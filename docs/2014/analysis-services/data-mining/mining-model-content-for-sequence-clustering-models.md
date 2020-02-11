@@ -1,5 +1,5 @@
 ---
-title: Le contenu du modèle Sequence Clustering des modèles d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
+title: Contenu du modèle d’exploration de données pour les modèles Sequence Clustering (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083569"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles Sequence Clustering (Analysis Services - Exploration de données)
-  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MSC (Microsoft Sequence Clustering). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MSC (Microsoft Sequence Clustering). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Présentation de la structure d'un modèle Sequence Clustering  
- Un modèle Sequence Clustering comprend un nœud parent unique (NODE_TYPE = 1) qui représente le modèle et ses métadonnées. Le nœud parent, étiqueté **(Tout)** , a un nœud de séquence connexe (NODE_TYPE = 13) qui répertorie toutes les transitions détectées dans les données d’apprentissage.  
+ Un modèle Sequence Clustering comprend un nœud parent unique (NODE_TYPE = 1) qui représente le modèle et ses métadonnées. Le nœud parent, étiqueté **(Tout)**, a un nœud de séquence connexe (NODE_TYPE = 13) qui répertorie toutes les transitions détectées dans les données d’apprentissage.  
   
- ![Structure du modèle sequence clustering](../media/modelcontent-seqclust.gif "Structure du modèle sequence clustering")  
+ ![Structure du modèle Sequence Clustering](../media/modelcontent-seqclust.gif "Structure du modèle Sequence Clustering")  
   
  L'algorithme crée également plusieurs clusters, selon les transitions trouvées dans les données et tous les autres attributs d'entrée inclus lors de la création du modèle, comme par exemple les données démographiques de la clientèle, etc. Chaque cluster (NODE_TYPE = 5) contient son propre nœud de séquence (NODE_TYPE = 13) qui répertorie uniquement les transitions utilisées pour générer ce cluster spécifique. Dans le nœud de séquence, vous pouvez descendre pour consulter les détails des transitions d'état individuelles (NODE_TYPE = 14).  
   
@@ -71,11 +71,11 @@ ms.locfileid: "66083569"
  CHILDREN_CARDINALITY  
  Estimation du nombre d'enfants du nœud.  
   
- **Racine du modèle** La valeur Cardinalité est égale au nombre de clusters plus un. Pour plus d’informations, consultez [Cardinalité](#bkmk_cardinality).  
+ **Racine du modèle** La valeur de cardinalité est égale au nombre de clusters plus un. Pour plus d’informations, consultez [Cardinalité](#bkmk_cardinality).  
   
- **Nœuds du cluster** La cardinalité est toujours de 1, parce que chaque cluster a un nœud enfant unique, qui contient la liste de séquences du cluster.  
+ **Nœuds de cluster** La cardinalité est toujours de 1, parce que chaque cluster a un nœud enfant unique, qui contient la liste des séquences dans le cluster.  
   
- **Nœuds de séquence** La cardinalité indique le nombre de transitions incluses dans ce cluster. Par exemple, la cardinalité du nœud de séquence pour la racine du modèle indique le nombre de transitions qui ont été trouvées dans tout le modèle.  
+ **Nœuds de séquence** Cardinalité indique le nombre de transitions incluses dans ce cluster. Par exemple, la cardinalité du nœud de séquence pour la racine du modèle indique le nombre de transitions qui ont été trouvées dans tout le modèle.  
   
  PARENT_UNIQUE_NAME  
  Nom unique du parent du nœud.  
@@ -94,7 +94,7 @@ ms.locfileid: "66083569"
  NODE_PROBABILITY  
  **Racine du modèle** Toujours 0.  
   
- **Nœuds du cluster** Probabilité ajustée du cluster dans le modèle. La somme des probabilités ajustées n'est pas égale à 1, parce que la méthode de clustering utilisée dans Sequence Clustering permet une appartenance partielle dans plusieurs clusters.  
+ **Nœuds de cluster** Probabilité ajustée du cluster dans le modèle. La somme des probabilités ajustées n'est pas égale à 1, parce que la méthode de clustering utilisée dans Sequence Clustering permet une appartenance partielle dans plusieurs clusters.  
   
  **Nœuds de séquence** Toujours 0.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66083569"
  MARGINAL_PROBABILITY  
  **Racine du modèle** Toujours 0.  
   
- **Nœuds du cluster** Même valeur que NODE_PROBABILITY.  
+ **Nœuds de cluster** La même valeur que NODE_PROBABILITY.  
   
  **Nœuds de séquence** Toujours 0.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66083569"
   
  **Racine du modèle** Nombre total de transitions dans le modèle.  
   
- **Nœuds du cluster** Prise en charge brute du cluster, soit le nombre de cas d’apprentissage qui apportent des cas à ce cluster.  
+ **Nœuds de cluster** Prise en charge brute du cluster, ce qui signifie le nombre de cas d’apprentissage qui apportent des cas à ce cluster.  
   
  **Nœuds de séquence** Toujours 0.  
   
@@ -151,14 +151,14 @@ ms.locfileid: "66083569"
 |Nœuds de séquence pour les clusters individuels|Plusieurs nœuds comportant les transitions pour les séquences de ce cluster uniquement|Exactement les mêmes informations que dans les nœuds de cluster individuels.|  
 |Transitions|Pas d'enfants|Répertorie les transitions pour le premier état connexe.<br /><br /> La prise en charge est une valeur de prise en charge ajustée, indiquant les cas qui participent à chaque transition. La probabilité correspond à la probabilité ajustée, représentée sous forme de pourcentage.|  
   
-###  <a name="bkmk_NODEDIST"></a> Table NODE_DISTRIBUTION  
+###  <a name="bkmk_NODEDIST"></a>Table NODE_DISTRIBUTION  
  La table NODE_DISTRIBUTION fournit des informations détaillées sur la probabilité et la prise en charge pour les transitions et les séquences d'un cluster spécifique.  
   
- Une ligne est toujours ajoutée à la table de transitions pour représenter les valeurs `Missing` possibles. Pour plus d’informations sur ce que le `Missing` valeur et comment il affecte les calculs, consultez [valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Une ligne est toujours ajoutée à la table de transitions pour représenter les valeurs `Missing` possibles. Pour plus d’informations sur `Missing` la signification de la valeur et sur la façon dont elle affecte les calculs, consultez [valeurs manquantes &#40;Analysis Services-exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
  Les calculs de prise en charge et de probabilité diffèrent selon que le calcul s'applique aux cas d'apprentissage ou au modèle fini. Cela est dû au fait que la méthode de clustering par défaut EM (Expectation Maximization) suppose que tout cas peut appartenir à plusieurs clusters. Lors du calcul de prise en charge pour les cas du modèle, il est possible d'utiliser des probabilités et des nombres bruts. Toutefois, les probabilités d'une séquence donnée d'un cluster doivent être pondérées par la somme de toutes les combinaisons de séquence et de cluster possibles.  
   
-###  <a name="bkmk_cardinality"></a> Cardinalité  
+###  <a name="bkmk_cardinality"></a>Cardinalité  
  Dans un modèle de clustering, la cardinalité du nœud parent indique généralement le nombre de clusters se trouvant dans le modèle. Toutefois, un modèle Sequence Clustering possède deux types de nœud au niveau du cluster : un type de nœud contient des clusters, et l'autre type une liste de séquences pour tout le modèle.  
   
  Par conséquent, pour connaître le nombre de clusters dans le modèle, vous pouvez prendre la valeur de NODE_CARDINALITY pour le nœud (Tout) et soustraire un. Par exemple, si le modèle a créé 9 clusters, la cardinalité de la racine du modèle est 10. Cela est dû au fait que le modèle contient 9 nœuds de cluster, chacun ayant son propre nœud de séquence, plus un nœud de séquence supplémentaire étiqueté cluster 10, qui représente les séquences pour le modèle.  
@@ -232,18 +232,18 @@ ORDER BY Count(*) DESC
   
 |Produit|Prise en charge (table NODE_DISTRIBUTION)|Probabilité (table NODE_DISTRIBUTION)|Probabilité (du graphique)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
-|manquantes|48.447887|0.138028169|(non affiché)|  
-|Cycling Cap|10.876056|0.030985915|0.03|  
+|Manquant|48.447887|0.138028169|(non affiché)|  
+|Cycling Cap|10.876056|0.030985915|0,03|  
 |Fender Set - Mountain|80.087324|0.228169014|0.23|  
-|Half-Finger Gloves|0.9887324|0.002816901|0.00|  
-|Hydration Pack|0.9887324|0.002816901|0.00|  
-|LL Mountain Tire|51.414085|0.146478873|(0.15%)|  
+|Half-Finger Gloves|0.9887324|0.002816901|0,00|  
+|Hydration Pack|0.9887324|0.002816901|0,00|  
+|LL Mountain Tire|51.414085|0.146478873|0.15|  
 |Long-Sleeve Logo Jersey (Pull-over à manches longues)|2.9661972|0.008450704|0.01|  
-|Mountain Bottle Cage|87.997183|0.250704225|0.25%|  
+|Mountain Bottle Cage|87.997183|0.250704225|0,25|  
 |Mountain Tire Tube|16.808451|0.047887324|0.05|  
-|Short-Sleeve Classic Jersey|10.876056|0.030985915|0.03|  
+|Short-Sleeve Classic Jersey|10.876056|0.030985915|0,03|  
 |Sport-100|20.76338|0.05915493|0.06|  
-|Water Bottle|18.785915|0.053521127|0.25%|  
+|Water Bottle|18.785915|0.053521127|0,25|  
   
  Bien que le cas sélectionné initialement dans les données d'apprentissage contenait le produit « Mountain-500 » suivi de « LL Mountain Tire », vous pouvez constater qu'il existe de nombreuses autres séquences possibles. Pour rechercher des informations détaillées sur un cluster donné, vous devez de nouveau parcourir vers le bas la liste de séquences dans le cluster jusqu'à atteindre les transitions réelles pour chaque état ou produit.  
   
@@ -261,8 +261,8 @@ ORDER BY Count(*) DESC
  Pour savoir comment obtenir la liste des chemins d’accès observés en interrogeant le contenu du modèle et pour voir d’autres exemples de requêtes sur un modèle Sequence Clustering, consultez [Exemples de requêtes de modèle MSC (Sequence Clustering)](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Exemples de requêtes de modèle MSC (Sequence Clustering)](clustering-model-query-examples.md)  
+ [Contenu du modèle d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Algorithme Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)  
   
   

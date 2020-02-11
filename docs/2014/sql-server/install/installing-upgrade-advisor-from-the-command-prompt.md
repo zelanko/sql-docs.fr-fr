@@ -1,5 +1,5 @@
 ---
-title: Installation du Conseiller de mise à niveau à partir de l’invite de commandes | Microsoft Docs
+title: Installation du conseiller de mise à niveau à partir de l’invite de commandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094337"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installation du Conseiller de mise à niveau à partir de l'invite de commandes
@@ -34,9 +34,9 @@ ms.locfileid: "66094337"
   
 |Argument|Description|  
 |--------------|-----------------|  
-|/q[n&#124;b&#124;r&#124;f]|Définit le niveau de l'interface utilisateur (UI) :<br /><br /> n = aucune interface utilisateur<br /><br /> b = interface utilisateur de base (progression uniquement, aucune invite)<br /><br /> r = interface utilisateur réduite (boîte de dialogue à la fin de l'installation)<br /><br /> f = interface utilisateur complète|  
-|/L|Spécifie les options du fichier journal. Pour enregistrer tous les messages dans *nom_fichier_journal*, utilisez **-L\*v**_nom_fichier_journal_. Pour enregistrer uniquement les messages d’erreur, utilisez `-Le` *nom_fichier_journal*.|  
-|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Spécifie que le Conseiller de mise à niveau doit être installé (ADDLOCAL), supprimé (REMOVE) ou réinstallé (REINSTALL).|  
+|/q [n&#124;b&#124;r&#124;f]|Définit le niveau de l'interface utilisateur (UI) :<br /><br /> n = aucune interface utilisateur<br /><br /> b = interface utilisateur de base (progression uniquement, aucune invite)<br /><br /> r = interface utilisateur réduite (boîte de dialogue à la fin de l'installation)<br /><br /> f = interface utilisateur complète|  
+|/L|Spécifie les options du fichier journal. Pour consigner tous les messages dans *log_file_name*, utilisez **-\*L v**_log_file_name_. Pour consigner les messages d' `-Le`erreur uniquement, utilisez *log_file_name*.|  
+|ADDLOCAL = ALL&#124; REMOVE = ALL&#124;REINSTALL = ALL|Spécifie que le Conseiller de mise à niveau doit être installé (ADDLOCAL), supprimé (REMOVE) ou réinstallé (REINSTALL).|  
 |UAINSTALLDIR=path|Installe le Conseiller de mise à niveau à l'emplacement spécifié par le chemin d'accès.|  
   
 ## <a name="installation-examples"></a>Exemples d'installation  
@@ -68,7 +68,7 @@ Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installation du Conseiller de mise à niveau](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
- [Prérequis pour le Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
+ [Installation du conseiller de mise à niveau](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
+ [Configuration requise par le Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Référence technique d’algorithme Microsoft Association | Microsoft Docs
+title: Informations techniques de référence sur l’algorithme Microsoft Association | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084128"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme Microsoft Association
@@ -42,11 +42,11 @@ ms.locfileid: "66084128"
  Des modèles d'association peuvent également être créés pour des attributs numériques. Si les attributs sont continus, les nombres peuvent être *discrétisés* , ou regroupés dans des compartiments. Les valeurs discrétisées peuvent ensuite être traitées comme des valeurs booléennes ou comme des paires attribut-valeur.  
   
 ### <a name="support-probability-and-importance"></a>Prise en charge, probabilité et importance  
- La*prise en charge*, parfois appelée *fréquence*, représente le nombre de cas contenant l’élément ciblé ou une combinaison d’éléments ciblés. Seuls les éléments ayant au moins le niveau de prise en charge spécifié peuvent être inclus dans le modèle.  
+ La *prise en charge*, qui parfois appelée *fréquence*, désigne le nombre de cas qui contiennent l’élément ciblé ou une combinaison d’éléments. Seuls les éléments ayant au moins le niveau de prise en charge spécifié peuvent être inclus dans le modèle.  
   
  Un *jeu d’éléments fréquent* fait référence à une collection d’éléments dans laquelle la prise en charge de la combinaison d’éléments est aussi supérieure au seuil défini par le paramètre MINIMUM_SUPPORT. Par exemple, si le jeu d'éléments est {A,B,C} et que MINIMUM_SUPPORT a la valeur 10, chaque élément individuel A, B et C doit être présent dans au moins 10 cas pour être inclus dans le modèle et la combinaison d'éléments {A,B,C} doit également être présente dans au moins 10 cas.  
   
- **Remarque** Vous pouvez également contrôler le nombre de jeux d'éléments dans un modèle d'exploration de données en spécifiant la longueur maximale d'un jeu d'éléments, la longueur représentant le nombre d'éléments.  
+ **Remarque** Vous pouvez également contrôler le nombre de jeux d’éléments dans un modèle d’exploration de données en spécifiant la longueur maximale d’un jeu d’éléments, où la longueur correspond au nombre d’éléments.  
   
  Par défaut, la prise en charge pour un élément ou un jeu d'éléments particulier représente le nombre de cas contenant cet élément ou ces éléments. Toutefois, vous pouvez également exprimer MINIMUM_SUPPORT sous la forme d'un pourcentage du nombre total de cas dans le jeu de données en tapant une valeur décimale inférieure à 1. Par exemple, si vous spécifiez une valeur MINIMUM_SUPPORT de 0,03, cela signifie qu'au moins 3 % du nombre total de cas dans le jeu de données doivent contenir cet élément ou ce jeu d'éléments pour l'inclusion dans le modèle. Faites des essais avec votre modèle pour déterminer s'il vaut mieux utiliser un nombre ou un pourcentage.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66084128"
   
  L'importance d'une règle est calculée par le logarithme du rapport de vraisemblance de la partie droite de la règle, étant donné la partie gauche de la règle. Par exemple, dans la règle `If {A} Then {B}`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcule le ratio des cas avec A et B sur les cas avec B sans A, puis normalise ce quotient en utilisant une échelle logarithmique.  
   
-### <a name="feature-selection"></a>Sélection des fonctionnalités  
+### <a name="feature-selection"></a>Sélection de caractéristiques  
  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) n'effectue aucune sélection automatique de fonctionnalités. En revanche, l'algorithme fournit des paramètres qui contrôlent les données utilisées par l'algorithme. Il peut s'agir d'application de limites sur la taille de chaque jeu d'éléments ou de la définition des prises en charge maximale et minimale requises pour ajouter un jeu d'éléments au modèle.  
   
 -   Pour exclure par filtrage les éléments et les événements qui sont trop courants et donc inintéressants, diminuez la valeur de MAXIMUM_SUPPORT pour supprimer les jeux d'éléments très fréquents du modèle.  
@@ -73,10 +73,10 @@ ms.locfileid: "66084128"
  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) prend en charge plusieurs paramètres qui affectent le comportement, les performances et la précision du modèle d'exploration de données résultant.  
   
 ### <a name="setting-algorithm-parameters"></a>Définition des paramètres de l'algorithme  
- Vous pouvez modifier à tout moment les paramètres d'un modèle d'exploration de données à l'aide du Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également modifier les paramètres par programmation à l’aide de la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection dans AMO, ou en utilisant le [MiningModels élément &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) dans XMLA. La table ci-dessous décrit chaque paramètre.  
+ Vous pouvez modifier à tout moment les paramètres d'un modèle d'exploration de données à l'aide du Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également modifier les paramètres par programmation à l’aide <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> de la collection dans AMO, ou à l’aide de l' [élément MiningModels &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) dans XMLA. La table ci-dessous décrit chaque paramètre.  
   
 > [!NOTE]  
->  Vous ne pouvez pas modifier les paramètres dans un modèle existant à l’aide d’une instruction DMX ; Vous devez spécifier les paramètres dans le DMX CREATE MODEL ou ALTER STRUCTURE... ADD MODEL quand vous créez le modèle.  
+>  Vous ne pouvez pas modifier les paramètres dans un modèle existant à l’aide d’une instruction DMX ; vous devez spécifier les paramètres dans DMX CREATe MODEL ou ALTER STRUCTURE... Ajoutez le modèle lorsque vous créez le modèle.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Spécifie le nombre maximal de jeux d'éléments à produire. Si aucun nombre n'est spécifié, la valeur par défaut est utilisée.  
@@ -128,7 +128,7 @@ ms.locfileid: "66084128"
  *OPTIMIZED_PREDICTION_COUNT*  
  Définit le nombre d'éléments à mettre en cache pour l'optimisation d'une prédiction.  
   
- La valeur par défaut est 0 : Lorsque la valeur par défaut est utilisée, l'algorithme produit autant de prédictions que demandé dans la requête.  
+ La valeur par défaut est 0. Lorsque la valeur par défaut est utilisée, l'algorithme produit autant de prédictions que demandé dans la requête.  
   
  Si vous spécifiez une valeur différente de zéro pour *OPTIMIZED_PREDICTION_COUNT* , les requêtes de prédiction peuvent retourner, au plus, le nombre spécifié d’éléments, même si vous demandez des prédictions supplémentaires. Toutefois, la définition d'une valeur peut améliorer les performances de la prédiction.  
   
@@ -147,13 +147,13 @@ ms.locfileid: "66084128"
   
  S'applique à la colonne du modèle d'exploration de données.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Un modèle d'association doit contenir une colonne clé, des colonnes d'entrée et une colonne prédictible unique.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md).  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Cyclique, discret, discrétisé, clé, table et trié|  
 |Attribut prédictible|Cyclique, discret, discrétisé, table et trié|  
@@ -162,8 +162,8 @@ ms.locfileid: "66084128"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Association](microsoft-association-algorithm.md)   
- [Exemples de requêtes de modèle d'association](association-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Algorithme d’association Microsoft](microsoft-association-algorithm.md)   
+ [Exemples de requêtes de modèle d’association](association-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

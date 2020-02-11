@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245342"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Serveurs cibles (onglet Instructions de téléchargement)
@@ -32,10 +32,10 @@ ms.locfileid: "63245342"
  **Serveur cible**  
  Affiche le nom du serveur auquel s'appliquent les instructions de téléchargement.  
   
- **Opération**  
+ **opération**  
  Affiche l'opération effectuée par l'instruction de téléchargement.  
   
- **Nom de l'objet**  
+ **Nom de l’objet**  
  Affiche le nom de l'objet concerné par l'instruction de téléchargement.  
   
  **Date de publication**  
@@ -50,7 +50,7 @@ ms.locfileid: "63245342"
  **Supprimer**  
  Supprime l'instruction de téléchargement sélectionnée.  
   
- **Désactiver**  
+ **Clear**  
  Désactive l'état de l'instruction de téléchargement sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  

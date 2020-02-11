@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4 : Déploiement du Package de la leçon 6 | Microsoft Docs'
+title: 'Étape 4 : Déploiement du package de la Leçon 6 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e04a36ca687c57daae2f286025add57a32632c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767331"
 ---
-# <a name="step-4-deploying-the-lesson-6-package"></a>Étape 4 : Déploiement du package de la leçon 6
+# <a name="step-4-deploying-the-lesson-6-package"></a>Étape 4 : Déploiement du package de la Leçon 6
   Pour déployer le package, vous devez l'ajouter au catalogue SSISDB dans Integration Services sur une instance de SQL Server. Dans cette leçon, vous allez ajouter le package de la leçon 6 au catalogue SSISDB, définir le paramètre, puis exécuter le package. Dans le cadre de cette leçon, vous utiliserez SQL Server Management Studio pour ajouter le package de la leçon 6 au catalogue SSISDB et déployer le package. Une fois le package déployé, vous modifierez le paramètre de façon à ce qu'il pointe vers un nouvel emplacement, puis vous exécuterez le package.  
   
  Dans cette leçon, vous allez :  
@@ -34,7 +34,7 @@ ms.locfileid: "62767331"
   
 1.  Cliquez sur Démarrer, pointez sur Tous les programmes, pointez sur Microsoft SQL Server 2012, puis cliquez sur SQL Management Studio.  
   
-2.  Dans la boîte de dialogue Se connecter au serveur, vérifiez les paramètres par défaut, puis cliquez sur Se connecter. Pour vous connecter, la zone Nom du serveur doit contenir le nom de l'ordinateur sur lequel SQL Server est installé. Si le moteur de base de données est une instance nommée, la zone Nom du serveur doit également contenir le nom de l’instance au format <nom_ordinateur>\\<nom_instance>.  
+2.  Dans la boîte de dialogue Se connecter au serveur, vérifiez les paramètres par défaut, puis cliquez sur Se connecter. Pour vous connecter, la zone Nom du serveur doit contenir le nom de l'ordinateur sur lequel SQL Server est installé. Si le moteur de base de données est une instance nommée, la zone Nom du serveur doit également contenir le nom de l’instance au format <nom_ordinateur>\\<nom_instance>.  
   
 3.  Dans l'Explorateur d'objets, développez Catalogues Integration Services.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106034"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Afficher les numéros de page ou d'autres propriétés de rapport (Générateur de rapports et SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106034"
   
 -   Durée d’exécution  
   
--   Numéro de page  
+-   Nombre de pages  
   
 -   Dossier Rapport  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66106034"
   
 -   ID d'utilisateur  
   
--   Langue  
+-   Langage  
   
  Pour un numéro de page, vous pouvez ajouter le mot « Page » avant le numéro. Vous pouvez également indiquer le nombre total de pages.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66106034"
   
 1.  Cliquez avec le bouton droit sur la zone de texte qui contient [&PageNumber] et cliquez sur **Expressions**.  
   
-     La zone de texte **Définir l'expression pour : valeur** contient l’expression =Globals!PageNumber.  
+     La zone de texte **Définir l’expression pour : valeur** contient l’expression =Globals!PageNumber.  
   
 2.  Placez le curseur après le signe =, puis tapez `"Page " &`.  
   

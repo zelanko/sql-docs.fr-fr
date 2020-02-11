@@ -1,5 +1,5 @@
 ---
-title: Options (éditeur de texte - Page Extension de fichier) | Microsoft Docs
+title: Options (éditeur de texte-page extension de fichier) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089937"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Options (Éditeur de texte - Page Extension de fichier)
@@ -32,13 +32,13 @@ ms.locfileid: "66089937"
  **Ajouter**  
  Permet d’ajouter une entrée qui inclut les valeurs **Extension** et **Expérience de modification** spécifiées dans la **Liste d’extensions**.  
   
- **Supprimer**  
+ **Remove**  
  Supprime l’entrée sélectionnée de la **Liste d’extensions**.  
   
  **Extension**  
  Répertorie toutes les extensions pour lesquelles un éditeur a été spécifié.  
   
- **Expérience de modification**  
+ **Éditeur choisi**  
  Répertorie les éditeurs sélectionnés pour les **Extensions**.  
   
  **Mapper les fichiers sans extension vers**  

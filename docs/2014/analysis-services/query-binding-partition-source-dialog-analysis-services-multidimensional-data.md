@@ -1,5 +1,5 @@
 ---
-title: Détails (boîte de dialogue Source de Partition) de la liaison de requête (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Détails de la liaison de requête (boîte de dialogue source de partition) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070566"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Détails de la liaison de requête (boîte de dialogue Source de partition) (Analysis Services - Données multidimensionnelles)
@@ -32,10 +32,10 @@ ms.locfileid: "66070566"
 > [!IMPORTANT]  
 >  Si vous spécifiez une clause WHERE, vous pouvez utiliser un sous-ensemble d'enregistrements de cette partition. Ceci est essentiel pour éviter la duplication de données lorsque plusieurs partitions sont dérivées d'une seule table de faits. Pour plus d’informations, consultez [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Vérifier**  
+ **Chèque**  
  Cliquez pour vérifier que l’instruction **Requête** est une instruction SQL valide.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Source de partition &#40;Analysis Services - données multidimensionnelles&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+ [Boîte de dialogue source de partition &#40;Analysis Services-données multidimensionnelles&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

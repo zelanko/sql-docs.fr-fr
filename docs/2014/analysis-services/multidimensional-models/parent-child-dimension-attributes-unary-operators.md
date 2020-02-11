@@ -1,5 +1,5 @@
 ---
-title: Opérateurs unaires dans les Dimensions Parent-enfant | Microsoft Docs
+title: Opérateurs unaires dans les dimensions parent-enfant | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073446"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Opérateurs unaires dans les dimensions parent-enfant
-  Dans une dimension contenant une relation parent-enfant dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous spécifiez une colonne d’opérateur unaire (ou cumul personnalisé) qui détermine le cumul personnalisé de tous les membres non calculés de l’attribut parent. L'opérateur unaire est appliqué aux membres dès que les valeurs des membres parents sont évaluées. La propriété **UnaryOperatorColumn** définie sur un attribut parent (**Usage**=Parent) spécifie la colonne d’une table dans la vue de source de données qui contient les opérateurs unaires. Les valeurs des opérateurs de cumul personnalisé qui sont stockés dans cette colonne sont appliquées à chaque membre de l'attribut.  
+  Dans une dimension qui contient une relation parent-enfant dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous spécifiez une colonne d’opérateur unaire (ou de cumul personnalisé) qui détermine le cumul personnalisé de tous les membres non calculés de l’attribut parent. L'opérateur unaire est appliqué aux membres dès que les valeurs des membres parents sont évaluées. La propriété **UnaryOperatorColumn** définie sur un attribut parent (**Usage**=Parent) spécifie la colonne d’une table dans la vue de source de données qui contient les opérateurs unaires. Les valeurs des opérateurs de cumul personnalisé qui sont stockés dans cette colonne sont appliquées à chaque membre de l'attribut.  
   
  Vous pouvez créer et modifier un calcul nommé sur une table de dimension de la vue de source de données en tant que colonne d'opérateur unaire. L'expression la plus simple, soit « + », retourne le même opérateur pour tous les membres. Mais vous pouvez utiliser n'importe quelle expression dès lors qu'elle retourne un opérateur pour chaque membre.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "66073446"
   
  Les valeurs vides et toute valeur non répertoriée dans le tableau sont traitées comme l'opérateur unaire de signe positif (+). Aucun opérateur n'étant prioritaire sur un autre, l'ordre de stockage des membres dans la colonne de l'opérateur unaire détermine l'ordre d'évaluation. Pour modifier l’ordre d’évaluation, créez un nouvel attribut, affectez à sa propriété **Type** la valeur **Sequence**, puis attribuez des numéros de séquence correspondant à l’ordre d’évaluation à sa propriété **Source Column** . Vous devez également classer les membres de l'attribut en fonction de cet attribut. Pour plus d’informations sur l’utilisation de l’Assistant Business Intelligence pour classer les membres d’un attribut, consultez [Définir le classement d’une dimension](bi-wizard-define-the-ordering-for-a-dimension.md).  
   
- Vous pouvez utiliser la propriété **UnaryOperatorColumn** pour spécifier un calcul nommé qui retourne un opérateur unaire comme caractère littéral pour tous les membres de l’attribut. Il peut suffire de taper un caractère littéral comme `'*'` dans le calcul nommé. L'opérateur par défaut, le signe plus (+), est ainsi remplacé par l'opérateur de multiplication, l'astérisque (*), pour tous les membres de l'attribut. Pour plus d’informations, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ Vous pouvez utiliser la propriété **UnaryOperatorColumn** pour spécifier un calcul nommé qui retourne un opérateur unaire comme caractère littéral pour tous les membres de l’attribut. Il peut suffire de taper un caractère littéral comme `'*'` dans le calcul nommé. L'opérateur par défaut, le signe plus (+), est ainsi remplacé par l'opérateur de multiplication, l'astérisque (*), pour tous les membres de l'attribut. Pour plus d’informations, consultez [définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  Sous l’onglet **Navigateur** du Concepteur de dimensions, vous pouvez afficher les opérateurs unaires en regard de chaque membre d’une hiérarchie. Vous pouvez également modifier les opérateurs unaires lorsque vous utilisez une dimension activée en écriture. Si la dimension n'est pas activée en écriture, vous devez utiliser un outil pour modifier directement la source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des propriétés d'attribut de dimension](dimension-attribute-properties-reference.md)   
+ [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)   
  [Opérateurs de cumul personnalisé dans les dimensions parent-enfant](parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Démarrer l'Assistant Business Intelligence dans le Concepteur de dimensions](database-dimensions-bi-wizard-in-dimension-designer.md)  
   

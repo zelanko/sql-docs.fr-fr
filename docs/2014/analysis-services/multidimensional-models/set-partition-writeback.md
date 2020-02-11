@@ -1,5 +1,5 @@
 ---
-title: Définir l’écriture différée de Partition | Microsoft Docs
+title: Définir l’écriture différée de partition | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072897"
 ---
 # <a name="set-partition-writeback"></a>Définir l'écriture différée de partition
@@ -57,11 +57,11 @@ ms.locfileid: "66072897"
   
  La conversion en partition de la table de données d'écriture différée désactive également la partition en écriture. Toutes les stratégies de lecture/écriture illimitée et les autorisations de lecture/écriture pour les cellules de la partition sont désactivées, et les utilisateurs finaux ne pourront pas changer les données de cube affichées. (Les utilisateurs finaux dont la stratégie de lecture/écriture illimitée ou les autorisations de lecture/écriture sont désactivées pourront encore explorer le cube.) Les autorisations Lire et Lire le contingent ne sont pas affectées.  
   
- Pour convertir en partition des données d’écriture différée, utilisez la boîte de dialogue **Convertir en partition**, accessible en cliquant avec le bouton droit sur la table d’écriture différée pour une partition activée en écriture dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous spécifiez un nom pour la partition et indiquez s'il convient de concevoir l'agrégation pour la partition ultérieurement ou au même moment que vous la créez. Pour créer l'agrégation au même moment ou vous choisissez la partition, vous devez choisir de copier la conception d'agrégation à partir d'une partition existante. Il s'agit normalement, mais pas obligatoirement, de la partition d'écriture différée actuelle. Vous pouvez également choisir de traiter la partition au même moment que vous la créez.  
+ Pour convertir en partition des données d’écriture différée, utilisez la boîte de dialogue **Convertir en partition** , accessible en cliquant avec le bouton droit sur la table d’écriture différée pour une partition activée en écriture dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous spécifiez un nom pour la partition et indiquez s'il convient de concevoir l'agrégation pour la partition ultérieurement ou au même moment que vous la créez. Pour créer l'agrégation au même moment ou vous choisissez la partition, vous devez choisir de copier la conception d'agrégation à partir d'une partition existante. Il s'agit normalement, mais pas obligatoirement, de la partition d'écriture différée actuelle. Vous pouvez également choisir de traiter la partition au même moment que vous la créez.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Partitions activées en écriture](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Activation de l’écriture différée sur un Cube OLAP au niveau des cellules dans Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Activation et sécurisation de l’entrée de données avec écriture différée d’Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Activation de l’écriture différée sur un cube OLAP au niveau de la cellule dans Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Activation et sécurisation de l’entrée de données avec Analysis Services écriture différée](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

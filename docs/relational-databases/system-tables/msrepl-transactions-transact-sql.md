@@ -18,26 +18,26 @@ ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: db034831d9c8a85285ae1ec99263496170fab655
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948623"
 ---
-# <a name="msrepltransactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
+# <a name="msrepl_transactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSrepl_transactions** table contient une ligne pour chaque transaction répliquée. Cette table est stockée dans la base de données de distribution.  
+  La table **MSrepl_transactions** contient une ligne pour chaque transaction répliquée. Cette table est stockée dans la base de données de distribution.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|Identificateur de la base de données du serveur de publication.|  
-|**xact_id**|**varbinary(16)**|L’ID de la transaction.|  
-|**xact_seqno**|**varbinary(16)**|Le numéro de séquence de la transaction.|  
-|**entry_time**|**datetime**|Heure d'entrée de la transaction dans la base de données de distribution.|  
+|**xact_id**|**varbinary(16)**|ID de la transaction.|  
+|**xact_seqno**|**varbinary(16)**|Numéro de séquence de la transaction.|  
+|**entry_time**|**DATETIME**|Heure d'entrée de la transaction dans la base de données de distribution.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

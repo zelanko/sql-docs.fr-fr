@@ -18,23 +18,23 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030911"
 ---
-# <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
+# <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Définit les valeurs d'option de verrouillage des index cluster et non cluster ou des tables dépourvues d'index cluster définis par l'utilisateur.  
   
- Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] choisit automatiquement le niveau de verrouillage, à savoir table, ligne ou page. Vous n'avez pas besoin de définir ces options manuellement. **sp_indexoption** est destinée aux utilisateurs expérimentés qui savent avec certitude un type particulier de verrou est toujours.  
+ Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] choisit automatiquement le niveau de verrouillage, à savoir table, ligne ou page. Vous n'avez pas besoin de définir ces options manuellement. **sp_indexoption** est fourni aux utilisateurs expérimentés qui savent avec certitude qu’un type particulier de verrou est toujours approprié.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Au lieu de cela, utilisez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Au lieu de cela, utilisez [ALTER INDEX &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-index-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,38 +46,38 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @IndexNamePattern = ] 'table_or_index_name'` Est le nom qualifié ou non d’une table définie par l’utilisateur ou un index. *table_or_index_name* est **nvarchar(1035)** , sans valeur par défaut. Les guillemets ne sont nécessaires que si l'on spécifie un nom qualifié de table ou d'index. Si un nom de table complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données en cours. Si un nom de table est spécifié sans index, la valeur d'option spécifiée est définie pour tous les index de cette table et, si aucun index cluster n'existe, pour la table elle-même.  
+`[ @IndexNamePattern = ] 'table_or_index_name'`Nom qualifié ou non qualifié d’une table ou d’un index défini par l’utilisateur. *table_or_index_name* est de type **nvarchar (1035)**, sans valeur par défaut. Les guillemets ne sont nécessaires que si l'on spécifie un nom qualifié de table ou d'index. Si un nom de table complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données en cours. Si un nom de table est spécifié sans index, la valeur d'option spécifiée est définie pour tous les index de cette table et, si aucun index cluster n'existe, pour la table elle-même.  
   
-`[ @OptionName = ] 'option_name'` Est le nom d’une option d’index. *option_name* est **varchar (35)** , sans valeur par défaut. *option_name* peut avoir l’une des valeurs suivantes.  
+`[ @OptionName = ] 'option_name'`Nom d’option d’index. *option_name* est de type **varchar (35)**, sans valeur par défaut. *option_name* peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Si la valeur est TRUE, les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés. Si la valeur est FALSE, les verrous de ligne ne sont pas utilisés. La valeur par défaut est TRUE.|  
 |**AllowPageLocks**|Si la valeur est TRUE, les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés. Si la valeur est FALSE, les verrous de page ne sont pas utilisés. La valeur par défaut est TRUE.|  
 |**DisAllowRowLocks**|Si la valeur est TRUE, les verrous de ligne ne sont pas utilisés. Si la valeur est FALSE, les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés.|  
 |**DisAllowPageLocks**|Si la valeur est TRUE, les verrous de page ne sont pas utilisés. Si la valeur est FALSE, les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés.|  
   
-`[ @OptionValue = ] 'value'` Spécifie si le *option_name* paramètre est activé (TRUE, ON, yes ou 1) ou désactivé (FALSE, OFF, no ou 0). *valeur* est **varchar(12)** , sans valeur par défaut.  
+`[ @OptionValue = ] 'value'`Spécifie si le paramètre *option_name* est activé (true, on, Yes ou 1) ou désactivé (false, OFF, no ou 0). la *valeur* est de type **varchar (12)**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou supérieur à 0 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Les index XML ne sont pas pris en charge. Si un index XML est spécifié ou qu'un nom de table est spécifié sans nom d'index et que la table contient un index XML, l'instruction échoue. Pour définir ces options, utilisez [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) à la place.  
+ Les index XML ne sont pas pris en charge. Si un index XML est spécifié ou qu'un nom de table est spécifié sans nom d'index et que la table contient un index XML, l'instruction échoue. Pour définir ces options, utilisez [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) à la place.  
   
- Pour afficher la page Propriétés de verrouillage et ligne actuelle, utilisez [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) ou [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.  
+ Pour afficher les propriétés de verrouillage de page et de ligne actuelles, utilisez [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) ou l’affichage catalogue [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
   
--   Ligne, page et verrous de niveau table sont autorisés lors de l’accès à l’index lorsque **AllowRowLocks** = TRUE ou **DisAllowRowLocks** = FALSE, et **AllowPageLocks** = TRUE ou  **DisAllowPageLocks** = FALSE. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] choisit le verrou approprié et peut promouvoir un verrou de ligne ou de page en verrou de table.  
+-   Les verrous de ligne, de page et de table sont autorisés lors de l’accès à l’index lorsque **AllowRowLocks** = true ou **DisallowRowLocks** = false, et **AllowPageLocks** = true ou **DisallowPageLocks** = false. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] choisit le verrou approprié et peut promouvoir un verrou de ligne ou de page en verrou de table.  
   
- Seul un verrou de niveau table est autorisé lorsque l’accès à l’index lorsque **AllowRowLocks** = FALSE ou **DisAllowRowLocks** = TRUE et **AllowPageLocks** = FALSE ou  **DisAllowPageLocks** = TRUE.  
+ Seul un verrou au niveau de la table est autorisé lors de l’accès à l’index lorsque **AllowRowLocks** = false ou **DisallowRowLocks** = true et **AllowPageLocks** = false ou **DisallowPageLocks** = true.  
   
  Si un nom de table est spécifié sans index, les paramétrages sont appliqués à tous les index de cette table. Lorsque la table sous-jacente ne possède aucun index cluster (en d'autres termes, il s'agit d'un segment de mémoire), les paramétrages sont appliqués comme suit :  
   
--   Lorsque **AllowRowLocks** ou **DisAllowRowLocks** sont la valeur TRUE ou FALSE, le paramètre est appliqué au segment de mémoire et de tout index non-cluster associé.  
+-   Quand **AllowRowLocks** ou **DisallowRowLocks** a la valeur true ou false, le paramètre est appliqué au segment de mémoire et aux index non cluster associés.  
   
--   Lorsque **AllowPageLocks** option est définie sur TRUE ou **DisAllowPageLocks** est définie sur FALSE, le paramètre est appliqué au segment de mémoire et de tout index non-cluster associé.  
+-   Lorsque l’option **AllowPageLocks** a la valeur true ou que **DisallowPageLocks** a la valeur false, le paramètre est appliqué au segment de mémoire et aux index non cluster associés.  
   
--   Lorsque **AllowPageLocks** option a la valeur FALSE ou **DisAllowPageLocks** est définie sur TRUE, le paramètre est appliqué totalement aux index non cluster. En d'autres termes, tous les verrous de page sont interdits sur les index non-cluster. Sur le segment de mémoire, seuls les verrous partagés (S), de mise à jour (U) et exclusifs (X) de la page sont interdits. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut toujours acquérir un verrou de page intentionnel (IS, IU ou IX) à des fins internes.  
+-   Lorsque l’option **AllowPageLocks** a la valeur false ou que **DisallowPageLocks** a la valeur true, le paramètre est entièrement appliqué aux index non-cluster. En d'autres termes, tous les verrous de page sont interdits sur les index non-cluster. Sur le segment de mémoire, seuls les verrous partagés (S), de mise à jour (U) et exclusifs (X) de la page sont interdits. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut toujours acquérir un verrou de page intentionnel (IS, IU ou IX) à des fins internes.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert une autorisation ALTER sur la table.  
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>R. Définition d'une option sur un index spécifique  
- L’exemple suivant interdit les verrous de page sur la `IX_Customer_TerritoryID` d’index sur la `Customer` table.  
+ L’exemple suivant interdit les verrous de page sur `IX_Customer_TerritoryID` l’index sur `Customer` la table.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Définition d'une option sur une table dépourvue d'index cluster  
- L'exemple suivant interdit les verrous de page sur une table dépourvue d'index cluster (un segment de mémoire). Le `sys.indexes` affichage catalogue est interrogé avant et après le `sp_indexoption` procédure est exécutée pour afficher les résultats de l’instruction.  
+ L'exemple suivant interdit les verrous de page sur une table dépourvue d'index cluster (un segment de mémoire). L' `sys.indexes` affichage catalogue est interrogé avant et après l’exécution `sp_indexoption` de la procédure pour afficher les résultats de l’instruction.  
   
 ```sql  
 USE AdventureWorks2012;  

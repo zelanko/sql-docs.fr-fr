@@ -1,5 +1,5 @@
 ---
-title: Paramètres du projet (mappage de Type) (OracleToSQL) | Microsoft Docs
+title: Paramètres du projet (mappage de type) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,128 +11,128 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266584"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Paramètres du projet (Mappage de type) (OracleToSQL)
-La page mappage de Type de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA convertit les types de données Oracle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.  
+La page mappage de type de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA convertit les types de données Oracle en types de données.  
   
-La page mappage de Type est disponible dans le **paramètres du projet** et **par défaut des paramètres de projet** boîtes de dialogue.  
+La page mappage de type est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** .  
   
--   Pour spécifier les paramètres pour tous les futurs projets SSMA, sur le **outils** menu, cliquez sur **par défaut des paramètres de projet**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichées ou modifiées à partir de **Version cible de migration** liste déroulante, puis cliquez sur **le mappage de Type** en bas du volet gauche.  
+-   Pour spécifier les paramètres de tous les futurs projets SSMA, dans le menu **Outils** , cliquez sur **paramètres du projet par défaut**, sélectionnez le type de projet de migration pour lequel les paramètres doivent être affichés ou modifiés dans la liste déroulante de la **version cible** de la migration, puis cliquez sur **mappage de type** en bas du volet gauche.  
   
--   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, cliquez sur **paramètres du projet**, puis cliquez sur **le mappage de Type** en bas du volet gauche.  
+-   Pour spécifier les paramètres du projet actif, dans le menu **Outils** , cliquez sur **paramètres du projet**, puis sur mappage de **type** en bas du volet gauche.  
   
-Pour spécifier les paramètres pour l’objet actuel ou la classe d’objets, utilisez le **le mappage de Type** onglet dans la fenêtre SSMA principale.  
+Pour spécifier les paramètres de l’objet ou de la classe d’objets en cours, utilisez l’onglet **mappage de type** dans la fenêtre SSMA principale.  
   
 ## <a name="options"></a>Options  
-Le tableau suivant présente le **le mappage de Type** onglet options :  
+Le tableau suivant présente les options de l’onglet **mappage de type** :  
   
 **Type de source**  
-Le type de données Oracle mappé.  
+Type de données Oracle mappé.  
   
 **Type de cible**  
-La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données pour le type de données Oracle spécifié.  
+Type de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données cible pour le type de données Oracle spécifié.  
   
-Consultez les tableaux dans la section suivante pour la valeur par défaut SSMA pour les mappages de type Oracle.  
+Consultez les tableaux de la section suivante pour les mappages de type SSMA pour Oracle par défaut.  
   
 **Ajouter**  
 Cliquez pour ajouter un type de données à la liste de mappage.  
   
-**Edition**  
-Cliquez pour modifier le type de données sélectionné dans la liste de mappage.  
+**Modifier**  
+Cliquez pour modifier le type de données sélectionné dans la liste mappage.  
   
-**Supprimer**  
-Cliquez pour supprimer le mappage de type de données sélectionnée dans la liste de mappage.  
+**Remove**  
+Cliquez pour supprimer le mappage de type de données sélectionné de la liste de mappage.  
   
 **Rétablir les valeurs par défaut**  
-Cliquez pour réinitialiser la liste de mappage de type pour les valeurs par défaut SSMA.  
+Cliquez pour rétablir les valeurs par défaut SSMAs de la liste mappage de type.  
   
-## <a name="default-type-mappings"></a>Mappages de Type par défaut  
+## <a name="default-type-mappings"></a>Mappages de types par défaut  
 Dans SSMA pour Oracle, vous pouvez définir des mappages de types personnalisés pour les arguments, les colonnes, les variables locales et les valeurs de retour. Le mappage par défaut pour les arguments et les types de retour est presque identique.  
   
-### <a name="default-argument-type-and-return-value-type-mapping"></a>Type d’Argument par défaut et de retourner le mappage de Type de valeur  
-Le tableau suivant contient le mappage de type de données par défaut pour les arguments et valeurs de retour.  
+### <a name="default-argument-type-and-return-value-type-mapping"></a>Type d’argument par défaut et mappage de type de valeur de retour  
+Le tableau suivant contient le mappage de type de données par défaut pour les arguments et les valeurs de retour.  
   
-|Type de données Oracle|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Type de données|  
+|Type de données Oracle|Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données par défaut|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
-|BINARY_FLOAT|float [53]|  
+|binary_float|float [53]|  
 |binary_integer|int|  
 |objet blob|varbinary(max)|  
-|booléenne|bit|  
+|boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
 |caractère|varchar(max)|  
 |character varying|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2[0]|  
-|dec|dec[38][0]|  
-|décimal|float [53]|  
+|Date|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|Décimal|float [53]|  
 |double précision|float [53]|  
 |float|float [53]|  
 |int|int|  
 |entier|int|  
 |long|varchar(max)|  
-|long raw|varbinary(max)|  
-|long raw [\*... 8000]<sup>*</sup>|varbinary [*]|  
-|long raw [8001..\*]<sup>*</sup>|varbinary(max)|  
-|national char|nvarchar(max)|  
-|national char varying|nvarchar(max)|  
-|caractères nationaux|nvarchar(max)|  
-|variable de caractères nationaux<sup>**</sup>|nvarchar(max)|  
-|variable de caractères nationaux<sup>*</sup>|nvarchar(max)|  
-|nchar|nvarchar(max)|  
+|long RAW|varbinary(max)|  
+|long RAW [\*.. 8000]<sup>*</sup>|varbinary [*]|  
+|long RAW [8001..\*]<sup>*</sup>|varbinary(max)|  
+|caractère national|nvarchar(max)|  
+|caractère national variable|nvarchar(max)|  
+|caractère national|nvarchar(max)|  
+|caractère national variable<sup>**</sup>|nvarchar(max)|  
+|caractère national variable<sup>*</sup>|nvarchar(max)|  
+|NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|number|float [53]|  
+|nombre|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
-|ID de ligne|uniqueidentifier|  
-|signtype|smallint|  
-|smallint|smallint|  
-|chaîne|varchar(max)|  
+|ID|UNIQUEIDENTIFIER|  
+|signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
+|string|varchar(max)|  
 |timestamp|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
 |horodateur avec fuseau horaire|datetimeoffset|  
-|UROWID|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
-|varchar2|varchar(max)|  
-|xmltype|xml|  
+|VARCHAR2|varchar(max)|  
+|XmlType|Xml|  
   
-<sup>*</sup> S’applique pour retourner la valeur le mappage de type uniquement.  
+<sup>*</sup>S’applique uniquement au mappage de type de valeur de retour.  
   
-<sup>**</sup> S’applique à l’argument le mappage de type uniquement.  
+<sup>**</sup>S’applique uniquement au mappage de type d’argument.  
   
-### <a name="default-column-type-mapping"></a>Mappage de Type de colonne par défaut  
+### <a name="default-column-type-mapping"></a>Mappage de type de colonne par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les colonnes.  
   
-|Type de données Oracle|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Type de données|  
+|Type de données Oracle|Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données par défaut|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
-|BINARY_FLOAT|float [53]|  
+|binary_float|float [53]|  
 |objet blob|varbinary(max)|  
 |char|char|  
-|char varying [*.. \*]|varchar[*]|  
+|char varying [*.. \*]|VARCHAR [*]|  
 |Char [*.. \*]|Char [*]|  
 |caractère|char|  
-|variable de caractère [*.. \*]|varchar[*]|  
+|caractère variable [*.. \*]|VARCHAR [*]|  
 |caractère [*.. \*]|Char [*]|  
 |CLOB|varchar(max)|  
-|date|datetime2[0]|  
-|dec|dec[38][0]|  
-|DEC [*.. \*]|DEC [*] [0]|  
-|DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|décimal|decimal[38][0]|  
+|Date|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|Dec [*.. \*]|Dec [*] [0]|  
+|Dec [*.. \*][\*.. \*]|Dec [*] [\*]|  
+|Décimal|décimal [38] [0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
-|Decimal [*.. \*][\*.. \*]|decimal[*][\*]|  
+|Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |double précision|float [53]|  
 |float|float [53]|  
 |float [*.. 53]|float [*]|  
@@ -140,131 +140,131 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |int|int|  
 |entier|int|  
 |long|varchar(max)|  
-|long raw|varbinary(max)|  
-|long raw [*.. 8000]|varbinary [*]|  
-|long raw [8001.. *]|varbinary(max)|  
+|long RAW|varbinary(max)|  
+|long RAW [*.. 8000]|varbinary [*]|  
+|long RAW [8001.. *]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|long [*.. 8000]|varchar[*]|  
+|long [*.. 8000]|VARCHAR [*]|  
 |long [8001.. *]|varchar(max)|  
-|national char|nchar|  
-|national char varying [*.. \*]|nvarchar[*]|  
-|national char [*.. \*]|nchar[*]|  
-|caractères nationaux|nchar|  
-|variable de caractères nationaux [*.. \*]|nvarchar[*]|  
-|les caractères nationaux [*.. \*]|nchar[*]|  
-|nchar|nchar|  
-|nchar[*]|nchar[*]|  
+|caractère national|NCHAR|  
+|caractère national variable [*.. \*]|nvarchar [*]|  
+|caractère national [*.. \*]|NCHAR [*]|  
+|caractère national|NCHAR|  
+|caractère national variable [*.. \*]|nvarchar [*]|  
+|caractère national [*.. \*]|NCHAR [*]|  
+|NCHAR|NCHAR|  
+|NCHAR [*]|NCHAR [*]|  
 |NCLOB|nvarchar(max)|  
-|number|float [53]|  
-|nombre [*.. \*]|numérique [*]|  
-|nombre [*.. \*][\*.. \*]|numérique [*] [\*]|  
+|nombre|float [53]|  
+|nombre [*.. \*]|Numeric [*]|  
+|nombre [*.. \*][\*.. \*]|Numeric [*] [\*]|  
 |numeric|numeric|  
-|numérique [*.. \*]|numérique [*]|  
-|numérique [*.. \*][\*.. \*]|numérique [*] [\*]|  
-|NVARCHAR2 [*.. \*]|nvarchar[*]|  
-|brut [*.. \*]|varbinary [*]|  
+|Numeric [*.. \*]|Numeric [*]|  
+|Numeric [*.. \*][\*.. \*]|Numeric [*] [\*]|  
+|nvarchar2[*.. \*]|nvarchar [*]|  
+|RAW [*.. \*]|varbinary [*]|  
 |real|float [53]|  
-|ID de ligne|uniqueidentifier|  
-|smallint|smallint|  
+|ID|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
-|horodateur avec fuseau horaire local [*.. \*]|datetimeoffset[*]|  
+|horodateur avec fuseau horaire local [*.. \*]|DateTimeOffset [*]|  
 |horodateur avec fuseau horaire|datetimeoffset|  
-|horodateur avec fuseau horaire [*.. \*]|datetimeoffset[*]|  
-|horodatage [*.. \*]|datetime2[*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*.. \*]|uniqueidentifier|  
-|varchar [*.. \*]|varchar[*]|  
-|VARCHAR2 [*.. \*]|varchar[*]|  
-|XmlType|xml|  
+|horodateur avec fuseau horaire [*.. \*]|DateTimeOffset [*]|  
+|horodateur [*.. \*]|datetime2 [*]|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
+|VARCHAR [*.. \*]|VARCHAR [*]|  
+|VARCHAR2 [*.. \*]|VARCHAR [*]|  
+|XmlType|Xml|  
   
-### <a name="default-local-variable-type-mapping"></a>Mappage de Type de Variable locale par défaut  
+### <a name="default-local-variable-type-mapping"></a>Mappage de type de variable locale par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les variables locales.  
   
-|Type de données Oracle|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Type de données|  
+|Type de données Oracle|Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données par défaut|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
-|BINARY_FLOAT|float [53]|  
+|binary_float|float [53]|  
 |binary_interger|int|  
-|Blob|varbinary(max)|  
+|Objet blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
-|char varying [*.. 8000]|varchar[*]|  
+|char varying [*.. 8000]|VARCHAR [*]|  
 |char varying [8001.. *]|varchar(max)|  
 |Char [*.. 8000]|Char [*]|  
 |Char [8001.. *]|varchar(max)|  
 |Caractère|char|  
-|variable de caractère [*.. 8000]|varchar[*]|  
-|variable de caractère [8001.. *]|varchar(max)|  
+|caractère variable [*.. 8000]|VARCHAR [*]|  
+|caractère variable [8001.. *]|varchar(max)|  
 |caractère [*.. 8000]|Char [*]|  
 |caractère [8001.. *]|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2[0]|  
-|dec|dec[38][0]|  
-|DEC [*.. \*]|DEC [*] [0]|  
-|DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|décimal|decimal[38][0]|  
+|Date|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|Dec [*.. \*]|Dec [*] [0]|  
+|Dec [*.. \*][\*.. \*]|Dec [*] [\*]|  
+|Décimal|décimal [38] [0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
-|Decimal [*.. \*][\*.. \*]|decimal[*][\*]|  
+|Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |double précision|float [53]|  
 |Float|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54.. *]|float [53]|  
 |Int|int|  
-|Entier|int|  
-|entier [*.. \*]|numérique [*] [0]|  
-|long|varchar(max)|  
-|long raw|varbinary(max)|  
-|long raw [*.. 8000]|varbinary [*]|  
-|long raw [8001.. *]|varbinary(max)|  
-|national char|nchar|  
-|national char varying [*.. 4000]|nvarchar[*]|  
-|national char varying [4001.. *]|nvarchar(max)|  
-|national char [*.. 4000]|nchar[*]|  
-|national char [4001.. *]|nvarchar(max)|  
-|caractères nationaux|nchar|  
-|les caractères nationaux [*.. 4000]|nvarchar[*]|  
-|les caractères nationaux [4001.. *]|nvarchar(max)|  
-|variable de caractères nationaux [*.. 4000]|nvarchar[*]|  
-|variable de caractères nationaux [4001.. *]|nvarchar(max)|  
-|Nchar|nchar|  
-|NCHAR [*.. 4000]|nchar[*]|  
+|Integer|int|  
+|entier [*.. \*]|Numeric [*] [0]|  
+|Long|varchar(max)|  
+|long RAW|varbinary(max)|  
+|long RAW [*.. 8000]|varbinary [*]|  
+|long RAW [8001.. *]|varbinary(max)|  
+|caractère national|NCHAR|  
+|caractère national variable [*.. 4000]|nvarchar [*]|  
+|caractère national variable [4001.. *]|nvarchar(max)|  
+|caractère national [*.. 4000]|NCHAR [*]|  
+|caractère national [4001.. *]|nvarchar(max)|  
+|caractère national|NCHAR|  
+|caractère national [*.. 4000]|nvarchar [*]|  
+|caractère national [4001.. *]|nvarchar(max)|  
+|caractère national variable [*.. 4000]|nvarchar [*]|  
+|caractère national variable [4001.. *]|nvarchar(max)|  
+|Nchar|NCHAR|  
+|NCHAR [*.. 4000]|NCHAR [*]|  
 |NCHAR [4001.. *]|nvarchar(max)|  
-|NCHAR varying [*.. 4000]|nvarchar[*]|  
+|NCHAR varying [*.. 4000]|nvarchar [*]|  
 |NCHAR varying [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |Number|float [53]|  
-|nombre [*.. \*]|numérique [*]|  
-|nombre [*.. \*][\*.. \*]|numérique [*] [\*]|  
-|Numeric|numérique [38] [0]|  
-|numérique [*.. \*]|numérique [*]|  
-|numérique [*.. \*][\*.. \*]|numérique [*] [\*]|  
-|NVARCHAR2 [*.. 4000]|nvarchar[*]|  
+|nombre [*.. \*]|Numeric [*]|  
+|nombre [*.. \*][\*.. \*]|Numeric [*] [\*]|  
+|Numérique|numérique [38] [0]|  
+|Numeric [*.. \*]|Numeric [*]|  
+|Numeric [*.. \*][\*.. \*]|Numeric [*] [\*]|  
+|nvarchar2[*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
 |pls_integer|int|  
-|brut [*.. 8000]|varbinary [*]|  
-|brut [8001.. *]|varbinary(max)|  
+|RAW [*.. 8000]|varbinary [*]|  
+|RAW [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
-|chaîne [*.. 8000]|varchar[*]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
+|chaîne [*.. 8000]|VARCHAR [*]|  
 |chaîne [8001.. *]|varchar(max)|  
 |timestamp|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
 |horodateur avec fuseau horaire|datetimeoffset|  
-|horodateur avec fuseau horaire local [*.. \*]|datetimeoffset[*]|  
-|horodateur avec fuseau horaire [*.. \*]|datetimeoffset[*]|  
-|horodatage [*.. \*]|datetime2[*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*.. \*]|uniqueidentifier|  
-|varchar [*.. 8000]|varchar[*]|  
-|varchar [8001.. *]|varchar(max)|  
-|VARCHAR2 [*.. 8000]|varchar[*]|  
-|VARCHAR2 [8001.. *]|varcha(max)|  
-|XmlType|xml|  
+|horodateur avec fuseau horaire local [*.. \*]|DateTimeOffset [*]|  
+|horodateur avec fuseau horaire [*.. \*]|DateTimeOffset [*]|  
+|horodateur [*.. \*]|datetime2 [*]|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
+|VARCHAR [*.. 8000]|VARCHAR [*]|  
+|VARCHAR [8001.. *]|varchar(max)|  
+|VARCHAR2 [*.. 8000]|VARCHAR [*]|  
+|VARCHAR2 [8001.. *]|varcha (max)|  
+|XmlType|Xml|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Référence de l’Interface utilisateur &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[Référence de l’interface utilisateur &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

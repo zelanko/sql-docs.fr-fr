@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 15 : Générer et exécuter le projet SSIS | Microsoft Docs'
+title: 'Tâche 15 : génération et exécution du projet SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,39 +10,39 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66822994"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>Tâche 15 : Génération et exécution du projet SSIS
+# <a name="task-15-building-and-running-the-ssis-project"></a>Tâche 15 : Générer et exécuter le projet SSIS
 
-  Dans cette tâche, vous allez générer et exécuter le projet SSIS. Si vous avez la version 64 bits d’Excel 2010 est installé sur votre ordinateur, vous devez définir la valeur de **Run64BitRuntime** à **False** pour la source Excel fonctionne.  
+  Dans cette tâche, vous allez générer et exécuter le projet SSIS. Si la version 64 bits d’Excel 2010 est installée sur votre ordinateur, vous devez définir la valeur de **Run64BitRuntime** sur **false** pour que la source Excel fonctionne.  
   
-1.  Dans le **l’Explorateur de solutions** fenêtre, cliquez sur **projet** dans le menu, cliquez sur **propriétés de CleanseAndCurateSuppliers**.  
+1.  Dans la fenêtre **Explorateur de solutions** , cliquez sur **projet** dans le menu, puis sur **Propriétés de CleanseAndCurateSuppliers**.  
   
-2.  Dans le **propriétés** boîte de dialogue, développez **propriétés de Configuration** sur la gauche, puis cliquez sur **débogage**.  
+2.  Dans la boîte de dialogue **Propriétés** , développez **Propriétés de configuration** sur la gauche, puis cliquez sur **débogage**.  
   
-3.  Définissez **Run64BitRuntime** à **False**.  
+3.  Affectez à **Run64BitRuntime** la **valeur false**.  
   
-     ![Propriétés du projet CleanseAndCurateSuppliers](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "propriétés du projet CleanseAndCurateSuppliers")  
+     ![Propriétés du projet CleanseAndCurateSuppliers](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "Propriétés du projet CleanseAndCurateSuppliers")  
   
-4.  Cliquez sur **OK** pour fermer la **propriétés** boîte de dialogue.  
+4.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés** .  
   
-5.  Cliquez sur **Build** sur la barre de menus, cliquez sur **générer CleanseAndCurateSuppliers**. Vérifiez l'absence d'erreurs de génération.  
+5.  Dans la barre de menus, cliquez sur **générer** , puis sur **générer CleanseAndCurateSuppliers**. Vérifiez l'absence d'erreurs de génération.  
   
-6.  Cliquez sur **déboguer** sur la barre de menus et cliquez sur **démarrer le débogage**.  
+6.  Dans la barre de menus, cliquez sur **Déboguer** , puis sur **Démarrer le débogage**.  
   
-7.  Passez en revue les messages dans la **progression** fenêtre et vérifiez que le package exécuté et s’est terminée correctement.  
+7.  Passez en revue les messages dans la fenêtre de **progression** et vérifiez que le package est exécuté et qu’il s’est terminé avec succès.  
   
-     ![Résulte de la fenêtre de progression](../../2014/tutorials/media/et-buildingandrunningthessisproject-02.jpg "résulte de la fenêtre en cours")  
+     ![Résultats de la fenêtre En cours](../../2014/tutorials/media/et-buildingandrunningthessisproject-02.jpg "Résultats de la fenêtre En cours")  
   
-     ![État final à partir de la fenêtre de progression](../../2014/tutorials/media/et-buildingandrunningthessisproject-03.jpg "état Final à partir de la fenêtre de progression")  
+     ![État final de la fenêtre En cours](../../2014/tutorials/media/et-buildingandrunningthessisproject-03.jpg "État final de la fenêtre En cours")  
   
-8.  Cliquez sur **déboguer** sur la barre de menus, cliquez sur **arrêter le débogage** pour arrêter la session de débogage. Si le package échoue, vous devez activer les visionneuses de données pour voir comment les données circulent entre les composants.  
+8.  Cliquez sur **Déboguer** dans la barre de menus et cliquez sur **arrêter le débogage** pour arrêter la session de débogage. Si le package échoue, vous devez activer les visionneuses de données pour voir comment les données circulent entre les composants.  
   
-## <a name="next-step"></a>Étape suivante  
- [Tâche 16 : Vérification avec Master Data Manager](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
+## <a name="next-step"></a>étape suivante  
+ [Tâche 16 : Vérification à l'aide de Master Data Manage](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
   
   

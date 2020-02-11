@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232321"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
@@ -23,7 +23,7 @@ ms.locfileid: "75232321"
 ## <a name="requirements-components-and-concepts"></a>Configuration requise, composants et concepts  
  **Dans cette section :**  
   
--   [Caution](#security)  
+-   [Sécurité](#security)  
   
 -   [Présentation des principaux composants et concepts](#intorkeyconcepts)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75232321"
   
 -   [Composants SQL Server](#sqlserver)  
   
--   [Limitations](#limitations)  
+-   [Limites](#limitations)  
   
 -   [Prise en charge des instructions Backup/Restore](#Support)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232321"
   
 -   [Restauration à partir d’Azure Storage à l’aide de SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>Caution  
+###  <a name="security"></a> Sécurité  
  Voici les considérations relatives à la sécurité et la configuration requise pour la sauvegarde ou la restauration à partir des services de stockage d’objets BLOB Azure.  
   
 -   Lorsque vous créez un conteneur pour le service de stockage d’objets BLOB Azure, nous vous recommandons de définir l’accès sur **privé**. La définition d’un accès privé limite l’accès aux seuls utilisateurs ou comptes capables de fournir les informations nécessaires pour s’authentifier auprès du compte Azure.  
@@ -65,7 +65,7 @@ ms.locfileid: "75232321"
   
  **Objet BLOB :** Fichier de tout type et de toute taille. Il existe deux types d’objets BLOB qui peuvent être stockés dans le service de stockage d’objets BLOB Azure : les objets BLOB de blocs et de pages. La sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des objets blob de pages en tant que type d'objet blob. Les objets BLOB sont adressables à l’aide du format\<d’URL suivant : compte\<de stockage https://\<>. blob.Core.Windows.NET/conteneur>/BLOB>  
   
- ![Stockage d’objets BLOB Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "un stockage Azure Blob")  
+ ![Stockage Blob Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Stockage Blob Azure")  
   
  Pour plus d’informations sur le service de stockage d’objets BLOB Azure, consultez la page [utilisation du service de stockage d’objets BLOB Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "75232321"
 |||||  
 |-|-|-|-|  
 |Instruction de sauvegarde/restauration|Prise en charge|Exceptions|Commentaires|  
-|SAUVEGARDE|&#x2713;|BLOCKSIZE et MAXTRANSFERSIZE ne sont pas prises en charge.|Requiert la spécification de WITH CREDENTIAL|  
+|BACKUP|&#x2713;|BLOCKSIZE et MAXTRANSFERSIZE ne sont pas prises en charge.|Requiert la spécification de WITH CREDENTIAL|  
 |RESTORE|&#x2713;||Requiert la spécification de WITH CREDENTIAL|  
 |RESTORE FILELISTONLY|&#x2713;||Requiert la spécification de WITH CREDENTIAL|  
 |RESTORE HEADERONLY|&#x2713;||Requiert la spécification de WITH CREDENTIAL|  
@@ -142,7 +142,7 @@ ms.locfileid: "75232321"
 |-|-|-|-|  
 |Argument|Prise en charge|Exception|Commentaires|  
 |DATABASE|&#x2713;|||  
-|JOURNAL|&#x2713;|||  
+|LOG|&#x2713;|||  
 ||  
 |TO (URL)|&#x2713;|Contrairement à DISK et TAPE, URL ne prend pas en charge la spécification ou la création d'un nom logique.|Cet argument est utilisé pour spécifier le chemin d'accès de l'URL du fichier de sauvegarde.|  
 |MIRROR TO|&#x2713;|||  
@@ -178,7 +178,7 @@ ms.locfileid: "75232321"
 |-|-|-|-|  
 |Argument|Prise en charge|Exceptions|Commentaires|  
 |DATABASE|&#x2713;|||  
-|JOURNAL|&#x2713;|||  
+|LOG|&#x2713;|||  
 |FROM (URL)|&#x2713;||L'argument FROM URL est utilisé pour spécifier le chemin d'accès de l'URL du fichier de sauvegarde.|  
 |**AVEC les options :**||||  
 |CREDENTIAL|&#x2713;||WITH CREDENTIAL est pris en charge uniquement lors de l’utilisation de l’option Restore FROM URL pour restaurer à partir du service de stockage d’objets BLOB Azure.|  
@@ -233,13 +233,13 @@ ms.locfileid: "75232321"
   
  Quand vous sélectionnez URL comme destination, certaines options de la page **Options de support** sont désactivées.  Les rubriques suivantes contiennent d'autres informations sur la boîte de dialogue Sauvegarder la base de données :  
   
- [Sauvegarder la base de données &#40;page général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+ [Sauvegarder la base de données &#40;page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
  [Sauvegarder la base de données &#40;la page Options de support&#41;](back-up-database-media-options-page.md)  
   
- [Sauvegarder la base de données &#40;la page Options de sauvegarde&#41;](back-up-database-backup-options-page.md)  
+ [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](back-up-database-backup-options-page.md)  
   
- [Créer des informations d’identification-s’authentifier auprès du stockage Azure](create-credential-authenticate-to-azure-storage.md)  
+ [Créer des informations d’identification - Authentification Azure Storage](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a>SQL Server de la sauvegarde sur une URL à l’aide de l’Assistant Plan de maintenance  
  Comme pour la tâche de sauvegarde décrite précédemment, l’Assistant Plan de maintenance de SQL Server Management Studio a été amélioré pour inclure l' **URL** comme l’une des options de destination, ainsi que d’autres objets de prise en charge nécessaires à la sauvegarde dans le stockage Azure, comme les informations d’identification SQL. Pour plus d'informations, consultez la section **Définir les tâches de sauvegarde** dans [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
@@ -253,11 +253,11 @@ ms.locfileid: "75232321"
   
 3.  SQL Server se connecte ensuite au stockage Azure à l’aide des informations d’identification SQL que vous avez fournies et ouvre la boîte **de dialogue localiser le fichier de sauvegarde dans Azure** . Les fichiers de sauvegarde résidant dans le stockage s'affichent sur cette page. Sélectionnez le fichier à utiliser pour la restauration, puis cliquez sur **OK**. Vous revenez dans la boîte de dialogue **Sélectionner les unités de sauvegarde**, et lorsque vous cliquez sur **OK**, vous revenez dans la boîte de dialogue principale **Restaurer** où vous pourrez effectuer la restauration.  Pour plus d'informations, consultez les rubriques ci-dessous :  
   
-     [Page général de restauration de la base de données &#40;&#41;](restore-database-general-page.md)  
+     [Restaurer la base de données &#40;page Général&#41;](restore-database-general-page.md)  
   
      [Page restaurer la base de données &#40;fichiers&#41;](restore-database-files-page.md)  
   
-     [Page Options de restauration de la base de données &#40;&#41;](restore-database-options-page.md)  
+     [Restaurer la base de données &#40;page Options&#41;](restore-database-options-page.md)  
   
 ##  <a name="Examples"></a>Exemples de code  
  Cette section contient les exemples suivants :  

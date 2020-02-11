@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126126"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Intégration de Reporting Services à l'aide de l'accès URL
@@ -29,10 +29,10 @@ ms.locfileid: "63126126"
 >  Les rubriques de cette section vous fournissent quelques idées de base pour l'intégration. Vous pouvez utiliser ces informations pour commencer à concevoir et développer vos propres scénarios d'intégration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Utilisation de l’accès URL dans une application web](integrating-reporting-services-using-url-access-web-application.md)  
+ [Utilisation de l'accès URL dans une application Web](integrating-reporting-services-using-url-access-web-application.md)  
  Décrit comment utiliser l'accès URL pour intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un environnement Web.  
   
- [Utilisation de l’accès URL dans une application Windows](integrating-reporting-services-using-url-access-windows-application.md)  
+ [Utilisation de l'accès URL dans une application Windows](integrating-reporting-services-using-url-access-windows-application.md)  
  Décrit comment utiliser l'accès URL pour intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un environnement [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32.  
   
 ## <a name="see-also"></a>Voir aussi  

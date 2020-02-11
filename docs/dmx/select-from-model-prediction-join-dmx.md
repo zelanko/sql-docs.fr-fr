@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modèle&gt; PREDICTION JOIN (DMX) | Microsoft Docs
+title: SELECT FROM &lt;Model&gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928321"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modèle&gt; PREDICTION JOIN (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Model&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Utilise un modèle d'exploration de données pour prévoir les états des colonnes dans une source de données externe. Le **PREDICTION JOIN** instruction correspond à chaque cas de la requête source et le modèle.  
+  Utilise un modèle d'exploration de données pour prévoir les états des colonnes dans une source de données externe. L’instruction **PREDICTION JOIN** correspond à chaque cas de la requête source au modèle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +35,16 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *n*  
  facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
- *Sélectionnez la liste d’expressions*  
+ *sélectionner la liste d’expressions*  
  Liste séparée par des virgules des identificateurs de colonnes et expressions dérivées du modèle d'exploration de données.  
   
  *model*  
  Identificateur du modèle  
   
- *Sélectionnez Sub*  
+ *sous-sélection*  
  Instruction Select incorporée  
   
- *requête de source de données*  
+ *requête de données sources*  
  Requête source  
   
  *liste de mappage de jointure*  
@@ -53,11 +53,11 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression de condition*  
  facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
- *expression*  
+ *formule*  
  facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
- La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Colonnes dans le \< *liste de mappage de jointure*> sont liées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
+ La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Les colonnes de \<la *liste de mappage de jointure*> sont associées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,15 +69,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La requête source de la jointure de prévision peut être une table ou une requête singleton.  
   
- Vous pouvez spécifier des fonctions de prédiction qui ne retournent pas d’une expression de table dans le \< *liste d’expressions select*> et la \< *expression de condition*>.  
+ Vous pouvez spécifier des fonctions de prédiction qui ne retournent pas d' \<expression de table dans la *liste Sélectionner* une expression> et l' \< *expression de condition*>.  
   
- **NATURAL PREDICTION JOIN** mappe automatiquement ensemble les noms de colonnes de la requête source qui correspondent aux noms de colonne dans le modèle. Si vous utilisez **prédiction naturelle**, vous pouvez omettre la clause ON.  
+ La **jointure de prédiction naturelle** mappe automatiquement les noms de colonnes de la requête source qui correspondent aux noms de colonne dans le modèle. Si vous utilisez la **prédiction naturelle**, vous pouvez omettre la clause on.  
   
  La condition WHERE ne peut être appliquée qu'aux colonnes prédictibles ou associées.  
   
  La clause ORDER BY ne peut accepter qu'une seule colonne comme argument ; autrement dit, vous ne pouvez pas effectuer de tri sur plusieurs colonnes.  
   
-## <a name="example-1-singleton-query"></a>Exemple 1 : Requête singleton  
+## <a name="example-1-singleton-query"></a>Exemple 1 : requête singleton  
  L'exemple suivant montre comment créer une requête permettant de prédire si une personne spécifique achètera ou non une bicyclette en temps réel. Dans cette requête, les données ne sont pas stockées dans une table ou toute autre source de données, mais sont directement entrées dans la requête. La personne spécifiée dans la requête possède les caractéristiques suivantes :  
   
 -   35 ans  
@@ -88,7 +88,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Deux enfants à charge  
   
- À l’aide du modèle d’exploration de données arbre de décision TM et des caractéristiques connues sur le sujet, la requête retourne une valeur booléenne qui indique si la personne a acheté la bicyclette, ainsi un ensemble de valeurs tabulaires, retournées par la [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) (fonction), qui décrivent comment la prédiction a été effectuée.  
+ À l’aide du modèle d’exploration de données arbre de décision TM et des caractéristiques connues sur le sujet, la requête retourne une valeur booléenne qui indique si la personne a acheté le vélo et un ensemble de valeurs tabulaires, retournées par la fonction [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) , qui décrivent comment la prédiction a été effectuée.  
   
 ```  
 SELECT  
@@ -104,8 +104,8 @@ NATURAL PREDICTION JOIN
   2 AS [Total Children]) AS t  
 ```  
   
-## <a name="example-2-using-openquery"></a>Exemple 2 : À l’aide de OPENQUERY  
- L'exemple suivant montre comment créer une requête de prédiction par lot à l'aide d'une liste de clients potentiels stockés dans un dataset externe. Étant donné que la table fait partie d’une vue de source de données qui a été définie sur une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la requête peut utiliser [OPENQUERY](../dmx/source-data-query-openquery.md) pour récupérer les données. Étant donné que les noms des colonnes dans la table sont différentes de celles figurant dans le modèle d’exploration de données, le **ON** clause doit être utilisée pour mapper les colonnes de la table pour les colonnes dans le modèle.  
+## <a name="example-2-using-openquery"></a>Exemple 2 : utilisation de OPENQUERY  
+ L'exemple suivant montre comment créer une requête de prédiction par lot à l'aide d'une liste de clients potentiels stockés dans un dataset externe. Étant donné que la table fait partie d’une vue de source de données qui a été définie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]sur une instance de, la requête peut utiliser [OPENQUERY](../dmx/source-data-query-openquery.md) pour récupérer les données. Étant donné que les noms des colonnes de la table sont différents de ceux du modèle d’exploration de données, la clause **on** doit être utilisée pour mapper les colonnes de la table aux colonnes du modèle.  
   
  La requête retourne le prénom et le nom de toutes les personnes de la table, ainsi qu'une colonne booléenne qui indique si chaque personne est susceptible d'acheter une bicyclette, où 0 signifie « n'achètera probablement pas de bicyclette » et 1 signifie « achètera probablement une bicyclette ». La dernière colonne contient la probabilité du résultat prédit.  
   
@@ -153,7 +153,7 @@ WHERE [BIKE Buyer]
 ORDER BY [LastName] ASC  
 ```  
   
-## <a name="example-3-predicting-associations"></a>Exemple 3 : Prédiction d'associations  
+## <a name="example-3-predicting-associations"></a>Exemple 3 : prédiction des associations  
  L'exemple suivant montre comment créer une prévision en utilisant un modèle construit à partir de l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Association. Les prédictions sur un modèle d'association permettent de recommander des produits associés. Par exemple, la requête suivante retourne les trois produits qui ont le plus de chances d'être achetés ensemble :  
   
 -   Mountain Bottle Cage  
@@ -162,7 +162,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- Le [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) fonction est polymorphe et peut être utilisée avec tous les types de modèle. Vous pouvez utiliser la valeur 3 comme argument pour la fonction afin de limiter le nombre d'articles retournés par la requête. Le **sélectionnez** liste qui suit la clause NATURAL PREDICTION JOIN fournit les valeurs à utiliser comme entrée pour la prédiction.  
+ La fonction [Predict &#40;DMX&#41;](../dmx/predict-dmx.md) est polymorphe et peut être utilisée avec tous les types de modèles. Vous pouvez utiliser la valeur 3 comme argument pour la fonction afin de limiter le nombre d'articles retournés par la requête. La liste de **sélection** qui suit la clause NATURAL PREDICTION JOIN fournit les valeurs à utiliser comme entrée pour la prédiction.  
   
 ```  
 SELECT FLATTENED  
@@ -175,7 +175,7 @@ NATURAL PREDICTION JOIN
   UNION SELECT 'Mountain-200' AS [Model]) AS [v Assoc Seq Line Items ]) AS t  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Expression.Model|  
 |----------------------|  
@@ -183,12 +183,12 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- La colonne contenant l'attribut prédictible `[v Assoc Seq Line Items]` étant une colonne de table, la requête retourne une colonne unique qui contient une table imbriquée. Par défaut, la colonne de table imbriquée est appelée `Expression`. Si votre fournisseur ne prend pas en charge les ensembles de lignes hiérarchiques, vous pouvez utiliser la **FLATTENED** mot clé, comme illustré dans cet exemple, pour que les résultats plus faciles à afficher.  
+ La colonne contenant l'attribut prédictible `[v Assoc Seq Line Items]` étant une colonne de table, la requête retourne une colonne unique qui contient une table imbriquée. Par défaut, la colonne de table imbriquée est appelée `Expression`. Si votre fournisseur ne prend pas en charge les ensembles de lignes hiérarchiques, vous pouvez utiliser le mot clé **aplati** comme indiqué dans cet exemple pour faciliter l’affichage des résultats.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
+ [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

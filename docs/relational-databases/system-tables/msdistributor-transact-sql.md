@@ -18,24 +18,24 @@ ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aa171f268fc6e39d584461dd0c2a4d69345706a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907383"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSdistributor** table contient les propriétés de serveur de distribution. Cette table est stockée dans le **msdb** base de données.  
+  La table **MSdistributor** contient les propriétés du serveur de distribution. Cette table est stockée dans la base de données **msdb** .  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**propriété**|**sysname**|Le nom de la propriété|  
-|**value**|**nvarchar(3000)**|Valeur de la propriété|  
+|**propriété**|**sysname**|Nom de la propriété|  
+|**ajoutée**|**nvarchar (3000)**|Valeur de la propriété|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

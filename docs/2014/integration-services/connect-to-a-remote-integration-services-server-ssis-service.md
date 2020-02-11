@@ -1,5 +1,5 @@
 ---
-title: Se connecter à un serveur Integration Services distant (Service SSIS) | Microsoft Docs
+title: Se connecter à un serveur de Integration Services distant (service SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,23 +16,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060423"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Se connecter à un serveur Integration Services distant (Service SSIS)
     
 > [!IMPORTANT] 
-> Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+> Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
  Pour se connecter à une instance de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un serveur distant, que ce soit à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou d’une autre application de gestion, les utilisateurs de l’application ont besoin d’un ensemble de droits sur le serveur.  
   
 > [!IMPORTANT] 
-> Pour gérer les packages stockés sur un serveur distant, vous n’avez pas besoin de vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
+> Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
-## <a name="connecting-to-integration-services-on-a-remote-server"></a>Connexion à Integration Services sur un serveur distant  
+## <a name="connecting-to-integration-services-on-a-remote-server"></a>Connexion à Integration Services sur un serveur distant  
   
 #### <a name="to-connect-to-integration-services-on-a-remote-server"></a>Pour se connecter à Integration Services sur un serveur distant  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66060423"
     > [!NOTE]  
     >  Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n'est pas spécifique à l'instance. Vous vous connectez au service en utilisant le nom de l'ordinateur sur lequel le service Integration Services s'exécute.  
   
-5.  Cliquer sur **Se connecter**.  
+5.  Cliquez sur **Connecter**.  
   
 > [!NOTE]  
 >  La boîte de dialogue **Rechercher les serveurs** n’affiche pas les instances distantes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. De plus, les options disponibles sous l’onglet **Options de connexion** de la boîte de dialogue **Se connecter au serveur** (cliquez sur le bouton **Options** pour les afficher) ne s’appliquent pas aux connexions [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -87,7 +87,7 @@ ms.locfileid: "66060423"
   
 2.  Dans la page **Applications** de la boîte de dialogue des **propriétés de configuration de Distributed COM** , sélectionnez SQL Server Integration Services 11.0, puis cliquez sur **Propriétés**.  
   
-3.  Sélectionnez la page **Sécurité** .  
+3.  Sélectionnez la page **Security** .  
   
 4.  Utilisez les deux boîtes de dialogue distinctes pour configurer les **autorisations d’accès** et les **autorisations d’exécution**. Aucune distinction entre accès local et accès à distance n'est possible : les autorisations d'accès englobent l'accès local et l'accès à distance, et les autorisations d'exécution incluent l'exécution locale et l'exécution à distance.  
   
@@ -99,13 +99,13 @@ ms.locfileid: "66060423"
  Si vous travaillez sous un compte Windows local sur un ordinateur client, vous pouvez vous connecter au service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un ordinateur distant uniquement si un compte local porte le même nom et mot de passe et si les droits appropriés existent sur l'ordinateur distant.  
   
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Par défaut, le service SSIS ne prend pas en charge la délégation  
-Par défaut, le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ne prend pas en charge la délégation des informations d’identification (fonctionnalité parfois appelée « double saut »). Dans ce scénario, vous opérez sur un ordinateur client, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s’exécute sur un deuxième ordinateur et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s’exécute sur un troisième. Dans un premier temps, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] transmet avec succès vos informations d’identification de l’ordinateur client au deuxième ordinateur sur lequel le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s’exécute. En revanche, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ne peut pas déléguer vos informations d’identification du deuxième ordinateur au troisième sur lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s’exécute.
+Par défaut, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le service ne prend pas en charge la délégation des informations d’identification, ou ce qui est parfois appelé double saut. Dans ce scénario, vous opérez sur un ordinateur client, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s’exécute sur un deuxième ordinateur et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s’exécute sur un troisième. Dans un premier temps, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] transmet avec succès vos informations d’identification de l’ordinateur client au deuxième ordinateur sur lequel le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s’exécute. En revanche, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ne peut pas déléguer vos informations d’identification du deuxième ordinateur au troisième sur lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s’exécute.
 
 Vous pouvez activer la délégation des informations d’identification en octroyant le droit **Approuver cet utilisateur pour la délégation à tous les services (Kerberos uniquement)** au compte de service SQL Server, qui lance le service Integration Services (ISServerExec.exe) en tant que processus enfant. Avant d’octroyer ce droit, demandez-vous s’il est conforme aux exigences de sécurité de votre organisation.
 
 Pour plus d’informations, consultez [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Faire fonctionner Kerberos et la délégation entre domaines avec un package SSIS).
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer un Pare-feu Windows pour l’accès au service SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
+ [Configurer un Pare-feu Windows pour l'accès au service SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   

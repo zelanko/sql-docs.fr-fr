@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de recherche de terme (onglet Avancé) | Microsoft Docs
+title: Éditeur de transformation de recherche de terme (onglet Avancé) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 692cde14a9cc8add332a4bbf6abe9518d3de642f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055208"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Éditeur de transformation de recherche de terme (onglet Avancé).
@@ -28,15 +28,15 @@ ms.locfileid: "66055208"
   
 ## <a name="options"></a>Options  
  **Utiliser la recherche de terme respectant la casse**  
- Indique si la recherche respecte la casse. La valeur par défaut est `False`.  
+ Indique si la recherche respecte la casse. Par défaut, il s’agit de `False`.  
   
  **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](../../2014/integration-services/configure-error-output.md) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation de recherche de terme &#40;onglet Table de référence&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
- [Éditeur de transformation de recherche de terme &#40;onglet Recherche de terme&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Éditeur de transformation de recherche de terme &#40;onglet de la table de référence&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [Éditeur de transformation de recherche de terme &#40;onglet recherche de terme&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [Transformation d'extraction de terme](data-flow/transformations/term-extraction-transformation.md)  
   
   

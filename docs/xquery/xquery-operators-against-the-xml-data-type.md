@@ -1,5 +1,5 @@
 ---
-title: Opérateurs XQuery sur le Type de données xml | Microsoft Docs
+title: Opérateurs XQuery sur le type de données XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945957"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Opérateurs XQuery sur le type de données xml
@@ -32,16 +32,16 @@ ms.locfileid: "67945957"
   
 -   Opérateurs de comparaison de valeurs (eq, ne, lt, gt, le, ge)  
   
--   Opérateurs de comparaison générale (=, ! =, \<, >, \<=, > =)  
+-   Opérateurs pour la comparaison générale (=, ! = \<,, > \<, =, >=)  
   
- Pour plus d’informations sur ces opérateurs, consultez [Expressions de comparaison &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
+ Pour plus d’informations sur ces opérateurs, consultez [expressions de comparaison &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-general-operators"></a>R. Utilisation d'opérateurs généraux  
- La requête illustre l'utilisation d'opérateurs généraux qui s'appliquent à des séquences et qui comparent également des séquences. La requête récupère une séquence de numéros de téléphone pour chaque client à partir de la **AdditionalContactInfo** colonne de la **Contact** table. Cette séquence est ensuite comparée à la séquence de deux numéros de téléphone ("111-111-1111", "222-2222").  
+ La requête illustre l'utilisation d'opérateurs généraux qui s'appliquent à des séquences et qui comparent également des séquences. La requête récupère une séquence de numéros de téléphone pour chaque client à partir de la colonne **AdditionalContactInfo** de la table **contact** . Cette séquence est ensuite comparée à la séquence de deux numéros de téléphone ("111-111-1111", "222-2222").  
   
- La requête utilise le **=** opérateur de comparaison. Chaque nœud dans la séquence situé à droite de la **=** opérateur est comparé à chaque nœud de la séquence situé à gauche. Si les nœuds correspondent, la comparaison de nœud est **TRUE**. Elle est ensuite convertie en int et comparée à 1, puis la requête retourne l'ID de client.  
+ La requête utilise l' **=** opérateur de comparaison. Chaque nœud de la séquence situé à droite de l' **=** opérateur est comparé à chaque nœud de la séquence sur le côté gauche. Si les nœuds correspondent, la comparaison de nœuds a la **valeur true**. Elle est ensuite convertie en int et comparée à 1, puis la requête retourne l'ID de client.  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -55,7 +55,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- Il existe un autre moyen d’observer le fonctionne de la requête précédente : Chaque valeur de numéro téléphone téléphone récupérée à partir de la **AdditionalContactInfo** colonne est comparée à l’ensemble de deux numéros de téléphone. Si la valeur se trouve dans le jeu, le client correspondant est retourné dans le résultat.  
+ Il existe une autre méthode pour observer le fonctionnement de la requête précédente : chaque valeur de numéro de téléphone Récupérée à partir de la colonne **AdditionalContactInfo** est comparée à l’ensemble de deux numéros de téléphone. Si la valeur se trouve dans le jeu, le client correspondant est retourné dans le résultat.  
   
 ### <a name="b-using-a-numeric-operator"></a>B. Utilisation d'un opérateur numérique  
  L'opérateur + de cette requête est un opérateur de valeur, car il s'applique à un seul élément. Par exemple, la valeur 1 est ajoutée à une taille de lot retournée par la requête :  
@@ -78,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. Utilisation d'un opérateur de valeur  
- La requête suivante extrait le <`Picture`> éléments pour un modèle de produit où la taille d’image est « small » :  
+ La requête suivante récupère les éléments de `Picture`> <pour un modèle de produit où la taille de l’image est « petite » :  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -91,10 +91,10 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Étant donné que les deux opérandes pour le **eq** opérateur sont des valeurs atomiques, l’opérateur de valeur est utilisé dans la requête. Vous pouvez écrire la même requête en utilisant l’opérateur de comparaison générale ( **=** ).  
+ Étant donné que les deux opérandes de l’opérateur **EQ** sont des valeurs atomiques, l’opérateur de valeur est utilisé dans la requête. Vous pouvez écrire la même requête à l’aide de l’opérateur de **=** comparaison général ().  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions XQuery impliquant le Type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [Fonctions XQuery sur le type de données XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Données XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

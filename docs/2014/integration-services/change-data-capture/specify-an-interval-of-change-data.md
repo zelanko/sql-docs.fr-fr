@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771207"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Spécifier un intervalle de données modifiées
@@ -73,7 +73,7 @@ ms.locfileid: "62771207"
   
 -   **Calcul de la date et de l’heure de début**. Vous utilisez la date et l'heure de fin du chargement précédent comme date et heure de début actuelles. Si vous utilisez un intervalle fixe pour les chargements incrémentiels, vous pouvez calculer cette valeur en utilisant les fonctions `datetime` de Transact-SQL ou du langage d'expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Autrement, vous devrez peut-être rendre les points de terminaison persistants entre les exécutions et utilisez une tâche d'exécution SQL ou une tâche de script pour charger le point de terminaison précédent.  
   
--   **Calcul de la date et de l’heure de fin**. Si vous utilisez un intervalle fixe pour les chargements incrémentiels, calculez la date et l'heure de fin actuelles sur la base d'un décalage par rapport à la date et à l'heure de début. Là encore, vous pouvez calculer cette valeur à l’aide de la `datetime` fonctions Transact-SQL ou de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] langage d’expression.  
+-   **Calcul de la date et de l’heure de fin**. Si vous utilisez un intervalle fixe pour les chargements incrémentiels, calculez la date et l'heure de fin actuelles sur la base d'un décalage par rapport à la date et à l'heure de début. Là encore, vous pouvez calculer cette valeur à l' `datetime` aide des fonctions de Transact-SQL ou [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] du langage d’expression.  
   
  Dans la procédure suivante, l'intervalle de modification utilise un intervalle fixe et suppose que le package de chargement incrémentiel est exécuté tous les jours sans exception. Sinon, les données modifiées pour les intervalles ratés seraient perdues. Le point de départ pour l'intervalle est avant-hier à minuit, soit une période écoulée comprise entre 24 à 48 heures. Le point de fin pour l'intervalle est hier à minuit (la nuit précédente), soit une période écoulée comprise entre 0 et 24 heures.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62771207"
     > [!NOTE]  
     >  Quand vous utilisez une expression pour définir la valeur d’une variable [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , l’expression est évaluée chaque fois que la valeur de la variable fait l’objet d’un accès.  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
  Une fois que vous avez calculé le point de départ et le point de fin pour une plage de modifications, l'étape suivante consiste à déterminer si les données modifiées sont prêtes.  
   
  **Rubrique suivante :** [Déterminer si les données modifiées sont prêtes](determine-whether-the-change-data-is-ready.md)  
@@ -110,7 +110,7 @@ ms.locfileid: "62771207"
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des variables dans des packages](../use-variables-in-packages.md)   
  [Expressions Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md)   
- [Tache d'exécution de requêtes SQL](../control-flow/execute-sql-task.md)   
+ [Exécution de requêtes SQL, tâche](../control-flow/execute-sql-task.md)   
  [Tâche de script](../control-flow/script-task.md)  
   
   

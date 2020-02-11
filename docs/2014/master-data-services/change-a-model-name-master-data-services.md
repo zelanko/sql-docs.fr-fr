@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d933475231913edeccbc5206afb675916a765302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054217"
 ---
 # <a name="change-a-model-name-master-data-services"></a>Modifier un nom de modèle (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d'un modèle.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -35,14 +35,14 @@ ms.locfileid: "66054217"
   
 2.  Dans la page **Vue du modèle** , dans la barre de menus, pointez sur **Gérer** , puis cliquez sur **Modèles**.  
   
-3.  Sur le **Maintenance du modèle** page, dans la grille, cliquez sur la ligne correspondant au modèle dont le nom que vous souhaitez modifier.  
+3.  Sur la page **maintenance du modèle** , dans la grille, cliquez sur la ligne du modèle portant le nom que vous souhaitez modifier.  
   
     > [!NOTE]  
     >  Vous ne pouvez pas modifier le nom du modèle de métadonnées.  
   
 4.  Cliquez sur **modifier le modèle sélectionné**.  
   
-5.  Dans le **nom_modèle** , tapez le nom du modèle mis à jour.  
+5.  Dans la zone **nom du modèle** , tapez le nom mis à jour du modèle.  
   
 6.  Cliquez sur **Enregistrer le modèle**.  
   

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228072"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introduction au cloud hybride SQL Server 2014
@@ -109,7 +109,7 @@ ms.locfileid: "75228072"
  
 ## <a name="see-also"></a>Voir aussi 
  [Guide du produit SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
- [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
+ [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Série de blogs cloud hybride de Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [Migration d'applications centrées sur les données vers Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  

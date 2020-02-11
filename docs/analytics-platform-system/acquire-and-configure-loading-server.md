@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401485"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Acquérir et configurer un serveur de chargement pour les Data Warehouse parallèles
@@ -86,7 +86,7 @@ Si vous envisagez d’utiliser Integration Services pour le chargement, vous dev
 --> 
   
 ## <a name="Step5"></a>Étape 5 : démarrer le chargement  
-Vous êtes maintenant prêt à commencer le chargement des données. Pour plus d’informations, voir :  
+Vous êtes maintenant prêt à commencer le chargement des données. Pour plus d'informations, consultez les pages suivantes :  
   
 1.  [Outil de chargement de ligne de commande dwloader](dwloader.md)  
   

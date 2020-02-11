@@ -1,5 +1,5 @@
 ---
-title: Prise en charge des constructions dans les procédures stockées compilées en mode natif | Microsoft Docs
+title: Constructions prises en charge dans les procédures stockées compilées en mode natif | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155717"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Constructions prises en charge dans les procédures stockées compilées en mode natif
-  Cette rubrique contient une liste des fonctionnalités prises en charge pour les procédures stockées compilées en mode natif ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)) :  
+  Cette rubrique contient la liste des fonctionnalités prises en charge pour les procédures stockées compilées en mode natif ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)) :  
   
 -   [Programmabilité dans les procédures stockées compilées en mode natif](#pncsp)  
   
@@ -26,11 +26,11 @@ ms.locfileid: "63155717"
   
 -   [Fonctions intégrées dans les procédures stockées compilées en mode natif](#bfncsp)  
   
--   [La surface d’exposition de requête dans les procédures stockées compilées en mode natif](#qsancsp)  
+-   [Surface d'exposition de la requête dans des procédures stockées compilées en mode natif](#qsancsp)  
   
 -   [Audit](#auditing)  
   
--   [Table, requête et les indicateurs de jointure](#tqh)  
+-   [Indicateurs de table, de requête et de jointure](#tqh)  
   
 -   [Limitations sur le tri](#los)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63155717"
   
  Pour plus d'informations sur les constructions qui ne sont pas prises en charge et sur la manière de contourner certaines des fonctionnalités qui ne sont pas prises en charge dans les procédures stockées compilées en mode natif, consultez [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Pour plus d’informations sur les fonctionnalités non prises en charge, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="pncsp"></a> Programmabilité dans les procédures stockées compilées en mode natif  
+##  <a name="pncsp"></a>Programmabilité dans les procédures stockées compilées en mode natif  
  Les constructions suivantes sont admises :  
   
 -   BEGIN ATOMIC (au niveau externe de la procédure stockée), LANGUAGE, ISOLATION LEVEL, DATEFORMAT et DATEFIRST  
@@ -63,10 +63,10 @@ ms.locfileid: "63155717"
   
      Pour optimiser les performances, utilisez un bloc TRY/CATCH pour une procédure stockée compilée en mode natif entière.  
   
-##  <a name="so"></a> Opérateurs pris en charge  
+##  <a name="so"></a>Opérateurs pris en charge  
  Les opérateurs suivants sont pris en charge :  
   
--   [Opérateurs de comparaison &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (par exemple, >, \<, > =, et < =) sont pris en charge dans des instructions conditionnelles (IF, tandis que).  
+-   Les [opérateurs de comparaison &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (par exemple, \<>,, >= et <=) sont pris en charge dans les conditions conditionnelles (if, while).  
   
 -   Opérateurs unaires (+, -).  
   
@@ -78,28 +78,28 @@ ms.locfileid: "63155717"
   
 -   Opérateurs au niveau du bit ~, &, |, et ^  
   
-##  <a name="bfncsp"></a> Fonctions intégrées dans les procédures stockées compilées en mode natif  
+##  <a name="bfncsp"></a>Fonctions intégrées dans les procédures stockées compilées en mode natif  
  Les fonctions suivantes sont prises en charge dans les contraintes par défaut sur les tables optimisées en mémoire et dans les procédures stockées compilées en mode natif.  
   
--   Fonctions mathématiques : ACOS, ASIN, ATAN, ATN2, COS, COT, degrés, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE et TAN  
+-   Fonctions mathématiques : ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE et TAN  
   
--   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et année.  
+-   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et YEAR.  
   
--   Fonctions de chaîne : LEN, LTRIM, RTRIM et SUBSTRING  
+-   Fonctions de chaîne : LEN, LTRIM, RTRIM et SUBSTRING  
   
--   Fonction d’identité : SCOPE_IDENTITY  
+-   Fonction d'identité : SCOPE_IDENTITY  
   
--   Fonctions NULL : ISNULL  
+-   Fonctions NULL : ISNULL  
   
--   Fonctions uniqueidentifier : NEWID et NEWSEQUENTIALID  
+-   Fonctions Uniqueidentifier : NEWID et NEWSEQUENTIALID  
   
--   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
+-   Fonctions d'erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
   
--   Conversions : CAST et CONVERT. Les conversions entre des chaînes de caractères Unicode et non-Unicode (n(var)char et (var)char) ne sont pas prises en charge.  
+-   Conversions : CAST et CONVERT. Les conversions entre des chaînes de caractères Unicode et non-Unicode (n(var)char et (var)char) ne sont pas prises en charge.  
   
 -   Fonctions système : @@rowcount. Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
   
-##  <a name="qsancsp"></a> La surface d’exposition de requête dans les procédures stockées compilées en mode natif  
+##  <a name="qsancsp"></a>Aire de requête dans les procédures stockées compilées en mode natif  
  Les constructions suivantes sont admises :  
   
 -   BETWEEN  
@@ -108,31 +108,31 @@ ms.locfileid: "63155717"
   
 -   CROSS JOIN et INNER JOIN sont uniquement prises en charge avec les requêtes SELECT.  
   
--   Les expressions sont pris en charge dans la liste de sélection et [où &#40;Transact-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) clause s’ils utilisent un opérateur pris en charge. Voir [Opérateurs pris en charge](#so) pour obtenir la liste des opérateurs actuellement pris en charge.  
+-   Les expressions sont prises en charge dans la liste de sélection et [dans &#40;clause Transact-SQL&#41;](/sql/t-sql/queries/where-transact-sql) si elles utilisent un opérateur pris en charge. Voir [Opérateurs pris en charge](#so) pour obtenir la liste des opérateurs actuellement pris en charge.  
   
 -   Prédicat de filtre IS [NOT] NULL  
   
--   À partir de \<table optimisée en mémoire >  
+-   À \<partir de la table mémoire optimisée>  
   
--   [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) est pris en charge, ainsi que les fonctions d’agrégation AVG, COUNT, COUNT_BIG, MIN, MAX et SUM. MIN et MAX ne sont pas pris en charge pour les types nvarchar, char, varchar, varchar, varbinary, et binary. [Clause ORDER BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) est pris en charge avec [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) si une expression dans la liste ORDER BY apparaît de façon textuelle dans la liste GROUP BY. Par exemple, GROUP BY a + b ORDER BY a + b est pris en charge, mais GROUP BY a, b ORDER BY a + b n'est pas pris en charge.  
+-   [Regrouper par &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) est pris en charge, ainsi que les fonctions d’agrégation AVG, COUNT, COUNT_BIG, min, Max et Sum. MIN et MAX ne sont pas pris en charge pour les types nvarchar, char, varchar, varchar, varbinary, et binary. La [clause Order by &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-order-by-clause-transact-sql) est prise en charge avec [GROUP BY &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) si une expression dans la liste order by apparaît textuellement dans la liste Group by. Par exemple, GROUP BY a + b ORDER BY a + b est pris en charge, mais GROUP BY a, b ORDER BY a + b n'est pas pris en charge.  
   
 -   HAVING, assujetti aux mêmes limitations d'expression que la clause WHERE  
   
 -   INSERT VALUES (une ligne par instruction) et INSERT SELECT  
   
--   ORDER BY <sup>1</sup>  
+-   CLASSEMENT par <sup>1</sup>  
   
 -   Prédicats qui ne référencent pas de colonne.  
   
 -   SELECT, UPDATE et DELETE  
   
--   HAUT <sup>1</sup>  
+-   PREMIERS <sup>1</sup>  
   
 -   Affectation de variable dans la liste SELECT.  
   
--   WHERE... AND  
+-   OÙ... LES  
   
- <sup>1</sup> ORDER BY et TOP sont pris en charge dans les procédures stockées compilées en mode natif, avec quelques restrictions :  
+ <sup>1</sup> order by et Top sont pris en charge dans les procédures stockées compilées en mode natif, avec quelques restrictions :  
   
 -   Il n'existe aucune prise en charge de `DISTINCT` dans la clause `SELECT` ou `ORDER BY`.  
   
@@ -151,12 +151,12 @@ ms.locfileid: "63155717"
   
  Ces limitations ne s'appliquent pas à l'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété sur les tables optimisées en mémoire.  
   
-##  <a name="auditing"></a> Audit  
+##  <a name="auditing"></a>Audit  
  L'audit au niveau de la procédure est pris en charge dans les procédures stockées compilées en mode natif. L'audit au niveau de l'instruction n'est pas pris en charge.  
   
  Pour plus d'informations sur l'audit, consultez [Créer une spécification de l'audit du serveur et de la base de données](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-##  <a name="tqh"></a> Table, requête et les indicateurs de jointure  
+##  <a name="tqh"></a>Indicateurs de table, de requête et de jointure  
  Les constructions suivantes sont admises :  
   
 -   Indicateurs INDEX, FORCESCAN et FORCESEEK, dans la syntaxe des indicateurs de table ou dans la [Clause OPTION &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) de la requête.  
@@ -167,18 +167,18 @@ ms.locfileid: "63155717"
   
 -   OPTIMIZE FOR  
   
- Pour plus d’informations, consultez [indicateurs &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql).  
+ Pour plus d’informations, consultez [indicateurs &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql).  
   
-##  <a name="los"></a> Limitations sur le tri  
+##  <a name="los"></a>Limitations sur le tri  
  Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
   
- Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, vous obtenez le message d’erreur : **Msg 41398, niveau 16, état 1, procédure  *\<Nom_procédure >* , ligne  *\<lineNumber >* l’opérateur TOP peut retourner un maximum de 8 192 lignes ;  *\<nombre >* a été demandée.**  
+ Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, le message d’erreur suivant s’affiche : **Message 41398, Niveau 16, État 1, Procédure *\<nom_procédure>*, Ligne *\<numéro_ligne>* L’opérateur TOP peut retourner au maximum 8 192 lignes ; *\<nombre* demandé.**  
   
  Si vous n'avez pas de clause TOP, triez les lignes avec ORDER BY.  
   
  Si vous n'utilisez pas de clause ORDER BY, utilisez une valeur entière avec l'opérateur TOP.  
   
- Exemple avec TOP N = 8192 : Compile  
+ Exemple avec TOP N = 8192 : Compiles  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Exemple avec TOP N > 8192 : La compilation échoue.  
+ Exemple avec TOP N > 8192 : Fails to compile.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  La limitation de 8192 lignes s'applique uniquement à `TOP N` où `N` est une constante, comme dans les exemples précédents.  Si `N` doit être supérieur à 8192, vous pouvez affecter la valeur à une variable et utiliser cette variable avec `TOP`.  
   
- Exemple d’utilisation d’une variable : Compile  
+ Exemple à l'aide d'une variable : Compiles  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitations sur les lignes retournées :** Il existe deux cas où qui peuvent potentiellement réduire le nombre de lignes qui peuvent être retournées par l’opérateur TOP :  
+ **Limitations sur les lignes retournées :** Il existe deux cas où cela peut potentiellement réduire le nombre de lignes qui peuvent être retournées par l’opérateur TOP :  
   
 -   L'utilisation de JOINs dans la requête.  L'impact de JOINs sur une limitation dépend du plan de requête.  
   

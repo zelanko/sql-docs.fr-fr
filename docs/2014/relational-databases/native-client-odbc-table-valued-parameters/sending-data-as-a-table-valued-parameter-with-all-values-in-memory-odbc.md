@@ -1,5 +1,5 @@
 ---
-title: Envoi de données comme un paramètre table avec toutes les valeurs en mémoire (ODBC) | Microsoft Docs
+title: Envoi de données en tant que paramètre table avec toutes les valeurs en mémoire (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205453"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Envoi de données comme paramètre table avec toutes les valeurs en mémoire (ODBC)
-  Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour un autre exemple illustrant des paramètres table, consultez [utiliser les paramètres &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
+  Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser des paramètres table &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
   
-## <a name="prerequisite"></a>Condition préalable  
+## <a name="prerequisite"></a>Configuration requise  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
 ```  
@@ -86,7 +86,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La deuxième étape consiste à lier les colonnes pour le paramètre table. Le focus de paramètre est d'abord défini sur la position ordinale du paramètre table. Puis les colonnes de la valeur de la table sont liées à l’aide de SQLBindParameter de la même façon qu’ils seraient si elles étaient des paramètres de la procédure stockée, mais avec des ordinaux de colonne pour ParameterNumber. S'il y avait plus de paramètres table, nous définirions le focus sur chacun d'eux à tour de rôle et lierions leurs colonnes. Enfin, le focus de paramètre est réinitialisé à la valeur 0.  
+3.  La deuxième étape consiste à lier les colonnes pour le paramètre table. Le focus de paramètre est d'abord défini sur la position ordinale du paramètre table. Ensuite, les colonnes de la valeur de table sont liées à l’aide de SQLBindParameter de la même façon que s’il s’agissait de paramètres de la procédure stockée, mais avec des ordinaux de colonne pour ParameterNumber. S'il y avait plus de paramètres table, nous définirions le focus sur chacun d'eux à tour de rôle et lierions leurs colonnes. Enfin, le focus de paramètre est réinitialisé à la valeur 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -102,7 +102,8 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  Remplissez les mémoires tampons de paramètres. `cbTVP` est défini avec le nombre de lignes à envoyer au serveur.  
+4.  Remplissez les mémoires tampons de paramètres. 
+  `cbTVP` est défini avec le nombre de lignes à envoyer au serveur.  
   
     ```  
     // Populate parameters.  

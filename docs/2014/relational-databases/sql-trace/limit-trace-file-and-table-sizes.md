@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136458"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limiter les tailles de fichier et de table de trace
@@ -29,7 +29,7 @@ ms.locfileid: "63136458"
 > [!NOTE]  
 >  Si vous enregistrez les données de trace dans un fichier existant, vous pouvez ajouter les données au fichier ou écraser le fichier. Si vous choisissez l'ajout au fichier et que la taille du fichier de trace est déjà supérieure ou égale à la taille de fichier maximale spécifiée, vous en êtes averti et pouvez alors augmenter la taille maximale du fichier ou indiquer un autre fichier. Il en est de même pour les tables de trace.  
   
-## <a name="maximum-file-size"></a>Taille de fichier maximale  
+## <a name="maximum-file-size"></a>Taille maximale du fichier  
  Une trace pour laquelle la taille de fichier maximale est spécifiée arrête d'enregistrer les informations de trace dans le fichier dès que cette taille est atteinte. Cette option permet de grouper les événements en fichiers plus petits, plus gérables. Elle permet en outre d'améliorer la fiabilité des traces sans assistance car la trace s'arrête dès que la taille de fichier maximale est atteinte. Vous pouvez définir la taille de fichier maximale des traces créées au moyen de procédures stockées Transact-SQL ou à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  L'option de taille de fichier maximale est limitée à 1 gigaoctet (Go). La taille de fichier maximale par défaut est de 5 mégaoctets (Mo).  

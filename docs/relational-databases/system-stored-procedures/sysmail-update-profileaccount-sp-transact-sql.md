@@ -18,18 +18,18 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 246081eb5c362cb76a4c037693ee6c40b999fcdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037329"
 ---
-# <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Met à jour le numéro de séquence d'un compte dans un profil de messagerie de base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,21 +42,21 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id` L’ID de profil du profil de mise à jour. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id`ID de profil du profil à mettre à jour. *profile_id* est de **type int**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
   
-`[ @profile_name = ] 'profile_name'` Le nom du profil du profil à mettre à jour. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'`Nom de profil du profil à mettre à jour. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
   
-`[ @account_id = ] account_id` L’ID de compte pour mettre à jour. *account_id* est **int**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
+`[ @account_id = ] account_id`ID de compte à mettre à jour. *account_id* est de **type int**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
   
-`[ @account_name = ] 'account_name'` Le nom du compte à mettre à jour. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
+`[ @account_name = ] 'account_name'`Nom du compte à mettre à jour. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
   
-`[ @sequence_number = ] sequence_number` Nouveau numéro de séquence pour le compte. *sequence_number* est **int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
+`[ @sequence_number = ] sequence_number`Nouveau numéro de séquence du compte. *sequence_number* est de **type int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Renvoie une erreur si le compte spécifié n'est pas associé au profil spécifié.  
@@ -65,13 +65,13 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  Si plusieurs comptes possèdent le même numéro de séquence, la messagerie de base de données utilise uniquement l'un d'eux pour un message électronique donné. Dans ce cas, la messagerie de base de données exclut toute garantie en ce qui concerne le compte utilisé pour ce numéro de séquence ou l'utilisation du même compte d'un message à un autre.  
   
- La procédure stockée **sysmail_update_profileaccount_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
+ La procédure stockée **sysmail_update_profileaccount_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant modifie le numéro de séquence du compte `Admin-BackupServer` au sein du profil `AdventureWorks Administrator` dans le **msdb** base de données. Une fois ce code exécuté, le numéro de séquence du compte est `3`. Cela indique qu'il sera utilisé si les deux premiers comptes échouent.  
+ L’exemple suivant modifie le numéro de séquence du compte `Admin-BackupServer` dans le profil `AdventureWorks Administrator` dans la base de données **msdb** . Une fois ce code exécuté, le numéro de séquence du compte est `3`. Cela indique qu'il sera utilisé si les deux premiers comptes échouent.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  
@@ -82,8 +82,8 @@ EXECUTE msdb.dbo.sysmail_update_profileaccount_sp
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Créer un compte de messagerie de base de données](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objets de Configuration de messagerie de base de données](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

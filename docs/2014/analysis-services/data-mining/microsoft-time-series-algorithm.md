@@ -1,5 +1,5 @@
 ---
-title: Algorithme de série chronologique de Microsoft | Microsoft Docs
+title: Algorithme MTS (Microsoft Time Series) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083767"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique fournit des algorithmes de régression qui sont optimisés pour prévoir des valeurs continues, telles que les ventes de produit, au fil du temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MTS (Time Series) fournit des algorithmes de régression optimisés pour la prévision de valeurs continues, telles que les ventes de produits, dans le temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
   
  Le diagramme suivant représente un modèle standard pour prévoir les ventes d'un produit dans quatre régions de ventes différentes dans le temps. Le modèle affiché dans le diagramme affiche des ventes pour chaque région représentée sous la forme de traits de couleur rouge, jaune, violette et bleue. Le trait de chaque région est constitué de deux parties :  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66083767"
   
  La combinaison des données sources et des données de prédiction est appelée une *série*.  
   
- ![Un exemple d’une série chronologique](../media/time-series.gif "un exemple d’une série chronologique")  
+ ![Exemple de série chronologique](../media/time-series.gif "Exemple de série chronologique")  
   
  Les prédictions croisées sont une fonctionnalité importante de l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series). Si vous effectuez l'apprentissage de l'algorithme avec deux séries distinctes mais connexes, vous pouvez utiliser le modèle résultant pour prédire le résultat d'une série en fonction du comportement de l'autre série. Par exemple, les ventes constatées d'un produit peuvent influencer les prévisions de ventes d'un autre produit. La prédiction croisée est également utile pour créer un modèle global qui peut s'appliquer à plusieurs séries. Par exemple, les prédictions pour une région particulière sont instables, car la série n'a pas de données de bonne qualité. Vous pouvez instruire un modèle global sur une moyenne de l'ensemble des quatre régions, puis appliquer le modèle aux différentes séries pour créer des prédictions plus stables pour chaque région.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66083767"
  Chaque trimestre, la société projette de mettre à jour le modèle avec les données de ventes récentes ainsi que leurs prédictions pour modeler des tendances récentes. Pour corriger les magasins qui n'effectuent pas une mise à jour correcte ou régulière des données de ventes, elle créera un modèle de prédiction global et l'utilisera pour créer des prédictions pour toutes les régions.  
   
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
- Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique utilisé un algorithme unique, ARTXP. L’algorithme ARTXP a été optimisé pour les prédictions à court terme et par conséquent, a prédit la valeur probable suivante dans une série. À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique utilise l’algorithme ARTXP et un second algorithme, ARIMA. L'algorithme ARIMA est optimisé pour les prédictions à long terme. Pour obtenir une explication détaillée sur l’implémentation des algorithmes ARTXP et ARIMA, consultez [Références techniques relatives à l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md).  
+ Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MTS (Time Series) utilisait un algorithme unique, ARTxp. L’algorithme ARTXP a été optimisé pour les prédictions à bref terme et, par conséquent, a prédit la valeur probable suivante dans une série. À compter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]de, [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’algorithme MTS (Time Series) utilise à la fois l’algorithme ARTxp et un second algorithme, ARIMA. L'algorithme ARIMA est optimisé pour les prédictions à long terme. Pour obtenir une explication détaillée sur l’implémentation des algorithmes ARTXP et ARIMA, consultez [Références techniques relatives à l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md).  
   
- Par défaut, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series utilise une combinaison des algorithmes quand il analyse des schémas et effectue des prédictions. L’algorithme effectue l’apprentissage de deux modèles séparés sur les mêmes données : un modèle utilise l’algorithme ARTXP et un modèle utilise l’algorithme ARIMA. L'algorithme fusionne ensuite les résultats des deux modèles pour produire la meilleure prédiction sur un nombre variable de tranches de temps. L'algorithme ARTXP étant idéal pour les prédictions à court terme, il pèse plus lourdement au début d'une série de prédictions. Toutefois, à mesure que les tranches de temps que vous prédisez sont éloignées dans le temps, l'algorithme ARIMA pèse plus lourdement.  
+ Par défaut, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series utilise une combinaison des algorithmes quand il analyse des schémas et effectue des prédictions. L’algorithme effectue l’apprentissage de deux modèles distincts sur les mêmes données : un modèle utilise l’algorithme ARTXP et un modèle utilise l’algorithme ARIMA. L'algorithme fusionne ensuite les résultats des deux modèles pour produire la meilleure prédiction sur un nombre variable de tranches de temps. L'algorithme ARTXP étant idéal pour les prédictions à court terme, il pèse plus lourdement au début d'une série de prédictions. Toutefois, à mesure que les tranches de temps que vous prédisez sont éloignées dans le temps, l'algorithme ARIMA pèse plus lourdement.  
   
- Vous pouvez également contrôler la combinaison des algorithmes pour favoriser les prédictions à court ou long terme dans la série chronologique. À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard, vous pouvez spécifier que le [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilisation d’algorithme de série chronologique un des paramètres suivants :  
+ Vous pouvez également contrôler la combinaison des algorithmes pour favoriser les prédictions à court ou long terme dans la série chronologique. À compter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] de standard, vous pouvez spécifier que [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’algorithme MTS (Time Series) utilise l’un des paramètres suivants :  
   
 -   Utiliser uniquement ARTXP pour les prédictions à court terme.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66083767"
   
 -   Utiliser la fusion par défaut des deux algorithmes.  
   
- À compter de [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], vous pouvez personnaliser comment la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de Time Series fusionne les modèles pour la prédiction. Quand vous utilisez un modèle mixte, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series fusionne les deux algorithmes comme suit :  
+ À compter [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]de, vous pouvez personnaliser la [!INCLUDE[msCoName](../../includes/msconame-md.md)] façon dont l’algorithme Time Series fusionne les modèles pour la prédiction. Quand vous utilisez un modèle mixte, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series fusionne les deux algorithmes comme suit :  
   
 -   Seul ARTXP est toujours utilisé pour effectuer les deux premières prédictions.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "66083767"
   
  Les spécifications pour un modèle de série chronologique se présentent comme suit :  
   
--   **Colonne Key Time unique** Chaque modèle doit contenir une colonne numérique ou de date utilisée comme série de cas, qui définit les tranches de temps que le modèle utilisera. Le type de données pour la colonne Key Time peut être un type de données datetime ou un type de données numérique. Toutefois, la colonne doit contenir des valeurs continues, et les valeurs doivent être uniques pour chaque série. La série de cas pour un modèle de série chronologique ne peut pas être stockée dans deux colonnes, telles qu'une colonne d'année et une colonne de mois.  
+-   **Une seule colonne Key Time** Chaque modèle doit contenir une colonne numérique ou de date utilisée comme série de cas, qui définit les tranches de temps que le modèle utilisera. Le type de données pour la colonne Key Time peut être un type de données datetime ou un type de données numérique. Toutefois, la colonne doit contenir des valeurs continues, et les valeurs doivent être uniques pour chaque série. La série de cas pour un modèle de série chronologique ne peut pas être stockée dans deux colonnes, telles qu'une colonne d'année et une colonne de mois.  
   
--   **Colonne prédictible** Chaque modèle doit contenir au moins une colonne prédictible autour de laquelle l’algorithme générera le modèle de série chronologique. Le type de données de la colonne prédictible doit avoir des valeurs continues. Par exemple, vous pouvez prédire la façon dont les attributs numériques, tels que le revenu, les ventes ou la température, changent avec le temps. Toutefois, vous ne pouvez pas utiliser une colonne qui contient des valeurs discrètes, telles que l'état des achats ou le niveau d'éducation, comme colonne prédictible.  
+-   **Colonne prévisible** Chaque modèle doit contenir au moins une colonne prévisible autour de laquelle l’algorithme générera le modèle de série chronologique. Le type de données de la colonne prédictible doit avoir des valeurs continues. Par exemple, vous pouvez prédire la façon dont les attributs numériques, tels que le revenu, les ventes ou la température, changent avec le temps. Toutefois, vous ne pouvez pas utiliser une colonne qui contient des valeurs discrètes, telles que l'état des achats ou le niveau d'éducation, comme colonne prédictible.  
   
--   **Colonne clé de série facultative** Chaque modèle peut avoir une colonne clé supplémentaire qui contient des valeurs uniques qui identifient une série. La colonne clé de série facultative doit contenir des valeurs uniques. Par exemple, un modèle unique peut contenir des ventes pour de nombreux modèles de produits, tant qu'il n'existe qu'un seul enregistrement pour chaque nom de produit pour chaque tranche horaire.  
+-   **Une colonne clé de série facultative** Chaque modèle peut avoir une colonne clé supplémentaire qui contient des valeurs uniques qui identifient une série. La colonne clé de série facultative doit contenir des valeurs uniques. Par exemple, un modèle unique peut contenir des ventes pour de nombreux modèles de produits, tant qu'il n'existe qu'un seul enregistrement pour chaque nom de produit pour chaque tranche horaire.  
   
  Vous pouvez définir les données d’entrée du modèle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series de plusieurs façons différentes. Toutefois, dans la mesure où le format des cas d'entrée affecte la définition du modèle d'exploration de données, vous devez considérer vos exigences opérationnelles et préparer vos données en conséquence. Les deux exemples suivants illustrent la façon dont les données d'entrée affectent le modèle. Dans les deux exemples, le modèle d'exploration de données complété contient des modèles pour quatre séries distinctes :  
   
@@ -98,13 +98,13 @@ ms.locfileid: "66083767"
   
  Dans les deux exemples, vous pouvez prédire les nouvelles ventes à venir et le volume pour chaque produit. Vous ne pouvez pas prédire les nouvelles valeurs pour le produit ou pour la chronologie.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Exemple 1 : Jeu de données de série chronologique avec la série représentée en tant que valeurs de colonne  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Exemple 1 : jeu de données de série chronologique avec la série représentée comme valeurs de colonne  
  Cet exemple utilise la table de cas d'entrée suivante :  
   
 |TimeID|Produit|Ventes|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|A|1000|600|  
-|2/2001|A|1100|500|  
+|1/2001|Un|1 000|600|  
+|2/2001|Un|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -114,15 +114,15 @@ ms.locfileid: "66083767"
   
  La colonne Sales décrit les bénéfices bruts du produit spécifié pour un jour et la colonne Volume décrit la quantité du produit spécifié en stock. Ces deux colonnes contiennent les données utilisées pour effectuer l'apprentissage du modèle. Sales et Volume peuvent être des attributs prédictibles pour chaque série dans la colonne Product.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemple 2 : Jeu de données de série chronologique avec chaque série dans une colonne distincte  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemple 2 : jeu de données de série chronologique avec chaque série dans une colonne distincte  
  Bien que cet exemple utilise fondamentalement les mêmes données d'entrée que le premier exemple, elles sont structurées différemment, comme illustré dans le tableau suivant :  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
 |------------|--------------|---------------|--------------|---------------|  
-|1/2001|1000|600|500|900|  
+|1/2001|1 000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- Dans cette table, la colonne TimeID contient encore la série de cas pour le modèle de série chronologique, que vous désignez comme colonne Key Time. Toutefois, les colonnes Sales et Volume précédentes sont à présent divisées en deux colonnes, et chacune de ces colonnes est précédée du nom du produit. En conséquence, la colonne TimeID ne contient qu'une seule entrée par jour. Cette opération crée un modèle de série chronologique qui contiendrait quatre colonnes prédictibles : A_Sales, A_Volume, B_Sales et B_Volume.  
+ Dans cette table, la colonne TimeID contient encore la série de cas pour le modèle de série chronologique, que vous désignez comme colonne Key Time. Toutefois, les colonnes Sales et Volume précédentes sont à présent divisées en deux colonnes, et chacune de ces colonnes est précédée du nom du produit. En conséquence, la colonne TimeID ne contient qu'une seule entrée par jour. Un modèle de série chronologique est ainsi créé, qui contient quatre colonnes prédictibles : A_Sales, A_Volume, B_Sales et B_Volume.  
   
  En outre, puisque vous avez réparti les produits dans des colonnes différentes, vous n'avez pas à spécifier une colonne clé de série supplémentaire. Toutes les colonnes du modèle sont une colonne de série de cas ou une colonne prédictible.  
   
@@ -153,10 +153,10 @@ ms.locfileid: "66083767"
 -   Prend en charge l’extraction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Références techniques relatives à l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Parcourir un modèle à l’aide de la visionneuse MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Référence technique de l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)   
  [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

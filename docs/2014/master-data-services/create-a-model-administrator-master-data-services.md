@@ -13,24 +13,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483411"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Créer un administrateur de modèle (Master Data Services)
-  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un administrateur de modèle lorsque vous souhaitez un groupe ou à l’utilisateur **mise à jour** autorisation à tous les objets dans un ou plusieurs modèles.  
+  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un administrateur de modèle lorsque vous souhaitez qu’un groupe ou un utilisateur dispose de l’autorisation **mettre à jour** sur tous les objets dans un ou plusieurs modèles.  
   
 > [!TIP]  
 >  Pour simplifier l'administration, créez un groupe Windows ou local et configurez-le comme un administrateur de modèle. Vous pouvez ensuite ajouter et supprimer des utilisateurs dans le groupe sans accéder à l'interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model-administrator"></a>Pour créer un administrateur de modèle  
   
@@ -48,16 +48,16 @@ ms.locfileid: "65483411"
   
 7.  Cliquez sur le modèle auquel vous souhaitez affecter une autorisation.  
   
-8.  Dans le menu, sélectionnez **mise à jour**.  
+8.  Dans le menu, sélectionnez **mettre à jour**.  
   
 9. Effectuez les étapes 7 et 8 pour chaque modèle que vous souhaitez que le groupe ou l'utilisateur administre.  
   
 10. Cliquez sur **Enregistrer**.  
   
 ## <a name="remarks"></a>Notes  
- N'affectez pas d'autres autorisations à des objets modèle ou membres de hiérarchie. Si vous le faites, l’utilisateur n’est plus un administrateur et ne peut pas afficher le modèle dans une zone fonctionnelle autre que **Explorer**.  
+ N'affectez pas d'autres autorisations à des objets modèle ou membres de hiérarchie. Si vous le faites, l’utilisateur n’est plus un administrateur et ne peut pas afficher le modèle dans une zone fonctionnelle autre que l' **Explorateur**.  
   
- Il existe une exception : si l’utilisateur a **mise à jour** autorisation affectée à une hiérarchie **racine** sur le **membres de hiérarchie** onglet, l’utilisateur est toujours considéré comme un modèle administrateur.  
+ Il existe une exception : si l’utilisateur a l’autorisation **mise à jour** attribuée à une **racine** de la hiérarchie sous l’onglet **membres de hiérarchie** , l’utilisateur est toujours considéré comme un administrateur de modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md)   

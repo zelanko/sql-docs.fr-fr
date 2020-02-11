@@ -1,5 +1,5 @@
 ---
-title: Désinstaller la Version autonome du Générateur de rapports (Générateur de rapports) | Microsoft Docs
+title: Désinstaller la version autonome de Générateur de rapports (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108660"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Désinstaller la version autonome du Générateur de rapports (Générateur de rapports)
@@ -40,7 +40,7 @@ ms.locfileid: "66108660"
   
 1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
-2.  Dans le **Open** zone de texte, tapez `cmd.`  
+2.  Dans la zone de texte **ouvrir** , tapez`cmd.`  
   
 3.  Dans la fenêtre d'invite de commandes, naviguez jusqu'au dossier avec ReportBuilder3_x86.msi.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66108660"
 1.  Appuyez sur **Entrée**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer, désinstaller et prise en charge du Générateur de rapports](../install-uninstall-and-report-builder-support.md)   
- [Installer la Version autonome du Générateur de rapports &#40;Générateur de rapports&#41;](install-report-builder.md)  
+ [Installer, désinstaller et Générateur de rapports la prise en charge](../install-uninstall-and-report-builder-support.md)   
+ [Installer la version autonome de Générateur de rapports &#40;Générateur de rapports&#41;](install-report-builder.md)  
   
   

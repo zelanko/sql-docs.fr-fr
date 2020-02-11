@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalité de sélection (exploration de données) | Microsoft Docs
+title: Sélection des fonctionnalités (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084416"
 ---
 # <a name="feature-selection-data-mining"></a>Sélection des fonctionnalités (exploration de données)
-  *Sélection des fonctionnalités* est un terme couramment utilisé dans l’exploration de données pour décrire les outils et techniques disponibles pour réduire les entrées à une taille gérable pour le traitement et l’analyse. Sélection de fonctionnalités implique non seulement *la réduction de cardinalité*, ce qui signifie que d’imposer une coupure aléatoire ou prédéfinie sur le nombre d’attributs pouvant être pris en compte lors de la création d’un modèle, mais également le choix des attributs, ce qui signifie que que l’analyste ou l’outil de modélisation activement sélectionne ou ignore les attributs en fonction de leur utilité pour l’analyse.  
+  La *sélection des fonctionnalités* est un terme couramment utilisé dans l’exploration de données pour décrire les outils et les techniques disponibles pour réduire les entrées à une taille gérable pour le traitement et l’analyse. La sélection des caractéristiques implique non seulement une réduction de la *cardinalité*, ce qui signifie imposer une coupure arbitraire ou prédéfinie sur le nombre d’attributs qui peuvent être pris en compte lors de la création d’un modèle, mais également le choix des attributs, ce qui signifie que l’analyste ou l’outil de modélisation sélectionne ou ignore activement les attributs en fonction de leur utilité pour l’analyse.  
   
  La possibilité d'appliquer la sélection des fonctionnalités est essentielle pour une analyse efficace, car les datasets contiennent souvent beaucoup plus d'informations que nécessaire pour générer le modèle. Par exemple, un dataset peut contenir 500 colonnes qui décrivent les caractéristiques des clients, mais si les données de certaines colonnes sont très éparses, vous tireriez peu de bénéfices à les ajouter au modèle. Si vous gardez les colonnes inutiles pendant la génération du modèle, plus d'UC et de mémoire sont nécessaires au cours du processus d'apprentissage, et plus d'espace de stockage est requis pour le modèle terminé.  
   
@@ -44,7 +44,8 @@ ms.locfileid: "66084416"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Sélection des fonctionnalités pour l'exploration de données Analysis Services  
  Habituellement, la sélection des fonctionnalités est effectuée automatiquement dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], et chaque algorithme comporte un ensemble de techniques par défaut permettant d'appliquer intelligemment la réduction des fonctionnalités. La sélection des fonctionnalités est toujours effectuée avant l'apprentissage du modèle, afin de choisir automatiquement les attributs d'un dataset qui sont le plus susceptibles d'être utilisés dans le modèle. Toutefois, vous pouvez également définir manuellement des paramètres pour influencer le comportement de la sélection des fonctionnalités.  
   
- En général, la sélection des fonctionnalités calcule un score pour chaque attribut, puis retient uniquement les attributs qui ont les meilleurs scores. Vous pouvez également ajuster le seuil pour les scores les plus élevés. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour calculer les scores ; la méthode exacte appliquée dans un modèle dépend de ces facteurs :  
+ En général, la sélection des fonctionnalités calcule un score pour chaque attribut, puis retient uniquement les attributs qui ont les meilleurs scores. Vous pouvez également ajuster le seuil pour les scores les plus élevés. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour calculer les scores ; la méthode exacte appliquée dans un modèle dépend de ces facteurs :  
   
 -   Algorithme utilisé dans votre modèle  
   
@@ -62,14 +63,14 @@ ms.locfileid: "66084416"
   
  Le score *d’intérêt et de pertinence* est utilisé pour classer par ordre de priorité et trier les attributs dans des colonnes qui contiennent des données numériques continues non binaires.  
   
- *L’entropie de Shannon* et deux scores *bayésiens* sont disponibles pour les colonnes qui contiennent des données discrètes et discrétisées. Toutefois, si le modèle contient des colonnes continues, le score d'intérêt et de pertinence est utilisé pour évaluer toutes les colonnes d'entrée, afin de garantir la cohérence.  
+ *L’entropie de Shannon* et deux scores *bayésiens* sont disponibles pour les colonnes qui contiennent des données discrètes et discrétisation. Toutefois, si le modèle contient des colonnes continues, le score d'intérêt et de pertinence est utilisé pour évaluer toutes les colonnes d'entrée, afin de garantir la cohérence.  
   
  La section suivante décrit chaque méthode de sélection des fonctionnalités.  
   
 #### <a name="interestingness-score"></a>Score d'intérêt et de pertinence  
- Une fonctionnalité présente un intérêt si elle fournit des informations utiles. Étant donné que la définition de ce qui est utile varie selon le scénario, l’industrie d’exploration de données a développé des différentes façons de mesurer *pertinence*. Par exemple, *fantaisie* peut être intéressant de détection d’observation ABERRANTE, mais la possibilité de faire la distinction entre des éléments étroitement liés connexes, ou *poids discriminant*, peut être plus intéressante pour classification.  
+ Une fonctionnalité présente un intérêt si elle fournit des informations utiles. Étant donné que la définition de ce qui est utile varie selon le scénario, le secteur de l’exploration de données a développé différentes façons de mesurer l' *intérêt*. Par exemple, la *nouveauté* peut être intéressante dans la détection de valeurs hors norme, mais la possibilité de faire la distinction entre des éléments étroitement liés, ou un *poids distinctif*, peut être plus intéressante pour la classification.  
   
- La mesure de pertinence utilisée dans SQL Server Analysis Services est *entropie*, ce qui signifie que les attributs avec des distributions aléatoires ont une entropie plus élevée et moins d’informations ; par conséquent, ces attributs sont inférieurs intéressant. L'entropie pour un attribut particulier est comparée à l'entropie de tous les autres attributs, comme suit :  
+ La mesure d’intérêt qui est utilisée dans SQL Server Analysis Services est *basée sur l’entropie*, ce qui signifie que les attributs avec des distributions aléatoires ont une entropie plus élevée et un gain d’informations plus faible. par conséquent, ces attributs sont moins intéressants. L'entropie pour un attribut particulier est comparée à l'entropie de tous les autres attributs, comme suit :  
   
  Intérêt/Pertinence(Attribut) = - (m - Entropie(Attribut)) * (m - Entropie(Attribut))  
   
@@ -77,7 +78,7 @@ ms.locfileid: "66084416"
   
  Ce score est utilisé par défaut chaque fois que la colonne contient des données numériques continues non binaires.  
   
-#### <a name="shannons-entropy"></a>L’entropie de Shannon  
+#### <a name="shannons-entropy"></a>Entropie de Shannon  
  L'entropie de Shannon mesure l'incertitude d'une variable aléatoire pour un résultat particulier. Par exemple, l'entropie d'une partie de pile ou face peut être représentée comme une fonction de la probabilité de la pièce tombant côté pile.  
   
  Analysis Services utilise la formule suivante pour calculer l'entropie de Shannon :  
@@ -106,24 +107,24 @@ ms.locfileid: "66084416"
 |Algorithme|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme Microsoft Naïve Bayes accepte uniquement les attributs discrets ou discrétisés ; par conséquent, il ne peut pas utiliser le score d'intérêt et de pertinence.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md).|  
-|MDT (Microsoft Decision Trees)|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Si des colonnes contiennent des valeurs continues non binaires, le score d'intérêt et de pertinence est utilisé pour toutes les colonnes afin de garantir la cohérence. Sinon, la méthode de sélection des fonctionnalités par défaut ou la méthode que vous avez spécifiée lors de la création du modèle est utilisée.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Références techniques relatives à l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md).|  
+|Arbres de décision|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Si des colonnes contiennent des valeurs continues non binaires, le score d'intérêt et de pertinence est utilisé pour toutes les colonnes afin de garantir la cohérence. Sinon, la méthode de sélection des fonctionnalités par défaut ou la méthode que vous avez spécifiée lors de la création du modèle est utilisée.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Références techniques relatives à l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Réseau neuronal|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme MNN (Microsoft Neural Network, réseau neuronal de Microsoft) peut utiliser les deux méthodes de type bayésien et entropie tant que les données contiennent des colonnes continues.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MDT (Microsoft Decision Trees)](microsoft-neural-network-algorithm-technical-reference.md).|  
-|MLR (Microsoft Logistic Regression)|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Bien que l'algorithme MLR (Microsoft Logistic Regression) soit basé sur l'algorithme MNN (Microsoft Neural Network), vous ne pouvez pas personnaliser les modèles de régression logistique de façon à contrôler le comportement de la sélection des fonctionnalités ; par conséquent, la valeur par défaut de la sélection des fonctionnalités est toujours la méthode la plus appropriée pour l'attribut.<br /><br /> Si tous les attributs sont discrets ou discrétisés, la valeur par défaut est BDEU.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md).|  
+|Régression logique|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Bien que l'algorithme MLR (Microsoft Logistic Regression) soit basé sur l'algorithme MNN (Microsoft Neural Network), vous ne pouvez pas personnaliser les modèles de régression logistique de façon à contrôler le comportement de la sélection des fonctionnalités ; par conséquent, la valeur par défaut de la sélection des fonctionnalités est toujours la méthode la plus appropriée pour l'attribut.<br /><br /> Si tous les attributs sont discrets ou discrétisés, la valeur par défaut est BDEU.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md).|  
 |Clustering|Score d'intérêt et de pertinence|L'algorithme de gestion de clusters Microsoft peut utiliser des données discrètes ou discrétisées. Toutefois, le score de chaque attribut étant calculé en tant que distance et étant représenté sous la forme d'un nombre continu, le score d'intérêt et de pertinence doit être utilisé.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md).|  
 |Régression linéaire|Score d'intérêt et de pertinence|L'algorithme MLR (Microsoft Linear Regression) Microsoft peut utiliser uniquement le score d'intérêt et de pertinence, car il prend en charge uniquement les colonnes continues.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md).|  
-|MAR (Microsoft Association Rules)<br /><br /> Sequence clustering|Non utilisée|La sélection des fonctionnalités n'est pas appelée avec ces algorithmes.<br /><br /> Toutefois, vous pouvez contrôler le comportement de l'algorithme et, si nécessaire, réduire la taille des données d'entrée en définissant la valeur des paramètres MINIMUM_SUPPORT et MINIMUM_PROBABILITY.<br /><br /> Pour plus d’informations, consultez [Informations techniques de référence relatives à l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md) et [Informations techniques de référence relatives à l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
-|Série chronologique|Non utilisée|La sélection des fonctionnalités ne s'applique pas aux modèles de série chronologique.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md).|  
+|Règles d’association<br /><br /> Sequence clustering|Non utilisé|La sélection des fonctionnalités n'est pas appelée avec ces algorithmes.<br /><br /> Toutefois, vous pouvez contrôler le comportement de l'algorithme et, si nécessaire, réduire la taille des données d'entrée en définissant la valeur des paramètres MINIMUM_SUPPORT et MINIMUM_PROBABILITY.<br /><br /> Pour plus d’informations, consultez [Informations techniques de référence relatives à l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md) et [Informations techniques de référence relatives à l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
+|Série chronologique|Non utilisé|La sélection des fonctionnalités ne s'applique pas aux modèles de série chronologique.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md).|  
   
 ## <a name="feature-selection-parameters"></a>Paramètres de sélection des fonctionnalités  
  Dans les algorithmes qui prennent en charge la sélection des fonctionnalités, vous pouvez contrôler à quel moment la sélection des fonctionnalités est activée au moyen des paramètres suivants. Chaque algorithme a une valeur par défaut pour le nombre des entrées autorisées, mais vous pouvez remplacer cette valeur par défaut et spécifier le nombre d'attributs. Cette section répertorie les paramètres qui sont fournis pour gérer la sélection des fonctionnalités.  
   
-#### <a name="maximuminputattributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
+#### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
  Si un modèle contient plus de colonnes que le nombre spécifié par le paramètre *MAXIMUM_INPUT_ATTRIBUTES* , l’algorithme ignore toutes les colonnes qu’il évalue comme inintéressantes.  
   
-#### <a name="maximumoutputattributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
+#### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  De manière similaire, si un modèle contient plus de colonnes prédictibles que le nombre spécifié par le paramètre *MAXIMUM_OUTPUT_ATTRIBUTES* , l’algorithme ignore toutes les colonnes qu’il évalue comme inintéressantes.  
   
-#### <a name="maximumstates"></a>MAXIMUM_STATES  
+#### <a name="maximum_states"></a>MAXIMUM_STATES  
  Si un modèle contient plus de cas que le nombre spécifié par le paramètre *MAXIMUM_STATES* , les états les moins utilisés sont regroupés et traités comme étant manquants. Si l'un de ces paramètres a la valeur 0, la sélection des fonctionnalités est désactivée, ce qui affecte le temps de traitement et les performances.  
   
  En plus de ces méthodes de sélection des fonctionnalités, vous pouvez améliorer la capacité de l’algorithme à identifier ou promouvoir des attributs explicites en définissant des *indicateurs de modélisation* sur le modèle ou en définissant des *indicateurs de distribution* sur la structure. Pour plus d’informations sur ces concepts, consultez [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md) et [Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md).  

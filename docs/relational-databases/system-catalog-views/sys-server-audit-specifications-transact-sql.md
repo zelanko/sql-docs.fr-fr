@@ -1,5 +1,5 @@
 ---
-title: Sys.server_audit_specifications (Transact-SQL) | Microsoft Docs
+title: sys. server_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125008"
 ---
-# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
+# <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations à propos des spécifications de l'audit du serveur dans un audit SQL Server sur une instance de serveur. Pour plus d’informations sur SQL Server Audit, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom de la spécification du serveur.|  
-|**server_specification_id**|**Int**|ID de la **server_specification**.|  
-|**create_date**|**DateTime**|Date de création de la spécification d'audit du serveur.|  
-|**modified_date**|**DateTime**|Date de dernière modification de la spécification d'audit du serveur.|  
-|**is_state_enabled**|**tinyint**|État de la spécification d'audit :<br /><br /> 0 - DÉSACTIVÉ<br /><br /> 1 - ACTIVÉE|  
+|**nomme**|**Sa**|Nom de la spécification du serveur.|  
+|**server_specification_id**|**Tiers**|ID de l' **server_specification**.|  
+|**create_date**|**Date/heure**|Date de création de la spécification d'audit du serveur.|  
+|**modified_date**|**Date/heure**|Date de dernière modification de la spécification d'audit du serveur.|  
+|**is_state_enabled**|**tinyint**|État de la spécification d'audit :<br /><br /> 0-DÉSACTIVÉ<br /><br /> 1-ACTIVÉ|  
 |**audit_GUID**|**uniqueidentifier**|GUID de l'audit qui contient cette spécification. Utilisé pendant l'énumération des spécifications d'audit de serveur membres pendant le démarrage du serveur.|  
   
 ## <a name="permissions"></a>Autorisations  
- Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW ANY DEFINITION** autorisation.  
+ Les principaux avec l’autorisation **ALTER ANY Server audit** ou **View any Definition** ont accès à cet affichage catalogue. En outre, le principal ne doit pas être refusé pour **afficher une autorisation de définition** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

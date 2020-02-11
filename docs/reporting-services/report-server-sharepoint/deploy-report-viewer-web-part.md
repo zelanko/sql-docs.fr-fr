@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579989"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
@@ -33,7 +33,7 @@ Utilisez les instructions suivantes pour déployer manuellement le package de so
 
 **Versions SharePoint Server prises en charge :**
 * SharePoint Server 2019
-* SharePoint Server 2016
+* Serveur SharePoint 2016
 * SharePoint Server 2013
 
 **Versions Reporting Services prises en charge :**  
@@ -62,7 +62,7 @@ Cette section montre comment déployer le package de solution sur votre batterie
 
 3. Exécutez l’applet de commande [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) pour déployer la solution de batterie de serveurs.
 
-    **SharePoint 2013**
+    **SharePoint 2013**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
@@ -154,16 +154,16 @@ Les langues suivantes sont prises en charge dans le composant WebPart :
 
     Install-SPRSService : [A] Impossible de caster Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService en [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Le type A provient de 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' dans le contexte 'Default' à l’emplacement 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Le type B provient de 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' dans le contexte 'Default' à l’emplacement 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
     
-    Solution :
+    Solution :
     1. Supprimez le composant WebPart de la Visionneuse de rapports.
     2. Désinstallez SSRS.
     3. Réinstallez le composant WebPart de la Visionneuse de rapports.
 
 * Erreur lors de la tentative de mise à niveau de SharePoint si le mode intégré SharePoint est configuré :
 
-    Impossible de charger le fichier ou l’assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' ou une de ses dépendances. Le système ne trouve pas le fichier spécifié. 00000000-0000-0000-0000-000000000000
+    Impossible de charger le fichier ou l’assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' ou une de ses dépendances. Le système ne peut pas trouver le fichier spécifié. 00000000-0000-0000-0000-000000000000
     
-    Solution :
+    Solution :
     1. Supprimez le composant WebPart de la Visionneuse de rapports.
     2. Désinstallez SSRS.
     3. Réinstallez le composant WebPart de la Visionneuse de rapports.

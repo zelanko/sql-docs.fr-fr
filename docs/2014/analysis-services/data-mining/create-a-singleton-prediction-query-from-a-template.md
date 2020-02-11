@@ -1,5 +1,5 @@
 ---
-title: Créer une requête de prédiction Singleton à partir d’un modèle | Microsoft Docs
+title: Créer une requête singleton de prédiction à partir d’un modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085489"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Créer une requête singleton de prédiction à partir d'un modèle
-  Une requête singleton est utile lorsque vous disposez d’un modèle que vous souhaitez utiliser pour la prédiction, mais ne souhaitez pas mapper à un jeu de données d’entrée externe ou élaborer des prédictions en bloc. Avec une requête singleton, vous pouvez fournir une ou plusieurs valeurs au modèle et immédiatement consulter la valeur prédite.  
+  Une requête singleton est utile lorsque vous avez un modèle que vous souhaitez utiliser pour la prédiction, mais que vous ne souhaitez pas le mapper à un jeu de données d’entrée externe ou effectuer des prédictions en bloc. Avec une requête singleton, vous pouvez fournir une ou plusieurs valeurs au modèle et immédiatement consulter la valeur prédite.  
   
  Par exemple, la requête DMX suivante représente une requête singleton sur le modèle de publipostage ciblé TM_Decision_Tree.  
   
@@ -47,7 +47,7 @@ AS [t]
   
 3.  Dans la boîte de dialogue **Se connecter à Analysis Services** , tapez le nom du serveur qui dispose de l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenant le modèle d'exploration de données à interroger.  
   
-4.  Cliquer sur **Se connecter**.  
+4.  Cliquez sur **Connecter**.  
   
 5.  Le modèle s'ouvre dans la base de données spécifiée, avec un modèle d'exploration de données Explorateur d'objets qui contient des fonctions d'exploration de données et une liste de structures d'exploration de données et de modèles connexes.  
   
@@ -69,20 +69,20 @@ AS [t]
   
 5.  Dans la ligne **modèle d'exploration de données** , tapez le nom du modèle d'exploration de données extrait de la liste des modèles d'exploration de données qui apparaissent dans l' **Explorateur d'objets**.  
   
-     Pour l’exemple de code présenté au début de cette rubrique, le **modèle d’exploration de** ligne a été définie sur le nom, `TM_Decision_Tree`.  
+     Pour l’exemple de code présenté au début de cette rubrique, la ligne du **modèle d’exploration de données** a été `TM_Decision_Tree`définie sur le nom,.  
   
 6.  Dans la ligne **valeur** , tapez la nouvelle valeur des données pour lesquelles vous souhaitez effectuer une prédiction.  
   
-     Pour l’exemple de code présenté au début de cette rubrique, le **valeur** ligne a été définie sur `2` pour prédire le comportement en fonction du nombre d’enfants à domicile d’achat de bicyclettes.  
+     Pour l’exemple de code présenté au début de cette rubrique, la ligne **valeur** a été définie `2` sur pour prédire le comportement d’achat de vélo en fonction du nombre d’enfants à la base.  
   
 7.  Dans la ligne **colonne** , tapez le nom de la colonne du modèle d'exploration de données à laquelle les nouvelles données doivent être mappées.  
   
-     Pour l’exemple de code présenté au début de cette rubrique, le **colonne** ligne a été définie sur `Number Children at Home`.  
+     Pour l’exemple de code présenté au début de cette rubrique, la **** ligne de `Number Children at Home`la colonne a la valeur.  
   
     > [!NOTE]  
     >  Lorsque vous utilisez la boîte de dialogue **Spécifier les valeurs des paramètres du modèle** , vous n'avez pas besoin de mettre le nom de colonne entre crochets. Les crochets seront ajoutés automatiquement.  
   
-8.  Laissez le **alias d’entrée** comme `t`.  
+8.  Laissez l' **alias d’entrée** sous la forme `t`.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -93,6 +93,6 @@ AS [t]
 11. Cliquez sur **Exécuter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Création de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

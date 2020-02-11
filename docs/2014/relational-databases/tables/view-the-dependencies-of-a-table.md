@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196608"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Afficher les dépendances d'une table
@@ -52,7 +52,7 @@ ms.locfileid: "68196608"
   
 2.  Cliquez avec le bouton droit sur une table, puis cliquez sur **Afficher les dépendances**.  
   
-3.  Dans la boîte de dialogue **Dépendances d’objets** _\<nom_objet>_ , sélectionnez soit **Objets dépendants de** _\<nom_objet>_ , soit **Objets dont** _\<nom_objet>_ **dépend**.  
+3.  Dans la boîte de dialogue **dépendances**_\<_ d’objets nom de l’objet>, sélectionnez les **objets qui dépendent du nom de** _ \<l’objet>_ ou **les**_\< _objets dont le nom d’objet>**dépend**.  
   
 4.  Sélectionnez un objet dans la grille **Dépendances** . Le type de l’objet (par exemple « déclencheur » ou « procédure stockée ») apparaît dans la zone **Type** .  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68196608"
   
 #### <a name="to-view-the-objects-that-depend-on-a-table"></a>Pour afficher les objets qui dépendent d'une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68196608"
   
 #### <a name="to-view-the-objects-on-which-a-table-depends"></a>Pour afficher les objets dont dépend une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
