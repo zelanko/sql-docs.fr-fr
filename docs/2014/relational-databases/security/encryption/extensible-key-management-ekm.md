@@ -15,14 +15,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957183"
 ---
 # <a name="extensible-key-management-ekm"></a>Gestion de clés extensible (EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]fournit des fonctionnalités de chiffrement de données avec la *gestion de clés extensible* (EKM), à l’aide du fournisseur *Microsoft Cryptographic API* (mscapi) pour le chiffrement et la génération de clés. Les clés de chiffrement pour les données et le chiffrement à clé sont créés dans des conteneurs de clé transitoires, et ils doivent être exportés d'un fournisseur avant d'être stockés dans la base de données. Cette approche permet à la gestion des clés, qui comprend une hiérarchie de clé de chiffrement et une sauvegarde de clé, d'être gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des fonctions de chiffrement de données en même temps que la *gestion de clés extensible* (EKM, Extensible Key Management) à l’aide du fournisseur de *l’API Microsoft Cryptography* (MSCAPI) pour le chiffrement et la génération de clés. Les clés de chiffrement pour les données et le chiffrement à clé sont créés dans des conteneurs de clé transitoires, et ils doivent être exportés d'un fournisseur avant d'être stockés dans la base de données. Cette approche permet à la gestion des clés, qui comprend une hiérarchie de clé de chiffrement et une sauvegarde de clé, d'être gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Face à la demande croissante de conformité aux normes et aux problèmes liés à la confidentialité des données, les organisations font appel au chiffrement afin d'apporter une solution de « défense en profondeur ». Cette approche est souvent peu pratique car elle utilise uniquement des outils de gestion de chiffrement de base de données. Les fabricants de matériel fournissent des produits qui prennent en charge la gestion des clés dans l’entreprise à l’aide des *modules de la sécurité matériels* . Les périphériques HSM stockent des clés de chiffrement dans les modules matériels ou logiciels. Il s'agit d'une solution plus sécurisée parce que les clés de chiffrement ne résident pas avec les données de chiffrement.  
   
@@ -30,8 +30,7 @@ ms.locfileid: "74957183"
   
  Les implémentations de modules de sécurité matériels varient selon les fournisseurs, et leur utilisation avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite une interface commune. Si MSCAPI fournit cette interface, elle prend en charge uniquement un sous-ensemble des fonctionnalités HSM. Elle connaît aussi d'autres limitations, telles que l'incapacité à rendre persistantes en mode natif des clés symétriques et une absence de prise en charge orientée session.  
   
- La gestion de clés extensible [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux fournisseurs tiers EKM/HSM d’enregistrer leurs modules dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Une fois enregistrés, les utilisateurs de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent utiliser les clés de chiffrement stockées dans les modules EKM. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut ainsi accéder aux fonctionnalités de chiffrement avancées offertes par ces modules, telles que le chiffrement et le déchiffrement en bloc, et les fonctions de gestion de clés, telles que le vieillissement de clé et la permutation de clé.  
+ La gestion de clés extensible [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux fournisseurs tiers EKM/HSM d’enregistrer leurs modules dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Une fois enregistrés, les utilisateurs de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent utiliser les clés de chiffrement stockées dans les modules EKM. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut ainsi accéder aux fonctionnalités de chiffrement avancées offertes par ces modules, telles que le chiffrement et le déchiffrement en bloc, et les fonctions de gestion de clés, telles que le vieillissement de clé et la permutation de clé.  
   
  Quand vous exécutez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans une machine virtuelle Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut utiliser des clés stockées dans [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401). Pour plus d’informations, consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
   
@@ -57,8 +56,7 @@ GO
  Pour désactiver la fonctionnalité, affectez-lui la valeur **0**. Pour plus d’informations sur la définition des options de serveur, consultez [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 ## <a name="how-to-use-ekm"></a>Comment utiliser EKM  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La gestion de clés extensible active les clés de chiffrement qui protègent les fichiers de base de données à stocker dans un périphérique off-box tel qu’une carte à puce, un périphérique USB ou un module EKM/HSM. Cela active également la protection des données des administrateurs de base de données (sauf les membres du groupe sysadmin). Les données peuvent être chiffrées à l’aide de clés de chiffrement auxquelles seul l’utilisateur de base de données a accès sur le module EKM/HSM externe.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La gestion de clés extensible active les clés de chiffrement qui protègent les fichiers de base de données à stocker dans un périphérique off-box tel qu’une carte à puce, un périphérique USB ou un module EKM/HSM. Elle permet aussi la protection des données pour les administrateurs de base de données (sauf les membres du groupe sysadmin). Les données peuvent être chiffrées à l'aide des clés de chiffrement auxquelles seul l'utilisateur de base de données peut accéder sur le module EKM/HSM externe.  
   
  La gestion de clés extensible offre aussi les avantages suivants :  
   
@@ -103,18 +101,17 @@ GO
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>Chiffrement et déchiffrement par un périphérique EKM  
  Vous pouvez utiliser les fonctions et fonctionnalités suivantes pour chiffrer et déchiffrer des données à l'aide des clés symétriques et asymétriques :  
   
-|Fonction ou fonctionnalité|Référence|  
+|Fonction ou fonctionnalité|Informations de référence|  
 |-------------------------|---------------|  
-|Chiffrement à clé symétrique|[CRÉER une clé symétrique &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Chiffrement à clé asymétrique|[CRÉER une clé asymétrique &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|Chiffrement à clé symétrique|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Chiffrement à clé asymétrique|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
 |EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
 |DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
 |EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
-|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY, &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
+|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   
 #### <a name="database-keys-encryption-by-ekm-keys"></a>Chiffrement de clés de base de données par les clés EKM  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut utiliser des clés EKM pour chiffrer d’autres clés dans une base de données. Vous pouvez créer et utiliser à la fois des clés symétriques et asymétriques sur un périphérique EKM. Vous pouvez chiffrer des clés symétriques natives (non-EKM) avec des clés asymétriques EKM.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut utiliser des clés EKM pour chiffrer d’autres clés dans une base de données. Vous pouvez créer et utiliser à la fois des clés symétriques et asymétriques sur un périphérique EKM. Vous pouvez chiffrer des clés symétriques natives (non-EKM) avec des clés asymétriques EKM.  
   
  L'exemple suivant crée une clé symétrique de base de données et la chiffre à l'aide d'une clé sur un module EKM.  
   
@@ -133,42 +130,41 @@ DECRYPTION BY EKM_AKey1
 > [!NOTE]  
 >  Vous ne pouvez pas chiffrer une clé EKM avec une autre clé EKM.  
 >   
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne prend pas en charge la signature des modules avec les clés asymétriques générées par un fournisseur EKM.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne prend pas en charge la signature des modules avec les clés asymétriques générées par un fournisseur EKM.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [Activer TDE à l’aide de EKM](enable-tde-on-sql-server-using-ekm.md)  
   
- [Gestion de clés extensible à l’aide de Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER un fournisseur de services de CHIFFREment &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [SUPPRIMER le fournisseur de services de CHIFFREment &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
- [MODIFIER le fournisseur de services de CHIFFREment &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
- [sys. cryptographic_providers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
- [sys. dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
- [sys. dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
- [sys. dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
- [sys. dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
- [sys. Credential &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
- [CRÉER des informations d’identification &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
+ [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
+ [sys.cryptographic_providers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
+ [sys.dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
+ [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
+ [sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
+ [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
+ [sys.credentials &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
- [CRÉER une clé asymétrique &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
- [DROP ASYMETRIQUE KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
- [CRÉER une clé symétrique &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
- [SUPPRIMER une clé symétrique &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
- [OUVRIR la clé symétrique &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
- [Sauvegarder et restaurer des clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Supprimer et recréer des clés de chiffrement &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Ajouter et supprimer des clés de chiffrement pour le déploiement avec montée en puissance parallèle &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
+ [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
+ [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Sauvegarder la clé principale du service](service-master-key.md)   
  [Restaurer la clé principale du service](restore-the-service-master-key.md)   
  [Créer une clé principale de base de données](create-a-database-master-key.md)   
- [Sauvegarder une clé principale de base de données](back-up-a-database-master-key.md)   
+ [Sauvegarder une clé primaire de base de données](back-up-a-database-master-key.md)   
  [Restaurer une clé principale de base de données](restore-a-database-master-key.md)   
  [Créer des clés symétriques identiques sur deux serveurs](create-identical-symmetric-keys-on-two-servers.md)  
   

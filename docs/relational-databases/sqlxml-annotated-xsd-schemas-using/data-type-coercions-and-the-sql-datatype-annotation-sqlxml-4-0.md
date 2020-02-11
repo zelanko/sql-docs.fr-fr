@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257470"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversions de types de données et annotation sql : DataType (SQLXML 4,0)
@@ -44,10 +44,10 @@ ms.locfileid: "75257470"
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|décimal|CONVERT(money, COLUMN)|  
+|Décimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Heure|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Temps|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Tous les autres|Aucune conversion supplémentaire|  
   
 > [!NOTE]  
@@ -59,28 +59,28 @@ ms.locfileid: "75257470"
 |Type de données SQL Server|Type de données XSD|  
 |--------------------------|-------------------|  
 |**bigint**|**long**|  
-|**binaire2**|**base64Binary**|  
-|**64bits**|**expression**|  
-|**Char**|**chaîne**|  
-|**Date/heure**|**Date/heure**|  
+|**binary**|**base64Binary**|  
+|**bit**|**expression**|  
+|**char**|**chaîne**|  
+|**DATETIME**|**Date/heure**|  
 |**sépar**|**sépar**|  
-|**dissocié**|**Cliquer**|  
+|**float**|**Cliquer**|  
 |**image**|**base64Binary**|  
-|**tiers**|**tiers**|  
+|**int**|**int**|  
 |**money**|**sépar**|  
-|**NCHAR**|**chaîne**|  
-|**Text**|**chaîne**|  
+|**nchar**|**chaîne**|  
+|**ntext**|**chaîne**|  
 |**nvarchar**|**chaîne**|  
 |**chiffre**|**sépar**|  
-|**non**|**dissocié**|  
+|**real**|**float**|  
 |**smalldatetime**|**Date/heure**|  
-|**smallint**|**Résumé**|  
-|**smallmoney**|**sépar**|  
+|**smallint**|**short**|  
+|**SMALLMONEY**|**sépar**|  
 |**sql_variant**|**chaîne**|  
 |**sysname**|**chaîne**|  
-|**financière**|**chaîne**|  
+|**text**|**chaîne**|  
 |**confirmé**|**Date/heure**|  
-|**sa**|**unsignedByte**|  
+|**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
 |**varchar**|**chaîne**|  
 |**uniqueidentifier**|**chaîne**|  

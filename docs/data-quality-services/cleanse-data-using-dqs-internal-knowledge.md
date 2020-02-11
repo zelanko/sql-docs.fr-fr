@@ -15,10 +15,10 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255688"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Nettoyer des données à l'aide de la base de connaissances DQS (interne)
@@ -39,9 +39,9 @@ ms.locfileid: "75255688"
   
 -   Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si les données sources à nettoyer se trouvent dans un fichier Excel. Sinon, vous ne pourrez pas sélectionner le fichier Excel à l'étape de mappage. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Si la version 64 bits d'Excel est utilisée, seuls les fichiers Excel 2003 (.xls) sont pris en charge ; les fichiers Excel 2007 ou 2010 (.xlsx) ne sont pas pris en charge. Si vous utilisez la version 64 bits d'Excel 2007 ou 2010, enregistrez le fichier comme fichier .xls ou fichier .csv, ou installez une version 32 bits d'Excel à la place.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour effectuer le nettoyage des données.  
   
 ##  <a name="Create"></a>Créer un projet de qualité des données de nettoyage  
@@ -105,7 +105,7 @@ ms.locfileid: "75255688"
   
  En fonction du niveau de confiance, les valeurs sont affichée sous les cinq onglets suivants :  
   
-|Tab|Description|  
+|Onglet|Description|  
 |---------|-----------------|  
 |**Recommandée**|Affiche les valeurs de domaine pour lesquelles DQS a identifié les valeurs suggérées dont le niveau de confiance est supérieur à la valeur du *seuil de suggestion automatique* mais inférieur à la valeur du *seuil de correction automatique* .<br /><br /> Les valeurs suggérées sont affichées dans la colonne **Corriger vers** de la valeur d'origine. Vous pouvez cliquer sur la case d'option dans la colonne **Approuver** ou **Refuser** d'une valeur de la grille supérieure pour accepter ou refuser la suggestion pour toutes les instances de la valeur. Dans ce cas, la valeur acceptée se déplace vers l'onglet **Corrigés** et la valeur refusée se déplace vers l'onglet **Non valide** .|  
 |**Nouveau**|Affiche le domaine valide pour lequel DQS ne dispose pas de suffisamment d’informations et, par conséquent, ne peut pas être mappé à un autre onglet. En outre, cet onglet contient également des valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être marqué comme valide.<br /><br /> Si vous pensez que la valeur est correcte, cliquez sur la case d'option située dans la colonne **Approuver** . Sinon, cliquez sur la case d'option située dans la colonne **Refuser** . La valeur acceptée se déplace vers l’onglet **correct** et la valeur rejetée se déplace vers l’onglet **non valide** . Vous pouvez également taper manuellement la valeur correcte en remplacement de la valeur d’origine dans la colonne **corriger vers** de la valeur, puis cliquer sur la case d’option dans la colonne **approuver** pour accepter la modification. Dans ce cas, la valeur se déplace vers l'onglet **Corrigés** .|  

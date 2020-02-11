@@ -16,16 +16,16 @@ ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924783"
 ---
 # <a name="navigating-through-data"></a>Navigation dans les données
-**Jeu d’enregistrements** prend en charge différentes méthodes et propriétés pour naviguer dans le jeu de données résultant. Nous examinons cette fonctionnalité en passant par quelques scénarios avec notre exemple **Recordset** objets.  
+**Recordset** prend en charge différentes méthodes et propriétés pour naviguer dans le jeu de données résultant. Nous examinons cette fonctionnalité en parcourant quelques scénarios avec nos exemples d’objets **Recordset** .  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Accès à un enregistrement](../../../ado/guide/data/jumping-to-a-record.md)  
   

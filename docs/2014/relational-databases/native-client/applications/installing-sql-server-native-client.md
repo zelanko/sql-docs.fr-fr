@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f832c4b55c8a039de440b08e6d2ed3350175e2a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231809"
 ---
 # <a name="installing-sql-server-native-client"></a>Installation de SQL Server Native Client
@@ -64,6 +64,6 @@ ms.locfileid: "75231809"
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’applications avec SQL Server Native Client](installing-sql-server-native-client.md)   
- [Rubriques de procédures relatives à l’installation](../../../sql-server/install/installation-how-to-topics.md)  
+ [Rubriques de procédures relatives à l'installation](../../../sql-server/install/installation-how-to-topics.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Validation et annulation des Transactions | Microsoft Docs
+title: Validation et restauration des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c7c028ca7e89378e959b11f59cad4119cef5086a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083309"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Validation et annulation des transactions
-Pour valider ou restaurer une transaction en mode de validation manuelle, une application appelle **SQLEndTran**. Pilotes pour les SGBD qui prennent en charge les transactions généralement implémentent cette fonction en exécutant un **valider** ou **ROLLBACK** instruction. Le Gestionnaire de pilotes n’appelle pas **SQLEndTran** lorsque la connexion est en mode de validation automatique ; elle retourne simplement SQL_SUCCESS, même si l’application tente de restaurer la transaction. Étant donné que les pilotes pour les SGBD qui ne prennent pas en charge les transactions sont toujours en mode de validation automatique, ils peuvent implémenter **SQLEndTran** retourne SQL_SUCCESS sans rien faire ou l’implémente pas du tout.  
+Pour valider ou restaurer une transaction en mode de validation manuelle, une application appelle **SQLEndTran**. Les pilotes pour les SGBD qui prennent en charge les transactions implémentent généralement cette fonction en exécutant une instruction **Commit** ou **Rollback** . Le gestionnaire de pilotes n’appelle pas **SQLEndTran** lorsque la connexion est en mode de validation automatique. elle retourne simplement SQL_SUCCESS, même si l’application tente de restaurer la transaction. Étant donné que les pilotes pour les SGBD qui ne prennent pas en charge les transactions sont toujours en mode de validation automatique, ils peuvent implémenter **SQLEndTran** pour retourner des SQL_SUCCESS sans effectuer aucune action ou ne pas implémenter le tout.  
   
 > [!NOTE]  
->  Les applications ne doivent pas valider ou restaurer les transactions en exécutant **validation** ou **ROLLBACK** instructions avec **SQLExecute** ou **SQLExecDirect**. Les effets de cette opération ne sont pas définis. Problèmes possibles incluent le pilote n’est plus savoir quand une transaction est active et ces instructions échouent sur les sources de données qui ne prennent pas en charge les transactions. Ces applications doivent appeler **SQLEndTran** à la place.  
+>  Les applications ne doivent pas valider ou restaurer des transactions en exécutant des instructions **Commit** ou **Rollback** avec **SQLExecute** ou **SQLExecDirect**. Les effets de cette action ne sont pas définis. Les problèmes possibles incluent le pilote qui ne sait plus quand une transaction est active et ces instructions échouent sur des sources de données qui ne prennent pas en charge les transactions. Ces applications doivent appeler **SQLEndTran** à la place.  
   
- Si une application passe le handle d’environnement à **SQLEndTran** mais ne passez pas un handle de connexion, le Gestionnaire de pilotes sur le plan conceptuel appelle **SQLEndTran** avec le handle d’environnement pour chaque pilote qui a un ou plusieurs connexions actives dans l’environnement. Le pilote puis valide les transactions sur chaque connexion dans l’environnement. Toutefois, il est important de savoir que le pilote, ni le Gestionnaire de pilotes effectue une validation en deux phases sur les connexions dans l’environnement ; Il s’agit simplement une facilité de programmation d’appeler simultanément **SQLEndTran** pour toutes les connexions dans l’environnement.  
+ Si une application transmet le descripteur d’environnement à **SQLEndTran** mais ne transmet pas de handle de connexion, le gestionnaire de pilotes appelle de manière conceptuelle **SQLEndTran** avec le descripteur d’environnement pour chaque pilote qui a une ou plusieurs connexions actives dans l’environnement. Le pilote valide ensuite les transactions sur chaque connexion dans l’environnement. Toutefois, il est important de se rendre compte que ni le pilote ni le gestionnaire de pilotes n’effectuent une validation en deux phases sur les connexions dans l’environnement. Il s’agit simplement d’une commodité de programmation pour appeler simultanément **SQLEndTran** pour toutes les connexions dans l’environnement.  
   
- (Un *validation en deux phases* est généralement utilisée pour valider des transactions qui sont réparties sur plusieurs sources de données. Dans sa première phase, les sources de données sont interrogés que s’ils peuvent valider leur partie de la transaction. Dans la deuxième phase, la transaction est effectivement validée sur toutes les sources de données. Si toutes les sources de données de réponse dans la première phase qu’ils ne peuvent pas valider la transaction, la deuxième phase ne se produit pas.)
+ (Une *validation en deux phases* est généralement utilisée pour valider des transactions qui sont réparties sur plusieurs sources de données. Dans sa première phase, les sources de données sont interrogées pour déterminer si elles peuvent valider leur partie de la transaction. Dans la deuxième phase, la transaction est effectivement validée sur toutes les sources de données. Si des sources de données répondent à la première phase qu’elles ne peuvent pas valider la transaction, la deuxième phase n’a pas lieu.)

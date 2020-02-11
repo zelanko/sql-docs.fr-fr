@@ -1,5 +1,5 @@
 ---
-title: Type de données prise en charge pour les améliorations ODBC Date / heure | Microsoft Docs
+title: Prise en charge des types de données pour les améliorations de date et d’heure ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1823e1416f546105205782d313f75e148e0aa848
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ee53add852917cdd234c9306c9ddaf46da0818
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63206996"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939609"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations date/heure (ODBC)
   Cette rubrique fournit des informations sur les types ODBC qui prennent en charge les types des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date et time.  
@@ -32,12 +32,12 @@ ms.locfileid: "63206996"
   
  Le tableau ci-dessous correspond au mappage complet de type serveur. Remarquez que certaines cellules contiennent deux entrées ; dans ces cas, la première est la valeur ODBC 3.0 et la seconde la valeur ODBC 2.0.  
   
-|Type de données SQL Server|Type de données SQL|Value|  
+|Type de données SQL Server|Type de données SQL|Valeur|  
 |--------------------------|-------------------|-----------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL. h)<br /><br /> 9 (Sqlext. h)|  
+|Temps|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
   
@@ -52,23 +52,24 @@ ms.locfileid: "63206996"
   
  Lorsque la liaison SQL_C_BINARY est spécifiée, la vérification de l'alignement est effectuée et une erreur signalée en cas d'alignement incorrect. Dans le cas de cette erreur, SQLSTATE a la valeur IM016, avec le message « Alignement des structures non valide ».  
   
-## <a name="data-formats-strings-and-literals"></a>Formats de données : Chaînes et littéraux  
+## <a name="data-formats-strings-and-literals"></a>Formats de données : chaînes et littéraux  
  Le tableau suivant représente les mappages entre les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les types de données ODBC et les littéraux de chaîne ODBC.  
   
 |Type de données SQL Server|Type de données ODBC|Format de chaîne pour les conversions clientes|  
 |--------------------------|--------------------|------------------------------------------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:hh:ss'<br /><br /> Ce type de données possède une précision d'une minute. Le composant des secondes sera égal à zéro en sortie et arrondi par le serveur en entrée.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'aaaa-mm-jj'|  
-|Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
+|Temps|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh : mm : SS [. 9999999] '<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'aaaa-mm-jj hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
   
  Il n'y a pas de modifications aux séquences d'échappement ODBC pour les littéraux de type date/time.  
   
  Dans les résultats, les fractions de seconde utilisent toujours un point (.), plutôt que les deux-points (:).  
   
- Les valeurs de chaîne retournés aux applications ont toujours la même longueur pour une colonne donnée. La longueur maximale des composants année, mois, jour, heure, minute et seconde, est complétée avec des zéros non significatifs, et le jour et l'heure des valeurs datetime sont séparés par un espace. Il y a également un espace entre l'heure et le décalage horaire dans une valeur datetimeoffset. Un décalage horaire est toujours précédé d'un signe ; quand le décalage est nul, le signe est un plus (+). Les fractions de seconde sont complétées si nécessaire avec des zéros à droite, jusqu'à la précision maximale définie pour la colonne. Pour les colonnes datetime, il y a trois chiffres de fractions de seconde. Pour les colonnes smalldatetime, il n'y a pas de chiffres de fractions de seconde et les secondes sont toujours égales à zéro.  
+ Les valeurs de chaîne retournées aux applications sont toujours de la même longueur pour une colonne donnée. La longueur maximale des composants année, mois, jour, heure, minute et seconde, est complétée avec des zéros non significatifs, et le jour et l'heure des valeurs datetime sont séparés par un espace. Il y a également un espace entre l'heure et le décalage horaire dans une valeur datetimeoffset. Un décalage horaire est toujours précédé d'un signe ; quand le décalage est nul, le signe est un plus (+). Les fractions de seconde sont complétées si nécessaire avec des zéros à droite, jusqu'à la précision maximale définie pour la colonne. Pour les colonnes datetime, il y a trois chiffres de fractions de seconde. Pour les colonnes smalldatetime, il n'y a pas de chiffres de fractions de seconde et les secondes sont toujours égales à zéro.  
   
  Une chaîne vide n'est pas un littéral de date et d'heure valide et ne représente pas une valeur NULL. La tentative de convertir une chaîne vide en valeur date/time provoque l'erreur SQLState 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».  
   
@@ -76,7 +77,7 @@ ms.locfileid: "63206996"
   
  Actuellement, le pilote autorise un espace supplémentaire autour des caractères de ponctuation et l'espace entre l'heure et le décalage horaire est facultatif. Toutefois, il se peut qu'il en aille différemment dans une version ultérieure ; les applications ne doivent pas s'appuyer sur le comportement actuel.  
   
-## <a name="data-formats-data-structures"></a>Formats de données : Structures de données  
+## <a name="data-formats-data-structures"></a>Formats de données : structures de données  
  Dans les structures décrites ci-après, ODBC spécifie les contraintes suivantes, extraites du calendrier grégorien :  
   
 -   La plage des mois s'étend de 1 à 12.  
@@ -87,7 +88,7 @@ ms.locfileid: "63206996"
   
 -   La plage des minutes s'étend de 0 à 59.  
   
--   La plage des secondes est 0 comprise entre 0 et 61.9 (n). Cela permet d'ajouter deux secondes intercalaires (au plus) pour conserver la synchronisation avec l'heure sidérale.  
+-   La plage des secondes est 0 comprise entre 0 et 61.9 (n). Ceci permet d’ajouter jusqu’à deux secondes intercalaires pour conserver la synchronisation avec l’heure sidérale.  
   
      Notez que, comme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas les secondes intercalaires, les valeurs de de secondes supérieures à 59 provoquent une erreur de serveur.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "63206996"
   
 -   SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-### <a name="sqlsstime2struct"></a>SQL_SS_TIME2_STRUCT  
+### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  Ce struct est complété jusqu'à 12 octets sur les systèmes d'exploitation 32 bits et 64 bits.  
   
 ```  
@@ -117,7 +118,7 @@ typedef struct tagSS_TIME2_STRUCT {
 } SQL_SS_TIME2_STRUCT;  
 ```  
   
-### <a name="sqlsstimestampoffsetstruct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
+### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
 ```  
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
@@ -136,6 +137,6 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  Si `timezone_hour` est négatif, `timezone_minute` doit être négatif ou égal à zéro. Si `timezone_hour` est positif, `timezone_minute` doit être positif ou égal à zéro. Si `timezone_hour` est égal à zéro, `timezone_minute` peut avoir une valeur comprise entre - 59 et + 59.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations date / heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Améliorations de la date et de l’heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

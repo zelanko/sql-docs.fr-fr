@@ -16,29 +16,29 @@ ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921464"
 ---
-# <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-Pour un RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) d’objet, spécifie la priorité de l’exécution du thread asynchrone qui extrait des données.  
+# <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
+Pour un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) RDS, spécifie la priorité d’exécution du thread asynchrone qui récupère les données.  
   
- Utilisez ces constantes avec la **Recordset** »**priorité de Thread d’arrière-plan**« propriété dynamique, qui est référencée dans l’index de base de données des propriétés dynamiques ADO-vers-OLE et expliquée dans la [ Le Service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentation.  
+ Utilisez ces constantes avec la propriété dynamique «**priorité des threads d’arrière-plan**» du **jeu d’enregistrements** , qui est référencée dans l’index de propriété dynamique ADO-to-OLE DB et documentée dans la documentation du [Service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) .  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adPriorityAboveNormal**|4|Définit la priorité entre normal et le plus élevé.|  
-|**adPriorityBelowNormal**|2|Définit la priorité minimum ou normal.|  
-|**adPriorityHighest**|5\.|Définit la priorité le plus élevé possible.|  
-|**AdPriorityLowest**|1|Définit la priorité le plus bas possible.|  
-|**adPriorityNormal**|3|Définit la priorité à la normale.|  
+|**adPriorityAboveNormal**|4|Définit la priorité entre le paramètre normal et le niveau le plus élevé.|  
+|**adPriorityBelowNormal**|2|Définit la priorité entre le niveau le plus bas et le niveau normal.|  
+|**adPriorityHighest**|5|Définit la priorité sur la valeur la plus élevée possible.|  
+|**AdPriorityLowest**|1|Définit la priorité sur la valeur la plus faible possible.|  
+|**adPriorityNormal**|3|Définit la priorité sur normal.|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
- Package : **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
+ Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.AdcPropAsyncThreadPriority.ABOVENORMAL|  
 |AdoEnums.AdcPropAsyncThreadPriority.BELOWNORMAL|  

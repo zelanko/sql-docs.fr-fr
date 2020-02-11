@@ -19,21 +19,21 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e73098a63f193ab868854674d2e77c3ba372c29c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957113"
 ---
-# <a name="transparent-data-encryption-tde"></a>Chiffrement transparent des données (TDE)
-  *Transparent Data Encryption* (TDE) chiffre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les fichiers [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] de données et, appelés chiffrement des données au repos. Vous pouvez prendre plusieurs précautions pour sécuriser la base de données telles que la conception d’un système sécurisé, le chiffrement de ressources confidentielles et la création d'un pare-feu autour des serveurs de base de données. Toutefois, dans un scénario où le support physique (par exemple, les lecteurs ou les bandes de sauvegarde) est volé, une personne malveillante peut juste restaurer ou attacher la base de données et consulter les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés qui sont utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
+# <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
+  *Transparent Data Encryption* (TDE) chiffre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les fichiers [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] de données et, appelés chiffrement des données au repos. Vous pouvez prendre plusieurs précautions pour sécuriser la base de données telles que la conception d’un système sécurisé, le chiffrement de ressources confidentielles et la création d'un pare-feu autour des serveurs de base de données. Toutefois, dans un scénario où le support physique (par exemple, les lecteurs ou les bandes de sauvegarde) est volé, une personne malveillante peut juste restaurer ou attacher la base de données et consulter les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
   
- TDE effectue le chiffrement et le déchiffrement d’E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données stockée dans l’enregistrement de démarrage de base de données à des fins de disponibilité lors de la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données MASTER du serveur ou une clé asymétrique protégée par un module EKM. TDE protège les données au repos, ce qui signifie les données et les fichiers journaux. Cette fonctionnalité permet de se conformer aux nombreuses lois, réglementations et directives établies dans de nombreux secteurs. Cela permet aux développeurs de logiciels de chiffrer des données à l'aide des algorithmes de chiffrement AES et 3DES sans modifier les applications existantes.  
+ TDE effectue le chiffrement et le déchiffrement d’E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données stockée dans l’enregistrement de démarrage de base de données à des fins de disponibilité lors de la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données MASTER du serveur ou une clé asymétrique protégée par un module EKM. Le chiffrement transparent des données protège les données « au repos », autrement dit les fichiers de données et les fichiers journaux. Il permet de se conformer à de nombreuses lois, règles et instructions établies dans différents secteurs professionnels. Cela permet aux développeurs de logiciels de chiffrer des données à l'aide des algorithmes de chiffrement AES et 3DES sans modifier les applications existantes.  
   
 > [!IMPORTANT]
 >  Le chiffrement transparent des données ne permet pas le chiffrement via des canaux de communication. Pour plus d’informations sur le chiffrement des données sur les canaux de communication, consultez [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
->  **Rubriques connexes :**  
+>  **Rubriques connexes :**  
 > 
 >  -   [Transparent Data Encryption avec Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [Déplacer une base de données protégée par TDE vers une autre SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "74957113"
   
  L'aperçu de l'état du chiffrement transparent des données s'applique même au sous-ensemble des régions géographiques où la famille de versions V12 de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] est annoncée comme ayant l'état de disponibilité générale. Le chiffrement transparent des données (TDE) pour [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] n'est pas destiné à être utilisé dans les bases de données de production tant que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] n'annonce pas qu'il est promu de l'aperçu à l'état de disponibilité générale. Pour plus d'informations sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, consultez [Nouveautés de la base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
- **Informations applicables à[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+ **Informations applicables à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
  Une fois sécurisée, la base de données peut être restaurée à l'aide du certificat approprié. Pour plus d'informations sur les certificats, consultez [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -58,14 +58,14 @@ ms.locfileid: "74957113"
   
  L'illustration ci-dessous montre l'architecture du chiffrement TDE. Seuls les éléments de niveau base de données (la clé de chiffrement de base de données et les parties ALTER DATABASE) sont configurables par l'utilisateur lors de l'utilisation du chiffrement transparent des données sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
- ![Affiche la hiérarchie décrite dans cette rubrique.](../../../database-engine/media/tde-architecture.gif "Affiche la hiérarchie décrite dans cette rubrique.")  
+ ![Affiche la hiérarchie décrite dans la rubrique.](../../../database-engine/media/tde-architecture.gif "Affiche la hiérarchie décrite dans cette rubrique.")  
   
 ## <a name="using-transparent-data-encryption"></a>Utilisation du chiffrement transparent des données  
  Pour utiliser le chiffrement transparent des données, procédez comme suit :  
   
 ||  
 |-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 -   Créez une clé principale.  
   
@@ -110,19 +110,19 @@ GO
   
 |Commande ou fonction|Objectif|  
 |-------------------------|-------------|  
-|[CRÉER une clé de CHIFFREment de base de données &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Crée une clé permettant de chiffrer une base de données.|  
+|[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Crée une clé permettant de chiffrer une base de données.|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Modifie la clé qui permet de chiffrer une base de données.|  
-|[SUPPRIMER la clé de CHIFFREment de base de données &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-database-transact-sql)|Supprime la clé qui était utilisée pour chiffrer une base de données.|  
-|[Options ALTER DATABASE SET &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Présente l'option `ALTER DATABASE` qui est utilisée pour activer le chiffrement transparent des données.|  
+|[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|Supprime la clé qui était utilisée pour chiffrer une base de données.|  
+|[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Présente l'option `ALTER DATABASE` qui est utilisée pour activer le chiffrement transparent des données.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Affichages catalogue et vues de gestion dynamique  
  Le tableau suivant indique les affichages catalogue et les vues de gestion dynamique du chiffrement transparent des données.  
   
 |Affichage catalogue ou vue de gestion dynamique|Objectif|  
 |---------------------------------------------|-------------|  
-|[sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Affichage catalogue qui affiche des informations sur la base de données.|  
-|[sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Affichage catalogue qui indique les certificats inclus dans une base de données.|  
-|[sys. dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Vue de gestion dynamique qui fournit des informations sur les clés de chiffrement utilisées dans une base de données et sur l'état de chiffrement d'une base de données.|  
+|[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Affichage catalogue qui affiche des informations sur la base de données.|  
+|[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Affichage catalogue qui indique les certificats inclus dans une base de données.|  
+|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Vue de gestion dynamique qui fournit des informations sur les clés de chiffrement utilisées dans une base de données et sur l'état de chiffrement d'une base de données.|  
   
 ## <a name="permissions"></a>Autorisations  
  Chaque fonctionnalité et commande TDE requiert des autorisations individuelles, décrites dans les tableaux précédents.  
@@ -234,8 +234,8 @@ GO
  [Activer TDE à l’aide de EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Transparent Data Encryption avec Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [Chiffrement SQL Server](sql-server-encryption.md)   
- [SQL Server et clés de chiffrement de base de données &#40;Moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Security Center pour SQL Server Moteur de base de données et Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [&#41;de SQL Server FILESTREAM &#40;](../../blob/filestream-sql-server.md)  
+ [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   
   

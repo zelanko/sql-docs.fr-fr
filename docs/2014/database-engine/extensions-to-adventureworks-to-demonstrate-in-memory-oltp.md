@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228468"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensions à AdventureWorks pour présenter l'OLTP en mémoire
@@ -497,7 +497,7 @@ ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od S
   
  Comme mesure de performances pour la charge de travail, nous utilisons le temps écoulé tel qu'indiqué par ostress.exe après avoir exécuté la charge de travail.  
   
-##### <a name="memory-optimized-tables"></a>Tables à mémoire optimisée  
+##### <a name="memory-optimized-tables"></a>Tables optimisées en mémoire  
  Nous allons commencer par exécuter la charge de travail sur les tables optimisées en mémoire. La commande suivante ouvre 100 threads, chacun exécuté pour 5 000 itérations.  Chaque itération insère 20 commandes dans des transactions séparées. Il y a 20 insertions par itération pour compenser le fait que la base de données est utilisée pour générer les données à insérer. Cela donne un total de 20 * 5 000 \* 100 = 10 000 000 commandes insérées.  
   
  Ouvrez l'invite de commandes RML et exécutez la commande suivante :  
@@ -575,10 +575,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**entrer**|**nomme**|**pages_MB**|  
-|MEMORYCLERK_XTP|Par défaut|94|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Par défaut|0|  
-|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Les régisseurs de mémoire par défaut contiennent les structures de mémoire à l'échelle du système et sont relativement petits. Le régisseur de mémoire de la base de données utilisateur, dans ce cas la base de données dont l'ID est 5, a une taille d'environ 900 Mo.  
   
@@ -624,10 +624,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**entrer**|**nomme**|**pages_MB**|  
-|MEMORYCLERK_XTP|Par défaut|146|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Par défaut|0|  
-|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Comme vous pouvez le voir, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un bit sous 8 Go pour les tables optimisées en mémoire et les index dans l'exemple de base de données.  
   
@@ -671,10 +671,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**entrer**|**nomme**|**pages_MB**|  
-|MEMORYCLERK_XTP|Par défaut|2261|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Par défaut|0|  
-|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  C'est le comportement attendu : la mémoire est récupérée lorsque la charge de travail transactionnelle s'exécute.  
   
@@ -690,10 +690,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**entrer**|**nomme**|**pages_MB**|  
-|MEMORYCLERK_XTP|Par défaut|1863|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Par défaut|0|  
-|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Utilisation du disque pour les tables optimisées en mémoire  
  La taille globale sur disque des fichiers de point de contrôle d'une base de données à un moment donné peut être récupérée à l'aide de la requête :  
@@ -883,5 +883,5 @@ ORDER BY state, file_type
  Dans ce cas, il existe deux paires de fichiers de point de contrôle avec l’état « under construction », signifiant que plusieurs paires de fichiers ont été déplacées vers l’état « under construction », probablement en raison du haut niveau de concurrence dans la charge de travail. Plusieurs threads simultanés ont nécessité une nouvelle paire de fichiers en même temps ; par conséquent, une paire est passée de l’état « precreated » à l’état « under construction ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#40;de l’optimisation en mémoire de l’OLTP en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

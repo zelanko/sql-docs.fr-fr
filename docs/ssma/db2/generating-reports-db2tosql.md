@@ -10,57 +10,57 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2d96b82e3ce883bcf9e704ea001024228be81761
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989657"
 ---
 # <a name="generating-reports-db2tosql"></a>Génération de rapports (DB2ToSQL)
-Les rapports de certaines activités effectuées à l’aide des commandes sont générées dans la Console SSMA au niveau d’arborescence objet.  
+Les rapports de certaines activités effectuées à l’aide de commandes sont générés dans la console SSMA au niveau de l’arborescence d’objets.  
   
-Utilisez la procédure suivante pour générer des rapports :  
+Pour générer des rapports, procédez comme suit :  
   
-1.  Spécifiez le **écriture-résumé-rapports pour** paramètre. Le rapport est stocké en tant que le nom de fichier (si spécifié) ou dans le dossier que vous spécifiez. Le nom de fichier est prédéfinie par le système comme indiqué dans le tableau ci-dessous where, **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
+1.  Spécifiez le paramètre **Write-Resume-Report-to** . Le rapport associé est stocké en tant que nom de fichier (s’il est spécifié) ou dans le dossier que vous spécifiez. Le nom de fichier est prédéfini par le système, comme indiqué dans le tableau ci- ** &lt;dessous&gt; ** , où n est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
   
-    Les rapports à l’égard des commandes sont :  
+    Les rapports vis-à-vis sont les suivants :  
   
     ||||  
     |-|-|-|  
-    |**Sl. Non.**|**Commande**|**Titre de rapport**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;. XML|  
-    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
-    |4|instruction CONVERT-sql|ConvertSQLReport&lt;n&gt;.XML|  
-    |5\.|synchroniser la cible|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6\.|actualisation de base de données|SourceDBRefreshReport&lt;n&gt;. XML|  
+    |**SL. non.**|**Commande**|**Titre de rapport**|  
+    |1|générer un rapport d’évaluation|AssessmentReport&lt;n&gt;. LANGAGE|  
+    |2|convertir-schéma|SchemaConversionReport&lt;n&gt;. LANGAGE|  
+    |3|migrer-données|DataMigrationReport&lt;n&gt;. LANGAGE|  
+    |4|Convert-SQL-Statement|ConvertSQLReport&lt;n&gt;. LANGAGE|  
+    |5|synchroniser-cible|TargetSynchronizationReport&lt;n&gt;. LANGAGE|  
+    |6|actualisation à partir de la base de données|SourceDBRefreshReport&lt;n&gt;. LANGAGE|  
   
     > [!IMPORTANT]  
-    > Un rapport de sortie est différent de rapport d’évaluation. Le premier est un rapport sur les performances d’une commande exécutée lors de la, ce dernier est un rapport XML pour la consommation par programmation.  
+    > Un rapport de sortie est différent du rapport d’évaluation. Le premier est un rapport sur les performances d’une commande exécutée, ce dernier est un rapport XML pour la consommation de programmation.  
   
-    Pour les options de commande pour les rapports de sortie (à partir de Sl. Non. 2 à 4 ci-dessus), reportez-vous à la [l’exécution de la Console SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) section.  
+    Pour les options de commande pour les rapports de sortie (à partir de SL. Non. 2-4 ci-dessus), reportez-vous à la section [exécution de la console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md) .  
   
-2.  Indiquer l’étendue de détail souhaité dans le rapport de sortie en utilisant les paramètres de niveau de détail de rapport :  
-  
-    ||||  
-    |-|-|-|  
-    |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|verbose="false"|Génère un rapport de synthèse de l’activité.|  
-    |2|verbose="true"|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
-  
-    > [!NOTE]  
-    > Les paramètres de niveau de détail de rapport spécifié ci-dessus sont applicables pour générer--rapport d’évaluation, convert-schéma, migrer des données, commandes de l’instruction convert-sql.  
-  
-3.  Indiquer l’étendue de détail que vous souhaitez pour les rapports d’erreurs en utilisant les paramètres de rapport d’erreurs :  
+2.  Indiquez l’étendue des détails souhaités dans le rapport de sortie à l’aide des paramètres de commentaires du rapport :  
   
     ||||  
     |-|-|-|  
-    |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
-    |2|report-errors="true"|Détails de l’erreur / avertissement / messages d’informations.|  
+    |**SL. non.**|**Commande et paramètre**|**Description de la sortie**|  
+    |1|Verbose = "false"|Génère un rapport de synthèse de l’activité.|  
+    |2|Verbose = "true"|Génère un rapport d’état résumé et détaillé pour chaque activité.|  
   
     > [!NOTE]  
-    > Les paramètres de rapport d’erreurs spécifiées ci-dessus sont applicables pour générer--rapport d’évaluation, convert-schéma, migrer des données, commandes de l’instruction convert-sql.  
+    > Les paramètres de commentaires du rapport spécifiés ci-dessus s’appliquent aux commandes Generate-Evaluation-Report, Convert-Schema, Migrate-Data et Convert-SQL-Statement.  
+  
+3.  Indiquez l’étendue des détails souhaités dans les rapports d’erreurs à l’aide des paramètres de rapport d’erreurs :  
+  
+    ||||  
+    |-|-|-|  
+    |**SL. non.**|**Commande et paramètre**|**Description de la sortie**|  
+    |1|rapport-Erreurs = « false »|Aucun détail sur les messages d’erreur/d’avertissement/d’informations.|  
+    |2|Report-errors = "true"|Messages d’erreur/d’avertissement/d’informations détaillés.|  
+  
+    > [!NOTE]  
+    > Les paramètres de rapport d’erreurs spécifiés ci-dessus s’appliquent aux commandes Generate-Evaluation-Report, Convert-Schema, Migrate-Data et Convert-SQL-Statement.  
   
 **Exemple :**  
   
@@ -83,9 +83,9 @@ Utilisez la procédure suivante pour générer des rapports :
 ```  
   
 ### <a name="synchronize-target"></a>synchroniser-cible :  
-La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation. Ensuite, un fichier par nom **TargetSynchronizationReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
+La commande **Synchronize-Target** a un paramètre **signal-Errors-to** qui spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation. Ensuite, un fichier par son **nom&lt;TargetSynchronizationReport&gt;n. XML** est créé à l’emplacement spécifié, où ** &lt;n&gt; ** est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
   
-**Remarque :** Si le chemin du dossier est indiqué, 'rapports erreurs-pour' paramètre devient un attribut facultatif pour la commande 'synchroniser-target'.  
+**Remarque :** Si le chemin d’accès au dossier est donné, le paramètre « Report-Errors-to » devient un attribut facultatif pour la commande « Synchronize-Target ».  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -98,20 +98,20 @@ La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qu
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nom de l’objet :** Spécifie l’ou les objets pris en compte pour la synchronisation (il peut également avoir des noms d’objets individuels ou un nom d’objet de groupe).  
+**nom de l’objet :** Spécifie le ou les objets pris en compte pour la synchronisation (il peut également avoir des noms d’objets individuels ou un nom d’objet de groupe).  
   
-**en cas d’erreur :** Spécifie s’il faut spécifier des erreurs de synchronisation comme des avertissements ou erreurs. Options disponibles pour en cas d’erreur :  
+**en cas d’erreur :** Spécifie si les erreurs de synchronisation doivent être spécifiées en tant qu’avertissements ou erreurs. Options disponibles pour on-Error :  
   
--   Rapport total en tant qu’avertissement  
+-   Rapport-total-AVERTISSEMENT  
   
--   rapport-each-sous-avertissement  
+-   rapport-chaque AVERTISSEMENT  
   
--   Échec-script  
+-   échec du script  
   
-### <a name="refresh-from-database"></a>actualisation-de-base de données :  
-La commande **actualisation à partir de base de données** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par nom **SourceDBRefreshReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
+### <a name="refresh-from-database"></a>actualisation à partir de la base de données :  
+La commande **Refresh-from-Database** a un paramètre **Report-Errors-to** qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par son **nom&lt;SourceDBRefreshReport&gt;n. XML** est créé à l’emplacement spécifié, où ** &lt;n&gt; ** est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
   
-**Remarque :** Si le chemin du dossier est indiqué, 'rapports erreurs-pour' paramètre devient un attribut facultatif pour la commande 'synchroniser-target'.  
+**Remarque :** Si le chemin d’accès au dossier est donné, le paramètre « Report-Errors-to » devient un attribut facultatif pour la commande « Synchronize-Target ».  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -126,15 +126,15 @@ La commande **actualisation à partir de base de données** a **erreurs de rappo
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nom de l’objet :** Spécifie l’ou les objets pris en compte pour actualisation (il peut également avoir des noms d’objets individuels ou un nom d’objet de groupe).  
+**nom de l’objet :** Spécifie le ou les objets pris en compte pour l’actualisation (il peut également avoir des noms d’objets individuels ou un nom d’objet de groupe).  
   
-**en cas d’erreur :** Spécifie s’il faut spécifier des erreurs d’actualisation comme des avertissements ou erreurs. Options disponibles pour en cas d’erreur :  
+**en cas d’erreur :** Spécifie s’il faut spécifier des erreurs d’actualisation comme avertissements ou erreurs. Options disponibles pour on-Error :  
   
--   Rapport total en tant qu’avertissement  
+-   Rapport-total-AVERTISSEMENT  
   
--   rapport-each-sous-avertissement  
+-   rapport-chaque AVERTISSEMENT  
   
--   Échec-script  
+-   échec du script  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exécution de la console SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

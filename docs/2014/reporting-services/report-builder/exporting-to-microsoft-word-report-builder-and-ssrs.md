@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244499"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "75244499"
   
  Les rapports en colonnes de style bulletin d'informations ne sont pas rendus dans Word. Les images et couleurs d'arrière-plan du corps du rapport ainsi que de la page ne sont pas rendus.  
   
-##  <a name="Pagination"></a>La pagination  
+##  <a name="Pagination"></a> Pagination  
  Une fois que le rapport est ouvert dans Word, Word le repagine entièrement en fonction de la taille de la page. La repagination peut provoquer l'insertion de sauts de page à des endroits où vous n'aviez pas l'intention d'en ajouter, et, dans certains cas, peut engendrer la présence dans le rapport exporté de deux sauts de page consécutifs dans une ligne ou l'ajout de pages vides. Vous pouvez essayer de modifier la pagination de Word en ajustant les marges de page.  
   
  Ce convertisseur ne prend en charge que les sauts de page logiques.  
@@ -82,7 +82,7 @@ ms.locfileid: "75244499"
   
  Pour éviter ce problème, utilisez plusieurs séquences de texte plutôt qu'une expression complexe lorsque vous utilisez des expressions dans les pieds de page et les en-têtes. Les deux expressions suivantes sont équivalentes. La première est une expression complexe, la seconde utilise des séquences de texte. Le convertisseur Word analyse uniquement la seconde expression avec succès.  
   
-##  <a name="Interactivity"></a>Interactivité  
+##  <a name="Interactivity"></a> Interactivité  
  Certains éléments interactifs sont pris en charge dans Word. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
@@ -185,13 +185,13 @@ ms.locfileid: "75244499"
 ##  <a name="Differences"></a>Différences entre les convertisseurs Word et Word 2003  
  Les rapports rendus avec les convertisseurs Word ou Word 2003 peuvent être très facilement confondus. Toutefois, vous pouvez remarquer des différences mineures entre les deux formats Word ou Word 2003.  
   
-##  <a name="DeviceInfo"></a>Paramètres d’informations de périphérique  
+##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, par exemple omettre les liens hypertexte et d'extraction ou développer tous les éléments pouvant être activés/désactivés quel que soit l'état d'origine de l'élément au moment du rendu, ce en modifiant les paramètres d'informations de périphérique. Pour plus d’informations, consultez [Word Device Information Settings](../word-device-information-settings.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalités interactives pour différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -13,18 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6707dc2e3c317c8b573eada62b2db07adbfa9d4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243100"
 ---
 # <a name="call-stack-window"></a>Fenêtre Pile des appels
-  La fenêtre **Pile des appels** affiche les modules de la pile des appels, ainsi que les types de données et les valeurs des paramètres transmis aux modules. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] Les modules incluent des déclencheurs, des fonctions et des procédures stockées. Pour afficher la pile des appels, vous devez être en mode débogage.  
+  La fenêtre **Pile des appels** affiche les modules de la pile des appels, ainsi que les types de données et les valeurs des paramètres transmis aux modules. [!INCLUDE[tsql](../../includes/tsql-md.md)] Les modules incluent des déclencheurs, des fonctions et des procédures stockées. Pour afficher la pile des appels, vous devez être en mode débogage.  
   
 ## <a name="task-list"></a>Liste des tâches  
- **Pour accéder à la fenêtre pile des appels**  
+ **Pour accéder à la fenêtre Pile des appels**  
   
 -   Dans le menu **Déboguer** , cliquez sur **Fenêtres**, puis sur **Pile des appels**.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "75243100"
   
 -   Double-cliquez sur le frame de pile.  
   
- **Pour afficher la source d’un frame autre que le frame actuel**  
+ **Pour afficher la source d'un frame autre que le frame actuel**  
   
 -   Cliquez avec le bouton droit sur le frame de pile, puis cliquez sur **Atteindre le code source**.  
   
@@ -46,15 +45,15 @@ ms.locfileid: "75243100"
  Toutes les expressions figurant dans les fenêtres **Variables locales**, **Espion**et **Espion express** sont évaluées en fonction du frame de pile actuel. La fenêtre de l'éditeur de requête affiche le code pour le frame actuel. Par défaut, le frame de pile actuel est le frame dans lequel le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] a suspendu l’exécution. Quand vous passez du frame de pile actuel à un autre frame, les expressions contenues dans les fenêtres **Variables locales**, **Espion**et **Espion express** sont réévaluées dans le contexte du nouveau frame, et le code source du nouveau frame est affiché dans la fenêtre de l’éditeur de requête.  
   
 ## <a name="columns"></a>Colonnes  
- **Nomme**  
+ **Nom**  
  Affiche les informations relatives à un module de la pile des appels.  
   
  Pour la ligne inférieure de la pile des appels, **Nom** répertorie la fenêtre source de l’éditeur de requête et le numéro de ligne du premier appel de la pile. Pour les autres lignes, **Nom** présente le format **Module(Instance.Database)(ParmList) LineNumber**.  
   
- **Modules**  
+ **Module**  
  Nom de la procédure stockée ou de la fonction qui a appelé le frame suivant.  
   
- **Instance. base de données**  
+ **Instance.Database**  
  Instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et base de données qui détiennent le module.  
   
  **ParmList**  
@@ -63,10 +62,10 @@ ms.locfileid: "75243100"
  **LineNumber**  
  Pour toutes les lignes à l’exception de la ligne du haut, **LineNumber** indique la ligne du module qui a appelé le frame. Pour la ligne du haut, **LineNumber** indique la ligne que le débogueur est en train de traiter.  
   
- **Sous**  
+ **Langage**  
  Affiche **Transact-SQL** pour [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](transact-sql-debugger.md)   
- [Informations sur le débogueur Transact-SQL](transact-sql-debugger-information.md)   
+ [Informations du débogueur Transact-SQL](transact-sql-debugger-information.md)   
  [Exécuter pas à pas du code Transact-SQL](step-through-transact-sql-code.md)  

@@ -1,6 +1,6 @@
 ---
-title: Utiliser la boîte à outils | Microsoft Docs
-ms.custom: ''
+title: Utiliser la boîte à outils
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6564bd4d2c8c88c4415be8c19e8a0b791d48dea9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6a7d9029d775b2d1255d683e6b4c3b9d44ccdb31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263368"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252197"
 ---
 # <a name="use-the-toolbox"></a>Utiliser la boîte à outils
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ Vous pouvez sélectionner et faire glisser des éléments, du texte et des contr
   
 Les éléments de la boîte à outils sont regroupés dans des sections appelés onglets. Voici une liste de référence des tâches courantes effectuées à l'aide de la boîte à outils. Des instructions sur leur réalisation sont également proposées.  
   
-|Pour|Action|  
+|À|Action|  
 |------|-----------|  
 |Ouvrir la boîte à outils|Dans le menu **Affichage** , cliquez sur **Boîte à outils**.|  
 |Faire en sorte que la boîte à outils se ferme automatiquement|Ouvrez la boîte à outils. Dans le menu **Fenêtre** , sélectionnez **Masquer automatiquement**.|  

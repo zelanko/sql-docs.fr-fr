@@ -19,10 +19,10 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557801"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données-Data Quality Services (DQS)
@@ -31,9 +31,9 @@ ms.locfileid: "75557801"
 
   Cette rubrique explique comment gérer un projet de qualité des données à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , par exemple ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données.  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="LimitationsRestrictions"></a>Limitations et restrictions  
+###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
   
 -   Vous ne pouvez pas ouvrir un projet verrouillé créé par un autre utilisateur.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "75557801"
 ###  <a name="Prerequisites"></a>Conditions préalables  
  Vous devez disposer d'au moins un projet de qualité des données à gérer.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour gérer un projet de qualité des données.  
   
 ##  <a name="Open"></a>Ouvrir un projet de qualité des données  

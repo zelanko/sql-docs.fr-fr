@@ -1,5 +1,5 @@
 ---
-title: Utilisation des Recordsets | Microsoft Docs
+title: Utilisation des recordsets | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,88 +13,88 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923415"
 ---
 # <a name="working-with-recordsets"></a>Utilisation des recordsets
-Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de vous réorganiser l’ordre des données dans le jeu de résultats, pour rechercher un enregistrement spécifique en fonction de critères que vous fournissez et d’optimiser ces opérations de recherche à l’aide d’index. Si ces fonctionnalités sont disponibles pour une utilisation dépend du fournisseur et dans certains cas - tels que celui de la [Index](../../../ado/reference/ado-api/index-property.md) propriété - la structure de la source de données.  
+L’objet **Recordset** offre des fonctionnalités intégrées qui vous permettent de réorganiser l’ordre des données dans le jeu de résultats, de rechercher un enregistrement spécifique en fonction des critères que vous fournissez, et même d’optimiser ces opérations de recherche à l’aide d’index. Le fait que ces fonctionnalités soient disponibles dépend du fournisseur et, dans certains cas, de la propriété [index](../../../ado/reference/ado-api/index-property.md) (la structure de la source de données elle-même).  
   
 ## <a name="arranging-data"></a>Organisation des données  
- Souvent, le moyen le plus efficace pour trier les données dans votre **Recordset** consiste à spécifier une clause ORDER BY dans la commande SQL utilisée pour renvoyer des résultats. Toutefois, vous devrez peut-être modifier l’ordre des données dans un **Recordset** qui a déjà été créé. Vous pouvez utiliser la **tri** propriété pour définir l’ordre dans les lignes d’un **Recordset** sont parcourus. En outre, le **filtre** propriété détermine les lignes qui sont accessibles lors du parcours des lignes.  
+ Souvent, la méthode la plus efficace pour trier les données dans votre **jeu d’enregistrements** consiste à spécifier une clause ORDER BY dans la commande SQL utilisée pour y retourner les résultats. Toutefois, vous devrez peut-être modifier l’ordre des données dans un **jeu d’enregistrements** qui a déjà été créé. Vous pouvez utiliser la propriété **sort** pour déterminer l’ordre dans lequel les lignes d’un **jeu d’enregistrements** sont parcourues. En outre, la propriété **Filter** détermine les lignes accessibles lors du parcours de lignes.  
   
- Le **tri** propriété définit ou retourne un **chaîne** valeur qui indique le champ de noms dans le **Recordset** sur laquelle trier. Chaque nom est séparé par une virgule et éventuellement suivie d’un espace et le mot clé **ASC** (qui trie le champ dans l’ordre croissant) ou **DESC** (qui trie le champ dans l’ordre décroissant). Par défaut, si aucun mot clé n’est spécifié, le champ est trié dans l’ordre croissant.  
+ La propriété de **Tri** définit ou retourne une valeur de **chaîne** qui indique les noms de champs dans le **jeu d’enregistrements** sur lequel effectuer le tri. Chaque nom est séparé par une virgule et est éventuellement suivi d’un espace et du mot clé **ASC** (qui trie le champ par ordre croissant) ou **desc** (qui trie le champ dans l’ordre décroissant). Par défaut, si aucun mot clé n’est spécifié, le champ est trié dans l’ordre croissant.  
   
- L’opération de tri est efficace, car les données ne sont pas physiquement réorganisées mais qu’il sont accessible dans l’ordre spécifié par un index.  
+ L’opération de tri est efficace, car les données ne sont pas réorganisées physiquement, mais sont accessibles dans l’ordre spécifié par un index.  
   
- Le **tri** propriété nécessite la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété être définie sur **adUseClient**. Un index temporaire est créé pour chaque champ dans le **tri** propriété si un index n’existe pas déjà.  
+ La propriété **sort** requiert la définition de la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) sur **adUseClient**. Un index temporaire sera créé pour chaque champ spécifié dans la propriété de **Tri** si un index n’existe pas déjà.  
   
- Définition de la **tri** propriété sur une chaîne vide sera réinitialise les lignes dans leur ordre d’origine et supprimer des index temporaires. Les index existants ne seront pas supprimés.  
+ Si vous affectez une chaîne vide à la propriété de **Tri** , les lignes sont réinitialisées dans leur ordre d’origine et les index temporaires sont supprimés. Les index existants ne seront pas supprimés.  
   
- Supposons qu’un **Recordset** contient trois champs nommés *firstName*, *middleInitial*, et *lastName*. Définir le **tri** propriété à la chaîne de «`lastName DESC, firstName ASC`», sera le **Recordset** par nom de famille dans l’ordre décroissant, puis par prénom par ordre croissant. L’initiale du milieu est ignoré.  
+ Supposons qu’un **Recordset** contienne trois champs nommés *FirstName*, *MiddleInitial*et *LastName*. Définissez la propriété de **Tri** sur la chaîne`lastName DESC, firstName ASC`«», ce qui permet d’ordonner le **jeu d’enregistrements** par nom de famille dans l’ordre décroissant, puis par le prénom dans l’ordre croissant. L’initiale du deuxième prénom est ignorée.  
   
- Aucun champ référencé dans une chaîne de critères de tri ne peut être nommé « ASC » ou « DESC », car ces noms en conflit avec les mots clés **ASC** et **DESC**. Donnez à un champ qui porte un nom en conflit un alias à l’aide de la **AS** mot clé dans la requête qui retourne le **Recordset**.  
+ Aucun champ référencé dans une chaîne de critères de tri ne peut être nommé « ASC » ou « DESC », car ces noms sont en conflit avec les mots clés **ASC** et **desc**. Donnez à un champ qui a un nom en conflit un alias à l’aide du mot clé **As** dans la requête qui retourne le **Recordset**.  
   
- Pour plus d’informations sur **Recordset** filtrage, consultez « Filtrage des résultats » plus loin dans cette rubrique.  
+ Pour plus d’informations sur le filtrage du **Recordset** , consultez « Filtrage des résultats » plus loin dans cette rubrique.  
   
-## <a name="finding-a-specific-record"></a>Recherche un enregistrement spécifique  
- ADO fournit le [trouver](../../../ado/reference/ado-api/find-method-ado.md) et [recherche](../../../ado/reference/ado-api/seek-method.md) méthodes pour localiser un enregistrement particulier dans un **Recordset**. Le **trouver** méthode est pris en charge par un grand nombre de fournisseurs, mais est limitée à un seul critère de recherche. Le **recherche** méthode prend en charge la recherche sur plusieurs critères, mais n’est pas pris en charge par de nombreux fournisseurs.  
+## <a name="finding-a-specific-record"></a>Recherche d’un enregistrement spécifique  
+ ADO fournit les méthodes de [recherche](../../../ado/reference/ado-api/find-method-ado.md) et [de recherche pour](../../../ado/reference/ado-api/seek-method.md) localiser un enregistrement particulier dans un **jeu d’enregistrements**. La méthode **Find** est prise en charge par divers fournisseurs, mais est limitée à un seul critère de recherche. La méthode **Seek** prend en charge la recherche sur plusieurs critères, mais n’est pas prise en charge par de nombreux fournisseurs.  
   
- Champs indexés peuvent améliorer considérablement les performances de la **trouver** (méthode) et **tri** et **filtre** propriétés de la **Recordset** objet. Vous pouvez créer un index interne pour un **champ** objet en définissant son dynamique [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété. Cette propriété dynamique est ajoutée à la **propriétés** collection de la **champ** de l’objet lorsque vous définissez la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété **adUseClient**. N’oubliez pas que cet index est interne à ADO : vous ne pouvez pas y accéder ou l’utiliser à d’autres fins. En outre, cet index est différent de la [Index](../../../ado/reference/ado-api/index-property.md) propriété de la **Recordset** objet.  
+ Les index sur les champs peuvent améliorer les performances de la méthode **Find** et des propriétés de **Tri** et de **filtre** de l’objet **Recordset** . Vous pouvez créer un index interne pour un objet de **champ** en définissant sa propriété [optimisation](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dynamique. Cette propriété dynamique est ajoutée à la collection **Properties** de l’objet **Field** lorsque vous affectez à la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) la valeur **adUseClient**. N’oubliez pas que cet index est interne à ADO. vous ne pouvez pas y accéder ou l’utiliser à d’autres fins. En outre, cet index est différent de la propriété [index](../../../ado/reference/ado-api/index-property.md) de l’objet **Recordset** .  
   
- Le **trouver** méthode localiser rapidement une valeur dans la colonne (champ) d’un **Recordset**. Vous pouvez souvent améliorer la vitesse de la **trouver** méthode sur une colonne à l’aide de la **optimiser** propriété pour créer un index sur celle-ci.  
+ La méthode **Find** localise rapidement une valeur dans une colonne (champ) d’un **jeu d’enregistrements**. Vous pouvez souvent améliorer la vitesse de la méthode **Find** sur une colonne en utilisant la propriété **optimize** pour créer un index sur celle-ci.  
   
- Le **trouver** méthode limite votre recherche au contenu d’un champ. Le **recherche** méthode requiert que vous avez un index et présente également d’autres limitations. Si vous devez effectuer une recherche sur plusieurs champs qui ne sont pas la base d’un index, ou si votre fournisseur ne prend pas en charge les index, vous pouvez limiter vos résultats à l’aide de la **filtre** propriété de la **Recordset** objet.  
+ La méthode **Find** limite votre recherche au contenu d’un champ. La méthode **Seek** exige que vous disposiez d’un index et que vous ayez également d’autres limitations. Si vous devez effectuer une recherche sur plusieurs champs qui ne sont pas la base d’un index ou si votre fournisseur ne prend pas en charge les index, vous pouvez limiter vos résultats à l’aide de la propriété **Filter** de l’objet **Recordset** .  
   
 ### <a name="find"></a>Rechercher  
- Le **trouver** méthode recherche une **Recordset** pour la ligne répondant à un critère spécifié. Si vous le souhaitez, la direction de recherche, de ligne de début et de décalage à partir de la ligne initiale peut être spécifiée. Si le critère est rempli, la position de ligne actuelle est définie sur l’enregistrement est trouvé ; Sinon, la position est définie à la fin (ou le début) de la **Recordset**, selon la direction de la recherche.  
+ La méthode **Find** recherche un **jeu d’enregistrements** pour la ligne qui répond à un critère spécifié. Éventuellement, la direction de la recherche, la ligne de départ et le décalage à partir de la ligne de départ peuvent être spécifiés. Si le critère est respecté, la position de ligne actuelle est définie sur l’enregistrement trouvé ; dans le cas contraire, la position est définie à la fin (ou au début) du **Recordset**, selon le sens de la recherche.  
   
- Uniquement un seul nom de colonne peut être spécifié pour le critère. En d’autres termes, cette méthode ne prend pas en charge les recherches sur plusieurs colonnes.  
+ Seul un nom de colonne unique peut être spécifié pour le critère. En d’autres termes, cette méthode ne prend pas en charge les recherches multicolonnes.  
   
- L’opérateur de comparaison pour le critère peut être " **>** " (supérieur à), " **\<** " (inférieur à), « = » (égal), « > = » (supérieur ou égal à), « < = » (inférieur ou égal à), » <> » (différent de), ou « LIKE » (critères spéciaux).  
+ L’opérateur de comparaison pour le critère peut être**>**"" (supérieur à),**\<**"" (inférieur à), "=" (égal à), ">=" (supérieur ou égal à), "<=" (inférieur ou égal à), "<>" (différent de) ou "like" (critères spéciaux).  
   
- La valeur du critère peut être une chaîne, un nombre à virgule flottante ou une date. Valeurs de chaîne sont délimitées par des guillemets simples ou « # » (signe dièse) (par exemple, « état = 'WA' » ou « état = #WA # »). Valeurs de date sont séparés par des signes « # » (signe dièse) (par exemple, « start_date > #7/22/97 # »).  
+ La valeur de critère peut être une chaîne, un nombre à virgule flottante ou une date. Les valeurs de chaîne sont délimitées par des guillemets simples ou par des signes dièse (#) (par exemple, "State = 'WA" "ou" state = #WA # "). Les valeurs de date sont délimitées par des signes « # » (dièse) (par exemple, « start_date > #7/22/97 # »).  
   
- Si l’opérateur de comparaison est « like », la valeur de chaîne peut contenir un astérisque (*) pour rechercher une ou plusieurs occurrences de n’importe quel caractère ou une sous-chaîne. Par exemple, « state like'm\*' » correspond à Maine et du Massachusetts. Vous pouvez également utiliser des astérisques de début et de fin pour rechercher une sous-chaîne contenue dans les valeurs. Par exemple, « état comme '\*comme\*' » correspond à Alaska, Arkansas et Massachusetts.  
+ Si l’opérateur de comparaison est « like », la valeur de chaîne peut contenir un astérisque (*) pour rechercher une ou plusieurs occurrences de n’importe quel caractère ou sous-chaîne. Par exemple, « État comme «\*m »» correspond à Maine et Massachusetts. Vous pouvez également utiliser des astérisques de début et de fin pour rechercher une sous-chaîne contenue dans les valeurs. Par exemple, « State like\*\*» correspond à Alaska, Arkansas et Massachusetts.  
   
- Astérisques peuvent être utilisés uniquement à la fin d’une chaîne de critères ou conjointement au début et à la fin d’une chaîne de critères, comme indiqué précédemment. Vous ne pouvez pas utiliser l’astérisque comme caractère générique de début ('* str') ou incorporé s\*r »). Cela entraîne une erreur.  
+ Les astérisques peuvent être utilisés uniquement à la fin d’une chaîne de critères, ou au début et à la fin d’une chaîne de critères, comme indiqué plus haut. Vous ne pouvez pas utiliser l’astérisque comme caractère générique de début (« * STR ») ou un\*caractère générique incorporé (r). Cela génère une erreur.  
   
-### <a name="seek-and-index"></a>Rechercher et d’Index  
- Utilisez le **recherche** méthode avec le **Index** propriété si le fournisseur sous-jacent prend en charge les index sur la **Recordset** objet. Utilisez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** méthode pour déterminer si le fournisseur sous-jacent prend en charge **recherche**et le **supports (adIndex)** méthode pour déterminer si le fournisseur prend en charge les index. (Par exemple, le [fournisseur OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) prend en charge **recherche** et **Index**.)  
+### <a name="seek-and-index"></a>Recherche et index  
+ Utilisez la méthode **Seek** avec la propriété **index** si le fournisseur sous-jacent prend en charge les index sur l’objet **Recordset** . Utilisez la méthode [supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** pour déterminer si le fournisseur sous-jacent prend en charge la **recherche**, et la méthode **prend en charge (adIndex)** pour déterminer si le fournisseur prend en charge les index. (Par exemple, le [fournisseur de OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) prend en charge la **recherche** et l' **indexation**.)  
   
- Si **recherche** n’a pas de rechercher la ligne souhaitée, aucune erreur ne se produit et la ligne est placé à la fin de la **Recordset**. Définir le **Index** index à la propriété souhaitée avant d’exécuter cette méthode.  
+ Si la **recherche** ne trouve pas la ligne souhaitée, aucune erreur ne se produit et la ligne est positionnée à la fin de l’ensemble d' **enregistrements**. Définissez la propriété **index** sur l’index souhaité avant d’exécuter cette méthode.  
   
- Cette méthode est prise en charge uniquement avec les curseurs côté serveur. Seek n’est pas pris en charge lorsque le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) valeur de propriété de la **Recordset** objet est **adUseClient**.  
+ Cette méthode est prise en charge uniquement avec les curseurs côté serveur. Seek n’est pas pris en charge lorsque la valeur de la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) de l’objet **Recordset** est **adUseClient**.  
   
- Cette méthode peut être utilisée uniquement lorsque la **Recordset** objet a été ouvert avec un [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valeur **adCmdTableDirect**.  
+ Cette méthode peut être utilisée uniquement lorsque l’objet **Recordset** a été ouvert avec une valeur [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) de **adCmdTableDirect**.  
   
 ## <a name="filtering-the-results"></a>Filtrage des résultats  
- Le **trouver** méthode limite votre recherche au contenu d’un champ. Le **recherche** méthode requiert que vous avez un index et présente également d’autres limitations. Si vous devez effectuer une recherche sur plusieurs champs qui ne sont pas la base d’un index ou si votre fournisseur ne prend pas en charge les index, vous pouvez limiter vos résultats à l’aide de la **filtre** propriété de la **Recordset** objet.  
+ La méthode **Find** limite votre recherche au contenu d’un champ. La méthode **Seek** exige que vous disposiez d’un index et que vous ayez également d’autres limitations. Si vous devez effectuer une recherche sur plusieurs champs qui ne sont pas la base d’un index ou si votre fournisseur ne prend pas en charge les index, vous pouvez limiter vos résultats à l’aide de la propriété **Filter** de l’objet **Recordset** .  
   
- Utilisez le **filtre** propriété à filtrer les enregistrements dans une **Recordset** objet. Filtrés **Recordset** devient le curseur actuel, ce qui signifie que les enregistrements qui ne respecte pas la **filtre** critères ne sont pas disponibles dans le **Recordset** jusqu'à ce que le **Filtre** est supprimé. Autres propriétés qui retournent des valeurs basées sur le curseur actuel sont affectées, tel que **AbsolutePosition**, **AbsolutePage**, **RecordCount**, et  **PageCount**. Il s’agit, car l’affectation du **filtre** propriété sur une valeur spécifique déplacera l’enregistrement actif vers le premier enregistrement qui satisfait à la nouvelle valeur.  
+ Utilisez la propriété **Filter pour filtrer** de manière sélective les enregistrements d’un objet **Recordset** . Le **Recordset** filtré devient le curseur actuel, ce qui signifie que les enregistrements qui ne répondent pas aux critères de **filtre** ne sont pas disponibles dans le **Recordset** tant que le **filtre** n’est pas supprimé. Les autres propriétés qui retournent des valeurs basées sur le curseur actuel sont affectées, telles que **AbsolutePosition**, **AbsolutePage**, **RecordCount**et **PageCount**. Cela est dû au fait que la définition de la propriété **Filter** sur une valeur spécifique déplace l’enregistrement en cours vers le premier enregistrement qui satisfait la nouvelle valeur.  
   
- Le **filtre** propriété accepte un argument de type variant. Cette valeur représente une des trois méthodes pour l’utilisation de la **filtre** propriété : une chaîne de critères, une **FilterGroupEnum** constante ou un tableau de signets. Pour plus d’informations, consultez filtrage avec une chaîne de critères de filtrage avec une constante et filtrage avec des signets, plus loin dans cette rubrique.  
+ La propriété **Filter** accepte un argument variant. Cette valeur représente l’une des trois méthodes d’utilisation de la propriété **Filter** : une chaîne de critères, une constante **FilterGroupEnum** ou un tableau de signets. Pour plus d’informations, consultez filtrage à l’aide d’une chaîne de critères, filtrage avec une constante et filtrage avec des signets plus loin dans cette rubrique.  
   
 > [!NOTE]
->  Lorsque vous connaissez les données que vous souhaitez sélectionner, il est généralement plus efficace pour ouvrir un **Recordset** avec une instruction SQL qui permet de filtrer efficacement le jeu de résultats, au lieu d’utiliser le **filtre** propriété.  
+>  Lorsque vous connaissez les données que vous souhaitez sélectionner, il est généralement plus efficace d’ouvrir un **jeu d’enregistrements** avec une instruction SQL qui filtre efficacement le jeu de résultats, au lieu de s’appuyer sur la propriété **Filter** .  
   
- Pour supprimer un filtre à partir d’un **Recordset**, utilisez le **adFilterNone** constante. Définissant le **filtre** en une chaîne de longueur nulle (« ») a le même effet que l’utilisation de la **adFilterNone** constante.  
+ Pour supprimer un filtre d’un **jeu d’enregistrements**, utilisez la constante **adFilterNone** . La définition de la propriété **Filter** sur une chaîne de longueur nulle ("") a le même effet que l’utilisation de la constante **adFilterNone** .  
   
-### <a name="filtering-with-a-criteria-string"></a>Filtrage avec une chaîne de critères  
- La chaîne de critères se compose de clauses sous la forme *NomChamp Opérateur valeur* (par exemple, `"LastName = 'Smith'"`). Vous pouvez créer des clauses composées en concaténant des clauses avec **AND** (par exemple, `"LastName = 'Smith' AND FirstName = 'John'"`) et **ou** (par exemple, `"LastName = 'Smith' OR LastName = 'Jones'"`). Utilisez les instructions suivantes pour les chaînes de critères :  
+### <a name="filtering-with-a-criteria-string"></a>Filtrage à l’aide d’une chaîne de critères  
+ La chaîne de critères est constituée de clauses au format *nom_champ opérateur valeur* (par exemple `"LastName = 'Smith'"`,). Vous pouvez créer des clauses composées en concaténant des clauses individuelles avec **et** ( `"LastName = 'Smith' AND FirstName = 'John'"`par exemple,) et **ou** ( `"LastName = 'Smith' OR LastName = 'Jones'"`par exemple,). Utilisez les instructions suivantes pour les chaînes de critères :  
   
--   *FieldName* doit être un nom de champ valide à partir de la **Recordset**. Si le nom du champ contienne des espaces, vous devez placer le nom entre crochets.  
+-   *FieldName* doit être un nom de champ valide du **Recordset**. Si le nom du champ contient des espaces, vous devez placer le nom entre crochets.  
   
--   *Opérateur* doit être une des opérations suivantes : **\<** , **>** , **\< =** , **>=** , **<>** , **=** , ou **comme**.  
+-   *L’opérateur* doit être l’un des suivants **\<**: **>**, ** \< **, **>=**, **<>**, **=**, ou **Like**.  
   
--   *Valeur* est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Utilisez des guillemets simples (') avec des chaînes et les signes dièse (`#`) avec des dates. Pour les nombres, vous pouvez utiliser décimales, signes dollar et la notation scientifique. Si *opérateur* est **comme**, *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque (\*) et symbole de pourcentage (%) caractères génériques sont autorisés, et ils doivent être le dernier caractère de la chaîne. *Valeur* ne peut pas être null.  
+-   La *valeur* est la valeur avec laquelle vous allez comparer les valeurs de champ (par `'Smith'`exemple `#8/24/95#` `12.345`,,, `$50.00`ou). Utilisez des guillemets simples (') avec des chaînes et des`#`signes dièse () avec des dates. Pour les nombres, vous pouvez utiliser des points décimaux, des signes dollar et une notation scientifique. Si l' *opérateur* est **comme**, la *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque (\*) et le signe de pourcentage (%) les caractères génériques sont autorisés et doivent être le dernier caractère de la chaîne. La *valeur* ne peut pas être null.  
   
     > [!NOTE]
-    >  Pour inclure des guillemets simples (') dans le filtre *valeur*, utilisez deux guillemets simples pour représenter un. Par exemple, pour filtrer sur *o ' Malley*, la chaîne de critères doit être `"col1 = 'O''Malley'"`. Pour inclure des guillemets simples au début et la fin de la valeur de filtre, placer la chaîne entre les signes dièse (#). Par exemple, pour filtrer sur *'1'* , la chaîne de critères doit être `"col1 = #'1'#"`.  
+    >  Pour inclure des guillemets simples (') dans la *valeur*de filtre, utilisez deux guillemets simples pour en représenter un. Par exemple, pour filtrer sur *O’Malley*, la chaîne de critères doit `"col1 = 'O''Malley'"`être. Pour inclure des guillemets simples à la fois au début et à la fin de la valeur de filtre, mettez la chaîne entre signes dièse (#). Par exemple, pour filtrer sur *« 1 »*, la chaîne de critères doit `"col1 = #'1'#"`être.  
   
- Il n’existe aucun ordre de priorité **AND** et **ou**. Clauses peuvent être regroupées dans les parenthèses. Toutefois, vous ne pouvez pas regrouper des clauses jointes par une **ou** puis joindre le groupe à une autre clause avec un AND, comme suit.  
+ Il n’existe aucune priorité entre **and** et **or**. Les clauses peuvent être regroupées entre parenthèses. Toutefois, vous ne pouvez pas regrouper les clauses jointes par **ou** , puis joindre le groupe à une autre clause avec un et, comme suit.  
   
 ```  
 (LastName = 'Smith' OR LastName = 'Jones') AND FirstName = 'John'  
@@ -106,25 +106,25 @@ Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de
 (LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')  
 ```  
   
- Dans un **comme** clause, vous pouvez utiliser un caractère générique au début et à la fin du modèle (par exemple, `LastName Like '*mit*'`) ou uniquement à la fin du modèle (par exemple, `LastName Like 'Smit*'`).  
+ Dans une clause **Like** , vous pouvez utiliser un caractère générique au début et à la fin du modèle (par exemple `LastName Like '*mit*'`,) ou uniquement à la fin du modèle (par exemple, `LastName Like 'Smit*'`).  
   
 ### <a name="filtering-with-a-constant"></a>Filtrage avec une constante  
- Les constantes suivantes sont disponibles pour le filtrage **Recordsets**.  
+ Les constantes suivantes sont disponibles pour filtrer les **recordsets**.  
   
-|Constante|Description|  
+|Constant|Description|  
 |--------------|-----------------|  
-|**adFilterAffectedRecords**|Filtres pour afficher uniquement les enregistrements concernés par la dernière **supprimer**, **Resync**, **UpdateBatch**, ou **CancelBatch** appeler.|  
-|**adFilterConflictingRecords**|Filtres pour afficher les enregistrements qui ont échoué la dernière mise à jour par lots.|  
-|**adFilterFetchedRecords**|Filtres pour afficher les enregistrements dans le cache actuel - autrement dit, les résultats du dernier appel pour récupérer les enregistrements à partir de la base de données.|  
-|**adFilterNone**|Supprime le filtre en cours et restaure tous les enregistrements pour l’affichage.|  
-|**adFilterPendingRecords**|Filtres pour afficher uniquement les enregistrements qui ont été modifiés, mais qui n’ont pas encore été envoyées au serveur. Applicable uniquement pour le mode de mise à jour par lot.|  
+|**adFilterAffectedRecords**|Filtres permettant d’afficher uniquement les enregistrements affectés par le dernier appel **Delete**, **Resync**, **UpdateBatch**ou **CancelBatch** .|  
+|**adFilterConflictingRecords**|Filtres permettant d’afficher les enregistrements qui ont échoué lors de la dernière mise à jour par lot.|  
+|**adFilterFetchedRecords**|Filtres permettant d’afficher les enregistrements dans le cache actuel, autrement dit, les résultats du dernier appel pour récupérer des enregistrements de la base de données.|  
+|**adFilterNone**|Supprime le filtre en cours et restaure tous les enregistrements à afficher.|  
+|**adFilterPendingRecords**|Filtres permettant d’afficher uniquement les enregistrements qui ont été modifiés mais qui n’ont pas encore été envoyés au serveur. S’applique uniquement au mode de mise à jour par lot.|  
   
- Les constantes de filtre facilitent la résolution des conflits d’enregistrements individuels lors des mises à jour par lot en vous permettant d’afficher, par exemple, uniquement les enregistrements qui ont été affectés pendant la dernière **UpdateBatch** appel de méthode, comme indiqué dans le exemple suivant.  
+ Les constantes de filtre facilitent la résolution des conflits d’enregistrements individuels pendant le mode de mise à jour par lot en vous permettant d’afficher, par exemple, uniquement les enregistrements qui ont été affectés lors du dernier appel de la méthode **UpdateBatch** , comme indiqué dans l’exemple suivant.  
   
  `Attribute VB_Name = "modExaminingData"`  
   
 ### <a name="filtering-with-bookmarks"></a>Filtrage avec des signets  
- Enfin, vous pouvez passer un tableau de type variant de signets pour les **filtre** propriété. Le curseur résultant contiendra uniquement les enregistrements dont le signet a été passé à la propriété. L’exemple de code suivant crée un tableau de signets à partir des enregistrements dans une **Recordset** qui ont un « B » dans le *ProductName* champ. Il passe ensuite le tableau à la **filtre** propriété et affiche des informations sur le résultat filtré **Recordset**.  
+ Enfin, vous pouvez passer un tableau de signets de type Variant à la propriété **Filter** . Le curseur résultant contient uniquement les enregistrements dont le signet a été passé à la propriété. L’exemple de code suivant crée un tableau de signets à partir des enregistrements d’un **jeu d’enregistrements** qui ont un « B » dans le champ *ProductName* . Il passe ensuite le tableau à la propriété **Filter** et affiche des informations sur le **Recordset**filtré résultant.  
   
 ```  
 'BeginFilterBkmk  
@@ -156,13 +156,13 @@ Loop
 'EndFilterBkmk  
 ```  
   
-## <a name="creating-a-clone-of-a-recordset"></a>Création d’un Clone d’un Recordset  
- Utilisez le **Clone** dupliqué de la méthode de création de plusieurs **Recordset** objets, en particulier si vous voulez conserver plusieurs enregistrements en cours dans un ensemble donné d’enregistrements. À l’aide de la **Clone** méthode est plus efficace que la création et ouverture d’un nouvel **Recordset** objet avec la même définition que l’original.  
+## <a name="creating-a-clone-of-a-recordset"></a>Création d’un clone d’un jeu d’enregistrements  
+ Utilisez la méthode **clone** pour créer plusieurs objets **Recordset** dupliqués, en particulier si vous souhaitez conserver plusieurs enregistrements actifs dans un ensemble donné d’enregistrements. L’utilisation de la méthode **clone** est plus efficace que la création et l’ouverture d’un nouvel objet **Recordset** avec la même définition que l’original.  
   
- L’enregistrement en cours d’un clone nouvellement créé est initialement défini sur le premier enregistrement. Le pointeur d’enregistrement actuel dans cloné **Recordset** n’est pas synchronisé avec l’original, ou vice versa. Vous pouvez naviguer de manière indépendante dans chaque **Recordset**.  
+ L’enregistrement actuel d’un clone nouvellement créé est initialement défini sur le premier enregistrement. Le pointeur d’enregistrement actif dans un **jeu d’enregistrements** cloné n’est pas synchronisé avec l’original ou vice versa. Vous pouvez naviguer indépendamment dans chaque **Recordset**.  
   
- Modifications apportées à un **Recordset** objet sont visibles dans tous ses clones, quel que soit le type de curseur. Toutefois, après l’exécution de [Requery](../../../ado/reference/ado-api/requery-method.md) sur l’original **Recordset**, les clones ne seront plus synchronisés à l’original.  
+ Les modifications que vous apportez à un objet **Recordset** sont visibles dans tous ses clones, quel que soit le type de curseur. Toutefois, après l’exécution de [Requery](../../../ado/reference/ado-api/requery-method.md) sur le **jeu d’enregistrements**d’origine, les clones ne sont plus synchronisés avec l’original.  
   
- Fermeture de la version d’origine **Recordset** ne ferme pas ses copies, ni ne le fait fermeture d’une copie de fermer la version d’origine ou les autres copies.  
+ La fermeture de l' **objet Recordset** d’origine ne ferme pas ses copies et ne ferme pas non plus la copie d’origine ou de l’une des autres copies.  
   
- Vous pouvez cloner un **Recordset** uniquement l’objet si elle prend en charge les signets. Les valeurs de signet sont interchangeables ; Autrement dit, une référence de signet à partir d’un **Recordset** objet fait référence au même enregistrement dans un de ses clones.
+ Vous pouvez cloner un objet **Recordset** uniquement s’il prend en charge les signets. Les valeurs de signet sont interchangeables ; autrement dit, une référence de signet d’un objet **Recordset** fait référence au même enregistrement dans l’un de ses clones.

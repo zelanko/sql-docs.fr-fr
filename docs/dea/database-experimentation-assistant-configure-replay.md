@@ -2,7 +2,7 @@
 title: Configurer la relecture pour les mises à niveau SQL Server
 description: Configurer Distributed Replay pour Assistant Expérimentation de base de données
 ms.custom: seo-lt-2019
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2ef570f531bcd37a2a5f7be1f3a900c4b8a4c112
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317736"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761533"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurer Distributed Replay pour Assistant Expérimentation de base de données
 
@@ -48,10 +48,12 @@ Pour configurer le service de contrôleur :
 3. Ouvrez services. msc et accédez au service de **contrôleur SQL Server Distributed Replay** .
 4. Cliquez avec le bouton droit sur le service, puis sélectionnez **Propriétés**. Définissez le compte de service sur un compte commun au contrôleur et aux ordinateurs clients du réseau.
 5. Sélectionnez **OK** pour fermer la fenêtre **Propriétés** .
-6. Redémarrez le service de **contrôleur SQL Server Distributed Replay** à partir de services. msc. Vous pouvez également exécuter les commandes suivantes sur la ligne de commande pour redémarrer le service :<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+6. Redémarrez le service de **contrôleur SQL Server Distributed Replay** à partir de services. msc. Vous pouvez également exécuter les commandes suivantes sur la ligne de commande pour redémarrer le service :
+
+   `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
-7. Pour obtenir d’autres options de configuration, consultez [configurer Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+Pour obtenir d’autres options de configuration, consultez [configurer Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## <a name="configure-dcom"></a>Configurer DCOM
 
@@ -68,9 +70,10 @@ Cette configuration n’est requise que sur l’ordinateur contrôleur.
 9. Ajoutez l’utilisateur qui va démarrer la relecture. Accordez des autorisations d’accès local à l’utilisateur. Si l’utilisateur envisage d’accéder au service de contrôleur à distance, accordez à l’utilisateur des autorisations d’accès à distance.
 10. Sélectionnez **OK** pour valider les modifications et revenir à l’onglet **sécurité** .
 11. Sélectionnez **OK** pour valider les modifications.
-12. Redémarrez le service de contrôleur SQL Server Distributed Replay à partir de services. msc. Vous pouvez également exécuter les commandes suivantes sur la ligne de commande pour redémarrer le service :<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
-   `NET START "SQL Server Distributed Replay Controller"`
+12. Redémarrez le service de contrôleur SQL Server Distributed Replay à partir de services. msc. Vous pouvez également exécuter les commandes suivantes sur la ligne de commande pour redémarrer le service :
+
+    `NET STOP "SQL Server Distributed Replay Controller"`</br>
+    `NET START "SQL Server Distributed Replay Controller"`
 
 ## <a name="set-up-the-client-service"></a>Configurer le service client
 
@@ -81,12 +84,16 @@ Avant de configurer le service client, utilisez des outils de mise en réseau te
 3. Cliquez avec le bouton droit sur le service, puis sélectionnez **Propriétés**. Définissez le compte de service sur un compte commun au contrôleur et aux ordinateurs clients du réseau.
 4. Sélectionnez **OK** pour fermer la fenêtre **Propriétés** . Si vous avez ignoré l’étape SQL Server Assistant Installation pour configurer le client Distributed Replay, vous pouvez le configurer à l’aide du fichier de configuration. Dans une installation par défaut, le fichier de configuration se trouve dans C:\Program Files (x86)\<\Microsoft\>SQL Server version \Tools\DReplayClient\DReplayClient.config.
 5. Assurez-vous que le fichier DReplayClient. config contient le nom de l’ordinateur contrôleur en tant que contrôleur pour l’inscription.
-6. Redémarrez le service client SQL Server Distributed Replay à partir de services. msc. Vous pouvez également exécuter les commandes suivantes à partir de la ligne de commande pour redémarrer le service :<br/>
-    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+6. Redémarrez le service client SQL Server Distributed Replay à partir de services. msc. Vous pouvez également exécuter les commandes suivantes à partir de la ligne de commande pour redémarrer le service :
+
+    `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
-7. Distributed Replay journaux du contrôleur se trouvent dans C:\Program Files (x86) \Microsoft\<SQL Server\>version \Tools\DReplayClient\Log. Les journaux indiquent si le client peut s’inscrire auprès du contrôleur.
-8. Si la configuration est réussie, le journal affiche le message « inscrit avec le contrôleur <nom\>du contrôleur ».
-9. Pour obtenir d’autres options de configuration, consultez [configurer Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+    Distributed Replay journaux du contrôleur se trouvent dans C:\Program Files (x86) \Microsoft\<SQL Server\>version \Tools\DReplayClient\Log. Les journaux indiquent si le client peut s’inscrire auprès du contrôleur.
+
+    Si la configuration est réussie, le journal affiche le message **enregistré avec le contrôleur <le\>nom du contrôleur**.
+
+Pour obtenir d’autres options de configuration, consultez [configurer Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Configurer les outils d’administration Distributed Replay
 

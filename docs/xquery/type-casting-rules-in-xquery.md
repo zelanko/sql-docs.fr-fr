@@ -1,5 +1,5 @@
 ---
-title: Type de règles de conversion dans XQuery | Microsoft Docs
+title: Règles de conversion de types dans XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946213"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Règles de conversion de types dans XQuery
@@ -31,38 +31,38 @@ ms.locfileid: "67946213"
 
   Le diagramme des spécifications suivant, retraçant les fonctions et les opérateurs XQuery 1.0 et XPath 2.0 définis par le W3C, illustre les types de données intégrés. Parmi ces types, on retrouve les types intégrés de primitives et de dérivées.  
   
- ![Hiérarchie des types XQuery 1.0](../xquery/media/xquery-typing-rules.gif "hiérarchie des types XQuery 1.0")  
+ ![Hiérarchie de type XQuery 1.0](../xquery/media/xquery-typing-rules.gif "Hiérarchie de type XQuery 1.0")  
   
  Cette rubrique décrit donc les règles de conversion de types applicables suivant une des deux méthodes suivantes :  
   
--   Conversion explicite procéder à l’aide de **casté en** ou les fonctions de constructeur de type (par exemple, `xs:integer("5")`).  
+-   Cast explicite que vous effectuez en utilisant **cast as** ou les fonctions de constructeur de type (par `xs:integer("5")`exemple,).  
   
 -   la conversion implicite qui a lieu pendant la promotion de type à un rang supérieur.  
   
 ## <a name="explicit-casting"></a>Conversion explicite  
  Le tableau suivant présente la conversion de types autorisée entre les différents types de primitives intégrés.  
   
- ![Décrit les règles de conversion pour XQuery. ](../xquery/media/casting-builtin-types.gif "Décrit les règles de conversion pour XQuery.")  
+ ![Décrit les règles de conversion pour XQuery.](../xquery/media/casting-builtin-types.gif "Décrit les règles de conversion pour XQuery.")  
   
 -   Un type de primitive intégré peut se convertir en un autre type de primitive intégré en respectant les règles en vigueur sur les données de la table.  
   
--   Un type de primitive peut également se convertir en tout autre type dérivé de ce type de primitive. Par exemple, vous pouvez convertir le type **xs : decimal** à **xs : Integer**, ou à partir de **xs : decimal** à **xs : long**.  
+-   Un type de primitive peut également se convertir en tout autre type dérivé de ce type de primitive. Par exemple, vous pouvez effectuer un cast de **XS : Decimal** en **XS : Integer**ou de **XS : Decimal** en **XS : long**.  
   
--   Un type dérivé peut être converti en tout autre type dont il constitue l'ancêtre dans la hiérarchie des types, et ce jusqu'à son type de primitive de base intégré. Par exemple, vous pouvez convertir le type **xs : Token** à **xs : normalizedString** ou **xs : String**.  
+-   Un type dérivé peut être converti en tout autre type dont il constitue l'ancêtre dans la hiérarchie des types, et ce jusqu'à son type de primitive de base intégré. Par exemple, vous pouvez effectuer un cast de **XS : Token** en **XS : normalizedString** ou en **XS : String**.  
   
--   Un type dérivé peut également être converti en type de primitive si l'ancêtre de sa primitive peut aussi être converti dans le type cible. Par exemple, vous pouvez effectuer un cast **xs : Integer**, un type dérivé, en un **xs : String**, primitifs type, car **xs : decimal**, **xs : Integer**de ancêtre de la primitive, pouvant être casté en **xs : String**.  
+-   Un type dérivé peut également être converti en type de primitive si l'ancêtre de sa primitive peut aussi être converti dans le type cible. Par exemple, vous pouvez convertir **XS : Integer**, un type dérivé, en un type **XS : String**, primitif, car **XS : Decimal**, **XS : Integer**, ancêtre primitif, peut être converti en **XS : String**.  
   
--   Un type dérivé peut également être converti en autre type dérivé si l'ancêtre de la primitive du type source peut aussi être converti en ancêtre de primitive du type cible. Par exemple, vous pouvez convertir le type **xs : Integer** à **xs : Token**, car vous pouvez convertir le type **xs : decimal** à **xs : String**.  
+-   Un type dérivé peut également être converti en autre type dérivé si l'ancêtre de la primitive du type source peut aussi être converti en ancêtre de primitive du type cible. Par exemple, vous pouvez effectuer un cast de **XS : Integer** en **XS : Token**, car vous pouvez effectuer un cast de **XS : Decimal** en **XS : String**.  
   
--   Les règles pour la conversion de types définis par l'utilisateur en types intégrés revient au même que pour la conversion de types intégrés. Par exemple, vous pouvez définir un **myInteger** type dérivé **xs : Integer** type. Ensuite, **myInteger** pouvant être casté en **xs : Token**, car **xs : decimal** pouvant être casté en **xs : String**.  
+-   Les règles pour la conversion de types définis par l'utilisateur en types intégrés revient au même que pour la conversion de types intégrés. Par exemple, vous pouvez définir un type **myInteger** dérivé du type **XS : Integer** . Ensuite, **myInteger** peut être converti en **XS : Token**, car **XS : Decimal** peut être converti en **XS : String**.  
   
  Les types de conversion suivants ne sont pas pris en charge :  
   
--   La conversion mettant en œuvre les types de liste n'est pas autorisée. Cela inclut les types de listes définis par l’utilisateur et les types de listes intégrées telles que **xs : IDREFS**, **xs : Entities**, et **xs : NMTOKENS**.  
+-   La conversion mettant en œuvre les types de liste n'est pas autorisée. Cela comprend les types de listes définies par l’utilisateur et les types de listes intégrés tels que **XS : IDREFS**, **XS : Entities**et **XS : NMTOKENS**.  
   
--   Conversion vers ou depuis **xs : QName** n’est pas pris en charge.  
+-   Le cast vers ou à partir de **XS : QName** n’est pas pris en charge.  
   
--   **xs : notation** et les sous-types entièrement ordonnés de durée, **xdt : yearmonthduration** et **xdt : daytimeduration**, ne sont pas pris en charge. C'est pour cela que la conversion mettant en œuvre ces types n'est pas prise en charge.  
+-   **XS : notation** et les sous-types entièrement ordonnés de Duration, **xdt : yearMonthDuration** et **xdt : dayTimeDuration**, ne sont pas pris en charge. C'est pour cela que la conversion mettant en œuvre ces types n'est pas prise en charge.  
   
  Les exemples suivants illustrent la conversion explicite de types.  
   
@@ -95,7 +95,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- La requête suivante retourne une erreur statique, car vous ne savez pas combien de haut niveau <`root`> sont des éléments dans l’instance de document.  
+ La requête suivante renvoie une erreur statique, car vous ne savez pas combien de <`root`> éléments de niveau supérieur se trouvent dans l’instance de document.  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +105,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- En spécifiant un singleton <`root`> élément dans l’expression, la requête aboutit. Elle renvoie ainsi une séquence de valeurs de type simple typé en xs:string.  
+ En spécifiant un <`root` Singleton> élément dans l’expression, la requête est réussie. Elle renvoie ainsi une séquence de valeurs de type simple typé en xs:string.  
   
 ```  
 declare @x xml(myCollection)  
@@ -115,7 +115,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- Dans l'exemple suivant, la variable de type xml inclut un mot clé document précisant la collection de schémas XML. Cela indique que l'instance XML doit être un document ne possédant qu'un seul élément de premier niveau. Si vous créez deux <`root`> éléments dans l’instance XML, elle retournera une erreur.  
+ Dans l'exemple suivant, la variable de type xml inclut un mot clé document précisant la collection de schémas XML. Cela indique que l'instance XML doit être un document ne possédant qu'un seul élément de premier niveau. Si vous créez deux <`root`> éléments dans l’instance XML, une erreur est retournée.  
   
 ```  
 declare @x xml(document myCollection)  
@@ -134,23 +134,23 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>Conversion implicite  
- La conversion implicite n'est autorisée que pour les types numériques et les types atomiques non typés. Par exemple, ce qui suit **min()** fonction retourne la valeur minimale de deux valeurs :  
+ La conversion implicite n'est autorisée que pour les types numériques et les types atomiques non typés. Par exemple, la fonction **min ()** suivante retourne la valeur minimale des deux valeurs suivantes :  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- Dans cet exemple, les deux valeurs transmise à la fonction XQuery **min()** (fonction) sont de types différents. Par conséquent, la conversion implicite est effectuée où **entier** type est promu au rang **double** et les deux **double** valeurs sont comparées.  
+ Dans cet exemple, les deux valeurs transmises à la fonction XQuery **min ()** sont de types différents. Par conséquent, la conversion implicite est effectuée où le type **entier** est promu en **double** et les deux valeurs **doubles** sont comparées.  
   
  La promotion de type telle qu'elle est décrite dans cet exemple suit les règles suivantes :  
   
--   Un type numérique dérivé peut être promu en son type de base. Par exemple, **entier** peut être promu en **décimal**.  
+-   Un type numérique dérivé peut être promu en son type de base. Par exemple, l' **entier** peut être promu au **format décimal**.  
   
--   Un **décimal** peut être promu en **float,** et un **float** peut être promu en **double**.  
+-   Un **nombre décimal** peut être promu en **float** et un **float** peut être promu en **double**.  
   
  La conversion implicite n'étant autorisée que pour les types numériques, ce qui suit n'est pas possible :  
   
--   La conversion implicite mettant en œuvre les types de chaîne (string) n'est pas autorisée. Par exemple, si deux **chaîne** sont des types attendus mais que vous transmettez un **chaîne** et un **jeton**, aucune conversion implicite ne se produit et une erreur est retournée.  
+-   La conversion implicite mettant en œuvre les types de chaîne (string) n'est pas autorisée. Par exemple, si deux types de **chaînes** sont attendus et que vous transmettez une **chaîne** et un **jeton**, aucune conversion implicite ne se produit et une erreur est retournée.  
   
 -   La conversion implicite des types numériques en types de chaînes n'est pas non plus autorisée. Ainsi, si vous transmettez une valeur de type integer à une fonction s'attendant à un paramètre de type string (chaîne), là encore la conversion implicite ne peut pas se produire et entraîne une erreur.  
   
@@ -167,7 +167,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Lors de la conversion vers des types binaires tels que xs:base64Binary ou xs:hexBinary à partir d'un type string (chaîne) ou untypedAtomic (atomique non typé), la valeur d'entrée doit être encodée respectivement au format base64 ou HEX.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Conversion d'une valeur en valeur de type string ou untypedAtomic  
- La conversion vers un type string (chaîne) ou untypedAtomic (atomique non typé) transforme la valeur en sa représentation lexicale canonique XQuery. Plus précisément, on peut dire qu'une valeur ayant répondu à un modèle précis ou à une autre contrainte lors de sa saisie pourrait ne pas être représentée en fonction de ladite contrainte.  Pour informer les utilisateurs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique les types où la contrainte de type peut être un problème en fournissant un avertissement lorsque ces types sont chargés dans la collection de schémas.  
+ La conversion vers un type string (chaîne) ou untypedAtomic (atomique non typé) transforme la valeur en sa représentation lexicale canonique XQuery. Plus précisément, on peut dire qu'une valeur ayant répondu à un modèle précis ou à une autre contrainte lors de sa saisie pourrait ne pas être représentée en fonction de ladite contrainte.  Pour informer les utilisateurs de cela [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , signale les types où la contrainte de type peut être un problème en fournissant un avertissement lorsque ces types sont chargés dans la collection de schémas.  
   
  Lors de la conversion d'une valeur de type xs:float ou xs:double, ou encore de l'un de leurs sous-types, en une valeur de type string ou untypedAtomic, ladite valeur est alors représentée sous sa forme scientifique. Cette opération n'est effectuée que si la valeur absolue de la donnée est inférieure à 1,0E-6 ou supérieure ou égale à 1,0E6. Dans ce cas, 0 est sérialisé sous sa forme scientifique de 0,0E0.  
   
@@ -197,7 +197,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   La valeur à virgule flottante NaN n'est pas prise en charge.  
   
--   Les valeurs convertibles sont limitées par les restrictions d'implémentation des types de cibles. Par exemple, vous ne peut pas convertir une chaîne de date avec une année négative en **xs : date**. De telles conversions génèreront la séquence vide si la valeur est fournie au moment de l'exécution (au lieu de déclencher une erreur d'exécution).  
+-   Les valeurs convertibles sont limitées par les restrictions d'implémentation des types de cibles. Par exemple, vous ne pouvez pas convertir une chaîne de date avec une année négative en **XS : date**. De telles conversions génèreront la séquence vide si la valeur est fournie au moment de l'exécution (au lieu de déclencher une erreur d'exécution).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir la sérialisation des données XML](../relational-databases/xml/define-the-serialization-of-xml-data.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b9cbd080a138b939224d6bb88218b46e52a23f4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255450"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
@@ -40,7 +40,7 @@ ms.locfileid: "75255450"
 ##  <a name="bkmk_general"></a>Recommandations générales du Journal ULS  
  Le tableau suivant répertorie les catégories et niveaux d'événements recommandés pour l'analyse d'un environnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Lorsqu'un événement est journalisé, chaque entrée inclut l'heure à laquelle l'événement a été enregistré, le nom du processus et l'ID du thread.  
   
-|Category|Niveau|Description|  
+|Category|Level|Description|  
 |--------------|-----------|-----------------|  
 |Base de données|Verbose|Journalise les événements ayant trait à l'accès aux bases de données.|  
 |Général|Verbose|Journalise les événements ayant trait à l'accès aux éléments suivants :<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Pages Web<br /><br /> Gestionnaire HTTP de la visionneuse de rapports<br /><br /> Accès aux rapports (fichiers .rdl)<br /><br /> Sources de données (fichiers .rsds)<br /><br /> URL sur le site SharePoint (fichiers .smdl)|  

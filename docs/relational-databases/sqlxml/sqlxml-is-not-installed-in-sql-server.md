@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c666d02449190ca6a88ac43c96ab7aee9676be4d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242649"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML n'est pas installé dans SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "75242649"
   
 -   **Date**  
   
--   **Heure**  
+-   **Time**  
   
 -   **DateTime2**  
   
@@ -38,6 +38,6 @@ ms.locfileid: "75242649"
  Lorsque vous utilisez SQLXML 4,0 SP1 avec SQLOLEDB ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]partir de, ces types apparaissent en tant que chaînes pour un développeur. SQLXML 4,0 SP1 activera ces quatre nouveaux types de données comme types scalaires intégrés lorsqu’ils sont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés avec Native Client OLE DB fournisseur 11,0 ou version ultérieure. Tant que vous n'aurez pas téléchargé SQLXML 4.0 SP1, le mappage de ces types en types autres que chaîne risque de provoquer la troncation de certaines données. Par exemple, si vous mappez **datetime2** à **xsd : date** , les données seront tronquées [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] à la précision **DateTime** de 3,33 millisecondes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts de programmation SQLXML 4,0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
+ [Concepts de la programmation SQLXML 4.0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
   

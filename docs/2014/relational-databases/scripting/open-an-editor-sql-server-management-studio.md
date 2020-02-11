@@ -11,18 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 443ff4762fe653850af8ba23166bd880298bae52
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242031"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
   Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] prend en charge quatre éditeurs : l’Éditeur de requête [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la modification de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , les éditeurs DMX et MDX pour la modification des scripts utilisant ces langages et l’éditeur XML/A pour la modification de scripts XML/A ou de fichiers XML. Tous ces éditeurs peuvent également être utilisés pour modifier des fichiers texte.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] prend en charge quatre éditeurs : l’Éditeur de requête [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la modification de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , les éditeurs DMX et MDX pour la modification des scripts utilisant ces langages et l’éditeur XML/A pour la modification de scripts XML/A ou de fichiers XML. Tous ces éditeurs peuvent également être utilisés pour modifier des fichiers texte.  
   
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Si vous partagez des fichiers avec des utilisateurs d'autres sites qui utilisent des pages de codes distinctes, vous devez enregistrer votre fichier avec le code Unicode approprié afin d'éviter les erreurs de lecture du fichier. De même, lorsque vous enregistrez des fichiers pour UNIX ou Macintosh, assurez-vous de les enregistrer au format de document approprié. Dans le menu **Fichier** , cliquez sur **Enregistrer sous**, puis sur **Enregistrer avec encodage** en cliquant sur la flèche en regard du bouton **Enregistrer** , puis choisissez **Unix** ou **Macintosh** sous **Fins de ligne**.  
@@ -36,34 +35,33 @@ ms.locfileid: "75242031"
 ### <a name="using-the-filenew-menu"></a>Utilisation du menu Fichier/Nouveau  
  Dans le menu de **Fichier** , cliquez sur **Nouveau**, puis sélectionnez l’un des éditeurs de requête proposés en option :  
   
--   **Interroger avec la connexion actuelle** -ouvre une nouvelle fenêtre d’éditeur du type associé à la connexion [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]active dans. La fenêtre de l'éditeur utilise les mêmes informations d'authentification que la connexion active. Par exemple, si vous sélectionnez une instance du dans [!INCLUDE[ssDE](../../includes/ssde-md.md)] l’Explorateur d’objets, puis que vous utilisez l’option **requête avec la connexion actuelle**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre un [!INCLUDE[ssDE](../../includes/ssde-md.md)] éditeur de requête connecté à la même instance en utilisant les mêmes informations d’authentification.  
+-   **Requête avec la connexion actuelle** - Ouvre une nouvelle fenêtre d’éditeur du type associé à la connexion active dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La fenêtre de l'éditeur utilise les mêmes informations d'authentification que la connexion active. Par exemple, si vous sélectionnez une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’Explorateur d’objets, puis choisissez **Requête avec la connexion actuelle**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre un Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est connecté à la même instance en utilisant les mêmes informations d’identification.  
   
--   **Moteur de base de données requête** : ouvre un nouvel [!INCLUDE[ssDE](../../includes/ssde-md.md)] éditeur de requête et une boîte de dialogue pour obtenir les informations requises pour se connecter à [!INCLUDE[ssDE](../../includes/ssde-md.md)]une instance du.  
+-   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations nécessaires pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   **Analysis Services requête MDX** : ouvre un nouvel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] éditeur de requête MDX et une boîte de dialogue qui vous permet d’obtenir les informations requises [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pour se connecter à une instance de.  
+-   **Requête MDX Analysis Services** - Ouvre un nouvel Éditeur de requête MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   **Analysis Services requête DMX** : ouvre un nouvel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] éditeur de requête DMX et une boîte de dialogue qui vous permet d’obtenir les informations requises [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pour se connecter à une instance de.  
+-   **Requête DMX Analysis Services** - Ouvre un nouvel Éditeur de requête DMX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   **Analysis Services requête XML/a** : ouvre un nouvel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] éditeur de requête XML/a et une boîte de dialogue qui vous permet d’obtenir les informations requises [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pour se connecter à une instance de.  
+-   **Requête XMLA Analysis Services** - Ouvre un nouvel Éditeur de requête XML/A [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="using-the-fileopen-menu"></a>Utilisation du menu Fichier/Ouvrir  
- Dans le menu **Fichier** , cliquez sur **Ouvrir**, puis naviguez jusqu’à un fichier et ouvrez-le. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre le type approprié d’éditeur pour l’extension de fichier, copie le contenu du fichier dans la fenêtre de l’éditeur et ouvre si nécessaire une boîte de dialogue de connexion. Par exemple, si vous ouvrez un fichier avec l'extension .sql, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , y copie le contenu du fichier .sql, et ouvre une boîte de dialogue de connexion. Si vous ouvrez un fichier avec une extension non associée à un éditeur spécifique, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre une fenêtre d'éditeur de texte et y copie le contenu du fichier.  
+ Dans le menu **Fichier** , cliquez sur **Ouvrir**, puis naviguez jusqu’à un fichier et ouvrez-le. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre le type approprié d’éditeur pour l’extension de fichier, copie le contenu du fichier dans la fenêtre de l’éditeur et ouvre si nécessaire une boîte de dialogue de connexion. Par exemple, si vous ouvrez un fichier avec l'extension .sql, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , y copie le contenu du fichier .sql, et ouvre une boîte de dialogue de connexion. Si vous ouvrez un fichier avec une extension non associée à un éditeur spécifique, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre une fenêtre d'éditeur de texte et y copie le contenu du fichier.  
   
  Pour plus d’informations, consultez [Associer des extensions de fichier à un éditeur de code](associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Utilisation de la barre d'outils  
  Dans la barre d’outils **Standard** , cliquez sur l’un des boutons suivants :  
   
--   **Nouvelle requête** : ouvre une nouvelle fenêtre d’éditeur du type associé à la connexion active dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La fenêtre de l'éditeur utilise les mêmes informations d'authentification que la connexion active. Par exemple, si vous sélectionnez une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’Explorateur d’objets, puis cliquez sur **Nouvelle requête** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre un Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est connecté à la même instance en utilisant les mêmes informations d’identification.  
+-   **Nouvelle requête** - Ouvre une nouvelle fenêtre d’éditeur du type associé à la connexion active dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La fenêtre de l'éditeur utilise les mêmes informations d'authentification que la connexion active. Par exemple, si vous sélectionnez une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’Explorateur d’objets, puis cliquez sur **Nouvelle requête** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre un Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est connecté à la même instance en utilisant les mêmes informations d’identification.  
   
--   **Moteur de base de données requête** : ouvre un nouvel [!INCLUDE[ssDE](../../includes/ssde-md.md)] éditeur de requête et une boîte de dialogue pour obtenir les informations requises pour se connecter à [!INCLUDE[ssDE](../../includes/ssde-md.md)]une instance du.  
+-   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations nécessaires pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   **Analysis Services requête MDX** : ouvre un nouvel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] éditeur de requête MDX et une boîte de dialogue qui vous permet d’obtenir les informations requises [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pour se connecter à une instance de.  
+-   **Requête MDX Analysis Services** - Ouvre un nouvel Éditeur de requête MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   **Analysis Services requête DMX** : ouvre un nouvel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] éditeur de requête DMX et une boîte de dialogue qui vous permet d’obtenir les informations requises [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pour se connecter à une instance de.  
+-   **Requête DMX Analysis Services** - Ouvre un nouvel Éditeur de requête DMX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   **Analysis Services requête XML/a** : ouvre un nouvel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] éditeur de requête XML/a et une boîte de dialogue qui vous permet d’obtenir les informations requises [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pour se connecter à une instance de.  
+-   **Requête XMLA Analysis Services** - Ouvre un nouvel Éditeur de requête XML/A [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="using-object-explorer"></a>Utilisation de l'Explorateur d'objets  
  Dans l’ **Explorateur d’objets**:  

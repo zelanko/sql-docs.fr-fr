@@ -12,10 +12,10 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 5e792a15670c50b918eabbf371258aa9b62cab82
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242131"
 ---
 # <a name="change-domain-values"></a>Modifier les valeurs de domaine
@@ -34,14 +34,14 @@ ms.locfileid: "75242131"
   
 -   Importez les valeurs de domaine d'un fichier Excel  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Prerequisites"></a>Conditions préalables  
  Pour modifier une valeur de domaine, vous devez avoir une base de connaissances et un domaine ouverts dans l'activité de gestion de l'arborescence du domaine.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour modifier les valeurs de domaine.  
   
 ##  <a name="Change"></a>Modifier les valeurs de domaine  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a049491513b826b2b050081b40cb5319ca74160f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243211"
 ---
 # <a name="specify-a-hit-count"></a>Spécifier un nombre d'accès
@@ -45,7 +45,7 @@ ms.locfileid: "75243211"
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Nombre d’accès** dans le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Dans la fenêtre **Points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Nombre d’accès** dans le menu contextuel.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75243211"
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Nombre d’accès** dans le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Dans la fenêtre **Points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Nombre d’accès** dans le menu contextuel.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "75243211"
 4.  Cliquez sur **OK** ou sur **Annuler** pour fermer la boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier une condition de point d'arrêt](specify-a-breakpoint-condition.md)  
+ [Spécifier une condition de point d’arrêt](specify-a-breakpoint-condition.md)  
   
   

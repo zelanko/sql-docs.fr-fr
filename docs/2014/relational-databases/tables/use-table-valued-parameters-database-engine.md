@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211761"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utiliser les paramètres table (Moteur de base de données)
@@ -63,23 +63,24 @@ ms.locfileid: "68211761"
   
 -   Sont mis en cache comme une table temporaire en cas de utilisation dans une procédure stockée. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les paramètres table sont également mis en cache pour les requêtes paramétrables.  
   
-##  <a name="Restrictions"></a> Restrictions  
+##  <a name="Restrictions"></a>Concernant  
  Les paramètres table ont les restrictions suivantes :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne maintient pas de statistiques sur les colonnes de paramètres table.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne maintient pas de statistiques sur les colonnes de paramètres table.  
   
 -   Les paramètres table doivent être passés comme paramètres READONLY d'entrée aux routines [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous ne pouvez pas effectuer d'opérations DML telles que UPDATE, DELETE ou INSERT sur un paramètre table dans le corps d'une routine.  
   
 -   Vous ne pouvez pas utiliser de paramètre table comme cible d'une instruction SELECT INTO ou INSERT EXEC. Un paramètre table peut être dans la clause FROM de SELECT INTO ou dans la chaîne ou procédure stockée INSERT EXEC.  
   
-##  <a name="BulkInsert"></a> Paramètres table et opérations BULK INSERT  
- L'utilisation de paramètres table est comparable à d'autres méthodes d'utilisation de variables basées sur des ensembles ; toutefois, l'utilisation de paramètres table peut souvent s'avérer plus rapide pour les grands ensembles de données. Comparé aux opérations en bloc, qui ont un coût de démarrage supérieur, les paramètres table sont particulièrement adaptés à l'insertion de moins de 1000 lignes.  
+##  <a name="BulkInsert"></a>Paramètres table et opérations BULK INSERT  
+ L'utilisation de paramètres table est comparable à d'autres méthodes d'utilisation de variables basées sur des ensembles ; toutefois, l'utilisation de paramètres table peut souvent s'avérer plus rapide pour les grands ensembles de données. Comparé aux opérations en bloc, qui ont un coût de démarrage supérieur, les paramètres table sont particulièrement adaptés à l'insertion de moins de 1000 lignes.  
   
  Les paramètres table réutilisés tirent parti de la mise en cache de table temporaire. Cette mise en cache de table autorise une meilleure extensibilité que les opérations BULK INSERT équivalentes. En utilisant de petites opérations d'insertion de ligne, vous pouvez retirer un petit avantage en matière de performances en utilisant des listes de paramètres ou des instructions groupées au lieu d'opérations BULK INSERT ou de paramètres table. Toutefois, ces méthodes sont moins commodes à programmer et les performances diminuent rapidement à mesure que le nombre de lignes augmente.  
   
  Les paramètres table procurent des performances supérieures ou égales à une implémentation de tableau de paramètres équivalente.  
   
-##  <a name="Example"></a> Exemple  
+##  <a name="Example"></a>Tels  
  L'exemple suivant utilise [!INCLUDE[tsql](../../includes/tsql-md.md)] et montre comment créer un type de paramètre table, déclarer une variable pour y faire référence, remplir la liste de paramètres, puis passer les valeurs à une procédure stockée.  
   
 ```  
@@ -120,12 +121,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
+ [CRÉER un TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
- [sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
- [sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [sys. types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
+ [sys. Parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
+ [sys. parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
+ [CRÉER une procédure &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
   

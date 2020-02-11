@@ -10,10 +10,10 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251764"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -96,7 +96,7 @@ ms.locfileid: "75251764"
   
  Lors de l'exportation des données nettoyées dans la page **Exporter** de l'Assistant de nettoyage de projet de qualité des données, spécifiez si vous souhaitez que les données nettoyées soient exportées au format normalisé en activant la case à cocher **Normaliser la sortie** . Par défaut, les données nettoyées sont exportées au format normalisé (autrement dit, la case à cocher est activée). Pour plus d’informations sur l’exportation des données nettoyées, consultez [Nettoyer des données à l’aide des connaissances DQS &#40;internes&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a>Tâches associées  
+##  <a name="Related"></a> Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

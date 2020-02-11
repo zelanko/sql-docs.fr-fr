@@ -1,5 +1,5 @@
 ---
-title: Source de l’exemple de propriété (VB) | Microsoft Docs
+title: Source, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5161dc2aa0a0a213095a160cf0473c138cdf2cf5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930915"
 ---
 # <a name="source-property-example-vb"></a>Source, exemple de propriété (VB)
-Cet exemple montre la [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriété en ouvrant trois [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets basés sur différentes sources de données.  
+Cet exemple illustre la propriété [source](../../../ado/reference/ado-api/source-property-ado-recordset.md) en ouvrant trois objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basés sur des sources de données différentes.  
   
 ```  
 'BeginSourceVB  
@@ -127,5 +127,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

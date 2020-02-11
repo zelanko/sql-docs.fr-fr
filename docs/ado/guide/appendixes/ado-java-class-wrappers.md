@@ -13,14 +13,14 @@ ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927005"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrappers de classe Java ADO
-Ce code déclare une instance de l’ADO.NET [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wrapper de classe et initialise le tout sur la même ligne de code. En outre, il déclare des variables pour chacun des arguments dans le [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) (méthode), en particulier pour [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) et [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (Java ne prend pas en charge énuméré types). Il s’ouvre et ferme le **Recordset** objet. Définissant simplement Rs1 NULL planifie cette variable doit être publié lorsque Java effectue sa libération systématique et intermittente des objets inutilisés.  
+Ce code déclare une instance du wrapper de la classe [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ADO et l’initialise, le tout sur la même ligne de code. En outre, il déclare des variables pour chacun des arguments de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) , en particulier pour [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) et [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (car Java ne prend pas en charge les types énumérés). Il ouvre et ferme l’objet **Recordset** . La définition de RS1 sur NULL planifie simplement cette variable à libérer lorsque Java effectue sa mise en version systématique et intermittente des objets inutilisés.  
   
 ```java
 public static void main( String args[])  

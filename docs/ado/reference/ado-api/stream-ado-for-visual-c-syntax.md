@@ -16,10 +16,10 @@ ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec7e5ac51718bd703586b0c60f77dad0c77cb938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930696"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (syntaxe ADO pour Visual C++)
@@ -41,7 +41,7 @@ Write(VARIANT Buffer)
 WriteText(BSTR Data, StreamWriteEnum Options = adWriteChar)  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
   
 ```  
 get_Charset(BSTR *pbstrCharset)  

@@ -18,10 +18,10 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929955"
 ---
 # <a name="effective-boolean-value-xquery"></a>Valeur booléenne effective (XQuery)
@@ -37,15 +37,15 @@ ms.locfileid: "67929955"
   
 -   Expressions logiques  
   
--   Le [ne fonctionne pas](../xquery/functions-on-boolean-values-not-function.md)  
+-   La [fonction not](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   Clause WHERE d'une expression FLWOR  
   
 -   [Expressions conditionnelles](../xquery/conditional-expressions-xquery.md)  
   
--   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
+-   [Expressions quantifiées](../xquery/quantified-expressions-xquery.md)  
   
- Voici un exemple de valeur booléenne effective. Lorsque le **si** expression est traitée, la valeur booléenne effective de la condition est déterminée. Puisque l'expression `/a[1]` renvoie une séquence vide, la valeur booléenne effective est false. Le résultat est renvoyé au format XML avec un nœud de texte (false).  
+ Voici un exemple de valeur booléenne effective. Lorsque l’expression **If** est traitée, la valeur booléenne effective de la condition est déterminée. Puisque l'expression `/a[1]` renvoie une séquence vide, la valeur booléenne effective est false. Le résultat est renvoyé au format XML avec un nœud de texte (false).  
   
 ```  
 value is false  
@@ -64,11 +64,11 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- Lorsque la requête réalisée sur des **xml** colonnes ou des variables, vous pouvez avoir des nœuds de type booléen. Le **data()** dans ce cas retourne une valeur booléenne. Si l'expression de la requête renvoie une valeur booléenne true, la valeur booléenne effective est true, comme le montre l'exemple qui suit. Les points suivants sont également illustrés dans l'exemple suivant :  
+ Lors de l’interrogation de colonnes ou de variables **XML** typées, vous pouvez avoir des nœuds de type booléen. Dans ce cas, les **données ()** retournent une valeur booléenne. Si l'expression de la requête renvoie une valeur booléenne true, la valeur booléenne effective est true, comme le montre l'exemple qui suit. Les points suivants sont également illustrés dans l'exemple suivant :  
   
--   Une collection de schémas XML est créée. L’élément \<b > dans la collection est de type booléen.  
+-   Une collection de schémas XML est créée. L’élément \<b> dans la collection est de type booléen.  
   
--   Typé **xml** variable est créée et interrogée.  
+-   Une variable **XML** typée est créée et interrogée.  
   
 -   L'expression `data(/b[1])` renvoie une valeur booléenne true. Par conséquent, la valeur booléenne effective est true dans ce cas.  
   
@@ -89,7 +89,7 @@ go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes fondamentaux de XQuery](../xquery/xquery-basics.md)   
+ [Notions de base de XQuery](../xquery/xquery-basics.md)   
  [Instruction et itération FLWOR &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9b1ebeaca9e81103d2038d6f7a34fe9221cc68f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055592"
 ---
 # <a name="-power-mdx"></a>^ (Puissance) (MDX)
@@ -28,7 +28,7 @@ Numeric_Expression ^ Numeric_Expression
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -38,6 +38,6 @@ Numeric_Expression ^ Numeric_Expression
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si une expression donne comme résultat une valeur NULL, l'opérateur retourne une valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

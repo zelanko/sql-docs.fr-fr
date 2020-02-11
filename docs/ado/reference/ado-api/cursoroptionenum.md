@@ -16,35 +16,35 @@ ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933266"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
-Spécifie quelles sont les fonctionnalités du [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode doit effectuer un test.  
+Spécifie les fonctionnalités que la méthode de [prise en charge](../../../ado/reference/ado-api/supports-method.md) doit tester.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adAddNew**|0x1000400|Prend en charge la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) méthode pour ajouter de nouveaux enregistrements.|  
-|**adApproxPosition**|0x4000|Prend en charge la [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) et [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) propriétés.|  
-|**adBookmark**|0x2000|Prend en charge la [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété pour accéder à des enregistrements spécifiques.|  
-|**adDelete**|0x1000800|Prend en charge la [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md) méthode pour supprimer des enregistrements.|  
-|**adFind**|0x80000|Prend en charge la [trouver](../../../ado/reference/ado-api/find-method-ado.md) méthode trouver une ligne dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
-|**adHoldRecords**|0x100|Récupère plusieurs enregistrements ou modifie la position suivante sans valider toutes les modifications en attente.|  
-|**adIndex**|0x100000|Prend en charge la [Index](../../../ado/reference/ado-api/index-property.md) propriété pour nommer un index.|  
-|**adMovePrevious**|0x200|Prend en charge la [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) et [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) méthodes, et [déplacer](../../../ado/reference/ado-api/move-method-ado.md) ou [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) méthodes pour déplacer l’enregistrement en cours de position vers l’arrière sans nécessiter de signets.|  
-|**adNotify**|0x40000|Indique que le fournisseur de données sous-jacent prend en charge les notifications (qui détermine si **Recordset** événements sont pris en charge).|  
-|**adResync**|0x20000|Prend en charge la [Resync](../../../ado/reference/ado-api/resync-method.md) méthode pour mettre à jour le curseur avec les données qui est visibles dans la base de données sous-jacente.|  
-|**adSeek**|0x200000|Prend en charge la [recherche](../../../ado/reference/ado-api/seek-method.md) méthode trouver une ligne dans un **Recordset**.|  
-|**adUpdate**|0x1008000|Prend en charge la [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode pour modifier des données existantes.|  
-|**adUpdateBatch**|0x10000|Prend en charge la mise à jour par lots ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) et [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) méthodes) pour transmettre des groupes de modifications au fournisseur.|  
+|**adAddNew**|0x1000400|Prend en charge la méthode [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) pour ajouter de nouveaux enregistrements.|  
+|**adApproxPosition**|0x4000|Prend en charge les propriétés [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) et [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) .|  
+|**adBookmark**|0x2000|Prend en charge la propriété [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) pour accéder à des enregistrements spécifiques.|  
+|**adDelete**|0x1000800|Prend en charge la méthode [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) pour supprimer des enregistrements.|  
+|**adFind**|0x80000|Prend en charge la méthode [Find](../../../ado/reference/ado-api/find-method-ado.md) pour localiser une ligne dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**adHoldRecords**|0x100|Récupère plus d’enregistrements ou modifie la position suivante sans valider toutes les modifications en attente.|  
+|**adIndex**|0x100000|Prend en charge la propriété [index](../../../ado/reference/ado-api/index-property.md) pour nommer un index.|  
+|**adMovePrevious**|0x200|Prend en charge les méthodes [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) et [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) , ainsi que les méthodes [Move](../../../ado/reference/ado-api/move-method-ado.md) ou [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) pour déplacer la position d’enregistrement actuelle vers l’arrière sans avoir besoin de signets.|  
+|**adNotify**|0x40000|Indique que le fournisseur de données sous-jacent prend en charge les notifications (qui détermine si les événements **Recordset** sont pris en charge).|  
+|**adResync**|0x20000|Prend en charge la méthode [Resync](../../../ado/reference/ado-api/resync-method.md) pour mettre à jour le curseur avec les données qui sont visibles dans la base de données sous-jacente.|  
+|**adSeek**|0x200000|Prend en charge la méthode [Seek](../../../ado/reference/ado-api/seek-method.md) pour localiser une ligne dans un **Recordset**.|  
+|**adUpdate**|0x1008000|Prend en charge la méthode [Update](../../../ado/reference/ado-api/update-method.md) pour modifier des données existantes.|  
+|**adUpdateBatch**|0x10000|Prend en charge la mise à jour par lots (méthodes[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) et [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) ) pour transmettre des groupes de modifications au fournisseur.|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
- Package : **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
+ Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.CursorOption.ADDNEW|  
 |AdoEnums.CursorOption.APPROXPOSITION|  
@@ -53,12 +53,12 @@ Spécifie quelles sont les fonctionnalités du [prend en charge](../../../ado/re
 |AdoEnums.CursorOption.FIND|  
 |AdoEnums.CursorOption.HOLDRECORDS|  
 |AdoEnums.CursorOption.INDEX|  
-|AdoEnums.CursorOption.MOVEPREVIOUS|  
+|AdoEnums. CursorOption. MOVEPREVIOUS|  
 |AdoEnums.CursorOption.NOTIFY|  
-|AdoEnums.CursorOption.RESYNC|  
+|AdoEnums. CursorOption. Resync|  
 |AdoEnums.CursorOption.SEEK|  
-|AdoEnums.CursorOption.UPDATE|  
-|AdoEnums.CursorOption.UPDATEBATCH|  
+|AdoEnums. CursorOption. UPDATE|  
+|AdoEnums. CursorOption. UPDATEBATCH|  
   
 ## <a name="applies-to"></a>S'applique à  
  [Supports, méthode](../../../ado/reference/ado-api/supports-method.md)

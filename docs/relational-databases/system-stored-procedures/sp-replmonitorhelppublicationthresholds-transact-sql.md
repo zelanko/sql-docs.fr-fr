@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75320776"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75320776"
 
   Retourne l'ensemble de mesures de seuil pour une publication analysée. Cette procédure stockée, utilisée pour surveiller la réplication, est exécutée sur la base de données du serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Publication transactionnelle.|  
-|**1,0**|Publication d'instantané.|  
+|**1**|Publication d'instantané.|  
 |**2**|Publication de fusion.|  
 |NULL (par défaut)|La réplication tente de déterminer le type de publication.|  
   
@@ -61,16 +61,16 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**tiers**|ID de la mesure de performance de réplication qui peut correspondre à l'une des valeurs suivantes.<br /><br /> **1expiration** : contrôle l’expiration imminente des abonnements aux publications transactionnelles.<br /><br /> **2latency** : analyse les performances des abonnements aux publications transactionnelles.<br /><br /> **4mergeexpiration** : contrôle l’expiration imminente des abonnements aux publications de fusion.<br /><br /> **5mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).<br /><br /> **6mergefastrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à bande passante élevée (LAN).<br /><br /> **7mergefastrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à bande passante élevée (LAN).<br /><br /> **8mergeslowrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
+|**metric_id**|**int**|ID de la mesure de performance de réplication qui peut correspondre à l'une des valeurs suivantes.<br /><br /> **1expiration** : contrôle l’expiration imminente des abonnements aux publications transactionnelles.<br /><br /> **2latency** : analyse les performances des abonnements aux publications transactionnelles.<br /><br /> **4mergeexpiration** : contrôle l’expiration imminente des abonnements aux publications de fusion.<br /><br /> **5mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).<br /><br /> **6mergefastrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à bande passante élevée (LAN).<br /><br /> **7mergefastrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à bande passante élevée (LAN).<br /><br /> **8mergeslowrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
 |**bonhomme**|**sysname**|Nom de la mesure de performance de réplication.|  
-|**ajoutée**|**tiers**|Valeur seuil de la mesure de performance.|  
-|**shouldalert**|**64bits**|Indique si une alerte doit être générée lorsque la mesure dépasse le seuil défini pour cette publication ; la valeur **1** indique qu’une alerte doit être déclenchée.|  
-|**IsEnabled**|**64bits**|Indique si l’analyse est activée pour cette mesure de performance de réplication pour cette publication ; la valeur **1** indique que l’analyse est activée.|  
+|**ajoutée**|**int**|Valeur seuil de la mesure de performance.|  
+|**shouldalert**|**bit**|Indique si une alerte doit être générée lorsque la mesure dépasse le seuil défini pour cette publication ; la valeur **1** indique qu’une alerte doit être déclenchée.|  
+|**IsEnabled**|**bit**|Indique si l’analyse est activée pour cette mesure de performance de réplication pour cette publication ; la valeur **1** indique que l’analyse est activée.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_replmonitorhelppublicationthresholds** est utilisé avec tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  

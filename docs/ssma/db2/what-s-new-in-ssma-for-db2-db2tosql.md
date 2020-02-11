@@ -2,23 +2,40 @@
 title: Nouveautés de SSMA pour DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 75fbcbef02dc19dac47d96431118b75df262b685
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 9b4fc1f9d0ce1128306f27a5f7bf6658377528cd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834299"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516563"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Nouveautés de SSMA pour DB2 (DB2ToSQL)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications DB2 dans chaque version.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+En plus d’un ensemble ciblé de correctifs conçus pour améliorer la facilité d’utilisation et les performances, la version 8.6 de SSMA pour DB2 a été améliorée en ajoutant un paramètre qui permet aux utilisateurs d’omettre les propriétés étendues SSMA dans le code converti.
+
+Pour tirer parti de ce paramètre, dans SSMA pour DB2, accédez **à outils** > **paramètres** > du projet**conversion****générale** > , puis sous **divers**, mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui**.
+
+![Paramètre d’omission des propriétés étendues](../db2/media/ssma-omit-extended-properties.png)
+
+En outre, SSMA pour DB2 fournit désormais les éléments suivants :
+
+-   Correctif pour la conversion de fonctions qui utilisent des valeurs d’argument par défaut
+-   Amélioration de l’analyse des fonctions dans la clause PARAMETER.
+- Possibilité de convertir l’instruction LEAVE.
+
+> [!IMPORTANT]
+> Avec SSMA v 8.5 et versions ultérieures, .net 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 

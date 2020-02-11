@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243271"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Démarrer l'utilitaire sqlcmd
@@ -30,11 +30,11 @@ ms.locfileid: "75243271"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>Pour démarrer l'utilitaire sqlcmd et établir une connexion à une instance par défaut de SQL Server  
   
-1.  Dans le menu **Démarrer** , cliquez sur **exécuter**. Dans la zone **Ouvrir** , tapez **cmd**, puis cliquez sur **OK** pour ouvrir une fenêtre d'invite de commandes.  
+1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans la zone **Ouvrir** , tapez **cmd**, puis cliquez sur **OK** pour ouvrir une fenêtre d'invite de commandes.  
   
 2.  Dans l’invite de commandes, tapez `sqlcmd`.  
   
-3.  Appuyez sur ENTRÉE.  
+3.  Appuyez sur Entrée.  
   
      Vous bénéficiez maintenant d'une connexion approuvée à l'instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est exécutée sur votre ordinateur.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75243271"
   
 1.  Ouvrez une fenêtre d’invite de commandes, `sqlcmd -S`puis tapez *myServer\instanceName*. Remplacez *mon_serveur\nom_instance* par le nom de l’ordinateur et de l’instance de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous souhaitez vous connecter.  
   
-2.  Appuyez sur ENTRÉE.  
+2.  Appuyez sur Entrée.  
   
      L' `sqlcmd` invite (1>) indique que vous êtes connecté à l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -54,6 +54,6 @@ ms.locfileid: "75243271"
     >  Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] entrées sont stockées dans une mémoire tampon. Elles sont exécutées en tant que lot lorsque la commande GO est rencontrée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécuter des fichiers de script Transact-SQL à l’aide de sqlcmd](sqlcmd-run-transact-sql-script-files.md)  
+ [Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd](sqlcmd-run-transact-sql-script-files.md)  
   
   

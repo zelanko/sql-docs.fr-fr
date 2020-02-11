@@ -1,5 +1,5 @@
 ---
-title: DeleteRule, propriété-Exemple (VC ++) | Microsoft Docs
+title: DeleteRule, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b73773b064fd50d8b1422a9a0aad2fe67aa71e91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6dc6d3284018aecd247baad6e66aaa332b721459
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966393"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911093"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule, exemple de propriété (VC++)
-Cet exemple montre la [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) propriété d’un [clé](../../../ado/reference/adox-api/key-object-adox.md) objet. Le code ajoute une nouvelle [Table](../../../ado/reference/adox-api/table-object-adox.md) , puis définit une nouvelle clé primaire, en définissant **DeleteRule** à **propriété DeleteRule**.  
+Cet exemple illustre la propriété [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) d’un objet [Key](../../../ado/reference/adox-api/key-object-adox.md) . Le code ajoute une nouvelle [table](../../../ado/reference/adox-api/table-object-adox.md) , puis définit une nouvelle clé primaire, en affectant à **DeleteRule** la valeur **adRICascade**.  
   
 ```  
 // BeginDeleteRuleCpp.cpp  
@@ -100,7 +100,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...."<< endl;  
+      cout << "Error occurred in include files...."<< endl;  
    }  
   
    ::CoUninitialize();  

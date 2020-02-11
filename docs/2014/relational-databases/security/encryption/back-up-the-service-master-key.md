@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: c6e67b2eacfd428bc296596699ff65939789d1e8
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957273"
 ---
 # <a name="back-up-the-service-master-key"></a>Sauvegarder la clé principale du service
@@ -24,28 +24,28 @@ ms.locfileid: "74957273"
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Caution](#Security)  
+     [Sécurité](#Security)  
   
 -   [Pour sauvegarder la clé principale du service](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a>Limitations et restrictions  
+###  <a name="Restrictions"></a> Limitations et restrictions  
   
 -   La clé principale doit être ouverte et, par conséquent, déchiffrée avant d'être sauvegardée. Si elle est chiffrée avec la clé principale du service, la clé principale ne doit pas être explicitement ouverte ; toutefois, si la clé principale est chiffrée uniquement avec un mot de passe, elle doit être ouverte explicitement.  
   
 -   Nous vous conseillons de sauvegarder la clé principale dès sa création et de stocker cette sauvegarde en lieu sûr, en dehors de votre lieu de travail.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
-##  <a name="Procedure"></a>Utilisation de Transact-SQL  
+##  <a name="Procedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-back-up-the-service-master-key"></a>Pour sauvegarder la clé principale du service  
   
@@ -59,9 +59,9 @@ ms.locfileid: "74957273"
   
 5.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-6.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
+6.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-7.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
+7.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Creates a backup of the "AdventureWorks2012" master key.  

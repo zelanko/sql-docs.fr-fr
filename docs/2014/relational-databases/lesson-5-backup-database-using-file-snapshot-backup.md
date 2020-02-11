@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231795"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Leçon 6 : migrer une base de données d’une machine source locale vers une machine de destination dans Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Leçon 6 : Migrer une base de données d’une machine source locale vers une machine de destination dans Azure
   Cette leçon part du principe que vous disposez déjà d’un autre SQL Server, qui peut résider sur un autre ordinateur local ou sur une machine virtuelle dans Azure. Pour plus d’informations sur la création d’une machine virtuelle SQL Server dans Azure, consultez [configuration d’une machine virtuelle SQL Server sur Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Après avoir configuré une machine virtuelle SQL Server dans Azure, assurez-vous que vous pouvez vous connecter à une instance de SQL Server de cette machine virtuelle via SQL Server Management Studio sur un autre ordinateur.  
   
  Cette leçon suppose également que vous avez déjà effectué les étapes suivantes :  
@@ -128,7 +128,7 @@ ms.locfileid: "75231795"
   
 1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.  
   
-2.  Cliquez avec le bouton droit sur **bases de données**, puis cliquez sur **nouvelle base de données**. Ensuite, cliquez avec le bouton droit sur TestDB1. Cliquez sur Tâches, puis cliquez sur Détacher. Dans la fenêtre de dialogue Détacher, cochez Supprimer les connexions. Cliquez sur **OK**.  
+2.  Cliquez avec le bouton droit sur **Bases de données**, puis cliquez sur **Nouvelle base de données**. Ensuite, cliquez avec le bouton droit sur TestDB1. Cliquez sur Tâches, puis cliquez sur Détacher. Dans la fenêtre de dialogue Détacher, cochez Supprimer les connexions. Cliquez sur **OK**.  
   
 3.  Connectez-vous à l'ordinateur de destination, sur lequel SQL Server 2014 CTP2 ou version ultérieure est installé. Pour préparer l'ordinateur de destination, vous devez créer des informations d'identification SQL Server sur l'ordinateur de destination de façon à indiquer le même conteneur que celui qui contient TestDB1. Si vous rattachez dans le même ordinateur, vous n'avez pas besoin de créer d'autres informations d'identification.  
   
@@ -146,5 +146,5 @@ ms.locfileid: "75231795"
   
  **Leçon suivante :**  
   
- [Leçon 7 : déplacer vos fichiers de données vers le stockage Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Leçon 7 :Déplacer vos fichiers de données dans Stockage Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

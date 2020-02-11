@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243229"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Spécifier une condition de point d'arrêt
@@ -31,7 +31,7 @@ ms.locfileid: "75243229"
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Condition** dans le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Dans la fenêtre **Points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Condition** dans le menu contextuel.  
   
@@ -43,5 +43,5 @@ ms.locfileid: "75243229"
     >  Le débogueur n'évalue l'expression booléenne que lorsque le point d'arrêt est atteint pour la première fois. Si vous choisissez **a changé**, le débogueur ne considère pas la première évaluation comme une modification, donc il ne s’y arrête pas.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier un nombre d’accès](specify-a-hit-count.md)   
- [Spécifier une action de point d'arrêt](specify-a-breakpoint-action.md)  
+ [Spécifier un nombre d'accès](specify-a-hit-count.md)   
+ [Spécifier une action de point d’arrêt](specify-a-breakpoint-action.md)  

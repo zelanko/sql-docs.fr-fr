@@ -21,17 +21,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242041"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gérer l'Éditeur et le mode d'affichage
   L'Éditeur offre plusieurs moyens de contrôler l'affichage du code.  
   
 ## <a name="changing-the-view-mode"></a>Changement du mode d'affichage  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]propose un mode d’affichage appelé **documents avec onglet**, qui vous permet d’ouvrir plusieurs éditeurs et documents simultanément et d’y accéder à l’aide des onglets situés en haut de l’éditeur. Vous pouvez également ouvrir l'environnement [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dans le mode MD, dans lequel il est possible d'attacher les fenêtres sans les onglets, de les organiser, de les réduire, etc.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un mode d’affichage appelé **Documents avec onglet**, qui permet d’ouvrir plusieurs éditeurs et documents en même temps et d’y accéder au moyen des onglets situés dans la partie supérieure de l’Éditeur. Vous pouvez également ouvrir l'environnement [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dans le mode MD, dans lequel il est possible d'attacher les fenêtres sans les onglets, de les organiser, de les réduire, etc.  
   
 #### <a name="to-switch-between-view-modes"></a>Pour passer d'un mode d'affichage à un autre  
   

@@ -16,18 +16,18 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925358"
 ---
 # <a name="examining-data"></a>Examen des données
-Le [obtention de données](../../../ado/guide/data/getting-data.md) section expliqué comment récupérer des données à partir d’une source de données car une ou plusieurs **Recordset** objets. Cette section traite de **Recordset** plus en détail, y compris comment naviguer dans le **Recordset** et afficher ses données.  
+La section [obtention de données](../../../ado/guide/data/getting-data.md) a expliqué comment récupérer des données d’une source de données sous la forme d’un ou de plusieurs objets **Recordset** . Cette section traite de l' **objet Recordset** plus en détail, y compris comment naviguer dans le **Recordset** et afficher ses données.  
   
- **Jeu d’enregistrements** prend en charge divers [propriétés et méthodes](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) pour parcourir et examiner les données contenues dans. Ces fonctionnalités dépendent du fournisseur. Certains fournisseurs ne peuvent pas en charge certaines propriétés ou des méthodes.  
+ **Recordset** prend en charge différentes [Propriétés et méthodes](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) permettant de parcourir et d’examiner les données contenues dans. Ces fonctionnalités dépendent du fournisseur. Certains fournisseurs peuvent ne pas prendre en charge certaines propriétés ou méthodes.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Enregistrement actif et taille du recordset](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
   

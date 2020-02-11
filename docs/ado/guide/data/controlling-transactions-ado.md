@@ -1,5 +1,5 @@
 ---
-title: Contrôle des Transactions (ADO) | Microsoft Docs
+title: Contrôle des transactions (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8a13ee7637c0cb16e33e626a218e28242dabf4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925776"
 ---
 # <a name="controlling-transactions-ado"></a>Contrôle des transactions (ADO)
-ADO prend en charge le traitement des transactions dans une connexion à l’aide de la **BeginTrans**, **CommitTrans**, et **RollbackTrans** méthodes sur un  **Connexion** objet. L’idée générale de l’implémentation de traitement des transactions dans ADO est illustrée dans l’extrait de code simple suivant.  
+ADO prend en charge le traitement des transactions dans une connexion à l’aide des méthodes **BeginTrans**, **CommitTrans**et **RollbackTrans** sur un objet **Connection** . L’idée générale de l’implémentation du traitement des transactions dans ADO est illustrée dans l’extrait de code simple suivant.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -77,6 +77,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Ici le traitement des transactions est utilisé pour garantir que les deux enregistrements sont mis à jour en une seule unité d’opération, et que les noms de deux produits sont échangés ou pas changent du tout.  
+ Ici, le traitement des transactions permet de s’assurer que les deux enregistrements sont mis à jour comme une unité d’exploitation et que les deux noms de produits sont interchangeables ou inchangés du tout.  
   
- Pour des discussions détaillées du traitement des transactions, consultez [mise à jour et persistance des données](../../../ado/guide/data/updating-and-persisting-data.md).
+ Pour obtenir des informations détaillées sur le traitement des transactions [, consultez Mise à jour et persistance des données](../../../ado/guide/data/updating-and-persisting-data.md).

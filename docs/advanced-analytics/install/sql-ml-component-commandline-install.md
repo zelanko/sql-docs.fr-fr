@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727591"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installer les composants de machine learning SQL Server R et Python à partir de la ligne de commande
@@ -70,7 +70,7 @@ En cas d’installation à partir de l’invite de commandes, [!INCLUDE[ssNoVers
 | /IACCEPTPYTHONLICENSETERMS | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation des composants Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation de SQL Server.|
 | /MRCACHEDIRECTORY | Pour une installation hors connexion, spécifie le dossier contenant les fichiers CAB des composants R. |
-| MPYCACHEDIRECTORY | Réservé pour un usage ultérieur. Utilisez %TEMP% pour stocker les fichiers .CAB des composants Python pour une installation sur un ordinateur ne disposant pas de connexion Internet. |
+| MPYCACHEDIRECTORY | Réservé pour un usage futur. Utilisez %TEMP% pour stocker les fichiers .CAB des composants Python pour une installation sur un ordinateur ne disposant pas de connexion Internet. |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
@@ -86,7 +86,7 @@ En cas d’installation à partir de l’invite de commandes, [!INCLUDE[ssNoVers
 | /IACCEPTPYTHONLICENSETERMS | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation des composants Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation de SQL Server.|
 | /MRCACHEDIRECTORY | Pour une installation hors connexion, spécifie le dossier contenant les fichiers CAB des composants R. |
-| MPYCACHEDIRECTORY | Réservé pour un usage ultérieur. Utilisez %TEMP% pour stocker les fichiers .CAB des composants Python pour une installation sur un ordinateur ne disposant pas de connexion Internet. |
+| MPYCACHEDIRECTORY | Réservé pour un usage futur. Utilisez %TEMP% pour stocker les fichiers .CAB des composants Python pour une installation sur un ordinateur ne disposant pas de connexion Internet. |
 ::: moniker-end
 
 ## <a name="indb"></a> Installation d’instances en base de données

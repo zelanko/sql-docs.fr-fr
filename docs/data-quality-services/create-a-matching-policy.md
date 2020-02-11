@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251788"
 ---
 # <a name="create-a-matching-policy"></a>Créer une stratégie de correspondance
@@ -28,14 +28,14 @@ ms.locfileid: "75251788"
   
  La création d'une stratégie de correspondance s'effectue en trois étapes : un processus de mappage au cours duquel vous identifiez la source de données et mappez des domaines à des colonnes, un processus de stratégie de correspondance au cours duquel vous créez une ou plusieurs règles de correspondance et testez chaque règle de correspondance séparément, et un processus de résultats de correspondance au cours duquel vous exécutez toutes les règles de correspondance ensemble, et si vous en êtes satisfait, vous ajoutez la stratégie à la base de connaissances. Chacun de ces processus est exécuté sur une page distincte de l'Assistant de l'activité Correspondance, ce qui vous permet de naviguer entre les différentes pages, de réexécuter le processus et de fermer un processus de stratégie de correspondance spécifique, puis de retourner à la même étape du processus. Après avoir testé toutes les règles ensemble, si vous le souhaitez, vous pouvez retourner à la page **Stratégie de correspondance** , apporter quelques ajustements à une règle individuelle, la tester de nouveau séparément, puis retourner à la page **Résultats de correspondance** pour réexécuter toutes les règles ensemble. DQS vous fournit des statistiques sur les données sources, les règles de correspondance et les résultats de correspondance, lesquelles vous permettent de prendre des décisions avisées sur la stratégie de correspondance et de l'affiner.  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Prerequisites"></a>Conditions préalables  
  Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si les données sources se trouvent dans un fichier Excel. Sinon, vous ne pourrez pas sélectionner le fichier Excel à l'étape de mappage. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Si la version 64 bits d'Excel est utilisée, seuls les fichiers Excel 2003 (.xls) sont pris en charge ; les fichiers Excel 2007 ou 2010 (.xlsx) ne sont pas pris en charge. Si vous utilisez la version 64 bits d'Excel 2007 ou 2010, enregistrez le fichier comme fichier .xls ou fichier .csv, ou installez une version 32 bits d'Excel à la place.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une stratégie de correspondance.  
   
 ##  <a name="MatchingRules"></a>Comment définir des paramètres de règle de correspondance  

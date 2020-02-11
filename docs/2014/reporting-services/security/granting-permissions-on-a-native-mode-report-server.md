@@ -22,12 +22,12 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 310ab4f332c3262b20e73211f5ec3d4a5f19786a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101943"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76971393"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Octroi d'autorisations sur un serveur de rapports en mode natif
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'autorisation basée sur les rôles et un sous-système d'authentification pour déterminer qui est habilité à effectuer des opérations et à accéder aux éléments d'un serveur de rapports. L'autorisation basée sur les rôles catégorise en rôles l'ensemble des actions qu'un utilisateur ou groupe peut effectuer. L'authentification repose sur l'authentification Windows intégrée ou sur un module d'authentification personnalisé que vous fournissez. Vous pouvez utiliser des rôles prédéfinis ou personnalisés avec chacun de ces types d'authentifications.  
@@ -53,10 +53,8 @@ ms.locfileid: "66101943"
 >  Si vous avez configuré un serveur de rapports de telle sorte qu'il s'exécute en mode intégré SharePoint, vous devez définir des autorisations sur le site SharePoint de manière à accorder l'accès aux éléments du serveur de rapports. Pour plus d’informations, consultez [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## <a name="who-sets-permissions"></a>Qui définit les autorisations ?  
- Initialement, seuls les utilisateurs qui sont membres du groupe des administrateurs locaux peuvent accéder au serveur de rapports. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé avec deux attributions de rôles par défaut qui accordent un accès au niveau élément et au niveau système aux membres du groupe des administrateurs locaux. Ces attributions de rôles intégrées permettent aux Administrateurs locaux d'accorder l'accès au serveur de rapports à d'autres utilisateurs et de gérer les éléments du serveur de rapports. Les attributions de rôles intégrées ne peuvent pas être supprimées. Un administrateur local a toujours l'autorisation de gérer entièrement une instance de serveur de rapports.  
-  
- Dans la mesure où les autorisations complètes sur un serveur de rapports incluent des autorisations au niveau élément et au niveau système, un administrateur local est assigné aux rôles suivants :  
-  
+ Initialement, seuls les utilisateurs qui sont membres du groupe des administrateurs locaux peuvent accéder au serveur de rapports. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé avec deux attributions de rôles par défaut qui accordent un accès au niveau élément et au niveau système aux membres du groupe des administrateurs locaux. Les administrateurs locaux peuvent utiliser ces attributions de rôles intégrées pour accorder l’accès du serveur de rapports à d’autres utilisateurs et gérer les éléments du serveur de rapports. Les attributions de rôles intégrées ne peuvent pas être supprimées. Un administrateur local a toujours l'autorisation de gérer entièrement une instance de serveur de rapports.  
+ 
  Une configuration supplémentaire est requise avant que vous puissiez administrer une instance du serveur de rapports sur un ordinateur local qui exécute Windows Vista ou Windows Server 2008. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="how-permissions-are-stored"></a>Stockage des autorisations  
@@ -65,7 +63,7 @@ ms.locfileid: "66101943"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>Tâches et outils de gestion des autorisations  
  Utilisez les outils suivants pour gérer les définitions et les attributions de rôles.  
   
-|Tool|Tâches|  
+|Outil|Tâches|  
 |----------|-----------|  
 |Management Studio – Permet d'afficher, modifier, créer et supprimer des définitions de rôles.|[Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
 |Gestionnaire de rapports – Permet d'assigner des utilisateurs et des groupes aux rôles.|[Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)|  
@@ -74,7 +72,7 @@ ms.locfileid: "66101943"
  [Rôles prédéfinis](role-definitions-predefined-roles.md)   
  [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentification avec le serveur de rapports](authentication-with-the-report-server.md)   
- (créer-et-gérer-rôle-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Sécurité et protection de Reporting Services](reporting-services-security-and-protection.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

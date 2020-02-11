@@ -14,16 +14,16 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88ce592ebbf5a1b44d55b1b3119ef96e713112bc
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74833017"
 ---
 # <a name="unicode-function-arguments"></a>Arguments des fonctions Unicode
 Le gestionnaire de pilotes ODBC 3,5 (ou version ultérieure) prend en charge les versions ANSI et Unicode de toutes les fonctions qui acceptent des pointeurs vers des chaînes de caractères ou des SQLPOINTER dans leurs arguments. Les fonctions Unicode sont implémentées en tant que fonctions (avec un suffixe *W*), et non pas en tant que macros. Les fonctions ANSI (qui peuvent être appelées avec ou sans suffixe *) sont*identiques aux fonctions de l’API ODBC en cours.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les fonctions Unicode qui renvoient ou prennent toujours des chaînes ou des arguments de longueur sont passées en tant que nombre de caractères. Pour les fonctions qui retournent des informations de longueur pour les données du serveur, la taille et la précision d’affichage sont décrites en nombre de caractères. Quand une longueur (taille de transfert des données) peut faire référence à des données de type chaîne ou non, la longueur est décrite en octets. Par exemple, **SQLGetInfoW** prend toujours la longueur comme nombre d’octets, mais **SQLExecDirectW** utilise le nombre de caractères.  
   
  Nombre de caractères fait référence au nombre d’octets (octets) pour les fonctions ANSI et au nombre de WCHAR (mots 16 bits) pour les fonctions UNICODE. En particulier, une séquence de caractères codés sur deux octets (DBCS) ou une séquence de caractères multioctets (MBCS) peut être composée de plusieurs octets. Une séquence de caractères Unicode UTF-16 peut être composée de plusieurs WCHARs.  

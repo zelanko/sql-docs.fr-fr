@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258534"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831545"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturer une trace dans Assistant Expérimentation de base de données
 
@@ -133,7 +133,7 @@ Si une erreur s’affiche lorsque vous exécutez une capture de trace, vérifiez
 
 - Le nom de l’ordinateur exécutant SQL Server est valide. Pour confirmer, essayez de vous connecter à l’ordinateur qui exécute SQL Server à l’aide de SQL Server Management Studio (SSMS).
 - La configuration de votre pare-feu ne bloque pas les connexions à l’ordinateur exécutant SQL Server.
-- L’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)du blog.
+- L’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - Le nom de la trace ne suit pas la Convention de\_substitution standard (capture 1). Essayez plutôt les noms de trace comme\_capture 1a ou Capture1.
 
 Voici quelques-unes des erreurs possibles et des solutions pour les résoudre :

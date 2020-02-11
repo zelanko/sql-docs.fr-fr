@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189831"
 ---
 # <a name="alert-properties-history-page"></a>Propriétés de l'alerte (page Historique)
-  Utilisez cette page pour afficher et modifier l'historique des alertes de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilisez cette page pour afficher et modifier l’historique des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertes de l’agent.  
   
 ## <a name="options"></a>Options  
  **Date de la dernière alerte**  
  Affiche la date à laquelle l’événement spécifié s’est produit en dernier lieu ou indique **(Jamais survenue)** si l’événement n’a pas eu lieu depuis la création de l’alerte.  
   
- **Date de la dernière réponse à**  
+ **Date de la dernière réponse**  
  Affiche la date à laquelle l’alerte a répondu à l’événement en dernier lieu ou indique **(Sans réponse)** si l’événement n’a pas eu lieu depuis la création de l’alerte.  
   
- **Nombre d'occurrences avant alerte**  
+ **Nombre d’occurrences**  
  Indique le nombre total d'occurrences de l'événement depuis la création de l'alerte ou depuis la dernière réinitialisation du compteur.  
   
  **Réinitialiser le nombre**  

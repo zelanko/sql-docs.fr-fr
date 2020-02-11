@@ -1,5 +1,5 @@
 ---
-title: Les curseurs keyset | Microsoft Docs
+title: Curseurs de jeu de clés | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,28 +14,28 @@ ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c7a12d1579af407bca77c9fa61d660a84a09f04e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924916"
 ---
 # <a name="keyset-cursors"></a>Curseurs de jeu de clés
-Le curseur de jeu de clés fournit des fonctionnalités entre un statique et un curseur dynamique dans sa capacité à détecter les modifications. Comme un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et à l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte les modifications apportées aux valeurs des lignes dans le jeu de résultats.  
+Le curseur de jeu de clés fournit les fonctionnalités entre un curseur statique et un curseur dynamique dans sa capacité à détecter les modifications. Comme un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et à l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte les modifications apportées aux valeurs des lignes dans le jeu de résultats.  
   
  Les curseurs de jeux de clés sont gérés par un ensemble d’identificateurs uniques (clés) appelé jeu de clés. Les clés sont créées à partir d'un ensemble de colonnes qui identifient uniquement les lignes de l'ensemble de résultats. Le jeu de clés est l’ensemble des valeurs de clés de toutes les lignes retournées par l’instruction de requête.  
   
  Avec les curseurs de jeux de clés, une clé est générée et enregistrée pour chaque ligne du curseur et stockée sur la station de travail cliente ou sur le serveur. Quand vous accédez à chaque ligne, la clé stockée est utilisée pour extraire les valeurs de données actuelles de la source de données. Dans un curseur de jeux de clés, l’appartenance au jeu de résultats est figée quand le jeu de clés est plein. Par la suite, les ajouts ou mises à jour affectant l’appartenance ne font partie du jeu de résultats qu’une fois celui-ci rouvert.  
   
- Modifications apportées aux valeurs de données (effectuées par le propriétaire du jeu de clés ou d’autres processus) sont visibles lorsque l’utilisateur fait défiler le jeu de résultats. Les insertions effectuées en dehors du curseur (par d’autres processus) sont visibles uniquement si le curseur est fermé puis rouvert. Les insertions effectuées à partir de l’intérieur du curseur sont visibles à la fin du jeu de résultats.  
+ Les modifications apportées aux valeurs de données (effectuées par le propriétaire du jeu de clés ou par d’autres processus) sont visibles lorsque l’utilisateur fait défiler le jeu de résultats. Les insertions effectuées en dehors du curseur (par d’autres processus) sont visibles uniquement si le curseur est fermé puis rouvert. Les insertions effectuées à partir de l’intérieur du curseur sont visibles à la fin du jeu de résultats.  
   
- Lorsqu’un curseur keyset tente de récupérer une ligne qui a été supprimée, la ligne apparaît comme un « trou » dans le jeu de résultats. La clé pour la ligne existe dans le jeu de clés, mais la ligne n’existe plus dans le jeu de résultats. Si les valeurs de clé dans une ligne sont mis à jour, la ligne est considérée comme supprimée, puis inséré, par conséquent, ces lignes apparaissent également sous forme de trous dans le jeu de résultats. Pendant un curseur keyset peut toujours détecter les lignes supprimées par d’autres processus, il peut éventuellement supprimer les clés des lignes, qu'il se supprime lui-même. Curseurs que cela ne peut pas détecter leurs propres suppressions car la preuve a été supprimée.  
+ Lorsqu’un curseur de jeu de clés tente d’extraire une ligne qui a été supprimée, la ligne apparaît sous la forme d’un « trou » dans le jeu de résultats. La clé pour la ligne existe dans le jeu de clés, mais la ligne n’existe plus dans le jeu de résultats. Si les valeurs de clé d’une ligne sont mises à jour, la ligne est considérée comme supprimée puis insérée, de sorte que ces lignes apparaissent également sous forme de trous dans le jeu de résultats. Bien qu’un curseur piloté par jeu de clés puisse toujours détecter les lignes supprimées par d’autres processus, il peut éventuellement supprimer les clés pour les lignes qu’il supprime lui-même. Les curseurs de jeu de clés qui effectuent cette opération ne peuvent pas détecter leurs propres suppressions, car la preuve a été supprimée.  
   
- Une mise à jour à une colonne clé équivaut à la suppression de l’ancienne clé suivie par une insertion de la nouvelle clé. La nouvelle valeur de clé n’est pas visible si la mise à jour n’a été pas effectuée via le curseur. Si la mise à jour a été effectuée via le curseur, la nouvelle valeur de clé est visible à la fin du jeu de résultats.  
+ Une mise à jour d’une colonne clé fonctionne comme une suppression de l’ancienne clé suivie d’une insertion de la nouvelle clé. La nouvelle valeur de clé n’est pas visible si la mise à jour n’a pas été effectuée par le biais du curseur. Si la mise à jour a été effectuée par le biais du curseur, la nouvelle valeur de clé est visible à la fin du jeu de résultats.  
   
- Il existe une variante des curseurs appelés curseurs standards. Dans un curseur standard par keyset, l’appartenance des lignes du jeu de résultats et l’ordre des lignes sont fixés à l’heure d’ouverture de curseur, mais les modifications apportées aux valeurs qui sont effectuées par le propriétaire du curseur et les modifications effectuées par d’autres processus sont visibles. Si une modification ne permet pas d’une ligne pour l’appartenance ou affecte l’ordre d’une ligne, la ligne ne disparaissent ni déplacé, sauf si le curseur est fermé et rouvert. Données insérées n’apparaissant pas, mais les modifications apportées aux données existantes s’affichent que les lignes sont extraites.  
+ Il existe une variante des curseurs pilotés par jeu de clés appelés curseurs standard pilotés par jeu de clés. Dans un curseur standard piloté par jeu de clés, l’appartenance des lignes dans le jeu de résultats et l’ordre des lignes sont fixes au moment de l’ouverture du curseur, mais les modifications apportées aux valeurs par le propriétaire du curseur et les modifications validées effectuées par d’autres processus sont visibles. Si une modification ne remplit pas une ligne pour l’appartenance ou affecte l’ordre d’une ligne, la ligne ne disparaît ou ne se déplace pas, sauf si le curseur est fermé et rouvert. Les données insérées n’apparaissent pas, mais les modifications apportées aux données existantes s’affichent au fur et à mesure que les lignes sont extraites.  
   
- Le curseur keyset est difficile à utiliser correctement car la sensibilité aux modifications de données dépend des circonstances différentes, comme décrit ci-dessus. Toutefois, si votre application n’est pas concernée avec les mises à jour simultanées permettre gérer par programmation les mauvaises clés et devez accéder directement à certaines lignes dotées de clés, le curseur keyset peut fonctionner pour vous. Utiliser le **adOpenKeyset CursorTypeEnum** pour indiquer que vous souhaitez utiliser un curseur de jeu de clés dans ADO.  
+ Le curseur de jeu de clés est difficile à utiliser correctement, car la sensibilité aux modifications de données dépend de nombreuses circonstances différentes, comme décrit ci-dessus. Toutefois, si votre application n’est pas concernée par les mises à jour simultanées, peut gérer par programmation les clés erronées et doit accéder directement à certaines lignes de clé, le curseur de jeu de clés peut fonctionner pour vous. Utilisez **AdOpenKeyset CursorTypeEnum** pour indiquer que vous souhaitez utiliser un curseur de jeu de clés dans ADO.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Curseurs avant uniquement](../../../ado/guide/data/forward-only-cursors.md)   

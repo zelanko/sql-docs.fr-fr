@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243291"
 ---
 # <a name="search-documents-interactively"></a>Effectuer une recherche de façon interactive dans des documents
-  À l’aide de la boîte de dialogue **Rechercher et remplacer** , vous pouvez rechercher un ou plusieurs fichiers ou fenêtres ouverts, puis parcourir la recherche d’une à une. Cette technique vous permet de voir chaque occurrence trouvée dans le contexte du texte qui la contient. Vous avez également la possibilité d’effectuer des opérations de recherche en bloc et de voir les occurrences trouvées dans un format de rapport à l’aide de la boîte de dialogue **Rechercher et remplacer** .  
+  La boîte de dialogue **Rechercher et remplacer** vous permet d’effectuer une recherche dans un ou plusieurs fichiers ouverts, ou encore dans une ou plusieurs fenêtres ouvertes, puis de faire défiler les occurrences trouvées l’une après l’autre. Cette technique vous permet de voir chaque occurrence trouvée dans le contexte du texte qui la contient. Vous avez également la possibilité d’effectuer des opérations de recherche en bloc et de voir les occurrences trouvées dans un format de rapport à l’aide de la boîte de dialogue **Rechercher et remplacer** .  
   
 ### <a name="to-search-all-open-documents"></a>Pour effectuer une recherche dans tous les documents ouverts  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75243291"
   
 5.  Cliquez sur **Remplacer**et continuez de cliquer sur **Remplacer** jusqu’à ce que la dernière occurrence trouvée dans le dernier fichier ait été remplacée. Cliquez sur **Suivant** pour ignorer une occurrence que vous ne souhaitez pas remplacer.  
   
-     - ou -  
+     -ou-  
   
      Cliquez sur **Remplacer tout** pour remplacer toutes les occurrences. Un message affiche alors le nombre total de remplacements effectués.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "75243291"
   
 ## <a name="see-also"></a>Voir aussi  
  [Effectuer une recherche incrémentielle dans un document actif](search-an-active-document-incrementally.md)   
- [Rechercher et remplacer](search-and-replace.md)   
- [Rechercher des documents à l’aide des listes de résultats](search-documents-using-results-lists.md)   
+ [Recherche et remplacement](search-and-replace.md)   
+ [Effectuer une recherche dans des documents à l'aide des listes de résultats](search-documents-using-results-lists.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)   
  [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md)  
   

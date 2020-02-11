@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243072"
 ---
 # <a name="transact-sql-debugger-information"></a>Informations du débogueur Transact-SQL
@@ -96,12 +96,12 @@ ms.locfileid: "75243072"
  En mode débogage, les onglets **Résultats** et **Messages** sont toujours actifs dans l’éditeur de requête. L’onglet **Résultats** continue à afficher les jeux de résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont exécutées au cours d’une session de débogage. L’onglet **Messages** continue à afficher des messages système, tels que *xx* lignes affectées et la sortie des instructions PRINT et RAISERROR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fenêtre variables locales](transact-sql-debugger-locals-window.md)   
- [Fenêtre Espion](transact-sql-debugger-watch-window.md)   
- [Espion express (boîte de dialogue)](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Fenêtre points d’arrêt](transact-sql-debugger-breakpoints-window.md)   
- [Fenêtre pile des appels](transact-sql-debugger-call-stack-window.md)   
- [Fenêtre threads](transact-sql-debugger-threads-window.md)   
+ [Variables locales (fenêtre)](transact-sql-debugger-locals-window.md)   
+ [Espion (fenêtre)](transact-sql-debugger-watch-window.md)   
+ [Boîte de dialogue Espion express](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Fenêtre Points d'arrêt](transact-sql-debugger-breakpoints-window.md)   
+ [Fenêtre Pile des appels](transact-sql-debugger-call-stack-window.md)   
+ [Fenêtre Threads](transact-sql-debugger-threads-window.md)   
  [Fenêtre Sortie](transact-sql-debugger-output-window.md)   
  [Débogueur Transact-SQL](transact-sql-debugger.md)  
   

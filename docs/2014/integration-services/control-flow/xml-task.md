@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232728"
 ---
 # <a name="xml-task"></a>Tâche XML
@@ -46,7 +46,7 @@ ms.locfileid: "75232728"
   
  Si la source est une variable, la variable spécifiée contient le chemin d'accès du document XML.  
   
- Si la source est un gestionnaire de connexions de fichiers, ce gestionnaire fournit les informations sources. Le gestionnaire de connexions de fichiers est configuré séparément de la tâche XML et est référencé dans la tâche XML. La chaîne de connexion du gestionnaire de connexions de fichiers spécifie le chemin d'accès du fichier XML. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](../connection-manager/file-connection-manager.md).  
+ Si la source est un gestionnaire de connexions de fichiers, ce gestionnaire fournit les informations sources. Le gestionnaire de connexions de fichiers est configuré séparément de la tâche XML et est référencé dans la tâche XML. La chaîne de connexion du gestionnaire de connexions de fichiers spécifie le chemin d'accès du fichier XML. Pour plus d’informations, consultez [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
  La tâche XML peut être configurée pour enregistrer les résultats de l'opération dans une variable ou un fichier. En cas d'enregistrement dans un fichier, la tâche XML utilise un gestionnaire de connexions de fichiers pour accéder au fichier. Vous pouvez également enregistrer les résultats du Diffgram généré par l'opération Diff dans des fichiers et des variables.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "75232728"
 |Diff|Permet de comparer deux documents XML. Si le document XML source est utilisé comme document de base, l'opération Diff la compare à un second document XML, détecte leurs différences et écrit ces différences dans un document XML Diffgram. Cette opération inclut des propriétés permettant de personnaliser la comparaison.|  
 |Fusionner|Permet de fusionner deux documents XML. Si le document XML source est utilisé comme document de base, l'opération Merge ajoute le contenu d'un second document dans le document de base. Cette opération peut spécifier un emplacement de fusion dans le document de base.|  
 |Correctif|Applique la sortie de l'opération Diff, appelée document Diffgram, à un document XML afin de créer un document parent qui inclut le contenu du document Diffgram.|  
-|Validate|Permet de valider le document XML en utilisant un DTD (Document Type Definition) ou un schéma XSD (XML Schema definition).|  
+|Valider|Permet de valider le document XML en utilisant un DTD (Document Type Definition) ou un schéma XSD (XML Schema definition).|  
 |XPath|Lance les requêtes et les évaluations XPath.|  
 |XSLT|Effectue les transformations XSL sur les documents XML.|  
   
@@ -110,34 +110,34 @@ ms.locfileid: "75232728"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Messages de journalisation personnalisés disponibles dans la tâche XML  
  Le tableau suivant décrit l'entrée de journal personnalisée de la tâche XML. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
   
-|Entrée de journal|Description|  
+|Entrée du journal|Description|  
 |---------------|-----------------|  
 |`XMLOperation`|Fournit des informations sur l'opération que la tâche effectue.|  
   
 ## <a name="configuration-of-the-xml-task"></a>Configuration de la tâche XML  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
 -   [Éditeur de tâche XML &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validation XML avec la tâche XML](xml-task.md)  
+-   [Effectuer une validation XML avec la tâche XML](xml-task.md)  
   
--   [Page expressions](../expressions/expressions-page.md)  
+-   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition des propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>Configuration par programme de la tâche XML  
- Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+ [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Entrée de Blog, [XML Destination Script Component](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/), sur agilebi.com  
   

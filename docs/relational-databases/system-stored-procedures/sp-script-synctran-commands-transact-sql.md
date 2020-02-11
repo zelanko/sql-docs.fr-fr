@@ -16,18 +16,18 @@ ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d7caca72f684dfb6428361a4550860b3bea3f273
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126411"
 ---
-# <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
+# <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Génère un script qui contienne le **sp_addsynctrigger** appels à appliquer aux abonnés pour les abonnements d’être mise à jour. Il y a un **sp_addsynctrigger** appeler pour chaque article de la publication. Le script généré contient également le **sp_addqueued_artinfo** appels qui créent le **MSsubsciption_articles** table qui est nécessaire pour traiter les publications en file d’attente. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
+  Génère un script qui contient les appels de **sp_addsynctrigger** à appliquer aux abonnés pour les abonnements pouvant être mis à jour. Il existe un appel de **sp_addsynctrigger** pour chaque article de la publication. Le script généré contient également les appels de **sp_addqueued_artinfo** qui créent la table **MSsubsciption_articles** nécessaire pour traiter les publications mises en file d’attente. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,23 +38,23 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication à écrire. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication à écrire. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @article = ] 'article'` Est le nom de l’article à écrire. *article* est **sysname**, avec une valeur par défaut **tous les**, qui spécifie tous les articles sont écrites.  
+`[ @article = ] 'article'`Nom de l’article pour lequel générer un script. *article* est de **type sysname**, avec **All**comme valeur par défaut, qui spécifie que tous les articles font l’objets d’un script.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="results-set"></a>Ensemble de résultats  
- **sp_script_synctran_commands** retourne un jeu de résultats qui se compose d’un seul **nvarchar (4000)** colonne. Le jeu de résultats forme les scripts complets nécessaires pour créer les le **sp_addsynctrigger** et **sp_addqueued_artinfo** appels à appliquer aux abonnés.  
+ **sp_script_synctran_commands** retourne un jeu de résultats qui se compose d’une seule colonne **nvarchar (4000)** . Le jeu de résultats forme les scripts complets nécessaires à la création des appels **sp_addsynctrigger** et **sp_addqueued_artinfo** à appliquer aux abonnés.  
   
 ## <a name="remarks"></a>Notes  
  **sp_script_synctran_commands** est utilisé dans la réplication transactionnelle et d’instantané.  
   
- **sp_addqueued_artinfo** est utilisé pour les abonnements de mettre à jour en file d’attente.  
+ **sp_addqueued_artinfo** est utilisé pour les abonnements pouvant être mis à jour en file d’attente.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_script_synctran_commands**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_script_synctran_commands**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   

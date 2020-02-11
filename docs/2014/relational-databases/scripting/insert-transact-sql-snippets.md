@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242079"
 ---
 # <a name="insert-transact-sql-snippets"></a>Insérer des extraits de code Transact-SQL
@@ -27,8 +27,7 @@ ms.locfileid: "75242079"
 ## <a name="inserting-snippets"></a>Insertion d'extraits de code  
  Vous pouvez utiliser le menu **Insérer un extrait** pour ouvrir une liste par catégorie d’extraits de code et en choisir un.  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] Les extraits de code contiennent des points de remplacement : du texte qui suggère la syntaxe pertinente pour ce point. Par exemple, l'extrait de code CREATE TABLE contient des points de remplacement pour des éléments tels que le nom de la table, les noms de colonne et les types de données de colonne. Après avoir inséré l'extrait de code, vous devez modifier le texte de remplacement pour former une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide. Pour plus d’informations, consultez [Compléter des extraits de code Transact-SQL](complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Les extraits de code contiennent des points de remplacement : du texte qui suggère la syntaxe pertinente pour ce point. Par exemple, l'extrait de code CREATE TABLE contient des points de remplacement pour des éléments tels que le nom de la table, les noms de colonne et les types de données de colonne. Après avoir inséré l'extrait de code, vous devez modifier le texte de remplacement pour former une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide. Pour plus d’informations, consultez [Compléter des extraits de code Transact-SQL](complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Insertion d'un extrait de code à l'aide du menu Insérer un extrait  
   
@@ -45,6 +44,6 @@ ms.locfileid: "75242079"
 3.  Double-cliquez sur l'extrait de code ou sélectionnez l'extrait de code dans le sélecteur d'extraits, puis appuyez sur TABULATION ou ENTRÉE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer des extraits de code d’entourage avec des extraits de code Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
+ [Insérer des extraits de code d’entourage (surround-with) Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
   
   

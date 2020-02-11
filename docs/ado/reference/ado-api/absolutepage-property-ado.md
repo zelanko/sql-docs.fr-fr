@@ -16,37 +16,37 @@ ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921831"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage, propriété (ADO)
-Indique la page sur laquelle réside l’enregistrement actif.  
+Indique sur quelle page se trouve l’enregistrement en cours.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Pour le code 32 bits, définit ou retourne un **Long** valeur entre 1 et le nombre de pages dans le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)), ou retourne une de la [PositionEnum ](../../../ado/reference/ado-api/positionenum.md) valeurs.  
+ Pour le code 32 bits, définit ou retourne une valeur de **type long** comprise entre 1 et le nombre de pages de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)), ou retourne l’une des valeurs [PositionEnum](../../../ado/reference/ado-api/positionenum.md) .  
   
- Pour le code de 64 bits, utilisez un type de données qui fournit pour le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser soit **Long** ou une autre valeur peut être de longueur de 64 bits comme DBORDINAL. N’utilisez pas **PositionEnum** valeurs, car ils sont limités à la longueur de 32 bits.  
+ Pour le code 64 bits, utilisez un type de données qui fournit le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser **long** ou une autre valeur qui peut être une longueur de 64 bits telle que DBORDINAL. N’utilisez pas de valeurs **PositionEnum** , car elles sont limitées à une longueur de 32 bits.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété peut être utilisée pour identifier le numéro de page sur lequel se trouve l’enregistrement actif. Il utilise le [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propriété pour séparer logiquement le nombre total de lignes de la **Recordset** objet en une série de pages, chacun d’eux possède le nombre d’enregistrements égales à **PageSize** (à l’exception de la dernière page, qui peut avoir moins d’enregistrements). Le fournisseur doit prendre en charge les fonctionnalités requises pour cette propriété doit être disponible.  
+ Cette propriété peut être utilisée pour identifier le numéro de la page sur laquelle se trouve l’enregistrement en cours. Elle utilise la propriété [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) pour diviser logiquement le nombre total d’ensembles de lignes de l’objet **Recordset** en une série de pages, dont chacune a le nombre d’enregistrements égal à **pageSize** (à l’exception de la dernière page, qui peut avoir moins d’enregistrements). Le fournisseur doit prendre en charge les fonctionnalités appropriées pour que cette propriété soit disponible.  
   
--   Lors de l’obtention ou la définition du **AbsolutePage** propriété, ADO utilise le [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propriété et la [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propriété ensemble comme suit :  
+-   Lors de l’obtention ou de la définition de la propriété **AbsolutePage** , ADO utilise la propriété [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) et la propriété [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) de la même manière :  
   
--   Pour obtenir le **AbsolutePage**, ADO récupère d’abord le **AbsolutePosition**et il divise par la **PageSize**.  
+-   Pour obtenir la valeur **AbsolutePage**, ADO commence par récupérer **AbsolutePosition**, puis le divise par le **pageSize**.  
   
--   Pour définir le **AbsolutePage**, ADO déplace le **AbsolutePosition** comme suit : elle multiplie la **PageSize** par la nouvelle **AbsolutePage** valeur, puis ajoute 1 à la valeur. Par conséquent, la position actuelle dans le **Recordset** une fois la valeur **AbsolutePage** est le premier enregistrement de cette page.  
+-   Pour définir **AbsolutePage**, ADO déplace le **AbsolutePosition** comme suit : il multiplie **pageSize** par la nouvelle valeur **AbsolutePage** , puis ajoute 1 à la valeur. Par conséquent, la position actuelle dans le **jeu d’enregistrements** après avoir correctement défini **AbsolutePage** est le premier enregistrement dans cette page.  
   
- Comme le **AbsolutePosition** propriété, **AbsolutePage** basé sur 1 et est égale à 1 lors de l’enregistrement actif est le premier enregistrement dans le **Recordset**. Définissez cette propriété pour déplacer vers le premier enregistrement d’une page particulière. Obtenir le nombre total de pages à partir de la **PageCount** propriété.  
+ Comme la propriété **AbsolutePosition** , **AbsolutePage** est de base 1 et égale 1 lorsque l’enregistrement actif est le premier enregistrement dans le **Recordset**. Définissez cette propriété pour passer au premier enregistrement d’une page particulière. Obtient le nombre total de pages de la propriété **PageCount** .  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [AbsolutePage, PageCount et PageSize, exemple de propriétés (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [AbsolutePage, PageCount et PageSize, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+ [AbsolutePage, PageCount et PageSize, propriétés, exemple (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [AbsolutePage, PageCount et PageSize, propriétés, exemple (VC + +)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePosition, propriété (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [PageCount, propriété (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize, propriété (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)

@@ -21,16 +21,16 @@ ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083124"
 ---
 # <a name="connecting-with-sqlconnect"></a>Connexion avec SQLConnect
-**SQLConnect** est la fonction de connexion la plus simple. Il requiert un nom de source de données et accepte un ID d’utilisateur facultatif et le mot de passe. Il fonctionne bien pour les applications que coder en dur une source de données nom et ne nécessitent pas un ID d’utilisateur ou le mot de passe. Elle fonctionne également parfaitement pour les applications qui veulent contrôlent leur propre « apparence » ou qui n’ont aucune interface utilisateur. De telles applications peuvent générer une liste de sources de données à l’aide de **SQLDataSources**, inviter l’utilisateur à la source de données, ID d’utilisateur et mot de passe, puis appelez **SQLConnect**.  
+**SQLConnect** est la fonction de connexion la plus simple. Il requiert un nom de source de données et accepte un ID d’utilisateur et un mot de passe facultatifs. Elle fonctionne bien pour les applications qui codent en dur un nom de source de données et ne nécessitent pas d’ID utilisateur ou de mot de passe. Il fonctionne également bien pour les applications qui souhaitent contrôler leur propre « apparence » ou qui n’ont pas d’interface utilisateur. De telles applications peuvent créer une liste de sources de données à l’aide de **SQLDataSources**, demander à l’utilisateur la source de données, l’ID d’utilisateur et le mot de passe, puis appeler **SQLConnect**.  
   
- L’exemple suivant se connecte à la base de données Northwind à l’aide d’une source de données appelé Northwind et récupère tous les champs nom et prénom de tous les enregistrements dans la table Employees.  
+ L’exemple suivant se connecte à la base de données Northwind, à l’aide d’un nom de source de données appelé Northwind, et récupère tous les champs nom et prénom de tous les enregistrements de la table Employees.  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

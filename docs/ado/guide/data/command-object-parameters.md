@@ -13,14 +13,14 @@ ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29ad7f3aa9347af77080b04fb309f8b50b95dbe4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925877"
 ---
 # <a name="command-object-parameters"></a>Paramètres de l’objet Command
-La rubrique précédente abordée [création et exécution d’une commande Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Une utilisation plus intéressante pour les [commande](../../../ado/reference/ado-api/command-object-ado.md) objet est indiqué dans l’exemple suivant, dans lequel la commande SQL a été paramétrée. Cette modification rend possible la réutilisation de la commande, en passant une valeur différente pour le paramètre chaque fois. Étant donné que le [propriété préparé](../../../ado/reference/ado-api/prepared-property-ado.md) propriété sur le **commande** objet est défini sur **true**, ADO nécessitera le fournisseur compiler la commande spécifiée dans [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) avant l’exécution pour la première fois. Il sera également conserver la commande compilée en mémoire. Cela ralentit l’exécution de la commande légèrement la première fois qu’elle est exécutée en raison de la surcharge requise pour préparer, mais entraîne un gain de performances chaque fois que la commande est appelée par la suite. Par conséquent, les commandes doivent être préparés uniquement si elles sont utilisées plusieurs fois.  
+La rubrique précédente a abordé la [création et l’exécution d’une commande simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Une utilisation plus intéressante de l’objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) est présentée dans l’exemple suivant, dans lequel la commande SQL a été paramétrée. Cette modification permet de réutiliser la commande, en passant chaque fois une valeur différente pour le paramètre. Étant donné que la propriété [Prepared Property](../../../ado/reference/ado-api/prepared-property-ado.md) de l’objet **Command** a la valeur **true**, ADO demande au fournisseur de compiler la commande spécifiée dans [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) avant de l’exécuter pour la première fois. La commande compilée est également conservée en mémoire. Cela ralentit légèrement l’exécution de la commande la première fois qu’elle est exécutée en raison de la surcharge requise pour la préparer, mais entraîne un gain de performances chaque fois que la commande est appelée par la suite. Par conséquent, les commandes doivent être préparées uniquement si elles sont utilisées plus d’une fois.  
   
 ```  
 'BeginManualParamCmd  
@@ -118,4 +118,4 @@ End Function
 'EndNewConnection  
 ```  
   
- Tous les fournisseurs prennent en charge les commandes préparées. Si le fournisseur ne prend pas en charge la préparation de la commande, il peut retourner une erreur dès que cette propriété est définie sur **True**. Si elle ne retourne pas d’erreur, il ignore la demande de préparation de la commande et les affecte le **Prepared** propriété **false**.
+ Tous les fournisseurs ne prennent pas en charge les commandes préparées. Si le fournisseur ne prend pas en charge la préparation de la commande, il peut retourner une erreur dès que cette propriété a la valeur **true**. Si elle ne retourne pas d’erreur, elle ignore la demande de préparation de la commande et affecte la **valeur false**à la propriété **Prepared** .

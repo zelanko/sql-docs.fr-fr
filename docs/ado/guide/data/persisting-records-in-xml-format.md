@@ -1,5 +1,5 @@
 ---
-title: Persistance des enregistrements au Format XML | Microsoft Docs
+title: Persistance des enregistrements au format XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,19 +17,19 @@ ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924595"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistance des enregistrements au format XML
-Comme le format ADTG, **Recordset** persistance au format XML est implémentée avec le fournisseur Microsoft OLE DB de persistance. Ce fournisseur génère un ensemble de lignes avant uniquement et en lecture seule à partir d’un fichier XML ou un flux qui contient les informations de schéma générées par ADO enregistré. De même, il peut prendre un ADO **Recordset**, générer du code XML et enregistrez-le dans un fichier ou de tout objet qui implémente le modèle COM **IStream** interface. (En fait, un fichier est juste un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2.5 et versions ultérieures, ADO repose sur Microsoft XML Parser (MSXML) pour charger le code XML dans le **Recordset**; par conséquent msxml.dll est requise.  
+À l’instar du format ADTG, la persistance des **recordsets** au format XML est implémentée avec le fournisseur de persistance Microsoft OLE DB. Ce fournisseur génère un ensemble de lignes avant uniquement et en lecture seule à partir d’un fichier ou d’un flux XML enregistré qui contient les informations de schéma générées par ADO. De même, il peut utiliser un **jeu d’enregistrements**ADO, générer du code XML et l’enregistrer dans un fichier ou tout objet qui implémente l’interface com **IStream** . (En fait, un fichier est simplement un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2,5 et ultérieures, ADO s’appuie sur l’analyseur XML de Microsoft (MSXML) pour charger le code XML dans le **jeu d’enregistrements**; par conséquent, MSXML. dll est requis.  
   
 > [!NOTE]
->  Certaines limitations s’appliquent lors de l’enregistrement hiérarchique **Recordsets** (formes de données) au format XML. Vous ne pouvez pas enregistrer au format XML si l’hiérarchique **Recordset** contient en attente de mises à jour, et vous ne pouvez pas enregistrer un paramétrable hiérarchique **Recordset**. Pour plus d’informations, consultez [filtré de persistance et de jeux d’enregistrements](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
+>  Certaines limitations s’appliquent lors de l’enregistrement de **recordsets** hiérarchiques (formes de données) au format XML. Vous ne pouvez pas enregistrer dans XML si le **jeu d’enregistrements** hiérarchique contient des mises à jour en attente et que vous ne pouvez pas enregistrer un **jeu d’enregistrements**hiérarchique paramétré. Pour plus d’informations, consultez [persistance des recordsets filtrés et hiérarchiques](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
   
- Le moyen le plus simple pour conserver les données au format XML et recharger dans ADO est avec la **enregistrer** et **Open** méthodes, respectivement. L’exemple de code ADO suivant illustre l’enregistrement des données dans le **titres** table dans un fichier nommé titles.sav.  
+ Le moyen le plus simple de conserver des données au format XML et de les charger à nouveau par le biais d’ADO est avec les méthodes **Save** et **Open** , respectivement. L’exemple de code ADO suivant montre comment enregistrer les données de la table **titles** dans un fichier nommé titles. SAV.  
   
 ```  
 Dim rs as new Recordset  
@@ -59,16 +59,16 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO conserve toujours l’intégralité de **Recordset** objet. Si vous souhaitez conserver un sous-ensemble de lignes de la **Recordset** de l’objet, utilisez le **filtre** méthode pour cibler les lignes ou de modifier la clause de sélection. Toutefois, vous devez ouvrir une **Recordset** objet avec un curseur côté client (**CursorLocation** = **adUseClient**) à utiliser le **filtrer** méthode pour enregistrer un sous-ensemble de lignes. Par exemple, pour extraire des titres qui commencent par la lettre « b », vous pouvez appliquer un filtre à une ouverture **Recordset** objet :  
+ ADO conserve toujours l’objet **Recordset** entier. Si vous souhaitez conserver un sous-ensemble de lignes de l’objet **Recordset** , utilisez la méthode **Filter** pour limiter les lignes ou modifier votre clause de sélection. Toutefois, vous devez ouvrir un objet **Recordset** avec un curseur côté client (**CursorLocation** = **adUseClient**) pour utiliser la méthode **Filter** pour l’enregistrement d’un sous-ensemble de lignes. Par exemple, pour récupérer des titres qui commencent par la lettre « b », vous pouvez appliquer un filtre à un objet **Recordset** ouvert :  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO utilise toujours l’ensemble de lignes du moteur de curseur Client pour générer un défilement signet **Recordset** objet par-dessus les données avant uniquement générées par le fournisseur de persistance.  
+ ADO utilise toujours l’ensemble de lignes du moteur de curseur client pour produire un objet **Recordset** de défilement et pouvant faire l’objet d’un signet en plus des données avant uniquement générées par le fournisseur de persistance.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Format de persistance XML](../../../ado/guide/data/xml-persistence-format.md)  
   

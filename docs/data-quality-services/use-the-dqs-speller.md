@@ -10,10 +10,10 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257748"
 ---
 # <a name="use-the-dqs-speller"></a>Utiliser le vérificateur d'orthographe DQS
@@ -30,14 +30,14 @@ ms.locfileid: "75257748"
   
  Le vérificateur d'orthographe fonctionne uniquement sur les domaines simples dont le type de données est String. Toutes les valeurs d'un domaine simple qui sont du type de données String sont envoyées au correcteur orthographique pour validation. Le vérificateur d'orthographe ne fonctionne pas pour un domaine composite et ne fonctionne pas pour les domaines de types autres que les chaînes, les valeurs mixtes (telles que lettres et chiffres sans espace), les chiffres romains, les caractères uniques et les valeurs qui se composent seulement de majuscules.  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Prerequisites"></a>Conditions préalables  
  Pour exécuter le vérificateur d'orthographe, vous devez disposer d'une base de connaissances et d'un domaine ouverts dans l'activité de découverte des connaissances ou de gestion de l'arborescence du domaine ; le vérificateur d'orthographe doit être activé pour le domaine et dans la page où vous allez l'exécuter ; et la propriété de langue doit être spécifiée pour le domaine.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exécuter le vérificateur d'orthographe.  
   
 ##  <a name="Enable"></a>Activer le vérificateur d’orthographe  

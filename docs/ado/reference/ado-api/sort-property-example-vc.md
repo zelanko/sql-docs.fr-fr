@@ -1,5 +1,5 @@
 ---
-title: Trier l’exemple de propriété (VC ++) | Microsoft Docs
+title: Sort, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930969"
 ---
 # <a name="sort-property-example-vc"></a>Sort, exemple de propriétés (VC++)
-Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [tri](../../../ado/reference/ado-api/sort-property.md) propriété pour réorganiser les lignes d’un **Recordset** dérivé le ***auteurs*** table de le **Pubs** base de données. Une routine utilitaire secondaire imprime chaque ligne.  
+Cet exemple utilise la propriété [sort](../../../ado/reference/ado-api/sort-property.md) de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour réorganiser les lignes d' **un jeu d’enregistrements** dérivé de la table ***Authors*** de la base de données **pubs** . Une routine utilitaire secondaire imprime chaque ligne.  
   
 ```  
 // SortPropertyExample.cpp  
@@ -133,5 +133,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort, propriété](../../../ado/reference/ado-api/sort-property.md)

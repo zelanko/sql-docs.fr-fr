@@ -1,5 +1,5 @@
 ---
-title: Sécurité procédures stockées (Transact-SQL) | Microsoft Docs
+title: Procédures stockées de sécurité (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,33 +17,34 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94fdd6946cbc2800a8f0f16e706e784ff0933f73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05131814c390373261ae492235f36a7841d2f5f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941858"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76315629"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Procédures stockées liées à la sécurité (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les suivant procédures stockées système qui sont utilisés pour gérer la sécurité. Certaines de ces procédures stockées sont déconseillées, mais soit toujours disponible pour prendre en charge la compatibilité descendante. Les rubriques relatives aux procédures déconseillées indiquent leur remplacement.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge les procédures stockées système suivantes qui sont utilisées pour gérer la sécurité. Certaines de ces procédures stockées sont déconseillées, mais restent disponibles pour prendre en charge la compatibilité descendante. Les rubriques relatives aux procédures déconseillées indiquent leur remplacement.  
 
 |||  
 |-|-|  
-|[sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (déconseillée)|
+|[sys. sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (déconseillée)|
 |[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
-|[sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) (Deprecated) |[sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) (déconseillée)
+|[sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) (déconseillée) |[sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) (déconseillée)
 |[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) (déconseillée) |[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) (déconseillée)
-|[sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) (déconseillée) |[sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md) (Deprecated)
+|[sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) (déconseillée) |[sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md) (déconseillée)
 |[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) (déconseillée) |[sp_approlepassword](../../relational-databases/system-stored-procedures/sp-approlepassword-transact-sql.md) (déconseillée)
 |[sp_audit_write](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) |[sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)
-|[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) |[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (déconseillée)
+|[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) (déconseillée) 
+|[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (déconseillée)
 |[sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) |[sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (déconseillée)
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) (déconseillée) |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md) (déconseillée)
 |[sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md) (déconseillée) |[sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)
-|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (déconseillée) |[sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
+|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (déconseillée) |[sys. sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
 |[sp_dropapprole](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md) (déconseillée) |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) |
 |[sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md) (déconseillée) |[sp_dropremotelogin](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md) (déconseillée) |
 |[sp_droprole](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md) (déconseillée) |[sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) (déconseillée) |

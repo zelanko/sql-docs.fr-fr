@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957093"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
@@ -36,17 +36,17 @@ ms.locfileid: "74957093"
  [Choisir un algorithme de chiffrement](choose-an-encryption-algorithm.md)  
  Informations sur la manière de sélectionner un algorithme de chiffrement efficace.  
   
- [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)  
+ [Chiffrement transparent des données &#40;TDE&#41;](transparent-data-encryption.md)  
  Informations générales sur la manière de chiffrer des données de façon transparente.  
   
- [SQL Server et clés de chiffrement de base de données &#40;Moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
+ [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les clés de chiffrement incluent une combinaison d'une clé publique, d'une clé privée et d'une clé symétrique, dont le but est de protéger les données sensibles. Cette section explique comment implémenter et gérer des clés de chiffrement.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Sécurisation de SQL Server](../securing-sql-server.md)  
  Vue d'ensemble du processus permettant de mieux sécuriser la plateforme [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et du travail avec des utilisateurs et des objets sécurisables.  
   
- [Fonctions de chiffrement &#40;&#41;Transact-SQL](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
+ [Fonctions de chiffrement &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
  Informations sur la manière d'implémenter des fonctions de chiffrement.  
   
  [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
@@ -58,7 +58,7 @@ ms.locfileid: "74957093"
  [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
  Informations sur l'utilisation d'une clé asymétrique pour chiffrer des données.  
   
- [ENCRYPTBYCERT, &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
  Informations sur l'utilisation d'un certificat pour chiffrer des données.  
   
 ## <a name="external-resources"></a>Ressources externes  
@@ -66,8 +66,8 @@ ms.locfileid: "74957093"
  Informations à jour sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server et clés de chiffrement de base de données &#40;Moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
- [Sauvegarder et restaurer des clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

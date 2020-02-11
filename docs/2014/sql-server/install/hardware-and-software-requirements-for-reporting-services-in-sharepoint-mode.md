@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245632"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Configurations matérielle et logicielle pour Reporting Services en mode SharePoint
 
   Cette rubrique décrit les conditions préalables, la configuration matérielle requise et les [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] éléments à prendre en compte pour l’exécution en mode SharePoint. Étant donné que le mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint nécessite un serveur SharePoint, la plupart des conditions sont basées sur l'environnement SharePoint. Pour les serveurs de rapports en mode natif, votre matériel doit correspondre aux configurations matérielle et logicielle minimales requises pour l'exécution de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d'informations, consultez [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   [Conditions préalables](#bkmk_prereq)  
+-   [Prérequis](#bkmk_prereq)  
   
 -   [Configuration requise pour la base de données du serveur de rapports](#bkmk_report_server_database)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75245632"
  Consultez la [documentation liée à Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) la plus récente sur le site Office.Microsoft.com. 
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est maintenant une fonctionnalité de Microsoft Excel 2013 ; elle est disponible avec le complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services de Microsoft SharePoint Server 2010 et 2013 Enterprise Edition.  
   
-##  <a name="bkmk_more_information"></a>Plus d’informations
+##  <a name="bkmk_more_information"></a> Informations supplémentaires
 
  Pour plus d’informations sur les modifications apportées à SharePoint, consultez [modifications de sharepoint 2010 à sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
   

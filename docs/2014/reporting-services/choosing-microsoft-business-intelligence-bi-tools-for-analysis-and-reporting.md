@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 6552e6e2ed1ad168fb5e5ff9c0715227870bcb92
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 7c76ec1a74032b5f35bc42ab4a901d95574e0900
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493956"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75688214"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analyse et création de rapports avec les outils Microsoft Business Intelligence
 
@@ -28,21 +28,21 @@ ms.locfileid: "69493956"
 |Charges de travail|Utilisateur|||Outils BI|||  
 |---------------|----------|-|-|--------------|-|-|  
 |||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
-|**BI en libre-service**|Analyste/Utilisateur final||||||  
+|**DÉCISIONNEL en libre-service**|Analyste/Utilisateur final||||||  
 |Découvrir facilement et accéder à des données publiques et d'entreprise||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
-|Créer des modèles de données puissants||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
+|Créer des modèles de données puissants||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Effectuer des analyses prédictives en libre-service||||||[Compléments d’exploration de données pour Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
-|Visualiser et explorer les données||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
-|Poser des questions à l'aide d'un requête en langage naturel|||||[Q & R](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|Accéder à des rapports avec des appareils mobiles||||[HTML 5 (prend en charge l’affichage de fichiers < 10 Mo)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (prend en charge l’affichage < 250 Mo)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Application mobile Power BI sur les appareils iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Application mobile Power BI sur les appareils Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Application mobile Power BI pour Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
-|Collaborer et partager|||[Sites SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites de l'équipe SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
-|**BI d'entreprise**|Professionnel de l'informatique||||||  
+|Visualiser et explorer les données||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Cartes 3D](https://support.office.com/article/visualize-your-data-in-3d-maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||||  
+|Poser des questions à l'aide d'un requête en langage naturel|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
+|Accéder à des rapports avec des appareils mobiles||||[HTML 5 (prend en charge l’affichage des fichiers <10 Mo)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (prend en charge l’affichage des <250 Mo)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI application mobile sur des appareils iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Power BI application mobile sur les appareils Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Power BI application mobile pour Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Collaborer et partager|||[Sites SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites d’équipe SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
+|**BI d’entreprise**|Professionnel de l'informatique||||||  
 |Créer des modèles d'entreprise multidimensionnels/tabulaires||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
 |Créer des visualisations de données ad-hoc|||[Power View pour SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
 |Créer des tableaux de bord|||[Tableaux de bord SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [Services PerformancePoint](https://technet.microsoft.com/library/ee424392.aspx)||||  
 |Créer des rapports opérationnels||||||<sup>1</sup> [Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Créer des rapports personnalisés et incorporés||||||<sup>1</sup> [Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
-|**Analyse avancée**|Données scientifiques||||||  
+|**Analytique avancée**|Scientifique des données||||||  
 |Effectuer des analyses prédictives en libre-service||||||[Compléments d’exploration de données pour Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |Utiliser des algorithmes d'exploration de données||||||[Exploration de données dans Analysis Services](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
   

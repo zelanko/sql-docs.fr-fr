@@ -18,23 +18,24 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729482"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Connexions, utilisateurs et rôles de base de données (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] comprend des connexions, des utilisateurs et des rôles installés automatiquement sur l'instance de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui héberge la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ces connexions, utilisateurs et rôles ne doivent pas être modifiés.  
   
 ## <a name="logins"></a>Connexions  
   
 |Connexion|Description|  
 |-----------|-----------------|  
-|**mds_dlp_login**|Autorise la création d'assemblys UNSAFE. Pour plus d’informations, consultez [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> \- Connexion désactivée avec mot de passe généré aléatoirement.<br /><br /> \- Mappé à dbo pour la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> \- Pour msdb, mds_clr_user mappe à cette connexion.|  
+|**mds_dlp_login**|Autorise la création d'assemblys UNSAFE. Pour plus d’informations, consultez [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> - Connexion désactivée avec mot de passe généré aléatoirement.<br /><br /> - Mappé à dbo pour la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> - Pour msdb, mds_clr_user mappe à cette connexion.|  
 |**mds_email_login**|Connexion active utilisée pour les notifications.<br /><br /> Pour msdb et la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user mappe à cette connexion.|  
   
 ## <a name="msdb-users"></a>Utilisateurs de msdb  
@@ -42,31 +43,31 @@ ms.locfileid: "73729482"
 |Utilisateur|Description|  
 |----------|-----------------|  
 |**mds_clr_user**|Non utilisé. Mappe à mds_dlp_login.|  
-|**mds_email_user**|Utilisé pour les notifications.<br /><br /> \- Mappe à mds_email_login.<br /><br /> \- Est un membre du rôle : DatabaseMailUserRole.|  
+|**mds_email_user**|Utilisé pour les notifications.<br /><br /> - Mappe à mds_email_login.<br /><br /> - Est un membre du rôle : DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Utilisateurs de base de données Master Data Services  
   
 |Utilisateur|Description|  
 |----------|-----------------|  
-|**mds_email_user**|Utilisé pour les notifications.<br /><br /> \- A l’autorisation SELECT pour le schéma mdm.<br /><br /> \- A l’autorisation EXECUTE pour le type de table défini par l’utilisateur mdm.MemberGetCriteria.<br /><br /> \- A l’autorisation EXECUTE pour la procédure stockée mdm.udpNotificationQueueActivate.|  
+|**mds_email_user**|Utilisé pour les notifications.<br /><br /> - A l’autorisation SELECT pour le schéma mdm.<br /><br /> - A l’autorisation EXECUTE pour le type de table défini par l’utilisateur mdm.MemberGetCriteria.<br /><br /> - A l’autorisation EXECUTE pour la procédure stockée mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Possède les schémas mdq et mdm. Le schéma par défaut est mdm.<br /><br /> Il n'est mappé à aucune connexion.|  
-|**mds_ssb_user**|Utilisé pour exécuter des tâches Service Broker.<br /><br /> \- A les autorisations DELETE, INSERT, REFERENCES, SELECT et UPDATE pour tous les schémas.<br /><br /> \- N’est mappé à aucune connexion.|  
+|**mds_ssb_user**|Utilisé pour exécuter des tâches Service Broker.<br /><br /> - A les autorisations DELETE, INSERT, REFERENCES, SELECT et UPDATE pour tous les schémas.<br /><br /> - N’est mappé à aucune connexion.|  
   
 ## <a name="master-data-services-database-role"></a>Rôle de base de données Master Data Services  
   
-|Rôle|Description|Autorisations|  
+|Role|Description|Autorisations|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Ce rôle contient le compte que vous désignez dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] lorsque vous créez une application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] et désignez un compte pour le pool d'applications.|L'autorisation EXECUTE sur tous les schémas.<br /><br /> <br /><br /> Les autorisations ALTER, INSERT et SELECT sur ces tables :<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> L'autorisation SELECT sur ces tables :<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> L'autorisation SELECT sur ces vues :<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Schémas  
   
-|Rôle|Description|  
+|Role|Description|  
 |----------|-----------------|  
-|**mdm**|Contient tous les objets de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] et Service Broker autres que les fonctions contenues dans le schéma mdq.|  
-|**mdq**|Contient les fonctions de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relatives aux résultats du filtrage de membres selon des expressions régulières ou des ressemblances, et pour la mise en forme de courriers électroniques de notification.|  
-|**stg.**|Contient des tables de base de données, des procédures stockées et des vues [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] liées au processus de site. Ne supprimez pas l'un de ces objets. Pour plus d’informations sur le processus de mise en lots, consultez [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
+|**Mobile**|Contient tous les objets de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] et Service Broker autres que les fonctions contenues dans le schéma mdq.|  
+|**MDQ**|Contient les fonctions de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relatives aux résultats du filtrage de membres selon des expressions régulières ou des ressemblances, et pour la mise en forme de courriers électroniques de notification.|  
+|**STG**|Contient des tables de base de données, des procédures stockées et des vues [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] liées au processus de site. Ne supprimez pas l'un de ces objets. Pour plus d’informations sur le processus de mise en lots, consultez [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité de l’objet de base de données &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [Master Data Services &#40;de sécurité de l’objet de base de données&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

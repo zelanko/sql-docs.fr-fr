@@ -21,30 +21,30 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889182"
 ---
 # <a name="upgrade-analysis-services"></a>Mettre à niveau Analysis Services
-  Utilisez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mise à niveau en mode SharePoint, consultez [mettre à niveau PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md). Pour plus d’informations sur la mise à niveau d’une instance de SQL Server existante, consultez [la rubrique mise &#40;à&#41;niveau vers SQL Server 2014 à l’aide de l’Assistant Installation](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Utilisez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mise à niveau en mode SharePoint, consultez [mettre à niveau PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md). Pour plus d’informations sur la mise à niveau d’une instance de SQL Server existante, consultez [mise à niveau vers SQL Server 2014 à l’aide de l’Assistant installation &#40;&#41;d’installation ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problèmes de mise à niveau connus  
- Avant de mettre à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez les rubriques suivantes :  
+ Avant de procéder à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]la mise à niveau vers, passez en revue les éléments suivants :  
   
--   [Notes de mise à jour de SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
+-   [Notes de publication de SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   Pour savoir quelles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fonctionnalités et fonctionnalités ont été supprimées, déconseillées ou modifiées, consultez [Analysis Services la compatibilité descendante](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility).  
   
 ## <a name="pre-upgrade-checklist"></a>Liste de contrôle préalable à la mise à niveau  
  Avant d'effectuer la mise à niveau, passez en revue les informations suivantes :  
   
--   [Mises à niveau de la version et de l’édition prises en charge](supported-version-and-edition-upgrades.md)  
+-   [Mises à niveau de la version et de l'édition prises en charge](supported-version-and-edition-upgrades.md)  
   
--   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
--   [Paramètres de l’outil d’analyse de configuration système](check-parameters-for-the-system-configuration-checker.md)  
+-   [Paramètres de l'outil d'analyse de configuration système](check-parameters-for-the-system-configuration-checker.md)  
   
 -   [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
@@ -62,12 +62,12 @@ ms.locfileid: "68889182"
 -   Vous pouvez également installer Analysis Services sur le nouveau matériel, puis migrer les bases de données existantes vers ce serveur.  
   
 ## <a name="in-place-upgrade"></a>Mise à niveau sur place  
- Vous pouvez mettre à niveau une instance existante d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et, dans le cadre du processus de mise à niveau, migrer automatiquement les bases de données existantes de l'instance précédente vers la nouvelle. Comme les métadonnées et les données binaires sont compatibles entre les deux versions, vous conserverez les données après la mise à niveau et vous n'avez pas à migrer les données manuellement.  
+ Vous pouvez mettre à niveau une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de vers et, dans le cadre du processus de mise à niveau, migrer automatiquement les bases de données existantes de l’ancienne instance vers la nouvelle instance. Comme les métadonnées et les données binaires sont compatibles entre les deux versions, vous conserverez les données après la mise à niveau et vous n'avez pas à migrer les données manuellement.  
   
  Pour mettre à niveau une instance existante, exécutez le programme d'installation et spécifiez le nom de l'instance existante comme nom de la nouvelle instance.  
   
 ## <a name="upgrading-databases"></a>Mise à niveau des bases de données  
- Les bases de données créées dans les versions antérieures d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutent sur le serveur mis à niveau sous un ancien paramétrage de niveau de compatibilité de base de données. Le niveau de compatibilité des bases de données créées dans les versions suivantes est 105. Vous pouvez modifier le niveau de compatibilité si vous souhaitez utiliser des fonctionnalités qui nécessitent un niveau de compatibilité de base de données plus récent. Une autre solution consiste à exécuter les bases de données sur le serveur mis à niveau en utilisant les paramètres d'origine. Pour plus d’informations, consultez [définir le niveau de compatibilité d’une base de &#40;données&#41;multidimensionnelle Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services).  
+ Les bases de données créées dans les versions antérieures d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutent sur le serveur mis à niveau sous un ancien paramétrage de niveau de compatibilité de base de données. Le niveau de compatibilité des bases de données créées dans les versions suivantes est 105. Vous pouvez modifier le niveau de compatibilité si vous souhaitez utiliser des fonctionnalités qui nécessitent un niveau de compatibilité de base de données plus récent. Une autre solution consiste à exécuter les bases de données sur le serveur mis à niveau en utilisant les paramètres d'origine. Pour plus d’informations, consultez [définir le niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services).  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -79,10 +79,10 @@ ms.locfileid: "68889182"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [Planification d'une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
+ [Planification d’une installation de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Compréhension de l’architecture Microsoft OLAP](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   
  [Mettre à niveau PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md)   
- [Installer Analysis Services en mode multidimensionnel et exploration de données](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [Installation de PowerPivot pour SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installer Analysis Services en mode multidimensionnel et d’exploration de données](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
+ [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232304"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
@@ -138,5 +138,5 @@ WITH PERMISSION_SET = UNSAFE;
  [Suppression d’un assembly](dropping-an-assembly.md)   
  [Sécurité d’accès du code d’intégration du CLR](../security/clr-integration-code-access-security.md)   
  [Propriété de base de données TRUSTWORTHY](../../security/trustworthy-database-property.md)   
- [Autorisation des appelants de confiance partielle](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
+ [Autorisation d'appelants partiellement approuvés](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
   

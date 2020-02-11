@@ -14,26 +14,26 @@ ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931852"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize, propriété dynamique (ADO)
 Spécifie si un index doit être créé sur un [champ](../../../ado/reference/ado-api/field-object.md).  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **booléenne** valeur qui indique si un index doit être créé.  
+ Définit ou retourne une valeur **booléenne** qui indique si un index doit être créé.  
   
 ## <a name="remarks"></a>Notes  
- Un index peut améliorer les performances des opérations de rechercher ou trier les valeurs dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). L’index est interne à ADO ; Vous ne peut pas explicitement accéder ou l’utiliser dans votre application.  
+ Un index peut améliorer les performances des opérations qui recherchent ou trient des valeurs dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). L’index est interne à ADO ; vous ne pouvez pas y accéder explicitement ou l’utiliser dans votre application.  
   
- Pour créer un index sur un champ, définissez la **optimiser** propriété **True**. Pour supprimer l’index, définissez cette propriété sur **False**.  
+ Pour créer un index sur un champ, affectez la valeur **true**à la propriété **optimize** . Pour supprimer l’index, affectez la valeur **false**à cette propriété.  
   
- **Optimiser** est une propriété dynamique ajoutée à la [champ](../../../ado/reference/ado-api/field-object.md) objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection lorsque le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété est définie sur **adUseClient**.  
+ **Optimize** est une propriété dynamique ajoutée à la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) de l’objet [Field](../../../ado/reference/ado-api/field-object.md) lorsque la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) a la valeur **adUseClient**.  
   
-## <a name="usage"></a>Utilisation  
+## <a name="usage"></a>Usage  
   
 ```  
 Dim rs As New Recordset  
@@ -47,11 +47,11 @@ fld.Properties("Optimize") = False   'Delete an index
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- [Field, objet](../../../ado/reference/ado-api/field-object.md)  
+ [Objet Field](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Optimize, exemple de propriété (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
- [Optimize, exemple de propriété (VC ++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
- [Propriété de filtre](../../../ado/reference/ado-api/filter-property.md)   
- [Rechercher, méthode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Optimize, exemple de propriété (VC + +)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
+ [Filter (propriété)](../../../ado/reference/ado-api/filter-property.md)   
+ [Find, méthode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Sort, propriété](../../../ado/reference/ado-api/sort-property.md)

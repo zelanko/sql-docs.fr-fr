@@ -1,5 +1,5 @@
 ---
-title: Clustered, propriété-Exemple (VC ++) | Microsoft Docs
+title: Clustered, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 33ef2ac09d81d85c6b9170c84bffbc8491dbd995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac845019bf2f8a8582f20adb5d4f8861f622fe44
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966940"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925491"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered, exemple de propriété (VC++)
-Cet exemple montre la [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) propriété d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Notez que les bases de données Microsoft Jet ne gèrent pas les index ordonnés en clusters, cet exemple retournera **False** pour le **Clustered** propriété de tous les index dans le *Northwind* base de données.  
+Cet exemple illustre la propriété [cluster](../../../ado/reference/adox-api/clustered-property-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md). Notez que les bases de données Microsoft Jet ne prennent pas en charge les index cluster. par conséquent, cet exemple retourne la **valeur false** pour la propriété **cluster** de tous les index de la base de données *Northwind* .  
   
 ```  
 // BeginClusteredCpp.cpp  
@@ -82,7 +82,7 @@ void ClusteredX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ClusteredX...."<< endl;  
+      cout << "Error occurred in ClusteredX...."<< endl;  
    }  
 }  
 ```  

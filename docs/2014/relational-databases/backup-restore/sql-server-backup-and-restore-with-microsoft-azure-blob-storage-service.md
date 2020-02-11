@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232429"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
@@ -54,7 +54,7 @@ ms.locfileid: "75232429"
   
 ## <a name="see-also"></a>Voir aussi  
  [Meilleures pratiques et dépannage de la SQL Server sauvegarde vers une URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Sauvegarde et restauration des bases de données système &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [Didacticiel : SQL Server la sauvegarde et la restauration dans le service de stockage d’objets BLOB Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
- [SQL Server la sauvegarde vers l’URL](sql-server-backup-to-url.md)  
+ [Sauvegarde SQL Server vers une URL](sql-server-backup-to-url.md)  
   

@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 631b6864529e903516857f68ea421365c144afef
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243301"
 ---
 # <a name="search-and-replace"></a>Recherche et remplacement
@@ -42,16 +42,16 @@ ms.locfileid: "75243301"
   
 -   Les options définies dans la boîte de dialogue **Rechercher et remplacer** affectent toutes les recherches. Ces options comprennent **Respecter la casse**, **Mot entier**, **Rechercher vers le haut**, **Rechercher le texte masqué**, **Caractères génériques**, **Expressions régulières**, **Regarder dans tous les documents ouverts**et **Regarder dans le projet en cours**. Les options ne sont pas toutes disponibles dans toutes les versions de la boîte de dialogue **Rechercher et remplacer** .  
   
--   La **commande Annuler** est disponible uniquement pour les documents restés ouverts après une opération de remplacement.  
+-   La commande**Annuler** est disponible uniquement pour les documents qui sont restés ouverts après une opération de remplacement.  
   
--   **Undo** pour une opération **remplacer tout** qui s’étend sur plusieurs fichiers est considérée comme une action en bloc unique dans tous les fichiers affectés. Par conséquent, vous ne pouvez pas annuler des modifications dans certains fichiers et les conserver dans d'autres.  
+-   L’action**Annuler** pour une opération **Remplacer tout** qui s’étend sur plusieurs fichiers est considérée comme une action en bloc sur tous les fichiers affectés. Par conséquent, vous ne pouvez pas annuler des modifications dans certains fichiers et les conserver dans d'autres.  
   
  En règle générale, vous ne pouvez pas rechercher des éléments avec des vues graphiques.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Effectuer une recherche incrémentielle dans un document actif](search-an-active-document-incrementally.md)   
- [Rechercher des documents de manière interactive](search-documents-interactively.md)   
- [Rechercher des documents à l’aide des listes de résultats](search-documents-using-results-lists.md)   
+ [Effectuer une recherche de façon interactive dans des documents](search-documents-interactively.md)   
+ [Effectuer une recherche dans des documents à l'aide des listes de résultats](search-documents-using-results-lists.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)   
  [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md)  
   

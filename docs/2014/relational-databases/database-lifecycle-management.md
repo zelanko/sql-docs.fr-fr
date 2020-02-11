@@ -31,10 +31,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232090"
 ---
 # <a name="database-lifecycle-management"></a>Gestion du cycle de vie de base de données
@@ -45,7 +45,7 @@ ms.locfileid: "75232090"
  Pour lire l’intégralité de la rubrique, consultez [Gestion du cycle de vie de la base de données (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page d’hébergement Azure](https://www.windowsazure.com/)   
+ [Page d’accueil Azure](https://www.windowsazure.com/)   
  [Centre de développement Azure](https://www.windowsazure.com/develop/overview/)   
  [Centre de gestion Azure](https://www.windowsazure.com/manage/overview/)   
  [Blog de l’équipe Azure](https://www.windowsazure.com/community/blog/)   

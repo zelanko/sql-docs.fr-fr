@@ -14,24 +14,24 @@ ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3885b805f32661f328552674bf9a9d1e98e6fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963677"
 ---
 # <a name="rds-objects"></a>Objets RDS
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 |||  
 |-|-|  
-|[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Lie une requête de données **Recordset** à un ou plusieurs contrôles (par exemple, une zone de texte, contrôle de grille ou zone de liste déroulante) pour afficher le **Recordset** données sur une page Web.<br /><br /> Le **DataControl** objet est sécurisé pour le script.|  
-|[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implémente des méthodes qui fournissent l’accès aux données en lecture/écriture spécifié des sources de données pour les applications côté client.<br /><br /> Le **DataFactory** objet n’est pas sécurisé pour le script.|  
-|[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Crée des proxys côté client pour les objets métier personnalisés situés sur la couche intermédiaire.<br /><br /> Le **DataSpace** objet est sécurisé pour le script.|  
-|[IRDSService, interface (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Expose les [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) (méthode), qui est utilisé pour retourner un pointeur vers l’interface demandée sur une version plus performante de l’objet.|  
+|[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Lie un **jeu d’enregistrements** de requêtes de données à un ou plusieurs contrôles (par exemple, une zone de texte, un contrôle de grille ou une zone de liste déroulante) pour afficher les données du **Recordset** sur une page Web.<br /><br /> L’objet **DataControl** est sécurisé pour l’écriture de scripts.|  
+|[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implémente des méthodes qui fournissent un accès en lecture/écriture aux données des sources de données spécifiées pour les applications côté client.<br /><br /> L’objet **DataFactory** n’est pas sûr pour l’écriture de scripts.|  
+|[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Crée des proxies côté client pour des objets métier personnalisés situés sur la couche intermédiaire.<br /><br /> L’objet **DataSpace** est sécurisé pour l’écriture de scripts.|  
+|[IRDSService, interface (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Expose la méthode [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) , qui est utilisée pour retourner un pointeur vers l’interface demandée sur une version plus puissante de l’objet.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des API RDS](../../../ado/reference/rds-api/rds-api-reference.md)
+ [Référence sur l’API RDS](../../../ado/reference/rds-api/rds-api-reference.md)
 
 

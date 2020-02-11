@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
+title: dbo. sysjobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 85710deec2e7ab5e79ed7a514e3b625c6232484e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902198"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761833"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "67902198"
 Contient des informations sur l'exécution des travaux planifiés par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 > [!NOTE]
-> Dans la plupart des cas les données sont mis à jour uniquement après la fin de l’étape de travail et la table ne contient généralement aucun enregistrement des étapes de travail qui sont actuellement en cours d’exécution, mais dans certains cas, processus sous-jacents *faire* fournissent des informations à propos de étapes de travail en cours.
+> Dans la plupart des cas, les données sont mises à jour uniquement une fois l’étape de travail terminée et la table ne contient généralement aucun enregistrement pour les étapes de travail qui sont actuellement en cours, mais dans certains cas, les processus sous- *jacents fournissent des* informations sur les étapes de travail en cours.
 
-Cette table est stockée dans le **msdb** base de données.  
+Cette table est stockée dans la base de données **msdb** .  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,21 +42,21 @@ Cette table est stockée dans le **msdb** base de données.
 |**job_id**|**uniqueidentifier**|ID de travail.|  
 |**step_id**|**int**|ID de l'étape dans le travail|  
 |**step_name**|**sysname**|Nom de l'étape|  
-|**sql_message_id**|**Int**|Identificateur de tout message d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné en cas d'échec du travail.|  
+|**sql_message_id**|**int**|Identificateur de tout message d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné en cas d'échec du travail.|  
 |**sql_severity**|**int**|Gravité des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**message**|**nvarchar(4000)**|Texte éventuel d'une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**run_status**|**int**|État de l'exécution du travail :<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulée<br /><br />**4** = en cours|  
-|**run_date**|**Int**|Date du début d'exécution du travail ou de l'étape. Pour l'historique des travaux en cours, date et heure de l'écriture de l'historique.|  
-|**run_time**|**int**|Heure de début de l'étape ou du travail.|  
-|**run_duration**|**int**|Temps écoulé dans l’exécution du travail ou de l’étape de **HHMMSS** format.|  
+|**Message**|**nvarchar(4000)**|Texte éventuel d'une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**run_status**|**int**|État de l'exécution du travail :<br /><br /> **0** = échec<br /><br /> **1** = réussite<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulé<br /><br />**4** = en cours|  
+|**run_date**|**int**|Date du début d'exécution du travail ou de l'étape. Pour l'historique des travaux en cours, date et heure de l'écriture de l'historique.|  
+|**run_time**|**int**|Heure à laquelle le travail ou l’étape a démarré au format **HHMMSS** .|  
+|**run_duration**|**int**|Temps écoulé dans l’exécution du travail ou de l’étape au format **HHMMSS** .|  
 |**operator_id_emailed**|**int**|Identificateur de l'opérateur averti de la fin du travail.|  
 |**operator_id_netsent**|**int**|Identificateur de l'opérateur averti par un message de la fin du travail.|  
-|**operator_id_paged**|**Int**|Identificateur de l'opérateur averti par radiomessagerie de la fin du travail.|  
+|**operator_id_paged**|**int**|Identificateur de l'opérateur averti par radiomessagerie de la fin du travail.|  
 |**retries_attempted**|**int**|Nombre de nouvelles tentatives pour le travail ou l'étape.|  
-|**server**|**sysname**|Nom du serveur sur lequel le travail a été exécuté.|  
+|**serveurs**|**sysname**|Nom du serveur sur lequel le travail a été exécuté.|  
   
   ## <a name="example"></a>Exemple
- Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] requête convertira le **run_time** et **run_duration** colonnes dans un format plus convivial.  Exécutez le script dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+ La requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante convertit les colonnes **run_time** et **run_duration** dans un format plus convivial.  Exécutez le script dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
  ```sql
  SET NOCOUNT ON;

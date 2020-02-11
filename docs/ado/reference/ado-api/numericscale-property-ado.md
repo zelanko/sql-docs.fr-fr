@@ -17,32 +17,32 @@ ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38d283e8fedb90ed5a99143090bc6a077efa8512
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932108"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale, propriété (ADO)
-Indique l’échelle des valeurs numériques dans un [paramètre](../../../ado/reference/ado-api/parameter-object.md) ou [champ](../../../ado/reference/ado-api/field-object.md) objet.  
+Indique l’échelle des valeurs numériques dans un objet de [paramètre](../../../ado/reference/ado-api/parameter-object.md) ou de [champ](../../../ado/reference/ado-api/field-object.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **octets** valeur qui indique le nombre de décimales utilisées pour les valeurs numériques qui sera résolu.  
+ Définit ou retourne une valeur d' **octet** qui indique le nombre de décimales auquel les valeurs numériques seront résolues.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **NumericScale** propriété afin de déterminer le nombre de chiffres à droite de la virgule décimale permet de représenter les valeurs d’une valeur numérique **paramètre** ou **champ** objet.  
+ Utilisez la propriété **NumericScale** pour déterminer le nombre de chiffres à droite de la virgule décimale qui sera utilisé pour représenter les valeurs d’un objet de **paramètre** ou de **champ** numérique.  
   
- Pour **paramètre** objets, le **NumericScale** propriété est en lecture/écriture.  
+ Pour les objets **Parameter** , la propriété **NumericScale** est en lecture/écriture.  
   
- Pour un **champ**objet, **NumericScale** est généralement en lecture seule. Toutefois, pour les nouveaux **champ** les objets qui ont été ajoutées à la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), **NumericScale** est en lecture/écriture uniquement après la [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété pour le **champ** a été spécifié et le fournisseur de données a correctement ajouté le nouveau **champ** en appelant le [ Mise à jour](../../../ado/reference/ado-api/update-method.md) méthode de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  
+ Pour un objet **Field**, **NumericScale** est généralement en lecture seule. Toutefois, pour les nouveaux objets de **champ** qui ont été ajoutés à la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), **NumericScale** est en lecture/écriture uniquement une fois que la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) du **champ** a été spécifiée et que le fournisseur de données a correctement ajouté le nouveau **champ** en appelant la méthode [Update](../../../ado/reference/ado-api/update-method.md) de la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) .  
   
 ## <a name="applies-to"></a>S'applique à  
   
 |||  
 |-|-|  
-|[Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)|[Field, objet](../../../ado/reference/ado-api/field-object.md)|  
+|[Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objet Field](../../../ado/reference/ado-api/field-object.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [NumericScale et Precision, propriétés, exemple (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [NumericScale et Precision, propriétés, exemple (VC ++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
+ [NumericScale et Precision, exemple de propriétés (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
+ [NumericScale et Precision, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Precision, propriété (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

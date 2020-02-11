@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 91c5c807a49ba76233f2c78c8dda2925b982f921
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: e55b45cf43e34982033d941ad9626f75afdec554
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611029"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75688227"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crée un repère de plan permettant d'associer des indicateurs de requête ou des plans de requête réels à des requêtes d'une base de données. Pour plus d'informations sur les repères de plan, consultez [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 sp_create_plan_guide [ @name = ] N'plan_guide_name'  
     , [ @stmt = ] N'statement_text'  
     , [ @type = ] N'{ OBJECT | SQL | TEMPLATE }'  
@@ -57,39 +56,40 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@stmt =] N'*statement_text*'  
  Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] permettant de créer un repère de plan. Lorsque l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimiseur de requête reconnaît une requête qui correspond à *statement_text*, *plan_guide_name* prend effet. Pour que la création d’un repère de plan aboutisse, *statement_text* doit apparaître dans le contexte spécifié \@par les \@paramètres type, \@module_or_batch et params.  
   
- *statement_text* doit être fourni de manière à permettre à l’optimiseur de requête de le faire correspondre à l’instruction correspondante fournie dans le lot ou le module \@identifié par \@module_or_batch et params. Pour plus d'informations, consultez la section « Remarques ». La taille de *statement_text* est limitée uniquement par la mémoire disponible du serveur.  
+ *statement_text* doit être fourni de manière à permettre à l’optimiseur de requête de le faire correspondre à l’instruction correspondante fournie dans le lot ou le module \@identifié par \@module_or_batch et les paramètres. Pour plus d'informations, consultez la section « Remarques ». La taille de *statement_text* est limitée uniquement par la mémoire disponible du serveur.  
   
- [\@type =] N' {objet | SQL | MODÈLE}»  
- Type de l’entité dans laquelle *statement_text* apparaît. Spécifie le contexte pour la correspondance de *statement_text* à *plan_guide_name*.  
+ [\@type =] N' {OBJET | SQL | MODÈLE}»  
+ Type de l’entité dans laquelle *statement_text* apparaît. Cela spécifie le contexte pour la correspondance de *statement_text* avec *plan_guide_name*.  
   
  OBJECT  
- Indique que *statement_text* apparaît dans le contexte d' [!INCLUDE[tsql](../../includes/tsql-md.md)] une procédure stockée, d’une fonction scalaire, d’une fonction table à [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions multiples ou d’un déclencheur DML dans la base de données active.  
+ Indique *statement_text* apparaît dans le contexte d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée, d’une fonction scalaire, d’une fonction table à instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] multiples ou d’un déclencheur DML dans la base de données active.  
   
  SQL  
- Indique que *statement_text* apparaît dans le contexte d’une instruction ou d’un lot autonome pouvant être soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d’un mécanisme quelconque. [!INCLUDE[tsql](../../includes/tsql-md.md)]les instructions soumises par des objets Common Language Runtime (CLR) ou des procédures stockées étendues, ou à l’aide de exec N'*sql_string*', sont traitées comme des lots sur le serveur et, \@par conséquent, doivent être identifiées en tant que type **=** 'SQL'. Si SQL est spécifié, le paramétrage de l’indicateur de requête {FORCEd | SIMPLE} ne peut pas être spécifié \@dans le paramètre hints.  
+ Indique *statement_text* apparaît dans le contexte d’une instruction ou d’un lot autonome pouvant être soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d’un mécanisme quelconque. [!INCLUDE[tsql](../../includes/tsql-md.md)]les instructions soumises par des objets common language runtime (CLR) ou des procédures stockées étendues, ou à l’aide de EXEC N'*sql_string*', sont traitées comme des lots sur le serveur et, \@par **=** conséquent, doivent être identifiées en tant que type’SQL'. Si SQL est spécifié, le paramétrage de l’indicateur de requête {FORCEd | SIMPLE} ne peut pas être spécifié \@dans le paramètre hints.  
   
  TEMPLATE  
  Indique que le repère de plan s’applique à toute requête paramétrée dans le formulaire indiqué dans *statement_text*. Si TEMPLATE est spécifié, seul le paramétrage {FORCEd | SIMPLE} l’indicateur de requête peut être spécifié \@dans le paramètre hints. Pour plus d’informations sur les repères de plan TEMPLATE, consultez [spécifier le comportement du paramétrage de requête à l’aide de repères de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
  [\@module_or_batch =] {N' [ *schema_name*. ] *object_name*' | N'*batch_text*' | NUL  
- Spécifie le nom de l’objet dans lequel *statement_text* s’affiche, ou le texte du lot dans lequel *statement_text* s’affiche. Le texte du lot ne peut pas inclure une instruction USE*Database* .  
+ Spécifie le nom de l’objet dans lequel *statement_text* s’affiche, ou le texte du lot dans lequel *statement_text* apparaît. Le texte du lot ne peut pas inclure une instruction USE*Database* .  
   
- Pour qu’un repère de plan corresponde à un lot envoyé à partir d’une application, *batch_tex*t doit être fourni dans le même format, caractère pour caractère, car il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est envoyé à. Aucune conversion interne n'est effectuée pour faciliter cette correspondance. Pour plus d'informations, consultez la section Notes.  
+ Pour qu’un repère de plan corresponde à un lot envoyé à partir d’une application, *batch_tex*t doit être fourni dans le même format, caractère pour caractère, tel qu' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il est envoyé à. Aucune conversion interne n'est effectuée pour faciliter cette correspondance. Pour plus d'informations, consultez la section Notes.  
   
- [*schema_name*.] *object_name* spécifie le nom d' [!INCLUDE[tsql](../../includes/tsql-md.md)] une procédure stockée, d’une fonction scalaire, d’une fonction table à [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions multiples ou d’un déclencheur DML qui contient *statement_text*. Si *schema_name* n’est pas spécifié, *schema_name* utilise le schéma de l’utilisateur actuel. Si null est spécifié et \@type = 'SQL', la valeur de \@module_or_batch est définie sur la valeur de \@stmt. Si \@type = 'template **\'** , \@module_or_batch doit avoir la valeur null.  
+ [*schema_name*.] *object_name* spécifie le nom d' [!INCLUDE[tsql](../../includes/tsql-md.md)] une procédure stockée, d’une fonction scalaire, d’une fonction table à [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions multiples ou d’un déclencheur DML qui contient des *statement_text*. Si *schema_name* n’est pas spécifié, *schema_name* utilise le schéma de l’utilisateur actuel. Si NULL est spécifié et \@type = 'SQL', la valeur de \@module_or_batch est définie sur la valeur de \@stmt. Si \@type = 'template**\'**, \@module_or_batch doit avoir la valeur null.  
   
- [ \@params =] {N' *\@parameter_name type_de_données* [, *... n* ] ' | NUL  
- Spécifie les définitions de tous les paramètres incorporés dans *statement_text*. \@params s’applique uniquement lorsque l’une des conditions suivantes est remplie:  
+ [ \@params =] {N'*\@parameter_name data_type* [,*... n* ] ' | NUL  
+ Spécifie les définitions de tous les paramètres incorporés dans *statement_text*. \@params s’applique uniquement lorsque l’une des conditions suivantes est remplie :  
   
--   \@type = 'SQL’ou’TEMPLATE'. Si’template', \@les paramètres ne doivent pas avoir la valeur null.  
+-   \@type = 'SQL’ou’TEMPLATE'. Si’TEMPLATE', \@les paramètres ne doivent pas avoir la valeur null.  
   
--   *statement_text* est soumis à l’aide de sp_executesql et une valeur \@est spécifiée pour le paramètre params, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou soumet une instruction en interne après l’avoir paramétrée. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère la soumission de requêtes paramétrables à partir des API de bases de données (y compris ODBC, OLE DB et ADO.NET) comme des appels à sp_executesql ou aux routines de curseur côté serveur d'API. Par conséquent, elles peuvent également être mises en correspondance par des repères de plan SQL ou TEMPLATE.  
+-   *statement_text* est soumise à l’aide de sp_executesql et une valeur \@est spécifiée pour le paramètre params, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou envoie une instruction en interne après l’avoir paramétrée. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère la soumission de requêtes paramétrables à partir des API de bases de données (y compris ODBC, OLE DB et ADO.NET) comme des appels à sp_executesql ou aux routines de curseur côté serveur d'API. Par conséquent, elles peuvent également être mises en correspondance par des repères de plan SQL ou TEMPLATE.  
   
- nom_de_paramètre type_de_données doit être fourni dans le même format que celui dans lequel il est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soumis à l’aide de sp_executesql ou soumis en interne après le paramétrage.  *\@* Pour plus d'informations, consultez la section Notes. Si le traitement ne contient aucun paramètre, la valeur NULL doit être spécifiée. La taille des \@paramètres est limitée uniquement par la mémoire disponible du serveur.  
+ parameter_name data_type doit être fourni dans le même format que celui dans lequel il est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soumis à l’aide de sp_executesql ou soumis en interne après le paramétrage. * \@* Pour plus d'informations, consultez la section Notes. Si le traitement ne contient aucun paramètre, la valeur NULL doit être spécifiée. La taille des \@paramètres est limitée uniquement par la mémoire disponible du serveur.  
   
- [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
- N’option (*query_hint* [, *... n* ])  
- Spécifie une clause option à joindre à une requête qui \@correspond à \@stmt. les indicateurs doivent être syntaxiquement identiques à une clause option dans une instruction SELECT et peuvent contenir toute séquence valide d’indicateurs de requête.  
+ [\@Hints =] {N’option (*query_hint* [,*... n* ]) ' | N'*XML_showplan*' | NUL  
+ N’option (*query_hint* [,*... n* ])  
+ Spécifie une clause OPTION à joindre à une requête qui \@correspond à \@stmt. les indicateurs doivent être syntaxiquement identiques à une clause option dans une instruction SELECT et peuvent contenir toute séquence valide d’indicateurs de requête.  
   
  N'*XML_showplan*'  
  Plan de requête dans le format XML à appliquer comme un indicateur.  
@@ -97,52 +97,54 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Nous vous recommandons d'assigner le plan d'exécution de requêtes XML à une variable ; sinon, vous devez isoler tout guillemet simple dans le plan d'exécution en le faisant précéder par un autre guillemet simple. Voir l'exemple E.  
   
  NULL  
- Indique qu'aucun indicateur existant spécifié dans la clause OPTION de la requête n'est appliqué à la requête. Pour plus d’informations, consultez [clause &#40;d’option Transact&#41;-SQL](../../t-sql/queries/option-clause-transact-sql.md).  
+ Indique qu'aucun indicateur existant spécifié dans la clause OPTION de la requête n'est appliqué à la requête. Pour plus d’informations, consultez [clause OPTION &#40;&#41;Transact-SQL ](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ## <a name="remarks"></a>Notes  
- Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Quand vous fournissez des valeurs pour les paramètres de **sp_create_plan_guide**, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si  **\@Name =**  **\@** est spécifié, stmt =,  **\@type =** , et ainsi de suite, doivent également être spécifiés. De même, si  **\@Name =** est omis et que seule la valeur de paramètre est fournie, les noms de paramètres restants doivent également être omis, et seules leurs valeurs sont fournies. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
+ Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Quand vous fournissez des valeurs pour les paramètres de **sp_create_plan_guide**, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si ** \@Name =** est spécifié, ** \@stmt =** , ** \@type =**, et ainsi de suite, doivent également être spécifiés. De même, si ** \@Name =** est omis et que seule la valeur de paramètre est fournie, les noms de paramètres restants doivent également être omis, et seules leurs valeurs sont fournies. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
   
  Vous pouvez créer plusieurs repères de plan OBJECT ou SQL pour la même requête et le même lot ou module. Toutefois, un seul repère de plan peut être activé à un moment donné.  
   
- Impossible de créer des repères de plan de \@type Object pour une valeur module_or_batch qui fait référence à une procédure stockée, une fonction ou un déclencheur DML qui spécifie la clause with Encryption ou qui est temporaire.  
+ Les repères de plan de type OBJECT ne \@peuvent pas être créés pour une valeur module_or_batch qui fait référence à une procédure stockée, une fonction ou un déclencheur DML qui spécifie la clause with Encryption ou qui est temporaire.  
   
  Si vous tentez de supprimer ou de modifier une fonction, une procédure stockée ou un déclencheur DML référencé par un repère de plan, qu'il soit activé ou désactivé, une erreur se produit. Une erreur se produit également si vous tentez de supprimer une table dont un des déclencheurs est référencé par un repère de plan.  
   
 > [!NOTE]
->  Les repères de plan ne peuvent pas être utilisés dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Les repères de plan sont visibles dans n'importe quelle édition. En outre, vous pouvez attacher une base de données qui contient des repères de plan à n'importe quelle édition. Les repères de plan demeurent intacts lorsque vous restaurez ou attachez une base de données à une version mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez vérifier les avantages des repères de plan dans chaque base de données après avoir réalisé une mise à niveau de serveur.  
+> Les repères de plan ne peuvent pas être utilisés dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Les repères de plan sont visibles dans n'importe quelle édition. En outre, vous pouvez attacher une base de données qui contient des repères de plan à n'importe quelle édition. Les repères de plan demeurent intacts lorsque vous restaurez ou attachez une base de données à une version mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez vérifier les avantages des repères de plan dans chaque base de données après avoir réalisé une mise à niveau de serveur.  
   
-## <a name="plan-guide-matching-requirements"></a>Paramétrage de la mise en correspondance du repère de plan  
- Pour les repères \@de plan qui spécifient type \@= 'SQL’ou type = 'template’pour correspondre correctement à une requête, les valeurs pour *batch_text* et  *\@parameter_name data_type* [, *... n* ] doivent être fournis exactement dans le même format que leurs homologues soumis par l’application. Par conséquent, vous devez indiquer le texte du traitement exactement de la même manière que le compilateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'a reçu. Pour saisir le texte réel du traitement et du paramètre, vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Pour plus d’informations, consultez [utiliser SQL Server Profiler pour créer et tester des repères de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+## <a name="plan-guide-matching-requirements"></a>Critères du repère de plan  
+ Pour les repères \@de plan qui spécifient type \@= 'SQL’ou type = 'template’pour correspondre correctement à une requête, les valeurs pour *batch_text* et * \@parameter_name data_type* [,*... n* ] doivent être fournis exactement dans le même format que leurs homologues soumis par l’application. Par conséquent, vous devez indiquer le texte du traitement exactement de la même manière que le compilateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'a reçu. Pour saisir le texte réel du traitement et du paramètre, vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Pour plus d’informations, consultez [utiliser SQL Server Profiler pour créer et tester des repères de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
- Quand \@type = 'SQL’et \@module_or_batch a la valeur null, la valeur de \@module_or_batch est définie sur la valeur de \@stmt. Cela signifie que la valeur de *statement_text* doit être fournie exactement dans le même format, caractère-pour-caractère, car elle est envoyée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance.  
+ Lorsque \@type = 'SQL’et \@MODULE_OR_BATCH a la valeur null, la valeur de \@module_or_batch est définie sur la valeur de \@stmt. Cela signifie que la valeur de *statement_text* doit être fournie exactement dans le même format, caractère-pour-caractère, car elle est envoyée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance.  
   
- Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspond à la valeur de *statement_text* à *batch_text* et  *\@à parameter_name data_type* [, *... n* ], ou si \@type = **\'** Object', au texte de la requête correspondante à l’intérieur de *nom_objet*, les éléments de chaîne suivants ne sont pas pris en compte:  
+ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspond à la valeur de *statement_text* à *batch_text* et * \@parameter_name data_type* [,*... n* ], ou si \@type = **\'** Object', au texte de la requête correspondante dans *object_name*, les éléments de chaîne suivants ne sont pas pris en compte :  
   
 -   les espaces (tabulations, espaces, retours chariot ou sauts de ligne) à l'intérieur de la chaîne ;  
   
--   Commentaires ( **--** ou **/ \* ).\* /**  
+-   Commentaires (**--** ** / \*ou \*    **).  
   
 -   les points-virgules situés à la fin.  
   
- Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut faire correspondre la chaîne `N'SELECT * FROM T WHERE a = 10'` *statement_text* à l' *batch_text*suivant:  
+ Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut faire correspondre la chaîne `N'SELECT * FROM T WHERE a = 10'` de *statement_text* à la *batch_text*suivante :  
   
- `N'SELECT *`  
-  
- `FROM T`  
-  
- `WHERE a=10'`  
-  
- Toutefois, la même chaîne n’est pas mise en correspondance avec ce *batch_text*:  
+ ```
+ N'SELECT *
+ FROM T
+ WHERE a = 10' 
+ ```
+ 
+ Toutefois, la même chaîne n’est pas mise en correspondance avec cette *batch_text*:  
   
  `N'SELECT * FROM T WHERE b = 10'`  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore les retours chariots, les sauts de lignes et les espaces au sein de la première requête. Dans la seconde, la séquence `WHERE b = 10` est interprétée différemment de `WHERE a = 10`. La mise en correspondance respecte la casse et les accents (même lorsque le classement de la base de données ne respecte pas la casse), sauf pour les mots clés, pour lesquels la casse n'est pas respectée. La mise en correspondance n'est en outre pas sensible aux formes abrégées des mots clés. Par exemple, les mots clés `EXECUTE`, `EXEC` et `execute` sont considérés comme équivalents.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore les retours chariots, les sauts de lignes et les espaces au sein de la première requête. Dans la seconde, la séquence `WHERE b = 10` est interprétée différemment de `WHERE a = 10`. La mise en correspondance respecte la casse et les accents (même lorsque le classement de la base de données ne respecte pas la casse), sauf pour les mots clés, pour lesquels la casse n'est pas respectée. La mise en correspondance n'est en outre pas sensible aux formes abrégées des mots clés. Par exemple, les mots clés `EXECUTE`, `EXEC` et `execute` sont considérés comme équivalents.  
   
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Effet du repère de plan sur le cache du plan  
  La création d'un repère de plan sur un module supprime le plan de requête pour ce module du cache du plan. La création d'un repère de plan de type OBJET ou SQL sur un lot supprime le plan de requête pour un lot qui a la même valeur de hachage. La création d'un repère de plan de type TEMPLATE supprime tous les lots comprenant une instruction unique du cache du plan dans cette base de données.  
   
 ## <a name="permissions"></a>Autorisations  
- Pour créer un repère de plan de type OBJECT, il vous faut une autorisation ALTER sur l'objet référencé. Pour créer un repère de plan de type SQL ou TEMPLATE, il vous faut une autorisation ALTER pour la base de données active.  
+ Pour créer un repère de plan de type OBJECT, `ALTER` vous devez disposer de l’autorisation sur l’objet référencé. Pour créer un repère de plan de type SQL ou TEMPLATE, `ALTER` vous devez disposer de l’autorisation sur la base de données actuelle.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -151,7 +153,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Voici la procédure stockée :  
   
-```  
+```sql  
 IF OBJECT_ID(N'Sales.GetSalesOrderByCountry', N'P') IS NOT NULL  
     DROP PROCEDURE Sales.GetSalesOrderByCountry;  
 GO  
@@ -171,7 +173,7 @@ GO
   
  Et voici le repère de plan créé pour la requête dans la procédure stockée :  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name =  N'Guide1',  
     @stmt = N'SELECT *  
@@ -192,13 +194,13 @@ EXEC sp_create_plan_guide
   
  Voici le traitement :  
   
-```  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Pour éviter la génération d'une exécution parallèle pour cette requête, créez le repère de plan suivant :  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide1',   
     @stmt = N'SELECT TOP 1 *   
@@ -213,7 +215,7 @@ EXEC sp_create_plan_guide
 ### <a name="c-creating-a-plan-guide-of-type-template-for-the-parameterized-form-of-a-query"></a>C. Création d'un repère de plan de type TEMPLATE pour la forme paramétrable d'une requête  
  L'exemple suivant crée un repère de plan correspondant à la requête qui paramètre selon une forme donnée, et commande à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'imposer le paramétrage de la requête. La syntaxe des deux requêtes suivantes est équivalente, seules leurs valeurs littérales constantes diffèrent.  
   
-```  
+```sql  
 SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
 INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
     ON h.SalesOrderID = d.SalesOrderID  
@@ -227,7 +229,7 @@ WHERE h.SalesOrderID = 45640;
   
  Voici le repère de plan pour la forme paramétrable de la requête :  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'TemplateGuide1',  
     @stmt = N'SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
@@ -242,7 +244,7 @@ EXEC sp_create_plan_guide
   
  Dans l'exemple précédent, la valeur du paramètre `@stmt` correspond à la forme paramétrable de la requête. La procédure stockée système [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) est la seule méthode fiable pour obtenir cette valeur et pouvoir l’utiliser dans sp_create_plan_guide. Vous pouvez utiliser le script suivant à la fois pour obtenir la requête paramétrable et créer ensuite un repère de plan à partir de celle-ci.  
   
-```  
+```sql  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -268,7 +270,7 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
   
  Supposez que les données suivantes apparaissent dans un événement de trace du générateur de profils RPC:Starting pour une requête que vous souhaitez ajuster au moyen d'un repère de plan :  
   
-```  
+```sql  
 DECLARE @p1 int;  
 SET @p1=-1;  
 DECLARE @p2 int;  
@@ -285,7 +287,7 @@ SELECT @p1, @p2, @p5, @p6, @p7;
   
  Vous constatez que le plan de la requête `SELECT` dans l'appel à `sp_cursorprepexec` utilise une jointure de fusion mais vous souhaitez utiliser une jointure de hachage. La requête soumise à l'aide de `sp_cursorprepexec` est paramétrable, y compris une chaîne de requête et une chaîne de paramètre. Vous pouvez créer le repère de plan suivant pour choisir un autre plan en utilisant les chaînes de requête et de paramètre exactement comme elles apparaissent, au caractère près, dans l'appel à `sp_cursorprepexec`.  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'APICursorGuide',  
     @stmt = N'SELECT * FROM Sales.SalesOrderHeader AS h   
@@ -303,7 +305,7 @@ EXEC sp_create_plan_guide
 ### <a name="e-creating-a-plan-guide-by-obtaining-the-xml-showplan-from-a-cached-plan"></a>E. Création d'un repère de plan en obtenant le plan d'exécution de requêtes XML à partir d'un plan mis en cache  
  L'exemple suivant crée un repère de plan pour une instruction SQL ad hoc simple. Le plan de requête souhaité pour cette instruction est fourni dans le repère de plan en spécifiant directement le plan d'exécution XML pour la requête dans le paramètre `@hints` . L'exemple exécute en premier l'instruction SQL pour générer un plan dans le cache du plan. Pour les besoins de cet exemple, il est supposé que le plan généré est le plan souhaité et qu'aucune analyse de requête supplémentaire n'est requise. Le plan d'exécution de requêtes XML pour la requête est obtenu en interrogeant les vues de gestion dynamique `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`et `sys.dm_exec_text_query_plan` , et est assigné à la variable `@xml_showplan` . La variable `@xml_showplan` est ensuite transmise à l'instruction `sp_create_plan_guide` dans le paramètre `@hints` . Vous pouvez aussi créer un repère de plan à partir d’un plan de requête dans le cache des plans à l’aide de la procédure stockée [sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md) .  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;  
@@ -328,14 +330,14 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Repères de plan](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
- [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [Procédures &#40;stockées moteur de base de données Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys. plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [Sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
- [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
+ [sys. fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
  [sp_get_query_template &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

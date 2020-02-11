@@ -20,14 +20,14 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931223"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition, propriété (ADO)
-Obtient ou définit un OLE DB **RowPosition** objet à partir de/sur un **ADORecordsetConstruction** objet. Lorsque vous utilisez **put_RowPosition** pour définir le **RowPosition** objet, résultant **Recordset** objet utilise le **RowPosition** objet déterminer la ligne actuelle.  
+Obtient ou définit un objet **RowPosition** OLE DB à partir de/sur un objet **ADORecordsetConstruction** . Quand vous utilisez **put_RowPosition** pour définir l’objet **RowPosition** , l’objet **Recordset** résultant utilise l’objet **RowPosition** pour déterminer la ligne actuelle.  
   
  En lecture/écriture.  
   
@@ -40,16 +40,16 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
   
 ## <a name="parameters"></a>Paramètres  
  *ppRowPos*  
- Pointeur vers un OLE DB **RowPosition** objet.  
+ Pointeur vers un objet OLE DB **RowPosition** .  
   
  *PRowPos*  
- OLE DB **RowPosition** objet.  
+ Objet **RowPosition** OLE DB.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Cette méthode de propriété renvoie les valeurs HRESULT standard, notamment S_OK et E_FAIL.  
+ Cette méthode de propriété retourne les valeurs HRESULT standard, y compris S_OK et E_FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque cette propriété est définie, si le **ensemble de lignes** de l’objet sur le **RowPosition** objet est différent de la **ensemble de lignes** de l’objet sur le **Recordset**de l’objet, le premier remplace ce dernier. Le même comportement s’applique aux cours **chapitre** de la **RowPosition** également.  
+ Quand cette propriété est définie, si l’objet **rowset** de l’objet **RowPosition** est différent de l’objet **rowset** sur l’objet **Recordset** , le précédent remplace ce dernier. Le même comportement s’applique également au **chapitre** actuel du **RowPosition** .  
   
 ## <a name="applies-to"></a>S'applique à  
  [ADORecordsetConstruction, interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

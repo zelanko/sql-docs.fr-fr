@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9c887f74e9516702cdd04085483c5b583f10e18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242635"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::Open et ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **IRow :: Open** prend en charge uniquement DBGUID_STREAM et DBGUID_NULL type d’objets à ouvrir.  
+  **IRow::Open** prend uniquement en charge l’ouverture des types d’objets DBGUID_STREAM et DBGUID_NULL.  
   
  La fonction suivante utilise **IRow::Open** et **ISequentialStream** pour récupérer (fetch) des données volumineuses.  
   
@@ -82,6 +82,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  Les données volumineuses peuvent être liées ou récupérées à l’aide de l’interface **ISequentialStream**. Pour les colonnes dépendantes, l'indicateur d'état indique si les données sont tronquées en définissant DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraction de données BLOB à l'aide d'IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [Extraction de données Blob à l’aide d’IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

@@ -15,14 +15,14 @@ ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486b76708354d4caf7e9efb2f73539b3eea9abf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925039"
 ---
 # <a name="hybrid-commands"></a>Commandes hybrides
-Commandes hybrides sont des commandes partiellement paramétrées. Exemple :  
+Les commandes hybrides sont des commandes partiellement paramétrées. Par exemple :  
   
 ```  
 SHAPE {select * from plants}   
@@ -31,9 +31,9 @@ SHAPE {select * from plants}
              PlantRegion TO CustomerRegion )   
 ```  
   
- Le comportement de mise en cache pour une commande hybride est identique à celui des commandes paramétrées standard.  
+ Le comportement de mise en cache d’une commande hybride est le même que celui des commandes paramétrées régulières.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
- [Grammaire de la mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
  [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)

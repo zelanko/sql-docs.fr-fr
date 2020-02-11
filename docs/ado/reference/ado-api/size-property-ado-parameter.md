@@ -16,34 +16,34 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931056"
 ---
 # <a name="size-property-ado-parameter"></a>Size, propriété (paramètre ADO)
-Indique la taille maximale, en octets ou de caractères, d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet.  
+Indique la taille maximale, en octets ou en caractères, d’un objet de [paramètre](../../../ado/reference/ado-api/parameter-object.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **Long** valeur qui indique la taille maximale en octets ou caractères d’une valeur dans un **paramètre** objet.  
+ Définit ou retourne une valeur de **type long** qui indique la taille maximale en octets ou en caractères d’une valeur dans un objet **Parameter** .  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **taille** propriété pour déterminer la taille maximale pour les valeurs écrites dans ou lire le [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété d’un **paramètre** objet.  
+ Utilisez la propriété **Size** pour déterminer la taille maximale des valeurs écrites ou lues à partir de la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) d’un objet **Parameter** .  
   
- Si vous spécifiez un type de données de longueur variable pour un **paramètre** objet (par exemple, les **chaîne** type, tel que **adVarChar**), vous devez définir l’objet  **Taille** propriété avant de l’ajouter à la [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection ; sinon, une erreur se produit.  
+ Si vous spécifiez un type de données de longueur variable pour un objet de **paramètre** (par exemple, n’importe quel type de **chaîne** , tel que **adVarChar**), vous devez définir la propriété **Size** de l’objet avant de l’ajouter à la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . dans le cas contraire, une erreur se produit.  
   
- Si vous avez déjà ajouté le **paramètre** de l’objet à la **paramètres** collection d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet et que vous modifiez son type pour un type de données de longueur variable, vous devez définir le **paramètre** l’objet **taille** propriété avant d’exécuter le **commande** l’objet ; sinon, une erreur se produit.  
+ Si vous avez déjà ajouté l’objet de **paramètre** à la collection de **paramètres** d’un objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) et que vous modifiez son type en type de données de longueur variable, vous devez définir la propriété **Size** de l’objet **Parameter** avant d’exécuter l’objet **Command** . dans le cas contraire, une erreur se produit.  
   
- Si vous utilisez le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode pour obtenir des informations sur les paramètres du fournisseur d’et il retourne un ou plusieurs types de données de longueur variable **paramètre** ADO peut allouer de mémoire pour les paramètres en fonction des objets de leur taille maximale potentielle, ce qui peut entraîner une erreur lors de l’exécution. Pour éviter une erreur, vous devez définir explicitement la **taille** propriété de ces paramètres avant d’exécuter la commande.  
+ Si vous utilisez la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) pour obtenir des informations sur les paramètres du fournisseur et qu’elle retourne un ou plusieurs objets de **paramètre** de type de données de longueur variable, ADO peut allouer de la mémoire pour les paramètres en fonction de leur taille potentielle maximale, ce qui peut provoquer une erreur pendant l’exécution. Pour éviter une erreur, vous devez définir explicitement la propriété **Size** pour ces paramètres avant d’exécuter la commande.  
   
- Le **taille** propriété est en lecture/écriture.  
+ La propriété **Size** est en lecture/écriture.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)  
+ [Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, taille et Direction, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, size et direction, exemple de propriétés (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, size et direction, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, size et direction, exemple de propriétés (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Size, propriété (objet Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)

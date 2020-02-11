@@ -2,23 +2,36 @@
 title: Nouveautés de SSMA pour Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: f196932ee9a37c9a814ad619b604520093b6098d
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: d78f7c213c6e745ecd99ff31d078f1383b4792e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834282"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516583"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Nouveautés de SSMA pour Oracle (OracleToSQL)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications Oracle dans chaque version.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+En plus d’un ensemble ciblé de correctifs conçus pour améliorer la facilité d’utilisation et les performances, la version v 8.6 de SSMA pour Oracle a été améliorée en ajoutant un paramètre qui permet aux utilisateurs d’omettre les propriétés étendues SSMA dans le code converti.
+
+Pour tirer parti de ce paramètre, dans SSMA pour Oracle, accédez **à outils** > **paramètres** > du projet**conversion****générale** > , puis sous **divers**, mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui**.
+
+![Paramètre d’omission des propriétés étendues](../oracle/media/ssma-omit-extended-properties.png)
+
+En outre, SSMA pour Oracle fournit désormais une analyse améliorée de la clause XMLTABLE.
+
+> [!IMPORTANT]
+> Avec SSMA v 8.5 et versions ultérieures, .net 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 

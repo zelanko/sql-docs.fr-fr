@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0e1bd5fa1ba4d4ff8b97436ac6e44b901f578187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074840"
 ---
 # <a name="expressions-dmx"></a>Expressions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Dans les Extensions DMX (Data Mining), une expression est une combinaison d’identificateurs, les valeurs et les opérateurs qui [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut évaluer pour obtenir un résultat.  
+  Dans les extensions DMX (Data Mining Extensions), une expression est une combinaison d’identificateurs, de valeurs et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’opérateurs que peut évaluer pour obtenir un résultat.  
   
  Une expression DMX peut être simple ou complexe. Une expression simple peut être l'un des éléments suivants :  
   
- Constante  
+ Constant  
  Une constante est un symbole représentant une valeur spécifique, unique. Une constante peut être une chaîne, ou une valeur numérique ou de date. Vous devez utiliser un guillemet simple (') pour délimiter des constantes de chaîne et de date.  
   
  Fonction scalaire  
@@ -31,19 +31,19 @@ ms.locfileid: "68074840"
  Fonction non scalaire  
  Une fonction non scalaire retourne une table.  
   
- Identificateur d’objet  
+ Identificateur d'objet  
  Dans DMX, les identificateurs d'objet sont considérés comme des expressions simples.  
   
- Pour construire des expressions complexes, vous pouvez utiliser des opérateurs pour associer ces expressions. Pour plus d’informations sur les opérateurs, consultez [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md).  
+ Pour construire des expressions complexes, vous pouvez utiliser des opérateurs pour associer ces expressions. Pour plus d’informations sur les opérateurs, consultez [Data Mining Extensions &#40;DMX&#41; opérateur Reference](../dmx/data-mining-extensions-dmx-operator-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40;DMX&#41; éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Présentation de l'instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
