@@ -10,10 +10,10 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258441"
 ---
 # <a name="managing-a-domain"></a>Gestion d'un domaine
@@ -52,7 +52,7 @@ ms.locfileid: "75258441"
 |Modifier ou augmenter les valeurs dans une base de connaissances|[Modifier les valeurs de domaine](../data-quality-services/change-domain-values.md)|  
 |Utiliser les règles de validation et de normalisation|[Créer une règle de domaine](../data-quality-services/create-a-domain-rule.md)|  
 |Utiliser des relations pour corriger un terme qui fait partie d'une valeur dans un domaine|[Créer des relations à base de termes](../data-quality-services/create-term-based-relations.md)|  
-|Effectuer, fermer ou annuler l'activité de gestion de l'arborescence du domaine|[Mettre fin à l’activité de gestion des domaines](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Effectuer, fermer ou annuler l'activité de gestion de l'arborescence du domaine|[Terminer l'activité de gestion de l'arborescence du domaine](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

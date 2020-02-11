@@ -1,5 +1,5 @@
 ---
-title: Codes d’erreur bibliothèque curseur ODBC | Microsoft Docs
+title: Codes d’erreur de la bibliothèque de curseurs ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,42 +15,42 @@ ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3fb86e1332e3b7e4d89003ccf6421151e5d9cec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100668"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Codes d’erreur de la bibliothèque de curseurs ODBC
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Microsoft Data Access Component. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez les curseurs de pilote et du serveur.  
+>  Cette fonctionnalité sera supprimée dans une future version de Microsoft Data Access Component. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt des curseurs de serveur et de pilote.  
   
- La bibliothèque de curseurs ODBC retourne le SQLSTATE suivants en plus de ceux répertoriés dans [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  
+ La bibliothèque de curseurs ODBC retourne les valeurs SQLSTATE suivantes en plus de celles figurant dans la référence de l' [API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
   
 > [!NOTE]  
->  La bibliothèque de curseurs ne trie pas les enregistrements d’état ; le Gestionnaire de pilotes et les ODBC 3. *x* pilotes sont responsables de classement des enregistrements d’état.  
+>  La bibliothèque de curseurs ne commande pas les enregistrements d’État ; le gestionnaire de pilotes et ODBC 3. les pilotes *x* sont responsables du classement des enregistrements d’État.  
   
 |SQLSTATE|Description|Peut être retourné à partir de|  
 |--------------|-----------------|--------------------------|  
-|01000|Curseur n’est pas modifiable.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|01000|Bibliothèque de curseurs ne pas utilisé. Échec du chargement.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|01000|Bibliothèque de curseurs ne pas utilisé. Prise en charge de pilote insuffisante.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|01000|Bibliothèque de curseurs ne pas utilisé. Incompatibilité de version avec le Gestionnaire de pilotes.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|01000|Pilote a retourné SQL_SUCCESS_WITH_INFO. Le message d’avertissement a été perdu.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|S1000|Erreur générale : Impossible de créer la mémoire tampon de fichier.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erreur générale : Impossible de lire à partir de la mémoire tampon de fichier.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erreur générale : Impossible d’écrire dans la mémoire tampon de fichier.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Erreur générale : Impossible de fermer ou supprimer la mémoire tampon de fichier.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
-|SL001|Requête positionnée n’est pas possible, car aucune colonne de recherche ont été lié.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
-|SL002|Requête positionnée n’a pas pu être effectuée, car le jeu de résultats a été créé par une condition de jointure.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
-|SL003|Mémoire tampon dépendante dépasse la taille de segment maximale.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|SL004|Jeu de résultats n’a pas été généré par un **sélectionnez** instruction.|**SQLGetData**|  
-|SL005|**Sélectionnez** instruction contient une clause GROUP BY.|**SQLGetData**|  
-|SL006|Tableaux de paramètres ne sont pas pris en charge avec des requêtes positionnées.|**SQLPrepare**<br /><br /> **SQLExecDirect**|  
-|SL008|**SQLGetData** n’est pas autorisée sur un curseur en avant uniquement (classe).|**SQLGetData**|  
-|SL009|Aucune colonne n’était liées avant d’appeler **SQLFetch** ou **SQLFetchScroll**.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|SL010|**SQLBindCol** renvoyé SQL_ERROR lors d’une tentative pour lier à une mémoire tampon interne.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|SL011|L’option d’instruction est valide uniquement après avoir appelé **SQLFetch** ou **SQLFetchScroll**.|**SQLGetStmtAttr**|  
-|SL012|Liaisons de l’instruction ne peuvent pas être modifiés lorsqu’un curseur est ouvert.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
-|SL014|Une requête positionnée a été émise et tous les champs de nombre de colonnes ont été mis en mémoire tampon.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
-|SL015|**SQLFetch** et **SQLFetchScroll** ne peuvent pas être combinés.|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
+|01000|Le curseur ne peut pas être mis à jour.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|01000|Bibliothèque de curseurs non utilisée. Échec du chargement.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|Bibliothèque de curseurs non utilisée. Prise en charge des pilotes insuffisante.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|Bibliothèque de curseurs non utilisée. Incompatibilité de version avec le gestionnaire de pilotes.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|Le pilote a retourné SQL_SUCCESS_WITH_INFO. Le message d’avertissement a été perdu.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|S1000|Erreur générale : impossible de créer le tampon de fichier.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erreur générale : impossible de lire à partir de la mémoire tampon du fichier.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erreur générale : impossible d’écrire dans le tampon de fichier.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Erreur générale : impossible de fermer ou de supprimer le tampon de fichier.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|SL001|La requête positionnée ne peut pas être effectuée, car aucune colonne pouvant faire l’objet d’une recherche n’est liée.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
+|SL002|La requête positionnée n’a pas pu être exécutée, car le jeu de résultats a été créé par une condition de jointure.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
+|SL003|Le tampon lié dépasse la taille maximale du segment.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|SL004|Le jeu de résultats n’a pas été généré par une instruction **Select** .|**SQLGetData**|  
+|SL005|L’instruction **Select** contient une clause Group by.|**SQLGetData**|  
+|SL006|Les tableaux de paramètres ne sont pas pris en charge avec les requêtes positionnées.|**SQLPrepare**<br /><br /> **SQLExecDirect**|  
+|SL008|**SQLGetData** n’est pas autorisé sur un curseur avant uniquement (non mis en mémoire tampon).|**SQLGetData**|  
+|SL009|Aucune colonne n’a été liée avant l’appel de **SQLFetch** ou **SQLFetchScroll**.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|SL010|**SQLBindCol** a retourné SQL_ERROR lors d’une tentative de liaison à une mémoire tampon interne.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|SL011|L’option d’instruction est valide uniquement après l’appel de **SQLFetch** ou **SQLFetchScroll**.|**SQLGetStmtAttr**|  
+|SL012|Les liaisons d’instruction ne peuvent pas être modifiées lorsqu’un curseur est ouvert.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
+|SL014|Une requête positionnée a été émise et tous les champs de nombre de colonnes n’ont pas été mis en mémoire tampon.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
+|SL015|**SQLFetch** et **SQLFetchScroll** ne peuvent pas être mélangées.|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|

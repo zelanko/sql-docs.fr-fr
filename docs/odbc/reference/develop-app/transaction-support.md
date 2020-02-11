@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de transaction | Microsoft Docs
+title: Prise en charge des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0b5e33f94c5452a2062f7c18339f27c8da73fa9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086065"
 ---
 # <a name="transaction-support"></a>Prise en charge des transactions
-Le degré de prise en charge des transactions est définie par le pilote. ODBC est conçue pour être implémentée sur une base de données utilisateur unique ou de bureau qui n’a pas besoin de gérer plusieurs mises à jour ses données. En outre, certaines bases de données qui prennent en charge les transactions faire donc uniquement pour les instructions de langage de Manipulation de données (DML) de SQL ; Il existe les restrictions ou la sémantique de transaction spéciales concernant l’utilisation du langage DDL (Data Definition) lorsqu’une transaction est active. Autrement dit, il peut être prise en charge de transaction pour plusieurs mises à jour simultanées tables mais ne pas pour modifier le nombre et la définition des tables lors d’une transaction.  
+Le niveau de prise en charge des transactions est défini par le pilote. ODBC est conçu pour être implémenté sur une base de données de bureau ou d’utilisateur unique qui n’a pas besoin de gérer plusieurs mises à jour de ses données. En outre, certaines bases de données qui prennent en charge les transactions ne le font que pour les instructions DML (Data Manipulation Language) de SQL ; Il existe des restrictions ou une sémantique de transaction spéciale en ce qui concerne l’utilisation du langage de définition de données (DDL) lorsqu’une transaction est active. Autrement dit, il peut y avoir une prise en charge des transactions pour plusieurs mises à jour simultanées des tables, mais pas pour modifier le nombre et la définition des tables au cours d’une transaction.  
   
- Une application détermine si les transactions sont prises en charge, DDL peut être inclus dans une transaction, ainsi que tous les effets spéciaux de, notamment DDL dans une transaction, en appelant **SQLGetInfo** avec l’option SQL_TXN_CAPABLE. Pour plus d’informations, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) description de fonction.  
+ Une application détermine si les transactions sont prises en charge, si DDL peut être inclus dans une transaction, et tous les effets spéciaux de l’inclusion de DDL dans une transaction, en appelant **SQLGetInfo** avec l’option SQL_TXN_CAPABLE. Pour plus d’informations, consultez la description de la fonction [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) .  
   
- Si le pilote ne prend pas en charge les transactions, mais l’application a la possibilité (à l’aide d’une API autre que ODBC) pour verrouiller et déverrouiller des données, les applications peuvent atteindre prise en charge de la transaction par verrouillage et déverrouillage des enregistrements et les tables en fonction des besoins. Pour implémenter l’exemple de transfert de compte, l’application serait verrouiller les enregistrements pour les deux comptes, copiez les valeurs actuelles, le premier compte de débit, le deuxième compte de crédit et déverrouiller les enregistrements. En cas d’échec de toutes les étapes, l’application serait réinitialiser les comptes à l’aide de la copie.  
+ Si le pilote ne prend pas en charge les transactions, mais que l’application a la possibilité (à l’aide d’une API autre qu’ODBC) de verrouiller et de déverrouiller les données, les applications peuvent prendre en charge la transaction en verrouillant et déverrouillant les enregistrements et les tables en fonction des besoins. Pour implémenter l’exemple de transfert de compte, l’application verrouille les enregistrements pour les deux comptes, copie les valeurs actuelles, débite le premier compte, crédite le deuxième compte et déverrouille les enregistrements. En cas d’échec d’une étape, l’application réinitialise les comptes à l’aide des copies.  
   
- Les sources de données même qui prennent en charge des transactions n’est peut-être pas en mesure de prendre en charge de plusieurs transactions à la fois dans un environnement particulier. Applications appellent **SQLGetInfo** avec l’option SQL_MULTIPLE_ACTIVE_TXN pour déterminer si une source de données peut prendre en charge les transactions actives simultanées sur plusieurs connexions dans le même environnement. Étant donné qu’une seule transaction par connexion, cela n’est plus intéressant pour les applications qui ont plusieurs connexions à la même source de données.
+ Même les sources de données qui prennent en charge les transactions peuvent ne pas être en mesure de prendre en charge plusieurs transactions à la fois dans un environnement particulier. Les applications appellent **SQLGetInfo** avec l’option SQL_MULTIPLE_ACTIVE_TXN pour déterminer si une source de données peut prendre en charge des transactions actives simultanées sur plusieurs connexions dans le même environnement. Étant donné qu’il y a une transaction par connexion, cela n’est intéressant que pour les applications qui ont plusieurs connexions à la même source de données.

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd6cefd41ea223b91445042ff3cee9090074feeb
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783192"
 ---
 # <a name="delete-a-job-step-log"></a>Supprimer un journal d’étapes de travail
@@ -31,7 +31,7 @@ ms.locfileid: "72783192"
   
      [Sécurité](#Security)  
   
--   **Pour supprimer un journal d'étapes de travail de SQL Server Agent, utilisez :**  
+-   **Pour supprimer un journal d’étapes de travail SQL Server Agent, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -46,14 +46,14 @@ ms.locfileid: "72783192"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à moins d'être membre du rôle de serveur fixe **sysadmin** .  
   
 ##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Pour supprimer un journal d'étapes de travail de SQL Server Agent  
   
-1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **SQL Server Agent**et **Travaux**, cliquez avec le bouton droit sur le travail à modifier, puis cliquez sur **Propriétés**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72783192"
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Pour supprimer un journal d'étapes de travail de SQL Server Agent  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72783192"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_DELETE_JOBSTEPLOG Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
+ Pour plus d’informations, consultez [sp_delete_jobsteplog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
   
 ##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
  Utilisez les méthodes `DeleteJobStepLogs` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

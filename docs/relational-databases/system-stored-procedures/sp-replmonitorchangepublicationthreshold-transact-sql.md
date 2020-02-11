@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322226"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75322226"
 
   Modifie la mesure du seuil de supervision pour une publication. Cette procédure stockée, utilisée pour surveiller la réplication, est exécutée sur la base de données du serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +57,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Publication transactionnelle.|  
-|**1,0**|Publication d'instantané.|  
+|**1**|Publication d'instantané.|  
 |**2**|Publication de fusion.|  
 |NULL (par défaut)|La réplication essaie de déterminer le type de publication.|  
   
@@ -65,12 +65,12 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 |Valeur|Nom de métrique|  
 |-----------|-----------------|  
-|**1,0**|**expiration** : contrôle l’expiration imminente des abonnements aux publications transactionnelles.|  
-|**2**|**latence** : analyse les performances des abonnements aux publications transactionnelles.|  
-|**4**|**mergeexpiration** : contrôle l’expiration imminente des abonnements aux publications de fusion.|  
+|**1**|**expiration** : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
+|**2**|**latency** : contrôle les performances des abonnements aux publications transactionnelles.|  
+|**4**|**mergeexpiration** : contrôle l'expiration imminente des abonnements aux publications de fusion.|  
 |**5,5**|**mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
 |**6**|**mergefastrunduration** : contrôle la durée des synchronisations de fusion sur les connexions de réseau local (LAN) à bande passante élevée.|  
-|**7**|**mergefastrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à bande passante élevée (LAN).|  
+|**7**|**mergefastrunspeed** - supervise le taux de synchronisation des synchronisations de fusion sur des connexions à bande passante élevée (LAN).|  
 |**version8**|**mergeslowrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
   
  Vous devez spécifier *metric_id* ou *thresholdmetricname*. Si *thresholdmetricname* est spécifié, *metric_id* doit avoir la valeur null.  
@@ -86,7 +86,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_replmonitorchangepublicationthreshold** est utilisé avec tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  

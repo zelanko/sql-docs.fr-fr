@@ -16,18 +16,18 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770992"
 ---
-# <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
+# <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retourne la liste de toutes les connexions accordées pour une publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,11 +46,11 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @login = ] 'login'`ID de connexion de sécurité standard. *login* est de **%** **type sysname**, avec la valeur par défaut.  
   
-`[ @initial_list = ] initial_list`Spécifie s’il faut retourner tous les membres avec un accès à la publication ou uniquement ceux qui ont accès avant l’ajout de nouveaux membres à la liste. *initial_list* est de valeur de bit, avec **0**comme valeur par défaut.  
+`[ @initial_list = ] initial_list`Spécifie s’il faut retourner tous les membres avec un accès à la publication ou uniquement ceux qui ont accès avant l’ajout de nouveaux membres à la liste. *initial_list* est de bit, avec **0**comme valeur par défaut.  
   
  **1** retourne des informations pour tous les membres du rôle serveur fixe **sysadmin** avec des connexions valides sur le serveur de distribution qui existaient lors de la création de la publication, ainsi que la connexion actuelle.  
   
- **0** retourne des informations pour tous les membres du rôle serveur fixe **sysadmin** avec des connexions valides sur le serveur de distribution qui existaient lors de la création de la publication, ainsi que tous les utilisateurs de la liste d’accès à la publication qui n’appartiennent pas à l' **administrateur système.** rôle serveur fixe.  
+ **0** retourne des informations pour tous les membres du rôle serveur fixe **sysadmin** avec des connexions valides sur le serveur de distribution qui existaient lors de la création de la publication, ainsi que tous les utilisateurs de la liste d’accès à la publication qui n’appartiennent pas au rôle serveur fixe **sysadmin** .  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -58,9 +58,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar (256)**|Nom de connexion réel.|  
 |**Isntname**|**int**|**0** = la connexion n’est pas un utilisateur Windows.<br /><br /> **1** = la connexion est un utilisateur Windows.|  
-|**Isntgroup**|**Int**|**0** = la connexion n’est pas un groupe Windows.<br /><br /> **1** = la connexion est un groupe Windows.|  
+|**Isntgroup**|**int**|**0** = la connexion n’est pas un groupe Windows.<br /><br /> **1** = la connexion est un groupe Windows.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

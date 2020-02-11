@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 7 : Déplacer vos fichiers de données vers le stockage Azure | Microsoft Docs'
+title: 'Leçon 7 : déplacer vos fichiers de données vers le stockage Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175457"
 ---
-# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Leçon 7 : Déplacer vos fichiers de données vers le stockage Azure
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Leçon 7 :Déplacer vos fichiers de données dans Stockage Azure
   Dans cette leçon, vous allez apprendre à déplacer vos fichiers de données vers le stockage Azure (mais pas votre instance SQL Server). Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5 et 6.  
   
  Pour déplacer vos fichiers de données vers le stockage Azure, vous pouvez `ALTER DATABASE` utiliser l’instruction, car elle permet de modifier l’emplacement des fichiers de données.  
@@ -32,7 +32,7 @@ ms.locfileid: "70175457"
   
 -   Vous avez créé des informations d'identification SQL Server sur l'ordinateur source.  
   
- Ensuite, procédez comme suit pour déplacer vos fichiers de données vers le stockage Azure:  
+ Ensuite, procédez comme suit pour déplacer vos fichiers de données vers le stockage Azure :  
   
 1.  Tout d'abord, créez une base de données de test dans la machine source et ajoutez-lui des données.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70175457"
   
     ```  
   
-2.  Exécutez le code ci-dessous :  
+2.  Exécutez le code suivant :  
   
     ```sql  
   
@@ -63,7 +63,7 @@ ms.locfileid: "70175457"
   
     ```  
   
-3.  Lorsque vous exécutez cette opération, le message suivant s’affiche: «Le fichier «TestDB1Alter» a été modifié dans le catalogue système. Le nouveau chemin sera utilisé au prochain démarrage de la base de données.»  
+3.  Lorsque vous exécutez cette opération, le message suivant s’affiche : « le fichier «TestDB1Alter » a été modifié dans le catalogue système. Le nouveau chemin sera utilisé au prochain démarrage de la base de données.»  
   
 4.  Ensuite, mettez la base de données hors connexion.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70175457"
   
     ```  
   
-5.  À présent, vous devez copier les fichiers de données vers le stockage Azure à l’aide de l’une des méthodes suivantes: [AzCopy Tool](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [put page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)ou un outil de l’Explorateur de stockage tiers.  
+5.  À présent, vous devez copier les fichiers de données vers le stockage Azure à l’aide de l’une des méthodes suivantes : [outil AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [page put](https://msdn.microsoft.com/library/azure/ee691975.aspx), référence de la [bibliothèque cliente de stockage](https://msdn.microsoft.com/library/azure/dn261237.aspx)ou outil d’exploration de stockage tiers.  
   
      **Important :** Lorsque vous utilisez cette nouvelle amélioration, veillez toujours à créer un objet blob de pages et non un objet blob de blocs.  
   
@@ -87,8 +87,8 @@ ms.locfileid: "70175457"
   
     ```  
   
- **Leçon suivante :**  
+ **Leçon suivante :**  
   
- [Leçon 8 : Restaurer une base de données dans Azure Storage](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [Leçon 8. Restaurer une base de données dans Azure Storage](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

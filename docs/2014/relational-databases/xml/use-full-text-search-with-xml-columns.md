@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193251"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Utiliser la recherche en texte intégral avec des colonnes XML
@@ -33,7 +33,7 @@ ms.locfileid: "63193251"
   
 2.  Ensuite, interrogez les valeurs XML pour lesquelles il existe un index XML sur la colonne XML.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemple : Association d’une recherche en texte intégral avec une requête XML  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemple : association d'une recherche en texte intégral avec une requête XML  
  Une fois l'index de texte intégral créé sur la colonne XML, la requête suivante recherche une valeur XML contenant le mot « custom » dans le titre d'un livre :  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  De plus, la recherche en texte intégral se sert de l’extraction de radical tandis que la fonction XQuery **contains()** attend une correspondance littérale. Cette différence est expliquée dans l'exemple suivant.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Exemple : Recherche en texte intégral sur des valeurs XML à l’aide de l’extraction de radical  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Exemple : recherche en texte intégral sur des valeurs XML à l'aide de l'extraction de radical  
  La vérification XQuery **contains()** exécutée dans l’exemple précédent ne peut généralement pas être éliminée. Prenons par exemple la requête suivante :  
   
 ```  
