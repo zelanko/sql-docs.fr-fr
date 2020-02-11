@@ -17,18 +17,18 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9493567f33cf07dbfa9ae4f19d037a7db6157eda
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72907401"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Les objets de base de données managés, tels que les procédures stockées ou les déclencheurs, sont successivement compilés et déployés dans des unités appelées « assemblys ». Les assemblys DLL managés doivent être enregistrés dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour enregistrer un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez l'instruction CREATE ASSEMBLY. Cette rubrique explique comment enregistrer un assembly dans une base de données à l'aide de l'instruction CREATE ASSEMBLY, puis comment spécifier les paramètres de sécurité de l'assembly.  
+  Les objets de base de données managés, tels que les procédures stockées ou les déclencheurs, sont successivement compilés et déployés dans des unités appelées « assemblys ». Les assemblys DLL managés doivent être [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inscrits dans avant que les fonctionnalités fournies par l’assembly puissent être utilisées. Pour enregistrer un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez l'instruction CREATE ASSEMBLY. Cette rubrique explique comment enregistrer un assembly dans une base de données à l'aide de l'instruction CREATE ASSEMBLY, puis comment spécifier les paramètres de sécurité de l'assembly.  
   
 ## <a name="the-create-assembly-statement"></a>Instruction CREATE ASSEMBLY  
- L'instruction CREATE ASSEMBLY permet de créer un assembly dans une base de données. Par exemple :  
+ L'instruction CREATE ASSEMBLY permet de créer un assembly dans une base de données. Voici un exemple :   
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -37,7 +37,8 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  La clause FROM spécifie le nom du chemin d'accès de l'assembly à créer. Ce chemin d'accès peut être soit un chemin UNC (Universal Naming Convention), soit le chemin d'accès d'un fichier physique stocké localement sur l'ordinateur.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'autorise pas l'inscription de différentes versions d'un assembly avec le même nom, la même culture et la même clé publique.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'autorise pas l'inscription de différentes versions d'un assembly avec le même nom, la même culture et la même clé publique.  
   
  Il est possible de créer des assemblys qui référencent d'autres assemblys. Lorsque vous créez un assembly dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée également les assemblys référencés par l'assembly au niveau de la racine si les assemblys référencés ne sont pas déjà créés dans la base de données.  
   
@@ -52,7 +53,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ## <a name="specifying-security-when-creating-assemblies"></a>Définition de la sécurité lors de la création d'assemblys  
  Lorsque vous créez un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous pouvez spécifier un des trois niveaux différents de sécurité dans lesquels votre code peut être exécuté : **SAFE**, **EXTERNAL_ACCESS**ou **UNSAFE**. Au moment de l'exécution de l'instruction **CREATE ASSEMBLY** , l'assembly de code est soumis à certains contrôles qui peuvent entraîner l'échec de l'enregistrement de l'assembly sur le serveur. Pour plus d'informations, consultez l'exemple d'emprunt d'identité sur [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
- **SAFE** est le jeu d'autorisations par défaut et fonctionne pour la majorité des scénarios. Pour spécifier un niveau de sécurité donné, vous devez modifier la syntaxe de l'instruction CREATE ASSEMBLY comme suit :  
+ **Safe** est le jeu d’autorisations par défaut et fonctionne pour la majorité des scénarios. Pour spécifier un niveau de sécurité donné, vous devez modifier la syntaxe de l'instruction CREATE ASSEMBLY comme suit :  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -70,9 +71,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  Lorsque le code dans un assembly s'exécute sous le jeu d'autorisations **SAFE** , tout calcul ou accès aux données sur le serveur ne peut avoir lieu que par l'entremise du fournisseur managé in-process.  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>Création d'assemblys EXTERNAL_ACCESS et UNSAFE  
- **EXTERNAL_ACCESS** propose des scénarios dans lesquels le code doit accéder à des ressources externes au serveur, tel que des fichiers, le réseau, le Registre et des variables d'environnement. Lorsque le serveur accède à une ressource externe, il emprunte l'identité du contexte de sécurité de l'utilisateur appelant le code managé.  
+ **EXTERNAL_ACCESS** résout les scénarios dans lesquels le code doit accéder aux ressources situées en dehors du serveur, telles que les fichiers, le réseau, le registre et les variables d’environnement. Lorsque le serveur accède à une ressource externe, il emprunte l'identité du contexte de sécurité de l'utilisateur appelant le code managé.  
   
- **UNSAFE** convient dans des situations où la sécurité d'un assembly ne peut être vérifiée ou exige un accès supplémentaire à des ressources restreintes, telles que l'API Win32 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
+ L’autorisation de code **unsafe** concerne les situations dans lesquelles un assembly n’est pas sécurisé de façon vérifiable ou nécessite un accès supplémentaire à des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ressources restreintes, telles que l’API Win32.  
   
  Pour la création d'un assembly **EXTERNAL_ACCESS** ou **UNSAFE** dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'une des deux conditions suivantes doit être remplie :  
   
@@ -133,8 +134,8 @@ WITH PERMISSION_SET = UNSAFE;
  [Gestion des assemblys d’intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Modification d’un assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Suppression d’un assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
-   de [sécurité d’accès du code d’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
+ [Sécurité d’accès du code d’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Propriété de base de données TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
- [Autorisation d’appelants partiellement approuvés](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Autorisation d'appelants partiellement approuvés](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

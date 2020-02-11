@@ -18,18 +18,18 @@ ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108772"
 ---
-# <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
+# <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet d'ajouter et de supprimer des informations d'identification contenant le mot de passe requis pour ouvrir la clé principale d'une base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,24 +41,25 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
 ## <a name="arguments"></a>Arguments  
  @db_name= N'*database_name*'  
- Spécifie le nom de la base de données associée à ces informations d'identification. Il ne peut s'agir d'une base de données système. *database_name* est **nvarchar**.  
+ Spécifie le nom de la base de données associée à ces informations d'identification. Il ne peut s'agir d'une base de données système. *database_name* est de type **nvarchar**.  
   
- @password= N'*mot de passe*'  
- Spécifie le mot de passe de la clé principale. *mot de passe* est **nvarchar**.  
+ @password= N'*mot_de_passe*'  
+ Spécifie le mot de passe de la clé principale. le *mot de passe* est **nvarchar**.  
   
- @action= N'add'  
+ @action= N’Add'  
  Indique que des informations d'identification seront ajoutées dans la banque d'informations d'identification pour la base de données spécifiée. Les informations d'identification contiennent le mot de passe de la clé principale de base de données. La valeur passée à @action est **nvarchar**.  
   
- @action= N'drop'  
+ @action= N’drop'  
  Indique que des informations d'identification seront supprimées de la banque d'informations d'identification pour la base de données spécifiée. La valeur passée à @action est **nvarchar**.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert la clé principale d'une base de données pour chiffrer ou déchiffrer une clé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de déchiffrer la clé principale de base de données à l'aide de la clé principale de service de l'instance. Si le déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification.  
+ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert la clé principale d'une base de données pour chiffrer ou déchiffrer une clé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de déchiffrer la clé principale de base de données à l'aide de la clé principale de service de l'instance. Si le déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification.  
   
 > [!CAUTION]  
 >  Ne créez pas d'informations d'identification de clé principale pour une base de données qui doit être inaccessible à sa et à d'autres principaux de serveur dotés de privilèges de haut niveau. Vous pouvez configurer une base de données de sorte que la hiérarchie de ses clés ne puisse pas être déchiffrée par la clé principale du service. Cette option est prise en charge dans le cadre d'une défense en profondeur de bases de données qui contiennent des données chiffrées qui ne doivent pas être accessibles à sa ni à d'autres principaux de serveur dotés de privilèges de haut niveau. La création d'informations d'identification de clé principale pour une telle base de données supprime cette défense en profondeur en permettant à sa et à d'autres principaux de serveur dotés de privilèges de haut niveau de déchiffrer la base de données.  
   
- Informations d’identification qui sont créées à l’aide de sp_control_dbmasterkey_password sont visibles dans le [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) vue de catalogue. Les noms des informations d'identification créées pour les clés principales des bases de données ont le format suivant :`##DBMKEY_<database_family_guid>_<random_password_guid>##`. Le mot de passe est stocké en tant que secret des informations d'identification. À chaque mot de passe ajouté dans la banque d'informations d'identification correspond une ligne dans sys.credentials.  
+ Les informations d’identification créées à l’aide de sp_control_dbmasterkey_password sont visibles dans l’affichage catalogue [sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . Les noms des informations d'identification créées pour les clés principales des bases de données ont le format suivant :`##DBMKEY_<database_family_guid>_<random_password_guid>##`. Le mot de passe est stocké en tant que secret des informations d'identification. À chaque mot de passe ajouté dans la banque d'informations d'identification correspond une ligne dans sys.credentials.  
   
  Vous ne pouvez pas utiliser sp_control_dbmasterkey_password pour créer des informations d'identification pour les bases de données système suivantes : master, model, msdb ou tempdb.  
   
@@ -74,7 +75,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Lorsque vous utilisez les informations d'identification ajoutées à l'aide de sp_control_dbmasterkey_password pour ouvrir la clé principale de la base de données, celle-ci est rechiffrée par la clé principale du service. Si la base de données est en mode lecture seule, l'opération de rechiffrement échouera et la clé principale de la base de données restera non chiffrée. Pour un accès ultérieur à la clé principale de la base de données, vous devez utiliser l'instruction OPEN MASTER KEY et un mot de passe. Pour ne pas à avoir à utiliser un mot de passe, créez les informations d'identification avant de placer la base de données en mode lecture seule.  
   
- **Problème de compatibilité descendante potentiel :** Actuellement, la procédure stockée ne vérifie pas l’existence d’une clé principale. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une prochaine version de la clé principale doit exister et le mot de passe utilisé dans la procédure stockée **sp_control_dbmasterkey_password** doit être le même mot de passe comme l’un des mots de passe utilisés pour chiffrer la clé principale de base de données.  
+ **Problème potentiel de compatibilité descendante :** Actuellement, la procédure stockée ne vérifie pas si une clé principale existe. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une version ultérieure, la clé principale doit exister et le mot de passe utilisé dans la procédure stockée **sp_control_dbmasterkey_password** doit être le même mot de passe que l’un des mots de passe utilisés pour chiffrer la clé principale de base de données.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
@@ -82,7 +83,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>R. Création d'informations d'identification pour la clé principale d'AdventureWorks2012  
- Dans l'exemple ci-dessous, des informations d'identification sont créées pour la clé principale de la base de données `AdventureWorks2012` et le mot de passe de la clé principale est enregistré en tant que secret dans les informations d'identification. Étant donné que tous les paramètres qui sont passés à `sp_control_dbmasterkey_password` doit être de type de données **nvarchar**, les chaînes de texte sont converties avec l’opérateur de cast `N`.  
+ Dans l'exemple ci-dessous, des informations d'identification sont créées pour la clé principale de la base de données `AdventureWorks2012` et le mot de passe de la clé principale est enregistré en tant que secret dans les informations d'identification. Étant donné que tous les paramètres passés `sp_control_dbmasterkey_password` à doivent être de type de données **nvarchar**, les chaînes de texte sont converties à l’aide de l’opérateur `N`de cast.  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
