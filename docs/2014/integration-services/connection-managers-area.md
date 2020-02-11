@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060398"
 ---
 # <a name="connection-managers-area"></a>Zone Gestionnaires de connexion
@@ -27,7 +27,7 @@ ms.locfileid: "66060398"
  Cliquez avec le bouton droit dans cette zone puis, dans le menu qui s'affiche, cliquez sur l'option de la tâche à exécuter.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;les connexions de&#41; SSIS](connection-manager/integration-services-ssis-connections.md)   
  [Concepteur SSIS](ssis-designer.md)  
   
   

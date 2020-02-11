@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source OLE DB (Page Gestionnaire de connexions) | Microsoft Docs
+title: Éditeur de source de OLE DB (page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,24 +15,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057049"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Éditeur de source OLE DB (page Gestionnaire de connexions)
-  La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner le gestionnaire de connexions OLE DB pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
+  La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner le gestionnaire de connexions OLE DB pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
   
 > [!NOTE]  
 >  Pour charger des données à partir d’une source de données qui utilise [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007, utilisez une source OLE DB. Vous ne pouvez pas utiliser une source Excel pour charger des données à partir d'une source de données Excel 2007. Pour plus d’informations, consultez [Configurer le gestionnaire de connexions OLE DB](configure-ole-db-connection-manager.md).  
 >   
->  Pour charger des données à partir d'une source de données qui utilise [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 ou une version antérieure, utilisez une source Excel. Pour plus d’informations, consultez [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
+>  Pour charger des données à partir d'une source de données qui utilise [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 ou une version antérieure, utilisez une source Excel. Pour plus d’informations, consultez [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  Le `CommandTimeout` propriété de la source OLE DB n’est pas disponible dans le **éditeur de Source OLE DB**, mais peut être définie à l’aide de la **éditeur avancé**. Pour plus d’informations sur cette propriété, consultez la section sur la source Excel dans [Propriétés personnalisées OLE DB](data-flow/ole-db-custom-properties.md).  
+>  La `CommandTimeout` propriété de la source de OLE DB n’est pas disponible dans l' **éditeur de source OLE DB**, mais elle peut être définie à l’aide de l' **éditeur avancé**. Pour plus d’informations sur cette propriété, consultez la section sur la source Excel dans [Propriétés personnalisées OLE DB](data-flow/ole-db-custom-properties.md).  
   
- Pour en savoir plus sur la source OLE DB, consultez [Source OLE DB](data-flow/ole-db-source.md).  
+ Pour en savoir plus sur la source OLE DB, consultez [OLE DB Source](data-flow/ole-db-source.md).  
   
 ## <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Ouvrir l'Éditeur de source OLE (page Gestionnaire de connexions)  
   
@@ -55,12 +55,12 @@ ms.locfileid: "66057049"
 |Option|Description|  
 |------------|-----------------|  
 |Table ou vue|Permet de récupérer les données d'une table ou d'une vue dans la source de données OLE DB.|  
-|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
 |Commande SQL|Récupérez les données de la source de données OLE DB à l'aide d'une requête SQL.|  
 |Commande SQL à partir d'une variable|Spécifiez le texte de la requête SQL dans une variable.|  
   
- **Aperçu**  
- Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . Le mode**Aperçu** peut afficher jusqu’à 200 lignes.  
+ **Préversion**  
+ Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . L' **Aperçu** peut afficher jusqu’à 200 lignes.  
   
 > [!NOTE]  
 >  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. Les valeurs \<valeur trop grande pour être affichée> ou System.Byte[] s’affichent à la place. La première s’affiche lorsque le fournisseur SQL OLE DB accède à la source de données, la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
@@ -82,7 +82,7 @@ ms.locfileid: "66057049"
  **Paramètres**  
  Si vous avez entré une requête paramétrable en spécifiant ? comme espace réservé de paramètre dans le texte de la requête, utilisez la boîte de dialogue **Définition des paramètres de la requête** pour mapper des paramètres d’entrée de la requête à des variables du package.  
   
- **Build query**  
+ **Générer la requête**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
   
  **Parcourir**  
@@ -97,9 +97,9 @@ ms.locfileid: "66057049"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de source OLE DB &#40;page Colonnes&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Éditeur de source OLE DB &#40;page Sortie d’erreur&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [Extraire des données à l'aide de la source OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [Éditeur de source de OLE DB &#40;page colonnes&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Éditeur de source de OLE DB &#40;page sortie d’erreur&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Extraire des données à l’aide de la source de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

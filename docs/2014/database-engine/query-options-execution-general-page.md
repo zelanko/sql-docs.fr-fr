@@ -1,5 +1,5 @@
 ---
-title: Options de requête d’exécution (Page Général) | Microsoft Docs
+title: Exécution des options de requête (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089041"
 ---
 # <a name="query-options-execution-general-page"></a>Options de requête – Exécution (page Général)
-  Cette page vous permet de spécifier les options d’exécution des requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur le corps d’une fenêtre de l’éditeur de requête, puis cliquez sur **Options de requête**.  
+  Utilisez cette page pour spécifier les options d’exécution [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] des requêtes. Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur le corps d’une fenêtre de l’éditeur de requête, puis cliquez sur **Options de requête**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **SET ROWCOUNT**  
+ **DÉFINIR LE ROWCOUNT**  
  La valeur par défaut 0 indique que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] attend les résultats, tant que tous les résultats ne sont pas reçus. Spécifiez une valeur supérieure à 0 pour que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] arrête la requête après avoir obtenu le nombre de lignes spécifié. Pour désactiver cette option, de manière à renvoyer toutes les lignes, spécifiez SET ROWCOUNT 0.  
   
- **SET TEXTSIZE**  
+ **DÉFINIR TEXTSIZE**  
  La valeur par défaut de 2 147 483 647 octets indique que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournira un champ de données complet jusqu'à la limite des champs de données `text`, `ntext`, `nvarchar(max)` et `varchar(max)`. Cela n'affecte pas le type de données XML. Spécifiez un nombre inférieur pour limiter les résultats en cas de valeurs importantes. Les colonnes d'une taille supérieure au nombre spécifié sont tronquées.  
   
- **Délai d'exécution**  
+ **Délai d’exécution**  
  Spécifie le nombre de secondes à attendre avant d'annuler la requête. La valeur 0 indique un délai d'attente illimité ou pas de délai.  
   
- **Délimiteur de lot**  
+ **Délimiteur de traitement**  
  Tapez un mot à utiliser pour séparer les instructions Transact-SQL en traitements. La valeur par défaut est GO.  
   
  **Par défaut, ouvrir les nouvelles requêtes en mode SQLCMD**  

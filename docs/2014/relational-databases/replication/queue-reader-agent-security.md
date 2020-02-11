@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 657116e00b6905964f8cc65c28dff383c3cc9ad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261693"
 ---
 # <a name="queue-reader-agent-security"></a>Sécurité de l'Agent de lecture de la file d'attente
@@ -36,7 +36,7 @@ ms.locfileid: "63261693"
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les comptes de connexion et les mots de passe dans la réplication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modèle de sécurité de l’Agent de réplication](security/replication-agent-security-model.md)   
- [Vue d’ensemble des agents de réplication](agents/replication-agents-overview.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Présentation des Agents de réplication](agents/replication-agents-overview.md)   
+ [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md)  
   
   

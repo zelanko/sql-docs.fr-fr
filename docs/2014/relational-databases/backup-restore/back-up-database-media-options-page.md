@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154839"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
-  Utilisez la page **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
+  Utilisez la page  **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
   
  **Pour créer une sauvegarde à l'aide de SQL Server Management Studio**  
   
--   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
+-   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
@@ -33,12 +33,12 @@ ms.locfileid: "70154839"
 >  Vous pouvez définir un plan de maintenance de base de données pour créer des sauvegardes de base de données. Pour plus d’informations, consultez [Plans de maintenance](../maintenance-plans/maintenance-plans.md) et [Utiliser l’Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Lorsque vous spécifiez une tâche de sauvegarde à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondant en cliquant sur le bouton **Script** puis en sélectionnant une destination pour le script.  
+>  Quand vous spécifiez une tâche de sauvegarde à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination pour le script.  
   
 ## <a name="options"></a>Options  
   
 ### <a name="overwrite-media"></a>Remplacer le support  
- Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné l’URL (Stockage Azure) comme destination de la sauvegarde dans la page Général de la boîte de dialogue Sauvegarder la base de données, les options figurant sous la section Remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l'instruction Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Pour plus d'informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné l’URL (Stockage Azure) comme destination de la sauvegarde dans la page Général de la boîte de dialogue Sauvegarder la base de données, les options figurant sous la section Remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l'instruction Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Pour plus d’informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Seule l’option **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants** est prise en charge avec les options de chiffrement. Si vous sélectionnez les options sous la section **Sauvegarder sur le support de sauvegarde existant**, les options de chiffrements sur la page **Options de sauvegarde** sont désactivées.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70154839"
  **Sauvegarder sur le support de sauvegarde existant**  
  Sauvegarde la base de données sur le support de sauvegarde existant. L'activation de cette case d'option active trois options.  
   
- Choisissez l'une des options suivantes :  
+ Choisissez l’une des options suivantes :  
   
  **Ajouter au jeu de sauvegarde existant**  
  Ajoute le jeu de sauvegarde au support de sauvegarde existant, tout en préservant les sauvegardes antérieures.  
@@ -56,7 +56,7 @@ ms.locfileid: "70154839"
  **Remplacer tous les jeux de sauvegarde existants**  
  Remplace les éventuelles sauvegardes antérieures présentes sur le support de sauvegarde existant par la sauvegarde active.  
   
- **Vérifier le nom du support de sauvegarde et la date d'expiration du jeu de sauvegarde**  
+ **Vérifier l’expiration du nom du support de sauvegarde et du jeu de sauvegarde**  
  Éventuellement, si vous sauvegardez sur un support de sauvegarde existant, exigez la vérification du nom et de la date d'expiration des jeux de sauvegarde pendant l'opération de sauvegarde.  
   
  **Nom du support de sauvegarde**  
@@ -76,13 +76,13 @@ ms.locfileid: "70154839"
 ### <a name="reliability"></a>Fiabilité  
  Les options du volet **Journal des transactions** contrôlent la gestion des erreurs par l’opération de sauvegarde.  
   
- **Vérifier la sauvegarde en fin d'opération**  
+ **Vérifier la sauvegarde en fin d’opération**  
  Vérifie si le jeu de sauvegarde est complet et que tous les volumes sont lisibles.  
   
- **Effectuer une somme de contrôle avant d'écrire sur le support**  
+ **Effectuer une somme de contrôle avant d’écrire sur le support**  
  La somme de contrôle permet de s'assurer de l'intégrité des supports de sauvegarde avant l'écriture. L'activation de cette option revient à spécifier l'option CHECKSUM dans une instruction BACKUP [!INCLUDE[tsql](../../includes/tsql-md.md)]. Elle peut entraîner une augmentation de la charge de travail et une diminution du débit de la sauvegarde. Pour plus d’informations sur les sommes de contrôle de sauvegarde, consultez [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- **Continuer lors d'erreurs**  
+ **Continuer en cas d’erreur**  
  La sauvegarde se poursuit même si une ou plusieurs erreurs sont rencontrées.  
   
 ### <a name="transaction-log"></a>Journal des transactions  
@@ -94,7 +94,7 @@ ms.locfileid: "70154839"
  **Tronquer le journal des transactions**  
  Permet de sauvegarder le journal des transactions puis de le tronquer pour libérer de l'espace. La base de données reste en ligne. Il s'agit de l'option par défaut.  
   
- **Sauvegarder la fin du journal et laisser la base de données dans l'état de restauration**  
+ **Sauvegarder la fin du journal et conserver la base de données dans l’état de restauration**  
  Sauvegarder la fin du journal et laisser la base de données dans l'état de restauration. Crée une *sauvegarde de la fin du journal*, incluant les journaux n’ayant pas encore été sauvegardés (journal actif), généralement en guise de préparation à la restauration d’une base de données. La base de données est inaccessible aux utilisateurs tant qu'elle n'a pas été restaurée dans son intégralité.  
   
  La sélection de cette option revient à spécifier WITH NO_TRUNCATE, NORECOVERY dans une instruction [BACKUP](/sql/t-sql/statements/backup-transact-sql) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Pour plus d’informations, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  

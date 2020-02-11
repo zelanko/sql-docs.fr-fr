@@ -16,35 +16,35 @@ ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933454"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Spécifie les autorisations disponibles pour la modification des données dans un [connexion](../../../ado/reference/ado-api/connection-object-ado.md), en ouvrant un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), ou spécifier des valeurs pour le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété de la  **Enregistrement** et [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objets.  
+Spécifie les autorisations disponibles pour la modification des données dans une [connexion](../../../ado/reference/ado-api/connection-object-ado.md), l’ouverture d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md)ou la spécification de valeurs pour la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) des objets **Record** et [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adModeRead**|1|Indique les autorisations en lecture seule.|  
-|**adModeReadWrite**|3|Indique les autorisations de lecture/écriture.|  
-|**adModeRecursive**|0x400000|Utilisé conjointement avec les autres *\*ShareDeny\** valeurs (**adModeShareDenyNone**, **adModeShareDenyWrite**, ou **adModeShareDenyRead**) pour propager les restrictions de partage à tous les enregistrements de sous-chemin du courant **enregistrement**. Il n’a aucun effet si le **enregistrement** n’a pas d’enfants. Une erreur d’exécution est générée s’il est utilisé avec **adModeShareDenyNone** uniquement. Toutefois, il peut être utilisé avec **adModeShareDenyNone** lorsqu’elles sont combinées avec d’autres valeurs. Par exemple, vous pouvez utiliser «**adModeRead** ou **adModeShareDenyNone** ou **encore adModeRecursive**».|  
-|**adModeShareDenyNone**|16|Permet à d’autres personnes d’ouvrir une connexion avec des autorisations. Aucun accès en lecture ou en écriture ne peut être refusé à d'autres personnes.|  
-|**adModeShareDenyRead**|4|Empêche d’autres personnes d’ouvrir une connexion avec les autorisations de lecture.|  
-|**adModeShareDenyWrite**|8|Empêche d’autres personnes d’ouvrir une connexion avec des autorisations d’écriture.|  
-|**adModeShareExclusive**|12|Empêche d’autres personnes d’ouvrir une connexion.|  
-|**adModeUnknown**|0|Valeur par défaut. Indique que les autorisations n’ont pas encore été définies ou qu’il ne peut pas être déterminées.|  
-|**adModeWrite**|2|Indique les autorisations en écriture seule.|  
+|**adModeRead**|1|Indique des autorisations en lecture seule.|  
+|**adModeReadWrite**|3|Indique des autorisations de lecture/écriture.|  
+|**adModeRecursive**|0x400000|Utilisé conjointement avec les autres * \*valeurs ShareDeny\* * (**adModeShareDenyNone**, **adModeShareDenyWrite**ou **adModeShareDenyRead**) pour propager des restrictions de partage à tous les sous-enregistrements de l' **enregistrement**actif. Elle n’a aucun effet si l' **enregistrement** n’a pas d’enfants. Une erreur d’exécution est générée si elle est utilisée avec **adModeShareDenyNone** uniquement. Toutefois, il peut être utilisé avec **adModeShareDenyNone** lorsqu’il est combiné à d’autres valeurs. Par exemple, vous pouvez utiliser «**adModeRead** » ou « **adModeShareDenyNone** » ou « **adModeRecursive**».|  
+|**adModeShareDenyNone**|16|Permet à d’autres utilisateurs d’ouvrir une connexion avec toutes les autorisations. Aucun accès en lecture ou en écriture ne peut être refusé à d'autres personnes.|  
+|**adModeShareDenyRead**|4|Empêche les autres utilisateurs d’ouvrir une connexion avec des autorisations de lecture.|  
+|**adModeShareDenyWrite**|8|Empêche les autres utilisateurs d’ouvrir une connexion avec des autorisations d’écriture.|  
+|**adModeShareExclusive**|12|Empêche les autres utilisateurs d’ouvrir une connexion.|  
+|**adModeUnknown**|0|valeur par défaut. Indique que les autorisations n’ont pas encore été définies ou ne peuvent pas être déterminées.|  
+|**adModeWrite**|2|Indique des autorisations en écriture seule.|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
- Package : **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
+ Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.ConnectMode.READ|  
 |AdoEnums.ConnectMode.READWRITE|  
-|(Il n’existe aucun équivalent de pour AdoEnums.ConnectMode.RECURSIVE)|  
+|(Il n’existe aucun équivalent de AdoEnums. ConnectMode. Recursive)|  
 |AdoEnums.ConnectMode.SHAREDENYNONE|  
 |AdoEnums.ConnectMode.SHAREDENYREAD|  
 |AdoEnums.ConnectMode.SHAREDENYWRITE|  
@@ -57,4 +57,4 @@ Spécifie les autorisations disponibles pour la modification des données dans u
 |||  
 |-|-|  
 |[Mode, propriété (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open, méthode (objet Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+|[Open, méthode (Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|

@@ -1,5 +1,5 @@
 ---
-title: Package et la boîte de dialogue niveau de Protection de projet | Microsoft Docs
+title: Boîte de dialogue niveau de protection du package et du projet | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056945"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Boîte de dialogue Niveau de protection du package
@@ -28,7 +28,7 @@ ms.locfileid: "66056945"
  Pour comprendre les exigences et les options de sécurité des packages, consultez [Contrôle d’accès pour les données sensibles présentes dans les packages](security/access-control-for-sensitive-data-in-packages.md) et [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
 ## <a name="options"></a>Options  
- **Package protection level**  
+ **Niveau de protection du package**  
  Sélectionnez un niveau de protection dans la liste.  
   
  **Mot de passe**  

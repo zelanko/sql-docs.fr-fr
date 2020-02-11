@@ -10,30 +10,30 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
 ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68661280"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemples d'expressions (Générateur de rapports et SSRS)
 
-Les expressions sont fréquemment utilisées dans les rapports pour en contrôler le contenu et l'apparence. Les expressions sont écrites [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]et peuvent utiliser des fonctions intégrées du code personnalisé, des variables de rapport et de groupe, et des variables définies par l’utilisateur. Les expressions commencent par un signe égal (=). Pour plus d’informations sur l’éditeur d’expressions et les types de références que vous pouvez inclure, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md), et [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
+Les expressions sont fréquemment utilisées dans les rapports pour en contrôler le contenu et l'apparence. Les expressions sont écrites [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]dans et peuvent utiliser des fonctions intégrées du code personnalisé, des variables de rapport et de groupe, et des variables définies par l’utilisateur. Les expressions commencent par un signe égal (=). Pour plus d’informations sur l’éditeur d’expressions et les types de références que vous pouvez inclure, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md), et [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
 
 > [!IMPORTANT]  
 >  Lorsque le sandboxing RDL est activé, seuls certains types et membres peuvent être utilisés dans le texte de l'expression au moment de la publication des rapports. Pour plus d’informations, consultez [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md).  
 
 Cette rubrique propose des exemples d'expressions qu'il est possible d'utiliser pour des tâches courantes dans un rapport.  
 
--   [Fonctions Visual Basic](#VisualBasicFunctions) Exemples pour les fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de date, de chaîne, de conversion et conditionnelles.  
+-   [Fonctions Visual Basic](#VisualBasicFunctions) Exemples pour les fonctions de date, de chaîne [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , de conversion et conditionnelles.  
 
--   [Fonctions de rapport](#ReportFunctions) Exemples pour les agrégats et autres fonctions de rapport intégrées.  
+-   [Fonctions de rapport](#ReportFunctions) Exemples d’agrégats et autres fonctions de rapport intégrées.  
 
--   [Apparence des données d'un rapport](#AppearanceofReportData) Exemples pour la modification de l'apparence d'un rapport.  
+-   [Apparence des données du rapport](#AppearanceofReportData) Exemples de modification de l’apparence d’un rapport.  
 
--   [Propriétés](#Properties) Exemples pour la définition des propriétés d'élément de rapport permettant de contrôler le format ou la visibilité.  
+-   [Propriétés](#Properties) de Exemples de définition des propriétés d’élément de rapport pour contrôler le format ou la visibilité.  
 
--   [Paramètres](#Parameters) Exemples pour l'utilisation de paramètres dans une expression.  
+-   [Paramètres](#Parameters) Exemples d’utilisation de paramètres dans une expression.  
 
 -   [Code personnalisé](#CustomCode) Exemples de code personnalisé incorporé.  
 
@@ -49,15 +49,15 @@ Pour obtenir des exemples d'expressions pour des utilisations spécifiques, cons
 
 Pour plus d’informations sur les expressions simples et complexes, l’endroit où vous pouvez utiliser des expressions et les types de références que vous pouvez inclure dans une expression, consultez les rubriques sous [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md). Pour plus d’informations sur le contexte dans lequel les expressions sont évaluées pour calculer des agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
 
-Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutoriel : Introduction aux expressions](../tutorial-introducing-expressions.md).  
+Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md).  
 
-L'éditeur d'expressions inclut une vue hiérarchique des fonctions intégrées. Lorsque vous sélectionnez la fonction, un exemple de code apparaît dans le volet Valeurs. Pour plus d’informations, consultez la boîte de dialogue [expression](../expression-dialog-box.md) ou la boîte de [dialogue Expression &#40;générateur de rapports&#41;](../expression-dialog-box-report-builder.md).  
+L'éditeur d'expressions inclut une vue hiérarchique des fonctions intégrées. Lorsque vous sélectionnez la fonction, un exemple de code apparaît dans le volet Valeurs. Pour plus d’informations, consultez la boîte de dialogue [expression](../expression-dialog-box.md) ou [expression &#40;générateur de rapports&#41;](../expression-dialog-box-report-builder.md).  
 
 ## <a name="functions"></a>Fonctions  
 
-Dans un rapport, beaucoup d'expressions contiennent des fonctions. Vous pouvez mettre en forme des données, appliquer une logique et accéder aux métadonnées du rapport en utilisant ces fonctions. Vous pouvez écrire des expressions qui utilisent des fonctions de la bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Runtime et des fonctions des espaces de noms <xref:System.Convert> et <xref:System.Math> . Vous pouvez ajouter des références à des fonctions issues d'autres assemblys ou du code personnalisé. Vous pouvez également utiliser des classes à partir de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], y compris <xref:System.Text.RegularExpressions>.  
+Dans un rapport, beaucoup d'expressions contiennent des fonctions. Vous pouvez mettre en forme des données, appliquer une logique et accéder aux métadonnées du rapport en utilisant ces fonctions. Vous pouvez écrire des expressions qui utilisent des fonctions [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de la bibliothèque Runtime, et des espaces <xref:System.Convert> de <xref:System.Math> noms et. Vous pouvez ajouter des références à des fonctions issues d'autres assemblys ou du code personnalisé. Vous pouvez également utiliser des classes du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], y <xref:System.Text.RegularExpressions>compris.  
 
-###  <a name="VisualBasicFunctions"></a> Fonctions Visual Basic  
+###  <a name="VisualBasicFunctions"></a>Fonctions Visual Basic  
 Vous pouvez utiliser des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour manipuler les données affichées dans des zones de texte ou utilisées pour des paramètres, des propriétés et d'autres zones du rapport. Cette section fournit des exemples décrivant certaines de ces fonctions. Pour plus d'informations, consultez [Membres de la bibliothèque runtime Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
 
 Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] offre de nombreuses options de formats personnalisés, par exemple pour des formats de date spécifiques. Pour plus d'informations, consultez [Mise en forme des types](https://go.microsoft.com/fwlink/?LinkId=112024) sur MSDN.  
@@ -76,7 +76,7 @@ Vous pouvez également écrire une expression pour arrondir une valeur à un mul
 = Round(1.3*5)/5  
 ```  
 
-####  <a name="DateFunctions"></a> Fonctions de date  
+####  <a name="DateFunctions"></a>Fonctions de date  
 
 -   La fonction `Today` fournit la date actuelle. Cette expression peut être utilisée dans une zone de texte pour afficher la date sur le rapport ou bien, dans un paramètre pour filtrer les données basées sur la date actuelle.  
 
@@ -90,7 +90,7 @@ Vous pouvez également écrire une expression pour arrondir une valeur à un mul
 =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
 ```  
 
--   La fonction `Year` affiche l'année pour une date particulière. Vous pouvez l'utiliser pour grouper des dates ou pour afficher l'année en tant que libellé d'un ensemble de dates. Cette expression affiche l'année pour un groupe donné de dates de commande client. La fonction `Month` et d'autres fonctions peuvent également être utilisées pour manipuler des dates. Pour plus d’informations, consultez le [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] documentation.  
+-   La fonction `Year` affiche l'année pour une date particulière. Vous pouvez l'utiliser pour grouper des dates ou pour afficher l'année en tant que libellé d'un ensemble de dates. Cette expression affiche l'année pour un groupe donné de dates de commande client. La fonction `Month` et d'autres fonctions peuvent également être utilisées pour manipuler des dates. Pour plus d’informations, consultez la documentation de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
 
 ```  
 =Year(Fields!OrderDate.Value)  
@@ -118,7 +118,8 @@ Lorsque cette expression est utilisée comme champ calculé dans un dataset, vou
 =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
 ```  
 
--   La fonction `CDate` convertit la valeur en date. La fonction `Now` retourne une valeur de date contenant la date et l'heure actuelles en fonction de votre système. `DateDiff` retourne une valeur longue spécifiant le nombre d'intervalles de temps entre deux valeurs de date.  
+-   La fonction `CDate` convertit la valeur en date. La fonction `Now` retourne une valeur de date contenant la date et l'heure actuelles en fonction de votre système. 
+  `DateDiff` retourne une valeur longue spécifiant le nombre d'intervalles de temps entre deux valeurs de date.  
 
 L'exemple suivant affiche la date de début de l'année en cours  
 
@@ -162,7 +163,7 @@ L'exemple suivant affiche la date de début de l'année en cours
 |Il y a un an|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Il y a deux ans|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 
-####  <a name="StringFunctions"></a> Fonctions de chaîne  
+####  <a name="StringFunctions"></a>Fonctions de chaîne  
 
 -   Vous pouvez combiner plusieurs champs en utilisant des opérateurs de concaténation et des constantes [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . L'expression suivante retourne deux champs, chacun sur une ligne séparée dans la même zone de texte :  
 
@@ -178,19 +179,19 @@ L'exemple suivant affiche la date de début de l'année en cours
 
 Si la zone de texte contient uniquement une date ou un nombre, vous devez utiliser la propriété format de la zone de texte pour appliquer la mise `Format` en forme au lieu de la fonction dans la zone de texte.  
 
--   Les `Right`fonctions `Len`,\\et `InStr` sont utiles pour retourner une sous-chaîne, par exemple en découpant le nom*d'* utilisateur de *domaine*en nom d’utilisateur uniquement. L’expression suivante retourne la partie de la chaîne à droite de la barre oblique inverse (\\) à partir d’un paramètre nommé *User*:  
+-   Les `Right`fonctions `Len`, et `InStr` sont utiles pour retourner une sous-chaîne, par exemple en découpant le nom*d'* utilisateur de *domaine*\\en nom d’utilisateur uniquement. L’expression suivante retourne la partie de la chaîne à droite de la barre oblique inverse (\\) à partir d’un paramètre nommé *User*:  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
 ```  
 
-L’expression suivante retourne la même valeur que précédemment, en utilisant des membres de la classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> au lieu des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] :  
+L’expression suivante produit la même valeur que la précédente, en utilisant les membres de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> classe au lieu [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] des fonctions :  
 
 ```  
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   Vous pouvez afficher les valeurs sélectionnées à partir d'un paramètre à valeurs multiples. L’exemple suivant utilise la `Join` fonction pour concaténer les valeurs sélectionnées du paramètre *MySelection* en une chaîne unique qui peut être définie en tant qu’expression pour la valeur d’une zone de texte dans un élément de rapport:  
+-   Vous pouvez afficher les valeurs sélectionnées à partir d'un paramètre à valeurs multiples. L’exemple suivant utilise la `Join` fonction pour concaténer les valeurs sélectionnées du paramètre *MySelection* en une chaîne unique qui peut être définie en tant qu’expression pour la valeur d’une zone de texte dans un élément de rapport :  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +204,7 @@ L'exemple suivant donne le même résultat que l'exemple ci-dessus et affiche un
 
 ```  
 
--   Les `Regex` fonctions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] desontutilespourmodifierleformatdeschaînesexistantes,parexemplelamiseenformed’un<xref:System.Text.RegularExpressions> numéro de téléphone. L’expression suivante utilise la `Replace` fonction pour modifier le format d’un numéro de téléphone à dix chiffres dans un champ de "*nnn*-*nnn*-*nnnn*" en "(*nnn*) *nnn* - *nnnn*":  
+-   Les `Regex` fonctions de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sont utiles pour modifier le format des chaînes existantes, par exemple la mise en forme d’un numéro de téléphone. L’expression suivante utilise la `Replace` fonction pour modifier le format d’un numéro de téléphone à dix chiffres dans un champ de *"nnn*-*nnn*-*nnnn*" en "*(nnn*) *nnn*-*nnnn*" :  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -212,7 +213,7 @@ L'exemple suivant donne le même résultat que l'exemple ci-dessus et affiche un
 > [!NOTE]  
 >  Vérifiez que la valeur de Fields!Phone.Value n’a pas d’espaces supplémentaires et est de type <xref:System.String>.  
 
-#### <a name="lookup"></a>Lookup  
+#### <a name="lookup"></a>Recherche  
 
 -   En spécifiant un champ clé, vous pouvez utiliser la fonction `Lookup` pour récupérer une valeur à partir d'un dataset pour une relation un-à-un, par exemple une paire clé-valeur. L’expression suivante affiche le nom de produit d’un dataset (« Product »), compte tenu de l’identificateur de produit qui doit être mis en correspondance :  
 
@@ -222,13 +223,14 @@ L'exemple suivant donne le même résultat que l'exemple ci-dessus et affiche un
 
 #### <a name="lookupset"></a>LookupSet  
 
--   En spécifiant un champ clé, vous pouvez utiliser la fonction `LookupSet` pour récupérer un jeu de valeurs à partir d'un dataset pour une relation un-à-plusieurs. Par exemple, une personne peut avoir plusieurs numéros de téléphone. Dans l'exemple suivant, supposons que le dataset PhoneList contient un identificateur de personne et un numéro de téléphone sur chaque ligne. `LookupSet` retourne un tableau de valeurs. L'expression suivante combine les valeurs de retour dans une chaîne unique et affiche la liste des numéros de téléphone de la personne spécifiée par ContactID :  
+-   En spécifiant un champ clé, vous pouvez utiliser la fonction `LookupSet` pour récupérer un jeu de valeurs à partir d'un dataset pour une relation un-à-plusieurs. Par exemple, une personne peut avoir plusieurs numéros de téléphone. Dans l'exemple suivant, supposons que le dataset PhoneList contient un identificateur de personne et un numéro de téléphone sur chaque ligne. 
+  `LookupSet` retourne un tableau de valeurs. L'expression suivante combine les valeurs de retour dans une chaîne unique et affiche la liste des numéros de téléphone de la personne spécifiée par ContactID :  
 
 ```  
 =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
 ```  
 
-####  <a name="ConversionFunctions"></a> Fonctions de conversion  
+####  <a name="ConversionFunctions"></a>Fonctions de conversion  
 Vous pouvez utiliser des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour convertir un champ en un type de données différent de celui qu'il avait au départ. Les fonctions de conversion peuvent être utilisées pour convertir le type de données par défaut d'un champ en type qui sera nécessaire pour certains calculs ou pour combiner du texte.  
 
 -   L’expression suivante convertit la constante 500 en type Decimal pour la comparer à un type de données money [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le champ Value d’une expression de filtre.  
@@ -243,7 +245,7 @@ Vous pouvez utiliser des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md
 =CStr(Parameters!MySelection.Count)  
 ```  
 
-####  <a name="DecisionFunctions"></a> Fonctions de décision  
+####  <a name="DecisionFunctions"></a>Fonctions de décision  
 
 -   La fonction `Iif` retourne une valeur sur les deux possibles, laquelle dépend du fait que l'expression est vraie ou fausse. L'expression ci-dessous utilise la fonction `Iif` pour retourner la valeur booléenne `True` si la valeur de `LineTotal` est supérieure à 100. Sinon, elle retourne `False` :  
 
@@ -298,10 +300,10 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 
 ```  
 
-###  <a name="ReportFunctions"></a> Fonctions de rapport  
+###  <a name="ReportFunctions"></a>Fonctions de rapport  
 Dans une expression, vous pouvez ajouter une référence à des fonctions supplémentaires de rapport qui manipulent les données dans un rapport. Cette section fournit des exemples pour deux de ces fonctions. Pour plus d’informations sur les fonctions et les exemples de rapport, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
 
-#####  <a name="Sum"></a> Sum  
+#####  <a name="Sum"></a>Checksum  
 
 -   La fonction `Sum` peut additionner les valeurs dans un groupe ou une région de données. Cette fonction peut être utile dans l'en-tête ou le pied de page d'un groupe. L'expression suivante affiche la somme des données dans la région de données ou le groupe Order :  
 
@@ -315,7 +317,7 @@ Dans une expression, vous pouvez ajouter une référence à des fonctions suppl�
 =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
 ```  
 
-#####  <a name="RowNumber"></a> RowNumber  
+#####  <a name="RowNumber"></a>RowNumber  
 
 -   La fonction `RowNumber`, quand elle est utilisée dans une zone de texte au sein d'une région de données, affiche le numéro de ligne de chaque instance de la zone de texte dans laquelle l'expression apparaît. Cette fonction peut être utile pour numéroter les lignes dans un tableau. Elle peut également servir à l'accomplissement de tâches plus complexes, telles que l'insertion de sauts de page en fonction du nombre de lignes. Pour plus d'informations, consultez [Sauts de page](#PageBreaks) , plus loin dans cette rubrique.  
 
@@ -325,10 +327,10 @@ L'étendue que vous spécifiez pour `RowNumber` détermine quand commence la ren
 =RowNumber(Nothing)  
 ```  
 
-##  <a name="AppearanceofReportData"></a> Apparence des données d'un rapport  
+##  <a name="AppearanceofReportData"></a>Apparence des données du rapport  
 Vous pouvez recourir à des expressions pour intervenir sur la façon dont les données apparaissent sur un rapport. Par exemple, vous pouvez afficher les valeurs de deux champs dans une seule zone de texte, afficher des informations sur le rapport ou modifier la façon dont les sauts de page sont insérés dans le rapport.  
 
-###  <a name="PageHeadersandFooters"></a> En-têtes et pieds de page  
+###  <a name="PageHeadersandFooters"></a>En-têtes et pieds de page  
 Lors de la conception d'un rapport, vous pouvez choisir d'afficher son nom et les numéros des pages dans le pied de page. Pour ce faire, vous pouvez utiliser les expressions suivantes :  
 
 -   L'expression suivante fournit le nom du rapport ainsi que les date et heure de son exécution. Elle peut être placée dans une zone de texte du pied de page du rapport ou dans le corps du rapport. Le format des date et heure est déterminé par la chaîne de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour la date courte :  
@@ -368,7 +370,7 @@ L'exemple suivant décrit comment afficher un total pour une page. Cet exemple s
 > [!NOTE]  
 >  Vous ne pouvez faire référence qu'à un seul élément de rapport par expression dans un en-tête ou un pied de page. Vous pouvez aussi faire référence au nom de la zone de texte, mais pas à l'expression de données elle-même, dans les expressions d'en-tête et de pied de page.  
 
-###  <a name="PageBreaks"></a> Sauts de page  
+###  <a name="PageBreaks"></a>Sauts de page  
 Dans certains rapports, vous pouvez souhaiter placer un saut de page à la fin d'un nombre spécifié de lignes à la place, ou en plus, de groupes ou d'éléments de rapport. Pour ce faire, créez un groupe qui contient les groupes ou enregistrements de détails qui vous intéressent, ajoutez un saut de page au groupe, puis ajoutez une expression de groupe pour regrouper par un nombre spécifié de lignes.  
 
 -   L'expression suivante, quand elle est placée dans l'expression de groupe, affecte un nombre à chaque ensemble de 25 lignes. Quand un saut de page est défini pour le groupe, cette expression insère un saut de page toutes les 25 lignes.  
@@ -385,10 +387,10 @@ Pour permettre à l'utilisateur de définir une valeur pour le nombre de lignes 
 
 Pour plus d’informations sur la définition de sauts de page pour un groupe, consultez [Ajouter un saut de page &#40;Générateur de rapports et SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
 
-##  <a name="Properties"></a> Propriétés  
+##  <a name="Properties"></a>Sous  
 Les expressions ne sont pas uniquement utilisées pour afficher des données dans des zones de texte. Elles peuvent également servir à modifier la manière dont les propriétés sont appliquées aux éléments de rapport. Vous pouvez modifier les informations de style d'un élément de rapport ou bien modifier sa visibilité.  
 
-###  <a name="Formatting"></a> Mise en forme  
+###  <a name="Formatting"></a>Mise en forme  
 
 -   L’expression suivante, quand elle est utilisée dans la propriété Color d’une zone de texte, modifie la couleur du texte en fonction de la valeur du champ `Profit` :  
 
@@ -396,7 +398,7 @@ Les expressions ne sont pas uniquement utilisées pour afficher des données dan
 =Iif(Fields!Profit.Value < 0, "Red", "Black")  
 ```  
 
-Vous pouvez également utiliser la variable objet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Me`. Cette variable constitue un autre moyen de faire référence à la valeur d'une zone de texte.  
+Vous pouvez également utiliser la variable objet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Me`. Cette variable constitue un autre moyen de faire référence à la valeur d'une zone de texte.  
 
 `=Iif(Me.Value < 0, "Red", "Black")`  
 
@@ -418,7 +420,7 @@ Si vous utilisez une expression pour une étendue spécifique, vous devrez peut-
 ### <a name="chart-colors"></a>Couleurs du graphique  
 Pour spécifier les couleurs d'un graphique à base de formes, vous pouvez utiliser du code personnalisé pour contrôler l'ordre dans lequel les couleurs sont mappées aux valeurs de point de données. Cela vous permet d'utiliser des couleurs cohérentes dans le cadre de plusieurs graphiques possédant les mêmes groupes de catégories. Pour plus d’informations, consultez [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
 
-###  <a name="Visibility"></a> Visibilité  
+###  <a name="Visibility"></a>Vue  
 Vous pouvez également afficher et masquer des éléments dans un rapport en utilisant les propriétés de visibilité de l'élément de rapport. Dans une région de données comme un tableau, vous pouvez initialement masquer les lignes de détails en fonction de la valeur d'une expression.  
 
 -   L'expression suivante, lorsqu'elle est utilisée pour la visibilité initiale des lignes de détails dans un groupe, affiche les lignes de détails de toutes les ventes supérieures à 90 pour cent dans le champ `PctQuota` :  
@@ -433,13 +435,13 @@ Vous pouvez également afficher et masquer des éléments dans un rapport en uti
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   L’expression suivante, lorsqu’elle est définie `Hidden` dans la propriété d’une colonne, affiche la colonne uniquement si le champ existe dans le DataSet du rapport après que les données ont été récupérées à partir de la source de données:  
+-   L’expression suivante, lorsqu’elle est définie `Hidden` dans la propriété d’une colonne, affiche la colonne uniquement si le champ existe dans le DataSet du rapport après que les données ont été récupérées à partir de la source de données :  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  
 ```  
 
-###  <a name="Hyperlinks"></a> URL  
+###  <a name="Hyperlinks"></a>URL  
 Vous pouvez personnaliser des URL à l'aide de données de rapport, mais aussi contrôler de manière conditionnelle si les URL sont ajoutées en tant qu'action pour une zone de texte.  
 
 -   L'expression ci-dessous, lorsqu'elle est utilisée en tant qu'action pour une zone de texte, génère une URL personnalisée qui spécifie le champ de dataset `EmployeeID` comme un paramètre d'URL.  
@@ -456,7 +458,7 @@ Pour plus d’informations, consultez [Ajouter un lien hypertexte à une URL &#4
 =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
 ```  
 
-##  <a name="ReportData"></a> Données des rapports  
+##  <a name="ReportData"></a>Données du rapport  
 Les expressions peuvent être utilisées pour manipuler les données utilisées dans les rapports. Vous pouvez faire référence à des paramètres et à d'autres informations de rapport. Vous pouvez même modifier la requête utilisée pour extraire les données du rapport.  
 
 ###  <a name="Parameters"></a> Paramètres  
@@ -480,7 +482,7 @@ Vous pouvez utiliser des expressions dans un paramètre pour faire varier la val
 =Fields(Parameters!ParameterField.Value).Value  
 ```  
 
-## <a name="CustomCode"></a> Code personnalisé
+## <a name="CustomCode"></a>Code personnalisé
 
 L'usage de code personnalisé au sein d'un rapport est possible. Le code personnalisé est soit incorporé au rapport, soit stocké dans un assembly personnalisé utilisé au sein du rapport. Pour plus d’informations sur le code personnalisé, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
 
@@ -528,6 +530,6 @@ Cela permet d'éviter les exceptions d'exécution. Vous pouvez maintenant utilis
 
 - [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)
 - [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)
-- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)
+- [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)
 - [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)
 - [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)

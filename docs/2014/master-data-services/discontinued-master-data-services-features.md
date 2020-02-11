@@ -1,5 +1,5 @@
 ---
-title: Master Data Services fonctionnalités abandonnées dans SQL Server 2014 | Microsoft Docs
+title: Fonctionnalités de Master Data Services abandonnées dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479443"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Fonctionnalités Master Data Services supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] supprimées  
+## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] supprimées  
  Il n'y a pas de fonctionnalités supprimées dans cette version.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supprimées  
+## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supprimées  
   
 ### <a name="security"></a>Sécurité  
  Pour faciliter la sécurité d'attribution, vous ne pouvez plus affecter des autorisations d'objet de modèle aux objets de hiérarchie dérivée, de hiérarchie explicite et de groupe d'attributs.  
   
--   Les autorisations de hiérarchie dérivée sont désormais basées sur le modèle. Par exemple, si vous souhaitez un utilisateur soit autorisé à une hiérarchie dérivée, vous devez affecter **mise à jour** sur l’objet modèle. Vous pouvez alors assigner **Deny** accès à toutes les entités vous ne souhaitez pas que l’utilisateur ait accès.  
+-   Les autorisations de hiérarchie dérivée sont désormais basées sur le modèle. Par exemple, si vous souhaitez qu’un utilisateur dispose d’une autorisation sur une hiérarchie dérivée, vous devez affecter la **mise à jour** à l’objet de modèle. Vous pouvez ensuite affecter **refuser** l’accès à toutes les entités auxquelles vous ne voulez pas que l’utilisateur ait accès.  
   
--   Les autorisations de hiérarchie explicite sont maintenant basées sur l'entité. Par exemple, si l’utilisateur a **mise à jour** autorisations à une entité de compte, puis toutes les hiérarchies explicites pour l’entité seront mises à jour.  
+-   Les autorisations de hiérarchie explicite sont maintenant basées sur l'entité. Par exemple, si l’utilisateur dispose d’autorisations de **mise à jour** sur une entité de compte, toutes les hiérarchies explicites de l’entité pourront être mises à jour.  
   
--   Autorisations de groupe d’attribut n’est plus peuvent être assignées dans le **autorisations d’accès** zone fonctionnelle. Au lieu de cela, dans le **Administration système** zone fonctionnelle où les groupes d’attributs sont créés, les utilisateurs et groupes peuvent être données **mise à jour** autorisation aux groupes d’attributs. **En lecture seule** autorisation aux groupes d’attributs n’est plus disponible.  
+-   Les autorisations de groupe d’attributs ne peuvent plus être affectées dans la zone fonctionnelle **autorisations d’accès** . Au lieu de cela, dans la zone fonctionnelle **administration de système** où les groupes d’attributs sont créés, les utilisateurs et les groupes peuvent disposer de l’autorisation **mettre à jour** sur les groupes d’attributs. L’autorisation **en lecture seule sur les** groupes d’attributs n’est plus disponible.  
   
 ### <a name="staging-process"></a>Processus de site  
  Vous ne pouvez pas utiliser le nouveau processus de site pour effectuer les opérations suivantes :  
@@ -53,17 +55,17 @@ ms.locfileid: "65479443"
  En outre, les packages peuvent être déployés uniquement dans l'édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans laquelle ils ont été créés. Cela signifie que les packages créés dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ne peuvent pas être déployés sur [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Vous devez déployer le package dans un environnement [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] puis mettre à niveau la base de données vers [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="code-generation-business-rules"></a>Règles d'entreprise de génération de code  
- Les règles d'entreprise qui génèrent automatiquement des valeurs pour l'attribut Code sont maintenant administrées différemment. Auparavant, pour générer des valeurs pour l’attribut Code, vous avez utilisé le **attribut par défaut avec une valeur générée** action dans le **Administration système** zone fonctionnelle sous **des règles d’entreprise** . Maintenant, dans **Administration système**, vous devez modifier l’entité pour activer les valeurs de Code générées automatiquement. Pour plus d’informations, consultez [Création automatique de code &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
+ Les règles d'entreprise qui génèrent automatiquement des valeurs pour l'attribut Code sont maintenant administrées différemment. Auparavant, pour générer des valeurs pour l’attribut code, vous avez utilisé l' **attribut default à une action valeur générée** dans la zone fonctionnelle **administration de système** sous **règles d’entreprise**. Désormais, dans **administration de système**, vous devez modifier l’entité pour activer les valeurs de code générées automatiquement. Pour plus d’informations, consultez [création automatique de Code &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Si vous possédez un package de déploiement de modèle [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] qui contient une règle de ce type, lorsque vous mettez à niveau la base de données vers [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la règle d'entreprise est exclue.  
   
 ### <a name="bulk-updates-and-exporting"></a>Mises à jour et exporations en bloc  
- Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus mettre à jour les valeurs d'attribut de plusieurs membres en bloc. Pour effectuer des mises à jour en bloc, utilisez le processus de site ou le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus mettre à jour les valeurs d'attribut de plusieurs membres en bloc. Pour effectuer des mises à jour en bloc, utilisez le processus de site [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]ou.  
   
- Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus exporter des membres vers Excel. Pour travailler avec les membres dans Excel, utilisez le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus exporter des membres vers Excel. Pour travailler avec des membres dans Excel, utilisez [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]le.  
   
 ### <a name="transactions"></a>Transactions  
- Dans le **Explorer** zone fonctionnelle, les utilisateurs ne peuvent plus restaurer leurs propres transactions. Auparavant, les utilisateurs pouvaient annuler les modifications apportées aux données dans **Explorer**. Les administrateurs peuvent toujours restaurer les transactions pour tous les utilisateurs dans le **gestion des versions** zone fonctionnelle.  
+ Dans la zone fonctionnelle **Explorateur** , les utilisateurs ne peuvent plus restaurer leurs propres transactions. Auparavant, les utilisateurs pouvaient annuler les modifications apportées aux données dans l' **Explorateur**. Les administrateurs peuvent toujours rétablir des transactions pour tous les utilisateurs dans la zone fonctionnelle **gestion des versions** .  
   
  Les annotations sont maintenant permanentes et ne peuvent pas être supprimées. Précédemment, les annotations étaient considérées comme des transactions et pouvaient être supprimées en inversant la transaction.  
   
@@ -74,6 +76,6 @@ ms.locfileid: "65479443"
  MDS n'inclut plus les applets de commande PowerShell.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités dépréciées de Master Data Services dans SQL Server 2014](deprecated-master-data-services-features.md)  
+ [Fonctionnalités Master Data Services déconseillées dans SQL Server 2014](deprecated-master-data-services-features.md)  
   
   

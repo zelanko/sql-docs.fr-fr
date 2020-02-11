@@ -17,14 +17,14 @@ ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967036"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword, méthode (ADOX)
-Modifie le mot de passe pour un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) compte.  
+Modifie le mot de passe d’un compte d' [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,15 +35,15 @@ User.ChangePassword OldPassword, NewPassword
   
 #### <a name="parameters"></a>Paramètres  
  *OldPassword*  
- Un **chaîne** valeur qui spécifie le mot de passe existant. Si l’utilisateur ne dispose actuellement d’un mot de passe, utilisez une chaîne vide (" ») pour *OldPassword*.  
+ Valeur de **chaîne** qui spécifie le mot de passe existant de l’utilisateur. Si l’utilisateur n’a pas de mot de passe, utilisez une chaîne vide ("") pour *oldPassword*.  
   
  *NewPassword*  
- Un **chaîne** valeur qui spécifie le nouveau mot de passe.  
+ Valeur de **chaîne** qui spécifie le nouveau mot de passe.  
   
 ## <a name="remarks"></a>Notes  
  Pour des raisons de sécurité, l’ancien mot de passe doit être spécifié en plus du nouveau mot de passe.  
   
- Une erreur se produit si le fournisseur ne prend pas en charge l’administration des propriétés de tiers de confiance.  
+ Une erreur se produit si le fournisseur ne prend pas en charge l’administration des propriétés du tiers de confiance.  
   
 ## <a name="applies-to"></a>S'applique à  
  [User, objet (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  

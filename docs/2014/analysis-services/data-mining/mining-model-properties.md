@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083511"
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
@@ -41,7 +41,7 @@ ms.locfileid: "66083511"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Algorithm**|Définit le type d'algorithme pour le modèle d'exploration de données.|  
+|**Utilisé**|Définit le type d'algorithme pour le modèle d'exploration de données.|  
 |**AlgorithmParameters**|Définit les valeurs pour les paramètres d'algorithme disponibles pour chaque type d'algorithme.|  
 |**Filter**|Définit un filtre qui s'applique aux données utilisées pour former et tester le modèle d'exploration de données. La définition de filtre est stockée avec le modèle et peut être utilisée facultativement lorsque vous créez des requêtes de prédiction ou lorsque vous testez la précision du modèle.<br /><br /> Le filtre de modèle n'est pas facultatif lors de la formation du modèle.|  
 |**Nom**|Définit le nom du modèle d'exploration de données.|  
@@ -56,15 +56,15 @@ ms.locfileid: "66083511"
 |**Nom**|Définit le nom de la colonne du modèle d'exploration de données. Vous pouvez taper un nouveau nom, pour fournir un alias pour la colonne du modèle d'exploration de données.|  
 |**ModelingFlags**|Définit tous les indicateurs spécifiques des algorithmes pour la colonne.|  
 |**SourceColumnID**|Indique le nom de la colonne de structure d'exploration de données sur laquelle la colonne du modèle est basée.<br /><br /> Cette propriété est en lecture seule.|  
-|**Usage**|Définit comment la colonne sera utilisée par le modèle d'exploration de données.|  
+|**Utilisation**|Définit comment la colonne sera utilisée par le modèle d'exploration de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Colonnes d'un modèle d'exploration de données](mining-model-columns.md)   
- [Structures d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Modifier les propriétés d'un modèle d'exploration de données](change-the-properties-of-a-mining-model.md)   
- [Outils d'exploration de données](data-mining-tools.md)   
- [Créer une structure d'exploration de données relationnelle](create-a-relational-mining-structure.md)   
+ [Colonnes du modèle d’exploration de données](mining-model-columns.md)   
+ [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Modifier les propriétés d’un modèle d’exploration de données](change-the-properties-of-a-mining-model.md)   
+ [Outils d’exploration de données](data-mining-tools.md)   
+ [Créer une structure d’exploration de données relationnelle](create-a-relational-mining-structure.md)   
  [Créer un alias pour une colonne du modèle](create-an-alias-for-a-model-column.md)  
   
   

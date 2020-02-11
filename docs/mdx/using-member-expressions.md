@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893513"
 ---
 # <a name="using-member-expressions"></a>Utilisation d'expressions de membre
@@ -20,7 +20,7 @@ ms.locfileid: "68893513"
 
   Une expression de membre contient un identificateur de membre, une fonction membre ou une expression pouvant être convertie en membre.  
   
- Les identificateurs de membre sont disponibles dans plusieurs formats. La forme la plus simple d'un identificateur de membre se compose du nom du membre. Exemple :  
+ Les identificateurs de membre sont disponibles dans plusieurs formats. La forme la plus simple d'un identificateur de membre se compose du nom du membre. Par exemple :  
   
 ```  
 SELECT Amount ON 0  
@@ -56,10 +56,10 @@ Dimension_Name
   
 ```  
   
- De nombreuses fonctions MDX retournent des membres. Pour obtenir une liste complète, consultez MDX [Function &#40;Reference&#41; MDX](../mdx/mdx-function-reference-mdx.md)  
+ De nombreuses fonctions MDX retournent des membres. Pour obtenir une liste complète, consultez [référence des fonctions mdx &#40;mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  Pour plus d’informations sur les noms de membres et les clés de membre, consultez [utilisation de membres, &#40;de&#41;tuples et de paramètres MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+>  Pour plus d’informations sur les noms de membres et les clés de membre, consultez [utilisation de membres, de tuples et de jeux &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  

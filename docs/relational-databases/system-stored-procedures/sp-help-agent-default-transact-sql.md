@@ -16,10 +16,10 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762761"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68762761"
 
   Récupère l'ID de la configuration par défaut du type d'Agent passé en paramètre. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,19 +38,19 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] _profile_idOUTPUT`ID de la configuration par défaut pour le type d’agent. l’option par défaut est de **type int**, sans valeur par défaut. l’ID de la valeur est également un paramètre de sortie et retourne l’ID de la configuration par défaut pour le type d’agent.  
+`[ @profile_id = ] _profile_idOUTPUT`ID de la configuration par défaut pour le type d’agent. *profile_id* est de **type int**, sans valeur par défaut. *profile_id* est également un paramètre de sortie et retourne l’ID de la configuration par défaut pour le type d’agent.  
   
 `[ @agent_type = ] 'agent_type'`Type d’agent. *agent_type* est de **type int**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**1**|Agent d’instantané.|  
+|**1**|Agent d'instantané.|  
 |**2**|Agent de lecture du journal|  
-|**3**|Agent de distribution.|  
+|**1,3**|Agent de distribution.|  
 |**4**|Agent de fusion.|  
-|**9**|Agent de lecture de la file d'attente|  
+|**0,9**|Agent de lecture de la file d'attente|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

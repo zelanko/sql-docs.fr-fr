@@ -16,14 +16,14 @@ ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937835"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update et CancelUpdate, exemple de méthodes (VB)
-Cet exemple montre la [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode conjointement avec le [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) (méthode).  
+Cet exemple illustre la méthode [Update](../../../ado/reference/ado-api/update-method.md) conjointement à la méthode [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
 ```  
 'BeginUpdateVB  
@@ -114,7 +114,7 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- Cet exemple montre la **mise à jour** méthode conjointement avec le [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) (méthode).  
+ Cet exemple illustre la méthode **Update** conjointement à la méthode [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) .  
   
 ```  
 Attribute VB_Name = "Update"  
@@ -122,5 +122,5 @@ Attribute VB_Name = "Update"
   
 ## <a name="see-also"></a>Voir aussi  
  [CancelUpdate, méthode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update, méthode](../../../ado/reference/ado-api/update-method.md)

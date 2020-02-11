@@ -1,5 +1,5 @@
 ---
-title: Collecteur de données procédures stockées (Transact-SQL) | Microsoft Docs
+title: Procédures stockées du collecteur de données (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942403"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Procédures stockées du collecteur de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server prend en charge les procédures stockées système suivantes qui sont utilisées pour travailler avec le collecteur de données et les composants suivants : jeux d’éléments, des éléments de collection et des types de collections.  
+  SQL Server prend en charge les procédures stockées système suivantes utilisées pour fonctionner avec le collecteur de données et les composants suivants : jeux d’éléments de collecte, éléments de collection et types de collection.  
   
 > [!IMPORTANT]  
 >  Contrairement aux procédures stockées standard, les procédures stockées du collecteur de données utilisent des paramètres de type strict qui ne prennent pas en charge la conversion automatique de type de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  

@@ -1,5 +1,5 @@
 ---
-title: Exemples de Code RDS | Microsoft Docs
+title: Exemples de code RDS | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,22 +13,22 @@ ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 07cf393fc46ca9cfe96cb116886f37ab8abd1b1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963711"
 ---
 # <a name="rds-code-examples"></a>Exemples de code RDS
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Utilisez les exemples de code suivants pour apprendre à utiliser les services Bureau à distance pour les objets, méthodes, propriétés et événements.  
+ Utilisez les exemples de code suivants pour apprendre à utiliser les objets, les méthodes, les propriétés et les événements RDS.  
   
- **Remarque** collez l’exemple de code entier dans votre éditeur de code. L’exemple ne pas fonctionne correctement si les exemples partielles sont utilisés ou si la mise en forme du paragraphe est perdue.  
+ **Remarque** Collez l’intégralité de l’exemple de code dans votre éditeur de code. L’exemple peut ne pas s’exécuter correctement si des exemples partiels sont utilisés ou si la mise en forme des paragraphes est perdue.  
   
--   [Exemples de Code RDS dans Microsoft Visual Basic](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
+-   [Exemples de code RDS dans Microsoft Visual Basic](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
   
--   [Exemples de Code RDS dans Microsoft Visual Basic Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [Exemples de code RDS dans Microsoft Visual Basic Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
   
--   [Exemples de Code RDS dans Microsoft Visual C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [Exemples de code RDS dans Microsoft Visual C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  

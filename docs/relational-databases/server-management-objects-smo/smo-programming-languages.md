@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 903ea22a3895f142f10ff9026a919067b8e60c95
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148576"
 ---
 # <a name="smo-programming-languages"></a>Langages de programmation SMO
@@ -32,8 +32,8 @@ ms.locfileid: "70148576"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Prise en main dans Visual C&#35; .net](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Fournit des informations sur la façon de démarrer l’écriture d’un C# programme Smo dans Visual .net|  
+|[Prise en main dans Visual C&#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Fournit des informations sur l'écriture d'un programme SMO dans Visual C# .NET|  
   
- SMO est un assembly .NET. Pour programmer à l'aide du [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, vous devez choisir un langage pris en charge par le CLR (Common Language Runtime). Dans la référence SMO, il existe une syntaxe pour les langages managés tels que Visual C# .net.  
+ SMO est un assembly .NET. Pour programmer à l'aide du [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, vous devez choisir un langage pris en charge par le CLR (Common Language Runtime). Dans la référence SMO, il existe une syntaxe pour les langages managés tels que Visual C# .NET.  
   
   

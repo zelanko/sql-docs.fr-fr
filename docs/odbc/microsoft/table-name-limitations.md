@@ -1,5 +1,5 @@
 ---
-title: Limitations des noms de table | Microsoft Docs
+title: Limitations des noms de tables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 152a0aa1e8d92424b2f60c49f44888de7d3e528c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939777"
 ---
 # <a name="table-name-limitations"></a>Limitations des noms de table
-Noms de table peuvent contenir des caractères valides (par exemple, des espaces). Si les noms de tables contiennent des caractères à l’exception des lettres, des chiffres et des traits de soulignement, le nom doit être délimité en l’entourant de guillemets précédent (').  
+Les noms de table peuvent contenir des caractères valides (par exemple, des espaces). Si les noms de table contiennent des caractères à l’exception des lettres, des chiffres et des traits de soulignement, le nom doit être délimité en le mettant entre guillemets (').  
   
- Lorsque le pilote Microsoft Excel est utilisé, et un nom de table n’est pas qualifié par une référence de base de données, la base de données par défaut est implicite. Si un nom dans Microsoft Excel inclut le « ! » caractères, il sera automatiquement traduit vers le caractère « $» à la place.  
+ Lorsque le pilote Microsoft Excel est utilisé et qu’un nom de table n’est pas qualifié par une référence de base de données, la base de données par défaut est implicite. Si un nom dans Microsoft Excel contient le caractère «  ! », il sera automatiquement converti en caractère « $ » à la place.  
   
- Le nom de table de Microsoft Excel qui fait référence à \<filename > est pris en charge pour Microsoft Excel version 3.0 et 4.0 fichiers. Le nom de table de Microsoft Excel qui fait référence à \<classeur-name > est prise en charge pour les fichiers Microsoft Excel 5.0, 7.0 ou 97.  
+ Le nom de la table Microsoft Excel \<qui fait référence au nom de fichier> est pris en charge pour les fichiers Microsoft Excel 3,0 et 4,0. Le nom de table Microsoft Excel qui \<fait référence au nom de classeur> est pris en charge pour les fichiers microsoft Excel 5,0, 7,0 ou 97.  
   
  Lorsque le pilote dBASE est utilisé, les caractères avec une valeur ASCII supérieure à 127 sont convertis en traits de soulignement.  
   
- Lorsque le pilote Microsoft Access est utilisé, le nom de table est limité à 64 caractères.  
+ Lorsque le pilote Microsoft Access est utilisé, le nom de la table est limité à 64 caractères.  
   
- Lorsque le pilote de Microsoft Excel 3.0 ou 4.0, Paradox, ou du texte dBASE, est utilisé, les mots clés MS-DOS spéciaux CON, AUX, LPT1, LPT2 et ne doivent pas utilisés comme noms de tables.
+ Lorsque le pilote dBASE, Microsoft Excel 3,0 ou 4,0, Paradox ou texte est utilisé, les mots clés MS-DOS spéciaux CON, aux, LPT1 et LPT2 ne doivent pas être utilisés comme noms de tables.

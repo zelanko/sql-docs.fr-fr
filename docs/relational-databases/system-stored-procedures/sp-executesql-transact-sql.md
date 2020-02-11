@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68290354"
 ---
-# <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
+# <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Exécute un lot ou une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)], réutilisable plusieurs fois ou créé dynamiquement. L'instruction ou le traitement d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peut contenir des paramètres incorporés.  
@@ -34,7 +34,7 @@ ms.locfileid: "68290354"
 > [!IMPORTANT]  
 >  Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] compilées à l'exécution peuvent exposer les applications à des attaques malveillantes.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,36 +49,36 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ \@stmt= ] *statement*  
- Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit porter le préfixe avec un **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)** .  
+ [ \@stmt =] *instruction*  
+ Chaîne Unicode qui contient une instruction ou [!INCLUDE[tsql](../../includes/tsql-md.md)] un lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit être précédée de **N**. Par exemple, la constante Unicode **N’sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)**.  
   
 > [!NOTE]  
->  \@stmt peut contenir des paramètres possédant la même forme qu’un nom de variable, par exemple : `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt peut contenir des paramètres ayant la même forme qu’un nom de variable, par exemple :`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Chaque paramètre inclus dans \@stmt doit posséder une entrée correspondante à la fois dans le \@liste des définitions de paramètre params et le paramètre de liste de valeurs.  
+ Chaque paramètre inclus dans \@stmt doit avoir une entrée correspondante dans la \@liste de définitions de paramètres params et dans la liste des valeurs de paramètre.  
   
- [ \@params =] N'\@*nom_paramètre* *data_type* [,... *n* ] '  
- Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans \@stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans \@stmt doit être défini dans \@params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt ne contient-elle pas de paramètres, \@params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
+ [ \@params =] \@N*parameter_name* *data_type* [,... *n* ] '  
+ Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans \@stmt. La chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans \@stmt doit être défini dans \@params. Si l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot \@dans stmt ne contient pas de \@paramètres, params n’est pas requis. La valeur par défaut de ce paramètre est NULL.  
   
  [ \@param1 =] '*value1*'  
- Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Il doit y avoir une valeur de paramètre fournie pour chaque paramètre inclus dans \@stmt. Les valeurs ne sont pas requis lorsque la [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt n’a aucun paramètre.  
+ Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Une valeur de paramètre doit être fournie pour chaque paramètre inclus dans \@stmt. Les valeurs ne sont pas obligatoires lorsque [!INCLUDE[tsql](../../includes/tsql-md.md)] l’instruction ou le \@lot dans stmt n’a pas de paramètres.  
   
  [ OUT | OUTPUT ]  
- Indique que le paramètre est un paramètre de sortie. **texte**, **ntext**, et **image** paramètres peuvent être utilisés comme paramètres de sortie, sauf si la procédure est une procédure du common language runtime (CLR). Un paramètre de sortie qui utilise le mot clé OUTPUT peut être un espace réservé de curseur, sauf si la procédure est une procédure CLR (Common Language Runtime).  
+ Indique que le paramètre est un paramètre de sortie. les paramètres **Text**, **ntext**et **image** peuvent être utilisés comme paramètres de sortie, sauf si la procédure est une procédure Common Language Runtime (CLR). Un paramètre de sortie qui utilise le mot clé OUTPUT peut être un espace réservé de curseur, sauf si la procédure est une procédure CLR (Common Language Runtime).  
   
  *n*  
  Représente un espace réservé destiné aux valeurs de paramètres supplémentaires. Ces valeurs doivent être des constantes ou des variables. Leur degré de complexité ne doit pas dépasser celui d'expressions telles que les fonctions ou expressions créées à l'aide d'opérateurs.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou autre que zéro (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne les jeux de résultats de toutes les instructions SQL de la chaîne SQL.  
   
 ## <a name="remarks"></a>Notes  
- paramètres de sp_executesql doivent être entrées dans l’ordre spécifique, comme décrit dans la section « Syntaxe » précédemment dans cette rubrique. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
+ sp_executesql paramètres doivent être entrés dans l’ordre spécifique, comme décrit dans la section « syntaxe », plus haut dans cette rubrique. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
   
- La procédure sp_executesql a le même comportement vis-à-vis des traitements d'instructions, de l'étendue des noms et du contexte de base de données que l'instruction EXECUTE. Le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de sp_executesql \@stmt paramètre n’est pas compilé jusqu'à l’exécution de l’instruction sp_executesql. Le contenu de \@stmt est alors compilé et exécuté en tant qu’un plan d’exécution distinct du plan d’exécution du lot qui a appelé sp_executesql. Le traitement sp_executesql ne peut pas faire référence à des variables déclarées dans le traitement qui a appelé sp_executesql. Les curseurs ou les variables locaux du traitement sp_executesql ne sont pas visibles pour le traitement qui appelle sp_executesql. Les modifications apportées au contexte de base de données ne durent que jusqu'à la fin de l'exécution de l'instruction sp_executesql.  
+ La procédure sp_executesql a le même comportement vis-à-vis des traitements d'instructions, de l'étendue des noms et du contexte de base de données que l'instruction EXECUTE. L' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans le \@paramètre sp_executesql stmt n’est pas compilé tant que l’instruction sp_executesql n’est pas exécutée. Le contenu de \@stmt est ensuite compilé et exécuté en tant que plan d’exécution distinct du plan d’exécution du lot qui a appelé sp_executesql. Le traitement sp_executesql ne peut pas faire référence à des variables déclarées dans le traitement qui a appelé sp_executesql. Les curseurs ou les variables locaux du traitement sp_executesql ne sont pas visibles pour le traitement qui appelle sp_executesql. Les modifications apportées au contexte de base de données ne durent que jusqu'à la fin de l'exécution de l'instruction sp_executesql.  
   
  La procédure sp_executesql peut être utilisée à la place de procédures stockées afin d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] plusieurs fois lorsque la modification des valeurs de paramètres de l'instruction constitue l'unique changement. L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] même demeurant constante, seules les valeurs de paramètre changent. Par conséquent, l'optimiseur de requête de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut réutiliser le plan d'exécution généré pour la première exécution.  
   
@@ -205,7 +205,7 @@ GO
  Pour cette procédure, l'utilisation de sp_executesql est plus efficace que l'utilisation d'EXECUTE pour exécuter une chaîne. Si vous utilisez sp_executesql, seules 12 versions de la chaîne INSERT sont générées (une par table mensuelle). Avec EXECUTE, chaque chaîne INSERT est unique car les valeurs de paramètres diffèrent. Bien que ces deux méthodes génèrent le même nombre de traitements d'instructions, la similitude des chaînes INSERT générées par sp_executesql renforce la probabilité de réutilisation des plans d'exécution par l'optimiseur de requête.  
   
 ### <a name="c-using-the-output-parameter"></a>C. Utilisation du paramètre OUTPUT  
- L’exemple suivant utilise un `OUTPUT` paramètre permettant de stocker le jeu de résultats généré par le `SELECT` instruction dans le `@SQLString` paramètre. Deux `SELECT` instructions sont ensuite exécutées qui utilisent la valeur de la `OUTPUT` paramètre.  
+ L’exemple suivant utilise un `OUTPUT` paramètre pour stocker le jeu de résultats généré par `SELECT` l’instruction dans `@SQLString` le paramètre. Deux `SELECT` instructions sont ensuite exécutées qui utilisent la valeur du `OUTPUT` paramètre.  
   
 ```  
 USE AdventureWorks2012;  

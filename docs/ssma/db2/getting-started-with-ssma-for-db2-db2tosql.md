@@ -1,5 +1,5 @@
 ---
-title: Bien démarrer avec SSMA pour DB2 (DB2ToSQL) | Microsoft Docs
+title: Prise en main avec SSMA pour DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,100 +10,100 @@ ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989638"
 ---
-# <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Bien démarrer avec SSMA pour DB2 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour DB2 vous permet de rapidement convertir des schémas de base de données DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas, charger les schémas qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et migrer les données de DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Prise en main avec SSMA pour DB2 (DB2ToSQL)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour DB2 vous permet de convertir rapidement les schémas de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données DB2 en schémas, de charger les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas résultants dans et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrer des données de DB2 vers.  
   
-Cette rubrique présente le processus d’installation et permet de vous familiariser avec l’interface utilisateur SSMA.  
+Cette rubrique présente le processus d’installation de, puis vous aide à vous familiariser avec l’interface utilisateur SSMA.  
   
 ## <a name="installing-ssma"></a>Installation de SSMA  
-Pour utiliser SSMA, vous devez d’abord installer le programme du client SSMA sur un ordinateur pouvant accéder à la base de données source DB2 et l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les fournisseurs OLE DB DB2 sur l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces composants prennent en charge la migration des données et l’émulation des fonctions du système DB2. Pour obtenir des instructions d’installation, consultez [l’installation de SSMA pour DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md).  
+Pour utiliser SSMA, vous devez d’abord installer le programme client SSMA sur un ordinateur qui peut accéder à la base de données DB2 source et à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance cible de. Fournisseurs OLEDB DB2 sur l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces composants prennent en charge la migration des données et l’émulation des fonctions système DB2. Pour obtenir des instructions d’installation, consultez [installation de SSMA pour DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md).  
   
-Pour démarrer SSMA, cliquez sur **Démarrer**, pointez sur **tous les programmes**, pointez sur  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Assistant de Migration pour DB2**, puis cliquez sur  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant de migration pour DB2**.  
+Pour démarrer SSMA, cliquez sur **Démarrer**, pointez sur **tous les programmes**, sur ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Migration pour DB2**, puis cliquez sur ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Migration pour DB2**.  
   
-## <a name="ssma-for-db2-user-interface"></a>SSMA pour Interface utilisateur de DB2  
-Une fois SSMA est installé, vous pouvez utiliser SSMA pour migrer des bases de données DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela permet de vous familiariser avec l’interface utilisateur SSMA avant de commencer. Le diagramme suivant illustre l’interface utilisateur de SSMA, y compris les explorateurs de métadonnées, métadonnées, barres d’outils, sortie et volet Liste d’erreur :  
+## <a name="ssma-for-db2-user-interface"></a>SSMA pour l’interface utilisateur DB2  
+Après l’installation de SSMA, vous pouvez utiliser SSMA pour migrer des bases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de données DB2 vers. Il vous permet de vous familiariser avec l’interface utilisateur SSMA avant de commencer. Le diagramme suivant illustre l’interface utilisateur pour SSMA, y compris les explorateurs de métadonnées, les métadonnées, les barres d’outils, le volet de sortie et le volet Liste d’erreurs :  
   
 ![Interface utilisateur SSMA](../../ssma/db2/media/ssma_db2_ui.png "Interface utilisateur SSMA")  
   
-Pour démarrer une migration, vous devez d’abord créer un nouveau projet. Ensuite, vous vous connectez à une base de données DB2. Après une connexion réussie, les schémas DB2 seront affiche dans l’Explorateur de métadonnées DB2. Vous pouvez ensuite les objets avec le bouton droit dans l’Explorateur de métadonnées de DB2 pour effectuer des tâches telles que créent des rapports qui évaluent les conversions vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également effectuer ces tâches en utilisant les menus et barres d’outils.  
+Pour démarrer une migration, vous devez d’abord créer un nouveau projet. Ensuite, vous vous connectez à une base de données DB2. Après une connexion réussie, les schémas DB2 s’affichent dans l’Explorateur de métadonnées DB2. Vous pouvez ensuite cliquer avec le bouton droit sur des objets dans l’Explorateur de métadonnées DB2 pour effectuer des tâches telles que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]créer des rapports qui évaluent les conversions vers. Vous pouvez également effectuer ces tâches à l’aide des barres d’outils et des menus.  
   
-Vous devez également vous connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après une connexion réussie, une hiérarchie de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données apparaissent dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. Après la conversion de schémas DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas, sélectionnez ces schémas convertis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, puis synchronisez les schémas avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Vous devez également vous connecter à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Une fois la connexion établie, une hiérarchie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de bases de données s' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche dans l’Explorateur de métadonnées. Après avoir converti les schémas DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas, sélectionnez les schémas convertis dans l’Explorateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de métadonnées, puis synchronisez les schémas avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-Une fois que vous synchronisez des schémas convertis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez revenir à l’Explorateur de métadonnées de DB2 et migrer des données à partir de schémas DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  
+Après avoir synchronisé les schémas convertis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez revenir à l’Explorateur de métadonnées DB2 et migrer des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de schémas DB2 vers des bases de données.  
   
-Pour plus d’informations sur ces tâches et comment les exécuter, consultez [migration de bases de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
+Pour plus d’informations sur ces tâches et sur la façon de les effectuer, consultez [migration de bases de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
 Les sections suivantes décrivent les fonctionnalités de l’interface utilisateur SSMA.  
   
 ### <a name="metadata-explorers"></a>Explorateurs de métadonnées  
-SSMA contient deux explorateurs de métadonnées pour rechercher et effectuer des actions sur DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  
+SSMA contient deux explorateurs de métadonnées permettant de parcourir et d’effectuer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des actions sur DB2 et les bases de données.  
   
-#### <a name="db2-metadata-explorer"></a>DB2 Explorateur de métadonnées  
-Explorateur de métadonnées DB2 affiche des informations sur les schémas DB2. À l’aide de l’Explorateur de métadonnées DB2, vous pouvez effectuer les tâches suivantes :  
+#### <a name="db2-metadata-explorer"></a>Explorateur de métadonnées DB2  
+L’Explorateur de métadonnées DB2 affiche des informations sur les schémas DB2. À l’aide de l’Explorateur de métadonnées DB2, vous pouvez effectuer les tâches suivantes :  
   
--   Parcourir les objets dans chaque schéma.  
+-   Parcourez les objets dans chaque schéma.  
   
--   Sélectionner des objets pour la conversion et puis de convertir les objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntaxe. Pour plus d’informations, consultez [conversion des schémas DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   Sélectionnez les objets à convertir, puis convertissez les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en syntaxe. Pour plus d’informations, consultez [conversion de schémas DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
--   Sélectionner des tables pour la migration de données, puis migrer les données à partir de ces tables à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [migration de bases de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
+-   Sélectionnez tables pour la migration des données, puis migrez les données de ces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tables vers. Pour plus d’informations, consultez [migration de bases de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
 #### <a name="sql-server-metadata-explorer"></a>Explorateur de métadonnées SQL Server  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées affiche des informations sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA récupère les métadonnées relatives à cette instance et le stocke dans le fichier projet.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L’Explorateur de métadonnées affiche des informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur une instance de. Quand vous vous connectez à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, SSMA récupère les métadonnées relatives à cette instance et les stocke dans le fichier projet.  
   
-Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour sélectionner des objets de base de données DB2 convertis, puis synchroniser ces objets avec l’instance de l’Explorateur de métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Explorateur de métadonnées pour sélectionner les objets de base de données DB2 convertis, puis synchroniser ces objets avec l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="metadata"></a>Métadonnées  
-À droite de chaque Explorateur de métadonnées des onglets qui décrivent l’objet sélectionné. Par exemple, si vous sélectionnez une table dans l’Explorateur de métadonnées de DB2, six onglets s’affichent : **Table**, **SQL**, **mappage, le rapport de Type**, **propriétés**, et **données**. Le **rapport** onglet contient des informations uniquement après avoir créé un rapport qui contient l’objet sélectionné. Si vous sélectionnez une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, les trois onglets s’afficheront : **Table**, **SQL**, et **données**.  
+À droite de chaque Explorateur de métadonnées se trouvent des onglets qui décrivent l’objet sélectionné. Par exemple, si vous sélectionnez une table dans l’Explorateur de métadonnées DB2, six onglets s’affichent : **table**, **SQL**, **mappage de type, rapport**, **Propriétés**et **données**. L’onglet **rapport** contient des informations uniquement après que vous avez créé un rapport qui contient l’objet sélectionné. Si vous sélectionnez une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Explorateur de métadonnées, trois onglets s’affichent : **table**, **SQL**et **données**.  
   
 La plupart des paramètres de métadonnées sont en lecture seule. Toutefois, vous pouvez modifier les métadonnées suivantes :  
   
--   Dans l’Explorateur de métadonnées de DB2, vous pouvez modifier les procédures et mappages de type. Pour convertir les procédures modifiées et mappages de type, apporter des modifications avant de convertir des schémas.  
+-   Dans l’Explorateur de métadonnées DB2, vous pouvez modifier les procédures et les mappages de type. Pour convertir les procédures et les mappages de type modifiés, apportez les modifications nécessaires avant de convertir les schémas.  
   
--   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, vous pouvez modifier le [!INCLUDE[tsql](../../includes/tsql-md.md)] pour les procédures stockées. Pour voir ces modifications dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], apporter ces modifications avant de charger les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Explorateur de métadonnées, vous [!INCLUDE[tsql](../../includes/tsql-md.md)] pouvez modifier les procédures stockées. Pour voir ces modifications dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effectuez ces modifications avant de charger les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-Modifications apportées dans l’Explorateur de métadonnées sont répercutées dans les métadonnées du projet, pas dans les bases de données source ou cible.  
+Les modifications apportées dans un Explorateur de métadonnées sont reflétées dans les métadonnées du projet, et non dans les bases de données source ou cible.  
   
 ### <a name="toolbars"></a>Barres d'outils  
-SSMA a deux barres d’outils : une barre d’outils du projet et une barre d’outils de migration.  
+SSMA comporte deux barres d’outils : une barre d’outils de projet et une barre d’outils de migration.  
   
-#### <a name="the-project-toolbar"></a>La barre d’outils du projet  
-La barre d’outils du projet contient des boutons pour l’utilisation de projets, la connexion à DB2 et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces boutons se présenter comme les commandes sur le **fichier** menu.  
+#### <a name="the-project-toolbar"></a>Barre d’outils du projet  
+La barre d’outils projet contient des boutons permettant d’utiliser des projets, de se connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à DB2 et de se connecter à. Ces boutons sont semblables aux commandes du menu **fichier** .  
   
-#### <a name="migration-toolbar"></a>Barre d’outils de migration  
-Le tableau suivant présente la migration des commandes de barre d’outils :  
+#### <a name="migration-toolbar"></a>Barre d’outils migration  
+Le tableau suivant présente les commandes de la barre d’outils migration :  
   
 |Bouton|Fonction|  
 |------|--------|  
-|**Créer des rapports**|Convertit les objets sélectionnés de DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntaxe, puis crée un rapport qui indique le succès de la conversion a.<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées DB2.|  
-|**Convertir le schéma**|Convertit les objets sélectionnés de DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets.<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées DB2.|  
-|**Migrer des données**|Migre les données à partir de la base de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avant d’exécuter cette commande, vous devez convertir les schémas DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas, puis charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées DB2.|  
-|**Arrêter**|Arrête le processus en cours.|  
+|**Créer un rapport**|Convertit les objets DB2 sélectionnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en syntaxe, puis crée un rapport qui indique la réussite de la conversion.<br /><br />Cette commande est désactivée, à moins que les objets ne soient sélectionnés dans l’Explorateur de métadonnées DB2.|  
+|**Convertir le schéma**|Convertit les objets DB2 sélectionnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en objets.<br /><br />Cette commande est désactivée, à moins que les objets ne soient sélectionnés dans l’Explorateur de métadonnées DB2.|  
+|**Migrer des données**|Migre les données de la base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données DB2 vers. Avant d’exécuter cette commande, vous devez convertir les schémas DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas, puis charger les objets dans. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br />Cette commande est désactivée, à moins que les objets ne soient sélectionnés dans l’Explorateur de métadonnées DB2.|  
+|**Stop**|Arrête le processus en cours.|  
   
 ### <a name="menus"></a>Menus  
 Le tableau suivant présente les menus SSMA.  
   
 |Menu|Description|  
 |----|-----------|  
-|**File**|Contient des commandes pour travailler avec des projets, la connexion à DB2 et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Edition**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails, telles que la copie [!INCLUDE[tsql](../../includes/tsql-md.md)] depuis le volet de détails SQL. Contient également le **gérer les signets** option, où vous serez en mesure de voir une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Affichage**|Contient le **synchroniser les explorateurs de métadonnées** commande. Qui synchronise les objets entre l’Explorateur de métadonnées de DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les dispositions.|  
-|**Outils**|Contient des commandes pour créer des rapports et de migrer des objets et données. Permet également d’accéder à la **paramètres globaux** et **paramètres du projet** boîtes de dialogue.|  
-|**Aide**|Fournit l’accès à l’aide de SSMA et en le **sur** boîte de dialogue.|  
+|**Fichier**|Contient des commandes pour travailler avec des projets, se connecter à DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se connecter à.|  
+|**Modifier**|Contient des commandes pour rechercher et utiliser du texte dans les pages de détails, telles [!INCLUDE[tsql](../../includes/tsql-md.md)] que la copie à partir du volet d’informations SQL. Contient également l’option **gérer les signets** , dans laquelle vous pouvez afficher la liste des signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
+|**Afficher**|Contient la commande **synchroniser les explorateurs de métadonnées** . Qui synchronise les objets entre l’Explorateur de métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 et l’Explorateur de métadonnées. Contient également des commandes pour afficher et masquer les volets **sortie** et **liste d’erreurs** , ainsi qu’une **disposition** d’options pour gérer les dispositions.|  
+|**Outils**|Contient des commandes pour créer des rapports et migrer des objets et des données. Permet également d’accéder aux boîtes de dialogue **paramètres globaux** et **paramètres du projet** .|  
+|**Aide**|Fournit l’accès à l’aide de SSMA et à la boîte de dialogue **à propos** de.|  
   
-### <a name="output-pane-and-error-list-pane"></a>Volets de sortie et erreur liste  
-Le **vue** menu fournit des commandes pour activer/désactiver la visibilité du volet sortie et le volet de la liste d’erreurs :  
+### <a name="output-pane-and-error-list-pane"></a>Volet de sortie et volet de Liste d’erreurs  
+Le menu **affichage** fournit des commandes pour activer/désactiver la visibilité du volet de sortie et du volet de liste d’erreurs :  
   
--   Le volet de sortie affiche les messages d’état à partir de SSMA pendant la conversion des objets, la synchronisation de l’objet et la migration des données.  
+-   Le volet sortie affiche les messages d’état de SSMA lors de la conversion d’objets, de la synchronisation d’objets et de la migration des données.  
   
--   Le volet de liste d’erreurs affiche les messages d’erreur, avertissement et d’information dans une liste pouvant être triée.  
+-   Le volet Liste d’erreurs affiche les messages d’erreur, d’avertissement et d’information dans une liste pouvant être triée.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration de données DB2 dans SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-[Référence de l’Interface utilisateur &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[Migration de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[Référence de l’interface utilisateur &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

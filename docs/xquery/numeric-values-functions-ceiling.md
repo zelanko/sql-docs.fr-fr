@@ -1,5 +1,5 @@
 ---
-title: Fonction CEILING (XQuery) | Microsoft Docs
+title: Fonction ceiling (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946576"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Fonctions de valeurs numériques : ceiling 
@@ -39,19 +39,19 @@ fn:ceiling ( $arg as numeric?) as numeric?
  Nombre à laquelle s'applique la fonction.  
   
 ## <a name="remarks"></a>Notes  
- Si le type de *$arg* est un des trois types numériques de base, **xs : float**, **xs : double**, ou **xs : decimal**, le type de retour est identique à le *$arg* type.  
+ Si le type de *$arg* est l’un des trois types numériques de base, **XS : float**, **XS : double**ou **XS : Decimal**, le type de retour est le même que le type de *$arg* .  
   
- Si le type de *$arg* est un type qui est dérivé d’un des types numériques, le type de retour est le type de base numérique.  
+ Si le type de *$arg* est un type dérivé de l’un des types numériques, le type de retour est le type numérique de base.  
   
- Si l’entrée pour les fonctions de valeur, fn : Ceiling ou fn : Round est **xdt : untypedAtomic**, elle est implicitement convertie en **xs : double**.  
+ Si l’entrée des fonctions FN : Floor, fn : Ceiling ou FN : Round est **xdt : untypedAtomic**, elle est implicitement convertie en **XS : double**.  
   
  Tout autre type génère une erreur statique.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>R. Utilisation de la fonction ceiling() de XQuery  
- Pour le modèle de produit 7, cette requête renvoie une liste des postes de travail que compte le processus de fabrication du modèle de produit. Pour chaque poste de travail, la requête renvoie l'ID, les heures de main-d'œuvre et la taille des lots, le cas échéant. La requête utilise le **ceiling** fonction pour retourner les heures de main-d'œuvre sous forme de valeurs de type **décimal**.  
+ Pour le modèle de produit 7, cette requête renvoie une liste des postes de travail que compte le processus de fabrication du modèle de produit. Pour chaque poste de travail, la requête renvoie l'ID, les heures de main-d'œuvre et la taille des lots, le cas échéant. La requête utilise la fonction **Ceiling** pour retourner les heures de main-d’œuvre en tant que valeurs de type **Decimal**.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -73,15 +73,15 @@ WHERE ProductModelID=7
   
 -   Le préfixe d'espace de noms AWMI signifie Adventure Works Manufacturing Instructions (instructions de fabrication d'Adventure Works). Ce préfixe fait référence à l'espace de noms utilisé dans le document interrogé.  
   
--   **Instructions** est un **xml** colonne de type. Par conséquent, le [méthode query() (type de données XML)](../t-sql/xml/query-method-xml-data-type.md) est utilisé pour spécifier une requête XQuery. L'instruction XQuery est spécifiée comme argument de la méthode query.  
+-   **Instructions** est une colonne de type **XML** . Par conséquent, la [méthode Query () (type de données XML)](../t-sql/xml/query-method-xml-data-type.md) est utilisée pour spécifier XQuery. L'instruction XQuery est spécifiée comme argument de la méthode query.  
   
--   **pour... retourner** est une construction de boucle. Dans la requête, le **pour** boucle identifie une liste de \<emplacement > éléments. Pour chaque poste de travail, le **retourner** instruction dans le **pour** boucle décrit le code XML à générer :  
+-   **pour... Return** est une construction de boucle. Dans la requête, la boucle **for** identifie une liste d' \<emplacements> éléments. Pour chaque poste de travail, l’instruction **Return** dans la boucle **for** décrit le XML à générer :  
   
-    -   Un \<emplacement > élément possédant les attributs LocationID et LaborHrs. L'expression correspondante entre accolades ({ }) récupère les valeurs requises à partir du document.  
+    -   \<Emplacement> élément ayant des attributs LocationID et LaborHrs. L'expression correspondante entre accolades ({ }) récupère les valeurs requises à partir du document.  
   
-    -   Le {$i/@LotSize } expression récupère l’attribut LotSize du document, le cas échéant.  
+    -   L’expression {i/@LotSize $} extrait l’attribut de volume du document, le cas échéant.  
   
-    -   Voici le résultat obtenu :  
+    -   Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result    
@@ -97,10 +97,10 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   Le **ceiling()** fonction mappe toutes les valeurs entières à xs : decimal.  
+-   La fonction **Ceiling ()** associe toutes les valeurs entières à XS : Decimal.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction FLOOR &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [Fonction Floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
  [Fonction Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   
   

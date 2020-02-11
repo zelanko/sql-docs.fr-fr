@@ -1,5 +1,5 @@
 ---
-title: Options (résultats de SQL Server-résultats de la requête à la Page de texte) | Microsoft Docs
+title: Options (résultats de la requête-SQL Server des résultats dans une page de texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,41 +13,41 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090020"
 ---
-# <a name="options-query-results-sql-server-results-to-text-page"></a>Options (résultats de SQL Server-résultats de la requête à la Page de texte)
-  Utilisez cette page pour définir les options d'affichage d'un jeu de résultats de requête au format texte. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour que ces modifications s’appliquent aux requêtes en cours, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit sur la fenêtre Requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**. Dans la boîte de dialogue **Options de requête**, sous **Résultats**, cliquez sur **Texte**.  
+# <a name="options-query-results-sql-server-results-to-text-page"></a>Options (résultats de la requête-SQL Server des résultats dans une page de texte)
+  Utilisez cette page pour définir les options d'affichage d'un jeu de résultats de requête au format texte. Les modifications apportées à ces options sont [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] appliquées uniquement aux nouvelles requêtes. Pour modifier les options des requêtes en cours, cliquez **sur options de requête** dans le menu **requête** ou cliquez avec le bouton [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] droit dans la fenêtre de requête et sélectionnez **options de requête**. Dans la boîte de dialogue **Options de requête**, sous **Résultats**, cliquez sur **Texte**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Format de sortie**  
  Par défaut, la sortie est affichée sous la forme de colonnes créées par le remplissage des résultats à l'aide d'espaces. Vous pouvez également utiliser des virgules, des tabulations ou des espaces pour séparer les colonnes. Sélectionnez **Délimiteur personnalisé** dans cette liste déroulante pour spécifier un autre séparateur dans la zone de texte **Délimiteur personnalisé**.  
   
- **Séparateur personnalisé**  
+ **Délimiteur personnalisé**  
  Indiquez le caractère à utiliser pour séparer les colonnes. Cette zone de texte est disponible uniquement si vous avez cliqué sur Délimiteur personnalisé dans la zone de liste déroulante **Format de sortie**.  
   
- **Inclure des en-têtes de colonne dans l'ensemble de résultats**  
+ **Inclure les en-têtes de colonnes dans le jeu de résultats**  
  Désactivez cette case à cocher si vous ne voulez pas que chaque colonne soit étiquetée au moyen d'un titre de colonne.  
   
- **Inclure la requête dans l'ensemble de résultats**  
+ **Inclure la requête dans le jeu de résultats**  
  Activez cette case à cocher pour inclure le texte de la requête en cours d'exécution dans le volet de résultats avant les résultats de la requête.  
   
- **Défilement pendant réception des résultats**  
+ **Défilement au fur et à mesure de la réception des résultats**  
  Activez cette case à cocher pour suivre l'exécution de la requête et afficher les enregistrements les plus récents à la fin de l'ensemble de résultats. Désactivez-la pour cibler l'affichage sur les premières lignes retournées.  
   
  **Aligner les valeurs numériques à droite**  
  Activez cette case à cocher pour aligner les valeurs numériques à droite de la colonne. Cela peut faciliter l'analyse de nombres comportant un nombre de décimales invariable.  
   
- **Ignorer les résultats après l'exécution de la requête**  
+ **Ignorer le résultat après l’exécution de la requête**  
  Activez cette case à cocher pour ignorer les résultats de la requête une fois qu'ils sont affichés dans le volet de résultats de la fenêtre de la requête.  
   
  **Afficher les résultats dans un onglet séparé**  
  Activez cette case à cocher pour afficher l'ensemble de résultats dans une nouvelle fenêtre de document, et non au bas de la fenêtre de document de la requête.  
   
- **Basculer vers l'onglet des résultats après l'exécution de la requête**  
+ **Basculer vers l’onglet résultats après l’exécution de la requête**  
  Activez cette case à cocher pour afficher automatiquement l'ensemble de résultats à l'écran.  
   
  **Nombre maximal de caractères affichés dans chaque colonne**  

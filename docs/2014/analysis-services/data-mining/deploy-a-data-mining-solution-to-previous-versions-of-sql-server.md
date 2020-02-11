@@ -1,5 +1,5 @@
 ---
-title: Déployer une Solution d’exploration de données aux Versions précédentes de SQL Server | Microsoft Docs
+title: Déployer une solution d’exploration de données dans des versions antérieures de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084676"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Déployer une solution d'exploration de données sur des versions antérieures de SQL Server
@@ -32,15 +32,15 @@ ms.locfileid: "66084676"
   
  [Déploiement de modèles de séries chronologiques](#bkmk_TimeSeries)  
   
- [Déploiement de modèles avec données d'exclusion](#bkmk_Holdout)  
+ [Déploiement de modèles avec exclusion](#bkmk_Holdout)  
   
- [Déploiement de modèles avec filtres](#bkmk_Filter)  
+ [Déploiement de modèles avec des filtres](#bkmk_Filter)  
   
- [Restauration à partir de sauvegardes de base de données](#bkmk_Backup)  
+ [Restauration à partir de sauvegardes de bases de données](#bkmk_Backup)  
   
  [Utilisation de la synchronisation de base de données](#bkmk_Synch)  
   
-##  <a name="bkmk_TimeSeries"></a> Déploiement de modèles de séries chronologiques  
+##  <a name="bkmk_TimeSeries"></a>Déploiement des modèles de série Times  
  L'algorithme MTS (Microsoft Time Series) a été amélioré dans SQL Server 2008 grâce à l'ajout d'un second algorithme complémentaire, ARIMA. Pour plus d’informations sur les modifications apportées à l’algorithme MTS, consultez [Algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm.md).  
   
  Par conséquent, les modèles d'exploration de données de série chronologique qui utilisent le nouvel algorithme ARIMA peuvent se comporter différemment lorsqu'ils sont déployés sur une instance de SQL Server 2005 Analysis Services.  
@@ -55,24 +55,24 @@ ms.locfileid: "66084676"
   
  Si le fournisseur utilisé pour la source de données du modèle est SQL Server ou le fournisseur de données SQL Client 10, vous devez aussi modifier la définition de la source de données pour spécifier la version antérieure de SQL Server Native Client. Sinon, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] génère une erreur indiquant que le fournisseur n'est pas enregistré.  
   
-##  <a name="bkmk_Holdout"></a> Déploiement de modèles avec données d'exclusion  
+##  <a name="bkmk_Holdout"></a>Déploiement de modèles avec exclusion  
  Si vous utilisez [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] pour créer une structure d'exploration de données qui contient une partition d'exclusion utilisée pour tester les modèles d'exploration de données, la structure d'exploration de données peut être déployée sur une instance de SQL Server 2005, mais les informations de partition seront perdues.  
   
  Lorsque vous ouvrez la structure d'exploration de données dans SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] génère une erreur, puis régénère la structure pour supprimer la partition d'exclusion.  
   
- Une fois que la structure a été régénérée, la taille de la partition d’exclusion n’est plus disponible dans la fenêtre Propriétés. Toutefois, la valeur \<ddl100_100 : holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) peuvent toujours être présents dans le fichier de script ASSL.  
+ Une fois la structure régénérée, la taille de la partition exclusion n’est plus disponible dans le Fenêtre Propriétés ; Toutefois, la valeur \<Ddl100_100 : HoldoutMaxPercent>30\</ddl100_100 : HoldoutMaxPercent>) peut toujours être présente dans le fichier de script ASSL.  
   
-##  <a name="bkmk_Filter"></a> Déploiement de modèles avec filtres  
+##  <a name="bkmk_Filter"></a>Déploiement de modèles avec des filtres  
  Si vous utilisez [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] pour appliquer un filtre à un modèle d'exploration de données, le modèle peut être déployé sur une instance de SQL Server 2005, mais le filtre ne sera pas appliqué.  
   
  Lorsque vous ouvrez le modèle d'exploration de données, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] génère une erreur, puis régénère le modèle pour supprimer le filtre.  
   
-##  <a name="bkmk_Backup"></a> Restauration à partir de sauvegardes de base de données  
+##  <a name="bkmk_Backup"></a>Restauration à partir de sauvegardes de bases de données  
  Vous ne pouvez pas restaurer une sauvegarde de base de données créée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers une instance de SQL Server 2005. Si vous le faites, SQL Server Management Studio génère une erreur.  
   
  Si vous créez une sauvegarde d'une base de données SQL Server 2005 Analysis Services et restaurez cette sauvegarde sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tous les modèles de séries chronologiques sont modifiés comme indiqué dans la section précédente.  
   
-##  <a name="bkmk_Synch"></a> Utilisation de la synchronisation de base de données  
+##  <a name="bkmk_Synch"></a>Utilisation de la synchronisation de base de données  
  La synchronisation de base de données n'est pas prise en charge de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers SQL Server 2005.  
   
  Si vous essayez de synchroniser une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , le serveur retourne une erreur et la synchronisation de la base de données échoue.  

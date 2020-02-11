@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478893"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Envoyer par courrier électronique un fichier de requête de raccourci (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous pouvez envoyer par e-mail un fichier de requête de raccourci à un autre utilisateur quand vous voulez vous assurer qu’il utilise les mêmes données que vous. Il est préférable de partager les requêtes plutôt qu'enregistrer la feuille de calcul et l'envoyer par courrier électronique.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir installé Outlook 2010 ou une version ultérieure.  
@@ -29,7 +29,7 @@ ms.locfileid: "65478893"
   
 ### <a name="to-send-a-shortcut-query-file"></a>Pour envoyer un fichier de requête de raccourci  
   
-1.  Assurez-vous que les données dans la feuille de calcul sont au format que vous souhaitez partager. Pour plus d’informations sur le filtrage des données et la réorganisation des colonnes, consultez [filtrer les données avant le chargement &#40;complément MDS pour Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) et [réorganiser des colonnes &#40;complément MDS pour Excel&#41; ](reorder-columns-mds-add-in-for-excel.md).  
+1.  Assurez-vous que les données dans la feuille de calcul sont au format que vous souhaitez partager. Pour plus d’informations sur le filtrage des données et la réorganisation des colonnes, consultez [Filtrer les données avant de charger &#40;Complément MDS pour Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) et [Réorganiser les colonnes &#40;complément MDS pour Excel ](reorder-columns-mds-add-in-for-excel.md)&#41;.  
   
 2.  Dans le groupe **Enregistrer et envoyer** , cliquez sur **Envoyer une requête**. Un message électronique s'ouvre et le fichier de requête de raccourci est joint au courrier.  
   

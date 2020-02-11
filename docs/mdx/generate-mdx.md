@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005903"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -33,21 +33,21 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression1*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Set_Expression2*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *String_Expression*  
  Expression de chaîne valide qui correspond généralement au nom du membre actuel (CurrentMember.Name) de chaque tuple dans le jeu spécifié.  
   
- *Délimiteur*  
+ *Delimiter*  
  Délimiteur valide exprimé en tant qu'expression de chaîne.  
   
 ## <a name="remarks"></a>Notes  
- Si un deuxième jeu est spécifié, le **générer** fonction retourne un jeu généré en appliquant les tuples dans le deuxième jeu à chaque tuple dans le premier jeu, et puis associant les jeux obtenus par union. Si **tous les** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
+ Si un deuxième jeu est spécifié, la fonction **generate** retourne un jeu généré en appliquant les tuples du deuxième jeu à chaque tuple du premier jeu, puis en joignant les jeux résultants par Union. Si **All** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
   
- Si une expression de chaîne est spécifiée, le **générer** fonction retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple dans le premier jeu et puis en concaténant les résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
+ Si une expression de chaîne est spécifiée, la fonction **generate** retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple du premier jeu, puis en concaténant les résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -72,7 +72,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- L’utilisation pratique la plus commune de **générer** est définie pour évaluer un type complexe expression, telle que TopCount, sur un jeu de membres. L'exemple de requête suivant affiche les 10 premiers produits pour chaque année civile sur les lignes :  
+ L’utilisation pratique la plus courante de la **génération** consiste à évaluer une expression d’ensemble complexe, telle que TopCount, sur un ensemble de membres. L'exemple de requête suivant affiche les 10 premiers produits pour chaque année civile sur les lignes :  
   
 ```  
 SELECT   
@@ -89,7 +89,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- Notez qu’un différent des 10 premiers sont affiché pour chaque année et que l’utilisation de **générer** est le seul moyen pour obtenir ce résultat. La simple jonction croisée des années civiles et du jeu des 10 premiers produits affichent les 10 premiers produits pour toutes les périodes, pour chaque année, comme illustré dans l'exemple suivant :  
+ Notez qu’une valeur Top 10 différente est affichée pour chaque année, et que l’utilisation de la fonction **generate** est la seule façon d’obtenir ce résultat. La simple jonction croisée des années civiles et du jeu des 10 premiers produits affichent les 10 premiers produits pour toutes les périodes, pour chaque année, comme illustré dans l'exemple suivant :  
   
 ```  
 SELECT   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ### <a name="string"></a>String  
- L’exemple suivant illustre l’utilisation de **générer** pour retourner une chaîne :  
+ L’exemple suivant illustre l’utilisation de la commande **generate** pour retourner une chaîne :  
   
 ```  
 WITH   
@@ -124,9 +124,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Cette forme de la **générer** fonction peut être utile lors du débogage des calculs, car elle permet de renvoyer une chaîne qui affiche les noms de tous les membres dans un jeu. Cela peut être plus facile à lire que la représentation MDX stricte d’un jeu qui le [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) fonction renvoie.  
+>  Cette forme de la fonction **generate** peut être utile lors du débogage des calculs, car elle vous permet de retourner une chaîne affichant les noms de tous les membres d’un jeu. Cela peut être plus facile à lire que la représentation MDX stricte d’un ensemble que la fonction [SetToStr &#40;mdx&#41;](../mdx/settostr-mdx.md) retourne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

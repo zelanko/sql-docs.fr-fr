@@ -11,45 +11,45 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266543"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Actualiser à partir de la base de données (OracleToSQL)
-Le **Actualiser à partir de la base de données** boîte de dialogue vous permet de sélectionner les objets à actualiser à partir de la base de données Oracle. Lignes dans la boîte de dialogue sont codées par couleur selon l’état des métadonnées :  
+La boîte **de dialogue actualiser à partir de la base de données** vous permet de sélectionner les objets à actualiser à partir de la base de données Oracle. Les lignes de la boîte de dialogue sont codées par couleur en fonction de l’état des métadonnées :  
   
--   Si les métadonnées de l’objet a été modifié localement et dans la base de données Oracle, la ligne est bleu.  
+-   Si les métadonnées de l’objet ont été modifiées localement et dans la base de données Oracle, la ligne est bleue.  
   
--   Si les métadonnées de l’objet a changé dans la base de données Oracle, mais pas dans SSMA, la ligne est jaune.  
+-   Si les métadonnées de l’objet ont été modifiées dans la base de données Oracle, mais pas dans SSMA, la ligne est en jaune.  
   
--   Si les métadonnées de l’objet a été modifié localement, mais pas dans la base de données Oracle, la ligne est vert.  
+-   Si les métadonnées de l’objet ont été modifiées localement, mais pas dans la base de données Oracle, la ligne est verte.  
   
 -   Si l’objet est nouveau dans la base de données Oracle, la ligne est rose.  
   
-Vous pouvez spécifier des paramètres d’actualisation objet par défaut dans le **paramètres du projet** boîte de dialogue. Pour plus d’informations, consultez [paramètres du projet&#40;synchronisation&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+Vous pouvez spécifier les paramètres d’actualisation des objets par défaut dans la boîte de dialogue **paramètres du projet** . Pour plus d’informations, consultez [paramètres du projet&#40;synchronisation&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
   
-Pour accéder à la **Actualiser à partir de la base de données** boîte de dialogue, avec le bouton droit, un objet dans l’Explorateur de métadonnées d’Oracle et cliquez sur **Actualiser à partir de la base de données**.  
+Pour accéder à la boîte **de dialogue actualiser à partir de la base de données** , cliquez avec le bouton droit sur un objet dans l’Explorateur de métadonnées Oracle, puis cliquez sur **Actualiser à partir**  
   
 ## <a name="options"></a>Options  
-**Réduction (-)**  
-Réduire tous les groupes d’objets pour masquer les objets individuels.  
+**Réduire (-)**  
+Réduisez tous les groupes d’objets pour masquer des objets individuels.  
   
-**Développement (+)**  
-Développez tous les groupes d’objets pour afficher les objets individuels.  
+**Développer (+)**  
+Développez tous les groupes d’objets pour afficher des objets individuels.  
   
-**Masquer/afficher les objets identiques**  
-Masquer les objets dans la liste si les métadonnées d’objet sont le même dans la base de données Oracle et de SSMA.  
+**Masquer/afficher les objets égaux**  
+Masque les objets de la liste si les métadonnées de l’objet sont identiques dans la base de données Oracle et dans SSMA.  
   
-**Actualiser à partir de la base de données (flèche)**  
-Utilisez le bouton fléché pour spécifier que les métadonnées pour les objets sélectionnés doivent être mis à jour dans SSMA.  
+**Actualiser à partir de la base de données (bouton fléché)**  
+Utilisez le bouton fléché pour spécifier que les métadonnées des objets sélectionnés doivent être mises à jour dans SSMA.  
   
-**Faire pas actualiser à partir de la base de données (bouton) X**  
-Utilisez le bouton X pour spécifier que les métadonnées pour les objets sélectionnés ne doivent pas mis à jour dans SSMA.  
+**Ne pas actualiser à partir de la base de données (bouton X)**  
+Utilisez le bouton X pour spécifier que les métadonnées des objets sélectionnés ne doivent pas être mises à jour dans SSMA.  
   
 **Légende**  
-Affiche un **légende** boîte de dialogue. La légende contient le mappage entre les couleurs de ligne et les États de métadonnées.  
+Affiche une boîte de dialogue **légende** . La légende contient le mappage entre les couleurs des lignes et les États des métadonnées.  
   
-Pour conserver le **légende** boîte de dialogue en haut de la **Actualiser à partir de la base de données** boîte de dialogue, sélectionnez le **afficher en haut** case à cocher.  
+Pour conserver la boîte de dialogue **légende** au-dessus de la boîte de dialogue **Actualiser à partir de la base de données** , activez la case à cocher Afficher par- **dessus** .  
   

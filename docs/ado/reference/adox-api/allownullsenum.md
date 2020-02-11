@@ -16,21 +16,21 @@ ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48e9d8c40d2ab76b902d285526fcd9e9abf7be07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967336"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
-Spécifie si les enregistrements avec des valeurs null sont indexés.  
+Spécifie si les enregistrements avec des valeurs NULL sont indexés.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adIndexNullsAllow**|0|L’index n’autorise pas les entrées dans lequel les colonnes clés sont null. Si une valeur null est entrée dans une colonne clé, l’entrée est insérée dans l’index.|  
-|**adIndexNullsDisallow**|1|Valeur par défaut. L’index n’autorise pas les entrées dans lequel les colonnes clés sont null. Si une valeur null est entrée dans une colonne clé, une erreur se produit.|  
-|**adIndexNullsIgnore**|2|L’index n’insère pas les entrées contenant des clés null. Si une valeur null est entrée dans une colonne clé, l’entrée est ignorée et aucune erreur ne se produit.|  
-|**adIndexNullsIgnoreAny**|4|L’index n’insère pas d’entrées où une colonne clé contient une valeur null. Pour un index ayant un plusieurs colonnes clés, si une valeur null est entrée dans une colonne, l’entrée est ignorée et aucune erreur ne se produit.|  
+|**adIndexNullsAllow**|0|L’index autorise les entrées dans lesquelles les colonnes clés ont la valeur null. Si une valeur null est entrée dans une colonne clé, l’entrée est insérée dans l’index.|  
+|**adIndexNullsDisallow**|1|valeur par défaut. L’index n’autorise pas les entrées dans lesquelles les colonnes clés ont la valeur null. Si vous entrez une valeur null dans une colonne clé, une erreur se produit.|  
+|**adIndexNullsIgnore**|2|L’index n’insère pas d’entrées contenant des clés NULL. Si une valeur null est entrée dans une colonne clé, l’entrée est ignorée et aucune erreur ne se produit.|  
+|**adIndexNullsIgnoreAny**|4|L’index n’insère pas d’entrées pour lesquelles une colonne clé a une valeur null. Pour un index ayant une clé à plusieurs colonnes, si une valeur null est entrée dans une colonne, l’entrée est ignorée et aucune erreur ne se produit.|  
   
 ## <a name="applies-to"></a>S'applique à  
  [IndexNulls, propriété (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

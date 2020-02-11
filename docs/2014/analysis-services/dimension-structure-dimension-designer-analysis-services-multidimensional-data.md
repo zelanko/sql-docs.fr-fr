@@ -1,5 +1,5 @@
 ---
-title: Dimension de Structure (Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Structure de dimension (Concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081750"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Structure de dimension (Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   La page **Structure de dimension** du Concepteur de dimensions permet de modifier les attributs, les hiérarchies et les niveaux de la dimension sélectionnée. La page **Structure de dimension** comporte une barre d'outils et trois volets.  
   
- **Pour afficher la page Structure de Dimension**  
+ **Pour afficher la page Structure de dimension**  
   
 -   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis ouvrez la dimension que vous souhaitez afficher.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66081750"
 ## <a name="panes"></a>Volets  
  La page **Structure de dimension** contient les volets suivants :  
   
- [Vue de Source de données](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Vue de source de données](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilisez le volet **Vue de source de données** pour explorer et gérer la vue de source de données associée à une dimension.  
   
  [Hierarchies](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
@@ -44,8 +44,8 @@ ms.locfileid: "66081750"
  Utilisez le volet **Attributs** pour explorer et gérer les attributs d’une dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Concepteur de dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

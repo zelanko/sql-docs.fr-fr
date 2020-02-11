@@ -1,5 +1,5 @@
 ---
-title: Fin de l’Assistant (Assistant vue de Source de données) (Analysis Services) | Microsoft Docs
+title: Fin de l’Assistant (Assistant vue de source de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5dce0aa56997537e4911b0607ca9fba392dd847
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087640"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>Fin de l'Assistant (Assistant Vue de source de données) (Analysis Services)
-  Utilisez la page **Fin de l'Assistant** de l'Assistant pour définir le nom de la vue de source de données et vérifier les tables et les vues incluses dans la vue. Après avoir cliqué sur **Terminer**, vous pouvez utiliser le Concepteur de vue de source de données pour modifier les propriétés de la vue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur le Concepteur de vue de source de données, consultez [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+  Utilisez la page **Fin de l'Assistant** de l'Assistant pour définir le nom de la vue de source de données et vérifier les tables et les vues incluses dans la vue. Après avoir cliqué sur **Terminer**, vous pouvez utiliser le Concepteur de vue de source de données pour modifier les propriétés de la vue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur le Concepteur de vue de source de données, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="options"></a>Options  
  **Nom**  
  Entrez le nom de la vue de source de données. Le nom de la source de données est utilisé par défaut.  
   
- **Aperçu**  
+ **Préversion**  
  Affiche les tables et les vues incluses dans la vue de source de données. Cliquez sur **Précédent** pour effectuer des modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de données Source vue Assistant &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
+ [Aide (F1) de l’Assistant vue de source de données &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
   
   

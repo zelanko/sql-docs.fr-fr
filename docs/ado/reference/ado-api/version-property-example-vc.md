@@ -1,5 +1,5 @@
 ---
-title: Version, exemple de propriété (VC ++) | Microsoft Docs
+title: Version, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,27 +15,27 @@ ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938697"
 ---
 # <a name="version-property-example-vc"></a>Version, exemple de propriété (VC++)
-Cet exemple utilise le [Version](../../../ado/reference/ado-api/version-property-ado.md) propriété d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet pour afficher la version actuelle de ADO. Il utilise également plusieurs propriétés dynamiques pour afficher :  
+Cet exemple utilise la propriété [version](../../../ado/reference/ado-api/version-property-ado.md) d’un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) pour afficher la version ADO actuelle. Il utilise également plusieurs propriétés dynamiques pour afficher :  
   
--   Nom actuel de SGBD et version.  
+-   Nom et version du SGBD actuel.  
   
 -   Version de OLE DB.  
   
--   Nom du fournisseur et la version.  
+-   Nom et version du fournisseur.  
   
--   Version d’ODBC.  
+-   Version ODBC.  
   
--   Nom du pilote ODBC et la version.  
+-   Nom et version du pilote ODBC.  
   
 > [!NOTE]
->  Si vous vous connectez à un fournisseur de source de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = yes** ou **Integrated Security = SSPI** au lieu des ID d’utilisateur et mot de passe informations dans la chaîne de connexion.  
+>  Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = Yes** ou **Integrated Security = SSPI** à la place des informations d’ID d’utilisateur et de mot de passe dans la chaîne de connexion.  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version, propriété (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Fonctions de Trace système | Microsoft Docs
+title: Fonctions de trace système | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,16 @@ ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b5666ac53572ac728ff8bb0581eeafae9dce185e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950939"
 ---
 # <a name="system-trace-functions"></a>Fonctions de suivi système
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les fonctions de suivi système suivantes.  
   
 ## <a name="in-this-section"></a>Dans cette section  

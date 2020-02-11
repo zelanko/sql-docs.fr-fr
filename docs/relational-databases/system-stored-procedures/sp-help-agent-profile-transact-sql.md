@@ -16,10 +16,10 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771456"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68771456"
 
   Affiche le profil de l'Agent indiqué. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="arguments"></a>Arguments  
 `[ @agent_type = ] agent_type`Type d’agent. *agent_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Agent d'instantané|  
 |**2**|l'Agent de lecture du journal ;|  
-|**3**|Agent de distribution|  
+|**1,3**|Agent de distribution|  
 |**4**|Agent de fusion|  
-|**9**|Agent de lecture de la file d'attente|  
+|**0,9**|Agent de lecture de la file d'attente|  
   
-`[ @profile_id = ] profile_id`ID du profil à afficher. l’option par défaut est de **type int**, avec **-1**comme valeur par défaut, qui renvoie tous les profils de la table **MSagent_profiles** .  
+`[ @profile_id = ] profile_id`ID du profil à afficher. *profile_id* est de **type int**, avec **-1**comme valeur par défaut, qui retourne tous les profils de la table **MSagent_profiles** .  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -58,10 +58,10 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_name**|**sysname**|Nom unique pour le type d'Agent.|  
 |**agent_type**|**int**|**1** = agent d’instantané<br /><br /> **2** = agent de lecture du journal<br /><br /> **3** = agent de distribution<br /><br /> **4** = agent de fusion<br /><br /> **9** = agent de lecture de la file d’attente|  
 |**Type**|**int**|**0** = système<br /><br /> **1** = personnalisé|  
-|**description**|**varchar(3000)**|Description du profil.|  
+|**description**|**varchar (3000)**|Description du profil.|  
 |**def_profile**|**bit**|Indique si ce profil représente le profil par défaut pour ce type d'agent.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

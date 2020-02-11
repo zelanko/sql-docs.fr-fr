@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29a9476f5835df326aa34d8ccfc4cc6d22ea7e3f
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68670617"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68670617"
 
   Renvoie la valeur entière, telle qu'elle est définie par la norme Unicode, du premier caractère de l'expression entrée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,14 +45,14 @@ UNICODE ( 'ncharacter_expression' )
 Expression **nchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Types de retour  
-**Int**  
+**int**  
   
 ## <a name="remarks"></a>Notes  
 Dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la fonction UNICODE retourne un codepoint UCS-2 dans la plage de 000000 à 00FFFF qui est capable de représenter les 65 535 caractères dans le plan multilingue de base (BMP) Unicode. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], lors de l'utilisation de classements prenant en charge des [Caractères supplémentaires (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), UNICODE retourne un codepoint UTF-16 compris entre 000000 et 10FFFF. Pour plus d’informations sur le support Unicode dans le [!INCLUDE[ssde_md](../../includes/ssde_md.md)], consultez [Classement et support Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-unicode-and-the-nchar-function"></a>A. Utilisation d'UNICODE et de la fonction NCHAR  
+### <a name="a-using-unicode-and-the-nchar-function"></a>R. Utilisation d'UNICODE et de la fonction NCHAR  
  Cet exemple fait appel aux fonctions `UNICODE` et `NCHAR` pour imprimer la valeur UNICODE du premier caractère de la chaîne `Åkergatan` de 24 caractères et pour imprimer correctement le premier caractère, soit `Å`.  
   
 ```sql  

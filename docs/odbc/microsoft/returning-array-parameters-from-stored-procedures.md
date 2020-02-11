@@ -1,5 +1,5 @@
 ---
-title: Retour des paramètres de tableau à partir de procédures stockées | Microsoft Docs
+title: Retour de paramètres de tableau à partir de procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987974"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Retour de paramètres de tableau depuis des procédures stockées
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Dans Oracle 7.3, il n’existe aucun moyen pour accéder à un Type d’enregistrement PL/SQL, à l’exception à partir d’un programme PL/SQL. Si une fonction ou procédure empaquetée possède un argument formel est défini comme un Type d’enregistrement PL/SQL, il n’est pas possible de lier cet argument formel en tant que paramètre. Utiliser le type de TABLE de PL/SQL dans le pilote Microsoft ODBC pour Oracle pour appeler des paramètres de tableau à partir de procédures contenant les séquences d’échappement correcte.  
+ Dans Oracle 7,3, il n’existe aucun moyen d’accéder à un type d’enregistrement PL/SQL, sauf à partir d’un programme PL/SQL. Si une procédure ou une fonction packagée a un argument formel défini en tant que type d’enregistrement PL/SQL, il n’est pas possible de lier cet argument formel en tant que paramètre. Utilisez le type de TABLE PL/SQL dans le pilote Microsoft ODBC pour Oracle pour appeler des paramètres de tableau à partir de procédures contenant les séquences d’échappement appropriées.  
   
  Pour appeler la procédure, utilisez la syntaxe suivante :  
   
@@ -35,11 +35,11 @@ ms.locfileid: "67987974"
 ```  
   
 > [!NOTE]  
->  Le \<max demandées par les enregistrements > paramètre doit être supérieur ou égal au nombre de lignes présentes dans le jeu de résultats. Sinon, Oracle retourne une erreur qui est passée à l’utilisateur par le pilote.  
+>  Le \<paramètre Max-recordss-requested> doit être supérieur ou égal au nombre de lignes présentes dans le jeu de résultats. Dans le cas contraire, Oracle retourne une erreur qui est transmise à l’utilisateur par le pilote.  
 >   
->  Les enregistrements PL/SQL ne peut pas être utilisés en tant que paramètres de tableau. Chaque paramètre de tableau peut représenter qu’une seule colonne d’une table de base de données.  
+>  Les enregistrements PL/SQL ne peuvent pas être utilisés en tant que paramètres de tableau. Chaque paramètre de tableau ne peut représenter qu’une seule colonne d’une table de base de données.  
   
- L’exemple suivant définit un package contenant deux procédures qui renvoient des jeux de résultats, puis fournit deux manières de retourner des jeux de résultats à partir du package.  
+ L’exemple suivant définit un package contenant deux procédures qui retournent des jeux de résultats différents, puis fournit deux manières de retourner des jeux de résultats à partir du package.  
   
 ## <a name="package-definition"></a>Définition du package :  
   
@@ -113,13 +113,13 @@ END SimplePackage;
     {call SimplePackage.Proc1( {resultset  3, o_id , ao_course, ao_dept  } ) }  
     ```  
   
-2.  Retourner chaque colonne en tant qu’un seul jeu de résultats :  
+2.  Retourne chaque colonne sous la forme d’un seul jeu de résultats :  
   
     ```  
     {call SimplePackage.Proc1( {resultset 3, o_id},  {resultset 3, ao_course}, {resultset 3, ao_dept} ) }  
     ```  
   
-     Cela retourne trois jeux de résultats, une pour chaque colonne.  
+     Cela retourne trois jeux de résultats, un pour chaque colonne.  
   
 #### <a name="to-invoke-procedure-proc2"></a>Pour appeler la procédure PROC2  
   
@@ -129,13 +129,13 @@ END SimplePackage;
     {call SimplePackage.Proc2( 5 , {resultset  5, ao_Arg2, ao_Arg3} ) }  
     ```  
   
-2.  Retourner chaque colonne en tant qu’un seul jeu de résultats :  
+2.  Retourne chaque colonne sous la forme d’un seul jeu de résultats :  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- Assurez-vous que vos applications extraire tous les jeux de résultats à l’aide de la [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API. Pour plus d’informations, reportez-vous à la *de référence du programmeur ODBC*.  
+ Assurez-vous que vos applications récupèrent tous les jeux de résultats à l’aide de l’API [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) . Pour plus d’informations, reportez-vous au *Guide de référence du programmeur ODBC*.  
   
 > [!NOTE]  
->  Dans le pilote ODBC pour Oracle version 2.0, les fonctions Oracle qui retournent des tableaux de PL/SQL ne peut pas être utilisées pour retourner des jeux de résultats.
+>  Dans le pilote ODBC pour Oracle version 2,0, les fonctions Oracle qui retournent des tableaux PL/SQL ne peuvent pas être utilisées pour retourner des jeux de résultats.

@@ -15,15 +15,15 @@ ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022107"
 ---
 # <a name="vertical-applications"></a>Applications verticales
-Applications verticales effectuent généralement une tâche bien définie par rapport à un système SGBD unique. Par exemple, une application de saisie de commandes suit les commandes dans une société. Ce que ces types d’applications ont en commun est que le schéma de base de données est généralement conçu par le développeur d’applications et l’application pourrait fonctionner avec un nombre de SGBD différents, il fonctionne avec un système SGBD unique pour un seul client.  
+En général, les applications verticales exécutent une tâche bien définie sur un seul SGBD. Par exemple, une application d’entrée de commande effectue le suivi des commandes d’une société. Ce que ces types d’applications ont en commun, c’est que le schéma de la base de données est généralement conçu par le développeur de l’application et, tandis que l’application peut fonctionner avec plusieurs SGBD différents, il fonctionne avec un seul SGBD pour un seul client.  
   
- Étant donné que les applications verticales nécessitent généralement certaines fonctionnalités, telles que les transactions, ou les curseurs avec défilement rarement prennent en charge tous les SGBD. Au lieu de cela, ils ont tendance à être hautement interopérable parmi un ensemble limité de SGBD. En règle générale, les développeurs d’applications verticales choisissent prendre en charge ces SGBD qui représente une grande partie du marché et ignore le reste. Il peuvent même choisir de prendre en charge des pilotes spécifiques pour les SGBD pour réduire leurs tests et les coûts de support produit.  
+ Étant donné que les applications verticales nécessitent généralement certaines fonctionnalités, telles que les curseurs ou les transactions à défilement, elles prennent rarement en charge tous les SGBD. Au lieu de cela, ils ont tendance à être très interopérables entre un ensemble limité de SGBD. En règle générale, les développeurs d’applications verticales choisissent de prendre en charge les SGBD qui représentent une grande partie du marché et d’ignorer le reste. Ils peuvent même choisir de prendre en charge des pilotes spécifiques pour ces SGBD afin de réduire leurs coûts de test et de support produit.  
   
- Étant donné que les applications verticales peuvent prendre en charge un ensemble connu de SGBD, ils contiennent parfois des code spécifiques au pilote ou propres au SGBD. Toutefois, ce code est préférable de conserver au minimum, car elle nécessite plus de temps pour mettre à jour.
+ Étant donné que les applications verticales peuvent prendre en charge un ensemble connu de SGBD, ils contiennent parfois du code spécifique au pilote ou au SGBD. Toutefois, ce type de code est mieux adapté au minimum, car il nécessite du temps supplémentaire pour assurer la maintenance.

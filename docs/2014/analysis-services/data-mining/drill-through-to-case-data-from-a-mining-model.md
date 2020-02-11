@@ -1,5 +1,5 @@
 ---
-title: Extraire des données de cas à partir d’un modèle d’exploration de données | Microsoft Docs
+title: Extraction des données de cas à partir d’un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084609"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Extraire des données de cas à partir d'un modèle d'exploration de données
@@ -31,16 +31,16 @@ ms.locfileid: "66084609"
   
 |Nom de la visionneuse|Nom du volet ou de l'onglet|Sélection du nœud|  
 |-----------------|----------------------|-----------------|  
-|**visionneuse d'arbres Microsoft**|Onglet**Arbre de décision**|Cliquez sur un nœud d'arborescence.<br /><br /> **Remarque** éviter l’utilisation de l’extraction sur le `All` nœud, car il peut prendre beaucoup de temps pour retourner les résultats.|  
-|**Microsoft Cluster Viewer**|**Diagramme de cluster**|Cliquez sur un nœud de cluster.|  
-|**Microsoft Cluster Viewer**|**Profils du cluster**|Cliquez n'importe où dans la colonne de cluster.|  
-|**Visionneuse d'associations Microsoft**|Onglet**Règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  
-|**Visionneuse d'associations Microsoft**|Onglet**Jeux d’éléments**|Cliquez sur une ligne qui contient un jeu d'éléments.|  
-|**Visionneuse de l'algorithme MSC (Microsoft Sequence Clustering)**|Onglet**Règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  
-|**Visionneuse de l'algorithme MSC (Microsoft Sequence Clustering)**|Onglet**Jeux d’éléments**|Cliquez sur une ligne qui contient un jeu d'éléments.|  
+|**Visionneuse d’arborescences Microsoft**|Onglet **arbre de décision**|Cliquez sur un nœud d'arborescence.<br /><br /> **Remarque** Évitez d’utiliser l’extraction `All` sur le nœud, car le renvoi des résultats peut prendre beaucoup de temps.|  
+|**Visionneuse de clusters Microsoft**|**Diagramme de cluster**|Cliquez sur un nœud de cluster.|  
+|**Visionneuse de clusters Microsoft**|**Profils de cluster**|Cliquez n'importe où dans la colonne de cluster.|  
+|**Visionneuse d’associations Microsoft**|Onglet **règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  
+|**Visionneuse d’associations Microsoft**|Onglet **jeux d’éléments**|Cliquez sur une ligne qui contient un jeu d'éléments.|  
+|**Visionneuse Microsoft Sequence Clustering**|Onglet **règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  
+|**Visionneuse Microsoft Sequence Clustering**|Onglet **jeux d’éléments**|Cliquez sur une ligne qui contient un jeu d'éléments.|  
   
 > [!NOTE]  
->  Certains modèles ne peuvent pas utiliser la fonctionnalité d'extraction. La capacité à utiliser la fonctionnalité d'extraction dépend de l'algorithme qui a été utilisé pour créer le modèle. Pour obtenir une liste des types de modèles d’exploration de données qui prennent en charge l’extraction, consultez [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  
+>  Certains modèles ne peuvent pas utiliser la fonctionnalité d'extraction. La capacité à utiliser la fonctionnalité d'extraction dépend de l'algorithme qui a été utilisé pour créer le modèle. Pour obtenir une liste des types de modèles d’exploration de données qui prennent en charge l’extraction, consultez [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md).  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>Pour afficher des données d'extraction à partir d'un modèle d'exploration de données  
   
@@ -57,6 +57,6 @@ ms.locfileid: "66084609"
 6.  Pour copier les données vers le Presse-papiers, cliquez avec le bouton droit sur une ligne dans la table et sélectionnez **Copier tout**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md)  
+ [Requêtes d’extraction &#40;l’exploration de données&#41;](drillthrough-queries-data-mining.md)  
   
   

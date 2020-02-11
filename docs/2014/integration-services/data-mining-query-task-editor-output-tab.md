@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890467"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Sortie)
@@ -37,7 +37,7 @@ ms.locfileid: "68890467"
  Saisissez la description de la tâche de requête d'exploration de données.  
   
 ## <a name="output-tab-options"></a>Options de l'onglet Sortie  
- **Connexion**  
+ **Connection**  
  Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur **Nouveau** pour en créer un.  
   
  **Nouveau**  
@@ -51,8 +51,8 @@ ms.locfileid: "68890467"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de requête d’exploration de données &#40;onglet Modèle d’exploration de données&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Éditeur de tâche de requête d’exploration de données &#40;onglet Requête&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Éditeur de tâche de requête d’exploration de données &#40;onglet modèle d’exploration de données&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Éditeur de tâche de requête d’exploration de données &#40;onglet requête&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Concepteur d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

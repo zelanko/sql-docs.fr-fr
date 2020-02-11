@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 713e2e507fd98f6d3d87fe60e075e587725ddaf2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890345"
 ---
 # <a name="full-database-backups-sql-server"></a>Sauvegardes complètes de bases de données (SQL Server)
@@ -33,19 +33,19 @@ ms.locfileid: "68890345"
 >  À mesure que la taille d'une base de données augmente, les sauvegardes complètes de base de données nécessitent davantage de temps et d'espace de stockage. Par conséquent, pour les bases de données volumineuses, il est conseillé de compléter les sauvegardes complètes avec une série de *sauvegardes différentielles de base de données*. Pour plus d’informations, consultez [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  TRUSTWORTHY a la valeur OFF pour une sauvegarde de base de données. Pour plus d’informations sur la façon d’affecter la valeur ON à TRUSTWORTHY, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+>  TRUSTWORTHY a la valeur OFF pour une sauvegarde de base de données. Pour obtenir des informations sur la façon d’affecter la valeur ON à TRUSTWORTHY, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
--   [Sauvegardes de base de données en mode de récupération simple](#DbBuRMs)  
+-   [Sauvegardes de bases de données en mode de récupération simple](#DbBuRMs)  
   
 -   [Sauvegardes de base de données en mode de récupération complète](#DbBuRMf)  
   
--   [Utiliser une sauvegarde complète pour restaurer la base de données](#RestoreDbBu)  
+-   [Utiliser une sauvegarde complète de base de données pour restaurer la base de données](#RestoreDbBu)  
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="DbBuRMs"></a> Sauvegardes de base de données en mode de récupération simple  
+##  <a name="DbBuRMs"></a>Sauvegardes de bases de données en mode de récupération simple  
  En mode de récupération simple, après chaque sauvegarde, la base de données est exposée à des pertes de travaux potentielles en cas de sinistre. Le risque de perte de travail augmente après chaque mise à jour et ce, jusqu'à la sauvegarde suivante, après laquelle le risque de perte de travail redevient nul et un nouveau cycle de risque de perte de travail commence. Le risque de perte de travail augmente au fil du temps entre les sauvegardes. La figure ci-dessous montre le risque de perte de travail pour une stratégie de sauvegarde qui utilise uniquement des sauvegardes complètes de base de données.  
   
  ![Affiche le risque de perte du travail entre les sauvegardes de base de données](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Affiche le risque de perte du travail entre les sauvegardes de base de données")  
@@ -61,7 +61,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="DbBuRMf"></a> Sauvegardes de base de données en mode de récupération complète  
+##  <a name="DbBuRMf"></a>Sauvegardes de base de données en mode de récupération complète  
  Pour les bases de données qui font appel au mode de récupération complète et au mode de récupération utilisant les journaux de transactions, les sauvegardes de base de données sont nécessaires, mais pas suffisantes. Les sauvegardes des journaux de transactions sont également requises. La figure ci-dessous montre la stratégie de sauvegarde la moins complexe possible en mode de restauration complète.  
   
  ![Séries de sauvegardes complètes de base de données et de sauvegardes de fichier journal](../../database-engine/media/bnr-rmfull-1-fulldb-log-backups.gif "Séries de sauvegardes complètes de base de données et de sauvegardes de fichier journal")  
@@ -85,13 +85,13 @@ BACKUP LOG AdventureWorks2012 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012F
 GO  
 ```  
   
-##  <a name="RestoreDbBu"></a> Utiliser une sauvegarde complète pour restaurer la base de données  
+##  <a name="RestoreDbBu"></a>Utiliser une sauvegarde complète de base de données pour restaurer la base de données  
  Vous pouvez recréer une base de données dans son intégralité en la restaurant à n'importe quel emplacement, en une seule étape, à partir d'une sauvegarde complète de base de données. La sauvegarde contient une partie suffisante du journal des transactions pour vous permettre de récupérer la base de données à l'issue de l'opération de sauvegarde. La base de données restaurée retrouve l'état qui était le sien à l'issue de la sauvegarde de base de données sans les transactions non validées. Dans le mode de récupération complète, vous devez restaurer toutes les sauvegardes ultérieures des journaux de transactions. Une fois la base de données récupérée, les transactions non validées sont restaurées.  
   
  Pour plus d’informations, consultez [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](complete-database-restores-simple-recovery-model.md) ou [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](complete-database-restores-full-recovery-model.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour créer une sauvegarde de base de données complète**  
+ **Pour créer une sauvegarde complète de base de données**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -102,7 +102,7 @@ GO
  [Utiliser l'Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde et restauration des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Sauvegarder et restaurer des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Sauvegarde et restauration de bases de données Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   

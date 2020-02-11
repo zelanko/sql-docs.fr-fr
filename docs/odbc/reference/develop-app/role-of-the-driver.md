@@ -14,13 +14,13 @@ ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c344c1d8b3a4702728807af9dae7ed9ca7c5cd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020381"
 ---
 # <a name="role-of-the-driver"></a>Rôle du pilote
-Le pilote vérifie toutes les erreurs et avertissements ne pas vérifiées par le Gestionnaire de pilotes et trie les enregistrements d’état qu’il génère. (Une application ODBC 2. *x* pilote ne trie pas les enregistrements d’état.) Cela inclut les erreurs et avertissements de troncation de données, conversion de données, la syntaxe et des transitions d’état. Le pilote peut également contrôler les erreurs et avertissements partiellement activés par le Gestionnaire de pilotes. Par exemple, bien que le Gestionnaire de pilotes vérifie si la valeur de *opération* dans **SQLSetPos** est autorisé, le pilote doit vérifier si elle est prise en charge.  
+Le pilote vérifie toutes les erreurs et tous les avertissements non vérifiés par le gestionnaire de pilotes et les enregistrements d’état de commandes qu’il génère. (ODBC 2. le pilote *x* ne commande pas les enregistrements d’État.) Cela comprend les erreurs et les avertissements dans la troncation des données, la conversion des données, la syntaxe et certaines transitions d’État. Le pilote peut également vérifier les erreurs et les avertissements partiellement vérifiés par le gestionnaire de pilotes. Par exemple, bien que le gestionnaire de pilotes vérifie si la valeur de l' *opération* dans **SQLSetPos** est légale, le pilote doit vérifier s’il est pris en charge.  
   
- Le pilote mappe également *erreurs natives* - autrement dit, les erreurs retournées par la source de données - pour SQLSTATE. Par exemple, le pilote peut mapper un nombre d’erreurs natives différentes pour le syntaxe SQL non conforme à SQLSTATE 42000 (syntaxe ou violation d’accès). Le pilote retourne le numéro d’erreur natif dans le champ SQL_DIAG_NATIVE de l’enregistrement de l’état. Documentation du pilote doit indiquer la façon dont des erreurs et avertissements sont mappés à partir de la source de données aux arguments dans **SQLGetDiagRec** et **SQLGetDiagField**.
+ Le pilote mappe également les *erreurs natives* , c’est-à-dire les erreurs retournées par la source de données-aux sqlstates. Par exemple, le pilote peut mapper plusieurs erreurs natives différentes pour la syntaxe SQL illégale à SQLSTATE 42000 (erreur de syntaxe ou violation d’accès). Le pilote retourne le numéro d’erreur natif dans le champ SQL_DIAG_NATIVE de l’enregistrement d’État. La documentation du pilote doit indiquer comment les erreurs et les avertissements sont mappés de la source de données aux arguments dans **SQLGetDiagRec** et **SQLGetDiagField**.

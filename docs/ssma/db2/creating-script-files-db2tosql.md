@@ -1,5 +1,5 @@
 ---
-title: Création de fichiers de Script (DB2ToSQL) | Microsoft Docs
+title: Création de fichiers de script (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,39 +10,39 @@ ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989838"
 ---
-# <a name="creating-script-files-db2tosql"></a>Création de fichiers de Script (DB2ToSQL)
-La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
+# <a name="creating-script-files-db2tosql"></a>Création de fichiers de script (DB2ToSQL)
+La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire, à créer le fichier de valeur de variable et le fichier de connexion au serveur.  
   
-Le fichier de script peut être divisé en trois sections, reportages.., :  
+Le fichier de script peut être divisé en trois sections, à savoir :  
   
-1.  **configuration :** Permet à l’utilisateur définir les paramètres de configuration pour l’application de console.  
+1.  **Configuration :** Permet à l’utilisateur de définir les paramètres de configuration de l’application console.  
   
-2.  **serveurs :** Permet à l’utilisateur définir des définitions de serveur de la source/cible. Cela peut également être dans un fichier de connexion de serveur distinct.  
+2.  **serveurs :** Permet à l’utilisateur de définir les définitions de serveur source/cible. Il peut également s’agir d’un fichier de connexion au serveur distinct.  
   
-3.  **commandes de script :** Permet à l’utilisateur d’exécuter des commandes de flux de travail SSMA.  
+3.  **script-commandes :** Permet à l’utilisateur d’exécuter des commandes de workflow SSMA.  
   
 Chaque section est décrite en détail ci-dessous :  
   
-## <a name="configuring-db2-console-settings"></a>Configuration des paramètres de la Console DB2  
-Les configurations d’un script sont affichées dans le fichier de script de console.  
+## <a name="configuring-db2-console-settings"></a>Configuration des paramètres de la console DB2  
+Les configurations d’un script s’affichent dans le fichier de script de la console.  
   
-Si un des éléments sont spécifié dans le noeud configuration, elles sont définies comme par exemple, le paramètre global, ils s’appliquent pour toutes les commandes de script. Ces éléments de configuration peuvent également être définies au sein de chaque commande dans la section de la commande de script si l’utilisateur souhaite remplacer le paramètre global.  
+Si l’un des éléments est spécifié dans le nœud de configuration, ils sont définis en tant que paramètres globaux, c’est-à-dire qu’ils s’appliquent à toutes les commandes de script. Ces éléments de configuration peuvent également être définis dans chaque commande de la section script-Command si l’utilisateur souhaite remplacer le paramètre global.  
   
 Les options configurables par l’utilisateur sont les suivantes :  
   
-1.  **Fournisseur de fenêtre de sortie :** Si l’attribut de messages supprimer est défini sur « true », la commande spécifique messages ne pas s’affichent sur la console. La description des attributs est donnée ci-dessous :  
+1.  **Fournisseur de fenêtre Sortie :** Si l’attribut Suppress-messages a la valeur « true », les messages spécifiques à la commande ne sont pas affichés sur la console. La description des attributs est indiquée ci-dessous :  
   
-    -   destination : Spécifie si la sortie doit obtenir imprimé à un fichier ou à stdout. Cela a la valeur false par défaut.  
+    -   destination : spécifie si la sortie doit être imprimée dans un fichier ou stdout. Il s’agit de la valeur false par défaut.  
   
-    -   nom de fichier : Le chemin d’accès du fichier (facultatif).  
+    -   nom-fichier : chemin d’accès du fichier (facultatif).  
   
-    -   supprimer-messages : Supprime les messages sur la console. Cela est « false » par défaut.  
+    -   supprimer-messages : supprime les messages sur la console. Il s’agit de la valeur par défaut « false ».  
   
     **Exemple :**  
   
@@ -61,7 +61,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou Gestionnaire de configuration*  
+    *ni*  
   
     ```xml  
     <...All commands...>  
@@ -79,13 +79,13 @@ Les options configurables par l’utilisateur sont les suivantes :
     </...All commands...>  
     ```  
   
-2.  **Fournisseur de connexion de Migration de données :** Qui spécifie le serveur source/cible est à prendre en compte pour la migration de données.  Source-utilisation-last-used indique que le dernier serveur source utilisé est utilisé pour la migration de données. De même cible-utilisation-last-used indique que le dernier serveur cible utilisée est utilisé pour la migration de données. L’utilisateur peut également spécifier le serveur (source ou cible) en utilisant les attributs source ou cible-serveurs.  
+2.  **Fournisseur de connexion pour la migration de données :** Spécifie le serveur source/cible à prendre en compte pour la migration des données.  Source-use-Last-Used indique que le dernier serveur source utilisé est utilisé pour la migration des données. De la même façon, la cible-use-Last-Used indique que le dernier serveur cible utilisé est utilisé pour la migration des données. L’utilisateur peut également spécifier le serveur (source ou cible) à l’aide des attributs serveur source ou serveur cible.  
   
-    Seuls un ou l’autre attribut spécifié permet par exemple :  
+    Un seul attribut spécifié peut être utilisé, par exemple :  
   
-    -   source-utilisation-last-used = « true » (valeur par défaut) ou serveur de source = « source_servername »  
+    -   source-use-Last-Used = "true" (valeur par défaut) ou source-Server = "source_servername"  
   
-    -   cible-utilisation-last-used = « true » (valeur par défaut) ou serveur de la cible = « target_servername »  
+    -   cible-use-Last-Used = "true" (valeur par défaut) ou target-Server = "target_servername"  
   
     **Exemple :**  
   
@@ -98,7 +98,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou Gestionnaire de configuration*  
+    *ni*  
   
     ```xml  
     <migrate-data>  
@@ -110,17 +110,17 @@ Les options configurables par l’utilisateur sont les suivantes :
     </migrate-data>  
     ```  
   
-3.  **Popup d’entrée utilisateur :** Cela permet la gestion des erreurs, lorsque les objets sont chargés à partir de la base de données. L’utilisateur fournit les modes d’entrée, et en cas d’erreur, la console se poursuit comme utilisateur spécifie.  
+3.  **Fenêtre contextuelle entrée d’utilisateur :** Cela permet de gérer les erreurs, lorsque les objets sont chargés à partir de la base de données. L’utilisateur fournit les modes de saisie et, en cas d’erreur, la console se présente comme l’indique l’utilisateur.  
   
-    Les modes sont les suivantes :  
+    Les modes sont les suivants :  
   
-    -   **Demandez-utilisateur -** invite l’utilisateur à continue('yes') ou d’erreur (« no »).  
+    -   **ask-User-** Demande à l’utilisateur de continuer (« oui ») ou d’erreur (« non »).  
   
-    -   **erreur -** la console affiche une erreur et interrompt l’exécution.  
+    -   **erreur :** La console affiche une erreur et interrompt l’exécution.  
   
-    -   **continuer-** la console se poursuit avec l’exécution.  
+    -   **Continuer-** La console se poursuit avec l’exécution.  
   
-    Le mode par défaut est **erreur**.  
+    Le mode par défaut est **Error**.  
   
     **Exemple :**  
   
@@ -131,7 +131,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou Gestionnaire de configuration*  
+    *ni*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -143,15 +143,15 @@ Les options configurables par l’utilisateur sont les suivantes :
     </connect-target-database>  
     ```  
   
-4.  **Reconnectez le fournisseur :** Cela permet à l’utilisateur définir la paramètres dans le cas où la reconnexion des échecs de connexion. Cela peut être défini pour les serveurs source et cible.  
+4.  **Fournisseur de reconnexion :** Cela permet à l’utilisateur de définir les paramètres de reconnexion en cas d’échec de la connexion. Cette valeur peut être définie pour les serveurs source et cible.  
   
-    Les modes de reconnexion sont :  
+    Les modes de reconnexion sont les suivants :  
   
-    -   se reconnecter-last-utilisé-serveur : Si la connexion n’est pas active, il tente de se reconnecter au dernier serveur utilisé au maximum 5 fois.  
+    -   reconnexion-to-Last-Used-Server : si la connexion n’est pas active, elle tente de se reconnecter au dernier serveur utilisé au plus 5 fois.  
   
-    -   générer une-erreur : Si la connexion n’est pas active, une erreur est générée.  
+    -   Generate-a-error : si la connexion n’est pas active, une erreur est générée.  
   
-    Le mode par défaut est **générer une erreur**.  
+    Le mode par défaut est **Generate-a-Error**.  
   
     **Exemple :**  
   
@@ -164,7 +164,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou Gestionnaire de configuration*  
+    *ni*  
   
     ```xml  
     <!--synchronization-->  
@@ -175,7 +175,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </synchronize-target>  
     ```  
-    *ou Gestionnaire de configuration*  
+    *ni*  
   
     ```xml  
     <!--data migration-->  
@@ -191,15 +191,15 @@ Les options configurables par l’utilisateur sont les suivantes :
     </migrate-data>  
     ```  
   
-5.  **Convertisseur de remplacer le fournisseur :** Cela permet à l’utilisateur gérer les objets qui sont déjà présents sur la cible de la métabase. Les actions possibles sont les suivantes :  
+5.  **Fournisseur de remplacement de convertisseur :** Cela permet à l’utilisateur de gérer les objets qui sont déjà présents dans la métabase cible. Les actions possibles sont les suivantes :  
   
-    -   Erreur : La console affiche une erreur et interrompt l’exécution.  
+    -   erreur : la console affiche une erreur et interrompt l’exécution.  
   
-    -   remplacer : Remplace les valeurs d’objet existantes. Cette action est effectuée par défaut.  
+    -   remplacement : remplace les valeurs d’objet existantes. Cette action est effectuée par défaut.  
   
-    -   Ignorer : La console ignore les objets qui existent déjà sur la base de données  
+    -   ignorer : la console ignore les objets qui existent déjà dans la base de données  
   
-    -   utilisateur poser : Invite l’utilisateur pour l’entrée (« Oui » / « non »)  
+    -   Ask-User : invite l’utilisateur à entrer une valeur (« oui »/« non »)  
   
     **Exemple :**  
   
@@ -210,7 +210,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou Gestionnaire de configuration*  
+    *ni*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -220,7 +220,7 @@ Les options configurables par l’utilisateur sont les suivantes :
     </convert-schema>  
     ```  
   
-6.  **Fournisseur de configuration requise a échoué :** Cela permet à l’utilisateur gérer les éléments nécessaires au traitement d’une commande. Par défaut, le mode strict est 'false'. Si elle est définie sur « true », une exception est généré pour l’échec de la configuration requise.  
+6.  **Fournisseur de composants requis en échec :** Cela permet à l’utilisateur de gérer les composants requis pour le traitement d’une commande. Par défaut, le mode strict est « false ». Si la valeur est « true », une exception est générée pour ne pas satisfaire aux conditions préalables.  
   
     **Exemple :**  
   
@@ -232,23 +232,23 @@ Les options configurables par l’utilisateur sont les suivantes :
     </output-providers>  
     ```  
   
-7.  **Arrêter l’opération :** Pendant l’opération intermédiaire, si l’utilisateur veut arrêter l’opération, puis **« Ctrl + C »** raccourci clavier peut être utilisé. SSMA pour DB2 Console attendra la fin d’opération et termine l’exécution de la console.  
+7.  **Arrêter l’opération :** Pendant la mi-opération, si l’utilisateur veut arrêter l’opération, la touche de raccourci **« Ctrl + C »** peut être utilisée. SSMA pour la console DB2 attend la fin de l’opération et met fin à l’exécution de la console.  
   
-    Si l’utilisateur souhaite arrêter l’exécution immédiatement, puis, **« Ctrl + C »** raccourci clavier peut être enfoncée à nouveau pour un arrêt soudain de l’application de Console SSMA.  
+    Si l’utilisateur veut arrêter immédiatement l’exécution, vous pouvez appuyer à nouveau sur la touche de raccourci **Ctrl + C** pour terminer brutalement l’application console SSMA.  
   
-8.  **Fournisseur de progression :** Indique la progression de chaque commande de console. Il est désactivé par défaut. Les attributs de rapport de progression comprennent :  
+8.  **Fournisseur de progression :** Indique la progression de chaque commande de console. Elle est désactivée par défaut. Les attributs de rapport de progression comprennent :  
   
-    -   inactif  
+    -   arrêt  
   
-    -   chaque 1 %  
+    -   toutes les-1%  
   
-    -   chaque 2 %  
+    -   toutes les 2%  
   
-    -   chaque 5 %  
+    -   toutes les 5%  
   
-    -   chaque 10 %  
+    -   toutes les 10%  
   
-    -   chaque - 20 %  
+    -   toutes les 20%  
   
     **Exemple :**  
   
@@ -263,7 +263,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou Gestionnaire de configuration*  
+    *ni*  
   
     ```xml  
     <...All commands...>  
@@ -279,22 +279,22 @@ Les options configurables par l’utilisateur sont les suivantes :
     </...All commands...>  
     ```  
   
-9. **Détail de l’enregistreur d’événements :** Jeux de connecter un niveau de détail. Cela correspond à l’option de toutes les catégories dans l’interface utilisateur. Par défaut, le niveau de détail du journal est « erreur ».  
+9. **Commentaires du journal :** Définit le niveau de détail du journal. Cela correspond à l’option toutes les catégories dans l’interface utilisateur. Par défaut, le niveau de détail du journal est « erreur ».  
   
-    Les options au niveau de l’enregistreur d’événements sont les suivantes :  
+    Les options au niveau du journal sont les suivantes :  
   
-    -   Erreur irrécupérable : Seuls les messages d’erreur irrécupérable sont enregistrés.  
+    -   Fatal-erreur : seuls les messages d’erreur fatale sont journalisés.  
   
-    -   Erreur : Seuls les messages d’erreur et d’erreur irrécupérable sont enregistrés.  
+    -   erreur : seuls les messages d’erreur et d’erreur fatale sont journalisés.  
   
-    -   Avertissement : Tous les niveaux à l’exception des messages de débogage et les informations sont enregistrées.  
+    -   AVERTISSEMENT : tous les niveaux, à l’exception des messages de débogage et d’informations, sont journalisés.  
   
-    -   Info : Tous les niveaux à l’exception des messages de débogage sont enregistrés.  
+    -   info : tous les niveaux, à l’exception des messages de débogage, sont journalisés.  
   
-    -   Débogage : Tous les niveaux de messages consignés.  
+    -   débogage : tous les niveaux de messages journalisés.  
   
     > [!NOTE]  
-    > Messages obligatoires sont enregistrés à n’importe quel niveau.  
+    > Les messages obligatoires sont journalisés à n’importe quel niveau.  
   
     **Exemple :**  
   
@@ -305,7 +305,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou Gestionnaire de configuration*  
+    *ni*  
   
     ```xml  
     <...All commands...>  
@@ -315,13 +315,13 @@ Les options configurables par l’utilisateur sont les suivantes :
     </...All commands...>  
     ```  
   
-10. **Remplacer le mot de passe chiffré :** Si « true », le mot de passe de texte en clair spécifiée dans la section de définition de serveur du fichier de connexion du serveur ou dans le fichier de script, substitutions de mot de passe chiffré stocké dans la mémoire protégée si existe. Si aucun mot de passe n’est spécifié en texte clair, l’utilisateur est invité à entrer le mot de passe.  
+10. **Remplacer le mot de passe chiffré :** Si la valeur est « true », le mot de passe en texte clair spécifié dans la section de définition de serveur du fichier de connexion au serveur ou dans le fichier de script, remplace le mot de passe chiffré stocké dans le stockage protégé s’il existe. Si aucun mot de passe n’est spécifié en texte clair, l’utilisateur est invité à entrer le mot de passe.  
   
-    Ici deux arriver :  
+    Ici, deux cas se produisent :  
   
-    1.  Si remplacer l’option est **false**, l’ordre de recherche sera protégé stockage -&gt;fichier de Script -&gt;fichier de connexion de serveur -&gt; inviter l’utilisateur.  
+    1.  Si l’option de remplacement a la **valeur false**, l’ordre de recherche est&gt;protégé fichier de&gt;script de stockage-&gt; fichier de connexion au serveur-utilisateur d’invite.  
   
-    2.  Si remplacer l’option est **true**, l’ordre de recherche sera fichier Script -&gt;fichier de connexion de serveur -&gt;inviter l’utilisateur.  
+    2.  Si l’option de remplacement a la **valeur true**, l’ordre de recherche sera fichier&gt;de script-fichier&gt;de connexion du serveur-inviter l’utilisateur.  
   
     **Exemple :**  
   
@@ -333,19 +333,19 @@ Les options configurables par l’utilisateur sont les suivantes :
     </output-providers>  
     ```  
   
-L’option non configurable est :  
+L’option non configurable est la suivante :  
   
--   **Nombre maximal des tentatives de reconnexion :** Lorsqu’une connexion établie expire ou s’arrête en raison d’une défaillance réseau, le serveur est nécessaire pour être reconnectées. Les tentatives de reconnexion sont autorisées à un maximum de **5** nouvelles tentatives après quoi, la console effectue automatiquement la reconnexion. La fonctionnalité de reconnexion automatique réduit vos efforts sur réexécuter le script.  
+-   **Nombre maximal de tentatives de reconnexion :** Lorsqu’une connexion établie expire ou s’interrompt en raison d’une défaillance du réseau, le serveur doit être reconnecté. Les tentatives de reconnexion sont autorisées à un maximum de **5** tentatives après laquelle, la console effectue automatiquement la reconnexion. La fonctionnalité de reconnexion automatique réduit votre effort de réexécution du script.  
   
-## <a name="server-connection-parameters"></a>Paramètres de connexion de serveur  
-Paramètres de connexion de serveur peuvent être définis dans le fichier de script ou dans le fichier de connexion de serveur. Reportez-vous à la [création des fichiers de connexion de serveur &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) section pour plus d’informations.  
+## <a name="server-connection-parameters"></a>Paramètres de connexion au serveur  
+Les paramètres de connexion au serveur peuvent être définis dans le fichier de script ou dans le fichier de connexion au serveur. Pour plus d’informations, reportez-vous à la section [création de fichiers de connexion au serveur &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) .  
   
 ## <a name="script-commands"></a>Commandes de script  
-Le fichier de script contient une séquence de commandes de flux de travail de migration au format XML. L’application de console SSMA traite la migration dans l’ordre les commandes apparaissant dans le fichier de script.  
+Le fichier de script contient une séquence de commandes de flux de travail de migration au format XML. L’application console SSMA traite la migration dans l’ordre des commandes figurant dans le fichier de script.  
   
-Par exemple, une migration de données standard d’une table spécifique dans une base de données DB2 suit la hiérarchie de : Schéma -&gt; Table.  
+Par exemple, une migration de données classique d’une table spécifique dans une base de données DB2 suit la hiérarchie de&gt; : Schema-Table.  
   
-Lorsque toutes les commandes dans le fichier de script sont exécutées avec succès, l’application de console SSMA se termine et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations sur les variables contenues dans un [création de fichiers de valeur Variable &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) ou, dans une section distincte du fichier de script pour les valeurs des variables.  
+Lorsque toutes les commandes du fichier de script sont exécutées avec succès, l’application de console SSMA s’arrête et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations variables contenues dans un fichier de [valeur de création de variable &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) ou dans une section distincte du fichier de script pour les valeurs de variables.  
   
 **Exemple :**  
   
@@ -372,28 +372,28 @@ Lorsque toutes les commandes dans le fichier de script sont exécutées avec suc
   
 </ssma-script-file>  
 ```  
-Modèles consistant en des fichiers de script 3 (pour l’exécution des scénarios différents), fichier de la valeur de la variable et un fichier de connexion de serveur sont fournis dans le dossier d’exemples de Scripts de Console du répertoire de produit :  
+Les modèles constitués de 3 fichiers de script (pour l’exécution de différents scénarios), d’un fichier de valeurs de variable et d’un fichier de connexion au serveur sont fournis dans le dossier exemple de scripts de console du répertoire du produit :  
   
--   AssessmentReportGenerationSample.xml  
+-   AssessmentReportGenerationSample. Xml  
   
--   ConversionAndDataMigrationSample.xml  
+-   ConversionAndDataMigrationSample. Xml  
   
--   SqlStatementConversionSample.xml  
+-   SqlStatementConversionSample. Xml  
   
--   VariableValueFileSample.xml  
+-   VariableValueFileSample. Xml  
   
--   ServersConnectionFileSample.xml  
+-   ServersConnectionFileSample. Xml  
   
-Vous pouvez exécuter les modèles (fichiers) après avoir modifié les paramètres affichés dans celui-ci de pertinence.  
+Vous pouvez exécuter les modèles (fichiers) après avoir modifié les paramètres affichés ici pour des critères de pertinence.  
   
-Vous trouverez la liste complète des commandes de script dans [l’exécution de la Console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+La liste complète des commandes de script se trouve dans [exécution de la console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
-## <a name="script-file-validation"></a>Validation de fichier de script  
-L’utilisateur peut valider facilement son fichier de script par rapport au fichier de définition de schéma **'O2SSConsoleScriptSchema.xsd'** disponibles dans le dossier « Schémas ».  
+## <a name="script-file-validation"></a>Validation du fichier de script  
+L’utilisateur peut facilement valider son fichier de script par rapport au fichier de définition de schéma **« O2SSConsoleScriptSchema. xsd »** disponible dans le dossier « schemas ».  
   
-## <a name="next-step"></a>Étape suivante  
-L’étape suivante de d’exploitation de la console est [création de fichiers de valeur Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
+## <a name="next-step"></a>étape suivante  
+L’étape suivante de l’utilisation de la console consiste à [créer des fichiers de valeurs de variables &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Création de fichiers de la valeur de la Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[Création de fichiers de valeurs de variables &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

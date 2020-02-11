@@ -1,5 +1,5 @@
 ---
-title: ATOMISATION (XQuery) | Microsoft Docs
+title: Atomisation (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985708"
 ---
 # <a name="atomization-xquery"></a>Atomisation (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  L'atomisation correspond au procédé d'extraction de la valeur typée d'un élément. Ce procédé s'applique cependant sous certaines conditions. Certains opérateurs XQuery, tels que les opérateurs arithmétiques et de comparaison, dépendent de ce processus. Par exemple, lorsque vous appliquez des opérateurs arithmétiques directement aux nœuds, la valeur typée d’un nœud est d’abord récupérée par l’appel implicite le [fonction données](../xquery/data-accessor-functions-data-xquery.md). Ceci permet de transférer la valeur atomique sous forme d'opérande à l'opérateur arithmétique.  
+  L'atomisation correspond au procédé d'extraction de la valeur typée d'un élément. Ce procédé s'applique cependant sous certaines conditions. Certains opérateurs XQuery, tels que les opérateurs arithmétiques et de comparaison, dépendent de ce processus. Par exemple, lorsque vous appliquez des opérateurs arithmétiques directement à des nœuds, la valeur typée d’un nœud est d’abord récupérée en appelant implicitement la [fonction de données](../xquery/data-accessor-functions-data-xquery.md). Ceci permet de transférer la valeur atomique sous forme d'opérande à l'opérateur arithmétique.  
   
- Par exemple, la requête suivante renvoie le total des attributs LaborHours indiquant le nombre d'heures travaillées. Dans ce cas, **data()** est appliquée implicitement pour les nœuds d’attribut.  
+ Par exemple, la requête suivante renvoie le total des attributs LaborHours indiquant le nombre d'heures travaillées. Dans ce cas, **Data ()** est appliqué implicitement aux nœuds d’attribut.  
   
 ```  
 declare @x xml  
@@ -39,17 +39,17 @@ set @x='<ROOT><Location LID="1" SetupTime="1.1" LaborHours="3.3" />
 SELECT @x.query('sum(/ROOT/Location/@LaborHours)')  
 ```  
   
- Bien que non obligatoire, vous pouvez également spécifier explicitement le **data()** fonction :  
+ Bien que cela ne soit pas obligatoire, vous pouvez également spécifier explicitement la fonction **Data ()** :  
   
 ```  
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- Un autre exemple d'atomisation implicite réside dans l'utilisation d'opérateurs arithmétiques. Le **+** opérateur requiert des valeurs atomiques et **data()** est appliquée implicitement pour extraire la valeur atomique de l’attribut LaborHours. La requête est spécifiée sur la colonne Instructions de la **xml** type dans la table ProductModel. La requête suivante renvoie trois fois l'attribut LaborHours. À ce sujet, vous remarquerez que :  
+ Un autre exemple d'atomisation implicite réside dans l'utilisation d'opérateurs arithmétiques. L' **+** opérateur requiert des valeurs atomiques, tandis que **Data ()** est appliqué implicitement pour récupérer la valeur atomique de l’attribut LaborHours. La requête est spécifiée par rapport à la colonne instructions du type **XML** dans la table ProductModel. La requête suivante renvoie trois fois l'attribut LaborHours. À ce sujet, vous remarquerez que :  
   
 -   Lors de la construction de l'attribut OriginalLaborHours, l'atomisation s'applique implicitement à la séquence singleton renvoyée par (`$WC/@LaborHours`). La valeur typée de l'attribut LaborHours est affectée à OriginalLaborHours.  
   
--   Lors de la construction de l'attribut UpdatedLaborHoursV1, l'opérateur arithmétique requiert des valeurs atomiques. Par conséquent, **data()** s’applique implicitement à l’attribut LaborHours renvoyé par (`$WC/@LaborHours`). La valeur atomique 1 lui est ensuite ajoutée. La construction de l’attribut UpdatedLaborHoursV2 affiche l’application explicite de **data()** , mais n’est pas obligatoire.  
+-   Lors de la construction de l'attribut UpdatedLaborHoursV1, l'opérateur arithmétique requiert des valeurs atomiques. Par conséquent, **Data ()** est appliqué implicitement à l’attribut LaborHours retourné par (`$WC/@LaborHours`). La valeur atomique 1 lui est ensuite ajoutée. La construction de l’attribut UpdatedLaborHoursV2 montre l’application explicite des **données ()**, mais n’est pas obligatoire.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +64,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <WC OriginalLaborHours="2.5"   
@@ -74,10 +74,10 @@ where ProductModelID=7
   
  L'atomisation entraîne donc une instance d'un type simple, un ensemble vide ou une erreur de type statique.  
   
- L’atomisation se produit également dans les paramètres d’expressions de comparaison passés aux fonctions, les valeurs retournées par les fonctions, **cast()** expressions et les expressions de tri transmises dans l’ordre par clause.  
+ L’atomisation se produit également dans les paramètres d’expression de comparaison passés aux fonctions, aux valeurs retournées par les fonctions, aux expressions **Cast ()** et aux expressions de classement passées dans la clause ORDER BY.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes fondamentaux de XQuery](../xquery/xquery-basics.md)   
+ [Notions de base de XQuery](../xquery/xquery-basics.md)   
  [Expressions de comparaison &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [Fonctions XQuery impliquant le type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   

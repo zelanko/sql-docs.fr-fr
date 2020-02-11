@@ -18,21 +18,21 @@ ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c8f2e34d15f7cca4443680b2d8b8a9fa2c7c6199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952316"
 ---
-# <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
+# <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime le serveur actuel des opérations multiserveur.  
   
 > [!CAUTION]  
->  **sp_msx_defect** modifie le Registre. La modification manuelle du Registre n'est pas recommandée parce que des modifications inadaptées ou incorrectes peuvent provoquer de graves problèmes de configuration à votre système. Seuls des utilisateurs expérimentés peuvent utiliser regedit.exe pour modifier le Registre. Pour plus d’informations, consultez la documentation de Microsoft Windows.  
+>  **sp_msx_defect** modifie le registre. La modification manuelle du Registre n'est pas recommandée parce que des modifications inadaptées ou incorrectes peuvent provoquer de graves problèmes de configuration à votre système. Seuls des utilisateurs expérimentés peuvent utiliser regedit.exe pour modifier le Registre. Pour plus d’informations, consultez la documentation de Microsoft Windows.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,19 +42,19 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @forced_defection = ] forced_defection` Spécifie s’il faut forcer la désinscription de se produire si le SQLServerAgent principal a été définitivement perdu en raison d’une détérioration irréversible endommagé **msdb** base de données, ou sur non **msdb** sauvegarde de base de données. *défection_forcée*est **bits**, avec une valeur par défaut **0**, ce qui indique qu’aucun forcer la désinscription. La valeur **1** force la désinscription.  
+`[ @forced_defection = ] forced_defection`Spécifie s’il faut ou non forcer la désinscription si le serveur SQLServerAgent principal a été définitivement perdu en raison d’une base de données **msdb** irrémédiablement endommagée ou de la sauvegarde d’une base de données **msdb** . *forced_defection*est de **bit**, avec **0**comme valeur par défaut, qui indique qu’aucune désinscription forcée ne doit se produire. La valeur **1** force la désinscription.  
   
- Après avoir forcé une désinscription par l’exécution de **sp_msx_defect**, un membre de la **sysadmin** rôle serveur fixe sur le SQLServerAgent principal doit exécuter la commande suivante pour terminer l’opération :  
+ Après avoir forcé une désinscription en exécutant **sp_msx_defect**, un membre du rôle serveur fixe **sysadmin** sur le serveur SQLServerAgent maître doit exécuter la commande suivante pour terminer la désinscription :  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
 ```  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Lorsque **sp_msx_defect** se termine correctement, un message est retourné.  

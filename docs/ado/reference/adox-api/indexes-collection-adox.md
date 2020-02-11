@@ -1,5 +1,5 @@
 ---
-title: Index de Collection (ADOX) | Microsoft Docs
+title: Indexes, collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,34 +17,34 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966046"
 ---
 # <a name="indexes-collection-adox"></a>Indexes, collection (ADOX)
-Contient tous les [Index](../../../ado/reference/adox-api/index-object-adox.md) objets d’une table.  
+Contient tous les objets [index](../../../ado/reference/adox-api/index-object-adox.md) d’une table.  
   
 ## <a name="remarks"></a>Notes  
- Le [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) méthode pour un **index** collection est unique pour ADOX. Vous pouvez :  
+ La méthode [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) d’une collection **indexes** est unique pour ADOX. Vous pouvez :  
   
--   Ajouter un nouvel index à la collection avec le **Append** (méthode).  
+-   Ajoutez un nouvel index à la collection à l’aide de la méthode **Append** .  
   
- Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont standard pour les collections ADO. Vous pouvez :  
   
--   Accéder à un index dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
+-   Accédez à un index dans la collection à l’aide de la propriété [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
--   Retourner le nombre d’index de la collection avec le [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété.  
+-   Retourne le nombre d’index contenus dans la collection avec la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Supprimer un index de la collection avec le [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) (méthode).  
+-   Supprimez un index de la collection à l’aide de la méthode [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
   
--   Mettre à jour les objets dans la collection afin de refléter le schéma actuel de la base de données avec le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) (méthode).  
+-   Mettez à jour les objets de la collection pour refléter le schéma de base de données actuel avec la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
 -   [Propriétés, méthodes et événements de la collection Indexes](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Indexes, exemple (VB) de la méthode Append](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Indexes, exemple de méthode Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

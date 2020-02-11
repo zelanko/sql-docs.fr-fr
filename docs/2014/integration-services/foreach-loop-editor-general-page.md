@@ -1,5 +1,5 @@
 ---
-title: Éditeur de boucle foreach (Page Général) | Microsoft Docs
+title: Éditeur de boucle foreach (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058520"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Éditeur de boucle Foreach (page Général)
@@ -36,8 +36,8 @@ ms.locfileid: "66058520"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de boucle foreach &#40;Page de Collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Éditeur de boucle foreach &#40;Page mappage de variables&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Éditeur de boucle foreach &#40;page de collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Éditeur de boucle foreach &#40;page Mappages de variables&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Page Expressions](expressions/expressions-page.md)   
  [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md)   
  [Conteneur de boucles For](control-flow/for-loop-container.md)  

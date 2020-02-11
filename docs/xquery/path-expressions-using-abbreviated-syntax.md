@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la syntaxe dans une Expression de chemin d’accès abrégée | Microsoft Docs
+title: Utilisation de la syntaxe abrégée dans une expression de chemin d’accès | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946415"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Expressions de chemin : utilisation de la syntaxe abrégée
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Tous les exemples de [présentation des Expressions de chemin d’accès dans XQuery](../xquery/path-expressions-xquery.md) utiliser la syntaxe non abrégée pour les expressions de chemin d’accès. La syntaxe non abrégée pour une étape d'axe dans une expression de chemin d'accès inclut le nom de l'axe et le test du nœud, séparés par un double signe deux-points et suivis le cas échéant par des qualificatifs d'étape.  
+  Tous les exemples de [compréhension des expressions de chemin d’accès dans XQuery](../xquery/path-expressions-xquery.md) utilisent une syntaxe unabrégée pour les expressions de chemin d’accès. La syntaxe non abrégée pour une étape d'axe dans une expression de chemin d'accès inclut le nom de l'axe et le test du nœud, séparés par un double signe deux-points et suivis le cas échéant par des qualificatifs d'étape.  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 child::ProductDescription[attribute::ProductModelID=19]  
@@ -35,13 +35,13 @@ child::ProductDescription[attribute::ProductModelID=19]
   
  XQuery prend en charge les abréviations suivantes lors de l'utilisation d'expressions de chemin d'accès :  
   
--   Le **enfant** axe est l’axe par défaut. Par conséquent, le **enfant ::** peut être omis à partir d’une étape dans une expression. Par exemple, `/child::ProductDescription/child::Summary` peut s'écrire sous la forme `/ProductDescription/Summary`.  
+-   L’axe **enfant** est l’axe par défaut. Par conséquent, l' **enfant ::** AXIS peut être omis dans une étape d’une expression. Par exemple, `/child::ProductDescription/child::Summary` peut s'écrire sous la forme `/ProductDescription/Summary`.  
   
--   Un **attribut** axe peut être abrégé par @. Par exemple, `/child::ProductDescription[attribute::ProductModelID=10]` peut s'écrire sous la forme `/ProudctDescription[@ProductModelID=10]`.  
+-   Un axe d' **attribut** peut être abrégé comme @. Par exemple, `/child::ProductDescription[attribute::ProductModelID=10]` peut s'écrire sous la forme `/ProudctDescription[@ProductModelID=10]`.  
   
--   Un **/descendant-or-self::node()/** peut être abrégé par / /. Par exemple, `/descendant-or-self::node()/child::act:telephoneNumber` peut s'écrire sous la forme `//act:telephoneNumber`.  
+-   Un **/descendant-or-self :: node ()/** peut être abrégé sous la forme//. Par exemple, `/descendant-or-self::node()/child::act:telephoneNumber` peut s'écrire sous la forme `//act:telephoneNumber`.  
   
-     La requête précédente récupère tous les numéros de téléphone stockés dans la colonne AdditionalContactInfo de la table Contact. Le schéma pour AdditionalContactInfo est défini d’une manière qui un \<telephoneNumber > élément peut apparaître n’importe où dans le document. Ainsi, pour retrouver tous les numéros de téléphone, vous devez rechercher tous les nœuds du document. Cette recherche part de la racine du document et se poursuit à travers tous les nœuds descendants.  
+     La requête précédente récupère tous les numéros de téléphone stockés dans la colonne AdditionalContactInfo de la table Contact. Le schéma pour AdditionalContactInfo est défini de façon à ce qu' \<un élément telephoneNumber> puisse apparaître n’importe où dans le document. Ainsi, pour retrouver tous les numéros de téléphone, vous devez rechercher tous les nœuds du document. Cette recherche part de la racine du document et se poursuit à travers tous les nœuds descendants.  
   
      La requête suivante permet de récupérer tous les numéros de téléphone pour un client donné d'après ses informations de contact :  
   
@@ -58,7 +58,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
      Si vous remplacez l'expression de chemin d'accès par sa syntaxe abrégée `//act:telephoneNumber`, vous obtenez les mêmes résultats.  
   
--   Le **self ::node()** dans une étape peut être abrégé en un seul point (.). Toutefois, le point n’est ni équivalent ni interchangeable avec le **self ::node()** .  
+-   Le **self :: node ()** d’une étape peut être abrégé en un seul point (.). Toutefois, le point n’est pas équivalent ou interchangeable avec le **self :: node ()**.  
   
      Par exemple, utiliser un point dans la requête suivante revient à représenter une valeur et non un nœud :  
   
@@ -66,6 +66,6 @@ child::ProductDescription[attribute::ProductModelID=19]
     ("abc", "cde")[. > "b"]  
     ```  
   
--   Le **parent ::node()** dans une étape peut être abrégé par deux points (.).  
+-   Le **parent :: node ()** d’une étape peut être abrégé en point double (..).  
   
   

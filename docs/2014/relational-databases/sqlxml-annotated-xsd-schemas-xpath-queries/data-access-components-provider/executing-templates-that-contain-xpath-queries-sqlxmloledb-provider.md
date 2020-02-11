@@ -1,5 +1,5 @@
 ---
-title: Exécution de modèles qui contiennent des requêtes XPath (fournisseur SQLXMLOLEDB) | Microsoft Docs
+title: Exécution de modèles contenant des requêtes XPath (fournisseur SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4b5d51597f41b5355acd4995aaf7f988ed53a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013089"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Exécution de modèles contenant des requêtes XPath (fournisseur SQLXMLOLEDB)
@@ -30,20 +30,20 @@ ms.locfileid: "66013089"
   
 -   ClientSideXML  
   
--   Chemin d’accès de base  
+-   Chemin de base  
   
 -   Schéma de mappage  
   
- Dans cet exemple d’application ADO, un modèle XML qui se compose d’une requête XPath (racine) est spécifié par rapport au schéma de mappage XSD (MySchema.xml) qui est décrit dans [l’exécution des requêtes XPath &#40;fournisseur SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ Dans cet exemple d’application ADO, un modèle XML qui se compose d’une requête XPath (racine) est spécifié par rapport au schéma de mappage XSD (MySchema. Xml) décrit dans [exécution de requêtes xpath &#40;&#41;fournisseur SQLXMLOLEDB ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
- La propriété de schéma de mappage fournit le schéma de mappage XSD par rapport à laquelle la requête XPath est exécutée. La propriété de chemin d’accès de Base fournit le chemin d’accès de fichier pour le schéma de mappage.  
+ La propriété schéma de mappage fournit le schéma de mappage XSD sur lequel la requête XPath est exécutée. La propriété chemin d’accès de base fournit le chemin d’accès du fichier au schéma de mappage.  
   
- La propriété ClientSideXML est définie sur True. Par conséquent, le document XML est généré sur le client.  
+ La propriété ClientSideXML a la valeur true. Par conséquent, le document XML est généré sur le client.  
   
  Dans l'application, une requête XPath est spécifiée directement. Par conséquent, le dialecte {5d531cb2-e6ed-11d2-b252-00c04f681b71} doit être inclus.  
   
 > [!NOTE]  
->  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) pour le fournisseur de données, ce qui nécessite l’installation du logiciel client réseau supplémentaire. Pour plus d’informations, consultez [configuration système requise pour SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de Native Client (SQLNCLI11) pour le fournisseur de données qui requiert l’installation d’un logiciel client réseau supplémentaire. Pour plus d’informations, consultez [Configuration système requise pour SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

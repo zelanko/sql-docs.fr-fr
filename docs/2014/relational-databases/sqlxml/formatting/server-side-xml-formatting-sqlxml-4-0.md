@@ -1,5 +1,5 @@
 ---
-title: (SQLXML 4.0) de la mise en forme XML côté serveur | Microsoft Docs
+title: Mise en forme XML côté serveur (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af44d854ba28e8e8ac3b1a4572bf9b222f20299b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012211"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Mise en forme XML côté serveur (SQLXML 4.0)
@@ -25,7 +25,7 @@ ms.locfileid: "66012211"
   
  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez stocker et extraire des documents XML vers et depuis des tables de base de données. Pour extraire un document XML, utilisez l'extension de requête FOR XML dans une requête SELECT.  
   
- Par exemple, supposons une application cliente exécute une commande sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui se compose des éléments suivants [!INCLUDE[tsql](../../../includes/tsql-md.md)] requête :  
+ Par exemple, supposons qu’une application cliente exécute une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] commande sur qui se compose [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la requête suivante :  
   
 ```  
 SELECT FirstName, LastName  
@@ -50,11 +50,11 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- Pour plus d’informations sur la clause FOR XML, consultez [construction de code XML à l’aide de XML](../../xml/for-xml-sql-server.md).  
+ Pour plus d’informations sur la clause FOR XML, consultez [construction de XML à l’aide de for XML](../../xml/for-xml-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture de mise en forme côté Client et côté serveur XML &#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [La mise en forme XML côté client &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
+ [Architecture de la mise en forme XML côté client et côté serveur &#40;SQLXML 4,0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [Mise en forme XML côté client &#40;SQLXML 4,0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)  
   
   

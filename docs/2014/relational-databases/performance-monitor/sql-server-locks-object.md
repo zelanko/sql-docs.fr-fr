@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7773177f6ec9d02df9d3d669abf561919ffe0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250610"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, objet Locks
@@ -27,15 +27,16 @@ ms.locfileid: "63250610"
   
 |Compteurs de verrous de SQL Server|Description|  
 |-------------------------------|-----------------|  
-|**Temps d'attente moyen (ms)**|Durée d'attente moyenne (en millisecondes) pour chaque demande de verrou qui se termine par une attente.|  
-|**Requêtes de verrous/seconde**|Nombre de nouveaux verrous et de conversions de verrous par seconde demandés par le gestionnaire de verrous.|  
-|**Expirations de verrouillage (expiration > 0)/s**|Nombre de demandes de verrous par seconde ayant expiré, demandes de verrous NOWAIT exclues.|  
-|**Dépassement de l'attente des verrous/seconde**|Nombre de demandes de verrous par seconde ayant expiré, demandes de verrous NOWAIT incluses|  
-|**Temps d'attente des verrous (ms)**|Temps d'attente total (en millisecondes) pour les verrous lors de la dernière seconde|  
-|**Attente de verrous/seconde**|Nombre de requêtes de verrous par seconde qui ont exigé une attente de l'utilisateur.|  
-|**Nombre de blocages/seconde**|Nombre de requêtes de verrous par seconde qui se sont terminées par un blocage.|  
+|**Temps d’attente moyen (MS)**|Durée d'attente moyenne (en millisecondes) pour chaque demande de verrou qui se termine par une attente.|  
+|**Requêtes de verrous/s**|Nombre de nouveaux verrous et de conversions de verrous par seconde demandés par le gestionnaire de verrous.|  
+|**Délais d’expiration des verrous (délai d’expiration > 0)/seconde**|Nombre de demandes de verrous par seconde ayant expiré, demandes de verrous NOWAIT exclues.|  
+|**Délais d’attente des verrous/s**|Nombre de demandes de verrous par seconde ayant expiré, demandes de verrous NOWAIT incluses|  
+|**Temps d’attente des verrous (MS)**|Temps d'attente total (en millisecondes) pour les verrous lors de la dernière seconde|  
+|**Attentes de verrous/s**|Nombre de requêtes de verrous par seconde qui ont exigé une attente de l'utilisateur.|  
+|**Nombre d’interblocages/s**|Nombre de requêtes de verrous par seconde qui se sont terminées par un blocage.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut verrouiller ces ressources.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut verrouiller ces ressources.  
   
 |Élément|Description|  
 |----------|-----------------|  
@@ -43,12 +44,12 @@ ms.locfileid: "63250610"
 |**AllocUnit**|Verrou sur une unité d'allocation.|  
 |**Application**|Verrou appliqué à une ressource d'application.|  
 |**Sauvegarde de la base de données**|Verrou sur une base de données, y compris tous ses objets.|  
-|**Extension**|Verrou sur un groupe contigu de 8 pages.|  
+|**Étendue**|Verrou sur un groupe contigu de 8 pages.|  
 |**Fichier**|Verrou sur un fichier de base de données|  
 |**Segment de mémoire/BTree**|Segment de mémoire ou BTree (HOBT) Verrou sur un segment de mémoire de pages de données ou sur la structure BTree d'un index|  
 |**Clé**|Verrou sur une ligne d'index|  
 |**Métadonnées**|Verrou sur une partie des informations de catalogue (appelée également métadonnées).|  
-|**Objet**|Verrou sur une table, une procédure stockée, une vue, etc. y compris toutes les données et tous les index. L’objet peut correspondre à tout élément ayant une entrée dans **sys.all_objects**.|  
+|**Object**|Verrou sur une table, une procédure stockée, une vue, etc. y compris toutes les données et tous les index. L’objet peut correspondre à tout élément ayant une entrée dans **sys.all_objects**.|  
 |**Page**|Verrou sur une page de 8 kilo-octets (Ko) dans une base de données.|  
 |**RID**|ID de ligne. Verrou sur une seule ligne dans un segment de mémoire.|  
   

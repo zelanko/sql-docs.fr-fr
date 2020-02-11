@@ -18,18 +18,18 @@ ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042823"
 ---
-# <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
+# <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une partie du journal [!INCLUDE[ssIS](../../includes/ssis-md.md)] (sysssislog) qui correspond au package_execution_id pour le package donné. La table contient une ligne pour chaque entrée du journal générée par les packages ou par leurs tâches et conteneurs lors de l'exécution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>Arguments  
  *log_id*  
- Identificateur unique local pour le journal des exécutions. *log_id* est **int**.  
+ Identificateur unique local pour le journal des exécutions. *log_id* est de **type int**.  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -53,14 +53,14 @@ fn_syscollector_get_execution_details ( log_id )
 |source|**nvarchar**|Nom de l'exécutable qui a généré l'entrée du journal.|  
 |sourceid|**uniqueidentifier**|GUID de l'exécutable qui a généré l'entrée du journal.|  
 |executionid|**uniqueidentifier**|GUID de l'instance d'exécution de l'exécutable qui a généré l'entrée du journal.|  
-|starttime|**datetime**|Heure de début de l'exécution du package.|  
-|endtime|**datetime**|Heure de fin d'exécution du package.|  
+|Heure de départ|**DATETIME**|Heure de début de l'exécution du package.|  
+|endtime|**DATETIME**|Heure de fin d'exécution du package.|  
 |datacode|**int**|Valeur entière qui identifie l'événement associé à l'entrée du journal. La valeur « 0 » indique que l'événement ne fournit aucun identificateur.|  
 |databytes|**image**|Tableau d'octets qui identifie une valeur de retour.|  
 |message|**nvarchar**|Description de l'événement et des informations associées à l'événement.|  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’autorisation SELECT pour **dc_operator**.  
+ Nécessite l’autorisation SELECT pour **dc_operator**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Activer la journalisation des packages dans SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   

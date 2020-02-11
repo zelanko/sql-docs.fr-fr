@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Effectuer une restauration à partir d’une sauvegarde complète de base de données | Microsoft Docs'
+title: 'Leçon 4 : effectuer une restauration à partir d’une sauvegarde complète de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153403"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Leçon 4 : Effectuer une restauration d’une sauvegarde de base de données complète
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Leçon 4 : Effectuer une restauration d'une sauvegarde de base de données complète
   Cette leçon illustre l'utilisation d'une instruction TSQL pour effectuer une restauration d'une sauvegarde de base de données complète créée au cours de la leçon précédente.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Effectuer une restauration d'une sauvegarde de base de données  
@@ -40,9 +40,9 @@ ms.locfileid: "70153403"
   
     ```  
   
-5.  Vérifiez l'instruction T-SQL et cliquez sur **Exécuter**  
+5.  Vérifiez l’instruction T-SQL et cliquez sur **exécuter** .  
   
 ### <a name="return-to-tutorials-portal"></a>Revenir au portail des didacticiels  
- [Tutoriel : SQL Server la sauvegarde et la restauration dans le service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)de stockage d’objets BLOB Azure.  
+ [Didacticiel : SQL Server la sauvegarde et la restauration dans le service de stockage d’objets BLOB Azure](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

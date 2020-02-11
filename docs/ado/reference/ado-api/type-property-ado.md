@@ -17,31 +17,31 @@ ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937866"
 ---
 # <a name="type-property-ado"></a>Type, propriété (ADO)
-Indique le type de données ou de type opérationnel d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md), [champ](../../../ado/reference/ado-api/field-object.md), ou [propriété](../../../ado/reference/ado-api/property-object-ado.md) objet.  
+Indique le type opérationnel ou le type de données d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md), d’un [champ](../../../ado/reference/ado-api/field-object.md)ou d’un objet de [propriété](../../../ado/reference/ado-api/property-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valeur.  
+ Définit ou retourne une valeur [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) .  
   
 ## <a name="remarks"></a>Notes  
- Pour **paramètre** objets, le **Type** propriété est en lecture/écriture. Pour les nouveaux **champ** les objets qui ont été ajoutées à la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), **Type** est en lecture/écriture uniquement après le [ Valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété pour le **champ** a été spécifié et le fournisseur de données a correctement ajouté le nouveau **champ** en appelant le [mettre à jour](../../../ado/reference/ado-api/update-method.md)(méthode) de la **champs** collection.  
+ Pour les objets de **paramètre** , la propriété de **type** est en lecture/écriture. Pour les nouveaux objets de **champ** qui ont été ajoutés à la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), le **type** est lecture/écriture uniquement lorsque la propriété [valeur](../../../ado/reference/ado-api/value-property-ado.md) du **champ** a été spécifiée et que le fournisseur de données a correctement ajouté le nouveau **champ** en appelant la méthode [Update](../../../ado/reference/ado-api/update-method.md) de la collection **Fields** .  
   
- Pour tous les autres objets, la **Type** propriété est en lecture seule.  
+ Pour tous les autres objets, la propriété **type** est en lecture seule.  
   
 ## <a name="applies-to"></a>S'applique à  
   
 ||||  
 |-|-|-|  
-|[Field, objet](../../../ado/reference/ado-api/field-object.md)|[Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)|[Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Objet Field](../../../ado/reference/ado-api/field-object.md)|[Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de propriété de type (objet Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Exemple de propriété de type (propriété) (VC ++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
+ [Type, exemple de propriété (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
+ [Type, exemple de propriété (propriété) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType, propriété (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -13,18 +13,18 @@ ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941823"
 ---
-# <a name="spdeletebackup-transact-sql"></a>sp_delete_backup (Transact-SQL)
+# <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Supprime tous les instantanés et le fichier de sauvegarde qui composent un jeu à partir de la base de données de sauvegarde de capture instantanée. Cette procédure stockée système est la seule méthode recommandée pour la gestion des jeux de sauvegarde d’instantanés. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Supprime tous les instantanés et le fichier de sauvegarde qui composent un jeu de sauvegarde d’instantané de la base de données spécifiée. Cette procédure stockée système est la seule méthode recommandée pour gérer les jeux de sauvegardes d’instantanés. Pour plus d’informations, voir [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)(en anglais).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,16 +37,16 @@ sys.sp_delete_backup
   
 ## <a name="arguments"></a>Arguments  
  *[ @backup_url =] backup_meta_file_url*  
- L’URL de la sauvegarde doit être supprimé, ce qui supprime toutes les captures instantanées comprenant la jeu, y compris le fichier de sauvegarde de sauvegarde spécifié.  
+ URL de la sauvegarde à supprimer, qui supprime toutes les captures instantanées contenant le jeu de sauvegarde spécifié, y compris le fichier de sauvegarde lui-même.  
   
- *[ @db_name =] nom_base_de_données*  
- Le nom de la base de données contenant l’instantané à supprimer. Lorsqu’un nom de base de données est fourni, le système vérifie que l’URL de sauvegarde fourni est une URL de sauvegarde pour la base de données spécifiée et utilise [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) pour supprimer chaque capture instantanée. Si aucun nom de base de données est fourni, cette vérification de la base de données n’est pas effectuée.  
+ *[ @db_name =] database_name*  
+ Nom de la base de données contenant l’instantané à supprimer. Lorsqu’un nom de base de données est fourni, le système vérifie que l’URL de sauvegarde fournie est une URL de sauvegarde pour la base de données spécifiée et utilise [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) pour supprimer chaque instantané. Si aucun nom de base de données n’est fourni, la vérification de la base de données n’est pas effectuée.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’autorisation ALTER ANY DATABASE ou l’autorisation ALTER sur la base de données spécifié.  
+ Nécessite l’autorisation ALTER ANY DATABASE ou l’autorisation ALTER sur la base de données spécifiée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
+ [sys. fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
  [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
   
   

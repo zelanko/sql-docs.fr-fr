@@ -19,18 +19,18 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942284"
 ---
-# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
+# <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Force le garbage collector FILESTREAM à s'exécuter, en supprimant tous fichiers FILESTREAM inutiles.  
   
- Un conteneur FILESTREAM ne peut pas être supprimé tant que tous les fichiers supprimés qu'il contient n'ont pas été nettoyés par le garbage collector. Le garbage collector FILESTREAM s'exécute automatiquement. Toutefois, si vous avez besoin pour supprimer un conteneur avant que le garbage collector a exécuté, vous pouvez utiliser sp_filestream_force_garbage_collection pour exécuter le garbage collector manuellement.  
+ Un conteneur FILESTREAM ne peut pas être supprimé tant que tous les fichiers supprimés qu'il contient n'ont pas été nettoyés par le garbage collector. Le garbage collector FILESTREAM s'exécute automatiquement. Toutefois, si vous devez supprimer un conteneur avant l’exécution du garbage collector, vous pouvez utiliser sp_filestream_force_garbage_collection pour exécuter le garbage collector manuellement.  
   
   
 ## <a name="syntax"></a>Syntaxe  
@@ -46,27 +46,28 @@ sp_filestream_force_garbage_collection
  Représente le nom de la base de données dans laquelle exécuter le garbage collector.  
   
 > [!NOTE]  
-> `@dbname` est **sysname**. En l'absence de spécification, c'est la base de données actuelle qui est utilisée.  
+> `@dbname`est de **type sysname**. En l'absence de spécification, c'est la base de données actuelle qui est utilisée.  
   
  `[ @filename = ] 'logical_file_name'`  
- Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. `@filename` est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifié.  
+ Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. 
+  `@filename` est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifiée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
   
 |||  
 |-|-|  
-|Value|Description|  
+|Valeur|Description|  
 |0|Réussite de l'opération|  
 |1|Échec de l'opération|  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*file_name*|Indique le nom de conteneur FILESTREAM|  
 |*num_collected_items*|Indique le nombre d'éléments FILESTREAM (fichiers/répertoires) qui ont été récupérés par le garbage collector (supprimés) dans ce conteneur.|  
-|*num_marked_for_collection_items*|Indique le nombre d'éléments FILESTREAM (fichiers/répertoires) qui ont été marqués pour le garbage collection dans ce conteneur. Ces éléments n’ayant pas encore été supprimés, mais peuvent être éligibles pour la suppression après la phase de garbage collection.|  
-|*num_unprocessed_items*|Indique le nombre d'éléments FILESTREAM éligibles (fichiers ou répertoires) qui n'ont pas été traités pour le garbage collection dans ce conteneur FILESTREAM. Les éléments peuvent être inexploités pour différentes raisons, notamment :<br /><br /> Fichiers qui doivent être épinglés car la sauvegarde de journal ou le point de contrôle n'a pas été accepté.<br /><br /> Fichiers en mode de récupération FULL ou BULK_LOGGED.<br /><br /> Il existe une transaction active de longue durée.<br /><br /> Le travail de lecture de journal de réplication n’a pas été exécutée. Consultez le livre blanc [stockage FILESTREAM dans SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) pour plus d’informations.|  
+|*num_marked_for_collection_items*|Indique le nombre d'éléments FILESTREAM (fichiers/répertoires) qui ont été marqués pour le garbage collection dans ce conteneur. Ces éléments n’ont pas encore été supprimés, mais peuvent être supprimés à la suite de la phase garbage collection.|  
+|*num_unprocessed_items*|Indique le nombre d'éléments FILESTREAM éligibles (fichiers ou répertoires) qui n'ont pas été traités pour le garbage collection dans ce conteneur FILESTREAM. Les éléments peuvent être inexploités pour différentes raisons, notamment :<br /><br /> Fichiers qui doivent être épinglés car la sauvegarde de journal ou le point de contrôle n'a pas été accepté.<br /><br /> Fichiers en mode de récupération FULL ou BULK_LOGGED.<br /><br /> Il existe une transaction active de longue durée.<br /><br /> Le travail du lecteur du journal de réplication n’a pas été exécuté. Pour plus d’informations, consultez le livre blanc [stockage FILESTREAM dans SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) .|  
 |*last_collected_xact_seqno*|Retourne le dernier numéro séquentiel dans le journal correspondant (LSN) jusqu'aux fichiers récupérés par le garbage collector pour le conteneur FILESTREAM spécifié.|  
   
 ## <a name="remarks"></a>Notes  
@@ -77,9 +78,9 @@ sp_filestream_force_garbage_collection
   
 Plusieurs appels de cette procédure stockée peuvent être exécutés simultanément uniquement sur des conteneurs distincts ou des bases de données distinctes.  
 
-En raison d’opérations de la phase 2, la procédure stockée doit être exécutée deux fois pour supprimer réellement les fichiers Filestream sous-jacents.  
+En raison des opérations en 2 phases, la procédure stockée doit être exécutée deux fois pour supprimer les fichiers FILESTREAM sous-jacents.  
 
-Garbage Collection (GC) s’appuie sur la troncation du journal. Si les fichiers ont été récemment supprimés sur une base de données à l’aide du mode de récupération complète, elles ne sont donc GC-ed uniquement après une sauvegarde de journal de ces parties de journaux de transaction est effectuée et la partie du journal est marqué comme inactive. Sur une base de données à l’aide du mode de récupération Simple, une troncation de journal se produit après un `CHECKPOINT` a été émis par rapport à la base de données.  
+Le garbage collection (GC) s’appuie sur la troncation du journal. Par conséquent, si des fichiers ont été supprimés récemment sur une base de données à l’aide du mode de récupération complète, ils sont GC uniquement après une sauvegarde de fichier journal de ces portions du journal des transactions et la partie du journal est marquée comme inactive. Sur une base de données utilisant le mode de récupération simple, une troncation `CHECKPOINT` du journal se produit après l’émission d’un sur la base de données.  
 
 
 ## <a name="permissions"></a>Autorisations  
@@ -106,7 +107,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[FileStream](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Vues de gestion dynamiques Filestream et FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Vues de catalogue Filestream et FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

@@ -11,20 +11,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264411"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Paramètres globaux (Testeur) (OracleToSQL)
-Utilisez la page de testeur de la **paramètres globaux** boîte de dialogue pour spécifier les paramètres pour un testeur de SSMA.  
+Utilisez la page testeur de la boîte de dialogue **paramètres globaux** pour spécifier les paramètres du testeur SSMA.  
   
-Accéder aux paramètres testeur, sur le **outils** menu, sélectionnez **paramètres globaux**, puis cliquez sur **testeur** en bas du volet gauche.  
+Pour accéder aux paramètres du testeur, dans le menu **Outils** , sélectionnez **paramètres globaux**, puis cliquez sur **testeur** en bas du volet gauche.  
   
 ## <a name="options"></a>Options  
-**Analyse de l’objet testable**  
-Ce paramètre spécifie s’il faut exécuter l’analyse des objets Testable. Sélectionnez **Oui** si vous souhaitez que le testeur de SSMA pour analyser et rechercher automatiquement les objets dépendants. Groupe d’options par défaut est **Oui**.  
+**Analyse des objets testable**  
+Ce paramètre spécifie s’il faut exécuter l’analyse des objets testable. Sélectionnez **Oui** si vous souhaitez que SSMA tester analyse et vérifie automatiquement les objets dépendants. L’option par défaut est **Oui**.  
   
 Les options suivantes sont disponibles pour ce paramètre :  
   
@@ -32,21 +32,21 @@ Les options suivantes sont disponibles pour ce paramètre :
   
 2.  Non  
   
-**Mode d’économie de tables auxiliaires**  
-Ce paramètre spécifie comment enregistrer les tables auxiliaires internes créées pendant l’exécution de cas de test. Options suivantes peuvent être définies pour ce paramètre particulier :  
+**Mode d’enregistrement des tables auxiliaires**  
+Ce paramètre spécifie comment enregistrer les tables auxiliaires internes créées au cours de l’exécution du cas de test. Les options suivantes peuvent être définies pour ce paramètre particulier :  
   
 1.  Toujours supprimer  
   
 2.  Toujours enregistrer  
   
-3.  Enregistrer en cas d’échec de la comparaison des tables  
+3.  Échec de l’enregistrement de la comparaison des tables  
   
-4.  Demandez à utilisateur si la comparaison de la Table a échoué  
+4.  Demander à l’utilisateur si la comparaison de table a échoué  
   
-Le groupe d’options par défaut est : **Toujours supprimer**.  
+Le groupe d’options par défaut est : **toujours supprimer**.  
   
-**Effectuer la restauration de données**  
-Ce paramètre spécifie s’il faut exécuter une opération de restauration après l’exécution de chaque cas de test. Groupe d’options par défaut est **non**.  
+**Effectuer une restauration des données**  
+Ce paramètre spécifie s’il faut effectuer une opération de restauration après l’exécution de chaque cas de test. Le groupe d’options par défaut est **non**.  
   
 Les options suivantes sont disponibles pour ce paramètre :  
   
@@ -54,8 +54,8 @@ Les options suivantes sont disponibles pour ce paramètre :
   
 2.  Non  
   
-**Arrêter l’exécution des tests après la première défaillance**  
-Ce paramètre spécifie s’il faut arrêter le cas de test en cours d’exécution en cours, si une erreur s’est produite lors de l’exécution. Groupe d’options par défaut est **Oui**.  
+**Arrêter l’exécution des tests après le premier échec**  
+Ce paramètre spécifie s’il faut arrêter le cas de test en cours d’exécution, si une erreur s’est produite lors de l’exécution. L’option par défaut est **Oui**.  
   
 Les options suivantes sont disponibles pour ce paramètre :  
   
@@ -64,5 +64,5 @@ Les options suivantes sont disponibles pour ce paramètre :
 2.  Non  
   
 ## <a name="see-also"></a>Voir aussi  
-[Terminer la préparation du cas de Test &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Fin de la préparation du cas de test &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

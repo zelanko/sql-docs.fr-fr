@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
+title: sys. dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948636"
 ---
-# <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
+# <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque moniteur de file d'attente de l'instance. Un moniteur de file d'attente gère l'activation pour une file d'attente.  
@@ -33,12 +33,12 @@ ms.locfileid: "67948636"
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|Identificateur d'objet de la base de données qui contient la file d'attente surveillée par le moniteur. Accepte la valeur NULL.|  
+|**database_id**|**int**|Identificateur d'objet de la base de données qui contient la file d'attente surveillée par le moniteur. Accepte la valeur NULL.|  
 |**queue_id**|**int**|Identificateur d'objet de la file d'attente surveillée par le moniteur. Accepte la valeur NULL.|  
-|**state**|**nvarchar(32)**|État de l’analyse. Accepte la valeur NULL. Il s’agit d’une des opérations suivantes :<br /><br /> **INACTIF**<br /><br /> **INFORMÉ**<br /><br /> **RECEIVES_OCCURRING**|  
-|**last_empty_rowset_time**|**datetime**|Horodatage de la dernière opération RECEIVE appliquée à la file d'attente qui a retourné un jeu de résultats vide. Accepte la valeur NULL.|  
-|**last_activated_time**|**datetime**|Horodatage de la dernière activation d'une procédure stockée par ce moniteur de file d'attente. Accepte la valeur NULL.|  
-|**tasks_waiting**|**int**|Nombre de sessions actuellement en attente dans une instruction RECEIVE relative à la file d'attente considérée. Accepte la valeur NULL.<br /><br /> Remarque : Ce nombre inclut n’importe quelle session exécutant une instruction receive, indépendamment de si le moniteur de file d’attente a démarré la session. C'est pourquoi vous utilisez WAITFOR avec RECEIVE. À la base, ces tâches attendent toutes les deux l'arrivée de messages dans la file d'attente.|  
+|**Département**|**nvarchar (32)**|État de l’analyse. Accepte la valeur NULL. Il s’agit de l’un des éléments suivants :<br /><br /> **INACTIVE**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**last_empty_rowset_time**|**DATETIME**|Horodatage de la dernière opération RECEIVE appliquée à la file d'attente qui a retourné un jeu de résultats vide. Accepte la valeur NULL.|  
+|**last_activated_time**|**DATETIME**|Horodatage de la dernière activation d'une procédure stockée par ce moniteur de file d'attente. Accepte la valeur NULL.|  
+|**tasks_waiting**|**int**|Nombre de sessions actuellement en attente dans une instruction RECEIVE relative à la file d'attente considérée. Accepte la valeur NULL.<br /><br /> Remarque : ce nombre comprend toute session exécutant une instruction RECEIVE, que le moniteur de file d’attente ait démarré ou non la session. C'est pourquoi vous utilisez WAITFOR avec RECEIVE. À la base, ces tâches attendent toutes les deux l'arrivée de messages dans la file d'attente.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
@@ -76,7 +76,7 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vues de gestion dynamique liées à Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker vues de gestion dynamique associées &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

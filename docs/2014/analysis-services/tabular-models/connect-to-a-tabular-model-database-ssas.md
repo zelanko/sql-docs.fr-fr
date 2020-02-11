@@ -1,5 +1,5 @@
 ---
-title: Se connecter à une base de données de modèle tabulaire (SSAS) | Microsoft Docs
+title: Se connecter à une base de données model tabulaire (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067660"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Se connecter à une base de données model tabulaire (SSAS)
   Après avoir généré un modèle tabulaire et l'avoir déployé sur un serveur Analysis Services en mode tabulaire, vous devez définir les autorisations qui le mettent à disposition des applications clientes. Cette rubrique explique comment accorder des autorisations et comment se connecter à une base de données à partir d'applications clientes.  
   
 > [!NOTE]  
->  Par défaut, les connexions distantes à Analysis Services ne sont pas disponibles avant d'avoir configuré le pare-feu. Assurez-vous que vous avez ouvert le port approprié si vous configurez une instance par défaut ou nommée pour les connexions clientes. Pour plus d’informations, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+>  Par défaut, les connexions distantes à Analysis Services ne sont pas disponibles avant d'avoir configuré le pare-feu. Assurez-vous que vous avez ouvert le port approprié si vous configurez une instance par défaut ou nommée pour les connexions clientes. Pour plus d’informations, consultez [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  Cette rubrique contient les sections suivantes :  
   
- [Autorisations de l'utilisateur sur la base de données](#bkmk_userpermissions)  
+ [Autorisations utilisateur sur la base de données](#bkmk_userpermissions)  
   
- [Autorisations administratives sur le serveur](#bkmk_admin)  
+ [Autorisations d’administration sur le serveur](#bkmk_admin)  
   
- [Connexion à partir d'Excel ou de SharePoint](#bkmk_excelconn)  
+ [Connexion à partir d’Excel ou de SharePoint](#bkmk_excelconn)  
   
  [Résolution des problèmes de connexion](#bkmk_Tshoot)  
   
-##  <a name="bkmk_userpermissions"></a> Autorisations de l'utilisateur sur la base de données  
+##  <a name="bkmk_userpermissions"></a>Autorisations utilisateur sur la base de données  
  Les utilisateurs qui se connectent à des bases de données tabulaires doivent appartenir à un rôle de base de données qui spécifie l'accès en lecture.  
   
  Les rôles, et parfois l'appartenance au rôle, sont définis lorsqu'un modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou pour les modèles déployés, à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la création de rôles à l’aide du Gestionnaires de rôles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consultez [Créer et gérer des rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md). Pour plus d’informations sur la création et la gestion des rôles d’un modèle déployé, consultez [Rôles de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-model-roles-ssas-tabular.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "66067660"
 > [!CAUTION]  
 >  Le redéploiement d'un projet de modèle tabulaire avec les rôles définis à l'aide du Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] remplace les rôles définis dans un modèle tabulaire déployé.  
   
-##  <a name="bkmk_admin"></a> Autorisations administratives sur le serveur  
+##  <a name="bkmk_admin"></a>Autorisations d’administration sur le serveur  
  Pour les organisations qui utilisent SharePoint pour l'hébergement de classeurs Excel ou de rapports Reporting Services, une configuration supplémentaire est obligatoire pour mettre des données de modèle tabulaire à disposition des utilisateurs SharePoint. Si vous n'utilisez pas SharePoint, ignorez cette section.  
   
  La consultation de classeurs Excel ou de rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] qui contiennent des données tabulaires requiert que le compte utilisé pour exécuter Excel Services ou Reporting Services dispose des autorisations d'administrateur sur l'instance d'Analysis Services. Les autorisations administratives sont obligatoires pour que ces services soient approuvés par l'instance d'Analysis Services.  
@@ -50,7 +50,7 @@ ms.locfileid: "66067660"
   
 1.  Dans l'Administration centrale, ouvrez la page Configurer les comptes de service.  
   
-2.  Sélectionnez le pool d'applications de service utilisé par Excel Services. Il peut s’agir **Pool d’applications de Service - système des Services Web SharePoint** ou un pool d’applications personnalisées. Le compte géré utilisé par Excel Services apparaîtra dans la page.  
+2.  Sélectionnez le pool d'applications de service utilisé par Excel Services. Il peut s’agit d’un **pool d’applications de service-système de services Web SharePoint** ou d’un pool d’applications personnalisé. Le compte géré utilisé par Excel Services apparaîtra dans la page.  
   
      Pour les batteries de serveurs SharePoint qui incluent Reporting Services en mode SharePoint, obtenez également les informations de compte de l'application de service Reporting Services.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067660"
   
 5.  Cliquez sur **Ajouter**, puis entrez le compte utilisé par Excel Services, suivi du compte utilisé par Reporting Services.  
   
-##  <a name="bkmk_excelconn"></a> Connexion à partir d'Excel ou de SharePoint  
+##  <a name="bkmk_excelconn"></a>Connexion à partir d’Excel ou de SharePoint  
  Les bibliothèques clientes qui fournissent l'accès aux bases de données Analysis Services peuvent être utilisées pour se connecter aux bases de données model qui s'exécutent sur un serveur en mode tabulaire. Les bibliothèques incluent le fournisseur OLE DB Analysis Services, ADOMD.NET et AMO.  
   
  Excel utilise le fournisseur OLE DB. Si vous avez installé MSOLAP.4 à partir de SQL Server 2008 R2 (nom de fichier msolap100.dll, version 10.50.1600.1), ou MSOLAP.5 (nom de fichier msolap110.dll) avec la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de PowerPivot pour Excel, vous disposez d'une version qui se connectera aux bases de données tabulaires.  
@@ -81,39 +81,39 @@ ms.locfileid: "66067660"
   
 2.  Sélectionnez **À partir d'Analysis Services**.  
   
-3.  Pour **Nom du serveur**, spécifiez le nom de l'instance Analysis Service qui héberge la base de données. Le nom du serveur est souvent le nom de l'ordinateur qui exécute le logiciel du serveur. Si le serveur a été installé comme instance nommée, vous devez spécifier le nom au format suivant : \<nom_serveur >\\< nom_instance\>.  
+3.  Pour **Nom du serveur**, spécifiez le nom de l'instance Analysis Service qui héberge la base de données. Le nom du serveur est souvent le nom de l'ordinateur qui exécute le logiciel du serveur. Si le serveur a été installé en tant qu’instance nommée, vous devez spécifier le nom au format \<suivant : \\ NomServeur>\><nom_instance.  
   
      L'instance de serveur doit être configurée pour un déploiement tabulaire autonome et doit avoir une règle de trafic entrant qui en autorise l'accès. Pour plus d’informations, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) et [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-4.  Pour les informations d'identification, choisissez **Utiliser l'authentification Windows** si vous disposez d'autorisations de lecture sur la base de données. Sinon, choisissez **Utiliser le nom d'utilisateur et le mot de passe suivants**, puis entrez le nom d'utilisateur et le mot de passe d'un compte Windows disposant des autorisations de base de données. Cliquer sur **Suivant**.  
+4.  Pour les informations d'identification, choisissez **Utiliser l'authentification Windows** si vous disposez d'autorisations de lecture sur la base de données. Sinon, choisissez **Utiliser le nom d'utilisateur et le mot de passe suivants**, puis entrez le nom d'utilisateur et le mot de passe d'un compte Windows disposant des autorisations de base de données. Cliquez sur **Suivant**.  
   
-5.  Sélectionnez la base de données. Si la sélection est valide, un cube représentant un **Modèle** s'affiche pour la base de données. Cliquez sur **Suivant** , puis sur **Terminer**.  
+5.  Sélectionnez la base de données. Si la sélection est valide, un cube représentant un **Modèle** s'affiche pour la base de données. Cliquez sur **Suivant**, puis sur **Terminer**.  
   
  Une fois la connexion établie, vous pouvez utiliser les données pour créer un tableau croisé dynamique ou un graphique croisé dynamique. Pour plus d'informations, consultez la section [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_sharepoint"></a> Se connecter depuis SharePoint  
- Si vous utilisez PowerPivot pour SharePoint, vous pouvez créer un fichier de connexion de modèle sémantique BI dans SharePoint pour assurer la redirection vers une base de données qui s'exécute sur un serveur Analysis Services en mode tabulaire. Une connexion de modèle sémantique BI fournit un point de terminaison HTTP à une base de données. Elle simplifie également l'accès au modèle tabulaire pour les travailleurs du savoir qui utilisent régulièrement des documents sur un site SharePoint. Les travailleurs du savoir doivent simplement connaître l'emplacement du fichier de connexion de modèle sémantique BI ou son URL pour accéder aux bases de données model tabulaires. Les détails relatifs à l'emplacement du serveur ou au nom de la base de données sont inclus dans la connexion de modèle sémantique BI. Pour plus d’informations sur la création et à l’aide de fichiers de connexion de modèle sémantique BI, consultez [PowerPivot BI Semantic Model Connection &#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) et [créer une connexion de modèle sémantique BI à un modèle tabulaire Base de données](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+##  <a name="bkmk_sharepoint"></a>Se connecter à partir de SharePoint  
+ Si vous utilisez PowerPivot pour SharePoint, vous pouvez créer un fichier de connexion de modèle sémantique BI dans SharePoint pour assurer la redirection vers une base de données qui s'exécute sur un serveur Analysis Services en mode tabulaire. Une connexion de modèle sémantique BI fournit un point de terminaison HTTP à une base de données. Elle simplifie également l'accès au modèle tabulaire pour les travailleurs du savoir qui utilisent régulièrement des documents sur un site SharePoint. Les travailleurs du savoir doivent simplement connaître l'emplacement du fichier de connexion de modèle sémantique BI ou son URL pour accéder aux bases de données model tabulaires. Les détails relatifs à l'emplacement du serveur ou au nom de la base de données sont inclus dans la connexion de modèle sémantique BI. Pour plus d’informations sur la création et l’utilisation de fichiers de connexion de modèle sémantique BI, consultez [connexion de modèle sémantique bi PowerPivot &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) et [créer une connexion de modèle sémantique bi à une base de données model tabulaire](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
-##  <a name="bkmk_Tshoot"></a> Résolution des problèmes de connexion  
+##  <a name="bkmk_Tshoot"></a>Résolution des problèmes de connexion  
  Cette section décrit les causes et les étapes de résolution des problèmes qui peuvent se produire lors d'une connexion à une base de données model tabulaire.  
   
- **L'Assistant Connexion de données n'arrive pas à obtenir la liste des bases de données de la source de données spécifiée.**  
+ **L’Assistant Connexion de données ne peut pas obtenir la liste des bases de données à partir de la source de données spécifiée.**  
   
  Lors de l'importation de données, cette erreur Microsoft Excel se produit lorsque vous essayez d'utiliser l'Assistant pour vous connecter à une base de données model tabulaire sur un serveur Analysis Services distant, alors que vous ne disposez pas d'autorisations suffisantes. Pour résoudre cette erreur, vous devez avoir des droits d'accès utilisateur sur la base de données. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un utilisateur l'accès aux données.  
   
- **Une erreur s’est produite lors d’une tentative pour établir une connexion à la source de données externe. Impossible d’actualiser les connexions suivantes : \<nom du modèle > bac à sable**  
+ **Une erreur s’est produite lors d’une tentative d’établissement d’une connexion à la source de données externe. Échec de l’actualisation des connexions suivantes \<: nom du modèle> bac à sable**  
   
  Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce que vous n'avez pas d'autorisations suffisantes sur le serveur Analysis Services distant. Pour résoudre cette erreur, vous devez avoir des droits d'accès utilisateur sur la base de données. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un utilisateur l'accès aux données.  
   
- **Une erreur s’est produite lors de la tentative effectuer cette opération. Recharger le classeur, puis essayez d’effectuer cette opération à nouveau.**  
+ **Une erreur s’est produite lors de la tentative d’exécution de cette opération. Rechargez le classeur, puis réessayez d’effectuer cette opération.**  
   
  Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce qu'Excel Services n'est pas approuvé par l'instance Analysis Services sur laquelle les données de modèle sont déployées. Pour résoudre cette erreur, accordez l'autorisation administrative Excel Services sur l'instance Analysis Services. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un administrateur les autorisations. Si l'erreur persiste, relancez le pool d'applications Excel Services.  
   
- **Une erreur s'est produite lors de la tentative de connexion à la source de données externe utilisée dans le classeur.**  
+ **Une erreur s’est produite lors d’une tentative d’établissement d’une connexion à la source de données externe utilisée dans le classeur**  
   
- Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce que l'utilisateur n'a pas d'autorisations SharePoint suffisantes sur le classeur. L'utilisateur doit avoir des autorisations **Lire** ou supérieures. Les autorisations**Affichage seul** ne sont pas suffisantes pour l’accès aux données.  
+ Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce que l'utilisateur n'a pas d'autorisations SharePoint suffisantes sur le classeur. L'utilisateur doit avoir des autorisations **Lire** ou supérieures. Les autorisations **Affichage seul** ne sont pas suffisantes pour l’accès aux données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Déploiement de solutions de modèles tabulaires &#40;&#41;SSAS tabulaire](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

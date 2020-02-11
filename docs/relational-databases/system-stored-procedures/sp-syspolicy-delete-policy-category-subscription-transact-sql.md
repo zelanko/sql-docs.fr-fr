@@ -18,18 +18,18 @@ ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010495"
 ---
-# <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
+# <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un abonnement aux catégories de stratégies pour une base de données spécifique.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,10 +39,10 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` Est l’identificateur pour l’abonnement aux catégories de stratégie. *policy_category_subscription_id* est **int**.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`Identificateur de l’abonnement à la catégorie de stratégie. *policy_category_subscription_id* est de **type int**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_delete_policy_category_subscription dans le contexte de la base de données système msdb.  
@@ -52,7 +52,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ## <a name="permissions"></a>Autorisations  
  Cette procédure stockée est exécutée dans le contexte du propriétaire actuel de la procédure stockée.  
   
- Pour obtenir les valeurs de *policy_category_subscription_id*, vous pouvez utiliser la requête suivante :  
+ Pour obtenir des valeurs pour *policy_category_subscription_id*, vous pouvez utiliser la requête suivante :  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_object, b.name AS category_name  

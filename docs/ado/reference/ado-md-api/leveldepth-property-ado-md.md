@@ -1,5 +1,5 @@
 ---
-title: LevelDepth, propriété (ADO MD) | Microsoft Docs
+title: Propriété LevelDepth (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,20 +17,20 @@ ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1e62432f5d5d91cbce2079eb161a152773ed1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949599"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth, propriété (ADO MD)
 Indique le nombre de niveaux entre la racine de la hiérarchie et un [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Retourne un **Long** entier et est en lecture seule.  
+ Retourne un entier **long** , et est en lecture seule.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **LevelDepth** propriété afin de déterminer la distance entre le [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md)objet à partir du niveau racine de la hiérarchie. Le **LevelDepth**d’un membre à la racine du niveau est 0. Cela correspond à la [profondeur](../../../ado/reference/ado-md-api/depth-property-ado-md.md) propriété d’un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) objet.  
+ Utilisez la propriété **LevelDepth** pour déterminer la distance de l’objet [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md)par rapport au niveau racine de la hiérarchie. Le **LevelDepth**d’un membre au niveau de la racine est 0. Cela correspond à la propriété [Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md) d’un objet [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>S'applique à  
  [Member, objet (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

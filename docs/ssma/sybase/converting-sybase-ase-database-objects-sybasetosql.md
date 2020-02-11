@@ -1,5 +1,5 @@
 ---
-title: Convertir des objets de base de données ASE Sybase (SybaseToSQL) | Microsoft Docs
+title: Conversion d’objets de base de données Sybase ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
@@ -12,48 +12,48 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948512"
 ---
-# <a name="converting-sap-ase-database-objects-sybasetosql"></a>Convertir des objets de base de données SAP ASE (SybaseToSQL)
-Après vous être connecté à SAP Adaptive Server Enterprise (ASE), connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et définir le projet et les options de mappage de données, vous pouvez convertir des objets de base de données SAP Adaptive Server Enterprise (ASE) à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure objets.  
+# <a name="converting-sap-ase-database-objects-sybasetosql"></a>Conversion d’objets de base de données SAP ASE (SybaseToSQL)
+Après vous être connecté à SAP Adaptive Server Enterprise (ASE), connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL et définir les options de mappage de projet et de données, vous pouvez convertir des objets de base de données SAP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Adaptive Server Enterprise (ASE) en objets de base de données SQL ou Azure.  
   
-## <a name="the-conversion-process"></a>Le processus de conversion  
-Convertir des objets de base de données accepte les définitions d’objets à partir de l’ASE, les convertit en similaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure objets et charge ensuite ces informations dans les métadonnées SSMA. Il ne charge pas les informations dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez ensuite afficher les objets et leurs propriétés à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l’Explorateur de métadonnées SQL Azure.
+## <a name="the-conversion-process"></a>Processus de conversion  
+La conversion d’objets de base de données prend les définitions d’objet de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ASE, les convertit en objets similaires ou SQL Azure, puis charge ces informations dans les métadonnées SSMA. Il ne charge pas les informations dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans Azure SQL. Vous pouvez ensuite afficher les objets et leurs propriétés à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’ou de l’Explorateur de métadonnées Azure SQL.
   
-Lors de la conversion, SSMA imprime les messages de sortie pour les messages d’erreur et de volet de sortie pour le **liste d’erreurs** volet. Utilisez les informations de sortie et d’erreur pour déterminer si vous devez modifier vos bases de données ASE ou votre processus de conversion pour obtenir les résultats de la conversion souhaitée.  
+Pendant la conversion, SSMA imprime les messages de sortie dans le volet de sortie et les messages d’erreur dans le volet de **liste d’erreurs** . Utilisez les informations de sortie et d’erreur pour déterminer si vous devez modifier vos bases de données ASE ou votre processus de conversion pour obtenir les résultats de conversion souhaités.  
   
 ## <a name="setting-conversion-options"></a>Définition des options de conversion  
-Avant de convertir des objets, passez en revue les options de conversion de projet dans le **paramètres du projet** boîte de dialogue. À l’aide de cette boîte de dialogue, vous pouvez définir comment SSMA convertit les fonctions et variables globales. Pour plus d’informations, consultez [paramètres du projet &#40;Conversion&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
+Avant de convertir des objets, passez en revue les options de conversion de projet dans la boîte de dialogue **paramètres du projet** . À l’aide de cette boîte de dialogue, vous pouvez définir la manière dont SSMA convertit des fonctions et des variables globales. Pour plus d’informations, consultez [Project settings &#40;Conversion&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
   
-## <a name="converting-ase-database-objects"></a>Convertir des objets de base de données ASE  
-Pour convertir des objets de base de données ASE, tout d’abord sélectionner les objets que vous souhaitez convertir et puis SSMA effectuer la conversion. Pour afficher les messages de sortie pendant la conversion, sur le **vue** menu, sélectionnez **sortie**.  
+## <a name="converting-ase-database-objects"></a>Conversion d’objets de base de données ASE  
+Pour convertir des objets de base de données ASE, commencez par sélectionner les objets que vous souhaitez convertir, puis faites en sorte que SSMA effectue la conversion. Pour afficher les messages de sortie pendant la conversion, dans le menu **affichage** , sélectionnez **sortie**.  
   
-**Pour convertir des objets de l’ASE à la syntaxe SQL Server ou SQL Azure**  
+**Pour convertir des objets ASE en syntaxe SQL Server ou SQL Azure**  
   
-1.  Dans l’Explorateur de métadonnées de Sybase, développez le serveur de l’ASE, puis puis **bases de données**.  
+1.  Dans l’Explorateur de métadonnées Sybase, développez le serveur ASE, puis développez **bases de données**.  
   
-2.  Sélectionnez les objets à convertir :  
+2.  Sélectionner les objets à convertir :  
   
-    -   Pour convertir toutes les bases de données, sélectionnez la case à cocher à côté **bases de données**.  
+    -   Pour convertir toutes les bases de données, activez la case à cocher en regard de **bases de données**.  
   
     -   Pour convertir ou omettre une base de données, activez ou désactivez la case à cocher en regard du nom de la base de données.  
   
-    -   Pour convertir ou omettre les schémas individuels, développez la base de données, puis **schémas**, puis sélectionnez ou désactivez la case à cocher en regard du schéma.  
+    -   Pour convertir ou omettre des schémas individuels, développez la base de données, développez **schémas**, puis activez ou désactivez la case à cocher en regard du schéma.  
   
-    -   Pour convertir ou omettre une catégorie d’objets, développez le schéma, puis sélectionnez ou désactivez la case à cocher en regard de la catégorie.  
+    -   Pour convertir ou omettre une catégorie d’objets, développez le schéma, puis activez ou désactivez la case à cocher en regard de la catégorie.  
   
-    -   Pour convertir ou omettre des objets, développez le dossier de catégorie, puis sélectionnez ou désactivez la case à cocher en regard de l’objet.  
+    -   Pour convertir ou omettre des objets individuels, développez le dossier Category, puis activez ou désactivez la case à cocher en regard de l’objet.  
   
-3.  Pour convertir tous les objets sélectionnés, cliquez sur **bases de données**, puis sélectionnez **convertir le schéma**.  
+3.  Pour convertir tous les objets sélectionnés, cliquez avec le bouton droit sur **bases de données**, puis sélectionnez **convertir le schéma**.  
   
-    Vous pouvez également convertir des objets individuels ou des catégories d’objets en double-cliquant sur l’objet ou son conteneur, puis en sélectionnant **convertir le schéma**.  
+    Vous pouvez également convertir des objets ou des catégories d’objets en cliquant avec le bouton droit sur l’objet ou dans le dossier qui les contient, puis en sélectionnant **convertir le schéma**.  
   
 > [!NOTE]  
-> Certaines des fonctions système SAP ASE ne correspondent pas exactement les fonctions de système de SQL Server équivalentes dans le comportement. Pour émuler le comportement de SAP ASE, SSMA génère des fonctions définies par l’utilisateur dans la base de données SQL Server converti sous un schéma nommé « s2ss ». Selon les paramètres de projet, certaines fonctions système SQL Server sont remplacées par ces fonctions émulées. SSMA crée les fonctions définies par l’utilisateur suivantes :  
+> Certaines fonctions du système SAP ASE ne correspondent pas exactement aux fonctions système SQL Server équivalentes dans le comportement. Pour émuler le comportement de SAP ASE, SSMA génère des fonctions définies par l’utilisateur dans la base de données SQL Server convertie sous un schéma appelé 2SS. Selon les paramètres du projet, certaines des fonctions système SQL Server sont remplacées par ces fonctions émulées. SSMA crée les fonctions définies par l’utilisateur suivantes :  
   
 ||||  
 |-|-|-|  
@@ -64,67 +64,67 @@ Pour convertir des objets de base de données ASE, tout d’abord sélectionner 
 |**ulowsurr**|**to_unichar**|**ssma_current_time**|  
 |**uhighsurr**|||  
   
-## <a name="objects-not-supported-in-azure-sql"></a>Objets non pris en charge dans SQL Azure  
-Les mots clés de T-SQL suivants sont utilisés par SSMA pour SAP ASE lors de la conversion vers SQL Server locale, mais ces mots clés ne sont pas pris en charge par la syntaxe T-SQL de SQL Azure :  
+## <a name="objects-not-supported-in-azure-sql"></a>Objets non pris en charge dans Azure SQL  
+Les mots clés T-SQL suivants sont utilisés par SSMA pour SAP ASE lors de la conversion en SQL Server localement, mais ces mots clés ne sont pas pris en charge par SQL Azure syntaxe T-SQL :  
   
 ||||  
 |-|-|-|  
 |CHECKPOINT|CREATE/ALTER/DROP DEFAULT|CREATE/DROP RULE|  
-|DBCC TRACEOFF|DBCC TRACEON|ALL GRANT/REVOKE/DENY|  
+|DBCC TRACEOFF|DBCC TRACEON|GRANT/REVOKE/DENY ALL|  
 |KILL|READTEXT|SELECT INTO|  
 |SET OFFSETS|SETUSER|SHUTDOWN|  
 |WRITETEXT|||  
   
 ## <a name="viewing-conversion-problems"></a>Affichage des problèmes de conversion  
-Certains objets SAP ASE ne peuvent pas convertir. Vous pouvez déterminer le taux de réussite de la conversion en affichant le rapport de synthèse de conversion.  
+Certains objets SAP ASE peuvent ne pas être convertis. Vous pouvez déterminer les taux de réussite de la conversion en affichant le rapport de conversion Résumé.  
   
 **Pour afficher un rapport de synthèse**  
   
-1.  Dans l’Explorateur de métadonnées de Sybase, sélectionnez **bases de données**.  
+1.  Dans l’Explorateur de métadonnées Sybase, sélectionnez **bases de données**.  
   
-2.  Dans le volet droit, sélectionnez le **rapport** onglet.  
+2.  Dans le volet droit, sélectionnez l’onglet **rapport** .  
   
-    Ce rapport affiche le rapport d’évaluation de résumé pour tous les objets de base de données qui ont été évaluées ou converti. Vous pouvez également afficher un rapport de synthèse pour des objets individuels :  
+    Ce rapport affiche le rapport d’évaluation Résumé pour tous les objets de base de données qui ont été évalués ou convertis. Vous pouvez également afficher un rapport de synthèse pour des objets individuels :  
   
-    -   Pour afficher le rapport pour une base de données, sélectionnez la base de données dans l’Explorateur de métadonnées Sybase.  
+    -   Pour afficher le rapport d’une base de données individuelle, sélectionnez la base de données dans l’Explorateur de métadonnées Sybase.  
   
-    -   Pour afficher le rapport pour un objet de base de données individuelle, sélectionnez l’objet dans l’Explorateur de métadonnées Sybase. Les objets qui présentent des problèmes de conversion ont une icône d’erreur rouge.  
+    -   Pour afficher le rapport d’un objet de base de données individuel, sélectionnez l’objet dans l’Explorateur de métadonnées Sybase. Les objets qui ont des problèmes de conversion ont une icône d’erreur rouge.  
   
-Pour les objets en échec de conversion, vous pouvez afficher la syntaxe qui a entraîné l’échec de conversion.  
+Pour les objets qui n’ont pas pu être converties, vous pouvez afficher la syntaxe qui a provoqué l’échec de la conversion.  
   
-**Pour afficher les problèmes de conversion individuels**  
+**Pour afficher des problèmes de conversion individuels**  
   
-1.  Dans l’Explorateur de métadonnées de Sybase, développez **bases de données**.  
+1.  Dans l’Explorateur de métadonnées Sybase, développez **bases de données**.  
   
 2.  Développez la base de données qui affiche une icône d’erreur rouge.  
   
-3.  Développez le **schémas** dossier, puis développez le schéma qui affiche une icône d’erreur rouge.  
+3.  Développez le dossier **schémas** , puis développez le schéma qui affiche une icône d’erreur rouge.  
   
-4.  Sous le schéma, développez un dossier qui a une icône d’erreur rouge.  
+4.  Sous le schéma, développez un dossier avec une icône d’erreur rouge.  
   
-5.  Sélectionnez l’objet qui a une icône d’erreur rouge.  
+5.  Sélectionnez l’objet avec une icône d’erreur rouge.  
   
-6.  Dans le volet droit, sélectionnez le **rapport** onglet.  
+6.  Dans le volet droit, sélectionnez l’onglet **rapport** .  
   
-7.  En haut de la **rapport** onglet est une liste déroulante. Si la liste affiche **statistiques**, modifiez la sélection à **Source**.  
+7.  En haut de l’onglet **rapport** se trouve une liste déroulante. Si la liste affiche des **statistiques**, modifiez la sélection en **source**.  
   
-    SSMA affichera le code source et plusieurs boutons immédiatement au-dessus du code.  
+    SSMA affiche le code source et plusieurs boutons immédiatement au-dessus du code.  
   
 8.  Sélectionnez **problème suivant**, une icône d’erreur rouge avec une flèche pointant vers la droite.  
   
-    SSMA pour SAP ASE met en évidence le premier code source problématiques qu’il trouve dans l’objet actuel.  
+    SSMA pour SAP ASE met en surbrillance le premier code source problématique trouvé dans l’objet actuel.  
   
-Pour chaque élément qui ne peut pas être converti, vous devez déterminer ce que vous voulez faire avec cet objet :  
+Pour chaque élément qui n’a pas pu être converti, vous devez déterminer ce que vous souhaitez faire avec cet objet :  
   
--   Vous pouvez modifier le code source des procédures et des déclencheurs sur les **SQL** onglet.  
+-   Vous pouvez modifier le code source pour les procédures et les déclencheurs sous l’onglet **SQL** .  
   
--   Vous pouvez modifier l’objet SAP ASE pour supprimer ou de réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+-   Vous pouvez modifier l’objet SAP ASE pour supprimer ou réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l’Explorateur de métadonnées SQL Azure et l’Explorateur de métadonnées de Sybase, désactivez la case à cocher en regard de l’élément avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et la migration des données à partir de SAP ASE.  
+-   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans l’Explorateur de métadonnées Azure SQL et l’Explorateur de métadonnées Sybase, désactivez la case à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cocher en regard de l’élément avant de charger les objets dans ou Azure SQL et de migrer des données à partir de SAP ASE.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-L’étape suivante du processus de migration est [le chargement des objets de base de données convertis dans SQL Server / SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
+L’étape suivante du processus de migration consiste à [charger des objets de base de données convertis dans SQL Server/SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration SAP ASE bases de données SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migration de bases de données SAP ASE vers SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

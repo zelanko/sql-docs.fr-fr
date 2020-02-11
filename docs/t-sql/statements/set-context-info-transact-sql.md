@@ -20,18 +20,18 @@ ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 79fc54e65b6e014575b5942a573c4077e8a9c5d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041812"
 ---
-# <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
+# <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Associe jusqu'à 128 octets d'informations binaires à la session ou à la connexion actuelle.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-setting-context-information-by-using-a-constant"></a>A. Définition des informations de contexte à l'aide d'une constante  
+### <a name="a-setting-context-information-by-using-a-constant"></a>R. Définition des informations de contexte à l'aide d'une constante  
  L'exemple ci-dessous illustre `SET CONTEXT_INFO` par la définition de la valeur et l'affichage des résultats. Notez que l'interrogation de `sys.dm_exec_sessions` nécessite les autorisations SELECT et VIEW SERVER STATE, ce qui n'est pas le cas pour la fonction CONTEXT_INFO.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: L’algorithme Microsoft Linear Regression | Microsoft Docs
+title: Algorithme de régression linéaire Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df1b3616a85d93b4c5fa814ee759880077c03b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084039"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algorithme MLR (Microsoft Linear Regression)
@@ -27,7 +27,7 @@ ms.locfileid: "66084039"
   
  La relation se présente sous la forme d'une équation correspondant à la droite représentant le mieux une série de données. Par exemple, la droite dans le diagramme suivant est la meilleure représentation linéaire possible des données.  
   
- ![Une ligne qui modélise un jeu de données](../media/linear-regression.gif "une ligne qui modélise un jeu de données")  
+ ![Ligne qui modélise un ensemble de données](../media/linear-regression.gif "Ligne qui modélise un ensemble de données")  
   
  Pour chaque point de données du diagramme, une erreur est associée à la distance entre le point et la droite de régression. Les coefficients a et b de l’équation de régression ajustent l’angle et l’emplacement de la droite de régression. Vous pouvez obtenir l’équation de régression en ajustant a et b jusqu’à ce que la somme des erreurs associées à tous les points atteigne le plus petit nombre possible.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66084039"
 ## <a name="data-required-for-linear-regression-models"></a>Données requises pour les modèles de régression linéaire  
  Lorsque vous préparez des données à utiliser dans un modèle de régression linéaire, vous devez comprendre les spécifications liées à l'algorithme. Cela comprend la quantité de données requise et le mode d'utilisation de ces données. Les spécifications pour ce type de modèle sont les suivantes :  
   
--   **Colonne à index unique** Chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
+-   **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
   
--   **Colonne prédictible** Nécessite au moins une colonne prédictible. Vous pouvez inclure dans un modèle plusieurs attributs prédictibles, mais ces attributs doivent être des types de données numériques continues. Vous ne pouvez pas utiliser un type de données datetime comme attribut prédictible même si le stockage natif pour les données est numérique.  
+-   **Colonne prévisible** Nécessite au moins une colonne prévisible. Vous pouvez inclure dans un modèle plusieurs attributs prédictibles, mais ces attributs doivent être des types de données numériques continues. Vous ne pouvez pas utiliser un type de données datetime comme attribut prédictible même si le stockage natif pour les données est numérique.  
   
 -   **Colonnes d’entrée** Les colonnes d’entrée doivent contenir des données numériques continues et recevoir le type de données approprié.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66084039"
   
  Si vous voulez en savoir plus sur l’équation, vous pouvez également afficher les coefficients et autres informations à l’aide de la [visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
- Pour un modèle de régression linéaire, le contenu du modèle inclut des métadonnées, la formule de régression et les statistiques relatives à la distribution de valeurs d'entrée. Pour plus d’informations, consultez [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ Pour un modèle de régression linéaire, le contenu du modèle inclut des métadonnées, la formule de régression et les statistiques relatives à la distribution de valeurs d'entrée. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Création de prédictions  
  Une fois le modèle traité, les résultats sont stockés sous la forme d'un jeu de statistiques avec le formulaire de régression linéaire que vous pouvez utiliser pour élaborer des prédictions. Pour obtenir des exemples de requêtes à utiliser avec un modèle de régression linéaire, consultez [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md).  
@@ -77,9 +77,9 @@ ms.locfileid: "66084039"
 -   Prend en charge l'utilisation de modèles d'exploration de données OLAP.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Références techniques relatives à l’algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Référence technique de l’algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Exemples de requêtes de modèle de régression linéaire](linear-regression-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

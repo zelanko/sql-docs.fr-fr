@@ -17,14 +17,14 @@ ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967292"
 ---
 # <a name="append-method-adox-keys"></a>Append, méthode (clés ADOX)
-Ajoute un nouveau [clé](../../../ado/reference/adox-api/key-object-adox.md) de l’objet à la [clés](../../../ado/reference/adox-api/keys-collection-adox.md) collection.  
+Ajoute un nouvel objet [clé](../../../ado/reference/adox-api/key-object-adox.md) à la collection de [clés](../../../ado/reference/adox-api/keys-collection-adox.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,29 +34,29 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Key*  
- Le **clé** objet à ajouter ou le nom de la clé à créer et à ajouter.  
+ *Clé*  
+ Objet **clé** à ajouter ou nom de la clé à créer et à ajouter.  
   
  *KeyType*  
- facultatif. Un **Long** valeur qui spécifie le type de clé. Le *clé* paramètre correspond à la [Type](../../../ado/reference/adox-api/type-property-key-adox.md) propriété d’un **clé** objet.  
+ facultatif. Valeur de type **long** qui spécifie le type de clé. Le paramètre de *clé* correspond à la propriété de [type](../../../ado/reference/adox-api/type-property-key-adox.md) d’un objet **clé** .  
   
  *Colonne*  
- Facultatif. Un **chaîne** valeur qui spécifie le nom de la colonne à indexer. Le *colonnes* paramètre correspond à la valeur de la [nom](../../../ado/reference/adox-api/name-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) objet.  
+ facultatif. Valeur de **chaîne** qui spécifie le nom de la colonne à indexer. Le paramètre *Columns* correspond à la valeur de la propriété [Name](../../../ado/reference/adox-api/name-property-adox.md) d’un objet [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
   
  *RelatedTable*  
- Facultatif. Un **chaîne** valeur qui spécifie le nom de la table associée. Le *RelatedTable* paramètre correspond à la valeur de la **nom** propriété d’un [Table](../../../ado/reference/adox-api/table-object-adox.md) objet.  
+ facultatif. Valeur de **chaîne** qui spécifie le nom de la table associée. Le paramètre *RelatedTable* correspond à la valeur de la propriété **Name** d’un objet [table](../../../ado/reference/adox-api/table-object-adox.md) .  
   
- *RelatedColumn*  
- facultatif. Un **chaîne** valeur qui spécifie le nom de la colonne associée pour une clé étrangère. Le *RelatedColumn* paramètre correspond à la valeur de la **nom** propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) objet.  
+ *; RelatedColumn*  
+ facultatif. Valeur de **chaîne** qui spécifie le nom de la colonne associée pour une clé étrangère. Le paramètre *RelatedColumn* correspond à la valeur de la propriété **Name** d’un objet [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
   
 ## <a name="remarks"></a>Notes  
- Le *colonnes* paramètre peut prendre le nom d’une colonne ou un tableau de noms de colonnes.  
+ Le paramètre *Columns* peut prendre soit le nom d’une colonne, soit un tableau de noms de colonnes.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Keys, collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Méthodes Append des clés, type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Append, méthode (colonnes ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append, méthode (groupes ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append, méthode (Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

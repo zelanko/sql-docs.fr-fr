@@ -14,13 +14,13 @@ ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 251ae0e4e94cec903e2c4b5cf687ed9b8b41dfc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952399"
 ---
 # <a name="identifiers-limitations"></a>Limitations des identificateurs
-Si un identificateur contient un espace ou symbole spécial, l’identificateur doit être encadrée de guillemets précédent. Un nom valide est une chaîne, pas plus de 64 caractères, dont le premier caractère ne doit pas être un espace. Noms valides ne peuvent pas contenir les caractères de contrôle ou les caractères spéciaux suivants : « &#124; # * ? [ ] . ! $ .  
+Si un identificateur contient un espace ou un symbole spécial, l’identificateur doit être placé entre guillemets. Un nom valide est une chaîne de plus de 64 caractères, dont le premier caractère ne doit pas être un espace. Les noms valides ne peuvent pas contenir de caractères de contrôle ou les caractères spéciaux suivants : ' &#124; # * ? [ ] . ! $ .  
   
- N’utilisez pas les mots réservés répertoriés dans la grammaire SQL dans l’annexe C de la *de référence du programmeur ODBC* (ou la forme abrégée de ces mots réservés) en tant qu’identificateurs (autrement dit, table ou colonne de noms), sauf si vous devez placer le mot à l’arrière guillemets (').
+ N’utilisez pas les mots réservés listés dans la grammaire SQL de l’annexe C du *Guide de référence du programmeur ODBC* (ou la forme abrégée de ces mots réservés) en tant qu’identificateurs (autrement dit, les noms de table ou de colonne), à moins que vous n’entouriez le mot placé entre guillemets (').

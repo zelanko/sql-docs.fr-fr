@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946603"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Modules et prologues : prologue XQuery
@@ -29,7 +29,7 @@ ms.locfileid: "67946603"
 
   Une requête XQuery se compose d'un prologue et d'un corps. Le prologue XQuery est une série de déclarations et de définitions qui créent ensemble l'environnement requis pour le traitement des requêtes. Dans SQL Server, le prologue XQuery peut inclure des déclarations d'espace de noms. Le corps XQuery se compose d'une séquence d'expressions qui spécifient le résultat de requête voulu.  
   
- Par exemple, la requête XQuery ci-dessous est spécifiée sur la colonne Instructions de **xml** type qui stocke les instructions de fabrication au format XML. La requête récupère les instructions de fabrication pour l'emplacement de l'atelier `10`. Le `query()` méthode de la **xml** type de données est utilisé pour spécifier la requête XQuery.  
+ Par exemple, la requête XQuery suivante est spécifiée par rapport à la colonne Instructions de type **XML** qui stocke les instructions de fabrication au format XML. La requête récupère les instructions de fabrication pour l'emplacement de l'atelier `10`. La `query()` méthode du type de données **XML** est utilisée pour spécifier la requête XQuery.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -41,14 +41,15 @@ WHERE ProductModelID=7
   
  Notez les points suivants dans la requête précédente :  
   
--   Le prologue XQuery inclut une déclaration de préfixe (AWMI) espace de noms, `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   Le prologue XQuery comprend une déclaration de préfixe d’espace `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`de noms (AWMI),.  
   
 -   Le mot clé `declare namespace` définit un préfixe d'espace de noms utilisé ultérieurement dans le corps de la requête.  
   
--   `/AWMI:root/AWMI:Location[@LocationID="10"]` représente le corps de la requête.  
+-   
+  `/AWMI:root/AWMI:Location[@LocationID="10"]` représente le corps de la requête.  
   
 ## <a name="namespace-declarations"></a>Déclarations d'espace de noms  
- Une déclaration d'espace de noms définit un préfixe et l'associe à un URI d'espace de noms, comme illustré dans la requête ci-dessous. Dans la requête, `CatalogDescription` est un **xml** colonne de type.  
+ Une déclaration d'espace de noms définit un préfixe et l'associe à un URI d'espace de noms, comme illustré dans la requête ci-dessous. Dans la requête, `CatalogDescription` est une colonne de type **XML** .  
   
  Lorsque vous spécifiez une requête XQuery sur cette colonne, le prologue de la requête spécifie la déclaration `declare namespace` pour associer le préfixe `PD` (description du produit) à l'URI d'espace de noms. Ce préfixe est alors utilisé dans le corps de la requête à la place de l'URI d'espace de noms. Les nœuds XML résultants sont dans l'espace de noms associé à l'URI d'espace de noms.  
   
@@ -73,7 +74,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Pour plus d’informations, consultez, [espaces de noms à ajouter aux requêtes avec WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Pour plus d’informations, consultez [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ### <a name="default-namespace-declaration"></a>Déclaration d'espace de noms par défaut  
  Au lieu de déclarer un préfixe d'espace de noms à l'aide de la déclaration `declare namespace`, vous pouvez utiliser la déclaration `declare default element namespace` pour lier un espace de noms par défaut pour des noms d'élément. Dans ce cas, vous ne spécifiez aucun préfixe.  

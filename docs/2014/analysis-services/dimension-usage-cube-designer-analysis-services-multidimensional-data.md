@@ -1,5 +1,5 @@
 ---
-title: Utilisation (Concepteur de Cube) de la dimension (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Utilisation de la dimension (Concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081666"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Utilisation de la dimension (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,19 +26,19 @@ ms.locfileid: "66081666"
   
 |Volet|Définition|  
 |----------|----------------|  
-|**Barre d'outils**|Utilisez la barre d'outils pour exécuter des actions courantes dans l'onglet. Pour plus d’informations sur ce volet, consultez [Barre d’outils &#40;onglet Utilisation de la dimension, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Grid**|Utilisez la grille pour afficher ou modifier les relations de dimensions entre les dimensions et les groupes de mesures dans le cube. Pour plus d’informations sur ce volet, consultez [Grille &#40;onglet Utilisation de la dimension, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barre d'outils**|Utilisez la barre d’outils pour effectuer des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet utilisation de la dimension, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Boutons**|Utilisez la grille pour afficher ou modifier les relations de dimensions entre les dimensions et les groupes de mesures dans le cube. Pour plus d’informations sur ce volet, consultez [Grille &#40;onglet Utilisation de la dimension, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Structure de cube &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculs &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Indicateurs de performance clés &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Actions &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Partitions &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
- [Perspectives &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
- [Traductions &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
- [Navigateur &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Structure de cube &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculs &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Indicateurs de performance clés &#40;&#41; &#40;concepteur de cube Analysis Services-données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Actions &#40;le concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Perspectives &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
+ [Traductions &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Navigateur &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

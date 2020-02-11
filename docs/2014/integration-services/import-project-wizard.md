@@ -1,5 +1,5 @@
 ---
-title: Assistant Importation de projet | Microsoft Docs
+title: Assistant importation de projet | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058049"
 ---
 # <a name="import-project-wizard"></a>Assistant Importation de projet
@@ -24,7 +24,7 @@ ms.locfileid: "66058049"
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>Pour créer un projet basé sur un projet dans un fichier .ispac ou dans le catalogue  
   
-1.  Cliquez sur **Fichier**, pointez sur **Nouveau**, puis cliquez sur Projet.  
+1.  Cliquez sur **fichier**, pointez sur **nouveau**, puis cliquez sur projet.  
   
 2.  Développez **Business Intelligence**, puis cliquez sur **Integration Services**.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66058049"
   
 8.  La page **Résultats** doit afficher les résultats de l'opération d'importation exécutée par l'Assistant. Cliquez sur **Enregistrer le rapport** pour enregistrer le rapport dans un fichier XML.  
   
-9. Pour fermer l'Assistant, cliquez sur **Fermer** .  
+9. Cliquez sur **Fermer** pour quitter l'Assistant.  
   
   

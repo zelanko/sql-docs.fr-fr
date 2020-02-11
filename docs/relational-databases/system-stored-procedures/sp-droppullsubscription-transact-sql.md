@@ -16,10 +16,10 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771450"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68771450"
 
   Supprime un abonnement à la base de données en cours de l'Abonné. Cette procédure stockée est exécutée sur la base de données d'abonnement par extraction de données (pull) de l'abonné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,19 +48,19 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- la procédure pas à pas est utilisée dans la réplication d’instantané et la réplication transactionnelle.  
+ **sp_droppullsubscription** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
- la table de l’éditeur supprime la ligne correspondante dans la table [Transact-SQL &#40;&#41; MSreplication_subscriptions](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) et l’agent de distribution correspondant sur l’abonné. Si aucune ligne n’est laissée dans le champ [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), elle supprime la table.  
+ **sp_droppullsubscription** supprime la ligne correspondante dans le [MSreplication_subscriptions &#40;table Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) et l’agent de distribution correspondant sur l’abonné. Si aucune ligne n’est laissée dans [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), elle supprime la table.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres du rôle serveur fixe **sysadmin** ou de l’utilisateur qui a créé l’abonnement parextraction peuvent exécuter la fonction la licence. Le rôle de base de données fixe **db_owner** ne peut exécuter la valeur de la base de au cas que si l’utilisateur qui a créé l’abonnement par extraction de données appartient à ce rôle.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou de l’utilisateur qui a créé l’abonnement par extraction peuvent exécuter **sp_droppullsubscription**. Le rôle de base de données fixe **db_owner** peut uniquement exécuter **sp_droppullsubscription** si l’utilisateur qui a créé l’abonnement par extraction de données appartient à ce rôle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: Formats de date et heure | Microsoft Docs
+title: Formats de date et d’heure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059644"
 ---
 # <a name="date-and-time-formats"></a>Formats de date et d'heure
@@ -36,7 +36,7 @@ ms.locfileid: "66059644"
     |------------|-----------------|  
     |AAAAMMJJ<br /><br /> AAAA-MM-JJ|Formats de base et étendus pour une année à quatre chiffres, un mois à deux chiffres et un jour à deux chiffres. Dans le format étendu, les parties de la date sont séparées par un tiret (-).|  
     |AAAA-MM|Formats à précision réduite de base et étendus pour une année à quatre chiffres et un mois à deux chiffres. Dans le format étendu, les parties de la date sont séparées par un tiret (-).|  
-    |AAAA|Le format à précision réduite est une année à quatre chiffres.|  
+    |YYYY|Le format à précision réduite est une année à quatre chiffres.|  
   
  L'analyse rapide ne prend pas en charge les formats suivants pour les données de date :  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66059644"
     |HHMISS<br /><br /> HH:MI:SS|Formats de base et étendus pour une heure à deux chiffres, une minute à deux chiffres et une seconde à deux chiffres. Dans le format étendu, les parties de l'heure sont séparées par deux points (:).|  
     |HHMI<br /><br /> HH:MI|Format tronqué de base et étendu pour une heure à deux chiffres et une minute à deux chiffres. Dans le format étendu, les parties de l'heure sont séparées par deux points (:).|  
     |HH|Format tronqué pour une heure à deux chiffres.|  
-    |00:00:00<br /><br /> 000000<br /><br /> 0000<br /><br /> 00<br /><br /> 240000<br /><br /> 24:00:00<br /><br /> 2400<br /><br /> 24|Format pour minuit.|  
+    |00:00:00<br /><br /> 000000<br /><br /> 0000<br /><br /> 00<br /><br /> 240000<br /><br /> 24:00:00<br /><br /> 2 400<br /><br /> 24|Format pour minuit.|  
   
 -   Formats d'heure qui spécifient un fuseau horaire, répertoriés dans le tableau suivant :  
   
@@ -125,8 +125,8 @@ ms.locfileid: "66059644"
 |Secondes|Ajout de 00.|  
 |Minutes|Ajouter 00:00.|  
 |Heure|Ajout de 00:00:00.|  
-|Jour|Ajout de 01 pour le jour du mois.|  
-|Mois|Ajout de 01 pour le mois de l'année.|  
+|jour|Ajout de 01 pour le jour du mois.|  
+|Month|Ajout de 01 pour le mois de l'année.|  
   
  Pour plus d’informations, consultez [Types de données Integration Services](data-flow/integration-services-data-types.md).  
   

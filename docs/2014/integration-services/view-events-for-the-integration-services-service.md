@@ -1,5 +1,5 @@
 ---
-title: Afficher les événements du Service Integration Services | Microsoft Docs
+title: Afficher les événements du service Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054673"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>afficher les événements du service Integration Services
@@ -63,7 +63,7 @@ ms.locfileid: "66054673"
 9. Dans le menu **Fichier** , cliquez sur **Quitter** pour fermer la boîte de dialogue **Observateur d’événements** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer le service Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
+ [Gérer le service de Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
  [Ajouter un journal pour les compteurs de performances de flux de données](performance/performance-counters.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Effectuer une copie d’un modèle d’exploration de données | Microsoft Docs
+title: Faire une copie d’un modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084220"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Créer une copie d'un modèle d'exploration de données
@@ -47,19 +47,19 @@ ms.locfileid: "66084220"
   
 1.  Sélectionnez le modèle d'exploration de données.  
   
-2.  Dans le **propriétés** fenêtre, cliquez sur la zone de texte pour le **filtre** propriété, puis cliquez sur la build **(...)**  bouton.  
+2.  Dans la fenêtre **Propriétés** , cliquez sur la zone de texte correspondant à la propriété **filtre** , puis cliquez sur le bouton Générer **(...)** .  
   
 3.  Modifiez les conditions de filtre.  
   
      Pour plus d’informations sur l’utilisation des boîtes de dialogue de l’éditeur de filtre, consultez [Appliquer un filtre à un modèle d’exploration de données](apply-a-filter-to-a-mining-model.md).  
   
-4.  Dans le **propriétés** fenêtre, dans le `AlgorithmParameters` zone de texte, cliquez sur **définir les paramètres**, puis modifiez les paramètres d’algorithme, si nécessaire.  
+4.  Dans la fenêtre **Propriétés** , dans la `AlgorithmParameters` zone de texte, cliquez sur **paramètres de définir**et modifiez les paramètres d’algorithme, si vous le souhaitez.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
  [Supprimer un filtre d'un modèle d'exploration de données](delete-a-filter-from-a-mining-model.md)  
   
   

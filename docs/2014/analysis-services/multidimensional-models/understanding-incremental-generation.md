@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811059"
 ---
 # <a name="understanding-incremental-generation"></a>Présentation de la génération incrémentielle
@@ -84,7 +84,7 @@ ms.locfileid: "68811059"
  D'un autre côté, si vous modifiez la chaîne de connexion à la source de données en spécifiant une base de données différente de celle de la génération précédente, aucune erreur ne se produit. La nouvelle base de données est utilisée, et aucune modification n'est apportée à la base de données précédente.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer des modifications dans les vues de source de données et les sources de données](manage-changes-to-data-source-views-and-data-sources.md)   
- [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [Gérer les modifications des vues de source de données et des sources de données](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Assistant génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

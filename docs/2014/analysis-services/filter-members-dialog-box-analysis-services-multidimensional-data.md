@@ -1,5 +1,5 @@
 ---
-title: Filtrer la boîte de dialogue de membres (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue Filtrer les membres (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081154"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Filtrer les membres (Analysis Services - Données multidimensionnelles)
@@ -28,12 +28,12 @@ ms.locfileid: "66081154"
   
 |Terme|Définition|  
 |----------|----------------|  
-|**expression de filtre**|Affiche une grille de propriétés, d'opérateurs et de valeurs utilisés pour créer une expression de filtrage. Note qu’une fois qu’une ligne est ajoutée, elle ne peut pas être supprimée. Vous devez fermer et rouvrir la boîte de dialogue pour définir une nouvelle expression de filtrage. Cette grille comporte les colonnes suivantes :<br /><br /> **Propriété**: Sélectionnez la propriété du membre à utiliser pour l'expression de filtrage.<br /><br /> **Opérateur**: Sélectionnez l'opérateur à utiliser pour l'expression de filtrage.<br /><br /> **Valeur**: Entrez la valeur de la propriété sélectionnée dans **Propriété** pour évaluer en utilisant l’opérateur défini dans **Opérateur**.|  
+|**Expression de filtre**|Affiche une grille de propriétés, d'opérateurs et de valeurs utilisés pour créer une expression de filtrage. Note qu’une fois qu’une ligne est ajoutée, elle ne peut pas être supprimée. Vous devez fermer et rouvrir la boîte de dialogue pour définir une nouvelle expression de filtrage. Cette grille comporte les colonnes suivantes :<br /><br /> **Propriété**: sélectionnez la propriété du membre à utiliser pour l’expression de filtre.<br /><br /> **Opérateur**: sélectionnez l’opérateur à utiliser pour l’expression de filtre.<br /><br /> **Valeur**: tapez la valeur de la propriété sélectionnée dans **propriété** à évaluer à l’aide de l’opérateur spécifié dans **opérateur**.|  
 |**Volet de test**|Lorsque vous cliquez sur **Tester** , ce volet affiche les membres retournés par l'expression de filtrage. Si aucun membre n'est retourné en utilisant les critères définis dans **Expression de filtre**, un avertissement s'affiche.|  
-|**Tester**|Cliquez pour tester les critères définis dans **Expression de filtre**.|  
+|**Test**|Cliquez pour tester les critères définis dans **Expression de filtre**.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Navigateur &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Navigateur &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

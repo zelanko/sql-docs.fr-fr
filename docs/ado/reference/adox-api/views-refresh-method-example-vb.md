@@ -1,5 +1,5 @@
 ---
-title: Vues Refresh, exemple de méthode (VB) | Microsoft Docs
+title: Views, exemple de méthode Refresh (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964733"
 ---
 # <a name="views-refresh-method-example-vb"></a>Views, exemple de méthode Refresh (VB)
-Le code suivant montre comment actualiser le [vues](../../../ado/reference/adox-api/views-collection-adox.md) collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md). Cela est nécessaire avant [vue](../../../ado/reference/adox-api/view-object-adox.md) objets à partir de la **catalogue** sont accessibles.  
+Le code suivant montre comment actualiser la collection [views](../../../ado/reference/adox-api/views-collection-adox.md) d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md). Cela est nécessaire pour pouvoir accéder aux objets de [vue](../../../ado/reference/adox-api/view-object-adox.md) du **catalogue** .  
   
 ```  
 ' BeginViewsRefreshVB  

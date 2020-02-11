@@ -19,16 +19,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212115"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Définir et modifier un filtre de lignes paramétrable pour un article de fusion
   Cette rubrique explique comment définir et modifier un filtre de lignes paramétrable dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Lorsque vous créez des articles de table, vous pouvez utiliser des filtres de lignes paramétrables. Ces filtres utilisent une clause [WHERE](/sql/t-sql/queries/where-transact-sql) pour sélectionner les données appropriées à publier. Au lieu de spécifier une valeur littérale dans la clause (comme c'est le cas avec un filtre de lignes statique), vous spécifiez l’une des deux fonctions système suivantes ou les deux : [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) et [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+ Lorsque vous créez des articles de table, vous pouvez utiliser des filtres de lignes paramétrables. Ces filtres utilisent une clause [WHERE](/sql/t-sql/queries/where-transact-sql) pour sélectionner les données appropriées à publier. Au lieu de spécifier une valeur littérale dans la clause (comme vous le feriez avec un filtre de lignes statique), vous spécifiez l’une des fonctions système suivantes, ou les deux : [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) et [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  
   
@@ -44,11 +44,11 @@ ms.locfileid: "68212115"
   
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Définissez, modifiez et supprimez des filtres de lignes paramétrables dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
+ Définissez, modifiez et supprimez des filtres de lignes paramétrables dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>Pour définir un filtre de lignes paramétrable  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **Ajouter**, puis sur **Ajouter un filtre**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **Ajouter**, puis sur **Ajouter un filtre**.  
   
 2.  Dans la boîte de dialogue **Ajouter un filtre** , sélectionnez une table à filtrer dans la zone de liste déroulante.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "68212115"
   
 4.  Sélectionnez l'option qui correspond aux données qui seront partagées entre des Abonnés :  
   
-    -   **Une ligne de cette table ira à plusieurs abonnements**  
+    -   **Une ligne de cette table va accéder à plusieurs abonnements**  
   
-    -   **Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**  
+    -   **Une ligne de cette table va à un seul abonnement**  
   
      Si vous sélectionnez **Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**, la réplication de fusion peut optimiser les performances en stockant et en traitant moins de métadonnées. Cependant, vous devez vérifier que les données sont partitionnées de telle façon qu'une ligne ne peut pas être répliquée sur plus d'un Abonné. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68212115"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>Pour supprimer un filtre de lignes paramétrable  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
   
 
   
@@ -99,29 +99,29 @@ ms.locfileid: "68212115"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Pour définir un filtre de lignes paramétrable pour un article dans une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez **@publication** , le nom de l'article pour **@article** , la table qui est publiée pour **@source_object** , la clause WHERE qui définit le filtre paramétrable pour **@subset_filterclause** (sans `WHERE`) et affectez l'une des valeurs suivantes à **@partition_options** , qui décrit le type de partitionnement qui résultera de l'application du filtre de lignes paramétrable :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez **@publication**le nom de l’article pour **@article**, la table en cours de **@source_object**publication, la clause WHERE qui définit le filtre paramétrable **@subset_filterclause** pour (sans `WHERE`l’inclure) et l’une des valeurs suivantes **@partition_options**pour, qui décrit le type de partitionnement qui résultera du filtre de lignes paramétrable :  
   
-    -   **0** - le filtrage de l'article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition (partition avec chevauchement).  
+    -   **0** -le filtrage de l’article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition (une « partition qui se chevauche »).  
   
-    -   **1** - les partitions obtenues se chevauchent et les mises à jour apportées au niveau de l'Abonné ne peuvent pas modifier la partition à laquelle une ligne appartient.  
+    -   **1** -les partitions résultantes se chevauchent, et les mises à jour effectuées sur l’abonné ne peuvent pas modifier la partition à laquelle une ligne appartient.  
   
-    -   **2** - le filtrage de l'article génère des partitions qui ne se chevauchent pas, mais plusieurs Abonnés peuvent recevoir la même partition.  
+    -   **2** -le filtrage de l’article génère des partitions qui ne se chevauchent pas, mais plusieurs abonnés peuvent recevoir la même partition.  
   
-    -   **3** - le filtrage de l'article génère des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement.  
+    -   **3** -le filtrage de l’article génère des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement.  
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Pour modifier un filtre de lignes paramétrable pour un article dans une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez **@publication** , **@article** , une valeur de `subset_filterclause` pour **@property** , l’expression qui définit le filtre paramétrable pour **@value** (non compris `WHERE`) et la valeur **1** pour les deux **@force_invalidate_snapshot** et **@force_reinit_subscription** .  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). **@publication**Spécifiez **@article**,, la valeur `subset_filterclause` pour **@property**, l’expression qui définit le filtre paramétré pour **@value** (non compris `WHERE`) et la valeur **1** pour **@force_invalidate_snapshot** et. **@force_reinit_subscription**  
   
-2.  Si cette modification conduit à un comportement de partitionnement différent, exécutez de nouveau [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) . Spécifiez **@publication** , **@article** , une valeur de `partition_options` pour **@property** et l’option de partitionnement la plus appropriée pour **@value** , ce qui peut prendre l’une des opérations suivantes :  
+2.  Si cette modification conduit à un comportement de partitionnement différent, exécutez de nouveau [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) . **@publication**Spécifiez **@article**,, la valeur `partition_options` pour **@property**et l’option de partitionnement la plus appropriée **@value**pour, qui peut être l’une des suivantes :  
   
-    -   **0** - le filtrage de l'article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition (partition avec chevauchement).  
+    -   **0** -le filtrage de l’article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition (une « partition qui se chevauche »).  
   
-    -   **1** - les partitions obtenues se chevauchent et les mises à jour apportées au niveau de l'Abonné ne peuvent pas modifier la partition à laquelle une ligne appartient.  
+    -   **1** -les partitions résultantes se chevauchent, et les mises à jour effectuées sur l’abonné ne peuvent pas modifier la partition à laquelle une ligne appartient.  
   
-    -   **2** - le filtrage de l'article génère des partitions qui ne se chevauchent pas, mais plusieurs Abonnés peuvent recevoir la même partition.  
+    -   **2** -le filtrage de l’article génère des partitions qui ne se chevauchent pas, mais plusieurs abonnés peuvent recevoir la même partition.  
   
-    -   **3** - le filtrage de l'article génère des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement.  
+    -   **3** -le filtrage de l’article génère des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement.  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple définit un groupe d'articles dans une publication de fusion où les articles sont filtrés à l'aide d'une série de filtres de jointure sur la table `Employee` , qui est elle-même filtrée à l'aide d'un filtre de lignes paramétrable sur la colonne **LoginID** . Pendant la synchronisation, la valeur retournée par la fonction [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql) est remplacée. Pour plus d'informations, consultez la section « Substitution de la valeur de HOST_NAME() » dans la rubrique [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  

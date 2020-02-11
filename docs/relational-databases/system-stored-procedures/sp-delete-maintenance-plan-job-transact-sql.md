@@ -18,13 +18,13 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c67731907d105c6fb2cc48ecf3232d2c9d89c5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009212"
 ---
-# <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
+# <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Dissocie le plan de maintenance spécifié du travail spécifié.  
@@ -34,7 +34,7 @@ ms.locfileid: "68009212"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,20 +45,20 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] 'plan\_id'` Spécifie l’ID du plan de maintenance. *plan_id* est **uniqueidentifier**, et doit être un ID valide.  
+`[ @plan_id = ] 'plan\_id'`Spécifie l’ID du plan de maintenance. *plan_id* est de type **uniqueidentifier**et doit être un ID valide.  
   
-`[ @job_id = ] 'job\_id'` Spécifie l’ID du travail auquel le plan de maintenance est associé. *job_id* est **uniqueidentifier**, et doit être un ID valide.  
+`[ @job_id = ] 'job\_id'`Spécifie l’ID du travail auquel le plan de maintenance est associé. *job_id* est de type **uniqueidentifier**et doit être un ID valide.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_delete_maintenance_plan_job** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_delete_maintenance_plan_job** doit être exécuté à partir de la base de données **msdb** .  
   
- Lorsque tous les travaux ont été supprimés du plan de maintenance, nous recommandons que les utilisateurs exécuter **sp_delete_maintenance_plan_db** pour supprimer les bases de données à partir du plan.  
+ Lorsque toutes les tâches ont été supprimées du plan de maintenance, nous recommandons aux utilisateurs d’exécuter **sp_delete_maintenance_plan_db** pour supprimer les bases de données restantes du plan.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_maintenance_plan_job**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_delete_maintenance_plan_job**.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple supprime le travail « B8FCECB1-E22C-11D2-AA64-00C04F688EAE » du plan de maintenance.  
@@ -69,6 +69,6 @@ EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC'
   
 ## <a name="see-also"></a>Voir aussi  
  [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Procédures stockées de Plan de Maintenance de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Procédures stockées de plan de maintenance de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

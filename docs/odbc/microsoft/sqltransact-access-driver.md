@@ -14,16 +14,16 @@ ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4d4b3d8d417591bd72dde22240c81a91d80f990
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948973"
 ---
 # <a name="sqltransact-access-driver"></a>SQLTransact (pilote Access)
 > [!NOTE]  
->  Cette rubrique fournit des informations d’accès spécifiques au pilote. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote d’accès. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Lorsque le pilote Microsoft Access est utilisé, SQL_COMMIT et SQL_ROLLBACK sont pris en charge pour le *fType* argument dans un appel à **SQLTransact**.  
+ Lorsque le pilote Microsoft Access est utilisé, SQL_COMMIT et SQL_ROLLBACK sont pris en charge pour l’argument *ftype* dans un appel à **SQLTransact**.  
   
- Si une défaillance se produit pendant le processus de validation, la base de données affecté peut être réparé à l’aide de l’option de base de données dans le programme d’installation du pilote Microsoft Access, ou en utilisant le mot clé REPAIR_DB dans le **SQLConfigDataSource** fonction.
+ Si une défaillance se produit pendant le processus de validation, la base de données affectée peut être réparée à l’aide de l’option réparer la base de données dans le programme d’installation du pilote Microsoft Access ou à l’aide du mot clé REPAIR_DB dans la fonction **SQLConfigDataSource** .

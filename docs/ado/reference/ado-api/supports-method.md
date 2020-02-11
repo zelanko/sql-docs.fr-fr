@@ -1,5 +1,5 @@
 ---
-title: Prend en charge de la méthode | Microsoft Docs
+title: Prend en charge la méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936705"
 ---
 # <a name="supports-method"></a>Supports, méthode
-Détermine si une certaine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet prend en charge un type particulier de fonctionnalité.  
+Détermine si un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) spécifié prend en charge un type particulier de fonctionnalité.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,22 +34,22 @@ boolean = recordset.Supports(CursorOptions )
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne un **booléenne** valeur qui indique si toutes les fonctionnalités identifié par le *CursorOptions* argument sont pris en charge par le fournisseur.  
+ Retourne une valeur **booléenne** qui indique si toutes les fonctionnalités identifiées par l’argument *CursorOptions* sont prises en charge par le fournisseur.  
   
 #### <a name="parameters"></a>Paramètres  
  *CursorOptions*  
- Un **Long** expression qui est constituée d’une ou plusieurs [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valeurs.  
+ Expression **longue** qui se compose d’une ou de plusieurs valeurs [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) .  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **prend en charge** méthode pour déterminer les types de fonctionnalités un **Recordset** prend en charge de l’objet. Si le **Recordset** objet prend en charge les fonctionnalités dont les constantes correspondantes se trouvent dans *CursorOptions*, le **prend en charge** méthode retourne **True**. Sinon, elle retourne **False**.  
+ Utilisez la méthode **prend en charge** pour déterminer les types de fonctionnalités qu’un objet **Recordset** prend en charge. Si l’objet **Recordset** prend en charge les fonctionnalités dont les constantes correspondantes se trouvent dans *CursorOptions*, la méthode **supports** retourne la **valeur true**. Sinon, elle retourne **false**.  
   
 > [!NOTE]
->  Bien que le **prend en charge** méthode peut retourner **True** pour une fonctionnalité donnée, il ne pas garantit que le fournisseur peut proposer la fonctionnalité en toutes circonstances. Le **prend en charge** méthode renvoie simplement si le fournisseur peut prendre en charge la fonctionnalité spécifiée, sous réserve que certaines conditions sont remplies. Par exemple, le **prend en charge** méthode peut indiquer qu’un **Recordset** objet prend en charge les mises à jour même si le curseur est basé sur une jointure de plusieurs tables, dont certaines colonnes ne sont pas modifiables.  
+>  Bien que la méthode **supports** puisse retourner la **valeur true** pour une fonctionnalité donnée, elle ne garantit pas que le fournisseur peut rendre la fonctionnalité disponible dans toutes les circonstances. La méthode **supports** retourne simplement une valeur indiquant si le fournisseur peut prendre en charge les fonctionnalités spécifiées, en supposant que certaines conditions sont remplies. Par exemple, la méthode **prend en charge** peut indiquer qu’un objet **Recordset** prend en charge les mises à jour, même si le curseur est basé sur une jointure de tables multiples, certaines colonnes de qui ne peuvent pas être mises à jour.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prend en charge de l’exemple de méthode (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Prend en charge de l’exemple de méthode (VC ++)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
+ [Supported, exemple de méthode (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
+ [Supported, exemple de méthode (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType, propriété (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

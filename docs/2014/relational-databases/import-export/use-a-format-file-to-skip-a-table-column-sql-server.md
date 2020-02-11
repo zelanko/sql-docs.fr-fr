@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011690"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utiliser un fichier de format pour ignorer une colonne de table (SQL Server)
@@ -130,7 +130,7 @@ GO
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
- Le fichier de format non XML par défaut résultant décrit une correspondance unique entre les champs données-fichier et les colonnes de table de la manière suivante :  
+ Le fichier de format non XML par défaut résultant décrit une correspondance unique entre les champs données-fichier et les colonnes de table de la manière suivante :  
   
 ```  
 <?xml version="1.0"?>  
@@ -188,7 +188,7 @@ GO
 #### <a name="using-bulk-import-on-a-view"></a>Utilisation de BULK IMPORT dans une vue  
  L'exemple suivant crée la vue `v_myTestSkipCol` dans la table `myTestSkipCol` . Cette vue ignore la deuxième colonne de la table, `Col2`. L'exemple utilise ensuite l'instruction `BULK INSERT` pour importer le fichier de données `myTestSkipCol2.dat` dans cette vue.  
   
- Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], exécutez le code suivant :  
+ Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
 ```  
 CREATE VIEW v_myTestSkipCol AS  
@@ -205,7 +205,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   

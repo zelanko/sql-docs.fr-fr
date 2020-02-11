@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060635"
 ---
 # <a name="configure-error-output"></a>Configurer la sortie d'erreur
@@ -31,15 +31,15 @@ ms.locfileid: "66060635"
  **Colonne**  
  Affiche les colonnes de sortie que vous avez sélectionnées dans la boîte de dialogue Éditeur de transformation.  
   
- **Erreur**  
+ **Error**  
  Le cas échéant, indiquez ce qui doit se passer en cas d'erreur : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Le cas échéant, indiquez ce qui doit se passer en cas de troncation : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Description**  
  Affichez la description de l'opération.  

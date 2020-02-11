@@ -18,21 +18,21 @@ ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eea0129b76a7bb7825987da98be40ba4a66d6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941716"
 ---
-# <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
+# <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un utilisateur de base de données à partir de la base de données actuelle.  
+  Supprime un utilisateur de base de données de la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +42,15 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name_in_db = ] 'name'` Est le nom de l’utilisateur de base de données à supprimer. *nom* est un **sysname** sans valeur par défaut. *nom* peut être le nom d’une connexion serveur, une connexion Windows ou un groupe Windows et doit exister dans la base de données actuelle. Lorsque vous spécifiez une connexion Windows ou un groupe Windows, spécifiez les noms sous lesquels ils sont connus dans la base de données.  
+`[ @name_in_db = ] 'name'`Nom de l’utilisateur de base de données à supprimer. *Name* est de **type sysname** et n’a pas de valeur par défaut. *nom* peut être le nom d’une connexion de serveur, d’une connexion Windows ou d’un groupe Windows, et doit exister dans la base de données actuelle. Lorsque vous spécifiez une connexion Windows ou un groupe Windows, spécifiez les noms sous lesquels ils sont connus dans la base de données.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
  Lorsque l'utilisateur de base de données est supprimé, les autorisations et les alias qui dépendent de cet utilisateur sont également supprimés.  
   
- **sp_revokedbaccess** pouvez supprimer uniquement les utilisateurs de base de données à partir de la base de données actuelle. Avant de supprimer un utilisateur de base de données qui possède des objets dans la base de données active, vous devez transférer la propriété des objets ou supprimer les objets de la base de données. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ **sp_revokedbaccess** pouvez supprimer uniquement les utilisateurs de base de données de la base de données active. Avant de supprimer un utilisateur de base de données qui possède des objets dans la base de données active, vous devez transférer la propriété des objets ou supprimer les objets de la base de données. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  **sp_revokedbaccess** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
@@ -58,7 +58,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
  Nécessite l'autorisation ALTER ANY USER sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant supprime l’utilisateur de base de données mappé à `Edmonds\LolanSo` à partir de la base de données actuelle.  
+ L’exemple suivant supprime l’utilisateur de base de données `Edmonds\LolanSo` mappé à à partir de la base de données active.  
   
 ```  
 EXEC sp_revokedbaccess 'Edmonds\LolanSo';  

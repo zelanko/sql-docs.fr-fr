@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche de Messages d’erreur (Page Général) transfert | Microsoft Docs
+title: Éditeur de tâche de transfert de messages d’erreur (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055082"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Éditeur de tâche de transfert de messages d'erreur (page Général)
@@ -37,7 +37,7 @@ ms.locfileid: "66055082"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de transfert de messages d’erreur &#40;page Messages&#41;](../../2014/integration-services/transfer-error-messages-task-editor-messages-page.md)   
+ [Éditeur de tâche de transfert de messages d’erreur &#40;page messages&#41;](../../2014/integration-services/transfer-error-messages-task-editor-messages-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

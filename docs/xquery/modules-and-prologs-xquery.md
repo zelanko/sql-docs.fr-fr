@@ -16,16 +16,16 @@ ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f7a2df8ea534622c4ff4c1695c7e44a7aea7611d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946588"
 ---
 # <a name="modules-and-prologs-xquery"></a>Modules et prologues (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [Prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) est une série de déclarations d’espace de noms. En utilisant la déclaration d'espace de noms en prologue, vous pouvez spécifier une liaison entre un préfixe et un espace de noms, puis utiliser le préfixe dans le corps de la requête.  
+  Le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) est une série de déclarations d’espaces de noms. En utilisant la déclaration d'espace de noms en prologue, vous pouvez spécifier une liaison entre un préfixe et un espace de noms, puis utiliser le préfixe dans le corps de la requête.  
   
 ## <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les spécifications XQuery suivantes ne sont pas prises en charge dans cette implémentation :  

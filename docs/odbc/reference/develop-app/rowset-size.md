@@ -17,21 +17,21 @@ ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67943763"
 ---
 # <a name="rowset-size"></a>Taille des ensembles de lignes
-Quelle taille d’ensemble de lignes à utiliser dépend de l’application. Applications basées sur l’écran suivent généralement une des deux stratégies. La première consiste à définir la taille de l’ensemble de lignes sur le nombre de lignes affichées sur l’écran ; Si l’utilisateur redimensionne l’écran, l’application modifie la taille de l’ensemble de lignes en conséquence. La seconde consiste à définir la taille de l’ensemble de lignes à un plus grand nombre, telle que 100, ce qui réduit le nombre d’appels à la source de données. L’application fait défiler localement dans l’ensemble de lignes lorsque cela est possible et extrait les nouvelles lignes uniquement lorsqu’il fait défiler en dehors de l’ensemble de lignes.  
+La taille de l’ensemble de lignes à utiliser dépend de l’application. Les applications basées sur l’écran suivent généralement l’une des deux stratégies. La première consiste à définir la taille de l’ensemble de lignes sur le nombre de lignes affichées à l’écran. Si l’utilisateur redimensionne l’écran, l’application modifie la taille de l’ensemble de lignes en conséquence. La seconde consiste à définir la taille de l’ensemble de lignes sur un nombre plus élevé, tel que 100, ce qui réduit le nombre d’appels à la source de données. L’application fait défiler localement l’ensemble de lignes dans la mesure du possible et récupère les nouvelles lignes uniquement lorsqu’il fait défiler l’ensemble de lignes.  
   
- Autres applications, tels que des rapports, ont tendance à la valeur de la taille de l’ensemble de lignes le plus grand nombre de lignes que l’application peut gérer raisonnablement - avec un plus grand ensemble de lignes, le réseau de la surcharge par ligne est parfois réduit. Exactement quelle un ensemble de lignes peut être dépend de la taille de chaque ligne et la quantité de mémoire disponible.  
+ D’autres applications, telles que les rapports, ont tendance à définir la taille de l’ensemble de lignes sur le plus grand nombre de lignes que l’application peut raisonnablement gérer-avec un plus grand ensemble de lignes, la charge réseau par ligne est parfois réduite. La taille exacte d’un ensemble de lignes dépend de la taille de chaque ligne et de la quantité de mémoire disponible.  
   
- Taille de l’ensemble de lignes est définie par un appel à **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_ROW_ARRAY_SIZE. L’application peut modifier la taille de l’ensemble de lignes, lier le nouvel ensemble de lignes mémoires tampons (en appelant **SQLBindCol** ou en spécifiant un décalage de liaison) même après les lignes qui ont été extraites, ou les deux. Les conséquences de la modification de la taille de l’ensemble de lignes dépendent de la fonction :  
+ La taille de l’ensemble de lignes est définie par un appel à **SQLSetStmtAttr** avec un argument d' *attribut* de SQL_ATTR_ROW_ARRAY_SIZE. L’application peut modifier la taille de l’ensemble de lignes, lier de nouvelles mémoires tampons d’ensemble de lignes (en appelant **SQLBindCol** ou en spécifiant un décalage de liaison) même après l’extraction des lignes, ou les deux à la fois. Les implications de la modification de la taille de l’ensemble de lignes dépendent de la fonction :  
   
--   **SQLFetch** et **SQLFetchScroll** utiliser la taille de l’ensemble de lignes au moment de l’appel pour déterminer combien de lignes à extraire. Toutefois, **SQLFetchScroll** avec un *FetchOrientation* d’incréments SQL_FETCH_NEXT le curseur basé sur l’ensemble de lignes de l’extraction précédente et les extractions puis un ensemble de lignes basé sur la taille d’ensemble de lignes en cours.  
+-   **SQLFetch** et **SQLFetchScroll** utilisent la taille de l’ensemble de lignes au moment de l’appel pour déterminer le nombre de lignes à extraire. Toutefois, **SQLFetchScroll** avec un *FetchOrientation* de SQL_FETCH_NEXT incrémente le curseur en fonction de l’ensemble de lignes de l’extraction précédente, puis extrait un ensemble de lignes en fonction de la taille de l’ensemble de lignes actuel.  
   
--   **SQLSetPos** utilise la taille de l’ensemble de lignes qui est en vigueur à compter de l’appel précédent à **SQLFetch** ou **SQLFetchScroll**, car **SQLSetPos** opère sur un ensemble de lignes qui a déjà été définie. **SQLSetPos** également sélectionnera la nouvelle taille d’ensemble de lignes si **SQLBulkOperations** a été appelée après la modification de la taille de l’ensemble de lignes.  
+-   **SQLSetPos** utilise la taille de l’ensemble de lignes en vigueur au cours de l’appel précédent à **SQLFetch** ou **SQLFetchScroll**, car **SQLSetPos** opère sur un ensemble de lignes qui a déjà été défini. **SQLSetPos** prend également en compte la nouvelle taille de l’ensemble de lignes si **SQLBulkOperations** a été appelé après la modification de la taille de l’ensemble de lignes.  
   
--   **SQLBulkOperations** utilise la taille de l’ensemble de lignes en vigueur au moment de l’appel, car elle effectue des opérations sur une table indépendante de n’importe quel ensemble de lignes extraite.
+-   **SQLBulkOperations** utilise la taille de l’ensemble de lignes en vigueur au moment de l’appel, car il effectue des opérations sur une table indépendante de tout ensemble de lignes extrait.

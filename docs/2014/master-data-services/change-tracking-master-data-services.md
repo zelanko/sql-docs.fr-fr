@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483519"
 ---
 # <a name="change-tracking-master-data-services"></a>Suivi des modifications (Master Data Services)
@@ -32,14 +32,14 @@ ms.locfileid: "65483519"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Ajoutez des attributs à un groupe de suivi des modifications.|[Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|Créez une règle d'entreprise qui initie les actions en fonction des modifications apportées aux attributs.|[Initier des actions en fonction de modifications de valeurs d’attribut &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Ajoutez des attributs à un groupe de suivi des modifications.|[Ajouter des attributs à un groupe de Change Tracking &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Créez une règle d'entreprise qui initie les actions en fonction des modifications apportées aux attributs.|[Initier des actions en fonction des modifications de valeur d’attribut &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Validation &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [&#40;de validation Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
 -   [Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   

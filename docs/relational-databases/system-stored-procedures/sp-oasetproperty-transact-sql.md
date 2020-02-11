@@ -18,18 +18,18 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008939"
 ---
-# <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
+# <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affecte une nouvelle valeur à une propriété d'un objet OLE.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,33 +39,33 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *objecttoken*  
- Jeton d’objet d’un objet OLE précédemment créé par **sp_OACreate**.  
+ *jeton_d'*  
+ Est le jeton d’objet d’un objet OLE précédemment créé par **sp_OACreate**.  
   
- *propertyname*  
+ *PropertyName*  
  Nom de la propriété de l'objet OLE à laquelle une nouvelle valeur doit être affectée.  
   
- *newvalue*  
+ *NewValue*  
  Nouvelle valeur de la propriété, ce doit être une valeur du type de données approprié.  
   
  *index*  
- Paramètre d'index. Si spécifié, *index* doit être une valeur de type de données approprié.  
+ Paramètre d'index. S’il est spécifié, l' *index* doit être une valeur du type de données approprié.  
   
  Certaines propriétés possèdent des paramètres. Elles sont désignées sous le nom de propriétés indexées, et les paramètres s'appellent des paramètres d'index. Une propriété peut posséder plusieurs paramètres d'index.  
   
 > [!NOTE]  
 >  Les paramètres pour cette procédure stockée sont spécifiés par position et non pas par nom.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou un nombre différent de zéro (échec), qui représente la valeur entière de HRESULT renvoyée par l'objet OLE Automation.  
   
- Pour plus d’informations sur les Codes de retour HRESULT, consultez [OLE Automation Codes de retour et les informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Pour plus d’informations sur les codes de retour HRESULT, consultez [codes de retour OLE Automation et informations sur les erreurs](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou d’autorisation d’exécuter directement cette procédure stockée. `Ole Automation Procedures` configuration doit être **activé** à utiliser des procédures système liées à OLE Automation.  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** ou l’autorisation EXECUTE directement sur cette procédure stockée. `Ole Automation Procedures`la configuration doit être **activée** pour pouvoir utiliser toute procédure système liée à OLE Automation.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant définit la `HostName` propriété (de l’élément précédemment créé **SQLServer** objet) à une nouvelle valeur.  
+ L’exemple suivant affecte une `HostName` nouvelle valeur à la propriété (de l’objet **SqlServer** créé précédemment).  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  

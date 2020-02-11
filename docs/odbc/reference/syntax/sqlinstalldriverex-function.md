@@ -1,5 +1,5 @@
 ---
-title: Sqlinstalldriverex, fonction | Microsoft Docs
+title: SQLInstallDriverEx fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030604"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx, fonction
 **Conformité**  
- Version introduite : ODBC 3.0  
+ Version introduite : ODBC 3,0  
   
  **Résumé**  
- **SQLInstallDriverEx** ajoute des informations sur le pilote à l’entrée de fichier Odbcinst.ini dans les informations système et incrémente le pilote *UsageCount* par 1. Toutefois, si une version du pilote existe déjà mais le *UsageCount* valeur pour le pilote n’existe pas, la nouvelle *UsageCount* a la valeur 2.  
+ **SQLInstallDriverEx** ajoute des informations sur le pilote à l’entrée Odbcinst. ini dans les informations système et incrémente de 1 le *UsageCount* du pilote. Toutefois, si une version du pilote existe déjà mais que la valeur *UsageCount* pour le pilote n’existe pas, la nouvelle valeur *UsageCount* est définie sur 2.  
   
- Cette fonction ne copie pas réellement de tous les fichiers. Il est responsable de programme appelant pour copier les fichiers du pilote dans le répertoire cible correctement.  
+ Cette fonction ne copie en fait pas de fichiers. Il incombe au programme appelant de copier correctement les fichiers du pilote dans le répertoire cible.  
   
- La fonctionnalité de **SQLInstallDriverEx** est également accessible avec [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ Les fonctionnalités de **SQLInstallDriverEx** sont également accessibles avec [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,90 +53,90 @@ BOOL SQLInstallDriverEx(
   
 ## <a name="arguments"></a>Arguments  
  *lpszDriver*  
- [Entrée] Description du pilote (généralement le nom du SGBD associé) présentée aux utilisateurs au lieu du nom de pilote physique. Le *lpszDriver* argument doit contenir une liste doublement se terminant par null de paires mot clé-valeur décrivant le pilote. Pour plus d’informations sur les paires mot clé-valeur, consultez [sous-clés de spécification de pilote](../../../odbc/reference/install/driver-specification-subkeys.md). Pour plus d’informations sur la chaîne doublement se terminant par null, consultez [ConfigDSN, fonction](../../../odbc/reference/syntax/configdsn-function.md).  
+ Entrée Description du pilote (généralement le nom du SGBD associé) présentée aux utilisateurs au lieu du nom du pilote physique. L’argument *lpszDriver* doit contenir une liste de paires mot clé-valeur se terminant par un caractère null, qui décrivent le pilote. Pour plus d’informations sur les paires mot clé-valeur, consultez [sous-clés de spécification de pilote](../../../odbc/reference/install/driver-specification-subkeys.md). Pour plus d’informations sur la chaîne double terminée par un caractère null, consultez [fonction ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
  *lpszPathIn*  
- [Entrée] Chemin d’accès complet du répertoire cible de l’installation, ou un pointeur null. Si *lpszPathIn* est un pointeur null, les pilotes seront installés dans le répertoire système.  
+ Entrée Chemin d’accès complet du répertoire cible de l’installation ou pointeur null. Si *lpszPathIn* est un pointeur null, les pilotes sont installés dans le répertoire système.  
   
  *lpszPathOut*  
- [Sortie] Chemin d’accès du répertoire cible où le pilote doit être installé. Si le pilote n’a pas encore été installé, *lpszPathOut* doit être le même que *lpszPathIn*. Si le pilote a été précédemment installé, *lpszPathOut* est le chemin d’accès de l’installation précédente.  
+ Sortie Chemin d’accès du répertoire cible où le pilote doit être installé. Si le pilote n’a pas encore été installé, *lpszPathOut* doit être identique à *lpszPathIn*. Si le pilote a été installé précédemment, *lpszPathOut* est le chemin d’accès de l’installation précédente.  
   
  *cbPathOutMax*  
- [Entrée] Longueur de *lpszPathOut*.  
+ Entrée Longueur de *lpszPathOut*.  
   
  *pcbPathOut*  
- [Sortie] Nombre total d’octets (sans le caractère de fin de la valeur null) disponibles à renvoyer dans *lpszPathOut*. Si le nombre d’octets à retourner est supérieur ou égal à *cbPathOutMax*, le chemin de sortie dans *lpszPathOut* est tronqué à *cbPathOutMax* moins le caractère du caractère nul de terminaison. Le *pcbPathOut* argument peut être un pointeur null.  
+ Sortie Nombre total d’octets (à l’exclusion du caractère de fin null) pouvant être renvoyés dans *lpszPathOut*. Si le nombre d’octets disponibles à retourner est supérieur ou égal à *cbPathOutMax*, le chemin de sortie dans *lpszPathOut* est tronqué à *cbPathOutMax* moins le caractère de fin null. L’argument *pcbPathOut* peut être un pointeur null.  
   
  *fRequest*  
- [Entrée] Type de requête. Le *fréquents* argument doit contenir l’une des valeurs suivantes :  
+ Entrée Type de requête. L’argument *fRequest* doit contenir l’une des valeurs suivantes :  
   
- ODBC_INSTALL_INQUIRY : Savoir où un pilote peut être installé.  
+ ODBC_INSTALL_INQUIRY : pour savoir où un pilote peut être installé.  
   
- ODBC_INSTALL_COMPLETE : Terminer la requête de l’installation.  
+ ODBC_INSTALL_COMPLETE : terminez la demande d’installation.  
   
  *lpdwUsageCount*  
- [Sortie] Le décompte d’utilisation du pilote après que cette fonction a été appelée.  
+ Sortie Le nombre d’utilisations du pilote après l’appel de cette fonction.  
   
- Applications ne doivent pas définir le décompte d’utilisation. ODBC gère ce nombre.  
+ Les applications ne doivent pas définir le nombre d’utilisations. ODBC conservera ce nombre.  
   
-## <a name="returns"></a>Valeur renvoyée  
- La fonction retourne la valeur TRUE si elle réussit, FALSE en cas d’échec.  
+## <a name="returns"></a>Retours  
+ La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLInstallDriverEx** retourne FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournés par **SQLInstallerError** et explique chacune dans le contexte de cette fonction.  
+ Quand **SQLInstallDriverEx** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erreur du programme d’installation générale|Une erreur s’est produite pour lequel aucune erreur d’installation spécifique s’est produite.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Longueur de la mémoire tampon non valide|Le *lpszPathOut* argument n’était pas assez grand pour contenir le chemin de sortie. La mémoire tampon contient le chemin d’accès tronquée.<br /><br /> Le *cbPathOutMax* argument était égale à 0, et *fréquents* a été ODBC_INSTALL_COMPLETE.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Type de demande non valide|Le *fréquents* argument n’est pas une des opérations suivantes :<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|Paires mot clé-valeur non valide|Le *lpszDriver* argument contenait une erreur de syntaxe.|  
-|ODBC_ERROR_INVALID_PATH|Chemin d’installation non valide|Le *lpszPathIn* argument contenait un chemin d’accès non valide.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Impossible de charger la bibliothèque le programme d’installation de pilote ou de convertisseur|La bibliothèque d’installation de pilote n’a pas pu être chargée.|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Séquence de paramètres non valide|Le *lpszDriver* argument ne contenait pas d’une liste de paires mot clé-valeur.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|Impossible d’incrémenter ou décrémenter le décompte d’utilisation de composant|Le programme d’installation a échoué incrémenter le décompte d’utilisation du pilote.|  
+|ODBC_ERROR_GENERAL_ERR|Erreur générale du programme d’installation|Une erreur s’est produite pour laquelle aucune erreur d’installation spécifique n’a été rencontrée.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Longueur de la mémoire tampon non valide|L’argument *lpszPathOut* n’était pas suffisamment grand pour contenir le chemin de sortie. La mémoire tampon contient le chemin d’accès tronqué.<br /><br /> L’argument *cbPathOutMax* était 0 et *fRequest* était ODBC_INSTALL_COMPLETE.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Type de demande non valide|L’argument *fRequest* ne faisait pas partie des éléments suivants :<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|Paires mot clé/valeur non valides|L’argument *lpszDriver* contient une erreur de syntaxe.|  
+|ODBC_ERROR_INVALID_PATH|Chemin d’installation non valide|L’argument *lpszPathIn* contient un chemin d’accès non valide.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Impossible de charger la bibliothèque d’installation du pilote ou du convertisseur|Impossible de charger la bibliothèque d’installation du pilote.|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Séquence de paramètres non valide|L’argument *lpszDriver* ne contient pas de liste de paires mot clé-valeur.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|Impossible d’incrémenter ou de décrémenter le nombre d’utilisations du composant|Le programme d’installation n’a pas pu incrémenter le nombre d’utilisations du pilote.|  
   
 ## <a name="comments"></a>Commentaires  
- Le *lpszDriver* argument est une liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet null, et la liste entière se termine avec un octet null. (Autrement dit, deux octets null marquent la fin de la liste.) Le format de cette liste est la suivante :  
+ L’argument *lpszDriver* est une liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet NULL, et la liste entière se termine par un octet NULL. (Autrement dit, deux octets de valeur null marquent la fin de la liste.) Le format de cette liste est le suivant :  
   
- _pilote-desc_ **\\** 0Driver **=** _pilote-DLL-filename_ **\\** 0 [le programme d’installation **=** _le programme d’installation-DLL-filename_<b>\\</b>0]  
+ _Driver-DESC_ **\\**0Driver**=**_pilote-dll-nom_fichier_**\\**0 [**=** programme d’installation _-dll-nom_fichier_<b>\\</b>0]  
   
- [_pilote-attr-mot-Clé1_ **=** _value1_<b>\\</b>0] [_pilote-attr-MotClé2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
+ [_Driver-attr-keyword1_**=**_value1_<b>\\</b>0] [_Driver-attr-keyword2_**=**_value2_<b>\\</b>0]... <b>\\</b>0  
   
- où \0 est un octet null et *pilote-attr-keywordn* est n’importe quel attribut de pilote mot clé. Les mots clés doivent apparaître dans l’ordre spécifié. Par exemple, supposons qu’un pilote pour les fichiers de texte mis en forme possède de pilote séparé et le programme d’installation DLL et pouvez utiliser des fichiers avec les extensions .txt et .csv. Le *lpszDriver* argument pour ce pilote peut être comme suit :  
+ où \ 0 est un octet NULL et *Driver-attr-Keyword* est un mot clé d’attribut Driver. Les mots clés doivent apparaître dans l’ordre spécifié. Par exemple, supposons qu’un pilote pour les fichiers texte mis en forme possède des dll de pilote et d’installation distinctes et peut utiliser des fichiers avec les extensions. txt et. csv. L’argument *lpszDriver* pour ce pilote peut être le suivant :  
   
 ```  
 Text\0Driver=TEXT.DLL\0Setup=TXTSETUP.DLL\0FileUsage=1\0  
 FileExtns=*.txt,*.csv\0\0  
 ```  
   
- Supposons qu’un pilote pour SQL Server ne dispose pas d’une DLL d’installation distinct et n’a pas de mots clés n’importe quel attribut de pilote. Le *lpszDriver* argument pour ce pilote peut être comme suit :  
+ Supposons qu’un pilote pour SQL Server n’a pas de DLL d’installation distincte et n’a pas de mot clé d’attribut de pilote. L’argument *lpszDriver* pour ce pilote peut être le suivant :  
   
 ```  
 SQL Server\0Driver=SQLSRVR.DLL\0\0  
 ```  
   
- Après avoir **SQLInstallDriverEx** récupère des informations sur le pilote à partir de la *lpszDriver* argument, il ajoute la description de pilote à la section [ODBC Drivers] de l’entrée de fichier Odbcinst.ini dans le système plus d’informations. Ensuite, il crée une section intitulée avec description du pilote et ajoute les chemins d’accès complets de la DLL du pilote et de la DLL d’installation. Enfin, elle retourne le chemin d’accès du répertoire cible de l’installation, mais ne copie pas les fichiers de pilote à celui-ci. Le programme appelant doit copier les fichiers de pilote dans le répertoire cible.  
+ Une fois que **SQLInstallDriverEx** a récupéré des informations sur le pilote à partir de l’argument *lpszDriver* , il ajoute la description du pilote à la section [ODBC Drivers] de l’entrée Odbcinst. ini dans les informations système. Il crée ensuite une section intitulée avec la description du pilote et ajoute les chemins d’accès complets de la DLL du pilote et la DLL d’installation. Enfin, elle retourne le chemin d’accès du répertoire cible de l’installation, mais ne copie pas les fichiers du pilote vers celle-ci. Le programme appelant doit réellement copier les fichiers de pilote dans le répertoire cible.  
   
- **SQLInstallDriverEx** incrémente le décompte d’utilisation de composant pour le pilote installé par 1. Si une version du pilote existe déjà, mais le nombre d’utilisations de composant pour le pilote n’existe pas, la nouvelle valeur de nombre de l’utilisation de composant est définie à 2.  
+ **SQLInstallDriverEx** incrémente de 1 le nombre d’utilisations des composants pour le pilote installé. Si une version du pilote existe déjà mais que le nombre d’utilisations des composants pour le pilote n’existe pas, la valeur du nouveau nombre d’utilisations du composant est définie sur 2.  
   
- Le programme d’installation d’application est responsable de la copier physiquement le fichier de pilote et de maintenir le décompte d’utilisation de fichier. Si le fichier de pilote n’a pas encore été installé, le programme d’installation d’application doit copier le fichier dans le *lpszPathIn* chemin d’accès et créer le décompte d’utilisation de fichier. Si le fichier a déjà été installé, le programme d’installation simplement incrémente le décompte d’utilisation de fichier et retourne le chemin d’accès de l’installation précédente dans le *lpszPathOut* argument.  
-  
-> [!NOTE]  
->  Pour plus d’informations sur les compteurs d’utilisation de composant et des compteurs d’utilisation de fichier, consultez [nombre d’utilisations](../../../odbc/reference/install/usage-counting.md).  
-  
- Si une version antérieure du fichier du pilote a été précédemment installée par l’application, le pilote doit être désinstallé et réinstallé, afin que le nombre d’utilisations de composant pilote est valide. **SQLConfigDriver** (avec un *fréquents* de ODBC_REMOVE_DRIVER) doit tout d’abord être appelée, puis **SQLRemoveDriver** doit être appelé pour décrémenter le décompte d’utilisation de composant. **SQLInstallDriverEx** doit ensuite être appelée pour réinstaller le pilote, d’incrémenter le décompte d’utilisation de composant. Le programme d’installation d’application doit remplacer l’ancien fichier avec le nouveau fichier. Le décompte d’utilisation de fichiers restent les mêmes, et toute autre application qui a utilisé l’ancien fichier de version utilise désormais la version plus récente.  
+ Le programme d’installation de l’application est responsable de la copie physique du fichier de pilote et de la gestion du nombre d’utilisations de fichiers. Si le fichier de pilote n’a pas déjà été installé, le programme d’installation de l’application doit copier le fichier dans le chemin d’accès *lpszPathIn* et créer le nombre d’utilisations de fichiers. Si le fichier a déjà été installé, le programme d’installation incrémente simplement le nombre d’utilisations de fichiers et retourne le chemin d’accès de l’installation antérieure dans l’argument *lpszPathOut* .  
   
 > [!NOTE]  
->  Si le pilote a été installé précédemment et **SQLInstallDriverEx** est appelée pour installer le pilote dans un autre répertoire, la fonction renverra TRUE, mais *lpszPathOut* inclura le répertoire où le pilote a déjà été installé. Il n’inclut pas le répertoire entré dans le *lpszDriver* argument.  
+>  Pour plus d’informations sur le nombre d’utilisations des composants et le nombre d’utilisations des fichiers, consultez [comptage de l’utilisation](../../../odbc/reference/install/usage-counting.md).  
   
- La longueur du chemin dans *lpszPathOut* dans **SQLInstallDriverEx** permettant à un processus d’installation en deux phases, pour une application de déterminer ce que *cbPathOutMax* doit être par appel **SQLInstallDriverEx** avec un *fréquents* du mode ODBC_INSTALL_INQUIRY. Cela retourne le nombre total d’octets disponibles dans le *pcbPathOut* mémoire tampon. **SQLInstallDriverEx** peut ensuite être appelée avec un *fréquents* de ODBC_INSTALL_COMPLETE et *cbPathOutMax* argument défini à la valeur de la *pcbPathOut*mémoire tampon, ainsi que le caractère de fin de la valeur null.  
+ Si une version antérieure du fichier de pilote était précédemment installée par l’application, le pilote doit être désinstallé, puis réinstallé, afin que le nombre d’utilisations du composant de pilote soit valide. **SQLConfigDriver** (avec un *fRequest* de ODBC_REMOVE_DRIVER) doit d’abord être appelé, puis **SQLRemoveDriver** doit être appelé pour décrémenter le nombre d’utilisations du composant. **SQLInstallDriverEx** doit ensuite être appelé pour réinstaller le pilote, ce qui incrémente le nombre d’utilisations des composants. Le programme d’installation de l’application doit remplacer l’ancien fichier par le nouveau fichier. Le nombre d’utilisations de fichiers reste le même et toute autre application qui utilisait le fichier de version antérieure utilisera désormais la version plus récente.  
   
- Si vous choisissez de ne pas utiliser le modèle en deux phases pour **SQLInstallDriverEx**, vous devez définir *cbPathOutMax*, qui définit la taille du stockage pour le chemin d’accès du répertoire cible, à la valeur _MAX_PATH, en tant que défini dans Stdlib.h, pour empêcher la troncation.  
+> [!NOTE]  
+>  Si le pilote a été précédemment installé et que **SQLInstallDriverEx** est appelé pour installer le pilote dans un répertoire différent, la fonction retourne la valeur true, mais *lpszPathOut* inclut le répertoire dans lequel le pilote a déjà été installé. Elle n’inclut pas le répertoire entré dans l’argument *lpszDriver* .  
   
- Lorsque *fréquents* est ODBC_INSTALL_COMPLETE, **SQLInstallDriverEx** n’autorise pas *lpszPathOut* null (ou *cbPathOutMax* être (0). Si *fréquents* est ODBC_INSTALL_COMPLETE, FALSE est retournée lorsque le nombre d’octets à retourner est supérieur ou égal à *cbPathOutMax*, avec le résultat que la troncation se produit.  
+ La longueur du chemin d’accès dans *lpszPathOut* dans **SQLInstallDriverEx** permet un processus d’installation en deux phases, de sorte qu’une application peut déterminer ce que *CbPathOutMax* doit être en appelant **SQLInstallDriverEx** avec un *fRequest* du mode ODBC_INSTALL_INQUIRY. Cette opération renvoie le nombre total d’octets disponibles dans la mémoire tampon *pcbPathOut* . **SQLInstallDriverEx** peut ensuite être appelé avec un *fRequest* de ODBC_INSTALL_COMPLETE et l’argument *cbPathOutMax* défini sur la valeur de la mémoire tampon *pcbPathOut* , plus le caractère de fin null.  
   
- Après avoir **SQLInstallDriverEx** a été appelée et le programme d’installation d’application a copié le fichier de pilote (si nécessaire), le programme d’installation du pilote DLL doit appeler **SQLConfigDriver** pour définir la configuration pour le pilote.  
+ Si vous choisissez de ne pas utiliser le modèle en deux phases pour **SQLInstallDriverEx**, vous devez définir *cbPathOutMax*, qui définit la taille du stockage pour le chemin d’accès du répertoire cible, sur la valeur _MAX_PATH, comme défini dans stdlib. h, pour empêcher la troncation.  
+  
+ Lorsque *fRequest* est ODBC_INSTALL_COMPLETE, **SQLInstallDriverEx** n’autorise pas la valeur de *lpszPathOut* null (ou *cbPathOutMax* à 0). Si *fRequest* est ODBC_INSTALL_COMPLETE, false est retourné lorsque le nombre d’octets disponibles à retourner est supérieur ou égal à *cbPathOutMax*, avec pour résultat que la troncation se produit.  
+  
+ Une fois que **SQLInstallDriverEx** a été appelé et que le programme d’installation de l’application a copié le fichier de pilote (si nécessaire), la dll d’installation du pilote doit appeler **SQLConfigDriver** pour définir la configuration du pilote.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   

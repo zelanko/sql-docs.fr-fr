@@ -1,5 +1,5 @@
 ---
-title: Utiliser les valeurs des Variables et des paramètres dans un Package enfant | Microsoft Docs
+title: Utiliser les valeurs des variables et des paramètres dans un package enfant | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054732"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Utiliser les valeurs des variables et des paramètres dans un package enfant
@@ -78,7 +78,7 @@ ms.locfileid: "66054732"
   
 4.  Dans la boîte de dialogue **Bibliothèque des configurations du package** , sélectionnez **Activer les configurations du package**et cliquez sur **Ajouter**.  
   
-5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
+5.  Sur la page d’accueil de l’Assistant Configuration de package, cliquez sur **suivant.**  
   
 6.  Dans la page Sélectionner le type de configuration, dans la liste **Type de configuration** , sélectionnez **Variable de package parent** et effectuez l’une des interventions suivantes :  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66054732"
   
     -   Sélectionnez **L’emplacement de la configuration est stocké dans une variable d’environnement** , puis dans la **liste Variable d’environnement**, sélectionnez la variable d’environnement qui contient le nom de la variable.  
   
-7.  Cliquer sur **Suivant**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Dans la page Sélectionner la propriété cible, développez le nœud **Variable** , puis développez le nœud **Propriétés** de la variable à configurer, puis cliquez sur la propriété devant être définie par la configuration.  
   
-9. Cliquer sur **Suivant**.  
+9. Cliquez sur **Suivant**.  
   
 10. Dans la page Fin de l'Assistant, modifiez facultativement le nom par défaut de la configuration, puis vérifiez les informations de configuration.  
   

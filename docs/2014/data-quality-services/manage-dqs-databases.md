@@ -11,17 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5be0404cc35964573b8a66d7874c76a82e7c55f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484471"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   Cette section fournit des informations sur les activités de gestion de bases de données qui peuvent être effectuées sur des bases de données DQS, telles que la sauvegarde/restauration ou le détachement et l'attachement.  
   
-##  <a name="BackupRestore"></a> Sauvegarder et restaurer les bases de données DQS  
- La sauvegarde et la restauration de bases de données SQL Server sont des opérations courantes que les administrateurs de bases de données exécutent pour empêcher la perte de données en cas d'incident lors de la récupération de données à partir des bases de données de sauvegarde. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est principalement implémenté par deux bases de données SQL Server : DQS_MAIN et DQS_PROJECTS. Les procédures de sauvegarde et de restauration des bases de données [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) sont similaires à celles de toute autre base de données SQL Server. Il existe trois défis inhérents à la sauvegarde et à la restauration des bases de données DQS :  
+##  <a name="BackupRestore"></a>Sauvegarder et restaurer les bases de données DQS  
+ La sauvegarde et la restauration de bases de données SQL Server sont des opérations courantes que les administrateurs de bases de données exécutent pour empêcher la perte de données en cas d'incident lors de la récupération de données à partir des bases de données de sauvegarde. 
+  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est principalement implémenté par deux bases de données SQL Server : DQS_MAIN et DQS_PROJECTS. Les procédures de sauvegarde et de restauration des bases de données [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) sont similaires à celles de toute autre base de données SQL Server. Il existe trois défis inhérents à la sauvegarde et à la restauration des bases de données DQS :  
   
 -   Les opérations de sauvegarde et de restauration des bases de données de DQS doivent être synchronisées. Sinon la base de données [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] restaurée ne sera pas fonctionnelle.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "65484471"
 >  -   En mode de récupération simple, lorsque les enregistrements du journal restent actifs longtemps (par exemple, lors d'une longue transaction), la troncation peut être différée et peut donc entraîner la saturation du journal des transactions. Par ailleurs, la troncation du journal ne réduit pas la taille du fichier journal physique (fichier .ldf). Pour réduire la taille d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d’informations sur la résolution des problèmes liés au journal des transactions, consultez [Journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) ou l’article du support Microsoft à l’adresse [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Vous devez effectuer régulièrement une sauvegarde complète ou différentielle des bases de données DQS et sauvegarder le journal des transactions pour récupérer les données jusqu'à une date et une heure spécifiques. Pour plus d’informations, consultez [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) et [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-##  <a name="DetachAttach"></a> Attacher et détacher les bases de données DQS  
+##  <a name="DetachAttach"></a>Détacher/attacher les bases de données DQS  
  Vous pouvez détacher les données et les fichiers journaux des transactions des bases de données DQS, puis rattachez les bases de données à la même instance ou à une autre instance de SQL Server si vous souhaitez remplacer les bases de données DQS par une autre instance de SQL Server sur le même ordinateur ou les déplacer.  
   
  Pour plus d’informations sur les éléments à prendre en considération avant et pendant le détachement et l’attachement de bases de données dans SQL Server, consultez [Attacher et détacher les bases de données &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -55,6 +56,6 @@ ms.locfileid: "65484471"
 |Décrit comment détacher et attacher les bases de données DQS.|[Attachement et détachement de bases de données DQS](../../2014/data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de DQS](../../2014/data-quality-services/dqs-administration.md)  
+ [administration de dqs](../../2014/data-quality-services/dqs-administration.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ajouter une Table imbriquée à une Structure d’exploration de données | Microsoft Docs
+title: Ajouter une table imbriquée à une structure d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086361"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>ajouter une table imbriquée à une structure d'exploration de données
@@ -44,6 +44,6 @@ ms.locfileid: "66086361"
      Une nouvelle colonne de table contenant la colonne clé est ajoutée à la structure d'exploration. Pour plus d’informations sur l’ajout de colonnes, consultez [Ajouter des colonnes à une structure d’exploration de données](add-columns-to-a-mining-structure.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures relatives aux structures d’exploration de données](mining-structure-tasks-and-how-tos.md)  
+ [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  
   
   

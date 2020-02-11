@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2d28df68512f9c97faebf3ee00b2aa34a2b8d1a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028667"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Modifications du **NODE_CAPTION** colonne dans le modèle d’exploration de données.  
+  Modifie la colonne **NODE_CAPTION** dans le modèle d’exploration de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +34,13 @@ SET NODE_CAPTION='new caption'
  Identificateur du modèle  
   
  *nouvelle légende*  
- Chaîne qui contient le nouveau nom pour le **NODE_CAPTION** colonne.  
+ Chaîne qui contient le nouveau nom de la colonne **NODE_CAPTION** .  
   
  *expression de condition*  
  facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
 ## <a name="examples"></a>Exemples  
- Dans l’exemple suivant, le **mise à jour** instruction modifie le nom par défaut, `Cluster 1`, pour le cluster `001` à un nom plus descriptif, `Likely Customers`.  
+ Dans l’exemple suivant, l’instruction **Update** modifie le nom par défaut `Cluster 1`,, pour `001` le cluster avec le nom plus `Likely Customers`descriptif,.  
   
 ```  
 UPDATE [TM Clustering].CONTENT  
@@ -49,8 +49,8 @@ WHERE NODE_UNIQUE_NAME = '001'
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
