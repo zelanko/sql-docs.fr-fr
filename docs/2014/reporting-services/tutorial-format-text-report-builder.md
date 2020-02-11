@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098903"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Tutoriel : Mettre en forme du texte (Générateur de rapports)
+# <a name="tutorial-format-text-report-builder"></a>Didacticiel : mettre en forme du texte (Générateur de rapports)
   Dans ce didacticiel, vous pouvez vous entraîner à mettre en forme le texte de plusieurs façons. Après avoir configuré le rapport vierge avec la source de données et le dataset, vous pourrez choisir les étapes que vous souhaitez explorer.  
   
  L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
@@ -26,38 +26,38 @@ ms.locfileid: "66098903"
   
  Dans une étape, vous allez sciemment générer une erreur afin de voir pourquoi il s'agit d'une erreur. Vous corrigerez ensuite l'erreur pour obtenir l'effet souhaité.  
   
- Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=184851).  
+ Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [Générateur de rapports exemples de rapports](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
-##  <a name="BackToTop"></a> Ce que vous allez apprendre  
+##  <a name="BackToTop"></a>Ce que vous allez apprendre  
   
 ### <a name="set-up-the-report"></a>Configurer le rapport  
- 1. [Créer un rapport vierge avec une données Source et le jeu de données](#CreateReport)  
+ 1. [Créer un rapport vierge avec une source de données et un DataSet](#CreateReport)  
   
- 2. [Ajouter un champ à l’aire de conception de rapport (de façon incorrecte, puis correctement)](#AddField)  
+ 2. [Ajouter un champ à l'aire de conception du rapport (de façon incorrecte, puis correcte)](#AddField)  
   
- 3. [Ajouter une Table à l’aire de conception de rapport](#AddTable)  
+ 3. [Ajoutez une table au rapport Aire de conception](#AddTable)  
   
 ### <a name="pick-and-choose"></a>Choisir  
  [Ajouter un lien hypertexte au rapport](#AddHyperlink)  
   
  [Faire pivoter le texte dans le rapport](#RotateText)  
   
- [Afficher le texte avec mise en forme HTML](#FormatHTML)  
+ [Affichage de texte avec une mise en forme HTML](#FormatHTML)  
   
- [Format monétaire](#FormatCurrency)  
+ [Mettre en forme la devise](#FormatCurrency)  
   
  [Enregistrer le rapport](#Save)  
   
- Durée estimée pour effectuer ce didacticiel : 20 minutes.  
+ Durée estimée pour effectuer le didacticiel : 20 minutes.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a> Créer un rapport vierge avec une données Source et le jeu de données  
+##  <a name="CreateReport"></a>Créer un rapport vierge avec une source de données et un DataSet  
   
 #### <a name="to-create-a-blank-report"></a>Pour créer un rapport vierge  
   
-1.  Cliquez sur **Démarrer**, pointez sur **programmes**, pointez sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **le Générateur de rapports**, puis cliquez sur **le Générateur de rapports**.  
+1.  Cliquez sur **Démarrer**, pointez sur **programmes**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]sur **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
   
     > [!NOTE]  
     >  La boîte de dialogue **Mise en route** s'affiche. Si elle ne s'affiche pas, à partir du bouton Générateur de rapports, cliquez sur **Nouveau**.  
@@ -68,26 +68,26 @@ ms.locfileid: "66098903"
   
 #### <a name="to-create-a-data-source"></a>Pour créer une source de données  
   
-1.  Dans le volet des données de rapport, cliquez sur **Nouveau**, puis sur **Source de données**.  
+1.  Dans le volet données du rapport, cliquez sur **nouveau**, puis sur **source de données**.  
   
-2.  Dans la zone **Nom**, tapez : **TextDataSource**  
+2.  Dans la zone **Nom** , tapez **TextDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
-4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : **Source de données = \<nom_serveur>**  
+4.  Vérifiez que le type de connexion est Microsoft SQL Server, puis, dans la zone **Chaîne de connexion**, tapez **Data Source = \<nom_serveur>**  
   
     > [!NOTE]  
-    >  L’expression \<servername >, par exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Ce didacticiel n'a pas besoin de données spécifiques. Il a juste besoin d'une connexion à une base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    >  L’expression \<ServerName>, par exemple rapport001, spécifie un ordinateur sur lequel une instance du SQL Server moteur de base de données est installée. Ce didacticiel n'a pas besoin de données spécifiques. Il a juste besoin d'une connexion à une base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 #### <a name="to-create-a-dataset"></a>Pour créer un dataset  
   
-1.  Dans le volet des données de rapport, cliquez sur **Nouveau**, puis sur **Dataset**.  
+1.  Dans le volet données du rapport, cliquez sur **nouveau**, puis sur **DataSet**.  
   
 2.  Vérifiez que la source de données est **TextDataSource**.  
   
-3.  Dans la zone **Nom**, tapez : **TextDataset.**  
+3.  Dans la zone **Nom** , tapez **TextDataset**.  
   
 4.  Vérifiez que le type de requête **Texte** est sélectionné, puis cliquez sur **Concepteur de requêtes**.  
   
@@ -128,28 +128,28 @@ ms.locfileid: "66098903"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Cliquez sur Exécuter ( **!** ) pour exécuter la requête.  
+7.  Cliquez sur Exécuter (**!**) pour exécuter la requête.  
   
      Les résultats de la requête sont les données qui peuvent être affichées dans votre rapport.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a> Ajouter un champ à l’aire de conception de rapport  
+##  <a name="AddField"></a>Ajoutez un champ au rapport Aire de conception  
  Si vous souhaitez qu'un champ de votre dataset apparaisse dans un rapport, votre premier réflexe peut être de le faire glisser directement sur l'aire de conception. Cet exercice montre pourquoi cela ne fonctionne pas et ce que vous devez faire à la place.  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Pour ajouter un champ au rapport (et obtenir le résultat incorrect)  
   
 1.  Faites glisser le champ **FullName** du volet Données du rapport vers l’aire de conception.  
   
-     Générateur de rapports crée une zone de texte avec une expression, représentée sous la forme \<Expr >.  
+     Générateur de rapports crée une zone de texte contenant une expression, représentée sous la \<forme expr>.  
   
 2.  Cliquez sur **Exécuter**.  
   
-     Notez qu’il existe qu’un seul enregistrement, **Fernando Ross**, qui est dans l’ordre alphabétique du premier enregistrement de la requête. Le champ ne se répète pas pour afficher les autres enregistrements.  
+     Notez qu’il n’existe qu’un seul enregistrement, **Fernando Ross**, qui est le premier enregistrement dans la requête par ordre alphabétique. Le champ ne se répète pas pour afficher les autres enregistrements.  
   
 3.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-4.  Sélectionnez l’expression \<Expr > dans la zone de texte.  
+4.  Sélectionnez l’expression \<expr> dans la zone de texte.  
   
 5.  Dans le volet Propriétés, les éléments suivants sont affichés pour la propriété **Valeur** (si le volet Propriétés n’est pas affiché, sous l’onglet **Affichage** , cochez **Propriétés**) :  
   
@@ -189,38 +189,38 @@ ms.locfileid: "66098903"
   
 7.  Sélectionnez la zone de liste et appuyez sur la touche Suppr.  
   
-##  <a name="AddTable"></a> Ajouter une Table à l’aire de conception de rapport  
- Créer cette table afin que vous avez un emplacement pour placer des liens hypertexte et le texte pivoté.  
+##  <a name="AddTable"></a>Ajoutez une table au rapport Aire de conception  
+ Créez cette table pour avoir un emplacement où placer les liens hypertexte et le texte pivoté.  
   
 #### <a name="to-add-a-table-to-the-report"></a>Pour ajouter un tableau au rapport  
   
-1.  Sur le **insérer** menu, cliquez sur **Table**, puis cliquez sur **Assistant Table**.  
+1.  Dans le menu **Insérer** , cliquez sur **tableau**, puis sur **Assistant Tableau**.  
   
-2.  Sur le **choisir un dataset** page de l’Assistant nouveau tableau ou matrice, cliquez sur **choisir un dataset existant dans ce rapport ou un dataset partagé**, puis cliquez sur **TextDataset (dans ce rapport)** , puis cliquez sur **suivant**.  
+2.  Dans la page **choisir un DataSet** de l’Assistant Nouveau tableau ou nouvelle matrice, cliquez sur **choisir un DataSet existant dans ce rapport ou un dataset partagé**, puis cliquez sur **TextDataset (dans ce rapport)**, puis cliquez sur **suivant**.  
   
-3.  Sur le **organiser les champs** page, faites glisser le **Territory**, **LinkText**, et **produit** champs **degroupesdelignes**, faites glisser le **Sales** champ **valeurs**, puis cliquez sur **suivant**.  
+3.  Dans la **page organiser les champs** , faites glisser les champs **secteur**, **linktext**et **produit** vers **groupes de lignes**, faites glisser le champ **Sales** vers **valeurs**, puis cliquez sur **suivant**.  
   
-4.  Sur le **choisir la disposition** page, désactivez le **développer/réduire les groupes** case à cocher afin de voir l’ensemble de table, puis cliquez sur **suivant**.  
+4.  Dans la page **choisir la disposition** , désactivez la case à cocher **développer/réduire les groupes** afin de pouvoir voir le tableau entier, puis cliquez sur **suivant**.  
   
-5.  Sur le **choisir un style** , cliquez sur **ardoise**, puis cliquez sur **Terminer**.  
+5.  Dans la page **choisir un style** , cliquez sur **ardoise**, puis sur **Terminer**.  
   
 6.  Faites glisser le tableau sous le bloc de titre.  
   
 7.  Cliquez sur **Exécuter**.  
   
-     Le tableau semble parfait, mais il contient deux lignes de total. Le **LinkText** champ n’a pas besoin d’une ligne de Total.  
+     Le tableau semble parfait, mais il contient deux lignes de total. Le champ **linktext** n’a pas besoin d’une ligne de total.  
   
 8.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-9. Avec le bouton droit de la zone de texte qui contient `[LinkText]`, puis cliquez sur **fractionner les cellules**.  
+9. Cliquez avec le bouton droit sur la zone `[LinkText]`de texte qui contient, puis cliquez sur **fractionner les cellules**.  
   
-10. Sélectionnez la cellule vide sous la `[LinkText]` la cellule, puis maintenez la touche MAJ ENFONCÉE et sélectionnez les deux cellules à sa droite : la **Total** de cellule dans le **produit** colonne et la `[Sum(Sales)]` cellule dans le  **Ventes** colonne.  
+10. Sélectionnez la cellule vide sous la `[LinkText]` cellule, maintenez la touche Maj enfoncée et sélectionnez les deux cellules à droite : la cellule **total** dans la colonne **Product** et la `[Sum(Sales)]` cellule dans la colonne **Sales** .  
   
-11. Ces trois cellules étant sélectionnées, cliquez sur un de ces cellules et cliquez sur **supprimer la ligne**.  
+11. Après avoir sélectionné ces trois cellules, cliquez avec le bouton droit sur l’une de ces cellules, puis cliquez sur **Supprimer la ligne**.  
   
 12. Cliquez sur **Exécuter**.  
   
-##  <a name="AddHyperlink"></a> Ajouter un lien hypertexte au rapport  
+##  <a name="AddHyperlink"></a>Ajouter un lien hypertexte au rapport  
  Dans cette section, vous allez ajouter un lien hypertexte au texte du tableau de la section précédente.  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>Pour ajouter un lien hypertexte au rapport  
@@ -229,17 +229,17 @@ ms.locfileid: "66098903"
   
 2.  Cliquez avec le bouton droit dans la cellule qui contient `[LinkText]`, puis cliquez sur **Propriétés de la zone de texte**.  
   
-3.  Dans le **propriétés de la zone texte** , cliquez sur **Action**.  
+3.  Dans la zone Propriétés de la **zone de texte** , cliquez sur **action**.  
   
-4.  Cliquez sur **atteindre l’URL**.  
+4.  Cliquez sur **accéder à l’URL**.  
   
-5.  Dans le **sélectionner une URL** , cliquez sur **[URL]** , puis cliquez sur **OK**.  
+5.  Dans la zone **Sélectionner une URL** , cliquez sur **[URL]**, puis sur **OK**.  
   
 6.  Notez que le texte n'est en aucune manière différent. Vous devez lui donner l'apparence de texte de lien.  
   
 7.  Sélectionnez `[LinkText]`.  
   
-8.  Dans le **police** section de la **accueil** , cliquez sur le **souligné** bouton, puis cliquez sur la flèche déroulante à côté le **couleur** bouton, Cliquez sur **bleu**.  
+8.  Dans la section **police** de l’onglet dossier de **démarrage** , cliquez sur le bouton **souligné** , puis cliquez sur la flèche déroulante en regard du bouton **couleur** , puis cliquez sur **bleu**.  
   
 9. Cliquez sur **Exécuter**.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "66098903"
   
 10. Cliquez sur un lien. Si l'ordinateur est connecté à Internet, un navigateur s'ouvre sur une rubrique d'aide du Générateur de rapports.  
   
-##  <a name="RotateText"></a> Faire pivoter le texte dans le rapport  
+##  <a name="RotateText"></a>Faire pivoter le texte dans le rapport  
  Dans cette section, vous allez faire pivoter une partie du texte du tableau des sections précédentes.  
   
 #### <a name="to-rotate-text"></a>Pour faire pivoter le texte  
@@ -267,17 +267,17 @@ ms.locfileid: "66098903"
   
 6.  Dans la zone de liste, cliquez sur **Rotate270**.  
   
-7.  Sur le **accueil** onglet dans le **paragraphe** , cliquez sur le **central** et **Center** boutons pour le texte dans le centre de la cellule verticalement et horizontalement.  
+7.  Dans l’onglet dossier de **démarrage** de la section **paragraphe** , cliquez sur les boutons **centraux** et **centraux** pour localiser le texte au centre de la cellule à la fois verticalement et horizontalement.  
   
-8.  Cliquez sur Exécuter ( **!** ).  
+8.  Cliquez sur Exécuter (**!**).  
   
  Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas en haut des cellules.  
   
-##  <a name="FormatHTML"></a> Afficher le texte avec mise en forme HTML  
+##  <a name="FormatHTML"></a>Affichage de texte avec une mise en forme HTML  
   
 #### <a name="to-display-text-formatted-as-html"></a>Pour afficher le texte mis en forme en HTML  
   
-1.  Cliquez sur **Conception** pour basculer en mode Conception.  
+1.  Cliquez sur **conception** pour basculer en mode conception.  
   
 2.  Sous l’onglet **Insertion** , cliquez sur **Zone de texte**, puis sur l’aire de conception, cliquez et faites glisser la souris pour créer une zone de texte sous le tableau d’environ 10 cm de large sur 8 cm de haut.  
   
@@ -305,33 +305,33 @@ ms.locfileid: "66098903"
   
 5.  Cliquez avec le bouton droit sur l’ensemble du texte sélectionné, puis cliquez sur **Propriétés du texte**.  
   
-6.  Sur le **général** page sous **type de balise**, cliquez sur **HTML - interpréter les balises HTML comme styles**.  
+6.  Sur la page **général** , sous **type de balise**, cliquez sur **HTML-interpréter les balises html comme des styles**.  
   
 7.  Cliquez sur **OK**.  
   
-8.  Cliquez sur Exécuter ( **!** ) pour afficher un aperçu du rapport.  
+8.  Cliquez sur Exécuter (**!**) pour afficher un aperçu du rapport.  
   
  Le texte de la zone de texte est affiché sous forme de titre, paragraphe et liste à puce.  
   
-##  <a name="FormatCurrency"></a> Format monétaire  
+##  <a name="FormatCurrency"></a>Mettre en forme la devise  
   
 #### <a name="to-format-numbers-as-currency"></a>Pour mettre en forme des nombres en devise  
   
-1.  Cliquez sur **Conception** pour basculer en mode Conception.  
+1.  Cliquez sur **conception** pour basculer en mode conception.  
   
 2.  Cliquez sur la cellule supérieure du tableau contenant `[Sum(Sales)]`, maintenez la touche Maj enfoncée et cliquez sur la cellule inférieure du tableau contenant `[Sum(Sales)]`.  
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** .  
   
-4.  (Facultatif) Sur le **accueil** sous l’onglet le **nombre** de groupe, cliquez sur le **Styles des espaces réservés** , puis cliquez sur **exemples de valeurs** pour voir comment les nombres mettre en forme.  
+4.  Facultatif Dans l’onglet dossier de **démarrage** , dans le groupe **nombre** , cliquez sur le bouton **styles des espaces réservés** et cliquez sur **exemples de valeurs** pour voir comment les nombres sont mis en forme.  
   
 5.  (Facultatif) Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher les valeurs en dollars sans indication de centimes.  
   
-6.  Cliquez sur Exécuter ( **!** ) pour afficher un aperçu du rapport.  
+6.  Cliquez sur Exécuter (**!**) pour afficher un aperçu du rapport.  
   
  Le rapport affiche maintenant les données mises en forme et est plus facile à lire.  
   
-##  <a name="Save"></a> Enregistrer le rapport  
+##  <a name="Save"></a>Enregistrer le rapport  
  Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur.  
   
  Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.  
@@ -363,7 +363,7 @@ ms.locfileid: "66098903"
 4.  Cliquez sur **Enregistrer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Il existe plusieurs façons de mettre en forme le texte dans le Générateur de rapports [didacticiel : Création d’un rapport de forme libre &#40;Générateur de rapports&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
+ Il existe de nombreuses façons de mettre en forme du texte dans Générateur de rapports [Didacticiel : la création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient plus d’exemples.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md)   

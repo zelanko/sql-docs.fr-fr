@@ -1,5 +1,5 @@
 ---
-title: Après la mise à niveau, les nouveaux mots clés réservés ne peuvent pas être utilisés comme identificateurs | Microsoft Docs
+title: Après la mise à niveau, les nouveaux mots clés réservés ne peuvent pas être utilisés en tant qu’identificateurs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096889"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Après une mise à niveau, les nouveaux mots clés réservés ne peuvent pas être utilisés comme identificateurs
@@ -49,14 +49,14 @@ ms.locfileid: "66096889"
   
 -   Conservez la compatibilité de base de données au niveau 90 ou inférieur.  
   
--   Faites référence à l'objet en utilisant des identificateurs délimités. Par exemple, l’instruction `CREATE TABLE [MERGE] ([MERGE] int);` utilise des crochets pour délimiter le nom d’objet MERGE.  
+-   Faites référence à l'objet en utilisant des identificateurs délimités. Par exemple, l’instruction `CREATE TABLE [MERGE] ([MERGE] int);` utilise des crochets pour délimiter la fusion du nom de l’objet.  
   
 ## <a name="external-resources"></a>Ressources externes  
- [Reserved Keywords &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [Mots clés réservés &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [Identificateurs délimités (moteur de base de données)](https://go.microsoft.com/fwlink/?LinkId=112509)  
+ [Identificateurs délimités (Moteur de base de données)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

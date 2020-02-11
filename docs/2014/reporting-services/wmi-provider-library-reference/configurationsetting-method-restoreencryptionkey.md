@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098128"
 ---
-# <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Méthode RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
+# <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Méthode RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Réapplique la clé de chiffrement spécifiée à la base de données du serveur de rapports.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,7 +42,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *KeyFile[]*  
+ *Keyfile []*  
  [out] Tableau contenant la clé de chiffrement chiffrée.  
   
  *Longueur*  
@@ -51,7 +51,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  *Mot de passe*  
  Chaîne utilisée pour chiffrer la clé de chiffrement.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
  *ExtendedErrors[]*  
@@ -65,8 +65,8 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
   
  Cette méthode est très efficace quand elle est appelée après la méthode [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) , qui efface la liste de clés de chiffrement.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

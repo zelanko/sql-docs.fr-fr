@@ -1,5 +1,5 @@
 ---
-title: Problèmes de mise à niveau de recherche en texte intégral | Microsoft Docs
+title: Problèmes de mise à niveau de la recherche en texte intégral | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d907c9b440053b0c0fc110fa02ca3de4e993905c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095121"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Problèmes de mise à niveau de la fonction de recherche en texte intégral
-  Les rubriques de cette section décrivent les problèmes de la fonction de recherche en texte intégral qui peuvent affecter votre mise à niveau. Les rubriques décrivent les mesures que vous pouvez prendre pour atténuer l’effet de ces modifications sur votre environnement.  
+  Les rubriques de cette section décrivent les problèmes de la fonction de recherche en texte intégral qui peuvent affecter votre mise à niveau. Les rubriques décrivent les actions que vous pouvez prendre pour atténuer l’effet de ces modifications sur votre environnement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation de l’Assistant Mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
+ [Utilisation du conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Résolution de problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

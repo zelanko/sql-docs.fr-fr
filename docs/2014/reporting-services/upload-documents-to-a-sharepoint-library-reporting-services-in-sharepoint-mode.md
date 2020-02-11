@@ -1,5 +1,5 @@
 ---
-title: Télécharger des Documents vers une bibliothèque SharePoint (Reporting Services en Mode SharePoint) | Microsoft Docs
+title: Télécharger des documents vers une bibliothèque SharePoint (Reporting Services en mode SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098837"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Télécharger des documents vers une bibliothèque SharePoint (Reporting Services en mode SharePoint)
@@ -49,7 +49,7 @@ ms.locfileid: "66098837"
   
 ## <a name="see-also"></a>Voir aussi  
  [publier un rapport dans une bibliothèque SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
- [publier une source de données partagée sur une bibliothèque SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Publier une source de données partagée dans une bibliothèque SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098265"
 ---
-# <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>Méthode ListReservedURLs (WMI MSReportServer_ConfigurationSetting)
+# <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>Méthode ListReservedURLs (WMI MSReportServer_ConfigurationSetting)
   Répertorie les URL réservées pour toutes les applications sur le serveur de rapports.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -37,22 +37,22 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *Application[]*  
+ *Application []*  
  [out] Applications qui ont des réservations d'URL.  
   
- *UrlString[]*  
+ *UrlString []*  
  [out] URL réservées.  
   
- *Account[]*  
+ *Compte []*  
  [out] Noms de comptes associés au compte pour les réservations d'URL.  
   
- *AccountSID[]*  
+ *AccountSID []*  
  [out] SID de comptes associés au compte pour les réservations d'URL.  
   
  *Longueur*  
  [out] Longueur des tableaux retournés par la méthode.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -60,8 +60,8 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

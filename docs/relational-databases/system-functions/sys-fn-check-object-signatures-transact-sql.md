@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_check_object_signatures (Transact-SQL) | Microsoft Docs
+title: sys. fn_check_object_signatures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046311"
 ---
-# <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
+# <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Retourne une liste de tous les objets signables et indique si un objet est signé par un certificat spécifié ou une clé asymétrique. Retourne également une valeur indiquant si la signature d'un objet est valide si l'objet est signé par le certificat spécifié ou une clé asymétrique.  
   
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,30 +45,30 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- {'\@*classe*'}  
+ {'\@*Class*'}  
  Identifie le type d'empreinte numérique fourni :  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- \@*classe* est **sysname**.  
+ \@la *classe* est de **type sysname**.  
   
- { \@ *empreinte* }  
- Hachage SHA-1 du certificat avec lequel la clé est chiffrée ou GUID de la clé asymétrique avec laquelle la clé est chiffrée. \@*empreinte numérique* est **varbinary(20)** .  
+ { \@ *empreinte numérique* }  
+ Hachage SHA-1 du certificat avec lequel la clé est chiffrée ou GUID de la clé asymétrique avec laquelle la clé est chiffrée. \@l' *empreinte numérique* est **varbinary (20)**.  
   
 ## <a name="tables-returned"></a>Tables retournées  
- Le tableau suivant répertorie les colonnes qui **fn_check_object_signatures** retourne.  
+ Le tableau suivant répertorie les colonnes retournées par **fn_check_object_signatures** .  
   
-|colonne|type|Description|  
+|Colonne|Type|Description|  
 |------------|----------|-----------------|  
-|type|**nvarchar(120)**|Retourne une description de type ou un assembly.|  
+|type|**nvarchar (120)**|Retourne une description de type ou un assembly.|  
 |entity_id|**int**|Retourne l'ID de l'objet en cours d'évaluation.|  
-|is_signed|**Int**|Retourne la valeur 0 lorsque l'objet n'est pas signé par l'empreinte numérique fournie. Retourne la valeur 1 lorsque l'objet est signé par l'empreinte numérique fournie.|  
-|is_signature_valid|**Int**|Lorsque is_signed a la valeur 1, retourne la valeur 0 lorsque la signature n'est pas valide. Retourne la valeur 1 lorsque la signature est valide.<br /><br /> Lorsque is_signed a la valeur 0, retourne toujours la valeur 0.|  
+|is_signed|**int**|Retourne la valeur 0 lorsque l'objet n'est pas signé par l'empreinte numérique fournie. Retourne la valeur 1 lorsque l'objet est signé par l'empreinte numérique fournie.|  
+|is_signature_valid|**int**|Lorsque is_signed a la valeur 1, retourne la valeur 0 lorsque la signature n'est pas valide. Retourne la valeur 1 lorsque la signature est valide.<br /><br /> Lorsque is_signed a la valeur 0, retourne toujours la valeur 0.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez **fn_check_object_signatures** pour confirmer que les utilisateurs malveillants ont falsifiés pas d’objets.  
+ Utilisez **fn_check_object_signatures** pour confirmer que les utilisateurs malveillants n’ont pas falsifié d’objets.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DEFINITION sur le certificat ou la clé asymétrique.  

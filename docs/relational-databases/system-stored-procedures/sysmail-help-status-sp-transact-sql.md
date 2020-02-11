@@ -18,18 +18,18 @@ ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044462"
 ---
-# <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
+# <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Affiche l'état des files d'attente de la messagerie de base de données. Utilisez **sysmail_start_sp** pour démarrer les files d’attente de messagerie de base de données et **sysmail_stop_sp** pour arrêter les files d’attente de messagerie de base de données.  
+  Affiche l'état des files d'attente de la messagerie de base de données. Utilisez **sysmail_start_sp** pour démarrer les files d’attente d’Database Mail et **sysmail_stop_sp** pour arrêter les files d’attente de Database mail.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,17 +38,17 @@ ms.locfileid: "68044462"
 sysmail_help_status_sp  
 ```  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**État**|**nvarchar(7)**|État de la messagerie de base de données. Les valeurs possibles sont **démarré** et **arrêté**.|  
+|**État**|**nvarchar (7)**|État de la messagerie de base de données. Les valeurs possibles sont **Started** et **Stopped**.|  
   
 ## <a name="permissions"></a>Autorisations  
- Par défaut, seuls les membres de la **sysadmin** rôle serveur fixe peut accéder à cette procédure.  
+ Par défaut, seuls les membres du rôle serveur fixe **sysadmin** peuvent accéder à cette procédure.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant affiche l'état de la messagerie de base de données.  
@@ -67,7 +67,7 @@ STARTED
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programme externe de messagerie de base de données](../../relational-databases/database-mail/database-mail-external-program.md)   
+ [Programme externe Database Mail](../../relational-databases/database-mail/database-mail-external-program.md)   
  [sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
  [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   

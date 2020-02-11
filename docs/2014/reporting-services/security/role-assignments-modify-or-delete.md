@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101962"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modifier ou supprimer une attribution de rôle (Gestionnaire de rapports)
@@ -63,9 +63,9 @@ ms.locfileid: "66101962"
 6.  Pour supprimer une attribution de rôle, cochez la case à côté du nom d’utilisateur ou de groupe, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- (créer-et-gérer-rôle-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Attributions de rôles](role-assignments.md)   
  [Page Paramètres du site &#40;Gestionnaire de rapports&#41;](../site-settings-page-report-manager.md)   
- [Nouvelle attribution de rôle système : Modifier les attributions de rôles système &#40;le Gestionnaire de rapports&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Nouvelle attribution de rôle système : page modifier les attributions de rôles système &#40;Gestionnaire de rapports&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

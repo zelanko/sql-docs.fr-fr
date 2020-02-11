@@ -1,5 +1,5 @@
 ---
-title: Sqlpostinstallererror, fonction | Microsoft Docs
+title: SQLPostInstallerError fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053671"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError, fonction
 **Conformité**  
- Version introduite : ODBC 3.0  
+ Version introduite : ODBC 3,0  
   
  **Résumé**  
- **SQLPostInstallerError** fournit un mécanisme pour une bibliothèque du programme d’installation de pilote ou de convertisseur pour signaler des erreurs pour le **ConfigDriver**, **ConfigDSN**, et **ConfigTranslator**  fonctions à la file d’attente des erreurs de programme d’installation. Applications n’utilisent pas cette API ; ils utilisent **SQLInstallerError** pour récupérer l’erreur.  
+ **SQLPostInstallerError** fournit un mécanisme permettant à une bibliothèque de configuration de pilote ou de traducteur de signaler les erreurs des fonctions **ConfigDriver**, **ConfigDSN**et **ConfigTranslator** à la file d’attente des erreurs du programme d’installation. Les applications n’utilisent pas cette API ; ils utilisent **SQLInstallerError** pour récupérer l’erreur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ RETCODE SQLPostInstallerError(
   
 ## <a name="arguments"></a>Arguments  
  *fErrorCode*  
- [Entrée] Code d’erreur de programme d’installation.  
+ Entrée Code d’erreur du programme d’installation.  
   
  *szErrorMsg*  
- [Entrée] Texte de message d’erreur.  
+ Entrée Texte du message d’erreur.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SQL_SUCCESS ou SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- **SQLPostInstallerError** ne valide pas les valeurs d’erreur pour lui-même. Si l’erreur a été correctement publié dans la file d’attente des erreurs de programme d’installation (récupérables à l’aide **SQLInstallerError**), valeur SQL_SUCCESS est retournée. SQL_ERROR est retournée si la valeur dans le *dwErrorCode* argument n’est pas un des codes d’erreur de programme d’installation spécifié.  
+ **SQLPostInstallerError** ne publie pas de valeurs d’erreur pour lui-même. Si l’erreur a été publiée avec succès dans la file d’attente des erreurs du programme d’installation (récupérables à l’aide de **SQLInstallerError**), SQL_SUCCESS est retourné. SQL_ERROR est retourné si la valeur de l’argument *dwErrorCode* n’est pas l’un des codes d’erreur du programme d’installation spécifiés.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   

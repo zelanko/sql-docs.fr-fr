@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ef2f94eb843b3ffbfbb67eb6ca01f2114522e024
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049222"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
@@ -29,15 +29,15 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
 ## <a name="remarks"></a>Notes  
- Le **DrillupLevel** fonction retourne un jeu de membres organisé hiérarchiquement en fonction des membres inclus dans le jeu spécifié. L'ordre des membres dans le jeu spécifié est conservé.  
+ La fonction **DrillupLevel** retourne un ensemble de membres organisés hiérarchiquement en fonction des membres inclus dans le jeu spécifié. L'ordre des membres dans le jeu spécifié est conservé.  
   
- Si une expression de niveau est spécifiée, le **DrillupLevel** fonction construit le jeu en récupérant uniquement les membres situés au-dessus du niveau spécifié. Si une expression de niveau est spécifiée et aucun membre du niveau spécifié représenté dans le jeu spécifié, le jeu spécifié est retourné.  
+ Si une expression de niveau est spécifiée, la fonction **DrillupLevel** construit le jeu en extrayant uniquement les membres qui se trouvent au-dessus du niveau spécifié. Si une expression de niveau est spécifiée et qu’il n’y a aucun membre du niveau spécifié représenté dans le jeu spécifié, le jeu spécifié est retourné.  
   
  Si aucune expression de niveau n'est spécifiée, la fonction construit le jeu en récupérant uniquement les membres situés un niveau au-dessus du niveau le plus bas de la première dimension référencée dans le jeu spécifié.  
   
@@ -57,6 +57,6 @@ SELECT DrillUpLevel
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

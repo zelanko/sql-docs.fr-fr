@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102132"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
@@ -30,11 +30,12 @@ ms.locfileid: "66102132"
 -   La valeur de `AuthenticationType` dans les fichiers RSeportServer.config doit être `RSWindowsNegotiate`, `RSWindowsKerberos` ou `RSWindowsNTLM`. Par défaut, le fichier RSReportServer.config inclut le paramètre `RSWindowsNegotiate` si le compte de service Report Server est NetworkService ou LocalSystem ; sinon, le paramètre `RSWindowsNTLM` est utilisé. Vous pouvez ajouter `RSWindowsKerberos` si vous possédez des applications qui utilisent uniquement l'authentification Kerberos.  
   
     > [!IMPORTANT]  
-    >  `RSWindowsNegotiate` provoquera une erreur d'authentification Kerberos si vous avez configuré le service Report Server pour qu'il s'exécute sous un compte d'utilisateur de domaine alors que vous n'avez pas inscrit un nom de principal du service (SPN) pour ce compte. Pour plus d'informations, consultez [Résolution des erreurs d'authentification Kerberos lors de la connexion à un serveur de rapports](#proxyfirewallRSWindowsNegotiate) dans cette rubrique.  
+    >  
+  `RSWindowsNegotiate` provoquera une erreur d'authentification Kerberos si vous avez configuré le service Report Server pour qu'il s'exécute sous un compte d'utilisateur de domaine alors que vous n'avez pas inscrit un nom de principal du service (SPN) pour ce compte. Pour plus d'informations, consultez [Résolution des erreurs d'authentification Kerberos lors de la connexion à un serveur de rapports](#proxyfirewallRSWindowsNegotiate) dans cette rubrique.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] doit être configuré pour l'authentification Windows. Par défaut, les fichiers Web.config pour le service Web Report Server et Gestionnaire de rapports incluent le \<mode d’authentification = « Windows » > paramètre. Si vous le remplacez par \<authentication mode="Forms">, l’authentification Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] échouera.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] doit être configuré pour l'authentification Windows. Par défaut, les fichiers Web. config du service Web Report Server et Gestionnaire de rapports incluent le \<paramètre authentication mode = "Windows" >. Si vous le remplacez par \<authentication mode="Forms">, l’authentification Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] échouera.  
   
--   Les fichiers Web.config pour le service Web Report Server et Gestionnaire de rapports doit avoir \<identity impersonate = « true » / >.  
+-   Les fichiers Web. config pour le service Web Report Server et Gestionnaire de rapports doivent avoir \<identity impersonate = "true"/>.  
   
 -   L'application cliente ou le navigateur client doivent prendre en charge la sécurité intégrée de Windows.  
   
@@ -45,13 +46,14 @@ ms.locfileid: "66102132"
  Les instructions suivantes sont destinées à un serveur de rapports en mode natif. Si le serveur de rapports est déployé en mode intégré SharePoint, vous devez utiliser les paramètres d'authentification par défaut qui spécifient la sécurité intégrée de Windows. Le serveur de rapports utilise des fonctionnalités internes dans l'extension d'authentification Windows par défaut pour prendre en charge les serveurs de rapports en mode intégré SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Protection étendue de l'authentification  
- À compter de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], la prise en charge de la protection étendue de l'authentification est disponible. La fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'utilisation de la liaison de canal et la liaison de service pour améliorer la protection de l'authentification. Les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doivent être utilisées avec un système d'exploitation qui prend en charge la protection étendue. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour la protection étendue est déterminée par les paramètres contenus dans le fichier RSReportServer.config. Le fichier peut être mis à jour en le modifiant ou à l'aide des API WMI. Pour plus d’informations, consultez [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ À compter de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], la prise en charge de la protection étendue de l'authentification est disponible. La fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'utilisation de la liaison de canal et la liaison de service pour améliorer la protection de l'authentification. Les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doivent être utilisées avec un système d'exploitation qui prend en charge la protection étendue. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour la protection étendue est déterminée par les paramètres contenus dans le fichier RSReportServer.config. Le fichier peut être mis à jour en le modifiant ou à l'aide des API WMI. Pour plus d’informations, consultez [protection étendue de l’authentification avec Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Pour configurer un serveur de rapports afin qu'il utilise la sécurité intégrée de Windows  
   
 1.  Ouvrez RSReportServer.config dans un éditeur de texte.  
   
-2.  Trouver <`Authentication`>.  
+2.  Recherchez <`Authentication`>.  
   
 3.  Copiez, parmi les structures XML suivantes, celle qui répond le mieux à vos besoins. Vous pouvez spécifier `RSWindowsNegotiate`, `RSWindowsNTLM` et `RSWindowsKerberos` dans n'importe quel ordre. Vous devez activer la permanence de l'authentification si vous voulez authentifier la connexion plutôt que chaque demande individuelle. En cas de permanence de l'authentification, toutes les demandes qui requièrent une authentification seront autorisées pendant la durée de la connexion.  
   
@@ -96,24 +98,24 @@ ms.locfileid: "66102132"
           </AuthenticationTypes>  
     ```  
   
-4.  Collez-la sur les entrées existantes de <`Authentication`>.  
+4.  Collez-la sur les entrées existantes `Authentication` pour <>.  
   
      Notez que vous ne pouvez pas utiliser `Custom` avec les types `RSWindows`.  
   
-5.  Modifiez comme il convient les paramètres de la protection étendue. La protection étendue est désactivée par défaut.  Si ces entrées ne sont pas présentes, l'ordinateur actuel peut ne pas exécuter une version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui prend en charge la protection étendue. Pour plus d'informations, consultez [Protection étendue de l'authentification avec Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+5.  Modifiez comme il convient les paramètres de la protection étendue. La protection étendue est désactivée par défaut.  Si ces entrées ne sont pas présentes, l'ordinateur actuel peut ne pas exécuter une version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui prend en charge la protection étendue. Pour plus d'informations, consultez [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
     ```  
           <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>  
           <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
     ```  
   
-6.  Enregistrez le fichier.  
+6.  Enregistrez le fichier .  
   
 7.  Si vous avez configuré un déploiement avec montée en puissance parallèle, répétez ces étapes pour d'autres serveurs de rapports du déploiement.  
   
 8.  Redémarrez le serveur de rapports pour effacer toutes les sessions qui sont actuellement ouvertes.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Résolution des erreurs d’authentification Kerberos lors de la connexion à un serveur de rapports  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a>Résolution des erreurs d’authentification Kerberos lors de la connexion à un serveur de rapports  
  Sur un serveur de rapports qui est configuré pour l'authentification Negotiate ou Kerberos, une connexion client au serveur de rapports échouera en cas d'erreur d'authentification Kerberos. Les erreurs d'authentification Kerberos sont connues pour se produire dans les cas suivants :  
   
 -   Le service Report Server s'exécute en tant que compte d'utilisateur de domaine Windows et vous n'avez pas inscrit de nom de principal du service (SPN) pour le compte.  
@@ -124,7 +126,7 @@ ms.locfileid: "66102132"
   
  Vous pouvez détecter l'erreur si vous avez activé l'enregistrement Kerberos. Le fait que vous soyez invité plusieurs fois à entrer les informations d'identification, puis qu'une fenêtre de navigateur vide s'affiche, constitue un autre symptôme de l'erreur.  
   
- Vous pouvez confirmer que vous rencontrez une erreur d’authentification Kerberos en supprimant < `RSWindowsNegotiate` / > à partir de votre fichier de configuration et retenter la connexion.  
+ Vous pouvez vérifier que vous rencontrez une erreur d’authentification Kerberos en supprimant < `RSWindowsNegotiate` /> de votre fichier de configuration et en réessayant la connexion.  
   
  Après avoir confirmé le problème, vous pouvez le résoudre de l'une des manières suivantes :  
   
@@ -175,7 +177,7 @@ ms.locfileid: "66102132"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- Pour plus d'informations, consultez [Protection étendue de l'authentification avec Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ Pour plus d’informations, consultez [protection étendue de l’authentification avec Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>Comment le navigateur choisit l'authentification Kerberos par négociation ou l'authentification NTLM par négociation  
  Lorsque vous utilisez Internet Explorer pour vous connecter au serveur de rapports, il spécifie l'authentification Kerberos par négociation ou l'authentification NTLM par négociation sur l'en-tête d'authentification. NTLM est utilisé à la place de Kerberos dans les cas suivants :  
@@ -207,9 +209,9 @@ ms.locfileid: "66102132"
 ## <a name="see-also"></a>Voir aussi  
  [Authentification avec le serveur de rapports](authentication-with-the-report-server.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)   
- [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Configurer une authentification de base sur le serveur de rapports](configure-basic-authentication-on-the-report-server.md)   
- [Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports](configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ [Configurer l’authentification personnalisée ou par formulaire sur le serveur de rapports](configure-custom-or-forms-authentication-on-the-report-server.md)   
+ [Protection étendue de l'authentification avec Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
   

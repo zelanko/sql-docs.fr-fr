@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098363"
 ---
-# <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>Méthode ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>Méthode ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
   Retourne la liste des certificats SSL installés sur l'ordinateur.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,25 +42,25 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  *LCID*  
  Paramètres régionaux à utiliser pour les messages d’erreur renvoyés.  
   
- *Application[]*  
+ *Application []*  
  [out] Applications comportant des liaisons de certificat.  
   
- *CertificateHash[]*  
+ *CertificateHash []*  
  [out] Hachages pour les certificats.  
   
- *IPAddress[]*  
+ *IPAddress []*  
  [out] Adresses IP des applications.  
   
- *Port[]*  
+ *Port []*  
  [out] Numéro de port stocké dans la liaison dans rsreportserver.config.  
   
- *Errors[]*  
+ *Erreurs []*  
  [out] Descriptions des erreurs qui se sont produites.  
   
  *Longueur*  
  [out] Longueur du tableau retourné par la méthode.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -68,8 +68,8 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

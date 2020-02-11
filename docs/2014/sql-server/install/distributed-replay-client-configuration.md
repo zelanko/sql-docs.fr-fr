@@ -1,5 +1,5 @@
 ---
-title: Configuration de Distributed Replay Client | Microsoft Docs
+title: Configuration du client Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095475"
 ---
 # <a name="distributed-replay-client-configuration"></a>Configuration de Distributed Replay Client
@@ -24,9 +24,9 @@ ms.locfileid: "66095475"
   
 ## <a name="options"></a>Options  
  **Nom du contrôleur**  
- Il s’agit d’un paramètre facultatif, et la valeur par défaut est \< *vide*>.  
+ Il s’agit d’un paramètre facultatif, et la valeur \<par défaut est *vide*>.  
   
- Entrez le nom du contrôleur avec lequel l'ordinateur client communiquera pour le service Distributed Replay Client. Notez les points suivants :  
+ Entrez le nom du contrôleur avec lequel l'ordinateur client communiquera pour le service Distributed Replay Client. Notez les points suivants :  
   
 -   Le nom doit être un nom de domaine complet (FQDN). Par exemple, un hôte appelé server1 dans la hiérarchie de produits au sein de Microsoft peut avoir un nom de domaine complet server1.products.microsoft.com.  
   

@@ -19,23 +19,23 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056274"
 ---
-# <a name="extended-events-tables---tracexeactionmap"></a>Tables d’événements étendus - trace_xe_action_map
+# <a name="extended-events-tables---trace_xe_action_map"></a>Tables d’événements étendus - trace_xe_action_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque action Événements étendus mappée à un ID de colonne Trace SQL. Cette table est stockée dans la base de données master, dans le schéma sys.  
+  Contient une ligne pour chaque action Événements étendus mappée à un ID de colonne Trace SQL. Cette table est stockée dans la base de données Master, dans le schéma sys.  
   
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|ID de la colonne Trace SQL en cours de mappage.|  
-|package_name|**nvarchar(60)**|Nom du package Événements étendus où réside l'action mappée.|  
-|xe_action_name|**nvarchar(60)**|Nom de l'action Événements étendus mappée à la colonne Trace SQL.|  
+|package_name|**nvarchar (60)**|Nom du package Événements étendus où réside l'action mappée.|  
+|xe_action_name|**nvarchar (60)**|Nom de l'action Événements étendus mappée à la colonne Trace SQL.|  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la requête suivante pour identifier les actions Événements étendus qui sont équivalentes aux colonnes Trace SQL :  

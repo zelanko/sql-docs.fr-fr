@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105819"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66105819"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Positionnement d'étiquettes de points de données sur un graphique  
  Pour tous les types de graphiques, vous pouvez afficher des étiquettes de points de données quand vous cliquez avec le bouton droit sur le graphique, puis que vous sélectionnez **Afficher les étiquettes de données**. La position des étiquettes de points de données est spécifiée selon le type de graphique :  
   
--   Sur un graphique à barres, vous pouvez repositionner l'étiquette de point de données à l'aide de l'attribut personnalisé **BarLabelStyle** . Il existe quatre positions possibles : Extérieur, Gauche, Centre et Droite. Lorsque le style de l'étiquette de la barre est défini sur Extérieur, les étiquettes sont positionnées en dehors de la barre, dans la mesure où elles tiennent dans la zone du graphique. Si l'étiquette ne peut pas être placée en dehors de la barre et dans la zone du graphique, elle est placée à l'intérieur de la barre.  
+-   Sur un graphique à barres, vous pouvez repositionner l'étiquette de point de données à l'aide de l'attribut personnalisé **BarLabelStyle** . Il existe quatre positions possibles : Extérieur, Gauche, Centre et Droite. Lorsque le style de l'étiquette de la barre est défini sur Extérieur, les étiquettes sont positionnées en dehors de la barre, dans la mesure où elles tiennent dans la zone du graphique. Si l'étiquette ne peut pas être placée en dehors de la barre et dans la zone du graphique, elle est placée à l'intérieur de la barre.  
   
 -   Sur un graphique à secteurs, vous pouvez repositionner l'étiquette de point de données à l'aide de l'attribut personnalisé **PieLabelStyle** . Il y a de nombreux facteurs à prendre en compte pour le positionnement des étiquettes de points de données autour d'un graphique à secteurs, y compris la taille du graphique à secteurs, l'espace disponible entre le graphique à secteurs et sa légende, et la taille des étiquettes. Pour plus d’informations, consultez [Afficher des étiquettes de points de données à l’extérieur d’un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -60,21 +60,21 @@ ms.locfileid: "66105819"
   
 |Mot clé de graphique|Description|Applicable au type de graphique|Exemple d'expression simple équivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Valeur Y du point de données.|All|`=Fields!MyDataField.Value`|  
+|#VALY|Valeur Y du point de données.|Tous|`=Fields!MyDataField.Value`|  
 |#VALY2|Valeur Y n° 2 du point de données.|Graphique d'étendue, graphique à bulles|None|  
 |#VALY3|Valeur Y n° 3 du point de données.|Graphique boursier, graphique en chandelier|None|  
 |#VALY4|Valeur Y n° 4 du point de données.|Graphique boursier, graphique en chandelier|None|  
-|#SERIESNAME|Nom de la série.|All|None|  
-|#LABEL|Étiquette de point de données.|All|None|  
+|#SERIESNAME|Nom de la série.|Tous|None|  
+|#LABEL|Étiquette de point de données.|Tous|None|  
 |#AXISLABEL|Étiquette de point de données d'axe.|Graphique à base de formes|`=Fields!MyDataField.Value`|  
-|#INDEX|Index de point de données.|All|None|  
-|#PERCENT|Pourcentage de la valeur Y du point de données.|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Total de toutes les valeurs Y de la série.|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Texte qui correspond au texte de l'élément de légende.|All|None|  
-|#AVG|Moyenne de toutes les valeurs Y de la série.|All|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|Index de point de données.|Tous|None|  
+|#PERCENT|Pourcentage de la valeur Y du point de données.|Tous|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Total de toutes les valeurs Y de la série.|Tous|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|Texte qui correspond au texte de l'élément de légende.|Tous|None|  
+|#AVG|Moyenne de toutes les valeurs Y de la série.|Tous|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Minimum de toutes les valeurs Y de la série.|Tous|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Maximum de toutes les valeurs Y de la série.|All|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|Première de toutes les valeurs Y de la série.|All|`=First(Fields!MyDataField.Value)`|  
+|#MAX|Maximum de toutes les valeurs Y de la série.|Tous|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|Première de toutes les valeurs Y de la série.|Tous|`=First(Fields!MyDataField.Value)`|  
   
  Pour mettre en forme le mot clé, mettez une chaîne de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre parenthèses. Par exemple, pour spécifier la valeur du point de données dans une info-bulle sous la forme d’un nombre à deux décimales, incluez la chaîne de format « N2 » entre accolades, telle que « #VALY{N2} » pour la propriété **ToolTip** de la série. Pour plus d'informations sur les chaînes de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consultez [Mise en forme des types](https://go.microsoft.com/fwlink/?LinkId=112024) sur le site MSDN. Pour plus d’informations sur la mise en forme des nombres dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66105819"
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutoriel : Ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

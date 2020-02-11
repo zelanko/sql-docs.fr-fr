@@ -1,5 +1,5 @@
 ---
-title: Recherche en texte intégral a changé depuis SQL Server 2008 | Microsoft Docs
+title: La recherche en texte intégral a changé depuis SQL Server 2008 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095149"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>La recherche en texte intégral a été modifiée dans SQL Server 2008
@@ -32,7 +32,7 @@ ms.locfileid: "66095149"
 ## <a name="external-resources"></a>Ressources externes  
  [Compatibilité descendante de la recherche en texte intégral](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
   
- [Mise à niveau de la recherche en texte intégral](https://go.microsoft.com/fwlink/?LinkId=112291)  
+ [Mise à niveau de la fonction de recherche en texte intégral](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
  [Modifications importantes apportées à la recherche en texte intégral](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   

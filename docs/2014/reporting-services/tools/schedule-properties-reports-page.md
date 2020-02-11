@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099784"
 ---
 # <a name="schedule-properties-reports-page"></a>Propriétés de planification (page Rapports)
@@ -30,10 +30,10 @@ ms.locfileid: "66099784"
 >  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Options  
- **Dossier**  
+ **Folder**  
  Spécifie le chemin d'accès au rapport.  
   
- **Rapport**  
+ **Report**  
  Définit le nom du rapport qui utilise la planification.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -41,6 +41,6 @@ ms.locfileid: "66099784"
  [Planifications](../subscriptions/schedules.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](report-server-in-management-studio-f1-help.md)   
  [Se connecter à un serveur de rapports dans Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Configurer les propriétés générales d’un rapport &#40;le Gestionnaire de rapports&#41;](../configure-general-properties-for-a-report-report-manager.md)  
+ [Configurer les propriétés générales d’un rapport &#40;Gestionnaire de rapports&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

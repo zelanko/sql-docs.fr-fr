@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101008"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66101008"
   
  Lorsque vous créez un abonnement, il existe trois méthodes pour spécifier sa remise :  
   
--   **Bibliothèque de documents**: Vous pouvez créer un abonnement qui remet un document basé sur le rapport d’origine dans une bibliothèque située sur le même site SharePoint que le rapport d’origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
+-   **Bibliothèque de documents**: vous pouvez créer un abonnement qui remet un document basé sur le rapport d'origine dans une bibliothèque située sur le même site SharePoint que le rapport d'origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
   
--   **Dossier de fichiers :** Vous pouvez remettre un document basé sur le rapport d’origine vers un dossier partagé sur le système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
+-   **Dossier de fichiers :** vous pouvez remettre un document basé sur le rapport d'origine dans un dossier partagé du système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
   
--   **Adresse de messagerie :** Si le serveur de rapports est configuré pour utiliser l’extension de remise par messagerie Report Server, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
+-   **Courrier électronique :** si le serveur de rapports est configuré pour utiliser l’extension de remise par messagerie du serveur de rapports, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte de réception. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
   
  **Dans cette rubrique :**  
   
@@ -161,6 +161,6 @@ ms.locfileid: "66101008"
  [Remise par e-mail dans Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Remise par partage de fichiers dans Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Remise à une bibliothèque SharePoint dans Reporting Services](sharepoint-library-delivery-in-reporting-services.md)   
- [Configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurer un serveur de rapports pour la remise par messagerie &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

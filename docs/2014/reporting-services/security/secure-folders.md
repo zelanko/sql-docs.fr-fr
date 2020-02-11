@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101710"
 ---
 # <a name="secure-folders"></a>Dossiers sécurisés
@@ -36,7 +36,7 @@ ms.locfileid: "66101710"
   
 |Sélectionnez cette tâche|Pour autoriser les opérations suivantes|  
 |----------------------|---------------------------|  
-|Afficher les dossiers|Visualiser les propriétés de la hiérarchie et d'accès en lecture seule du dossier qui indiquent les dates de création et de modification de celui-ci.<br /><br /> Les utilisateurs ne peuvent pas afficher les éléments dans le dossier, sauf si elles sont affectées aux rôles qui incluent également les tâches suivantes : « Afficher les rapports, » « Afficher les modèles », « Afficher les ressources » et « Sources de données d’affichage ».|  
+|Afficher les dossiers|Visualiser les propriétés de la hiérarchie et d'accès en lecture seule du dossier qui indiquent les dates de création et de modification de celui-ci.<br /><br /> Les utilisateurs ne peuvent afficher les éléments contenus dans le dossier que si des rôles qui incluent également les tâches « Afficher les rapports », « Afficher les modèles », « Afficher les ressources » et « Afficher les sources de données » leur ont été attribués.|  
 |Gérer les dossiers|Visualiser les propriétés du dossier, modifier le nom ou la description ou déplacer le dossier. Cette tâche permet aux utilisateurs de créer des dossiers.|  
 |Gérer les rapports|Ajouter des rapports depuis le système de fichiers à un dossier et publier les rapports depuis le Générateur de rapports sur le serveur de rapports.|  
 |Gérer les sources de données|Ajouter de nouveaux éléments de source de données partagée à un dossier et modifier les sources de données partagées existantes.|  

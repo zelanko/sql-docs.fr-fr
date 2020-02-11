@@ -1,5 +1,5 @@
 ---
-title: Sqlgetpoolid, fonction | Microsoft Docs
+title: SQLGetPoolID fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061486"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 3,81 ODBC : ODBC  
+ Version introduite : ODBC 3,81 conforme aux normes : ODBC  
   
  **Résumé**  
- **SQLGetPoolID** récupère l’ID de pool.  
+ **SQLGetPoolID** récupère l’ID du pool.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,29 +37,29 @@ SQLRETURN  SQLGetPoolID (
   
 ## <a name="arguments"></a>Arguments  
  *hDbcInfoToken*  
- [Entrée] Handle de jeton qui contient toutes les informations de connexion.  
+ Entrée Handle de jeton qui contient toutes les informations de connexion.  
   
  *pPoolID*  
- [Sortie] L’ID du pool, qui est utilisé pour identifier un ensemble de connexions qui peuvent être utilisés indifféremment (ce qui nécessite éventuellement une réinitialisation supplémentaire).  
+ Sortie L’ID du pool, qui est utilisé pour identifier un ensemble de connexions qui peuvent être utilisées de façon interchangeable (éventuellement nécessitant une réinitialisation supplémentaire).  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLGetPoolID** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, le Gestionnaire de pilotes utilisera un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN et un **gérer** de *hDbcInfoToken*.  
+ Quand **SQLGetPoolID** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, le gestionnaire de pilotes utilise un **comme HandleType** de SQL_HANDLE_DBC_INFO_TOKEN et un **handle** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Notes  
- **SQLGetPoolID** est utilisé pour obtenir l’ID du pool reçoit un jeu d’informations de connexion (à partir de **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, et  **SQLSetConnectInfo**). Ce pool d’ID est utilisé pour identifier un ensemble de connexions qui peuvent être utilisés indifféremment (ce qui nécessite éventuellement une réinitialisation supplémentaire). L’ID du pool est utilisé pour identifier le pool de connexions pour ce groupe de connexions.  
+ **SQLGetPoolID** est utilisé pour obtenir l’ID du pool en fonction d’un ensemble d’informations de connexion (à partir de **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**et **SQLSetConnectInfo**). Cet ID de pool est utilisé pour identifier un ensemble de connexions qui peuvent être utilisées indifféremment (éventuellement nécessitant une réinitialisation supplémentaire). L’ID du pool est utilisé pour identifier le pool de connexions de ce groupe de connexions.  
   
- Chaque fois qu’un pilote retourne SQL_ERROR ou SQL_INVALID_HANDLE, le Gestionnaire de pilotes retourne l’erreur à l’application (dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) ou [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ Chaque fois qu’un pilote retourne SQL_ERROR ou SQL_INVALID_HANDLE, le gestionnaire de pilotes renvoie l’erreur à l’application (dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) ou [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Chaque fois qu’un pilote retourne SQL_SUCCESS_WITH_INFO, le Gestionnaire de pilotes obtiendront les informations de diagnostic à partir de *hDbcInfoToken*et retourne SQL_SUCCESS_WITH_INFO, à l’application dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)et [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Chaque fois qu’un pilote retourne SQL_SUCCESS_WITH_INFO, le gestionnaire de pilotes obtient les informations de diagnostic à partir de *hDbcInfoToken*et renvoie SQL_SUCCESS_WITH_INFO à l’application dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) et [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Applications ne doivent pas appeler cette fonction directement. Un pilote ODBC qui prend en charge le regroupement de connexions prenant en charge les pilotes doive implémenter cette fonction.  
+ Les applications ne doivent pas appeler cette fonction directement. Un pilote ODBC qui prend en charge le regroupement de connexions prenant en charge les pilotes doit implémenter cette fonction.  
   
- Inclure sqlspi.h pour le développement de pilote ODBC.  
+ Incluez sqlspi. h pour le développement du pilote ODBC.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’un pilote ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Le regroupement de connexions prenant en charge de pilote](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Regroupement de connexions prenant en charge les pilotes](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Développement de la reconnaissance des pools de connexions dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

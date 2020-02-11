@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102180"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Page Sécurité (Paramètres du site. Gestionnaire de rapports)
@@ -33,26 +33,26 @@ ms.locfileid: "66102180"
   
 2.  Cliquez sur **Paramètres du site**en haut de la page. La page des propriétés générales du site s'ouvre.  
   
-3.  Sélectionnez l'onglet **Sécurité** .  
+3.  Sélectionnez l'onglet **Sécurité**.  
   
 ## <a name="options"></a>Options  
  **Supprimer**  
  Cliquez pour supprimer une attribution de rôle existante. Avant de cliquer sur ce bouton **Supprimer**, activez la case à cocher en regard du nom d'utilisateur ou de groupe que vous souhaitez supprimer. Vous ne pouvez pas supprimer une attribution de rôle s'il s'agit de la seule qui reste. La suppression d'une attribution de rôle n'entraîne pas celle d'un compte d'utilisateur ou de groupe ou des définitions de rôles.  
   
  **Nouvelle attribution de rôle**  
- Cliquez pour ouvrir la page Nouvelle attribution de rôle système qui permet de créer des attributions de rôles système supplémentaires pour le site du serveur de rapports. Pour plus d’informations, consultez [nouvelle attribution de rôle système : Modifier les attributions de rôles système &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Cliquez pour ouvrir la page Nouvelle attribution de rôle système qui permet de créer des attributions de rôles système supplémentaires pour le site du serveur de rapports. Pour plus d’informations, consultez la [page nouvelle attribution de rôle système : modifier les attributions de rôles système &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Modifier**  
- Cliquez pour ouvrir la page Modifier les attributions de rôles système qui permet de modifier des attributions de rôles système individuelles pour le site du serveur de rapports. Pour plus d’informations, consultez [nouvelle attribution de rôle système : Modifier les attributions de rôles système &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Cliquez pour ouvrir la page Modifier les attributions de rôles système qui permet de modifier des attributions de rôles système individuelles pour le site du serveur de rapports. Pour plus d’informations, consultez la [page nouvelle attribution de rôle système : modifier les attributions de rôles système &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Groupe ou utilisateur**  
  Répertorie les groupes et les utilisateurs qui font partie de l'attribution de rôle existante. Les attributions de rôle existantes pour le dossier actif sont définies pour les groupes et les utilisateurs qui apparaissent dans cette colonne. Cliquez sur **Modifier** en regard d'un nom d'utilisateur ou de groupe pour afficher ou modifier les détails d'une attribution de rôle.  
   
- **Roles**  
- Répertorie une ou plusieurs définitions de rôles qui font partie d'une attribution de rôle existante. Si plusieurs rôles sont attribués à un compte d'utilisateur ou de groupe, ce groupe ou cet utilisateur peut effectuer toutes les tâches qui appartiennent à tous les rôles. Pour afficher l'ensemble des tâches que chaque rôle prend en charge, utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Vous ne pouvez pas afficher, créer, modifier ni supprimer des rôles dans le Gestionnaire de rapports. Pour obtenir des instructions, consultez [créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ **Rôles**  
+ Répertorie une ou plusieurs définitions de rôles qui font partie d'une attribution de rôle existante. Si plusieurs rôles sont attribués à un compte d'utilisateur ou de groupe, ce groupe ou cet utilisateur peut effectuer toutes les tâches qui appartiennent à tous les rôles. Pour afficher l’ensemble des tâches que chaque rôle prend en charge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], utilisez. Vous ne pouvez pas afficher, créer, modifier ni supprimer des rôles dans le Gestionnaire de rapports. Pour obtenir des instructions, consultez [créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Aide (F1) Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

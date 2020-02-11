@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098540"
 ---
-# <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>Méthode CreateSSLCertificateBinding (WMI MSReportServer_ConfigurationSetting)
+# <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>Méthode CreateSSLCertificateBinding (WMI MSReportServer_ConfigurationSetting)
   Crée une liaison de certificat SSL.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -50,13 +50,13 @@ public void CreateSSLCertificateBinding(string application,
  *Port*  
  Port SSL associé à la liaison.  
   
- *Lcid*  
+ *LCID*  
  Paramètres régionaux à utiliser pour les messages d'erreur retournés.  
   
- *Erreur*  
+ *Error*  
  [out] Description des erreurs qui se sont produites.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -79,8 +79,8 @@ public void CreateSSLCertificateBinding(string application,
   
 5.  Une réservation d'URL qui spécifie un nom d'hôte existe, mais le nom d'hôte ne correspond pas au nom d'hôte de certificat.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

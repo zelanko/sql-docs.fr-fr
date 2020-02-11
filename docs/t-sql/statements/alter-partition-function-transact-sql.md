@@ -26,10 +26,10 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071256"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
@@ -40,7 +40,7 @@ Modifie une fonction de partition en divisant ou en fusionnant ses valeurs limit
 > [!CAUTION]  
 >  Une même fonction de partition peut être utilisée par plusieurs tables ou index. Ils sont alors tous affectés par ALTER PARTITION FUNCTION en une seule transaction.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -111,7 +111,7 @@ L'instruction ALTER PARTITION FUNCTION peut être exécutée avec les autorisati
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. Fractionnement d'une partition de table ou d'index partitionné en deux partitions  
+### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>R. Fractionnement d'une partition de table ou d'index partitionné en deux partitions  
 L'exemple suivant crée une fonction de partition pour partitionner une table ou un index en quatre partitions. `ALTER PARTITION FUNCTION` fractionne l'une des partitions en deux pour créer au total cinq partitions.  
   
 ```sql  

@@ -28,16 +28,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106289"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Mise en forme de la légende sur un graphique (Générateur de rapports et SSRS)
   La légende du graphique contient des descriptions pour chaque catégorie d'un graphique. Une légende contient toujours un ou plusieurs éléments de légende. Chaque élément de légende consiste en une zone colorée qui représente les séries et une chaîne de texte qui décrit ces dernières, comme indiqué dans l'illustration ci-dessous.  
   
- ![Diagramme d’une légende de graphique](../media/rs-legenddiagram.gif "Diagramme d’une légende de graphique")  
+ ![Diagramme d'une légende de graphique](../media/rs-legenddiagram.gif "Diagramme d'une légende de graphique")  
   
  Un élément de légende est relié à une série individuelle sur le graphique, à l'exception des graphiques à base de formes, où la légende est reliée aux points de données individuels. Le graphique ajoute automatiquement des éléments à la légende en fonction des séries générées à partir de vos données.  
   
@@ -76,15 +76,15 @@ ms.locfileid: "66106289"
 ## <a name="formatting-the-legend-text"></a>Mise en forme du texte de légende  
  Vous pouvez modifier la police, la taille, le style et la couleur du texte de légende dans la page **Police** de la boîte de dialogue **Propriétés de la légende** .  
   
- Par défaut, le texte de légende n'est pas optimisé pour s'ajuster à la zone de légende. Pour que le texte de légende s’adapte automatiquement à l’espace alloué, la valeur est la propriété AutoFitTextDisabled `False` et définir une taille de police minimale pour la propriété MinFontSize à la plus petite taille de police que vous jugez est présentable et toujours autoriser les éléments de légende optimisation.  
+ Par défaut, le texte de légende n'est pas optimisé pour s'ajuster à la zone de légende. Pour que le texte de la légende s’ajuste automatiquement à l’espace alloué, affectez à la propriété AutoFitTextDisabled la valeur `False` et définissez une taille de police minimale pour la propriété MinFontSize sur la taille de police la plus faible que vous pensez être présentable tout en autorisant l’optimisation de la légende.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Propriétés de la légende, Général &#40;Générateur de rapports et SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Boîte de dialogue Propriétés de la légende, général &#40;Générateur de rapports et SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Masquer des éléments de légende dans le graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-hide-items-report-builder.md)   
- [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Masquer les éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-hide-items-report-builder.md)   
+ [Définir des couleurs sur un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

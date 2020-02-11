@@ -1,5 +1,5 @@
 ---
-title: Afficher les rapports Reporting Services sur les appareils Microsoft Surface et Apple iOS | Microsoft Docs
+title: Afficher des rapports d’Reporting Services sur des appareils Microsoft surface et Apple iOS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3937f227d025da054a28f73fffde4a57dc365c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098659"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Afficher des rapports Reporting Services sur des appareils Microsoft Surface et Apple iOS
@@ -29,7 +29,7 @@ ms.locfileid: "66098659"
 ## <a name="view-and-interact-with-reports"></a>Afficher et interagir avec les rapports  
  À compter de [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge l'affichage et l'interactivité de base sur les appareils Microsoft Surface et les appareils utilisant Apple iOS et le navigateur Apple Safari, tels que les iPad. Vous pouvez également publier des rapports à l'aide d'appareils Microsoft Surface.  
   
- ![Bureau IPad](media/videothumbnail.jpg "bureau IPad")  
+ ![Bureau IPad](media/videothumbnail.jpg "Bureau IPad")  
 Visionnez une démonstration d'affichage de rapports sur un iPad.  
   
  Vous pouvez également afficher des rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur un appareil Windows Phone 8.  
@@ -38,26 +38,26 @@ Visionnez une démonstration d'affichage de rapports sur un iPad.
   
 -   Pour un serveur de rapports en mode natif, installez [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] ou version ultérieure.  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] est disponible en téléchargement à partir de la [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35575).  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]peut être téléchargé à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=35575).  
   
 -   Pour un serveur de rapports en mode SharePoint, installez [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] ou version ultérieure du complément de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint.  
   
- **Pour afficher et interagir avec un rapport sur un appareil de Microsoft Surface ou un appareil iPad**  
+ **Pour afficher un rapport et interagir avec sur votre iPad ou votre appareil Microsoft Surface**  
   
 1.  Vérifiez que vous pouvez vous connecter au serveur de rapports ou au site SharePoint où réside le rapport.  
   
 2.  Ouvrez le rapport en effectuant une des actions suivantes.  
   
-    -   **Démarrer à partir de la messagerie :** À partir d’un message électronique qui est créé par un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abonnement, appuyez sur l’URL du rapport. Le rapport s'ouvre dans le navigateur.  
+    -   **Démarrer à partir d’un message électronique :** À partir d’un message électronique créé par [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] un abonnement, appuyez sur l’URL du rapport. Le rapport s'ouvre dans le navigateur.  
   
-    -   **Démarrer à partir du serveur de rapports :** Parcourez le répertoire sur le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] du serveur de rapports, puis appuyez sur le nom du rapport pour ouvrir le rapport.  
+    -   **Démarrer à partir du serveur de rapports :** Parcourez le répertoire [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur le serveur de rapports, puis appuyez sur le nom du rapport pour ouvrir le rapport.  
   
-    -   **Démarrer à partir d’une bibliothèque de documents SharePoint :** Accédez à une bibliothèque de documents SharePoint qui contient [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] signale et appuyez sur le nom du rapport. Vous pouvez afficher et interagir avec le rapport.  
+    -   **Démarrer à partir d’une bibliothèque de documents SharePoint :** Accédez à une bibliothèque de documents SharePoint qui [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contient des rapports, puis appuyez sur le nom du rapport. Vous pouvez afficher et interagir avec le rapport.  
   
         > [!IMPORTANT]  
         >  Pour un iPad, assurez-vous que la propriété **Private Browsing** de Safari est désactivée.  
   
-    -   **Composant WebPart SharePoint :** Si le composant WebPart a été ajouté à une page SharePoint, vous pouvez afficher [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rapports.  
+    -   **Composant WebPart SharePoint :** Si le composant WebPart a été ajouté à une page SharePoint, vous pouvez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] afficher des rapports.  
   
 3.  Sur votre appareil Microsoft Surface, vous pouvez également ouvrir le rapport grâce au Gestionnaire de rapports. Parcourez le répertoire du Gestionnaire de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , puis touchez le nom du rapport pour l'ouvrir.  
   
@@ -88,7 +88,7 @@ Visionnez une démonstration d'affichage de rapports sur un iPad.
   
     -   Exportez le rapport en touchant l'icône du **menu déroulant Exporter** , puis en touchant un format de fichier.  
   
-        -   Si vous affichez le rapport sur un appareil Microsoft Surface, vous pouvez exporter le rapport à un des formats suivants.  
+        -   Si vous affichez le rapport sur un appareil Microsoft surface, vous pouvez exporter le rapport dans l’un des formats suivants.  
   
             -   Fichier XML avec données de rapport  
   
@@ -104,9 +104,9 @@ Visionnez une démonstration d'affichage de rapports sur un iPad.
   
             -   Word  
   
-        -   Si vous affichez le rapport sur un iPad, vous pouvez exporter le rapport sous forme de fichier TIFF ou PDF.  
+        -   Si vous affichez le rapport sur un iPad, vous pouvez exporter le rapport en tant que fichier TIFF ou PDF.  
   
-## <a name="authentication"></a>Authentification  
+## <a name="authentication"></a>Authentication  
  L'authentification RSWindowsNTLM et l'authentification RSWindowsBasic fonctionnent avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif et avec l'iPad.  
   
  En général, il est recommandé de ne pas utiliser RSWindowsBasic dans un environnement autre que https car ce type d'authentification ne garantit pas la confidentialité des informations de connexion transmises.  
@@ -126,18 +126,18 @@ Visionnez une démonstration d'affichage de rapports sur un iPad.
 ## <a name="additional-information"></a>Informations supplémentaires  
  Pour plus d'informations sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et les navigateurs pris en charge, consultez :  
   
--   [Planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+-   [Planification de la prise en charge des navigateurs Reporting Services et Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  Pour plus d'informations sur Microsoft Business Intelligence et les appareils mobiles, consultez les rubriques suivantes :  
   
 -   [Vue d’ensemble des appareils mobiles et SharePoint 2013](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
   
--   [Prise en charge des navigateurs pour appareils mobiles dans SharePoint 2013](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
+-   [Navigateurs d’appareils mobiles pris en charge dans SharePoint 2013](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
   
--   [Affichage de rapports et tableaux de bord sur des périphériques Apple iPad (SharePoint Server 2010)](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx).  
+-   [Affichage des rapports et des tableaux de bord sur les appareils Apple iPad (SharePoint Server 2010)](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx).  
   
--   [Affichage des rapports Reporting Services sur un iPad (vidéo)](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx).  
+-   [Affichage des rapports de Reporting Services sur un iPad (vidéo)](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx).  
   
--   [Affichage des rapports Reporting Services sur un appareil Microsoft Surface RT (vidéo)](https://technet.microsoft.com/sqlserver/dn146017)  
+-   [Affichage de rapports Reporting Services sur un appareil Microsoft Surface RT (vidéo)](https://technet.microsoft.com/sqlserver/dn146017)  
   
   

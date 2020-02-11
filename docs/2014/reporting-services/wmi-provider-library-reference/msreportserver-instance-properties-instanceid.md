@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba254f3cf1e5104a4ac56ca2bed587b150ac824f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097207"
 ---
-# <a name="instanceid-property-wmi-msreportserverinstance"></a>Propriété InstanceID (WMI MSReportServer_Instance)
+# <a name="instanceid-property-wmi-msreportserver_instance"></a>Propriété InstanceID (WMI MSReportServer_Instance)
   Cet objet prend en charge l'infrastructure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et ne doit pas être utilisé directement à partir de votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -38,8 +38,8 @@ public Dim InstanceID As String
 public string InstanceID;  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_Instance](msreportserver-instance-members.md)  

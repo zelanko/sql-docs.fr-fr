@@ -15,27 +15,27 @@ ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9452ade90f6967dff6d72d5692efcf91b93154d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057246"
 ---
 # <a name="processing-sql-statements"></a>Traitement des instructions SQL
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- La bibliothèque de curseurs ODBC transmet toutes les instructions SQL directement dans le pilote à l’exception de ce qui suit :  
+ La bibliothèque de curseurs ODBC transmet toutes les instructions SQL directement au pilote, à l’exception de ce qui suit :  
   
--   Positionné de mise à jour et supprimer des instructions  
+-   Instructions Update et DELETE positionnées  
   
--   **SELECT FOR UPDATE** instructions  
+-   **Select for Update** , instructions  
   
--   Instructions SQL par lots  
+-   Instructions SQL par lot  
   
- Pour exécuter la mise à jour positionnée et supprimer des instructions et pour positionner le curseur sur une ligne pour appeler **SQLGetData** pour cette ligne, la bibliothèque de curseurs construit une instruction de recherche qui identifie la ligne.  
+ Pour exécuter des instructions Update et DELETE positionnées et pour positionner le curseur sur une ligne pour appeler **SQLGetData** pour cette ligne, la bibliothèque de curseurs construit une instruction recherchée qui identifie la ligne.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Traitement des instructions de mise à jour et de suppression positionnées](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)  
   

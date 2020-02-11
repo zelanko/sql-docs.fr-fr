@@ -1,5 +1,5 @@
 ---
-title: Rechercher du texte, des nombres ou des Dates dans un rapport (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
+title: Rechercher du texte, des nombres ou des dates dans un rapport (Reporting Services en mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6cf40f4d3baa60caa0d9d44f372e41521497e33e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102669"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Rechercher du texte, des nombres ou des dates dans un rapport (Reporting Services en mode intégré SharePoint)
-  Vous pouvez rechercher du contenu dans un rapport en tapant un mot ou une expression que vous souhaitez trouver (la longueur maximale de la chaîne de recherche est de 256 caractères). La recherche est une technique de navigation qui vous permet de trouver une valeur correspondante dans le rapport et de placer le focus sur la partie du rapport qui contient cette valeur.  
+  Vous pouvez rechercher du contenu dans un rapport en tapant un mot ou une expression que vous souhaitez trouver (la longueur maximale de la chaîne de recherche est de 256 caractères). La recherche est une technique de navigation qui vous permet de trouver une valeur correspondante dans le rapport et de placer le focus sur la partie du rapport qui contient cette valeur.  
   
  La recherche respecte la casse et commence au niveau de la page ou de la section actuellement sélectionnée. Seul le contenu visible dans le rapport est inclus dans l'opération de recherche. Si le rapport contient des zones que vous pouvez développer ou réduire, les valeurs qui figurent dans une zone réduite sont ignorées durant la recherche. Vous ne pouvez rechercher que du texte, des nombres ou des dates figurant dans le rapport actuel. Si vous utilisez un rapport consultable à l'aide de clics et généré automatiquement pour l'exploration des données, vous ne pouvez pas rechercher un terme aperçu dans un rapport généré antérieurement ; par ailleurs, vous ne pouvez pas non plus utiliser la fonctionnalité de recherche pour trouver un terme susceptible d'apparaître dans un rapport situé plus loin dans le chemin d'accès aux données.  
   

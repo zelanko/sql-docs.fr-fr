@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs
+title: sys. fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046497"
 ---
-# <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
+# <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne l’ordinal de colonne de la colonne spécifiée tel qu’il apparaît dans le [table de modifications](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associé à l’instance de capture spécifiée.  
+  Retourne l’ordinal de colonne de la colonne spécifiée telle qu’elle apparaît dans la [table de modifications](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associée à l’instance de capture spécifiée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,19 +43,19 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
   
 ## <a name="arguments"></a>Arguments  
  **'** *capture_instance* **'**  
- Nom de l'instance de capture dans laquelle la colonne spécifiée est identifiée comme une colonne capturée. *capture_instance* est **sysname**.  
+ Nom de l'instance de capture dans laquelle la colonne spécifiée est identifiée comme une colonne capturée. *capture_instance* est de **type sysname**.  
   
- **«** *column_name* **»**  
- Colonne sur laquelle des rapports doivent être effectués. *column_name* est **sysname**.  
+ **'** *column_name* **'**  
+ Colonne sur laquelle des rapports doivent être effectués. *column_name* est de **type sysname**.  
   
 ## <a name="return-type"></a>Type de retour  
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction est utilisée pour identifier la position ordinale d'une colonne capturée dans le masque de mise à jour de capture des données modifiées. Il est principalement utilisé conjointement avec la fonction [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) pour extraire des informations à partir du masque de mise à jour lors de l’interrogation des données modifiées.  
+ Cette fonction est utilisée pour identifier la position ordinale d'une colonne capturée dans le masque de mise à jour de capture des données modifiées. Il est principalement utilisé conjointement avec la fonction [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) pour extraire des informations du masque de mise à jour lors de l’interrogation des données modifiées.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’autorisation SELECT sur toutes les colonnes capturées de la table source. Si un rôle de base de données pour le composant de capture des données modifiées est spécifié pour l'instance de capture, l'appartenance à ce rôle est également requise.  
+ Nécessite l’autorisation SELECT sur toutes les colonnes capturées de la table source. Si un rôle de base de données pour le composant de capture des données modifiées est spécifié pour l'instance de capture, l'appartenance à ce rôle est également requise.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant obtient la position ordinale de la colonne `VacationHours` dans le masque de mise à jour pour l'instance de capture `HumanResources_Employee`. Cette valeur est ensuite utilisée dans l'appel à `sys.fn_cdc_is_bit_set` pour extraire des informations du masque de mise à jour retourné.  
@@ -78,8 +78,8 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de capture de données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.fn_cdc_is_bit_set &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
+ [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys. sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys. fn_cdc_is_bit_set &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
   
   

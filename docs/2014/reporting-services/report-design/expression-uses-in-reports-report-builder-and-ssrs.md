@@ -13,28 +13,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105894"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilisation d'expressions dans les rapports (Générateur de rapport et SSRS)
-  Les expressions sont utilisées dans la définition de rapport pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d'élément de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d'en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>** .  
+  Les expressions sont utilisées dans la définition de rapport pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d'élément de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d'en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>**.  
   
- Les expressions peuvent être simples ou complexes. Les*expressions simples* contiennent une référence à un champ de dataset, paramètre ou champ intégré unique. Les expressions complexes peuvent contenir plusieurs références intégrées, opérateurs et appels de fonction. Par exemple, une expression complexe peut inclure la fonction Sum appliquée au champ Sales.  
+ Les expressions peuvent être simples ou complexes. Les *expressions simples* contiennent une référence à un champ de DataSet, un paramètre ou un champ prédéfini unique. Les expressions complexes peuvent contenir plusieurs références intégrées, opérateurs et appels de fonction. Par exemple, une expression complexe peut inclure la fonction Sum appliquée au champ Sales.  
   
- Les expressions sont écrites en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Une expression commence par un signe égal (=) suivi d'une combinaison de références à des collections intégrées, telles que des paramètres et champs de dataset, constantes, fonctions et opérateurs.  
+ Les expressions sont écrites [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]en. Une expression commence par un signe égal (=) suivi d'une combinaison de références à des collections intégrées, telles que des paramètres et champs de dataset, constantes, fonctions et opérateurs.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> Utilisation d'expressions simples  
+##  <a name="Simple"></a>Utilisation d’expressions simples  
  Les expressions simples apparaissent entre crochets sur l'aire de conception et dans les boîtes de dialogue ; par exemple, un champ de dataset apparaît comme `[ProductID]`. Elles sont créées automatiquement lorsque vous faites glisser un champ d'un dataset vers une zone de texte. Un espace réservé est créé et l'expression définit la valeur sous-jacente. Vous pouvez également taper les expressions directement dans une cellule de région de données ou zone de texte sur l'aire de conception ou dans une boîte de dialogue (par exemple, `[ProductID]`).  
   
  Le tableau suivant répertorie des exemples d'utilisations des expressions simples. Le tableau décrit la fonctionnalité, la propriété à définir, la boîte de dialogue utilisée en général pour la définir et la valeur de la propriété. Vous pouvez taper l'expression simple directement sur l'aire de conception, dans une boîte de dialogue ou dans le volet Propriétés, ou vous pouvez la modifier dans la boîte de dialogue Expression, comme vous le feriez avec toute expression.  
   
-|Fonctionnalité|Propriété, contexte et boîte de dialogue|Valeur de propriété|  
+|Fonctionnalités|Propriété, contexte et boîte de dialogue|Valeur de propriété|  
 |-------------------|---------------------------------------|--------------------|  
 |Spécifier un champ de dataset à afficher dans une zone de texte.|Propriété Value d’un espace réservé à l’intérieur d’une zone de texte. Utilisez la **boîte de dialogue Propriétés de l'espace réservé, Général**.|`[Sales]`|  
 |Agréger des valeurs pour un groupe.|Propriété Value d’un espace réservé à l’intérieur d’une ligne associée à un groupe de tableaux matriciels. Utilisez la **boîte de dialogue Propriétés de la zone de texte**.|`[Sum(Sales)]`|  
@@ -50,10 +50,10 @@ ms.locfileid: "66105894"
   
  
   
-##  <a name="Complex"></a> Utilisation d'expressions complexes  
+##  <a name="Complex"></a>Utilisation d’expressions complexes  
  Les expressions complexes peuvent contenir plusieurs références intégrées, opérateurs et appels de fonction, et apparaissent dans l’aire de conception sous la forme `<<Expr>>`. Pour voir ou modifier le texte de l'expression, vous devez ouvrir la boîte de dialogue **Expression** ou taper directement dans le volet Propriétés. Le tableau suivant répertorie les utilisations classiques d'une expression complexe pour afficher ou organiser des données, ou modifier l'apparence du rapport, y compris la propriété à définir, la boîte de dialogue utilisée en général pour la définir et la valeur de la propriété. Vous pouvez taper une expression directement dans une boîte de dialogue, sur l'aire de conception ou dans le volet Propriétés.  
   
-|Fonctionnalité|Propriété, contexte et boîte de dialogue|Valeur de propriété|  
+|Fonctionnalités|Propriété, contexte et boîte de dialogue|Valeur de propriété|  
 |-------------------|---------------------------------------|--------------------|  
 |Calculer les valeurs d'agrégat pour un dataset.|Propriété Value d’un espace réservé à l’intérieur d’une zone de texte. Utilisez la **boîte de dialogue Propriétés de l'espace réservé, Général**.|`=First(Fields!Sales.Value,"DataSet1")`|  
 |Concaténer du texte et des expressions dans la même zone de texte.|Propriété Value d’un espace réservé à l’intérieur d’une zone de texte placée dans un en-tête ou un pied de page. Utilisez la **boîte de dialogue Propriétés de l'espace réservé, Général**.|`="This report began processing at " & Globals!ExecutionTime`|  
@@ -61,12 +61,12 @@ ms.locfileid: "66105894"
 |Mettre en forme des données dans une zone de texte selon la valeur.|Propriété Color d’un espace réservé à l’intérieur d’une zone de texte sur la ligne Détails d’un tableau matriciel. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Police**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calculer une valeur une fois pour s'y reporter dans tout le rapport.|Propriété Value d’une variable de rapport. Utilisez la **boîte de dialogue Propriétés du rapport, Variables**.|`=Variables!MyCalculation.Value`|  
 |Inclure des valeurs spécifiques pour plusieurs champs d'un dataset.|Équation de filtre pour un groupe dans un tableau matriciel. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Filtres**.|Pour le type de données, sélectionnez **Booléen**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Masquer une zone de texte sur l'aire de conception, qui peut être activée ou désactivée par l'utilisateur à l'aide d'un paramètre booléen nommé *Show*.|Propriété masquée dans une zone de texte. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Visibilité**.|`=Not Parameters!` *Afficher\<paramètre_booléen>* `.Value`|  
+|Masquer une zone de texte sur l'aire de conception, qui peut être activée ou désactivée par l'utilisateur à l'aide d'un paramètre booléen nommé *Show*.|Propriété masquée dans une zone de texte. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Visibilité**.|`=Not Parameters!`*Afficher\<les>de paramètres booléens*`.Value`|  
 |Spécifier un contenu dynamique de l'en-tête de page ou du pied de page.|Valeur d’un espace réservé à l’intérieur d’une zone de texte placée dans l’en-tête ou le pied de page.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Spécifier une source de données de façon dynamique à l'aide d'un paramètre.|Chaîne de connexion sur la source de données. Utilisez la **boîte de dialogue Propriétés de la source de données, Général**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifier toutes les valeurs pour un paramètre à valeurs multiples choisi par l'utilisateur.|Valeur d’un espace réservé à l’intérieur d’une zone de texte. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Filtres**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
 |Spécifier des sauts de page toutes les 20 lignes dans un tableau matriciel sans aucun autre groupe.|Expression de groupe pour un groupe dans un tableau matriciel. Utilisez la **boîte de dialogue Propriétés du groupe de tableaux matriciels, Sauts de page**. Sélectionnez l'option **Entre chaque instance d'un groupe**.|`=Ceiling(RowNumber(Nothing)/20)`|  
-|Spécifier une visibilité conditionnelle basée sur un paramètre.|Propriété masquée d’un tableau matriciel. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Visibilité**.|`=Not Parameters!<` *boolean parameter* `>.Value`|  
+|Spécifier une visibilité conditionnelle basée sur un paramètre.|Propriété masquée d’un tableau matriciel. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Visibilité**.|`=Not Parameters!<`*paramètre booléen*`>.Value`|  
 |Spécifier une date mise en forme pour une culture spécifique.|Valeur d’un espace réservé à l’intérieur d’une zone de texte dans une région de données. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Général**.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |Concaténer une chaîne et un nombre mis en forme comme un pourcentage à deux décimales.|Valeur d’un espace réservé à l’intérieur d’une zone de texte dans une région de données. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Général**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   

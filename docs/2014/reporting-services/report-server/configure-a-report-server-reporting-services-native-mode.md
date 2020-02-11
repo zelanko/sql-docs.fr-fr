@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104067"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurer un serveur de rapports (mode natif de Reporting Services)
@@ -29,7 +29,7 @@ ms.locfileid: "66104067"
   
 -   Une base de données du serveur de rapports qui stocke des données d'application, des rapports et d'autres éléments.  
   
- Le programme d’installation configure les paramètres minimum si vous sélectionnez une des options d’installation suivantes : Configuration par défaut du mode natif ou configuration par défaut de mode intégré SharePoint. Si vous avez installé le serveur de rapports en mode de fichiers uniquement (option **Installer mais ne pas configurer** dans l’Assistant Installation), seul le compte de service est configuré. L'URL du service Web et la base de données du serveur de rapports doivent être configurés à l'issue de l'installation.  
+ Le programme d'installation fournit la configuration minimale si vous sélectionnez les options d'installation suivantes : configuration par défaut en mode natif ou configuration par défaut en mode intégré SharePoint. Si vous avez installé le serveur de rapports en mode de fichiers uniquement (option **Installer mais ne pas configurer** dans l’Assistant Installation), seul le compte de service est configuré. L'URL du service Web et la base de données du serveur de rapports doivent être configurés à l'issue de l'installation.  
   
  Le Gestionnaire de rapports est une fonctionnalité en option pour un serveur de rapports en mode natif, mais il vous est recommandé de configurer le Gestionnaire de rapports pour vous permettre d'accorder à l'utilisateur l'accès au serveur de rapports et gérer le contenu de ce serveur. Si vous déployez un serveur de rapports en mode intégré SharePoint, utilisez le frontal Web d'un serveur SharePoint pour accorder l'accès.  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66104067"
  Vérifiez votre installation en créant des dossiers, en téléchargeant des éléments, et en exécutant des rapports. Suivez les instructions de la rubrique [Vérifier une installation de Reporting Services](../install-windows/verify-a-reporting-services-installation.md) pour vérifier votre installation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)   
+ [Gérer un serveur de rapports Reporting Services en mode natif](manage-a-reporting-services-native-mode-report-server.md)   
+ [Configurer un pare-feu pour l’accès au serveur de rapports](configure-a-firewall-for-report-server-access.md)   
  [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [Configurer un serveur de rapports pour l'administration à distance](configure-a-report-server-for-remote-administration.md)   
+ [Configurer un serveur de rapports pour l’administration à distance](configure-a-report-server-for-remote-administration.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

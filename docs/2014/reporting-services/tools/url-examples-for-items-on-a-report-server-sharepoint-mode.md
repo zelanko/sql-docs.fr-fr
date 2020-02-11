@@ -1,5 +1,5 @@
 ---
-title: Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en Mode SharePoint (SSRS) | Microsoft Docs
+title: Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099452"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Exemples d'URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66099452"
   
 |Object|Description|  
 |------------|-----------------|  
-|Application web SharePoint|Une application web SharePoint peut être installée comme serveur autonome ou dans une batterie de serveurs contenant une collection de serveurs virtuels. Une application web a une URL (par exemple, http: *//nom_serveur*) et peut contenir plusieurs sites.|  
+|Application web SharePoint|Une application web SharePoint peut être installée comme serveur autonome ou dans une batterie de serveurs contenant une collection de serveurs virtuels. Une application web a une URL (par exemple, http:*//nom_serveur*) et peut contenir plusieurs sites.|  
 |Site|Un site peut être un site parent d'une application web ou un sous-site.|  
 |Bibliothèque SharePoint|Une bibliothèque contient des documents ou des dossiers. Une bibliothèque ou un dossier de bibliothèque représente le seul objet de site qui peut stocker des rapports, des modèles de rapport, des sources de données partagées et des images externes.|  
 |Élément|Les éléments de serveur de rapports auxquels vous pouvez faire référence dans une URL incluent une définition de rapport pour un rapport ou un sous-rapport, un modèle de rapport, une source de données partagée ou une image externe.|  
@@ -44,19 +44,19 @@ ms.locfileid: "66099452"
 ### <a name="url-for-a-sharepoint-server"></a>URL d'un serveur SharePoint  
  Vous devez utiliser une URL vers le serveur SharePoint lorsque vous déployez un projet de serveur de rapports ou de modèle de rapport dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sur le serveur de rapports.  
   
- Pour trouver le nom du serveur à utiliser, ouvrez un navigateur et localisez la bibliothèque SharePoint où vous souhaitez publier un rapport. Le nom du serveur apparaît juste après le préfixe du protocole, par exemple, http: *//nom_serveur*.  
+ Pour trouver le nom du serveur à utiliser, ouvrez un navigateur et localisez la bibliothèque SharePoint où vous souhaitez publier un rapport. Le nom du serveur apparaît juste après le préfixe du protocole, par exemple, http:*//nom_serveur*.  
   
- L'utilisation du point de terminaison du proxy URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas prise en charge. Un point de terminaison de proxy inclut un numéro de port, par exemple, http: *//nom_serveur:8080/reportserver*.  
+ L'utilisation du point de terminaison du proxy URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas prise en charge. Un point de terminaison de proxy inclut un numéro de port, par exemple, http:*//nom_serveur:8080/reportserver*.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL d'un site ou sous-site de serveur SharePoint  
  Lorsque vous déployez un rapport ou une source de données de rapport, vous devez utiliser une URL vers un site et un sous-site SharePoint, le cas échéant. Dans l’URL, le nom du site apparaît juste après celui du serveur, par exemple, http://*nom_serveur/site* ou http://*nom_serveur/site/sous-site*.  
   
- Dans une application web [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , le site et le sous-site correspondent le plus souvent aux onglets du site principal. Pour trouver le nom du site ou du sous-site, cliquez sur **Accueil**, puis sur **Tout le contenu du site**. Faites défiler vers le bas et recherchez **Sites et espaces de travail**. La liste des sites s'affiche dans cette section.  
+ Sur une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] application 2007 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou Web, le site et le sous-site correspondent fréquemment aux onglets du site principal. Pour trouver le nom du site ou du sous-site, cliquez sur **Accueil**, puis sur **Tout le contenu du site**. Faites défiler vers le bas et recherchez **Sites et espaces de travail**. La liste des sites s'affiche dans cette section.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL d'une bibliothèque SharePoint  
  Si vous déployez un rapport ou un élément connexe vers une bibliothèque SharePoint, vous devez utiliser une URL vers la bibliothèque SharePoint. L'URL à utiliser pour une bibliothèque varie selon votre version de SharePoint.  
   
- Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la bibliothèque apparaît après le nom du serveur, par exemple, http://*nom_serveur/* Documents partagés.  
+ Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la bibliothèque apparaît après le nom du serveur, par exemple, http://*nom_serveur/* Documents partagés.  
   
  Dans [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], la bibliothèque apparaît après le site et le sous-site. Par exemple, http://*nom_serveur/site/* Documents.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66099452"
 |Exemple de rapport Company Sales dans le dossier **Documents/Doc** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |Exemple de rapport Company Sales dans le dossier **Report Center** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a> Publication dans une bibliothèque SharePoint à partir d’un outil de création  
+##  <a name="publishingToDocLib"></a>Publication depuis un outil de création vers une bibliothèque SharePoint  
  Lorsque vous utilisez un outil de création de rapports pour publier des rapports et des fichiers associés dans une bibliothèque, les fichiers sont validés avant d'être ajoutés. Si vous téléchargez les rapports et les fichiers associés via l’action **Télécharger** dans une bibliothèque SharePoint, aucune vérification de validation n’a lieu. Vous ne saurez pas si le fichier est valide tant que vous n'accéderez pas au rapport en le gérant, le modifiant ou l'exécutant.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "66099452"
 ### <a name="file-names"></a>Noms de fichiers  
  Les noms de fichiers dans une URL pour des éléments de rapport doivent inclure une extension de nom de fichier. L'extension de nom de fichier détermine le type de fichier. Lorsque vous publiez des éléments de rapport à partir d'un outil de création de rapports, l'extension de nom de fichier est incluse automatiquement. Si vous téléchargez un élément de rapport vers une bibliothèque SharePoint, vous devez inclure une extension de nom de fichier.  
   
- Si vous ne spécifiez pas d'extension de nom de fichier pour les éléments que vous téléchargez sur un site SharePoint, l'erreur `rsInvalidDataSourceReference` se produit. Les noms de fichiers ne doivent pas inclure les caractères qui ne sont pas reconnus comme des caractères valides de nom de fichier par les applications SharePoint. N’incluez pas les caractères suivants : # % & * : \< > ? / { | }.  
+ Si vous ne spécifiez pas d'extension de nom de fichier pour les éléments que vous téléchargez sur un site SharePoint, l'erreur `rsInvalidDataSourceReference` se produit. Les noms de fichiers ne doivent pas inclure les caractères qui ne sont pas reconnus comme des caractères valides de nom de fichier par les applications SharePoint. N’incluez pas les caractères suivants : #% & * \< : > ? / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>Différences entre le téléchargement et la publication  
  Lorsque vous utilisez le Concepteur de rapports ou le Générateur de rapports pour publier des rapports et des fichiers associés dans une bibliothèque, les fichiers sont validés avant d'être ajoutés. Si vous téléchargez les rapports et les fichiers associés via l’action **Télécharger** dans une bibliothèque SharePoint, aucune vérification de validation n’a lieu. Vous ne saurez pas si le fichier est valide tant que vous n'accéderez pas au rapport en le gérant, le modifiant ou l'exécutant.  
@@ -136,7 +136,7 @@ ms.locfileid: "66099452"
   
 ## <a name="see-also"></a>Voir aussi  
  [publier un rapport dans une bibliothèque SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publier une source de données partagée sur une bibliothèque SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Publier une source de données partagée dans une bibliothèque SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Pages de propriétés du projet, boîte de dialogue](project-property-pages-dialog-box.md)  
   
   

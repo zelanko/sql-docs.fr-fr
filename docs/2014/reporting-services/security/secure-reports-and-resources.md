@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101668"
 ---
 # <a name="secure-reports-and-resources"></a>Sécuriser des rapports et des ressources
@@ -61,7 +61,7 @@ ms.locfileid: "66101668"
  Pour limiter le risque d'insertion de liens dans un rapport qui, par inadvertance, exécuterait des scripts malveillants, n'associez des liens hypertexte qu'avec des données de sources fiables. Vérifiez que les données issues des résultats de la requête et des expressions qui lient des données aux liens hypertexte ne créent pas de liens susceptibles d'être utilisés frauduleusement. Ainsi, ne fondez pas un lien hypertexte sur une expression qui concatène des données à partir de plusieurs champs de dataset. Si nécessaire, accédez au rapport et utilisez la commande « Afficher la source » pour rechercher la présence éventuelle d'URL et de scripts suspects.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Limitation des attaques par injection SQL dans un rapport paramétré  
- Dans un rapport qui inclut un paramètre de type `String`, veillez à utiliser une liste de valeurs disponibles (également appelée liste de valeurs valides) et vous assurer que l’utilisateur qui exécute le rapport dispose uniquement les autorisations requises pour afficher les données dans le rapport. Lorsque vous définissez un paramètre de type `String`, la zone de texte qui apparaît vous permet d'entrer n'importe quelle valeur. Une liste de valeurs disponibles limite les valeurs susceptibles d'être entrées. Si le paramètre de rapport est lié à un paramètre de requête et vous n'utilisez pas une liste de valeurs disponibles, l'utilisateur d'un rapport peut taper la syntaxe SQL dans la zone de texte, ce qui peut exposer le rapport et votre serveur de rapports au risque d'une attaque par injection SQL. Si l'utilisateur dispose d'autorisations suffisantes pour exécuter la nouvelle instruction SQL, cela risque de générer des résultats indésirables sur le serveur.  
+ Dans un rapport qui inclut un paramètre de type `String`, veillez à utiliser une liste de valeurs disponibles (également appelée liste de valeurs valides) et assurez-vous que tout utilisateur exécutant le rapport dispose uniquement des autorisations requises pour afficher les données du rapport. Lorsque vous définissez un paramètre de type `String`, la zone de texte qui apparaît vous permet d'entrer n'importe quelle valeur. Une liste de valeurs disponibles limite les valeurs susceptibles d'être entrées. Si le paramètre de rapport est lié à un paramètre de requête et vous n'utilisez pas une liste de valeurs disponibles, l'utilisateur d'un rapport peut taper la syntaxe SQL dans la zone de texte, ce qui peut exposer le rapport et votre serveur de rapports au risque d'une attaque par injection SQL. Si l'utilisateur dispose d'autorisations suffisantes pour exécuter la nouvelle instruction SQL, cela risque de générer des résultats indésirables sur le serveur.  
   
  Si un paramètre de rapport n'est pas lié à un paramètre de requête et les valeurs de paramètre sont incluses dans le rapport, l'utilisateur d'un rapport peut taper la syntaxe de l'expression ou une URL dans la valeur de paramètre et rendre le rapport au format Excel ou HTML. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "66101668"
  Les rapports qui contiennent des informations confidentielles doivent être sécurisés au niveau de l'accès aux données, en exigeant des utilisateurs qu'ils s'identifient pour accéder à des données sensibles. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). Vous pouvez également sécuriser un dossier pour le rendre inaccessible aux utilisateurs non autorisés. Pour plus d’informations, consultez [Dossiers sécurisés](secure-folders.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- (créer-et-gérer-rôle-assignments.md)   
- [Configurer l'accès au Générateur de rapports](../report-server/configure-report-builder-access.md)   
+ (create-and-manage-role-assignments.md)   
+ [Configurer l’accès Générateur de rapports](../report-server/configure-report-builder-access.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)   
  [Sécuriser les éléments de source de données partagée](secure-shared-data-source-items.md)   
  [Stocker des informations d’identification dans une source de données Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

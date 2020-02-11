@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103082"
 ---
 # <a name="upload-files-to-a-folder"></a>Télécharger des fichiers dans un dossier
@@ -39,27 +39,27 @@ ms.locfileid: "66103082"
   
  Sur un plan visuel, les fichiers que vous téléchargez dans une base de données de serveur de rapports s'affichent dans l'arborescence des dossiers avec les icônes suivantes.  
   
- ![Icône Rapport](../media/hlp-16doc.gif "Icône Rapport")  
+ ![Icône de rapport](../media/hlp-16doc.gif "Icône de rapport")  
 icône de rapport  
   
- ![Icône de modèle](../media/model-icon.gif "Icône de modèle")  
+ ![Icône de modèle](../media/model-icon.gif "Icône Modèle")  
 icône de modèle de rapport  
   
- ![Icône Ressource générique](../media/hlp-16file.gif "Icône Ressource générique")  
+ ![icône de ressource générique](../media/hlp-16file.gif "icône de ressource générique")  
 icône de ressource générique  
   
  Lorsque vous téléchargez un fichier, il est toujours placé dans le dossier en cours de sélection. Vous pouvez soit naviguer d'abord vers le dossier où l'élément sera stocké, soit télécharger un fichier puis le déplacer ultérieurement vers son emplacement définitif.  
   
  Pour télécharger un fichier, utilisez le Gestionnaire de rapports. Votre possibilité de télécharger des fichiers sur un serveur de rapports dépend des tâches incluses dans votre attribution de rôle. Si vous utilisez la sécurité par défaut, les administrateurs locaux peuvent ajouter des éléments à un serveur de rapports. Si la fonctionnalité Mes rapports est activée, tout utilisateur disposant d'un dossier Mes rapports est autorisé à télécharger des éléments dans ce dossier. Si vous utilisez des attributions de rôle personnalisées, l'attribution de rôle doit inclure les tâches prenant en charge la gestion de dossiers.  
   
-|Pour effectuer cette opération|Incluez ces tâches|  
+|Action à réaliser|Incluez ces tâches|  
 |----------------|-------------------------|  
 |Télécharger un fichier .rdl dans un dossier|Gérer les rapports|  
-|Télécharger un fichier en tant qu'objet binaire|Gérer les ressources|  
+|Télécharger un fichier en tant qu'objet binaire|Gestion des ressources|  
 |Afficher le contenu d'un dossier|Afficher les ressources, afficher les rapports|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;]... / mode.md du natif ssrs report manager)   
+ [Gestionnaire de rapports &#40;&#41; en mode natif SSRS].. /report-manager-ssrs-native-mode.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tâches et autorisations](../security/tasks-and-permissions.md)   
  [Télécharger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../reports/upload-a-file-or-report-report-manager.md)  

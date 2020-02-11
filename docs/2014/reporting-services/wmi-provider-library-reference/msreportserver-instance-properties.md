@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27719888e994a9cfc9408901a7d89fcf28220c5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097025"
 ---
-# <a name="msreportserverinstance-properties"></a>Propriétés MSReportServer_Instance
+# <a name="msreportserver_instance-properties"></a>Propriétés MSReportServer_Instance
   La classe MSReportServer_Instance fournit des informations de base nécessaires pour qu’un client puisse se connecter à un serveur de rapports installé.  
   
 ## <a name="public-properties"></a>Propri&#233;t&#233;s publiques  
@@ -35,7 +35,7 @@ ms.locfileid: "66097025"
 |[Propriété EditionID &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionid.md)|Retourne l'édition du serveur de rapports.|  
 |[Propriété EditionName &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionname.md)|Retourne le nom explicite de l'édition du serveur de rapports.|  
 |[InstanceID](msreportserver-instance-properties-instanceid.md)|Cet objet prend en charge l'infrastructure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et ne doit pas être utilisé directement à partir de votre code.|  
-|[InstanceName](msreportserver-instance-properties-instancename.md)|Retourne le nom d'une instance du serveur de rapports sur un ordinateur spécifique. En lecture seule.|  
+|[InstanceName](msreportserver-instance-properties-instancename.md)|Retourne le nom d'une instance du serveur de rapports sur un ordinateur spécifique. Lecture seule.|  
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|Indique si le serveur de rapports est configuré pour le mode intégré SharePoint.|  
 |[Version](msreportserver-instance-properties-version.md)|Retourne la version du serveur de rapports.|  
   

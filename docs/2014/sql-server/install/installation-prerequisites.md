@@ -1,5 +1,5 @@
 ---
-title: Conditions préalables d’installation | Microsoft Docs
+title: Conditions préalables à l’installation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094346"
 ---
-# <a name="installation-prerequisites"></a>Conditions préalables d'installation
+# <a name="installation-prerequisites"></a>Configuration requise pour l'installation
   Pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soit correctement installé, les composants logiciels suivants sont requis sur l'ordinateur d'installation. Ils sont installés par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 4.0 pour toutes les éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+-   
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 4.0 pour toutes les éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
--   Fichiers de support du programme d’installation de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fichiers de support du programme d’installation  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   

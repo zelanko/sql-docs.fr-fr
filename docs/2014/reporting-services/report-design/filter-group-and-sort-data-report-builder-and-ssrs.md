@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f25545a48a95082636fc3efa951e5eab42c94be7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105890"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
@@ -31,11 +31,11 @@ ms.locfileid: "66105890"
   
 -   **Expressions de filtre** Une expression de filtre teste les données à inclure ou à exclure selon une comparaison que vous spécifiez. Les filtres sont appliqués aux données d'un rapport une fois que ces dernières ont été récupérées à partir d'une connexion de données. Vous pouvez ajouter n'importe quelle combinaison de filtres aux éléments suivants : définition de dataset partagé sur le serveur de rapports, instance de dataset partagé ou dataset incorporé dans un rapport, région de données telle qu'un tableau ou un graphique, ou groupe de régions de données, par exemple un groupe de lignes dans un tableau ou un groupe de catégories dans un graphique.  
   
--   **Expressions de groupe** Une expression de groupe organise les données en fonction d'un champ de dataset ou de toute autre valeur. Les expressions de groupe sont créées automatiquement lorsque vous générez la mise en page de rapport. Le processeur de rapports évalue les expressions de groupe une fois que les filtres sont appliqués aux données, et lorsque les données de rapport et les régions de données sont combinées. Vous pouvez personnaliser une expression de groupe après sa création.  
+-   **Expressions de groupe** Une expression de groupe organise les données en fonction d’un champ de DataSet ou d’une autre valeur. Les expressions de groupe sont créées automatiquement lorsque vous générez la mise en page de rapport. Le processeur de rapports évalue les expressions de groupe une fois que les filtres sont appliqués aux données, et lorsque les données de rapport et les régions de données sont combinées. Vous pouvez personnaliser une expression de groupe après sa création.  
   
--   **Expressions de tri** Une expression de tri contrôle l'ordre dans lequel les données s'affichent dans une région de données. Les expressions de tri sont créées automatiquement lorsque vous générez la mise en page de rapport. Par défaut, l'expression de tri d'un groupe a la même valeur que l'expression de groupe. Vous pouvez personnaliser une expression de tri après sa création.  
+-   **Expressions de tri** Une expression de tri contrôle l’ordre dans lequel les données s’affichent dans une région de données. Les expressions de tri sont créées automatiquement lorsque vous générez la mise en page de rapport. Par défaut, l'expression de tri d'un groupe a la même valeur que l'expression de groupe. Vous pouvez personnaliser une expression de tri après sa création.  
   
--   **Tri interactif** Pour permettre à un utilisateur de trier ou d'inverser l'ordre de tri d'une colonne, vous pouvez ajouter un bouton de tri interactif à une cellule d'en-tête de colonne ou d'en-tête de groupe dans un tableau ou une matrice.  
+-   **Tri interactif** Pour permettre à un utilisateur de trier ou d’inverser l’ordre de tri d’une colonne, vous pouvez ajouter un bouton de tri interactif à une cellule d’en-tête de colonne ou d’en-tête de groupe dans un tableau ou une matrice.  
   
  Pour aider vos utilisateurs à personnaliser les expressions de filtre, de groupe ou de tri, vous pouvez modifier une expression afin d'ajouter une référence à un paramètre de rapport. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66105890"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Filtering"></a> Filtrage des données dans le rapport  
+##  <a name="Filtering"></a>Filtrage des données dans le rapport  
  Les filtres sont les éléments d'un rapport qui permettent de contrôler les données une fois qu'elles ont été récupérées à partir de la connexion de données. Utilisez des filtres lorsque vous ne pouvez pas modifier une requête de dataset pour filtrer les données avant qu'elles ne soient récupérées à partir d'une source de données externe.  
   
  Lorsque c'est possible, générez des requêtes de dataset qui retournent uniquement les données que vous devez afficher dans le rapport. Lorsque vous réduisez la quantité des données qui doivent être récupérées et traitées, vous contribuez à améliorer les performances du rapport. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "66105890"
   
  Pour personnaliser une vue pour chaque utilisateur, vous pouvez inclure une référence à un champ UserID dans un filtre. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).
 
-##  <a name="Grouping"></a> Regroupement des données dans le rapport  
+##  <a name="Grouping"></a>Regroupement des données dans le rapport  
  Les groupes permettent d'organiser les données dans un rapport afin de les afficher ou de calculer des valeurs d'agrégat. En comprenant comment définir des groupes et utiliser leurs fonctionnalités, vous parviendrez à concevoir des rapports plus concis.  
   
  Les expressions de groupe sont créées automatiquement lorsque vous effectuez les opérations suivantes :  
@@ -86,7 +86,7 @@ ms.locfileid: "66105890"
   
  Le nom de groupe identifie une étendue d'expression. Vous pouvez spécifier le nom d'un groupe en tant qu'étendue dans laquelle calculer des agrégats, organiser des données hiérarchiquement et activer/désactiver l'affichage des nœuds enfants des nœuds parents dans un rapport d'extraction, afin d'afficher des vues différentes des mêmes données sur plusieurs régions de données, et de visualiser les données de synthèse dans un tableau, une matrice, un graphique, une jauge ou une carte. Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Pour effectuer un regroupement sur plusieurs champs du dataset, ajoutez chaque champ à l'ensemble d'expressions de groupe. Vous pouvez également écrire vos propres expressions de groupe dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Par exemple, vous pouvez effectuer un regroupement selon une plage de valeurs ou utiliser un paramètre de rapport pour permettre à l'utilisateur de sélectionner le mode de regroupement de données dans une région de données. Pour plus d’informations, consultez [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Pour effectuer un regroupement sur plusieurs champs du dataset, ajoutez chaque champ à l'ensemble d'expressions de groupe. Vous pouvez également écrire vos propres expressions de groupe [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]dans. Par exemple, vous pouvez effectuer un regroupement selon une plage de valeurs ou utiliser un paramètre de rapport pour permettre à l'utilisateur de sélectionner le mode de regroupement de données dans une région de données. Pour plus d’informations, consultez [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
  Pour la présentation du rapport, vous pouvez ajouter des sauts de page avant et après chaque groupe ou instance d'un groupe afin de réduire le volume de données sur chaque page et mieux gérer les performances de rendu de rapport. Pour plus d’informations, consultez [Ajouter un saut de page &#40;Générateur de rapports et SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -98,21 +98,21 @@ ms.locfileid: "66105890"
  Pour plus d’informations, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Groupes et étendue dans les régions de données  
- Pour fournir plusieurs vues de données à partir du même dataset, vous pouvez spécifier les mêmes expressions de groupe pour chaque région de données. Par exemple, vous pouvez afficher des données par catégories dans un tableau afin d'afficher toutes les données de détail, et faire de même dans un graphique à secteurs afin d'afficher des agrégats, ce qui facilite la visualisation de chaque catégorie par rapport à l'ensemble du dataset. Pour plus d’informations, consultez [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Pour fournir plusieurs vues de données à partir du même dataset, vous pouvez spécifier les mêmes expressions de groupe pour chaque région de données. Par exemple, vous pouvez afficher des données par catégories dans un tableau afin d'afficher toutes les données de détail, et faire de même dans un graphique à secteurs afin d'afficher des agrégats, ce qui facilite la visualisation de chaque catégorie par rapport à l'ensemble du dataset. Pour plus d’informations, consultez [liaison de plusieurs régions de données à un même Dataset &#40;générateur de rapports et des&#41;SSRS ](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  Lorsque vous imbriquez une région de données dans une cellule de tableau, de matrice ou de liste, vous limitez automatiquement l'étendue des données aux appartenances aux groupes les plus profondes de la cellule. Par exemple, supposons que vous ajoutiez un graphique à une cellule située à la fois dans un groupe de lignes et dans un groupe de colonnes. Les données disponibles dans ce graphique sont limitées à l'instance de groupe de lignes la plus profonde et à l'instance de groupe de colonnes la plus profonde au moment de l'exécution. Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
 
-##  <a name="Sorting"></a> Tri des données dans le rapport  
+##  <a name="Sorting"></a>Tri des données dans le rapport  
  Pour maîtriser l'ordre de tri des données dans votre rapport, vous pouvez trier les données dans une requête de dataset ou définir une expression de tri pour un groupe ou une région de données. Vous pouvez également ajouter des boutons de tri interactif aux tableaux et aux matrices pour permettre à un utilisateur de modifier l'ordre de tri des lignes.  
   
  Les trois types de tri peuvent être associés dans un même rapport. Par défaut, l'ordre de tri est déterminé par l'ordre dans lequel les données sont retournées par la requête de dataset. Les expressions de tri sont appliquées dans la région de données et le groupe de régions de données. Les tris interactifs sont appliqués après les expressions de tri.  
   
- Pour les expressions qui contiennent des fonctions d'agrégation, la plupart des résultats ne sont pas affectés par l'ordre de tri. Les valeurs de retour des fonctions d'agrégation suivantes sont affectées par l'ordre de tri : Premier, Dernier et Précédent. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Pour les expressions qui contiennent des fonctions d'agrégation, la plupart des résultats ne sont pas affectés par l'ordre de tri. Les valeurs de retour des fonctions d’agrégation suivantes sont affectées par l’ordre de tri : First, Last et Previous. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Tri des données dans une requête de dataset  
  Incluez l'ordre de tri dans la requête de dataset afin de pré-trier les données avant leur extraction pour un rapport. Le tri des données dans la requête est effectué par la source de données et non pas par le processeur de rapports.  
   
- Pour une source de données de type [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez ajouter une clause ORDER BY à la requête de dataset. Par exemple, la requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante trie les colonnes Sales et Region by Sales dans la table SalesOrders par ordre décroissant : `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Pour plus d'informations, consultez la rubrique relative au tri des lignes à l'aide de ORDER BY dans la [documentation en ligne de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
+ Pour un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de source de données, vous pouvez ajouter une clause ORDER BY à la requête de DataSet. Par exemple, la requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante trie les colonnes Sales et Region by Sales dans la table SalesOrders par ordre décroissant : `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Pour plus d'informations, consultez la rubrique relative au tri des lignes à l'aide de ORDER BY dans la [documentation en ligne de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Toutes les sources de données ne permettent pas de spécifier l'ordre de tri dans la requête.  
@@ -120,9 +120,9 @@ ms.locfileid: "66105890"
 ### <a name="sorting-data-with-sort-expressions"></a>Tri des données avec des expressions de tri  
  Pour trier des données dans le rapport après leur extraction de la source de données, vous pouvez définir des expressions de tri pour une région de données du tableau matriciel ou un groupe, notamment le groupe de détails. La liste suivante décrit l'effet de la définition d'expressions de tri sur différents éléments :  
   
--   **Région de données de tableau matriciel.** Définissez des expressions de tri sur une région de données de type liste, table ou matrice pour contrôler l'ordre de tri des données dans cette région de données après l'application de filtres de dataset et de région de données lors de l'exécution.  
+-   **région de données de tableau matriciel.** Définissez des expressions de tri sur une région de données de type liste, table ou matrice pour contrôler l'ordre de tri des données dans cette région de données après l'application de filtres de dataset et de région de données lors de l'exécution.  
   
--   **Groupe de régions de données de tableau matriciel.** Définissez des expressions de tri pour chaque groupe, dont le groupe de détails, pour contrôler l'ordre de tri des instances de groupe. Par exemple, dans le groupe de détails, vous contrôlez l'ordre des lignes de détails. Pour un groupe enfant, vous contrôlez l'ordre des instances de groupe à l'intérieur du groupe parent. Par défaut, lorsque vous créez un groupe, l'expression de tri est définie sur l'expression de groupe et l'ordre croissant.  
+-   **Groupe de région de données de tableau matriciel.** Définissez des expressions de tri pour chaque groupe, dont le groupe de détails, pour contrôler l'ordre de tri des instances de groupe. Par exemple, dans le groupe de détails, vous contrôlez l'ordre des lignes de détails. Pour un groupe enfant, vous contrôlez l'ordre des instances de groupe à l'intérieur du groupe parent. Par défaut, lorsque vous créez un groupe, l'expression de tri est définie sur l'expression de groupe et l'ordre croissant.  
   
      Si vous n'avez qu'un seul groupe de détails, vous pouvez indifféremment définir une expression de tri dans la requête, dans la région de données ou dans le groupe de détails.  
   
@@ -159,7 +159,7 @@ FROM Production.Product
   
  Pour plus d’informations, consultez [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md) et [Fonction Lookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookup-function.md).  
   
-###  <a name="Interactive"></a> Ajout du tri interactif pour l'utilisateur  
+###  <a name="Interactive"></a>Ajout d’un tri interactif pour l’utilisateur  
  Pour permettre à un utilisateur de modifier l'ordre de tri des données de rapport dans un tableau ou une matrice, vous pouvez ajouter des boutons de tri interactif aux en-têtes de colonnes ou aux en-têtes de groupes. Les utilisateurs peuvent cliquer sur le bouton pour basculer l'ordre de tri. Le tri interactif est pris en charge dans les formats de rendu qui permettent l'intervention de l'utilisateur, tels que le format HTML.  
   
  Vous ajoutez des boutons de tri interactif à une zone de texte dans une cellule de région de données de tableau matriciel. Par défaut, chaque cellule contient une zone de texte. Dans les propriétés de la zone de texte, spécifiez quelle partie d'une région de données de table ou de matrice doit être triée (les valeurs du groupe parent, les valeurs du groupe enfant ou les lignes de détails), les éléments d'après lesquels effectuer le tri et si l'expression de tri doit être appliquée à d'autres éléments de rapport qui ont une relation d'égal à égal. Par exemple, si une table et un graphique qui fournissent des vues sur le même dataset sont contenus dans un rectangle, ils constituent des régions de données homologues. Lorsqu'un utilisateur bascule l'ordre de tri de la table, l'ordre de tri du graphique bascule également. Pour plus d’informations, consultez [Tri interactif &#40;Générateur de rapports et SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
@@ -190,7 +190,7 @@ FROM Production.Product
   
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
-##  <a name="Related"></a> Sections connexes  
+##  <a name="Related"></a>Sections connexes  
  [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
  [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  

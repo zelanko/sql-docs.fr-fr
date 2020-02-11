@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105213"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Fonction Multilookup (Générateur de rapports et SSRS)
@@ -35,19 +35,20 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`) Expression évaluée dans l'étendue actuelle et qui spécifie le jeu de noms ou de clés à rechercher. Par exemple, pour un paramètre à valeurs multiples, `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (`Variant`) Expression évaluée pour chaque ligne d'un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple, `=Fields!ID.Value`.  
+ (`Variant`) Expression évaluée pour chaque ligne d'un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple : `=Fields!ID.Value`.  
   
  *result_expression*  
- (`Variant`) Une expression qui est évaluée pour la ligne dans le jeu de données où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!Name.Value`.  
+ (`Variant`) Expression évaluée pour la ligne du DataSet où *source_expression* = *destination_expression*et qui spécifie la valeur à récupérer. Par exemple : `=Fields!Name.Value`.  
   
  *dataset*  
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Couleurs ».  
   
-## <a name="return"></a>Return  
+## <a name="return"></a>Renvoie  
  Retourne une valeur `VariantArray`, ou `Nothing` si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez `Multilookup` pour récupérer un ensemble de valeurs d'un dataset pour les paires nom-valeur lorsqu'il existe une relation un-à-un pour chaque paire. `MultiLookup` équivaut à appeler `Lookup` pour un ensemble de noms ou de clés. Par exemple, pour un paramètre à valeurs multiples basé sur des identificateurs de clé primaire,vous pouvez utiliser `Multilookup` dans une expression d'une zone de texte d'une table pour récupérer des valeurs associées d'un dataset qui n'est pas lié au paramètre ou à la table.  
+ Utilisez `Multilookup` pour récupérer un ensemble de valeurs d'un dataset pour les paires nom-valeur lorsqu'il existe une relation un-à-un pour chaque paire. 
+  `MultiLookup` équivaut à appeler `Lookup` pour un ensemble de noms ou de clés. Par exemple, pour un paramètre à valeurs multiples basé sur des identificateurs de clé primaire,vous pouvez utiliser `Multilookup` dans une expression d'une zone de texte d'une table pour récupérer des valeurs associées d'un dataset qui n'est pas lié au paramètre ou à la table.  
   
  La fonction `Multilookup` effectue les actions suivantes :  
   
@@ -59,9 +60,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Pour récupérer une valeur unique dans un dataset avec les paires nom-valeur d’un nom spécifique, lorsqu’il existe une relation un-à-un, utilisez la [Fonction Lookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookup-function.md). Pour récupérer plusieurs valeurs dans un dataset avec les paires nom-valeur d’un nom, lorsqu’il existe une relation un-à-plusieurs, utilisez une [Fonction LookupSet &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookupset-function.md).  
   
- Les restrictions suivantes s'appliquent :  
+ Les restrictions suivantes s’appliquent :  
   
--   `Multilookup` est évalué après que toutes les expressions de filtre ont été appliquées.  
+-   
+  `Multilookup` est évalué après que toutes les expressions de filtre ont été appliquées.  
   
 -   Un seul niveau de recherche est pris en charge. Une expression source, destination ou de résultat ne peut pas inclure de référence à une fonction de recherche.  
   
@@ -69,7 +71,8 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Les expressions source, de destination et de résultat ne peuvent pas inclure de références à des variables de groupe ou de rapport.  
   
--   `Multilookup` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
+-   
+  `Multilookup` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
   
     -   des chaînes de connexion dynamiques pour une source de données ;  
   
@@ -90,12 +93,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Le dataset CategoryNames contient l'identificateur et le nom de catégorie, comme indiqué dans le tableau ci-dessous.  
   
-|ID|Nom|  
+|id|Name|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Composants|  
+|4|Components|  
   
  Pour rechercher les noms correspondant à la liste d'identificateurs, utilisez `Multilookup`. Vous devez tout d'abord fractionner la liste en un tableau de chaînes, appeler `Multilookup` pour récupérer les noms des catégories, puis concaténer les résultats en une chaîne.  
   
@@ -110,7 +113,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>Exemple  
  Supposons qu' un dataset CouleursProduits contient un champ d'identificateur de couleur IDCouleur et un champ de valeur de couleur Couleur, comme indiqué dans le tableau ci-dessous.  
   
-|ColorID|Color|  
+|ColorID|Couleur|  
 |-------------|-----------|  
 |1|Rouge|  
 |2|Bleu|  

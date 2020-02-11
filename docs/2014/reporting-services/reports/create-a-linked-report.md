@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102698"
 ---
 # <a name="create-a-linked-report"></a>Créer un rapport lié
@@ -34,9 +34,11 @@ ms.locfileid: "66102698"
   
 2.  Indiquez un nom pour le nouveau rapport lié. Tapez éventuellement une description.  
   
-3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si vous ne sélectionnez aucun dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport sur lequel il est basé).  
+3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . 
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si vous ne sélectionnez aucun dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport sur lequel il est basé).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Le rapport lié s’ouvre.  
+4.  
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Le rapport lié s’ouvre.  
   
      L'icône d'un rapport lié est différente des autres éléments gérés par un serveur de rapports. L'icône ci-après indique un rapport lié :  
   
@@ -44,9 +46,9 @@ ms.locfileid: "66102698"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../new-linked-report-page-report-manager.md)   
- [Page Choisir l’emplacement de l’élément &#40;Gestionnaire de rapports&#41;](../choose-item-location-page-report-manager.md)   
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../general-properties-page-reports-report-manager.md)   
+ [Page nouveau rapport lié &#40;Gestionnaire de rapports&#41;](../new-linked-report-page-report-manager.md)   
+ [Page choisir l’emplacement de l’élément &#40;Gestionnaire de rapports&#41;](../choose-item-location-page-report-manager.md)   
+ [Page Propriétés générales, rapports &#40;Gestionnaire de rapports&#41;](../general-properties-page-reports-report-manager.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)  
   

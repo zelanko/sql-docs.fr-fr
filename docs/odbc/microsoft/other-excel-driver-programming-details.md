@@ -15,17 +15,17 @@ ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043772"
 ---
 # <a name="other-excel-driver-programming-details"></a>Autres détails de programmation du pilote Excel
 > [!NOTE]  
->  Cette section fournit des informations spécifiques au pilote Excel sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette section fournit des informations spécifiques au pilote Excel sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [SQLBindParameter (pilote Excel)](../../odbc/microsoft/sqlbindparameter-excel-driver.md)  
   

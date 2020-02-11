@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099143"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
@@ -26,8 +26,8 @@ ms.locfileid: "66099143"
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|rsProcessingError|  
-|Source de l'événement|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
+|ID de l’événement|rsProcessingError|  
+|Source de l’événement|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
 |Composant|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texte du message|Des erreurs se sont produites lors du traitement du rapport.|  
   
@@ -53,9 +53,9 @@ ms.locfileid: "66099143"
   
 -   Un assembly personnalisé ou un assembly [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui a été incorrectement déployé n’a pas pu se charger.  
   
--   Un paramètre dont la propriété Nullable pour `False` a détecté une valeur null dans le paramètre.  
+-   Un paramètre dont la propriété Nullable a la valeur `False` a détecté une valeur null dans le paramètre.  
   
--   Une expression pour la propriété Hidden d’une région de données contient une erreur : Référence d’objet non définie à une instance d’un objet.  
+-   Une expression pour la propriété Hidden d’une région de données contient une erreur : la référence d’objet n’est pas définie à une instance d’un objet.  
   
 -   Une expression contenait un appel de fonction non valide ou une erreur de syntaxe.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66099143"
  Un paramètre à valeurs multiples ne peut pas contenir la valeur NULL. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Le rapport principal avec le sous-rapport n'a pas pu être traité  
- Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version n’est pas compatible entre un rapport et ses sous-rapports, le message suivant s’affiche : « Sous-rapport ne peut pas être traité ».  
+ Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version d'un rapport et de ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
   
  Vous devez modifier le rapport principal ou les sous-rapports pour que tous les rapports puissent être traités par la même version du processeur de rapports. Pour plus d’informations sur la cause de l’échec de la mise à niveau d’un rapport, consultez [Mettre à niveau des rapports](../install-windows/upgrade-reports.md).  
   
@@ -117,12 +117,12 @@ ms.locfileid: "66099143"
   
  Pour les fonctions d'agrégation qui calculent des totaux cumulés (`Previous`, `RunningValue` ou `RowNumber`), vous pouvez spécifier un paramètre d'étendue qui est un nom de groupe de lignes ou un nom de groupe de colonnes, mais pas les deux. Cela s'applique au message d'erreur suivant :  
   
--   `Previous`, `RunningValue` ou `RowNumber` agréger les fonctions utilisées dans les cellules de données de la  *\<type d’élément de rapport >* ' *\<nom_élément_rapport >* » font référence à des étendues de regroupement dans les colonnes et les lignes de la  *\<type_élément_rapport >* . Les paramètres d’étendue de toutes les `Previous`, `RunningValue` et `RowNumber` fonctions au sein d’agrégation un  *\<type_élément_rapport >* peuvent faire référence à des regroupements de lignes ou des regroupements de colonnes de données, mais pas les deux.  
+-   `Previous`, `RunningValue` ou `RowNumber` les fonctions d’agrégation utilisées dans les cellules de données du * \<type d’élément de rapport>* «*\<nom d’élément de rapport>*» font référence à des étendues de regroupement dans les colonnes et les lignes du * \<type d’élément de rapport>*. Les paramètres d’étendue de `Previous`toutes `RunningValue` les `RowNumber` fonctions d’agrégation au sein d’un * \<type d’élément de rapport>* peuvent faire référence à des regroupements de lignes ou à des regroupements de colonnes de données, mais pas les deux.  
   
  Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Étendue de dataset par défaut pour une zone de texte de niveau supérieur  
- N'utilisez pas d'étendue par défaut pour une zone de texte ajoutée à l'aire de conception du rapport lorsque le rapport a plusieurs dataset. Utilisez une expression qui inclut le nom du dataset comme étendue, et une fonction d'agrégation. Par exemple, `=First(Fields!FieldName.Value, "DataSet2")`.  
+ N'utilisez pas d'étendue par défaut pour une zone de texte ajoutée à l'aire de conception du rapport lorsque le rapport a plusieurs dataset. Utilisez une expression qui inclut le nom du dataset comme étendue, et une fonction d'agrégation. Par exemple : `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   

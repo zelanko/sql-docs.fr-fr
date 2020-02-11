@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098296"
 ---
-# <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>Méthode ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
+# <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>Méthode ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
   Retourne la liste des installations du serveur de rapports qui sont présentes dans la base de données du serveur de rapports, même si elles n'ont pas accès aux informations sécurisées.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -45,22 +45,22 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *MachineNames[]*  
+ *MachineNames []*  
  [out] Tableau contenant les noms de machines des installations du serveur de rapports dans la base de données.  
   
- *InstanceNames[]*  
+ *InstanceNames []*  
  [out] Tableau contenant les noms d'instances de chacune des installations du serveur de rapports dans la base de données.  
   
  *InstallationIDs[]*  
  [out] Tableau contenant l'ID d'installation de chaque installation du serveur de rapports dans la base de données.  
   
- *IsInitialized[]*  
+ *IsInitialized []*  
  [out] Tableau contenant l'état d'initialisation de chaque installation du serveur de rapports dans la base de données.  
   
  *Longueur*  
  [out] Longueur des tableaux retournés par la méthode. Tous les tableaux retournés ont la même longueur.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
  *ExtendedErrors[]*  
@@ -72,8 +72,8 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ## <a name="remarks"></a>Notes  
  ListReportServersInDatabase répertorie les installations du serveur de rapports qui sont présentes dans la base de données du serveur de rapports, qu’elles aient accès ou non aux informations sécurisées, et retourne un ensemble de tableaux correspondants qui contiennent des informations à propos de chaque installation.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

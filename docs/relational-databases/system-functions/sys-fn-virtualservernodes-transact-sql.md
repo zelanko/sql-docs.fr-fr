@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_virtualservernodes (Transact-SQL) | Microsoft Docs
+title: sys. fn_virtualservernodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,21 +24,21 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059201"
 ---
-# <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
+# <a name="sysfn_virtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Retourne la liste des nœuds d'instance de cluster de basculement sur lesquels une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être exécutée. Ce type d'informations est utile dans les environnements de clustering de basculement.  
   
 > [!IMPORTANT]
->  Cela [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fonction système est incluse pour la compatibilité descendante. Nous vous recommandons d’utiliser [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) à la place.  
+>  Cette [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fonction système est incluse à des fins de compatibilité descendante. Nous vous recommandons d’utiliser à la place [sys. dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,12 +48,12 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>Tables retournées  
- Si le serveur actuel est un serveur en cluster, **fn_virtualservernodes** retourne une liste de nœuds d’instance de cluster de basculement sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini.  
+ Si le serveur actuel est un serveur en cluster, **fn_virtualservernodes** retourne une liste de nœuds d’instance de cluster de basculement sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lesquels cette instance de a été définie.  
   
  Si l’instance de serveur actuelle n’est pas un serveur en cluster, **fn_virtualservernodes** retourne un ensemble de lignes vide.  
   
 ## <a name="permissions"></a>Autorisations  
- L’utilisateur doit avoir l’autorisation VIEW SERVER STATE pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ L’utilisateur doit disposer de l’autorisation VIEW SERVER STATE pour l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance de.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `fn_virtualservernodes` pour effectuer une requête sur une instance de serveur cluster :  
@@ -73,7 +73,7 @@ SELECT * FROM fn_virtualservernodes();
  SS3-CLUSN2  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
+ [sys. dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys. fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   
   

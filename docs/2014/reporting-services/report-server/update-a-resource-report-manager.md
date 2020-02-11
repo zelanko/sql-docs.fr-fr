@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103055"
 ---
 # <a name="update-a-resource-report-manager"></a>mise à jour d'une ressource (Gestionnaire de rapports)
@@ -44,9 +44,9 @@ ms.locfileid: "66103055"
  Si la ressource en cours de mise à jour contient une image utilisée dans un rapport, vous devez actualiser le rapport pour afficher l'image mise à jour.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
- [Page Charger un fichier &#40;Gestionnaire de rapports&#41;](../upload-file-page-report-manager.md)   
- [Télécharger des fichiers dans un dossier](upload-files-to-a-folder.md)   
+ [Page contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
+ [Page charger un fichier &#40;Gestionnaire de rapports&#41;](../upload-file-page-report-manager.md)   
+ [Charger des fichiers dans un dossier](upload-files-to-a-folder.md)   
  [Aide F1 du Gestionnaire de rapports](../report-manager-f1-help.md)  
   
   

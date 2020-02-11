@@ -1,5 +1,5 @@
 ---
-title: Signaler la Page d’historique (Gestionnaire de rapports) | Microsoft Docs
+title: Page historique de rapport (Gestionnaire de rapports) | Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104478"
 ---
 # <a name="report-history-page-report-manager"></a>Page Historique de rapport (Gestionnaire de rapports)
@@ -39,7 +39,7 @@ Vous pouvez cliquer sur un instantané d'historique de rapport pour l'afficher. 
   
 2.  Pointez sur le rapport et cliquez sur la flèche déroulante.  
   
-3.  Dans le menu déroulant, cliquez sur **Afficher l'historique du rapport**.  
+3.  Dans le menu déroulant, cliquez sur **Afficher l’historique du rapport**.  
   
 ## <a name="options"></a>Options  
  **Supprimer**  
@@ -55,8 +55,8 @@ Vous pouvez cliquer sur un instantané d'historique de rapport pour l'afficher. 
  Affiche la taille de la définition de rapport et des données contenues dans le rapport. Cette valeur indique la quantité d'espace utilisée par la définition de rapport et les données dans la base de données du serveur de rapports. La taille du rapport rendu, qui comprend la mise en forme, est plus volumineuse. La taille totale, indiquée entre parenthèses, correspond à la taille de tous les instantanés de l'historique de rapport du rapport actif.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher ou supprimer l’historique de rapport &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
+ [Afficher ou supprimer l’historique de rapport &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
- [Page de propriétés Options d’instantanés &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)
+ [Page Propriétés générales, rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Aide (F1) Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Page de propriétés options d’instantané &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

@@ -16,14 +16,14 @@ ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40fe9d23f14d4a7af80fe31a418cccf7133b7252
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067420"
 ---
 # <a name="data-buffer-length"></a>Longueur du tampon de données
-L’application transmet la longueur d’octet de la mémoire tampon de données pour le pilote dans un argument nommé *BufferLength* ou un nom similaire. Par exemple, dans l’exemple suivant appel à **SQLBindCol**, l’application spécifie la longueur de la *ValuePtr* tampon (**sizeof (***ValuePtr***)** ):  
+L’application transmet la longueur d’octet de la mémoire tampon de données au pilote dans un argument nommé *BufferLength* ou un nom similaire. Par exemple, dans l’appel suivant à **SQLBindCol**, l’application spécifie la longueur de la mémoire tampon *ValuePtr* (**sizeof (***ValuePtr***)**) :  
   
 ```  
 SQLCHAR      ValuePtr[50];  
@@ -31,17 +31,17 @@ SQLINTEGER   ValueLenOrInd;
 SQLBindCol(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);  
 ```  
   
- Un pilote retournera toujours le nombre d’octets, pas le nombre de caractères, dans l’argument de longueur de mémoire tampon de n’importe quelle fonction qui a un argument de chaîne de sortie.  
+ Un pilote retourne toujours le nombre d’octets, et non le nombre de caractères, dans l’argument de longueur de la mémoire tampon de toute fonction ayant un argument de chaîne de sortie.  
   
- Longueurs de mémoire tampon de données sont uniquement requises pour les mémoires tampons de sortie ; le pilote les utilise pour éviter d’écrire au-delà de la fin de la mémoire tampon. Toutefois, le pilote vérifie la longueur de mémoire tampon de données uniquement lorsque la mémoire tampon contient des données de longueur variable, telles que les données binaires ou caractères. Si la mémoire tampon contient des données de longueur fixe, comme une structure entier ou une date, le pilote ignore la longueur de mémoire tampon de données et suppose que la mémoire tampon est suffisamment grande pour contenir les données ; Autrement dit, elle tronque jamais les données de longueur fixe. Par conséquent, il est important pour l’application allouer un tampon assez grand pour les données de longueur fixe.  
+ Les longueurs de mémoire tampon de données sont requises uniquement pour les mémoires tampons de sortie. le pilote les utilise pour éviter d’écrire au-delà de la fin de la mémoire tampon. Toutefois, le pilote vérifie la longueur de la mémoire tampon de données uniquement lorsque la mémoire tampon contient des données de longueur variable, telles que des données de type caractère ou binaire. Si la mémoire tampon contient des données de longueur fixe, telles qu’un entier ou une structure de date, le pilote ignore la longueur de la mémoire tampon des données et suppose que la mémoire tampon est suffisamment grande pour contenir les données ; autrement dit, il ne tronque jamais les données de longueur fixe. Il est donc important pour l’application d’allouer une mémoire tampon suffisamment importante pour les données de longueur fixe.  
   
- Lorsqu’une troncation des données non-sortie chaînes se produit (telles que le nom du curseur retourné pour **SQLGetCursorName**), la longueur retournée dans l’argument de longueur de mémoire tampon est le nombre maximal de caractères possible.  
+ Lorsqu’une troncation de chaînes de sortie non données se produit (par exemple, le nom de curseur renvoyé pour **SQLGetCursorName**), la longueur retournée dans l’argument de longueur de la mémoire tampon correspond à la longueur maximale de caractères possible.  
   
- Longueurs de mémoire tampon de données ne sont pas requis pour les mémoires tampons d’entrée, car le pilote n’écrit pas dans ces mémoires tampons.  
+ Les longueurs de mémoire tampon de données ne sont pas requises pour les mémoires tampons d’entrée, car le pilote n’écrit pas dans ces mémoires tampons.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
--   [À l’aide des valeurs de longueur / d’indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)  
+-   [Utilisation des valeurs de longueur/indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)  
   
 -   [Longueur des données, longueur de la mémoire tampon et troncation](../../../odbc/reference/develop-app/data-length-buffer-length-and-truncation.md)  
   

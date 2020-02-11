@@ -1,5 +1,5 @@
 ---
-title: Varier l’affichage des polygones, ligne et Point par des règles et des données analytiques (Générateur de rapports et SSRS) | Microsoft Docs
+title: Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104617"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Modifier l'affichage des polygones, des lignes et des points à l'aide de règles et de données analytiques (Générateur de rapports et SSRS)
@@ -100,15 +100,15 @@ ms.locfileid: "66104617"
 ##  <a name="Distribution"></a> Fonctionnement des options de distribution  
  Pour créer une distribution de valeurs, vous pouvez diviser vos données en plages. Vous spécifiez le type de distribution, le nombre de sous-plages et les valeurs de plage minimale et maximale.  
   
- Dans la liste suivante, supposez que vous avez trois éléments cartographiques et six valeurs analytiques connexes qui comprise entre 1 et 9999 avec les valeurs suivantes : 1, 10, 200, 2000, 4777, 8999.  
+ Dans la liste suivante, supposez que vous avez trois éléments cartographiques et six valeurs analytiques connexes qui varient de 1 à 9 999 avec les valeurs suivantes : 1, 10, 200, 2 000, 4 777, 8 999.  
   
--   **EqualInterval.** Créez des plages qui divisent les données en intervalles de plage égaux. Pour l'exemple, les trois plages seraient 0-2999, 3000-5999, 6000-8999. Sous-plage 1 : 1, 10, 200, 500. Sous-plage 2 : 4777. Sous-plage 3 : 8999. Cette méthode ne prend pas en considération la distribution des données. Les valeurs très élevées ou très basses peuvent dénaturer les résultats de distribution.  
+-   **EqualInterval.** Créez des plages qui divisent les données en intervalles de plage égaux. Pour l'exemple, les trois plages seraient 0-2999, 3000-5999, 6000-8999. Sous-plage 1 : 1, 10, 200, 500. Sous-plage 2 : 4777. Sous-plage 3 : 8999. Cette méthode ne prend pas en considération la distribution des données. Les valeurs très élevées ou très basses peuvent dénaturer les résultats de distribution.  
   
--   **EqualDistribution.** Créez des plages qui divisent les données de sorte que chaque plage ait un même nombre d'éléments. Dans l'exemple de données, les trois plages seraient 0-10, 11-500 et 501-8999. Sous-plage 1 : 1, 10. Sous-plage 2 : 200, 500. Sous-plage 3 : 4777, 8999. Cette méthode peut déformer la distribution en créant des divisions couvrant des plages très grandes ou très petites.  
+-   **EqualDistribution.** Créez des plages qui divisent les données de sorte que chaque plage ait un même nombre d'éléments. Dans l'exemple de données, les trois plages seraient 0-10, 11-500 et 501-8999. Sous-plage 1 : 1, 10. Sous-plage 2 : 200, 500. Sous-plage 3 : 4777, 8999. Cette méthode peut déformer la distribution en créant des divisions couvrant des plages très grandes ou très petites.  
   
 -   **Optimal.** Créez des plages qui ajustent automatiquement la distribution pour créer des sous-plages équilibrées. Le nombre de sous-plages est déterminé par l'algorithme.  
   
--   **Custom.** Spécifiez votre propre nombre de plages pour contrôler la distribution de valeurs. Dans l’exemple de données, vous pouvez spécifier 3 plages : 1-2, 3-8, 9.  
+-   **Custom.** Spécifiez votre propre nombre de plages pour contrôler la distribution de valeurs. Pour les données d'exemple, vous pouvez spécifier 3 plages : 1-2, 3-8, 9.  
   
  Les valeurs de distribution sont utilisées par les règles pour faire varier les valeurs d'affichage des éléments cartographiques.  
   

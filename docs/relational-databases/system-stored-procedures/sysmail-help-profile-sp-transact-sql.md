@@ -18,18 +18,18 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044499"
 ---
-# <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
+# <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Répertorie des informations sur un ou plusieurs profils de messagerie.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,11 +39,11 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id` Identificateur du profil pour retourner des informations pour. *profile_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @profile_id = ] profile_id`ID de profil pour lequel des informations doivent être retournées. *profile_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @profile_name = ] 'profile_name'` Le nom du profil pour retourner des informations pour. *nom_profil* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @profile_name = ] 'profile_name'`Nom du profil pour lequel des informations doivent être retournées. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -52,20 +52,20 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ||||  
 |-|-|-|  
 |Nom de la colonne|Type de données|Description|  
-|**profile_id**|**int**|L’id de profil pour le profil.|  
-|**name**|**sysname**|Le nom du profil pour le profil.|  
-|**description**|**nvarchar (256)**|La description du profil.|  
+|**profile_id**|**int**|ID de profil du profil.|  
+|**nomme**|**sysname**|Nom de profil du profil.|  
+|**description**|**nvarchar (256)**|Description du profil.|  
   
 ## <a name="remarks"></a>Notes  
- Lorsqu’un nom de profil ou un id de profil est spécifié, **sysmail_help_profile_sp** retourne des informations sur ce profil. Sinon, **sysmail_help_profile_sp** retourne des informations sur chacun des profils dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+ Lorsqu’un nom de profil ou un ID de profil est spécifié, **sysmail_help_profile_sp** retourne des informations sur ce profil. Dans le cas contraire, **sysmail_help_profile_sp** retourne des informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chaque profil de l’instance.  
   
- La procédure stockée **sysmail_help_profile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
+ La procédure stockée **sysmail_help_profile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- **A. Afficher tous les profils**  
+ **A. Affichage de tous les profils**  
   
  Cet exemple montre comment afficher tous les profils de l'instance.  
   
@@ -82,7 +82,7 @@ profile_id  name                          description
 57          AdventureWorks Operator       Operator mail profile.          
 ```  
   
- **B. Affichage d’un profil spécifique**  
+ **B. Affichage d'un profil spécifique**  
   
  Cet exemple montre comment afficher des informations pour le profil `AdventureWorks Administrator`.  
   
@@ -101,6 +101,6 @@ profile_id  name                          description
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

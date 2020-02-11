@@ -1,5 +1,5 @@
 ---
-title: 'Modifie le format de stockage pour les types xs : DateTime, xs : date et xs : Time | Microsoft Docs'
+title: 'Les modifications apportées au format de stockage pour les types xs : dateTime, XS : date et XS : Time | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096605"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Modifications du format de stockage pour les types xs:dateTime, xs:date et xs:time
@@ -29,7 +29,7 @@ ms.locfileid: "66096605"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- Le format de stockage dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour les types xs : DateTime, xs : date et xs : Time a été modifié pour prendre en charge les valeurs avec ou sans informations de fuseau horaire et pour permettre la conservation du fuseau horaire.  
+ Le format de stockage [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans pour les types xs : DateTime, XS : date et XS : Time a été modifié pour prendre en charge des valeurs avec ou sans informations de fuseau horaire et pour permettre la préservation du fuseau horaire.  
   
  Si une collection de schémas XML fait référence à l'un de ces types, les index XML sur toutes les colonnes associées à la collection seront désactivés après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous serez en mesure de les interroger en utilisant SELECT et/ou XQUERIES, mais l'index XML ne sera pas utilisé. Si une année négative est rencontrée, il en résultera une erreur d'exécution.  
   

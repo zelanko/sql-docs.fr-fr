@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d420e2dba1dfdb284b0002eca6d8408c4e019e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093077"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>Supprimer les instructions qui suppriment des objets système
@@ -32,7 +32,7 @@ ms.locfileid: "66093077"
  Supprimez toutes les instructions qui tentent d'éliminer des objets système de votre application. Modifiez vos applications pour révoquer ou refuser l'autorisation EXECUTE sur les objets système. Vous pouvez également utiliser l'outil Configuration de la surface d'exposition pour désactiver certains de ces objets. Par exemple, la procédure stockée étendue **xp_cmdshell** peut être désactivée ou activée à l'aide de l'outil SAC.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

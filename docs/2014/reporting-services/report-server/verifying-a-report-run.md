@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c11c57f7c5f67b2557f5637ad10658abc9f80606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103138"
 ---
 # <a name="verifying-a-report-run"></a>Vérification de l'exécution d'un rapport
@@ -40,7 +40,7 @@ ms.locfileid: "66103138"
   
 |Pour ce type de rapport|Les informations de date et d'heure se situent ici|Pour afficher ces informations, procédez comme suit|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Rapport s'exécutant en tant qu'instantané de rapport.|Dans la page Contenu. Pour plus d’informations, consultez [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md).|1) Localisez le dossier contenant le rapport.<br />2) Choisissez d’afficher le contenu du dossier en mode Détails.<br />(3) 3) Notez la date et l’heure dans le **quand exécuter** colonne.|  
+|Rapport s'exécutant en tant qu'instantané de rapport.|Dans la page Contenu. Pour plus d’informations, consultez [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md).|1) Localisez le dossier contenant le rapport.<br />2) Choisissez d’afficher le contenu du dossier en mode Détails.<br />3) 3) Notez la date et l’heure dans la colonne lors de l' **exécution** .|  
 |Instantané dans l'historique de rapport.|Dans la page des propriétés de l'historique. Pour plus d’informations, consultez [Page de propriétés Options d’instantanés &#40;Gestionnaire de rapports&#41;](../snapshot-options-properties-page-report-manager.md).|1) Ouvrez le rapport.<br />2) Cliquez sur la page **Propriétés** .<br />3) Cliquez sur l’onglet **Historique** .<br />4) Notez la date et l’heure figurant dans la colonne **Lors de l’exécution** .|  
 |Rapport mis en cache.|Dans la planification utilisée pour créer et actualiser le rapport mis en cache.|1) Ouvrez le rapport.<br />2) Cliquez sur la page **Propriétés** .<br />3) Cliquez sur l’onglet **Exécution** .<br />4) Ouvrez la planification.|  
   

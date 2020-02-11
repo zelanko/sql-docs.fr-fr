@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106137"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Créer un groupe de hiérarchies récursives (Générateur de rapports et SSRS)
@@ -50,13 +50,13 @@ ms.locfileid: "66106137"
     > [!NOTE]  
     >  Si vous ne voyez pas le volet Propriétés, cliquez sur **Propriétés** sous l’onglet **Affichage** .  
   
-2.  Dans le volet Propriétés, développez le `Padding` nœud, cliquez sur **gauche**et dans la liste déroulante, sélectionnez  **\<Expression... >** .  
+2.  Dans le volet Propriétés, développez `Padding` le nœud, cliquez sur **gauche**, puis dans la liste déroulante, sélectionnez ** \<expression... >**.  
   
 3.  Dans le volet Expression, tapez l'expression suivante :  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Les propriétés de remplissage nécessitent toutes une chaîne au format *nnyy*, où *nn* est un nombre et *yy* une unité de mesure. L'exemple d'expression génère une chaîne utilisant la fonction `Level` pour augmenter la taille du remplissage en fonction du niveau de récursivité. Ainsi, une ligne de niveau 1 implique un remplissage de 12 points (2 + (1\*10)) et une ligne de niveau 3 correspond à un remplissage de 32 points (2 + (3\*10)). Pour plus d’informations sur la `Level` de fonction, consultez [niveau](report-builder-functions-level-function.md).  
+     Les propriétés de remplissage nécessitent toutes une chaîne au format *nnyy*, où *nn* est un nombre et *yy* une unité de mesure. L'exemple d'expression génère une chaîne utilisant la fonction `Level` pour augmenter la taille du remplissage en fonction du niveau de récursivité. Ainsi, une ligne de niveau 1 implique un remplissage de 12 points (2 + (1\*10)) et une ligne de niveau 3 correspond à un remplissage de 32 points (2 + (3\*10)). Pour plus d’informations `Level` sur la fonction, consultez [niveau](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

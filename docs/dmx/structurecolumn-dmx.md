@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68065394"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
@@ -32,27 +32,27 @@ StructureColumn('structure column name')
  Nom d'une colonne de structure d'exploration de données de table imbriquée ou de cas.  
   
 ## <a name="result-type"></a>Type de résultat  
- Le type est retourné varie selon le type de la colonne qui est référencé dans le \<nom de colonne de structure > paramètre. Par exemple, si la colonne de structure d'exploration de données référencée contient une valeur scalaire, la fonction renvoie une valeur scalaire.  
+ Le type retourné dépend du type de la colonne référencée dans le \<paramètre nom de la colonne de structure>. Par exemple, si la colonne de structure d'exploration de données référencée contient une valeur scalaire, la fonction renvoie une valeur scalaire.  
   
  Si la colonne de structure d'exploration de données référencée est une table imbriquée, la fonction renvoie une valeur de table. La valeur de table retournée peut être utilisée dans la clause FROM d'une instruction sub-SELECT.  
   
 ## <a name="remarks"></a>Notes  
  Cette fonction est polymorphe et peut être utilisée n'importe où dans une instruction qui autorise des expressions, y compris une liste d'expressions SELECT, une expression de condition WHERE et une expression ORDER BY.  
   
- Le nom de la colonne dans la structure d’exploration de données est une valeur de chaîne et par conséquent doit être placée entre guillemets simples : par exemple, `StructureColumn('` **colonne 1**`')`. S'il y a plusieurs colonnes qui ont le même nom, le nom est résolu dans le contexte de l'instruction SELECT englobante.  
+ Le nom de la colonne dans la structure d’exploration de données est une valeur de chaîne et, par conséquent, doit être placé entre guillemets simples : par exemple, `StructureColumn('` **colonne 1**`')`. S'il y a plusieurs colonnes qui ont le même nom, le nom est résolu dans le contexte de l'instruction SELECT englobante.  
   
- Les résultats sont retournés à partir d’une requête en utilisant le **StructureColumn** (fonction) sont affectés par la présence de tous les filtres sur le modèle. Autrement dit, le filtre de modèle contrôle les cas inclus dans le modèle d'exploration de données. Par conséquent, une requête sur la colonne de structure retourne uniquement les cas qui sont utilisés dans le modèle d'exploration de données. Consultez la section Exemples de cette rubrique pour un exemple de code qui affiche l'effet des filtres de modèle d'exploration de données sur les tables de cas et une table imbriquée.  
+ Les résultats retournés à partir d’une requête à l’aide de la fonction **StructureColumn** sont affectés par la présence de filtres sur le modèle. Autrement dit, le filtre de modèle contrôle les cas inclus dans le modèle d'exploration de données. Par conséquent, une requête sur la colonne de structure retourne uniquement les cas qui sont utilisés dans le modèle d'exploration de données. Consultez la section Exemples de cette rubrique pour un exemple de code qui affiche l'effet des filtres de modèle d'exploration de données sur les tables de cas et une table imbriquée.  
   
- Pour plus d’informations sur l’utilisation de cette fonction dans une instruction DMX SELECT, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) ou [SELECT FROM &#60;structure&#62;. CAS](../dmx/select-from-structure-cases.md).  
+ Pour plus d’informations sur l’utilisation de cette fonction dans une instruction DMX SELECT, consultez [SELECT FROM &#60;model&#62;. Les cas &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) ou [SELECT dans &#60;&#62; de structure. CAS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>Messages d'erreur  
  L'erreur de sécurité suivante est déclenchée si l'utilisateur ne dispose pas d'autorisations d'extraction sur la structure d'exploration de données parent :  
   
- Le ' % {utilisateur /}' utilisateur ne dispose pas d’autorisation d’extraire la structure d’exploration de données parente du ' % {modèle /}' modèle d’exploration.  
+ L’utilisateur'% {User/} 'n’a pas l’autorisation d’extraire la structure d’exploration de données parente du modèle d’exploration de données'% {model/} '.  
   
  Le message d'erreur suivant est généré si un nom de colonne de structure non valide est spécifié :  
   
- Le ' % {structure-column-name /}' colonne de structure d’exploration de données est introuvable dans le ' % {structure /}' parent de structure d’exploration de données dans le contexte actuel (ligne % {ligne /}, colonne % {colonne /}).  
+ La colonne de structure d’exploration de données'% {Column-Name/} 'est introuvable dans la structure d’exploration de données parente'% {structure/} 'dans le contexte actuel (ligne% {Line/}, colonne% {column/}).  
   
 ## <a name="examples"></a>Exemples  
  Nous utiliserons la structure d'exploration de données suivante pour ces exemples. Notez que la structure d'exploration de données contient deux colonnes de table imbriquée, `Products` et `Hobbies`. La table imbriquée dans la colonne `Hobbies` à une colonne unique utilisée comme clé pour la table imbriquée. La table imbriquée dans la colonne `Products` est une table imbriquée complexe qui possède à la fois une colonne clé et d'autres colonnes utilisées pour l'entrée. Les exemples suivants illustrent comment une structure d'exploration de données peut être conçue pour inclure plusieurs colonnes différentes, même si un modèle peut ne pas utiliser chaque colonne. Certaines de ces colonnes peuvent ne pas être utiles au niveau du modèle pour généraliser des modèles, mais peuvent être très utiles pour l'extraction.  
@@ -93,7 +93,7 @@ ProductName
 WITH FILTER(EXISTS (Products))  
 ```  
   
-### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>Exemple de requête 1 : Renvoi d’une colonne à partir de la Structure d’exploration de données  
+### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>Exemple de requête 1 : retourner une colonne de la structure d'exploration de données  
  L'exemple de requête suivant retourne les colonnes `CustomerName` et `Age`, définies comme faisant une partie intégrante du modèle d'exploration de données. Cependant, la requête retourne également la colonne `Age` qui appartient à la structure mais pas au modèle d'exploration de données.  
   
 ```  
@@ -103,7 +103,7 @@ WHERE Age > 30
   
  Notez que le filtrage de lignes pour restreindre les cas aux clients âgés de plus 30 ans a lieu au niveau du modèle. Par conséquent, cette expression ne retournerait pas les cas qui sont inclus dans les données de structure mais ne sont pas utilisés par le modèle. Comme la condition de filtre utilisée pour créer le modèle (`EXISTS (Products)`) restreint les cas uniquement aux clients qui ont acheté des produits, il peut y avoir des cas dans la structure qui ne sont pas retournés par cette requête.  
   
-### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Exemple de requête 2 : Appliquez un filtre à la colonne de Structure  
+### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Exemple de requête 2 : application d'un filtre à la colonne de structure  
  L'exemple de requête suivant ne retourne pas que les colonnes du modèle `CustomerName` et `Age`, et le table imbriquée `Products`, mais il retourne aussi la valeur de la colonne `Quantity` dans la table imbriquée qui ne fait pas partie du modèle.  
   
 ```  
@@ -112,10 +112,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Notez que, dans cet exemple, un filtre est appliqué à la colonne de structure pour restreindre les cas aux clients dont l’occupation est 'architecte de' (`WHERE StructureColumn('Occupation') = 'Architect'`). Étant donné que la condition de filtre de modèle est toujours appliquée aux cas lorsque le modèle est créé, seuls les cas qui contiennent au moins une ligne éligible dans la table `Products` sont inclus dans les cas de modèles. Par conséquent, le filtre de la table imbriquée `Products` et le filtre sur le cas `('Occupation')` sont appliqués.  
+ Notez que, dans cet exemple, un filtre est appliqué à la colonne de structure pour limiter les cas aux clients dont l’occupation est « architecte`WHERE StructureColumn('Occupation') = 'Architect'`» (). Étant donné que la condition de filtre de modèle est toujours appliquée aux cas lorsque le modèle est créé, seuls les cas qui contiennent au moins une ligne éligible dans la table `Products` sont inclus dans les cas de modèles. Par conséquent, le filtre de la table imbriquée `Products` et le filtre sur le cas `('Occupation')` sont appliqués.  
   
-### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Exemple de requête 3 : Sélection de colonnes dans une Table imbriquée  
- L'exemple de requête ci-dessous retourne les noms des clients qui ont été utilisés comme cas d'apprentissage à partir du modèle. Pour chaque client, la requête retourne également une table imbriquée qui contient les détails d'achat. Bien que le modèle inclut la `ProductName` colonne, le modèle n’utilise pas la valeur de la `ProductName` colonne. Le modèle vérifie seulement si le produit a été acheté normaux (`NOT``OnSale`) prix. Cette requête retourne non seulement le nom du produit mais aussi la quantité achetée, qui n'est pas incluse dans le modèle.  
+### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Exemple de requête 3 : sélection de colonnes dans une table imbriquée  
+ L'exemple de requête ci-dessous retourne les noms des clients qui ont été utilisés comme cas d'apprentissage à partir du modèle. Pour chaque client, la requête retourne également une table imbriquée qui contient les détails d'achat. Bien que le modèle comprenne `ProductName` la colonne, le modèle n’utilise pas la valeur de `ProductName` la colonne. Le modèle vérifie uniquement si le produit a été acheté au tarif`NOT``OnSale`normal (). Cette requête retourne non seulement le nom du produit mais aussi la quantité achetée, qui n'est pas incluse dans le modèle.  
   
 ```  
 SELECT CustomerName,    
@@ -125,7 +125,7 @@ FROM MyModel.CASES
   
  Notez que vous ne pouvez pas retourner la colonne `ProductName` ou la colonne `Quantity` sauf si l'extraction est activée sur le modèle d'exploration de données.  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Exemple de requête 4 : Filtrer sur et retourner les colonnes de Table imbriquée  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Exemple de requête 4 : filtrer sur et retourner les colonnes dans une table imbriquée  
  L'exemple de requête suivant retourne les colonnes de cas et de table imbriquée inclus dans la structure d'exploration de données mais pas dans le modèle. Le modèle a déjà fait l'objet d'un filtre sur la présence de produits `OnSale`, mais cette requête ajoute un filtre sur la colonne de structure d'exploration de données, `Quantity` :  
   
 ```  
@@ -136,8 +136,8 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

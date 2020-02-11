@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106049"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Afficher des étiquettes de points de données à l'extérieur d'un graphique à secteurs (Générateur de rapports et SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66106049"
   
 5.  Affectez à la propriété **PieLabelStyle** la valeur **Extérieur**.  
   
-6.  Définir le `PieLineColor` propriété **noir**. La propriété PieLineColor définit les lignes de légende de chaque étiquette de point de données.  
+6.  Affectez `PieLineColor` la valeur **Black**à la propriété. La propriété PieLineColor définit les lignes de légende de chaque étiquette de point de données.  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>Pour empêcher les étiquettes qui se chevauchent de s'afficher à l'extérieur d'un graphique à secteurs  
   

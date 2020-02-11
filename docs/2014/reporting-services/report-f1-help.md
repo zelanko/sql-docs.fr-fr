@@ -1,5 +1,5 @@
 ---
-title: Signaler la touche F1 | Microsoft Docs
+title: Aide F1 sur les rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1da03094a3c01d3d0c3c7aab3a277be8ae83a6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104589"
 ---
 # <a name="report-f1-help"></a>Aide F1 sur les rapports

@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8894f24743fd08b1b16dd97c238c2dcc0cbfa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097652"
 ---
-# <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Propriété IsWebServiceEnabled (WMI MSReportServer_ConfigurationSetting)
-  Indique si le service Web Report Server est activé. En lecture seule.  
+# <a name="iswebserviceenabled-property-wmi-msreportserver_configurationsetting"></a>Propriété IsWebServiceEnabled (WMI MSReportServer_ConfigurationSetting)
+  Indique si le service Web Report Server est activé. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,8 +44,8 @@ public boolean IsWebServiceEnabled;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

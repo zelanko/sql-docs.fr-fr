@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des fonctionnalités | Microsoft Docs
+title: Sélectionner les fonctionnalités | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c9ebe68f92a652e8f713ca73dedce6b54443c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092364"
 ---
-# <a name="select-features"></a>Sélectionner les composants
+# <a name="select-features"></a>Sélectionner les fonctionnalités
   Utilisez la page Sélection de composant pour sélectionner les composants et fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à mettre à jour.  
   
 ## <a name="options"></a>Options  

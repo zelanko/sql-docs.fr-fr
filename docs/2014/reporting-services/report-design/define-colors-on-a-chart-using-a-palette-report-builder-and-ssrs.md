@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106080"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Définir les couleurs d'un graphique à l'aide d'une palette (Générateur de rapports et SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106080"
   
 2.  Dans l'aire de conception, cliquez sur le graphique. Les propriétés de l'objet graphique sont affichées dans le volet Propriétés.  
   
-3.  Dans le **graphique** section, pour le `Palette` propriété, sélectionnez **personnalisé**.  
+3.  Dans la section **graphique** , pour la `Palette` propriété, sélectionnez **personnalisé**.  
   
 4.  Dans la propriété CustomPaletteColors, cliquez sur le bouton Modifier la collection ( **...** ). L' **Éditeur de collection ReportColorExpression** s'ouvre.  
   

@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32176543c121e2559ab659030714924e7d23e1b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100100"
 ---
 # <a name="report-designer-f1-help"></a>Aide sur le Concepteur de rapports via la touche F1
-  Cette section fournit la touche F1 pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Assistants Concepteur de rapports, des vues et des boîtes de dialogue. Vous pouvez également ouvrir l'aide via la touche F1 lors de l'utilisation d'une boîte de dialogue en appuyant sur F1 ou en cliquant sur le bouton Aide affiché dans la boîte de dialogue.  
+  Cette section fournit de l’aide via [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la touche F1 pour les assistants, les affichages et les boîtes de dialogue de concepteur de rapports. Vous pouvez également ouvrir l'aide via la touche F1 lors de l'utilisation d'une boîte de dialogue en appuyant sur F1 ou en cliquant sur le bouton Aide affiché dans la boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Références relatives aux fonctionnalités &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   
+ [Référence des fonctionnalités &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   
  [Rapports Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Définir les Options de traitement (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
+title: Définir les options de traitement (Reporting Services en mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d64015e0b1756033f3a3a0b7caf90262d7d43f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101334"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Définir les options de traitement (Reporting Services en mode intégré SharePoint)
@@ -30,27 +30,28 @@ ms.locfileid: "66101334"
 -   L'historique de rapport est un ensemble de copies d'un rapport ayant fait l'objet d'une exécution précédente. Vous pouvez utiliser l'historique de rapport pour conserver un enregistrement d'un rapport dans le temps. L'historique de rapport ne convient pas aux rapports contenant des données confidentielles ou des données personnelles. Pour cette raison, l'historique de rapport peut inclure uniquement les rapports qui interrogent une source de données à l'aide d'un ensemble unique d'informations d'identification (soit stockées, soit utilisées pour l'exécution de rapport sans assistance) qui sont mises à la disposition de tous les utilisateurs qui exécutent un rapport.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] avec SharePoint utilise les fonctionnalités de gestion du contenu extrait et archivé de SharePoint pour enregistrer les mises à jour des types de contenu de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Cela inclut la création d'instantanés de rapports. Par conséquent, si vous avez activé le contrôle de version sur une bibliothèque de documents, vous verrez la version actualisée du rapport lorsqu'une nouvelle capture instantanée d'historique de rapport est créée. Il s'agit d'un effet secondaire de la mise à jour des captures d'instantanés. Lorsqu'un instantané est mis à jour, la propriété LastExecution du rapport est modifiée, ce qui modifie la version du rapport.  
+    >  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] avec SharePoint utilise les fonctionnalités de gestion du contenu extrait et archivé de SharePoint pour enregistrer les mises à jour des types de contenu de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Cela inclut la création d'instantanés de rapports. Par conséquent, si vous avez activé le contrôle de version sur une bibliothèque de documents, vous verrez la version actualisée du rapport lorsqu'une nouvelle capture instantanée d'historique de rapport est créée. Il s'agit d'un effet secondaire de la mise à jour des captures d'instantanés. Lorsqu'un instantané est mis à jour, la propriété LastExecution du rapport est modifiée, ce qui modifie la version du rapport.  
   
 -   Vous pouvez spécifier des valeurs de délai d'attente pour fixer des limites à l'utilisation des ressources système.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Mode SharePoint|  
   
  **Dans cette rubrique :**  
   
--   [Pour définir les options d'actualisation des données](#bkmk_set_data_refresh)  
+-   [Pour définir les options d’actualisation des données](#bkmk_set_data_refresh)  
   
--   [Pour définir les options de mise en cache de rapport](#bkmk_set_report_caching)  
+-   [Pour définir les options de mise en cache d’un rapport](#bkmk_set_report_caching)  
   
--   [Pour définir des délais d'expiration de traitement](#bkmk_set_processing)  
+-   [Pour définir des valeurs de délai d’attente de traitement](#bkmk_set_processing)  
   
--   [Pour définir les options et limites de l'historique de rapport](#bkmk_set_report_history)  
+-   [Pour définir les options et les limites de l’historique de rapport](#bkmk_set_report_history)  
   
--   [Définir le délai d'attente de base de données](#bkmk_set_database_timeout)  
+-   [Définir le délai d’expiration de base de données](#bkmk_set_database_timeout)  
   
-##  <a name="bkmk_set_data_refresh"></a> Pour définir les options d'actualisation des données  
+##  <a name="bkmk_set_data_refresh"></a>Pour définir les options d’actualisation des données  
   
 1.  Pointez vers un rapport de la bibliothèque.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "66101334"
   
 7.  Dans **Options d'instantanés des données**, sélectionnez **Créer ou mettre à jour l'instantané lorsque cette page est enregistrée** si vous souhaitez créer immédiatement les données d'instantané à utiliser avec le rapport sans attendre le traitement planifié des données.  
   
-##  <a name="bkmk_set_report_caching"></a> Pour définir les options de mise en cache de rapport  
+##  <a name="bkmk_set_report_caching"></a>Pour définir les options de mise en cache d’un rapport  
   
 1.  Pointez vers un rapport de la bibliothèque.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "66101334"
   
     -   Créez une planification personnalisée pour effacer le cache à un instant que vous spécifiez.  
   
-##  <a name="bkmk_set_processing"></a> Pour définir des délais d'expiration de traitement  
+##  <a name="bkmk_set_processing"></a>Pour définir des valeurs de délai d’attente de traitement  
   
 1.  Pointez vers un rapport de la bibliothèque.  
   
@@ -90,7 +91,7 @@ ms.locfileid: "66101334"
   
 3.  Dans **Délai de traitement**, sélectionnez **Utiliser le paramètre par défaut de site** si vous voulez utiliser la valeur spécifiée au niveau du serveur de rapports. Sinon, sélectionnez **Ne pas spécifier de délai d’exécution lors du traitement du rapport** ou **Limiter le traitement des rapports (en secondes)** pour remplacer cette valeur par un délai d’expiration différent ou par aucun délai d’expiration.  
   
-##  <a name="bkmk_set_report_history"></a> Pour définir les options et limites de l'historique de rapport  
+##  <a name="bkmk_set_report_history"></a>Pour définir les options et les limites de l’historique de rapport  
   
 1.  Pointez vers un rapport de la bibliothèque.  
   
@@ -100,12 +101,12 @@ ms.locfileid: "66101334"
   
 4.  Dans **Limites des instantanés d'historique**, sélectionnez **Utiliser le paramètre par défaut de site** si vous voulez utiliser la valeur spécifiée au niveau du serveur de rapports. Sinon, sélectionnez **Ne pas limiter le nombre d'instantanés** ou **Limiter le nombre d'instantanés à** pour spécifier une valeur personnalisée.  
   
-##  <a name="bkmk_set_database_timeout"></a> Définir le délai d'attente de base de données  
+##  <a name="bkmk_set_database_timeout"></a>Définir le délai d’expiration de base de données  
   
 1.  Utilisez Windows PowerShell pour définir le délai d'attente de base de données sur un serveur de rapports SharePoint. Pour plus d’informations, consultez la section Obtenir et définir les propriétés de la base de données d’application Reporting Services de l’article [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement d'un rapport](report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d’un rapport](report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   

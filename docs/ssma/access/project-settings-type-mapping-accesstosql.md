@@ -1,5 +1,5 @@
 ---
-title: Paramètres du projet (mappage de Type) (AccessToSQL) | Microsoft Docs
+title: Paramètres du projet (mappage de type) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,62 +17,62 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066657"
 ---
-# <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de Type) (AccessToSQL)
-Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour les objets de base de données individuelle. Pour plus d’informations, consultez [Source de mappage et les Types de données cible](mapping-source-and-target-data-types-accesstosql.md).  
+# <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de type) (AccessToSQL)
+Les paramètres de projet de mappage de type vous permettent de définir des mappages de types par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour des objets de base de données individuels. Pour plus d’informations, consultez [mappage des types de données source et cible](mapping-source-and-target-data-types-accesstosql.md).  
   
-Mappage de type est disponible dans le **paramètres du projet** et **par défaut des paramètres de projet** boîtes de dialogue :  
+Le mappage de type est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** :  
   
--   Utilisez le **paramètres du projet** boîte de dialogue pour définir les options de configuration pour le projet actuel. Pour accéder aux paramètres de mappage de type, sur le **outils** menu, sélectionnez **paramètres du projet**, puis cliquez sur **mappage de Type** dans le volet gauche.  
+-   Utilisez la boîte de dialogue **paramètres du projet** pour définir les options de configuration du projet actif. Pour accéder aux paramètres de mappage de type, dans le menu **Outils** , sélectionnez **paramètres du projet**, puis cliquez sur **mappage de type** dans le volet gauche.  
   
--   Utilisez le **par défaut des paramètres de projet** boîte de dialogue pour définir les options de configuration pour tous les projets. Pour accéder aux paramètres de mappage de type, sur le **outils** menu, sélectionnez **par défaut des paramètres de projet**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affiché / a été remplacée par  **Version cible de migration** liste déroulante, puis cliquez sur **le mappage de Type** dans le volet gauche.  
+-   Utilisez la boîte de dialogue **paramètres du projet par défaut** pour définir les options de configuration de tous les projets. Pour accéder aux paramètres de mappage de type, dans le menu **Outils** , sélectionnez **paramètres de projet par défaut**, sélectionnez le type de projet de migration pour lequel les paramètres doivent être affichés/Changed à partir de la liste déroulante de la **version cible** de la migration, puis cliquez sur **mappage de type** dans le volet gauche.  
   
 ## <a name="options"></a>Options  
 **Type de source**  
-Le type de données Access à mapper.  
+Type de données Access à mapper.  
   
 **Type de cible**  
-La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou type de données SQL Azure pour le type de données d’accès spécifié.  
+Type de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données cible ou SQL Azure pour le type de données Access spécifié.  
   
-Le tableau suivant présente le mappage par défaut entre les types de données source et cible.  
+Le tableau suivant montre le mappage par défaut entre les types de données source et cible.  
   
 |Type de données Access|Type de données de SQL Server|  
 |--------------------|------------------------|  
-|**binaire [\*... \*]**|**varbinary[\*]**|  
-|**boolean**|**bit**|  
-|**byte**|**tinyint**|  
+|**binaire [\*.. \*]**|**varbinary [\*]**|  
+|**expression**|**bit**|  
+|**poids**|**tinyint**|  
 |**currency**|**money**|  
-|**date**|**datetime**|  
-|**decimal**|**float**|  
-|**double**|**float**|  
+|**Date**|**DATETIME**|  
+|**sépar**|**float**|  
+|**Cliquer**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**entier**|**smallint**|  
 |**long**|**int**|  
-|**longbinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
-|**Mémo** : pour Access 97|**varchar(max)**|  
-|**single**|**real**|  
-|**texte [\*... \*]**|**nvarchar[\*]**|  
-|**texte [\*... \*]** : pour Access 97|**varchar[\*]**|  
+|**autorise**|**varbinary(max)**|  
+|**mémo**|**nvarchar(max)**|  
+|**MEMO** -pour Access 97|**varchar(max)**|  
+|**Single**|**real**|  
+|**texte [\*.. \*]**|**nvarchar [\*]**|  
+|**texte [\*.. ] \*** -pour Access 97|**VARCHAR [\*]**|  
   
 **Ajouter**  
 Cliquez pour ajouter un type de données à la liste de mappage.  
   
-**Edition**  
-Cliquez pour modifier un type de données dans la liste de mappage.  
+**Modifier**  
+Cliquez pour modifier un type de données dans la liste mappage.  
   
-**Supprimer**  
-Cliquez pour supprimer le mappage de type de données sélectionnée dans la liste de mappage.  
+**Remove**  
+Cliquez pour supprimer le mappage de type de données sélectionné de la liste de mappage.  
   
 **Rétablir les valeurs par défaut**  
-Cliquez pour réinitialiser tous les mappages de type de données pour les valeurs par défaut SSMA.  
+Cliquez pour réinitialiser tous les mappages de type de données aux paramètres SSMA par défaut.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Mappage de types de données sources et cibles](mapping-source-and-target-data-types-accesstosql.md)  
-[Reference(Access) d’Interface utilisateur](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Référence de l’interface utilisateur (accès)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

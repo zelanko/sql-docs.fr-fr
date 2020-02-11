@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093112"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Supprimer les références aux procédures stockées système déconseillées
@@ -98,11 +98,11 @@ ms.locfileid: "66093112"
 |sp_addalias|Remplacez les alias par une combinaison de comptes d'utilisateurs et de rôles de base de données. Pour plus d'informations, consultez « CREATE USER (Transact-SQL) » et « CREATE ROLE (Transact-SQL) » dans la documentation en ligne de SQL Server. Supprimez les alias dans les bases de données mises à niveau à l'aide de sp_dropalias.|  
 |sp_addgroupsp_changegroup<br /><br /> sp_dropgroup<br /><br /> sp_helpgroup|Utilisez des rôles. Pour plus d'informations, consultez « Server-Level Roles » et « Database-Level Roles » dans la documentation en ligne de SQL Server.|  
   
-### <a name="undocmented-system-stored-procedures"></a>Procédures stockées système de Undocmented  
+### <a name="undocmented-system-stored-procedures"></a>Procédures stockées système Undocmented  
  Vous pouvez créer des procédures stockées CLR dotées de fonctionnalités équivalentes pour remplacer ces procédures stockées système non documentées. Pour plus d'informations, consultez la rubrique « Procédures stockées CLR » dans la documentation en ligne de SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

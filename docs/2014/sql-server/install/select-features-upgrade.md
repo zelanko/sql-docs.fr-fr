@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des fonctionnalités (mise à niveau) | Microsoft Docs
+title: Sélectionner les fonctionnalités (mise à niveau) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092360"
 ---
 # <a name="select-features-upgrade"></a>Sélection des fonctionnalités (mise à niveau)
@@ -26,7 +26,7 @@ ms.locfileid: "66092360"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Utilisez le Conseiller de mise à niveau pour préparer des mises à niveau](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
+ [Utiliser le conseiller de mise à niveau pour préparer les mises à niveau](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [Utiliser plusieurs versions et instances de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

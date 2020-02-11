@@ -1,5 +1,5 @@
 ---
-title: Rapport de journal d’exécution de serveur et vue ExecutionLog3 | Microsoft Docs
+title: Journal des exécutions du serveur de rapports et vue ExecutionLog3 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103472"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
@@ -30,7 +30,7 @@ ms.locfileid: "66103472"
   
  Le journal d'exécution des rapports est stocké dans la base de données du serveur de rapports nommée par défaut **ReportServer**. Les vues SQL fournissent les informations associées au journal d'exécution. Les vues « 2 » et « 3 » ont été ajoutées dans les dernières versions et contiennent de nouveaux champs ou des champs avec des noms plus conviviaux que dans les versions précédentes. Les anciennes vues sont toujours présentes dans le produit de sorte que les applications personnalisées qui dépendent d'elles ne sont pas impactées. Si vous n'avez pas de dépendance sur une vue plus ancienne, par exemple ExecutionLog, il est recommandé d'utiliser la vue la plus récente, soit ExecutionLog**3**.  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Paramètres de configuration d'un serveur de rapports en mode SharePoint](#bkmk_sharepoint)  
   
@@ -108,7 +108,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande. Si votre environnement inclut plusieurs serveurs de rapports, vous pouvez analyser la distribution InstanceName pour surveiller et déterminer si votre programme d'équilibrage de la charge réseau distribue les requêtes entre les différents serveurs de rapports comme prévu.|  
 |ItemPath|Chemin de stockage d'un rapport ou d'un élément de rapport|  
@@ -117,14 +117,14 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|Valeurs possibles :<br />**Interactive**<br />**Abonnement**<br /><br /> <br /><br /> L'analyse des données de journal filtrées par RequestType=Subscription et triées par TimeStart peut identifier des périodes d'utilisation importante des abonnements ; si vous le souhaitez, il est par la suite possible de modifier l'heure de certains abonnements aux rapports.|  
 |Format|Format de rendu.|  
 |Paramètres|Valeurs des paramètres utilisées pour une exécution de rapport.|  
-|ItemAction|Valeurs possibles :<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Exécuter**<br /><br /> **RenderEdit**|  
+|ItemAction|Valeurs possibles :<br /><br /> **Render**<br /><br /> **Trier**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Effectue**<br /><br /> **RenderEdit**|  
 |TimeStart|Heures de début et de fin qui indiquent la durée d'un traitement de rapport.|  
 |TimeEnd||  
 |TimeDataRetrieval|Nombre de millisecondes passées pour la récupération des données.|  
 |TimeProcessing|Nombre de millisecondes passées pour le traitement du rapport.|  
 |TimeRendering|Nombre de millisecondes passées pour le rendu du rapport.|  
-|`Source`|Source d'exécution du rapport. Valeurs possibles :<br /><br /> **Live**<br /><br /> **Cache**: Indique une exécution mise en cache, par exemple, jeu de données de requêtes ne sont pas exécutées en temps réel.<br /><br /> **Snapshot**<br /><br /> **Historique**<br /><br /> **Ad hoc** : Indique un rapport généré dynamiquement en fonction de modèle d’extraction ou un rapport du Générateur de rapports affiché en aperçu sur un client utilisant le serveur de rapports pour le traitement et de rendu.<br /><br /> **Session**: Indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> **RDCE**:  Indique une Report Definition Customization Extension. Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
-|État|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
+|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> **En direct**<br /><br /> **Cache**: indique une exécution mise en cache, par exemple, les requêtes de DataSet ne sont pas exécutées en direct.<br /><br /> **Instantané**<br /><br /> **History**<br /><br /> **Adhoc** : indique soit un rapport d’extraction basé sur un modèle de rapport généré dynamiquement, soit un rapport d’générateur de rapports qui est affiché en aperçu sur un client utilisant le serveur de rapports pour le traitement et le rendu.<br /><br /> **Session**: indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> **RDCE**: indique une extension de la personnalisation de la définition de rapport. Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
+|Statut|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
 |AdditionalInfo|Conteneur de propriétés XML contenant des informations supplémentaires sur l'exécution. Le contenu peut être différent pour chaque ligne.|  
@@ -222,13 +222,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- La section suivante décrit certaines des propriétés que s’affiche dans le champ AdditionalInfo :  
+ La section suivante décrit certaines des propriétés que vous verrez dans le champ AdditionalInfo :  
   
--   **ProcessingEngine**: 1=SQL Server 2005, 2=Nouveau moteur de traitement à la demande. Si la plupart de vos rapports affichent toujours la valeur 1, vous pouvez envisager de les reconcevoir afin qu'ils utilisent le nouveau moteur de traitement à la demande, plus efficace.  
+-   **ProcessingEngine**: 1 = SQL Server 2005, 2 = nouveau moteur de traitement à la demande. Si la plupart de vos rapports affichent toujours la valeur 1, vous pouvez envisager de les reconcevoir afin qu'ils utilisent le nouveau moteur de traitement à la demande, plus efficace.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: Nombre de millisecondes passées pour exécuter des opérations d'échelle dans le moteur de traitement. La valeur 0 indique qu'aucune période de temps supplémentaire n'a été passée sur les opérations d'échelle et indique également que la demande ne présente pas une mémoire insuffisante.  
+-   **ScalabilityTime**: nombre de millisecondes consacrées à l’exécution d’opérations liées à l’échelle dans le moteur de traitement. La valeur 0 indique qu'aucune période de temps supplémentaire n'a été passée sur les opérations d'échelle et indique également que la demande ne présente pas une mémoire insuffisante.  
   
     ```  
     <ScalabilityTime>  
@@ -236,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: Estimation de la quantité maximale de mémoire, en kilo-octets, consommée par chaque composant pendant une requête particulière.  
+-   **EstimatedMemoryUsageKB**: estimation de la quantité de mémoire maximale, en kilo-octets, consommée par chaque composant pendant une requête particulière.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -244,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: Types d'extensions de données ou de sources de données utilisées dans le rapport. Le nombre représente le nombre d'occurrences de la source de données spécifique.  
+-   **DataExtension**: types d’extensions de données ou de sources de données utilisés dans le rapport. Le nombre représente le nombre d'occurrences de la source de données spécifique.  
   
     ```  
     <DataExtension>  
@@ -252,7 +252,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**la valeur est exprimée en millisecondes. Ces données peuvent être utilisées pour diagnostiquer les problèmes de performances. Le temps nécessaire pour récupérer des images d'un serveur web externe peut ralentir l'exécution globale des rapports. Ajout dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages** La valeur est dans millisecondes. Ces données peuvent être utilisées pour diagnostiquer les problèmes de performances. Le temps nécessaire pour récupérer des images d'un serveur web externe peut ralentir l'exécution globale des rapports. Ajouté dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  
@@ -262,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Connexions**: Une structure à plusieurs niveaux. Ajout dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Connexions**: structure à plusieurs niveaux. Ajouté dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  
@@ -307,7 +307,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
 |ReportPath|Structure du chemin d'accès au rapport.  Par exemple, pour un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, le ReportPath sera « /test ».<br /><br /> Pour un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, le ReportPath sera « /Samples/test/ »|  
@@ -322,8 +322,8 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes consacré à la récupération des données, au traitement du rapport et au rendu du rapport.|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|Source de l'exécution du rapport (1=Direct, 2=Cache, 3=Instantané, 4=Historique).|  
-|État|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
+|Source|Source de l'exécution du rapport (1=Direct, 2=Cache, 3=Instantané, 4=Historique).|  
+|Statut|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
 |AdditionalInfo|Conteneur de propriétés XML contenant des informations supplémentaires sur l'exécution.|  
@@ -339,12 +339,12 @@ select * from ExecutionLog order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
 |ReportID|Identificateur du rapport.|  
 |UserName|Identificateur de l'utilisateur.|  
-|RequestType|Valeurs possibles :<br /><br /> True = Demande d'abonnement<br /><br /> False= Demande interactive|  
+|RequestType|Valeurs possibles :<br /><br /> True = Demande d'abonnement<br /><br /> False= Demande interactive|  
 |Format|Format de rendu.|  
 |Paramètres|Valeurs des paramètres utilisées pour une exécution de rapport.|  
 |TimeStart|Heures de début et de fin qui indiquent la durée d'un traitement de rapport.|  
@@ -352,8 +352,8 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes consacré à la récupération des données, au traitement du rapport et au rendu du rapport.|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|Source d'exécution du rapport. Valeurs possibles : (1 = actif, 2 = Cache, 3 = instantané, 4 = historique, 5 = Adhoc, 6 = Session, 7 = RDCE).|  
-|État|Valeurs possibles : rsSuccess, rsProcessingAborted, ou un code d'erreur. Si plusieurs erreurs se produisent, seule la première erreur est enregistrée.|  
+|Source|Source d'exécution du rapport. Valeurs possibles : (1=Actif, 2=Cache, 3=Instantané, 4=Historique, 5=Adhoc, 6=Session, 7=RDCE).|  
+|Statut|Valeurs possibles : rsSuccess, rsProcessingAborted, ou un code d'erreur. Si plusieurs erreurs se produisent, seule la première erreur est enregistrée.|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
   

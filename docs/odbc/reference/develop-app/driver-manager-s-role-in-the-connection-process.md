@@ -1,5 +1,5 @@
 ---
-title: Gestionnaire de pilotes&#39;rôle s dans le processus de connexion | Microsoft Docs
+title: Rôle&#39;s du gestionnaire de pilotes dans le processus de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,27 +16,27 @@ ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046944"
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>Gestionnaire de pilotes&#39;rôle s dans le processus de connexion
-N’oubliez pas que les applications n’appellent pas directement les fonctions de pilote. Au lieu de cela, ils appellent des fonctions de gestionnaire de pilotes portant le même nom et le Gestionnaire de pilotes appelle les fonctions de pilote. En règle générale, cela se produit presque immédiatement. Par exemple, l’application appelle **SQLExecute** dans le Gestionnaire de pilotes et après quelques vérifications des erreurs, le Gestionnaire de pilotes appelle **SQLExecute** dans le pilote.  
+# <a name="driver-manager39s-role-in-the-connection-process"></a>Rôle&#39;s du gestionnaire de pilotes dans le processus de connexion
+N’oubliez pas que les applications n’appellent pas directement les fonctions des pilotes. Au lieu de cela, ils appellent les fonctions du gestionnaire de pilotes avec le même nom et le gestionnaire de pilotes appelle les fonctions du pilote. En règle générale, cela se produit presque immédiatement. Par exemple, l’application appelle **SQLExecute** dans le gestionnaire de pilotes et après quelques vérifications d’erreurs, le gestionnaire de pilotes appelle **SQLExecute** dans le pilote.  
   
- Le processus de connexion est différent. Lorsque l’application appelle **SQLAllocHandle** avec les options de SQL_HANDLE_ENV et SQL_HANDLE_DBC, la fonction alloue des handles uniquement dans le Gestionnaire de pilotes. Le Gestionnaire de pilotes n’appelle pas cette fonction dans le pilote, car il ne sait pas quel pilote à appeler. De même, si l’application passe le handle d’une connexion non connecté à **SQLSetConnectAttr** ou **SQLGetConnectAttr**, seul le Gestionnaire de pilotes exécute la fonction. Il stocke ou obtient la valeur d’attribut à partir de sa connexion gérer et retourne SQLSTATE 08003 (connexion non ouverte) lors de l’obtention d’une valeur pour un attribut qui n’a pas été définie et pour quels ODBC ne définit pas de valeur par défaut.  
+ Le processus de connexion est différent. Lorsque l’application appelle **SQLAllocHandle** avec les options SQL_HANDLE_ENV et SQL_HANDLE_DBC, la fonction alloue des handles uniquement dans le gestionnaire de pilotes. Le gestionnaire de pilotes n’appelle pas cette fonction dans le pilote, car il ne sait pas quel pilote appeler. De même, si l’application transmet le descripteur d’une connexion non connectée à **SQLSetConnectAttr** ou **SQLGetConnectAttr**, seul le gestionnaire de pilotes exécute la fonction. Elle stocke ou obtient la valeur de l’attribut à partir de son descripteur de connexion et retourne SQLSTATE 08003 (connexion non ouverte) lors de l’obtention d’une valeur pour un attribut qui n’a pas été défini et pour laquelle ODBC ne définit pas de valeur par défaut.  
   
- Lorsque l’application appelle **SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**, le Gestionnaire de pilotes détermine tout d’abord le pilote à utiliser. Elle vérifie ensuite pour déterminer si un pilote est actuellement chargé sur la connexion :  
+ Lorsque l’application appelle **SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect**, le gestionnaire de pilotes détermine d’abord le pilote à utiliser. Il vérifie ensuite si un pilote est actuellement chargé sur la connexion :  
   
--   Si aucun pilote n’est chargé sur la connexion, le Gestionnaire de pilotes vérifie si le pilote spécifié est chargé sur une autre connexion dans le même environnement. Si le Gestionnaire de pilotes charge pas, le pilote sur la connexion et les appels **SQLAllocHandle** dans le pilote avec l’option de SQL_HANDLE_ENV.  
+-   Si aucun pilote n’est chargé sur la connexion, le gestionnaire de pilotes vérifie si le pilote spécifié est chargé sur une autre connexion dans le même environnement. Si ce n’est pas le cas, le gestionnaire de pilotes charge le pilote sur la connexion et appelle **SQLAllocHandle** dans le pilote avec l’option SQL_HANDLE_ENV.  
   
-     Le Gestionnaire de pilotes appelle ensuite **SQLAllocHandle** dans le pilote avec l’option de SQL_HANDLE_DBC, déterminant si elle a été simplement chargé. Si l’application la valeur des attributs de connexion, le Gestionnaire de pilotes appelle **SQLSetConnectAttr** dans le pilote ; si une erreur se produit, fonction de connexion du Gestionnaire de pilotes retourne SQLSTATE IM006 (chauffeur  **SQLSetConnectAttr** a échoué). Enfin, le Gestionnaire de pilotes appelle la fonction de connexion dans le pilote.  
+     Le gestionnaire de pilotes appelle ensuite **SQLAllocHandle** dans le pilote avec l’option SQL_HANDLE_DBC, qu’il soit ou non chargé. Si l’application définit des attributs de connexion, le gestionnaire de pilotes appelle **SQLSetConnectAttr** dans le pilote. Si une erreur se produit, la fonction de connexion du gestionnaire de pilotes retourne SQLSTATE IM006 (échec **SQLSetConnectAttr** du pilote). Enfin, le gestionnaire de pilotes appelle la fonction de connexion dans le pilote.  
   
--   Si le pilote spécifié est chargé sur la connexion, le Gestionnaire de pilotes appelle uniquement la fonction de connexion dans le pilote. Dans ce cas, le pilote doit garantir que tous les attributs de connexion sur la connexion leurs paramètres actuels.  
+-   Si le pilote spécifié est chargé sur la connexion, le gestionnaire de pilotes appelle uniquement la fonction de connexion dans le pilote. Dans ce cas, le pilote doit s’assurer que tous les attributs de connexion de la connexion maintiennent leurs paramètres actuels.  
   
--   Si un autre pilote est chargé sur la connexion, le Gestionnaire de pilotes appelle **SQLFreeHandle** dans le pilote pour libérer la connexion. S’il n’y a aucune autre connexion qui utilisent le pilote, le Gestionnaire de pilotes appelle **SQLFreeHandle** dans le pilote pour libérer de l’environnement et décharge le pilote. Le Gestionnaire de pilotes puis effectue les mêmes opérations que lorsqu’un pilote n’est pas chargé sur la connexion.  
+-   Si un autre pilote est chargé sur la connexion, le gestionnaire de pilotes appelle **SQLFreeHandle** dans le pilote pour libérer la connexion. S’il n’existe aucune autre connexion qui utilise le pilote, le gestionnaire de pilotes appelle **SQLFreeHandle** dans le pilote pour libérer l’environnement et décharge le pilote. Le gestionnaire de pilotes effectue ensuite les mêmes opérations que lorsqu’un pilote n’est pas chargé sur la connexion.  
   
- Le Gestionnaire de pilotes se verrouille le handle d’environnement (*henv*) avant d’appeler un chauffeur **SQLAllocHandle** et **SQLFreeHandle** lorsque *HandleType* est défini sur **SQL_HANDLE_DBC**.  
+ Le gestionnaire de pilotes verrouille le descripteur d’environnement (*henv*) avant d’appeler les appels **SQLAllocHandle** et **SQLFreeHandle** d’un pilote lorsque *comme HandleType* est défini sur **SQL_HANDLE_DBC**.  
   
- Lorsque l’application appelle **SQLDisconnect**, les appels du Gestionnaire de pilotes **SQLDisconnect** dans le pilote. Toutefois, elle laisse le pilote chargé dans le cas où l’application se reconnecte au pilote. Lorsque l’application appelle **SQLFreeHandle** avec l’option de SQL_HANDLE_DBC, appelle le Gestionnaire de pilotes **SQLFreeHandle** dans le pilote. Si le pilote n’est pas utilisé par les autres connexions, le Gestionnaire de pilotes appelle ensuite **SQLFreeHandle** dans le pilote avec la SQL_HANDLE_ENV option et décharge le pilote.
+ Lorsque l’application appelle **SQLDisconnect**, le gestionnaire de pilotes appelle **SQLDisconnect** dans le pilote. Toutefois, il laisse le pilote chargé au cas où l’application se reconnecte au pilote. Lorsque l’application appelle **SQLFreeHandle** avec l’option SQL_HANDLE_DBC, le gestionnaire de pilotes appelle **SQLFreeHandle** dans le pilote. Si le pilote n’est pas utilisé par d’autres connexions, le gestionnaire de pilotes appelle **SQLFreeHandle** dans le pilote avec l’option SQL_HANDLE_ENV et décharge le pilote.

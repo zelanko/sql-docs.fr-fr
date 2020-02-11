@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 747a811d1d355bd182b18f4c29f2d1bf9354fa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103025"
 ---
 # <a name="windows-application-log"></a>Journal des applications Windows
@@ -41,8 +41,8 @@ ms.locfileid: "66103025"
   
 |Type d'événement|Description|  
 |----------------|-----------------|  
-|Informations|Événement décrivant une opération réussie (par exemple, le démarrage des services du serveur de rapports).|  
-|Warning|Événement indiquant un problème potentiel (par exemple, un faible espace disque).|  
+|Information|Événement décrivant une opération réussie (par exemple, le démarrage des services du serveur de rapports).|  
+|Avertissement|Événement indiquant un problème potentiel (par exemple, un faible espace disque).|  
 |Error|Événement décrivant un problème significatif (par exemple, le service n'a pas démarré).|  
 |Audit des succès|Événement de sécurité décrivant une ouverture de session réussie.|  
 |Audit des échecs|Événement consigné en journal en cas d'échec d'une tentative d'ouverture de session.|  

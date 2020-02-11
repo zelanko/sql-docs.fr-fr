@@ -1,5 +1,5 @@
 ---
-title: Date, Time et Timestamp de séquences d’échappement | Microsoft Docs
+title: Séquences d’échappement de date, d’heure et d’horodatage | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a6d7a35d0697d1dcbda8f9f64b7ac5a32307d5c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051139"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Date, heure et horodatage, séquences d’échappement
-ODBC définit des séquences d’échappement pour les littéraux de date, heure et timestamp. La syntaxe de ces séquences d’échappement est comme suit :  
+ODBC définit des séquences d’échappement pour les littéraux de date, d’heure et d’horodatage. La syntaxe de ces séquences d’échappement est la suivante :  
   
 ```  
   
@@ -53,4 +53,4 @@ timestamp-separator ::=
 ```  
   
 ## <a name="remarks"></a>Notes  
- Les séquences d’échappement des littéraux de date, time et timestamp sont pris en charge si les types de données date, time et timestamp sont pris en charge par la source de données. Une application doit appeler **SQLGetTypeInfo** pour déterminer si ces types de données sont pris en charge.
+ Les séquences d’échappement des littéraux de date, d’heure et d’horodatage sont prises en charge si les types de données de date, d’heure et d’horodatage sont pris en charge par la source de données. Une application doit appeler **SQLGetTypeInfo** pour déterminer si ces types de données sont pris en charge.

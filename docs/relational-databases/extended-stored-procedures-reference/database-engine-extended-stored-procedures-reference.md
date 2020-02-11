@@ -13,19 +13,19 @@ ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064205"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>Procédures stockées étendues de moteur de base de données - Guide de référence
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
- L’API de procédure stockée étendue [!INCLUDE[msCoName](../../includes/msconame-md.md)], qui faisait partie des services ODS (Open Data Services), fournit une interface de programmation d’applications serveur pour étendre les fonctionnalités de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'API comprend des fonctions et des macros C et C++ utilisées pour créer des applications.  
+ L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] API de procédure stockée étendue, précédemment intégrée à Open Data Services, fournit une interface de programmation d’applications (API) basée [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur pour étendre les fonctionnalités. L'API comprend des fonctions et des macros C et C++ utilisées pour créer des applications.  
   
  Avec l'apparition de nouvelles technologies plus puissantes telles que l'intégration du CLR, les besoins en termes de procédures stockées étendues ont été en grande partie éliminés.  
   

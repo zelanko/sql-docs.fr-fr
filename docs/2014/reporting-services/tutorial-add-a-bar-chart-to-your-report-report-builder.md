@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099200"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)
   Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
   
 -   améliorer la lisibilité des noms de catégorie longs ;  
@@ -30,22 +30,22 @@ ms.locfileid: "66099200"
   
  ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
-##  <a name="BackToTop"></a> Ce que vous allez apprendre  
+##  <a name="BackToTop"></a>Ce que vous allez apprendre  
  Dans ce didacticiel, vous apprendrez à effectuer les tâches suivantes :  
   
-1.  [Créer un graphique à partir de l’Assistant graphique](#Chart)  
+1.  [Créer un graphique à partir de l'Assistant Graphique](#Chart)  
   
-2.  [Choisissez le Type de graphique](#ChartType)  
+2.  [Choisir le type de graphique](#ChartType)  
   
-3.  [Afficher toutes les valeurs de catégorie sur l’axe Vertical](#AllValues)  
+3.  [Afficher toutes les valeurs des catégories sur l'axe vertical](#AllValues)  
   
-4.  [Modifier l’affichage des noms sur l’axe Vertical](#Sort)  
+4.  [Modifier l'affichage des noms sur l'axe vertical](#Sort)  
   
 5.  [Déplacer la légende](#Legend)  
   
 6.  [Déplacer le titre du graphique](#ChartTitle)  
   
-7.  [Mettre en forme et étiqueter l’axe Horizontal](#Horizontal)  
+7.  [Mettre en forme et étiqueter l'axe horizontal](#Horizontal)  
   
 8.  [Ajouter un filtre pour afficher les cinq valeurs supérieures](#Filter)  
   
@@ -54,18 +54,18 @@ ms.locfileid: "66099200"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l'accès à un serveur de rapports, la création d'un dataset et le choix d'une source de données, consultez le premier didacticiel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, la création d’un dataset et le choix d’une source de données, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a> 1. Créer un rapport de graphique à partir de l'Assistant Graphique  
- À partir de la **mise en route** boîte de dialogue, créez un dataset incorporé, choisir une source de données partagée et créer un graphique à barres à l’aide de l’Assistant graphique.  
+##  <a name="Chart"></a>1. créer un rapport de graphique à partir de l’Assistant graphique  
+ Dans la boîte de dialogue **prise en main** , créez un dataset incorporé, choisissez une source de données partagée et créez un graphique à barres à l’aide de l’Assistant graphique.  
   
 > [!NOTE]  
->  Dans ce didacticiel, la requête contient les valeurs des données : elle n’a donc pas besoin d’une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
+>  Dans ce didacticiel, la requête contient les valeurs de données. Ainsi, aucune source de données externe n’est nécessaire. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
 #### <a name="to-create-a-new-chart-report"></a>Pour créer un rapport de graphique  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66099200"
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue ne pas s’affichent, cliquez sur le bouton Générateur de rapports, puis cliquez sur **New**.  
+    >  Si la boîte de dialogue **prise en main** ne s’affiche pas, cliquez sur le bouton Générateur de rapports, puis cliquez sur **nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66099200"
     > [!NOTE]  
     >  La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
+6.  Sur la page **créer une requête** , cliquez sur **modifier en tant que texte**.  
   
 7.  Collez la requête suivante dans le volet de requête :  
   
@@ -110,9 +110,9 @@ ms.locfileid: "66099200"
   
 8.  (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
   
-9. Cliquer sur **Suivant**.  
+9. Cliquez sur **Suivant**.  
   
-##  <a name="ChartType"></a> 2. Choisir le type de graphique  
+##  <a name="ChartType"></a>2. choisir le type de graphique  
  Vous avez le choix entre plusieurs types de graphiques prédéfinis.  
   
 #### <a name="to-add-a-column-chart"></a>Pour ajouter un histogramme  
@@ -121,7 +121,7 @@ ms.locfileid: "66099200"
   
 2.  Cliquez sur **Barre**, puis sur **Suivant**.  
   
-     Dans la page **Organiser les champs du graphique**, quatre champs se trouvent dans le volet **Champs disponibles** : FirstName, LastName, SalesYear2009 et SalesYear2008.  
+     Dans la page **organiser les champs du graphique** , il y a quatre champs dans le volet **champs disponibles** : FirstName, LastName, SalesYear2009 et SalesYear2008.  
   
 3.  Faites glisser LastName vers le volet Catégories.  
   
@@ -129,9 +129,9 @@ ms.locfileid: "66099200"
   
 5.  Faites glisser SalesYear2008 vers le volet valeurs sous SalesYear2009. SalesYear2008 représente le montant des ventes de chaque commercial pour l'année 2008.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
-7.  Sur le **choisir un style** page, dans le volet Styles, sélectionnez un style.  
+7.  Dans la page **choisir un style** , dans le volet styles, sélectionnez un style.  
   
      Un style spécifie un style de police, un jeu de couleurs et un style de bordure. Lorsque vous sélectionnez un style, le volet Aperçu affiche un aperçu du graphique avec ce style.  
   
@@ -145,27 +145,27 @@ ms.locfileid: "66099200"
   
  Le rapport affiche le graphique à barres des ventes de chaque commercial pour les années 2008 et 2009. La longueur de la barre correspond au total des ventes.  
   
-##  <a name="AllValues"></a> 3. Modifier l’affichage des noms sur l’axe Vertical  
+##  <a name="AllValues"></a>3. modifier l’affichage des noms sur l’axe vertical  
  Par défaut, seules quelques-unes des valeurs de l'axe vertical s'affichent. Vous pouvez modifier le graphique pour afficher toutes les catégories.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>Pour afficher tous les commerciaux le long de l'axe des abscisses d'un graphique à barres  
   
 1.  Basculez en mode création de rapport.  
   
-2.  Cliquez sur l’axe vertical, puis cliquez sur **propriétés de l’axe Vertical**.  
+2.  Cliquez avec le bouton droit sur l’axe vertical, puis cliquez sur Propriétés de l' **axe vertical**.  
   
 3.  Sous **Plage et intervalle de l’axe**, dans la zone **Intervalle** , tapez **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Avec le bouton droit vertical **titre de l’axe** et désactivez le **afficher le titre de l’axe** case à cocher.  
+5.  Cliquez avec le bouton droit sur le titre de l' **axe** vertical et désactivez la case à cocher **afficher le titre** de l’axe.  
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 > [!NOTE]  
 >  Si vous ne parvenez pas à lire les noms des commerciaux sur l'axe vertical, vous pouvez augmenter la taille de votre graphique ou modifier les options de mise en forme des étiquettes d'axe.  
   
-###  <a name="CategoryExpression"></a> Afficher le nom et prénom sur l’axe Vertical  
+###  <a name="CategoryExpression"></a>Afficher le nom et le prénom sur l’axe vertical  
  Vous pouvez modifier l'expression de catégorie pour inclure le nom suivi du prénom de chaque commercial.  
   
 ##### <a name="to-change-the-category-expression"></a>Pour modifier l'expression de catégorie  
@@ -193,7 +193,7 @@ ms.locfileid: "66099200"
 > [!NOTE]  
 >  Si vous ne parvenez pas à lire les noms des commerciaux sur l'axe vertical, vous pouvez augmenter la taille de votre graphique ou modifier les options de mise en forme des étiquettes d'axe.  
   
-##  <a name="Sort"></a> 4. Modifier l’ordre de tri des noms sur l’axe Vertical  
+##  <a name="Sort"></a>4. modifier l’ordre de tri pour les noms sur l’axe vertical  
  Lorsque vous triez les données d'un graphique, vous modifiez l'ordre des valeurs sur l'axe des abscisses.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>Pour trier les noms dans l'ordre alphabétique sur le graphique à barres  
@@ -206,13 +206,13 @@ ms.locfileid: "66099200"
   
 4.  Cliquez sur **Tri**. La page **Modifiez les options de tri** affiche une liste d’expressions de tri. Par défaut, cette liste a une expression de tri identique à l'expression de groupe de la catégorie d'origine.  
   
-5.  Dans l’ordre de tri, cliquez sur l’expression (**Fx**) bouton.  
+5.  Dans Trier par, cliquez sur le bouton Expression (**FX**).  
   
 6.  Tapez l’expression suivante : `=Fields!LastName.Value & ", " & Fields!FirstName.Value`  
   
 7.  Cliquez sur **OK**.  
   
-8.  Sur le **propriétés du groupe de catégories** page, dans le **ordre** liste déroulante, sélectionnez **Z à A**. Cette opération sélectionne par ordre alphabétique inverse afin que les noms apparaissent dans l’ordre de haut en bas.  
+8.  De retour sur la page **Propriétés du groupe de catégories** , dans la liste déroulante **ordre** , sélectionnez **Z à A**. Cela sélectionne l’ordre alphabétique inversé afin que les noms s’affichent dans l’ordre de haut en bas.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -220,7 +220,7 @@ ms.locfileid: "66099200"
   
  Les noms sur l’axe horizontal sont triés dans l’ordre inverse, avec **Alerca** en haut et **Zeng** en bas.  
   
-##  <a name="Legend"></a> 5. Déplacer la légende  
+##  <a name="Legend"></a>5. déplacer la légende  
  Pour améliorer la lisibilité des valeurs du graphique, vous pouvez déplacer la légende du graphique. Par exemple, dans un graphique à barres horizontales, vous pouvez modifier la position de la légende de manière à l'afficher au-dessus ou en dessous de la zone de graphique. Cela permet d'augmenter l'espace horizontal entre les barres.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>Pour afficher la légende sous la zone de graphique d'un graphique à barres  
@@ -239,19 +239,19 @@ ms.locfileid: "66099200"
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="ChartTitle"></a> 6. Intituler le graphique  
+##  <a name="ChartTitle"></a>6. titre du graphique  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area-of-a-bar-chart"></a>Pour modifier le titre d'un graphique à barres au-dessus de la zone de graphique  
   
 1.  Basculez en mode création de rapport.  
   
-2.  Sélectionnez les mots **titre du graphique** en haut du graphique, puis tapez le texte suivant : **Ventes pour 2008 et 2009**.  
+2.  Sélectionnez les mots **titre du graphique** en haut du graphique, puis tapez le texte suivant : **ventes pour 2008 et 2009**.  
   
 3.  Cliquez n'importe où en dehors du texte.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Horizontal"></a> 7. Mettre en forme et étiqueter l'axe horizontal  
+##  <a name="Horizontal"></a>7. mettre en forme et étiqueter l’axe horizontal  
  Par défaut, l'axe horizontal affiche les valeurs dans un format général qui est mis à l'échelle automatiquement pour s'ajuster à la taille du graphique.  
   
 #### <a name="to-format-the-numbers-on-the-horizontal-axis"></a>Pour mettre en forme les nombres sur l'axe horizontal  
@@ -260,25 +260,25 @@ ms.locfileid: "66099200"
   
 2.  Cliquez sur l'axe horizontal en bas du graphique pour le sélectionner.  
   
-     Dans le ruban, sur le **accueil** sous l’onglet le **nombre** de groupe, cliquez sur le **devise** bouton. Les étiquettes de l'axe horizontal changent et utilisent une devise.  
+     Dans le ruban, sous l’onglet dossier de **démarrage** , dans le groupe **nombre** , cliquez sur le bouton **devise** . Les étiquettes de l'axe horizontal changent et utilisent une devise.  
   
 3.  (Facultatif) Supprimez les chiffres décimaux. Près du bouton **Devise** , cliquez deux fois sur le bouton **Réduire les décimales** .  
   
 4.  Cliquez avec le bouton droit sur l’axe horizontal, puis cliquez sur **Propriétés de l’axe horizontal**.  
   
-5.  Sur le **nombre** onglet, sélectionnez **afficher les valeurs en milliers.**  
+5.  Sous l’onglet **nombre** , sélectionnez **afficher les valeurs en milliers.**  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Avec le bouton droit **titre de l’axe** et cliquez sur **propriétés du titre axe**.  
+7.  Cliquez avec le bouton droit sur le titre de l' **axe** , puis cliquez sur **Propriétés du titre**de l’axe.  
   
-8.  Dans le **texte du titre** , tapez **ventes en milliers** et cliquez sur **OK**.  
+8.  Dans la zone de **texte titre** , tapez **ventes en milliers** , puis cliquez sur **OK**.  
   
 9. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
  Le rapport affiche les montants des ventes sur l'axe horizontal sous forme de devises en milliers, sans chiffres décimaux.  
   
-##  <a name="Filter"></a> 8. Ajouter un filtre pour afficher les cinq valeurs supérieures  
+##  <a name="Filter"></a>8. Ajouter un filtre pour afficher les cinq premières valeurs  
  Vous pouvez ajouter un filtre au graphique pour spécifier les données du dataset à inclure ou exclure dans le graphique.  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>Pour ajouter un filtre et afficher les cinq valeurs supérieures  
@@ -293,7 +293,7 @@ ms.locfileid: "66099200"
   
 5.  Cliquez sur **Ajouter**. Un nouveau filtre vide apparaît.  
   
-6.  Dans **Expression**, type **[SUM (salesyear2009)]** . Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2009.Value)`, que vous pouvez afficher en cliquant sur le bouton **fx** .  
+6.  Dans **expression**, tapez **[Sum (SalesYear2009)]**. Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2009.Value)`, que vous pouvez afficher en cliquant sur le bouton **fx** .  
   
 7.  Vérifiez que le type de données est **Text**.  
   
@@ -309,21 +309,21 @@ ms.locfileid: "66099200"
   
  Le graphique affiche les noms des cinq meilleurs commerciaux issus des données de ventes 2009.  
   
-##  <a name="Title"></a> 9. Ajouter un titre de rapport  
+##  <a name="Title"></a>9. Ajouter un titre de rapport  
   
 #### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Type **graphique à barres des ventes**, appuyez sur entrée, puis tapez **cinq meilleurs vendeurs pour 2009**, donc il ressemble à ceci :  
+2.  Tapez **graphique à barres des ventes**, appuyez sur entrée, puis tapez **cinq meilleurs vendeurs pour 2009**. il ressemble à ceci :  
   
      **Graphique à barres des ventes**  
   
-     **Cinq meilleurs vendeurs pour 2009**  
+     **Cinq meilleurs vendeurs pour 2009**  
   
 3.  Sélectionnez **Graphique à barres des ventes**, puis cliquez sur le bouton **Gras** .  
   
-4.  Sélectionnez **cinq meilleurs vendeurs pour 2009**, puis, dans le **police** section sur la **accueil** onglet, définissez la taille de police sur **10**.  
+4.  Sélectionnez les **cinq meilleurs vendeurs pour 2009**, puis dans la section **police** de l’onglet dossier de **départ** , définissez la taille de police sur **10**.  
   
 5.  (Facultatif) Vous devrez peut-être agrandir la zone de texte Titre pour contenir les deux lignes de texte.  
   
@@ -331,7 +331,7 @@ ms.locfileid: "66099200"
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Save"></a> 10. Enregistrer le rapport  
+##  <a name="Save"></a>10. enregistrer le rapport  
   
 #### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
   

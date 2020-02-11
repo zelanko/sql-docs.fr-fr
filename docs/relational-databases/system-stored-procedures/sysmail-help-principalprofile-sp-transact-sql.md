@@ -18,19 +18,19 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044523"
 ---
-# <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Répertorie des informations sur les associations entre les profils de messagerie de la base de données et les principaux de la base de données.  
   
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,16 +41,16 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @principal_id = ] principal_id` Est l’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à répertorier. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
+`[ @principal_id = ] principal_id`ID de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association à répertorier. *principal_id* est de **type int**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* peuvent être spécifiés.  
   
-`[ @principal_name = ] 'principal_name'` Est le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à répertorier. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
+`[ @principal_name = ] 'principal_name'`Nom de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association à répertorier. *principal_name* est de **type sysname**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* peuvent être spécifiés.  
   
-`[ @profile_id = ] profile_id` Est l’ID du profil pour l’association à répertorier. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* peut être spécifié.  
+`[ @profile_id = ] profile_id`ID du profil pour l’Association à répertorier. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* peuvent être spécifiés.  
   
-`[ @profile_name = ] 'profile_name'` Est le nom du profil pour l’association à répertorier. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* peut être spécifié.  
+`[ @profile_name = ] 'profile_name'`Nom du profil pour l’Association à répertorier. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* peuvent être spécifiés.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne un jeu de résultats qui contient les colonnes répertoriées dans le tableau ci-dessous.  
@@ -59,15 +59,15 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |-|-|-|  
 |Nom de la colonne|Type de données|Description|  
 |**principal_id**|**int**|Identificateur de l'utilisateur de la base de données.|  
-|**principal_name**|**sysname**|Le nom de l’utilisateur de base de données.|  
+|**principal_name**|**sysname**|Nom de l’utilisateur de base de données.|  
 |**profile_id**|**int**|Numéro d'identification du profil de messagerie de la base de données.|  
-|**nom_profil**|**sysname**|Nom du profil de messagerie de la base de données.|  
+|**profile_name**|**sysname**|Nom du profil de messagerie de la base de données.|  
 |**is_default**|**bit**|Indicateur signalant s'il s'agit du profil par défaut de l'utilisateur.|  
   
 ## <a name="remarks"></a>Notes  
- Si **sysmail_help_principalprofile_sp** est appelée sans paramètres, le jeu de résultats retourné répertorie toutes les associations de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sinon, l'ensemble de résultats contient des informations pour les associations qui correspondent aux paramètres fournis. Par exemple, la procédure répertorie toutes les associations d'un profil lorsque le nom de ce dernier est fourni.  
+ Si **sysmail_help_principalprofile_sp** est appelée sans paramètres, le jeu de résultats retourné répertorie toutes les associations dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sinon, l'ensemble de résultats contient des informations pour les associations qui correspondent aux paramètres fournis. Par exemple, la procédure répertorie toutes les associations d'un profil lorsque le nom de ce dernier est fourni.  
   
- **sysmail_help_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
+ **sysmail_help_principalprofile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
@@ -109,6 +109,6 @@ principal_id principal_name     profile_id  profile_name                   is_de
   
 ## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
- [Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

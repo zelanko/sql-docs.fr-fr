@@ -1,5 +1,5 @@
 ---
-title: Spécifier une Image en tant que pointeur sur une jauge (Générateur de rapports et SSRS) | Microsoft Docs
+title: Spécifier une image en tant que pointeur sur une jauge (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101148"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)
-  La jauge contient trois styles intégrés pouvant être utilisés pour personnaliser l'apparence du pointeur. Pour une jauge radiale, les styles intégrés sont : AIGUILLE, marqueur et barre. Pour une jauge linéaire, les styles intégrés sont les suivants : Marqueur, Barre et Thermomètre. Si un pointeur unique est requis, l'utilisateur peut créer et spécifier une image qui sera utilisée en tant que pointeur totalement fonctionnel.  
+  La jauge contient trois styles intégrés pouvant être utilisés pour personnaliser l'apparence du pointeur. Pour une jauge radiale, les styles intégrés sont les suivants : Aiguille, Marqueur et Barre. Pour une jauge linéaire, les styles intégrés sont les suivants : Marqueur, Barre et Thermomètre. Si un pointeur unique est requis, l'utilisateur peut créer et spécifier une image qui sera utilisée en tant que pointeur totalement fonctionnel.  
   
  Lorsque vous spécifiez une image pour le pointeur, celle-ci doit avoir les spécifications suivantes :  
   
@@ -35,11 +35,11 @@ ms.locfileid: "66101148"
   
 1.  En mode Conception, cliquez sur le pointeur de la jauge.  
   
-2.  (Facultatif) Si aucun pointeur n’existe sur la jauge, avec le bouton droit sur la jauge et sélectionnez **ajouter un pointeur**. Un pointeur est ajouté à la jauge.  
+2.  Facultatif Si aucun pointeur n’existe sur la jauge, cliquez avec le bouton droit sur la jauge et sélectionnez **Ajouter un pointeur**. Un pointeur est ajouté à la jauge.  
   
-3.  Cliquez sur le **insérer** onglet sur le ruban et double-cliquez sur l’icône d’image. La boîte de dialogue **Propriétés de l’image** s’ouvre.  
+3.  Cliquez sur l’onglet **Insérer** du ruban et double-cliquez sur l’icône d’image. La boîte de dialogue **Propriétés de l’image** s’ouvre.  
   
-4.  Ajoutez une image à votre rapport. Pour plus d’informations, consultez [incorporer une Image dans un rapport &#40;Générateur de rapports et SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+4.  Ajoutez une image à votre rapport. Pour plus d’informations, consultez [incorporer une image dans un rapport &#40;générateur de rapports et SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 5.  Ouvrez le volet Propriétés.  
   
@@ -47,14 +47,14 @@ ms.locfileid: "66101148"
   
 7.  Développez le nœud PointerImage.  
   
-8.  Dans **Source**, sélectionnez **Embedded** dans la liste déroulante.  
+8.  Dans **source**, sélectionnez **incorporé** dans la liste déroulante.  
   
     > [!NOTE]  
-    >  Si votre image est stockée dans la base de données ou sur le web, vous pouvez spécifier l'option appropriée pour cette propriété. Pour plus d’informations, consultez [boîte de dialogue de propriétés Image, général &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
+    >  Si votre image est stockée dans la base de données ou sur le web, vous pouvez spécifier l'option appropriée pour cette propriété. Pour plus d’informations, consultez [boîte de dialogue Propriétés de l’image, général &#40;générateur de rapports et SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
 9. Dans **valeur**, sélectionnez le nom de votre image dans la liste déroulante.  
   
-10. Dans **couleur transparente**, choisissez une couleur que vous souhaitez supprimer de l’image. Cette opération donne au pointeur de la jauge une apparence transparente.  
+10. Dans **transparente**, sélectionnez une valeur de couleur que vous souhaitez supprimer de l’image. Cette opération donne au pointeur de la jauge une apparence transparente.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   

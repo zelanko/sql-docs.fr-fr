@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106164"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "66106164"
     > [!NOTE]  
     >  Pour sélectionner une région de données de tableau matriciel, cliquez dans n'importe quelle cellule pour afficher les handles de ligne et de colonne, puis cliquez sur le handle d'angle.  
   
-2.  Dans le volet Propriétés, tapez le texte que vous souhaitez voir apparaître dans l’Explorateur de documents dans le `DocumentMapLabel` propriété, ou entrez une expression qui correspond à une étiquette. Par exemple, tapez **Graphique sur les ventes**.  
+2.  Dans le volet Propriétés, tapez le texte que vous souhaitez voir apparaître dans l’Explorateur de documents dans `DocumentMapLabel` la propriété, ou entrez une expression qui prend la valeur d’une étiquette. Par exemple, tapez **Graphique sur les ventes**.  
   
     > [!NOTE]  
     >  Si le volet Propriétés n’est pas visible, sous l’onglet **Affichage** , dans le groupe **Afficher/Masquer** , sélectionnez **Propriétés**.  
@@ -112,13 +112,13 @@ ms.locfileid: "66106164"
 4.  Collez l'URL dans le Gestionnaire de rapports et appuyez sur ENTRÉE. Le rapport est exécuté et l'explorateur de documents est masqué.  
   
 > [!NOTE]  
->  Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Pour plus d’informations sur le téléchargement des exemples [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de rapports, consultez [Générateur de rapports et concepteur de rapports exemples de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Pour plus d'informations, consultez « Accès URL » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Recherche et affichage de rapports dans Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

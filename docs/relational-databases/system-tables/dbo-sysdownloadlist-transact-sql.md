@@ -1,5 +1,5 @@
 ---
-title: dbo.sysdownloadlist (Transact-SQL) | Microsoft Docs
+title: dbo. sysdownloadlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061196"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
@@ -33,18 +33,18 @@ ms.locfileid: "68061196"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**instance_id**|**Int**|Colonne d'identité indiquant la séquence naturelle d'insertion des lignes|  
+|**instance_id**|**int**|Colonne d'identité indiquant la séquence naturelle d'insertion des lignes|  
 |**source_server**|**sysname**|Nom du serveur source|  
-|**operation_code**|**tinyint**|Code d'opération pour le travail :<br /><br /> **1** = INS (INSERTION)<br /><br /> **2** = UPD (MISE À JOUR)<br /><br /> **3** = SUPPR (SUPPRESSION)<br /><br /> **4** = DÉMARRAGE<br /><br /> **5** = ARRÊTER|  
+|**operation_code**|**tinyint**|Code d'opération pour le travail :<br /><br /> **1** = ins (insérer)<br /><br /> **2** = UPD (mise à jour)<br /><br /> **3** = del (supprimer)<br /><br /> **4** = démarrer<br /><br /> **5** = arrêter|  
 |**object_type**|**tinyint**|Code du type d'objet.|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|Numéro d'identification de l'objet.|  
 |**target_server**|**sysname**|Nom du serveur cible|  
 |**error_message**|**nvarchar(1024)**|Message d'erreur si le serveur cible rencontre une erreur lors du traitement de la ligne spécifique|  
-|**date_posted**|**datetime**|Date et heure à laquelle le travail a été posté vers le serveur cible|  
-|**date_downloaded**|**datetime**|Date et heure à laquelle le travail a été téléchargé pour la dernière fois|  
-|**status**|**tinyint**|État du travail :<br /><br /> **0** ne = pas encore téléchargé<br /><br /> **1** = téléchargé avec succès|  
+|**date_posted**|**DATETIME**|Date et heure à laquelle le travail a été posté vers le serveur cible|  
+|**date_downloaded**|**DATETIME**|Date et heure à laquelle le travail a été téléchargé pour la dernière fois|  
+|**statu**|**tinyint**|État du travail :<br /><br /> **0** = pas encore téléchargé<br /><br /> **1** = téléchargé avec succès|  
 |**deleted_object_name**|**sysname**|Nom de l'objet supprimé.|  
   
- <sup>1</sup> le **object_id** colonne peut être une valeur de **-1**, qui correspond à une valeur ALL si la **operation_code** colonne est une valeur de suppression.  
+ <sup>1</sup> la colonne **object_id** peut avoir la valeur **-1**, qui correspond à la valeur All si l' **operation_code** colonne est la valeur Delete.  
   
   

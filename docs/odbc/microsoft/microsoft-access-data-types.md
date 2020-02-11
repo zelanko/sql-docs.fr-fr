@@ -18,55 +18,55 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045159"
 ---
 # <a name="microsoft-access-data-types"></a>Types de données Microsoft Access
-Le tableau suivant montre les types de données Microsoft Access, types de données utilisés pour créer des tables et les types de données ODBC SQL.  
+Le tableau suivant répertorie les types de données Microsoft Access, les types de données utilisés pour créer des tables et les types de données ODBC SQL.  
   
-|Type de données Microsoft Access|Type de données (Create Table)|Type de données SQL ODBC|  
+|Type de données Microsoft Access|Type de données (CREATETABLE)|Type de données SQL ODBC|  
 |--------------------------------|-------------------------------|------------------------|  
-|BIGBINARY [1]|LONGBINARY|SQL_LONGVARBINARY|  
+|BIGBINARY [1]|AUTORISE|SQL_LONGVARBINARY|  
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
-|COMPTEUR|COMPTEUR|SQL_INTEGER|  
+|)|)|SQL_INTEGER|  
 |Monétaire (Currency)|Monétaire (Currency)|SQL_NUMERIC|  
 |DATE/HEURE|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
-|BINAIRE LONGUE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXTE LONG|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|MÉMO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|NOMBRE (taille du champ = unique)|UNIQUE|SQL_REAL|  
-|NOMBRE (taille du champ = DOUBLE)|Double|SQL_DOUBLE|  
-|NOMBRE (taille du champ = octet)|OCTET NON SIGNÉ|SQL_TINYINT|  
-|NOMBRE (taille du champ = entier)|COURT|SQL_SMALLINT|  
-|NOMBRE (taille du champ = entier LONG)|LONG|SQL_INTEGER|  
+|BINAIRE LONG|AUTORISE|SQL_LONGVARBINARY|  
+|TEXTE LONG|LONGTEXT|SQL_WLONGVARCHAR DE SQL_LONGVARCHAR [2] [3]|  
+|CHAMPS|LONGTEXT|SQL_WLONGVARCHAR DE SQL_LONGVARCHAR [2] [3]|  
+|NUMBER (FieldSize = SINGLE)|SINGLE|SQL_REAL|  
+|NUMBER (TailleChamp = DOUBLE)|DOUBLE|SQL_DOUBLE|  
+|NUMBER (TailleChamp = octet)|OCTET NON SIGNÉ|SQL_TINYINT|  
+|NUMBER (TailleChamp = entier)|Résumé|SQL_SMALLINT|  
+|NUMBER (FieldSize = entier LONG)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
-|OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|ActiveX|AUTORISE|SQL_LONGVARBINARY|  
+|TEXT|VARCHAR|SQL_VARCHAR [1] SQL_WVARCHAR [2]|  
 |VARBINARY|VARBINARY|SQL_VARBINARY|  
   
- [1] applications accès 4.0 uniquement. Longueur maximale de 4 000 octets. Comportement similaire à LONGBINARY.  
+ [1] accéder aux applications 4,0 uniquement. Longueur maximale de 4000 octets. Comportement similaire à LONGBINARY.  
   
  [2] applications ANSI uniquement.  
   
- [3] Unicode et 4.0 de l’accès des applications uniquement.  
+ [3] applications Unicode et Access 4,0 uniquement.  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** retourne des types de données ODBC. Il ne retourne pas tous les types de données Microsoft Access si plusieurs types de Microsoft Access est mappé vers le même type de données ODBC SQL. Toutes les conversions dans l’annexe D de la *de référence du programmeur ODBC* sont pris en charge pour les types de données SQL répertoriés dans le tableau précédent.  
+>  **SQLGetTypeInfo** retourne des types de données ODBC. Elle ne retourne pas tous les types de données Microsoft Access si plusieurs types Microsoft Access sont mappés au même type de données SQL ODBC. Toutes les conversions de l’annexe D de la *Référence du programmeur ODBC* sont prises en charge pour les types de données SQL répertoriés dans le tableau précédent.  
   
- Le tableau suivant présente des limitations sur les types de données Microsoft Access.  
+ Le tableau suivant présente les limitations sur les types de données Microsoft Access.  
   
 |Type de données|Description|  
 |---------------|-----------------|  
-|BINARY, VARBINARY et VARCHAR|Création d’une colonne BINARY, VARBINARY ou VARCHAR de zéro ou de longueur non spécifiée retourne en fait une colonne de 510 octets.|  
-|BYTE|Même si un champ de numéro d’accès à Microsoft avec une taille égale à BYTE n’est pas signé, un nombre négatif peut être inséré dans le champ lorsque vous utilisez le pilote Microsoft Access.|  
-|CHAR et VARCHAR LONGVARCHAR|Un littéral de chaîne de caractères peut contenir n’importe quel caractère ANSI (décimal 1-255). Utilisez consécutifs un double guillemet (") pour représenter un guillemet simple (').<br /><br /> Procédures doivent être utilisées pour passer des données de caractères lors de l’utilisation de n’importe quel caractère spécial dans une colonne de type de données de caractères.|  
-|DATE|Valeurs de date doivent être délimités en fonction du format de date canonique ODBC ou délimitées par le séparateur de date/heure (« # »). Sinon, Microsoft Access traite la valeur comme une expression arithmétique et ne génère pas un avertissement ou une erreur.<br /><br /> Par exemple, la date « 5 mars 1996 » doit être représentée en tant que {d ' 1996-03-05 »} ou #03/05/1996 #; Sinon, si seul le 03/05/1993 est soumise, Microsoft Access évaluera cela en tant que 3 divisé par 5 divisé en 1996. Cette valeur est arrondi à l’entier 0, et étant donné que le zéro jour mappe à 1899-12-31, la date est utilisée.<br /><br /> Une barre verticale (&#124;) ne peut pas être utilisés dans une valeur de date, même si placé à l’arrière de guillemets.|  
-|GUID|Type de données limité à Microsoft Access 4.0.|  
-|NUMERIC|Type de données limité à Microsoft Access 4.0.|  
+|BINARY, VARBINARY et VARCHAR|La création d’une colonne BINARY, VARBINARY ou VARCHAR de zéro ou d’une longueur non spécifiée retourne en fait une colonne de 510 octets.|  
+|BYTE|Bien qu’un champ de numéro Microsoft Access avec un Field égal à BYTE soit non signé, un nombre négatif peut être inséré dans le champ lors de l’utilisation du pilote Microsoft Access.|  
+|CHAR, LONGVARCHAR et VARCHAR|Un littéral de chaîne de caractères peut contenir n’importe quel caractère ANSI (1-255 décimal). Utilisez deux guillemets simples consécutifs (' ') pour représenter un guillemet simple (').<br /><br /> Les procédures doivent être utilisées pour passer des données de caractères lors de l’utilisation d’un caractère spécial dans une colonne de type de données character.|  
+|DATE|Les valeurs de date doivent être délimitées selon le format de date canonique ODBC ou délimitée par le délimiteur DateTime (« # »). Dans le cas contraire, Microsoft Access traitera la valeur comme une expression arithmétique et ne déclenchera pas d’avertissement ni d’erreur.<br /><br /> Par exemple, la date « 5 mars 1996 » doit être représentée sous la forme {d' 1996-03-05 '} ou #03/05/1996 #; dans le cas contraire, si seulement 03/05/1993 est envoyé, Microsoft Access évalue cela comme suit : 3 divisé par 5 divisé par 1996. Cette valeur est arrondie à l’entier 0, et puisque le jour zéro est mappé à 1899-12-31, il s’agit de la date utilisée.<br /><br /> Un caractère de barre verticale (&#124;) ne peut pas être utilisé dans une valeur de date, même s’il est placé entre guillemets.|  
+|GUID|Type de données limité à Microsoft Access 4,0.|  
+|NUMERIC|Type de données limité à Microsoft Access 4,0.|  
   
- Vous trouverez davantage de limites sur les types de données dans [Limitations des types de données](../../odbc/microsoft/data-type-limitations.md).
+ Vous trouverez plus de restrictions sur les types de données dans limitations des types de [données](../../odbc/microsoft/data-type-limitations.md).

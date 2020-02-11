@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105491"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Graphiques à secteurs (Générateur de rapports et SSRS)
@@ -35,9 +35,9 @@ ms.locfileid: "66105491"
   
 -   **Anneau éclaté**. Graphique en anneau où tous les secteurs sont déplacés loin du centre de l'anneau.  
   
--   **Secteurs 3D**. Graphique à secteurs 3D.  
+-   **secteurs 3D**. Graphique à secteurs 3D.  
   
--   **Secteurs éclatés 3D**. Graphique à secteurs éclatés 3D.  
+-   **secteurs éclatés 3D**. Graphique à secteurs éclatés 3D.  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>Considérations relatives aux données pour l'affichage sur un graphique en secteurs  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66105491"
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>Application de styles de dessin à un graphique en secteurs  
  Vous pouvez ajouter des styles de dessin spéciaux au graphique en secteurs pour augmenter son impact visuel. Les styles de dessin incluent des effets de biseau et concaves. Ces effets sont disponibles uniquement sur un graphique à secteurs 2D. L'illustration suivante montre un exemple de styles de dessin concaves et en biseau sur un graphique à secteurs.  
   
- ![Styles de dessin de secteur](../media/rs-piedrawingeffects-concave2.gif "Styles de dessin de secteur")  
+ ![Styles de dessins à secteurs](../media/rs-piedrawingeffects-concave2.gif "Styles de dessins à secteurs")  
   
  Pour plus d’informations, consultez [Ajouter des styles de biseau, du relief et des textures à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
@@ -89,9 +89,9 @@ ms.locfileid: "66105491"
  [Afficher des étiquettes de points de données à l’extérieur d’un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Regrouper des petits secteurs sur un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Afficher des valeurs en pourcentage sur un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Tutoriel : Ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
+ [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   

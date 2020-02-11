@@ -21,13 +21,13 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056519"
 ---
-# <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
+# <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Annule l'association entre le plan de maintenance spécifié et la base de données spécifiée.  
@@ -37,7 +37,7 @@ ms.locfileid: "68056519"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,25 +48,25 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] 'plan\_id'` Spécifie l’ID de plan de maintenance. *plan_id* est **uniqueidentifier**.  
+`[ @plan_id = ] 'plan\_id'`Spécifie l’ID du plan de maintenance. *plan_id* est de type **uniqueidentifier**.  
   
-`[ @db_name = ] 'database\_name'` Spécifie le nom de la base de données doit être supprimé du plan de maintenance. *database_name* est de type **sysname**.  
+`[ @db_name = ] 'database\_name'`Spécifie le nom de la base de données à supprimer du plan de maintenance. *database_name* est de **type sysname**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_delete_maintenance_plan_db** doit être exécuté à partir de la **msdb** base de données.  
+ **sp_delete_maintenance_plan_db** doit être exécuté à partir de la base de données **msdb** .  
   
- Le **sp_delete_maintenance_plan_db** procédure stockée supprime l’association entre le plan de maintenance et de la base de données spécifié ; il ne pas supprimer ou détruire la base de données.  
+ La procédure stockée **sp_delete_maintenance_plan_db** supprime l’association entre le plan de maintenance et la base de données spécifiée ; elle ne supprime ni ne détruit la base de données.  
   
- Lorsque **sp_delete_maintenance_plan_db** supprime la dernière base de données à partir du plan de maintenance, la procédure stockée supprime également le plan de maintenance.  
+ Lorsque **sp_delete_maintenance_plan_db** supprime la dernière base de données du plan de maintenance, la procédure stockée supprime également le plan de maintenance.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_maintenance_plan_db**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Exemples  
- Supprime le plan de maintenance dans le **AdventureWorks2012** base de données, ajouté précédemment à l’aide de **sp_add_maintenance_plan_db**.  
+ Supprime le plan de maintenance de la base de données **AdventureWorks2012** , précédemment ajouté à l’aide de **sp_add_maintenance_plan_db**.  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
@@ -74,6 +74,6 @@ EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',
   
 ## <a name="see-also"></a>Voir aussi  
  [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Procédures stockées de Plan de Maintenance de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Procédures stockées de plan de maintenance de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

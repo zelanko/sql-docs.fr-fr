@@ -1,5 +1,5 @@
 ---
-title: Modifier les applications attendent des valeurs bigint de sysperfinfo.cntr_value | Microsoft Docs
+title: Modifier les applications pour qu’elles attendent des valeurs bigint de sysperfinfo. cntr_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093959"
 ---
-# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>Modifier les applications pour qu'elles attendent des valeurs bigint de sysperfinfo.cntr_value
+# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>Modifier les applications pour qu'elles attendent des valeurs bigint de sysperfinfo.cntr_value
   sysperfinfo retourne une `bigint` valeur pour la colonne cntr_value.  
   
 ## <a name="component"></a>Composant  
@@ -33,7 +33,7 @@ ms.locfileid: "66093959"
 >  sysperfinfo est une vue de compatibilité. Utilisez de préférence la vue de gestion dynamique sys.dm_os_performance_counter.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

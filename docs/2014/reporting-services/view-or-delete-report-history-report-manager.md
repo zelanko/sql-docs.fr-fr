@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098707"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Afficher ou supprimer l'historique de rapport (Gestionnaire de rapports)
@@ -41,7 +41,7 @@ ms.locfileid: "66098707"
   
 2.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la page **Contenu** . Localisez le rapport pour lequel vous souhaitez créer ou afficher des instantanés d'historique, puis cliquez dessus pour l'ouvrir.  
   
-3.  Cliquez sur l’onglet **Historique** . Les instantanés d’historique sont affichés dans le **quand exécuter** colonne.  
+3.  Cliquez sur l’onglet **historique** . Les instantanés d’historique s’affichent dans la colonne lors de l' **exécution** .  
   
 4.  Pour afficher l'instantané d'historique, cliquez sur ce dernier.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "66098707"
   
 1.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la page **Contenu** . Localisez le rapport pour lequel vous souhaitez créer des instantanés d'historique, puis cliquez dessus pour l'ouvrir.  
   
-2.  Cliquez sur l’onglet **Historique** . Les instantanés d’historique sont affichés dans le **quand exécuter** colonne.  
+2.  Cliquez sur l’onglet **historique** . Les instantanés d’historique s’affichent dans la colonne lors de l' **exécution** .  
   
-3.  Sélectionnez la case à cocher en regard de l’instantané d’historique à supprimer, puis cliquez sur **supprimer**.  
+3.  Activez la case à cocher en regard de l’instantané d’historique que vous souhaitez supprimer, puis cliquez sur **supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Page de l’historique de rapport &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
+ [Page de l’historique de rapport &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [Définir les propriétés de traitement d’un rapport](report-server/set-report-processing-properties.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Créer, modifier et supprimer des instantanés dans l'historique de rapport](report-server/create-modify-and-delete-snapshots-in-report-history.md)  

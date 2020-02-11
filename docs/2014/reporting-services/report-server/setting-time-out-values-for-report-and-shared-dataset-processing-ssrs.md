@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103209"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Définition des valeurs de délai d'attente pour le traitement d'un rapport et d'un dataset partagé (SSRS)
-  Vous pouvez spécifier des valeurs de délai d'attente pour fixer des limites à l'utilisation des ressources système. Le serveur de rapports accepte deux valeurs de délai d'attente :  
+  Vous pouvez spécifier des valeurs de délai d'attente pour fixer des limites à l'utilisation des ressources système. Le serveur de rapports accepte deux valeurs de délai d'attente :  
   
 -   Une valeur de délai d'attente de requête de dataset incorporé, qui est le nombre de secondes pendant lequel le serveur de rapports attend une réponse de la base de données. Cette valeur est définie dans un rapport.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66103209"
   
 -   Une valeur de délai d'attente pour l'exécution de rapport représente le nombre maximal de secondes pendant lequel le traitement de rapport peut se poursuivre avant d'être arrêté. Cette valeur est définie au niveau système. Ce paramètre est modifiable pour chaque rapport.  
   
- La plupart des erreurs liées au délai d'attente se produisent pendant le traitement des requêtes. Si vous rencontrez des erreurs de ce type, essayez d'augmenter la valeur du délai d'attente de la requête. Veillez à ce que la valeur du délai d'attente pour l'exécution du rapport soit supérieure au délai d'attente de la requête. Le temps imparti doit être suffisamment long pour permettre aux traitements de la requête et du rapport de s'effectuer.  
+ La plupart des erreurs liées au délai d'attente se produisent pendant le traitement des requêtes. Si vous rencontrez des erreurs de ce type, essayez d'augmenter la valeur du délai d'attente de la requête. Veillez à ajuster la valeur du délai d’exécution du rapport afin qu’elle soit supérieure au délai d’expiration de la requête. La période doit être suffisante pour terminer le traitement des requêtes et des rapports.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Définition d'un délai de requête pour un dataset incorporé dans un rapport  
  Les valeurs de délai d'attente de la requête sont spécifiées pendant la création du rapport, lors de la définition d'un dataset incorporé. La valeur du délai d'attente est conservée avec le rapport, dans l'élément `Timeout` de la définition de rapport. Elle est par défaut de 30 secondes. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -56,8 +56,8 @@ ms.locfileid: "66103209"
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Serveur de rapports Reporting Services &#40;mode natif&#41;](reporting-services-report-server-native-mode.md)   
- [Gérer un processus en cours d'exécution](../subscriptions/manage-a-running-process.md)   
+ [Reporting Services serveur de rapports &#40;le mode natif&#41;](reporting-services-report-server-native-mode.md)   
+ [Gérer un processus en cours d’exécution](../subscriptions/manage-a-running-process.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)  
   
   

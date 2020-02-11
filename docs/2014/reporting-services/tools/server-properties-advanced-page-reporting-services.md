@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099657"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
@@ -32,10 +32,10 @@ ms.locfileid: "66099657"
  Nom du rôle utilisé lors de la création des stratégies de sécurité sur le dossier Mes rapports de l'utilisateur. La valeur par défaut est `My Reports Role`.  
   
  **EnableClientPrinting**  
- Détermine si le contrôle ActiveX RSClientPrint peut être téléchargé à partir du serveur de rapports. Les valeurs valides sont `true` et `false`. La valeur par défaut est `true`. Pour plus d’informations sur les paramètres supplémentaires nécessaires pour ce contrôle, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Détermine si le contrôle ActiveX RSClientPrint peut être téléchargé à partir du serveur de rapports. Les valeurs valides `true` sont `false`et. La valeur par défaut est `true`. Pour plus d’informations sur les paramètres supplémentaires nécessaires pour ce contrôle, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est `true`. Pour plus d’informations sur le journal de l’exécution de serveur de rapports, consultez [journal de l’exécution de serveur de rapports et vue ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est `true`. Pour plus d’informations sur le journal des exécutions du serveur de rapports, consultez [le journal des exécutions du serveur de rapports et la vue ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
  Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont comprises entre `-1` et `2` `147` `483` `647`. Si la valeur est égale à `-1`, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est `60`.  
@@ -59,16 +59,16 @@ ms.locfileid: "66099657"
  Indique si le serveur de rapports doit utiliser les cookies de session lors la communication avec les navigateurs clients. La valeur par défaut est `true`.  
   
  **ExternalImagesTimeout**  
- Détermine la période pendant laquelle un fichier image externe doit être récupéré avant l'expiration du délai de connexion. La valeur par défaut est `600` secondes.  
+ Détermine la durée pendant laquelle un fichier image externe doit être récupéré avant l’expiration du délai d’attente de la connexion. La valeur par `600` défaut est secondes.  
   
  **SnapshotCompression**  
  Définit le mode de compression des instantanés. La valeur par défaut est `SQL`. Les valeurs valides sont les suivantes :  
   
- **SQL =** les instantanés sont compressés quand ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.  
+ **SQL =** Les instantanés sont compressés lorsqu’ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.  
   
  **None** = les instantanés ne sont pas compressés.  
   
- **All =** les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.  
+ **Tout =** Les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.  
   
  **SystemReportTimeout**  
  Valeur (en secondes) du délai d'exécution du traitement du rapport par défaut pour tous les rapports gérés dans l'espace de noms du serveur de rapports. Cette valeur peut être remplacée au niveau du rapport. Si cette propriété est définie, le serveur de rapports essaie d'arrêter le traitement d'un rapport lorsque le délai spécifié est expiré. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est égale à `-1`, les rapports de l'espace de noms ne spécifient pas de délai d'exécution pendant le traitement. La valeur par défaut est `1800`.  
@@ -77,11 +77,13 @@ ms.locfileid: "66099657"
  Nombre maximal d'instantanés stockées pour un rapport. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est égale à `-1`, il n'existe aucune limite sur le nombre d'instantanés.  
   
  **EnableIntegratedSecurity**  
- Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est `True`. Les valeurs valides sont les suivantes :  
+ Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. Par défaut, il s’agit de `True`. Les valeurs valides sont les suivantes :  
   
- `True` = la sécurité intégrée de Windows est activée.  
+ 
+  `True` = la sécurité intégrée de Windows est activée.  
   
- `False` = la sécurité intégrée de Windows n'est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée de Windows ne seront pas exécutées.  
+ 
+  `False` = la sécurité intégrée de Windows n'est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée de Windows ne seront pas exécutées.  
   
  `EnableLoadReportDefinition`  
  Sélectionnez cette option pour spécifier si les utilisateurs peuvent effectuer une exécution de rapport ad hoc à partir d'un rapport du Générateur de rapports. La définition de cette option détermine la valeur de la propriété `EnableLoadReportDefinition` sur le serveur de rapports.  
@@ -91,7 +93,7 @@ ms.locfileid: "66099657"
  La désactivation de cette option atténue la menace qu'un utilisateur malveillant lance une attaque par déni de service en surchargeant le serveur de rapports avec les demandes LoadReportDefinition.  
   
  **EnableRemoteErrors**  
- Inclut les informations externes sur l'erreur (par exemple, les informations d'erreur relatives aux sources de données de rapport) avec les messages d'erreur retournés pour les utilisateurs qui demandent des rapports à partir d'ordinateurs distants. Les valeurs possibles sont `true` et `false`. La valeur par défaut est `false`. Pour plus d’informations, consultez [Activer les erreurs distantes &#40;Reporting Services&#41;](../report-server/enable-remote-errors-reporting-services.md).  
+ Inclut les informations externes sur l'erreur (par exemple, les informations d'erreur relatives aux sources de données de rapport) avec les messages d'erreur retournés pour les utilisateurs qui demandent des rapports à partir d'ordinateurs distants. Les valeurs valides sont `true` et `false`. La valeur par défaut est `false`. Pour plus d’informations, consultez [Activer les erreurs distantes &#40;Reporting Services&#41;](../report-server/enable-remote-errors-reporting-services.md).  
   
  **EnableReportDesignClientDownload**  
  Spécifie si le package d'installation du Générateur de rapports peut être téléchargé à partir du serveur de rapports. Si vous effacez ce paramètre, l'URL du Générateur de rapports ne fonctionnera pas. Pour plus d’informations, consultez [Configurer l’accès au Générateur de rapports](../report-server/configure-report-builder-access.md).  
@@ -100,7 +102,7 @@ ms.locfileid: "66099657"
  Spécifie le nombre des entrées de cache de données qui peuvent être actives dans une session d'édition de rapport. La valeur par défaut est 5.  
   
  **EditSessionTimeout**  
- Spécifie le nombre de secondes jusqu'à l'expiration d'une session d'édition de rapport. La valeur par défaut est 7 200 secondes (2 heures).  
+ Spécifie le nombre de secondes avant l’expiration d’une session d’édition de rapport. La valeur par défaut est 7200 secondes (2 heures).  
   
  **EnableTestConnectionDetailedErrors**  
  Indique si les messages d'erreur détaillés sont envoyés à l'ordinateur client lorsque des utilisateurs testent des connexions de la source des données à l'aide du serveur de rapports. La valeur par défaut est `true`. Si l'option est définie sur `false`, seuls les messages d'erreur génériques sont envoyés.  
@@ -108,10 +110,10 @@ ms.locfileid: "66099657"
 ## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Se connecter à un serveur de rapports dans Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Propriétés de Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
+ [Propriétés de la Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](report-server-in-management-studio-f1-help.md)   
- [Propriétés système de Report Server](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
- [Écrire des scripts pour les tâches d'administration et de déploiement](script-deployment-and-administrative-tasks.md)   
+ [Propriétés système du serveur de rapports](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
+ [Script de déploiement et tâches administratives](script-deployment-and-administrative-tasks.md)   
  [Activer et désactiver Mes rapports](../report-server/enable-and-disable-my-reports.md)  
   
   

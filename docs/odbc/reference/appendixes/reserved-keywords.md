@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057209"
 ---
 # <a name="reserved-keywords"></a>Mots clés réservés
-Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire minimale SQL ; Toutefois, pour garantir la compatibilité avec les pilotes qui gèrent la grammaire SQL de base, les applications doivent éviter en utilisant l’une de ces mots clés. Le signe #**définir** valeur SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  
+Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire SQL minimale ; Toutefois, pour garantir la compatibilité avec les pilotes qui prennent en charge la grammaire SQL de base, les applications doivent éviter d’utiliser l’un de ces mots clés. La valeur #**define** SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
 |AND|LEFT|  
-|TOUTES|LEVEL|  
+|ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
 |ASC|LOWER|  
@@ -48,7 +48,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|Non|  
+|CASCADED|NON|  
 |CASE|Aucune|  
 |CAST|NOT|  
 |CATALOG|NULL|  
@@ -56,19 +56,19 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
-|CHECK|ON|  
+|CHECK|ACTIVÉ|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|Ou|  
+|COLLATION|OR|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|CHEVAUCHEMENTS|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
+|CONTRAINTES|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|POSITION|  
+|CONVERT|ENDROIT|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -78,7 +78,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,9 +94,9 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINCT|TAILLE appropriée|  
 |DOMAIN|SMALLINT|  
-|Double|SOME|  
+|DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
@@ -110,8 +110,8 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |EXTERNAL|TABLE|  
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
-|FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FETCH|TEMPS|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -129,7 +129,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |HOUR|USAGE|  
 |IDENTITÉ|Utilisateur|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|VALEUR|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -137,7 +137,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|par|  
+|INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|YEAR|  

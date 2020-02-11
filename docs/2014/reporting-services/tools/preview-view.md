@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100110"
 ---
 # <a name="preview-view"></a>Vue Aperçu
@@ -30,31 +30,31 @@ ms.locfileid: "66100110"
 ## <a name="options"></a>Options  
  Utilisez la barre d'outils pour gérer les fonctions d'aperçu.  
   
- **Afficher ou masquer l’Explorateur de documents**  
+ **Afficher ou masquer le plan du document**  
  Choisissez cette option pour afficher ou masquer le plan du document s'il existe.  
   
  **Afficher ou masquer la zone de paramètres**  
  Choisissez cette option pour afficher ou masquer les zones de paramètres des rapports contenant des paramètres.  
   
- **Première Page**  
+ **Première page**  
  Choisissez cette option pour atteindre la première page du rapport.  
   
  **Page précédente**  
  Choisissez cette option pour atteindre la page précédente du rapport.  
   
- **Page actuelle**  
+ **Page active**  
  Affiche la page active du rapport.  
   
- **Nombre total de Pages**  
+ **Nombre total de pages**  
  Affiche le nombre total de pages du rapport.  
   
  **Page suivante**  
  Choisissez cette option pour atteindre la page suivante du rapport.  
   
- **Dernière Page**  
+ **Dernière page**  
  Choisissez cette option pour atteindre la dernière page du rapport.  
   
- **Revenir au rapport Parent**  
+ **Revenir au rapport parent**  
  Choisissez cette option pour revenir au rapport parent. Cette option sert à parcourir les rapports d'extraction.  
   
  **Arrêter le rendu**  
@@ -63,10 +63,10 @@ ms.locfileid: "66100110"
  **Actualiser**  
  Choisissez cette option pour actualiser le cache des données et exécutez de nouveau le rapport.  
   
- **Print**  
+ **Étendue**  
  Choisissez cette option pour imprimer le rapport.  
   
- **Mise en page**  
+ **Page**  
  Choisissez cette option pour basculer entre l'aperçu du rapport et l'affichage du rapport tel qu'il apparaîtra sur la page imprimée.  
   
  **Mise en page**  
@@ -78,13 +78,13 @@ ms.locfileid: "66100110"
  **Zoom**  
  Sélectionnez un facteur de zoom avant ou arrière pour l'affichage du rapport.  
   
- **Texte de recherche**  
+ **Texte recherché**  
  Tapez un fragment de texte à rechercher dans le rapport. Vous ne pouvez pas utiliser d'opérateurs de recherche. Cliquez sur **Rechercher** pour rechercher la première instance.  
   
- **Find**  
+ **Trouver**  
  Choisissez cette option pour commencer la recherche du texte dans le rapport.  
   
- **Suivant**  
+ **Rechercher suivant**  
  Choisissez cette option pour rechercher l'instance suivante du texte recherché.  
   
 ## <a name="see-also"></a>Voir aussi  

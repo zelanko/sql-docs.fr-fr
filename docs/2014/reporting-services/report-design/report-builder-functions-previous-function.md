@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105197"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Fonction Previous (Générateur de rapports et SSRS)
@@ -34,27 +34,27 @@ Previous(expression, scope)
  *expression*  
  (`Variant` ou `Binary`) Expression à utiliser pour identifier les données et pour laquelle récupérer la valeur précédente, par exemple, `Fields!Fieldname.Value` ou `Sum(Fields!Fieldname.Value)`.  
   
- *portée*  
- (`String`) Facultatif. Le nom d’un groupe ou région de données ou null (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie la portée à partir de laquelle récupérer la valeur précédente spécifiée par *expression*.  
+ *scope*  
+ (`String`) Facultatif. Nom d’un groupe ou d’une région de données, ou`Nothing` valeur [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null (en), qui spécifie l’étendue à partir de laquelle récupérer la valeur précédente spécifiée par *expression*.  
   
 ## <a name="return-type"></a>Type de retour  
- Retourne un `Variant` ou `Binary`.  
+ Retourne `Variant` ou `Binary`.  
   
 ## <a name="remarks"></a>Notes  
  La fonction `Previous` retourne la valeur précédente de l'expression évaluée dans l'étendue spécifiée après que cette dernière a été correctement triée et filtrée.  
   
- Si *expression* ne contient pas d’agrégat, la `Previous` fonction des valeurs par défaut à l’étendue actuelle pour l’élément de rapport.  
+ Si l' *expression* ne contient pas d’agrégat, `Previous` la fonction utilise par défaut l’étendue actuelle de l’élément de rapport.  
   
  Dans le groupe de détails, utilisez `Previous` pour spécifier la valeur d'une référence de champ dans l'instance précédente de la ligne de détails.  
   
 > [!NOTE]  
->  Le `Previous` fonction prend uniquement en charge les références de champ dans le groupe de détails. Par exemple, dans une zone de texte du groupe de détails, `=Previous(Fields!Quantity.Value)` retourne les données du champ `Quantity` de la ligne précédente. Cette expression dans la première ligne retourne une valeur Null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
+>  La `Previous` fonction ne prend en charge que les références de champ dans le groupe de détails. Par exemple, dans une zone de texte du groupe de détails, `=Previous(Fields!Quantity.Value)` retourne les données du champ `Quantity` de la ligne précédente. Cette expression dans la première ligne retourne une valeur Null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
   
- Si *expression* contient une fonction d’agrégation qui utilise une étendue par défaut, `Previous` agrège les données au sein de l’instance précédente de l’étendue spécifiée dans l’agrégat appel de fonction.  
+ Si *expression* contient une fonction d’agrégation qui utilise une étendue par `Previous` défaut, agrège les données dans l’instance précédente de l’étendue spécifiée dans l’appel de la fonction d’agrégation.  
   
- Si *expression* contient une fonction d’agrégation qui spécifie une portée différente de la valeur par défaut, le *étendue* paramètre pour le `Previous` fonction doit être une étendue contenante pour l’étendue spécifiée dans l’appel de fonction d’agrégation.  
+ Si *expression* contient une fonction d’agrégation qui spécifie une étendue autre que la valeur ** par défaut, le `Previous` paramètre scope de la fonction doit être une étendue contenante pour l’étendue spécifiée dans l’appel de la fonction d’agrégation.  
   
- Les fonctions `Level`, `InScope`, `Aggregate` et `Previous` ne peut pas être utilisé dans le *expression*paramètre. La spécification du paramètre *recursive* pour une fonction d’agrégation n’est pas prise en charge.  
+ Les fonctions `Level`, `InScope` `Aggregate` et `Previous` ne peuvent pas être utilisées dans le paramètre d' *expression*. La spécification du paramètre *recursive* pour une fonction d’agrégation n’est pas prise en charge.  
   
  Pour plus d’informations, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   

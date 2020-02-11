@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ab8c48b9c02f7bcf9f2c9457b56cb2533125756
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105974"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Extraction, exploration, sous-rapports et régions de données imbriquées (Générateur de rapports et SSRS)
@@ -22,9 +22,9 @@ ms.locfileid: "66105974"
   
  ![rs_DrillThruDrilldownEtc](../media/rs-drillthrudrilldownetc.gif "rs_DrillThruDrilldownEtc")  
   
- A. Rapport d'extraction  
+ R. Rapport d'extraction  
   
- B. sous-rapport  
+ B. Sous-rapport  
   
  C. Régions de données imbriquées  
   
@@ -35,10 +35,10 @@ ms.locfileid: "66105974"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a> Résumé des caractéristiques  
+##  <a name="SummaryCharacteristics"></a>Résumé des caractéristiques  
  Ce tableau résume les différentes caractéristiques. Les détails sont décrits dans des sections distinctes plus loin dans cette rubrique. L'exploration n'est pas incluse dans ces comparaisons, car vous pouvez appliquer son action d'affichage et de masquage à n'importe quel élément de rapport.  
   
-|Caractéristique|Sous-rapport|extraction|imbriquée|  
+|Caractéristique|Sous-rapport|Extraction|imbriquée|  
 |-----------|---------------|------------------|------------|  
 |Utilisation du dataset du rapport principal|Identique ou différent|Identique ou différent|Identique|  
 |Récupération des données|Données récupérées en même temps que le rapport principal|Données récupérées à chaque rapport d'extraction|Données toutes récupérées en même temps que le rapport principal|  
@@ -51,32 +51,32 @@ ms.locfileid: "66105974"
   
 
   
-##  <a name="Details"></a> Détails des caractéristiques  
+##  <a name="Details"></a>Détails des caractéristiques  
   
-###  <a name="Datasets"></a> Datasets utilisés  
+###  <a name="Datasets"></a>Jeux de données qu’ils utilisent  
  Les sous-rapports et les rapports d'extraction peuvent utiliser soit le même dataset que le rapport principal, soit un autre dataset. Les régions de données imbriquées utilisent le même dataset.  
   
-###  <a name="RetrieveData"></a> Récupération de données  
+###  <a name="RetrieveData"></a>Récupération de données  
  Les sous-rapports et les régions de données imbriquées récupèrent les données en même temps que le rapport principal. Ce n'est pas le cas des rapports d'extraction. Chaque rapport d'extraction récupère les données lorsqu'un utilisateur clique sur chaque lien. Cela est important si les données du rapport principal et du sous-rapport doivent être récupérées en même temps.  
   
-###  <a name="ProcessRender"></a> Traitement et rendu  
+###  <a name="ProcessRender"></a>Traitement et rendu  
  Un sous-rapport est traité dans le cadre du rapport principal. Par exemple, si un sous-rapport qui affiche des informations de détails des commandes est ajouté à une cellule de table dans la ligne de détails, le sous-rapport est traité une fois par ligne de la table et est rendu dans le cadre du rapport principal. Un rapport d'extraction est quant à lui traité et rendu uniquement lorsque l'utilisateur clique sur le lien d'extraction dans le rapport principal de résumé.  
   
-###  <a name="Performance"></a> Performance  
+###  <a name="Performance"></a>Garantie  
  Lorsque vous réfléchissez à ce que vous allez choisir, songez à utiliser une région de données à la place d'un sous-rapport, en particulier si le sous-rapport ne doit pas être utilisé par plusieurs rapports. Étant donné que le serveur de rapports traite chaque instance d'un sous-rapport comme un rapport distinct, des problèmes de performance peuvent se produire. Les régions de données fournissent une grande partie des fonctionnalités et de la flexibilité des sous-rapports, mais avec de meilleures performances. En outre, les rapports d'extraction offrent de meilleures performances que les sous-rapports, car ils ne récupèrent pas toutes les données en même temps que le rapport principal.  
   
-###  <a name="Parameters"></a> Utilisation de paramètres  
+###  <a name="Parameters"></a>Utilisation des paramètres  
  Les rapports d'extraction et les sous-rapports ont en général des paramètres de rapport qui spécifient les données à afficher. Par exemple, lorsque vous cliquez sur un numéro de commande client dans un rapport principal, le rapport d'extraction qui s'ouvre accepte ce numéro en tant que paramètre, puis affiche toutes les données correspondantes. Lorsque vous créez le lien dans le rapport principal, vous spécifiez des valeurs à transmettre en tant que paramètres au rapport d'extraction.  
   
  Pour créer un rapport d'extraction ou un sous-rapport, vous devez concevoir le rapport d'extraction ou sous-rapport cible en premier, puis créer une action d'extraction ou ajouter la référence au rapport principal.  
   
-###  <a name="Reusability"></a> Possibilité de réutilisation  
+###  <a name="Reusability"></a>Réutilisation  
  Les sous-rapports et les rapports d'extraction sont des rapports distincts. Par conséquent, ils peuvent être utilisés dans plusieurs rapports ou être affichés en tant que rapports autonomes. Les régions de données imbriquées ne sont pas réutilisables. Vous ne pouvez pas les enregistrer en tant que parties de rapports, car elles sont imbriquées dans une région de données. Vous pouvez enregistrer la région de données conteneur en tant que partie de rapport, mais pas la région de données imbriquée.  
   
-###  <a name="Location"></a> Emplacement  
+###  <a name="Location"></a>Emplacement  
  Les sous-rapports et les rapports d'extraction sont des rapports distincts ; par conséquent, ils sont stockés hors du rapport principal. Les sous-rapports peuvent se trouver sur un serveur de rapports identique ou différent, mais les rapports d'extraction doivent se trouver sur le même serveur de rapports. Les régions de données imbriquées font partie de rapport principal.  
   
-###  <a name="Display"></a> Affichage  
+###  <a name="Display"></a>Vidéo  
  Les sous-rapports et les régions de données imbriquées sont affichés dans le rapport principal. Les rapports d'extraction sont affichés de manière autonome.  
   
 

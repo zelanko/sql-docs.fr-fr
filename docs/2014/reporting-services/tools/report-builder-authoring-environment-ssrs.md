@@ -1,5 +1,5 @@
 ---
-title: (SSRS) de générateur de rapports | Microsoft Docs
+title: Générateur de rapports (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100115"
 ---
 # <a name="report-builder-ssrs"></a>Générateur de rapports (SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66100115"
  Le Générateur et le Concepteur de rapports partagent de nombreuses fonctionnalités. Pour plus d'informations sur le Générateur de rapports, consultez la [documentation du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer l'accès au Générateur de rapports](../report-server/configure-report-builder-access.md)   
+ [Configurer l’accès Générateur de rapports](../report-server/configure-report-builder-access.md)   
  [Outils de Reporting Services](reporting-services-tools.md)   
  [Concevoir des rapports à l’aide du Concepteur de rapports &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Vérifications des erreurs générales | Microsoft Docs
+title: Vérifications générales des erreurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 0c9a3425-0a7c-48de-9ff6-73601c26283e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6b7c37febee411571b8ac8316d3800912e35758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069919"
 ---
 # <a name="general-error-checks"></a>Vérifications des erreurs générales
-Le Gestionnaire de pilotes vérifie une erreur générale. Elle retourne toujours SQL_ERROR quand il rencontre l’erreur suivante : La fonction doit être pris en charge par le pilote.
+Le gestionnaire de pilotes vérifie une erreur générale. Elle retourne toujours SQL_ERROR lorsqu’elle rencontre l’erreur suivante : la fonction doit être prise en charge par le pilote.

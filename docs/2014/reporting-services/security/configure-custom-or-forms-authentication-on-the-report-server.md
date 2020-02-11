@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102136"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports
@@ -34,7 +34,7 @@ ms.locfileid: "66102136"
   
 1.  Ouvrez RSReportServer.config dans un éditeur de texte.  
   
-2.  Trouver <`Authentication`>.  
+2.  Recherchez <`Authentication`>.  
   
 3.  Copiez la structure XML suivante :  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66102136"
     </Authentication>  
     ```  
   
-4.  Collez-la sur les entrées existantes de <`Authentication`>.  
+4.  Collez-la sur les entrées existantes `Authentication` pour <>.  
   
      Notez que vous ne pouvez pas utiliser `Custom` avec d'autres types d'authentification.  
   
-5.  Enregistrez le fichier.  
+5.  Enregistrez le fichier .  
   
 6.  Ouvrez le fichier Web.config du serveur de rapports. Par défaut, celui-ci se trouve dans le dossier \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66102136"
   
 12. Ajouter la structure d’éléments `PassThroughCookies` au fichier de configuration. Pour plus d’informations, consultez [Configurer le Gestionnaire de rapports pour passer des cookies d’authentification personnalisée](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
-13. Enregistrez le fichier.  
+13. Enregistrez le fichier .  
   
 14. Si vous avez configuré un déploiement avec montée en puissance parallèle, répétez l’ensemble des étapes précédentes pour d'autres serveurs de rapports du déploiement.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66102136"
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une extension de sécurité](../extensions/security-extension/implementing-a-security-extension.md)   
  [Authentification avec le serveur de rapports](authentication-with-the-report-server.md)   
- [Fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Configurer une authentification de base sur le serveur de rapports](configure-basic-authentication-on-the-report-server.md)   
  [Configurer une authentification Windows sur le serveur de rapports](configure-windows-authentication-on-the-report-server.md)  
   

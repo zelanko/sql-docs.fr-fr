@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100077"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Aide du serveur de rapports dans Management Studio accessible par la touche F1
@@ -26,7 +26,7 @@ ms.locfileid: "66100077"
   
 -   [Annuler les travaux du serveur de rapports](cancel-report-server-jobs-management-studio.md)  
   
--   [Suppression des éléments du catalogue](delete-catalog-items-management-studio.md)  
+-   [Supprimer des éléments du catalogue](delete-catalog-items-management-studio.md)  
   
 -   [Page Propriétés du travail](job-properties-management-studio.md)  
   
@@ -54,10 +54,10 @@ ms.locfileid: "66100077"
   
 -   [Propriétés du rôle système](system-role-properties-management-studio.md)  
   
--   [Propriétés de rôle d'utilisateur](user-role-properties-management-studio.md)  
+-   [Propriétés du rôle utilisateur](user-role-properties-management-studio.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Références relatives aux fonctionnalités (Reporting Services)](../feature-reference-reporting-services.md)   
+ [Référence des fonctionnalités (Reporting Services)](../feature-reference-reporting-services.md)   
  [Présentation de SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

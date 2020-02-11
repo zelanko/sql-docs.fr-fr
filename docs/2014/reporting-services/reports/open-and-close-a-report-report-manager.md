@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102589"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Ouvrir et fermer un rapport (Gestionnaire de rapports)
@@ -32,7 +32,7 @@ ms.locfileid: "66102589"
   
 3.  Pour afficher un rapport, cliquez sur son nom ou sur son icône. L'icône ci-après représente un rapport :  
   
-     ![Icône Rapport](../media/hlp-16doc.gif "Icône Rapport")  
+     ![Icône de rapport](../media/hlp-16doc.gif "Icône de rapport")  
   
      Pour certains rapports, vous devez fournir soit un nom d'utilisateur et un mot de passe, soit une valeur de paramètre.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66102589"
   
 ## <a name="see-also"></a>Voir aussi  
  [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
+ [Page contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

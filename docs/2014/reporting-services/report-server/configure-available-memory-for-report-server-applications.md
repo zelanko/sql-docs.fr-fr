@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80215f23b2544a442600a97112f3d0e2650f55e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103969"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
@@ -26,7 +26,8 @@ ms.locfileid: "66103969"
  Cette rubrique décrit les paramètres de configuration que vous pouvez spécifier, ainsi que la façon dont le serveur répond quand la sollicitation de la mémoire devient un facteur de traitement des requêtes.  
   
 ## <a name="memory-management-policies"></a>Stratégies de gestion de la mémoire  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] répond aux limitations des ressources système en ajustant la quantité de mémoire allouée en fonction des applications et des types de requêtes de traitement. Les applications qui s'exécutent dans le service Report Server et qui sont soumises à la gestion de la mémoire sont les suivantes :  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] répond aux limitations des ressources système en ajustant la quantité de mémoire allouée en fonction des applications et des types de requêtes de traitement. Les applications qui s'exécutent dans le service Report Server et qui sont soumises à la gestion de la mémoire sont les suivantes :  
   
 -   Gestionnaire de rapports, une application Web frontale pour le serveur de rapports ;  
   
@@ -42,7 +43,7 @@ ms.locfileid: "66103969"
 |---------------------|---------------------|  
 |Faible|Les requêtes actives continuent d'être traitées. Les nouvelles requêtes sont presque toujours acceptées. Les requêtes adressées à l'application de traitement en arrière-plan reçoivent une priorité plus faible que les requêtes adressées au service Web Report Server.|  
 |Moyenne|Les requêtes actives continuent d'être traitées. Les nouvelles requêtes peuvent éventuellement être acceptées. Les requêtes adressées à l'application de traitement en arrière-plan reçoivent une priorité plus faible que les requêtes adressées au service Web Report Server. Les allocations de mémoire pour les trois applications serveur sont réduites ; la réduction est relativement plus importante pour le traitement en arrière-plan, ce qui permet d'offrir davantage de mémoire aux requêtes du service Web.|  
-|Élevée|L'allocation de mémoire est davantage réduite. Les applications serveur qui requièrent plus de mémoire sont refusées. Les requêtes actuelles sont ralenties et mettent plus de temps à s'exécuter. Les nouvelles requêtes ne sont pas acceptées. Le serveur de rapports place les fichiers de données en mémoire sur disque.<br /><br /> Si les contraintes de mémoire deviennent très importantes et s'il n'y a pas de mémoire disponible pour gérer les nouvelles requêtes, le serveur de rapports retourne l'erreur HTTP 503 relative à l'indisponibilité du serveur pendant que les requêtes actives finissent de s'exécuter. Dans certains cas, les domaines d'application peuvent être recyclés pour réduire immédiatement la sollicitation de la mémoire.|  
+|Élevé|L'allocation de mémoire est davantage réduite. Les applications serveur qui requièrent plus de mémoire sont refusées. Les requêtes actuelles sont ralenties et mettent plus de temps à s'exécuter. Les nouvelles requêtes ne sont pas acceptées. Le serveur de rapports place les fichiers de données en mémoire sur disque.<br /><br /> Si les contraintes de mémoire deviennent très importantes et s'il n'y a pas de mémoire disponible pour gérer les nouvelles requêtes, le serveur de rapports retourne l'erreur HTTP 503 relative à l'indisponibilité du serveur pendant que les requêtes actives finissent de s'exécuter. Dans certains cas, les domaines d'application peuvent être recyclés pour réduire immédiatement la sollicitation de la mémoire.|  
   
  Bien que vous ne puissiez pas personnaliser les réponses du serveur de rapports aux différents scénarios de sollicitation de la mémoire, vous pouvez spécifier des paramètres de configuration qui définissent les limites séparant les réponses aux sollicitations élevée, moyenne et faible de la mémoire.  
   
@@ -54,15 +55,17 @@ ms.locfileid: "66103969"
 ## <a name="configuration-settings-for-memory-management"></a>Paramètres de configuration pour la gestion de la mémoire  
  Les paramètres de configuration qui contrôlent l'allocation de mémoire pour le serveur de rapports sont `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin` et `MemoryThreshold`.  
   
--   `WorkingSetMaximum` et `WorkingSetMinimum` définissent la plage de mémoire disponible. Vous pouvez configurer ces paramètres pour définir une plage de mémoire disponible pour les applications du serveur de rapports. Cela peut être utile si vous hébergez plusieurs applications sur le même ordinateur et si vous réalisez que le serveur de rapports utilise une quantité disproportionnée de ressources système par rapport aux autres applications du même ordinateur.  
+-   
+  `WorkingSetMaximum` et `WorkingSetMinimum` définissent la plage de mémoire disponible. Vous pouvez configurer ces paramètres pour définir une plage de mémoire disponible pour les applications du serveur de rapports. Cela peut être utile si vous hébergez plusieurs applications sur le même ordinateur et si vous réalisez que le serveur de rapports utilise une quantité disproportionnée de ressources système par rapport aux autres applications du même ordinateur.  
   
--   `MemorySafetyMargin` et `MemoryThreshold` définissent les limites des niveaux faible, moyen et élevé de sollicitation de la mémoire. Pour chaque état, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] entreprend une action corrective visant à garantir une gestion appropriée du traitement des rapports et des autres requêtes en fonction de la quantité de mémoire disponible sur l’ordinateur. Vous pouvez spécifier les paramètres de configuration qui déterminent la limite entre les niveaux faible, moyen et élevé de sollicitation de la mémoire.  
+-   
+  `MemorySafetyMargin` et `MemoryThreshold` définissent les limites des niveaux faible, moyen et élevé de sollicitation de la mémoire. Pour chaque état, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] entreprend une action corrective visant à garantir une gestion appropriée du traitement des rapports et des autres requêtes en fonction de la quantité de mémoire disponible sur l’ordinateur. Vous pouvez spécifier les paramètres de configuration qui déterminent la limite entre les niveaux faible, moyen et élevé de sollicitation de la mémoire.  
   
      Bien que vous puissiez modifier les paramètres de configuration, cela n'améliorera pas les performances de traitement des rapports. La modification des paramètres de configuration n'est utile que si les requêtes sont supprimées avant la fin de leur exécution. La meilleure méthode pour améliorer les performances du serveur est de déployer le serveur de rapports ou des applications individuelles du serveur de rapports sur des ordinateurs dédiés.  
   
  L'illustration suivante montre comment les paramètres sont utilisés conjointement pour distinguer les niveaux faible, moyen et élevé de sollicitation de la mémoire :  
   
- ![Paramètres de configuration de l’état de la mémoire](../media/rs-memoryconfigurationzones.gif "Paramètres de configuration de l’état de la mémoire")  
+ ![Paramètres de configuration pour l'état de la mémoire](../media/rs-memoryconfigurationzones.gif "Paramètres de configuration pour l'état de la mémoire")  
   
  Le tableau suivant décrit les paramètres `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin` et `MemoryThreshold`. Les paramètres de configuration sont spécifiés dans le [fichier RSReportServer.config](rsreportserver-config-configuration-file.md).  
   
@@ -87,12 +90,13 @@ ms.locfileid: "66103969"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>À propos des paramètres de configuration de la mémoire ASP.NET  
- Bien que le service Web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], aucune d'entre elles ne répond aux paramètres de configuration de la mémoire spécifiés dans la section `processModel` de machine.config pour les applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] qui s'exécutent en mode de compatibilité IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire du fichier RSReportServer.config uniquement.  
+ Bien que le service Web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], aucune d'entre elles ne répond aux paramètres de configuration de la mémoire spécifiés dans la section `processModel` de machine.config pour les applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] qui s'exécutent en mode de compatibilité IIS 5.0. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire du fichier RSReportServer.config uniquement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md)   
- [Fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md)   
- [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)  
+ [Fichier de configuration RSReportServer](rsreportserver-config-configuration-file.md)   
+ [Fichier de configuration RSReportServer](rsreportserver-config-configuration-file.md)   
+ [Modifier un fichier de configuration Reporting Services &#40;RSreportserver. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Domaines d'application des applications du serveur de rapports](application-domains-for-report-server-applications.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101999"
 ---
 # <a name="create-and-manage-role-assignments"></a>Créer et gérer des attributions de rôles
@@ -41,7 +41,7 @@ ms.locfileid: "66101999"
   
  Vous devez être membre du groupe local Administrateurs sur l'ordinateur serveur de rapports pour créer une attribution de rôle. Vous pouvez déléguer cette responsabilité en affectant d’autres utilisateurs au rôle **Gestionnaire de contenu** .  
   
- Pour plus d’informations, consultez [accorder l’accès utilisateur à un serveur de rapports &#40;le Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md).  
+ Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Création d'une attribution de rôle au niveau système  
  Pour créer ou gérer une attribution de rôle au niveau système, utilisez le Gestionnaire de rapports et ouvrez la page Paramètres du site.  
@@ -67,7 +67,7 @@ ms.locfileid: "66101999"
  [Modifier ou supprimer une attribution de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)   
  [Attributions de rôles](role-assignments.md)   
  [Définitions de rôles](role-definitions.md)   
- [Predefined Roles](role-definitions-predefined-roles.md)   
+ [Rôles prédéfinis](role-definitions-predefined-roles.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)  
   
   

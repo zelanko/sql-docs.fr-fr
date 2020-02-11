@@ -1,5 +1,5 @@
 ---
-title: Instance utilisateur - Configuration du moteur de base de données | Microsoft Docs
+title: Configuration de la Moteur de base de données-instance utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095880"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Configuration du moteur de base de données – Instance utilisateur
@@ -30,7 +30,7 @@ ms.locfileid: "66095880"
  L'instance utilisateur, également désignée comme instance enfant ou client, est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est générée par l'instance parent (l'instance principale exécutée en tant que service, telle que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) pour le compte d'un utilisateur. L'instance utilisateur s'exécute en tant que processus utilisateur dans le contexte de sécurité de cet utilisateur. L'instance utilisateur est isolée de l'instance parent et de toutes les autres instances utilisateur exécutées sur l'ordinateur. La fonction d’instance utilisateur est également appelée RANU (« Run As Normal User », exécution en mode utilisateur normal).  
   
 > [!NOTE]  
->  Les connexions configurées en tant que membres du rôle serveur fixe **sysadmin** durant l’installation sont configurées en tant qu’administrateurs dans l’exemple de base de données. Si elles ne sont pas supprimées, elles sont membres du rôle serveur fixe **sysadmin** sur l’instance utilisateur.  
+>  Les connexions approvisionnées en tant que membres du rôle serveur fixe **sysadmin** lors de l’installation sont approvisionnées en tant qu’administrateurs dans la base de données de modèle. Si elles ne sont pas supprimées, elles sont membres du rôle serveur fixe **sysadmin** sur l’instance utilisateur.  
   
  Ajouter l'utilisateur au rôle Administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Par défaut, cette option est désactivée. Pour ajouter l'utilisateur du programme d'installation en cours au rôle Administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , activez la case à cocher.  

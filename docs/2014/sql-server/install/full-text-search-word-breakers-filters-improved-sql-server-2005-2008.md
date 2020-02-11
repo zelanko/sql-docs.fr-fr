@@ -1,5 +1,5 @@
 ---
-title: Recherche en texte intégral analyseurs lexicaux et filtres été considérablement améliorés dans SQL Server 2005 et SQL Server 2008 | Microsoft Docs
+title: Les filtres et les analyseurs lexicaux de recherche en texte intégral ont été considérablement améliorés dans SQL Server 2005 et SQL Server 2008 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7eebd70d700a36898c59f1fce8a51806bc78f91d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094991"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>Les filtres et les analyseurs lexicaux pour la recherche en texte intégral ont été considérablement améliorés dans SQL Server 2005 et SQL Server 2008
@@ -26,7 +26,7 @@ ms.locfileid: "66094991"
 ## <a name="description"></a>Description  
  Les analyseurs lexicaux et les filtres utilisés pour la recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont été considérablement modifiés afin d'optimiser leur fonctionnalité et fiabilité. Dans certains cas spécifiques, les modifications apportées aux analyseurs lexicaux peuvent avoir un impact sur les jetons de certaines données. Les jetons créés dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] peuvent être différents de ceux créés dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
- Pour plus d’informations sur les analyseurs lexicaux, consultez [configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+ Pour plus d’informations sur les analyseurs lexicaux, consultez [configurer et gérer](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)les analyseurs lexicaux et les générateurs de formes dérivées pour la recherche.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

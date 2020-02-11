@@ -11,21 +11,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101090"
 ---
 # <a name="subscriptions-page-report-manager"></a>Page Abonnements (Gestionnaire de rapports)
   La page Abonnements vous permet de répertorier tous les abonnements de la source de données partagée ou du rapport actifs. Si vous disposez d'une autorisation suffisante (accordée par la tâche « Gérer tous les abonnements », par exemple), vous pouvez afficher les abonnements de tous les utilisateurs. Si ce n'est pas le cas, cette page affiche uniquement les abonnements dont vous être propriétaire.  
   
 > [!NOTE]  
->  D'autres pages contiennent également des informations sur les abonnements. Pour plus d’informations, consultez [Page Mes abonnements &#40;le Gestionnaire de rapports&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) pour accéder à tous vos abonnements au même endroit ou la [nouvel abonnement ou modifier la Page d’abonnement &#40;le Gestionnaire de rapports&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) pour créer ou modifier un abonnement.  
+>  D'autres pages contiennent également des informations sur les abonnements. Pour plus d’informations, consultez la [page mes abonnements &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/my-subscriptions-page-report-manager.md) pour accéder à tous vos abonnements dans un même emplacement ou la [page nouvel abonnement ou modifier l’abonnement &#40;gestionnaire de rapports&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) pour créer ou modifier un abonnement.  
   
  Certaines options ne sont disponibles que s'il existe des abonnements. Si aucun abonnement n'est défini et si vous accédez à cette page à partir d'un rapport, les options **Nouvel abonnement** et **Nouvel abonnement piloté par les données** sont les seules disponibles dans la page.  
   
- Avant de créer un abonnement, vous devez vérifier que la source de données du rapport utilise des informations d'identification stockées. Utilisez la page des propriétés des sources de données pour stocker des informations d'identification. Pour plus d’informations, consultez [Page de propriétés de Sources de données &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Avant de créer un abonnement, vous devez vérifier que la source de données du rapport utilise des informations d'identification stockées. Utilisez la page des propriétés des sources de données pour stocker des informations d'identification. Pour plus d’informations, consultez la [page Propriétés des sources de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
 > [!NOTE]  
 >  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -56,13 +56,13 @@ ms.locfileid: "66101090"
  **Modifier**  
  Cliquez pour afficher ou modifier la description.  
   
- **Rapport**  
+ **Report**  
  Lorsque vous ouvrez cette page à partir d'une source de données partagée, cette colonne identifie le rapport pour lequel l'abonnement est défini. La colonne **Dossier** identifie l'emplacement du rapport.  
   
  **Description**  
  Affiche une description de l'abonnement.  
   
- **Déclencheur**  
+ **Stead**  
  Identifie les critères qui entraînent l'exécution de l'abonnement. Un déclencheur **TimedSubscription** est basé sur une planification qui définit à quel moment l'abonnement s'exécute. Un déclencheur **SnapshotUpdated** est basé sur une mise à jour d'un instantané de rapport.  
   
  **Propriétaire**  
@@ -80,8 +80,8 @@ ms.locfileid: "66101090"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
+ [Créez, modifiez et supprimez les abonnements standard &#40;Reporting Services en mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

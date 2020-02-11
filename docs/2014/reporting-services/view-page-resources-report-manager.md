@@ -1,5 +1,5 @@
 ---
-title: Page vue, ressources (Gestionnaire de rapports) | Microsoft Docs
+title: Page de vue, ressources (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcff47cf725fd5b9fd059e6a06b075be00c5e808
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098701"
 ---
 # <a name="view-page-resources-report-manager"></a>Page Vue, Ressources (Gestionnaire de rapports)
   La page Afficher des ressources vous permet d'afficher une ressource. Une ressource est un élément stocké et géré sur un serveur de rapports, mais qui n'est pas traité sur un serveur de rapports (un serveur de rapports traite des rapports et des modèles). Vous pouvez utiliser des ressources lorsque vous souhaitez stocker des documents, des images ou d'autres fichiers arbitraires qui ne sont pas traités par le serveur. La plupart des fichiers image (tels que les fichiers JPG, GIF et PNG) peuvent être affichés dans la page Afficher du Gestionnaire de rapports. Les autres ressources s'ouvrent dans une autre fenêtre de l'application.  
   
- Outre l'affichage des ressources dans la page Afficher, vous pouvez définir la sécurité et des propriétés sur la ressource. Pour plus d’informations, consultez [Page propriétés générales, ressources &#40;le Gestionnaire de rapports&#41; ](../../2014/reporting-services/general-properties-page-resources-report-manager.md) et [Page propriétés de sécurité, éléments &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md).  
+ Outre l'affichage des ressources dans la page Afficher, vous pouvez définir la sécurité et des propriétés sur la ressource. Pour plus d’informations, consultez [page Propriétés générales, ressources &#40;gestionnaire de rapports](../../2014/reporting-services/general-properties-page-resources-report-manager.md) page propriétés de&#41;et de [sécurité, éléments &#40;gestionnaire de rapports ](../../2014/reporting-services/security-properties-page-items-report-manager.md)&#41;.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

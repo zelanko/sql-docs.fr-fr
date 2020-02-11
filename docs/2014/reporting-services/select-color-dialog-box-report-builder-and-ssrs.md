@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la boîte de dialogue couleur (Générateur de rapports et SSRS) | Microsoft Docs
+title: Boîte de dialogue Sélectionner une couleur (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101381"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Sélectionner une couleur (Générateur de rapports et SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66101381"
  **Sélecteur de couleurs**  
  Choisissez une option parmi les trois proposées permettant de spécifier la façon dont vous souhaitez sélectionner des couleurs :  
   
--   **Sélecteur - Cercle de couleur** Choisissez une couleur à l’aide des valeurs de couleur Teinte/Saturation/Luminosité (TSL).  
+-   **Sélecteur-cercle de couleur** Choisissez une couleur à l’aide des valeurs de couleur teinte/saturation/luminosité (TSL).  
   
--   **Sélecteur - Carré de couleur** Choisissez une couleur à l’aide des valeurs de couleur Rouge/Vert/Bleu (RVB).  
+-   **Sélecteur-carré de couleur** Choisissez une couleur à l’aide des valeurs de couleur rouge/vert/bleu (RVB).  
   
--   **Palette - Couleurs standard** Choisissez une couleur dans une liste prédéfinie de valeurs de couleur.  
+-   **Palette-couleurs standard** Choisissez une couleur dans une liste prédéfinie de valeurs de couleur.  
   
  **Cercle de couleur**  
  Utilisez cette option pour les couleurs TSL, car les valeurs TSL sont associées à un système de coordonnées cylindriques. La teinte représente la couleur réelle, la saturation correspond à la pureté de la couleur et la luminosité est la luminosité ou l'obscurité relative.  
@@ -46,7 +46,7 @@ ms.locfileid: "66101381"
  Lorsque vous sélectionnez une couleur, le centre du carré détermine la couleur. Utilisez le curseur de couleur pour modifier la plage de la couleur choisie. Les coordonnées x et y représentent les deux autres couleurs. Par exemple, si vous sélectionnez le vert, le curseur affiche la plage des valeurs vertes, tandis que les coordonnées x et y représentent respectivement les valeurs rouges et bleues.  
   
  **Couleurs standard**  
- Utilisation pour les couleurs nommées à partir de la [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` énumération.  
+ Utilisez pour les couleurs nommées [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` de l’énumération.  
   
  **Système de couleurs**  
  Spécifiez des couleurs RVB ou TSL. Ce choix modifie l'affichage pour afficher des valeurs RVB ou TSL, mises à jour de façon interactive lorsque vous utilisez un cercle de couleur ou un carré de couleur pour le **Sélecteur de couleurs**.  
@@ -65,13 +65,13 @@ ms.locfileid: "66101381"
  **Alpha**  
  Valeur décimale pour la composante alpha ou de transparence de la couleur. Lorsque cette valeur est activée, vous pouvez utiliser le commutateur de curseur pour ajuster le degré de transparence voulu.  
   
- **Teinte**  
+ **Hue**  
  Valeur décimale pour la teinte de la couleur TSL. Utilisez la zone de sélection numérique pour modifier la valeur ou tapez une valeur comprise entre 0 et 255.  
   
  **Saturation**  
  Valeur décimale pour la saturation de la couleur TSL. Utilisez la zone de sélection numérique pour modifier la valeur ou tapez une valeur comprise entre 0 et 255.  
   
- **Brightness**  
+ **Brightness (Luminosité)**  
  Valeur décimale pour la luminosité de la couleur TSL. Utilisez la zone de sélection numérique pour modifier la valeur ou tapez une valeur comprise entre 0 et 255.  
   
  **Échantillon de couleur**  

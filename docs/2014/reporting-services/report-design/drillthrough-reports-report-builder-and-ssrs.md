@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63119bf6d8ba4e9d907b9c6cdfb6bfe0b7765941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105940"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Rapports d'extraction (Générateur de rapports et SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105940"
 > [!NOTE]  
 >  Lorsque vous utilisez le Générateur de rapports, vous devez être connecté à un serveur de rapports afin d'afficher le rapport d'extraction qui s'ouvre lorsque vous cliquez sur le lien d'extraction dans le rapport principal.  
   
- Pour commencer rapidement à utiliser des rapports d'extraction, voir [Tutoriel : Créer un rapport principal et un rapport d’extraction &#40;Générateur de rapports&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Rapport d’extraction est également décrit dans deux solutions décisionnelles, [création de rapport BI : Rapports et scénario d’abonnements](https://technet.microsoft.com/bi/ff769487.aspx) et [des tableaux de bord d’entreprise : Solution de ventes](https://technet.microsoft.com/bi/ff643005.aspx)  
+ Pour commencer à utiliser rapidement les rapports d’extraction, consultez [Didacticiel : création d’un rapport principal et d’un rapport d’extraction &#40;Générateur de rapports&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Le rapport d'extraction est également décrit dans deux solutions décisionnelles, [Création de rapport BI : rapports et scénario d'abonnements](https://technet.microsoft.com/bi/ff769487.aspx) et [Tableaux de bord d'entreprise : solution de vente](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

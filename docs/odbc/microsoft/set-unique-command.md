@@ -1,5 +1,5 @@
 ---
-title: SET UNIQUE, commande | Microsoft Docs
+title: DÉFINIR la commande UNIQUE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29598ed97cba8be04a0c08727cffc40e663becba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063616"
 ---
 # <a name="set-unique-command"></a>SET UNIQUE, commande
-Spécifie si les enregistrements avec les valeurs de clés d’index en double sont conservées dans un fichier d’index.  
+Spécifie si les enregistrements avec des valeurs de clé d’index dupliquées sont conservés dans un fichier d’index.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,11 +30,11 @@ SET UNIQUE ON | OFF
 ```  
   
 ## <a name="arguments"></a>Arguments  
- ON  
- Spécifie que n’importe quel enregistrement avec une valeur de clé d’index dupliquées ne pas être inclus dans le fichier d’index. Seul le premier enregistrement avec la valeur de clé d’index d’origine est inclus dans le fichier d’index.  
+ ACTIVÉ  
+ Spécifie que tout enregistrement avec une valeur de clé d’index dupliquée ne doit pas être inclus dans le fichier d’index. Seul le premier enregistrement avec la valeur de clé d’index d’origine est inclus dans le fichier d’index.  
   
  OFF  
- (Valeur par défaut). Spécifie que les enregistrements avec les valeurs de clé d’index dupliquées inclus dans le fichier d’index.  
+ (Par défaut.) Spécifie que les enregistrements avec des valeurs de clé d’index dupliquées doivent être inclus dans le fichier d’index.  
   
 ## <a name="remarks"></a>Notes  
- Un fichier d’index conserve son paramètre de valeur UNIQUE lorsque vous émettez la RÉINDEXATION. Pour plus d’informations, consultez [INDEX](../../odbc/microsoft/index-command.md).
+ Un fichier d’index conserve son paramètre SET UNIQUE lorsque vous émettez la réindexation. Pour plus d’informations, consultez [index](../../odbc/microsoft/index-command.md).

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105351"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendu des éléments de rapport (Générateur de rapports et SSRS)
@@ -79,11 +79,11 @@ ms.locfileid: "66105351"
   
      Les en-têtes sont prioritaires sur les pieds de page. Les groupes répétés internes sont prioritaires sur les groupes externes. Les éléments pour lesquels la propriété `RepeatWith` est définie et qui sont plus proches de la région de données cible sont prioritaires sur les éléments plus éloignés de la région de données.  
   
--   Petits éléments de rapport, tels que les zones de texte ou les rectangles, avec une propriété KeepTogether explicite ayant la valeur `true`.  
+-   Les petits éléments de rapport, tels que les zones de texte ou les rectangles, avec une `true`propriété KeepTogether explicite définie sur.  
   
--   Grands éléments de rapport, tels que les sous-rapports ou un membre de tableau matriciel non-le plus profond, avec une propriété KeepTogether explicite ayant la valeur `true`.  
+-   Les grands éléments de rapport, tels que les sous-rapports ou un membre de tableau matriciel non plus profond, avec une `true`propriété KeepTogether explicite définie sur.  
   
--   Régions de données de tableau matriciel avec une propriété KeepTogether explicite ayant la valeur `true`.  
+-   Les régions de données de tableau matriciel avec une propriété `true`KeepTogether explicite définie sur.  
   
 ### <a name="subreports"></a>Sous-rapports  
  Un sous-rapport est rendu sous la forme d'un rectangle qui contient un autre rapport défini dans un fichier rapport .rdl séparé. Le fichier de sous-rapport doit être publié sur un serveur de rapports avant qu'il soit accessible au rapport parent.  

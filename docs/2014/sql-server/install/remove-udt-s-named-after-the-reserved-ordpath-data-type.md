@@ -1,5 +1,5 @@
 ---
-title: Supprimez les UDT&#39;s nommé d’après le type de données ORDPATH | Microsoft Docs
+title: Supprimer l’UDT&#39;s nommé après le type de données ORDPATH réservé | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092919"
 ---
-# <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Supprimez les UDT&#39;s nommé d’après le type de données ORDPATH
+# <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Supprimer l’UDT&#39;s nommé après le type de données ORDPATH réservé
   Le Conseiller de mise à niveau a détecté un type défini par l'utilisateur (UDT) nommé d'après un terme réservé pour le type de donnée `ORDPATH`.  
   
 ## <a name="component"></a>Composant  

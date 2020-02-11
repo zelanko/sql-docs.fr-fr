@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bacb9387a4026fbf6a41f0b5d9cdd0b77594da97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100384"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Suppression des éléments du catalogue (Management Studio)
@@ -41,12 +41,12 @@ ms.locfileid: "66100384"
  **État**  
  Affiche les informations de progression d'une opération de suppression.  
   
- **Erreur**  
+ **Error**  
  Affiche un code d'erreur si une erreur se produit pendant la suppression d'un élément.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer un élément &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](report-server-in-management-studio-f1-help.md)   
- [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)  
+ [Créer, modifier et supprimer des planifications](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

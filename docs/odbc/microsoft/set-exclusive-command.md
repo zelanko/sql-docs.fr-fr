@@ -13,14 +13,14 @@ ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d1a37043d332b54d0d5c5ebb7b2ba9f3acce000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071757"
 ---
 # <a name="set-exclusive-command"></a>SET EXCLUSIVE, commande
-Spécifie si les fichiers de la table sont ouverts pour une utilisation exclusive ou partagée sur un réseau.  
+Spécifie si les fichiers de table sont ouverts pour une utilisation exclusive ou partagée sur un réseau.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,14 +30,14 @@ SET EXCLUSIVE ON | OFF
 ```  
   
 ## <a name="arguments"></a>Arguments  
- ON  
- Limite d’accessibilité d’une table ouverte sur un réseau à l’utilisateur qui l’avez ouverte. La table n’est pas accessible à d’autres utilisateurs sur le réseau. SET de ON exclusif empêche également tous les autres utilisateurs ayant un accès en lecture seule.  
+ ACTIVÉ  
+ Limite l’accessibilité d’une table ouverte sur un réseau à l’utilisateur qui l’a ouverte. La table n’est pas accessible aux autres utilisateurs sur le réseau. La clause EXCLUSIVE ON empêche également tous les autres utilisateurs d’avoir un accès en lecture seule.  
   
  OFF  
- (Valeur par défaut pour le pilote ; les valeurs par défaut pour Visual FoxPro sont ON pour la session de données globales et désactivée (OFF) pour une session de données privées). Permet à une table est ouverte sur un réseau partagé et modifiés par n’importe quel utilisateur sur le réseau.  
+ (Valeur par défaut pour le pilote ; les valeurs par défaut pour Visual FoxPro sont ACTIVÉes pour la session de données globale et désactivées pour une session de données privée.) Autorise le partage et la modification d’une table ouverte sur un réseau par n’importe quel utilisateur sur le réseau.  
   
 ## <a name="remarks"></a>Notes  
- Modification du paramètre de valeur exclusif ne change pas l’état des tables précédemment ouverts. Par exemple, si une table est ouvert avec définir exclusif la valeur ON et définissez exclusif est modifié ultérieurement à OFF, la table conserve son état de l’usage exclusif.  
+ La modification de la valeur de SET EXCLUSIVE ne modifie pas l’état des tables précédemment ouvertes. Par exemple, si une table est ouverte avec SET EXCLUSIVE défini sur ON et que l’option SET EXCLUSIVE est remplacée par la valeur OFF, la table conserve son état d’utilisation exclusive.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration d’ODBC pour Visual FoxPro, boîte de dialogue](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

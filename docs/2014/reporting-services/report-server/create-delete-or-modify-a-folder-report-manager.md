@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103914"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>création, suppression ou modification d'un dossier (Gestionnaire de rapports)
@@ -35,7 +35,7 @@ ms.locfileid: "66103914"
   
      La page **Nouveau dossier** s’affiche.  
   
-3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : \@ & = + , $ / * \< > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
+3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : \@ & = +, $/* \< > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
   
 4.  Tapez éventuellement une description.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "66103914"
   
 6.  Vous pouvez également supprimer le dossier et son contenu en cliquant sur **Supprimer**.  
   
-7.  Cliquez sur **Appliquer** pour enregistrer vos modifications.  
+7.  Cliquez sur **Appliquer** pour enregistrer les modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Nouveau dossier &#40;Gestionnaire de rapports&#41;](../new-folder-page-report-manager.md)   
- [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
+ [Page nouveau dossier &#40;Gestionnaire de rapports&#41;](../new-folder-page-report-manager.md)   
+ [Page contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
  [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

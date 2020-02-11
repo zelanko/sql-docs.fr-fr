@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104946"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Graphiques à base de formes (Générateur de rapports et SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66104946"
   
 -   Les graphiques à base de formes sont idéaux pour représenter des pourcentages proportionnels en respectant un ordre de tri. Toutefois, par souci de cohérence, le graphique ne trie pas les valeurs de votre dataset par défaut. Pensez à organiser vos valeurs de la plus élevée à la plus basse pour représenter le plus correctement possible vos données sous la forme d'un graphique en entonnoir ou en pyramide. Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   Les valeurs null, vides, négatives n'ont aucun effet lors du calcul de ratios C'est pourquoi, ces valeurs ne sont pas affichées sur un graphique à base de formes. Si vous souhaitez indiquer visuellement ces types de valeurs sur votre graphique, modifiez le type de graphique. Pour plus d’informations sur comment ajouter des points vides à un graphique non forme, consultez [ajouter des Points vides au graphique &#40;Générateur de rapports et SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Les valeurs null, vides, négatives n'ont aucun effet lors du calcul de ratios C'est pourquoi, ces valeurs ne sont pas affichées sur un graphique à base de formes. Si vous souhaitez indiquer visuellement ces types de valeurs sur votre graphique, modifiez le type de graphique. Pour plus d’informations sur l’ajout de points vides à un graphique qui n’est pas à formes, consultez [Ajouter des points vides au graphique &#40;générateur de rapports et SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Si vous définissez vos propres couleurs sur un graphique à base de formes à l'aide d'une palette personnalisée, assurez-vous de disposer de suffisamment de couleurs dans votre palette pour mettre en surbrillance chaque point de données avec sa propre couleur. Pour plus d’informations, consultez [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   

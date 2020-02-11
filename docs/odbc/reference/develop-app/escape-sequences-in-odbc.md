@@ -15,20 +15,20 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051122"
 ---
 # <a name="escape-sequences-in-odbc"></a>Séquences d’échappement dans ODBC
-Un nombre de fonctionnalités de langage, tels que les jointures externes et des appels de fonctions scalaires, est généralement implémenté par les SGBD. Toutefois, les syntaxes pour ces fonctionnalités ont tendance à être propres au SGBD, même lorsque les syntaxes standards sont définis par les divers organismes de normalisation. Pour cette raison, ODBC définit des séquences d’échappement qui contiennent des syntaxes standards pour les fonctionnalités de langage suivantes :  
+Un certain nombre de fonctionnalités de langage, telles que les jointures externes et les appels de fonction scalaires, sont généralement implémentées par des SGBD. Toutefois, les syntaxes de ces fonctionnalités ont tendance à être spécifiques au SGBD, même lorsque les syntaxes standard sont définies par les divers corps de normes. Pour cette raison, ODBC définit des séquences d’échappement qui contiennent des syntaxes standard pour les fonctionnalités de langage suivantes :  
   
--   Littéraux d’intervalle de date, time, timestamp et datetime  
+-   Littéraux date, Time, timestamp et DateTime Interval  
   
--   Fonctions scalaires, par exemple, numérique, chaîne et fonctions de conversion de type de données  
+-   Fonctions scalaires telles que des fonctions numériques, de chaîne et de conversion de types de données  
   
--   COMME caractère d’échappement de prédicat  
+-   Caractère d’échappement de prédicat LIKE  
   
 -   Jointures externes  
   
@@ -43,20 +43,20 @@ Un nombre de fonctionnalités de langage, tels que les jointures externes et des
 ```  
   
 ## <a name="remarks"></a>Notes  
- La séquence d’échappement est reconnue et analysée par les pilotes, remplacement les séquences d’échappement par la grammaire de SGBD spécifiques. Pour plus d’informations sur la syntaxe de séquence d’échappement, consultez [séquences d’échappement ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) dans l’annexe c : Grammaire SQL.  
+ La séquence d’échappement est reconnue et analysée par les pilotes, qui remplacent les séquences d’échappement par une grammaire spécifique au SGBD. Pour plus d’informations sur la syntaxe de séquence d’échappement, consultez [séquences d’échappement ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) dans annexe C : grammaire SQL.  
   
 > [!NOTE]  
->  Dans ODBC 2. *x*, il s’agissait de la syntaxe standard de la séquence d’échappement : **--(\*fournisseur (** _-nom du fournisseur_ **), produit (** _-nom du produit_ **)** _extension_  **\*)--**  
+>  Dans ODBC 2. *x*, il s’agit de la syntaxe standard de la séquence d’échappement : **--(\*fournisseur (**_nom du fournisseur_**),**_extension_ __**** ** \*** du produit (nom du produit))--  
 >   
->  En plus de cette syntaxe, une syntaxe sténographique a été définie sous la forme : **{** _extension_ **}**  
+>  En plus de cette syntaxe, une syntaxe sténographique a été définie sous la forme : **{**_extension_**}**  
 >   
->  Dans ODBC 3. *x*, la forme longue de la séquence d’échappement a été déconseillée et la forme abrégée est utilisée exclusivement.  
+>  Dans ODBC 3. *x*, la forme longue de la séquence d’échappement est dépréciée et la forme abrégée est utilisée exclusivement.  
   
- Étant donné que les séquences d’échappement sont mappés par le pilote pour les syntaxes de SGBD spécifiques, une application peut utiliser la séquence d’échappement ou une syntaxe spécifique au SGBD. Toutefois, les applications qui utilisent la syntaxe de SGBD spécifiques ne sera pas interopérables. Lorsque vous utilisez la séquence d’échappement, applications devraient vous assurer que l’attribut d’instruction SQL_ATTR_NOSCAN est désactivée, ce qui est par défaut. Sinon, la séquence d’échappement est être envoyée directement à la source de données, où elle entraîne généralement une erreur de syntaxe.  
+ Étant donné que les séquences d’échappement sont mappées par le pilote à des syntaxes propres au SGBD, une application peut utiliser la séquence d’échappement ou la syntaxe spécifique au SGBD. Toutefois, les applications qui utilisent la syntaxe propre au SGBD ne sont pas interopérables. Lors de l’utilisation de la séquence d’échappement, les applications doivent s’assurer que l’attribut d’instruction SQL_ATTR_NOSCAN est désactivé, ce qui est le cas par défaut. Dans le cas contraire, la séquence d’échappement sera envoyée directement à la source de données, où elle provoquera généralement une erreur de syntaxe.  
   
- Pilotes prennent en charge uniquement les séquences d’échappement qui ils peuvent mapper aux fonctionnalités de langage sous-jacent. Par exemple, si la source de données ne prend pas en charge les jointures externes, ni sera le pilote. Pour déterminer les séquences d’échappement sont pris en charge, une application appelle **SQLGetTypeInfo** et **SQLGetInfo**. Pour plus d’informations, consultez la section suivante, [Date, Time et Timestamp littéraux](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ Les pilotes ne prennent en charge que les séquences d’échappement qu’ils peuvent mapper aux fonctionnalités du langage sous-jacent. Par exemple, si la source de données ne prend pas en charge les jointures externes, ni le pilote. Pour déterminer les séquences d’échappement prises en charge, une application appelle **SQLGetTypeInfo** et **SQLGetInfo**. Pour plus d’informations, consultez la section suivante, [date, heure et littéraux d’horodatage](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Littéraux de date, d’heure et d’horodatage](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   

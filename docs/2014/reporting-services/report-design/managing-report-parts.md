@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105586"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
-  À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], parties de rapports peuvent être publiés sur les serveurs de rapports et réutilisées dans d’autres rapports et par d’autres utilisateurs s’ils ont les autorisations appropriées.  
+  À partir [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]de, les parties de rapports peuvent être publiées sur des serveurs de rapports et réutilisées dans d’autres rapports et par d’autres utilisateurs si elles disposent des autorisations appropriées.  
   
  Les parties de rapports peuvent être réutilisées par plusieurs utilisateurs et dans plusieurs rapports. Les utilisateurs peuvent rechercher des parties de rapports sur le serveur et les ajouter à un rapport.  Les utilisateurs peuvent également être informés des mises à jour apportées à la partie de rapport sur le serveur et republier de nouvelles versions d'une partie de rapport. Ces actions de création du rapport peuvent être affectées et contrôlées par les autorisations de sécurité de Reporting Services.  Cette rubrique passe en revue les propriétés et le comportement des parties de rapports une fois que celles-ci sont sur le serveur.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "66105586"
  Pour gérer des parties de rapports, vous pouvez utiliser le Gestionnaire de rapports pour un serveur de rapports en mode natif ou les pages d'application pour un serveur de rapports en mode intégré SharePoint.  
   
 ### <a name="server-side-interaction-and-search"></a>Interaction et recherche côté serveur  
- Les parties de rapports peuvent être publiées sur un serveur de rapports en mode natif ou en mode intégré SharePoint. Les utilisateurs peuvent utiliser la fonctionnalité de bibliothèque de parties de rapports dans une application de création de rapports telle que le Générateur de rapports de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour rechercher et ajouter des parties de rapports à leurs rapports. Lorsqu'un utilisateur recherche une partie de rapport, la recherche regarde le catalogue du serveur de rapports indépendamment du mode pour lequel le serveur a été installé.  
+ Les parties de rapports peuvent être publiées sur un serveur de rapports en mode natif ou en mode intégré SharePoint. Les utilisateurs peuvent utiliser la fonctionnalité de la bibliothèque de parties de rapports dans une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de création de rapports telle que générateur de rapports pour rechercher et ajouter des parties de rapports à leurs rapports. Lorsqu'un utilisateur recherche une partie de rapport, la recherche regarde le catalogue du serveur de rapports indépendamment du mode pour lequel le serveur a été installé.  
   
  Lorsque les parties de rapports sont publiées à partir d'une application de création de rapports telle que le Générateur de rapports, sur un serveur de rapports en mode intégré SharePoint, le catalogue du serveur de rapports est également mis à jour et les recherches à partir de la bibliothèque reflètent précisément la partie de rapport nouvelle ou mise à jour.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66105586"
   
 |Propriété|Description|Partie de rapport<br /><br /> Critères de recherche de bibliothèque|  
 |--------------|-----------------|---------------------------------------------|  
-|Créer une vue d’abonnement|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
+|Name|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
 |Description|Vous pouvez organiser les noms des parties de rapports de manière à simplifier les recherches des utilisateurs dans la bibliothèque. Par exemple, vous pouvez rechercher la description qui commence par « Ventes>> » pour trouver toutes les parties de rapports impliquant une présentation et des données associées aux ventes.|Oui|  
 |CreatedBy|ID de l'utilisateur qui a ajouté la partie de rapport à la base de données du serveur de rapports. Le format exact dépend de la méthode d'authentification. Par exemple, certaines méthodes d'authentification provoquent l'affichage complet du domaine\nom_utilisateur dans les champs CreatedBy et ModifiedBy.|Oui|  
 |CreationDate|Date à laquelle la partie de rapport a été créée à l'origine.<br /><br /> Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
 |ModifiedBy|ModifiedBy est l'ID de l'utilisateur auteur des dernières modifications apportées à la partie de rapport.|Oui|  
-|ModifiedDate|Date à laquelle la partie de rapport a été modifiée pour la dernière fois sur le serveur.<br /><br /> Ce champ est utilisé dans le cadre de la logique pour déterminer le moment où il existe des mises à jour côté serveur associées à une partie de rapport. Pour plus d'informations, consultez la description de la propriété ComponentID ultérieurement dans cette table.|Oui|  
+|DateModification|Date à laquelle la partie de rapport a été modifiée pour la dernière fois sur le serveur.<br /><br /> Ce champ est utilisé dans le cadre de la logique pour déterminer le moment où il existe des mises à jour côté serveur associées à une partie de rapport. Pour plus d'informations, consultez la description de la propriété ComponentID ultérieurement dans cette table.|Oui|  
 |SubType (*)|SubType est une chaîne qui indique le type de partie de rapport à rechercher, par exemple « Tableau matriciel » ou « Graphique ».|Oui|  
 |ComponentID (*)|ComponentID est un identificateur unique pour la partie de rapport. Il s'agit d'un nouveau champ ajouté au catalogue qui est visible à la fois sur le serveur et sur les applications de création de rapports telles que le Générateur de rapports.<br /><br /> Ce champ est utilisé par les applications clientes lors de la vérification du serveur en vue de détecter des mises à jour d'une partie de rapport. L'application cliente recherche sur le serveur les identificateurs ComponentID qui se trouvent dans le rapport côté client en cours. Lorsqu'il existe un ComponentID correspondant, la valeur ModifiedDate est comparée à la valeur SyncDate côté client de l'élément de rapport.|N0|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66105586"
 |Actions|Role|  
 |-------------|----------|  
 |Ajouter, supprimer, modifier les propriétés de l'élément, gérer la sécurité et télécharger des parties de rapport|Contrôle total|  
-|Ajouter, supprimer, modifier les propriétés de l'élément et télécharger des parties de rapport|Conception<br /><br /> Collaboration|  
+|Ajouter, supprimer, modifier les propriétés de l'élément et télécharger des parties de rapport|Conception<br /><br /> Participez|  
 |Rechercher et réutiliser|Lire<br /><br /> Vue seule|  
   
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité  
@@ -92,10 +92,10 @@ ms.locfileid: "66105586"
   
 ## <a name="see-also"></a>Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Page propriétés générales, parties de rapport &#40;le Gestionnaire de rapports&#41;](../general-properties-page-report-parts-report-manager.md)   
- [Déplacer les éléments de Page &#40;le Gestionnaire de rapports&#41;](../move-items-page-report-manager.md)   
+ [Page Propriétés générales, parties de rapport &#40;Gestionnaire de rapports&#41;](../general-properties-page-report-parts-report-manager.md)   
+ [Page déplacer les éléments &#40;Gestionnaire de rapports&#41;](../move-items-page-report-manager.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Résoudre les problèmes de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Résoudre les problèmes liés aux parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   
   

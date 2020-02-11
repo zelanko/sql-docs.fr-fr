@@ -1,5 +1,5 @@
 ---
-title: Définir les paramètres d’un rapport publié (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
+title: Définir des paramètres sur un rapport publié (Reporting Services en mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105014"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>définir les paramètres sur un rapport publié (Reporting Services en mode intégré SharePoint)
@@ -82,6 +82,6 @@ ms.locfileid: "66105014"
 7.  Cliquez sur **Appliquer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [Référence autorisations de sites et de listes SharePoint pour des éléments de serveur de rapports](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   

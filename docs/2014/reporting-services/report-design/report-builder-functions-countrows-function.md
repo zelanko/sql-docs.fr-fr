@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105280"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Fonction CountRows (Générateur de rapports et SSRS)
@@ -31,17 +31,19 @@ CountRows(scope, recursive)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *portée*  
+ *scope*  
  (`String`) Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport à compter.  
   
- *récursifs*  
- (**Type énuméré**) Facultatif. `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ *recursive*  
+ (**Type énuméré**) Facultatif. 
+  `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  
  Retourne un `Integer`.  
   
 ## <a name="remarks"></a>Notes  
- `CountRows` compte toutes les lignes dans l'étendue spécifiée, y compris celles contenant des valeurs Null.  
+ 
+  `CountRows` compte toutes les lignes dans l'étendue spécifiée, y compris celles contenant des valeurs Null.  
   
  La valeur du paramètre *scope* ne peut pas être une expression et doit faire référence à l'étendue actuelle ou à une étendue contenante.  
   

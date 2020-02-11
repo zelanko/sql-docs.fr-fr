@@ -1,5 +1,5 @@
 ---
-title: Configuration Analysis Services – répertoires de données | Microsoft Docs
+title: Configuration de la Analysis Services-répertoires de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096811"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configuration de Analysis Services – Répertoires de données
@@ -22,14 +22,14 @@ ms.locfileid: "66096811"
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
   
-|Description|Répertoire par défaut|Recommandations|  
+|Description|Annuaire par défaut|Recommandations|  
 |-----------------|-----------------------|---------------------|  
-|Répertoire de données racine|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Data\|Vérifiez que le dossier \Program Files\Microsoft SQL Server\ est protégé par des autorisations limitées. Le fonctionnement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dépend, dans de nombreuses configurations, de la performance de l'emplacement de stockage sur lequel le répertoire de données se trouve. Placez ce répertoire sur l'emplacement de stockage le plus performant raccordé au système. Pour les installations de cluster de basculement, vérifiez que les répertoires de données sont placés sur le disque partagé.|  
-|Répertoire de fichiers journaux|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Log\|il s’agit du répertoire pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] des fichiers journaux, y compris le journal FlightRecorder. Si vous augmentez la durée de la boîte noire, assurez-vous que le répertoire de journal dispose de l'espace adéquat.|  
-|Répertoire Temp|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Temp\|placer le répertoire Temp sur le sous-système de stockage hautes performances.|  
-|Répertoire de sauvegarde|C:\Program Files\Microsoft SQL Server\MSAS12. \<Id_instance > \OLAP\Backup\|il s’agit du répertoire pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] par défaut des fichiers de sauvegarde. Pour les installations de PowerPivot pour SharePoint, il s'agit également de l'emplacement où les services système PowerPivot mettent en cache les fichiers de données PowerPivot.<br /><br /> Vérifiez que des autorisations appropriées sont définies pour empêcher la perte de données et vérifiez que le groupe d'utilisateurs pour le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
+|Répertoire de données racine|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Data\|Assurez-vous que le dossier \Program Files\Microsoft SQL Server \ est protégé avec des autorisations limitées. Le fonctionnement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dépend, dans de nombreuses configurations, de la performance de l'emplacement de stockage sur lequel le répertoire de données se trouve. Placez ce répertoire sur l'emplacement de stockage le plus performant raccordé au système. Pour les installations de cluster de basculement, vérifiez que les répertoires de données sont placés sur le disque partagé.|  
+|Répertoire de fichiers journaux|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Log\|il s’agit du répertoire [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les fichiers journaux et il comprend le journal FlightRecorder. Si vous augmentez la durée de la boîte noire, assurez-vous que le répertoire de journal dispose de l'espace adéquat.|  
+|Répertoire Temp|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Temp\|Placez le répertoire Temp sur le sous-système de stockage hautes performances.|  
+|Répertoire de sauvegarde|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Backup\|il s’agit du répertoire [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les fichiers de sauvegarde par défaut. Pour les installations de PowerPivot pour SharePoint, il s'agit également de l'emplacement où les services système PowerPivot mettent en cache les fichiers de données PowerPivot.<br /><br /> Vérifiez que des autorisations appropriées sont définies pour empêcher la perte de données et vérifiez que le groupe d'utilisateurs pour le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
   
-## <a name="notes"></a>Remarques  
+## <a name="notes"></a>Notes  
   
 -   Les instances d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployées sur une batterie de serveurs SharePoint stockent des fichiers d'application, des fichiers de données et des propriétés dans les bases de données de contenu et les bases de données d'application de service.  
   

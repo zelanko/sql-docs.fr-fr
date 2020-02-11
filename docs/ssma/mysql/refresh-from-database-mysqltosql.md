@@ -10,36 +10,36 @@ ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066705"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Actualiser à partir de la base de données (MySQLToSQL)
-Le **Actualiser à partir de la base de données** boîte de dialogue vous permet de sélectionner les objets à actualiser à partir de la base de données MySQL. Lignes dans la boîte de dialogue sont codées par couleur selon l’état des métadonnées :  
+La boîte **de dialogue actualiser à partir de la base de données** vous permet de sélectionner les objets à actualiser à partir de la base de données MySQL. Les lignes de la boîte de dialogue sont codées par couleur en fonction de l’état des métadonnées :  
   
--   Si les métadonnées de l’objet a été modifié localement et dans la base de données MySQL, la ligne est bleu.  
+-   Si les métadonnées de l’objet ont été modifiées localement et dans la base de données MySQL, la ligne est bleue.  
   
--   Si les métadonnées de l’objet a changé dans la base de données MySQL, mais pas dans SSMA, la ligne est jaune.  
+-   Si les métadonnées de l’objet ont été modifiées dans la base de données MySQL, mais pas dans SSMA, la ligne est en jaune.  
   
--   Si les métadonnées de l’objet a été modifié localement, mais pas dans la base de données MySQL, la ligne est vert.  
+-   Si les métadonnées de l’objet ont été modifiées localement, mais pas dans la base de données MySQL, la ligne est verte.  
   
 -   Si l’objet est nouveau dans la base de données MySQL, la ligne est rose.  
   
-Vous pouvez spécifier des paramètres d’actualisation objet par défaut dans le **paramètres du projet** boîte de dialogue. Pour plus d’informations, consultez [paramètres du projet &#40;synchronisation&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+Vous pouvez spécifier les paramètres d’actualisation des objets par défaut dans la boîte de dialogue **paramètres du projet** . Pour plus d’informations, consultez [paramètres du projet &#40;synchronisation&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
-Pour accéder à la **Actualiser à partir de la base de données** boîte de dialogue, avec le bouton droit, un objet dans l’Explorateur de métadonnées de MySQL et cliquez sur **Actualiser à partir de la base de données**.  
+Pour accéder à la boîte **de dialogue actualiser à partir de la base de données** , cliquez avec le bouton droit sur un objet dans l’Explorateur de métadonnées MySQL, puis cliquez sur **Actualiser à partir**  
   
 ## <a name="options"></a>Options  
   
 |||  
 |-|-|  
 |**Terme**|**Définition**|  
-|**Réduction (-)**|Réduire tous les groupes d’objets pour masquer les objets individuels.|  
-|**Développement (+)**|Développez tous les groupes d’objets pour afficher les objets individuels.|  
-|**Masquer/afficher les objets identiques**|Masquer les objets dans la liste si les métadonnées d’objet sont le même dans la base de données MySQL et de SSMA.|  
-|**Actualiser à partir de la base de données (flèche)**|Utilisez le bouton fléché pour spécifier que les métadonnées pour les objets sélectionnés doivent être mis à jour dans SSMA.|  
-|**Faire pas actualiser à partir de la base de données (bouton) X**|Utilisez le bouton X pour spécifier que les métadonnées pour les objets sélectionnés ne doivent pas mis à jour dans SSMA.|  
-|**Légende**|Affiche un **légende** boîte de dialogue. La légende contient le mappage entre les couleurs de ligne et les États de métadonnées.<br /><br />Pour conserver le **légende** boîte de dialogue en haut de la **Actualiser à partir de la base de données** boîte de dialogue, sélectionnez le **afficher en haut** case à cocher.|  
+|**Réduire (-)**|Réduisez tous les groupes d’objets pour masquer des objets individuels.|  
+|**Développer (+)**|Développez tous les groupes d’objets pour afficher des objets individuels.|  
+|**Masquer/afficher les objets égaux**|Masque les objets de la liste si les métadonnées de l’objet sont identiques dans la base de données MySQL et dans SSMA.|  
+|**Actualiser à partir de la base de données (bouton fléché)**|Utilisez le bouton fléché pour spécifier que les métadonnées des objets sélectionnés doivent être mises à jour dans SSMA.|  
+|**Ne pas actualiser à partir de la base de données (bouton X)**|Utilisez le bouton X pour spécifier que les métadonnées des objets sélectionnés ne doivent pas être mises à jour dans SSMA.|  
+|**Légende**|Affiche une boîte de dialogue **légende** . La légende contient le mappage entre les couleurs des lignes et les États des métadonnées.<br /><br />Pour conserver la boîte de dialogue **légende** au-dessus de la boîte de dialogue **Actualiser à partir de la base de données** , activez la case à cocher Afficher par- **dessus** .|  
   

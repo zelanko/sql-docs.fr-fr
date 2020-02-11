@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aeb149fe1de94e9942352ca620f26311e252b477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100628"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Région de données de tableau matriciel (Générateur de rapports et SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66100628"
   
  La compréhension du fonctionnement de la région de données de tableau matriciel requiert la compréhension préalable des éléments suivants :  
   
-1.  la différence entre données de détail et données groupées ;  
+1.  la différence entre données de détail et données groupées ;  
   
 2.  les groupes, qui sont organisés comme des membres de hiérarchies de groupes en tant que groupes de lignes sur l'axe horizontal et en tant que groupes de colonnes sur l'axe vertical ;  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66100628"
 ## <a name="see-also"></a>Voir aussi  
  [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS &#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

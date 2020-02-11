@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098102"
 ---
-# <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
+# <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>Méthode SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
   Définit la connexion à une base de données de serveur de rapports spécifique.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -43,14 +43,14 @@ public void BackupEncryptionKey(string Server,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *Server*  
+ *Serveur*  
  Nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée pour héberger la base de données du serveur de rapports.  
   
  *DatabaseName*  
  Nom de la base de données du serveur de rapports.  
   
- *CredentialsType*  
- Type d'informations d'identification à utiliser pour la connexion. Les valeurs peuvent être les suivantes :  
+ *CredentialsType a*  
+ Type d'informations d'identification à utiliser pour la connexion. Les valeurs peuvent être les suivantes :  
   
 -   0 - Windows  
   
@@ -58,13 +58,13 @@ public void BackupEncryptionKey(string Server,
   
 -   2 - Service Windows  
   
- *UserName*  
+ *Nom d’utilisateur*  
  Nom du compte utilisé pour établir la connexion à la base de données du serveur de rapports.  
   
  *Mot de passe*  
  Mot de passe utilisé pour établir la connexion à la base de données du serveur de rapports.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -81,12 +81,12 @@ public void BackupEncryptionKey(string Server,
   
  La méthode SetDatabaseConnection ne vérifie pas si le serveur de rapports peut se connecter à la base de données à l’aide des données spécifiées.  
   
- Quand ’elle est définie pour la première fois, la propriété ConnectionPoolSize est définie selon les processeurs suivants : ConnectionPoolSize = #Processors * 75.  
+ Quand elle est configurée pour la première fois, la propriété ConnectionPoolSize est définie selon les processeurs suivants : ConnectionPoolSize = #Processors * 75.  
   
  La méthode SetDatabaseConnection n’accorde pas d’autorisations aux comptes spécifiés. Vous devez appeler la méthode [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) pour chaque compte qui doit accéder à la base de données du serveur de rapports et exécuter le script obtenu.  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

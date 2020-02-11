@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103520"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
@@ -44,11 +44,12 @@ ms.locfileid: "66103520"
   
 -   Équilibrage des demandes de traitement de rapports adressées au serveur en planifiant le traitement des rapports, et en indiquant ceux qui peuvent être exécutés à la demande et ceux qui sont chargés à partir du cache.  
   
--   Fournir une autorisation pour effectuer des tâches de gestion à l’aide de rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués.  
+-   Octroi d’autorisations d’effectuer des tâches de gestion via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués.  
   
- Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou le gestionnaire de rapports. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le Gestionnaire de rapports permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports. Pour plus d’informations, consultez [Outils de Reporting Services](../tools/reporting-services-tools.md).  
+ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou le gestionnaire de rapports. 
+  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le Gestionnaire de rapports permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports. Pour plus d’informations, consultez [Outils de Reporting Services](../tools/reporting-services-tools.md).  
   
-##  <a name="bkmk_ReportServerItems"></a> Éléments du serveur de rapports  
+##  <a name="bkmk_ReportServerItems"></a>Éléments du serveur de rapports  
  Les éléments du serveur de rapports incluent les rapports, les sources de données partagées, les datasets partagés, les parties d'un rapport, les ressources (éléments qui sont stockés dans un serveur de rapports mais pas traités par celui-ci) et les dossiers. Les éléments peuvent dépendre d'autres éléments, par exemple, un rapport peut dépendre des sources de données partagées qu'il référence. Si vous déplacez un élément dépendant, le serveur de rapports met à jour les informations de référence automatiquement.  
   
  Vous pouvez déplacer des éléments de serveur de rapports vers des emplacements de dossiers dans l'arborescence des dossiers du serveur de rapports. Lorsque vous déplacez un élément, toutes les propriétés (y compris les paramètres de sécurité) accompagnent l'élément vers son nouvel emplacement. Lorsque vous déplacez un dossier, tous les éléments qu'il contient l'accompagnent.  
@@ -57,16 +58,16 @@ ms.locfileid: "66103520"
   
 |Icône|Élément pouvant être déplacé|  
 |----------|-------------------|  
-|![Icône Rapport](../media/hlp-16doc.gif "Icône Rapport")|Rapport|  
+|![Icône de rapport](../media/hlp-16doc.gif "Icône de rapport")|Rapport|  
 |![Icône Rapport lié](../media/hlp-16linked.gif "Icône Rapport lié")|Rapport lié|  
 |![Icône Dossier](../media/hlp-16folder.gif "Icône Dossier")|Dossier|  
-|![Icône Ressource générique](../media/hlp-16file.gif "Icône Ressource générique")|Ressource générique|  
-|![Icône Source de données partagée](../media/hlp-16datasource.png "Icône Source de données partagée")|Source de données partagée|  
+|![icône de ressource générique](../media/hlp-16file.gif "icône de ressource générique")|Ressource générique|  
+|![Icône de source de données partagée](../media/hlp-16datasource.png "Icône de source de données partagée")|Source de données partagée|  
 ||Dataset partagé|  
   
- Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L’autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l’élément en question : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
+ Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
   
-##  <a name="bkmk_Folders"></a> Dossiers  
+##  <a name="bkmk_Folders"></a>Contenus  
  Une hiérarchie de dossiers est utilisée pour l'adressage des éléments stockés et gérés par un serveur de rapports.  Par défaut, la structure des dossiers comporte un nœud racine nommé Accueil et des dossiers réservés qui prennent en charge la fonctionnalité optionnelle Mes rapports. Les dossiers supplémentaires sont définis par l'utilisateur. Les dossiers du serveur de rapports sont utiles si vous souhaitez accorder le même niveau d'accès à plusieurs éléments. Les autorisations que vous définissez sur le dossier peuvent être héritées par les éléments dans le dossier et par les dossiers supplémentaires qui dépendent de ce dossier. Par exemple, vous pouvez créer un jeu de dossiers sous le dossier de base, affecter des autorisations d'équipe à chaque dossier, puis laisser les membres de l'équipe personnaliser les dossiers sous le dossier d'équipe, si nécessaire.  
   
  Si vous utilisez un navigateur pour ouvrir directement une session sur le serveur de rapports, le nœud racine de la structure de dossiers est le nom du répertoire virtuel du serveur de rapports. À partir du nœud racine, vous pouvez créer, modifier et supprimer des dossiers en fonction de vos besoins pour organiser le contenu d'un serveur de rapports. Vous pouvez ajouter du contenu à un dossier, déplacer des éléments entre les dossiers, modifier les noms ou les emplacements de dossiers et supprimer des dossiers qui ne sont plus nécessaires.  
@@ -96,7 +97,7 @@ ms.locfileid: "66103520"
   
 |Dossier|Objectif|  
 |------------|-------------|  
-|Dossier de base|Nœud racine de l'arborescence des dossiers|  
+|Accueil|Nœud racine de l'arborescence des dossiers|  
 |Utilisateurs|Ce dossier s'affiche lorsque vous activez la fonctionnalité Mes Rapports. Il contient les sous-dossiers de tous les utilisateurs qui utilisent la fonctionnalité Mes rapports ; l'accès à ces dossiers est limité exclusivement aux administrateurs du serveur de rapports. Chaque nom de sous-dossier correspond au nom de l'utilisateur.|  
 |Mes rapports|Offre un espace de noms personnel pour chaque utilisateur.|  
   
@@ -117,7 +118,7 @@ ms.locfileid: "66103520"
   
  Dans un dossier, la visibilité d'un élément dépend des attributions de rôles (autrement dit, des autorisations d'affichage d'un élément) et des options d'affichage définies actuellement pour le dossier. Dans le Gestionnaire de rapports, vous avez la possibilité de définir la page Contenu pour utiliser le mode Liste ou Détails. Dans certains cas, un élément de rapport peut se retrouver masqué dans l'affichage des listes. Prenez soin d'afficher un dossier en mode Détails avant de procéder à la suppression de son contenu.  
   
-##  <a name="bkmk_Resources"></a> Ressources  
+##  <a name="bkmk_Resources"></a>Situées  
  Une ressource est un élément géré qui est stocké sur un serveur de rapports, mais qui n'est pas traité sur ce dernier. En règle générale, une ressource fournit du contenu externe aux utilisateurs des rapports. Il peut s'agir, par exemple, d'une image dans un fichier .jpg, d'un fichier de forme ESRI qui contient des données spatiales ou d'un fichier HTML qui décrit les règles d'entreprise utilisées dans un rapport. Le fichier JPG, SHP ou HTML est stocké sur le serveur de rapports ; toutefois, le serveur de rapports passe ce fichier directement au navigateur au lieu de le traiter en premier. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) et la section « Ajout de données à une carte » dans [Cartes &#40;Générateur de rapports et SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Ajout et affichage d'une ressource  
@@ -125,8 +126,8 @@ ms.locfileid: "66103520"
   
 |Opération|Type de fichier|  
 |---------------|---------------|  
-|Télécharger|Pour télécharger une ressource, vous devez utiliser le Gestionnaire de rapports si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [télécharger un fichier ou un rapport &#40;le Gestionnaire de rapports&#41; ](../reports/upload-a-file-or-report-report-manager.md) ou [charger des Documents vers une bibliothèque SharePoint &#40;Reporting Services en SharePoint Mode&#41;]... / upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
-|Publier|Tous les fichiers d'un projet qui ne sont pas des rapports, des parties de rapport, des sources de données ou des datasets, sont téléchargés en tant que ressources. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
+|Télécharger|Pour télécharger une ressource, vous devez utiliser le Gestionnaire de rapports si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [charger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../reports/upload-a-file-or-report-report-manager.md) ou [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en Mode SharePoint&#41;]. /upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Publish|Tous les fichiers d'un projet qui ne sont pas des rapports, des parties de rapport, des sources de données ou des datasets, sont téléchargés en tant que ressources. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
   
  Toutes les ressources ont pour origine des fichiers situés sur un système de fichiers. Ceux-ci sont ensuite téléchargés vers un serveur de rapports. À l'exception de la limitation de la taille de fichier par défaut à 4 mégaoctets, imposée par ASP.NET, il n'y a pas de restrictions sur les types de fichiers que vous pouvez télécharger. Cependant, lorsqu'ils sont publiés sur un serveur de rapports en tant que ressources, les types de fichiers ayant des types MIME équivalents offrent une utilisation plus optimale que d'autres. Par exemple, les ressources basées sur des fichiers HTML et JPG s'ouvrent dans une fenêtre de navigateur lorsque l'utilisateur clique sur la ressource choisie ; le fichier HTML est rendu sous forme de page Web et le fichier JPG sous forme d'image à l'intention de l'utilisateur. En revanche, les ressources qui ne disposent pas de types MIME équivalents, par exemple les fichiers d'application de bureau, risquent de ne pas être rendues dans la fenêtre du navigateur.  
   
@@ -146,7 +147,7 @@ ms.locfileid: "66103520"
   
  Pour plus d’informations, consultez [Mise à jour d’une ressource &#40;Gestionnaire de rapports&#41;](update-a-resource-report-manager.md).  
   
-##  <a name="bkmk_MyReports"></a> Mes rapports  
+##  <a name="bkmk_MyReports"></a>Mes rapports  
  Le dossier Mes Rapports est un espace de travail personnel pour chaque utilisateur qui ouvre une session sur un serveur de rapports avec un compte de domaine valide. Ce dossier à usage spécial assure le stockage des rapports en cours d'élaboration, des rapports qui ne sont pas destinés à une large distribution ou des rapports qui ont été modifiés pour un besoin particulier. Vous ne pouvez pas restreindre le nombre ou la taille des éléments qui sont stockés dans un dossier Mes Rapports, ni configurer le dossier Mes Rapports pour qu'il soit partagé entre plusieurs utilisateurs.  
   
  Techniquement, Mes Rapports associe le nom d'un dossier virtuel que voit chaque utilisateur (Mes Rapports) à un dossier principal Dossiers des utilisateurs et à un sous-dossier unique basé sur le nom de l'utilisateur. Lorsqu'un utilisateur accède à son dossier Mes Rapports, il est en réalité redirigé vers son sous-dossier dans Dossiers des utilisateurs. Chaque sous-dossier assure le stockage des rapports et des éléments que l'utilisateur ajoute à son dossier Mes Rapports.  
@@ -161,20 +162,20 @@ ms.locfileid: "66103520"
   
 |Caractère|Valeur d'échappement|Exemple|  
 |---------------|------------------|-------------|  
-|(espace)|[ ]|*Prénom Nom* devient *Prénom[ ]Nom*|  
-|\ (barre oblique inverse)|Remplacé par une espace|*NomDomaine\nom_utilisateur* devient *NomDomaine nom_utilisateur*|  
-|@ (symbole at)|[at]|*nom_utilisateur*@hotmail.com devient *nom_utilisateur*[at]hotmail.com|  
-|& (esperluette)|[amp]|*nom_utilisateur*@*société*&*société.com* devient *nom_utilisateur*[at]*société*[amp]*société.com*|  
-|$ (signe $)|[dollar]|*Nom* $*Utilisateur* devient *Nom*[ ][dollar]*Utilisateur*|  
+|(espace)|[ ]|*FirstName LastName* devient *FirstName [] LastName*|  
+|\ (barre oblique inverse)|Remplacé par une espace|*NomDomaine\NomUtilisateur* devient *DomainName nom_utilisateur*|  
+|@ (symbole at)|[at]|*le nom d'* @hotmail.com utilisateur devient le *nom d’utilisateur*[at] hotmail. com|  
+|& (esperluette)|[amp]|*le nom d’utilisateur*@*société*&*Company.com* devient le *nom d’utilisateur*[at]*société*[amp]*Company.com*|  
+|$ (signe $)|[dollar]|** $Le*nom* d’utilisateur devient *User*[] [Dollar]*Name*|  
   
  La fonctionnalité Mes Rapports est facultative. Lorsque vous installez un serveur de rapports, la fonctionnalité Mes Rapports est désactivée par défaut. Pour plus d’informations sur l’activation de cette fonctionnalité, consultez [Activer et désactiver Mes rapports](enable-and-disable-my-reports.md). Pour plus d’informations, consultez [Sécuriser Mes Rapports](../security/secure-my-reports.md).  
   
 ## <a name="tasks"></a>Tâches  
  [Télécharger des fichiers dans un dossier](upload-files-to-a-folder.md)  
   
- [Création, suppression ou modification d’un dossier &#40;Gestionnaire de rapports&#41;](create-delete-or-modify-a-folder-report-manager.md)  
+ [Créer, supprimer ou modifier un dossier &#40;Gestionnaire de rapports&#41;](create-delete-or-modify-a-folder-report-manager.md)  
   
- [Mise à jour d’une ressource &#40;Gestionnaire de rapports&#41;](update-a-resource-report-manager.md)  
+ [Mettre à jour une ressource &#40;Gestionnaire de rapports&#41;](update-a-resource-report-manager.md)  
   
  [Télécharger des fichiers dans un dossier](upload-files-to-a-folder.md)  
   

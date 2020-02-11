@@ -1,5 +1,5 @@
 ---
-title: SQLError (pilote ODBC de Visual FoxPro) | Microsoft Docs
+title: SQLError (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,29 +13,29 @@ ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d7e8a60030e9c5c7666ce3b25488cfc6adf00783
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053864"
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : Complète  
+ Prise en charge : complète  
   
- Conformité d’API ODBC : Niveau principal  
+ Conformité de l’API ODBC : niveau principal  
   
- Retourne des informations d’erreur ou d’état sur la dernière erreur. Le pilote gère une pile ou une liste d’erreurs qui peuvent être retournées pour le *hstmt*, *pas*, et *henv* arguments, en fonction de la l’appel à **SQLError**  est effectuée. La file d’attente de l’erreur est vidé après chaque instruction.  
+ Retourne des informations d’erreur ou d’État sur la dernière erreur. Le pilote gère une pile ou une liste d’erreurs qui peuvent être retournées pour les arguments *HSTMT*, *hdbc*et *henv* , en fonction de la façon dont l’appel à **SQLError** est effectué. La file d’attente d’erreurs est vidée après chaque instruction.  
   
- Le tableau suivant décrit les **SQLError** arguments et valeurs de retour utilisés par le pilote.  
+ Le tableau suivant décrit les arguments **SQLError** et les valeurs de retour utilisées par le pilote.  
   
-|SQLError argument|Description de la valeur de retour|  
+|Argument SQLError|Description de la valeur de retour|  
 |-----------------------|------------------------------|  
-|*szSQLState*|La valeur de la variable SQLSTATE représentée par l’erreur.|  
-|*pfNativeError*|Une valeur différente de zéro indique un [Visual FoxPro ODBC pilote natif Message d’erreur](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md). La valeur zéro indique l’erreur a été détectée par le pilote et mappé appropriés [Code d’erreur ODBC](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).|  
-|*szErrorMsg*|Le texte de l’erreur native ou erreur ODBC.|  
-|*pcbErrorMsg*|La longueur du texte du message ainsi que la longueur des identificateurs.|  
+|*szSQLState*|Valeur de l’argument SQLSTATE représenté par l’erreur.|  
+|*pfNativeError*|Une valeur différente de zéro indique un [message d’erreur natif du pilote ODBC Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md). La valeur zéro indique que l’erreur a été détectée par le pilote et mappée au [code d’erreur ODBC](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)approprié.|  
+|*szErrorMsg*|Texte de l’erreur native ou de l’erreur ODBC.|  
+|*pcbErrorMsg*|Longueur du texte du message plus la longueur des identificateurs.|  
   
- Pour plus d’informations sur les messages d’erreur de pilote, consultez [présentation des Messages d’erreur](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md). Pour plus d’informations sur cette fonction, consultez [SQLError](../../odbc/reference/syntax/sqlerror-function.md) dans le *de référence du programmeur ODBC*.
+ Pour plus d’informations sur les messages d’erreur du pilote, consultez [Présentation des messages d’erreur](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md). Pour plus d’informations sur cette fonction, consultez [SQLError](../../odbc/reference/syntax/sqlerror-function.md) dans le *Guide de référence du programmeur ODBC*.

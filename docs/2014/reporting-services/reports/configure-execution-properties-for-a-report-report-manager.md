@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102709"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Configurer les propriétés d’exécution d’un rapport (Gestionnaire de rapports)
@@ -49,8 +49,8 @@ ms.locfileid: "66102709"
 ## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés de traitement d’un rapport](../report-server/set-report-processing-properties.md)   
  [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
+ [Page contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Page de propriétés Options de traitement &#40;Gestionnaire de rapports&#41;](../processing-options-properties-page-report-manager.md)  
+ [Page de propriétés options de traitement &#40;Gestionnaire de rapports&#41;](../processing-options-properties-page-report-manager.md)  
   
   

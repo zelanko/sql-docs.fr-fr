@@ -1,5 +1,5 @@
 ---
-title: Définir des autorisations pour les éléments de serveur de rapports sur un Site SharePoint (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
+title: Définir des autorisations pour les éléments de serveur de rapports sur un site SharePoint (Reporting Services en mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101562"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint (Reporting Services en mode intégré SharePoint)
@@ -61,7 +61,7 @@ ms.locfileid: "66101562"
   
 7.  Cliquez sur **Nouveau**.  
   
-8.  Cliquez sur **Ajouter des utilisateurs**.  
+8.  Cliquez sur **Add Users**.  
   
 9. Dans Utilisateurs/Groupes, entrez le compte d'utilisateur.  
   

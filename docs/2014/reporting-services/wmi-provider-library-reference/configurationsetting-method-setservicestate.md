@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097950"
 ---
-# <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetServiceState (WMI MSReportServer_ConfigurationSetting)
+# <a name="setservicestate-method-wmi-msreportserver_configurationsetting"></a>Méthode SetServiceState (WMI MSReportServer_ConfigurationSetting)
   Active ou désactive les services Web et Windows Report Server.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -46,12 +46,12 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  Valeur `Boolean` indiquant l'état du service Windows. La valeur `true` démarre le service Windows Report Server ; la valeur `false` arrête le service Windows.  
   
  *EnableWebService*  
- Un `Boolean` valeur indiquant l’état de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service Web. La valeur `true` démarre le service Web Report Server ; la valeur `false` arrête le service Web.  
+ `Boolean` Valeur indiquant l’état du service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web. La valeur `true` démarre le service Web Report Server ; la valeur `false` arrête le service Web.  
   
  *EnableReportManager*  
  Valeur `Boolean` indiquant l'état souhaité du Gestionnaire de rapports.  
   
- *HRESULT*  
+ *SIGNÉ*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -59,8 +59,8 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

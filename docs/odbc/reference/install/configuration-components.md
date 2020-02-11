@@ -13,17 +13,17 @@ ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248a9e31b176444ad51cb3a62c7c5f12f1b7bde3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068586"
 ---
 # <a name="configuration-components"></a>Composants de configuration
 > [!NOTE]  
->  ODBC à partir de Windows XP et Windows Server 2003, est inclus dans le système d’exploitation Windows. Vous devez explicitement uniquement installer ODBC dans les versions antérieures de Windows.  
+>  À compter de Windows XP et de Windows Server 2003, ODBC est inclus dans le système d’exploitation Windows. Vous devez uniquement installer explicitement ODBC sur les versions antérieures de Windows.  
   
- Sources de données sont configurées par le programme d’installation DLL, qui, dans le pilote d’appels de désactiver le programme d’installation DLL et le programme d’installation de traducteur dll car ils sont nécessaires. Le programme d’installation DLL est soit appelée directement à partir du panneau ou chargé et appelé par un autre programme, appelé le *du programme d’administration*. L’illustration suivante montre la relation entre les composants de configuration.  
+ Les sources de données sont configurées par la DLL du programme d’installation, qui à son tour appelle les dll d’installation du pilote et les dll d’installation du convertisseur, selon les besoins. La DLL du programme d’installation est soit appelée directement à partir du panneau de configuration, soit chargée et appelée par un autre programme, appelé *programme d’administration*. L’illustration suivante montre la relation entre les composants de configuration.  
   
  ![Relation entre composants de configuration](../../../odbc/reference/install/media/pr30.gif "pr30")  
   

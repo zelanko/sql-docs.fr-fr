@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103847"
 ---
 # <a name="enable-and-disable-my-reports"></a>Activer et désactiver Mes rapports
@@ -31,7 +31,7 @@ ms.locfileid: "66103847"
 ## <a name="how-to-enable-and-disable-my-reports"></a>Comment activer et désactiver Mes rapports  
  Pour activer Mes rapports à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance du serveur de rapports et ouvrez la page **Propriétés du serveur** . Puis sous l’onglet **Général** , sélectionnez l’option **Activer un dossier Mes rapports pour chaque utilisateur** .  
   
- La définition de rôle utilisée pour Mes rapports détermine les actions prises en charge dans l'espace de travail Mes rapports. Si, par exemple, le rôle Mes rapports exclut « Créer des rapports liés », les utilisateurs ne peuvent pas créer de rapports liés dans les dossiers Mes rapports. Pour plus d’informations, consultez [Sécuriser Mes rapports](../security/secure-my-reports.md).  
+ La définition de rôle utilisée pour Mes rapports détermine les actions prises en charge dans l'espace de travail Mes rapports. Si, par exemple, le rôle Mes rapports exclut « Créer des rapports liés », les utilisateurs ne peuvent pas créer de rapports liés dans les dossiers Mes rapports. Pour plus d’informations, consultez [Sécuriser Mes Rapports](../security/secure-my-reports.md).  
   
  Pour désactiver Mes rapports, désactivez l’option **Activer un dossier Mes rapports pour chaque utilisateur**. Le fait de désactiver Mes rapports masque pour les utilisateurs toutes les indications visibles du dossier Mes rapports. Les dossiers de stockage proprement dit (c'est-à-dire les sous-dossiers de Dossiers des utilisateurs) doivent être supprimés manuellement une fois la fonctionnalité désactivée.  
   

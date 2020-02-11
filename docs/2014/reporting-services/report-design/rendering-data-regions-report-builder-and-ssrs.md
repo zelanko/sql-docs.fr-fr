@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105367"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendu des régions de données (Générateur de rapports et SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105367"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Régions de données de tableau matriciel  
- La région de données de tableau matriciel, qui vous permet de créer des tables, des matrices et des listes, est rendue sous forme d'une grille composée de colonnes et de lignes. L'intersection d'une ligne et d'une colonne est une cellule. Lors du rendu, cette cellule peut contenir des données ou d'autres éléments de rapport, tels que des images, des rectangles, des zones de texte ou des sous-rapports. Une région de données de tableau matriciel peut être agrandie verticalement et/ou horizontalement. De plus, la cellule d'angle, les cellules d'en-tête de région de données et les cellules de corps de la région de données peut être agrandies en fonction de leur contenu. Si la région de données s'étend sur plusieurs pages, les éléments de rapport configurés pour être répétés avec la région de données sont rendus sur chaque page sur laquelle la région de données est affichée. Pour plus d’informations, consultez [répertorie &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ La région de données de tableau matriciel, qui vous permet de créer des tables, des matrices et des listes, est rendue sous forme d'une grille composée de colonnes et de lignes. L'intersection d'une ligne et d'une colonne est une cellule. Lors du rendu, cette cellule peut contenir des données ou d'autres éléments de rapport, tels que des images, des rectangles, des zones de texte ou des sous-rapports. Une région de données de tableau matriciel peut être agrandie verticalement et/ou horizontalement. De plus, la cellule d'angle, les cellules d'en-tête de région de données et les cellules de corps de la région de données peut être agrandies en fonction de leur contenu. Si la région de données s'étend sur plusieurs pages, les éléments de rapport configurés pour être répétés avec la région de données sont rendus sur chaque page sur laquelle la région de données est affichée. Pour plus d’informations, consultez la page [répertorie &#40;générateur de rapports et les&#41;SSRS ](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="right-to-left"></a>De droite à gauche  
  Une région de données de tableau matriciel configurée pour un affichage de droite à gauche est rendue avec sa structure sous la forme d’une image miroir de la région de données si elle était rendue de gauche à droite. L'angle de la région de données apparaît dans l'angle supérieur droit. Si des colonnes dynamiques existent dans le rapport, elles se développent à gauche. Les paramètres de droite à gauche n'affectent pas l'ordre des données dans la région de données ; vos colonnes sont simplement organisées différemment.  

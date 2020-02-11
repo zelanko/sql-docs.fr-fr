@@ -18,18 +18,18 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046209"
 ---
-# <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
+# <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Définit une base de données secondaire pour la copie des journaux de transaction.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,62 +53,62 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @secondary_database = ] 'secondary_database'` Est le nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
+`[ @secondary_database = ] 'secondary_database'`Nom de la base de données secondaire. *secondary_database* est de **type sysname**, sans valeur par défaut.  
   
-`[ @primary_server = ] 'primary_server'` Le nom de l’instance principale de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux. *primary_server* est **sysname** et ne peut pas être NULL.  
+`[ @primary_server = ] 'primary_server'`Nom de l’instance principale du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration de la copie des journaux de session. *primary_server* est de **type sysname** et ne peut pas avoir la valeur null.  
   
-`[ @primary_database = ] 'primary_database'` Est le nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'`Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
   
-`[ @restore_delay = ] 'restore_delay'` La durée, en minutes, pendant laquelle le serveur secondaire attend avant de restaurer un fichier de sauvegarde donné. *restore_delay* est **int** et ne peut pas être NULL. La valeur par défaut est 0.  
+`[ @restore_delay = ] 'restore_delay'`Durée, en minutes, pendant laquelle le serveur secondaire attend avant de restaurer un fichier de sauvegarde donné. *restore_delay* est de **type int** et ne peut pas avoir la valeur null. La valeur par défaut est 0.  
   
-`[ @restore_all = ] 'restore_all'` Si défini sur 1, le serveur secondaire restaure toutes les sauvegardes de journaux de transactions disponibles lors de l’exécution de la tâche de restauration. Dans le cas contraire, le serveur s'arrête une fois qu'un fichier est restauré. *restore_all* est **bits** et ne peut pas être NULL.  
+`[ @restore_all = ] 'restore_all'`Si la valeur est définie sur 1, le serveur secondaire restaure toutes les sauvegardes du journal des transactions disponibles lors de l’exécution du travail de restauration. Dans le cas contraire, le serveur s'arrête une fois qu'un fichier est restauré. *restore_all* est de type **bit** et ne peut pas être null.  
   
-`[ @restore_mode = ] 'restore_mode'` Le mode de restauration pour la base de données secondaire.  
+`[ @restore_mode = ] 'restore_mode'`Mode de restauration de la base de données secondaire.  
   
  0 = Restauration du journal avec l'option NORECOVERY.  
   
  1 = Restauration du journal avec l'option STANDBY.  
   
- *restaurer* est **bits** et ne peut pas être NULL.  
+ *Restore* est de type **bit** et ne peut pas être null.  
   
-`[ @disconnect_users = ] 'disconnect_users'` Si défini sur 1, les utilisateurs sont déconnectés de la base de données secondaire lorsqu’une opération de restauration est effectuée. Par défaut = 0. *Déconnecter* utilisateurs est **bits** et ne peut pas être NULL.  
+`[ @disconnect_users = ] 'disconnect_users'`Si la valeur est définie sur 1, les utilisateurs sont déconnectés de la base de données secondaire lors de l’exécution d’une opération de restauration. Valeur par défaut = 0. la *déconnexion* des utilisateurs est de type **bit** et ne peut pas être null.  
   
-`[ @block_size = ] 'block_size'` La taille, en octets, qui est utilisée comme la taille de bloc pour l’unité de sauvegarde. *block_size* est **int** avec une valeur par défaut de -1.  
+`[ @block_size = ] 'block_size'`Taille, en octets, utilisée comme taille de bloc pour l’unité de sauvegarde. *block_size* est de **type int** avec la valeur par défaut-1.  
   
-`[ @buffer_count = ] 'buffer_count'` Le nombre total de mémoires tampons utilisées par l’opération de sauvegarde ou de restauration. *buffer_count* est **int** avec une valeur par défaut de -1.  
+`[ @buffer_count = ] 'buffer_count'`Nombre total de mémoires tampons utilisées par l’opération de sauvegarde ou de restauration. *buffer_count* est de **type int** avec la valeur par défaut-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'` La taille, en octets, de l’entrée maximale ou de la demande de sortie qui est émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’unité de sauvegarde. *max_transfersize* est **int** et peut être NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'`Taille, en octets, de la demande d’entrée ou de sortie maximale émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’unité de sauvegarde. *max_transfersize* est de **type int** et peut avoir la valeur null.  
   
-`[ @restore_threshold = ] 'restore_threshold'` Le nombre de minutes pouvant s’écouler entre les opérations de restauration avant qu’une alerte est générée. *restore_threshold* est **int** et ne peut pas être NULL.  
+`[ @restore_threshold = ] 'restore_threshold'`Nombre de minutes autorisées à s’écouler entre les opérations de restauration avant la génération d’une alerte. *restore_threshold* est de **type int** et ne peut pas avoir la valeur null.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Est l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert ne* est **int**, avec 14 420 comme valeur par défaut.  
+`[ @threshold_alert = ] 'threshold_alert'`Alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert* est de **type int**, avec 14 420 comme valeur par défaut.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Indique si une alerte est générée lorsque *backup_threshold* est dépassé. La valeur 1 par défaut indique que l'alerte sera générée. *threshold_alert_enabled* est **bits**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Spécifie si une alerte est déclenchée lorsque *backup_threshold* est dépassé. La valeur 1 par défaut indique que l'alerte sera générée. *threshold_alert_enabled* est de **bits**.  
   
-`[ @history_retention_period = ] 'history_retention_period'` Est la durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est **int**, avec NULL comme valeur par défaut. La valeur 14 420 est utilisée si aucune autre valeur n'est spécifiée.  
+`[ @history_retention_period = ] 'history_retention_period'`Durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est de **type int**, avec NULL comme valeur par défaut. La valeur 14 420 est utilisée si aucune autre valeur n'est spécifiée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **sp_add_log_shipping_secondary_database** doit être exécuté à partir de la **master** base de données sur le serveur secondaire. Elle effectue les actions suivantes :  
+ **sp_add_log_shipping_secondary_database** doit être exécuté à partir de la base de données **Master** sur le serveur secondaire. Elle effectue les actions suivantes :  
   
-1.  **sp_add_log_shipping_secondary_primary** doit être appelée avant cette procédure stockée pour initialiser le journal principal les informations de base de données sur le serveur secondaire d’expédition.  
+1.  **sp_add_log_shipping_secondary_primary** doit être appelé avant cette procédure stockée pour initialiser les informations de la base de données principale de copie des journaux de session sur le serveur secondaire.  
   
 2.  Ajoute une entrée pour la base de données secondaire dans **log_shipping_secondary_databases** à l’aide des arguments fournis.  
   
-3.  Ajoute un enregistrement moniteur local dans **log_shipping_monitor_secondary** sur le serveur secondaire à l’aide des arguments fournis.  
+3.  Ajoute un enregistrement de moniteur local dans **log_shipping_monitor_secondary** sur le serveur secondaire à l’aide des arguments fournis.  
   
-4.  Si le serveur moniteur est différent du serveur secondaire, ajoute un enregistrement moniteur dans **log_shipping_monitor_secondary** sur le moniteur de serveur à l’aide des arguments fournis.  
+4.  Si le serveur moniteur est différent du serveur secondaire, ajoute un enregistrement de moniteur dans **log_shipping_monitor_secondary** sur le serveur moniteur à l’aide des arguments fournis.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
- Cet exemple illustre l’utilisation de la **sp_add_log_shipping_secondary_database** procédure pour ajouter la base de données stockée **LogShipAdventureWorks** en tant que base de données secondaire dans une configuration d’envoi de journaux avec la base de données primaire [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] résidant sur le serveur principal TRIBECA.  
+ Cet exemple illustre l’utilisation de la procédure stockée **sp_add_log_shipping_secondary_database** pour ajouter la base de données **LogShipAdventureWorks** en tant que base de données secondaire dans une [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] configuration d’envoi de journaux avec la base de données primaire résidant sur le serveur principal Tribeca.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   

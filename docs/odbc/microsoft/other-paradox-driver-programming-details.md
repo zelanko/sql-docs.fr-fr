@@ -15,17 +15,17 @@ ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b19265c66107e6059639663fac4f6c2ff44219f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043792"
 ---
 # <a name="other-paradox-driver-programming-details"></a>Autres détails de programmation du pilote Paradox
 > [!NOTE]  
->  Cette section fournit des informations spécifiques au pilote Paradox sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette section fournit des informations spécifiques au pilote Paradox sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [SQLColAttributes (pilote Paradox)](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)  
   
@@ -47,6 +47,6 @@ ms.locfileid: "68043792"
   
 -   [SQLTransact (pilote Paradox)](../../odbc/microsoft/sqltransact-paradox-driver.md)  
   
--   [ pour Paradox](../../odbc/microsoft/create-index-for-paradox.md)  
+-   [CREATE INDEX pour Paradox](../../odbc/microsoft/create-index-for-paradox.md)  
   
 -   [Plusieurs hstmts (pilote Paradox)](../../odbc/microsoft/multiple-hstmts-paradox-driver.md)

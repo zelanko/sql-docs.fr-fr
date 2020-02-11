@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c30dfdd78ed6f420bee7c6bbba449ba40a2a137a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100789"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -38,8 +38,8 @@ ms.locfileid: "66100789"
   
 -   [Suspendre et reprendre des planifications partagées (mode SharePoint)](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a> Suspendre et reprendre des planifications partagées (mode natif)  
- Pour suspendre et reprendre une planification partagée, utilisez la page Planifications du Gestionnaire de rapports. Vous ne pouvez pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; ce dernier n'a pas les options nécessaires pour vous permettre de suspendre et de reprendre des planifications. Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
+##  <a name="bkmk_native"></a>Suspendre et reprendre des planifications partagées (mode natif)  
+ Pour suspendre et reprendre une planification partagée, utilisez la page Planifications du Gestionnaire de rapports. Vous ne pouvez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]pas utiliser ; elle ne fournit pas d’options pour la suspension et la reprise des planifications. Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Pour suspendre ou reprendre une planification partagée  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66100789"
   
 3.  Sélectionnez la planification, puis cliquez sur **Suspendre** ou **Reprendre** dans le Ruban. Si une planification est actuellement suspendue, la colonne **État** contient **Suspendu**.  
   
-##  <a name="bkmk_sharepoint"></a> Suspendre et reprendre des planifications partagées (mode SharePoint)  
+##  <a name="bkmk_sharepoint"></a>Suspendre et reprendre des planifications partagées (mode SharePoint)  
  Pour suspendre et reprendre une planification partagée, utilisez la page Paramètres du site ou PowerShell. Les planifications sont gérées en fonction de chaque site SharePoint.  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Pour suspendre ou reprendre une planification partagée  
@@ -65,7 +65,7 @@ ms.locfileid: "66100789"
 ## <a name="see-also"></a>Voir aussi  
  [Planifications](schedules.md)   
  [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)   
- [Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports](change-time-zones-and-clock-settings-on-a-report-server.md)   
- [Gérer un processus en cours d’exécution](manage-a-running-process.md)  
+ [Modifier les fuseaux horaires et les paramètres d’horloge sur un serveur de rapports](change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [Gérer un processus en cours d'exécution](manage-a-running-process.md)  
   
   

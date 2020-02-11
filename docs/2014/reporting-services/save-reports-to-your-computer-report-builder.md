@@ -1,5 +1,5 @@
 ---
-title: Enregistrer des rapports sur votre ordinateur (Générateur de rapports) | Microsoft Docs
+title: Enregistrer les rapports sur votre ordinateur (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102309"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Enregistrer des rapports sur votre ordinateur (Générateur de rapports)
@@ -27,7 +27,7 @@ ms.locfileid: "66102309"
     > [!NOTE]  
     >  Si vous réenregistrez un rapport, il est automatiquement stocké à son emplacement précédent. Utilisez l’option **Enregistrer sous** pour modifier l’emplacement.  
   
-2.  Si vous le souhaitez, cliquez sur **Desktop**, **Mes Documents**, ou **poste de travail** pour enregistrer le rapport à un de ces dossiers.  
+2.  Si vous le souhaitez, cliquez sur **Bureau**, **mes documents**ou **poste de travail** pour enregistrer le rapport dans l’un de ces dossiers.  
   
 3.  Sur votre ordinateur, accédez à l'emplacement où vous souhaitez enregistrer le rapport. Dans **Nom**, tapez le nom du rapport.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66102309"
   
 2.  Sur votre ordinateur, accédez à l'emplacement où vous souhaitez enregistrer le rapport.  
   
-3.  Dans **Nom**, tapez le nom du rapport. Si vous le souhaitez, cliquez sur **Desktop**, **Mes Documents**, ou **poste de travail** pour enregistrer le rapport à un de ces dossiers.  
+3.  Dans **Nom**, tapez le nom du rapport. Si vous le souhaitez, cliquez sur **Bureau**, **mes documents**ou **poste de travail** pour enregistrer le rapport dans l’un de ces dossiers.  
   
 4.  Dans **Éléments de type**, sélectionnez le type d’élément de rapport à enregistrer. Le type des rapports est Rapports (*.rdl).  
   

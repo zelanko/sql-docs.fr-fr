@@ -1,5 +1,5 @@
 ---
-title: Autres problèmes de mise à niveau de réplication | Microsoft Docs
+title: Autres problèmes de mise à niveau de la réplication | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,19 +18,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093634"
 ---
 # <a name="other-replication-upgrade-issues"></a>Autres problèmes de mise à niveau de la réplication
   Cette rubrique traite de plusieurs problèmes de mise à niveau qui ne sont pas signalés par le Conseiller de mise à niveau.  
   
 ## <a name="versions-supported"></a>Versions prises en charge  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas nécessaire d'arrêter l'activité sur les autres nœuds pendant qu'un nœud est mis à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas nécessaire d'arrêter l'activité sur les autres nœuds pendant qu'un nœud est mis à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie.  
   
- Lorsque vous répliquez entre ou parmi les différentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous n’êtes généralement limité aux fonctionnalités de la version la plus ancienne qui est utilisée.  
+ Lorsque vous effectuez une réplication entre ou entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]différentes versions de, vous êtes généralement limité aux fonctionnalités de la version la plus ancienne qui est utilisée.  
   
 > [!NOTE]  
 >  Le format de stockage sur disque de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant le même dans les environnements 64 bits et 32 bits, une topologie de réplication peut combiner des instances de serveur qui s'exécutent dans un environnement 32 bits et des instances de serveur qui s'exécutent dans un environnement 64 bits.  
@@ -49,7 +50,7 @@ ms.locfileid: "66093634"
   
 -   Tous les contrôles ActiveX sont marqués comme non sûrs pour l'écriture de scripts et l'initialisation.  
   
--   Le contrôle ActiveX d'instantané a été supprimé. Vous pouvez créer et gérer des instantanés à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou par programmation en utilisant des procédures stockées de réplication. Pour plus d’informations, consultez les rubriques « Comment : Créer et appliquer l’instantané Initial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) » et « comment : Créer l’instantané Initial (programmation Transact-SQL) » dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+-   Le contrôle ActiveX d'instantané a été supprimé. Vous pouvez créer et gérer des instantanés à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou par programmation en utilisant des procédures stockées de réplication. Pour plus d'informations, consultez les rubriques « Procédure : créer et appliquer l'instantané initial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) » et « Procédure : créer l'instantané initial (programmation Transact-SQL de programmation) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Le contrôle ActiveX de distribution et le contrôle ActiveX de fusion ont été déconseillés. Une fonctionnalité semblable est fournie pour les applications de code managé à l'aide de Replication Management Objects. Pour plus d'informations, consultez « Synchronisation des abonnements (Programmation RMO) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -11,28 +11,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103718"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS)
-  Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées dans une installation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers une instance située sur un autre ordinateur. Les bases de données reportserver et reportservertempdb doivent être déplacées ou copiées ensemble. Ces deux bases de données sont requises dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ; la base de données reportservertempdb doit être liée par nom à la base de données reportserver primaire que vous déplacez.  
+  Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans une installation vers une instance qui se trouve sur un autre ordinateur. Les bases de données reportserver et reportservertempdb doivent être déplacées ou copiées ensemble. Ces deux bases de données sont requises dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ; la base de données reportservertempdb doit être liée par nom à la base de données reportserver primaire que vous déplacez.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.  
   
  Le déplacement d'une base de données n'a aucune incidence sur les opérations planifiées qui sont actuellement définies pour les éléments du serveur de rapports.  
   
 -   Les planifications sont recréées la première fois que vous redémarrerez le service Report Server.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux de l’Agent, qui sont utilisés pour déclencher une planification, sont recréés dans la nouvelle instance de base de données. Vous n'avez pas à déplacer les travaux vers le nouvel ordinateur ; toutefois, vous pouvez supprimer des travaux sur l'ordinateur qui ne sera plus utilisé.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux de l’Agent, qui sont utilisés pour déclencher une planification, sont recréés dans la nouvelle instance de base de données. Vous n'avez pas à déplacer les travaux vers le nouvel ordinateur ; toutefois, vous pouvez supprimer des travaux sur l'ordinateur qui ne sera plus utilisé.  
   
 -   Les abonnements, les instantanés et les rapports mis en cache sont préservés dans la base de données déplacée. Si un instantané ne collecte pas des données actualisées après le déplacement de la base de données, désactivez les options d’instantané dans le Gestionnaire de rapports, cliquez sur **Appliquer** pour enregistrer les modifications apportées, recréez la planification, puis cliquez à nouveau sur **Appliquer** pour enregistrer les modifications apportées.  
   
 -   Les données temporaires de session utilisateur et de rapport qui sont stockées dans reportservertempdb sont conservées lorsque vous déplacez la base de données.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose plusieurs approches pour déplacer les bases de données, notamment la sauvegarde et la restauration, l’attachement et le détachement, ainsi que la copie. Les approches ne sont pas toutes appropriées lorsqu'il s'agit de déplacer une base de données vers une nouvelle instance de serveur. L'approche à utiliser pour déplacer la base de données du serveur de rapports varie selon les impératifs de disponibilité de votre système. Pour déplacer les bases de données du serveur de rapports, la méthode la plus simple consiste à les attacher et à les détacher. Cependant, cette approche exige une mise hors connexion du serveur de rapports durant le détachement de la base de données. La méthode de sauvegarde et de restauration est un choix plus judicieux si vous voulez minimiser les perturbations de service, mais vous devez exécuter des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] pour effectuer les opérations. La copie de la base de données n'est pas recommandée (surtout à l'aide de l'Assistant Copie de base de données), car elle ne conserve pas les paramètres d'autorisation dans la base de données.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose plusieurs approches pour déplacer les bases de données, notamment la sauvegarde et la restauration, l’attachement et le détachement, ainsi que la copie. Les approches ne sont pas toutes appropriées lorsqu'il s'agit de déplacer une base de données vers une nouvelle instance de serveur. L'approche à utiliser pour déplacer la base de données du serveur de rapports varie selon les impératifs de disponibilité de votre système. Pour déplacer les bases de données du serveur de rapports, la méthode la plus simple consiste à les attacher et à les détacher. Cependant, cette approche exige une mise hors connexion du serveur de rapports durant le détachement de la base de données. La méthode de sauvegarde et de restauration est un choix plus judicieux si vous voulez minimiser les perturbations de service, mais vous devez exécuter des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] pour effectuer les opérations. La copie de la base de données n'est pas recommandée (surtout à l'aide de l'Assistant Copie de base de données), car elle ne conserve pas les paramètres d'autorisation dans la base de données.  
   
 > [!IMPORTANT]  
 >  Les procédures décrites dans cette rubrique sont recommandées lorsque le déplacement de la base de données du serveur de rapports est la seule modification que vous apportez à l'installation existante. Procéder à la migration de toute une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (c’est-à-dire déplacer la base de données et modifier l’identité du service Windows Report Server utilisant la base de données) nécessite la reconfiguration de la connexion et la réinitialisation de la clé de chiffrement.  
@@ -46,7 +48,7 @@ ms.locfileid: "66103718"
   
 2.  Arrêtez le service Report Server. Vous pouvez utiliser l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour arrêter le service.  
   
-3.  Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et établissez une connexion à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge les bases de données du serveur de rapports.  
+3.  Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et ouvrez une connexion à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance qui héberge les bases de données du serveur de rapports.  
   
 4.  Cliquez avec le bouton droit sur la base de données du serveur de rapports, puis cliquez sur **Détacher**. Répétez cette étape pour chaque base de données temporaire du serveur de rapports.  
   
@@ -58,7 +60,7 @@ ms.locfileid: "66103718"
   
 8.  Cliquez sur **Ajouter** pour sélectionner les fichiers .mdf et .ldf de base de données du serveur de rapports que vous voulez attacher. Répétez cette étape pour chaque base de données temporaire du serveur de rapports.  
   
-9. Une fois les bases de données attachées, vérifiez que le `RSExecRole` est un rôle de base de données dans la base de données du serveur de rapports et de la base de données temporaire. `RSExecRole` doit disposer des select, insert, update, delete et les autorisations de référence sur les tables de base de données de serveur de rapports et les autorisations d’exécution sur les procédures stockées. Pour plus d’informations, consultez [Créer le rôle RSExecRole](../security/create-the-rsexecrole.md).  
+9. Une fois les bases de données attachées, vérifiez `RSExecRole` que est un rôle de base de données dans la base de données du serveur de rapports et la base de données temporaire. `RSExecRole`doit avoir des autorisations SELECT, Insert, Update, DELETE et Reference sur les tables de base de données du serveur de rapports, et des autorisations Execute sur les procédures stockées. Pour plus d’informations, consultez [Créer le rôle RSExecRole](../security/create-the-rsexecrole.md).  
   
 10. Démarrez l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis établissez une connexion au serveur de rapports.  
   
@@ -73,7 +75,7 @@ ms.locfileid: "66103718"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>Sauvegarde et restauration des bases de données du serveur de rapports  
  Si vous ne pouvez pas procéder à la mise hors connexion du serveur de rapports, vous pouvez utiliser la sauvegarde et la restauration pour déplacer les bases de données du serveur de rapports. Vous devez utiliser des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour les opérations de sauvegarde et de restauration. Une fois les bases de données restaurées, vous devez configurer le serveur de rapports pour qu'il utilise la base de données sur la nouvelle instance de serveur. Pour plus d'informations, consultez les instructions figurant à la fin de cette rubrique.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Utilisation de BACKUP et COPY_ONLY pour sauvegarder les bases de données du serveur de rapports  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>Utilisation de BACKUP et COPY_ONLY pour sauvegarder les bases de données du serveur de rapports  
  Lorsque vous sauvegardez les bases de données, définissez l'argument COPY_ONLY. Veillez à sauvegarder les fichiers de base de données et les fichiers journaux.  
   
 ```  
@@ -201,28 +203,28 @@ GO
   
 1.  Démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis établissez une connexion au serveur de rapports.  
   
-2.  Dans la page Base de données, cliquez sur **Modifier la base de données**. Cliquer sur **Suivant**.  
+2.  Dans la page Base de données, cliquez sur **Modifier la base de données**. Cliquez sur **Suivant**.  
   
-3.  Cliquez sur **Choisir une base de données de serveur de rapports existante**. Cliquer sur **Suivant**.  
+3.  Cliquez sur **Choisir une base de données de serveur de rapports existante**. Cliquez sur **Suivant**.  
   
-4.  Sélectionnez le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge désormais la base de données du serveur de rapports, puis cliquez sur **Tester la connexion**. Cliquer sur **Suivant**.  
+4.  Sélectionnez le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge désormais la base de données du serveur de rapports, puis cliquez sur **Tester la connexion**. Cliquez sur **Suivant**.  
   
-5.  Dans Nom de la base de données, sélectionnez la base de données du serveur de rapports que vous voulez utiliser. Cliquer sur **Suivant**.  
+5.  Dans Nom de la base de données, sélectionnez la base de données du serveur de rapports que vous voulez utiliser. Cliquez sur **Suivant**.  
   
-6.  Dans Informations d'identification, spécifiez les informations d'identification que le serveur de rapports doit utiliser pour se connecter à la base de données du serveur de rapports. Cliquer sur **Suivant**.  
+6.  Dans Informations d'identification, spécifiez les informations d'identification que le serveur de rapports doit utiliser pour se connecter à la base de données du serveur de rapports. Cliquez sur **Suivant**.  
   
 7.  Cliquez sur **Suivant** , puis sur **Terminer**.  
   
 > [!NOTE]  
->  Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiert que l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] comporte le rôle `RSExecRole`. La création de rôles, l’inscription d’une connexion et les attributions de rôles ont lieu quand vous définissez la connexion à la base de données du serveur de rapports par le biais de l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si vous utilisez d'autres approches (surtout si vous recourez à l'utilitaire d'invite de commandes rsconfig.exe) pour configurer la connexion, le serveur de rapports ne sera pas en état de fonctionner. Vous devrez peut-être écrire du code WMI pour rendre le serveur de rapports disponible. Pour plus d’informations, consultez [Accès au fournisseur WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiert que l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] comporte le rôle `RSExecRole`. La création de rôles, l’inscription d’une connexion et les attributions de rôles ont lieu quand vous définissez la connexion à la base de données du serveur de rapports par le biais de l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si vous utilisez d'autres approches (surtout si vous recourez à l'utilitaire d'invite de commandes rsconfig.exe) pour configurer la connexion, le serveur de rapports ne sera pas en état de fonctionner. Vous devrez peut-être écrire du code WMI pour rendre le serveur de rapports disponible. Pour plus d’informations, consultez [Accéder au fournisseur WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer le rôle RSExecRole](../security/create-the-rsexecrole.md)   
+ [Créer le RSExecRole](../security/create-the-rsexecrole.md)   
  [Démarrer et arrêter le service Report Server](start-and-stop-the-report-server-service.md)   
- [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configurer une connexion à la base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurer le compte d’exécution sans assistance &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Utilitaire rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
+ [Utilitaire rsconfig &#40;&#41;SSRS](../tools/rsconfig-utility-ssrs.md)   
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-database-ssrs-native-mode.md)  
   

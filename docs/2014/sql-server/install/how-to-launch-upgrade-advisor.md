@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Lancer le Conseiller de mise à niveau | Microsoft Docs'
+title: 'Procédure : lancer le conseiller de mise à niveau | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094906"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>Procédure : lancer le Conseiller de mise à niveau
@@ -27,11 +27,11 @@ ms.locfileid: "66094906"
   
 ### <a name="to-launch-upgrade-advisor"></a>Pour lancer le Conseiller de mise à niveau  
   
--   Pour lancer le Conseiller de mise à niveau, cliquez sur **Démarrer**, cliquez sur **tous les programmes**, cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , puis cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+-   Pour lancer le conseiller de mise à niveau, cliquez sur **Démarrer**, **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** sur **tous les programmes**, sur, puis sur ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] conseiller de mise à niveau**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécutez le Conseiller de mise à niveau &#40;Interface utilisateur&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
- [Les rubriques de procédures de conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+ [Exécution du conseiller de mise à niveau &#40;de l’interface utilisateur&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+ [Rubriques de procédures relatives au conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Page télécharger un fichier (Gestionnaire de rapports) | Microsoft Docs
+title: Page Télécharger un fichier (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098865"
 ---
 # <a name="upload-file-page-report-manager"></a>Page Télécharger un fichier (Gestionnaire de rapports)
@@ -22,7 +22,7 @@ ms.locfileid: "66098865"
   
 -   Les fichiers .rdl téléchargés sont publiés sur un serveur de rapports sous forme de rapport.  
   
--   Les fichiers .smdl téléchargés sont publiés sous la forme de modèles de rapports s'ils contiennent des informations sur la vue de la source de données. Si une référence de la vue de source de données est absente, une erreur se produit au cours du téléchargement. Certaines informations sur la vue de source de données peuvent être manquantes si vous téléchargez un fichier .smdl à partir d'un projet de modèle de rapport [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Dans les projets de modèles de rapports, les informations de la vue de source de données sont stockées dans un fichier distinct au lieu d'être incluses dans le fichier .smdl lui-même.  
+-   Les fichiers .smdl téléchargés sont publiés sous la forme de modèles de rapports s'ils contiennent des informations sur la vue de la source de données. Si une référence de la vue de source de données est absente, une erreur se produit au cours du téléchargement. Les informations de vue de source de données peuvent être manquantes si vous téléchargez un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] fichier. smdl à partir d’un projet de modèle de rapport. Dans les projets de modèles de rapports, les informations de la vue de source de données sont stockées dans un fichier distinct au lieu d'être incluses dans le fichier .smdl lui-même.  
   
      Les fichiers de modèles qui contiennent des informations sur la vue de source de données (et qui peuvent par conséquent être téléchargés) ont été précédemment publiés sur un serveur de rapports, puis enregistrés depuis le serveur dans un fichier du système de fichiers. Si vous ouvrez la page Propriétés générales d'un modèle et cliquez sur **Modifier** pour ouvrir le modèle, vous pouvez enregistrer celui-ci dans un fichier, puis le télécharger sous la forme d'un nouveau modèle sur le serveur de rapports. Le fichier .smdl que vous téléchargez ensuite contient toutes les informations nécessaires à la publication du modèle.  
   
@@ -50,15 +50,15 @@ ms.locfileid: "66098865"
  Cliquez pour choisir un fichier dans le système de fichiers.  
   
  **Nom**  
- Tapez le nom du fichier tel qu'il apparaîtra dans l'espace de noms du serveur de rapports. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ * \< > | "ou / lorsque vous spécifiez un nom d’élément.  
+ Tapez le nom du fichier tel qu'il apparaîtra dans l'espace de noms du serveur de rapports. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ * \< > | "ou/lorsque vous spécifiez un nom d’élément.  
   
- **Remplacer l’élément s’il existe**  
+ **Remplacer l'élément s'il existe**  
  Activez cette case à cocher si vous souhaitez remplacer un élément existant par une nouvelle version. Pour remplacer une version existante, le nom du nouvel élément et celui de l'élément existant doivent être identiques.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Page Contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Page contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Aide (F1) Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Télécharger des fichiers dans un dossier](report-server/upload-files-to-a-folder.md)  
   
   

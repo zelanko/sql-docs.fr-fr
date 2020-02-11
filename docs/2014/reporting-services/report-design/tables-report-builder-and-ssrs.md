@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af1eccd0349d0ed204d595d32fdc35c76c3b2efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104740"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tables (Générateur de rapports et SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66104740"
 > [!NOTE]  
 >  Vous pouvez publier des tables hors d'un rapport en tant que parties du rapport.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Pour commencer à utiliser rapidement les tables, consultez le [Tutoriel : Création d’un rapport de table de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) ou [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ Pour rapidement commencer à utiliser les tables, consultez [Didacticiel : création d’un rapport de table de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) ou [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
  Les exemples de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent un certain nombre de rapports qui utilisent des tables. Vous pouvez découvrir les tables en explorant la définition de rapport d'un exemple de rapport dans le Générateur de rapports ou le Concepteur de rapports ou en affichant un aperçu du rapport rendu dans le Générateur de rapports ou le Concepteur de rapports. Pour plus d'informations sur le téléchargement des exemples de rapports, consultez [Exemples de produits (SSRS) Server Reporting Services](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingTable"></a> Ajout d'une table pour afficher des données de détail  
+##  <a name="AddingTable"></a>Ajout d’une table pour afficher des données de détail  
  Ajoutez une table à l'aire de conception depuis l'onglet Insérer sur le ruban. Vous pouvez ajouter une table à l'aide de l'Assistant Tableau ou matrice, qui inclut la création d'une connexion à la source de données et d'un dataset ainsi que la configuration de la table, ou une table basée sur le modèle de table, que vous configurez manuellement.  
   
 > [!NOTE]  
@@ -44,9 +44,9 @@ ms.locfileid: "66104740"
   
  Lorsque vous sélectionnez la table, des poignées de ligne et de colonne apparaissent à l'extérieur de la table tandis que des crochets apparaissent dans les cellules. Les poignées de ligne affichent des graphiques qui vous aident à comprendre l'objectif de chaque ligne. Les crochets indiquent l'appartenance aux groupes pour une cellule sélectionnée. La figure suivante montre une cellule vide sélectionnée dans une table par défaut.  
   
- ![Modèle de table sur l’aire de conception, sélectionné](../media/rs-tabletemplatenewselected.gif "Modèle de table sur l’aire de conception, sélectionné")  
+ ![Modèle de table sur l'aire de conception, sélectionné](../media/rs-tabletemplatenewselected.gif "Modèle de table sur l'aire de conception, sélectionné")  
   
- Le handle de ligne de la ligne de données affiche le symbole de détails (![handle de ligne avec 3 traits parallèles pour la ligne de détails](../media/rs-icontablix-detailsrow.gif "handle de ligne avec 3 lignes parallèles pour la ligne de détails")). Pour afficher des données sur ces lignes, faites glisser les champs du volet des données de rapport vers la ligne d'en-tête ou de détails. Les deux lignes sont remplies simultanément. Pour ajouter des colonnes supplémentaires, faites glisser le champ vers la table jusqu'à ce que vous voyiez un point d'insertion. Après avoir ajouté des champs de dataset à la table, vous pouvez modifier le format par défaut pour les dates et devises afin de contrôler leur mode d'affichage dans le rapport. Le diagramme suivant représente une région de données d'une table comportant les champs suivants : Date, Order, Product, Qty et Ligne Total.  
+ Le descripteur de ligne de la ligne de données affiche le symbole de détails (![descripteur de ligne avec 3 lignes parallèles pour la ligne de détails](../media/rs-icontablix-detailsrow.gif "Handle de ligne avec 3 lignes parallèles pour la ligne de détails")). Pour afficher des données sur ces lignes, faites glisser les champs du volet des données de rapport vers la ligne d'en-tête ou de détails. Les deux lignes sont remplies simultanément. Pour ajouter des colonnes supplémentaires, faites glisser le champ vers la table jusqu'à ce que vous voyiez un point d'insertion. Après avoir ajouté des champs de dataset à la table, vous pouvez modifier le format par défaut pour les dates et devises afin de contrôler leur mode d'affichage dans le rapport. Le diagramme suivant représente une région de données d'une table comportant les champs suivants : Date, Order, Product, Qty et Line Total.  
   
  ![Conception, table avec en-têtes de colonnes en gras](../media/rs-basictabledetailsformatteddesign.gif "Conception, table avec en-têtes de colonnes en gras")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66104740"
   
  Pour plus d’informations, consultez [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="AddingRowGroups"></a> Ajout de groupes de lignes à une table  
+##  <a name="AddingRowGroups"></a>Ajout de groupes de lignes à une table  
  De la même manière que vous pouvez faire glisser un champ du volet des données de rapport vers une cellule pour afficher les données de détail, vous pouvez faire glisser un champ vers le volet de regroupement pour ajouter un groupe. Pour une table, faites glisser le champ vers le volet Groupes de lignes. Une fois que vous avez ajouté un groupe, la table ajoute automatiquement des cellules dans les nouvelles colonnes dans la région du groupe de lignes dans laquelle afficher les valeurs du groupe. Pour plus d’informations sur les zones, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  L'illustration suivante représente une table avec deux groupes de lignes imbriquées en mode Conception. Les groupes de lignes ont été créés en faisant glisser le champ Order, puis le champ Date vers le volet Groupes de lignes puis en insérant chaque groupe comme un parent des groupes existants. L'illustration montre un groupe parent basé sur la date et un groupe enfant basé sur le numéro de commande, ainsi que le groupe de détails défini par défaut.  
@@ -83,7 +83,7 @@ ms.locfileid: "66104740"
 ### <a name="adding-totals-to-row-groups"></a>Ajout de totaux aux groupes de lignes  
  Pour afficher des totaux pour un groupe, vous pouvez utiliser la commande contextuelle **Ajouter un total** . Pour un groupe de lignes, la commande Ajouter un total ajoute une ligne à l'extérieur du groupe de sorte qu'elle ne se répète qu'une fois par rapport au groupe. Pour les groupes imbriqués, la ligne de total du groupe enfant peut être à l'extérieur du groupe enfant mais à l'intérieur du groupe parent. Dans un tel cas, il est utile de définir une couleur d'arrière-plan de la ligne de total pour le groupe enfant afin de la distinguer des lignes de détails. Vous pouvez également utiliser une couleur d'arrière-plan différente pour distinguer l'en-tête de la table et les lignes de pied de page. L'illustration suivante montre la table avec une ligne de total ajoutée pour le groupe en fonction des numéros de commande.  
   
- ![Mode Création, ajouter des lignes de totaux au groupe et à la table](../media/rs-basictablegroupstotalscolordesign.gif "Mode Création, ajouter des lignes de totaux au groupe et à la table")  
+ ![Mode Conception, ajoutez des lignes de totaux au groupe et à la table](../media/rs-basictablegroupstotalscolordesign.gif "Mode Conception, ajoutez des lignes de totaux au groupe et à la table")  
   
  Lorsque vous affichez le rapport, la ligne qui comprend les sous-totaux de commande se répète une fois pour chaque numéro de commande. Le pied de page de la table affiche des totaux pour toutes les dates. Dans l'illustration suivante, les dernières lignes affichent les trois dernières lignes de détails, le sous-total pour le dernier numéro de commande SO71952, et les totaux pour toutes les dates de la table.  
   
@@ -91,12 +91,12 @@ ms.locfileid: "66104740"
   
  Pour plus d’informations, consultez [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="RemovingHidingRows"></a> Suppression ou masquage de lignes de détails  
+##  <a name="RemovingHidingRows"></a>Suppression ou masquage de lignes de détails  
  Après avoir affiché l'aperçu d'une table dans un rapport, vous pouvez décider de supprimer des lignes de détails existantes. Ou vous pouvez décider de les masquer par défaut et autoriser l'utilisateur à afficher alternativement plus ou moins de détails, comme dans un rapport d'extraction.  
   
  Pour supprimer toutes les lignes de détails d'une table, utilisez le volet de regroupement. Sélectionnez le groupe de détails et utilisez le menu contextuel pour supprimer le groupe et les lignes qui affichent les données de détail. L'illustration suivante montre la vue de conception pour une table regroupée par date et numéro de commande, mais sans lignes de détails. Aucune ligne de total n'a été ajoutée à cette table.  
   
- ![Mode Création, table avec deux groupes, aucun détail](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "Mode Création, table avec deux groupes, aucun détail")  
+ ![Mode Conception, table avec deux groupes, aucun détail](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "Mode Conception, table avec deux groupes, aucun détail")  
   
  Une fois la ligne de détails supprimée, les valeurs sont intégrées aux groupes de lignes. Les données de détail ne s'affichent plus.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66104740"
   
  Vous pouvez également masquer les lignes de détails lorsque le rapport est affiché initialement. Pour ce faire, vous pouvez créer un rapport d'extraction, dans lequel seules les données du groupe parent sont affichées. Pour chaque groupe interne (y compris le groupe de détails), ajoutez une bascule de visibilité à la cellule de regroupement du groupe conteneur. Par exemple, pour le groupe de détails, ajoutez une bascule vers la zone de texte qui affiche la valeur du groupe numéro de commande. Pour le groupe numéro de commande, ajoutez une bascule vers la zone de texte qui affiche la valeur du groupe date. L'illustration suivante montre la ligne correspondant au 01 septembre 2001, développée pour afficher les quelques premières commandes.  
   
- ![Aperçu, table avec nœud d’exploration vers le bas développé](../media/rs-basictablegroupsdrilldownpreview.gif "Aperçu, table avec nœud d’exploration vers le bas développé")  
+ ![Aperçu, table avec nœud d'exploration vers le bas développé](../media/rs-basictablegroupsdrilldownpreview.gif "Aperçu, table avec nœud d'exploration vers le bas développé")  
   
  Pour plus d’informations, consultez [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   

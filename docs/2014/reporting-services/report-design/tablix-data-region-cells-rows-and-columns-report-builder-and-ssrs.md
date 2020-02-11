@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104647"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)
-  Pour contrôler l'affichage des données d'une région de données de tableau matriciel à l'aide des lignes et des colonnes dans un rapport, vous devez comprendre comment spécifier des lignes et des colonnes pour les données de détail, les données de groupe, les étiquettes et les totaux. Dans la plupart des cas, vous pouvez utiliser les structures par défaut pour afficher vos données dans une table, une matrice ou une liste. Pour plus d’informations, consultez [Tables &#40;Générateur de rapports et SSRS&#41;](tables-report-builder-and-ssrs.md), [Matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [répertorie &#40;Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+  Pour contrôler l'affichage des données d'une région de données de tableau matriciel à l'aide des lignes et des colonnes dans un rapport, vous devez comprendre comment spécifier des lignes et des colonnes pour les données de détail, les données de groupe, les étiquettes et les totaux. Dans la plupart des cas, vous pouvez utiliser les structures par défaut pour afficher vos données dans une table, une matrice ou une liste. Pour plus d’informations, consultez [Tables &#40;générateur de rapports et ssrs&#41;](tables-report-builder-and-ssrs.md), [matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [listes &#40;générateur de rapports et&#41;SSRS ](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Une région de données de tableau matriciel affiche des données de détail dans des lignes et des colonnes de détail et des données groupées dans des lignes et des colonnes de groupe. Quand vous ajoutez des groupes de lignes et de colonnes à une région de données de tableau matriciel, les lignes et les colonnes dans lesquelles les données doivent s’afficher sont ajoutées automatiquement. Vous pouvez ajouter et supprimer manuellement des lignes et des colonnes pour personnaliser une région de données de tableau matriciel et contrôler la manière dont vos données s'affichent dans le rapport.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "66104647"
   
 |Icône|Description|  
 |----------|-----------------|  
-|![Handle de ligne avec 3 traits parallèles pour la ligne de détails](../media/rs-icontablix-detailsrow.gif "handle de ligne avec 3 traits parallèles pour la ligne de détails")|Seulement le groupe de détails dans la hiérarchie des groupes de lignes|  
-|![Handle de ligne avec la ligne de détails et un groupe externe](../media/rs-icontablix-groupwithdetails.gif "Handle de ligne avec la ligne de détails et un groupe externe")|Un groupe externe et le groupe de détails enfant|  
+|![Handle de ligne avec 3 lignes parallèles pour la ligne de détails](../media/rs-icontablix-detailsrow.gif "Handle de ligne avec 3 lignes parallèles pour la ligne de détails")|Seulement le groupe de détails dans la hiérarchie des groupes de lignes|  
+|![Handle de ligne avec ligne de détails et un groupe externe](../media/rs-icontablix-groupwithdetails.gif "Handle de ligne avec ligne de détails et un groupe externe")|Un groupe externe et le groupe de détails enfant|  
 |![Deux crochets parallèles signalant des groupes imbriqués](../media/rs-icontablix-nestedgroupnodetails.gif "Deux crochets parallèles signalant des groupes imbriqués")|Un groupe externe, un groupe interne ; aucun groupe de détails|  
-|![2 crochets et 3 lignes empilées pour les détails imbriqués](../media/rs-icontablix-nestedgroupwithdetails.gif "2 crochets et 3 lignes empilées pour les détails imbriqués")|Un groupe externe, un groupe interne et le groupe de détails enfant|  
+|![2 crochets & 3 lignes empilées pour les détails du & imbriqué](../media/rs-icontablix-nestedgroupwithdetails.gif "2 crochets et 3 lignes empilées pour les détails imbriqués")|Un groupe externe, un groupe interne et le groupe de détails enfant|  
 |![Un groupe externe avec ligne de pied de page, un groupe interne](../media/rs-icontablix-nestedgroupwithparentfooter.gif "Un groupe externe avec ligne de pied de page, un groupe interne")|Un groupe externe avec une ligne de pied de page pour les totaux et un groupe interne|  
 |![Crochet de groupe externe, crochet de groupe interne, détails](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "Crochet de groupe externe, crochet de groupe interne, détails")|Un groupe externe avec une ligne de pied de page pour les totaux, un groupe interne avec une ligne de pied de page pour les totaux, et une ligne de détail|  
 |![En-tête et pied de page parents, et groupe enfant également](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "En-tête et pied de page parents, et groupe enfant également")|Un groupe externe avec un en-tête pour les étiquettes et un pied de page pour les totaux, et un groupe interne ; aucun groupe de détails|  
@@ -62,7 +62,7 @@ ms.locfileid: "66104647"
 ### <a name="total-rows"></a>Lignes de totaux  
  Après avoir ajouté des groupes de lignes et de colonnes, vous pouvez ajouter une ligne pour afficher les totaux des colonnes et une colonne pour afficher les totaux des lignes. La figure suivante illustre une matrice avec des groupes de lignes et de colonnes, une ligne de total et une colonne de total.  
   
- ![Région de données de tableau matriciel](../media/rs-tablixparts.gif "Région de données de tableau matriciel")  
+ ![région de données de tableau matriciel](../media/rs-tablixparts.gif "Région de données de tableau matriciel")  
   
 ### <a name="grouping-pane"></a>Volet de regroupement  
  Le volet Regroupement affiche les groupes de lignes et de colonnes pour la région de données de tableau matriciel actuellement sélectionnée dans l'aire de conception. La figure suivante illustre le volet Regroupement pour cette région de données de tableau matriciel.  
@@ -84,7 +84,7 @@ ms.locfileid: "66104647"
   
  La figure suivante illustre une région de données de tableau matriciel avec un groupe de détails et des groupes de lignes imbriqués.  
   
- ![Mode Création, ajouter des lignes de totaux au groupe et à la table](../media/rs-basictablegroupstotalscolordesign.gif "Mode Création, ajouter des lignes de totaux au groupe et à la table")  
+ ![Mode Conception, ajoutez des lignes de totaux au groupe et à la table](../media/rs-basictablegroupstotalscolordesign.gif "Mode Conception, ajoutez des lignes de totaux au groupe et à la table")  
   
  Pour une région de données de tableau matriciel qui affiche des données de détail, le groupe de détails est le groupe enfant le plus profond. Les lignes que vous ajoutez à un groupe de détails se répètent une fois par ligne dans le jeu de résultats de la requête pour le dataset lié à cette région de données de tableau matriciel. La figure suivante illustre la dernière page du rapport rendu. Dans cette figure, vous pouvez voir les dernières lignes de détail et la ligne de sous-total pour la dernière commande.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66104647"
  Les cellules de la zone du corps de tableau matriciel peuvent afficher des données de détail lorsque la cellule est dans une ligne ou une colonne de détail et des données de groupe agrégées lorsque la cellule est dans une ligne ou une colonne de groupe. L'étendue des données d'une cellule s'étend à l'intersection avec les groupes de lignes et de colonnes les plus internes auxquels la cellule appartient.  
   
 > [!NOTE]  
->  Les données effectives affichées pour chaque cellule sont l'expression évaluée pour l'élément de rapport que la cellule contient, en général une zone de texte. Dans une cellule qui appartient à une ligne ou une colonne de détail, l’expression a comme valeur par défaut les données de détail (par exemple, **[LineTotal])** . Dans une cellule qui n’appartient pas à une ligne ou une colonne de détail, l’expression a pour valeur par défaut une fonction d’agrégation (par exemple, **Sum[LineTotal])** . Si une expression ne spécifie pas de fonction d'agrégation bien que la cellule appartienne à une ligne ou une colonne de groupe, la première valeur dans le groupe est affichée. Pour plus d’informations sur les agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Les données effectives affichées pour chaque cellule sont l'expression évaluée pour l'élément de rapport que la cellule contient, en général une zone de texte. Dans une cellule qui appartient à une ligne ou une colonne de détail, l’expression a comme valeur par défaut les données de détail (par exemple, **[LineTotal])**. Dans une cellule qui n’appartient pas à une ligne ou une colonne de détail, l’expression a pour valeur par défaut une fonction d’agrégation (par exemple, **Sum[LineTotal])**. Si une expression ne spécifie pas de fonction d'agrégation bien que la cellule appartienne à une ligne ou une colonne de groupe, la première valeur dans le groupe est affichée. Pour plus d’informations sur les agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Fusion et fractionnement de cellules  
  À l’intérieur d’une zone de tableau matriciel, vous pouvez fusionner plusieurs cellules adjacentes. Par exemple, vous pouvez créer des cellules pour les étiquettes qui couvrent plusieurs colonnes ou lignes.  

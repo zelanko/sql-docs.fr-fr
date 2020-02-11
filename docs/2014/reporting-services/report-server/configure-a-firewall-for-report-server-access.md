@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104161"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurer un pare-feu pour accéder au serveur de rapports
@@ -29,7 +29,7 @@ ms.locfileid: "66104161"
   
  Si vous accédez à des bases de données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur des ordinateurs externes, ou si la base de données du serveur de rapports se trouve sur une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] externe, vous devez ouvrir les ports 1433 et 1434 sur l'ordinateur externe. Pour plus d’informations, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Ces instructions supposent que vous avez déjà configuré le compte de service, créé la base de données du serveur de rapports et configuré les URLS du service Web Report Server et du Gestionnaire de rapports. Pour plus d’informations, consultez [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](manage-a-reporting-services-native-mode-report-server.md).  
   
  Vous devez aussi avoir vérifié que le serveur de rapports est accessible via une connexion locale du navigateur Web à l'instance locale du serveur de rapports. Cette étape établit que votre installation est en état de marche. Vous devez vérifier que l'installation est configurée correctement avant de commencer à ouvrir les ports. Pour compléter cette étape sur Windows Server, vous devez également avoir ajouté le site du serveur de rapports aux Sites de confiance. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
@@ -45,27 +45,27 @@ ms.locfileid: "66104161"
   
 3.  Cliquez sur **Règles de trafic entrant**.  
   
-4.  Cliquez sur **Nouvelle règle** dans la fenêtre **Actions****.**  
+4.  Cliquez sur **nouvelle règle** dans la fenêtre **actions** **.**  
   
 5.  Cliquez sur **Type de règle** de **Port**.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
 7.  Dans la page **Protocole et ports** , cliquez sur **TCP**.  
   
 8.  Sélectionnez **Ports locaux spécifiques** et tapez la valeur **80**.  
   
-9. Cliquer sur **Suivant**.  
+9. Cliquez sur **Suivant**.  
   
 10. Dans la page **Action** , cliquez sur **Autoriser la connexion**.  
   
-11. Cliquer sur **Suivant**.  
+11. Cliquez sur **Suivant**.  
   
 12. Dans la page **Profil** , cliquez sur les options appropriées pour votre environnement.  
   
-13. Cliquer sur **Suivant**.  
+13. Cliquez sur **Suivant**.  
   
-14. Dans la page **Nom** , entrez un nom de**ReportServer (TCP sur le port 80)**.  
+14. Dans la page **Nom** , entrez un nom de**ReportServer (TCP sur le port 80)** .  
   
 15. Cliquez sur **Terminer**.  
   
@@ -73,23 +73,23 @@ ms.locfileid: "66104161"
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Pour ouvrir le port 80 sur Windows Vista ou Windows Server 2008  
   
-1.  À partir de la **Démarrer** menu, cliquez sur **le panneau de configuration**, cliquez sur **sécurité**, puis cliquez sur **Windows Firewall**.  
+1.  Dans le menu **Démarrer** , cliquez sur **panneau de configuration**, sur **sécurité**, puis sur **pare-feu Windows**.  
   
-2.  Cliquez sur **autoriser un programme via le pare-feu de Windows**.  
+2.  Cliquez sur **Autoriser un programme via le Pare-feu Windows**.  
   
 3.  Cliquez sur **Continuer**.  
   
-4.  Sous l’onglet Exceptions, cliquez sur **ajouter un Port**.  
+4.  Sous l’onglet exceptions, cliquez sur **Ajouter un port**.  
   
-5.  Dans nom, tapez **ReportServer (TCP sur le port 80)**.  
+5.  Dans nom, tapez **reportserver (TCP sur le port 80)**.  
   
-6.  Dans le numéro de Port, tapez **80**.  
+6.  Dans numéro de port, tapez **80**.  
   
 7.  Vérifiez que **TCP** est sélectionné.  
   
-8.  Cliquez sur **modifier l’étendue**.  
+8.  Cliquez sur **Modifier l'étendue**.  
   
-9. Cliquez sur **uniquement mon réseau (sous-réseau)**, puis cliquez sur **OK**.  
+9. Cliquez sur **mon réseau (sous-réseau) uniquement**, puis sur **OK**.  
   
 10. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
