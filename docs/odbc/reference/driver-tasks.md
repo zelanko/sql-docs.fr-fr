@@ -1,5 +1,5 @@
 ---
-title: Tâches des pilotes | Microsoft Docs
+title: Tâches du pilote | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915459"
 ---
 # <a name="driver-tasks"></a>Tâches des pilotes
 Les tâches spécifiques effectuées par les pilotes sont les suivantes :  
   
--   Connexion et déconnexion à partir de la source de données.  
+-   Connexion à la source de données et déconnexion de celle-ci.  
   
--   Vérification des erreurs de fonction ne pas vérifiées par le Gestionnaire de pilotes.  
+-   Recherche des erreurs de fonction non vérifiées par le gestionnaire de pilotes.  
   
--   Transactions de l’initiateur ; Cela est transparent pour l’application.  
+-   Lancement des transactions ; Cela est transparent pour l’application.  
   
--   Envoi de la source de données pour l’exécution d’instructions SQL. Le pilote doit modifier SQL ODBC à SQL de SGBD spécifiques ; Cela est souvent limité à en remplaçant les clauses d’échappement définis par ODBC avec propres au SGBD SQL.  
+-   Envoi d’instructions SQL à la source de données pour exécution. Le pilote doit modifier le SQL ODBC en SQL spécifique au SGBD. Cela est souvent limité au remplacement de clauses d’échappement définies par ODBC avec un SQL spécifique au SGBD.  
   
--   Envoie des données et la récupération des données à partir de la source de données, notamment la conversion en types de données comme spécifié par l’application.  
+-   Envoi et récupération de données à partir de la source de données, y compris la conversion des types de données tels que spécifiés par l’application.  
   
--   Erreurs de mappage de SGBD spécifiques à SQLSTATE de ODBC.
+-   Mappage des erreurs spécifiques au SGBD aux SQLSTATE ODBC.

@@ -1,5 +1,5 @@
 ---
-title: Objet de propriété (ADO) | Microsoft Docs
+title: Property, objet (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,41 +16,41 @@ ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917552"
 ---
 # <a name="property-object-ado"></a>Property, objet (ADO)
-Représente une caractéristique dynamique d’un objet ADO qui est définie par le fournisseur.  
+Représente une caractéristique dynamique d’un objet ADO qui est défini par le fournisseur.  
   
 ## <a name="remarks"></a>Notes  
- Objets ADO possèdent deux types de propriétés : intégrées et dynamiques.  
+ Les objets ADO ont deux types de propriétés : intégré et dynamique.  
   
- Propriétés intégrées sont les propriétés implémentées dans ADO et immédiatement disponibles pour tout nouvel objet, à l’aide du `MyObject.Property` syntaxe. Ils n’apparaissent pas en tant que **propriété** les objets d’un objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection, donc vous pouvez modifier leurs valeurs, vous ne pouvez pas modifier leurs caractéristiques.  
+ Les propriétés intégrées sont les propriétés implémentées dans ADO et immédiatement disponibles pour tout nouvel objet, à l' `MyObject.Property` aide de la syntaxe. Ils n’apparaissent pas en tant qu’objets de **propriété** dans la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) d’un objet. par conséquent, bien que vous puissiez modifier leurs valeurs, vous ne pouvez pas modifier leurs caractéristiques.  
   
- Propriétés dynamiques sont définies par le fournisseur de données sous-jacent et apparaissent dans le **propriétés** collection pour l’objet ADO approprié. Par exemple, une propriété spécifique au fournisseur peut indiquer si un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet prend en charge les transactions ou la mise à jour. Ces propriétés supplémentaires apparaissent en tant que **propriété** objets dans ce **Recordset** l’objet **propriétés** collection. Propriétés dynamiques peuvent être référencées uniquement par le biais de la collection, à l’aide de la `MyObject.Properties(0)` ou `MyObject.Properties("Name")` syntaxe.  
+ Les propriétés dynamiques sont définies par le fournisseur de données sous-jacent et s’affichent dans la collection **Properties** pour l’objet ADO approprié. Par exemple, une propriété spécifique au fournisseur peut indiquer si un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) prend en charge les transactions ou la mise à jour. Ces propriétés supplémentaires s’affichent sous la forme d’objets de **propriété** dans la collection de **Propriétés** de cet objet **Recordset** . Les propriétés dynamiques peuvent être référencées uniquement par l’intermédiaire de la `MyObject.Properties(0)` collection `MyObject.Properties("Name")` , à l’aide de la syntaxe ou.  
   
- Vous ne pouvez pas supprimer un de ces types de propriété.  
+ Vous ne pouvez pas supprimer un type de propriété.  
   
- Dynamique **propriété** objet possède quatre propriétés intégrées :  
+ Un objet de **propriété** dynamique a quatre propriétés intégrées :  
   
--   Le [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété est une chaîne qui identifie la propriété.  
+-   La propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) est une chaîne qui identifie la propriété.  
   
--   Le [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété est un entier qui spécifie le type de données de propriété.  
+-   La propriété de [type](../../../ado/reference/ado-api/type-property-ado.md) est un entier qui spécifie le type de données de la propriété.  
   
--   Le [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété est une variante qui contient le paramètre de propriété. **Valeur** est la propriété par défaut pour un **propriété** objet.  
+-   La propriété [valeur](../../../ado/reference/ado-api/value-property-ado.md) est un variant qui contient le paramètre de propriété. La **valeur** est la propriété par défaut d’un objet de **propriété** .  
   
--   Le [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété est une valeur longue qui indique les caractéristiques de la propriété spécifique au fournisseur.  
+-   La propriété [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) est une valeur de type long qui indique les caractéristiques de la propriété spécifique au fournisseur.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
--   [Objet de propriétés, méthodes et événements](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Property](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
- [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Field, objet](../../../ado/reference/ado-api/field-object.md)   
+ [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

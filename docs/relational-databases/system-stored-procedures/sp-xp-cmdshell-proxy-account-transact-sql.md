@@ -20,21 +20,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950459"
 ---
-# <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
+# <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Crée une information d’identification de proxy pour **xp_cmdshell**.  
+  Crée des informations d’identification de proxy pour **xp_cmdshell**.  
   
 > [!NOTE]  
->  **xp_cmdshell** est désactivée par défaut. Pour activer **xp_cmdshell**, consultez [Server Configuration Option xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  **xp_cmdshell** est désactivé par défaut. Pour activer **xp_cmdshell**, consultez [Xp_cmdshell option de configuration de serveur](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,16 +50,16 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  *account_name*  
  Spécifie la connexion Windows qui doit être le proxy.  
   
- *password*  
+ *de*  
  Spécifie le mot de passe du compte Windows.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Les informations d’identification de proxy seront appelée **## xp_cmdshell_proxy_account ##** .  
+ Les informations d’identification du proxy sont appelées **# #xp_cmdshell_proxy_account # #**.  
   
- Lorsqu’elle est exécutée à l’aide de l’option NULL, **sp_xp_cmdshell_proxy_account** supprime les informations d’identification de proxy.  
+ Lorsqu’il est exécuté à l’aide de l’option NULL, **sp_xp_cmdshell_proxy_account** supprime les informations d’identification du proxy.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
