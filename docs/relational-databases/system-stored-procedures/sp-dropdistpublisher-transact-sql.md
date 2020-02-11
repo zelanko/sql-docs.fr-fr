@@ -16,10 +16,10 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a15162774d3814e574735d8e1d5fd5e6b769327f
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278126"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "72278126"
 
   Supprime un serveur de publication de distribution. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,21 +39,21 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` est le serveur de publication à supprimer. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Est le serveur de publication à supprimer. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @no_checks = ] no_checks` spécifie si **sp_dropdistpublisher** vérifie que le serveur de publication a désinstallé le serveur en tant que serveur de distribution. *no_checks* est de **bit**, avec **0**comme valeur par défaut.  
+`[ @no_checks = ] no_checks`Spécifie si **sp_dropdistpublisher** vérifie que le serveur de publication a désinstallé le serveur en tant que serveur de distribution. *no_checks* est de **bit**, avec **0**comme valeur par défaut.  
   
  Si la **valeur est 0**, la réplication vérifie que le serveur de publication distant a désinstallé le serveur local en tant que serveur de distribution. Si le serveur de publication est local, la réplication vérifie qu'il ne reste aucun objet de publication ou de distribution sur le serveur local.  
   
- Si la condition est égale à **1**, tous les objets de réplication associés au serveur de publication de distribution sont supprimés même si un serveur de publication distant est inaccessible. Après cela, le serveur de publication distant doit désinstaller la réplication à l’aide de [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) avec **\@ignore_distributor** = **1**.  
+ Si la condition est égale à **1**, tous les objets de réplication associés au serveur de publication de distribution sont supprimés même si un serveur de publication distant est inaccessible. Après cela, le serveur de publication distant doit désinstaller la réplication à l’aide de [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) avec ** \@ignore_distributor** = **1**.  
   
-`[ @ignore_distributor = ] ignore_distributor` spécifie si les objets de distribution sont conservés sur le serveur de distribution lorsque le serveur de publication est supprimé. *ignore_distributor* est de **bits** et peut prendre l’une des valeurs suivantes :  
+`[ @ignore_distributor = ] ignore_distributor`Spécifie si les objets de distribution sont conservés sur le serveur de distribution lorsque le serveur de publication est supprimé. *ignore_distributor* est de **bits** et peut prendre l’une des valeurs suivantes :  
   
  **1** = les objets de distribution appartenant au serveur de *publication* sont conservés sur le serveur de distribution.  
   
  **0** = les objets de distribution du serveur de *publication* sont nettoyés sur le serveur de distribution.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

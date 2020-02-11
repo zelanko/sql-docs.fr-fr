@@ -1,5 +1,5 @@
 ---
-title: Source, propriété (objet Recordset ADO) | Microsoft Docs
+title: Source, propriété (ADO Recordset) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -22,31 +22,31 @@ ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f6ac84445272ae3657d4e25691dbbf150f32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930922"
 ---
 # <a name="source-property-ado-recordset"></a>Source, propriété (objet Recordset ADO)
-Indique la source de données pour un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
+Indique la source de données d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit un **chaîne** valeur ou [commande](../../../ado/reference/ado-api/command-object-ado.md) objet référence ; retourne uniquement un **chaîne** valeur qui indique la source de la **Recordset**.  
+ Définit une valeur de **chaîne** ou une référence d’objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) ; retourne uniquement une valeur de **chaîne** qui indique la source du **Recordset**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **Source** propriété pour spécifier une source de données pour un **Recordset** en utilisant l’une des opérations suivantes : une **commande** variable, une instruction SQL, une procédure stockée, l’objet ou un nom de table.  
+ Utilisez la propriété **source** pour spécifier une source de données pour un objet **Recordset** à l’aide d’un des éléments suivants : une variable d’objet de **commande** , une instruction SQL, une procédure stockée ou un nom de table.  
   
- Si vous définissez le **Source** propriété un **commande** objet, le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété de la **Recordset** objet hérite les valeur de la **ActiveConnection** propriété spécifié **commande** objet. Toutefois, la lecture la **Source** propriété ne retourne pas une **commande** objet ; au lieu de cela, elle retourne le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété de la **commande** de l’objet à laquelle vous avez défini le **Source** propriété.  
+ Si vous définissez la **propriété source** sur un **objet Command** , la propriété [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) de l’objet **Recordset** héritera de la valeur de la propriété **ActiveConnection** de l’objet **Command** spécifié. Toutefois, la lecture de la propriété **source** ne retourne pas d’objet **Command** . au lieu de cela, elle retourne la propriété [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) de l’objet **Command** dans lequel vous définissez la propriété **source** .  
   
- Si le **Source** propriété est une instruction SQL, une procédure stockée ou un nom de table, vous pouvez optimiser les performances en passant approprié *Options* argument avec le [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)appel de méthode.  
+ Si la propriété **source** est une instruction SQL, une procédure stockée ou un nom de table, vous pouvez optimiser les performances en passant l’argument d' *options* approprié avec l’appel de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) .  
   
- Le **Source** propriété est en lecture/écriture pour fermé **Recordset** objets et en lecture seule pour open **Recordset** objets.  
+ La propriété **source** est en lecture/écriture pour les objets **Recordset** fermés et en lecture seule pour les objets **Recordset** ouverts.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de propriété source (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
- [Source, propriété (objet Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Source, exemple de propriété (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
+ [Source, propriété (erreur ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source, propriété (objet Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

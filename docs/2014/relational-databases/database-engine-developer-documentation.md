@@ -1,5 +1,5 @@
 ---
-title: Guide&#39;du développeur (moteur de base de données) | Microsoft Docs
+title: Guide des&#39;pour les développeurs (Moteur de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530949"
 ---
-# <a name="developer39s-guide-database-engine"></a>Guide&#39;du développeur (moteur de base de données)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un riche ensemble d'outils pour développer, administrer, et contrôler les applications de base de données.  
+# <a name="developer39s-guide-database-engine"></a>Guide des&#39;pour les développeurs (Moteur de base de données)
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fournit un ensemble complet d’outils pour développer, administrer et contrôler les applications de base de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
@@ -34,12 +34,12 @@ ms.locfileid: "69530949"
  Décrit la version la plus récente de SQLXML, qui propose les mêmes fonctionnalités que SQLXML 3.0, aussi bien que les mises à jour supplémentaires destinées à accueillir les nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], comme le type de données XML.  
   
  [Fournisseur WMI pour les concepts de gestion de configuration](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- Décrit une couche publiée utilisée avec le composant logiciel enfichable Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour MMC (Microsoft Management Console) et le Gestionnaire de configuration [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il offre une méthode d'interface unifiée avec les appels API qui gèrent les opérations de registre requises par le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il permet également un contrôle et une manipulation avancés des services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sélectionnés.  
+ Décrit une couche publiée utilisée avec le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] composant logiciel enfichable Configuration Manager pour la console MMC (Microsoft Management Console) et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le Configuration Manager. Il offre une méthode d'interface unifiée avec les appels API qui gèrent les opérations de registre requises par le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il permet également un contrôle et une manipulation avancés des services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sélectionnés.  
   
  [Fournisseur WMI pour les concepts des événements de serveur](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  Décrit comment utiliser WMI (Windows Management Instrumentation) pour surveiller les événements dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Guide de programmation SMO &#40;SQL Server Management Objects&#41;](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
+ [Guide de programmation SQL Server Management Objects &#40;SMO&#41;](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
  Contient des informations sur SQL-SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects), une collection d'objets conçus pour la programmation de tous les aspects de la gestion de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Programmation de procédure stockée étendue de moteur de base de données](database-engine-extended-stored-procedure-programming.md)  
@@ -48,14 +48,14 @@ ms.locfileid: "69530949"
  [Programmation du collecteur de données](../database-engine/dev-guide/data-collector-programming.md)  
  Décrit le modèle objet du collecteur de données.  
   
- [Programmation de boîte de message d’exception](../database-engine/dev-guide/exception-message-box-programming.md)  
+ [Programmation de boîte de message d'exception](../database-engine/dev-guide/exception-message-box-programming.md)  
  Décrit comment utiliser l'interface de programmation des messages d'exception dans vos applications pour contrôler les messages de manière beaucoup plus rigoureuse et pour donner à vos utilisateurs la possibilité d'enregistrer le contenu des messages d'erreur afin de pouvoir obtenir une assistance ultérieure.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de l’exploration de données](../analysis-services/dev-guide/data-mining-programming.md)   
- [Guide &#40;du développeur Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
- [Guide &#40;du développeur Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Réplication du &#40;Guide du développeur&#41;](replication/concepts/replication-developer-documentation.md)   
- [Guide &#40;du développeur Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [Guide du développeur &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [Guide du développeur &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Guide du développeur &#40;la réplication&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Guide du développeur &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

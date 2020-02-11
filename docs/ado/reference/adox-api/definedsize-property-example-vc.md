@@ -1,5 +1,5 @@
 ---
-title: DefinedSize, propriété-Exemple (VC ++) | Microsoft Docs
+title: DefinedSize, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4c6930cd849ca7d0dd8b8905d52fd8355a38b66a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966463"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939583"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize, exemple de propriété (VC++)
-Cet exemple montre la [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la **employés** table de la *Northwind* base de données. Ensuite, la modification dans les valeurs de prénom [champ](../../../ado/reference/ado-api/field-object.md) d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) selon le **employés** table s’affiche. Notez que, par défaut, le champ FirstName se remplit d’espaces une fois que vous redéfinissez le **DefinedSize** propriété.  
+Cet exemple illustre la propriété [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la table **Employees** de la base de données *Northwind* . Ensuite, la modification des valeurs du [champ](../../../ado/reference/ado-api/field-object.md) FirstName d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) basé sur la table **Employees** s’affiche. Notez que, par défaut, le champ FirstName est complété par des espaces après avoir redéfini la propriété **DefinedSize** .  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -149,7 +149,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in DefinedSizeX...." << endl;  
+      cout << "Error occurred in DefinedSizeX...." << endl;  
    }  
   
    if (m_pRstEmployees)  
@@ -163,5 +163,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de colonne (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize, propriété (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

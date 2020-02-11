@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63016067"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
@@ -83,7 +83,7 @@ ms.locfileid: "63016067"
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
     ```  
   
-     \- Ou -  
+     -Ou-  
   
     ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
@@ -133,7 +133,7 @@ ms.locfileid: "63016067"
   
 2.  Développez la base de données que vous souhaitez, développez **Programmabilité**, puis développez **Procédures stockées**.  
   
-3.  Cliquez avec le bouton droit sur la procédure stockée définie par l’utilisateur à supprimer, puis cliquez sur **Exécuter la procédure stockée**.  
+3.  Cliquez avec le bouton droit sur la procédure stockée définie par l’utilisateur à executer, puis cliquez sur **Exécuter la procédure stockée**.  
   
 4.  Dans la boîte de dialogue **Exécuter la procédure** , entrez une valeur pour chaque paramètre et indiquez si le paramètre doit passer une valeur Null.  
   

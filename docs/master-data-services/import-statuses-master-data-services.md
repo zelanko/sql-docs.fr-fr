@@ -11,10 +11,10 @@ ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728189"
 ---
 # <a name="import-statuses-master-data-services"></a>États d'importation (Master Data Services)
@@ -23,15 +23,15 @@ ms.locfileid: "73728189"
 
   Dans la zone fonctionnelle **Gestion de l'intégration** , dans la page **Lots intermédiaires** , les états suivants sont possibles.  
   
-|État|Description|Status_ID|  
+|Statut|Description|Status_ID|  
 |------------|-----------------|----------------|  
 |En file d'attente d'exécution|Le lot n'a pas démarré le traitement.|1|  
 |Exécution en cours|Le lot est en cours de traitement.|2|  
-|Terminé|Le lot a terminé le traitement.|3|  
+|Completed|Le lot a terminé le traitement.|3|  
 |En file d'attente de suppression|Le lot a terminé le traitement et sera effacé.|4|  
 |Désactivé|Le traitement a été effacé.|5|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

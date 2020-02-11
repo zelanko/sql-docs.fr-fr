@@ -14,10 +14,10 @@ ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728367"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Supprimer une hiérarchie dérivée (Master Data Services)

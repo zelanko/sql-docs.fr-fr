@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0471fc5fe8d7fc8b3b55d6fec39780e60f591db9
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73765693"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -43,7 +43,7 @@ HRESULT BCPColFmt(
 ```  
   
 ## <a name="remarks"></a>Notes  
- La méthode **BCPColFmt** permet de créer une liaison entre des champs de fichier de données BCP et des colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il accepte la longueur, le type, la marque de fin et la longueur de préfixe d'une colonne en tant que paramètres et définit chacune de ces propriétés pour les champs individuels.  
+ La méthode **BCPColFmt** permet de créer une liaison entre des champs de fichier de données BCP et des colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il accepte la longueur, le type, la marque de fin et la longueur de préfixe d'une colonne en tant que paramètres et définit chacune de ces propriétés pour les champs individuels.  
   
  Si l'utilisateur choisit le mode interactif, cette méthode est appelée deux fois : une fois pour définir le format de colonne en fonction des valeurs par défaut (qui varient selon le type de la colonne serveur), et une fois pour définir le format en fonction du type de colonne du choix du client choisi lors du mode interactif pour chaque colonne.  
   
@@ -70,14 +70,14 @@ HRESULT BCPColFmt(
   
  Vous n'êtes pas obligé de copier toutes les données dans un fichier utilisateur vers une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour ignorer une colonne, spécifiez le format des données pour la colonne en attribuant la valeur 0 au paramètre idxServerCol. Pour ignorer un champ, vous avez encore besoin de toutes les informations pour que la méthode fonctionne correctement.  
   
- **Remarque** La fonction [IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) peut être utilisée pour assurer la persistance de la spécification de format fournie par le biais de **BCPColFmt**.  
+ **Remarque** La fonction [IBCPSession :: BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) peut être utilisée pour rendre persistante la spécification de format fournie par le biais de **BCPColFmt**.  
   
 ## <a name="arguments"></a>Arguments  
  *idxUserDataCol*[in]  
  Index de champ dans le fichier de données de l'utilisateur.  
   
  *eUserDataType*[in]  
- Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriés dans le fichier d'en-tête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (sqlncli.h) au format BCP_TYPE_XXX ; par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier lorsque l'argument **eUserDataType** est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
+ Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriés dans le fichier d'en-tête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (sqlncli.h) au format BCP_TYPE_XXX ; par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier lorsque l’argument **eUserDataType** est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
   
 -   Si la colonne source n'est pas décimale ou numérique, la précision et l'échelle par défaut sont utilisées.  
   
@@ -91,13 +91,13 @@ HRESULT BCPColFmt(
   
  Le fait d'attribuer BCP_LENGTH_NULL à **cbUserData** indique que toutes les valeurs dans les champs de fichier de données sont ou doivent être NULL. Le fait d'attribuer BCP_LENGTH_VARIABLE à **cbUserData** indique que le système doit déterminer la longueur des données pour chaque champ. Pour certains champs, cela peut signifier qu'un indicateur de longueur/null est généré pour précéder les données sur une copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou que l'indicateur est attendu dans les données copiées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour les types de données caractères et binaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **cbUserData** peut être BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou une valeur positive. Si **cbUserData** est BCP_LENGTH_VARIABLE, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de marque de fin pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si **cbUserData** est BCP_LENGTH_VARIABLE, le type de données est un type caractère ou binaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; et si aucun indicateur de longueur et aucune séquence de marque de fin n'est spécifié, le système retourne un message d'erreur.  
+ Pour les types de données caractères et binaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **cbUserData** peut être BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou une valeur positive. Si **cbUserData** est BCP_LENGTH_VARIABLE, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de marque de fin pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si **cbUserData** est BCP_LENGTH_VARIABLE, le type de données est un type caractère ou binaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si aucun indicateur de longueur ni aucune séquence de terminateur ne sont spécifiés, le système retourne un message d’erreur.  
   
  Si **cbUserData** a la valeur 0 ou une valeur positive, le système utilise **cbUserData** comme longueur de données maximale. Toutefois, si un indicateur de longueur ou une séquence de terminaison est fournie en plus d'une valeur **cbUserData**positive, le système détermine la longueur de données en utilisant la méthode qui entraîne la plus petite quantité de données à copier.  
   
  La valeur **cbUserData** représente le nombre d'octets de données. Si des données caractères sont représentées par des caractères Unicode étendus, une valeur de paramètre **cbUserData** positive représente le nombre de caractères multiplié par la taille, en octets, de chaque caractère.  
   
- *pbUserDataTerm*[size_is][in]  
+ *pbUserDataTerm*[size_is] [in]  
  Séquence de marque de fin à utiliser pour le champ. Ce paramètre est utile surtout pour les types de données de caractères puisque tous les autres types sont de longueur fixe ou, dans le cas des données binaires, nécessitent un indicateur de longueur pour enregistrer avec précision le nombre d'octets présents.  
   
  Pour éviter de terminer des données extraites ou pour indiquer que les données dans un fichier utilisateur ne sont pas terminées, attribuez la valeur NULL à ce paramètre.  
@@ -106,21 +106,21 @@ HRESULT BCPColFmt(
   
  L'interface de programmation d'applications (API) de la copie en bloc procède à la conversion des caractères Unicode vers MBCS en fonction des besoins. Prenez soin de définir comme il se doit la chaîne d'octets de terminaison et la longueur de cette même chaîne.  
   
- *cbUserDataTerm*[in]  
+ *cbUserDataTerm avec*[in]  
  Longueur, en octets, de la séquence de marque de fin à utiliser pour la colonne. Si aucune marque de fin n'est présente ou désirée dans les données, attribuez 0 à cette valeur.  
   
  *idxServerCol*[in]  
  Position ordinale de la colonne dans la table de base de données. Le premier numéro de colonne est 1. La position ordinale d'une colonne est signalée par **IColumnsInfo::GetColumnInfo** ou des méthodes semblables. Si cette valeur est 0, la copie en bloc ignore le champ dans le fichier de données.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="return-code-values"></a>Codet de retour  
+ S_OK  
  S_OK  
   
  E_FAIL  
- Une erreur spécifique au fournisseur s'est produite. Pour obtenir des informations détaillées, utilisez l'interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Une erreur spécifique au fournisseur s’est produite. pour plus d’informations, utilisez l’interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
   
  E_UNEXPECTED  
- L'appel à la méthode était inattendu. Par exemple, la méthode [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) n'a pas été appelée avant d'appeler cette méthode.  
+ L'appel à la méthode était inattendu. Par exemple, la méthode [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) n’a pas été appelée avant d’appeler cette méthode.  
   
  E_INVALIDARG  
  L'argument n'était pas valide.  
@@ -129,7 +129,7 @@ HRESULT BCPColFmt(
  Erreur de mémoire insuffisante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [IBCPSession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Exécution d'opérations de copie en bloc](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

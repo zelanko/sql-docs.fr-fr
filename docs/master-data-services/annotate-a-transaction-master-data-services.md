@@ -13,10 +13,10 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728792"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Annoter une transaction (Master Data Services)

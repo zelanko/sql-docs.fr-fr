@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056285"
 ---
 # <a name="wideworldimporters-data-generation"></a>Génération de données WideWorldImporters
@@ -40,7 +40,7 @@ Pour générer des exemples de données jusqu’à la date actuelle :
 
     Cette instruction ajoute des exemples de données de vente et d’achat à la base de données, jusqu’à la date actuelle. Il affiche la progression de la génération des données par jour. La génération de données peut prendre environ 10 minutes pour chaque année nécessitant des données. En raison d’un facteur aléatoire dans la génération de données, il existe des différences entre les données générées entre les exécutions.
 
-    Pour augmenter ou diminuer la quantité de données générées pour les commandes par jour, modifiez la valeur du paramètre `@AverageNumberOfCustomerOrdersPerDay`. Utilisez les paramètres `@SaturdayPercentageOfNormalWorkDay` et `@SundayPercentageOfNormalWorkDay` pour déterminer le volume des commandes pour les jours du week-end.
+    Pour augmenter ou diminuer la quantité de données générées pour les commandes par jour, modifiez la valeur du `@AverageNumberOfCustomerOrdersPerDay`paramètre. Utilisez les paramètres `@SaturdayPercentageOfNormalWorkDay` et `@SundayPercentageOfNormalWorkDay` pour déterminer le volume de commandes pour les jours du week-end.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importer des données générées dans WideWorldImportersDW
 
@@ -62,20 +62,20 @@ WideWorldImportersDW peut augmenter arbitrairement la taille des données pour l
 
 L’une des difficultés consiste à conserver la taille du téléchargement suffisamment petite pour un téléchargement facile, mais suffisamment grand pour présenter les fonctionnalités de performances de SQL Server. Par exemple, les avantages significatifs pour les index ColumnStore sont atteints uniquement lorsque vous travaillez avec un grand nombre de lignes. 
 
-Vous pouvez utiliser la procédure `Application.Configuration_PopulateLargeSaleTable` pour augmenter le nombre de lignes dans la table `Fact.Sale`. Les lignes sont insérées dans l’année civile 2012 afin d’éviter toute collision avec les données des importateurs mondiaux existantes qui commencent le 1er janvier 2013.
+Vous pouvez utiliser la `Application.Configuration_PopulateLargeSaleTable` procédure pour augmenter le nombre de lignes dans la `Fact.Sale` table. Les lignes sont insérées dans l’année civile 2012 afin d’éviter toute collision avec les données des importateurs mondiaux existantes qui commencent le 1er janvier 2013.
 
 ### <a name="procedure-details"></a>Détails de la procédure
 
-#### <a name="name"></a>Nom
+#### <a name="name"></a>Name
 
     Application.Configuration_PopulateLargeSaleTable
 
 #### <a name="parameters"></a>Paramètres
 
-  `@EstimatedRowsFor2012` **bigint** (avec 12 millions comme valeur par défaut)
+  `@EstimatedRowsFor2012`**bigint** (avec 12 millions comme valeur par défaut)
 
-#### <a name="result"></a>Résultat
+#### <a name="result"></a>Résultats
 
-Approximativement, le nombre requis de lignes est inséré dans la table `Fact.Sale` de l’année 2012. La procédure limite artificiellement le nombre de lignes à 50 000 par jour. Vous pouvez modifier cette limitation, mais la limitation vous aide à éviter les surinflations accidentelles de la table.
+Approximativement, le nombre de lignes requis est inséré dans `Fact.Sale` la table au cours de l’année 2012. La procédure limite artificiellement le nombre de lignes à 50 000 par jour. Vous pouvez modifier cette limitation, mais la limitation vous aide à éviter les surinflations accidentelles de la table.
 
 La procédure applique également l’indexation ColumnStore en cluster si elle n’a pas déjà été appliquée.

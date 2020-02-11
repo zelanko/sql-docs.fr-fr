@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fa0411d322e3e16b8fe1bebf6f84fb626b0f82e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781502"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Utilisation des rubriques de procédures relatives aux curseurs (ODBC)
@@ -29,11 +29,11 @@ ms.locfileid: "73781502"
   
 -   [Utiliser des curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [Utiliser la liaison &#40;d’ensemble de lignes ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [Utiliser la liaison d’ensemble de lignes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [Extraire et mettre à &#40;jour les ensembles de lignes ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [Extraire et mettre à jour des ensembles de lignes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [Rubriques de procédures ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

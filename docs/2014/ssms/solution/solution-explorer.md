@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025723"
 ---
 # <a name="solution-explorer"></a>Explorateur de solutions
-  Le volet Explorateur de solutions dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des conteneurs appelés projets pour la gestion des éléments, tels que les scripts de base de données, les requêtes, les connexions de données et les fichiers. Un ou plusieurs projets qui sont liés entre eux peuvent être combinés dans un conteneur appelé solution.  
+  Le volet Explorateur de solutions dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des conteneurs appelés projets pour la gestion d’éléments tels que les scripts de base de données, les requêtes, les connexions de données et les fichiers. Un ou plusieurs projets qui sont liés entre eux peuvent être combinés dans un conteneur appelé solution.  
   
  Une solution contient un ou plusieurs projets, qu'accompagnent les fichiers et les métadonnées qui permettent de définir la solution dans son entier. Un projet est un ensemble de fichiers, qu'accompagnent les métadonnées correspondantes telles que les informations de connexion. Les solutions et les projets contiennent des éléments qui représentent les scripts, les requêtes, les informations de connexion et les fichiers dont vous avez besoin pour créer votre solution de base de données.  
   

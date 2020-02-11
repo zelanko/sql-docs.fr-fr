@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d147e5c6fa257a6397635014d868d75e7c8833dd
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783483"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Traitement des instructions qui génèrent des messages
@@ -52,7 +52,8 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
               Table Scan"  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 a remplacé l'option SHOWPLAN par SHOWPLAN_ALL et SHOWPLAN_TEXT, qui retournent l'une et l'autre la sortie comme jeu de résultats, et non comme ensemble de messages.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 a remplacé l'option SHOWPLAN par SHOWPLAN_ALL et SHOWPLAN_TEXT, qui retournent l'une et l'autre la sortie comme jeu de résultats, et non comme ensemble de messages.  
   
  Chaque ligne de STATISTICS TIME est retournée au format suivant :  
   
@@ -99,7 +100,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>Utilisation des instructions PRINT et RAISERROR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions PRINT et RAISERROR renvoient également des données en appelant **SQLGetDiagRec**. Les instructions PRINT forcent l’exécution de l’instruction SQL à retourner SQL_SUCCESS_WITH_INFO, et un appel ultérieur à **SQLGetDiagRec** retourne une valeur *SQLSTATE* de 01000. Une erreur RAISERROR avec une gravité égale ou inférieure à dix se comporte de la même façon que PRINT. Une instruction RAISERROR dont le niveau de gravité est supérieur ou égal à 11 provoque le retour de l’instruction EXECUTE SQL_ERROR et un appel ultérieur à **SQLGetDiagRec** retourne *SQLSTATE* 42000. Par exemple, l'instruction suivante retourne SQL_SUCCESS_WITH_INFO :  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]Les instructions PRINT et RAISERROR renvoient également des données en appelant **SQLGetDiagRec**. Les instructions PRINT forcent l’exécution de l’instruction SQL à retourner SQL_SUCCESS_WITH_INFO, et un appel ultérieur à **SQLGetDiagRec** retourne une valeur *SQLSTATE* de 01000. Une erreur RAISERROR avec une gravité égale ou inférieure à dix se comporte de la même façon que PRINT. Une instruction RAISERROR dont le niveau de gravité est supérieur ou égal à 11 provoque le retour de l’instruction EXECUTE SQL_ERROR et un appel ultérieur à **SQLGetDiagRec** retourne *SQLSTATE* 42000. Par exemple, l'instruction suivante retourne SQL_SUCCESS_WITH_INFO :  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
@@ -144,7 +145,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  Le minutage de l’appel de **SQLGetDiagRec** est essentiel lorsque la sortie des instructions Print ou RAISERROR est incluse dans un jeu de résultats. L’appel de **SQLGetDiagRec** pour récupérer la sortie Print ou RAISERROR doit être effectué immédiatement après l’instruction qui reçoit SQL_ERROR ou SQL_SUCCESS_WITH_INFO. Cela est simple lorsqu'une seule instruction SQL est exécutée, comme dans les exemples ci-dessus. Dans ce cas, l’appel à **SQLExecDirect** ou **SQLExecute** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO et **SQLGetDiagRec** peut ensuite être appelé. La situation est moins simple lors du codage de boucles pour gérer la sortie d'un lot d'instructions SQL ou lors de l'exécution de procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un jeu de résultats pour chaque instruction SELECT exécutée dans un lot ou une procédure stockée. Si le lot ou la procédure contient les instructions PRINT ou RAISERROR, leur sortie est entrelacée avec les jeux de résultats des instructions SELECT. Si la première instruction du traitement ou de la procédure est un PRINT ou RAISERROR, **SQLExecute** ou **SQLExecDirect** retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, et l’application doit appeler **SQLGetDiagRec** jusqu’à ce qu’elle retourne SQL_NO_DATA à Récupérez les informations PRINT ou RAISERROR.  
+ Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un jeu de résultats pour chaque instruction SELECT exécutée dans un lot ou une procédure stockée. Si le lot ou la procédure contient les instructions PRINT ou RAISERROR, leur sortie est entrelacée avec les jeux de résultats des instructions SELECT. Si la première instruction du traitement ou de la procédure est PRINT ou RAISERROR, **SQLExecute** ou **SQLExecDirect** retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, et l’application doit appeler **SQLGetDiagRec** jusqu’à ce qu’elle retourne SQL_NO_DATA pour récupérer les informations Print ou RAISERROR.  
   
  Si l’instruction PRINT ou RAISERROR vient après une instruction SQL (telle qu’une instruction SELECT), les informations PRINT ou RAISERROR sont retournées lorsque [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)positionne sur le jeu de résultats contenant l’erreur. **SQLMoreResults** retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR selon la gravité du message. Les messages sont récupérés en appelant **SQLGetDiagRec** jusqu’à ce qu’il retourne SQL_NO_DATA.  
   

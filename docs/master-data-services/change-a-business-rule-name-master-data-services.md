@@ -13,10 +13,10 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728675"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Modifier le nom d'une règle d'entreprise (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728675"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], modifiez le nom d'une règle d'entreprise lorsque le nom affecté ne répond pas aux besoins de votre société.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -57,6 +57,6 @@ ms.locfileid: "73728675"
 10. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur de la colonne **État de la règle d’entreprise**est **Active**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

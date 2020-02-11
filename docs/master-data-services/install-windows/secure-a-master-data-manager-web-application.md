@@ -10,10 +10,10 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729178"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Sécuriser une application Web Master Data Manager
@@ -25,7 +25,7 @@ ms.locfileid: "73729178"
 > [!NOTE]  
 >  L'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] peut utiliser HTTP ou HTTPS, mais pas les deux.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez être administrateur du serveur Web sur lequel [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] est installé.  
@@ -38,7 +38,7 @@ ms.locfileid: "73729178"
   
 2.  Dans le volet **Connexions** , sous **Sites**, cliquez sur le site qui héberge l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
-3.  Dans le volet **Actions** , cliquez sur **Liaisons**.  
+3.  Dans le volet **Actions**, cliquez sur **Liaisons**.  
   
 4.  Cliquez sur **Ajouter**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73729178"
   
 7.  Cliquez sur **OK**.  
   
-8.  Ce paramètre est facultatif. Pour supprimer HTTP afin que les utilisateurs puissent accéder au site avec HTTPS uniquement, dans la liste, cliquez sur la ligne avec **http**. Cliquez sur **Supprimer** et dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
+8.  facultatif. Pour supprimer HTTP afin que les utilisateurs puissent accéder au site avec HTTPS uniquement, dans la liste, cliquez sur la ligne avec **http**. Cliquez sur **Supprimer** et dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
   
     > [!IMPORTANT]  
     >  Vous devez changer les configurations basicHttp et wsHttpBinding après avoir supprimé HTTP.  
@@ -65,6 +65,6 @@ ms.locfileid: "73729178"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une application web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+ [Créer une application Web Data Manager principale &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

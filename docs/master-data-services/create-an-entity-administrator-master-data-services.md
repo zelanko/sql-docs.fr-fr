@@ -11,10 +11,10 @@ ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729535"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Créer un administrateur d’entité (Master Data Services)

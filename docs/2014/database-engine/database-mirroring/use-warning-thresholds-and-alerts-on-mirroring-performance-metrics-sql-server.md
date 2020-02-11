@@ -1,5 +1,5 @@
 ---
-title: Utiliser des seuils d’avertissement et d’alertes sur la mise en miroir des mesures de performances (SQL Server) | Microsoft Docs
+title: Utiliser des seuils d’avertissement et des alertes sur les métriques de performances de mise en miroir (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754032"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir (SQL Server)
@@ -29,13 +29,13 @@ ms.locfileid: "62754032"
   
  Une fois l'analyse établie pour une base de données en miroir, un administrateur système peut configurer des seuils d'avertissements sur plusieurs métriques de performances clés. Il est également possible de configurer des alertes sur ces événements de mise en miroir de bases de données et sur d'autres événements.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
--   [Métriques de performances et seuils d'avertissement](#PerfMetricsAndWarningThresholds)  
+-   [Métriques de performances et seuils d’avertissement](#PerfMetricsAndWarningThresholds)  
   
--   [Définition et gestion de seuils d'avertissement](#SetUpManageWarningThresholds)  
+-   [Définition et gestion de seuils d’avertissement](#SetUpManageWarningThresholds)  
   
--   [Utilisation d'alertes pour une base de données en miroir](#UseAlerts)  
+-   [Utilisation d’alertes pour une base de données mise en miroir](#UseAlerts)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62754032"
 |Mesure de performance|Seuil d'avertissement|Libellé Moniteur de mise en miroir de bases de données|  
 |------------------------|-----------------------|--------------------------------------|  
 |Journal non envoyé|Spécifie la quantité de kilo-octets (Ko) de journal non envoyé qui génère un avertissement sur l'instance de serveur principal. Cet avertissement aide à mesurer le risque de perte de données en termes de Ko et concerne tout particulièrement le mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|**Avertir si le journal non envoyé dépasse le seuil**|  
-|Journal non restauré|Spécifie la quantité de Ko de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.<br /><br /> Remarque : Pour un basculement automatique, le temps nécessaire au système pour remarquer l'erreur dépend du temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avertir si le journal non restauré dépasse le seuil**|  
+|Journal non restauré|Spécifie la quantité de Ko de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.<br /><br /> Remarque : pour un basculement automatique, le temps nécessaire au système pour remarquer l’erreur ne dépend pas du temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avertir si le journal non restauré dépasse le seuil**|  
 |Transaction non envoyée la plus ancienne|Spécifie le nombre de minutes de transactions pouvant s'accumuler dans la file d'attente d'envoi avant qu'un avertissement ne soit généré sur l'instance de serveur principal. Cet avertissement aide à mesurer le risque de perte de données en termes de temps et concerne tout particulièrement le mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|  
 |Charge de validation par le serveur miroir|Spécifie le nombre de millisecondes de délai moyen par transaction qui sont tolérés avant qu'un avertissement soit généré sur le serveur principal. Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression. Cette valeur est utile uniquement en mode haute sécurité.|**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62754032"
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Événements de seuil de performance envoyés au journal des événements Windows  
  Si un seuil d’avertissement est défini pour une métrique de performance, la valeur la plus récente est comparée au seuil quand la table d’états est mise à jour. Si le seuil est atteint, la procédure de mise à jour, **sp_dbmmonitorupdate**, génère un événement d’informations (un *événement de seuil de performance*) pour la métrique et elle écrit l’événement dans le journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Le tableau suivant répertorie les ID des événements de seuil de performance.  
   
-|Mesure de performance|ID d'événement|  
+|Mesure de performance|ID de l’événement|  
 |------------------------|--------------|  
 |Journal non envoyé|32042|  
 |Journal non restauré|32043|  

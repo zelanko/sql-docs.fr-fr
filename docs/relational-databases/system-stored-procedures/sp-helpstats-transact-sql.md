@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048410"
 ---
-# <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
+# <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne les informations statistiques sur les colonnes et les index de la table spécifiée.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Pour obtenir des informations sur les statistiques, interrogez la [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) et [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) affichages catalogue.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Pour obtenir des informations sur les statistiques, interrogez les affichages catalogue [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) et [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +44,11 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'object_name'` Spécifie la table sur laquelle les informations statistiques. *object_name* est **nvarchar(520)** et ne peut pas être null. Vous pouvez spécifier un nom en une ou deux parties.  
+`[ @objname = ] 'object_name'`Spécifie la table sur laquelle fournir des informations statistiques. *object_name* est de type **nvarchar (520)** et ne peut pas être null. Vous pouvez spécifier un nom en une ou deux parties.  
   
-`[ @results = ] 'value'` Spécifie l’étendue des informations à fournir. Les entrées valides sont **tous les** et **statistiques**. **Tous les** répertorie les statistiques de tous les index et également les colonnes qui possèdent des statistiques créées sur ces derniers ; **Statistiques** répertorie uniquement les statistiques non associées à un index. *valeur* est **nvarchar (5)** avec STATS comme valeur par défaut.  
+`[ @results = ] 'value'`Spécifie l’étendue des informations à fournir. Les entrées valides sont **All** et **stats**. **Toutes les** listes de statistiques pour tous les index et les colonnes sur lesquelles des statistiques sont créées ; **Stats** répertorie uniquement les statistiques qui ne sont pas associées à un index. *value* est de type **nvarchar (5),** avec stats comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -56,11 +56,11 @@ sp_helpstats[ @objname = ] 'object_name'
   
 |Nom de la colonne|Description|  
 |-----------------|-----------------|  
-|**statistics_name**|Nom des statistiques. Retourne **sysname** et ne peut pas être null.|  
-|**statistics_keys**|Clés sur lesquelles sont basées les statistiques. Retourne **nvarchar (2078)** et ne peut pas être null.|  
+|**statistics_name**|Nom des statistiques. Retourne **sysname** et ne peut pas avoir la valeur null.|  
+|**statistics_keys**|Clés sur lesquelles sont basées les statistiques. Retourne une valeur de type **nvarchar (2078)** et ne peut pas être null.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez DBCC SHOW_STATISTICS pour afficher des informations statistiques détaillées sur l'index ou les statistiques de votre choix. Pour plus d’informations, consultez [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) et [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
+ Utilisez DBCC SHOW_STATISTICS pour afficher des informations statistiques détaillées sur l'index ou les statistiques de votre choix. Pour plus d’informations, consultez [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) et [sp_helpindex &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -100,6 +100,6 @@ EXEC sp_helpstats
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028822"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propriétés de SQL Server (onglet Avancé)
@@ -34,7 +34,7 @@ ms.locfileid: "63028822"
  Affiche l'emplacement où sont placés les vidages de mémoire en cas d'erreur.  
   
  **Rapport d'erreurs**  
- Quand cette option a pour valeur **Oui**, le programme Dr. Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ». Pour modifier cette valeur, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur votre serveur, cliquez sur **Propriétés**, puis sur la page **Paramètres divers du serveur**. Les options figurent dans la zone **Rapport d’information** .  
+ Quand cette option a pour valeur **Oui**, le programme Dr Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ». Pour modifier cette valeur, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , cliquez avec le bouton droit sur votre serveur, cliquez sur **Propriétés**, puis sur la page **Paramètres divers du serveur** . Les options figurent dans la zone **Rapport d’information** .  
   
  **Version de fichier**  
  Affiche la version de l'exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

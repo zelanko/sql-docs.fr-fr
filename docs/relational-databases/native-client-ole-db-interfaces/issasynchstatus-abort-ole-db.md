@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789522"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -46,8 +46,8 @@ HRESULT Abort(
   
  DBASYNCHOP_OPEN : la demande d'annulation s'applique à l'ouverture ou au remplissage asynchrone d'un ensemble de lignes ou à l'initialisation asynchrone d'un objet source de données.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="return-code-values"></a>Codet de retour  
+ S_OK  
  La demande d'annulation de l'opération asynchrone a été traitée. Cela ne garantit pas que l'opération ait été annulée. Pour déterminer si l'opération a bien été annulée, le consommateur doit appeler [ISSAsynchStatus::GetStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) et vérifier la présence de DB_E_CANCELED ; toutefois, il est possible qu'il ne soit pas retourné dans l'appel suivant.  
   
  DB_E_CANTCANCEL  
@@ -63,13 +63,13 @@ HRESULT Abort(
  Le paramètre *hChapter* n'est pas DB_NULL_HCHAPTER ou *eOperation* n'est pas DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize::Initialize** n'a pas été appelé ou ne s'est pas terminé.  
+ **ISSAsynchStatus :: Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize :: Initialize** n’a pas été appelé, ou n’est pas terminé.  
   
  **ISSAsynchStatus :: Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize :: Initialize** a été appelé, mais il a été annulé par la suite avant l’initialisation ou a dépassé le délai d’attente. L’objet source de données n’est toujours pas initialisé.  
   
- **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes sur lequel **ITransaction::Commit** ou **ITransaction::Abort** a été appelé précédemment, et l'ensemble de lignes n'a pas survécu à la validation ou à l'abandon et se trouve dans un état passif.  
+ **ISSAsynchStatus :: Abort** a été appelé sur un ensemble de lignes sur lequel **ITransaction :: Commit** ou **ITransaction :: Abort** a été appelé précédemment, et l’ensemble de lignes n’a pas survécu à la validation ou à l’abandon et est à l’État Zombie.  
   
- **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d'initialisation. L'ensemble de lignes se trouve dans un état zombie.  
+ **ISSAsynchStatus :: Abort** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d’initialisation. L'ensemble de lignes se trouve dans un état zombie.  
   
 ## <a name="remarks"></a>Notes  
  L'abandon de l'initialisation d'un ensemble de lignes ou d'un objet source de données peut laisser l'ensemble de lignes ou l'objet source de données dans un état zombie, de telle sorte que toutes les méthodes autres que **IUnknown** retournent E_UNEXPECTED. Lorsque cela se produit, la seule action possible pour le consommateur est de libérer l'ensemble de lignes ou l'objet source de données.  
@@ -77,6 +77,6 @@ HRESULT Abort(
  Le fait d'appeler **ISSAsynchStatus::Abort** et de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN retourne S_OK. Cela ne signifie pas pour autant que l'opération est terminée ou annulée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution d’opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
+ [Exécution d'opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

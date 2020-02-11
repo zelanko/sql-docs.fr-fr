@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957153"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurer une clé principale de base de données
@@ -24,17 +24,17 @@ ms.locfileid: "74957153"
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Caution](#Security)  
+     [Sécurité](#Security)  
   
 -   [Pour restaurer la clé principale de base de données à l’aide de Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a>Limitations et restrictions  
+###  <a name="Restrictions"></a> Limitations et restrictions  
   
 -   Une fois la clé principale restaurée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déchiffre toutes les clés chiffrées au moyen de la clé principale active, puis chiffre ces clés au moyen de la clé principale restaurée. Cette opération gourmande en ressources doit être planifiée au cours d'une période de faible demande. Si la clé principale de base de données en cours n'est pas ouverte ou ne peut pas être ouverte, ou si une clé chiffrée à l'aide de cette clé principale ne peut pas être déchiffrée, l'opération de restauration échoue.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "74957153"
   
 -   S'il n'existe aucune clé principale dans la base de données en cours, l'instruction RESTORE MASTER KEY crée une clé principale. La nouvelle clé principale n'est pas automatiquement chiffrée au moyen de la clé principale du service.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio avec Transact-SQL  
@@ -57,9 +57,9 @@ ms.locfileid: "74957153"
   
 2.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
+3.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-4.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
+4.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Restores the database master key of the AdventureWorks2012 database.  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890368"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Éditeur de tâche de traitement d'Analysis Services (page Analysis Services)
@@ -43,44 +43,44 @@ ms.locfileid: "68890368"
  **Nouveau**  
  Créez un nouveau gestionnaire de connexions Analysis Services.  
   
- **Rubriques connexes :** [Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md), [Informations de référence sur l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Analysis Services gestionnaire de connexions](connection-manager/analysis-services-connection-manager.md), [boîte de dialogue ajouter un gestionnaire de connexions Analysis Services référence de l’interface utilisateur](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
- **Liste d'objets**  
+ **Liste d’objets**  
  |Propriété|Description|  
 |--------------|-----------------|  
-|**Nom de l'objet**|Affiche la liste des noms d'objets définis.|  
+|**Nom de l’objet**|Affiche la liste des noms d'objets définis.|  
 |**Type**|Affiche la liste des types des objets définis.|  
-|**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes :** [Traitement d’objets de modèle multidimensionnel](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
-|**Réglages**|Affiche la liste des paramètres de traitement des objets définis.|  
+|**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes**: [traitement d’objets de modèle multidimensionnel](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Paramètres**|Affiche la liste des paramètres de traitement des objets définis.|  
   
  **Ajouter**  
  Ajoutez un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à la liste.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un objet et cliquez sur **Supprimer**.  
   
- **Analyse d'impact**  
+ **Analyse d’impact**  
  Analyse l'impact sur l'objet sélectionné.  
   
- **Rubriques connexes :** [Boîte de dialogue Analyse d'impact &#40;Analysis Services - Données multidimensionnelles&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Rubriques connexes :** [boîte de dialogue analyse d’impact &#40;Analysis Services-données multidimensionnelles&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
- **Résumé des paramètres du traitement**  
+ **Résumé des paramètres du lot**  
  |Propriété|Description|  
 |--------------|-----------------|  
 |**Ordre de traitement**|Indique si les objets sont traités séquentiellement ou dans un traitement. Si le traitement parallèle est utilisé, indique le nombre d'objets à traiter simultanément.|  
 |**Mode de transaction**|Indique le mode de transaction du traitement séquentiel.|  
-|**Erreurs de la dimension**|Indique le comportement de la tâche lorsqu'une erreur se produit.|  
-|**Chemin d'accès du journal des erreurs de clé de dimension**|Définit le chemin d'accès du fichier de consignation des erreurs.|  
+|**Erreurs de dimension**|Indique le comportement de la tâche lorsqu'une erreur se produit.|  
+|**Chemin du journal des erreurs de clé de dimension**|Définit le chemin d'accès du fichier de consignation des erreurs.|  
 |**Traiter les objets affectés**|Indique si les objets dépendants ou affectés sont également traités.|  
   
  **Modifier les paramètres**  
  Change les options de traitement et la gestion des erreurs dans les clés de dimension.  
   
- **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Rubriques connexes :** [boîte de dialogue modifier les paramètres &#40;Analysis Services-données multidimensionnelles&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de traitement d’Analysis Services &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de traitement de Analysis Services &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Tâche DDL d'exécution de SQL Server Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   
   

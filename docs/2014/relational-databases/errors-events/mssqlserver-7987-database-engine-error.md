@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0541f066c653a233508a48d7b8f02504d36f25b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913274"
 ---
-# <a name="mssqlserver7987"></a>MSSQLSERVER_7987
+# <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7987|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7987|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|Texte du message|Pré-vérifications de table système : ID d’objet O_ID a non-concordance de liaison de chaîne. P_ID1->suiv. = P_ID2, mais P_ID2->préc. = P_ID3. Vérifiez l'instruction qui s'est arrêtée en raison d'une erreur irréparable.|  
+|Texte du message|Pré-vérifications de table système : non-correspondance de liaisons de chaînes dans l'ID d'objet O_ID. P_ID1->suiv. = P_ID2, mais P_ID2->préc. = P_ID3. Vérifiez l'instruction qui s'est arrêtée en raison d'une erreur irréparable.|  
   
 ## <a name="explanation"></a>Explication  
  La première étape d'un DBCC CHECKDB consiste à effectuer des prévérifications sur les pages de données des tables système critiques. Toute erreur détectée à ce stade étant irréparable, DBCC CHECKDB s'arrête immédiatement.  

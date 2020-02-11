@@ -18,13 +18,13 @@ ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6219f18bee08d5c20431cb87a2cb30795c515d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950474"
 ---
-# <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
+# <a name="sp_xml_removedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Supprime la représentation interne du document XML spécifié par le descripteur du document puis invalide le descripteur.  
@@ -32,7 +32,7 @@ ms.locfileid: "67950474"
 > [!NOTE]  
 >  Un document analysé est stocké dans le cache interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'analyseur MSXML (Msxmlsql.dll) utilise un huitième de la mémoire totale disponible pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour éviter de manquer de mémoire, exécutez **sp_xml_removedocument** pour libérer de la mémoire.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,8 +45,8 @@ sp_xml_removedocument hdoc
  *hdoc*  
  Descripteur du document nouvellement créé. Un descripteur incorrect renvoie une erreur. *hdoc* est un entier.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- 0 (succès) ou > 0 (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ 0 (succès) ou >0 (échec)  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -59,10 +59,10 @@ EXEC sp_xml_removedocument @hdoc;
 ```  
   
 ## <a name="see-also"></a>Voir aussi      
- <br>[Procédures système (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
- <br>[XML procédures stockées (Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
- <br>[sp_xml_preparedocument(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+ <br>[Procédures stockées système (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[Procédures stockées XML (Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
+ <br>[sys. dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_preparedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
  <br>[OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
   
   

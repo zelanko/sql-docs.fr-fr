@@ -14,29 +14,29 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df90080d0c07b87d646c7c67cbe1fd672a2a582f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780662"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Profilage des données de performances du pilote ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Cet exemple présente les options [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiques aux pilotes ODBC et destinées à l'enregistrement des statistiques de performances. L’exemple crée un fichier : odbcperf. log. cet exemple illustre la création d’un fichier journal de données de performances et l’affichage des données de performances directement à partir de la structure de données SQLPERF (la structure SQLPERF est définie dans odbcss. h.). Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
+  Cet exemple présente les options [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiques aux pilotes ODBC et destinées à l'enregistrement des statistiques de performances. Cet exemple crée un fichier odbcperf.log. Il illustre à la fois la création d'un fichier journal des données de performances et l'affichage de ces données directement à partir de la structure de données SQLPERF. (La structure SQLPERF est définie dans Odbcss.h.). Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Utilisez l'authentification Windows quand c'est possible. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Pour enregistrer les données de performances du pilote à l'aide de l'Administrateur ODBC  
   
-1.  Dans **le panneau de configuration**, double-cliquez sur **Outils d’administration** , puis sur **sources de données (ODBC)** . Vous pouvez également appeler l'exécutable odbcad32.exe.  
+1.  Dans **le panneau de configuration**, double-cliquez sur **Outils d’administration** , puis sur **sources de données (ODBC)**. Vous pouvez également appeler l'exécutable odbcad32.exe.  
   
 2.  Cliquez sur l’onglet **DSN utilisateur**, **système DSN**ou **fichier DSN** .  
   
 3.  Cliquez sur la source de données dont vous souhaitez consigner les performances.  
   
-4.  Cliquez sur **configurer**.  
+4.  Cliquez sur **Configurer**.  
   
 5.  Dans l’Assistant Microsoft SQL Server configurer un DSN, accédez à la page contenant les **statistiques du pilote ODBC du journal dans le fichier journal**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73780662"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Pour enregistrer les données de performances du pilote par programme  
   
-1.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA_LOG et le chemin d’accès complet et le nom du fichier journal des données de performances. Par exemple:  
+1.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA_LOG et le chemin d’accès complet et le nom du fichier journal des données de performances. Par exemple :  
   
     ```  
     "C:\\Odbcperf.log"  
@@ -65,7 +65,7 @@ ms.locfileid: "73780662"
 3.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_DATA et SQL_PERF_STOP pour arrêter l’enregistrement des données de performances.  
   
 ## <a name="example"></a>Exemple  
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
@@ -241,7 +241,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives &#40;au profilage des performances du&#41; pilote ODBC  ODBC](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
- [Profilage des données de performances du pilote ODBC](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
+ [Rubriques de procédures relatives au profilage des performances du pilote ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
+ [Profilage des performances du pilote ODBC](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

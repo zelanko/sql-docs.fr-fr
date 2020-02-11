@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241800"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importer des valeurs de projet de nettoyage dans un domaine
@@ -24,7 +24,7 @@ ms.locfileid: "75241800"
 
   Dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), vous pouvez importer les connaissances de qualité des données collectées pendant le processus de nettoyage dans un projet de nettoyage de qualité des données ou un package Integration Services qui contient le composant de nettoyage DQS dans un domaine. Cela garantit que des connaissances approuvées ne sont pas perdues, et que la base de connaissances est améliorée en permanence.  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Prerequisites"></a>Conditions préalables  
   
@@ -32,9 +32,9 @@ ms.locfileid: "75241800"
   
 -   Le projet de nettoyage dans le client de qualité des données ou le package Integration Services qui contient le composant de nettoyage DQS doit s'être correctement terminé.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer les connaissances de qualité des données collectées pendant le processus de nettoyage vers un domaine.  
   
 ##  <a name="Import"></a>Importer les valeurs de projet de nettoyage  

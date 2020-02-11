@@ -13,18 +13,18 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 7aa82ee5c5a617c3564ac9246f2e42bebcab220e
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844364"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>Procédures stockées SQL Data Warehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] fournit des procédures intégrées que vous pouvez utiliser pour effectuer des opérations liées aux rôles de base de données. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] comprend les procédures système suivantes :  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]fournit des procédures intégrées que vous pouvez utiliser pour effectuer des opérations liées aux rôles de base de données. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]comprend les procédures système suivantes :  
   
-##  <a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41; ](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+##  <a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   
@@ -39,10 +39,10 @@ ms.locfileid: "73844364"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  Certaines procédures stockées système supplémentaires sont utilisées uniquement dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou via des API clientes et ne sont pas destinées à une utilisation générale du client. Ces procédures sont répertoriées dans [procédures stockées système (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Ces procédures sont sujettes à modification et la compatibilité n’est pas garantie. Toutes les procédures de la liste ne sont pas disponibles dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+>  Certaines procédures stockées système supplémentaires sont utilisées uniquement dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou via des API clientes et ne sont pas destinées à une utilisation générale du client. Ces procédures sont répertoriées dans [procédures stockées système (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Ces procédures sont sujettes à modification et la compatibilité n’est pas garantie. Toutes les procédures de la liste ne sont pas [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]disponibles dans.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40;stockées système Transact-SQL&#41; ](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
+ [Fonctions stockées système &#40;&#41;Transact-SQL](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

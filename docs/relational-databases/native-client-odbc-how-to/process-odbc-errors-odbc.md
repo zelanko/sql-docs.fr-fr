@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2acf7bd227d04cfd5b99a45ef4fa336b78bd4cfa
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781044"
 ---
 # <a name="process-odbc-errors-odbc"></a>Traiter les erreurs ODBC (ODBC)
@@ -25,7 +25,7 @@ ms.locfileid: "73781044"
 
   Deux appels de fonctions ODBC peuvent être utilisés pour récupérer les messages ODBC : [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Pour obtenir les informations ODBC de base dans les champs de diagnostic **SQLState**, **pfNative** et **ErrorMessage**, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) jusqu’à ce que SQL_NO_DATA soit retourné. Pour chaque enregistrement de diagnostic, [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) peut être appelé pour extraire les champs individuels. Tous les champs spécifiques au pilote doivent être extraits à l’aide de **SQLGetDiagField**.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) sont traités par le gestionnaire de pilote ODBC, et non par un pilote individuel. Le Gestionnaire de pilote ODBC ne met pas en cache les champs de diagnostic spécifiques aux pilotes tant qu'une connexion n'a pas été établie avec succès. L’appel de [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) pour les champs de diagnostic spécifiques aux pilotes n’est pas possible avant une connexion réussie. Les commandes de connexion ODBC sont incluses dans ce cas de figure, même si elles retournent SQL_SUCCESS_WITH_INFO. Les champs de diagnostic spécifiques au pilote ne seront pas disponibles jusqu'au prochain appel d'une fonction ODBC.  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) sont traités par le gestionnaire de pilotes ODBC, et non par un pilote individuel. Le Gestionnaire de pilote ODBC ne met pas en cache les champs de diagnostic spécifiques aux pilotes tant qu'une connexion n'a pas été établie avec succès. L’appel de [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) pour les champs de diagnostic spécifiques aux pilotes n’est pas possible avant une connexion réussie. Les commandes de connexion ODBC sont incluses dans ce cas de figure, même si elles retournent SQL_SUCCESS_WITH_INFO. Les champs de diagnostic spécifiques au pilote ne seront pas disponibles jusqu'au prochain appel d'une fonction ODBC.  
   
 ## <a name="example"></a>Exemple  
   
@@ -35,17 +35,17 @@ ms.locfileid: "73781044"
  Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour créer la procédure stockée utilisée par cet exemple.  
+ Exécutez la première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour créer la procédure stockée utilisée par cet exemple.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Puis, exécutez le programme.  
   
- Exécutez la troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer la procédure stockée utilisée par cet exemple.  
+ Exécutez la troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour supprimer la procédure stockée utilisée par cet exemple.  
   
 ### <a name="code"></a>Code  
   
@@ -239,6 +239,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [Rubriques de procédures ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

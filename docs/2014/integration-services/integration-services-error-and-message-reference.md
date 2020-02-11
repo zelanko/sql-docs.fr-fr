@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892657"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
@@ -358,7 +358,7 @@ ms.locfileid: "62892657"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Le nom d'objet « %1 » n'est pas valide. Le nom doit commencer par un caractère alphabétique.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Le nom d'objet « %1 » n'est pas valide. Le nom doit commencer par un caractère alphabétique ou par le trait de soulignement « _ ».|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Le nom d'objet « %1 » n'est pas valide. Le nom ne peut comporter que des caractères alphanumériques ou des traits de soulignement « _ ».|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Le nom d'objet « %1 » n'est pas valide. Le nom ne peut pas contenir les caractères suivants : / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Le nom d'objet « %1 » n'est pas valide. Le nom ne peut pas contenir les caractères suivants : / \ : ? « \< > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Impossible de charger la propriété de valeur « %1 » à l'aide de la persistance par défaut.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Le gestionnaire de connexions « %1 » n'est pas de type « %2 »|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|« %1 » est vide|  
@@ -1413,7 +1413,7 @@ ms.locfileid: "62892657"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|Le nombre de lignes %2!ld! n'est pas valide pour la propriété « %1 ». Il doit être supérieur à 0.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|Une écriture de chaîne de %1!I64d! de long a été demandée à l'adaptateur, mais la longueur de l'ensemble des données doit être inférieure à 4 294 967 295 octets.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|Aucune entrée n'a été mappée à une sortie. « %1 » doit posséder au moins une colonne d'entrée mappée à une colonne de sortie.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|La conversion de « %1 » avec la page de codes %2!d! en « %3 » avec la page de codes %4!d! n'est pas prise en charge.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|La conversion de « %1 » avec la page de codes %2!d! en « %3 » avec la page de codes %4!d! n’est pas prise en charge.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|Mappage de la colonne de métadonnées externe pour %1 non valide.  L'ID de cette colonne ne peut pas être égal à zéro.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|Le %1 est mappé à une colonne de métadonnées externe inexistante.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|Échec de l'écriture des données d'objet longues de type DT_TEXT, DT_NTEXT ou DT_IMAGE dans le tampon de la tâche de flux de données de la colonne « %1 ».|  
@@ -1459,7 +1459,7 @@ ms.locfileid: "62892657"
 |0xC0204010|-1071628272|DTS_E_CANONLYSETCOMPFLAGSONSOURCE|La propriété ComparisonFlags ne peut pas posséder une valeur différente de zéro pour « %1 », car « %2 » n'est pas une sortie source. La colonne de sortie « nomcol » (ID) ne peut posséder une valeur autre que zéro pour la propriété ComparisonFlags, car sa sortie « nomsortie » (ID) n'est pas une sortie source.|  
 |0xC0204011|-1071628271|DTS_E_NONSTRINGCOMPARISONFLAGSNOTZERO|Les indicateurs de comparaison de « %1 » doivent être égaux à zéro car ils ne sont pas de type chaîne. ComparisonFlags peut uniquement posséder une valeur différente de zéro pour les colonnes de type chaîne.|  
 |0xC0204012|-1071628270|DTS_E_COMPFLAGSONLYONSORTCOL|« %1 » ne peut pas comporter une propriété ComparisonFlags définie à une valeur différente de zéro, car sa propriété SortKeyPosition a la valeur zéro. La propriété ComparisonFlags d'une colonne de sortie peut être différente de zéro uniquement si la valeur de SortKeyPosition diffère également de zéro.|  
-|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|Propriété en lecture seule.|  
+|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|la propriété est en lecture seule.|  
 |0xC0204014|-1071628268|DTS_E_INVALIDDATATYPE|%1 possède une valeur de type de données non valide (%2!ld!) définie.|  
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|« %1 » nécessite la définition d'une page de codes mais la valeur transmise était zéro.|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|La longueur de « %1 » n'est pas valide. Cette longueur doit être comprise entre %2!ld! et %3!ld!.|  
@@ -1922,7 +1922,7 @@ ms.locfileid: "62892657"
 |0xC02090BE|-1071607618|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_PATHNOTFOUND|Échec de l'ouverture d'un fichier en lecture. Le chemin est introuvable.|  
 |0xC02090BF|-1071607617|DTS_E_FILEOPENERR_FORREAD_TOOMANYOPENFILES|Échec de l'ouverture du fichier « %1 » pour lecture. Trop de fichiers sont ouverts.|  
 |0xC02090C0|-1071607616|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_TOOMANYOPENFILES|Échec de l'ouverture du fichier en lecture. Trop de fichiers sont ouverts.|  
-|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|Échec de l'ouverture du fichier « %1 » en lecture. Accès refusé.|  
+|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|Échec de l'ouverture du fichier « %1 » en lecture. L’accès est refusé.|  
 |0xC02090C2|-1071607614|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_ACCESSDENIED|Échec de l'ouverture du fichier en lecture. Vous ne possédez pas les autorisations appropriées.|  
 |0xC02090C3|-1071607613|DTS_E_INSERTERINVALIDBOM|La valeur d'indicateur d'ordre des octets (BOM) du fichier « %1 » est 0x%2!4.4X!, mais la valeur attendue est 0x%3!4.4X!. La propriété ExpectBOM a été définie pour ce fichier, mais la valeur BOM est manquante ou non valide dans ce fichier.|  
 |0xC02090C4|-1071607612|DTS_E_TXFILEINSERTERSTATIC_INSERTERINVALIDBOM|La valeur d'indicateur d'ordre des octets (BOM) du fichier n'est pas valide. La propriété ExpectBOM a été définie pour ce fichier, mais la valeur BOM est manquante ou non valide dans ce fichier.|  
@@ -2268,7 +2268,7 @@ ms.locfileid: "62892657"
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Fonction incorrecte.|  
-|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Le système ne trouve pas le fichier spécifié.|  
+|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Le système ne peut pas trouver le fichier spécifié.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Démarrage du service SSIS Microsoft.<br /><br /> Serveur version %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Service SSIS Microsoft démarré.<br /><br /> Serveur version %1|  
 |0x102|258|DTS_MSG_SERVER_STOPPING|Expiration du délai d'attente de l'opération d'attente.|  

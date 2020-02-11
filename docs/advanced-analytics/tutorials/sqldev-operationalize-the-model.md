@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel R + T-SQL : Exécuter des prédictions'
+title: 'Tutoriel R + T-SQL : Exécuter des prédictions'
 description: Tutoriel montrant comment rendre opérationnel un script R incorporé dans des procédures stockées SQL Server avec des fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,22 +10,22 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4b8e516d2e96c1cc4812a36800fd22371729445d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724868"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Leçon 4 : Exécuter des prédictions avec un script R incorporé dans une procédure stockée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article fait partie d’un tutoriel pour développeurs SQL qui montre comment utiliser R dans SQL Server.
+Cet article fait partie d’un tutoriel pour développeurs SQL expliquant comment utiliser le langage R dans SQL Server.
 
 Dans cette étape, vous allez apprendre à utiliser le modèle pour prédire des résultats potentiels à partir de nouvelles observations. Le modèle est encapsulé dans une procédure stockée qui peut être appelée directement par d’autres applications. La procédure pas à pas montre plusieurs façons d’effectuer le scoring :
 
 - **Mode de scoring par lot** : utilisez une requête SELECT comme entrée de la procédure stockée. La procédure stockée retourne une table d’observations correspondant aux cas d’entrée.
 
-- **Mode de scoring individuel** : transmettez un ensemble de valeurs de paramètres individuels comme entrée.  La procédure stockée retourne une seule ligne ou valeur.
+- **Mode de scoring individuel** : transmettez un ensemble de valeurs de paramètres individuels sous forme d’entrée.  La procédure stockée retourne une seule ligne ou valeur.
 
 Tout d’abord, examinons le fonctionnement du calcul de score en général.
 

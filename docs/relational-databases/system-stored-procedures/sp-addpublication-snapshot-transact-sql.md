@@ -16,21 +16,21 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769112"
 ---
-# <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
+# <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crée l'Agent d'instantané pour la publication spécifiée. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!IMPORTANT]  
->  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,12 +61,12 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Fréquence à laquelle l’Agent d’instantané est exécutée. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une seule fois.|  
 |**4** (par défaut)|Tous les jours.|  
-|**8**|Toutes les semaines.|  
-|**16**|Tous les mois.|  
+|**version8**|Toutes les semaines.|  
+|**16**|Mensuelle:|  
 |**32**|Tous les mois, en fonction de l'intervalle de fréquence.|  
 |**64**|Au démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
@@ -77,20 +77,20 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* n’est pas utilisé.|  
 |**4** (par défaut)|Tous les *frequency_interval* jours, avec une valeur par défaut quotidienne.|  
-|**8**|*frequency_interval* est une ou plusieurs des valeurs suivantes (combinées avec un [ &#124; opérateur logique (or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = dimanche&#124;<br /><br /> **2** = lundi&#124;<br /><br /> **4** = mardi&#124;<br /><br /> **8** = mercredi&#124;<br /><br /> **16** = jeudi&#124;<br /><br /> **32** = vendredi&#124;<br /><br /> **64** = samedi|  
+|**version8**|*frequency_interval* est une ou plusieurs des valeurs suivantes (combinées avec un opérateur logique [&#124; (or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) ) :<br /><br /> **1** = dimanche &#124;<br /><br /> **2** = lundi &#124;<br /><br /> **4** = mardi &#124;<br /><br /> **8** = mercredi &#124;<br /><br /> **16** = jeudi &#124;<br /><br /> **32** = vendredi &#124;<br /><br /> **64** = samedi|  
 |**16**|Le *frequency_interval* jour du mois.|  
-|**32**|*frequency_interval* est l’un des éléments suivants:<br /><br /> **1** = dimanche&#124;<br /><br /> **2** = lundi&#124;<br /><br /> **3** = mardi&#124;<br /><br /> **4** = mercredi&#124;<br /><br /> **5** = jeudi&#124;<br /><br /> **6** = vendredi&#124;<br /><br /> **7** = samedi&#124;<br /><br /> **8** = jour&#124;<br /><br /> **9** = jour de semaine&#124;<br /><br /> **10** = jour de week-end|  
+|**32**|*frequency_interval* est l’un des éléments suivants :<br /><br /> **1** = dimanche &#124;<br /><br /> **2** = lundi &#124;<br /><br /> **3** = mardi &#124;<br /><br /> **4** = mercredi &#124;<br /><br /> **5** = jeudi &#124;<br /><br /> **6** = vendredi &#124;<br /><br /> **7** = samedi &#124;<br /><br /> **8** = jour &#124;<br /><br /> **9** = jour de la semaine &#124;<br /><br /> **10** = jour de week-end|  
 |**64**|*frequency_interval* n’est pas utilisé.|  
 |**128**|*frequency_interval* n’est pas utilisé.|  
   
-`[ @frequency_subday = ] frequency_subday`Unité pour *freq_subday_interval*. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday`Unité de *freq_subday_interval*. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4** (par défaut)|Minute|  
-|**8**|Heure|  
+|**version8**|Heure|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec 5 comme valeur par défaut, c’est-à-dire toutes les 5 minutes.  
   
@@ -110,14 +110,14 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est de type **smallint**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification et **1** spécifie l’authentification Windows. La valeur **0** doit être spécifiée pour les serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication non-. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'`Nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est de **type sysname**, avec NULL comme valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* est **égal à 0**. Si *publisher_login* a la valeur null et que *publisher_security_mode* a la valeur **1**, le compte spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
+`[ @publisher_login = ] 'publisher_login'`Nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est de **type sysname**, avec NULL comme valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* a la **valeur 0**. Si *publisher_login* a la valeur null et que *publisher_security_mode* a la valeur **1**, le compte spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
   
 `[ @publisher_password = ] 'publisher_password'`Mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
-`[ @job_login = ] 'job_login'`Nom de connexion du compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance, utilisez un compte SQL Server. *job_login* est de type **nvarchar (257)** , avec NULL comme valeur par défaut. Ce compte est toujours utilisé pour les connexions de l’agent au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
+`[ @job_login = ] 'job_login'`Nom de connexion du compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance, utilisez un compte SQL Server. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte est toujours utilisé pour les connexions de l’agent au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
   
 > [!NOTE]
 >  Pour les serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-, il doit s’agir de la même connexion que celle spécifiée dans [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
@@ -132,7 +132,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé lors de la création [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un agent d’instantané sur un serveur de publication.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -146,7 +146,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Créer et appliquer un instantané](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
+ [Créer et appliquer l’instantané](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   

@@ -13,10 +13,10 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729277"
 ---
 # <a name="entity-dependencies-explorer"></a>Explorateur Dépendances d’entité
@@ -24,7 +24,8 @@ ms.locfileid: "73729277"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   
-[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 contient un nouvel explorateur, appelé Dépendances d’entité, qui permet de visualiser les relations entre les membres d’une entité dans un modèle, spécifiés par la valeur de leurs attributs basés sur un domaine (DBA), mais sans avoir à définir préalablement une hiérarchie dérivée.   
+
+  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 contient un nouvel explorateur, appelé Dépendances d’entité, qui permet de visualiser les relations entre les membres d’une entité dans un modèle, spécifiés par la valeur de leurs attributs basés sur un domaine (DBA), mais sans avoir à définir préalablement une hiérarchie dérivée.   
   
 Il vous aide à répondre à la question « qui utilise mon entité et comment ? ». La vue est similaire à la page de l’explorateur Hiérarchie dérivée, mais elle est plus inclusive. Elle montre toutes les relations DBA, pas seulement celles définies dans le cadre d’une hiérarchie particulière. Aucune définition de la hiérarchie n’est nécessaire, car la structure hiérarchique affichée est simplement déduite des attributs DBA existants.  
   

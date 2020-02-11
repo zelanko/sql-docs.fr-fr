@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9235d096be513e1480dab7e23672e14011c63f0a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781208"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Gestion des colonnes texte et image - Utiliser des paramètres de données à l’exécution
@@ -28,32 +28,32 @@ ms.locfileid: "73781208"
   
 1.  Quand vous appelez [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) pour lier une mémoire tampon de programme au paramètre d’instruction :  
   
-    -   Pour le dernier paramètre, utilisez SQL_LEN_DATA_AT_EXEC(*longueur*) où *longueur* représente la longueur totale des données du paramètre **text**, **ntext** ou **image** en octets.  
+    -   Pour le dernier paramètre, utilisez SQL_LEN_DATA_AT_EXEC(*longueur*) où *longueur* représente la longueur totale des données du paramètre **text**, **ntext**ou **image** en octets.  
   
-    -   Utilisez un paramètre **rgbValue** (huitième paramètre) d’un identificateur de paramètre défini par le programme.  
+    -   Utilisez un **rgbValue** (huitième paramètre) d'un identificateur de paramètre défini par le programme.  
   
-2.  Le fait d’appeler [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) ou [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) retourne SQL_NEED_DATA, ce qui indique que les paramètres de données en cours d’exécution sont prêts à être traités.  
+2.  Le fait d'appeler [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) ou [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) retourne SQL_NEED_DATA, ce qui indique que les paramètres de données en cours d'exécution sont prêts à être traités.  
   
 3.  Pour chaque paramètre de données en cours d'exécution :  
   
-    -   Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour obtenir l’ID du paramètre défini par le programme. SQL_NEED_DATA est retourné s'il existe un autre paramètre de données en cours d'exécution.  
+    -   Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour obtenir l'ID du paramètre défini par le programme. SQL_NEED_DATA est retourné s'il existe un autre paramètre de données en cours d'exécution.  
   
     -   Appelez [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) une ou plusieurs fois pour envoyer les données du paramètre jusqu'à ce que toute la longueur soit envoyée.  
   
-4.  Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour indiquer que toutes les données du dernier paramètre de données en cours d’exécution ont été envoyées. SQL_NEED_DATA n'est pas retourné.  
+4.  Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour indiquer que toutes les données du dernier paramètre de données en cours d'exécution ont été envoyées. SQL_NEED_DATA n'est pas retourné.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment lire des données de type caractères SQL_LONG variables à l'aide de SQLParamData et SQLPutData. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour créer la table utilisée par l’exemple.  
+ Exécutez la première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour créer la table utilisée par l’exemple.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Exécutez ensuite le programme.  
   
- Exécutez la troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer la table utilisée par l’exemple.  
+ Exécutez la troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour supprimer la table utilisée par l’exemple.  
   
 ```  
 use AdventureWorks  
@@ -225,6 +225,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives &#40;à la gestion des colonnes de texte et d’image ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Rubriques de procédures relatives à la gestion des colonnes de texte et d’image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

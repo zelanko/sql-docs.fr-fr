@@ -1,5 +1,5 @@
 ---
-title: Déplacer des éléments de boîte à outils SSIS | Microsoft Docs
+title: Déplacer les éléments de boîte à outils SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057557"
 ---
 # <a name="move-ssis-toolbox-items"></a>Déplacer des éléments de la boîte à outils SSIS
@@ -24,17 +24,17 @@ ms.locfileid: "66057557"
   
 1.  Cliquez avec le bouton droit sur un élément de la boîte à outils SSIS, puis cliquez sur l'un des éléments suivants :  
   
-    -   **Déplacer vers Favoris**  
+    -   **Déplacer vers les favoris**  
   
-    -   **Déplacer vers Courant**  
+    -   **Déplacer vers le Common**  
   
-    -   **Déplacer vers Autres sources**  
+    -   **Déplacer vers d’autres sources**  
   
-    -   **Déplacer vers Autres destinations**  
+    -   **Déplacer vers d’autres destinations**  
   
-    -   **Déplacer vers Autres transformations**  
+    -   **Déplacer vers d’autres transformations**  
   
-    -   **Déplacer vers Autres tâches**  
+    -   **Déplacer vers d’autres tâches**  
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>Pour actualiser la boîte à outils SSIS  
   

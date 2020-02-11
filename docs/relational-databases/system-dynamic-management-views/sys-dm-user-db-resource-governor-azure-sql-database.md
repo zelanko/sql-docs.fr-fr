@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165922"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
@@ -33,19 +33,19 @@ ms.locfileid: "74165922"
 
 Retourne les paramètres de configuration et de capacité réels utilisés par les mécanismes de gouvernance des ressources dans la base de données actuelle ou le pool élastique.
   
-|Nom de colonne|Data type|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|int|ID de la base de données, unique au sein d’un serveur Azure SQL Database.|
-|**logical_database_guid**|uniqueidentifier|GUID logique pour la base de données utilisateur qui reste au sein de la durée de vie d’une base de données utilisateur.  Si vous renommez la base de données ou modifiez son objectif de niveau de service, cette valeur ne sera pas modifiée.|
-|**physical_database_guid**|uniqueidentifier|GUID physique d’une base de données utilisateur qui reste dans la durée de vie de l’instance physique de la base de données utilisateur. La modification de l’objectif de niveau de service de base de données entraîne la modification de cette valeur.|
-|**server_name**|nvarchar|Nom du serveur logique.|
-|**database_name**|nvarchar|Nom de la base de données logique.|
-|**slo_name**|nvarchar|Objectif de niveau de service, y compris la génération de matériel.|
+|**logical_database_guid**|UNIQUEIDENTIFIER|GUID logique pour la base de données utilisateur qui reste au sein de la durée de vie d’une base de données utilisateur.  Si vous renommez la base de données ou modifiez son objectif de niveau de service, cette valeur ne sera pas modifiée.|
+|**physical_database_guid**|UNIQUEIDENTIFIER|GUID physique d’une base de données utilisateur qui reste dans la durée de vie de l’instance physique de la base de données utilisateur. La modification de l’objectif de niveau de service de base de données entraîne la modification de cette valeur.|
+|**server_name**|NVARCHAR|Nom du serveur logique.|
+|**database_name**|NVARCHAR|Nom de la base de données logique.|
+|**slo_name**|NVARCHAR|Objectif de niveau de service, y compris la génération de matériel.|
 |**dtu_limit**|int|Limite de DTU de la base de données (NULL pour vCore).|
 |**cpu_limit**|int|limite vCore de base de données (NULL pour les bases de données DTU).|
-|**min_cpu**|tinyint|Valeur MIN_CPU_PERCENT du pool de ressources de la charge de travail utilisateur. Consultez [concepts du pool de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**max_cpu**|tinyint|Valeur MAX_CPU_PERCENT du pool de ressources de la charge de travail utilisateur. Consultez [concepts du pool de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**cap_cpu**|tinyint|Valeur CAP_CPU_PERCENT du pool de ressources de la charge de travail utilisateur. Consultez [concepts du pool de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**min_cpu**|TINYINT|Valeur MIN_CPU_PERCENT du pool de ressources de la charge de travail utilisateur. Consultez [concepts du pool de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**max_cpu**|TINYINT|Valeur MAX_CPU_PERCENT du pool de ressources de la charge de travail utilisateur. Consultez [concepts du pool de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**cap_cpu**|TINYINT|Valeur CAP_CPU_PERCENT du pool de ressources de la charge de travail utilisateur. Consultez [concepts du pool de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**min_cores**|SMALLINT|À usage interne uniquement|
 |**max_dop**|SMALLINT|Valeur MAX_DOP pour le groupe de charge de travail utilisateur. Consultez [créer un groupe de charge de travail](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql).|
 |**min_memory**|int|Valeur MIN_MEMORY_PERCENT du pool de ressources de la charge de travail utilisateur. Consultez [concepts du pool de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
@@ -61,13 +61,13 @@ Retourne les paramètres de configuration et de capacité réels utilisés par l
 |**initial_db_file_size_in_mb**|bigint|Taille par défaut du nouveau fichier de données, en Mo. Consultez [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**log_size_in_mb**|bigint|Taille par défaut du nouveau fichier journal, en Mo. Consultez [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**instance_cap_cpu**|int|À usage interne uniquement|
-|**instance_max_log_rate**|bigint|Limite du taux de génération de journaux pour l’instance de SQL Server, en octets par seconde. S’applique à tous les journaux générés par l’instance, y compris les `tempdb` et les autres bases de données système. Dans un pool élastique, s’applique au journal généré par toutes les bases de données dans le pool.|
+|**instance_max_log_rate**|bigint|Limite du taux de génération de journaux pour l’instance de SQL Server, en octets par seconde. S’applique à tous les journaux générés par l' `tempdb` instance, y compris les autres bases de données système. Dans un pool élastique, s’applique au journal généré par toutes les bases de données dans le pool.|
 |**instance_max_worker_threads**|int|Limite de threads de travail pour l’instance SQL Server.|
 |**replica_type**|int|Type de réplica, où 0 est principal et 1 est secondaire.|
 |**max_transaction_size**|bigint|Espace maximal du journal utilisé par une transaction, en Ko.|
 |**checkpoint_rate_mbps**|int|À usage interne uniquement|
 |**checkpoint_rate_io**|int|À usage interne uniquement|
-|**last_updated_date_utc**|datetime|Date et heure du dernier changement ou de la reconfiguration du paramètre, en heure UTC.|
+|**last_updated_date_utc**|DATETIME|Date et heure du dernier changement ou de la reconfiguration du paramètre, en heure UTC.|
 |**primary_group_id**|int|ID de groupe de charge de travail de la charge de travail utilisateur sur le réplica principal et sur les réplicas secondaires.|
 |**primary_group_max_workers**|int|Limite de threads de travail pour le groupe de charge de travail utilisateur.|
 |**primary_min_log_rate**|bigint|Taux de journal minimal, en octets par seconde, au niveau du groupe de charge de travail utilisateur. La gouvernance des ressources ne tentera pas de réduire la fréquence des journaux en dessous de cette valeur.|
@@ -117,11 +117,11 @@ ORDER BY database_name;
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
-- [sys. dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
-- [sys. dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
+- [gouverneur de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
+- [sys.dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
+- [sys.dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
 - [sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
-- [sys. dm_resource_governor_workload_groups_history_ex (Azure SQL Database)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
+- [sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
 - [Gouvernance du taux de journal des transactions](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Limites de ressources de base de données DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [Limites de ressources vCore de base de données unique](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

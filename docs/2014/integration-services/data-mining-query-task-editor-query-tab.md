@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890720"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Requête)
@@ -37,15 +37,15 @@ ms.locfileid: "68890720"
  Saisissez la description de la tâche de requête d'exploration de données.  
   
 ## <a name="build-query-tab-options"></a>Options de l'onglet Générer la requête  
- **Requête d'exploration de données**  
+ **Requête d’exploration de données**  
  Tapez une requête d'exploration de données.  
   
- **Rubriques connexes :**  [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Rubriques connexes :**  [informations de référence sur la&#41; DMX &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Générer une nouvelle requête**  
  Créez la requête d'exploration de données en utilisant un outil graphique.  
   
- **Rubriques connexes :** [Requête d'exploration de données](control-flow/data-mining-query.md)  
+ **Rubriques connexes :** [requête d’exploration de données](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Options de l'onglet Mappage de paramètre  
  **Nom du paramètre**  
@@ -57,11 +57,11 @@ ms.locfileid: "68890720"
  **Ajouter**  
  Ajoute un paramètre à la liste.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un paramètre, puis cliquez sur **Supprimer**.  
   
 ## <a name="result-set-tab-options"></a>Options de l'onglet Ensemble de résultats  
- **Nom de résultat**  
+ **Nom du résultat**  
  Vous pouvez également mettre à jour le nom de l'ensemble de résultats. Mappez le résultat à une variable en sélectionnant cette dernière dans la liste **Nom de la variable** .  
   
  Après avoir ajouté un résultat en cliquant sur **Ajouter**, définissez un nom unique pour le résultat.  
@@ -75,13 +75,13 @@ ms.locfileid: "68890720"
  **Ajouter**  
  Ajoute un ensemble de résultats à la liste.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un résultat et cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de requête d’exploration de données &#40;onglet Modèle d’exploration de données&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Éditeur de tâche de requête d’exploration de données &#40;onglet Sortie&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Concepteur d'exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Éditeur de tâche de requête d’exploration de données &#40;onglet modèle d’exploration de données&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Éditeur de tâche de requête d’exploration de données &#40;onglet sortie&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Concepteur d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

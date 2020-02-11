@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ece1e3a161b03598ebc40ce9022780387b47e5c3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785959"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLProcedureColumns** retourne une ligne signalant les attributs de valeur de retour de toutes les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  **SQLProcedureColumns** retourne une ligne signalant les attributs de valeur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retour de toutes les procédures stockées.  
   
- **SQLProcedureColumns** retourne SQL_SUCCESS qu'il existe ou pas des valeurs pour les paramètres *CatalogName*, *SchemaName*, *ProcName*ou *ColumnName* . **SQLFetch** retourne SQL_NO_DATA lorsque des valeurs non valides sont utilisées dans ces paramètres.  
+ **SQLProcedureColumns** retourne SQL_SUCCESS si des valeurs existent pour les paramètres *nomcatalogue*, *SchemaName*, *procname*ou *ColumnName* . **SQLFetch** retourne SQL_NO_DATA lorsque des valeurs non valides sont utilisées dans ces paramètres.  
   
  **SQLProcedureColumns** peut être exécuté sur un curseur côté serveur statique. Une tentative d'exécution de **SQLProcedureColumns** sur un curseur pouvant être mis à jour (dynamique ou jeu de clés) retourne SQL_SUCCESS_WITH_INFO, ce qui indique que le type de curseur a été modifié.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73785959"
 |DECIMAL_DIGITS|Nombre de colonnes du paramètre table.|  
 |NUM_PREC_RADIX|NULL|  
 |NULLABLE|SQL_NULLABLE|  
-|REMARKS|NULL|  
+|Remarques|NULL|  
 |COLUMN_DEF|NULL. Les types table ne peuvent pas avoir de valeurs par défaut.|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
 |SQL_DATEIME_SUB|NULL|  
@@ -66,18 +66,18 @@ ms.locfileid: "73785959"
   
  En conformité avec la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques aux pilotes ajoutées dans les précédentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et après toutes les colonnes mandatées par ODBC lui-même.  
   
- Pour plus d’informations sur les paramètres table, consultez [ &#40;&#41;ODBC Table-valued Parameters](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>Prise en charge par SQLProcedureColumns des fonctionnalités de date et heure améliorées  
  Pour les valeurs retournées pour les types de date/heure, consultez [Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Pour plus d’informations générales, consultez [améliorations &#40;de la date&#41;et de l’heure ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations générales, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Prise en charge par SQLProcedureColumns des grands types CLR définis par l'utilisateur  
- **SQLProcedureColumns** prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types &#40;CLR volumineux définis par l'&#41;utilisateur ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLProcedureColumns** prend en charge les types CLR volumineux définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-   de la [fonction SQLProcedureColumns](https://go.microsoft.com/fwlink/?LinkId=59363)  
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [SQLProcedureColumns fonction)](https://go.microsoft.com/fwlink/?LinkId=59363)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

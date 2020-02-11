@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 : Génération de l’utilitaire de déploiement | Microsoft Docs'
+title: 'Étape 1 : Génération de l’utilitaire de déploiement | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767581"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Étape 1 : Génération de l’utilitaire de déploiement
+# <a name="step-1-building-the-deployment-utility"></a>Étape 1 : génération de l'utilitaire de déploiement
   Au cours de cette tâche, vous allez configurer et générer un utilitaire de déploiement pour le projet Didacticiel de déploiement.  
   
  Avant de générer l'utilitaire de déploiement, vous devez modifier les propriétés du projet Didacticiel de déploiement. La boîte de dialogue **Pages de propriétés du didacticiel de déploiement** vous permet de configurer ces propriétés. Dans cette boîte de dialogue, vous devez activer la possibilité de mettre à jour des configurations au cours du déploiement et spécifier que le processus de création génère un utilitaire de déploiement. Après avoir défini les propriétés, vous allez générer le projet.  
@@ -34,7 +34,7 @@ ms.locfileid: "62767581"
   
 4.  Dans la boîte de dialogue **Pages de propriétés du didacticiel de déploiement** , développez Propriétés de configuration et cliquez sur Utilitaire de déploiement.  
   
-5.  Dans le volet droit de la **Pages de propriétés de didacticiel de déploiement** boîte de dialogue, vérifiez que `AllowConfigurationChanges` a la valeur `true`, affectez la valeur `CreateDeploymentUtility` à `true`et éventuellement mettre à jour la valeur par défaut `DeploymentOutputPath`.  
+5.  Dans le volet droit de la boîte de dialogue **pages de propriétés du didacticiel** de `AllowConfigurationChanges` déploiement, vérifiez `true`que a `CreateDeploymentUtility` la `true`valeur, affectez à la valeur, et `DeploymentOutputPath`Mettez éventuellement à jour la valeur par défaut.  
   
 6.  Cliquez sur **OK**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767581"
   
 4.  Dans la fenêtre de sortie, vérifiez les informations suivantes :  
   
-     Build démarrée : Projet SQL Integration Services : Incrémentiel ...  
+     Génération démarrée : projet SQL Integration Services : incrémentiel ...  
   
      Création de l'utilitaire de déploiement...  
   
@@ -56,14 +56,14 @@ ms.locfileid: "62767581"
   
      Fin de la génération -- 0 erreur, 0 avertissement  
   
-     ========== Build : 0 réussi, 0 échoué, 1 mis à jour, 0 ignoré ==========  
+     ========== Génération : 0 a réussi, 0 a échoué, 1 est à jour, 0 a été ignoré ==========  
   
 5.  Dans le menu **Fichier** , cliquez sur **Quitter**. Si vous êtes invité à enregistrer les modifications apportées aux éléments du didacticiel de déploiement, cliquez sur **Oui**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Vérification de l'application de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [Étape 2 : Vérification du bundle de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un utilitaire de déploiement](../../2014/integration-services/create-a-deployment-utility.md)  

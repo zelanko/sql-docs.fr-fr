@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f795f1848f3e4c9fe1239df79677c35c38ba3b58
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783508"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>Prise en charge de sql_variant pour les types Date et Time
@@ -25,7 +25,7 @@ ms.locfileid: "73783508"
 
   Cette rubrique décrit comment le type de données **sql_variant** prend en charge les fonctionnalités de date et d’heure améliorées.  
   
- L'attribut de colonne SQL_CA_SS_VARIANT_TYPE est utilisé pour retourner le type C d'une colonne de résultat de variante. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit un attribut supplémentaire, SQL_CA_SS_VARIANT_SQL_TYPE, qui définit le type SQL d’une colonne de résultat de variante dans le descripteur de ligne d’implémentation (IRD). SQL_CA_SS_VARIANT_SQL_TYPE peut également être utilisé dans le descripteur de paramètre d’implémentation (IPD) pour spécifier le type SQL d’un paramètre SQL_SS_TIME2 ou SQL_SS_TIMESTAMPOFFSET qui a SQL_C_BINARY type C lié avec le type SQL_SS_VARIANT.  
+ L'attribut de colonne SQL_CA_SS_VARIANT_TYPE est utilisé pour retourner le type C d'une colonne de résultat de variante. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit un attribut supplémentaire, SQL_CA_SS_VARIANT_SQL_TYPE, qui définit le type SQL d'une colonne de résultat de variante dans le descripteur de ligne d'implémentation (IRD, Implementation Row Descriptor). SQL_CA_SS_VARIANT_SQL_TYPE peut également être utilisé dans le descripteur de paramètre d'implémentation (IPD, Implementation Parameter Descriptor) pour spécifier le type SQL d'un paramètre SQL_SS_TIME2 ou SQL_SS_TIMESTAMPOFFSET qui a le type de C SQL_C_BINARY lié au type SQL_SS_VARIANT.  
   
  Les nouveaux types SQL_SS_TIME2 et SQL_SS_TIMESTAMPOFFSET peuvent être définis par SQLColAttribute. SQL_CA_SS_VARIANT_SQL_TYPE peut être retourné par SQLGetDescField.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "73783508"
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_WCHAR|nvarcar|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
-|SQL_C_TINYINT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
-|SQL_C_STINYINT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
-|SQL_C_SHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
-|SQL_C_SSHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
+|SQL_C_TINYINT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
+|SQL_C_STINYINT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
+|SQL_C_SHORT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
+|SQL_C_SSHORT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_USHORT|int|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_LONG|int|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_SLONG|int|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
@@ -49,18 +49,18 @@ ms.locfileid: "73783508"
 |SQL_C_FLOAT|real|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_DOUBLE|float|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
-|SQL_C_UTINYINT|tinyint|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
+|SQL_C_UTINYINT|TINYINT|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE n'est pas défini.|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale est défini sur SQL_DESC_PRECISION (le paramètre *DecimalDigits* de **SQLBindParameter**).|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale est défini sur SQL_DESC_PRECISION (le paramètre *DecimalDigits* de **SQLBindParameter**).|  
-|SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
+|SQL_C_TYPE_DATE|Date|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Scale est défini sur SQL_DESC_PRECISION (le paramètre *DecimalDigits* de **SQLBindParameter**).|  
-|SQL_C_NUMERIC|DECIMAL|La précision est définie sur SQL_DESC_PRECISION (le paramètre *Column* de **SQLBindParameter**).<br /><br /> Mise à l’échelle définie sur SQL_DESC_SCALE (paramètre *DecimalDigits* de SQLBindParameter).|  
+|SQL_C_NUMERIC|Décimal|La précision est définie sur SQL_DESC_PRECISION (le paramètre *Column* de **SQLBindParameter**).<br /><br /> Mise à l’échelle définie sur SQL_DESC_SCALE (paramètre *DecimalDigits* de SQLBindParameter).|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations &#40;de la date et de l’heure ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Améliorations de la date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

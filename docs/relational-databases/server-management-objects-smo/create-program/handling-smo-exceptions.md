@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4fdf4e03eeb839aad74588f3fb338d10fc949220
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148704"
 ---
 # <a name="handling-smo-exceptions"></a>Gestion des exceptions SMO
@@ -38,12 +38,12 @@ ms.locfileid: "70148704"
 > [!NOTE]  
 >  L’exception **SqlException** est déclarée dans l’espace de noms **System. Data. SqlClient** .  
   
- ![Diagramme qui montre les niveaux à partir desquels un EXCP](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Diagramme qui montre les niveaux à partir desquels un EXCP")  
+ ![Diagramme illustrant les niveaux à partir desquels une exception s'est produite](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Diagramme illustrant les niveaux à partir desquels une exception s'est produite")  
   
  Le diagramme affiche le flux d'exceptions à travers les couches de l'application.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual C&#35; Smo dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Interception d'une exception en Visual Basic  
  Cet exemple de code montre comment utiliser la méthode **try... Catch... Finally** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] pour intercepter une exception Smo. Toutes les exceptions SMO possèdent le type SmoException et sont répertoriées dans la référence SMO. La séquence d'exceptions internes est affichée pour indiquer la racine de l'erreur. Pour plus d'informations, consultez la documentation [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
@@ -83,7 +83,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Interception d'une exception en Visual C#  
- Cet exemple de code montre comment utiliser la méthode **try... Catch...** Finally C# (instruction visuelle) pour intercepter une exception Smo. Toutes les exceptions SMO possèdent le type SmoException et sont répertoriées dans la référence SMO. La séquence d'exceptions internes est affichée pour indiquer la racine de l'erreur. Pour plus d'informations, consultez la documentation Visual C#.  
+ Cet exemple de code montre comment utiliser la méthode **try... Catch... Finally** (instruction Visual C#) pour intercepter une exception Smo. Toutes les exceptions SMO possèdent le type SmoException et sont répertoriées dans la référence SMO. La séquence d'exceptions internes est affichée pour indiquer la racine de l'erreur. Pour plus d'informations, consultez la documentation Visual C#.  
   
 ```csharp  
 {   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229226"
 ---
 # <a name="use-powerpivot-gallery"></a>Utiliser la Galerie PowerPivot
@@ -41,7 +41,7 @@ ms.locfileid: "75229226"
   
 -   [Problèmes connus](#bkmk_known_issues)  
   
- [Conditions préalables](#prereq)  
+ [Prérequis](#prereq)  
   
 ##  <a name="prereq"></a>Conditions préalables  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75229226"
 ##  <a name="add"></a>Enregistrer un classeur Excel dans la Galerie PowerPivot  
  Vous pouvez publier des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la bibliothèque à l'aide de toutes les techniques de partage offertes par Excel 2010. Par exemple, dans Excel 2010, vous pouvez utiliser l'option Enregistrer sous pour spécifier tout ou partie d'un chemin d'accès SharePoint à une bibliothèque.  
   
-1.  Enregistrez le fichier.  
+1.  Enregistrez le fichier .  
   
 2.  1.  **Excel 2010 :** Dans le menu fichier, cliquez sur **enregistrer & envoyer**.  
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811231"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
@@ -23,7 +23,7 @@ ms.locfileid: "68811231"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>Configuration d'une table mémoire optimisée en tant qu'abonné  
  Pour configurer une table mémoire optimisée en tant qu'abonné, effectuez les étapes suivantes.  
   
- **Créer et activer la publication**  
+ **Créer et activer une publication**  
   
 1.  Créer une publication  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68811231"
     GO  
     ```  
   
- **Générer un instantané et ajuster le schéma**  
+ **Générer un instantané et régler le schéma**  
   
 1.  Créez un travail instantané et générez un instantané.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68811231"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Naviguez jusqu'au dossier d'instantané. L’emplacement par défaut est «C:\Program Files\Microsoft SQL Server\MSSQL12. INSTANCE > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\». \<  
+2.  Naviguez jusqu'au dossier d'instantané. L’emplacement par défaut est «C:\Program Files\Microsoft SQL Server\MSSQL12. \<Instance> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\».  
   
 3.  Recherchez **. Fichier SCH** pour votre table et ouvrez-le dans Management Studio. Modifiez le schéma de la table et mettez à jour la procédure stockée comme décrit ci-dessous.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "68811231"
     GO  
     ```  
   
- **Ajouter aucun abonnement de synchronisation**  
+ **Ajouter un abonnement sans synchronisation**  
   
  Ajoutez un abonnement nosync.  
   
@@ -299,9 +299,9 @@ GO
   
 -   Les tables répliquées en tables mémoire optimisées sur un abonné sont limitées aux types de données autorisés dans les tables mémoire optimisées. Pour plus d’informations, consultez [types de données pris en charge](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Il existe des restrictions pour la mise à jour de la clé primaire des tables répliquées en une table mémoire optimisée sur un abonné. Pour plus d’informations, consultez réplication des [modifications apportées à une clé primaire](#PrimaryKey).  
+-   Il existe des restrictions pour la mise à jour de la clé primaire des tables répliquées en une table mémoire optimisée sur un abonné. Pour plus d’informations, consultez [réplication des modifications apportées à une clé primaire](#PrimaryKey).  
   
--   La clé étrangère, la contrainte unique, les déclencheurs, les modifications de schéma, ROWGUIDCOL, les colonnes calculées, la compression de données, les types de données d'alias, le contrôle de version et les verrous ne sont pas pris en charge dans les tables mémoire optimisées. Pour plus d’informations, consultez [Constructions Transact-SQL non prises en charge par OLTP en mémoire](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+-   La clé étrangère, la contrainte unique, les déclencheurs, les modifications de schéma, ROWGUIDCOL, les colonnes calculées, la compression de données, les types de données d'alias, le contrôle de version et les verrous ne sont pas pris en charge dans les tables mémoire optimisées. Pour plus d'informations, consultez [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
 ##  <a name="Schema"></a> Modification d'un fichier de schéma  
   

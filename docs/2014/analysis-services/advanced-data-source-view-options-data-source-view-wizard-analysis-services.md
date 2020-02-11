@@ -1,5 +1,5 @@
 ---
-title: Advanced boîte de dialogue des Options du mode des Source de données (Assistant vue de Source de données) (Analysis Services) | Microsoft Docs
+title: Boîte de dialogue Options avancées de vue de source de données (Assistant vue de source de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062844"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Boîte de dialogue Options avancées des vues de source de données (Assistant Vue de source de données) (Analysis Services)
@@ -25,14 +25,14 @@ ms.locfileid: "66062844"
  Pour ouvrir la boîte de dialogue **Options avancées des vues de source de données** , dans l'Assistant Vue de source de données, dans la page **Sélectionnez une source de données** , cliquez sur **Avancé**.  
   
 ## <a name="options"></a>Options  
- **Extraire les relations**  
+ **Récupérer les relations**  
  Indique si les détails sur les relations doivent être récupérés à partir de la source de données et appliqués à la vue de source de données. Si vous modifiez cette option après avoir créé les relations, aucune relation existante n'est supprimée de la vue de source de données.  
   
  **Se restreindre aux schémas**  
  Utilisez cette option pour spécifier une liste de noms de schémas séparés par des virgules qui limite les schémas récupérés à partir de la source de données. Si aucun nom de schéma n'est répertorié pour cette option, il n'y a aucune restriction sur les schémas qui peuvent être utilisés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données dans des modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Sources de données dans les modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

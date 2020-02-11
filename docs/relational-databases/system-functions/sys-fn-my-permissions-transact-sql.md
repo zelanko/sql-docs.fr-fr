@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_my_permissions (Transact-SQL) | Microsoft Docs
+title: sys. fn_my_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122631"
 ---
-# <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
+# <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie la liste des autorisations accordées effectivement au principal sur un élément sécurisable. Une fonction associée est [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,23 +42,23 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *securable*  
- Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur ou une base de données, cette valeur doit être définie sur NULL. *securable* est une expression scalaire de type **sysname**. *élément sécurisable* peut être un nom en plusieurs parties.  
+ *élément sécurisable*  
+ Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur ou une base de données, cette valeur doit être définie sur NULL. l’élément *sécurisable* est une expression scalaire de type **sysname**. l’élément *sécurisable* peut être un nom en plusieurs parties.  
   
- «*securable_class*»  
- Nom de la classe de l'élément sécurisable pour lequel les autorisations sont affichées. *securable_class* est un **sysname**. *securable_class* doit être une des opérations suivantes : RÔLE D’APPLICATION, ASSEMBLY, CLÉ ASYMÉTRIQUE, CERTIFICAT, CONTRAT, BASE DE DONNÉES, POINT DE TERMINAISON, FULLTEXT CATALOG, LOGIN, TYPE DE MESSAGE, OBJET, LIAISONS DE SERVICE DISTANT, RÔLE, ITINÉRAIRE, SCHÉMA, SERVEUR, SERVICE, SYMMETRIC KEY, TYPE, UTILISATEUR, COLLECTION DE SCHÉMAS XML.  
+ '*securable_class*'  
+ Nom de la classe de l'élément sécurisable pour lequel les autorisations sont affichées. *securable_class* est de **type sysname**. *securable_class* doit correspondre à l’un des éléments suivants : rôle d’application, assembly, clé asymétrique, certificat, contrat, base de données, point de terminaison, catalogue de texte intégral, connexion, type de message, objet, liaison de service distant, rôle, itinéraire, schéma, serveur, service, clé symétrique, type, utilisateur, collection de schémas XML.  
   
 ## <a name="columns-returned"></a>Colonnes retournées  
- Le tableau suivant répertorie les colonnes qui **fn_my_permissions** retourne. Chaque ligne renvoyée décrit une autorisation détenue par le contexte de sécurité actuel sur l'élément sécurisable. Renvoie NULL si la requête échoue.  
+ Le tableau suivant répertorie les colonnes retournées par **fn_my_permissions** . Chaque ligne renvoyée décrit une autorisation détenue par le contexte de sécurité actuel sur l'élément sécurisable. Renvoie NULL si la requête échoue.  
   
-|Nom de la colonne|type|Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nom de l'élément sécurisable pour lequel les autorisations affichées sont effectivement accordées.|  
 |subentity_name|**sysname**|Nom de colonne si l'élément sécurisable contient des colonnes, sinon NULL.|  
 |permission_name|**nvarchar**|Nom de l’autorisation.|  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction table renvoie la liste des autorisations effectives détenues par le principal appelant sur un élément sécurisable spécifié. Une autorisation effective est l’une des opérations suivantes :  
+ Cette fonction table renvoie la liste des autorisations effectives détenues par le principal appelant sur un élément sécurisable spécifié. Une autorisation effective est l’un des éléments suivants :  
   
 -   une autorisation accordée directement au principal et non refusée ;  
   
@@ -70,7 +70,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  L'évaluation des autorisations a toujours lieu dans le contexte de sécurité de l'appelant. Pour déterminer si un autre principal dispose d'une autorisation effective, l'appelant doit disposer de l'autorisation IMPERSONATE sur ce principal.  
   
- Pour les entités au niveau schéma, les noms non NULL en une, deux ou trois parties sont acceptés. Pour les entités de niveau de base de données, un nom en une partie est accepté, avec une valeur null signifie «*base de données actuelle*». Pour le serveur lui-même, la valeur NULL (« serveur actif ») est exigée. **fn_my_permissions** ne peut pas vérifier les autorisations sur un serveur lié.  
+ Pour les entités au niveau schéma, les noms non NULL en une, deux ou trois parties sont acceptés. Pour les entités au niveau de la base de données, un nom en une partie est accepté, avec une valeur null signifiant «*base de données active*». Pour le serveur lui-même, la valeur NULL (« serveur actif ») est exigée. **fn_my_permissions** ne pouvez pas vérifier les autorisations sur un serveur lié.  
   
  La requête suivante renvoie la liste des classes intégrées des éléments sécurisables :  
   
@@ -80,7 +80,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- Si la valeur par défaut est fourni comme valeur de *sécurisable* ou *securable_class*, la valeur sera interprétée comme NULL.  
+ Si la valeur par défaut est fournie comme élément *sécurisable* ou *securable_class*, la valeur sera interprétée comme null.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Affichage des autorisations effectives sur une collection de schémas XML  
- L’exemple suivant retourne une liste des autorisations effectives de l’appelant sur une Collection de schémas XML nommée `ProductDescriptionSchemaCollection` dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.  
+ L’exemple suivant retourne une liste des autorisations effectives de l’appelant sur une collection de schémas XML `ProductDescriptionSchemaCollection` nommée dans [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la base de données.  
   
 ```  
 USE AdventureWorks2012;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. Affichage des autorisations effectives d'un autre nom de connexion  
- L'exemple suivant renvoie la liste des autorisations effectives détenues par le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` sur la table `Employee` du schéma `HumanResources` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. L'appelant doit disposer de l'autorisation IMPERSONATE sur le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof`.  
+ L'exemple suivant renvoie la liste des autorisations effectives détenues par le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` sur la table `Employee` du schéma `HumanResources` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. L'appelant doit disposer de l'autorisation IMPERSONATE sur le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof`.  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -161,8 +161,8 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Securables](../../relational-databases/security/securables.md)   
+ [Autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Éléments sécurisables](../../relational-databases/security/securables.md)   
  [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+title: sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 description: Retourne l’état actuel des sémaphores de ressource utilisés pour limiter l’optimisation des requêtes simultanées
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
@@ -21,26 +21,26 @@ author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164997"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Retourne l’état actuel des sémaphores de ressource utilisés pour limiter l’optimisation des requêtes simultanées.
 
-|Colonne|type|Description|  
+|Colonne|Type|Description|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|ID du pool de ressources sous Resource Governor|  
-|**nom**|**sysname**|Nom de la porte de compilation (petite passerelle, passerelle moyenne, Big Gateway)|
+|**nomme**|**sysname**|Nom de la porte de compilation (petite passerelle, passerelle moyenne, Big Gateway)|
 |**max_count**|**int**|Nombre maximal configuré de compilations simultanées|
 |**active_count**|**int**|Nombre de compilations actuellement actives dans cette porte|
 |**waiter_count**|**int**|Nombre d’objets Waiter dans cette porte|
 |**threshold_factor**|**bigint**|Facteur de seuil qui définit la partie de mémoire maximale utilisée par l’optimisation de requête.  Pour la petite passerelle, threshold_factor indique l’utilisation maximale de la mémoire de l’optimiseur en octets pour une requête avant qu’elle soit nécessaire pour obtenir un accès dans la petite passerelle.  Pour les passerelles moyenne et grande, threshold_factor affiche la partie de la mémoire totale du serveur disponible pour cette porte. Elle est utilisée comme diviseur lors du calcul du seuil d’utilisation de la mémoire pour la porte.|
-|**threshold**|**bigint**|Mémoire de seuil suivante, en octets.  La requête est requise pour accéder à cette passerelle si sa consommation de mémoire atteint ce seuil.  « -1 » si la requête n’est pas requise pour accéder à cette passerelle.|
+|**durée**|**bigint**|Mémoire de seuil suivante, en octets.  La requête est requise pour accéder à cette passerelle si sa consommation de mémoire atteint ce seuil.  « -1 » si la requête n’est pas requise pour accéder à cette passerelle.|
 |**is_active**|**bit**|Indique si la requête est requise pour passer la porte active ou non.|
 
 
@@ -57,7 +57,7 @@ L’attente d’une passerelle entraîne une compilation différée. En plus des
 
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. Affichage des statistiques sur les sémaphores de ressources  
+### <a name="a-viewing-statistics-on-resource-semaphores"></a>R. Affichage des statistiques sur les sémaphores de ressources  
 Quelles sont les statistiques actuelles de la passerelle mémoire de l’optimiseur pour cette instance de SQL Server ?
 
 ```  
@@ -70,6 +70,6 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[Comment utiliser la commande DBCC MEMORYSTATUS pour surveiller l’utilisation de la mémoire sur SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-la [compilation de requêtes volumineuses attend sur RESOURCE_SEMAPHORE_QUERY_COMPILE dans SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+ [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+[Comment utiliser la commande DBCC MEMORYSTATUS pour surveiller l’utilisation de la mémoire sur les SQL Server](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
+de[compilation de requêtes volumineuses 2005 en attente sur RESOURCE_SEMAPHORE_QUERY_COMPILE dans SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

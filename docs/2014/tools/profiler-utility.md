@@ -1,5 +1,5 @@
 ---
-title: Utilitaire de Profiler | Microsoft Docs
+title: Utilitaire de profileur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211093"
 ---
 # <a name="profiler-utility"></a>Utilitaire profiler
@@ -62,7 +62,7 @@ ms.locfileid: "68211093"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
- **/P** *password*  
+ **/P** *mot de passe*  
  Indique un mot de passe spécifié par l'utilisateur pour l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **/E**  
@@ -74,29 +74,29 @@ ms.locfileid: "68211093"
  **/A**  *analysis_services_server_name*  
  Spécifie une instance d'Analysis Services. Profiler se connecte automatiquement au serveur spécifié en utilisant les informations d’authentification spécifiées dans les commutateurs **/U** et **/P** ou dans le commutateur **/E** . Pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , utilisez **/A** *analysis_services_server_name\instance_name*.  
   
- **/D** *database*  
+ **/D** *base de données*  
  Spécifie le nom de la base de données à utiliser avec la connexion. Cette option sélectionne la base de données par défaut pour l'utilisateur spécifié si aucune base de données n'est spécifiée.  
   
- **/B "** *trace_table_name* **"**  
+ **/B «** *trace_table_name* **»**  
  Spécifie une table de trace à charger lors du démarrage du générateur de profils. Vous devez spécifier la base de données, l'utilisateur ou le schéma, ainsi que la table.  
   
- **/T"** *template_name* **"**  
- Spécifie le modèle qui sera chargé pour configurer la trace. Le nom du modèle doit être entre guillemets. Le nom du modèle doit être le répertoire de modèles système ou le répertoire de modèles utilisateur. Si deux modèles portant le même nom existent dans les deux répertoires, le modèle du répertoire système est chargé. Si aucun modèle n'existe sous le nom spécifié, le modèle standard est chargé. Notez que l’extension de fichier du modèle (.tdf) ne doit pas être spécifiée dans *template_name*. Exemple :  
+ **/T «** *template_name* **»**  
+ Spécifie le modèle qui sera chargé pour configurer la trace. Le nom du modèle doit être entre guillemets. Le nom du modèle doit être le répertoire de modèles système ou le répertoire de modèles utilisateur. Si deux modèles portant le même nom existent dans les deux répertoires, le modèle du répertoire système est chargé. Si aucun modèle n'existe sous le nom spécifié, le modèle standard est chargé. Notez que l’extension de fichier du modèle (.tdf) ne doit pas être spécifiée dans *template_name*. Par exemple :  
   
 ```  
 /T "standard"  
 ```  
   
- **/F"** *filename* **"**  
+ **/F "** *nom_fichier* **"**  
  Spécifie le chemin et le nom d'un fichier de trace à charger lors du démarrage du générateur de profils. Le chemin complet et le nom de fichier doivent être entre guillemets. Cette option n’est pas utilisable avec **/O**.  
   
- **/O "** *filename*  **"**  
+ **/O "** *nom_fichier*  **"**  
  Spécifie le chemin d'accès et le nom d'un fichier dans lequel les résultats de trace doivent être écrits. Le chemin complet et le nom de fichier doivent être entre guillemets. Cette option n’est pas utilisable avec **/F**.  
   
  **/L** *locale_ID*  
  Non disponible  
   
- **/M "** *MM-DD-YY hh:mm:ss* **"**  
+ **/M "** *mm-jj-aa hh : mm : SS* **"**  
  Spécifie la date et l'heure auxquelles la trace doit s'arrêter. L'heure d'arrêt doit être indiquée entre guillemets. Spécifiez l'heure d'arrêt conformément aux paramètres du tableau ci-dessous :  
   
 |Paramètre|Définition|  
@@ -125,6 +125,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](command-prompt-utility-reference-database-engine.md)  
+ [Informations de référence sur l’utilitaire d’invite de commandes &#40;Moteur de base de données&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

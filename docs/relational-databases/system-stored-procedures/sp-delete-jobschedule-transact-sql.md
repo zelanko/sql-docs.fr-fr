@@ -18,24 +18,24 @@ ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a1641685bfe017ab7bc3adfda5c667684a70b786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130653"
 ---
-# <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
+# <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime la planification d'un travail.  
   
- **sp_delete_jobschedule** est fourni pour la compatibilité descendante uniquement.  
+ **sp_delete_jobschedule** n’est fourni qu’à des fins de compatibilité descendante.  
   
   
 ## <a name="remarks"></a>Notes  
  Il est désormais possible de gérer la planification des travaux indépendamment des travaux. Pour supprimer une planification d’un travail, utilisez **sp_detach_schedule**. Pour supprimer une planification, utilisez **sp_delete_schedule**.  
   
-> **Remarque : sp_delete_jobschedule** ne prend pas en charge les planifications attachées à plusieurs travaux. Si un script existant appelle **sp_delete_jobschedule** pour supprimer une planification qui est attachée à plusieurs travaux, la procédure retourne une erreur.  
+> **Remarque : sp_delete_jobschedule** ne prend pas en charge les planifications attachées à plusieurs travaux. Si un script existant appelle **sp_delete_jobschedule** pour supprimer une planification attachée à plusieurs travaux, la procédure retourne une erreur.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -46,9 +46,9 @@ ms.locfileid: "68130653"
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membres de la **sysadmin** rôle peut supprimer n’importe quelle planification du travail. Les utilisateurs qui ne sont pas membres de la **sysadmin** rôle peut supprimer uniquement les planifications de travaux dont ils sont propriétaires.  
+ Les membres du rôle **sysadmin** peuvent supprimer n’importe quelle planification de travail. Les utilisateurs qui ne sont pas membres du rôle **sysadmin** peuvent uniquement supprimer les planifications de travaux dont ils sont propriétaires.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

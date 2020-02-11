@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683604"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistance sur SQL Server
@@ -89,7 +89,7 @@ ms.locfileid: "74683604"
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fournit des informations d'avant-vente sur l'évaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'outil de stockage de données et de Business Intelligence.|  
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fournit des informations d'avant-vente sur l'évaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'outil de stockage de données et de Business Intelligence.|  
 |[Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?LinkId=42461)|Fournit un référentiel dans lequel il est possible de chercher des articles sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rédigés par le support [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
   
  Les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] ont un cycle de vie de support qui détermine la durée du support pour chaque version Le support [!INCLUDE[msCoName](../includes/msconame-md.md)]  tient à jour une page qui définit le cycle de vie du support [!INCLUDE[msCoName](../includes/msconame-md.md)]. Cette page contient des liens vers d'autres pages qui indiquent la disponibilité du support pour les produits [!INCLUDE[msCoName](../includes/msconame-md.md)]. Pour plus d’informations, consultez [support Microsoft Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780654"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Exécution de procédures stockées - Traiter les codes de retour et les paramètres de sortie
@@ -29,7 +29,7 @@ ms.locfileid: "73780654"
   Les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont pas disponibles pour l'application tant que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) n'a pas retourné SQL_NO_DATA. Si une erreur est retournée à partir d’une procédure stockée, appelez SQLMoreResults pour passer au résultat suivant jusqu’à ce que SQL_NO_DATA soit retourné.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Pour traiter des codes de retour et des paramètres de sortie  
   
@@ -44,15 +44,15 @@ ms.locfileid: "73780654"
 ## <a name="example"></a>Exemple  
  Cet exemple montre le traitement d'un code de retour et d'un paramètre de sortie. Cet exemple n'est pas pris en charge sur la plateforme IA64. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une procédure stockée utilisée par cet exemple.  
+ La première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () crée une procédure stockée utilisée par cet exemple.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Puis, exécutez le programme.  
   
- La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la procédure stockée utilisée par cet exemple.  
+ La troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () supprime la procédure stockée utilisée par cet exemple.  
   
 ```  
 use AdventureWorks  
@@ -194,6 +194,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Appeler des procédures &#40;stockées ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[Appeler des procédures stockées &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

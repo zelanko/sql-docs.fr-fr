@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1916be8c443799fa41680341e72889bd10551b4a
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200429"
 ---
 # <a name="import-the-sqlps-module"></a>Importer le module SQLPS
@@ -40,7 +40,7 @@ ms.locfileid: "74200429"
 > [!NOTE]  
 >  Les verbes utilisés dans les noms de deux applets de commande SQL Server (`Encode-Sqlname` et `Decode-Sqlname`) ne correspondent pas aux verbes approuvés pour Windows PowerShell 2.0. Cela n'a aucun effet sur leur opération, mais Windows PowerShell déclenche un avertissement lorsque le module `sqlps` est importé dans une session.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
  Par défaut, Windows PowerShell s’exécute avec le niveau **Restreint**de la stratégie d’exécution de scripts, ce qui empêche l’exécution de tout script Windows PowerShell. Pour charger le module `sqlps`, vous pouvez utiliser l'applet de commande `Set-ExecutionPolicy` pour activer l'exécution de scripts signés uniquement ou de tous les scripts. Exécutez uniquement des scripts provenant de sources fiables et sécurisez tous les fichiers d'entrée et de sortie en utilisant les autorisations NTFS appropriées. Pour plus d'informations sur l'activation de scripts Windows PowerShell, consultez [Exécution de scripts Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows).  
   
 ##  <a name="LoadSqlps"></a>Charger le module sqlps  
@@ -62,5 +62,5 @@ Import-Module "sqlps" -DisableNameChecking
 
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [Fournisseur SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
- [Utiliser les applets de commande Moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [fournisseur PowerShell SQL Server](../powershell/sql-server-powershell-provider.md)   
+ [Utiliser les applets de commande du Moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62731911"
 ---
-# <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION, ensemble de lignes
+# <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION, ensemble de lignes
   Fournit des informations sur les traces XEvent qui sont actuellement actives sur le serveur.  
   
- **S'applique à :** modèles tabulaires, modèles multidimensionnels  
+ **S’applique à :** modèles tabulaires, modèles multidimensionnels  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes `DISCOVER_XEVENT_TRACE_DEFINITION` contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de la colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||Définition XML de la trace XEvent.|  
   
@@ -36,14 +36,14 @@ ms.locfileid: "62731911"
   
  Le tableau suivant fournit le GUID et les valeurs de chaîne qui identifient cet ensemble de lignes.  
   
-|Argument|Value|  
+|Argument|Valeur|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML for Analysis Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
- [Utiliser des événements étendus SQL Server &#40;XEvents&#41; pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Ensembles de lignes de schéma XML for Analysis](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
+ [Utilisez SQL Server des événements étendus &#40;&#41; XEvents pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [Utilisez les vues de gestion dynamique &#40;les DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

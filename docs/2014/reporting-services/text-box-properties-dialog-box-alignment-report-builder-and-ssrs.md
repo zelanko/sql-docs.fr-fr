@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés du texte zone, alignement (Générateur de rapports et SSRS) | Microsoft Docs
+title: Boîte de dialogue Propriétés de la zone de texte, alignement (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 750a4cefffe2baaefadf7266e94800374834ad85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100530"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la zone de texte, Alignement (Générateur de rapports et SSRS)
@@ -25,22 +25,22 @@ ms.locfileid: "66100530"
   
 ## <a name="options"></a>Options  
  **Horizontal**  
- Spécifiez à quel endroit la valeur est positionnée horizontalement dans une cellule ou région de données sélectionnée. L'option **Par défaut** est sélectionnée par défaut. La valeur de l'option Par défaut est **Général**. Pour plus d’informations la façon dont l’alignement général du texte est calculé, consultez [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
+ Spécifiez à quel endroit la valeur est positionnée horizontalement dans une cellule ou région de données sélectionnée. L'option **Par défaut** est sélectionnée par défaut. La valeur de l'option Par défaut est **Général**. Pour plus d’informations la façon dont l’alignement général du texte est calculé, consultez [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression.  
   
- **Vertical**  
- Spécifiez à quel endroit la valeur est positionnée verticalement dans une cellule ou région de données sélectionnée. L'option **Par défaut** est sélectionnée par défaut. La valeur de l'option Par défaut est **Haut**. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
+ **Barr**  
+ Spécifiez à quel endroit la valeur est positionnée verticalement dans une cellule ou région de données sélectionnée. L'option **Par défaut** est sélectionnée par défaut. La valeur de l'option Par défaut est **Haut**. Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression.  
   
- **Left**  
- Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord gauche d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
+ **Gauche**  
+ Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord gauche d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression.  
   
- **Right**  
- Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord droit d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
+ **Oui**  
+ Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord droit d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression.  
   
- **Top**  
- Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord supérieur d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
+ **Retour au début**  
+ Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord supérieur d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression.  
   
- **Bottom**  
- Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord inférieur d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
+ **Bas**  
+ Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord inférieur d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   

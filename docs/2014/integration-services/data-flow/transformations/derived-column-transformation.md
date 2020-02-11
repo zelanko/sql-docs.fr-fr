@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900512"
 ---
 # <a name="derived-column-transformation"></a>Transformation de colonne dérivée
@@ -72,11 +72,11 @@ ms.locfileid: "62900512"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Dériver les valeurs de colonnes à l’aide de la transformation de colonne dérivée](derived-column-transformation.md)  
+-   [Dériver les valeurs de colonnes à l'aide de la transformation de colonne dérivée](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   
- Blog, [comment Split Column Data using SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
+ Blog, [comment fractionner des données de colonne à l’aide de SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
   
   

@@ -18,18 +18,18 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305220"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il existe deux files d'attente dans la messagerie de base de données : la file d'attente des messages et la file d'attente des états. La file d'attente des messages stocke les éléments de messagerie en attente d'envoi. La file d'attente des états stocke l'état des éléments qui ont déjà été envoyés. Cette procédure stockée permet d'afficher l'état de la file d'attente des messages ou des états. Si le paramètre **\@queue_type** n’est pas spécifié, la procédure stockée renvoie une ligne pour chacune des files d’attente.  
+  Il existe deux files d'attente dans la messagerie de base de données : la file d'attente des messages et la file d'attente des états. La file d'attente des messages stocke les éléments de messagerie en attente d'envoi. La file d'attente des états stocke l'état des éléments qui ont déjà été envoyés. Cette procédure stockée permet d'afficher l'état de la file d'attente des messages ou des états. Si le paramètre ** \@queue_type** n’est pas spécifié, la procédure stockée retourne une ligne pour chacune des files d’attente.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +39,23 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @queue_type = ] 'queue_type'` argument facultatif supprime les messages électroniques du type spécifié en tant que *queue_type*. *queue_type* est de type **nvarchar (6)** et n’a pas de valeur par défaut. Les entrées valides sont **mail** et **Status**.  
+`[ @queue_type = ] 'queue_type'`Argument facultatif supprime les messages électroniques du type spécifié en tant que *queue_type*. *queue_type* est de type **nvarchar (6)** sans valeur par défaut. Les entrées valides sont **mail** et **Status**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|Type de file d'attente. Les valeurs possibles sont **mail** et **Status**.|  
-|**length**|**Int**|Nombre d'éléments de messagerie dans la file d'attente spécifiée.|  
-|**state**|**nvarchar(64)**|État du moniteur. Les valeurs possibles sont **INactives** (la file d’attente est inactive), **notifiée** (la file d’attente a reçu l’accusé de réception d’une notification) et **RECEIVES_OCCURRING** (file d’attente de réception).|  
-|**last_empty_rowset_time**|**DATE/HEURE**|Date et heure à laquelle la file d'attente était vide pour la dernière fois. Format 24 heures et fuseau horaire GMT.|  
-|**last_activated_time**|**DATE/HEURE**|Date et heure de la dernière activation de la file d'attente. Format 24 heures et fuseau horaire GMT.|  
+|**queue_type**|**nvarchar (6)**|Type de file d'attente. Les valeurs possibles sont **mail** et **Status**.|  
+|**base**|**int**|Nombre d'éléments de messagerie dans la file d'attente spécifiée.|  
+|**Département**|**nvarchar (64)**|État du moniteur. Les valeurs possibles sont **INactives** (la file d’attente est inactive), **notifiée** (la file d’attente a reçu l’accusé de réception d’une notification) et **RECEIVES_OCCURRING** (file d’attente reçoit).|  
+|**last_empty_rowset_time**|**Date/heure**|Date et heure à laquelle la file d'attente était vide pour la dernière fois. Format 24 heures et fuseau horaire GMT.|  
+|**last_activated_time**|**Date/heure**|Date et heure de la dernière activation de la file d'attente. Format 24 heures et fuseau horaire GMT.|  
   
 ## <a name="remarks"></a>Notes  
- Lors de la résolution des Database Mail, utilisez **sysmail_help_queue_sp** pour afficher le nombre d’éléments dans la file d’attente, l’état de la file d’attente et la date de la dernière activation.  
+ Lors de la résolution des Database Mail, utilisez **sysmail_help_queue_sp** pour voir le nombre d’éléments dans la file d’attente, l’état de la file d’attente et la date de la dernière activation.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, seuls les membres du rôle serveur fixe **sysadmin** peuvent accéder à cette procédure.  

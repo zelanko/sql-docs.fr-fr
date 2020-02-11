@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468190"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
@@ -42,7 +42,7 @@ ms.locfileid: "62468190"
   
      Un modèle pour créer des tables optimisées en mémoire s'affiche.  
   
-2.  Pour remplacer les paramètres du modèle, cliquez sur **Spécifier les valeurs des paramètres du modèle** dans le menu **Requête** .  
+2.  Pour remplacer les paramètres du modèle, cliquez sur **Spécifier les valeurs des paramètres du modèle** dans le menu **Requête**.  
   
      Pour plus d’informations sur la manière d’utiliser les modèles, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62468190"
   
     -   Rapports  
   
-    -   Properties  
+    -   Propriétés  
   
     -   Tâche de base de données :  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62468190"
   
         -   Importez et exportez des données. Utilisez l’ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et l’option Copier les données à partir d’une ou plusieurs tables ou vues** . Si la table de destination est une table optimisée en mémoire qui n'existe pas dans la base de données de destination :  
   
-            1.  Dans l’**Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , dans l’écran **Spécifier la copie ou l’interrogation de table**, sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**. Ensuite, cliquez sur **Suivant**.  
+            1.  Dans l’**Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , dans l’écran **Spécifier la copie ou l’interrogation de table**, sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**. Cliquez ensuite sur **Suivant**.  
   
             2.  Cliquez sur **Modifier les mappages**. Sélectionnez ensuite **Créer la table de destination** puis cliquez sur **Modifier SQL**. Entrez la syntaxe CREATE TABLE pour créer une table optimisée en mémoire sur la base de données de destination. Cliquez sur **OK** et suivez les étapes restantes de l’Assistant.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62468190"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Fonctionnalités non prises en charge dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Pour les objets OLTP en mémoire, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ne prend pas en charge les fonctionnalités et les opérations qui ne sont pas non plus prises en charge par le moteur de base de données.  
   
- Pour plus d’informations sur la non prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités, consultez [pris en charge les fonctionnalités de SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités non prises en charge, consultez fonctionnalités de [SQL Server prises en](unsupported-sql-server-features-for-in-memory-oltp.md)charge.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge d'OLTP en mémoire par SQL Server](sql-server-support-for-in-memory-oltp.md)  

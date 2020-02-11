@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637657"
 ---
 # <a name="hello-world-ready-sample"></a>Exemple HelloWorldReady
@@ -30,12 +30,13 @@ ms.locfileid: "73637657"
   
  Le code source et l'assembly pour la procédure stockée CLR elle-même ne changent pas. Un script `build.cmd` est fourni, qui montre comment compiler et lier les assemblys de ressource. Bien que le code source pour l'application crée un gestionnaire de ressources basé sur l'assembly en cours d'exécution, vous n'avez pas à incorporer les ressources neutres de culture dans la DLL qui contient la procédure stockée. Le `System.Resources.NeutralResourcesLanguage attribute` permet aux ressources indépendantes de la culture d'exister dans une DLL satellite. Il est bien plus avantageux d'utiliser une DLL distincte à cet effet, de sorte qu'il ne soit pas nécessaire de modifier la DLL principale contenant la procédure stockée CLR lorsqu'un texte localisé doit être ajouté ou modifié. Cela set particulièrement utile pour les types clr définis par l'utilisateur qui peuvent avoir des colonnes et d'autres dépendances qui rendraient la suppression et le rajout du type difficiles à effectuer. Généralement, les versions de DLL satellites doivent être identiques à la version d'assembly principale. Toutefois, vous pouvez utiliser l'attribut `SatelliteContractVersion` pour permettre une mise à jour de l'assembly principal sans mise à jour des assemblys satellites. Pour plus d'informations, consultez la classe `ResourceManager` dans la documentation Microsoft .NET.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Cet exemple fonctionne uniquement avec SQL Server 2005 et les versions ultérieures.  
   
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -74,11 +75,11 @@ ms.locfileid: "73637657"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `HelloWorld.vb` (pour l'exemple Visual Basic) ou `HelloWorld.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `HelloWorld.vb` (pour l'exemple Visual Basic) ou `HelloWorld.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Dans c:\MySample, créez le fichier `messages.resx` et copiez l'exemple de code C# dans le fichier.  
   
-5.  Dans c:\MySample, créez le fichier `messages.de.resx` en enregistrant le fichier `messages.resx` comme `messages.de.resx` après avoir modifié la ligne  
+5.  Dans c:\MySample, créez le fichier `messages.de.resx` en enregistrant le `messages.resx` fichier `messages.de.resx` comme après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +87,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  Dans c:\MySample, créez le fichier `messages.es.resx` en enregistrant le fichier `messages.resx` comme `messages.es.resx` après avoir modifié la ligne  
+6.  Dans c:\MySample, créez le fichier `messages.es.resx` en enregistrant le `messages.resx` fichier `messages.es.resx` comme après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +95,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  Dans c:\MySample, créez le fichier `messages.fr.resx` en enregistrant le fichier `messages.resx` comme `messages.fr.resx` après avoir modifié la ligne  
+7.  Dans c:\MySample, créez le fichier `messages.fr.resx` en enregistrant le `messages.resx` fichier `messages.fr.resx` comme après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +103,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  Dans c:\MySample, créez le fichier `messages.fr-FR.resx` en enregistrant le fichier `messages.resx` comme `messages.fr-FR.resx` après avoir modifié la ligne  
+8.  Dans c:\MySample, créez le fichier `messages.fr-FR.resx` en enregistrant le `messages.resx` fichier `messages.fr-FR.resx` comme après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +111,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. Dans c:\MySample, créez le fichier `messages.it.resx` en enregistrant le fichier `messages.resx` comme `messages.it.resx` après avoir modifié la ligne  
+9. Dans c:\MySample, créez le fichier `messages.it.resx` en enregistrant le `messages.resx` fichier `messages.it.resx` comme après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +119,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. Dans c:\MySample, créez le fichier `messages.ja.resx` en enregistrant le fichier `messages.resx` comme `messages.ja.resx` après avoir modifié la ligne  
+10. Dans c:\MySample, créez le fichier `messages.ja.resx` en enregistrant le `messages.resx` fichier `messages.ja.resx` comme après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -451,6 +452,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

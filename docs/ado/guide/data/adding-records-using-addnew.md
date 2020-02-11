@@ -15,24 +15,24 @@ ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926280"
 ---
-# <a name="adding-records-using-addnew-method"></a>Ajout d’enregistrements à l’aide de AddNew (méthode)
-Voici la syntaxe de base de la **AddNew** méthode :
+# <a name="adding-records-using-addnew-method"></a>Ajout d’enregistrements à l’aide de la méthode AddNew
+Il s’agit de la syntaxe de base de la méthode **AddNew** :
 
- *jeu d’enregistrements*. AddNew *FieldList*, *valeurs*
+ *Recordset*. *Valeurs* du *FieldList*AddNew
 
- Le *FieldList* et *valeurs* arguments sont facultatifs. *Liste de champs* est un nom unique ou un tableau de noms ou les positions ordinales des champs dans le nouvel enregistrement.
+ Les arguments *FieldList* et *values* sont facultatifs. *FieldList* est un nom unique ou un tableau de noms ou de positions ordinales des champs dans le nouvel enregistrement.
 
- Le *valeurs* argument est une valeur unique ou un tableau de valeurs pour les champs dans le nouvel enregistrement.
+ L’argument *valeurs* est soit une valeur unique, soit un tableau de valeurs pour les champs dans le nouvel enregistrement.
 
- En règle générale, lorsque vous envisagez d’ajouter un enregistrement unique, vous appellerez la **AddNew** méthode sans aucun argument. Plus précisément, vous appellerez **AddNew**; définissez le **valeur** de chaque champ dans le nouvel enregistrement ; puis appelez **mise à jour** ou **UpdateBatch**, ou les deux. Vous pouvez vous assurer que votre **Recordset** prend en charge l’ajout de nouveaux enregistrements à l’aide de la **prend en charge** propriété avec le **adAddNew** constante énumérée.
+ En règle générale, lorsque vous envisagez d’ajouter un seul enregistrement, vous devez appeler la méthode **AddNew** sans aucun argument. Plus précisément, vous allez appeler **AddNew**. Définissez la **valeur** de chaque champ dans le nouvel enregistrement. puis appelez **Update** ou **UpdateBatch**, ou les deux. Vous pouvez vous assurer que votre **Recordset** prend en charge l’ajout de nouveaux enregistrements à l’aide de la propriété **supports** avec la constante énumérée **adAddNew** .
 
- Le code suivant utilise cette technique pour ajouter un nouvel expéditeur à l’exemple **Recordset**. SQL Server fournit la valeur du champ n° messager automatiquement. Par conséquent, le code ne tente pas de fournir une valeur de champ pour les nouveaux enregistrements.
+ Le code suivant utilise cette technique pour ajouter un nouvel expéditeur à l’exemple d' **objet Recordset**. SQL Server fournit automatiquement la valeur du champ ShipperID. Par conséquent, le code ne tente pas de fournir une valeur de champ pour les nouveaux enregistrements.
 
 ```
 'BeginAddNew1.1
@@ -48,4 +48,4 @@ End If
 ```
 
 ## <a name="remarks"></a>Notes
- Étant donné que ce code utilise un déconnecté **Recordset** avec un curseur côté client en mode batch, vous devez reconnecter le **Recordset** à la source de données avec un nouveau **connexion** objet avant de pouvoir appeler le **UpdateBatch** méthode pour valider les modifications apportées à la base de données. Ceci se fait facilement à l’aide de la nouvelle fonction **GetNewConnection**.
+ Étant donné que ce code utilise un **jeu d’enregistrements** déconnecté avec un curseur côté client en mode batch, vous devez reconnecter le **Recordset** à la source de données avec un nouvel objet de **connexion** avant de pouvoir appeler la méthode **UpdateBatch** pour envoyer des modifications à la base de données. Pour ce faire, vous utilisez la nouvelle fonction **GetNewConnection**.

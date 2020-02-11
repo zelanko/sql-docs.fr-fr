@@ -14,10 +14,10 @@ ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 74a2b9a825b9e589cba9416eb932bcb824f00373
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728325"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Supprimer une hiérarchie explicite (Master Data Services)
@@ -44,7 +44,7 @@ ms.locfileid: "73728325"
   
 3.  Dans la grille de la page **Gérer l’entité** , sélectionnez la ligne de l’entité qui contient la hiérarchie explicite à supprimer.  
   
-4.  Cliquez sur **Hiérarchies explicites**.  
+4.  Cliquez sur **hiérarchies explicites**.  
   
 5.  Dans la page **Gérer la hiérarchie explicite** , cliquez sur la hiérarchie explicite à supprimer.  
   

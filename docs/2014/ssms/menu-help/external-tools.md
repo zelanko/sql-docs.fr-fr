@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62649691"
 ---
 # <a name="external-tools"></a>Outils externes
@@ -38,7 +38,7 @@ ms.locfileid: "62649691"
  **Supprimer**  
  Supprime l'outil ou la commande de la liste **Contenu du menu** , ainsi que du menu **Outils** .  
   
- **Title**  
+ **Titre**  
  Nom sous lequel l'outil ou la commande sera affiché dans le sous-menu **Outils externes** du menu **Outils** . Faites précéder une des lettres de ce nom du caractère &amp; pour l'utiliser comme touche d'accès rapide de l'outil. Par exemple, `&Spy++` s'afficherait sous la forme **Spy++** dans le menu **Outils** .  
   
  **Commande**  
@@ -70,9 +70,9 @@ ms.locfileid: "62649691"
   
 2.  Dans la zone **Titre** , tapez **Gestionnaire de configuration SQL Server**.  
   
-3.  Dans le **commande** , tapez le chemin d’accès à la [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console de gestion exécutable, telles que `C:\WINNT\system32\mmc.exe`  
+3.  Dans la zone **commande** , tapez le chemin d’accès [!INCLUDE[msCoName](../../includes/msconame-md.md)] à l’exécutable de la console de gestion, par exemple`C:\WINNT\system32\mmc.exe`  
   
-4.  Dans le **Arguments** , tapez le chemin d’accès au fichier .msc, tel que `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  Dans la zone **arguments** , tapez le chemin d’accès au fichier. msc, par exemple`"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  Affichez les propriétés du raccourci de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans le menu **Démarrer** pour vérifier l'emplacement des fichiers sur votre ordinateur.  

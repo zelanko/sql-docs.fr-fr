@@ -10,20 +10,21 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637718"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928102"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Exemple de manipulation de chaînes sensible aux caractères supplémentaires
-  Cet exemple pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illustre un traitement de chaînes sensible aux caractères supplémentaires. Cet exemple illustre l'implémentation de cinq fonctions de chaîne Transact-SQL qui procurent les mêmes fonctions de manipulation de chaînes que les fonctions intégrées, mais avec une capacité additionnelle autorisant la gestion des chaînes de caractères Unicode et supplémentaires. Les cinq fonctions sont Lens (), `lefts(), rights(), subs()` et `replace_s()` qui sont équivalentes aux fonctions intégrées `LEN(), LEFT(), RIGHT(), SUBSTRING()` et `REPLACE()` fonctions de chaîne.  
+  Cet exemple pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illustre un traitement de chaînes sensible aux caractères supplémentaires. Cet exemple illustre l'implémentation de cinq fonctions de chaîne Transact-SQL qui procurent les mêmes fonctions de manipulation de chaînes que les fonctions intégrées, mais avec une capacité additionnelle autorisant la gestion des chaînes de caractères Unicode et supplémentaires. Les cinq fonctions sont Lens ( `lefts(), rights(), subs()` ) et `replace_s()` sont équivalentes aux fonctions intégrées `LEN(), LEFT(), RIGHT(), SUBSTRING()` et `REPLACE()` aux fonctions de chaîne.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -151,7 +152,7 @@ if (length < 0)
             if ((start + length) <= 1)  
                 return (String.Empty);  
   
-// The 2 if statements below guarentee that the result will match the substring function in   
+// The 2 if statements below guarantee that the result will match the substring function in   
 // Transact-SQL which will initialize start to 1 by subtracting from the length.  
             if (start <= 0 && length > 0)  
                 length--;  
@@ -352,7 +353,7 @@ Public NotInheritable Class SurrogateStringFunction
             Return String.Empty  
         End If  
   
-        ' The 2 if statements below guarentee that the result will match the substring function in   
+        ' The 2 if statements below guarantee that the result will match the substring function in   
         ' Transact-SQL which will initialize start to 1 by subtracting from the length.  
         If start <= 0 AndAlso length > 0 Then  
             length -= 1  
@@ -686,6 +687,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

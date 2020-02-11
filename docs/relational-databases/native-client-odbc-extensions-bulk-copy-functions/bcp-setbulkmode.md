@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782397"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -43,7 +43,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  Descripteur de connexion ODBC compatible avec la copie en bloc.  
   
- *property*  
+ *propriété*  
  Constante de type BYTE. Consultez le tableau dans la section Notes pour obtenir une liste des constantes.  
   
  *pField*  
@@ -58,7 +58,7 @@ RETCODE bcp_setbulkmode (
  *cbRow*  
  Longueur, en octets, de la valeur de marque de fin de ligne.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL  
   
 ## <a name="remarks"></a>Notes  
@@ -285,6 +285,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

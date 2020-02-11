@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 58209d617d7978ff4ed6da486bd5c89c076c05af
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787411"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -40,7 +40,7 @@ ms.locfileid: "73787411"
 |Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retourne SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR pour les types de données **varchar (max)** .|  
-|TYPE_NAME|Retourne "varchar", "varbinary" ou "nvarchar" pour les types de données **varchar (max)** , **varbinary (max)** et **nvarchar (max)** .|  
+|TYPE_NAME|Retourne "varchar", "varbinary" ou "nvarchar" pour les types de données **varchar (max)**, **varbinary (max)** et **nvarchar (max)** .|  
 |COLUMN_SIZE|Retourne SQL_SS_LENGTH_UNLIMITED pour les types de données **varchar (max)** indiquant que la taille de la colonne est illimitée.|  
 |BUFFER_LENGTH|Retourne SQL_SS_LENGTH_UNLIMITED pour les types de données **varchar (max)** indiquant que la taille de la mémoire tampon est illimitée.|  
 |SQL_DATA_TYPE|Retourne SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR pour les types de données **varchar (max)** .|  
@@ -56,42 +56,42 @@ ms.locfileid: "73787411"
   
  Pour le type UDT des paramètres, vous pouvez utiliser les nouveaux descripteurs spécifiques au pilote définis ci-dessus pour obtenir ou définir les propriétés de métadonnées supplémentaires d'un UDT, si le serveur retourne ou nécessite ces informations.  
   
- Lorsqu’un client se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et appelle SQLColumns, l’utilisation de valeurs NULL ou de caractères génériques pour le paramètre d’entrée de catalogue ne retourne pas d’informations à partir d’autres catalogues. Seules les informations sur le catalogue actuel sont retournées. Le client peut tout d’abord appeler SQLTables pour déterminer dans quel catalogue se trouve la table souhaitée. Le client peut ensuite utiliser cette valeur de catalogue pour le paramètre d’entrée de catalogue dans son appel à SQLColumns pour extraire des informations sur les colonnes de cette table.  
+ Lorsqu’un client se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLColumns, l’utilisation de valeurs null ou de caractères génériques pour le paramètre d’entrée de catalogue ne retourne pas d’informations à partir d’autres catalogues. Seules les informations sur le catalogue actuel sont retournées. Le client peut tout d’abord appeler SQLTables pour déterminer dans quel catalogue se trouve la table souhaitée. Le client peut ensuite utiliser cette valeur de catalogue pour le paramètre d’entrée de catalogue dans son appel à SQLColumns pour extraire des informations sur les colonnes de cette table.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns et paramètres table  
  Le jeu de résultats retourné par SQLColumns dépend du paramètre de SQL_SOPT_SS_NAME_SCOPE. Pour plus d’informations, consultez [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Les colonnes suivantes ont été ajoutées pour les paramètres table :  
   
-|Nom de la colonne|Type de données|Sommaire|  
+|Nom de la colonne|Type de données|Contents|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Pour une colonne d'un TABLE_TYPE, SQL_TRUE si la colonne est une colonne calculée ; sinon, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE si la colonne est une colonne d'identité ; sinon, SQL_FALSE.|  
   
- Pour plus d’informations sur les paramètres table, consultez [ &#40;&#41;ODBC Table-valued Parameters](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>Prise en charge par SQLColumns des fonctionnalités de date et heure améliorées  
  Pour plus d’informations sur les valeurs retournées pour les types date/heure, consultez [métadonnées de catalogue](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Pour plus d’informations, consultez [améliorations &#40;de la date&#41;et de l’heure ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Prise en charge SQLColumns pour les types CLR volumineux définis par l'utilisateur  
- **SQLColumns** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types &#40;CLR volumineux définis par l'&#41;utilisateur ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColumns** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Prise en charge SQLColumns pour les colonnes éparses  
- Deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des colonnes spécifiques ont été ajoutées au jeu de résultats pour SQLColumns :  
+ Deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonnes spécifiques ont été ajoutées au jeu de résultats pour SQLColumns :  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Si la colonne est une colonne éparse, SQL_TRUE ; sinon, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Si la colonne est la colonne **column_set** , il s’agit de SQL_TRUE ; Sinon, SQL_FALSE.|  
   
- En conformité avec la spécification ODBC, SS_IS_SPARSE et SS_IS_COLUMN_SET apparaissent avant toutes les colonnes spécifiques au pilote qui ont été ajoutées aux versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], et après que toutes les colonnes ont été imposées par ODBC lui-même.  
+ En conformité avec la spécification ODBC, SS_IS_SPARSE et SS_IS_COLUMN_SET apparaissent avant toutes les colonnes spécifiques au pilote qui ont été ajoutées aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], et après toutes les colonnes mandatées par ODBC lui-même.  
   
  Le jeu de résultats retourné par SQLColumns dépend du paramètre de SQL_SOPT_SS_NAME_SCOPE. Pour plus d’informations, consultez [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
- Pour plus d’informations sur les colonnes éparses dans ODBC, consultez [colonnes éparses prennent en charge &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Pour plus d’informations sur les colonnes éparses dans ODBC, consultez [prise en charge des colonnes éparses &#40;odbc&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonction SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

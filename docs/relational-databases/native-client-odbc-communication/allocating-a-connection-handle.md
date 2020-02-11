@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 877e86886e8a11b494120c6b0436206779904613
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785011"
 ---
 # <a name="allocating-a-connection-handle"></a>Allocation d'un handle de connexion
@@ -39,7 +39,7 @@ ms.locfileid: "73785011"
   
  Les applications s'exécutant sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou version ultérieure peuvent améliorer leurs performances en réinitialisant la taille du paquet réseau du flux TDS (Tabular Data Stream). La taille du paquet par défaut est définie au niveau du serveur avec la valeur 4 Ko. Une taille de paquet comprise entre 4 Ko et 8 Ko offre généralement les meilleures performances. Si les tests indiquent qu'une taille de paquet différente offre de meilleures performances, l'application peut réinitialiser la taille du paquet. Les applications ODBC peuvent effectuer cette opération avant de se connecter en appelant **SQLSetConnectAttr** avec l’option SQL_ATTR_PACKET_SIZE. Certaines applications fonctionnent mieux avec une taille de paquet plus grande, mais les gains en termes de performances sont généralement minimes pour les tailles de paquet supérieures à 8 Ko.  
   
- Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dispose d’un certain nombre d’attributs de connexion étendus qu’une application peut utiliser pour augmenter ses fonctionnalités. Certains de ces attributs contrôlent les mêmes options que celles qui peuvent être spécifiées dans les sources de données et qui sont utilisées pour remplacer n'importe quelle option définie dans une source de données. Par exemple, si une application utilise des identificateurs entre guillemets, elle peut attribuer à l'attribut SQL_COPT_SS_QUOTED_IDENT spécifique au pilote la valeur SQL_QI_ON pour faire en sorte que cette option soit toujours définie indépendamment du paramètre dans une source de données quelconque.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client possède un certain nombre d’attributs de connexion étendus qu’une application peut utiliser pour augmenter ses fonctionnalités. Certains de ces attributs contrôlent les mêmes options que celles qui peuvent être spécifiées dans les sources de données et qui sont utilisées pour remplacer n'importe quelle option définie dans une source de données. Par exemple, si une application utilise des identificateurs entre guillemets, elle peut attribuer à l'attribut SQL_COPT_SS_QUOTED_IDENT spécifique au pilote la valeur SQL_QI_ON pour faire en sorte que cette option soit toujours définie indépendamment du paramètre dans une source de données quelconque.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Communication avec SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  

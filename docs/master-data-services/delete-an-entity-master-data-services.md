@@ -14,10 +14,10 @@ ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1fa2f891c4f5fc0d582b341ce1000d407fef743b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729474"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Supprimer une entité (Master Data Services)

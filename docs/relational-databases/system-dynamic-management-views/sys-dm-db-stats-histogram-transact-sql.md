@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096254"
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
+# <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Retourne l’histogramme des statistiques pour l’objet de base de données spécifiée (table ou vue indexée) dans le courant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Similaire à `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
+Retourne l’histogramme des statistiques pour l’objet de base de données spécifié (table ou vue indexée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) dans la base de données actuelle. Semblable à `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> Ce DMF est disponible à partir de [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+> Ce DMF est disponible à partir [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] de SP1 Cu2
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,29 +43,29 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>Arguments  
  *object_id*  
- ID de l'objet dans la base de données active dont les propriétés d'une de ses statistiques sont demandées. *l’object_id* est **int**.  
+ ID de l'objet dans la base de données active dont les propriétés d'une de ses statistiques sont demandées. *object_id* est de **type int**.  
   
  *stats_id*  
- ID des statistiques pour *l’object_id*. spécifié. L’ID des statistiques peut être obtenu à partir de la vue de gestion dynamique [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* correspond à **int**.  
+ ID des statistiques pour *l’object_id*. spécifié. L’ID des statistiques peut être obtenu à partir de la vue de gestion dynamique [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* est de **type int**.  
   
 ## <a name="table-returned"></a>Table retournée  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|ID de l'objet (table ou vue indexée) pour lequel retourner les propriétés de l'objet de statistiques.|  
-|stats_id |**Int**|ID de l'objet de statistiques. Unique dans la table ou la vue indexée. Pour plus d’informations, consultez [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|step_number |**int** |Nombre d’étape dans l’histogramme. |
+|stats_id |**int**|ID de l'objet de statistiques. Unique dans la table ou la vue indexée. Pour plus d’informations, consultez [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
+|step_number |**int** |Nombre d’étapes dans l’histogramme. |
 |range_high_key |**sql_variant** |Valeur de colonne de limite supérieure pour une étape d'histogramme. La valeur de colonne est également appelée « valeur de clé ».|
-|RANGE_ROWS |**real** |Nombre estimé de lignes dont la valeur de colonne est comprise dans une étape d'histogramme, à l'exception de la limite supérieure. |
+|range_rows |**real** |Nombre estimé de lignes dont la valeur de colonne est comprise dans une étape d'histogramme, à l'exception de la limite supérieure. |
 |equal_rows |**real** |Nombre estimé de lignes dont la valeur de colonne est égale à la limite supérieure de l'étape d'histogramme. |
-|DISTINCT_RANGE_ROWS |**bigint** |Nombre estimé de lignes ayant une valeur de colonne distincte dans une étape d'histogramme, à l'exception de la limite supérieure. |
-|average_range_rows |**real** |Nombre moyen de lignes avec des valeurs de colonne en double dans une étape d’histogramme, à l’exclusion de la limite supérieure (`RANGE_ROWS / DISTINCT_RANGE_ROWS` pour `DISTINCT_RANGE_ROWS > 0`). |
+|distinct_range_rows |**bigint** |Nombre estimé de lignes ayant une valeur de colonne distincte dans une étape d'histogramme, à l'exception de la limite supérieure. |
+|average_range_rows |**real** |Nombre moyen de lignes avec des valeurs de colonnes dupliquées dans une étape d’histogramme, à`RANGE_ROWS / DISTINCT_RANGE_ROWS` l' `DISTINCT_RANGE_ROWS > 0`exception de la limite supérieure (pour). |
   
  ## <a name="remarks"></a>Notes  
  
- Le jeu de résultats pour `sys.dm_db_stats_histogram` renvoie des informations semblables à `DBCC SHOW_STATISTICS WITH HISTOGRAM` et inclut également `object_id`, `stats_id`, et `step_number`.
+ Le ResultSet pour `sys.dm_db_stats_histogram` retourne des informations semblables `DBCC SHOW_STATISTICS WITH HISTOGRAM` à et comprend `object_id`également `stats_id`, et `step_number`.
 
- Étant donné que la colonne `range_high_key` est une données sql_variant type, vous devrez peut-être utiliser `CAST` ou `CONVERT` si un prédicat effectue la comparaison avec une constante non chaîne.
+ Étant donné que `range_high_key` la colonne est un type de données sql_variant, vous devrez `CAST` peut `CONVERT` -être utiliser ou si un prédicat effectue une comparaison avec une constante qui n’est pas une chaîne.
 
 ### <a name="histogram"></a>Histogramme
   
@@ -75,7 +75,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  Le diagramme suivant illustre un histogramme avec six étapes : La zone située à gauche de la première valeur limite supérieure représente la première étape.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramme")  
+ ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
   
  Pour chaque étape d'histogramme :  
   
@@ -93,8 +93,8 @@ L'utilisateur doit avoir sélectionné des autorisations sur les colonnes de sta
 
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-simple-example"></a>A. Exemple simple    
-L’exemple suivant crée et remplit une table simple. Puis crée des statistiques sur les `Country_Name` colonne.
+### <a name="a-simple-example"></a>R. Exemple simple    
+L’exemple suivant crée et remplit une table simple. Crée ensuite des statistiques sur `Country_Name` la colonne.
 
 ```sql
 CREATE TABLE Country
@@ -105,12 +105,12 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-La clé primaire occupe `stat_id` le numéro 1, appelez `sys.dm_db_stats_histogram` pour `stat_id` numéro 2, pour retourner l’histogramme des statistiques pour la `Country` table.    
+La clé primaire occupe `stat_id` le nombre 1, donc `sys.dm_db_stats_histogram` appelez `stat_id` pour le numéro 2 pour retourner l’histogramme des statistiques `Country` de la table.    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>B. Requêtes utiles :   
+### <a name="b-useful-query"></a>B. Requête utile :   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -119,15 +119,15 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. Requêtes utiles :
-L’exemple suivant sélectionne à partir de la table `Country` avec un prédicat sur la colonne `Country_Name`.
+### <a name="c-useful-query"></a>C. Requête utile :
+L’exemple suivant sélectionne une table `Country` avec un prédicat sur la colonne `Country_Name`.
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-L’exemple suivant examine la statistique créée précédemment sur la table `Country` et à la colonne `Country_Name` pour l’étape d’histogramme qui correspondent au prédicat dans la requête ci-dessus.
+L’exemple suivant examine la statistique créée précédemment sur la table `Country` et la `Country_Name` colonne pour l’étape d’histogramme correspondant au prédicat dans la requête ci-dessus.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
@@ -146,5 +146,5 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
   
 ## <a name="see-also"></a>Voir aussi  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
-[Fonctions (Transact-SQL) et les vues de gestion dynamique liées aux objets](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
+[Fonctions et vues de gestion dynamique relatives aux objets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056613"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrer des SQL Server locaux ou des SQL Server sur des machines virtuelles Azure vers Azure SQL Database à l’aide de la Assistant Migration de données
@@ -27,13 +27,13 @@ Le Assistant Migration de données fournit des évaluations transcohérentes de 
 
 Cet article fournit des instructions pas à pas pour migrer SQL Server site local vers Azure SQL Database à l’aide de l’Assistant Migration de données.
 
-## <a name="create-a-new-migration-project"></a>Créer un projet de migration
+## <a name="create-a-new-migration-project"></a>Créer un nouveau projet de migration
 
 1. Dans le volet gauche, sélectionnez **nouveau** (+), puis sélectionnez le type de projet **migration** .
 
 2. Définissez le type de source sur **SQL Server** et le type de serveur cible sur **Azure SQL Database**.
 
-3. Sélectionnez **Créer**.
+3. Sélectionnez **Create** (Créer).
 
    ![Créer un projet de migration](../dma/media/NewCreate1.png)
 
@@ -48,7 +48,7 @@ Cet article fournit des instructions pas à pas pour migrer SQL Server site loca
 
     ![Sélectionner le serveur source](../dma/media/select-source-server.png)
 
-3. Sélectionnez **Se connecter**.
+3. Sélectionnez **Connecter**.
 
 4. Sélectionnez une base de données source unique à migrer vers Azure SQL Database.
 
@@ -70,7 +70,7 @@ Cet article fournit des instructions pas à pas pour migrer SQL Server site loca
 
      ![Sélectionner le serveur cible](../dma/media/select-target-server.png)
 
-3. Sélectionnez **Se connecter**.
+3. Sélectionnez **Connecter**.
 
 4. Sélectionnez une base de données cible unique vers laquelle effectuer la migration.
 
@@ -116,10 +116,10 @@ Cet article fournit des instructions pas à pas pour migrer SQL Server site loca
 
 L’écran final indique l’état global.
 
-   ![État de la migration](../dma/media/migration-status.png) 
+   ![état de la migration](../dma/media/migration-status.png) 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Assistant Migration de données (DMA)](../dma/dma-overview.md)
+* [Assistant Migration de données (DMA)](../dma/dma-overview.md)
 * [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)
 * [Assistant Migration de données : meilleures pratiques](../dma/dma-bestpractices.md)

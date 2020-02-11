@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918575"
 ---
 # <a name="set-or-change-the-server-collation"></a>Définir ou changer le classement du serveur
@@ -28,11 +28,11 @@ ms.locfileid: "62918575"
   
 -   Vérifiez que vous disposez de toutes les informations ou de tous les scripts nécessaires pour recréer vos bases de données utilisateur et les objets qu'elles contiennent.  
   
--   Exportez toutes vos données à l’aide d’un outil tel que l’[utilitaire bcp](../../tools/bcp-utility.md). Pour plus d’informations, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+-   Exportez toutes vos données à l’aide d’un outil tel que l’ [utilitaire bcp](../../tools/bcp-utility.md). Pour plus d’informations, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
 -   Supprimez toutes les bases de données utilisateur.  
   
--   Recréez la base de données MASTER en spécifiant le nouveau classement dans la propriété SQLCOLLATION de la commande **setup** . Exemple :  
+-   Recréez la base de données MASTER en spécifiant le nouveau classement dans la propriété SQLCOLLATION de la commande **setup** . Par exemple :  
   
     ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
@@ -50,7 +50,7 @@ ms.locfileid: "62918575"
 >  Au lieu de changer le classement par défaut d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez spécifier un classement par défaut pour chaque nouvelle base de données que vous créez.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
+ [Prise en charge d'Unicode et du classement](collation-and-unicode-support.md)   
  [Définir ou modifier le classement de la base de données](set-or-change-the-database-collation.md)   
  [Définir ou modifier le classement des colonnes](set-or-change-the-column-collation.md)   
  [Reconstruire des bases de données système](../databases/system-databases.md)  

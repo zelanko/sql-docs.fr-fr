@@ -13,10 +13,10 @@ ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ac272f3087d970c22d30fd3d4b9f105855d783f9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728661"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Modifier le nom d'une hiérarchie dérivée (Master Data Services)

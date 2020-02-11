@@ -13,10 +13,10 @@ ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d74ce56cb1289e218d65370cd6de8fef653e462a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729697"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Modifier le nom d'une version (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "73729697"
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Gestion des versions. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Gestion des versions. Pour plus d’informations, consultez [autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 ### <a name="to-change-the-version-name"></a>Pour changer le nom de version  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73729697"
 ## <a name="see-also"></a>Voir aussi  
  [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Verrouiller une version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
- [Activer une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
+ [Valider une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

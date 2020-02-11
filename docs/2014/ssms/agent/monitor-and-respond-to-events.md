@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720129"
 ---
 # <a name="monitor-and-respond-to-events"></a>Surveiller et répondre aux événements
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut surveiller les *événements*et répondre automatiquement à ces derniers, par exemple des messages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], des conditions de performances particulières et des événements WMI (Windows Management Instrumentation).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L’agent peut surveiller et répondre automatiquement aux *événements*, tels que les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]messages de, les conditions de performances spécifiques et les événements de Windows Management Instrumentation (WMI).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Alertes](alerts.md)  
@@ -44,11 +44,13 @@ ms.locfileid: "62720129"
 ## <a name="about-monitoring-and-responding-to-events"></a>À propos de la surveillance et de la réponse aux événements  
  Les réponses automatiques aux événements sont appelées *alertes*. Vous pouvez définir une alerte sur un ou plusieurs événements pour spécifier la façon dont vous voulez que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y réponde lorsqu'ils se produisent. Une alerte peut répondre à un événement en notifiant un administrateur ou en exécutant un travail, ou les deux. Une alerte peut également transmettre un événement au journal des applications Microsoft Windows d'un autre ordinateur. Par exemple, vous pouvez spécifier qu'un opérateur soit notifié immédiatement si un événement de gravité 19 se produit. En définissant des alertes, les administrateurs de bases de données peuvent surveiller et gérer plus efficacement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne répond qu’aux événements pour lesquels une alerte a été définie. La méthode qu'utilise l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour surveiller les événements dépend du type d'événement.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne répond qu’aux événements pour lesquels une alerte a été définie. La méthode qu'utilise l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour surveiller les événements dépend du type d'événement.  
   
  Lorsqu'une alerte de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est définie sur un compteur de performance, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le surveille directement. Pour un événement WMI, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inscrit une requête d'événement pour cet événement.  
   
- Pour répondre aux messages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surveille le journal des applications Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne peut répondre qu’aux messages qui apparaissent dans ce journal. Par défaut, SQL Server enregistre les événements suivants dans le journal des applications Windows :  
+ Pour répondre aux messages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surveille le journal des applications Windows. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne peut répondre qu’aux messages qui apparaissent dans ce journal. Par défaut, SQL Server enregistre les événements suivants dans le journal des applications Windows :  
   
 -   Erreurs sysmessages dont le niveau de gravité est supérieur ou égal à 19.  
   

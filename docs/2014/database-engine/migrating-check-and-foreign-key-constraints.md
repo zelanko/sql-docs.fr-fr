@@ -1,5 +1,5 @@
 ---
-title: Vérification de la migration et les contraintes de clé étrangère | Microsoft Docs
+title: Migration des contraintes de vérification et de clé étrangère | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774929"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migration des contraintes de validation et de clé étrangère

@@ -16,29 +16,29 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138911"
 ---
 # <a name="interface-conformance-levels"></a>Niveaux de conformité de l’interface
-L’objectif de l’audit consiste à informer l’application quelles fonctionnalités sont disponibles à ce dernier à partir du pilote. Un schéma audit basé sur les fonctions ne pas suffisamment à atteindre cet objectif. Dans ODBC 3. *x*, pilotes sont classées selon les fonctionnalités qu’ils possèdent. Prise en charge la fonctionnalité peut inclure la prise en charge de la fonction ; Il peut également inclure la prise en charge d’un champ de descripteur, un attribut d’instruction, une valeur « Y » pour un type d’informations retourné par **SQLGetInfo**, et ainsi de suite.  
+L’objectif de l’audit est d’informer l’application des fonctionnalités qui lui sont disponibles à partir du pilote. Un schéma de nivellement basé sur des fonctions n’atteint pas suffisamment cet objectif. Dans ODBC 3. *x*, les pilotes sont classés en fonction des fonctionnalités qu’ils possèdent. La prise en charge de la fonctionnalité peut inclure la prise en charge de la fonction. Il peut également inclure la prise en charge d’un champ de descripteur, d’un attribut d’instruction, d’une valeur « Y » pour un type d’informations retourné par **SQLGetInfo**, et ainsi de suite.  
   
- Pour simplifier la spécification de la conformité de l’interface, ODBC définit trois niveaux de conformité. Pour répondre à un niveau de conformité spécifique, un pilote doit satisfaire toutes les exigences de ce niveau de conformité. La mise en conformité avec un niveau donné implique la mise en conformité complète avec tous les niveaux inférieurs.  
+ Pour simplifier la spécification de la conformité de l’interface, ODBC définit trois niveaux de conformité. Pour atteindre un niveau de conformité particulier, un pilote doit satisfaire à toutes les exigences de ce niveau de conformité. La conformité avec un niveau donné implique une conformité complète avec tous les niveaux inférieurs.  
   
- Niveaux de conformité ne pas toujours diviser clairement la prise en charge pour une liste spécifique de fonctions ODBC, mais spécifient les fonctionnalités prises en charge comme indiqué dans les sections suivantes. Pour prendre en charge une fonctionnalité, un pilote doit prendre en charge certains ou tous les formulaires d’appels à certaines fonctions ODBC (pour plus d’informations, consultez [fonction conformité](../../../odbc/reference/develop-app/function-conformance.md)), définissant certains attributs (voir [conformité des attributs ](../../../odbc/reference/develop-app/attribute-conformance.md)) et certains champs de descripteur (consultez [conformité des champs de descripteur](../../../odbc/reference/develop-app/descriptor-field-conformance.md)).  
+ Les niveaux de conformité ne se divisent pas toujours clairement en prise en charge d’une liste spécifique de fonctions ODBC, mais spécifient les fonctionnalités prises en charge, comme indiqué dans les sections suivantes. Pour assurer la prise en charge d’une fonctionnalité, un pilote doit prendre en charge une partie ou l’ensemble des types d’appels à certaines fonctions ODBC (pour plus d’informations, consultez [conformité](../../../odbc/reference/develop-app/function-conformance.md)aux fonctions), définir certains attributs (voir [conformité aux attributs](../../../odbc/reference/develop-app/attribute-conformance.md)) et certains champs de descripteur (voir conformité au [champ du descripteur](../../../odbc/reference/develop-app/descriptor-field-conformance.md)).  
   
- L’application détecte un niveau de conformité d’interface d’un pilote en se connectant à une source de données et en appelant **SQLGetInfo** avec l’option SQL_ODBC_INTERFACE_CONFORMANCE.  
+ L’application Découvre le niveau de conformité de l’interface d’un pilote en se connectant à une source de données et en appelant **SQLGetInfo** avec l’option SQL_ODBC_INTERFACE_CONFORMANCE.  
   
- Pilotes sont libres d’implémenter des fonctionnalités au-delà du niveau auquel ils prétendent la mise en conformité complète. Applications découvrir toutes ces fonctionnalités supplémentaires en appelant **SQLGetFunctions** (pour déterminer quelles fonctions ODBC sont présentes) et **SQLGetInfo** (pour différentes autres fonctionnalités ODBC de la requête).  
+ Les pilotes sont libres d’implémenter des fonctionnalités au-delà du niveau auquel ils revendiquent une conformité complète. Les applications découvrent ces fonctionnalités supplémentaires en appelant **SQLGetFunctions** (pour déterminer quelles fonctions ODBC sont présentes) et **SQLGetInfo** (pour interroger diverses autres fonctionnalités ODBC).  
   
- Il existe trois niveaux de conformité d’interface ODBC : Core, niveau 1 et niveau 2.  
+ Il existe trois niveaux de conformité de l’interface ODBC : Core, Level 1 et Level 2.  
   
 > [!NOTE]
->  Ces niveaux de conformité des exigences différentes que les niveaux de conformité ODBC API du même nom dans ODBC 2 *.x*. En particulier, toutes les fonctionnalités implicitement par ODBC 2 *.x* conformité API niveau 1 font désormais partie du niveau de la conformité de l’interface Core. Par conséquent, de nombreux pilotes ODBC peuvent signaler de conformité de l’interface au niveau du noyau.  
+>  Ces niveaux de conformité ont des exigences différentes de celles des niveaux de conformité de l’API ODBC du même nom dans ODBC 2 *. x*. En particulier, toutes les fonctionnalités impliquées par le niveau 1 de conformité de l’API ODBC 2 *. x* font désormais partie du niveau de conformité de l’interface de base. Par conséquent, de nombreux pilotes ODBC peuvent signaler la conformité de l’interface au niveau du noyau.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Conformité de l’interface principale](../../../odbc/reference/develop-app/core-interface-conformance.md)  
   

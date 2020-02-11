@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056624"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécuter Assistant Migration de données à partir de la ligne de commande
 
-Avec la version 2,1 et versions ultérieures, lorsque vous installez Assistant Migration de données, il installe également dmacmd. exe dans *% ProgramFiles%\\Assistant Migration de données Microsoft\\* . Utilisez dmacmd. exe pour évaluer vos bases de données en mode sans assistance et générer le résultat dans un fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou de bases de données volumineuses. 
+Avec la version 2,1 et versions ultérieures, lorsque vous installez Assistant Migration de données, il installe également dmacmd. exe dans *% ProgramFiles%\\\\Assistant Migration de données Microsoft*. Utilisez dmacmd. exe pour évaluer vos bases de données en mode sans assistance et générer le résultat dans un fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou de bases de données volumineuses. 
 
 > [!NOTE]
 > Dmacmd. exe prend en charge l’exécution des évaluations uniquement. Les migrations ne sont pas prises en charge pour le moment.
@@ -61,7 +61,7 @@ DmaCmd.exe /AssessmentName="string"
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Exemples d’évaluations à l’aide de l’interface CLI
 
-**Dmacmd.exe**
+**Dmacmd. exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -259,7 +259,7 @@ Ces commandes prennent en charge des recommandations pour les deux Azure SQL Dat
 |`/SkuRecommendationCurrencyCode` | Devise dans laquelle afficher les prix (par exemple, « USD ») | O <br> (Pour les prix les plus récents)
 |`/SkuRecommendationOfferName` | Nom de l’offre (par exemple, « MS-AZR-0003P »). Pour plus d’informations, consultez la page Détails de l' [offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | O <br> (Pour les prix les plus récents)
 |`/SkuRecommendationRegionName` | Nom de la région (par exemple, « Ouest ») | O <br> (Pour les prix les plus récents)
-|`/SkuRecommendationSubscriptionId` | L'ID de l'abonnement. | O <br> (Pour les prix les plus récents)
+|`/SkuRecommendationSubscriptionId` | ID de l’abonnement. | O <br> (Pour les prix les plus récents)
 |`/SkuRecommendationDatabasesToRecommend` | Liste des bases de données à recommander, séparées par des espaces (par exemple « Database1 », « Database2 » « Database3 »). Les noms respectent la casse et doivent être placés entre guillemets doubles. En cas d’omission, des recommandations sont fournies pour toutes les bases de données. | N
 |`/AzureAuthenticationTenantId` | Locataire d’authentification. | O <br> (Pour les prix les plus récents)
 |`/AzureAuthenticationClientId` | ID client de l’application AAD utilisée pour l’authentification. | O <br> (Pour les prix les plus récents)
@@ -270,7 +270,7 @@ Ces commandes prennent en charge des recommandations pour les deux Azure SQL Dat
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Exemples d’évaluations de références SKU à l’aide de l’interface CLI
 
-**Dmacmd.exe**
+**Dmacmd. exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 

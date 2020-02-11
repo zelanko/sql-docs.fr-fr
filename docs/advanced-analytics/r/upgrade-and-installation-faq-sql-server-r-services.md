@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727343"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>FAQ sur la mise à niveau et l’installation de SQL Server Machine Learning ou R Server
@@ -24,7 +24,7 @@ Cette rubrique apporte des réponses à certaines questions courantes sur l’in
 + Certains problèmes se produisent uniquement lors des mises à niveau des préversions. Par conséquent, nous vous recommandons d’identifier votre version et votre édition avant de lire ces notes. Pour obtenir des informations sur la version, exécutez `@@VERSION` dans une requête à partir de SQL Server Management Studio.
 + Effectuez une mise à niveau vers la version la plus récente ou la version du service dès que possible pour résoudre les problèmes résolus dans les versions récentes.
 
-**S’applique à :** SQL Server 2016 R Services, SQL Server Machine Learning Services (dans la base de données)
+**S’applique à :** SQL Server 2016 R Services, SQL Server Machine Learning Services (dans la base de données)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Exigences et restrictions sur les versions antérieures de SQL Server 2016 
 
@@ -72,7 +72,7 @@ Les mises à niveau à partir des préversions de SQL Server 2016 ne sont plus p
 
 Les versions suivantes ont été installées avec les préversions de SQL Server 2016.
 
-| Options de version | Build         |
+| Version | Build         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |

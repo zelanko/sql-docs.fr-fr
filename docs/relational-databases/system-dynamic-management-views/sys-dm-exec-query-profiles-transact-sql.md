@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165505"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
@@ -33,18 +33,18 @@ ms.locfileid: "74165505"
 Contrôle la progression en temps réel lorsqu'une requête est en cours d'exécution. Par exemple, utilisez cette vue de gestion dynamique pour déterminer la partie de la requête qui est lente. Joignez cette vue de gestion dynamique à d'autres vues de gestion dynamique système identifiées dans le champ de description. Ou bien, joignez cette vue de gestion dynamique à d'autres compteurs de performances (tels que l'analyseur de performances, xperf) à l'aide de colonnes timestamp.  
   
 ## <a name="table-returned"></a>Table retournée  
-Les compteurs retournés sont par opérateur par thread. Les résultats sont dynamiques et ne correspondent pas aux résultats des options existantes, telles que les `SET STATISTICS XML ON` qui créent uniquement une sortie quand la requête est terminée.  
+Les compteurs retournés sont par opérateur par thread. Les résultats sont dynamiques et ne correspondent pas aux résultats des options existantes, telles `SET STATISTICS XML ON` que la création d’une sortie uniquement lorsque la requête est terminée.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifie la session dans laquelle cette requête s'exécute. Référence dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  
-|sql_handle|**varbinary(64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Référence dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Référence dm_exec_query_stats. plan_handle.|  
+|sql_handle|**varbinary (64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Référence dm_exec_query_stats.sql_handle.|  
+|plan_handle|**varbinary (64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Référence dm_exec_query_stats. plan_handle.|  
 |physical_operator_name|**nvarchar (256)**|Nom de l'opérateur physique.|  
 |node_id|**int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
 |thread_id|**int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
-|task_address|**varbinary(8)**|Identifie la tâche SQLOS utilisée par ce thread. Référence dm_os_tasks.task_address.|  
+|task_address|**varbinary (8)**|Identifie la tâche SQLOS utilisée par ce thread. Référence dm_os_tasks.task_address.|  
 |row_count|**bigint**|Nombre de lignes retournées par l'opérateur jusqu'à présent.|  
 |rewind_count|**bigint**|Nombre de rembobinages jusqu'à présent.|  
 |rebind_count|**bigint**|Nombre de reliaisons jusqu'à présent.|  
@@ -72,28 +72,28 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |segment_read_count|**int**|Nombre de lectures anticipées de segment jusqu'à présent.|  
 |segment_skip_count|**int**|Nombre de segments ignorés jusqu'à présent.| 
 |actual_read_row_count|**bigint**|Nombre de lignes lues par un opérateur avant l’application du prédicat résiduel.| 
-|estimated_read_row_count|**bigint**|**S’applique à :** À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes dont la lecture est estimée par un opérateur avant l’application du prédicat résiduel.|  
+|estimated_read_row_count|**bigint**|**S’applique à :** À partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] de SP1. <br/>Nombre de lignes dont la lecture est estimée par un opérateur avant l’application du prédicat résiduel.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Si le nœud de plan de requête n’a pas d’e/s, tous les compteurs d’e/s sont définis sur NULL.  
   
- Les compteurs d’e/s rapportés par cette DMV sont plus granulaires que ceux signalés par `SET STATISTICS IO` de deux manières :  
+ Les compteurs d’e/s rapportés par cette DMV sont plus granulaires que ceux signalés par `SET STATISTICS IO` les deux méthodes suivantes :  
   
--   `SET STATISTICS IO` regroupe les compteurs pour l’ensemble des e/s d’une table donnée. Avec cette vue de gestion dynamique, vous obtiendrez des compteurs distincts pour chaque nœud du plan de requête qui effectue des e/s vers la table.  
+-   `SET STATISTICS IO`regroupe les compteurs pour l’ensemble des e/s d’une table donnée. Avec cette vue de gestion dynamique, vous obtiendrez des compteurs distincts pour chaque nœud du plan de requête qui effectue des e/s vers la table.  
   
 -   En cas d'analyse parallèle, cette vue de gestion dynamique indique des compteurs pour chaque threads parallèles de l'analyse.
  
-À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastructure de profilage des statistiques d’exécution de requête standard* existe côte à côte avec une *infrastructure de profilage des statistiques d’exécution de requête légère*. `SET STATISTICS XML ON` et `SET STATISTICS PROFILE ON` utilisent toujours l' *infrastructure de profilage des statistiques d’exécution de requête standard*. Pour que `sys.dm_exec_query_profiles` soit remplie, l’une des infrastructures de profilage de requête doit être activée. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).    
+À compter [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] de SP1, l' *infrastructure de profilage des statistiques d’exécution de requête standard* existe côte à côte avec une *infrastructure de profilage des statistiques d’exécution de requête légère*. `SET STATISTICS XML ON`et `SET STATISTICS PROFILE ON` utilisent toujours l' *infrastructure de profilage des statistiques d’exécution de requête standard*. Pour `sys.dm_exec_query_profiles` que soit rempli, l’une des infrastructures de profilage de requête doit être activée. Pour plus d’informations, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> La requête en cours d’investigation doit démarrer **après** l’activation de l’infrastructure de profilage de la requête, et l’activer après le démarrage de la requête ne produira pas de résultats dans `sys.dm_exec_query_profiles`. Pour plus d’informations sur la façon d’activer les infrastructures de profilage de requête, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).
+> La requête en cours d’investigation doit démarrer **après** l’activation de l’infrastructure de profilage de la requête. l’activation de la requête après `sys.dm_exec_query_profiles`le démarrage de la requête ne produira pas de résultats dans. Pour plus d’informations sur la façon d’activer les infrastructures de profilage de requête, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Autorisations  
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] instance managée, requiert `VIEW DATABASE STATE` l’autorisation et l’appartenance du rôle de base de données `db_owner`.   
-Sur les niveaux [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium, requiert l’autorisation `VIEW DATABASE STATE` dans la base de données. Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed instance `VIEW DATABASE STATE` , requiert l’autorisation et `db_owner` l’appartenance du rôle de base de données.   
+Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
    
 ## <a name="examples"></a>Exemples  
- Étape 1 : Connectez-vous à une session dans laquelle vous envisagez d’exécuter la requête que vous allez analyser avec `sys.dm_exec_query_profiles`. Pour configurer la requête pour le profilage, utilisez `SET STATISTICS PROFILE ON`. Exécutez votre requête dans la même session.  
+ Étape 1 : Connectez-vous à une session dans laquelle vous envisagez d’exécuter la requête `sys.dm_exec_query_profiles`que vous allez analyser avec. Pour configurer la requête pour le profilage `SET STATISTICS PROFILE ON`, utilisez. Exécutez votre requête dans la même session.  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -125,5 +125,5 @@ ORDER BY node_id;
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

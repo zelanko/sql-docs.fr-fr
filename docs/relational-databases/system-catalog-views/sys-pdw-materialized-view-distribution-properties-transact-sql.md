@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 5dca3564e8e2ccc83f0968d42c636112880f6e56
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401683"
 ---
 # <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>sys. pdw_materialized_view_distribution_properties (Transact-SQL) (version préliminaire)
@@ -27,8 +27,8 @@ Affiche les vues matérialisées des informations de distribution.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------| 
-|object_id|**tiers**|ID de la vue matérialisée pour laquelle les propriétés de la propriété sont spécifiées.| 
-|distribution_policy |**sa**|2 = HACHAGE</br>4 = ROUND_ROBIN|  
+|object_id|**int**|ID de la vue matérialisée pour laquelle les propriétés de la propriété sont spécifiées.| 
+|distribution_policy |**tinyint**|2 = HACHAGE</br>4 = ROUND_ROBIN|  
 |distribution_policy_desc |**nvarchar (60)**|HACHAGE, ROUND_ROBIN|  
  
 ## <a name="permissions"></a>Autorisations

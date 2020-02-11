@@ -1,5 +1,5 @@
 ---
-title: Redéploiement de Packages | Microsoft Docs
+title: Redéploiement des packages | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14edf3c34278ce89686a390c5b69662753ae653d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056479"
 ---
 # <a name="redeployment-of-packages"></a>Redéploiement de packages
@@ -29,6 +29,6 @@ ms.locfileid: "66056479"
  Si vous ne mettez à jour que quelques packages dans le projet, vous ne souhaitez pas forcément redéployer le projet tout entier. Pour ne déployer que quelques packages, vous pouvez créer un nouveau projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ajouter les packages mis à jour au nouveau projet, puis créer et déployer le projet. Les configurations de package sont automatiquement copiées avec le package lorsque vous l'ajoutez à un autre projet.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Déployer des packages à l'aide de l'utilitaire de déploiement](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)  
+ [Déployer des packages à l’aide de l’utilitaire de déploiement](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)  
   
   
