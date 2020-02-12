@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956152"
 ---
 # <a name="add-existing-items-to-a-project"></a>Ajouter des éléments existants à un projet
-  Vous pouvez ajouter des éléments à un projet pour étendre la fonctionnalité de l'application. Un élément existant peut être une requête ou un fichier divers. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contient deux types de projets : les projets de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les projets de script Analysis Services. Les fichiers de requête que vous pouvez ajouter au projet sont déterminés par le type du projet. Par exemple, vous pouvez ajouter une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] (fichier doté de l'extension .sql) à un projet de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais vous ne pouvez pas l'ajouter à un projet de script de services d'analyse. Pour associer des extensions de fichiers supplémentaires à un type de projet, consultez [associer des Extensions de fichier à un éditeur de Code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+  Vous pouvez ajouter des éléments à un projet pour étendre la fonctionnalité de l'application. Un élément existant peut être une requête ou un fichier divers. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] comporte deux types de projets : les projets de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les projets de script Analysis Services. Les fichiers de requête que vous pouvez ajouter au projet sont déterminés par le type du projet. Par exemple, vous pouvez ajouter une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] (fichier doté de l'extension .sql) à un projet de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais vous ne pouvez pas l'ajouter à un projet de script de services d'analyse. Pour associer d’autres extensions de fichier à un type de projet, consultez [associer des extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>Pour ajouter une requête existante ou un fichier divers à un projet  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62956152"
      Utilisez cette option pour filtrer les fichiers et les dossiers affichés. Entrez une partie ou l'intégralité du nom de fichier servant de filtre. Vous pouvez utiliser l'astérisque (`*`) comme caractère générique.  
   
     > [!NOTE]  
-    >  Vous pouvez naviguer jusqu’à un emplacement sur le web ou sur le réseau en entrant une URL ou un chemin réseau dans la zone de texte **Nom de fichier** . Par exemple, **http://mywebsite** affiche les fichiers disponibles à l’emplacement monsiteweb, tandis que **\\ \myserver\myshare** affiche les fichiers disponibles à l’emplacement partage sur monserveur.  
+    >  Vous pouvez naviguer jusqu’à un emplacement sur le web ou sur le réseau en entrant une URL ou un chemin réseau dans la zone de texte **Nom de fichier** . Par exemple, **http://mywebsite** affiche les fichiers disponibles à l’emplacement monsiteweb, tandis que **\\\myserver\myshare** affiche les fichiers disponibles à l’emplacement partage sur monserveur.  
   
      **Fichiers de type**  
      Utilisez cette option pour filtrer les fichiers selon leur extension de fichier. Chaque produit affiche la liste des filtres par défaut correspondant aux types de fichiers les plus courants.  
