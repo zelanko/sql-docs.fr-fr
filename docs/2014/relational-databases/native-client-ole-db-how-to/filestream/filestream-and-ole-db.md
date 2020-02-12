@@ -11,21 +11,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cadab8c51000270d218bea890d2c4e7077daae9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938647"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream et OLE DB
   Cette section contient quatre exemples qui illustrent l'utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB avec la fonctionnalité Filestream :  
   
--   [Lire une colonne FILESTREAM dans un fichier avec IBCPSession (OLE DB) &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
+-   [Lire une colonne FILESTREAM dans un fichier à l’aide de IBCPSession &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
--   [Récupérer des données d’une colonne FILESTREAM avec ISequentialStream (OLE DB) &#40;OLE DB&#41;](retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
+-   [Récupérez des données à partir d’une colonne FILESTREAM à l’aide de ISequentialStream &#40;OLE DB&#41;](retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
   
--   [Envoyer des données à une colonne FILESTREAM avec l’interface ISequentialStream liée au paramètre ICommandText (OLE DB) &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Envoyer des données à une colonne FILESTREAM à l’aide de ISequentialStream liée au paramètre ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Envoyer des données à une colonne FILESTREAM avec IRowsetFastUpload (OLE DB) &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Envoyer des données à une colonne FILESTREAM à l’aide de IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
   

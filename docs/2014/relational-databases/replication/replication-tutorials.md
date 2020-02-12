@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960763"
 ---
 # <a name="replication-tutorials"></a>Didacticiels sur la réplication
@@ -27,10 +27,10 @@ ms.locfileid: "62960763"
  Dans les didacticiels sur la réplication, « serveur de publication » fait référence au serveur qui contient les données source en cours de réplication et « Abonné » au serveur de destination. Le serveur de publication et l'Abonné peuvent partager la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais ce n'est pas une obligation. Pour plus d’informations, consultez [Présentation du modèle de publication de réplication](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
->  La plupart des tâches expliquées dans ces didacticiels peuvent être effectuées par programme. Pour plus d’informations, consultez [Guide du développeur &#40;réplication&#41;](concepts/replication-developer-documentation.md).  
+>  La plupart des tâches expliquées dans ces didacticiels peuvent être effectuées par programme. Pour plus d’informations, consultez [Guide du développeur &#40;&#41;de réplication ](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Didacticiels sur la réplication  
- [Préparation du serveur à la réplication](tutorial-preparing-the-server-for-replication.md)  
+ [Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md)  
  Apprenez à préparer les serveurs afin que la réplication puisse s'exécuter avec les privilèges minimaux. Ce didacticiel doit être effectué avant les autres didacticiels sur la réplication.  
   
  [Réplication de données entre serveurs connectés en permanence](tutorial-replicating-data-between-continuously-connected-servers.md)  
@@ -40,6 +40,6 @@ ms.locfileid: "62960763"
  Apprenez à utiliser la réplication de fusion pour échanger les données entre un serveur et un ou plusieurs clients connectés uniquement de façon occasionnelle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité de la réplication SQL Server](security/view-and-modify-replication-security-settings.md)  
+ [Sécurité Réplication SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69e887cc2a8f35710a0c7c910e0e912d6a4a0a61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922841"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Sauvegarder le journal des transactions lorsque la base de données est endommagée (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "62922841"
   
 #### <a name="to-back-up-the-tail-of-the-transaction-log"></a>Pour effectuer une sauvegarde de fichier journal de transactions après défaillance  
   
-1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62922841"
   
 7.  Laissez l'option **Sauvegarde de copie uniquement** désactivée.  
   
-8.  Dans la zone **Jeu de sauvegarde** , acceptez le nom du jeu de sauvegarde par défaut proposé dans la zone de texte **Nom** , ou attribuez-lui un autre nom.  
+8.  Dans la zone **Jeu de sauvegarde**, acceptez le nom du jeu de sauvegarde par défaut proposé dans la zone de texte **Nom**, ou attribuez-lui un autre nom.  
   
 9. Dans la zone de texte **Description** , entrez une description de la sauvegarde de la fin du journal.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "62922841"
     > [!IMPORTANT]  
     >  Lors de la restauration, la boîte de dialogue Restaurer la base de données affiche le type de sauvegarde de la fin du journal en tant que **Journal des transactions (copie uniquement)** .  
   
-15. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général** ), l’option **Décharger la bande après la sauvegarde** est activée. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
+15. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général** ), l’option **Décharger la bande après la sauvegarde** est active. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
   
 16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et versions ultérieures prennent en charge la [compression de la sauvegarde](backup-compression-sql-server.md). Par défaut, la compression d’une sauvegarde dépend de la valeur de l’option de configuration de serveur **Compression par défaut des sauvegardes** . Toutefois, quelle que soit la valeur par défaut actuelle au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde**, et vous pouvez empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
   
@@ -166,10 +166,10 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
- [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;Mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](back-up-database-backup-options-page.md)   
  [Sauvegarder la base de données &#40;page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Restaurations de fichiers &#40;mode de récupération simple&#41;](file-restores-simple-recovery-model.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](file-restores-full-recovery-model.md)  
