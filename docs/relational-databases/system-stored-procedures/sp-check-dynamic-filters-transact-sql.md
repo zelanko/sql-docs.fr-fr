@@ -27,18 +27,18 @@ ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771289"
 ---
-# <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
+# <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Affiche des informations sur les propriétés du filtre de lignes paramétrable d'une publication, notamment les fonctions utilisées pour générer une partition de données filtrées pour une publication, et indique si la publication peut utiliser des partitions précalculées. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,14 +54,14 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Indique si la publication est qualifiée pour l’utilisation de partitions précalculées; où **1** signifie que les partitions précalculées peuvent être utilisées, et **0** signifie qu’elles ne peuvent pas être utilisées.|  
-|**has_dynamic_filters**|**bit**|Si au moins un filtre de lignes paramétrable a été défini dans la publication; où **1** signifie qu’il existe un ou plusieurs filtres de lignes paramétrés, et **0** signifie qu’il n’existe aucun filtre dynamique.|  
-|**dynamic_filters_function_list**|**nvarchar(500)**|Indique les fonctions utilisées pour filtrer les articles dans une publication, chaque fonction étant séparée par un point-virgule.|  
-|**validate_subscriber_info**|**nvarchar(500)**|Indique les fonctions utilisées pour filtrer les articles dans une publication, chaque fonction étant séparée par un signe plus (+).|  
+|**can_use_partition_groups**|**bit**|Indique si la publication est qualifiée pour l’utilisation de partitions précalculées ; où **1** signifie que les partitions précalculées peuvent être utilisées, et **0** signifie qu’elles ne peuvent pas être utilisées.|  
+|**has_dynamic_filters**|**bit**|Si au moins un filtre de lignes paramétrable a été défini dans la publication ; où **1** signifie qu’il existe un ou plusieurs filtres de lignes paramétrés, et **0** signifie qu’il n’existe aucun filtre dynamique.|  
+|**dynamic_filters_function_list**|**nvarchar (500)**|Indique les fonctions utilisées pour filtrer les articles dans une publication, chaque fonction étant séparée par un point-virgule.|  
+|**validate_subscriber_info**|**nvarchar (500)**|Indique les fonctions utilisées pour filtrer les articles dans une publication, chaque fonction étant séparée par un signe plus (+).|  
 |**uses_host_name**|**bit**|Si la fonction [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) est utilisée dans les filtres de lignes paramétrables, où **1** indique que cette fonction est utilisée pour le filtrage dynamique.|  
 |**uses_suser_sname**|**bit**|Si la fonction [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) est utilisée dans les filtres de lignes paramétrables, où **1** indique que cette fonction est utilisée pour le filtrage dynamique.|  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
