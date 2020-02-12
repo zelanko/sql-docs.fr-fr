@@ -30,11 +30,11 @@ ms.locfileid: "76286412"
   
 |Error|Message|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Impossible d’insérer une ligne de clé en double dans l’objet '%1!' avec un index unique '%.\*ls'.|  
-|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Violation de %1! contrainte '%2!'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Impossible d’insérer une ligne de clé en double dans l’objet '%1!' *avec un index unique '%.\*ls'.|  
+|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Violation de la contrainte% ls'%. * ls'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|La base de données '%ls' a été restaurée ; cependant, une erreur est survenue lors de la restauration/suppression de la réplication. La base de données est restée hors ligne. Consultez la rubrique MSSQL_ENG003165 dans la documentation en ligne de SQL Server.|  
-|[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|Impossible de %1! le %2! '%3!' parce qu'il est utilisé pour la réplication.|  
-|[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|Impossible de modifier %1! '%2!' parce qu'elle est en cours d'édition pour la réplication.|  
+|[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|Impossible de% S_MSG% S_MSG'%. * ls', car il est utilisé pour la réplication.|  
+|[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|Impossible de modifier le% S_MSG'%. * ls', car il est en cours de publication pour la réplication.|  
 |MSSQL_ENG007395. Consultez [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossible pour le fournisseur OLE DB « %ls » du serveur lié « %ls » de démarrer une transaction imbriquée. Cette dernière est obligatoire, car l'option XACT_ABORT est définie à la valeur OFF.|  
 |[MSSQL_ENG014005](../../relational-databases/replication/mssql-eng014005.md)|Impossible de supprimer la publication. Il existe un abonnement.|  
 |[MSSQL_ENG014010](../../relational-databases/replication/mssql-eng014010.md)|Le serveur '%s' n'est pas défini comme serveur d'abonnements.|  
@@ -78,7 +78,7 @@ ms.locfileid: "76286412"
 |MSSQL_ENG021642. Consultez [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié appelé '%s' existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication.|  
 |MSSQL_ENG021663. Consultez [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Aucune clé primaire valide n'a été trouvée pour la table source [%s].[%s].|  
 |MSSQL_ENG021684. Consultez [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Les autorisations associées à la connexion administrateur du serveur de publication Oracle '% s' ne suffisent pas.|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' doit être une connexion Windows valide sous la forme 'MACHINE\Login' ou 'DOMAIN\Login'. Consultez la documentation de '%s'.|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' doit être une connexion Windows valide sous la forme : 'MACHINE\Connexion' ou 'DOMAIN\Connexion'. Consultez la documentation de '%s'.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|Le travail de l'Agent '%s' doit être ajouté à l'aide de '%s' avant de continuer. Consultez la documentation de '%s'.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|Le processus n'a pas pu exécuter '%1' sur '%2'.|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|Le processus de fusion n'a pas pu modifier l'historique de génération sur le '%1'. Lors de la résolution du problème, redémarrez la synchronisation avec un enregistrement d'historique détaillé et spécifiez un fichier de sortie dans lequel écrire.|  
