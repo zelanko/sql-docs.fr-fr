@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96479cfd42c8a08295a600ef3de4137b66aa106d
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 6b5f2c8dac062f147326a0b9fcfb7120f0648729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119370"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74165430"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurer Kubernetes sur plusieurs machines pour les déploiements de cluster Big Data SQL Server
 
@@ -104,12 +104,14 @@ Après avoir exécuté les commandes précédentes sur chaque machine, choisisse
    EOF
    ```
 
-1. Initialisez le maître Kubernetes sur cette machine. Vous devez voir une sortie indiquant que le maître Kubernetes a été initialisé correctement.
+1. Initialisez le maître Kubernetes sur cette machine. L’exemple de script ci-dessous spécifie Kubernetes version `1.15.0`. La version que vous utilisez dépend de votre cluster Kubernetes.
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   Vous devez voir une sortie indiquant que le maître Kubernetes a été initialisé correctement.
 
 1. Notez la commande `kubeadm join` à utiliser sur les autres serveurs pour rejoindre le cluster Kubernetes. Copiez ceci pour l’utiliser plus tard.
 
@@ -143,7 +145,7 @@ Sur chacune des autres machines, exécutez la commande `kubeadm join` que vous a
 
 ## <a name="view-the-cluster-status"></a>Voir l’état du cluster
 
-Pour vérifier la connexion à votre cluster, utilisez la commande [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) pour retourner une liste des nœuds de cluster.
+Pour vérifier la connexion à votre cluster, utilisez la commande [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) pour retourner une liste des nœuds du cluster.
 
 ```bash
 kubectl get nodes
