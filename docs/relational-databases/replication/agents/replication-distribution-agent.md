@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68770748"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
@@ -93,7 +93,7 @@ distrib [-?]
  Imprime tous les paramètres disponibles.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ Nom du serveur de publication. Spécifiez *server_name* pour l’instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-PublisherDB** _publisher_database_  
  Nom de la base de données du serveur de publication.  
@@ -175,7 +175,7 @@ distrib [-?]
 |Valeur HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Les messages de progression sont écrits dans la console ou dans un fichier de sortie. Les enregistrements d'historique ne sont pas journalisés dans la base de données de distribution.|  
-|**1**|Valeur par défaut. Met toujours à jour un message d'historique précédent du même état (démarrage, progression, succès, et ainsi de suite). Si aucun enregistrement précédent du même état n'existe, insère un nouvel enregistrement.|  
+|**1**|Par défaut. Met toujours à jour un message d'historique précédent du même état (démarrage, progression, succès, et ainsi de suite). Si aucun enregistrement précédent du même état n'existe, insère un nouvel enregistrement.|  
 |**2**|Insère de nouveaux enregistrements d'historique, sauf s'il s'agit d'un enregistrement concernant notamment un message inactif ou un message de travail de longue durée, auquel cas les enregistrements précédents sont mis à jour.|  
 |**3**|Insère toujours de nouveaux enregistrements, sauf s'il s'agit de messages inactifs.|  
   
@@ -189,7 +189,7 @@ distrib [-?]
  Nombre de secondes avant l'expiration de la connexion. La valeur par défaut est **15** secondes.  
   
  **-MaxBcpThreads** _number_of_threads_  
- Spécifie le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle. Le nombre maximal de threads et de connexions ODBC pouvant exister simultanément est, en privilégiant la valeur la plus petite, **MaxBcpThreads** ou le nombre de demandes de copie en bloc qui apparaissent dans la transaction de synchronisation dans la base de données de distribution. **MaxBcpThreads** doit présenter une valeur supérieure à **0** et n’a aucune limite supérieure codée en dur. La valeur par défaut est **2** fois le nombre de processeurs, la valeur maximale étant de **8**. Lors de l’application d’une capture instantanée qui a été générée au niveau du serveur de publication à l’aide de l’option de capture instantanée simultanée, un seul thread est utilisé, quel que soit le nombre que vous spécifiez pour **MaxBcpThreads**.  
+ Spécifie le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle. Le nombre maximal de threads et de connexions ODBC pouvant exister simultanément est, en privilégiant la valeur la plus petite, **MaxBcpThreads** ou le nombre de demandes de copie en bloc qui apparaissent dans la transaction de synchronisation dans la base de données de distribution. **MaxBcpThreads** doit avoir une valeur supérieure à **0** et n'a aucune limite supérieure codée en dur. La valeur par défaut est **2** fois le nombre de processeurs, la valeur maximale étant de **8**. Lors de l’application d’une capture instantanée qui a été générée au niveau du serveur de publication à l’aide de l’option de capture instantanée simultanée, un seul thread est utilisé, quel que soit le nombre que vous spécifiez pour **MaxBcpThreads**.  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
  Nombre maximal de transactions par émission ou par extraction appliquées aux Abonnés dans le cadre d'une synchronisation. La valeur **0** indique que la valeur maximale est un nombre infini de transactions. D'autres valeurs peuvent être utilisées par les Abonnés pour réduire la durée d'une synchronisation qui est extraite d'un serveur de publication.  

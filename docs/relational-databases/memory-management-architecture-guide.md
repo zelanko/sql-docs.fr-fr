@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115270"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
@@ -54,7 +54,7 @@ L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire v
 > [!NOTE]
 > Le tableau suivant comprend une colonne pour les versions 32 bits qui ne sont plus disponibles.
 
-| |32 bits <sup>1</sup> |64 bits|
+| |32 bits <sup>1</sup> |64 bits|
 |-------|-------|-------| 
 |Mémoire conventionnelle |Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . jusqu'à la limite d'espace d'adressage virtuel de processus : <br>- 2 Go<br>- 3 Go avec le paramètre d’amorçage /3 gb <sup>2</sup> <br>- 4 Go sur WOW64 <sup>3</sup> |Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . jusqu'à la limite d'espace d'adressage virtuel de processus : <br>- 7 To avec l’architecture IA64 (IA64 non pris en charge dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et les versions ultérieures)<br>- Maximum du système d’exploitation avec architecture x64 <sup>4</sup>
 |Mécanisme AWE (Permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d'aller au-delà de la limite d'espace d'adressage virtuel de processus sur une plateforme 32 bits.) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] éditions Standard, Entreprise et Développeur : le pool de mémoires tampons peut accéder à 64 Go de mémoire maximum.|Non applicable <sup>5</sup> |
@@ -63,7 +63,7 @@ L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire v
 <sup>1</sup> les versions 32 bits ne sont pas disponibles à partir de la version [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb est un paramètre d’amorçage de système d’exploitation. Pour plus d'informations, consultez la MSDN Library.  
 <sup>3</sup> WOW64 (Windows on Windows 64) est un mode dans lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 bits s’exécute sur un système d’exploitation 64 bits.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Standard prend en charge jusqu’à 128 Go. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition prend en charge le maximum du système d’exploitation.  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Standard prend en charge jusqu’à 128 Go. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition prend en charge le maximum du système d’exploitation.  
 <sup>5</sup> Notez que l’option sp_configure awe enabled est présente sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]64 bits, mais qu’elle est ignorée.    
 <sup>6</sup> Si le privilège de verrouillage des pages en mémoire (LPIM) est accordé (sur la version 32 bits pour la prise en charge d’AWE ou sur la version 64 bits par elle-même), nous recommandons de définir également la mémoire de serveur maximale. Pour plus d’informations sur LPIM, consultez [Mémoire du serveur (option de configuration de serveur)](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
@@ -78,7 +78,7 @@ Dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion
 -  **Allocateur de page unique (SPA)** , comprenant uniquement les allocations de mémoire inférieures ou égales à 8 Ko dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les options de configuration *Mémoire maximum du serveur (Mo)* et *Mémoire minimum du serveur (Mo)* déterminaient les limites de la mémoire physique consommée par SPA. Le pool de tampons était aussi le mécanisme pour SPA et le plus grand consommateur d’allocations de pages uniques.
 -  **Allocateur de plusieurs pages (MPA)** , pour les allocations de mémoire demandant plus de 8 Ko.
 -  **Allocateur du CLR**, comprenant les segments de mémoire du CLR SQL et ses allocations globales créées durant l’initialisation du CLR.
--  Allocations de mémoire pour les **[piles de threads](../relational-databases/memory-management-architecture-guide.md#stacksizes)**  dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+-  Allocations de mémoire pour les **[piles de threads](../relational-databases/memory-management-architecture-guide.md#stacksizes)** dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 -  **Allocations Windows directes (DWA)** , pour les demandes d’allocation de mémoire apportées directement à Windows. Il s’agit notamment de l’utilisation des segments de mémoire Windows et des allocations virtuelles directes effectuées par les modules chargés dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les allocations à partir des DLL de procédure stockée étendue, les objets créés au moyen de procédures Automation (appels sp_OA) et les allocations à partir de fournisseurs de serveur lié sont des exemples de demandes d’allocation de mémoire.
 
 À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les allocations de page unique, les allocations de plusieurs pages et les allocations du CLR sont toutes consolidées dans un **Allocateur de pages de « toute taille »** et sont incluent dans les limites de mémoire contrôlées par les options de configuration *mémoire maximum du serveur (Mo)* et *mémoire minimum du serveur (Mo)* . Ce changement offre des capacités de redimensionnement plus précises pour tous les besoins en mémoire transitant par le Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -107,7 +107,7 @@ Ce comportement est généralement observé durant les opérations suivantes :
 -  Traçage d’opérations qui doivent stocker des paramètres d’entrée volumineux
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Changements apportés à « memory_to_reserve » à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Changements apportés à « memory_to_reserve » à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Dans les versions antérieures de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), le Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réservait une partie de l’espace d’adressage virtuel (VAS) des processus à **l’allocateur multipage**, à **l’allocateur CLR**, aux allocations de mémoire pour les **piles de threads** dans le processus SQL Server et aux **allocations Windows directes (DWA)** . Cette partie de l’espace d’adressage virtuel est également appelée « Mem-To-Leave » ou « pool non-tampon ».
 
 L’espace d’adressage virtuel réservé pour ces allocations est déterminé par l’option de configuration _**memory\_to\_reserve**_ . La valeur par défaut utilisée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est de 256 Mo. Pour remplacer la valeur par défaut, utilisez le paramètre de démarrage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Pour plus d’informations sur le paramètre de démarrage *-g*, consultez la page [Options de démarrage du service moteur de base de données](../database-engine/configure-windows/database-engine-service-startup-options.md) dans la documentation.
@@ -150,7 +150,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-<a name="stacksizes"></a> La mémoire pour les piles de threads<sup>1</sup>, le CLR<sup>2</sup>, les fichiers .dll de procédure étendue, les fournisseurs OLE DB référencés par les requêtes distribuées, les objets Automation référencés dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] et la mémoire allouée par une DLL non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **ne sont pas** contrôlées par max server memory.
+<a name="stacksizes"></a> La mémoire pour les piles de threads<sup>1</sup>, le CLR<sup>2</sup>, les fichiers .dll de procédure étendue, les fournisseurs OLE DB référencés par les requêtes distribuées, les objets Automation référencés dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] et la mémoire allouée par une DLL non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**ne sont pas** contrôlées par max server memory.
 
 <sup>1</sup> Pour plus d’informations sur les threads de worker par défaut calculés pour un nombre donné d’UC avec affinité dans l’hôte actif, consultez la page [Configurer l’option de configuration du serveur max worker threads](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) dans la documentation. Les tailles de pile [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont les suivantes :
 
@@ -323,6 +323,6 @@ La protection de la somme de contrôle, introduite dans [!INCLUDE[ssVersion2005]
 [Mémoire du serveur (option de configuration de serveur)](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lecture de pages](../relational-databases/reading-pages.md)   
 [Écriture de pages](../relational-databases/writing-pages.md)   
-[Guide pratique pour configurer SQL Server pour utiliser Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+[Procédure : configurer SQL Server pour utiliser Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Exigences liées à l’utilisation des tables à mémoire optimisée](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
 [Résoudre les problèmes de mémoire insuffisante à l’aide de tables à mémoire optimisée](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

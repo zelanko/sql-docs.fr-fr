@@ -12,18 +12,18 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: ac6d3ac9128c8f27a898f4b903f74d1e9ab9bb1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116497"
 ---
-# <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
+# <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Affiche la taille et le nombre de lignes pour chaque partition d’une table dans une base de données [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Icône de lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [Conventions syntaxiques Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ Voici les résultats de la commande DBCC PDW_SHOWPARTITIONSTATS.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|partition_number|INT|Numéro de partition.|  
-|used_page_count|BIGINT|Nombre de pages utilisées pour les données.|  
-|reserved_page_count|BIGINT|Nombre de pages réservées pour la partition.|  
-|row_count|BIGINT|Nombre de lignes dans la partition.|  
-|pdw_node_id|INT|Nœud de calcul pour les données.|  
-|distribution_id|INT|Identificateur de distribution des données.|  
+|partition_number|int|Numéro de partition.|  
+|used_page_count|bigint|Nombre de pages utilisées pour les données.|  
+|reserved_page_count|bigint|Nombre de pages réservées pour la partition.|  
+|row_count|bigint|Nombre de lignes dans la partition.|  
+|pdw_node_id|int|Nœud de calcul pour les données.|  
+|distribution_id|int|Identificateur de distribution des données.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Exemples de syntaxe de base DBCC PDW_SHOWPARTITIONSTATS  
+### <a name="a-dbcc-pdw_showpartitionstats-basic-syntax-examples"></a>R. Exemples de syntaxe de base DBCC PDW_SHOWPARTITIONSTATS  
 Les exemples suivants affichent l’espace utilisé et le nombre de lignes par partition pour la table FactInternetSales dans la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql

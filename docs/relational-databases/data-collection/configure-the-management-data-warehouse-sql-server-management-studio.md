@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056471"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
@@ -93,7 +93,7 @@ ms.locfileid: "74056471"
   
  Spécifiez une connexion en activant la case à cocher **Mappage** pour la connexion.  
   
- **Appartenance au rôle de base de données pour :** *\<nom_entrepôt_données*  
+ **Appartenance au rôle de base de données pour :**  *\<nom_entrepôt_données>*  
  Sélectionnez le rôle d'entrepôt de données de gestion auquel la connexion est mappée en cliquant sur une ou plusieurs cases à cocher en regard des options suivantes :  
   
 -   **mdw_admin**  
@@ -116,10 +116,10 @@ ms.locfileid: "74056471"
  **Détails**  
  Affiche chaque étape de configuration sous la forme d’une ligne dans la grille **Détails** . Chaque ligne contient une colonne **Action** qui décrit l'étape et une colonne **État** qui indique la réussite ou l'échec de l'étape. En cas d'erreur, un message s'affiche dans la colonne **Message** .  
   
- **Arrêter**  
+ **Stop**  
  Arrête le traitement de l'Assistant.  
   
- **Rapport**  
+ **Report**  
  Affiche un rapport de la configuration de la collecte de données. Les options de rapport suivantes sont fournies :  
   
 -   Afficher le rapport  
@@ -130,7 +130,7 @@ ms.locfileid: "74056471"
   
 -   Envoyer le rapport sous forme de courrier électronique  
   
- **Fermer**  
+ **Close**  
  Ferme l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  

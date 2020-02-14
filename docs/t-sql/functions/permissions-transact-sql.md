@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843631"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73843631"
   
  **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) et [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md). L'utilisation continue de la fonction PERMISSIONS peut entraîner une baisse des performances.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  Nom facultatif de la colonne dont les informations sur les autorisations sont renvoyées. La colonne doit être un nom de colonne valide dans la table spécifiée par *objectid*.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
  La fonction PERMISSIONS peut servir à déterminer si l'utilisateur actuel possède les autorisations nécessaires pour exécuter une instruction ou pour accorder une autorisation (GRANT) à un autre utilisateur.  
@@ -93,7 +93,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |16|0x10|Suppression|  
 |32|0x20|EXECUTE (procédures uniquement)|  
 |4096|0x1000|SELECT ANY (une colonne minimum)|  
-|8192|0x2000|UPDATE ANY|  
+|8 192|0x2000|UPDATE ANY|  
 |16384|0x4000|REFERENCES ANY|  
   
  Le tableau ci-dessous indique les bits utilisés pour les autorisations d’objet renvoyées (au niveau des colonnes) lorsque l’argument *objectid* et la colonne sont tous deux spécifiés.  
@@ -112,7 +112,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. Utilisation de la fonction PERMISSIONS avec des autorisations d'instruction  
+### <a name="a-using-the-permissions-function-with-statement-permissions"></a>R. Utilisation de la fonction PERMISSIONS avec des autorisations d'instruction  
  Cet exemple détermine si l'utilisateur actuel peut exécuter l'instruction `CREATE TABLE`.  
   
 ```  

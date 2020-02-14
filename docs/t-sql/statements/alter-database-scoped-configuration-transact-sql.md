@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db98f5aa3cdec76b59e51f743200b24725231f95
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258136"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831635"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -92,6 +92,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
 }
 ```
 
@@ -366,6 +367,12 @@ L’option `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` détermine la durée 
 - Lorsque la valeur est définie sur 0, les opérations suspendues ne sont jamais abandonnées automatiquement
 
 La valeur actuelle de cette option s’affiche dans [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
+
+**S’APPLIQUE À** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Vous permet de déterminer si un prédicat de [sécurité au niveau des lignes (RLS)](../../relational-databases/security/row-level-security.md) affecte la cardinalité du plan d’exécution de la requête utilisateur globale. Si ISOLATE_SECURITY_POLICY_CARDINALITY est activé, un prédicat RLS n’affecte pas la cardinalité d’un plan d’exécution. Prenons l’exemple d’une table contenant 1 million de lignes et d’un prédicat RLS qui limite le résultat à 10 lignes pour l’utilisateur qui envoie la requête. Si la configuration étendue à la base de données est désactivée, l’estimation de la cardinalité de ce prédicat sera de 10. Si cette configuration étendue à la base de données est activée, l’optimisation des requêtes est estimée à 1 million de lignes. Il est recommandé d’utiliser la valeur par défaut pour la plupart des charges de travail.
 
 ## <a name="Permissions"></a> Autorisations
 

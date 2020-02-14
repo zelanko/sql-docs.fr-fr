@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 06c5e725e62946544301098a7636760040b28b64
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 6fea23921dd3b01032de8c8960970526502eee17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952432"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831893"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -2619,6 +2619,9 @@ ON : l’optimiseur de requête crée si nécessaire des statistiques sur les c
 La valeur par défaut est ON. Nous vous recommandons d'utiliser le paramètre par défaut pour la plupart des bases de données.
 
 OFF : l’optimiseur de requête ne crée pas de statistiques sur les colonnes uniques des prédicats de requête quand il compile les requêtes. Si cette option a la valeur OFF, il peut en résulter des plans de requête non optimisés et une dégradation des performances des requêtes.
+
+### <a name="remarks"></a>Notes
+Cette commande doit être exécutée lorsque vous êtes connecté à la base de données utilisateur.
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `s_auto_create_stats_on` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `IsAutoCreateStatistics` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 

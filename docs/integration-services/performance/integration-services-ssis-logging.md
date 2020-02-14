@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282562"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
@@ -71,7 +71,7 @@ ms.locfileid: "71282562"
   
  Le tableau suivant énumère les ProgID et ClassID des modules fournisseurs d'informations inclus dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ainsi que l'emplacement des journaux dans lesquels les modules fournisseurs d'informations écrivent.  
   
-|Module fournisseur d'informations|ProgID|ClassID|Emplacement|  
+|Module fournisseur d'informations|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |Fichier texte|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|Le gestionnaire de connexions de fichiers utilisé par le module fournisseur d'informations spécifie le chemin d'accès du fichier texte.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|Le gestionnaire de connexions de fichiers utilisé par le module fournisseur d'informations spécifie le chemin d'accès du fichier utilisé par [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -101,7 +101,7 @@ ms.locfileid: "71282562"
   
 |Élément|Description|  
 |-------------|-----------------|  
-|Ordinateur|Le nom de l'ordinateur sur lequel l'événement du journal est survenu.|  
+|Computer|Le nom de l'ordinateur sur lequel l'événement du journal est survenu.|  
 |Opérateur|L'identité de l'utilisateur ayant lancé le package.|  
 |SourceName|Le nom du conteneur ou de la tâche dans laquelle l'événement du journal est survenu.|  
 |SourceID|L'identificateur unique du package ; la boucle Foreach, la boucle For ou le conteneur de séquences ; ou la tâche dans laquelle l'événement du journal est survenu.|  
@@ -232,7 +232,7 @@ ms.locfileid: "71282562"
   
 4.  Dans la colonne **Configuration**, sélectionnez un gestionnaire de connexions ou cliquez sur **\<Nouvelle connexion>** afin de créer un gestionnaire de connexions du type approprié pour le module fournisseur d’informations. En fonction du module fournisseur sélectionné, utilisez l'un des gestionnaires de connexions suivants :  
   
-    -   Pour les fichiers texte, utilisez un gestionnaire de connexions de fichiers. Pour plus d'informations, consultez [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+    -   Pour les fichiers texte, utilisez un gestionnaire de connexions de fichiers. Pour plus d’informations, consultez [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
     -   Pour [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], utilisez un gestionnaire de connexions de fichiers.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "71282562"
  Utilisez le volet **Conteneurs** de la boîte de dialogue **Configurer les journaux SSIS** pour activer l’enregistrement du fichier journal du package et de ses conteneurs.  
   
 #### <a name="options"></a>Options  
- **Conteneurs**  
+ **Containers**  
  Activez les cases à cocher dans la vue hiérarchique pour activer l'enregistrement du fichier journal du package et de ses conteneurs :  
   
 -   Si la case à cocher est désactivée, l'enregistrement du container dans le fichier journal n'est pas activé. Activez-la pour permettre l'enregistrement.  
@@ -305,7 +305,7 @@ ms.locfileid: "71282562"
  **Ajouter**  
  Ajoutez un journal du type spécifié à la collection de modules fournisseurs d'informations du package.  
   
- **Name**  
+ **Nom**  
  Activez ou désactivez les journaux pour les conteneurs ou les tâches sélectionnés dans le volet **Conteneurs** de la boîte de dialogue **Configurer les journaux SSIS** à l’aide des cases à cocher. Le champ de nom est modifiable. Utilisez le nom par défaut du fournisseur ou tapez un nom descriptif unique.  
   
  **Description**  
@@ -329,7 +329,7 @@ ms.locfileid: "71282562"
  **Description**  
  Affichez la description de l'événement.  
   
- **Avancé**  
+ **Avancée**  
  Sélectionnez ou désélectionnez les événements à enregistrer dans le journal et les informations à enregistrer pour chaque événement. Cliquez sur **Simple** pour masquer tous les détails de l’enregistrement dans le journal à l’exception de la liste des événements. Les informations suivantes peuvent être enregistrées dans le journal :  
   
 |Valeur|Description|  
@@ -340,15 +340,15 @@ ms.locfileid: "71282562"
 |**SourceID**|GUID (Global Unique IDentifier) du package, du conteneur ou de la tâche dans lequel s'est produit l'événement enregistré.|  
 |**ExecutionID**|GUID de l'instance d'exécution du package.|  
 |**MessageText**|Un message associé à l'entrée de journal.|  
-|**DataBytes**|Réservé pour un usage ultérieur.|  
+|**DataBytes**|Réservé pour un usage futur.|  
   
- **Simple**  
+ **De base**  
  Sélectionnez ou désélectionnez les événements à enregistrer dans le journal. Cette option masque les détails d'enregistrement à l'exception de la liste des événements. Si vous sélectionnez un événement, tous les détails d'enregistrement dans le journal sont sélectionnés pour l'événement par défaut. Cliquez sur **Avancé** pour afficher tous les détails d’enregistrement.  
   
  **Load**  
  Spécifiez un fichier XML existant à utiliser comme modèle de configuration des options d'enregistrement dans le journal.  
   
- **Enregistrer**  
+ **Save**  
  Enregistrez les détails de la configuration en tant que modèle dans un fichier XML.  
 
 ## <a name="saved_config"></a> Configurer la journalisation à l’aide d’un fichier de configuration enregistré
@@ -367,7 +367,7 @@ ms.locfileid: "71282562"
 4.  Sous l’onglet **Fournisseurs et journaux** , sélectionnez les journaux à utiliser pour le conteneur.  
   
     > [!NOTE]  
-    >  Vous ne pouvez créer des journaux qu'au niveau du package. Pour plus d’informations, consultez [Activer la journalisation des packages dans SQL Server Data Tools](#ssdt).  
+    >  Vous ne pouvez créer des journaux qu'au niveau du package. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt).  
   
 5.  Cliquez sur l’onglet **Détails** , puis sur **Charger**.  
   
@@ -413,8 +413,8 @@ ms.locfileid: "71282562"
 |Niveau de journalisation|Description|  
 |-------------------|-----------------|  
 |None|La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
-|Simple|Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s'agit de la valeur par défaut.|  
-|RuntimeLineage|Collecte les données nécessaires au suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage afin de mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations.|  
+|De base|Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s’agit de la valeur par défaut.|  
+|RuntimeLineage|Collecte les données nécessaires au suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage pour mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations.|  
 |Performances|Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.<br /><br /> Le rapport **Performances de l'exécution** affiche le temps d'activité et le temps total écoulé des composants de flux de données du package. Ces informations sont disponibles si le niveau de journalisation de la dernière exécution du package a été défini sur **Performances** ou **Commentaires**. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vue [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) affiche les heures de début et de fin des composants de flux de données, pour chaque phase d’exécution. Cette vue affiche ces informations pour ces composants uniquement lorsque le niveau de journalisation de l'exécution du package est défini sur **Performances** ou **Commentaires**.|  
 |Commentaires|Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic.<br /><br /> Les événements personnalisés sont notamment les événements consignés par les tâches [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les événements personnalisés, consultez [Custom Messages for Logging](#custom_messages).<br /><br /> L'événement **DiagnosticEx** est un exemple d'événement de diagnostic. Chaque fois qu'une tâche d'exécution de package exécute un package enfant, cet événement capture les valeurs de paramètres passées aux packages enfants.<br /><br /> L’événement **DiagnosticEx** vous permet également d’obtenir les noms des colonnes dans lesquelles des erreurs se produisent au niveau des lignes. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur.  Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> La valeur de la colonne de message pour **DiagnosticEx** est du texte XML. Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> La vue [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) affiche une ligne chaque fois qu’un composant de flux de données envoie des données à un composant en aval, pour une exécution de package. Le niveau de journalisation doit avoir la valeur **Commentaires** pour capturer ces informations dans la vue.|  
   
@@ -449,15 +449,15 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
  [Package](#Package)  
   
- [Tâche d'insertion en bloc](#BulkInsert)  
+ [Tâche d’insertion en bloc](#BulkInsert)  
   
  [tâche de flux de données](#DataFlow)  
   
  [Tâche d'exécution DTS 2000](#ExecuteDTS200)  
   
- [Tâche d'exécution de processus](#ExecuteProcess)  
+ [Tâche d’exécution de processus](#ExecuteProcess)  
   
- [Tache d'exécution de requêtes SQL](#ExecuteSQL)  
+ [Tache d’exécution de requêtes SQL](#ExecuteSQL)  
   
  [Tâches du système de fichiers](#FileSystem)  
   
@@ -467,11 +467,11 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
  [Tâche de script](#Script)  
   
- [Tâche Envoyer un message](#SendMail)  
+ [Tache Envoyer un message](#SendMail)  
   
  [Tâche de transfert de bases de données](#TransferDatabase)  
   
- [Tâche de transfert de messages d'erreur](#TransferErrorMessages)  
+ [Tâche de transfert de messages d’erreur](#TransferErrorMessages)  
   
  [Tâche de transfert de travaux](#TransferJobs)  
   
@@ -479,13 +479,13 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
  [Tâche de transfert de procédures stockées de master](#TransferMasterStoredProcedures)  
   
- [Tâche de transfert d'objets SQL Server](#TransferSQLServerObjects)  
+ [Tâche de transfert d’objets SQL Server](#TransferSQLServerObjects)  
   
  [Tâche de services Web](#WebServices)  
   
  [Tâche Lecteur de données WMI](#WMIDataReader)  
   
- [Tâche Observateur d'événement WMI](#WMIEventWatcher)  
+ [Tâche Observateur d’événement WMI](#WMIEventWatcher)  
   
  [Tâche XML](#XML)  
   
@@ -509,7 +509,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**DTSBulkInsertTaskEnd**|Indique que l'insertion en bloc est terminée.|  
 |**DTSBulkInsertTaskInfos**|Fournit des informations détaillées concernant la tâche.|  
   
-####  <a name="DataFlow"></a> tâche de flux de données  
+####  <a name="DataFlow"></a> Data Flow Task  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de flux de données.  
   
 |Entrée du journal|Description|  

@@ -16,10 +16,10 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e253e6a4e19982e5350161cde00bc7609ed7380d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297007"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparaison de la tâche de script et du composant Script
@@ -45,7 +45,7 @@ ms.locfileid: "71297007"
 |Fonctionnalité|Tâche de script|Composant Script|  
 |-------------|-----------------|----------------------|  
 |Flux de contrôle / Flux de données|La tâche de script est configurée sous l'onglet Flux de contrôle du concepteur et s'exécute à l'extérieur du flux de données du package.|Le composant Script est configuré dans la page Flux de données du concepteur et représente une source, une transformation ou une destination dans la tâche de flux de données.|  
-|Fonction|Une tâche de script peut exécuter quasiment toutes les tâches à caractère général.|Vous devez spécifier si vous souhaitez créer une source, une transformation ou une destination à l'aide du composant Script.|  
+|Objectif|Une tâche de script peut exécuter quasiment toutes les tâches à caractère général.|Vous devez spécifier si vous souhaitez créer une source, une transformation ou une destination à l'aide du composant Script.|  
 |Exécution|Une tâche de script exécute du code personnalisé à un point donné du flux de travail du package. Elle ne s'exécute qu'une seule fois, à moins d'être placée dans un conteneur de boucles ou un gestionnaire d'événements.|Un composant Script s'exécute également une seule fois, mais il exécute généralement sa routine de traitement principale une fois pour chaque ligne de données dans le flux de données.|  
 |Éditeur|**L’éditeur de tâche de script** comporte trois pages : **Général**, **Script** et **Expressions**. Seules les propriétés **ReadOnlyVariables**, **ReadWriteVariables** et **ScriptLanguage** affectent directement le code que vous pouvez écrire.|**L’éditeur de transformation de script** comporte jusqu’à quatre pages : **Colonnes d’entrée**, **Entrées et sorties**, **Script** et **Gestionnaires de connexions**. Les métadonnées et les propriétés que vous configurez dans chacune de ces pages déterminent les membres des classes de base générées automatiquement et utilisés pour le codage.|  
 |Interaction avec le package|Dans le code écrit pour une tâche de script, la propriété **Dts** vous permet d’accéder à d’autres fonctionnalités du package. La propriété **Dts** est un membre de la classe **ScriptMain**.|Dans le code du composant Script, des propriétés d'accesseur typées vous permettent d'accéder à certaines fonctionnalités de package, telles que les variables et les gestionnaires de connexions.<br /><br /> La méthode **PreExecute** ne peut accéder qu’à des variables en lecture seule. La méthode **PostExecute** peut accéder à des variables en lecture seule et en lecture/écriture.<br /><br /> Pour plus d’informations sur ces méthodes, consultez [Codage et débogage du composant Script](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).|  

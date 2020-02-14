@@ -23,10 +23,10 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117070"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117070"
   
  Cette fonctionnalité est incompatible avec l'exportation de base de données à l'aide de l'infrastructure d'application de la couche Données. Vous devez supprimer toutes les clés symétriques avant l'exportation.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -155,7 +155,7 @@ Spécifiez l’algorithme de chiffrement.
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-symmetric-key"></a>A. Création d'une clé symétrique  
+### <a name="a-creating-a-symmetric-key"></a>R. Création d'une clé symétrique  
  Dans l'exemple ci-dessous, une clé symétrique nommée `JanainaKey09` est créée à l'aide de l'algorithme `AES 256`, puis la nouvelle clé est chiffrée au moyen du certificat `Shipping04`.  
   
 ```  

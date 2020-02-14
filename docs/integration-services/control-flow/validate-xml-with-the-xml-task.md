@@ -14,10 +14,10 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293833"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -120,7 +120,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Voici le résultat dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] du second exemple de requête figurant dans le texte précédent.  
   
- ![Requête de regroupement des erreurs XML dans Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Requête de regroupement des erreurs XML dans Management Studio")  
+ ![Erreurs XML de requête sur un groupe dans Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Erreurs XML de requête sur un groupe dans Management Studio")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche XML](../../integration-services/control-flow/xml-task.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4 : Déployer le package de la leçon 6 | Microsoft Docs'
+title: 'Étape 4 : Déployer le package de la leçon 6 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283012"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Leçon 6-4 : Déployer le package de la leçon 6
@@ -60,7 +60,7 @@ Dans cette tâche, vous effectuez les opérations suivantes :
   
 3.  Développez le dossier **SSIS Tutorial**, cliquez avec le bouton droit sur **Projets**, puis sélectionnez **Importer les packages**.  
   
-4.  Dans la page **Introduction** **à l’Assistant Conversion de projet Integration Services**, sélectionnez **Suivant**.  
+4.  Dans la page **Introduction** **de l’Assistant Conversion de projet Integration Services**, sélectionnez **Suivant**.  
   
 5.  Dans la page **Localiser les packages**, vérifiez que l’option **Système de fichiers** est sélectionnée dans la liste **Source**, puis sélectionnez **Parcourir**.  
   

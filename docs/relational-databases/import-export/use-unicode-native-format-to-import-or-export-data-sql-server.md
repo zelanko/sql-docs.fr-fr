@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091463"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif Unicode pour importer ou exporter des données (SQL Server)
@@ -41,11 +41,11 @@ Vous pouvez importer des données au format natif Unicode dans une table à l’
   
 Le format natif Unicode est pris en charge par les options de commande suivantes :  
   
-|Command|Option|Description|  
+|Commande|Option|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|Amène l’utilitaire **bcp** à utiliser le format natif Unicode, qui utilise des types de données (bases de données) natifs pour toutes les données qui ne sont pas de type caractère, et le format de données de type caractère Unicode pour toutes les données de type caractère (**char**, **nchar**, **varchar**, **nvarchar**, **text**et **ntext**).|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Utilise le format natif Unicode lors de l’importation en bloc des données.|  
-|OPENROWSET|Néant|Doit utiliser un fichier de format.|
+|OPENROWSET|N/A|Doit utiliser un fichier de format.|
     
 > [!NOTE]
 >  Vous pouvez également spécifier le formatage par champ dans un fichier de format. Pour plus d’informations, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -185,7 +185,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
 -   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

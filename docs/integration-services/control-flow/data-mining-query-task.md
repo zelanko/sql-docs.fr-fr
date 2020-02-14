@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298356"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
@@ -38,7 +38,7 @@ ms.locfileid: "71298356"
   
 -   [Tâche DDL d’exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Tâche de traitement d'Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tâche de traitement d’Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 ## <a name="prediction-queries"></a>Requêtes de prédiction  
  La requête est une instruction DMX (Data Mining Extensions). Le langage DMX est une extension du langage SQL qui prend en charge l'utilisation de modèles d'exploration de données. Pour plus d’informations sur l’utilisation du langage DMX, consultez [Guide de référence du langage DMX & #40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "71298356"
  Si le résultat comprend une imbrication, elle est mise à plat avant d'être enregistrée. La mise à plat d'un résultat change en table un ensemble de résultats imbriqué. Par exemple, la mise à plat d'un résultat imbriqué composé d'une colonne **Customer** et d'une colonne **Product** imbriquée ajoute des lignes à la colonne **Customer** afin de créer une table qui comprend les données de produit associées à chaque client. Ainsi, dans le cas d'un client auquel sont associés trois produits différents, l'opération génère une table de trois lignes, contenant chacune le nom du client et un nom de produit différent. Si le mot clé FLATTENED est omis, la table ne contient que la colonne **Customer** et une seule ligne par client. Pour plus d’informations, consultez [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>Configuration de la tâche de requête d'exploration de données  
- La tâche de requête d'exploration de données requiert deux connexions. La première connexion est celle d'un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient la structure et le modèle d'exploration de données. La seconde connexion est celle d'un gestionnaire de connexions OLE DB à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table dans laquelle la tâche écrit les données. Pour plus d'informations, consultez [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) et [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ La tâche de requête d'exploration de données requiert deux connexions. La première connexion est celle d’un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient la structure et le modèle d’exploration de données. La seconde connexion est celle d'un gestionnaire de connexions OLE DB à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table dans laquelle la tâche écrit les données. Pour plus d'informations, consultez [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) et [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "71298356"
  Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Options générales  
- **Name**  
+ **Nom**  
  Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "71298356"
  Saisissez la description de la tâche de requête d'exploration de données.  
   
 ### <a name="mining-model-tab-options"></a>Options de l'onglet Modèle d'exploration de données  
- **Connexion**  
+ **Connection**  
  Choisissez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans la liste ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
@@ -106,7 +106,7 @@ ms.locfileid: "71298356"
  Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Options générales  
- **Name**  
+ **Nom**  
  Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ms.locfileid: "71298356"
  **Ajouter**  
  Ajoute un paramètre à la liste.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un paramètre, puis cliquez sur **Supprimer**.  
   
 ### <a name="result-set-tab-options"></a>Options de l'onglet Ensemble de résultats  
@@ -154,7 +154,7 @@ ms.locfileid: "71298356"
  **Ajouter**  
  Ajoute un ensemble de résultats à la liste.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un résultat et cliquez sur **Supprimer**.  
 ## <a name="data-mining-query-task-editor-output-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Sortie)
   Utilisez l'onglet **Sortie** de la boîte de dialogue **Éditeur de tâche de requête d'exploration de données** pour définir la destination de la requête de prédiction.  
@@ -162,7 +162,7 @@ ms.locfileid: "71298356"
  Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Options générales  
- **Name**  
+ **Nom**  
  Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -172,7 +172,7 @@ ms.locfileid: "71298356"
  Saisissez la description de la tâche de requête d'exploration de données.  
   
 ### <a name="output-tab-options"></a>Options de l'onglet Sortie  
- **Connexion**  
+ **Connection**  
  Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur **Nouveau** pour en créer un.  
   
  **Nouveau**  

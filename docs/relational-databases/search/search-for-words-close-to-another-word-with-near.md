@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68702833"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Recherche de mots dans le voisinage d'autres mots avec NEAR
@@ -102,11 +102,11 @@ GO
 ## <a name="how-maximum-distance-is-measured"></a>Comment mesurer la distance maximale  
  Une distance maximale spécifique, telle que 10 ou 25, détermine combien de termes de non-recherche, notamment les mots vides, peuvent séparer le premier et le dernier terme de recherche dans une chaîne donnée. Par exemple, `NEAR((dogs, cats, "hunting mice"), 3)` retournerait la ligne suivante, dans laquelle le nombre total de termes de non-recherche est trois («`enjoy`», «`but`» et «`avoid`») :  
   
- «`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`»  
+ "`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`"  
   
  Le même terme de proximité ne retournerait pas la ligne suivante, car les quatre termes de non-recherche («`enjoy`», «`but`», «`usually`» et «`avoid`») dépassent la distance maximale :  
   
- «`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`»  
+ "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Combiner NEAR avec d’autres termes  
  Vous pouvez combiner NEAR avec d’autres termes. Vous pouvez utiliser AND (&), OR (|) ou AND NOT (&!) pour combiner un terme de proximité personnalisé avec un autre terme de proximité personnalisé, un terme simple ou un terme de préfixe. Par exemple :  

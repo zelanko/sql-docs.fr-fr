@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ee002f5c835f8a6a69aa6afe69e1838c56c24e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013066"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918351"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,6 +103,6 @@ ms.locfileid: "68013066"
 |Activer et configurer l'extension du pool de mémoires tampons|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Modifier la configuration de l'extension du pool de mémoires tampons|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Afficher la configuration de l'extension du pool de mémoires tampons|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  
-|Surveiller l'extension du pool de mémoires tampons|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Compteurs de performance](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
+|Surveiller l'extension du pool de mémoires tampons|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Compteurs de performances](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   

@@ -14,10 +14,10 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903212"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
@@ -34,7 +34,7 @@ ms.locfileid: "67903212"
   
  Pour utiliser la synchronisation Web, vous devez configurer IIS en effectuant les étapes ci-dessous. Chaque étape est détaillée dans cette rubrique.  
   
-1.  Installez et configurez l'écouteur de réplication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur qui exécute IIS.  
+1.  Installez et configurez l’écouteur de réplication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur qui exécute IIS.  
   
 2.  Configurer SSL (Secure Sockets Layer). SSL est requis pour les communications entre IIS et tous les abonnés.  
   

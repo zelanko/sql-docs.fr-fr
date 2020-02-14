@@ -13,10 +13,10 @@ ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940825"
 ---
 # <a name="backup-device-general-page"></a>Unité de sauvegarde (page Général)
@@ -34,12 +34,12 @@ ms.locfileid: "67940825"
  Permet d'afficher le nom d'une unité logique de sauvegarde existante ou de spécifier le nom d'une nouvelle unité logique de sauvegarde.  
   
  **Bande**  
- Permet d’afficher ou de sélectionner l’unité à bande de destination dans la liste **Bande** . Cette option est disponible uniquement si un lecteur de bande est connecté à l'ordinateur qui exécute l'instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Permet d’afficher ou de sélectionner l’unité à bande de destination dans la liste **Bande** . Cette option est disponible uniquement si un lecteur de bande est connecté à l’ordinateur qui exécute l’instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  Les unités de sauvegarde sur bande situées sur des ordinateurs distants ne sont pas des destinations de sauvegarde valides.  
   
- **Fichier**  
+ **File**  
  Permet d'afficher le fichier de destination d'une unité logique de sauvegarde existante ou de spécifier un fichier de destination pour une nouvelle unité logique de sauvegarde.  
   
 -   S'il s'agit d'une unité logique de sauvegarde existante, le chemin d'accès du fichier de sauvegarde s'affiche. Le champ **Fichier** n'est pas modifiable et le bouton Parcourir n'est pas disponible.  

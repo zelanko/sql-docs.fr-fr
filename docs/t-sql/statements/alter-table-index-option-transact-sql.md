@@ -1,5 +1,5 @@
 ---
-title: " | Microsoft Docs"
+title: " | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982017"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982017"
 
   Spécifie un ensemble d’options applicables à un index qui fait partie d’une définition de contrainte créée à l’aide d’[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73982017"
   
  Spécifie le remplissage de l'index. La valeur par défaut est OFF.  
   
- ON  
+ ACTIVÉ  
  Le pourcentage d'espace libre indiqué par FILLFACTOR est appliqué aux pages de niveau intermédiaire de l'index.  
   
  OFF ou *fillfactor* n’est pas spécifié  
@@ -89,7 +89,7 @@ ms.locfileid: "73982017"
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
  Spécifie le type de réponse quand une opération d’insertion essaie d’insérer des valeurs de clés en double dans un index unique. L'option IGNORE_DUP_KEY s'applique uniquement aux opérations d'insertion après la création ou la régénération de l'index. Cette option n’a aucun effet lors de l’exécution de [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), d’[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) ou d’[UPDATE](../../t-sql/queries/update-transact-sql.md). La valeur par défaut est OFF.  
   
- ON  
+ ACTIVÉ  
  Un message d’avertissement s’affiche quand des valeurs de clé en double sont insérées dans un index unique. Seules les lignes qui violent la contrainte d’unicité échouent.  
   
  OFF  
@@ -104,7 +104,7 @@ ms.locfileid: "73982017"
  STATISTICS_NORECOMPUTE **=** { ON | **OFF** }  
  Indique si les statistiques sont recalculées. La valeur par défaut est OFF.  
   
- ON  
+ ACTIVÉ  
  Les statistiques obsolètes ne sont pas recalculées automatiquement.  
   
  OFF  
@@ -115,7 +115,7 @@ ms.locfileid: "73982017"
   
  Indique si les verrous de ligne sont autorisés ou non. La valeur par défaut est ON.  
   
- ON  
+ ACTIVÉ  
  Les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés.  
   
  OFF  
@@ -126,7 +126,7 @@ ms.locfileid: "73982017"
   
  Indique si les verrous de page sont autorisés. La valeur par défaut est ON.  
   
- ON  
+ ACTIVÉ  
  Les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés.  
   
  OFF  
@@ -143,7 +143,7 @@ Spécifie s’il faut optimiser ou pas la contention d’insertion de la derniè
   
  Indique si les résultats du tri doivent être stockés dans **tempdb**. La valeur par défaut est OFF.  
   
- ON  
+ ACTIVÉ  
  Les résultats intermédiaires du tri utilisés pour créer l’index sont stockés dans **tempdb**. Cela peut réduire le temps nécessaire pour créer un index si **tempdb** ne se trouve pas sur le même groupe de disques que la base de données utilisateur. Toutefois, une plus grande quantité d'espace disque est alors utilisée lors de la création de l'index.  
   
  OFF  
@@ -157,7 +157,7 @@ Spécifie s’il faut optimiser ou pas la contention d’insertion de la derniè
 > [!NOTE]  
 >  Les index uniques non cluster ne peuvent pas être créés en ligne. Il s'agit des index qui sont créés en raison d'une contrainte UNIQUE ou PRIMARY KEY.  
   
- ON  
+ ACTIVÉ  
  Les verrous de table à long terme ne sont pas maintenus pendant la durée de l'opération d'index. Lors de la principale phase de l'indexation, seul le verrou de partage intentionnel (IS, Intent Share) est maintenu sur la table source. Ceci permet d'exécuter les requêtes ou les mises à jour dans la table sous-jacente et ses index. Au début de l'opération, un verrou partagé (S, Shared) est placé sur l'objet source pendant une période de temps très courte. À la fin de l'opération, pendant une période de temps très courte, un verrou partagé (S, Shared) est placé sur la source si un index non cluster est créé, ou bien un verrou de SCH-M (Modification du schéma) est placé lorsqu'un index cluster est créé ou supprimé en ligne et lorsqu'un index cluster ou non cluster est régénéré. Bien que les verrous d'index en ligne soient des verrous de métadonnées courtes, le verrou Sch-M doit notamment attendre que toutes les transactions bloquantes soient terminées sur cette table. Pendant le temps d'attente, le verrou Sch-M bloque toutes les autres transactions qui attendent derrière ce verrou en cas d'accès à la même table. ONLINE ne peut pas prendre la valeur ON si un index est en cours de création sur une table locale temporaire.  
   
 > [!NOTE]  
@@ -169,7 +169,7 @@ Spécifie s’il faut optimiser ou pas la contention d’insertion de la derniè
  Pour plus d’informations, consultez [Fonctionnement des opérations d’index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md).  
   
 > [!NOTE]
->  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MAXDOP **=** _max_degree_of_parallelism_  
  **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
@@ -254,7 +254,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
 **low_priority_lock_wait**  
  **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
- Un **SWITCH** ou une reconstruction d’index en ligne se termine dès qu’il n’y a aucune opération bloquante pour cette table. *WAIT_AT_LOW_PRIORITY* indique que si l’opération **SWITCH** ou l’opération de reconstruction d’index en ligne ne peut pas être fermée immédiatement, elle attend. L’opération contient des verrous de faible priorité, ce qui permet à d’autres opérations qui contiennent des verrous en conflit avec les instructions DDL de continuer. Omettre l’option **WAIT AT LOW PRIORITY** équivaut à `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ Un **SWITCH** ou une reconstruction d’index en ligne se termine dès qu’il n’y a aucune opération bloquante pour cette table. *WAIT_AT_LOW_PRIORITY* indique que si l’opération **SWITCH** ou l’opération de reconstruction d’index en ligne ne peut pas être fermée immédiatement, elle attend. L’opération contient des verrous de faible priorité, ce qui permet à d’autres opérations qui contiennent des verrous en conflit avec les instructions DDL de continuer. L’omission de l’option **WAIT AT LOW PRIORITY** équivaut à `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
 MAX_DURATION = *time* [**MINUTES** ]  
  Temps d’attente (valeur entière spécifiée en minutes) que le**SWITCH** ou le verrou de reconstruction d’index en ligne qui doit être acquis attend lors de l’exécution de la commande DDL. Le SWITCH ou l'opération de reconstruction de l'index en ligne tente de terminer immédiatement. Si l’opération est bloquée pendant la durée **MAX_DURATION**, l’une des actions **ABORT_AFTER_WAIT** est exécutée. La durée **MAX_DURATION** est toujours spécifiée en minutes, et le mot **MINUTES** peut être omis.  

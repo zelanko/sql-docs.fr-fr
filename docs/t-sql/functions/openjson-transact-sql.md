@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632140"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -42,7 +42,7 @@ Utilisez **OPENJSON** pour importer des données JSON dans [!INCLUDE[ssNoVersion
 >
 > Le niveau de compatibilité 120 peut être la valeur par défaut, même dans une nouvelle base de données Azure SQL Database.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,9 +60,9 @@ La fonction table **OPENJSON** analyse l’expression *jsonExpression* fournie c
 
 Par défaut, la fonction table **OPENJSON** retourne trois colonnes qui contiennent le nom de la clé, la valeur et le type de chaque paire {clé:valeur} trouvée dans *jsonExpression*. En guise d’alternative, vous pouvez spécifier explicitement le schéma du jeu de résultats retourné par **OPENJSON** en fournissant *with_clause*.
   
-### <a name="withclause"></a>with_clause
+### <a name="with_clause"></a>with_clause
   
-![Syntaxe pour la clause WITH dans OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "Syntaxe WITH dans OPENJSON")
+![Syntaxe pour la clause WITH dans OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "Syntaxe OPENJSON WITH")
 
 *with_clause* contient la liste des colonnes avec leurs types que **OPENJSON** doit retourner. Par défaut, **OPENJSON** fait correspondre les clés dans *jsonExpression* avec les noms de colonne dans *with_clause* (dans ce cas, les clés correspondantes impliquent un respect de la casse). Si un nom de colonne ne correspond pas à un nom de clé, vous pouvez fournir un *column_path* facultatif, qui est une [expression de chemin JSON](../../relational-databases/json/json-path-expressions-sql-server.md) qui fait référence à une clé dans *jsonExpression*. 
 
@@ -91,7 +91,7 @@ SELECT * FROM OpenJson(@json);
 
 **Résultats :**
 
-| Clé                                | valeur                 | Type |
+| key                                | value                 | type |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
@@ -128,7 +128,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **Résultats**  
   
-|Key|Valeur|  
+|Clé|Valeur|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -140,7 +140,7 @@ Quand **OPENJSON** analyse un tableau JSON, la fonction retourne les index des �
 
 La comparaison utilisée pour faire correspondre les étapes de chemin aux propriétés de l’expression JSON respecte la casse et ne tient pas compte du classement (autrement dit, il s’agit d’une comparaison BIN2). 
 
-### <a name="withclause"></a>*with_clause*
+### <a name="with_clause"></a>*with_clause*
 
 Définit explicitement le schéma de sortie pour la fonction **OPENJSON** à retourner. *with_clause* peut contenir les éléments suivants :
 
@@ -229,12 +229,12 @@ Les colonnes que la fonction OPENJSON retourne dépendent de l’option WITH.
   
         |Valeur de la colonne Type|Type de données JSON|  
         |------------------------------|--------------------|  
-        |0|Null|  
-        |1|chaîne|  
-        |2|INT|  
+        |0|null|  
+        |1|string|  
+        |2|int|  
         |3|true/false|  
         |4|tableau|  
-        |5|objet|  
+        |5|object|  
   
      Seules les propriétés de premier niveau sont retournées. L’instruction échoue si le texte JSON n’est pas formaté correctement.  
 

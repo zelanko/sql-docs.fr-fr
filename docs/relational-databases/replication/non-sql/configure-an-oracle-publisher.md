@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907186"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
@@ -27,7 +27,7 @@ ms.locfileid: "72907186"
   
 2.  S’agissant des tables à publier, attribuez directement l’autorisation SELECT sur chacune d’elles (et non un rôle) à l’utilisateur administratif Oracle que vous avez créé à l’étape 1.  
   
-3.  Installez le logiciel client Oracle et le fournisseur OLE DB Oracle sur le serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puis arrêtez et redémarrez l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si le serveur de distribution s’exécute sur une plateforme 64 bits, vous devez utiliser la version 64 bits du fournisseur OLE DB Oracle.  
+3.  Installez le logiciel client et le fournisseur OLE DB Oracle sur le serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis arrêtez et redémarrez l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si le serveur de distribution s’exécute sur une plateforme 64 bits, vous devez utiliser la version 64 bits du fournisseur OLE DB Oracle.  
   
 4.  Configurez la base de données Oracle en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
@@ -51,7 +51,7 @@ ms.locfileid: "72907186"
 >  Vous devez être membre du rôle serveur fixe **sysadmin** pour activer un serveur de publication ou un serveur de distribution, et pour créer une publication ou un abonnement Oracle à partir d'une publication Oracle.  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Création du schéma utilisateur administratif de réplication dans la base de données Oracle  
- Les agents de réplication se connectent à la base de données Oracle et effectuent des opérations dans le cadre d'un schéma utilisateur que vous devez créer. Ce schéma doit bénéficier d'autorisations qui sont répertoriées dans la section suivante. Le schéma utilisateur possède tous les objets créés par le processus de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de publication Oracle, à l'exception d'un synonyme public, **MSSQLSERVERDISTRIBUTOR**. Pour plus d'informations sur les objets créés dans la base de données Oracle, consultez [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md).  
+ Les agents de réplication se connectent à la base de données Oracle et effectuent des opérations dans le cadre d'un schéma utilisateur que vous devez créer. Ce schéma doit bénéficier d'autorisations qui sont répertoriées dans la section suivante. Le schéma utilisateur possède tous les objets créés par le processus de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de publication Oracle, à l’exception d’un synonyme public, **MSSQLSERVERDISTRIBUTOR**. Pour plus d'informations sur les objets créés dans la base de données Oracle, consultez [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md).  
   
 > [!NOTE]  
 >  La suppression du synonyme public **MSSQLSERVERDISTRIBUTOR** et de l’utilisateur de réplication Oracle configuré à l’aide de l’option **CASCADE** supprime tous les objets de réplication du serveur de publication Oracle.  
@@ -89,7 +89,7 @@ ms.locfileid: "72907186"
   
  Dans Oracle Universal Installer, vous devez fournir les informations suivantes :  
   
-|Informations|Description|  
+|Information|Description|  
 |-----------------|-----------------|  
 |Oracle Home|Chemin d'accès du répertoire d'installation des logiciels Oracle. Acceptez le chemin par défaut (C:\oracle\ora90 ou équivalent) ou entrez un autre chemin. Pour plus d'informations sur Oracle Home, consultez la section « Considérations sur Oracle Home » plus loin dans cette rubrique.|  
 |Nom d'Oracle Home|Alias pour le chemin du répertoire d'origine Oracle Home.|  
@@ -116,7 +116,7 @@ ms.locfileid: "72907186"
   
 2.  Tapez `cmd` puis cliquez sur **OK**.  
   
-3.  À l'invite de commandes, tapez :  
+3.  À l’invite de commandes, tapez :  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -145,7 +145,7 @@ ms.locfileid: "72907186"
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations sur l’administration des serveurs de publication Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Mappage de type de données pour les serveurs de publication Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Glossaire des termes de la publication Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

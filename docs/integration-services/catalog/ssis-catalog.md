@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294961"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
@@ -53,13 +53,13 @@ ms.locfileid: "71294961"
 >   
 >  Si les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basculent dans le cadre d’un basculement de cluster, les packages en cours d’exécution ne redémarrent pas. Vous pouvez utiliser les points de contrôle pour redémarrer les packages. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
-## <a name="features-and-capabilities"></a>Fonctionnalités et fonctions  
+## <a name="features-and-capabilities"></a>Fonctionnalités et capacités  
   
 -   [Identificateurs d’objets de catalogue](../../integration-services/catalog/ssis-catalog.md#CatalogObjectIdentifiers)  
   
 -   [Configuration du catalogue](../../integration-services/catalog/ssis-catalog.md#Configuration)  
   
--   [Autorisations](../../integration-services/catalog/ssis-catalog.md#Permissions)  
+-   [autorisations](../../integration-services/catalog/ssis-catalog.md#Permissions)  
   
 -   [Dossiers](../../integration-services/catalog/ssis-catalog.md#Folders)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71294961"
   
 -   Paramètre  
   
--   Variable d'environnement  
+-   Variable d’environnement  
   
 ###  <a name="Folder"></a> Dossier, projet, environnement  
  Lorsque vous renommez un dossier, un projet ou un environnement, respectez les règles suivantes.  
@@ -95,7 +95,7 @@ ms.locfileid: "71294961"
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
-###  <a name="Parameter"></a> Paramètre  
+###  <a name="Parameter"></a> Parameter  
  Lorsque vous affectez un nom à un paramètre, respectez les règles suivantes :  
   
 -   Le premier caractère du nom doit être une lettre, ainsi que défini dans la norme Unicode 2.0, ou un trait de soulignement (_).  
@@ -135,7 +135,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
  **Période de rétention (jours)**  
  Définit l'âge maximal des données opérationnelles autorisées (en jours). Les données plus anciennes sont supprimées.  
   
- La valeur minimale est de un jour. La valeur maximale est limitée uniquement par la valeur maximale des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int** . Pour plus d’informations sur ce type de données, consultez [int, bigint, smallint et tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
+ La valeur minimale est de un jour. La valeur maximale est limitée uniquement par la valeur maximale des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int**. Pour plus d’informations sur ce type de données, consultez [int, bigint, smallint et tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
   
  **Supprimer régulièrement les anciennes versions**  
  L’étape de travail de nettoyage des versions de projet s’exécute quand cette propriété a la valeur **True**.  
@@ -164,7 +164,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
  La modification de l'algorithme de chiffrement est une opération qui prend du temps. Tout d'abord, le serveur doit utiliser l'algorithme précédemment spécifié pour déchiffrer toutes les valeurs de configuration. Le serveur doit ensuite utiliser le nouvel algorithme pour ré-chiffrer les valeurs. Pendant ce temps, aucune autre opération [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne peut être effectuée sur le serveur. Ainsi, pour permettre aux opérations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de continuer de façon ininterrompue, l’algorithme de chiffrement est une valeur en lecture seule dans la boîte de dialogue dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Pour modifier le paramètre de la propriété **Algorithme de chiffrement** , définissez la base de données **SSISDB** en mode mono-utilisateur, puis appelez la procédure stockée catalog.configure_catalog. Utilisez ENCRYPTION_ALGORITHM pour l’argument *property_name*. Pour connaître les valeurs de propriétés prises en charge, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Pour plus d’informations sur la procédure stockée, consultez [catalog.configure_catalog &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ Pour modifier le paramètre de la propriété **Algorithme de chiffrement** , définissez la base de données **SSISDB** en mode mono-utilisateur, puis appelez la procédure stockée catalog.configure_catalog. Utilisez ENCRYPTION_ALGORITHM pour l’argument *property_name* . Pour connaître les valeurs de propriétés prises en charge, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Pour plus d’informations sur la procédure stockée, consultez [catalog.configure_catalog &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  Pour plus d’informations sur le mode mono-utilisateur, consultez [Définir une base de données en mode mono-utilisateur](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Pour plus d’informations sur le chiffrement et les algorithmes de chiffrement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les rubriques de la section [Chiffrement SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -407,7 +407,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
      Pour plus d’informations sur l’instruction, consultez [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md).  
   
-     Dans l’exemple suivant, la clé principale est exportée vers le fichier `c:\temp directory\RCTestInstKey`. Le mot de passe `LS2Setup!` est utilisé pour chiffrer la clé principale.  
+     Dans l’exemple suivant, la clé principale est exportée vers le fichier `c:\temp directory\RCTestInstKey` . Le mot de passe `LS2Setup!` est utilisé pour chiffrer la clé principale.  
   
     ```  
     backup master key to file = 'c:\temp\RCTestInstKey'  
@@ -419,7 +419,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
 4.  Générez le script CREATE LOGIN pour ##MS_SSISServerCleanupJobLogin## en effectuant les actions suivantes. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
-    1.  Dans l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud **Sécurité**, puis le nœud **Connexions**.  
+    1.  Dans l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud **Sécurité** , puis le nœud **Connexions** .  
   
     2.  Cliquez avec le bouton droit sur **##MS_SSISServerCleanupJobLogin##** , puis cliquez sur **Générer un script de la connexion en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
   
@@ -466,7 +466,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
     ```  
   
-3.  Restaurez la base de données SSISDB à partir de la sauvegarde, à l’aide de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez les rubriques suivantes :  
+3.  Restaurez la base de données SSISDB à partir de la sauvegarde, à l’aide de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, voir les rubriques suivantes :  
   
     -   [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -486,7 +486,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
 7.  Restaurez la clé principale à l'aide de l'une des méthodes suivantes. Pour plus d’informations sur le chiffrement, consultez [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-    -   **Méthode 1**  
+    -   **Méthode 1**  
   
          Utilisez cette méthode si vous avez déjà effectué une sauvegarde de la clé principale de base de données et si vous disposez du mot de passe de chiffrement de la clé principale.  
   
@@ -508,7 +508,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
         >   
         >  L'argument FORCE spécifie que le processus de restauration doit continuer même si la clé principale de base de données actuelle n'est pas ouverte. Pour le catalogue SSISDB, comme la clé principale de la base de données n’a pas été ouverte sur l’instance où est restaurée la base de données, ce message s’affiche.  
   
-    -   **Méthode 2**  
+    -   **Méthode 2**  
   
          Utilisez cette méthode si vous disposez du mot de passe d'origine utilisé pour créer SSISDB.  
   
@@ -561,7 +561,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
 6.  Sur la page **Résultat** , passez en revue les résultats.  
   
-     ![Passer en revue les résultats de l’Assistant Mise à niveau de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Passer en revue les résultats de l’Assistant Mise à niveau de SSISDB")  
+     ![Consulter les résultats dans l’Assistant Mise à niveau de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Consulter les résultats dans l’Assistant Mise à niveau de SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On pour le catalogue SSIS (SSISDB)
   La fonctionnalité des groupes de disponibilité AlwaysOn est une solution de haute disponibilité et de récupération d’urgence qui offre une alternative au niveau de l’entreprise à la mise en miroir de bases de données. Un groupe de disponibilité prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées bases de données de disponibilité, qui basculent de concert. Pour plus d’informations, consultez [Groupes de disponibilité AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
@@ -573,7 +573,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
  
  **Dans cette section :**  
   
-1.  [Conditions préalables](#prereq)  
+1.  [Composants requis](#prereq)  
   
 2.  [Configurer la prise en charge de SSIS pour AlwaysOn](#Firsttime)  
   

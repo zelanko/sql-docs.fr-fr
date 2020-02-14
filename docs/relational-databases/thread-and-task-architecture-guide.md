@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305200"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guide d’architecture de thread et de tâche
@@ -46,7 +46,7 @@ Un **thread de travail** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)],
 Un **planificateur**, également appelé planificateur SOS, gère les threads de travail nécessitant un temps de traitement pour effectuer le travail résultant de tâches. Chaque planificateur est mappé à un processeur (UC) individuel. La durée pendant laquelle un Worker peut rester actif dans un planificateur est appelée quantum de système d’exploitation, avec un maximum de 4 ms. Une fois que son temps de quantum a expiré, un thread de travail consacre son temps à d’autres threads ayant besoin d’accéder aux ressources de l’UC et change d’état. Cette coopération entre les Workers pour optimiser l’accès aux ressources de l’UC est appelée **planification coopérative**, également connue sous le nom de planification non préemptive. À son tour, la modification de l’état du Worker est propagée à la tâche associée à ce Worker ainsi qu’à la requête associée à la tâche. Pour plus d’informations sur les états des Workers, consultez [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Pour plus d’informations sur les planificateurs, consultez [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Allocation de threads à une UC
-Par défaut, chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence chaque thread, et le système d’exploitation répartit les threads à partir des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre les processeurs (UC) sur un ordinateur en fonction de la charge. Si l'affinité de processus a été activée au niveau du système d'exploitation, ce dernier attribue chaque thread à une UC spécifique. En revanche, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] attribue des **threads de travail** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aux **planificateurs** qui distribuent les threads de manière équitable entre les unités centrales.
+Par défaut, chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence chaque thread, et le système d’exploitation répartit les threads à partir des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre les processeurs (UC) sur un ordinateur en fonction de la charge. Si l'affinité de processus a été activée au niveau du système d'exploitation, ce dernier attribue chaque thread à une UC spécifique. En revanche, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] attribue des **threads de travail** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aux **planificateurs** qui distribuent les threads de manière équitable entre les processeurs.
     
 Pour exécuter des travaux multitâches, par exemple lorsque plusieurs applications accèdent au même ensemble d’UC, le système d’exploitation déplace parfois les threads de travail entre les différentes UC. Même si cela est efficace du point de vue du système d'exploitation, cette activité peut réduire les performances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] du fait des charges système élevées, puisque chaque cache de processeur est rechargé par des données de façon répétée. L'affectation d’UC à des threads spécifiques permet d'améliorer les performances dans ces conditions en éliminant les rechargements de processeurs et en réduisant la migration des threads entre les UC (réduisant ainsi les changements de contexte) ; une telle association entre un thread et un processeur est appelée affinité du processeur. Si l'affinité a été activée, le système d'exploitation attribue chaque thread à une UC spécifique. 
 

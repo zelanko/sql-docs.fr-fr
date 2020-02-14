@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296153"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "71296153"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Les variables stockent des valeurs qu'un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
+  Les variables stockent les valeurs qu’un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
   
  Vous pouvez utiliser des variables dans des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour les opérations suivantes :  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71296153"
 **RaiseChangedEvent**  
  Quand la propriété a la valeur **True**, l’événement **OnVariableValueChanged** est déclenché en cas de changement de la valeur de la variable.  
   
- **En lecture seule**  
+ **Lecture seule**  
  Quand la propriété a la valeur **False**, la variable est en lecture-écriture.  
   
 **Portée**    
@@ -135,7 +135,7 @@ La valeur d'une variable définie par l'utilisateur peut être un littéral ou u
 
 | Type de données | Valeur par défaut |
 |---|---|
-| Booléen | False |
+| Boolean | False |
 | Types de données numérique et binaire | 0 (zéro) |
 | Types de données de caractère et de chaîne | (chaîne vide) |
 | Object | System.Object |
@@ -188,7 +188,7 @@ Une variable a des options permettant de définir la valeur de la variable et le
   
 6.  Dans la boîte de dialogue **Options de la grille** , sélectionnez des colonnes supplémentaires à afficher dans la boîte de dialogue **Options de la grille de variables** , puis cliquez sur **OK**.  
   
-7.  Éventuellement, définissez les propriétés d'une variable. Pour plus d’informations, consultez [Définir les propriétés d’une variable définie par l’utilisateur](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
+7.  Éventuellement, définissez les propriétés d'une variable. Pour plus d’informations, consultez [Définir les propriétés d'une variable définie par l'utilisateur](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
   
 8.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
@@ -199,7 +199,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
  **Conteneur**  
  Sélectionnez un conteneur dans la liste. Le conteneur définit l'étendue de la variable. Le conteneur peut être le package ou un exécutable du package.  
   
- **Name**  
+ **Nom**  
  Entrez le nom de la variable.  
   
  **Espace de noms**  
@@ -208,7 +208,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
  **Type de valeur**  
  Sélectionnez un type de données.  
   
- **Value**  
+ **Valeur**  
  Tapez une valeur. La valeur doit être compatible avec le type de données spécifié dans l'option **Type de valeur** .  
   
  **Lecture seule**  
@@ -314,7 +314,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
   
 7.  Dans la fenêtre **Propriétés** , mettez à jour les propriétés en lecture/écriture de la variable. Certaines propriétés sont en lecture/lecture uniquement pour les variables définies par l'utilisateur.  
   
-     Pour plus d’informations sur les propriétés, consultez [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md).  
+     Pour plus d’informations sur les propriétés, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 8.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
 

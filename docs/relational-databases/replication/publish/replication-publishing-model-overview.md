@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769800"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287554"
 ---
 # <a name="replication-publishing-model-overview"></a>Vue d’ensemble du modèle de publication de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  La réplication utilise une métaphore de l'industrie de l'édition pour représenter les composants d'une topologie de réplication ; elle comprend un serveur de publication, un serveur de distribution, des abonnés, des publications, des articles et des abonnements. Il peut être utile de penser à la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans les mêmes termes qu'un magazine :  
+  La réplication utilise une métaphore de l'industrie de l'édition pour représenter les composants d'une topologie de réplication ; elle comprend un serveur de publication, un serveur de distribution, des abonnés, des publications, des articles et des abonnements. La réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut s’envisager comme un magazine :  
   
 -   L'éditeur d'un magazine produit une ou plusieurs publications  
   
@@ -63,12 +63,12 @@ ms.locfileid: "68769800"
 ## <a name="publication"></a>Publication  
  Une publication est une collection d'un ou plusieurs articles provenant d'une base de données. Le regroupement de plusieurs articles en une publication facilite la spécification d'un ensemble logique d'objets de base de données et de données qui sont répliqués comme une seule unité.  
   
-## <a name="subscription"></a>Abonnement  
- Un abonnement est une requête portant sur la remise d'une copie d'une publication à un Abonné. L'abonnement définit la publication qui sera reçue, et où et quand elle sera reçue. Il existe deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Pour plus d’informations sur les abonnements par envoi et par extraction de données, consultez [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md).  
+## <a name="subscription"></a>Subscription  
+ Un abonnement est une requête portant sur la remise d'une copie d'une publication à un Abonné. L'abonnement définit la publication qui sera reçue, et où et quand elle sera reçue. Il existe deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Pour plus d’informations sur les abonnements par envoi et par extraction de données, consultez [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des Agents de réplication](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Types de réplication](../../../relational-databases/replication/types-of-replication.md)   
+ [Présentation des Agents de réplication](../../../relational-databases/replication/agents/replication-agents-overview.md)   
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [Configurer la réplication pour les groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [Gestion d’une base de données de publication Always On (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

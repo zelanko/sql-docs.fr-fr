@@ -13,29 +13,29 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710825"
 ---
-# <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation web
+# <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet un contrôle fin de la configuration de la sécurité de la synchronisation Web. Cette rubrique donne une liste complète de tous les composants qui peuvent être inclus dans une configuration de synchronisation Web, ainsi que des informations sur les connexions qui sont établies entre ces composants. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet un contrôle précis de la configuration de la sécurité de la synchronisation web. Cette rubrique donne une liste complète de tous les composants qui peuvent être inclus dans une configuration de synchronisation Web, ainsi que des informations sur les connexions qui sont établies entre ces composants. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  L'illustration suivante présente toutes les connexions envisageables, mais il est possible que certaines d'entre elles ne soient pas nécessaires dans une topologie donnée. Par exemple, une connexion à un serveur FTP est nécessaire uniquement si l'instantané est remis à l'aide de FTP.  
   
- ![Composants et connexions dans la synchronisation web](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Composants et connexions dans la synchronisation web")  
+ ![Composants et connexions dans la synchronisation Web](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Composants et connexions dans la synchronisation Web")  
   
  Les tableaux suivants décrivent les composants et les connexions présentés dans l'illustration.  
   
-## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>A. Utilisateur Windows sous lequel l'Agent de fusion est exécuté  
+## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>R. Utilisateur Windows sous lequel l'Agent de fusion est exécuté  
  Au cours de la synchronisation, l'Agent de fusion (A) est démarré chez l'Abonné. L'Agent de fusion peut être démarré à partir d'une étape de travail de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'une application personnalisée indépendante. Si l'Agent de fusion est démarré à partir d'une étape de travail de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l'Agent de fusion est exécuté dans le contexte d'un utilisateur Windows que vous spécifiez. Si vous ne spécifiez pas d'utilisateur Windows, l'Agent de fusion est exécuté dans le contexte du compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 |Type de compte|Emplacement de spécification du compte|  
 |---------------------|------------------------------------|  
 |Utilisateur Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)] : paramètres `@job_login` et `@job_password` de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects) : propriétés <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Gestionnaire de configuration|  
 |Application indépendante|L'Agent de fusion est exécuté dans le contexte de l'utilisateur Windows qui exécute l'application.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Connexion à l'Abonné  
@@ -80,9 +80,9 @@ ms.locfileid: "71710825"
   
  Le réconciliateur de réplication de fusion se connecte au serveur de publication à l'aide de l'authentification Windows ou de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'utilisateur Windows ou la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifié doit respecter les conditions suivantes :  
   
--   Faire partie de la liste d'accès à la publication (PAL, Publication Access List). Pour plus d’informations, consultez [Sécuriser le serveur de publication](../../../relational-databases/replication/security/secure-the-publisher.md).  
+-   faire partie de la liste d'accès à la publication (PAL, Publication Access List). Pour plus d’informations, consultez [Sécuriser le serveur de publication](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
--   Être associé à un utilisateur de la base de données de publication.  
+-   être associé à un utilisateur de la base de données de publication.  
   
 |Type d'authentification|Emplacement de spécification de l'authentification|  
 |----------------------------|-------------------------------------------|  

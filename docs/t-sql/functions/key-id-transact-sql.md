@@ -21,18 +21,18 @@ ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3ccf2da9a32cb932dc206d702d6303ffa85e0664
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109342"
 ---
-# <a name="keyid-transact-sql"></a>KEY_ID (Transact-SQL)
+# <a name="key_id-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie l'ID d'une clé symétrique dans la base de données actuelle.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ Key_ID ( 'Key_Name' )
  Nom de la clé symétrique dans la base de données.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
  Le nom d'une clé temporaire doit commencer par le signe #.  
@@ -56,7 +56,7 @@ Key_ID ( 'Key_Name' )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-id-of-a-symmetric-key"></a>A. Renvoi de l'ID d'une clé symétrique  
+### <a name="a-returning-the-id-of-a-symmetric-key"></a>R. Renvoi de l'ID d'une clé symétrique  
  L'exemple suivant renvoie l'ID de la clé `ABerglundKey1`.  
   
 ```  

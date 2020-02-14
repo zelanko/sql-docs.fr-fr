@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307627"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Index columnstore - Conseils en matière de chargement de données
@@ -74,7 +74,7 @@ SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id,
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
- ![Rowgroup et deltastore pour un chargement par lot](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup et deltastore pour un chargement par lot")  
+ ![Rowgroup et deltastore pour une charge de traitement](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup et deltastore pour une charge de traitement")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>Utiliser une table en préproduction pour améliorer les performances
 Si vous chargez des données uniquement pour les mettre en préproduction avant d’exécuter d’autres transformations, il sera beaucoup plus rapide de charger la table dans une table de segments de mémoire que de charger des données dans une table columnstore cluster. De plus, le chargement de données dans une table temporaire [Temporary] s’effectue également beaucoup plus rapidement que le chargement d’une table dans un stockage permanent.  

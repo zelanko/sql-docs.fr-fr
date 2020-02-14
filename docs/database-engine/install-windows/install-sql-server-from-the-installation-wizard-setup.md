@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75259023"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934190"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -67,9 +67,9 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
    Pour continuer, sélectionnez **suivant**.
 
 1. Sur la page **Termes du contrat de licence**, consultez le contrat de licence. Si vous acceptez, cochez la case **J’accepte les termes du contrat de licence**, puis sélectionnez **Suivant**.  
-
-   >[!NOTE]
-   > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+    
+   > [!NOTE]
+   > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
 
 1. Dans la page **Règles globales**, l’installation passera automatiquement à la page **Mises à jour du produit** s'il n'existe aucune erreur de règle.  
   
@@ -227,15 +227,17 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
   
 1. L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour créer une nouvelle installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sélectionnez **Installation** dans la zone de navigation de gauche, puis sélectionnez **Nouvelle installation autonome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou ajoutez des fonctionnalités à une installation existante**.  
 
-1. Sur la page **Clé de produit (Product Key)** sélectionnez une option pour indiquer si vous installez une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une version de production avec une clé PID. Pour plus d’informations, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+1. Sur la page **Clé de produit (Product Key)** sélectionnez une option pour indiquer si vous installez une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une version de production avec une clé PID. Pour plus d’informations, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
    Pour continuer, sélectionnez **suivant**.
-
   
-1. Sur la page **Termes du contrat de licence**, consultez le contrat de licence. Si vous acceptez, cochez la case **J’accepte les termes du contrat de licence et la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement)**, puis sélectionnez **Suivant**.  
+1. Sur la page **Termes du contrat de licence**, consultez le contrat de licence. Si vous acceptez, cochez la case **J’accepte les termes du contrat de licence et la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement)** , puis sélectionnez **Suivant**.  
 
-   >[!NOTE]
-   > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+   > [!NOTE]
+   > Si une clé de produit de licence Enterprise Server/CAL est entrée et que l’ordinateur a plus de 20 cœurs physiques, ou 40 cœurs logiques lorsque l’hyper-threading est activé, un avertissement s’affiche lors de l’installation. Vous pouvez quand même continuer l’installation en activant la case à cocher **Cochez cette case pour confirmer cette limite et continuer ou cliquez sur Précédent/Annuler pour entrer une licence de produit Enterprise Core prenant en charge la valeur maximale du système d'exploitation** ou cliquez sur **Précédent** et entrez une clé de licence prenant en charge le nombre maximal de processeurs du système d’exploitation.
+
+   > [!NOTE]
+   > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
 
 1. Dans la page **Règles globales**, l’installation passera automatiquement à la page **Mises à jour du produit** s'il n'existe aucune erreur de règle.  
   

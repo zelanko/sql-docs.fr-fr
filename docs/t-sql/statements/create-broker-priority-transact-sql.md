@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064685"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064685"
 
   Définit un niveau de priorité et le jeu de critères pour déterminer les conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] auxquelles le niveau de priorité est attribué. Le niveau de priorité est attribué aux points de terminaison qui utilisent la même combinaison de contrats et de services que ceux spécifiés dans la priorité de conversation. Les priorités varient en valeur de 1 (faible) à 10 (élevée). La valeur par défaut est 5.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -163,7 +163,7 @@ FOR CONVERSATION
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. Attribution d'un niveau de priorité aux deux directions d'une conversation  
+### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>R. Attribution d'un niveau de priorité aux deux directions d'une conversation  
  Ces deux priorités de conversation font en sorte que le niveau de priorité 3 est attribué à toutes les opérations qui utilisent `SimpleContract` entre `TargetService` et `InitiatorAService`.  
   
 ```  

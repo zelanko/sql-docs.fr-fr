@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009403"
 ---
 # <a name="columnstore-indexes-overview"></a>Index columnstore : Vue d’ensemble
@@ -45,7 +45,7 @@ Les termes et concepts clés suivants sont associés aux index columnstore.
 Un columnstore représente des données organisées logiquement sous la forme d’une table comportant des lignes et des colonnes, et stockées physiquement dans un format de données en colonnes.  
   
 #### <a name="rowstore"></a>Rowstore
-Un rowstore représente des données organisées logiquement sous la forme d’une table comportant des lignes et des colonnes, et stockées physiquement dans un format de données en lignes. Il s'agit de la méthode classique de stockage des données de tables relationnelles. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un rowstore correspond à une table dont le format de stockage de données sous-jacent est un segment de mémoire, un index cluster ou une table à mémoire optimisée.  
+Un rowstore représente des données organisées logiquement sous la forme d’une table comportant des lignes et des colonnes, et stockées physiquement dans un format de données en colonnes. Il s'agit de la méthode classique de stockage des données de tables relationnelles. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un rowstore correspond à une table dont le format de stockage de données sous-jacent est un segment de mémoire, un index cluster ou une table à mémoire optimisée.  
   
 > [!NOTE]  
 > Dans les discussions au sujet des index columnstore, les termes rowstore et columnstore sont utilisés pour mettre en évidence le format du stockage de données.  
@@ -61,12 +61,12 @@ Un segment de colonne est une colonne de données issue du rowgroup.
 -   Chaque rowgroup contient un segment de colonne pour chaque colonne dans la table.  
 -   Chaque segment de colonne est compressé et stocké sur un support physique.  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Segment de colonne](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "segment de colonne")  
   
 #### <a name="clustered-columnstore-index"></a>Index columnstore cluster
 Un index columnstore cluster représente le stockage physique de la totalité de la table.    
   
-![Index columnstore cluster](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Index columnstore cluster")  
+![Index columnstore cluster](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Index Columnstore cluster")  
   
 Pour réduire la fragmentation des segments de colonne et améliorer les performances, l’index columnstore est susceptible de stocker temporairement des données dans un index cluster appelé *deltastore*, ainsi que la liste btree des ID des lignes supprimées. Les opérations deltastore sont effectuées en coulisse. Pour retourner des résultats de requête corrects, l'index columnstore cluster associe les résultats de columnstore et de deltastore.  
   
@@ -138,7 +138,7 @@ Toutes les tables relationnelles, sauf si vous les spécifiez en tant qu’index
   
 Quand vous créez une table avec l’instruction `CREATE TABLE`, vous pouvez en faire un columnstore en spécifiant l’option `WITH CLUSTERED COLUMNSTORE INDEX`. Si vous avez déjà une table rowstore et que vous souhaitez la convertir au format columnstore, utilisez l’instruction `CREATE COLUMNSTORE INDEX`.  
   
-|Tâche|Rubriques d’informations de référence|Remarques|  
+|Tâche|Rubriques de référence|Notes|  
 |----------|----------------------|-----------|  
 |Créer une table sous forme de columnstore|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer la table en tant qu’index cluster columnstore. Il est inutile de créer au préalable une table rowstore pour la convertir ensuite en columnstore.|  
 |Créer une table mémoire avec un index columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer une table optimisée en mémoire avec un index columnstore. L’index columnstore peut également être ajouté après la création de la table, suivant la syntaxe `ALTER TABLE ADD INDEX`.|  

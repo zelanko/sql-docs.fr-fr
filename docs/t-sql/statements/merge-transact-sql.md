@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680828"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
@@ -46,7 +46,7 @@ FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -186,7 +186,7 @@ Spécifie le nombre ou le pourcentage de lignes affectées. L’argument *expres
   
 La clause TOP est appliquée après la jointure de l'intégralité de la table source et de la table cible, et après la suppression des lignes jointes qui ne sont pas éligibles pour une opération de type INSERT, UPDATE ou DELETE. La clause TOP réduit le nombre de lignes jointes à la valeur spécifiée. Les actions d’insertion, de mise à jour ou de suppression s’appliquent aux lignes jointes restantes de manière non ordonnée. Les lignes ne sont donc pas réparties selon un ordre particulier dans le cadre des actions définies dans les clauses WHEN. Par exemple, la spécification de la clause TOP (10) affecte 10 lignes. Parmi ces lignes, 7 peuvent être mises à jour et 3 insérées, ou alors 1 ligne peut être supprimée, 5 mises à jour et 4 insérées, et ainsi de suite.  
   
-Étant donné que l'instruction MERGE effectue une analyse complète des tables source et cible, les performances d'E/S peuvent être affectées lorsque la clause TOP est utilisée pour modifier une table volumineuse en créant plusieurs lots. Dans ce scénario, il est important de s'assurer que tous les lots consécutifs ciblent les nouvelles lignes.  
+Étant donné que l'instruction MERGE effectue une analyse complète des tables source et cible, les performances d'E/S peuvent être affectées lorsque la clause TOP est utilisée pour modifier une table volumineuse en créant plusieurs lots. Dans ce scénario, il est important de s’assurer que tous les lots consécutifs ciblent les nouvelles lignes.  
   
 *database_name*  
 Nom de la base de données contenant *target_table*.  
@@ -313,91 +313,91 @@ Si des déclencheurs INSTEAD OF INSERT sont définis sur *target_table*, l’op�
 
 Nécessite l'autorisation SELECT sur la table source et les autorisations INSERT, UPDATE ou DELETE sur la table cible. Pour plus d’informations, consultez la section Autorisations dans les articles [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) et [DELETE](../../t-sql/statements/delete-transact-sql.md).  
   
-## <a name="optimizing-merge-statement-performance"></a>Optimisation du niveau de performance de l’instruction MERGE
+## <a name="optimizing-merge-statement-performance"></a>Optimisation des performances de l'instruction MERGE
 
-En utilisant l’instruction MERGE, vous pouvez remplacer les instructions individuelles en DML par une instruction unique. Vous pouvez ainsi améliorer le niveau de performance des requêtes car les opérations sont effectuées dans une seule instruction, ce qui permet de réduire le nombre de traitements des données des tables sources et cibles. Toutefois, vous ne pouvez obtenir des gains de niveau de performance que si vous disposez d’index et de jointures corrects, d’autres considérations entrant également en jeu.
+En utilisant l'instruction MERGE, vous pouvez remplacer les instructions individuelles DML par une instruction unique. Vous pouvez ainsi améliorer les performances des requêtes car les opérations sont effectuées dans une seule instruction, cela permettant de réduire le nombre de traitements des données des tables sources et cibles. Toutefois, vous ne pouvez obtenir des gains de performance que si vous disposez d'index et de jointures corrects, d'autres considérations entrant également en jeu.
 
 ### <a name="index-best-practices"></a>Meilleures pratiques pour les index
 
-Pour améliorer le niveau de performance de l’instruction MERGE, nous vous recommandons de respecter les lignes directrices suivantes relatives aux index :
+Pour améliorer les performances de l'instruction MERGE, nous vous recommandons de respecter les règles suivantes relatives aux index :
 
-- Créez un index sur les colonnes de jointure de la table source qui est unique et couvrante.
+- Créez un index sur les colonnes de jointure de la table source qui sont uniques et qui sont des colonnes de couverture.
 - Créez un index cluster unique sur les colonnes de jointure dans la table cible.
 
-Ces index garantissent que les clés de jointure sont uniques et que les données des tables sont triées. Le niveau de performance des requêtes est meilleur car l’optimiseur de requête n’a pas besoin d’effectuer de validation supplémentaire pour localiser et mettre à jour les lignes en double, et aucune opération de tri supplémentaire n’est nécessaire.
+Ces index garantissent que les clés de jointure sont uniques et que les données des tables sont triées. Les performances des requêtes sont meilleures car l'optimiseur de requête n'a pas besoin d'effectuer de validation supplémentaire pour localiser et mettre à jour les lignes en double, et aucune opération de tri supplémentaire n'est nécessaire.
 
 ### <a name="join-best-practices"></a>Meilleures pratiques pour les jointures
 
-Pour améliorer le niveau de performance de l’instruction MERGE et garantir l’obtention de résultats corrects, nous vous recommandons de respecter les lignes directrices suivantes relatives aux jointures :
+Pour améliorer les performances de l'instruction MERGE et garantir l'obtention de résultats corrects, nous vous recommandons de respecter les règles suivantes relatives aux jointures :
 
 - Spécifiez uniquement dans la clause ON <merge_search_condition> des conditions de recherche qui déterminent les critères de correspondance des données dans les tables sources et cibles. Autrement dit, spécifiez uniquement les colonnes de la table cible qui seront comparées aux colonnes correspondantes de la table source. 
-- N’incluez pas de comparaisons avec d’autres valeurs, par exemple, une constante.
+- N'incluez pas de comparaisons avec d'autres valeurs (par exemple, une constante).
 
 Pour filtrer des lignes des tables sources ou cibles, utilisez l’une des méthodes suivantes.
 
-- Spécifiez la condition de recherche destinée au filtrage des lignes dans la clause WHEN appropriée. Par exemple, WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
-- Définissez un affichage sur la source ou la cible qui retourne les lignes filtrées et référencez-le en tant que table source ou cible. Si l’affichage est défini sur la table cible, toutes les actions dont elle fait l’objet doivent satisfaire aux conditions requises pour la mise à jour des affichages. Pour plus d’informations sur la mise à jour de données à l’aide d’un affichage, consultez Modification des données via un affichage.
-- Utilisez la clause `WITH <common table expression>` pour filtrer les lignes des tables sources ou cibles. Cette méthode est semblable à la spécification de critères de recherche supplémentaires dans la clause ON et peut produire des résultats incorrects. Nous vous recommandons d’éviter l’utilisation de cette méthode ou de la tester soigneusement avant de l’implémenter.
+- Spécifiez la condition de recherche destinée au filtrage des lignes dans la clause WHEN appropriée. Par exemple, WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
+- Définissez une vue sur la source ou la cible qui retourne les lignes filtrées et référencez la vue en tant que table source ou cible. Si la vue est définie sur la table cible, toutes les opérations dont elle fait l'objet doivent satisfaire aux conditions requises pour la mise à jour des vues. Pour plus d’informations sur la mise à jour de données à l’aide d’un affichage, consultez Modification des données via un affichage.
+- Utilisez la clause `WITH <common table expression>` pour filtrer les lignes des tables sources ou cibles. Cette méthode est semblable à la spécification de critères de recherche supplémentaires dans la clause ON et peut produire des résultats incorrects. Nous vous recommandons d'éviter l'utilisation de cette méthode ou de la tester soigneusement avant de l'implémenter.
 
-L’opération de jointure dans l’instruction MERGE peut être optimisée de la même façon qu’une jointure dans une instruction SELECT. Lorsque SQL Server procède au traitement des jointures, l’optimiseur de requête choisit parmi plusieurs possibilités la méthode de traitement la plus efficace. Lorsque la source et la cible sont de taille semblable et que vous avez appliqué aux tables sources et cibles les lignes directrices relatives aux index décrites précédemment, un opérateur de jointure de fusion constitue le plan de requête le plus efficace. En effet, les deux tables ne sont analysées qu’une fois et il n’est pas nécessaire de trier les données. Lorsque la source est plus petite que la table cible, un opérateur de boucles imbriquées est préférable.
+L'opération de jointure dans l'instruction MERGE peut être optimisée de la même façon qu'une jointure dans une instruction SELECT. Lorsque SQL Server procède au traitement des jointures, l’optimiseur de requête choisit parmi plusieurs possibilités la méthode de traitement la plus efficace. Lorsque la source et la cible sont de taille semblable et que vous avez appliqué aux tables sources et cibles les lignes directrices relatives aux index décrites précédemment, un opérateur de jointure de fusion constitue le plan de requête le plus efficace. En effet, les deux tables ne sont analysées qu'une fois et il n'est pas nécessaire de trier les données. Lorsque la source est plus petite que la table cible, un opérateur de boucles imbriquées est préférable.
 
-Vous pouvez forcer l’utilisation d’une jointure spécifique en spécifiant la clause `OPTION (<query_hint>)` dans l’instruction MERGE. Nous vous recommandons de ne pas utiliser de jointure hachée comme indicateur de requête pour les instructions MERGE car ce type de jointure n’utilise pas d’index.
+Vous pouvez forcer l'utilisation d'une jointure spécifique en spécifiant la clause `OPTION (<query_hint>)` dans l'instruction MERGE. Nous vous recommandons de ne pas utiliser de jointure de hachage comme indicateur de requête pour les instructions MERGE car ce type de jointure n'utilise pas d'index.
 
 ### <a name="parameterization-best-practices"></a>Meilleures pratiques pour le paramétrage
 
-Si une instruction SELECT, INSERT, UPDATE ou DELETE est exécutée sans paramètres, l’optimiseur de requête SQL Server peut choisir de paramétrer l’instruction en interne. Toute valeur littérale contenue dans la requête est alors remplacée par des paramètres. Par exemple, l’instruction insère dbo. Les valeurs MyTable (col1, col2) (1, 10) peuvent être implémentées en interne sous la forme INSERT dbo. VALEURS MyTable (col1, col2) (@p1, @p2). Ce processus, appelé paramétrage simple, augmente la capacité du moteur relationnel à faire correspondre les nouvelles instructions SQL aux plans d’exécution existants compilés précédemment. On peut ainsi améliorer le niveau de performance des requêtes grâce à la diminution de la fréquence des compilations et recompilations des requêtes. L’optimiseur de requête n’applique pas le processus de paramétrage simple aux instructions MERGE. Par conséquent, les instructions MERGE qui contiennent des valeurs littérales peuvent ne pas s’exécuter de façon aussi fluide que les instructions individuelles INSERT, UPDATE ou DELETE car un nouveau plan est compilé à chaque exécution de l’instruction MERGE.
+Si une instruction SELECT, INSERT, UPDATE ou DELETE est exécutée sans paramètres, l’optimiseur de requête SQL Server peut choisir de paramétrer l’instruction en interne. Toute valeur littérale contenue dans la requête est alors remplacée par des paramètres. Par exemple, l’instruction insère dbo. Les valeurs MyTable (col1, col2) (1, 10) peuvent être implémentées en interne sous la forme INSERT dbo. VALEURS MyTable (col1, col2) (@p1, @p2). Ce processus, appelé paramétrage simple, augmente la capacité du moteur relationnel à faire correspondre les nouvelles instructions SQL aux plans d’exécution existants compilés précédemment. On peut ainsi améliorer les performances des requêtes grâce à la diminution de la fréquence des compilations et recompilations des requêtes. L'optimiseur de requête n'applique pas le processus de paramétrage simple aux instructions MERGE. Par conséquent, les instructions MERGE qui contiennent des valeurs littérales peuvent ne pas s'exécuter de façon aussi fluide que les instructions individuelles INSERT, UPDATE ou DELETE car un nouveau plan est compilé à chaque exécution de l'instruction MERGE.
 
-Pour améliorer le niveau de performance des requêtes, nous vous recommandons de respecter les lignes directrices suivantes relatives au paramétrage :
+Pour améliorer les performances des requêtes, nous vous recommandons de respecter les règles suivantes relatives au paramétrage :
 
-- Paramétrez toutes les valeurs littérales de la clause `ON <merge_search_condition>` et des clauses `WHEN` de l’instruction MERGE. Par exemple, vous pouvez incorporer l’instruction MERGE dans une procédure stockée pour remplacer les valeurs littérales par les paramètres d’entrée appropriés.
+- Paramétrez toutes les valeurs littérales de la clause `ON <merge_search_condition>` et des clauses `WHEN` de l’instruction MERGE. Par exemple, vous pouvez incorporer l'instruction MERGE dans une procédure stockée pour remplacer les valeurs littérales par les paramètres d'entrée appropriés.
 - Si vous ne pouvez pas paramétrer l’instruction, créez un repère de plan de type `TEMPLATE` et spécifiez l’indicateur de requête `PARAMETERIZATION FORCED` dans le repère de plan.
-- Si les instructions MERGE sont fréquemment exécutées sur la base de données, vous devez envisager de définir l’option PARAMETERIZATION sur FORCED. Configurez cette option avec précaution. L’option `PARAMETERIZATION` est un paramètre de niveau base de données qui affecte le traitement de toutes les requêtes effectuées sur la base de données.
+- Si les instructions MERGE sont fréquemment exécutées sur la base de données, vous devez envisager de définir l'option PARAMETERIZATION sur FORCED. Configurez cette option avec précaution. L’option `PARAMETERIZATION` est un paramètre de niveau base de données qui affecte le traitement de toutes les requêtes effectuées sur la base de données.
 
 ### <a name="top-clause-best-practices"></a>Meilleures pratiques pour la clause TOP
 
-Dans l’instruction MERGE, la clause TOP spécifie le nombre ou le pourcentage de lignes affectées après la jointure de la table source et de la table cible, et après la suppression des lignes qui ne sont pas éligibles pour une action de type insert, update ou delete. La clause TOP réduit le nombre de lignes jointes à la valeur spécifiée, et les actions de type insert, update ou delete sont appliquées aux lignes jointes restantes sans respecter un ordre particulier. Les lignes ne sont donc pas réparties selon un ordre particulier dans le cadre des actions définies dans les clauses WHEN. Par exemple, la spécification de la clause TOP (10) affecte 10 lignes, dont 7 peuvent être mises à jour et 3 insérées, ou alors 1 ligne peut être supprimée, 5 mises à jour et 4 insérées, et ainsi de suite.
+Dans l'instruction MERGE, la clause TOP définit le nombre ou le pourcentage de lignes affectées après la jointure de la table source et de la table cible, et après la suppression des lignes qui ne sont pas éligibles pour une opération de type INSERT, UPDATE ou DELETE. La clause TOP réduit le nombre de lignes jointes à la valeur spécifiée et les actions INSERT, UPDATE ou DELETE sont appliquées aux lignes jointes restantes sans respecter un ordre particulier. Les lignes ne sont donc pas réparties selon un ordre particulier dans le cadre des actions définies dans les clauses WHEN. Par exemple, la spécification de la clause TOP (10) affecte 10 lignes, dont 7 peuvent être mises à jour et 3 insérées, ou alors 1 ligne peut être supprimée, 5 mises à jour et 4 insérées, et ainsi de suite.
 
-On utilise couramment la clause TOP pour effectuer des opérations en langage de manipulation de données sur une grande table dans les lots. Lorsque l’on utilise dans ce but la clause TOP dans l’instruction MERGE, il est important de tenir compte des conséquences suivantes.
+On utilise couramment la clause TOP pour effectuer des opérations en langage DML sur une grande table dans les lots. Lorsque l'on utilise dans ce but la clause TOP dans l'instruction MERGE, il est important de tenir compte des conséquences suivantes.
 
-- Le niveau de performance d’E/S peut être affecté.
+- Les performances d'E/S peuvent être affectées.
 
-  L’instruction MERGE effectue une analyse complète des tables sources et cibles. La division de l’opération en lots permet de réduire le nombre d’opérations d’écriture effectuées par lot. Toutefois, chaque lot effectuera une analyse complète des tables sources et cibles. L’activité de lecture résultante peut affecter les niveaux de performance de la requête.
+  L'instruction MERGE effectue une analyse complète des tables sources et cibles. La division de l'opération en lots permet de réduire le nombre d'opérations d'écriture effectuées par lot. Toutefois, chaque lot effectuera une analyse complète des tables sources et cibles. L'activité de lecture résultante peut affecter les performances de la requête.
 
 - Des résultats incorrects peuvent se produire.
 
   Il est important de s’assurer que tous les lots consécutifs traitent les nouvelles lignes. Dans le cas contraire, des comportements indésirables tels que l’insertion incorrecte de lignes en double dans la table cible peuvent se produire. Cela peut se produire lorsque la table source inclut une ligne que ne figurait pas dans un lot cible mais figurait dans la table cible globale.
 
-- Pour garantir l’obtention de résultats corrects :
+- Pour garantir l'obtention de résultats corrects :
 
   - Utilisez la clause ON pour déterminer quelles lignes sources affectent les lignes cibles existantes et quelles lignes sont vraiment nouvelles.
   - Utilisez une condition supplémentaire dans la clause WHEN MATCHED pour déterminer si la ligne cible a déjà été mise à jour par un lot précédent.
 
-Étant donné que la clause TOP n’est appliquée qu’une fois ces clauses appliquées, chaque exécution insère une ligne réellement sans correspondance ou met à jour une ligne existante.
+Étant donné que la clause TOP n'est appliquée qu'une fois ces clauses appliquées, chaque exécution insère une ligne réellement sans correspondance ou met à jour une ligne existante.
 
 ### <a name="bulk-load-best-practices"></a>Meilleures pratiques pour le chargement en masse
 
 L’instruction MERGE peut être utilisée pour effectuer un chargement en masse efficace des données à partir d’un fichier de données sources vers une table cible en spécifiant la clause `OPENROWSET(BULK…)` comme source de table. La totalité du fichier est ainsi traitée dans un lot unique.
 
-Pour améliorer le niveau de performance du processus de fusion en masse, nous vous recommandons de respecter les lignes directrices suivantes :
+Pour améliorer les performances du processus de fusion en masse, nous vous recommandons de respecter les règles suivantes :
 
 - Créez un index cluster sur les colonnes de jointure de la table cible.
 - Utilisez les conseils ORDER et UNIQUE dans la clause `OPENROWSET(BULK…)` pour spécifier la façon dont le fichier de données sources a été trié.
 
-  Par défaut, le processus de chargement en masse considère que le fichier de données n'est pas trié. Par conséquent, il est important que les données sources soient triées d’après l’index cluster sur la table cible et que le conseil ORDER soit utilisé pour indiquer l’ordre de tri afin que l’optimiseur de requête puisse générer un plan de requête plus efficace. Les conseils sont validés pendant l’exécution. Si le flux de données ne se conforme pas aux indicateurs spécifiés, une erreur est générée.
+  Par défaut, le processus de chargement en masse considère que le fichier de données n'est pas trié. Par conséquent, il est important que les données sources soient triées d'après l'index cluster sur la table cible et que l'indicateur ORDER soit utilisé pour indiquer l'ordre de tri afin que l'optimiseur de requête puisse générer un plan de requête plus efficace. Les indicateurs sont validés pendant l'exécution. Si le flux de données ne se conforme pas aux indicateurs spécifiés, une erreur est générée.
 
-Le respect de ces lignes directrices permet de s’assurer que les clés de jointure sont uniques et que l’ordre de tri des données dans le fichier source correspond à celui de la table cible. Le niveau de performance des requêtes est amélioré car aucune opération de tri supplémentaire n’est nécessaire et aucune copie des données n’est requise.
+Le respect de ces règles permet d'être sûr que les clés de jointure sont uniques et que l'ordre de tri des données dans le fichier source correspond à celui de la table cible. Les performances des requêtes sont améliorées car aucune opération de tri supplémentaire n'est nécessaire et aucune copie des données n'est requise.
 
-### <a name="measuring-and-diagnosing-merge-performance"></a>Mesure et diagnostic du niveau de performance de l’instruction MERGE
+### <a name="measuring-and-diagnosing-merge-performance"></a>Mesure et diagnostic des performances de l'instruction MERGE
 
 Les fonctionnalités suivantes sont à votre disposition pour vous aider à mesurer et diagnostiquer les performances des instructions MERGE.
 
 - Utilisez le compteur merge stmt dans la vue de gestion dynamique [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) pour retourner le nombre d’optimisations de requêtes concernant les instructions MERGE.
 - Utilisez l’attribut merge_action_type dans la vue de gestion dynamique [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) pour retourner le type de plan d’exécution de déclencheur utilisé comme résultat d’une instruction MERGE.
-- Utilisez Trace SQL pour rassembler des données de résolution de problèmes pour l’instruction MERGE comme vous le feriez pour d’autres instructions en langage de manipulation de données. Pour en savoir plus, voir [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).
+- Utilisez Trace SQL pour rassembler des données de résolution des problèmes pour l'instruction MERGE comme vous le feriez pour d'autres instructions en langage DML. Pour en savoir plus, voir [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).
 
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Utilisation de MERGE pour effectuer des opérations INSERT et UPDATE sur une table dans une instruction unique
+### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>R. Utilisation de MERGE pour effectuer des opérations INSERT et UPDATE sur une table dans une instruction unique
 
 Un scénario courant est la mise à jour d’une ou de plusieurs colonnes dans une table si une ligne correspondante existe. Ou l’insertion des données en tant que nouvelle ligne si une ligne correspondante n’existe pas. En général, vous exécutez l’un des scénarios en passant des paramètres à une procédure stockée qui contient les instructions UPDATE et INSERT appropriées. Avec l'instruction MERGE, vous pouvez effectuer les deux tâches dans une instruction unique. L'exemple suivant illustre une procédure stockée qui contient à la fois une instruction INSERT et une instruction UPDATE dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La procédure est ensuite modifiée pour exécuter les opérations équivalentes à l'aide d'une seule instruction MERGE.  
   

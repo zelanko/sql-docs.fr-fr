@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768762"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285698"
 ---
 # <a name="replication-programming-concepts"></a>Concepts de programmation en matière de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "68768762"
   
  Vous pouvez également étendre votre application en associant les fonctionnalités de réplication à d'autres fonctionnalités fournies par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le tableau suivant décrit certaines fonctionnalités étendues que vous pouvez fournir dans votre application de réplication.  
   
-|Fonctionnalité|Exemple|  
+|Fonctionnalités|Exemple|  
 |-------------------|-------------|  
 |Administration de serveur à l'aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)|Application qui permet à un administrateur de joindre et de configurer une base de données en tant que serveur de publication dans une topologie de réplication.|  
 |Accès aux données à l'aide d'ADO.NET|Application qui permet aux utilisateurs d'accéder par programme aux données de ventes répliquées et de les modifier dans une base de données d'abonné locale en mode hors connexion, puis de se connecter et de synchroniser l'abonnement par extraction de données (pull) en cliquant sur un bouton.|  
@@ -86,7 +86,7 @@ ms.locfileid: "68768762"
   
 -   [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
--   [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>Choix d'un environnement de développement  
  Lorsque vous développez une application de réplication, trois environnements de développement de base doivent être pris en compte. Chaque environnement de développement a accès aux mêmes fonctionnalités de réplication, à quelques exceptions près. Il est possible de développer des applications de réplication dans chacun des environnements suivants.  

@@ -13,10 +13,10 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e97ae33bcccee338be576138ca335bd6298e0128
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294072"
 ---
 # <a name="hadoop-file-system-task"></a>Tâche du système de fichiers Hadoop
@@ -39,7 +39,7 @@ ms.locfileid: "71294072"
 |**Chemin de fichier Hadoop**|Spécifiez le chemin d’accès du fichier ou du répertoire sur HDFS.|  
 |**Type de fichier Hadoop**|Spécifiez si l’objet du système de fichiers HDFS est un fichier ou un répertoire.|  
 |**Remplacer la destination**|Spécifiez s’il faut remplacer le fichier cible le cas échéant.|  
-|**Opération**|Spécifiez l’opération. Les opérations disponibles sont **CopyToHDFS**, **CopyFromHDFS**et **CopyWithinHDFS**.|  
+|**opération**|Spécifiez l’opération. Les opérations disponibles sont **CopyToHDFS**, **CopyFromHDFS**et **CopyWithinHDFS**.|  
 |**Connexion de fichiers locaux**|Spécifiez un gestionnaire de connexions de fichiers existant ou créez-en un. Ce gestionnaire de connexions indique où se trouvent les fichiers source.|  
 |**Est récursif**|Indiquez si vous souhaitez copier tous les sous-dossiers de manière récursive.|  
   

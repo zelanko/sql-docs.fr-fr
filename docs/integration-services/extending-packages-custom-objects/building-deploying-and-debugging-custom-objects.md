@@ -13,10 +13,10 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297315"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
@@ -134,7 +134,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 2.  Sous l’onglet **Déboguer** des **Propriétés du projet**, sélectionnez **Démarrer le programme externe** comme **Première action** et localisez **dtexec.exe**, installé par défaut dans C:\Program Files\Microsoft SQL Server\130\DTS\Binn.  
   
-3.  Dans la zone de texte **Options de ligne de commande**, sous **Options de démarrage**, entrez les arguments de ligne de commande requis pour exécuter un package qui utilise votre composant. Souvent, l'argument de ligne de commande sera consitué du commutateur /F[ILE] suivi du chemin d'accès et du nom du fichier .dtsx. Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+3.  Dans la zone de texte **Options de ligne de commande**, sous **Options de démarrage**, entrez les arguments de ligne de commande requis pour exécuter un package qui utilise votre composant. Souvent, l'argument de ligne de commande sera consitué du commutateur /F[ILE] suivi du chemin d'accès et du nom du fichier .dtsx. Pour plus d'informations, consultez [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md).  
   
 4.  Définissez des points d'arrêt dans le code source aux emplacements appropriés dans les méthodes d'exécution de votre composant.  
   

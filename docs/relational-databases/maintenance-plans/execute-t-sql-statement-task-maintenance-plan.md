@@ -15,10 +15,10 @@ ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d27395a66cd9bddb66bd2a74bcd13492509046e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115798"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Exécuter la tâche de l’instruction T-SQL (Plan de maintenance)
@@ -26,7 +26,7 @@ ms.locfileid: "68115798"
   Utilisez la boîte de dialogue **Exécuter la tâche de l’instruction T-SQL** pour personnaliser le plan de maintenance en y ajoutant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de votre choix.  
   
 ## <a name="options"></a>Options  
- **Connexion**  
+ **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
  **Nouveau**  
@@ -45,7 +45,7 @@ ms.locfileid: "68115798"
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
 ## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
- **Nom de la connexion**  
+ **Nom de connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
  **Sélectionnez ou entrez un nom de serveur.**  
@@ -58,12 +58,12 @@ ms.locfileid: "68115798"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Permet de se connecter à une instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] à l’aide de l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Permet de se connecter à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] avec l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
  Se connecte à une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
  **Mot de passe**  

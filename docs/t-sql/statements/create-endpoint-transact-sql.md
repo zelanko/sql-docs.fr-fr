@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902834"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "67902834"
   
 > **REMARQUE :** Les services Web XML natifs (points de terminaison SOAP/HTTP) ont été supprimés dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Pour les options propres à SERVICE_BROKER, consultez la section « Options SERVICE_BROKER » ci-dessous. Pour les options propres à DATABASE_MIRRORING, consultez la section « Options DATABASE_MIRRORING » ci-dessous.  
   
- AUTHENTICATION **=** \<authentication_options> Indique les exigences d’authentification TCP/IP pour les connexions à ce point de terminaison. Le paramètre par défaut est WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Indique les exigences d’authentification TCP/IP pour les connexions à ce point de terminaison. Le paramètre par défaut est WINDOWS.  
   
  Parmi les méthodes d'authentification prises en charge figurent NTLM et/ou Kerberos.  
   
@@ -169,7 +169,7 @@ FOR DATABASE_MIRRORING (
  **\<authentication_options> ::=**  
   
  **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
- Indique que le point de terminaison doit se connecter à l'aide du protocole d'authentification Windows pour authentifier les points de terminaison. Il s'agit du paramètre par défaut.  
+ Indique que le point de terminaison doit se connecter à l'aide du protocole d'authentification Windows pour authentifier les points de terminaison. Il s’agit de la valeur par défaut.  
   
  Si vous spécifiez une méthode d'autorisation (NTLM ou KERBEROS), cette méthode est utilisée en tant que protocole d'authentification. Avec la valeur par défaut, NEGOTIATE, le point de terminaison utilise le protocole de négociation Windows pour choisir NTLM ou Kerberos.  
   
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
  Transfère les messages si une adresse de transfert est disponible.  
   
  DISABLED  
- Annule les messages destinés à des services situés ailleurs. Il s'agit du paramètre par défaut.  
+ Annule les messages destinés à des services situés ailleurs. Il s’agit de la valeur par défaut.  
   
  MESSAGE_FORWARD_SIZE **=** _forward_size_  
  Indique l'espace de stockage maximal, en mégaoctets, à allouer au point de terminaison lors du stockage des messages à transférer.  

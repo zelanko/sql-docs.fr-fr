@@ -14,15 +14,15 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986930"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, objet Buffer Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  L'objet **Buffer Manager** fournit des compteurs pour analyser comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise :  
+  L'objet **Gestionnaire de tampons** fournit des compteurs pour analyser comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise :  
   
 -   la mémoire pour stocker des pages de données ;  
   
@@ -39,13 +39,13 @@ ms.locfileid: "67986930"
 -   La fréquence de lecture de données à partir du disque par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Comparées aux autres opérations, comme les accès mémoire, les E/S physiques consomment beaucoup de temps. La diminution des E/S physiques permet d'améliorer les performances des requêtes.  
   
 ## <a name="buffer-manager-performance-objects"></a>Objets de performance du gestionnaire de tampons  
- Ce tableau décrit les objets de performance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gestionnaire de tampons** .  
+ Ce tableau décrit les objets de performance **Gestionnaire de tampons** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs du gestionnaire de tampons de SQL Server|Description|  
 |----------------------------------------|-----------------|  
 |**Pages d’enregistreur en arrière-plan/s**|Nombre de pages vidées pour permettre l’application des paramètres d’intervalle de récupération.| 
 |**Taux d'accès au cache des tampons**|Indique le pourcentage des pages retrouvées dans le cache des tampons sans devoir être lues sur le disque. Ce rapport correspond au nombre total de présences dans le cache divisé par le nombre total de recherches dans le cache au cours des quelques derniers milliers d'accès aux pages. Au bout d'un certain temps, ce rapport change peu. Comme la lecture à partir du cache est beaucoup moins coûteuse que la lecture à partir du disque, ce rapport devrait être élevé. En général, il est possible d'augmenter le taux de présence dans le cache en augmentant la quantité de mémoire mise à la disposition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou en utilisant la fonctionnalité d'extension du pool de mémoires tampons.|  
-|**Base du taux d’accès au cache des tampons**|À usage interne uniquement|
+|**Base du taux d’accès au cache des tampons**|À usage interne uniquement.|
 |**Pages de points de contrôle/s**|Indique le nombre de pages vidées sur le disque par seconde par point de contrôle ou autre opération impliquant le vidage des pages de modifications.|  
 |**Pages de base de données**|Indique le nombre de pages dans le pool de mémoires tampons avec le contenu de la base de données.|  
 |**Pages affectées à l'extension**|Nombre total de pages de cache occupé dans le fichier d'extension du pool de mémoires tampons.|  

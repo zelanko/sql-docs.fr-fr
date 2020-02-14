@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710319"
 ---
 # <a name="create-a-full-database-backup"></a>Créer une sauvegarde complète de base de données
@@ -89,7 +89,7 @@ Les autorisations `BACKUP DATABASE` et `BACKUP LOG` reviennent par défaut aux m
 
 1. Une fois la sauvegarde terminée, cliquez sur **OK** pour fermer la boîte de dialogue SQL Server Management Studio.
 
-### <a name="additional-information"></a>Autres informations
+### <a name="additional-information"></a>Informations supplémentaires
 
 - Après la création d’une sauvegarde de base de données complète, vous pouvez créer une [sauvegarde de base de données différentielle](create-a-differential-database-backup-sql-server.md) ou une [sauvegarde du journal des transactions](back-up-a-transaction-log-sql-server.md).
 
@@ -132,7 +132,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-full-back-up-to-disk-to-default-location"></a>A. Sauvegarde complète sur disque à l’emplacement par défaut
+#### <a name="a-full-back-up-to-disk-to-default-location"></a>R. Sauvegarde complète sur disque à l’emplacement par défaut
 
 Dans cet exemple, la base de données `SQLTestDB` est sauvegardée sur disque à l’emplacement de sauvegarde par défaut.
 
@@ -264,7 +264,7 @@ Options **WITH** de base relatives au jeu de sauvegarde :
 
 - **{ COMPRESSION | NO_COMPRESSION }** : Dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et versions ultérieures uniquement, spécifie si la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md) est effectuée sur cette sauvegarde, remplaçant la valeur par défaut au niveau du serveur.
 - **ENCRYPTION (ALGORITHM, SERVER CERTIFICATE | ASYMMETRIC KEY)** : Dans SQL Server 2014 ou les versions ultérieures, spécifiez l'algorithme de chiffrement à utiliser, ainsi que le certificat ou la clé asymétrique pour sécuriser le chiffrement.
-- **DESCRIPTION** **=** { **’** _texte_ **’**  |  **@** _texte\_variable_ } : Spécifie le texte au format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.
+- **DESCRIPTION** **=** { **'** _text_ **'**  |  **@** _text\_variable_ }: Spécifie le texte au format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.
 - **NAME = { *nom_jeu_sauvegarde* |  **@** _variable\_nom\_jeu\_sauvegarde_ }**  : Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.
 
 Par défaut, `BACKUP` ajoute la sauvegarde à un support de sauvegarde existant, préservant les jeux de sauvegarde existants. Pour spécifier explicitement ceci, utilisez l’option `NOINIT`. Pour plus d’informations sur l’ajout à des jeux de sauvegarde existants, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
@@ -312,7 +312,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-back-up-to-a-disk-device"></a>A. Sauvegarder sur une unité de disque
+#### <a name="a-back-up-to-a-disk-device"></a>R. Sauvegarder sur une unité de disque
 
 L'exemple suivant sauvegarde entièrement la base de données `SQLTestDB` sur disque, à l'aide de `FORMAT` , pour créer une nouveau jeu de supports.
 
@@ -375,7 +375,7 @@ Utilisez l’applet de commande **Backup-SqlDatabase** . Pour indiquer explicite
 
 ### <a name="examples"></a>Exemples
 
-#### <a name="a-full-backup-local"></a>A. Sauvegarde complète (locale)
+#### <a name="a-full-backup-local"></a>R. Sauvegarde complète (locale)
 
 L'exemple suivant crée une sauvegarde complète de la base de données `<myDatabase>` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`. Cet exemple spécifie, de manière facultative, **-BackupAction Database**.
 

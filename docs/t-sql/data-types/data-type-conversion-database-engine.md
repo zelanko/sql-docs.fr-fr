@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68697494"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversion de types de données (moteur de base de données)
@@ -56,7 +56,7 @@ Utilisez CAST au lieu de CONVERT si vous souhaitez que le code de programmation 
   
 L'illustration ci-dessous reprend toutes les conversions de types de données explicites et implicites autorisées pour les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournis par le système. Ces types sont notamment **xml**, **bigint** et **sql_variant**. Aucune conversion implicite d’attribution de valeur n’est effectuée à partir du type de données **sql_variant**, mais une conversion implicite vers **sql_variant** existe.
   
-![Table de conversion de types de données](../../t-sql/data-types/media/lrdatahd.png "Table de conversion de types de données")
+![Table de conversion de type de données](../../t-sql/data-types/media/lrdatahd.png "Table de conversion de type de données")
 
 Le graphique ci-dessus illustre toutes les conversions implicites et explicites autorisées dans SQL Server, mais il n’indique pas le type de données résultant de la conversion. Quand SQL Server effectue une conversion explicite, l’instruction elle-même détermine le type de données résultant. Pour les conversions implicites,ce sont les instructions d’assignation, comme la définition de la valeur d’une variable ou l’insertion d’une valeur dans une colonne, qui donnent le type de données défini par la déclaration de variable ou la définition de colonne. Pour les opérateurs de comparaison ou d’autres expressions, le type de données résultant dépend des règles de priorité des types de données.
 
@@ -122,16 +122,16 @@ Le tableau suivant décrit la conversion des types de données [!INCLUDE[ssNoVer
   
 |Type de données SQL Server|Type de données Visual Basic|  
 |--------------------------|----------------------------|  
-|**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
-|**decimal**, **numeric**|**String**|  
+|**char**, **varchar**, **text**, **nvarchar**, **ntext**|**Chaîne**|  
+|**decimal**, **numeric**|**Chaîne**|  
 |**bit**|**Booléen**|  
 |**binary**, **varbinary**, **image**|Tableau de type **Byte()** unidimensionnel|  
-|**Int**|**Long**|  
+|**int**|**Long**|  
 |**smallint**|**Integer**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
 |**real**|**Unique**|  
-|**money**, **smallmoney**|**Monétaire (Currency)**|  
+|**money**, **smallmoney**|**Devise**|  
 |**datetime**, **smalldatetime**|**Date**|  
 |Tout type qui prend la valeur NULL|**Variant** ayant la valeur Null|  
   
@@ -141,9 +141,9 @@ Il s'agit des conversions des types de données [!INCLUDE[vbprvb](../../includes
   
 |Type de données Visual Basic|Type de données SQL Server|  
 |----------------------------|--------------------------|  
-|**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**Int**|  
+|**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
-|**Monétaire (Currency)**|**money**|  
+|**Devise**|**money**|  
 |**Date**|**datetime**|  
 |**String** avec 4 000 caractères au maximum|**varchar**/**nvarchar**|  
 |**String** avec plus de 4 000 caractères|**text**/**ntext**|  

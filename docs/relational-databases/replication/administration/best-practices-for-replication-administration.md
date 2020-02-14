@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 04cfff3e2772f945d01093bab15246924a104b2b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5d0948f6732b97da93b1136635175b90d5e92059
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768837"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286874"
 ---
-# <a name="best-practices-for-replication-administration"></a>Bonnes pratiques en matière d’administration de la réplication
+# <a name="best-practices-for-replication-administration"></a>Méthodes conseillées pour l'administration de la réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les méthodes conseillées présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68768837"
  Les bases de données répliquées nécessitent une attention toute particulière en ce qui concerne la sauvegarde et la restauration de données. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Créer un script de la topologie de réplication  
- Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système [!INCLUDE[tsql](../../../includes/tsql-md.md)] nécessaires à l'implémentation du ou des composants faisant l'objet d'un script, comme une publication ou un abonnement. Il est possible de créer des scripts à l'aide d'un Assistant (comme l'Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée. Pour plus d’informations, voir [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+ Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système [!INCLUDE[tsql](../../../includes/tsql-md.md)] nécessaires à l'implémentation du ou des composants faisant l'objet d'un script, comme une publication ou un abonnement. Il est possible de créer des scripts à l’aide d’un Assistant (comme l’Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée. Pour plus d'informations, voir [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
  Le script doit être exécuté à nouveau sur un composant si des modifications de propriétés sont apportées. Si vous utilisez des procédures stockées personnalisées avec la réplication transactionnelle, une copie de chaque procédure doit être stockée avec les scripts ; la copie doit être mise à jour si la procédure change (les procédures sont généralement mises à jour suite à des modifications de schéma ou à des modifications des conditions requises par l'application). Pour plus d’informations sur les procédures personnalisées, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -114,9 +114,9 @@ ms.locfileid: "68768837"
 ## <a name="monitor-the-replication-topology"></a>Analyser la topologie de réplication  
  Une fois la topologie de réplication en place et les seuils et alertes configurées, il est recommandé d'analyser régulièrement la réplication. L'analyse d'une topologie de réplication est un aspect important du déploiement de la réplication. L'activité de la réplication étant distribuée, il est essentiel de faire le suivi de cette activité et des états à travers tous les ordinateurs impliqués dans la réplication. Les outils suivants peuvent être utilisés pour surveiller la réplication :  
   
--   Le Moniteur de réplication est l'outil le plus important d'analyse de réplication, il vous permet d'analyser la santé globale d'une topologie de réplication. Pour plus d’informations, voir [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
+-   Le Moniteur de réplication est l'outil le plus important d'analyse de réplication, il vous permet d'analyser la santé globale d'une topologie de réplication. Pour plus d'informations, voir [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] et les Replication Management Objects fournissent des interfaces pour l'analyse de réplication. Pour plus d’informations, voir [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] et les Replication Management Objects fournissent des interfaces pour l'analyse de réplication. Pour plus d'informations, voir [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   Le Moniteur système peut également s'avérer très utile pour l'analyse des performances de la réplication. Pour plus d’informations, voir [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68768837"
  Une fois que vous avez créé une publication, il sera peut-être nécessaire d'ajouter ou de supprimer des articles, ou de modifier les propriétés de la publication ou des articles. La plupart des modifications sont autorisées après qu'une publication ait été créée, mais dans certains cas, il est nécessaire de générer un nouvel instantané pour une publication et/ou de réinitialiser les abonnements à la publication. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>Comprendre comment effectuer des modifications de schémas si les conditions requises par l'application sont modifiées  
- Dans certains cas, les modifications de schémas sont nécessaires une fois qu'une application est en fonctionnement. Dans une topologie de réplication, ces modifications doivent le plus souvent être propagées à tous les abonnés. La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Lorsque vous effectuez l'une des modifications de schémas qui suit sur l'objet publié approprié sur un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ Dans certains cas, les modifications de schémas sont nécessaires une fois qu'une application est en fonctionnement. Dans une topologie de réplication, ces modifications doivent le plus souvent être propagées à tous les abonnés. La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Quand vous effectuez une des modifications de schéma suivantes dans l’objet publié approprié sur un Abonné [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
   

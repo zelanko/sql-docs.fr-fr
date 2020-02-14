@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908599"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Créer une publication à partir d'une base de données Oracle
@@ -28,7 +28,7 @@ ms.locfileid: "72908599"
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
 -   **Pour créer une publication à partir d'une base de données Oracle à l'aide de :**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72908599"
   
 6.  Dans l'onglet **Propriétés de la connexion** , sélectionnez un type de serveur de publication ( **Passerelle** ou **Complet**).  
   
-     L’option **Complet** est conçue pour fournir des publications transactionnelles et d’instantané avec l’ensemble complet de fonctionnalités prises en charge pour la publication Oracle. L'option **Passerelle** permet l'optimisation de la conception en améliorant les performances pour les cas où la réplication sert de passerelle entre les systèmes. Vous ne pouvez pas utiliser l'option **Passerelle** si vous envisagez de publier la même table dans plusieurs publications transactionnelles. Une table peut apparaître au maximum dans une publication transactionnelle et dans une ou plusieurs publications d'instantané si vous sélectionnez **Passerelle**.  
+     L'option **Complet** a pour but de fournir un instantané et des publications transactionnelles avec le jeu complet de fonctionnalités prises en charge pour le serveur de publication Oracle. L'option **Passerelle** permet l'optimisation de la conception en améliorant les performances pour les cas où la réplication sert de passerelle entre les systèmes. Vous ne pouvez pas utiliser l'option **Passerelle** si vous envisagez de publier la même table dans plusieurs publications transactionnelles. Une table peut apparaître au maximum dans une publication transactionnelle et dans une ou plusieurs publications d'instantané si vous sélectionnez **Passerelle**.  
   
 7.  Cliquez sur **Se connecter**, qui crée une connexion au serveur de publication Oracle et le configure pour la réplication. La boîte de dialogue **Se connecter au serveur** se ferme et vous revenez dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** .  
   
@@ -102,12 +102,12 @@ ms.locfileid: "72908599"
   
      Pour plus d'informations sur les autorisations requises par chaque Agent, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) et [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md).  
   
-10. Dans la page **Actions de l'Assistant** , créez éventuellement un script de la publication. Pour plus d’informations, consultez [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+10. Dans la page **Actions de l'Assistant** , créez éventuellement un script de la publication. Pour plus d'informations, voir [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 11. Dans la page **Terminer l'Assistant** , spécifiez un nom pour la publication.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- Une fois la base de données Oracle configurée comme serveur de publication, vous pouvez créer une publication transactionnelle ou d’instantané de la même manière que depuis un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], en utilisant des procédures stockées système.  
+ Une fois la base de données Oracle configurée comme serveur de publication, vous pouvez créer une publication transactionnelle ou d’instantané de la même façon que vous le feriez à partir un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], en utilisant des procédures stockées système.  
   
 #### <a name="to-create-an-oracle-publication"></a>Pour créer une publication Oracle  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72908599"
         > [!NOTE]  
         >  Le paramètre **\@job_login** doit correspondre à la connexion fournie à l’étape 3. Ne fournissez pas d'informations de sécurité pour le serveur de publication. L'Agent de lecture du journal se connecte au serveur de publication à l'aide des informations de sécurité fournies à l'étape 3.  
   
-5.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) pour créer la publication. Pour plus d’informations, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+5.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) pour créer la publication. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 6.  Dans la base de données de distribution sur le serveur de distribution, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l’étape 4 pour **\@publication** et les informations d’identification Windows sous lesquelles l’Agent d’instantané s’exécute pour **\@job_name** et **\@password**. Pour utiliser l’authentification standard Oracle lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **\@publisher_security_mode** et spécifier les informations de connexion Oracle pour **\@publisher_login** et **\@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
   
@@ -147,6 +147,6 @@ ms.locfileid: "72908599"
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Configurer le travail d’un jeu de transactions pour un serveur de publication Oracle &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
+ [Script pour l’attribution d’autorisations Oracle](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
   
   

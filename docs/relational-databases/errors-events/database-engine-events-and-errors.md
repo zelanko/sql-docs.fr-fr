@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247318"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918191"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 
@@ -5871,7 +5871,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14689   |   16  |   Non  |   Un jeu d'éléments de collecte ne peut pas démarrer si l'entrepôt de données de gestion n'est pas configuré. Exécutez le script instmdw.sql pour créer et configurer l'entrepôt de données de gestion. |
 |   14690   |   16  |   Non  |   Impossible d'effectuer cette procédure lorsque le collecteur est activé. Désactivez le collecteur, puis réessayez.  |
 |   14691   |   16  |   Non  |   L'état du collecteur ne peut pas être Null. Cela peut indiquer une altération interne des données de configuration du collecteur.   |
-|   14692   |   16  |   Non  |   Privilèges insuffisants pour démarrer le jeu d'éléments de collecte '%s'. Seul un membre du rôle serveur fixe sysadmin peut démarrer un jeu d'éléments de collecte sans proxy d'Agent SQL Server. Attachez un proxy d'Agent SQL Server au jeu d'éléments de collecte avant de réessayer.    |
+|   14692   |   16  |   Non  |   Privilèges insuffisants pour démarrer le jeu d’éléments de collecte '%s'. Seul un membre du rôle serveur fixe sysadmin peut démarrer un jeu d'éléments de collecte sans proxy d'Agent SQL Server. Attachez un proxy d'Agent SQL Server au jeu d'éléments de collecte avant de réessayer.    |
 |   14693   |   16  |   Non  |   Un jeu d'éléments de collecte ne peut pas démarrer sans planification. Indiquez une planification pour le jeu d'éléments de collecte.    |
 |   14694   |   16  |   Non  |   Impossible de télécharger des données sur demande pour le jeu d'éléments de collecte '%s' en mode non mis en cache.    |
 |   14695   |   16  |   Non  |   Impossible de collecter des données sur demande pour le jeu d'éléments de collecte '%s' en mode mis en cache.   |
@@ -7997,7 +7997,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   21796   |   16  |   Non  |   La propriété "xactsetjobinterval" doit avoir une valeur supérieure ou égale à 0.  |
 |   21797   |   16  |   Non  |   Impossible de créer le travail de l'agent. '%s' doit être une connexion Windows valide sous la forme : 'MACHINE\Connexion' ou 'DOMAIN\Connexion'. Consultez la documentation de '%s'.    |
 |   21798   |   16  |   Non  |   Impossible d'exécuter la procédure administrative de réplication. Le travail de l'Agent « %1!s! » doit être ajouté à l'aide de « %2!s! » avant de continuer. Consultez la documentation de '%s'.   |
-|   21799   |   16  |   Non  |   L'agent %s pour le serveur de publication (%s), base de données (%s), publication (%s) est introuvable. Créez l'agent à l'aide de la procédure appropriée : sp_addpublication_snapshot, sp_addlogreader_agent ou sp_addqreader_agent.  |
+|   21799   |   16  |   Non  |   L’agent %s pour le serveur de publication (%s), base de données (%s), publication (%s) est introuvable. Créez l'agent à l'aide de la procédure appropriée : sp_addpublication_snapshot, sp_addlogreader_agent ou sp_addqreader_agent.   |
 |   21800   |   16  |   Non  |   Le filigrane de création commune n'est pas valide dans ce réplica, parce qu'il n'existe pas ou que les métadonnées relatives aux modifications qui n'ont pas encore été propagées ont peut-être été nettoyées. |
 |   21801   |   16  |   Non  |   Échec de la procédure stockée sp_createagentparameter pour ajouter un ou plusieurs paramètres à la table système msdb.dbo.MSagentparameterlist. Consultez les éventuelles erreurs retournées par sp_createagentparameter et celles retournées par SQL Server pendant l'exécution de sp_createagentparameter.    |
 |   21802   |   16  |   Non  |   Le processus de création du profil d'agent ne peut pas valider la valeur du paramètre d'agent spécifiée. '%s' n'est pas une valeur valide pour le paramètre '%s'. La valeur doit être un entier inférieur ou égal à '%d'. Vérifiez que la réplication est installée correctement.   |

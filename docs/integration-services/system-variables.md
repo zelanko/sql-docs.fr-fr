@@ -17,10 +17,10 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0b29d0e74d25739b72e712080d2f379ae3be437
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296727"
 ---
 # <a name="system-variables"></a>Variables système
@@ -44,11 +44,11 @@ ms.locfileid: "71296727"
 |**CreatorName**|String|Nom de la personne qui a créé le package.|  
 |**ExecutionInstanceGUID**|String|Identificateur unique de l'instance exécutée d'un package.|  
 |**FailedConfigurations**|String|Noms des configurations de package ayant échoué.|  
-|**IgnoreConfigurationsOnLoad**|Booléen|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
-|**InteractiveMode**|Booléen|Indique si le package est exécuté en mode interactif. Si un package s’exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cette propriété a la valeur **True**. Si un package s’exécute par le biais de l’utilitaire de ligne de commande **DTExec** , la propriété a la valeur **False**.|  
+|**IgnoreConfigurationsOnLoad**|Boolean|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
+|**InteractiveMode**|Boolean|Indique si le package est exécuté en mode interactif. Si un package s’exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cette propriété a la valeur **True**. Si un package s’exécute par le biais de l’utilitaire de ligne de commande **DTExec** , la propriété a la valeur **False**.|  
 |**LocaleId**|Int32|Paramètre régional utilisé par le package.|  
 |**MachineName**|String|Nom de l'ordinateur sur lequel s'exécute le package.|  
-|**OfflineMode**|Booléen|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
+|**OfflineMode**|Boolean|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
 |**PackageID**|String|Identificateur unique du package.|  
 |**PackageName**|String|Nom du package.|  
 |**StartTime**|DateTime|Heure de début d'exécution du package.|  
@@ -83,17 +83,17 @@ ms.locfileid: "71296727"
   
 |Variable système|Type de données|Description|Gestionnaire d'événements|  
 |---------------------|---------------|-----------------|-------------------|  
-|**Annuler**|Booléen|Indique si l'exécution du gestionnaire d'événements s'arrête lorsqu'une erreur, un avertissement ou une annulation de requête se produit.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnWarning<br /><br /> Gestionnaire d'événements OnQueryCancel|  
+|**Annuler**|Boolean|Indique si l'exécution du gestionnaire d'événements s'arrête lorsqu'une erreur, un avertissement ou une annulation de requête se produit.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnWarning<br /><br /> Gestionnaire d'événements OnQueryCancel|  
 |**ErrorCode**|Int32|Identificateur de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
 |**ErrorDescription**|String|Description de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
-|**ExecutionStatus**|Booléen|État de l'exécution en cours.|Gestionnaire d'événements OnExecStatusChanged|  
+|**ExecutionStatus**|Boolean|État de l'exécution en cours.|Gestionnaire d'événements OnExecStatusChanged|  
 |**ExecutionValue**|DBNull|Valeur de l'exécution.|Gestionnaire d'événements OnTaskFailed|  
 |**LocaleId**|Int32|Paramètre régional utilisé par le gestionnaire d'événements.|Tous les gestionnaires d'événements|  
 |**PercentComplete**|Int32|Pourcentage de travail terminé.|Gestionnaire d'événements OnProgress|  
 |**ProgressCountHigh**|Int32|Partie supérieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressCountLow**|Int32|Partie inférieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressDescription**|String|Description de la progression.|Gestionnaire d'événements OnProgress|  
-|**Propagate**|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : la valeur de la variable **Propagate** est ignorée lors de la validation du package. Si vous affectez la valeur **Propagate** à **False** dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
+|**Propagate**|Boolean|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : la valeur de la variable **Propagate** est ignorée lors de la validation du package. Si vous affectez la valeur **Propagate** à **False** dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
 |**SourceDescription**|String|Description de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |**SourceID**|String|Identificateur unique de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |**SourceName**|String|Nom de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
@@ -108,6 +108,6 @@ ms.locfileid: "71296727"
  Cette règle s'applique également aux variables définies par l'utilisateur. Cependant, lorsque les types de données de variables système ne peuvent pas être modifiés et si vous devez personnaliser l'utilisation de ces variables en fonction des types de données, les variables définies par l'utilisateur offrent plus de souplesse. Les variables définies par l'utilisateur qui sont utilisées dans des liaisons de paramètres sont généralement définies avec des types de données compatibles avec les types de données des paramètres auxquels elles sont mappées.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

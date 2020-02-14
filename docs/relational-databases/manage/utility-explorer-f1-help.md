@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024484"
 ---
 # <a name="utility-explorer-f1-help"></a>Aide sur l'Explorateur d'objets accessible via la touche F1
@@ -123,11 +123,11 @@ ms.locfileid: "68024484"
  Mode Liste  
  Le mode Liste, dans le volet supérieur, affiche des données concernant des applications de la couche Données. Les icônes d'état d'intégrité fournissent un résumé de l'état de chaque application de la couche Données par catégorie d'utilisation :  
   
--   Coche verte (![](../../relational-databases/manage/media/well-utilized.gif "Correctement exploité")) : nombre d’applications de la couche Données qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
+-   Coche verte – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Nombre d’applications de la couche Données qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
   
--   Flèche bas verte (![](../../relational-databases/manage/media/utility-down-arrow.gif "Utilitaire, flèche bas")) : les ressources sont sous-exploitées.  
+-   Flèche bas verte – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Les ressources sont sous-utilisées.  
   
--   Flèche haut rouge (![](../../relational-databases/manage/media/utility-up-arrow.gif "Utilitaire, flèche haut")) : les ressources sont surexploitées.  
+-   Flèche haut rouge – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Les ressources sont surutilisées.  
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
@@ -265,11 +265,11 @@ ms.locfileid: "68024484"
   
  Les icônes d'état d'intégrité fournissent un résumé de l'état de chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par catégorie d'utilisation :  
   
--   Coche verte (![](../../relational-databases/manage/media/well-utilized.gif "Correctement exploité")) : nombre d’instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
+-   Coche verte – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Nombre d’instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
   
--   Flèche bas verte (![](../../relational-databases/manage/media/utility-down-arrow.gif "Utilitaire, flèche bas")) : les ressources sont sous-exploitées.  
+-   Flèche bas verte – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Les ressources sont sous-exploitées.  
   
--   Flèche haut rouge (![](../../relational-databases/manage/media/utility-up-arrow.gif "Utilitaire, flèche haut")) : les ressources sont surexploitées.  
+-   Flèche haut rouge – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Les ressources sont surutilisées.  
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
@@ -315,7 +315,7 @@ ms.locfileid: "68024484"
   
 -   Respect de la casse (True ou False)  
   
--   Langue :  
+-   Language :  
   
 -   Dernière heure signalée : cette colonne affiche l’heure et la date locales du processeur à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
@@ -412,7 +412,7 @@ ms.locfileid: "68024484"
   
 -   Respect de la casse (True ou False)  
   
--   Langue :  
+-   Language :  
 
 ## <a name="utility-administration-sql-server-utility"></a>Administration de l'utilitaire (utilitaire SQL Server)
 Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres de stratégie, de sécurité et d'entrepôt de données pour un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les concepts de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -480,7 +480,7 @@ Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres 
  
 **Onglet Entrepôt de données** : affiche les détails de configuration de l’entrepôt de données de gestion de l’utilitaire.  
   
- Rétention des données  
+ Conservation des données  
  Spécifiez la période de rétention des données pour les informations d'utilisation recueillies pour les instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La période par défaut est d'un an. La valeur minimale est d'un mois. La plus longue valeur prise en charge est de 2 ans.  
   
  Informations de configuration de l'entrepôt de données de l'utilitaire  
@@ -498,7 +498,7 @@ Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres 
  Pour rétablir les valeurs par défaut des paramètres de cet onglet, cliquez sur le bouton **Paramètres par défaut** , puis sur **Appliquer**.  
  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  [Créer un point de contrôle de l’utilitaire SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Se connecter à un utilitaire SQL Server](../../relational-databases/manage/connect-to-a-sql-server-utility.md)  

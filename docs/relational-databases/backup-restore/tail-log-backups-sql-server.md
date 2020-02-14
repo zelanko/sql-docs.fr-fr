@@ -18,10 +18,10 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041342"
 ---
 # <a name="tail-log-backups-sql-server"></a>Sauvegardes de la fin du journal (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68041342"
    ##  <a name="TailLogScenarios"></a> Scénarios qui nécessitent une sauvegarde de la fin du journal  
  Nous vous recommandons d'effectuer une sauvegarde de la fin du journal dans les scénarios suivants :  
   
--   Si la base de données est en ligne et que vous envisagez d'effectuer une opération de restauration de la base de données, commencez par sauvegarder la fin du journal. Pour éviter une erreur de base de données en ligne, vous devez utiliser ... l’option WITH NORECOVERY de l’instruction [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   Si la base de données est en ligne et que vous envisagez d'effectuer une opération de restauration de la base de données, commencez par sauvegarder la fin du journal. Pour éviter une erreur de base de données en ligne, vous devez utiliser ... l’option WITH NORECOVERY de l’instruction [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   Si une base de données est hors connexion, ne démarre pas et que vous devez restaurer la base de données, sauvegardez d'abord la fin du journal. Comme il est exclu d'effectuer une transaction à ce stade, l'utilisation de WITH NORECOVERY est facultative.  
   

@@ -15,10 +15,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295044"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Nouveautés d’Integration Services dans SQL Server 2016
@@ -41,7 +41,7 @@ Ces nouvelles fonctionnalités nécessitent SQL Server Data Tools (SSDT) version
 
 ## <a name="2016-improvements-by-category"></a>Améliorations de la version 2016 par catégorie  
   
--   **Simplicité de gestion**  
+-   **Facilité de gestion**  
   
     -   Amélioration du déploiement  
   
@@ -187,9 +187,9 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
 ####  <a name="encrypted"></a> Prise en charge de la fonctionnalité Always Encrypted dans le catalogue SSIS  
  SSIS prend déjà en charge la fonctionnalité de chiffrement intégral dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez les billets de blog suivants.  
   
--   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx) (SSIS avec Always Encrypted)  
+-   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
   
--   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx) (Transformation de recherche avec Always Encrypted)  
+-   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
 
 ### <a name="better-debugging"></a>Amélioration du débogage
 

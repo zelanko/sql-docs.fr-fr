@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909556"
 ---
 # <a name="set-index-options"></a>Définir les options d'index
@@ -87,7 +87,7 @@ Nécessite une autorisation ALTER sur la table ou la vue.
 5. Cliquez avec le bouton droit sur l’index dont vous voulez modifier les propriétés, puis sélectionnez **Propriétés**.
 6. Sous **Sélectionner une page**, sélectionnez **Options**.
 7. Modifiez les paramètres de l'ensemble de propriétés pour personnaliser l'index.
-8. Pour ajouter, supprimer ou déplacer une colonne d’index, sélectionnez la page **Général** dans la boîte de dialogue **Propriétés de l’index -** _nom_index_ . Pour plus d'informations, consultez [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
+8. Pour ajouter, supprimer ou déplacer une colonne d’index, sélectionnez la page **Général** dans la boîte de dialogue **Propriétés de l’index -** _nom_index_. Pour plus d'informations, consultez [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
 ## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
 

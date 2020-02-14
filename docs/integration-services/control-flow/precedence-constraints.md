@@ -20,10 +20,10 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10deeb5de3a74e765f99a76d59d2184a6b76b106
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294011"
 ---
 # <a name="precedence-constraints"></a>Contraintes de précédence
@@ -116,7 +116,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
  **Opération d’évaluation**  
  Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
   
- **Value**  
+ **Valeur**  
  Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l'achèvement**.  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
  **Expression**  
  Si vous utilisez les opérations **Expression**, **Expression et contrainte**ou **Expression ou contrainte**, tapez une expression ou lancez le Générateur d’expressions pour créer l’expression. L'expression doit prendre une valeur de type Boolean.  
   
- **Tester**  
+ **Test**  
  Validez l'expression.  
   
  **ET logique**  
@@ -156,7 +156,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
     |EvalOp|Sélectionnez une opération d'évaluation. Si l’opération **Expression**, **ExpressionAndConstant**ou **ExpressionOrConstant** est sélectionnée, vous pouvez spécifier une expression.|  
     |Expression|Si l'opération d'évaluation inclut une expression, fournissez une expression. L'expression doit prendre une valeur de type Boolean. Pour plus d’informations sur le langage des expressions, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Définissez **LogicalAnd** pour spécifier si la contrainte de précédence est évaluée en accord avec d’autres contraintes de précédence quand plusieurs exécutables précèdent l’exécutable contraint et lui sont liés|  
-    |Nom|Mettez à jour le nom de la contrainte de précédence.|  
+    |Name|Mettez à jour le nom de la contrainte de précédence.|  
     |ShowAnnotation|Spécifiez le type d'annotation à utiliser. Sélectionnez **Never** pour désactiver les annotations, **AsNeeded** pour activer l’annotation à la demande, **ConstraintName** pour annoter automatiquement en utilisant la valeur de la propriété Name, **ConstraintDescription** pour annoter automatiquement en utilisant la valeur de la propriété Description et **ConstraintOptions** pour annoter automatiquement en utilisant les valeurs des propriétés Value et Expression.|  
     |Valeur|Si l’opération d’évaluation spécifiée dans la propriété EvalOP inclut une contrainte, sélectionnez le résultat d’exécution de l’exécutable de contrainte.|  
   
@@ -179,9 +179,9 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
 ## <a name="add-expressions-to-precedence-constraints"></a>Ajouter des expressions aux contraintes de précédence
  Une contrainte de précédence peut utiliser une expression pour définir la contrainte entre deux exécutables : l'exécutable de précédence et l'exécutable contraint. Les exécutables peuvent être des tâches ou des conteneurs. L'expression peut être utilisée seule ou en combinaison avec le résultat d'exécution de l'exécutable de précédence. Le résultat d'exécution d'un exécutable est soit succès, soit échec. Quand vous configurez le résultat d’exécution d’une contrainte de précédence, vous pouvez lui affecter la valeur **Succès**, **Échec**ou **Achèvement**. **Succès** exige que l’exécutable de précédence réussisse, **Échec** exige que l’exécutable de précédence échoue et **Achèvement** indique que l’exécutable contraint doit s’exécuter, que la tâche de précédence réussisse ou échoue. Pour plus d’informations, consultez [Contraintes de précédence](../../integration-services/control-flow/precedence-constraints.md).  
   
- Le résultat d’évaluation de l’expression doit être **True** ou **False** et l’expression doit être une expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valide. L'expression peut utiliser des littéraux, des variables système et personnalisées, ainsi que les fonctions et opérateurs fournis par la grammaire des expressions [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Par exemple, l’expression `@Count == SQRT(144) + 10` utilise la variable **Count**, la fonction SQRT, ainsi que les opérateurs égal à (==) et ajouter (+). Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
+ Le résultat d’évaluation de l’expression doit être **True** ou **False** et l’expression doit être une expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valide. L'expression peut utiliser des littéraux, des variables système et personnalisées, ainsi que les fonctions et opérateurs fournis par la grammaire des expressions [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Par exemple, l’expression `@Count == SQRT(144) + 10` utilise la variable **Count**, la fonction SQRT, ainsi que les opérateurs égal à (==) et ajouter (+). Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- Dans l'illustration qui suit, la tâche A et la tâche B sont liées par une contrainte de précédence qui utilise un résultat d'exécution et une expression. La valeur de la contrainte est définie sur **Succès** et l’expression est  `@X >== @Z`. La tâche B, la tâche contrainte, s’exécute uniquement si la tâche A se termine avec succès et si la valeur de la variable **X** est supérieure ou égale à la valeur de la variable **Z**.  
+ Dans l'illustration qui suit, la tâche A et la tâche B sont liées par une contrainte de précédence qui utilise un résultat d'exécution et une expression. La valeur de la contrainte est définie sur **Succès** et l’expression est  `@X >== @Z`. La tâche B, la tâche contrainte, s’exécute uniquement si la tâche A se termine avec succès et si la valeur de la variable **X** est supérieure ou égale à la valeur de la variable **Z**.  
   
  ![Contrainte de précédence entre deux tâches](../../integration-services/control-flow/media/mw-dts-03.gif "Contrainte de précédence entre deux tâches")  
   
@@ -216,10 +216,10 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
   
 |Opération d'évaluation|Résultat d'évaluation de la contrainte|Résultat d'évaluation de l'expression|L'exécutable contraint s'exécute|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Contrainte|True|Néant|True|  
-|Contrainte|False|Néant|False|  
-|Expression|Néant|True|True|  
-|Expression|Néant|False|False|  
+|Contrainte|True|N/A|True|  
+|Contrainte|False|N/A|False|  
+|Expression|N/A|True|True|  
+|Expression|N/A|False|False|  
 |Contrainte et expression|True|True|True|  
 |Contrainte et expression|True|False|False|  
 |Contrainte et expression|False|True|False|  

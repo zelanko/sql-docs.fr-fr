@@ -26,17 +26,17 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039150"
 ---
 # <a name="use-xml-data-in-applications"></a>Utiliser des données XML dans les applications
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique décrit les options dont vous disposez pour utiliser le type de données **xml** dans votre application. Cette rubrique inclut des informations sur les thèmes suivants :  
+  Cette rubrique décrit les options dont vous disposez pour utiliser le type de données **xml** dans votre application. Cette rubrique inclut des informations sur les thèmes suivants :  
   
--   Gestion de XML à partir d’une colonne de type **xml[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’ADO et de**  Native Client  
+-   Gestion de XML à partir d’une colonne de type **xml[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’ADO et de** Native Client  
   
 -   Gestion de XML à partir d'une colonne de type **xml** à l'aide d'ADO.NET  
   
@@ -146,14 +146,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Gestion de XML à partir d'une colonne de type XML à l'aide d'ADO.NET  
- Pour gérer XML à partir d’une colonne de type de données **xml** à l’aide d’ADO.NET et de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vous pouvez utiliser le comportement standard de la classe **SqlCommand** . Par exemple, une colonne de type de données **xml** et ses valeurs peuvent être récupérées comme toute colonne SQL à l'aide de **SqlDataReader**.Toutefois, si vous souhaitez utiliser le contenu d'une colonne de type de données **xml** sous la forme XML, vous devez d'abord assigner un type **XmlReader** au contenu.  
+ Pour gérer du code XML à partir d’une colonne de type de données **xml** à l’aide d’ADO.NET et de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez utiliser le comportement standard de la classe **SqlCommand**. Par exemple, une colonne de type de données **xml** et ses valeurs peuvent être récupérées comme toute colonne SQL à l'aide de **SqlDataReader**.Toutefois, si vous souhaitez utiliser le contenu d'une colonne de type de données **xml** sous la forme XML, vous devez d'abord assigner un type **XmlReader** au contenu.  
   
- Pour plus d'informations et d'exemples de code, consultez la rubrique relative aux valeurs de colonne XML dans un lecteur de données dans la documentation du Kit de développement logiciel de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
+ Pour plus d’informations et d’exemples de code, consultez la rubrique relative aux valeurs de colonne XML dans un lecteur de données dans la documentation du SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Gestion d'une colonne de type XML dans les paramètres à l'aide d'ADO.NET  
  Pour gérer un type de données xml passé en tant que paramètre dans ADO.NET et le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez fournir la valeur sous la forme d’une instance du type de données **SqlXml** . Aucune gestion spéciale n’est requise, car les colonnes de type de données **xml** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent accepter les valeurs de paramètre de la même façon que d’autres colonnes et types de données, tels que **string** ou **integer**.  
   
- Pour plus d'informations et d'exemples de code, consultez la rubrique relative aux valeurs XML en tant que paramètres de commande dans la documentation du Kit de développement logiciel de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
+ Pour plus d’informations et d’exemples de code, consultez la rubrique relative aux valeurs XML en tant que paramètres de commande dans la documentation du SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  

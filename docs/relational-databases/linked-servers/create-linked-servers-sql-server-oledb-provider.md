@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095993"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Requêtes distribuées Microsoft SQL Server : connectivité OLE DB
@@ -110,9 +110,9 @@ Un curseur de jeu de clés est pris en charge sur une requête distribuée si to
 
 Les curseurs de jeu de clés ne sont pas pris en charge sur les requêtes distribuées qui impliquent la fonction *OpenQuery*.
 
-#### <a name="updatable-keyset-cursor-requirements"></a>Exigences relatives aux curseurs de jeu de clés pouvant être mis à jour
+#### <a name="updatable-keyset-cursor-requirements"></a>Éléments requis pour la mise à jour des curseurs pilotés par jeu de clés
 
-Une table distante peut être mise à jour ou supprimée au moyen d’un curseur de jeu de clés défini sur une requête distribuée, par exemple `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. Voici les conditions sous lesquelles les curseurs pouvant être mis à jour sur des requêtes distribuées sont autorisés :
+Une table distante peut être mise à jour ou supprimée au moyen d’un curseur de jeu de clés défini sur une requête distribuée, par exemple `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. Voici les conditions dans lesquelles les curseurs pouvant être mis à jour sur des requêtes distribuées sont autorisés :
 
 - Les curseurs pouvant être mis à jour sont autorisés si le fournisseur remplit également les conditions pour les mises à jour et les suppressions sur la table distante. Pour plus d’informations, consultez \"Instructions UPDATE et DELETE\", plus loin dans cet article.
 
@@ -190,7 +190,7 @@ Voici les principales étapes que SQL Server effectue lorsqu’il se connecte à
 
    SQL Server collecte plusieurs propriétés de fournisseur à utiliser dans l’évaluation de requêtes distribuées ; ces propriétés sont récupérées en appelant `IDBProperties::GetProperties`. Toutes ces propriétés sont facultatives. Toutefois, la prise en charge de toutes les propriétés pertinentes permet à SQL Server de tirer pleinement parti des fonctionnalités du fournisseur. Par exemple, `DBPROP_SQLSUPPORT` est nécessaire pour déterminer si SQL Server peut envoyer des requêtes au fournisseur. Si cette propriété n’est pas prise en charge, SQL Server n’utilise pas le fournisseur distant en tant que fournisseur de commandes SQL, même s’il s’agit d’un fournisseur de ce type. Dans le tableau suivant, la colonne Valeur par défaut indique la valeur que SQL Server suppose si le fournisseur ne prend pas en charge la propriété.
 
-Propriété| Valeur par défaut| Utiliser |
+Propriété| Valeur par défaut| Utilisation |
 |:----|:----|:----|
 |`DBPROP_DBMSNAME`|None|Utilisée pour les messages d’erreur.|
 |`DBPROP_DBMSVER` |None|Utilisée pour les messages d’erreur.|
@@ -208,8 +208,8 @@ Propriété| Valeur par défaut| Utiliser |
 |`SQLPROP_GROUPBY`|False|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que le fournisseur prend en charge la clause GROUP BY dans l’instruction `SELECT` comme indiqué par la norme SQL-92.
 |`SQLPROP_DATELITERALS `|False|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que le fournisseur prend en charge les littéraux datetime conformément à la syntaxe SQL Server Transact-SQL.
 |`SQLPROP_ANSILIKE `|False|Propriété spécifique à SQL Server : cette propriété présente un intérêt pour un fournisseur qui prend en charge le niveau SQL-Minimum et l’opérateur `LIKE` conformément au niveau d’entrée SQL-92 (\'%\' et \'_\' comme caractères génériques).
-|`SQLPROP_SUBQUERIES `|False|Propriété SQL Server : cette propriété présente un intérêt dans un fournisseur qui prend en charge le niveau SQL-Minimum. Cette propriété indique que le fournisseur prend en charge les sous-requêtes comme indiqué par le niveau d’entrée SQL-92. Cela comprend les sous-requêtes dans la liste `SELECT` et dans la clause `WHERE` avec prise en charge des sous-requêtes corrélées ainsi que des opérateurs `IN`, `EXISTS`, `ALL` et `ANY`.
-|`SQLPROP_INNERJOIN`|False|Propriété spécifique à SQL Server : cette propriété présente un intérêt pour les fournisseurs qui prennent en charge le niveau SQL-Minimum. Cette propriété indique la prise en charge des jointures avec plusieurs tables dans la clause `FROM`. ------ ---
+|`SQLPROP_SUBQUERIES `|False|Propriété SQL Server : Cette propriété présente un intérêt dans un fournisseur qui prend en charge le niveau SQL-Minimum. Cette propriété indique que le fournisseur prend en charge les sous-requêtes comme indiqué par le niveau d’entrée SQL-92. Cela comprend les sous-requêtes dans la liste `SELECT` et dans la clause `WHERE` avec prise en charge des sous-requêtes corrélées ainsi que des opérateurs `IN`, `EXISTS`, `ALL` et `ANY`.
+|`SQLPROP_INNERJOIN`|False|Propriété spécifique à SQL Server : Cette propriété présente un intérêt pour les fournisseurs qui prennent en charge le niveau SQL-Minimum. Cette propriété indique la prise en charge des jointures avec plusieurs tables dans la clause `FROM`. ------ ---
 
 Les trois littéraux suivants sont récupérés d’`IDBInfo::GetLiteralInfo` : `DBLITERAL_CATALOG_SEPARATOR`, `DBLITERAL_SCHEMA_SEPARATOR` (pour construire un nom d’objet complet en fonction de ses parties catalogue, schéma et nom d’objet) et `DBLITERAL_QUOTE` (pour délimiter les noms d’identificateur dans une requête SQL envoyée au fournisseur).
 
@@ -323,7 +323,7 @@ Table de mappage des types de données SQL Server et OLE DB.
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>ou Gestionnaire de configuration<br> Longueur max. > 4 000 caractères|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>or<br> Longueur max. > 4 000 caractères|ntext|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
 |`DBTYPE_IDISPATCH`| |Error|
@@ -332,16 +332,16 @@ Table de mappage des types de données SQL Server et OLE DB.
 |`DBTYPE_VARIANT`*| |NVARCHAR|
 |`DBTYPE_IUNKNOWN`| |Error|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>ou Gestionnaire de configuration<br> Longueur max. > 8 000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, taille de colonne = 8 <br>ou Gestionnaire de configuration<br> Longueur maximale non indiquée. | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longueur max. > 8 000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, taille de colonne = 8 <br>or<br> Longueur maximale non indiquée. | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>ou Gestionnaire de configuration<br> Longueur max. > 8 000 caractères <br>ou Gestionnaire de configuration<br>   Longueur maximale non indiquée. | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longueur max. > 8 000 caractères <br>or<br>   Longueur maximale non indiquée. | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>ou Gestionnaire de configuration<br> Longueur max. > 4 000 caractères <br>ou Gestionnaire de configuration<br>   Longueur maximale non indiquée. | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longueur max. > 4 000 caractères <br>or<br>   Longueur maximale non indiquée. | `ntext`|
 |`DBTYPE_UDT`| |Error|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (conversion explicite requise)|
@@ -385,7 +385,7 @@ Pour utiliser le mappage côté exportation dans le cas des instructions `UPDATE
 
 #### <a name="large-object-lob-handling"></a>Traitement des objets volumineux (LOB)
 
-Comme indiqué dans la table de mappage, si les colonnes du type `DBTYPE_STR` `DBTYPE_WSTR` ou `DBTYPE_BSTR` signalent également `DBCOLUMNFLAGS_ISLONG`, ou si leur longueur maximale dépasse 4 000 caractères (ou si aucune longueur maximale n’est indiquée), SQL Server les traite en tant que colonne `text` ou `ntext` selon le cas. De même, pour les colonnes `DBTYPE_BYTES`, si `DBCOLUMNFLAGS_ISLONG` est défini ou si la longueur maximale est supérieure à 8 000 octets (ou si la longueur maximale n’est pas indiquée), les colonnes sont traitées comme des colonnes `image`. Les colonnes `Text`, `ntext` et `image` sont appelées colonnes LOB.
+Comme indiqué dans la table de mappage, si les colonnes du type `DBTYPE_STR``DBTYPE_WSTR` ou `DBTYPE_BSTR` signalent également `DBCOLUMNFLAGS_ISLONG`, ou si leur longueur maximale dépasse 4 000 caractères (ou si aucune longueur maximale n’est indiquée), SQL Server les traite en tant que colonne `text` ou `ntext` selon le cas. De même, pour les colonnes `DBTYPE_BYTES`, si `DBCOLUMNFLAGS_ISLONG` est défini ou si la longueur maximale est supérieure à 8 000 octets (ou si la longueur maximale n’est pas indiquée), les colonnes sont traitées comme des colonnes `image`. Les colonnes `Text`, `ntext` et `image` sont appelées colonnes LOB.
 
 SQL Server n’expose pas la fonctionnalité de texte intégral et d’image sur les objets LOB à partir d’un fournisseur OLE DB. Les `TEXTPTRS` ne sont pas pris en charge sur les objets volumineux à partir d’un fournisseur OLE DB ; par conséquent, aucune des fonctionnalités associées n’est prise en charge, par exemple la fonction système `TEXTPTR` ainsi que les instructions `READTEXT`, `WRITETEXT` et `UPDATETEXT`. Les instructions `SELECT` qui récupèrent des colonnes LOB entières sont prises en charge, comme les instructions `UPDATE` et `INSERT` pour les colonnes d’objets volumineux dans les tables distantes.
 
@@ -616,7 +616,7 @@ Le tableau suivant répertorie toutes les interfaces OLE DB utilisées par SQL S
 
 Dans le cas des interfaces facultatives, la colonne Scénarios indique un ou plusieurs des six scénarios qui utilisent l’interface spécifiée. Par exemple, l’interface `IRowsetChange` sur les ensembles de lignes de la table de base est une interface facultative ; cette interface est utilisée dans les instructions `UPDATE` et DELETE ainsi que dans les scénarios de l’instruction `INSERT`. Si cette interface n’est pas prise en charge, les instructions UPDATE, DELETE et `INSERT` ne peuvent pas être prises en charge avec ce fournisseur. Certaines des autres interfaces facultatives sont marquées \"performances\" dans la colonne Scénarios, ce qui indique que l’interface produit de meilleures performances générales. Par exemple, si l’interface `IDBSchemaRowset` n’est pas prise en charge, SQL Server doit ouvrir l’ensemble de lignes deux fois : une fois pour ses métadonnées et une fois pour l’exécution de la requête. En prenant en charge `IDBSchemaRowset`, les performances SQL Server sont améliorées.
 
-|Object|Interface|Requis|Commentaires|Scénarios|
+|Object|Interface|Obligatoire|Commentaires|Scénarios|
 |:-----|:-----|:-----|:-----|:-----|
 |Objet source de données|`IDBInitialize`|Oui|Initialisez et configurez les données et le contexte de sécurité.| |
 | |`IDBCreateSession`|Oui|Créez un objet de session de base de données.| |
@@ -640,7 +640,7 @@ Dans le cas des interfaces facultatives, la colonne Scénarios indique un ou plu
 | |`IColumnsInfo`|Oui|Obtenez des informations sur les colonnes d’un ensemble de lignes.|Accès indexé, performances.|
 | |`IRowsetInfo`|Oui|Obtenez des informations sur les propriétés d’un ensemble de lignes.|Accès indexé, performances.|
 | |`IRowsetIndex`|Oui|Nécessaire uniquement pour les ensembles de lignes d’un index ; utilisation avec la fonctionnalité d’indexation (définition de plages, recherche).|Accès indexé, performances.|
-|Command|`ICommand`|Oui| |Requête distante, requête directe.|
+|Commande|`ICommand`|Oui| |Requête distante, requête directe.|
 | |`ICommandText`|Oui|À utiliser pour la définition du texte de la requête.|Requête distante, requête directe.|
 | |`IColumnsInfo`|Oui|À utiliser afin d’obtenir les métadonnées de colonne pour les résultats de la requête.|Requête distante, requête directe.|
 | |`ICommandProperties`|Oui|À utiliser pour spécifier les propriétés requises sur des ensembles de lignes retournés par la commande.|Requête distante, requête directe.|

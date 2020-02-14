@@ -13,10 +13,10 @@ ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ac643b3c0c095dee143c3feca878bd4072273bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901100"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossaire des termes de la publication Oracle
@@ -24,7 +24,7 @@ ms.locfileid: "67901100"
   Vous devez connaître et comprendre les termes Oracle suivants pour configurer et administrer la publication Oracle. Pour une liste complète des termes Oracle, consultez la documentation en ligne d'Oracle.  
   
 #### <a name="index-organized-tables-iot"></a>Table organisée en index (IOT)  
- Une table dont les données sont physiquement triées sur le disque dans l'ordre de l'index ; elle est similaire à une table [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec un index cluster. Une IOT est répliquée vers un Abonné sous forme de table avec un index cluster.  
+ Table dont les données sont physiquement triées sur le disque dans l’ordre de l’index ; elle est comparable à une table [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec un index cluster. Une IOT est répliquée vers un Abonné sous forme de table avec un index cluster.  
   
 #### <a name="instance"></a>Instance  
  Une base de données Oracle est associée à une instance. L'instance comprend les processus mémoire et d'arrière-plan qui prennent en charge la base de données. Une instance Oracle est toujours mappée vers une seule base de données, alors qu'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut contenir plusieurs bases de données. Il y a des circonstances où une base de données Oracle peut avoir plusieurs instances.  
@@ -39,7 +39,7 @@ ms.locfileid: "67901100"
  Un objet de base de données qui est utilisé pour générer des nombres uniques. La réplication utilise des séquences pour classer les modifications apportées à des tables publiées.  
   
 #### <a name="sqlplus"></a>SQL\*Plus  
- Une application utilisée pour accéder à et faire des requêtes sur des bases de données Oracle. Elle est similaire à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**.  
+ Une application utilisée pour accéder à et faire des requêtes sur des bases de données Oracle. Elle est comparable à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**.  
   
 #### <a name="synonym"></a>Synonyme  
  Un alias pour un objet. Le synonyme public spécial **MSSQLSERVERDISTRIBUTOR** est automatiquement créé quand un serveur de publication Oracle est configuré. Le synonyme référence la table **HREPL_Distributor** et fournit un pointeur logique vers le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui sert le serveur de publication.  
@@ -59,6 +59,6 @@ ms.locfileid: "67901100"
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Objets créés sur le serveur de publication Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [Serveurs de publication non SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

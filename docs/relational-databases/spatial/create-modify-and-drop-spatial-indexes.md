@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048710"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
@@ -56,7 +56,7 @@ ms.locfileid: "68048710"
   
 7.  Pour spécifier la colonne spatiale à indexer, cliquez sur **Ajouter**.  
   
-8.  Dans la boîte de dialogue **Sélectionner des colonnes à partir de** *\<nom_table>* , sélectionnez une colonne de type **geometry** ou **geography** en cochant la case correspondante. Toutes les autres colonnes spatiales deviennent alors impossibles à modifier. Si vous souhaitez sélectionner une autre colonne spatiale, vous devez tout d'abord désactiver la colonne sélectionnée actuellement. Lorsque vous avez terminé, cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **Sélectionner des colonnes à partir de** *\<nom de la table>* , sélectionnez une colonne de type **geometry** ou **geography** en cochant la case correspondante. Toutes les autres colonnes spatiales deviennent alors impossibles à modifier. Si vous souhaitez sélectionner une autre colonne spatiale, vous devez tout d'abord désactiver la colonne sélectionnée actuellement. Lorsque vous avez terminé, cliquez sur **OK**.  
   
 9. Vérifiez votre sélection de colonne dans la grille **Colonnes clés d'index** .  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68048710"
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
  **Pour supprimer un index à l'aide de Management Studio**  
- [Supprimer un index](../../relational-databases/indexes/delete-an-index.md)  
+ [Suppression d'index](../../relational-databases/indexes/delete-an-index.md)  
   
  **Pour supprimer un index spatial à l'aide du Concepteur de tables dans Management Studio**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>Pour supprimer un index spatial dans le Concepteur de tables  
@@ -155,6 +155,6 @@ ms.locfileid: "68048710"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
+ [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298303"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
@@ -118,7 +118,7 @@ ms.locfileid: "71298303"
 Pour plus d’informations sur le langage Transact-SQL, consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
 ### <a name="static-options"></a>Options statiques  
- **Name**  
+ **Nom**  
  Donnez un nom unique à la tâche d'exécution SQL dans le flux de travail. Le nom fourni est affiché dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Description**  
@@ -147,7 +147,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
   
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Gestionnaire de connexions de SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **Connexion**  
+ **Connection**  
  Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \<**Nouvelle connexion...** >.  
   
  **SQLSourceType**  
@@ -192,7 +192,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
  **FileConnection**  
  Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
- **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
@@ -228,7 +228,7 @@ Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur d
  **Ajouter**  
  Cliquez pour ajouter une association de paramètre.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez une association de paramètre dans la liste et cliquez sur **Supprimer**.  
  
 ## <a name="result-set-page---execute-sql-task-editor"></a>Page Ensemble de résultats - Éditeur de tâche d’exécution SQL
@@ -249,11 +249,11 @@ Utilisez la page **Jeu de résultats** de la boîte de dialogue **Éditeur de t�
  **Ajouter**  
  Ajoute une correspondance de jeu de résultats.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un mappage de jeu de résultats dans la liste, puis cliquez sur **Supprimer**.  
  
 ## <a name="parameters-in-the-execute-sql-task"></a>Paramètres de la tâche d’exécution SQL
-Les instructions et les procédures stockées SQL utilisent fréquemment des paramètres **d’entrée** , des paramètres de **sortie** et des codes de retour. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la tâche d’exécution SQL prend en charge les types de paramètres **Input**, **Output** et **ReturnValue**. Vous utilisez le type **Input** pour les paramètres d’entrée, **Output** pour les paramètres de sortie et **ReturnValue** pour les codes de retour.  
+Les instructions et les procédures stockées SQL utilisent fréquemment des paramètres **d’entrée** , des paramètres de **sortie** et des codes de retour. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la tâche d’exécution SQL prend en charge les types de paramètres **Input**, **Output**et **ReturnValue** . Vous utilisez le type **Input** pour les paramètres d’entrée, **Output** pour les paramètres de sortie et **ReturnValue** pour les codes de retour.  
   
 > [!NOTE]  
 >  Vous ne pouvez utiliser des paramètres dans une tâche d'exécution SQL que si le fournisseur de données les prend en charge.  
@@ -312,15 +312,15 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Utiliser des paramètres de date et d’heure avec les gestionnaires de connexions ADO.NET et ADO  
  Au moment de la lecture des données des types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **time** et **datetimeoffset**, une tâche d’exécution SQL qui utilise un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou ADO a les spécifications supplémentaires suivantes :  
   
--   Concernant les données de type **time**, un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] impose que ces données soient stockées dans un paramètre de type **Input** ou **Output**, et dont le type de données est **string**.  
+-   Concernant les données de type **time** , un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] impose que ces données soient stockées dans un paramètre de type **Input** ou **Output**, et dont le type de données est **string**.  
   
--   Pour les données **datetimeoffset**, un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] impose que ces données soient stockées dans l’un des paramètres suivants :  
+-   Pour les données **datetimeoffset** , un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] impose que ces données soient stockées dans l’un des paramètres suivants :  
   
     -   Un paramètre de type **Input** et dont le type de données est **string**.  
   
     -   Un paramètre de type **Output** ou **ReturnValue**, et dont le type de données est **datetimeoffset**, **string**ou **datetime2**. Si vous sélectionnez un paramètre dont le type de données est **string** ou **datetime2**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] convertit les données en string ou datetime2.  
   
--   Un gestionnaire de connexions ADO impose que les données **time** ou **datetimeoffset** soient stockées dans un paramètre de type **Input** ou **Output** et dont le type de données est **adVarWchar**.  
+-   Un gestionnaire de connexions ADO impose que les données **time** ou **datetimeoffset** soient stockées dans un paramètre de type **Input** ou **Output**et dont le type de données est **adVarWchar**.  
   
  Pour plus d’informations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et leur mappage aux types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) et [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
@@ -331,7 +331,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
 -   Un paramètre de sortie doté du type de données approprié, tel que répertorié dans le tableau suivant.  
   
-    |Type de paramètre de **sortie**|Type de données Date|  
+    |Type de paramètre de**sortie**|Type de données Date|  
     |-------------------------------|--------------------|  
     |DBDATE|**date**|  
     |DBTIME2|**time**|  
@@ -380,16 +380,16 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
 ###  <a name="Stored_procedures"></a> Utiliser des paramètres avec les procédures stockées  
  Les commandes SQL qui exécutent des procédures stockées peuvent également utiliser le mappage de paramètres. Les règles d'utilisation des marqueurs de paramètres et des noms de paramètres varient selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise, tout comme les règles des requêtes paramétrables.  
   
- Le tableau suivant présente des exemples de la commande EXEC par type de gestionnaire de connexions. Les exemples exécutent la procédure stockée **uspGetBillOfMaterials** dans [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. La procédure stockée utilise les paramètres `@StartProductID` d’entrée `@CheckDate` **et** .  
+ Le tableau suivant présente des exemples de la commande EXEC par type de gestionnaire de connexions. Les exemples exécutent la procédure stockée **uspGetBillOfMaterials** dans [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. La procédure stockée utilise les paramètres **d’entrée** `@StartProductID` et `@CheckDate`.  
   
 |Type de connexion|Syntaxe EXEC|  
 |---------------------|-----------------|  
 |EXCEL et OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462) dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462)dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
 |ADO|Si IsQueryStoredProcedure est défini sur **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Si IsQueryStoredProcedure est défini sur **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Si IsQueryStoredProcedure est défini sur **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Si IsQueryStoredProcedure est défini sur **True**, `uspGetBillOfMaterials`|  
   
- Pour utiliser des paramètres de sortie, la syntaxe impose que le mot clé OUTPUT suive chaque marqueur de paramètre. Par exemple, la syntaxe de paramètre de sortie suivante est correcte : `EXEC myStoredProcedure ? OUTPUT`.  
+ Pour utiliser des paramètres de sortie, la syntaxe impose que le mot clé OUTPUT suive chaque marqueur de paramètre. Par exemple, la syntaxe de paramètre de sortie suivante est correcte : `EXEC myStoredProcedure ? OUTPUT`.  
   
  Pour plus d’informations sur l’utilisation de paramètres d’entrée et de sortie avec des procédures stockées Transact-SQL, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
  
@@ -474,7 +474,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
 |Type de connexion|Syntaxe EXEC|  
 |---------------------|-----------------|  
 |EXCEL et OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462) dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462)dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
 |ADO|Si IsQueryStoreProcedure est défini sur **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Si IsQueryStoreProcedure est défini sur **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Définissez IsQueryStoreProcedure sur **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -526,9 +526,9 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
 |Type d'ensemble de résultats|Type de données de la variable|Type d'objet|  
 |---------------------|---------------------------|--------------------|  
 |Ligne unique|Tout type compatible avec la colonne de type contenue dans l'ensemble de résultats.|Non applicable|  
-|Ensemble de résultats complet|**Objet**|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un **Recordset**ADO.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l’objet retourné est un **System.Data.DataSet**.<br /><br /> Vous pouvez utiliser une tâche de script pour accéder à l'objet **System.Data.DataSet** , comme le montre l'exemple suivant.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**String**|**String**|  
-|XML|**Objet**|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un **MSXML6.IXMLDOMDocument**.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l’objet retourné est un **System.Xml.XmlDocument**.|  
+|Ensemble de résultats complet|**Object**|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un **Recordset**ADO.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , l’objet retourné est un **System.Data.DataSet**.<br /><br /> Vous pouvez utiliser une tâche de script pour accéder à l'objet **System.Data.DataSet** , comme le montre l'exemple suivant.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|XML|**Chaîne**|**Chaîne**|  
+|XML|**Object**|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un **MSXML6.IXMLDOMDocument**.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , l’objet retourné est un **System.Xml.XmlDocument**.|  
   
  Vous pouvez définir la variable dans l'étendue de la tâche d'exécution SQL ou dans celle du package. Si la variable a l'étendue d'un package, le jeu de résultats est disponible pour les autres tâches et conteneurs figurant dans le package, ainsi que pour les packages exécutés par les tâches d'exécution de package ou d'exécution de package DTS 2000.  
   

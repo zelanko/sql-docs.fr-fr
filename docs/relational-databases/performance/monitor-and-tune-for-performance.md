@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020251"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Surveiller et régler les performances
@@ -52,7 +52,7 @@ ms.locfileid: "68020251"
 -   Résoudre les problèmes ou déboguer des composants d’application, comme des procédures stockées.  
   
 ## <a name="monitoring-in-a-dynamic-environment"></a>Surveillance dans un environnement dynamique  
-La modification des conditions aboutit à un changement des performances. Dans vos évaluations, vous pouvez voir les changements de performances au fur et à mesure que le nombre d'utilisateurs augmente, que les accès des utilisateurs et les méthodes de connexion changent, que la base de données se remplit, que les applications clientes changent, que les données des applications changent, que les requêtes deviennent plus complexes et que le trafic réseau augmente. Grâce aux outils permettant de surveiller les performances, vous pouvez associer certaines modifications des performances à des modifications de conditions et des requêtes complexes. **Exemples :**  
+La modification des conditions aboutit à un changement des performances. Dans vos évaluations, vous pouvez voir les changements de performances au fur et à mesure que le nombre d'utilisateurs augmente, que les accès des utilisateurs et les méthodes de connexion changent, que la base de données se remplit, que les applications clientes changent, que les données des applications changent, que les requêtes deviennent plus complexes et que le trafic réseau augmente. Grâce aux outils permettant de surveiller les performances, vous pouvez associer certaines modifications des performances à des modifications de conditions et des requêtes complexes. **Exemples :**  
   
 -   en surveillant les temps de réponse des requêtes les plus fréquentes, vous pouvez déterminer s'il faut modifier, soit les requêtes, soit les index des tables ;  
   
@@ -69,12 +69,12 @@ La demande des ressources du serveur croît proportionnellement au nombre d'util
 |Rubrique| Tâche|  
 |-----------|----------------------|  
 |[Surveiller les composants SQL Server](../../relational-databases/performance/monitor-sql-server-components.md)|Étapes requises pour superviser tout composant de SQL Server, tel que le Moniteur d’activité, les Événements étendus, les Vues et fonctions de gestion dynamique, et ainsi de suite.|  
-|[Outils d'analyse et de paramétrage des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Liste les outils de supervision et de paramétrage disponibles avec SQL Server, tels que les Statistiques des requêtes actives et l’Assistant Paramétrage du moteur de base de données.|  
+|[Outils de surveillance et de réglage des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Liste les outils de supervision et de paramétrage disponibles avec SQL Server, tels que les Statistiques des requêtes actives et l’Assistant Paramétrage du moteur de base de données.|  
 |[Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|Maintenez la stabilité des performances de charge de travail durant la mise à niveau vers un niveau de compatibilité de base de données plus récent.|  
 |[Surveillance des performances à l’aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Utiliser le magasin de requêtes pour capturer automatiquement l’historique des requêtes, des plans et des statistiques d’exécution et les conserver à des fins de consultation.|  
 |[Établir un niveau de référence des performances](../../relational-databases/performance/establish-a-performance-baseline.md)|Comment établir un niveau de référence des performances.|  
 |[Isoler les problèmes de performance](../../relational-databases/performance/isolate-performance-problems.md)|Isoler les problèmes de performance des bases de données.|  
-|[Identifier les goulots d'étranglement](../../relational-databases/performance/identify-bottlenecks.md)|Surveiller et suivre les performances du serveur afin d’identifier les goulots d’étranglement.|  
+|[Identifier les goulots d’étranglement](../../relational-databases/performance/identify-bottlenecks.md)|Surveiller et suivre les performances du serveur afin d’identifier les goulots d’étranglement.|  
 |[Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|Traite de la méthodologie et des scripts utilisés pour obtenir des informations sur les performances des requêtes.|  
 |[Analyse des performances et surveillance de l'activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les outils de surveillance de l’activité et des performances Windows.|  
 |[Superviser l’utilisation des ressources](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Utilisation du Moniteur système (également appelé perfmon) pour mesurer les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de compteurs de performance.|  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742948"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instructions RESTORE - LABELONLY (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68742948"
 > [!NOTE]  
 >  Pour une description des arguments, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,20 +78,20 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Jeux de résultats  
  Le jeu de résultats renvoyé par RESTORE LABELONLY comporte une seule ligne avec les informations suivantes :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Nom du support de sauvegarde.|  
 |**MediaSetId**|**uniqueidentifier**|Numéro d'identification unique du jeu de supports.|  
-|**FamilyCount**|**Int**|Nombre de familles de supports dans le support de sauvegarde.|  
-|**FamilySequenceNumber**|**Int**|Numéro de séquence de la famille.|  
+|**FamilyCount**|**int**|Nombre de familles de supports dans le support de sauvegarde.|  
+|**FamilySequenceNumber**|**int**|Numéro de séquence de la famille.|  
 |**MediaFamilyId**|**uniqueidentifier**|Numéro d'identification unique de la famille de supports de sauvegardes.|  
-|**MediaSequenceNumber**|**Int**|Numéro de séquence de ce support dans la famille.|  
+|**MediaSequenceNumber**|**int**|Numéro de séquence de ce support dans la famille.|  
 |**MediaLabelPresent**|**tinyint**|Indique si la description du support contient :<br /><br /> **1** =  Étiquette de support [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format<br /><br /> **0** = Description du support|  
 |**MediaDescription**|**nvarchar(255)**|Description du support, au format libre, ou étiqueté au format de bande.|  
 |**SoftwareName**|**nvarchar(128)**|Nom du logiciel de sauvegarde qui a permis l'écriture de l'étiquette du support de sauvegarde.|  
-|**SoftwareVendorId**|**Int**|Numéro d'identification du fournisseur du logiciel qui a permis l'écriture de la sauvegarde.|  
+|**SoftwareVendorId**|**int**|Numéro d'identification du fournisseur du logiciel qui a permis l'écriture de la sauvegarde.|  
 |**MediaDate**|**datetime**|Date et heure d’écriture de l’étiquette.|  
-|**Mirror_Count**|**Int**|Nombre de miroirs dans le jeu (1-4).<br /><br /> Remarque : Les étiquettes créées pour différents miroirs d’un jeu sont identiques.|  
+|**Mirror_Count**|**int**|Nombre de miroirs dans le jeu (1-4).<br /><br /> Remarque : Les étiquettes créées pour différents miroirs d’un jeu sont identiques.|  
 |**IsCompressed**|**bit**|Indique si la sauvegarde est compressée :<br /><br /> 0 = non compressée<br /><br /> 1 =compressée|  
   
 > [!NOTE]  
@@ -101,7 +101,7 @@ FROM <backup_device>
  L'exécution de RESTORE LABELONLY permet de déterminer rapidement le contenu du support de sauvegarde. Comme elle lit uniquement l'en-tête de support, l'instruction RESTORE LABELONLY s'exécute vite, même pour des unités de bande de grande capacité.  
   
 ## <a name="security"></a>Sécurité  
- Une opération de sauvegarde peut éventuellement spécifier les mots de passe d'un support de sauvegarde. Si un mot de passe est défini dans un support de sauvegarde, vous devez spécifier le mot de passe approprié dans l'instruction RESTORE. Le mot de passe empêche les opérations non autorisées de restauration et d’ajout de jeux de sauvegarde sur le support à l’aide d’outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, un mot de passe n'empêche pas d'écraser les supports en cas d'utilisation de l'option FORMAT de l'instruction BACKUP.  
+ Une opération de sauvegarde peut éventuellement spécifier les mots de passe d'un support de sauvegarde. Si un mot de passe est défini dans un support de sauvegarde, vous devez spécifier le mot de passe approprié dans l'instruction RESTORE. Le mot de passe empêche les opérations non autorisées de restauration et d’ajout de jeux de sauvegarde sur le support à l’aide d’outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, un mot de passe n'empêche pas d'écraser les supports en cas d'utilisation de l'option FORMAT de l'instruction BACKUP.  
   
 > [!IMPORTANT]  
 >  Le niveau de protection de ce mot de passe est faible. Son but est d'éviter que des utilisateurs autorisés ou non autorisés effectuent une restauration incorrecte à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En aucun cas, elle n'empêche la lecture des données de la sauvegarde par d'autres moyens ou le remplacement du mot de passe. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La bonne pratique en matière de protection des sauvegardes consiste à stocker les bandes de sauvegarde dans un emplacement sûr ou à sauvegarder les fichiers disque protégés par une liste de contrôle d’accès (ACL). La liste de contrôle d'accès doit être définie à la racine du répertoire dans lequel les sauvegardes sont effectuées.  

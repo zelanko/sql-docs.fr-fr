@@ -35,10 +35,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981972"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clause FROM plus JOIN, APPLY, PIVOT (Transact-SQL)
@@ -59,7 +59,7 @@ Cet article aborde également les mots clés suivants qui peuvent être utilisé
 - APPLY
 - PIVOT
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -229,7 +229,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  Sous-requête qui récupère les lignes de la base de données. *derived_table* est utilisé comme entrée de la requête externe.  
   
- *derived* *_table* peut utiliser le constructeur de valeurs de table [!INCLUDE[tsql](../../includes/tsql-md.md)] pour spécifier plusieurs lignes. Par exemple, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Pour plus d’informations, consultez [Constructeur de valeurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived* *_table* peut utiliser le constructeur de valeurs de table [!INCLUDE[tsql](../../includes/tsql-md.md)] pour spécifier plusieurs lignes. Par exemple : `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Pour plus d’informations, consultez [Constructeur de valeurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Alias facultatif qui peut remplacer un nom de colonne dans le jeu de résultats de la table dérivée. Utilisez un alias de colonne pour chaque colonne de la liste de sélection et placez l'intégralité de la liste d'alias de colonnes entre parenthèses.  
@@ -242,7 +242,7 @@ FROM { <table_source> [ ,...n ] }
  Spécifie qu’une version spécifique des données est retournée à partir de la table temporelle spécifiée et de la table d’historique associée avec versions gérées par le système  
   
 ### <a name="tablesample-clause"></a>Clause Tablesample
-**S’applique à :** SQL Server, SQL Database 
+**S’applique à :** SQL Server, SQL Database 
  
  Spécifie qu'un exemple de données est retourné à partir de la table. L'exemple peut être approximatif. Cette clause peut être utilisée sur toute table primaire ou jointe dans une instruction SELECT ou UPDATE. TABLESAMPLE ne peut pas être spécifié avec des vues.  
   
@@ -268,7 +268,7 @@ FROM { <table_source> [ ,...n ] }
  Expression d'un entier de type constante utilisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour générer un nombre aléatoire. *repeat_seed* est une valeur **bigint**. Si la valeur *repeat_seed* n’est pas spécifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lui assigne une valeur aléatoire. Pour une valeur *repeat_seed* spécifique, le résultat de l’échantillonnage reste toujours identique si aucune modification n’est apportée à la table. L’expression *repeat_seed* doit correspondre à un entier supérieur à zéro.  
   
 ### <a name="tablesample-clause"></a>Clause Tablesample
-**S’applique à :** SQL Data Warehouse
+**S’applique à :** SQL Data Warehouse
 
  Spécifie qu'un exemple de données est retourné à partir de la table. L'exemple peut être approximatif. Cette clause peut être utilisée sur toute table primaire ou jointe dans une instruction SELECT ou UPDATE. TABLESAMPLE ne peut pas être spécifié avec des vues. 
 
@@ -458,7 +458,7 @@ L'opérateur APPLY fonctionne de la même façon pour produire la source de tabl
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-a-simple-from-clause"></a>A. Utilisation d'une clause FROM simple  
+### <a name="a-using-a-simple-from-clause"></a>R. Utilisation d'une clause FROM simple  
  L'exemple suivant récupère les colonnes `TerritoryID` et `Name` à partir de la table `SalesTerritory` dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql    
@@ -593,7 +593,7 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ### <a name="k-using-apply"></a>K. Utilisation de l'opérateur APPLY  
 L’exemple suivant part du principe que les tables et la fonction table ci-après existent dans la base de données :  
 
-|Nom de l’objet|Noms des colonnes|      
+|Nom d’objet|Noms des colonnes|      
 |---|---|   
 |Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
 |EmpMgr|MgrID, EmpID|     

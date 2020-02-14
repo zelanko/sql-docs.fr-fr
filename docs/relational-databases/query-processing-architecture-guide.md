@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866074"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909749"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ En outre, les clauses de requête suivantes ne sont pas paramétrables. Notez qu
 
 * <select_list> d’une instruction `SELECT`. Notamment les listes `SELECT` des sous-requêtes et les listes `SELECT` des instructions `INSERT`.
 * Les instructions `SELECT` de sous-requêtes apparaissant dans une instruction `IF` .
-* Les clauses `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`et `FOR XM`d’une requête.
+* Les clauses `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` ou `FOR XML` d’une requête.
 * Les arguments, qu’il s’agisse d’un argument direct ou d’une sous-expression, des opérateurs `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`ou `FULLTEXT` .
 * Les arguments pattern et escape_character d’une clause `LIKE` .
 * L’argument style d’une clause `CONVERT` .
 * Les constantes entières d’une clause `IDENTITY` .
 * Les constantes spécifiées à l'aide de la syntaxe d'extension ODBC.
-* Les expressions de constantes pouvant être évaluées lors de la compilation et qui sont des arguments des opérateurs +, -, \*, / et %. Lors de l'examen d'un paramétrage forcé éventuel, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considère qu'une expression est constituée de constantes pouvant être évaluées lors de la compilation lorsque l'une des conditions suivantes est vraie :  
+* Les expressions de constantes pouvant être évaluées lors de la compilation et qui sont des arguments des opérateurs `+`, `-`, `*`, `/` et `%`. Lors de l'examen d'un paramétrage forcé éventuel, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considère qu'une expression est constituée de constantes pouvant être évaluées lors de la compilation lorsque l'une des conditions suivantes est vraie :  
   * l'expression ne contient pas de colonnes, de variables ou de sous-requêtes ;  
   * l’expression contient une clause `CASE` .  
-* Les arguments des clauses d'indicateur de requête. Notamment l’argument `number_of_rows` de l’indicateur de requête `FAST` , l’argument `number_of_processors` de l’indicateur de requête `MAXDOP` et l’argument number de l’indicateur de requête `MAXRECURSION` .
+* Les arguments des clauses d'indicateur de requête. Notamment l’argument *number_of_rows* de l’indicateur de requête `FAST`, l’argument *number_of_processors* de l’indicateur de requête `MAXDOP` et l’argument *number* de l’indicateur de requête `MAXRECURSION`.
 
 Le paramétrage est effectué au niveau des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] individuelles. En d'autres termes, les instructions individuelles d'un traitement sont paramétrables. Une fois la compilation terminée, la requête paramétrable est exécutée dans le contexte du traitement pour lequel elle a été initialement soumise. Dans le cas d’un plan d’exécution mis en cache, vous pouvez déterminer si la requête a été paramétrée en référençant la colonne sql de la vue de gestion dynamique sys.syscacheobjects. Si la requête est paramétrable, les noms et les types de données des paramètres sont spécifiés avant le texte du lot soumis dans cette colonne, par exemple, (\@1 tinyint).
 

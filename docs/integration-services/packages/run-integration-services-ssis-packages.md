@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282606"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Exécuter des packages Integration Services (SSIS)
@@ -33,7 +33,7 @@ ms.locfileid: "71282606"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Pour exécuter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser un outil parmi plusieurs, en fonction de l’endroit où ces packages sont stockés. Ces outils sont répertoriées dans le tableau ci-dessous.  
+  Pour exécuter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez utiliser un outil parmi plusieurs, en fonction de l’endroit où ces packages sont stockés. Ces outils sont répertoriées dans le tableau ci-dessous.  
 
 > [!NOTE]
 > Cet article décrit comment exécuter des packages SSIS de manière générale et comment les exécuter au niveau local. Vous pouvez également exécuter des packages SSIS sur les plateformes suivantes :
@@ -46,19 +46,19 @@ ms.locfileid: "71282606"
   
 |Outil|Packages stockés sur le serveur Integration Services|Packages stockés dans le magasin de packages SSIS ou dans la base de données msdb|Packages stockés dans le système de fichiers, hors de l'emplacement qui fait partie du magasin de packages SSIS|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
-|**Outils de données SQL Server**|Non|Non<br /><br /> Vous pouvez cependant ajouter un package existant à un projet du magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] , qui inclut la base de données msdb. L'ajout d'un package existant au projet de cette manière effectue une copie locale du package dans le système de fichiers.|Oui|  
+|**SQL Server Data Tools**|Non|Non<br /><br /> Vous pouvez cependant ajouter un package existant à un projet du magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] , qui inclut la base de données msdb. L'ajout d'un package existant au projet de cette manière effectue une copie locale du package dans le système de fichiers.|Oui|  
 |**SQL Server Management Studio, quand vous êtes connecté à une instance du moteur de base de données qui héberge le serveur Integration Services**<br /><br /> Pour plus d’informations, consultez [Boîte de dialogue d’exécution de package](#execute_package_dialog)|Oui|Non<br /><br /> Vous pouvez toutefois importer un package vers le serveur à partir de ces emplacements.|Non<br /><br /> Vous pouvez toutefois importer un package vers le serveur à partir du système de fichiers.|
 |**SQL Server Management Studio, quand vous êtes connecté à une instance du moteur de base de données qui héberge le serveur Integration Services**<br /><br /> Pour plus d’informations, consultez [Exécuter des packages dans Scale Out](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|Oui|Non|Non|
 |**SQL Server Management Studio, quand il est connecté au service Integration Services qui gère le magasin de packages SSIS**|Non|Oui|Non<br /><br /> Vous pouvez cependant importer un package dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] à partir du système de fichiers.|  
-|**dtexec**<br /><br /> Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).|Oui|Oui|Oui|  
+|**dtexec**<br /><br /> Pour plus d'informations, consultez [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md).|Oui|Oui|Oui|  
 |**dtexecui**<br /><br /> Pour plus d’informations, consultez [Référence de l’interface utilisateur de l’utilitaire d’exécution de package &#40;DtExecUI&#41;](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|Non|Oui|Oui|  
 |**SQL Server Agent**<br /><br /> Vous pouvez utiliser un travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier un package.<br /><br /> Pour plus d’informations, consultez [Travaux de l’Agent SQL Server pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Oui|Oui|Oui|  
 |**Procédure stockée intégrée**<br /><br /> Pour plus d’informations, consultez [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|Oui|Non|Non|  
-|**API managée à l’aide des types et membres dans l’espace de noms** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Oui|Non|Non|  
-|**API managée à l’aide des types et membres dans l’espace de noms** <xref:Microsoft.SqlServer.Dts.Runtime>|Actuellement impossible|Oui|Oui|  
+|**API managée en utilisant des types et des membres dans l’espace de noms**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Oui|Non|Non|  
+|**API managée en utilisant des types et des membres dans l’espace de noms**  <xref:Microsoft.SqlServer.Dts.Runtime>|Actuellement impossible|Oui|Oui|  
 
 ## <a name="execution-and-logging"></a>Exécution et journalisation  
- Les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être activés pour la journalisation et vous pouvez capturer des informations sur l'exécution dans des fichiers journaux. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Les packages[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être activés pour la journalisation et vous pouvez capturer des informations sur l'exécution dans des fichiers journaux. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
  Vous pouvez surveiller des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés et exécutés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide des rapports de fonctionnement. Les rapports sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71282606"
   
      -ou-  
   
-     Utilisez des procédures stockées pour exécuter le package. Cliquez sur **Script** pour générer l’instruction Transact-SQL qui crée et démarre une instance de l’exécution. L'instruction inclut un appel aux procédures stockées catalog.create_execution, catalog.set_execution_parameter_value et catalog.start_execution. Pour plus d’informations sur ces procédures stockées, consultez [catalog.create_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
+     Utilisez des procédures stockées pour exécuter le package. Cliquez sur **Script** pour générer l’instruction Transact-SQL qui crée et démarre une instance de l’exécution. L'instruction inclut un appel aux procédures stockées catalog.create_execution, catalog.set_execution_parameter_value et catalog.start_execution. Pour plus d’informations sur ces procédures stockées, consultez [catalog.create_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)[catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
 
 ## <a name="execute_package_dialog"></a> Boîte de dialogue d’exécution de package
   Utilisez la boîte de dialogue **Exécuter le package** pour exécuter un package stocké sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

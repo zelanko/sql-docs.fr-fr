@@ -17,10 +17,10 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55c02331a87c078b3f510f36dab6c7260d12ad4b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297058"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Création d'une transformation asynchrone à l'aide du composant Script
@@ -137,7 +137,7 @@ ms.locfileid: "71297058"
   
 8.  Créez et configurez un autre composant de destination pour la deuxième sortie. Puis connectez la deuxième sortie de la transformation, **MySummaryOutput**, au composant de destination. Comme la deuxième sortie écrit une seule ligne avec une seule valeur, vous pouvez configurer facilement une destination à l'aide d'un gestionnaire de connexions de fichiers plats qui se connecte à un nouveau fichier contenant une seule colonne. Dans l’exemple, cette colonne de destination est nommée **MyRedmondCount**.  
   
-9. Exécutez l'exemple.  
+9. Exécutez l’exemple.  
   
 ```vb  
 Public Class ScriptMain  

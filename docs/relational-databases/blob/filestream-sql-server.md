@@ -16,18 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903961"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-FILESTREAM permet aux applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de stocker des données non structurées, telles que des documents et des images, dans le système de fichiers. Les applications peuvent tirer parti des API de diffusion et des performances du système de fichiers, et en même temps maintenir la cohérence transactionnelle entre les données non structurées et les données structurées correspondantes.  
+FILESTREAM permet aux applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de stocker des données non structurées, telles que des documents et des images, dans le système de fichiers. Les applications peuvent tirer parti des API de diffusion et des performances du système de fichiers, et en même temps maintenir la cohérence transactionnelle entre les données non structurées et les données structurées correspondantes.  
   
-FILESTREAM intègre le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec un système de fichiers NTFS ou ReFS en stockant les données d’objet blob **varbinary(max)** en tant que fichiers dans le système de fichiers. [!INCLUDE[tsql](../../includes/tsql-md.md)] Les instructions peuvent insérer, mettre à jour, interroger, rechercher et sauvegarder des données FILESTREAM. Les interfaces de système de fichiers Win32 fournissent l'accès de diffusion en continu aux données.  
+FILESTREAM intègre le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec un système de fichiers NTFS ou ReFS en stockant les données d’objet blob **varbinary(max)** en tant que fichiers dans le système de fichiers. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent insérer, mettre à jour, interroger, rechercher et sauvegarder des données FILESTREAM. Les interfaces de système de fichiers Win32 fournissent l'accès de diffusion en continu aux données.  
   
 FILESTREAM utilise le cache système NT pour mettre en cache les données de fichiers. Cela aide à réduire tout effet que les données FILESTREAM peuvent avoir sur les performances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Le pool de mémoires tampons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas utilisé ; par conséquent, cette mémoire est disponible pour le traitement de requête.  
   
@@ -159,7 +159,7 @@ La création de vues mappées en mémoire (E/S mappées en mémoire) à l'aide d
 [Éviter les conflits avec les opérations de base de données dans les applications FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
 [Déplacer une base de données compatible FILESTREAM](../../relational-databases/blob/move-a-filestream-enabled-database.md)  
 [Configurer FILESTREAM sur un cluster de basculement](../../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md)  
-[Configurer un pare-feu pour l'accès FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)
+[Configurer un pare-feu pour l’accès FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)
 
 ## <a name="related-content"></a>Contenu associé
 

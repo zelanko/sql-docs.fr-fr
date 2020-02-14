@@ -18,10 +18,10 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294151"
 ---
 # <a name="for-loop-container"></a>Conteneur de boucles For
@@ -41,7 +41,7 @@ ms.locfileid: "71294151"
   
  Le schéma suivant illustre un conteneur de boucles For avec une tâche Envoyer un message. Si l'expression d'initialisation est `@Counter = 0`, que l'expression d'évaluation est `@Counter < 4`et que l'expression d'itération est `@Counter = @Counter + 1`, la boucle se répète quatre fois et envoie quatre messages électroniques.  
   
- ![Un conteneur de boucles For répète une tâche quatre fois.](../../integration-services/control-flow/media/ssis-forloop.gif "Un conteneur de boucles For répète une tâche quatre fois.")  
+ ![Un conteneur de boucles For répète une tâche quatre fois](../../integration-services/control-flow/media/ssis-forloop.gif "Un conteneur de boucles For répète une tâche quatre fois")  
   
  Les expressions doivent être des expressions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valides.  
   
@@ -107,7 +107,7 @@ Utilisez la page **Éditeur de boucle For** de la boîte de dialogue **Éditeur 
  **AssignExpression**  
  Indiquez éventuellement une expression qui modifie une expression à chaque répétition de la boucle.  
   
- **Name**  
+ **Nom**  
  Indiquez un nom unique pour le conteneur de la boucle For. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100073"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68100073"
 
 Supprime toutes les lignes d’une table ou des partitions spécifiées d’une table, sans journaliser les suppressions de ligne individuelles. L'instruction TRUNCATE TABLE est semblable à l'instruction DELETE sans la clause WHERE. Cependant, l'instruction TRUNCATE TABLE est plus rapide et utilise moins de ressources système et de ressources du journal des transactions.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +72,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  Nom de la table à tronquer ou dont toutes les lignes sont supprimées. *table_name* doit être un littéral. *table_name* ne peut pas être la fonction **OBJECT_ID()** ou une variable.  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  Spécifie les partitions à tronquer ou à partir desquelles toutes les lignes sont supprimées. Si la table n’est pas partitionnée, l’argument **WITH PARTITIONS** génère une erreur. Si la clause **WITH PARTITIONS** n’est pas fournie, la totalité de la table est tronquée.  
   
@@ -134,7 +134,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-truncate-a-table"></a>A. Tronquer une table  
+### <a name="a-truncate-a-table"></a>R. Tronquer une table  
  L'exemple suivant supprime toutes les données de la table `JobCandidate`. Des instructions `SELECT` sont incluses avant et après l'instruction `TRUNCATE TABLE` pour comparer les résultats.  
   
 ```sql  
@@ -152,7 +152,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. Tronquer les partitions de table  
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  L'exemple suivant tronque les partitions spécifiées d'une table partitionnée. La syntaxe `WITH (PARTITIONS (2, 4, 6 TO 8))` provoque la troncation des numéros de partitions 2, 4, 6, 7 et 8.  
   

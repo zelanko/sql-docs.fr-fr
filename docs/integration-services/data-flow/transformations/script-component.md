@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297880"
 ---
 # <a name="script-component"></a>Composant Script
@@ -99,7 +99,7 @@ ms.locfileid: "71297880"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configuration du composant Script dans le concepteur  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ### <a name="configuring-the-script-component-programmatically"></a>Configuration du composant Script par programmation  
  Pour plus d’informations sur les propriétés définissables dans la fenêtre **Propriétés** ou par programmation, cliquez sur l’une des rubriques suivantes :  
@@ -129,7 +129,7 @@ ms.locfileid: "71297880"
  **Connection managers**  
  Affiche la liste des connexions disponibles que peut utiliser le script.  
   
- **Name**  
+ **Nom**  
  Tapez un nom unique descriptif pour la connexion.  
   
  **Gestionnaire de connexions**  
@@ -141,7 +141,7 @@ ms.locfileid: "71297880"
  **Ajouter**  
  Ajoute une connexion à la liste **Gestionnaires de connexions** .  
   
- **Supprimer**  
+ **Remove**  
  Supprime la connexion sélectionnée de la liste **Gestionnaires de connexions** .  
   
 ## <a name="script-transformation-editor-input-columns-page"></a>Éditeur de transformation de script (page Colonnes d'entrée)
@@ -209,7 +209,7 @@ ms.locfileid: "71297880"
 |-----------|-----------------|  
 |**Description**|Décrit la transformation de script en terme de fonction.|  
 |**LocaleID**|Définissez les paramètres régionaux pour fournir des informations spécifiques à la région relatives au tri et à la conversion de date et d'heure.|  
-|**Name**|Entrez un nom descriptif pour le composant.|  
+|**Nom**|Entrez un nom descriptif pour le composant.|  
 |**ValidateExternalMetadata**|Indiquez si la transformation de script valide les métadonnées de colonne par rapport aux sources de données externes lors de la conception. La valeur **false** diffère la validation jusqu'à l'exécution.|  
 |**ReadOnlyVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture seule par la transformation de script.<br /><br /> Remarque : Les noms de variable respectent la casse.|  
 |**ReadWriteVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture/écriture par la transformation de script.<br /><br /> Remarque : Les noms de variable respectent la casse.|  
@@ -217,7 +217,7 @@ ms.locfileid: "71297880"
 |**UserComponentTypeName**|Spécifie la classe <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> et l’assembly **Microsoft.SqlServer.TxScript** qui prennent en charge l’infrastructure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
  **Modifier le script**  
- Utilisez [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) pour créer ou modifier un script.  
+ Utilisez [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) pour créer ou modifier un script.  
   
 ## <a name="related-content"></a>Contenu associé  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

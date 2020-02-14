@@ -21,20 +21,20 @@ ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68329293"
 ---
-# <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
+# <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Cette fonction retourne le nombre (valeur entière très grande signée) de limites *datepart* spécifiées, traversées entre les valeurs *startdate* et *enddate* spécifiées.
   
 Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -87,7 +87,7 @@ Consultez *startdate*.
 ## <a name="return-type"></a>Type de retour  
 **bigint** signé  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Retourne la différence **bigint** entre *startdate* et *enddate*, exprimée dans le jeu de limites par *datepart*.
   
 Si une valeur de retour est hors limites pour **bigint** (-9 223 372 036 854 775 808 à +9 223 372 036 854 775 807), `DATEDIFF_BIG` retourne une erreur. Contrairement à `DATEDIFF`, qui retourne un **int** et qui par conséquent, peut dépasser la capacité avec une précision d’une **minute** ou plus, `DATEDIFF_BIG` peut dépasser la capacité seulement si vous utilisez une précision d’une **nanoseconde**, où la différence entre *enddate* et *startdate* est supérieure à 292 années, 3 mois, 10 jours, 23 heures, 47 minutes et 16,8547758 secondes.
@@ -103,7 +103,7 @@ Si seule une valeur d’heure est affectée à une variable d’un type de donn�
 Si *startdate* et *enddate* ont des types de données date différents et que l’un a plus de parties heure ou une meilleure précision en fractions de seconde que l’autre, `DATEDIFF_BIG` affecte aux parties manquantes de l’autre la valeur 0.
   
 ## <a name="datepart-boundaries"></a>Limites de datepart
-Les instructions suivantes ont les mêmes valeurs *startdate* et *enddate*. Ces dates sont adjacentes et ont une différence d’une microseconde (0,0000001 seconde). La différence entre les *startdate* et *endate* dans chaque instruction traverse une limite d’heure ou de calendrier de son *datepart*. Chaque instruction retourne 1. Si *startdate* et *enddate* ont des valeurs d’année différentes, mais les mêmes valeurs de semaine de calendrier, `DATEDIFF_BIG` retourne 0 pour *datepart* **week**.
+Les instructions suivantes ont les mêmes valeurs *startdate* et *enddate*. Ces dates sont adjacentes et ont une différence d’une microseconde (0,0000001 seconde). La différence entre les *startdate* et *endate* dans chaque instruction traverse une limite d’heure ou de calendrier de son *datepart*. Chaque instruction retourne 1. Si *startdate* et *enddate* ont des valeurs d’année différentes, mais les mêmes valeurs de semaine de calendrier, `DATEDIFF_BIG` retourne 0 pour *datepart* **week**.
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');

@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909756"
 ---
 # <a name="how-online-index-operations-work"></a>Fonctionnement des opérations d'index en ligne
@@ -78,7 +78,7 @@ ms.locfileid: "67909756"
 |-----------|---------------------|------------------|  
 |Préparation|Un nouvel index est créé et défini en écriture seule.|IS|  
 |Build|Les données sont insérées à partir de la source.<br /><br /> Les modifications des utilisateurs (insertions, mises à jour, suppressions) apportées à la source sont appliquées.<br /><br /> Cette activité est transparente pour l'utilisateur.|IS|  
-|Finale|Les métadonnées de l'index sont mises à jour.<br /><br /> L'index est défini en lecture/écriture.|S<br /><br /> ou Gestionnaire de configuration<br /><br /> SCH-M|  
+|Finale|Les métadonnées de l'index sont mises à jour.<br /><br /> L'index est défini en lecture/écriture.|S<br /><br /> or<br /><br /> SCH-M|  
   
  Les instructions SELECT émises par l'utilisateur n'accèdent pas à la cible aussi longtemps que l'opération d'index n'est pas terminée.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "67909756"
 ## <a name="related-content"></a>Contenu associé  
  [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md)  
   
- [Instructions pour les opérations d'index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
+ [Instructions pour les opérations d’index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9ac35433b8e197da585f18a6cf87328d493c9bda
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286045"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configuration de la tâche de script dans l'éditeur de tâche de script
@@ -40,7 +40,7 @@ ms.locfileid: "71286045"
  La page **Script** de l’**éditeur de tâche de script** affiche les propriétés personnalisées de la tâche de script.  
   
 ### <a name="scriptlanguage-property"></a>Propriété ScriptLanguage  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) prend en charge les langages de programmation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Après avoir créé un script dans la tâche de script, vous ne pouvez pas modifier la valeur de la propriété **ScriptLanguage**.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) prend en charge les langages de programmation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Après avoir créé un script dans la tâche de script, vous ne pouvez pas modifier la valeur de la propriété **ScriptLanguage**.  
   
  Pour définir le langage de script par défaut des composants Script et des tâches de script, utilisez la propriété **ScriptLanguage** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d'informations, consultez [General Page](../../general-page-of-integration-services-designers-options.md).  
   

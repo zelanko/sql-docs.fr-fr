@@ -27,10 +27,10 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e7828421f6a8d4bca6084c6b9e0d215b432cc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294079"
 ---
 # <a name="integration-services-tasks"></a>Tâches Integration Services
@@ -42,7 +42,7 @@ ms.locfileid: "71294079"
   
  Vous pouvez également écrire des tâches personnalisées à l'aide d'un langage de programmation qui prend en charge COM, tel que Visual Basic, ou d'un langage de programmation .NET, tel que C#.  
   
- Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , outil graphique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettant de manipuler les packages, met à votre disposition une aire de conception pour la création des flux de contrôle de package, ainsi que des éditeurs personnalisés pour la configuration des tâches. Vous pouvez aussi programmer le modèle objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer des packages par programmation.  
+ Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)], outil graphique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettant de manipuler les packages, met à votre disposition une aire de conception pour la création des flux de contrôle de package, ainsi que des éditeurs personnalisés pour la configuration des tâches. Vous pouvez aussi programmer le modèle objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer des packages par programmation.  
   
 ## <a name="types-of-tasks"></a>Types de tâches  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les types de tâches suivants.  

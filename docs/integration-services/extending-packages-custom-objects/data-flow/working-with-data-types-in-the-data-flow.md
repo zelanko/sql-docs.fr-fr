@@ -15,10 +15,10 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2100176fa0bb6f02deff6cdf2a210ea81e04f9a6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287442"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Utilisation de types de données dans le flux de données
@@ -94,7 +94,7 @@ ms.locfileid: "71287442"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|  
   
 ## <a name="mapping-data-types-in-the-data-flow"></a>Mappage des types de données dans le flux de données  
- Lors du déplacement de données depuis des sources vers des destinations en passant par des transformations, un composant de flux de données doit parfois convertir des types de données entre les types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] définis dans l’énumération <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> et les types de données managées de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] définis dans l’espace de noms **System**. De plus, un composant doit parfois convertir un type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en autre type de données pour que ce type puisse être converti en type managé.  
+ Lors du déplacement de données depuis des sources vers des destinations en passant par des transformations, un composant de flux de données doit parfois convertir des types de données entre les types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] définis dans l’énumération <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> et les types de données managées de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] définis dans l’espace de noms **System**. De plus, un composant doit parfois convertir un type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en autre type de données pour que ce type puisse être converti en type managé.  
   
 > [!NOTE]  
 >  Les fichiers de mappage au format XML installés par défaut dans C:\Program Files\Microsoft SQL Server\130\DTS\MappingFiles ne sont pas liés au mappage des types de données décrit dans cette rubrique. Ces fichiers mappent les types de données d'une version de base de données ou d'un système vers une autre ou un autre (par exemple, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à Oracle), puis ils sont utilisés uniquement par l'Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur ces fichiers de mappage, consultez [Assistant Importation et Exportation SQL Server](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  

@@ -18,10 +18,10 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298525"
 ---
 # <a name="msmq-connection-manager"></a>Gestionnaire de connexions MSMQ
@@ -64,13 +64,13 @@ ms.locfileid: "71298525"
 >  Le gestionnaire de connexions MSMQ prend en charge les files d'attente privées et publiques locales et les files d'attente publiques distantes. Il ne prend pas en charge les files d'attente privées distantes. Pour une solution de contournement qui utilise la tâche de script, consultez [Envoi vers une file d'attente de messages privée distante à l'aide de la tâche de script](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md).  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Fournissez un nom unique pour le gestionnaire de connexions MSMQ dans le flux de travail. Le nom fourni sera affiché dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Description**  
  Décrivez le gestionnaire de connexions. Il est recommandé d'indiquer ici l'usage auquel le gestionnaire de connexions est destiné, de sorte que les packages soient correctement documentés et plus faciles à gérer.  
   
- **Chemin d'accès**  
+ **Chemin d’accès**  
  Tapez le chemin d'accès complet de la file d'attente de messages. Le format du chemin d'accès dépend du type de file d'attente.  
   
 |Type de file d'attente|Exemple de chemin d'accès|  

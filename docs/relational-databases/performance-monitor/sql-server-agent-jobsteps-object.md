@@ -14,10 +14,10 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093628"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objet JobSteps
@@ -26,11 +26,11 @@ ms.locfileid: "68093628"
   
  Le tableau suivant énumère les compteurs **SQLAgent:JobSteps** .  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |**Étapes actives**|Ce compteur fait état du nombre d'étapes de travail en cours d'exécution.|  
 |**Étapes en attente**|Ce compteur fait état du nombre d'étapes de travail en mesure d'être exécutées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais dont l'exécution n'a pas encore commencé.|  
-|**Total des tentatives d'exécution d'une étape**|Ce compteur indique le nombre de fois que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tenté d'exécuter une étape de travail depuis le dernier redémarrage du serveur.|  
+|**Total des tentatives d'exécution d'une étape**|Ce compteur indique le nombre de fois que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a retenté une étape de travail depuis le dernier redémarrage du serveur.|  
   
  Chaque compteur de l'objet contient les instances suivantes :  
   
@@ -44,10 +44,10 @@ ms.locfileid: "68093628"
 |**Distribution**|Informations relatives aux étapes de travail qui utilisent le sous-système **Distribution**|  
 |**Dts**|Informations relatives aux étapes de travail qui utilisent le sous-système [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|  
 |**LogReader**|Informations relatives aux étapes de travail qui utilisent le sous-système **LogReader**|  
-|**Fusion**|Informations relatives aux étapes de travail qui utilisent le sous-système **Merge**|  
+|**Fusionner**|Informations relatives aux étapes de travail qui utilisent le sous-système **Merge**|  
 |**PowerShell**|Informations relatives aux étapes de travail qui utilisent le sous-système **PowerShell**|  
 |**QueueReader**|Informations relatives aux étapes de travail qui utilisent le sous-système **QueueReader**|  
-|**Snapshot**|Informations relatives aux étapes de travail qui utilisent le sous-système **Snapshot**|  
+|**Instantané**|Informations relatives aux étapes de travail qui utilisent le sous-système **Snapshot**|  
 |**TSQL**|Informations relatives aux étapes de travail qui exécutent [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  

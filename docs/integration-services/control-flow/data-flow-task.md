@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298348"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
@@ -68,7 +68,7 @@ ms.locfileid: "71298348"
   
  Pour plus d'informations sur la façon d'utiliser ces entrées de journal pour analyser et améliorer les performances du flux de données, consultez l'une des rubriques suivantes :  
   
--   [Compteurs de performances](../../integration-services/performance/performance-counters.md)  
+-   [Compteurs de performance](../../integration-services/performance/performance-counters.md)  
   
 -   [Fonctionnalités de performances de flux de données](../../integration-services/data-flow/data-flow-performance-features.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71298348"
   
  Par exemple, le tableau suivant affiche le message « Des lignes ont été fournies comme entrée à un composant de flux de données. :  : 1185 : Sortie de source OLE DB : 1180 : Trier : 1181 : Entrée de tri : 76 », analysé sur plusieurs colonnes. Le message a été écrit par l’événement **OnPipelineRowsSent** au moment où les lignes ont été envoyées de la source OLE DB à la transformation de tri.  
   
-|colonne|Description|Valeur|  
+|Colonne|Description|Valeur|  
 |------------|-----------------|-----------|  
 |**PathID**|Valeur de la propriété **ID** du chemin entre la source OLE DB et la transformation de tri.|1185|  
 |**PathName**|Valeur de la propriété **Nom** du chemin.|Sortie de source OLE DB|  

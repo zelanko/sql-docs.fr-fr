@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999435"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Contraintes de clé primaire et de clé étrangère
@@ -64,7 +64,7 @@ ms.locfileid: "67999435"
   
  Une table peut référencer au maximum 253 autres tables et colonnes en tant que clés étrangères (références sortantes). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fait passer de 253 à 10 000 le nombre limite des autres tables et colonnes pouvant référencer des colonnes dans une table unique (références entrantes). (Cela nécessite au minimum le niveau de compatibilité 130). Cette augmentation est soumise aux restrictions suivantes :  
   
--   Les références de clés étrangères supérieures à 253 sont uniquement prises en charge pour les opérations DELETE DML. Les opérations UPDATE et MERGE ne sont pas prises en charge.  
+-   Les références de clés étrangères supérieures à 253 sont uniquement prises en charge pour les opérations DELETE DML. Les opérations UPDATE et MERGE ne sont pas prises en charge.  
   
 -   Une table comportant une clé étrangère référencée vers elle-même est toujours limitée à 253 références de clés étrangères.  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094742"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Ajouter des colonnes à une table (moteur de base de données)
@@ -59,7 +59,7 @@ Requiert une autorisation ALTER sur la table.
     > [!NOTE]
     > Les valeurs par défaut des propriétés des colonnes sont ajoutées lorsque vous créez une nouvelle colonne, mais vous pouvez les modifier sous l’onglet **Propriétés de la colonne** .
 
-6. Quand vous avez fini d’ajouter des colonnes, dans le menu **Fichier** , choisissez **Enregistrer** _nom de la table_.
+6. Quand vous avez fini d’ajouter des colonnes, dans le menu **Fichier**, choisissez **Enregistrer** _nom de la table_.
   
 ## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
   

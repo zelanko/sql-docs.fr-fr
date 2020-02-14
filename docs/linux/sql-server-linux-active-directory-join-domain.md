@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224512"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761873"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Joindre SQL Server sur un hôte Linux à un domaine Active Directory
 
@@ -27,7 +27,7 @@ Cet article fournit des instructions générales sur la façon de joindre une ma
 Avant de configurer l’authentification Active Directory, vous devez configurer un contrôleur de domaine Active Directory, Windows, sur votre réseau. Joignez alors votre hôte SQL Server sur Linux à un domaine Active Directory.
 
 > [!IMPORTANT]
-> Les exemples d’étapes décrits dans cet article sont fournis à titre d’information uniquement. Les étapes réelles peuvent différer légèrement dans votre environnement en fonction de la configuration de votre environnement global. Faites appel à vos administrateurs système et de domaine pour votre environnement à des fins de configuration, de personnalisation et de résolution des problèmes spécifiques.
+> Les exemples d’étapes décrits dans cet article sont fournis à titre d’information uniquement et font référence aux systèmes d’exploitation Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x et SUSE Enterprise Linux (SLES) 12. Les étapes réelles peuvent différer légèrement dans votre environnement en fonction de la configuration de votre environnement global et de la version de votre système d’exploitation. Par exemple, Ubuntu 18.04 utilise netplan, tandis que Red Hat Enterprise Linux (RHEL) 8.x utilise nmcli entre autres outils pour gérer et configurer le réseau. Il est recommandé de faire appel à vos administrateurs système et de domaine pour votre environnement en ce qui concerne les outils, la configuration, la personnalisation et la résolution des problèmes.
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>Vérifier la connexion à un contrôleur de domaine
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 Si l’une de ces vérifications de nom échoue, mettez à jour votre liste de recherche de domaine. Les sections suivantes fournissent des instructions pour Ubuntu, Red Hat Enterprise Linux (RHEL) et SUSE Linux Enterprise Server (SLES), respectivement.
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. Modifiez le fichier **/etc/network/interfaces** de façon à ce que votre domaine Active Directory se trouve dans la liste de recherche de domaine :
 
@@ -71,7 +71,7 @@ Si l’une de ces vérifications de nom échoue, mettez à jour votre liste de r
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. Modifiez le fichier **/etc/sysconfig/network-scripts/ifcfg-eth0** de façon à ce que votre domaine Active Directory se trouve dans la liste de recherche de domaine. Ou modifiez un autre fichier config d’interface comme il convient :
 
@@ -100,7 +100,7 @@ Si l’une de ces vérifications de nom échoue, mettez à jour votre liste de r
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. Modifiez le fichier **/etc/sysconfig/network/config** pour que votre adresse IP du contrôleur de domaine Active Directory soit utilisée pour les requêtes DNS et que votre domaine Active Directory figure dans la liste de recherche du domaine :
 
@@ -178,7 +178,7 @@ Procédez comme suit pour joindre un hôte SQL Server à un domaine Active Direc
 
    SQL Server utilise SSSD et NSS pour le mappage des comptes et des groupes d’utilisateurs aux identificateurs de sécurité (SID). SSSD doit être configuré et en cours d’exécution pour SQL Server pour créer des connexions AD avec succès. **realmd** effectue généralement cette opération automatiquement dans le cadre de la jonction au domaine, mais dans certains cas, vous devez le faire séparément.
 
-   Pour plus d’informations, consultez comment [configurer SSSD manuellement](https://access.redhat.com/articles/3023951) et [configurer NSS pour fonctionner avec SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Pour plus d’informations, consultez comment [configurer SSSD manuellement](https://access.redhat.com/articles/3023951) et [configurer NSS pour fonctionner avec SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Vérifiez que vous pouvez maintenant collecter des informations sur un utilisateur à partir du domaine et que vous pouvez acquérir un ticket Kerberos en tant qu’utilisateur. L’exemple suivant utilise les commandes **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) et [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) pour ce faire.
 

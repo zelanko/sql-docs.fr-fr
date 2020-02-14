@@ -20,10 +20,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290841"
 ---
 # <a name="xml-source"></a>Source XML
@@ -72,7 +72,7 @@ ms.locfileid: "71290841"
 ## <a name="configuration-of-the-xml-source"></a>Configuration de la source XML  
  La source XML prend en charge trois modes différents d'accès aux données. Vous pouvez spécifier l'emplacement du fichier de données XML, la variable qui contient cet emplacement ou celle qui contient les données XML.  
   
- La source XML inclut les propriétés personnalisées **XMLData** et **XMLSchemaDefinition**, qui peuvent être mises à jour par des expressions de propriété lors du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des sources XML](../../integration-services/data-flow/xml-source-custom-properties.md).  
+ La source XML inclut les propriétés personnalisées **XMLData** et **XMLSchemaDefinition** , qui peuvent être mises à jour par des expressions de propriété lors du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des sources XML](../../integration-services/data-flow/xml-source-custom-properties.md).  
   
  La source XML prend en charge plusieurs sorties standard et plusieurs sorties d'erreur.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "71290841"
  **Colonne**  
  Affichez les colonnes externes (sources) que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source XML**.  
   
- **Erreur**  
+ **Error**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
  **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  

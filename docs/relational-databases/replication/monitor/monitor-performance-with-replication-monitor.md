@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c20631f9a24ddf3950a14897bca8934f6794045
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: feabed59f397f2a12ca3697e5938e0540fcad228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770590"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288127"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Analyser les performances avec le Moniteur de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Le moniteur de réplication de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d'analyser les performances de la réplication transactionnelle et de la réplication de fusion via les fonctionnalités suivantes :  
+  Le Moniteur de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d’analyser les performances de la réplication transactionnelle et de la réplication de fusion via les fonctionnalités suivantes :  
   
 -   Définition d'alertes et de seuils  
   

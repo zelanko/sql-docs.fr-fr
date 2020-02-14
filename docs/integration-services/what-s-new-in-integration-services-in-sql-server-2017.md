@@ -11,10 +11,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296468"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Nouveautés d’Integration Services dans SQL Server 2017
@@ -39,13 +39,13 @@ Voici les nouvelles fonctionnalités les plus importantes d’Integration Servic
 
 ## <a name="new-in-azure-data-factory"></a>Nouveautés dans Azure Data Factory
 
-Avec la préversion publique d’Azure Data Factory version 2 en septembre 2017, vous pouvez désormais effectuer les opérations suivantes :
+Avec la préversion publique d’Azure Data Factory version 2 de septembre 2017, vous pouvez désormais effectuer les opérations suivantes :
 -   Déployer des packages dans la base de données du catalogue SSIS (SSISDB) sur Azure SQL Database.
 -   Exécuter des packages déployés sur Azure sur le runtime d’intégration Azure-SSIS, composant d’Azure Data Factory version 2.
 
 Pour plus d’informations, consultez [Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
-Ces nouvelles fonctionnalités nécessitent SQL Server Data Tools (SSDT) version 17.2 ou ultérieure, mais ne nécessitent pas SQL Server 2017 ou SQL Server 2016. Quand vous déployez des packages sur Azure, l’Assistant Déploiement de package met toujours à niveau les packages vers le format de package le plus récent.
+Ces nouvelles fonctionnalités nécessitent SQL Server Data Tools (SSDT) version 17.2 ou ultérieure, mais ne nécessitent pas SQL Server 2017 ou SQL Server 2016. Quand vous déployez des packages sur Azure, l’Assistant Déploiement de package met toujours à niveau les packages avec le format de package le plus récent.
 
 ## <a name="new-in-the-azure-feature-pack"></a>Nouveautés dans le Feature Pack Azure
 

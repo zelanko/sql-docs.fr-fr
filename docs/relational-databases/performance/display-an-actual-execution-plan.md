@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946887"
 ---
 # <a name="display-an-actual-execution-plan"></a>Afficher un plan d'exécution réel
@@ -37,7 +37,7 @@ ms.locfileid: "67946887"
   
 3.  Dans le menu **Requête**, cliquez sur **Inclure le plan d’exécution réel** ou cliquez sur le bouton de la barre d’outils **Inclure le plan d’exécution réel**.
 
-    ![Bouton Plan d’exécution réel dans la barre d’outils](../../relational-databases/performance/media/actualexecplantoolbar.png "Bouton Plan d’exécution réel dans la barre d’outils")   
+    ![Bouton Plan d’exécution réel sur la barre d’outils](../../relational-databases/performance/media/actualexecplantoolbar.png "Bouton Plan d’exécution réel sur la barre d’outils")   
   
 4.  Exécutez la requête en cliquant sur le bouton de la barre d’outils **Exécuter** . Le plan utilisé par l’optimiseur de requête est affiché sous l’onglet **Plan d’exécution** dans le volet de résultats. 
 
@@ -47,7 +47,7 @@ ms.locfileid: "67946887"
   
     Il est également possible d'afficher les propriétés des opérateurs dans la fenêtre Propriétés. Si les propriétés ne sont pas visibles, cliquez avec le bouton droit sur un opérateur, puis cliquez sur **Propriétés**. Sélectionnez l'opérateur de votre choix.  
 
-    ![Cliquez avec le bouton droit sur Propriétés dans l’opérateur de plan](../../relational-databases/performance/media/planproperties.png "Cliquez avec le bouton droit sur Propriétés dans l’opérateur de plan")    
+    ![Cliquer avec le bouton droit sur Propriétés dans l’opérateur de plan](../../relational-databases/performance/media/planproperties.png "Cliquer avec le bouton droit sur Propriétés dans l’opérateur de plan")    
   
 6.  Si vous voulez modifier l’affichage du plan d’exécution, cliquez avec le bouton droit sur le plan d’exécution et sélectionnez **Zoom avant**, **Zoom arrière**, **Zoom personnalisé**ou **Zoom pour ajuster**. Les options**Zoom avant** et **Zoom arrière** vous permettent d’effectuer un zoom avant ou arrière sur le plan d’exécution. Quant à l’option **Zoom personnalisé** , elle vous permet de définir votre propre zoom, par exemple, un pourcentage de zoom de 80. Enfin, l’option**Zoom pour ajuster** agrandit le plan de sorte que sa taille soit ajustée en fonction de celle du volet de résultats. Vous pouvez également utiliser une combinaison de la touche Ctrl et de la roulette de votre souris pour activer le **zoom dynamique**.  
 

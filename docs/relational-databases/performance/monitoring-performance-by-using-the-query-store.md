@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909305"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
@@ -111,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Utiliser la fonctionnalité Requêtes régressées  
 Après avoir activé le magasin des requêtes, actualisez la partie de la base de données du volet de l’Explorateur d’objets pour ajouter la section **Magasin des requêtes** .  
   
-![Arborescence du magasin des requêtes SQL Server 2016 dans l’Explorateur d'objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Arborescence du magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS")   ![Arborescence du magasin des requêtes SQL Server 2017 dans l’Explorateur d'objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Arborescence du magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS") 
+![Arborescence du magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Arborescence du magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS")![Arborescence du magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Arborescence du magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS") 
   
 Sélectionnez **Requêtes régressées** pour ouvrir le volet **Requêtes régressées** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le volet Requêtes régressées affiche les requêtes et les plans du magasin de requêtes. Utilisez les listes déroulantes situées en haut du volet pour filtrer les requêtes selon différents critères : **Durée (ms)** (par défaut), Temps processeur (ms), Lectures logiques (Ko), Écritures logiques (Ko), Lectures physiques (Ko), Temps CLR (ms), DOP, Consommation de mémoire (Ko), Nombre de lignes, Mémoire utilisée par la journalisation (Ko), Mémoire utilisée par la base de données temporaire (Ko) et Temps d’attente (ms).  
 Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons sont disponibles pour afficher la requête source, forcer et désactiver l’application forcée d’un plan de requête, basculer entre les formats de grille et de graphique, comparer des plans sélectionnés (si plusieurs plans sont sélectionnés) et actualiser l’affichage.  
@@ -142,9 +142,9 @@ Voici quelques exemples vous permettant d’obtenir plus d’insights sur votre 
 |||| 
 |-|-|-|  
 |Expérience précédente|Nouvelle expérience|Action|
-|Attentes élevées de RESOURCE_SEMAPHORE par base de données|Attentes élevées de mémoire dans le Magasin des requêtes pour des requêtes spécifiques|Recherchez les requêtes les plus consommatrices de mémoire dans le Magasin des requêtes. Ces requêtes retardent probablement davantage la progression des requêtes concernées. Utilisez l’indicateur de requête MAX_GRANT_PERCENT pour ces requêtes ou pour les requêtes concernées.|
-|Attentes élevées de LCK_M_X par base de données|Attentes élevées de verrouillage dans le Magasin des requêtes pour des requêtes spécifiques|Vérifiez les textes de requête des requêtes affectées et identifiez les entités cibles. Recherchez dans le Magasin des requêtes d’autres requêtes modifiant la même entité, qui sont fréquemment exécutées et/ou ont une durée importante. Après avoir identifié ces requêtes, modifiez la logique d’application pour améliorer l’accès concurrentiel ou utilisez un niveau d’isolation moins restrictif.|
-|Attentes élevées de PAGEIOLATCH_SH par base de données|Attentes élevées d’E/S de mémoire tampon dans le Magasin des requêtes pour des requêtes spécifiques|Recherchez les requêtes avec un grand nombre de lectures physiques dans le Magasin des requêtes. Si elles correspondent aux requêtes avec des attentes élevées d’E/S, introduisez un index sur l’entité sous-jacente pour faire des recherches au lieu d’analyses et ainsi réduire la surcharge d’E/S des requêtes.|
+|Attentes élevées de RESOURCE_SEMAPHORE par base de données|Attentes élevées de mémoire dans le Magasin des requêtes pour des requêtes spécifiques|Recherchez les principales requêtes consommatrices de mémoire dans le Magasin des requêtes. Ces requêtes retardent probablement davantage la progression des requêtes affectées. Utilisez l’indicateur de requête MAX_GRANT_PERCENT pour ces requêtes ou pour les requêtes concernées.|
+|Attentes élevées de LCK_M_X par base de données|Attentes élevées de verrouillage dans le Magasin des requêtes pour des requêtes spécifiques|Vérifiez les textes de requêtes pour les requêtes affectées et identifiez les entités cibles. Recherchez dans le Magasin des requêtes d’autres requêtes modifiant la même entité, qui sont fréquemment exécutées et/ou ont une durée importante. Après avoir identifié ces requêtes, envisagez de changer la logique d’application pour améliorer l’accès concurrentiel, ou utilisez un niveau d’isolation moins restrictif.|
+|Attentes élevées de PAGEIOLATCH_SH par base de données|Attentes élevées d’E/S de mémoire tampon dans le Magasin des requêtes pour des requêtes spécifiques|Recherchez les requêtes comportant un grand nombre de lectures physiques dans le Magasin des requêtes. Si elles correspondent aux requêtes avec des attentes élevées d’E/S, introduisez un index sur l’entité sous-jacente pour faire des recherches au lieu d’analyses et ainsi réduire la surcharge d’E/S des requêtes.|
 |Attentes élevées de SOS_SCHEDULER_YIELD par base de données|Attentes élevées du processeur dans le Magasin des requêtes pour des requêtes spécifiques|Recherchez les requêtes les plus consommatrices de processeur dans le Magasin des requêtes. Parmi elles, identifiez celles pour lesquelles la tendance de processeur élevé correspond aux attentes élevées de processeur pour les requêtes concernées. Concentrez-vous sur l’optimisation de ces requêtes : il peut y avoir une régression de plan ou peut-être un index manquant.|
 
 ##  <a name="Options"></a> Options de configuration 
@@ -335,7 +335,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  Vous pouvez définir votre propre procédure avec une logique différente pour effacer les données dont vous n’avez plus besoin.  
   
- L’exemple ci-dessus utilise la procédure stockée étendue **sp_query_store_remove_query** pour supprimer les données inutiles. Vous pouvez également utiliser :  
+ L’exemple ci-dessus utilise la procédure stockée étendue **sp_query_store_remove_query** pour supprimer les données inutiles. Vous pouvez aussi utiliser :  
   
 -   **sp_query_store_reset_exec_stats** pour effacer les statistiques d’exécution pour un plan donné.  
 -   **sp_query_store_remove_plan** pour supprimer un plan unique.  

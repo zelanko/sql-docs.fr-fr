@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134676"
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
@@ -31,10 +31,10 @@ ms.locfileid: "68134676"
   
 -   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
   
--   **Pour mettre à niveau une DAC à l’aide de**  [l’Assistant d’inscription de l’application de la couche Données](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Pour mettre à niveau une DAC à l’aide de** :  [l’Assistant d’inscription de l’application de la couche Données](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
- Le processus d'inscription crée une définition de la DAC qui définit les objets de la base de données. La combinaison de la définition de la DAC et de la base de données forme une instance DAC. Si vous inscrivez une base de données comme une DAC sur une instance du moteur de base de données, la DAC inscrite est incorporée dans l’Utilitaire SQL Server la prochaine fois que le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC sera ensuite présente dans le nœud **Applications de la couche Données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
+ Le processus d'inscription crée une définition de la DAC qui définit les objets de la base de données. La combinaison de la définition de la DAC et de la base de données forme une instance DAC. Si vous inscrivez une base de données comme une DAC sur une instance du moteur de base de données, la DAC inscrite est incorporée dans l’Utilitaire SQL Server la prochaine fois que le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC est ensuite présente dans le nœud **Application de la couche Données déployée** au sein de l’**Explorateur d’utilitaire** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et est signalée dans la page de détails pour **Application de la couche Données déployée**.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
  L'inscription de la DAC ne peut être exécutée que sur une base de données dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure. L'inscription de la DAC ne peut pas être effectuée si une DAC est déjà inscrite pour la base de données. Par exemple, si la base de données a été créée en déployant une DAC, vous ne pouvez pas exécuter l’ **Assistant Inscrire l’application de la couche Données**.  
@@ -108,7 +108,7 @@ ms.locfileid: "68134676"
  [Utilisation de l'Assistant Inscrire l'application de la couche Données](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Validation d'objets  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. _SchemaName_ **.** _ObjectName_ identifient quel objet est vérifié actuellement.  
+ **Vérification de**  _SchemaName_ **.** _ObjectName_ **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. _SchemaName_ **.** _ObjectName_ identifient quel objet est vérifié actuellement.  
   
  **< Précédent** : vous renvoie à la page **Définir les propriétés** pour modifier vos entrées.  
   

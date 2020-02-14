@@ -14,10 +14,10 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0c5b79da02f8b78601db8691c83e6782f83b8b0
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095680"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutoriel : Chaînes de propriétés et changement de contexte
@@ -52,7 +52,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 Pour obtenir des instructions sur la restauration d’une base de données dans SQL Server Management Studio, consultez [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurez l'environnement  
-Utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et le code ci-dessous pour ouvrir la base de données `AdventureWorks2017` ; ensuite, à l'aide de l'instruction `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)], vérifiez que l'utilisateur dbo est affiché dans le contexte.  
+Utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et le code ci-dessous pour ouvrir la base de données `AdventureWorks2017` ; ensuite, à l’aide de l’instruction `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)], vérifiez que l’utilisateur dbo est affiché dans le contexte.  
   
 ```sql
 USE AdventureWorks2017;  
@@ -332,7 +332,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

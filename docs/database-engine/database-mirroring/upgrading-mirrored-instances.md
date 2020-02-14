@@ -15,10 +15,10 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050630"
 ---
 # <a name="upgrading-mirrored-instances"></a>Mise à niveau des instances en miroir
@@ -67,7 +67,7 @@ ms.locfileid: "68050630"
   
  L'organigramme suivant illustre les étapes de base d'une mise à niveau propagée pour chaque mode d'opération. Les procédures correspondantes sont décrites après l'illustration.  
   
- ![Organigramme montrant les étapes d’une mise à niveau propagée](../../database-engine/database-mirroring/media/dbm-rolling-upgrade.gif "Organigramme montrant les étapes d’une mise à niveau propagée")  
+ ![Organigramme illustrant les étapes d’une mise à niveau propagée](../../database-engine/database-mirroring/media/dbm-rolling-upgrade.gif "Organigramme illustrant les étapes d’une mise à niveau propagée")  
   
 > [!IMPORTANT]  
 >  Une instance de serveur peut remplir différents rôles de mise en miroir (serveur principal, serveur miroir ou témoin) dans des sessions de mise en miroir simultanées. Dans ce cas, vous devez adapter le processus de mise à niveau propagée de base en conséquence. Pour plus d’informations, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  

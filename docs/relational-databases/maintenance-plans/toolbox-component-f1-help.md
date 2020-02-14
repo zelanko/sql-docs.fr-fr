@@ -13,15 +13,15 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115530"
 ---
 # <a name="toolbox-component-f1-help"></a>Aide (F1) des composants de la boîte à outils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La**boîte à outils** affiche divers éléments que vous pouvez utiliser dans les projets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Vous pouvez ouvrir la **boîte à outils** à partir du menu **Affichage** et ancrer cette fenêtre comme vous le souhaitez. Quand elle est ancrée, la **boîte à outils** peut rester affichée ou être masquée si elle est inutilisée à l’aide de l’option **Masquer automatiquement** .  
+  La **boîte à outils** affiche divers éléments que vous pouvez utiliser dans les projets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez ouvrir la **boîte à outils** à partir du menu **Affichage** et ancrer cette fenêtre comme vous le souhaitez. Quand elle est ancrée, la **boîte à outils** peut rester affichée ou être masquée si elle est inutilisée à l’aide de l’option **Masquer automatiquement** .  
   
  Les icônes de la**boîte à outils** peuvent être glissées et déplacées ou copiées et collées dans des éditeurs de code ou sur des surfaces de mode de création au sein de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

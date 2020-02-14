@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982076"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73982076"
 
   Spécifie les propriétés d’une colonne ajoutées à une table à l’aide de l’instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -93,7 +93,7 @@ column_name <data_type>
   
 -   type de données alias dérivé d'un type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les types de données d'alias doivent être créés à l'aide de CREATE TYPE avant de pouvoir être utilisés dans une définition de table ;  
   
--   type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] défini par l’utilisateur et le schéma auquel il appartient. Un type de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être créé à l'aide de CREATE TYPE avant de pouvoir être utilisé dans une définition de table.  
+-   type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] défini par l’utilisateur et schéma auquel il appartient. Un type de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être créé à l'aide de CREATE TYPE avant de pouvoir être utilisé dans une définition de table.  
   
  Si *type_schema_name* n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] référence *type_name* dans l’ordre suivant :  
   

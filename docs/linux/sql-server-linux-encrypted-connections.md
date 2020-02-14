@@ -11,10 +11,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71016861"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Chiffrement des connexions à SQL Server sur Linux
@@ -75,7 +75,7 @@ Le protocole TLS est utilisé pour chiffrer des connexions d'une application cli
 -   **Exemples de chaîne de connexion** 
 
     - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
-  ![Boîte de dialogue de connexion SSMS](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png " Boîte de dialogue de connexion SSMS")  
+  ![Boîte de dialogue de connexion de SSMS](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "Boîte de dialogue de connexion de SSMS")  
   
     - **SQLCMD** 
 
@@ -129,7 +129,7 @@ Le protocole TLS est utilisé pour chiffrer des connexions d'une application cli
 
 ## <a name="common-connection-errors"></a>Erreurs de connexion courantes  
 
-|Message d'erreur |Fix |
+|Message d’erreur |Fix |
 |--- |--- |
 |La chaîne de certificats a été émise par une autorité qui n’est pas approuvée.  |Cette erreur se produit lorsque des clients ne peuvent pas vérifier la signature sur le certificat présenté par SQL Server pendant la négociation TLS. Assurez-vous que le client approuve directement le certificat [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou l’autorité de certification qui a signé le certificat SQL Server. |
 |Le principal nom cible est incorrect.  |Assurez-vous que le champ Nom commun sur le certificat de SQL Server correspond au nom de serveur spécifié dans la chaîne de connexion du client. |  

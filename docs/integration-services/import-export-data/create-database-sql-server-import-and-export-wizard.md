@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296284"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Créer la base de données (Assistant Importation et Exportation SQL Server)
@@ -36,7 +36,7 @@ La capture d’écran suivante montre la boîte de dialogue **Créer une base de
 ![Page Créer une base de données de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/create-database.png "Page Créer une base de données de l’Assistant Importation et Exportation")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Fournir un nom pour la nouvelle base de données  
-**Name**  
+**Nom**  
  Fournissez un nom pour la base de données SQL Server de destination.
  
 ### <a name="naming-requirements"></a>Exigences concernant l’affectation des noms

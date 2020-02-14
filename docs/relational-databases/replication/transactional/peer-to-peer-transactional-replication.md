@@ -17,10 +17,10 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710719"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Réplication transactionnelle d’égal à égal
@@ -94,7 +94,7 @@ ms.locfileid: "71710719"
 ## <a name="considerations-for-using-peer-to-peer-replication"></a>Considérations sur l'utilisation de la réplication d'égal à égal  
  Cette section fournit des informations et des consignes à considérer lors de l'utilisation de la réplication d'égal à égal.  
   
-### <a name="general-considerations"></a>Considérations générales  
+### <a name="general-considerations"></a>Considérations d’ordre général  
   
 -   La réplication d'égal à égal est disponible uniquement dans les versions Enterprise de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -116,7 +116,7 @@ ms.locfileid: "71710719"
   
 -   L'utilisation de colonnes d'identité est déconseillée. Avec les identités, vous devez gérer manuellement les plages affectées aux tables sur chaque base de données participante. Pour plus d’informations, consultez la section « Affectation de plages pour la gestion manuelle de plages d’identité » dans [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-### <a name="feature-restrictions"></a>Restrictions liées aux fonctionnalités  
+### <a name="feature-restrictions"></a>Restrictions des fonctionnalités  
  La réplication d'égal à égal prend en charge les principales fonctionnalités de la réplication transactionnelle, mais ne prend pas en charge les options suivantes :  
   
 -   initialisation et réinitialisation avec instantané ;  
@@ -158,7 +158,7 @@ ms.locfileid: "71710719"
   
 ||Homologues SQL Server 2005 uniquement ou combinaison d’homologues SQL Server 2005 et d’homologues SQL Server 2008 ou version ultérieure|Homologues SQL Server 2005 uniquement ou combinaison d’homologues SQL Server 2005 et d’homologues SQL Server 2008 ou version ultérieure|Homologues SQL 2008 ou version ultérieure|Homologues SQL 2008 ou version ultérieure|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|Ajout d’un nœud à la topologie|2 nœuds dans la topologie complète : aucune suspension requise. Utilisez plutôt `sync_type = 'initialize with backup'`|Plus de 2 nœuds : suspension requise.|`sync_type = 'replication support only'`: suspension requise.|`sync_type = 'initialize with backup'` et `'initialize from lsn'` : aucune suspension requise.|  
+|Ajout d’un nœud à la topologie|2 nœuds dans la topologie complète : aucune suspension requise. Utilisez `sync_type = 'initialize with backup'`.|Plus de 2 nœuds : suspension requise.|`sync_type = 'replication support only'`: suspension requise.|`sync_type = 'initialize with backup'` et `'initialize from lsn'` : aucune suspension requise.|  
   
  Les modifications de schéma de topologie (ajout ou suppression d’un article) nécessitent une suspension. Pour plus d’informations, consultez [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   

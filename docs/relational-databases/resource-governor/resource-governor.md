@@ -13,15 +13,15 @@ ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912055"
 ---
 # <a name="resource-governor"></a>gouverneur de ressources
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor vous permet de spécifier des limites sur l'utilisation de la quantité d'UC, d'E/S physiques et de mémoire par les demandes d'application entrantes.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le gouverneur des ressources vous permet de spécifier des limites sur la quantité d’UC,d’E/S physiques et de mémoire utilisables par les requêtes d’application entrantes.  
   
 ## <a name="benefits-of-resource-governor"></a>Avantages de Resource Governor  
  Resource Governor vous permet de gérer les ressources et les charge de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en spécifiant des limites concernant la consommation de ressources par les demandes entrantes. Du point de vue de Resource Governor, la charge de travail est un ensemble de requêtes de taille similaire qui peuvent ou devraient être traitées comme une entité unique. Bien que cela ne soit pas indispensable, plus le modèle d'utilisation des ressources d'une charge de travail est uniforme, plus il est avantageux d'utiliser Resource Governor. Les limites de ressources peuvent être reconfigurées en temps réel avec un impact négligeable sur les charges de travail en cours d'exécution.  
@@ -75,7 +75,7 @@ ms.locfileid: "67912055"
   
 -   Le pool de ressources fournit et limite les ressources requises par l'application, par exemple, Application 3.  
   
- ![Composants fonctionnels du gouverneur de ressources](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Composants fonctionnels du gouverneur de ressources")  
+ ![Composants fonctionnels de Resource Governor](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Composants fonctionnels de Resource Governor")  
   
 ## <a name="resource-governor-tasks"></a>Tâches de Resource Governor  
   
@@ -87,7 +87,7 @@ ms.locfileid: "67912055"
 |Décrit comment créer, modifier, déplacer et supprimer un groupe de charge de travail.|[Groupe de charge de travail de Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md)|  
 |Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Fonction classifieur de Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
 |Décrit comment configurer Resource Governor à l'aide d'un modèle.|[Configurer Resource Governor à l’aide d’un modèle](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
-|Décrit comment afficher les propriétés de Resource Governor.|[Afficher les propriétés de Resource Governor](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
+|Décrit comment afficher les propriétés de Resource Governor.|[Afficher les propriétés du gouverneur de ressources](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Instances du moteur de base de données &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  

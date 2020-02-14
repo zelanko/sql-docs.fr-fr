@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291496"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
@@ -58,11 +58,11 @@ ms.locfileid: "71291496"
   
  Cette transformation a une entrée et une sortie.  
   
- Seules les colonnes d’entrée avec les types de données **DT_WSTR** et **DT_STR** peuvent être utilisées dans la correspondance approximative. La correspondance exacte peut être appliquée aux colonnes de n’importe quel type de données, à l’exception des types **DT_TEXT**, **DT_NTEXT**et **DT_IMAGE**. Pour plus d’informations, consultez [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Les colonnes participant à la jointure entre l'entrée et la table de référence doivent avoir des types de données compatibles. Par exemple, il est valide d’effectuer une jointure entre une colonne ayant le type de données DTS **DT_WSTR** et une colonne ayant le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** , mais pas d’effectuer une jointure entre une colonne ayant le type de données **DT_WSTR** et une colonne ayant le type de données **int** .  
+ Seules les colonnes d’entrée avec les types de données **DT_WSTR** et **DT_STR** peuvent être utilisées dans la correspondance approximative. La correspondance exacte peut être appliquée aux colonnes de n’importe quel type de données, à l’exception des types **DT_TEXT**, **DT_NTEXT**et **DT_IMAGE**. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). Les colonnes participant à la jointure entre l'entrée et la table de référence doivent avoir des types de données compatibles. Par exemple, il est valide d’effectuer une jointure entre une colonne ayant le type de données DTS **DT_WSTR** et une colonne ayant le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar**, mais pas d’effectuer une jointure entre une colonne ayant le type de données **DT_WSTR** et une colonne ayant le type de données **int**.  
   
  Vous pouvez personnaliser cette transformation en spécifiant le volume maximum de mémoire, l'algorithme de comparaison de lignes et la mise en cache d'index et de tables de référence utilisés par la transformation.  
   
- Vous pouvez configurer la quantité de mémoire utilisée par la transformation de recherche floue en définissant la propriété personnalisée MaxMemoryUsage. Vous pouvez spécifier le nombre de mégaoctets (Mo) ou utiliser la valeur 0, ce qui permet à la transformation d'utiliser une quantité de mémoire dynamique basée sur ses besoins et sur la mémoire physique disponible. La propriété personnalisée MaxMemoryUsage peut être mise à jour par une expression de la propriété lors du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Utiliser des expressions de propriété dans les packages](../../../integration-services/expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformation](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ Vous pouvez configurer la quantité de mémoire utilisée par la transformation de recherche floue en définissant la propriété personnalisée MaxMemoryUsage. Vous pouvez spécifier le nombre de mégaoctets (Mo) ou utiliser la valeur 0, ce qui permet à la transformation d'utiliser une quantité de mémoire dynamique basée sur ses besoins et sur la mémoire physique disponible. La propriété personnalisée MaxMemoryUsage peut être mise à jour par une expression de la propriété au moment du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../../integration-services/expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="controlling-fuzzy-matching-behavior"></a>Contrôle du comportement de la correspondance floue  
  La transformation de recherche floue comprend trois fonctionnalités de personnalisation de la recherche qu'elle effectue : le nombre maximum de correspondances à retourner par ligne d'entrée, les séparateurs de jetons et les seuils de similarité.  
@@ -172,9 +172,9 @@ ms.locfileid: "71291496"
  Si vous avez décidé d'enregistrer le nouvel index de recherche, indiquez si vous voulez également que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve l'index.  
   
 > [!NOTE]  
->  Quand vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées gérées pour tenir l’index à jour. Ces procédures stockées managées utilisent la fonctionnalité de l’intégration du common language runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité de l’intégration du common language runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
->  L’option **Conserver l’index stocké** nécessitant l’intégration du CLR, cette fonctionnalité n’est effective que quand vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
+>  Dans la mesure où l’option **Conserver l’index stocké** requiert l’intégration du CLR, cette fonctionnalité n’est effective que lorsque vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
   
  **Utiliser l'index existant**  
  Indiquez que la transformation doit utiliser un index de recherche existant.  
@@ -187,9 +187,9 @@ ms.locfileid: "71291496"
   
 ### <a name="options"></a>Options  
  **Colonnes d'entrée disponibles**  
- Faites glisser les colonnes d'entrée sur les colonnes de recherche afin de les y connecter. Ces colonnes doivent avoir le même type de données pris en charge. Sélectionnez une ligne de mappage et cliquez avec le bouton droit de la souris pour modifier les mappages dans la boîte de dialogue [Créer des relations](../../../integration-services/data-flow/transformations/create-relationships.md) .  
+ Faites glisser les colonnes d'entrée sur les colonnes de recherche afin de les y connecter. Ces colonnes doivent avoir le même type de données pris en charge. Sélectionnez une ligne de mappage et cliquez avec le bouton droit pour modifier les mappages dans la boîte de dialogue [Créer des relations](../../../integration-services/data-flow/transformations/create-relationships.md) .  
   
- **Name**  
+ **Nom**  
  Permet d'afficher les noms des colonnes d'entrée disponibles.  
   
  **Transfert direct**  
@@ -219,7 +219,7 @@ ms.locfileid: "71291496"
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Transformation de regroupement probable](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

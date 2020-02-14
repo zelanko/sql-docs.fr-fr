@@ -14,22 +14,22 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947925"
 ---
 # <a name="sql-server-user-settable-object"></a>Objet SQL Server User Settable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L’objet **User Settable** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de créer des instances de compteurs personnalisées. La création de vos propres instances de compteurs est utile pour surveiller les aspects du serveur qui ne le sont pas par les compteurs existants, comme les composants propres à votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, la détermination du nombre de commandes clients enregistrées ou l'inventaire des produits).  
   
- L’objet **User Settable** contient 10 instances du compteur de requêtes : du **compteur utilisateur 1** au **compteur utilisateur 10**. Ces compteurs correspondent aux procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_user_counter1** à **sp_user_counter10**. Comme ces procédures stockées sont exécutées par les applications de l'utilisateur, les valeurs définies par les procédures stockées sont affichées dans le Moniteur système. Un compteur peut surveiller toute valeur entière (par exemple une procédure stockée qui compte combien de fois un produit en particulier a été commandé en un jour).  
+ L’objet **User Settable** contient 10 instances du compteur de requêtes : du **compteur utilisateur 1** au **compteur utilisateur 10**. Ces compteurs correspondent aux procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**sp_user_counter1** à **sp_user_counter10**. Comme ces procédures stockées sont exécutées par les applications de l'utilisateur, les valeurs définies par les procédures stockées sont affichées dans le Moniteur système. Un compteur peut surveiller toute valeur entière (par exemple une procédure stockée qui compte combien de fois un produit en particulier a été commandé en un jour).  
   
 > [!NOTE]  
 >  Les procédures stockées des compteurs utilisateur ne sont pas automatiquement interrogées par le Moniteur système. Pour que les valeurs d'un compteur soient mises à jour, les procédures doivent être explicitement exécutées par une application de l'utilisateur. Utilisez un déclencheur pour mettre automatiquement à jour la valeur du compteur. Par exemple, pour créer un compteur qui surveille le nombre de lignes d'une table, créez un déclencheur INSERT et DELETE sur la table qui exécute l'instruction suivante : `SELECT COUNT(*) FROM table`. Dès que le déclencheur est activé à la suite de l'exécution d'une opération INSERT ou DELETE sur la table, le compteur du Moniteur système est automatiquement mis à jour.  
   
- Le tableau décrit l’objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
+ Le tableau décrit l’objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Définissable par l’utilisateur**.  
   
 |Compteurs SQL Server User Settable|Description|  
 |---------------------------------------|-----------------|  

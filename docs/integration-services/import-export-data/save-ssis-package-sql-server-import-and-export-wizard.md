@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296257"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
@@ -35,7 +35,7 @@ La capture d’écran suivante montre la première partie de la page **Enregistr
 ![Enregistrer le package : options courantes](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>Fournir un nom et une description pour le package  
- **Name**  
+ **Nom**  
  Permet de spécifier un nom unique pour le package.  
   
  **Description**  
@@ -58,13 +58,13 @@ La capture d’écran suivante montre la première partie de la page **Enregistr
  **Nom du serveur**  
  Tapez ou sélectionnez le nom du serveur de destination.  
    
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
 Connectez-vous au serveur à l’aide de l’authentification intégrée Windows. Il s'agit de la méthode d'authentification conseillée.  
   
  **Utiliser l’authentification SQL Server**  
 Connectez-vous au serveur à l’aide de l’authentification SQL Server.  
   
- **User name**  
+ **Nom d'utilisateur**  
 Si vous avez choisi d’utiliser l’authentification SQL Server, entrez le nom d’utilisateur.  
   
  **Mot de passe**  
@@ -92,7 +92,7 @@ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Présentation des deux pages d’options pour l’enregistrement du package  
  La page **Enregistrer le package SSIS** est l’une des deux pages dans lesquelles vous choisissez les options d’enregistrement du package SSIS.  
   
--   Dans la page précédente, **Enregistrer et exécuter le package**, vous choisissez d’enregistrer le package dans SQL Server ou sous forme de fichier. Vous pouvez aussi y sélectionner les paramètres de sécurité pour le package enregistré. Pour avoir un autre aperçu de la page **Enregistrer et exécuter le package** , consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+-   Dans la page précédente, **Enregistrer et exécuter le package**, vous choisissez d’enregistrer le package dans SQL Server ou sous forme de fichier. Vous pouvez également choisir des paramètres de sécurité pour le package enregistré. Pour avoir un autre aperçu de la page **Enregistrer et exécuter le package** , consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
   
 -   Dans la page active, vous indiquez un nom pour le package et des informations complémentaires sur l’emplacement où doit être enregistré le package.  
  

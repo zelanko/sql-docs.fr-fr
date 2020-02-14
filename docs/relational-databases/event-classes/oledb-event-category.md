@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2e254e09c52bee4adb1a2712857932488f7a0c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102546"
 ---
 # <a name="oledb-event-category"></a>catégorie d'événements OLEDB
@@ -29,11 +29,11 @@ ms.locfileid: "68102546"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d'événements OLEDB Call](../../relational-databases/event-classes/oledb-call-event-class.md)|Indique que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a effectué un appel non-données ou non-**QueryInterface** sur un fournisseur OLE DB pour des requêtes distribuées et des procédures stockées distantes.|  
+|[OLEDB Call, classe d’événements](../../relational-databases/event-classes/oledb-call-event-class.md)|Indique que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a effectué un appel non données ou non **QueryInterface** à un fournisseur OLE DB pour des requêtes distribuées et des procédures stockées distantes.|  
 |[Classe d'événements OLEDB DataRead](../../relational-databases/event-classes/oledb-dataread-event-class.md)|Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a appelé un fournisseur OLE DB pour des requêtes distribuées et des procédures stockées distantes.|  
 |[Classe d'événements OLEDB Errors](../../relational-databases/event-classes/oledb-errors-event-class.md)|Indique qu'un appel à un fournisseur OLE DB a retourné une erreur.|  
 |[Classe d'événements OLEDB Provider Information](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Indique qu'une requête distribuée s'est exécutée et a recueilli des informations qui correspondent à la connexion du fournisseur.|  
-|[Classe d'événements OLEDB QueryInterface](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a émis un appel OLE DB **QueryInterface** pour des requêtes distribuées et des procédures stockées distantes.|  
+|[OLEDB QueryInterface, classe d’événements](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a émis un appel OLE DB **QueryInterface** pour des requêtes distribuées et des procédures stockées distantes.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  

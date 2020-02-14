@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940406"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
@@ -37,7 +37,7 @@ Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
-|Base de données|Système d'exploitation|Fournisseur|  
+|Base de données|Système d’exploitation|Fournisseur|  
 |--------------|----------------------|--------------|  
 |Oracle|Toute plateforme prenant en charge Oracle|Fournisseur OLE DB Oracle (fourni par Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows sauf 9.x|Fournisseur OLE DB du serveur HIS Microsoft (Host Integration Server)|  
@@ -63,15 +63,15 @@ Pour plus d'informations sur la création d'abonnements à Oracle et IBM DB2, co
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Règles des abonnés non-SQL Server  
  Retenez les règles suivantes lors de la réplication sur des abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-### <a name="general-considerations"></a>Considérations générales  
+### <a name="general-considerations"></a>Considérations d’ordre général  
   
 -   La réplication prend en charge la publication des tables et des vues indexées vers des Abonnées non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (les vues indexées ne peuvent pas être répliquées en tant que telles).  
   
--   Lors de la création d'une publication dans l'Assistant Nouvelle publication et de son activation pour les abonnés non-SQL Server à l'aide de la boîte de dialogue Propriétés de la publication, le propriétaire de tous les objets dans la base de données d'abonnement n'est pas spécifié pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , alors qu'il est défini en tant que propriétaire de l'objet correspondant dans la base de données de publication pour les abonnés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Au moment de créer une publication dans l’Assistant Nouvelle publication et de l’activer pour les abonnés non SQL Server à partir de la boîte de dialogue Propriétés de la publication, le propriétaire de tous les objets de la base de données d’abonnement n’est pas spécifié pour les abonnés non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], alors qu’il est défini en tant que propriétaire de l’objet correspondant dans la base de données de publication pour les abonnés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Si une publication a des abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], elle doit être activée pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avant qu’un abonnement aux abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne soit créé.  
   
--   Par défaut, les scripts générés par l’Agent d’instantané pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent des identificateurs sans guillemets dans la syntaxe `CREATE TABLE`. Ainsi, une table publiée nommée « test » est répliquée comme « TEST ». Pour utiliser la même casse que la table dans la base de données de publication, utilisez le paramètre **-QuotedIdentifier** pour l’Agent de distribution. Le paramètre **-QuotedIdentifier** doit également être utilisé si les noms d’objets publiés (tables, colonnes et contraintes) comportent des espaces ou des mots réservés dans la version de la base de données au niveau de l’abonné non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur ce paramètre, consultez [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   Par défaut, les scripts générés par l’Agent d’instantané pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent des identificateurs sans guillemets dans la syntaxe `CREATE TABLE`. Ainsi, une table publiée nommée « test » est répliquée comme « TEST ». Pour utiliser la même casse que la table dans la base de données de publication, utilisez le paramètre **-QuotedIdentifier** pour l’Agent de distribution. Le paramètre **-QuotedIdentifier** doit également être utilisé si les noms d’objets publiés (tables, colonnes et contraintes) comportent des espaces ou des mots réservés dans la version de la base de données au niveau de l’abonné non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur ce paramètre, consultez [Agent de distribution de réplication](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   Le compte sous lequel s'exécute l'Agent de distribution doit disposer de droits d'accès au répertoire d'installation du fournisseur OLE DB.  
   
@@ -91,7 +91,7 @@ Pour plus d'informations sur la création d'abonnements à Oracle et IBM DB2, co
   
 -   La valeur NULL est traitée différemment par différentes bases de données, ce qui affecte la façon dont une valeur vide, une chaîne vide ou une valeur NULL est représentée. Cela affecte à son tour le comportement des valeurs insérées dans des colonnes où des contraintes uniques sont définies. Par exemple, Oracle autorise plusieurs valeurs NULL dans une colonne considérée comme unique, alors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'autorise qu'une seule valeur NULL dans une colonne unique.  
   
-     Un autre facteur est la façon dont les valeurs NULL, les chaînes vides ou les valeurs vides sont traitées lorsque la colonne est définie comme NOT NULL. Pour plus d'informations sur la résolution de ce problème pour les abonnés Oracle, consultez [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
+     Un autre facteur est la façon dont les valeurs NULL, les chaînes vides ou les valeurs vides sont traitées lorsque la colonne est définie comme NOT NULL. Pour plus d'informations sur la résolution de ce problème pour les abonnés Oracle, consultez [Abonnés Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
   
 -   Les métadonnées liées à la réplication (table de la séquence de la transaction) ne sont pas supprimées d'abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque l'abonnement est supprimé.  
   

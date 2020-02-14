@@ -13,10 +13,10 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298319"
 ---
 # <a name="data-mining-query"></a>Requête d'exploration de données
@@ -48,7 +48,7 @@ ms.locfileid: "71298319"
   
  Les colonnes des tables contenant le modèle d'exploration de données et les colonnes d'entrée peuvent être glissées et déplacées sur la cellule.  
   
- **Field**  
+ **Champ**  
  Sélectionnez une colonne dans la liste des colonnes dérivées de la table source. Si vous avez sélectionné **Fonction de prédiction** dans **Source**, cette cellule contient une liste déroulante des fonctions de prédiction disponibles pour le modèle d’exploration de données sélectionné.  
   
  **Alias**  
@@ -57,7 +57,7 @@ ms.locfileid: "71298319"
  **Afficher**  
  Sélectionnez cette option pour retourner la colonne ou pour utiliser la colonne uniquement dans la clause WHERE.  
   
- **Grouper**  
+ **Groupe**  
  Utilisez cette option avec la colonne **et/ou** pour regrouper les expressions. Par exemple, (expr1 OU expr2) ET expr3.  
   
  **et/ou**  
@@ -67,7 +67,7 @@ ms.locfileid: "71298319"
  Spécifiez une condition ou une expression utilisateur qui s'applique à la colonne. Les colonnes des tables contenant le modèle d'exploration de données et les colonnes d'entrée peuvent être glissées et déplacées sur la cellule.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de requête d'exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
+ [Outils de requête d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

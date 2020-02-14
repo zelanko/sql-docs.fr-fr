@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903823"
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
@@ -89,7 +89,7 @@ Pour configurer la recherche en texte intégral par le biais d’un Assistant, c
  
  Nous vous recommandons d'associer les tables ayant les mêmes caractéristiques de mise à jour (par exemple avec peu de modifications ou, au contraire, beaucoup de modifications, ou les tables fréquemment modifiées à un moment donné de la journée) dans le même catalogue de texte intégral. Cette manière de configurer la planification du remplissage du catalogue de texte intégral permet d'assurer la synchronisation perpétuelle des index de texte intégral et des tables, sans nuire à l'utilisation des ressources du serveur de base de données pendant les périodes de forte activité.  
   
- Respectez les consignes suivantes :  
+ Tenez compte des recommandations suivantes :  
   
 -   Si vous indexez une table avec des millions de lignes, affectez la table sur son propre catalogue en recherche intégrale.  
   
@@ -101,14 +101,14 @@ Sélectionnez systématiquement le plus petit index unique disponible comme clé
 ### <a name="associate-a-stoplist"></a>Associer une liste de mots vides   
   Une *liste de mots vides* est une liste contenant des mots vides, également appelés mots parasites. Une liste de mots vides est associée à chaque index de recherche en texte intégral, et les mots contenus dans cette liste de mots vides s'appliquent aux requêtes de texte intégral sur cet index. Par défaut, la liste de mots vides système est associée à un nouvel index de recherche en texte intégral. Vous pouvez créer et utiliser votre propre liste de mots vides.   
   
- Par exemple, l’instruction [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante crée une liste de mots vides de texte intégral nommée myStoplist en copiant la liste de mots vides système :  
+ Par exemple, l’instruction [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante crée une liste de mots vides de texte intégral nommée myStoplist en copiant la liste de mots vides système :  
   
 ```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- L’instruction [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] suivante modifie une liste de mots vides nommée myStoplist en ajoutant le mot « en » (d’abord pour l’espagnol, puis pour le français) :  
+ L’instruction [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante modifie une liste de mots vides nommée myStoplist en ajoutant le mot « en » (d’abord pour l’espagnol, puis pour le français) :  
   
 ```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  

@@ -15,26 +15,26 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025486"
 ---
 # <a name="server-properties---general-page"></a>Propriétés du serveur - Page Général
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Utilisez cette page pour consulter des informations en lecture seule sur votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilisez cette page pour consulter des informations en lecture seule sur votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-grid"></a>Grille des propriétés  
  Consultez les propriétés du serveur sélectionné, comme le nom du serveur, le système d'exploitation du serveur ou encore le nombre de processeurs.  
   
- **Name**  
+ **Nom**  
  Affiche le nom de l'instance du serveur.  
   
- **Product**  
+ **Produit**  
  Affiche l'édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours d'exécution.  
   
- **Système d'exploitation**  
+ **Système d’exploitation**  
  Affiche le système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en cours d'exécution.  
   
  **Plateforme**  

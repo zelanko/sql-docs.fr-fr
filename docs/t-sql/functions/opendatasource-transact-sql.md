@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342058"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -57,8 +57,8 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
   
 |Mot clé|Propriété OLE DB|Valeurs admises et description|  
 |-------------|---------------------|----------------------------------|  
-|Source de données|DBPROP_INIT_DATASOURCE|Nom de la source de données à laquelle la connexion doit être établie. Ceci est interprété différemment selon les fournisseurs. Pour le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB, cette propriété indique le nom du serveur. Pour le fournisseur Jet OLE DB, elle indique le chemin d'accès complet au fichier .mdb ou .xls.|  
-|Emplacement|DBPROP_INIT_LOCATION|Emplacement de la base de données à laquelle la connexion doit être établie|  
+|source de données|DBPROP_INIT_DATASOURCE|Nom de la source de données à laquelle la connexion doit être établie. Ceci est interprété différemment selon les fournisseurs. Pour le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB, cette propriété indique le nom du serveur. Pour le fournisseur Jet OLE DB, elle indique le chemin d'accès complet au fichier .mdb ou .xls.|  
+|Location|DBPROP_INIT_LOCATION|Emplacement de la base de données à laquelle la connexion doit être établie|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|Chaîne de connexion spécifique au fournisseur|  
 |Connect timeout|DBPROP_INIT_TIMEOUT|Délai d’expiration au bout duquel la tentative de connexion échoue|  
 |ID d'utilisateur|DBPROP_AUTH_USERID|ID utilisateur à utiliser pour la connexion|  
@@ -87,7 +87,7 @@ Tout appel à `OPENDATASOURCE`, `OPENQUERY` ou `OPENROWSET` dans la clause `FROM
   
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. Utilisation d’OPENDATASOURCE avec SELECT et OLE DB Driver pour SQL Server  
+### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>R. Utilisation d’OPENDATASOURCE avec SELECT et OLE DB Driver pour SQL Server  
  L’exemple suivant utilise le pilote [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) pour accéder à la table `HumanResources.Department` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur le serveur distant `Seattle1`. Une instruction `SELECT` définit l’ensemble de lignes retourné. La chaîne de caractères du fournisseur contient les mots clés `Server` et `Trusted_Connection`. Ces mots clés sont reconnus par le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver.  
   
 ```sql  

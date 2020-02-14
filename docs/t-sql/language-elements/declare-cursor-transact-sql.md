@@ -25,10 +25,10 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894791"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67894791"
 
   Définit les attributs d'un curseur [!INCLUDE[tsql](../../includes/tsql-md.md)], notamment s'il permet ou non le défilement, et la requête utilisée pour créer le jeu de résultats sur lequel le curseur opère. La syntaxe d’une instruction `DECLARE CURSOR` peut utiliser à la fois la syntaxe ISO et un jeu d’extensions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -91,7 +91,7 @@ Spécifie que l'étendue du curseur est globale pour la connexion. Toute procéd
 >  Si ni `GLOBAL` ni `LOCAL` ne sont spécifiés, la valeur par défaut est contrôlée par la valeur de l’option de base de données **default to local cursor**.  
   
 FORWARD_ONLY  
-Spécifie que le curseur peut seulement aller vers l’avant et défiler de la première à la dernière ligne. `FETCH NEXT` est la seule fonction d’extraction prise en charge. Toutes les instructions d’insertion, de mise à jour et de suppression émises par l’utilisateur actuel ou validées par d’autres utilisateurs et ayant une incidence sur les lignes du jeu de résultats sont visibles au fur et à mesure que les lignes sont extraites. Cependant, étant donné que le curseur ne permet pas le défilement arrière, les modifications apportées aux lignes de la base de données après l’extraction d’une ligne ne sont pas visibles par le biais du curseur. Les curseurs avant uniquement sont dynamiques par défaut, ce qui signifie que toutes les modifications sont détectées lors du traitement de la ligne active. Cela accélère l’ouverture du curseur et permet au jeu de résultats d’afficher les mises à jour apportées aux tables sous-jacentes. Bien que les curseurs avant uniquement ne prennent pas en charge le défilement vers l’arrière, les applications peuvent retourner au début du jeu de résultats en fermant et en rouvrant le curseur. Si vous spécifiez `FORWARD_ONLY` sans les mots clés `STATIC`, `KEYSET` ou `DYNAMIC`, le curseur fonctionne comme un curseur dynamique. Quand ni `FORWARD_ONLY` ni `SCROLL` ne sont spécifiés, `FORWARD_ONLY` est la valeur par défaut, sauf si les mots clés `STATIC`, `KEYSET` ou `DYNAMIC` sont spécifiés. Les curseurs `STATIC`, `KEYSET` et `DYNAMIC` sont par défaut de type `SCROLL`. Contrairement aux API de base de données comme ODBC et ADO, `FORWARD_ONLY` est pris en charge avec les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] `STATIC`, `KEYSET` et `DYNAMIC`.  
+Spécifie que le curseur peut seulement aller vers l’avant et défiler de la première à la dernière ligne. `FETCH NEXT` est la seule fonction d’extraction prise en charge. Toutes les instructions d’insertion, de mise à jour et de suppression émises par l’utilisateur actuel ou validées par d’autres utilisateurs et ayant une incidence sur les lignes du jeu de résultats sont visibles au fur et à mesure que les lignes sont extraites. Cependant, étant donné que le curseur ne permet pas le défilement arrière, les modifications apportées aux lignes de la base de données après l’extraction d’une ligne ne sont pas visibles par le biais du curseur. Les curseurs avant uniquement sont dynamiques par défaut, ce qui signifie que toutes les modifications sont détectées lors du traitement de la ligne active. Cela accélère l’ouverture du curseur et permet au jeu de résultats d’afficher les mises à jour apportées aux tables sous-jacentes. Bien que les curseurs avant uniquement ne prennent pas en charge le défilement vers l’arrière, les applications peuvent retourner au début du jeu de résultats en fermant et en rouvrant le curseur. Si vous spécifiez `FORWARD_ONLY` sans les mots clés `STATIC`, `KEYSET` ou `DYNAMIC`, le curseur fonctionne comme un curseur dynamique. Quand ni `FORWARD_ONLY` ni `SCROLL` ne sont spécifiés, `FORWARD_ONLY` est la valeur par défaut, sauf si les mots clés `STATIC`, `KEYSET` ou `DYNAMIC` sont spécifiés. Les curseurs `STATIC`, `KEYSET` et `DYNAMIC` sont par défaut de type `SCROLL`. Contrairement aux API de base de données comme ODBC et ADO, `FORWARD_ONLY` est pris en charge avec les curseurs `STATIC`, `KEYSET` et `DYNAMIC` de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
    
  STATIC  
 Spécifie que le curseur affiche toujours le jeu de résultats tel qu’il était quand le curseur a été ouvert pour la première fois, et effectue une copie temporaire des données à utiliser par le curseur. Toutes les requêtes au curseur reçoivent une réponse à partir de cette table temporaire dans **tempdb**. Par conséquent, les insertions, mises à jour et suppressions effectuées sur des tables de base ne sont pas répercutées dans les données retournées par les extractions de ce curseur, et celui-ci ne détecte pas les modifications apportées à l’appartenance, à l’ordre ou aux valeurs du jeu de résultats après l’ouverture du curseur. Les curseurs statiques peuvent détecter leurs propres mises à jour, suppressions et insertions, bien qu’ils ne soient pas obligés de le faire. Par exemple, supposez qu’un curseur statique extrait une ligne et qu’une autre application met ensuite à jour cette ligne. Si l’application réextrait la ligne à partir du curseur statique, les valeurs qu’elle voit sont inchangées, malgré les modifications apportées par l’autre application. Tous les types de défilement sont pris en charge. 
@@ -174,7 +174,7 @@ Vous ne pouvez pas utiliser de curseurs ou de déclencheurs sur une table avec u
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-simple-cursor-and-syntax"></a>A. Utilisation d'un curseur et d'une syntaxe simples  
+### <a name="a-using-simple-cursor-and-syntax"></a>R. Utilisation d'un curseur et d'une syntaxe simples  
 
 Le jeu de résultats généré à l'ouverture du curseur ci-après contient toutes les lignes et toutes les colonnes de la table. Ce curseur peut être mis à jour, et toutes les mises à jour et les suppressions sont représentées sous la forme d'extractions effectuées sur ce curseur. `FETCH NEXT` est la seule extraction disponible car l'option `SCROLL` n'a pas été spécifiée.  
  

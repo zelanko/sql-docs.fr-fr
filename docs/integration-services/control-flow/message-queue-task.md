@@ -22,10 +22,10 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294101"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
@@ -107,7 +107,7 @@ ms.locfileid: "71294101"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche MSMQ** pour nommer et décrire la tâche MSMQ, pour spécifier le format du message et indiquer si la tâche envoie ou reçoit des messages.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Attribuez un nom unique à la tâche MSMQ. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "71294101"
  Spécifiez si la tâche MSMQ envoie ou reçoit des messages. Si vous sélectionnez l’option **Envoyer un message**, la page Envoyer est répertoriée dans le volet gauche de la boîte de dialogue ; si vous sélectionnez l’option **Recevoir un message**, la page Recevoir est répertoriée. Par défaut, cette valeur est définie sur **Envoyer un message**.  
   
 ## <a name="message-queue-task-editor-send-page"></a>Éditeur de tâche MSMQ (page Envoyer)
-  Utilisez la page **Envoyer** de la boîte de dialogue **Éditeur de tâche MSMQ** pour configurer une tâche MSMQ afin d'envoyer des messages depuis un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  Utilisez la page **Envoyer** de la boîte de dialogue **Éditeur de tâche MSMQ** pour configurer une tâche MSMQ afin d’envoyer des messages depuis un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ### <a name="options"></a>Options  
  **UseEncryption**  
@@ -200,7 +200,7 @@ ms.locfileid: "71294101"
  **Remplacer**  
  Indiquez si vous voulez remplacer les données dans un fichier existant lors de l'enregistrement du contenu d'un message de fichiers de données. La valeur par défaut est **False**.  
   
- **Filtre**  
+ **Filter**  
  Indiquez si vous voulez appliquer un filtre au message. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Valeur|Description|  
@@ -247,13 +247,13 @@ ms.locfileid: "71294101"
  **Rubriques connexes :** [Sélectionner un package](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--string-message"></a>MessageType = Message de type chaîne  
- **Comparer**  
+ **Compare**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les messages ne sont pas comparés.|  
-|**Concordance exacte**|Les messages doivent correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
+|**Correspondance exacte**|Les messages doivent correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
 |**Ignorer la casse**|Le message doit correspondre à la chaîne figurant dans l’option **CompareString** , mais la comparaison ne tient pas compte de la casse.|  
 |**Contenant**|Le message doit contenir la chaîne figurant dans l’option **CompareString** .|  
   
@@ -261,13 +261,13 @@ ms.locfileid: "71294101"
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
 #### <a name="messagetype--string-message-to-variable"></a>MessageType = Message de type chaîne pour la variable  
- **Comparer**  
+ **Compare**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les messages ne sont pas comparés.|  
-|**Concordance exacte**|Le message doit correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
+|**Correspondance exacte**|Le message doit correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
 |**Ignorer la casse**|Le message doit correspondre à la chaîne figurant dans l’option **CompareString** , mais la comparaison ne tient pas compte de la casse.|  
 |**Contenant**|Le message doit contenir la chaîne figurant dans l’option **CompareString** .|  
   

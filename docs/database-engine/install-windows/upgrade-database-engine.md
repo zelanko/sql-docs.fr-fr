@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531560"
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
@@ -33,7 +33,7 @@ ms.locfileid: "73531560"
   
 3.  [Mettre à niveau le moteur de base de données](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). Une fois que le moteur de base de données a été mis à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et que les bases de données sont en ligne, vous devez effectuer des étapes supplémentaires, notamment exécuter une nouvelle sauvegarde, mettre à niveau les fonctionnalités de base de données pour activer de nouvelles fonctionnalités et renseigner à nouveau les catalogues de texte intégral. Cet article décrit ces étapes.  
   
-4.  Mettre à niveau le [niveau de compatibilité de base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**s’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). L’une des étapes à suivre après la mise en ligne de vos bases de données dans la nouvelle version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] peut consister à mettre à niveau le mode des fonctionnalités de base de données pour activer de nouvelles fonctionnalités, en modifiant le niveau de compatibilité de base de données. Cette opération peut être effectuée manuellement ou par le biais de l’Assistant Paramétrage de requêtes. 
+4.  Mettre à niveau le [niveau de compatibilité de base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). L’une des étapes à suivre après la mise en ligne de vos bases de données dans la nouvelle version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] peut consister à mettre à niveau le mode des fonctionnalités de base de données pour activer de nouvelles fonctionnalités, en modifiant le niveau de compatibilité de base de données. Cette opération peut être effectuée manuellement ou par le biais de l’Assistant Paramétrage de requêtes. 
 
     - [Changer le mode de compatibilité de la base de données et utiliser le magasin des requêtes](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Après avoir modifié manuellement le niveau de compatibilité de la base de données, utilisez le magasin des requêtes pour superviser les performances et identifier les régressions possibles. Cet article traite du processus recommandé et fournit un workflow recommandé.  
 

@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296864"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
@@ -39,7 +39,7 @@ ms.locfileid: "71296864"
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre un large éventail de tâches et de transformations prédéfinies, des outils graphiques pour créer des packages et la base de données du catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permettant de stocker, d’exécuter et de gérer les packages.
 
-Vous pouvez utiliser les outils [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] graphiques pour créer des solutions sans écrire une seule ligne de code. Vous avez également la possibilité de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] complet afin de créer des packages par programme et de coder des tâches personnalisées et d’autres objets de package.
+Vous pouvez utiliser les outils [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] graphiques pour créer des solutions sans écrire une seule ligne de code. Vous avez également la possibilité de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] complet afin de créer des packages par programmation et de coder des tâches personnalisées et d’autres objets de package.
 
 ## <a name="get-sql-server-integration-services"></a>Obtenir SQL Server Integration Services
 

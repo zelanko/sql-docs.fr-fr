@@ -26,19 +26,19 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843573"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315619"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Permet, lorsqu'aucune valeur par défaut n'est spécifiée, d'insérer dans la table une valeur système à la place de la connexion actuelle.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,10 +57,12 @@ SYSTEM_USER
  Si l’utilisateur actuel s’est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’authentification Windows, SYSTEM_USER retourne le nom d’identification de la connexion Windows, sous la forme suivante : *DOMAIN*\\*nom_connexion_utilisateur*. Toutefois, s'il s'est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'authentification SQL Server, SYSTEM_USER retourne le nom d'identification de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple `WillisJo` si l'utilisateur s'est connecté en tant que `WillisJo`.  
   
  SYSTEM_USER retourne le nom du contexte qui s'exécute actuellement. Si l'instruction EXECUTE AS a été utilisée pour changer de contexte, SYSTEM_USER retourne le nom du contexte emprunté.  
-  
+
+ Vous ne pouvez pas utiliser EXECUTE AS en tant que SYSTEM_USER.
+
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. Utilisation de SYSTEM_USER pour retourner le nom d'utilisateur système actuel  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>R. Utilisation de SYSTEM_USER pour retourner le nom d'utilisateur système actuel  
  L'exemple suivant déclare une variable `char`, stocke la valeur actuelle de `SYSTEM_USER` dans la variable, puis imprime la valeur stockée dans la variable.  
   
 ```  

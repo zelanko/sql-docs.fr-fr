@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846509"
 ---
 # <a name="reinitialize-a-subscription"></a>Réinitialiser un abonnement
@@ -33,7 +33,7 @@ ms.locfileid: "70846509"
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  La réinitialisation d'un abonnement est un processus en deux parties :  
   
-1.  Un abonnement seul ou tous les abonnements à une publication sont *marqués* pour réinitialisation. Marquez des abonnements pour réinitialisation dans la boîte de dialogue **Réinitialiser les abonnements** , qui est disponible à partir du dossier **Publications locales** et du dossier **Abonnements locaux** dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez aussi marquer des abonnements à partir de l'onglet **Tous les abonnements** et du nœud des publications dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md). Quand vous marquez un abonnement pour réinitialisation, vous disposez des options suivantes :  
+1.  Un abonnement seul ou tous les abonnements à une publication sont *marqués* pour réinitialisation. Marquez des abonnements pour réinitialisation dans la boîte de dialogue **Réinitialiser les abonnements**, qui est disponible à partir du dossier **Publications locales** et du dossier **Abonnements locaux** dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez aussi marquer des abonnements à partir de l'onglet **Tous les abonnements** et du nœud des publications dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md). Quand vous marquez un abonnement pour réinitialisation, vous disposez des options suivantes :  
   
      **Utiliser l'instantané actuel**  
      Permet d'appliquer l'instantané à l'Abonné lors de l'exécution suivante de l'agent de distribution ou de l'agent de fusion. Si aucun instantané valide n'est disponible, vous ne pouvez pas sélectionner cette option.  
@@ -105,7 +105,7 @@ ms.locfileid: "70846509"
   
 1.  Sur l’Abonné, dans la base de données d’abonnement, exécutez [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Spécifiez **\@publisher**, **\@publisher_db** et **\@publication**. L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de distribution.  
   
-2.  (Facultatif) Démarrez l'Agent de distribution sur l'Abonné pour synchroniser l'abonnement. Pour plus d'informations, voir [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+2.  (Facultatif) Démarrez l'Agent de distribution sur l'Abonné pour synchroniser l'abonnement. Pour plus d’informations, consultez [Synchroniser un abonnement par extraction (pull)](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par émission de données à une publication transactionnelle  
   
@@ -142,7 +142,7 @@ ms.locfileid: "70846509"
     > [!IMPORTANT]  
     >  Si vous ajoutez, supprimez ou modifiez un filtre paramétré, les modifications en attente chez l'abonné ne peuvent pas être chargées sur le serveur de publication pendant la réinitialisation. Si vous voulez télécharger les modifications en attente, synchronisez tous les abonnements avant de modifier le filtre.  
   
-     Pour plus d'informations, voir [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+     Pour plus d’informations, voir [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Pour modifier la stratégie de réinitialisation pour une publication de fusion existante  
   
@@ -188,7 +188,7 @@ ms.locfileid: "70846509"
   
 4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Cette méthode marque l'abonnement pour réinitialisation.  
   
-5.  Synchronisez l'abonnement par émission de données. Pour plus d'informations, voir [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+5.  Synchronisez l'abonnement par émission de données. Pour plus d’informations, consultez [Synchroniser un abonnement par émission (push)](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Pour réinitialiser un abonnement par extraction à une publication de fusion  
   
@@ -206,7 +206,7 @@ ms.locfileid: "70846509"
     > [!NOTE]  
     >  Les modifications ne peuvent pas être téléchargées si l'abonnement a expiré. Pour plus d'informations, voir [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
-5.  Synchronisez l'abonnement par extraction. Pour plus d'informations, voir [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+5.  Synchronisez l'abonnement par extraction. Pour plus d’informations, consultez [Synchroniser un abonnement par extraction (pull)](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Pour réinitialiser un abonnement par émission de données à une publication de fusion  
   
@@ -224,7 +224,7 @@ ms.locfileid: "70846509"
     > [!NOTE]  
     >  Les modifications ne peuvent pas être téléchargées si l'abonnement a expiré. Pour plus d'informations, voir [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
-5.  Synchronisez l'abonnement par émission de données. Pour plus d'informations, voir [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+5.  Synchronisez l'abonnement par émission de données. Pour plus d’informations, consultez [Synchroniser un abonnement par émission (push)](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 ###  <a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple réinitialise un abonnement par extraction à une publication transactionnelle.  

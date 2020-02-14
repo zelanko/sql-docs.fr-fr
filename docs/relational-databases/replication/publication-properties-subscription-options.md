@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769995"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286564"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68769995"
   
 ### <a name="creation-and-synchronization"></a>Création et synchronisation  
  **Autoriser les abonnements anonymes**  
- Détermine s'il est nécessaire d'autoriser les extractions d'abonnements anonymes. Les abonnements anonymes sont pris en charge pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows CE. Pour utiliser cette option pour les publications d'instantané et transactionnelles, l'option **Instantané toujours disponible** doit avoir la valeur **True**.  
+ Détermine s'il est nécessaire d'autoriser les extractions d'abonnements anonymes. Les abonnements anonymes sont pris en charge pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows CE. Pour utiliser cette option pour les publications d'instantané et transactionnelles, l'option **Instantané toujours disponible** doit avoir la valeur **True**.  
   
  **Base de données d'abonnement pouvant être attachée**  
  Détermine s'il est possible de créer des abonnements en attachant une copie d'une base de données d'abonnement (nécessite que l'option **Instantané toujours disponible** ait la valeur **True** pour les publications d'instantané et transactionnelles).  
@@ -49,7 +49,7 @@ ms.locfileid: "68769995"
  Détermine s'il est nécessaire d'autoriser les abonnés à créer des extractions d'abonnements sur cette publication. Pour plus d’informations, consultez [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md).  
   
 ### <a name="schema-replication"></a>Réplication de schéma  
- **Réplique les modifications de schéma**  
+ **Répliquer les modifications de schéma**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine s'il est nécessaire de répliquer les modifications de schéma (telles que l'ajout d'une colonne à une table ou la modification du type de données d'une colonne) sur les objets publiés. Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Options applicables aux publications d'instantané et transactionnelles  
@@ -79,14 +79,14 @@ ms.locfileid: "68769995"
  S'applique uniquement à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures. Détermine si la publication prend en charge la réplication d'égal à égal. Si cette option est définie sur **True** , les autres propriétés de publication prennent également en charge la réplication d'égal à égal. Cette option est en lecture seule si des abonnements existent. Cette option ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement** , **Autoriser les abonnements mis à jour en attente**ou **Autoriser les Abonnés non-SQL Server** a la valeur **True**. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Autoriser la détection de conflit d'égal à égal**  
- S'applique uniquement à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Spécifie si la détection de conflit est activée pour cette publication. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure, et la détection doit être activée pour tous les nœuds. Pour utiliser la détection de conflit, vous devez également spécifier une valeur pour **ID d'appelant de l'homologue**. Pour plus d'informations, consultez [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ S'applique uniquement à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Spécifie si la détection de conflit est activée pour cette publication. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure, et la détection doit être activée pour tous les nœuds. Pour utiliser la détection de conflit, vous devez également spécifier une valeur pour **ID d'appelant de l'homologue**. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  **ID d'appelant de l'homologue**  
  S'applique uniquement à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Spécifie un ID pour un nœud dans une topologie d'égal à égal. Cet ID est utilisé pour détection de conflit si **Autoriser la détection de conflit d'égal à égal** a la valeur **True**. Spécifiez un ID positif différent de zéro qui n'a jamais été utilisé dans la topologie. Pour obtenir la liste des ID qui ont déjà été utilisés, interrogez la table système [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
 ### <a name="updatable-subscriptions"></a>Abonnements pouvant être mis à jour  
  **Autoriser les abonnements mis à jour immédiatement**  
- Détermine si les modifications de données de l'abonné peuvent être immédiatement répliquées sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, consultez [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+ Détermine si les modifications de données de l'abonné peuvent être immédiatement répliquées sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Autoriser les abonnements mis à jour en attente**  
  Détermine si les modifications de données de l'abonné peuvent être mises en file d'attente et répliquées ultérieurement sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
@@ -108,7 +108,7 @@ ms.locfileid: "68769995"
   
 ### <a name="filtering"></a>Filtrage  
  **Autoriser les filtres paramétrés**  
- Dépend du fait qu'une publication utilise ou non des filtres paramétrés. Cette option est toujours en lecture seule. Pour plus d’informations, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Dépend du fait qu'une publication utilise ou non des filtres paramétrés. Cette option est toujours en lecture seule. Pour plus d'informations, voir [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Valider les abonnés**  
  Détermine les fonctions à utiliser lors de la confirmation qu'un abonné dispose de la partition de données correcte. Séparez les valeurs multiples par des virgules. Pour plus d’informations, consultez [Valider des informations de partition pour un Abonné de fusion](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  

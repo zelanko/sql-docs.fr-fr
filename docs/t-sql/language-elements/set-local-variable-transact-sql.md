@@ -19,18 +19,18 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072285"
 ---
-# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
+# <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Affecte la valeur indiquée à la variable locale spécifiée, précédemment créée en utilisant l’instruction DECLARE @*local_variable*.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 Syntaxe pour SQL Server et Azure SQL Database :
@@ -188,7 +188,7 @@ Nécessite l'appartenance au rôle public. Tous les utilisateurs peuvent utilise
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. Impression de la valeur d'une variable initialisée avec SET  
+### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>R. Impression de la valeur d'une variable initialisée avec SET  
 L’exemple suivant crée la variable `@myvar`, place une valeur de chaîne dans la variable et imprime la valeur de la variable `@myvar`.  
   
 ```  

@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908014"
 ---
 # <a name="view-statistics-properties"></a>Afficher les propriétés des statistiques
@@ -59,9 +59,9 @@ ms.locfileid: "72908014"
   
 5.  Cliquez avec le bouton droit sur l’objet Statistiques dont vous voulez afficher les propriétés, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_ , dans le volet **Sélectionner une page** , sélectionnez **Détails**.  
+6.  Dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_, dans le volet **Sélectionner une page** , sélectionnez **Détails**.  
   
-     Les propriétés suivantes s’affichent dans la page **Détails** dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_ .  
+     Les propriétés suivantes s’affichent dans la page **Détails** de la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_.  
   
      **Nom de la table**  
      Affiche le nom de la table décrite par les statistiques.  
@@ -74,10 +74,10 @@ ms.locfileid: "72908014"
   
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats de l'en-tête de statistiques.  
   
-     **Name**  
+     **Nom**  
      Nom de l'objet de statistiques.  
   
-     **Mis à jour**  
+     **Updated**  
      Date et heure de la dernière mise à jour des statistiques.  
   
      **Lignes**  

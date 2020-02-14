@@ -12,10 +12,10 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d3019419538c05efc28ceabc5324d373500f65c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285136"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Sélectionner les tables et les vues sources (Assistant Importation et Exportation SQL Server)
@@ -33,14 +33,14 @@ ms.locfileid: "71285136"
  
 Dans cet exemple, la liste **Source** contient toutes les tables dans l’exemple de base de données AdventureWorks. La ligne sélectionnée montre que l’utilisateur souhaite copier la table **Sales.Customer** à partir de la source vers la nouvelle table **Sales.CustomerNew** dans la destination. 
    
- ![Page Sélectionner les tables de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/select-tables1.png "Page Sélectionner les tables de l’Assistant Importation et Exportation")
+ ![Page Sélectionner des tables de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/select-tables1.png "Page Sélectionner des tables de l’Assistant Importation et Exportation")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>Capture d’écran - Si vous avez fourni une requête  
  La capture d’écran suivante montre un exemple de la page **Sélectionner les tables et les vues sources** de l’Assistant lorsque vous avez sélectionné auparavant l’option **Écrire une requête pour spécifier les données à transférer** dans la page **Spécifier la copie ou l’interrogation de table**. La liste **Source** ne contient qu’une seule ligne, dans laquelle l’élément nommé `[Query]` représente la requête que vous avez indiquée dans la page **Fournir une requête source**.
  
 Dans cet exemple, l’utilisateur souhaite copier les résultats de la requête à partir de la source vers la table **Sales.CustomerNew** dans la destination.  
     
- ![Page Sélectionner les tables de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/select-tables2.png "Page Sélectionner les tables de l’Assistant Importation et Exportation")  
+ ![Page Sélectionner des tables de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/select-tables2.png "Page Sélectionner des tables de l’Assistant Importation et Exportation")  
 
 ## <a name="select-source-and-destination-tables"></a>Sélectionner des tables sources et de destination 
 **Source**  
@@ -62,7 +62,7 @@ Cliquez sur **Modifier les mappages** pour afficher la boîte de dialogue **Mapp
 
 Pour plus d’informations, consultez [Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
-**Aperçu**  
+**Préversion**  
 Cliquez sur **Aperçu** pour afficher un aperçu de 200 lignes d’exemples de données maximum dans la boîte de dialogue **Aperçu des données**. Cela confirme que l’Assistant va copier les données que vous souhaitez copier. Pour plus d’informations, consultez [Aperçu des données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
 Après avoir affiché un aperçu des données, vous souhaiterez peut-être modifier les options que vous avez sélectionnées dans les pages précédentes de l’Assistant. Pour effectuer ces modifications, retournez dans la page **Sélectionner les tables et les vues sources** , puis cliquez sur **Précédent** pour retourner aux pages précédentes où vous pouvez modifier vos sélections.  

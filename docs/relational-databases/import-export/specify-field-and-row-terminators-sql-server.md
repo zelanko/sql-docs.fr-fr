@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062549"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
@@ -171,7 +171,7 @@ ModifiedDate datetime not NULL CONSTRAINT DF_AddressType_ModifiedDate DEFAULT (G
 GO 
 ```  
   
-#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. Utilisation de bcp pour spécifier de façon interactive les terminateurs  
+#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>R. Utilisation de bcp pour spécifier de façon interactive les terminateurs  
  L'exemple suivant importe en bloc le fichier de données `Department-c-t.txt` par le biais de la commande `bcp` . Les commutateurs de cette commande sont identiques à ceux de la commande d'exportation en bloc. Pour plus d'informations, consultez la section « Spécification des terminateurs pour l'exportation en bloc », plus haut dans cette rubrique.  
   
  À l'invite de commandes Windows, entrez :  
@@ -183,7 +183,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilisation de BULK INSERT pour spécifier de façon interactive les terminateurs  
  L'exemple suivant importe en bloc le fichier de données `Department-c-t.txt` par le biais de l'instruction `BULK INSERT` en utilisant les qualificateurs répertoriés dans le tableau suivant.  
   
-|Option|Attribute|  
+|Option|Attribut|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|Chargement des champs de données en tant que données sous forme de caractères.|  
 |FIELDTERMINATOR **='** `,` **'**|Virgule (`,`) servant d'indicateur de fin de champ.|  
@@ -204,7 +204,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

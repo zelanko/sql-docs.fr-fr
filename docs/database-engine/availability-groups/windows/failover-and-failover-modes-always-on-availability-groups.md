@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67949103"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
@@ -164,7 +164,7 @@ ms.locfileid: "67949103"
 ###  <a name="EnableAutoFo"></a> Pour configurer un basculement automatique  
  Un réplica de disponibilité peut être configuré pour prendre en charge le basculement automatique à tout moment.  
   
- **To configure automatic failover**  
+ **Pour configurer un basculement automatique**  
   
 1.  Vérifiez que le réplica secondaire est configuré pour utiliser le mode de disponibilité avec validation synchrone. Pour plus d’informations, consultez [Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).  
   

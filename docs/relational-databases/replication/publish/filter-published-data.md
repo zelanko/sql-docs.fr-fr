@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769880"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287636"
 ---
 # <a name="filter-published-data"></a>Filtrer des données publiées
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,11 +54,11 @@ ms.locfileid: "68769880"
   
 -   Les filtres de lignes paramétrables, disponibles uniquement avec la réplication de fusion.  
   
-     À l'aide des filtres de lignes paramétrables, vous pouvez choisir un sous-ensemble de lignes à publier. Contrairement aux filtres statiques qui envoient le même sous-ensemble de lignes à chaque abonné, les filtres des lignes paramétrables se servent d'une valeur de données fournie par l'Abonné pour envoyer différents sous-ensembles de lignes aux abonnés. Pour plus d’informations, consultez [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     À l'aide des filtres de lignes paramétrables, vous pouvez choisir un sous-ensemble de lignes à publier. Contrairement aux filtres statiques qui envoient le même sous-ensemble de lignes à chaque abonné, les filtres des lignes paramétrables se servent d'une valeur de données fournie par l'Abonné pour envoyer différents sous-ensembles de lignes aux abonnés. Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Les filtres de jointure, disponibles uniquement avec la réplication de fusion.  
   
-     À l'aide des filtres de jointure, vous pouvez étendre un filtre de lignes d'une table publiée à l'autre. Pour plus d’informations, consultez [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
+     À l'aide des filtres de jointure, vous pouvez étendre un filtre de lignes d'une table publiée à l'autre. Pour plus d’informations, voir [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
 ## <a name="static-row-filters"></a>filtres de lignes statiques  
  L'illustration suivante montre une table publiée filtrée pour que seules les lignes 2, 3 et 6 soient intégrées à la publication.  
@@ -74,7 +74,7 @@ ms.locfileid: "68769880"
     > [!NOTE]  
     >  Dans les publications transactionnelles, les filtres de lignes peuvent ajouter un surcroît de traitement considérable car la clause de filtrage d'articles est évaluée pour chaque ligne de journal écrite pour une table publiée afin de déterminer si la ligne doit être répliquée. Les filtres de lignes doivent être évités dans les publications transactionnelles si chaque nœud de réplication peut prendre en charge la charge complète des données, et si l'ensemble global des données est relativement peu volumineux.  
   
--   Avec la réplication de fusion, utilisez le filtrage des lignes paramétrables plutôt que la création de plusieurs publications à l'aide des filtres de lignes statiques. Pour plus d’informations, consultez [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Avec la réplication de fusion, utilisez le filtrage des lignes paramétrables plutôt que la création de plusieurs publications à l'aide des filtres de lignes statiques. Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Pour définir et modifier un filtre de lignes statiques, consultez [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "68769880"
 |Colonnes n'autorisant pas la valeur NULL et n'ayant pas de valeur par défaut ou n'ayant pas la propriété IDENTITY définie.|Publications d'instantané ou publications transactionnelles qui autorisent les abonnements pouvant être mis à jour|  
 |Colonnes avec contraintes ou index uniques|Publications d'instantané ou publications transactionnelles qui autorisent les abonnements pouvant être mis à jour|  
 |Toutes les colonnes d'une publication de fusion SQL Server 7.0|Il est impossible de filtrer les colonnes dans les publications de fusion SQL Server 7.0.|  
-|Horodateur|Publications d'instantané ou publications transactionnelles SQL Server 7.0 qui autorisent les abonnements pouvant être mis à jour|  
+|Timestamp|Publications d'instantané ou publications transactionnelles SQL Server 7.0 qui autorisent les abonnements pouvant être mis à jour|  
   
  \*Si vous publiez une table dans une publication de fusion et que cette table contient déjà une colonne de type de données **uniqueidentifier** avec la propriété **ROWGUIDCOL** définie, la réplication peut utiliser cette colonne au lieu de créer une colonne supplémentaire nommée **rowguid**. Dans ce cas, la colonne existante doit être publiée.  
   

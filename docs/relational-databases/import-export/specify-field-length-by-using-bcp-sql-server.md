@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062535"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Spécifier la longueur des champs au moyen de bcp (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68062535"
  Pour obtenir un exemple illustrant cette invite en contexte, consultez [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
->  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
+>  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
  Plusieurs facteurs déterminent si une commande **bcp** vous demande la longueur de champ :  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68062535"
   
 -   Lors de la conversion de données non caractères en données caractères, la commande **bcp** suggère une longueur de champ par défaut suffisamment importante pour stocker les données.  
   
--   Si le type de stockage de fichier est non caractère, la commande **bcp** ne demande pas de longueur de champ. Les données sont enregistrées au format natif [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Si le type de stockage de fichier est non caractère, la commande **bcp** ne demande pas de longueur de champ. Les données sont stockées dans la représentation de données native de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (format natif).  
   
 ## <a name="using-default-field-lengths"></a>Utilisation des longueurs de champs par défaut  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande généralement d’accepter les valeurs par défaut de longueur de champ suggérées par la commande **bcp**. Lors de la création d'un fichier de données en mode caractère, l'utilisation de la longueur de champ par défaut garantit que les données ne sont pas tronquées et que des erreurs de dépassement de capacité numérique ne se produiront pas.  
@@ -63,17 +63,17 @@ ms.locfileid: "68062535"
 |**varchar**|Longueur définie pour la colonne|  
 |**nchar**|Le double de la longueur définie pour la colonne|  
 |**nvarchar**|Le double de la longueur définie pour la colonne|  
-|**Texte**|0|  
+|**Text**|0|  
 |**ntext**|0|  
 |**bit**|1|  
-|**binaire**|Le double de la longueur définie pour la colonne + 1|  
+|**binary**|Le double de la longueur définie pour la colonne + 1|  
 |**varbinary**|Le double de la longueur définie pour la colonne + 1|  
 |**image**|0|  
 |**datetime**|24|  
 |**smalldatetime**|24|  
 |**float**|30|  
 |**real**|30|  
-|**Int**|12|  
+|**int**|12|  
 |**bigint**|19|  
 |**smallint**|7|  
 |**tinyint**|5|  
@@ -100,14 +100,14 @@ ms.locfileid: "68062535"
 |Type de données|Longueur par défaut (en caractères)|  
 |---------------|-----------------------------------|  
 |**bit**|1|  
-|**binaire**|Longueur définie pour la colonne|  
+|**binary**|Longueur définie pour la colonne|  
 |**varbinary**|Longueur définie pour la colonne|  
 |**image**|0|  
 |**datetime**|8|  
 |**smalldatetime**|4|  
 |**float**|8|  
 |**real**|4|  
-|**Int**|4|  
+|**int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
 |**tinyint**|1|  

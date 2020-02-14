@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148300"
 ---
 # <a name="stored-procedures-database-engine"></a>Procédures stockées (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Une procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un groupe d’une ou de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou une référence à une méthode CLR (Common Runtime Language) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Les procédures ressemblent à des constructions d'autres langages de programmation, car elles peuvent :  
+  Une procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un groupe d’une ou de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou une référence à une méthode CLR (Common Runtime Language) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Les procédures ressemblent à des constructions d'autres langages de programmation, car elles peuvent :  
   
 -   accepter des paramètres d'entrée et retourner plusieurs valeurs sous la forme de paramètres de sortie au programme appelant ;  
   
@@ -53,7 +53,7 @@ ms.locfileid: "70148300"
  Maintenance plus simple  
  Lorsque les applications clientes appellent des procédures et conservent les opérations de base de données dans la couche Données, seules les procédures doivent être mises à jour pour toutes les modifications apportées dans la base de données sous-jacente. La couche application reste distincte et peut ignorer les modifications apportées à la mise en page, aux relations et aux processus de base de données.  
   
- Performances améliorées  
+ performances améliorées  
  Par défaut, une procédure est compilée à sa première exécution et crée un plan d'exécution qui est réutilisé pour les exécutions suivantes. Étant donné que le processeur de requêtes ne doit pas créer de plan, le traitement de la procédure dure généralement moins longtemps.  
   
  Si des modifications significatives ont été apportées aux tables ou aux données référencés par la procédure, le plan précompilé peut ralentir la procédure. Dans ce cas, la recompilation de la procédure et l'application forcée d'un nouveau plan d'exécution peuvent améliorer les performances.  
@@ -61,7 +61,7 @@ ms.locfileid: "70148300"
 ## <a name="types-of-stored-procedures"></a>Types de procédures stockées  
 
  **Définie par l’utilisateur**  
- Une procédure définie par l’utilisateur peut être créée dans une base de données définie par l’utilisateur ou dans toutes les bases de données système à l’exception de la base de données **Resource** . La procédure peut être développée dans [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en tant que référence à une méthode CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Une procédure définie par l’utilisateur peut être créée dans une base de données définie par l’utilisateur ou dans toutes les bases de données système à l’exception de la base de données **Resource** . La procédure peut être développée dans [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en tant que référence à une méthode CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  **Temporaire**  
  Les procédures temporaires sont une forme de procédures définies par l'utilisateur. Les procédures temporaires sont semblables à une procédure permanente, sauf qu'elles sont stockées dans **tempdb**. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des procédures temporaires locales est un signe dièse (#) unique. Ces procédures sont visibles uniquement à la connexion actuelle de l'utilisateur et sont supprimées dès que la connexion est fermée. En revanche, le nom des procédures temporaires globales commence par deux signes dièse (##) ; ces procédures sont visibles à tout utilisateur après avoir été créées et sont supprimées à la fin de la dernière session qui utilise la procédure.  

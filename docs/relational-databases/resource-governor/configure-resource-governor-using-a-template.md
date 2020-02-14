@@ -12,10 +12,10 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2b26aba44ff43de115268dcafa5ecc51e3f13c02
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903947"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurer Resource Governor à l'aide d'un modèle
@@ -24,7 +24,7 @@ ms.locfileid: "72903947"
   
 -   **Avant de commencer :**  [Autorisations](#Permissions)  
   
--   **Pour créer un groupe de charge de travail, avec :**  [un modèle](#ConfRGTemplate)  
+-   **Pour créer un groupe de charge de travail, avec :** [un modèle](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Utilisez les étapes suivantes pour ouvrir et modifier un modèle qui crée un pool de ressources et un groupe de charge de travail pour le pool. De plus, ce modèle vous permet de créer une fonction classifieur définie par l'utilisateur qui achemine de nouvelles connexions vers le groupe par défaut ou le groupe de charge de travail que vous créez.  

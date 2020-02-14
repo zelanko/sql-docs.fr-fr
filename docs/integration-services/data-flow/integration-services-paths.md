@@ -21,10 +21,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292408"
 ---
 # <a name="integration-services-paths"></a>Chemins d'accès d'Integration Services
@@ -66,10 +66,10 @@ Utilisez la boîte de dialogue **Éditeur du chemin d'accès au flux de données
  Utilisez le nœud **Général** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour nommer et décrire le chemin d'accès et pour spécifier ses options d'annotation.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Donnez un nom unique au chemin d'accès.  
   
- **ID**  
+ **Identifiant**  
  Identificateur de lignage du chemin d'accès. Cette propriété est en lecture seule.  
   
  **IdentificationString**  
@@ -94,7 +94,7 @@ Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin
  **Path metadata**  
  Affiche la liste des métadonnées des colonnes. Cliquez sur les en-têtes de colonne pour trier les données des colonnes.  
   
- **Name**  
+ **Nom**  
  Donne le nom de la colonne.  
   
  **Type de données**  
@@ -103,7 +103,7 @@ Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin
  **Précision**  
  Affiche le nombre de chiffres d'une valeur numérique.  
   
- **Échelle**  
+ **Mettre à l'échelle**  
  Affiche le nombre de chiffres à droite du séparateur décimal d'une valeur numérique.  
   
  **Longueur**  
@@ -131,7 +131,7 @@ Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin
 Utilisez la page **Visionneuses de données** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour gérer les visionneuses de données liées au chemin d'accès.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Affiche la liste des visionneuses de données.  
   
  **Type de Visionneuse de données**  

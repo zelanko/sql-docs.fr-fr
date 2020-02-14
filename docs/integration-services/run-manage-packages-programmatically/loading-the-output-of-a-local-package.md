@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295749"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Chargement de la sortie d'un package local
@@ -45,7 +45,7 @@ ms.locfileid: "71295749"
   
 2.  Dans le projet de développement, définissez une référence à l’espace de noms **Microsoft.SqlServer.Dts.DtsClient** en localisant l’assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Par défaut, cet assembly est installé dans **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importez l’espace de noms dans votre code à l’aide de l’instruction C# **Using** ou [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports**.  
   
-3.  Dans votre code, créez un objet de type **DtsClient.DtsConnection** avec une chaîne de connexion qui contient les paramètres de ligne de commande nécessaires à **dtexec.exe** pour exécuter le package. Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md). Ouvrez ensuite la connexion à l'aide de cette chaîne de connexion. Vous pouvez également vous servir de l’utilitaire **dtexecui** pour créer visuellement la chaîne de connexion nécessaire.  
+3.  Dans votre code, créez un objet de type **DtsClient.DtsConnection** avec une chaîne de connexion qui contient les paramètres de ligne de commande nécessaires à **dtexec.exe** pour exécuter le package. Pour plus d'informations, consultez [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md). Ouvrez ensuite la connexion à l'aide de cette chaîne de connexion. Vous pouvez également vous servir de l’utilitaire **dtexecui** pour créer visuellement la chaîne de connexion nécessaire.  
   
     > [!NOTE]  
     >  L'exemple de code montre le chargement du package à partir du système de fichiers en utilisant la syntaxe `/FILE <path and filename>`. Toutefois, vous pouvez également charger le package à partir de la base de données MSDB en utilisant la syntaxe `/SQL <package name>` ou à partir du magasin de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en utilisant la syntaxe `/DTS \<folder name>\<package name>`.  

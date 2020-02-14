@@ -16,10 +16,10 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb28965af992a19864ccf2e6959decd778468403
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296501"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Création d'une destination ODBC à l'aide du composant Script
@@ -60,7 +60,7 @@ ms.locfileid: "71296501"
   
 5.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes **AddressID** et **City**.  
   
-6.  Dans la page **Entrées et sorties**, renommez l’entrée avec un nom plus descriptif, comme **MyAddressInput**.  
+6.  Dans la page **Entrées et sorties**, renommez l’entrée en lui attribuant un nom plus descriptif, comme **MyAddressInput**.  
   
 7.  Dans la page **Gestionnaires de connexions**, ajoutez ou créez le gestionnaire de connexions ODBC et attribuez-lui un nom descriptif, par exemple **MyODBCConnectionManager**.  
   

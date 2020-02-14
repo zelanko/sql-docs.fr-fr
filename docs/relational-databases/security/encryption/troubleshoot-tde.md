@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558464"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909899"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erreurs courantes liées au chiffrement transparent des données avec des clés managées par le client dans Azure Key Vault
 
@@ -33,7 +33,7 @@ Dans les 8 premières heures, si le problème d’accès à la clé Azure Key V
 
 Si une base de données inaccessible n’est plus nécessaire, elle peut être supprimée immédiatement pour arrêter les coûts. Toutes les autres actions sur la base de données ne sont pas autorisées tant que l’accès à la clé Azure Key Vault n’a pas été restauré et que la base de données est de nouveau en ligne. La modification de l’option TDE à partir des clés managées par le client sur le serveur n’est pas non plus possible lorsqu’une base de données chiffrée avec des clés managées par le client est inaccessible. Cela est nécessaire pour protéger les données contre tout accès non autorisé, tandis que les autorisations sur le protecteur TDE ont été révoquées. 
 
-Lorsqu’une base de données est inaccessible pendant plus de 8 heures, elle ne peut plus être corrigée automatiquement. Si l’accès à la clé Azure Key Vault a été restauré après cette période, vous devez revalider l’accès manuellement pour remettre la base de données en ligne. Dans ce cas, la remise en ligne de la base de données peut être très longue, selon la taille de la base de données. En outre, cela nécessite la création d’un ticket de support. Une fois la base de données de nouveau en ligne, des paramètres précédemment configurés tels que le géolien si la récupération d’urgence géographique a été configurée, l’historique de récupération jusqu’à une date et heure et les étiquettes seront perdus. Par conséquent, nous vous recommandons d’implémenter un système de notifications à l’aide de [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) qui permettent d’être informé et de traiter les problèmes sous-jacents d’accès aux clés dès que possible. 
+Lorsqu’une base de données est inaccessible pendant plus de 8 heures, elle ne peut plus être corrigée automatiquement. Si l’accès à la clé Azure Key Vault a été restauré après cette période, vous devez revalider manuellement l’accès à la clé pour remettre la base de données en ligne. Dans ce cas, la remise en ligne de la base de données peut être très longue, selon la taille de celle-ci. Une fois la base de données de nouveau en ligne, les paramètres précédemment configurés tels que le [groupe de basculement](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group) ou l’historique de récupération jusqu’à une date et heure, ainsi que toutes les étiquettes, **seront perdus**. Par conséquent, nous vous recommandons d’implémenter un système de notifications à l’aide de [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) qui permettent d’être informé et de traiter les problèmes sous-jacents d’accès aux clés dès que possible. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erreurs courantes provoquant l’inaccessibilité des bases de données
 

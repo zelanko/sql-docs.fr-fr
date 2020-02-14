@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296265"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Vérifier le mappage de type de données (Assistant Importation et Exportation SQL Server)
@@ -31,7 +31,7 @@ Si vous avez spécifié un mappage de type de données qui risque d’échouer d
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>Capture d’écran de la page Vérifier le mappage de type de données
  La capture d’écran suivante montre un exemple de la page **Vérifier le mappage de type de données** de l’Assistant.
  
- Dans cet exemple :
+ Dans cet exemple :
  -   L’utilisateur a spécifié un mappage dans la boîte de dialogue **Mappage de colonnes** qui ne peut pas réussir.
  -   L’icône d’avertissement sur la ligne dans la liste **Table** indique que la conversion d’au moins une colonne de données à partir des résultats de la requête vers un type de données compatibles dans la table de destination pose problème.
  -   L’icône d’avertissement dans la première ligne de la liste **Mappage de type de données** indique que le mappage depuis le type de données **int** de la colonne source vers le type de données **smalldatetime** de la colonne de destination peut provoquer une perte de données.
@@ -47,7 +47,7 @@ Dans cet exemple, les résultats de la requête fournie par l’utilisateur vont
   
  Le tableau suivant décrit les colonnes de la liste **Table** .  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |(Icône Source)|Indique la probabilité de réussite des conversions de types de données :<br /> -   Une icône représentant une coche **verte** indique que l’Assistant prévoit la réussite de toutes les conversions de types de données de cette table.<br />-   Une icône d’avertissement **jaune** indique que vous devez vérifier les différentes conversions qui seront effectuées par l’Assistant. Pour ce faire, sélectionnez la table, puis examinez les conversions correspondant aux différentes colonnes dans la liste **Mappage de type de données** .<br />-   Une icône d’erreur **rouge** indique que l’Assistant n’est pas en mesure d’effectuer de manière fiable certaines conversions pour cette table.|  
 |**Source**|Nom de la table source.|  
@@ -63,14 +63,14 @@ Dans cet exemple, chaque colonne de la source va être copiée dans une colonne 
 
 Le tableau suivant décrit les colonnes de la liste **Mappage de type de données** . 
 
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |(Icône Conversion)|Indique la probabilité de réussite des conversions de types de données :<br /> -   Une icône représentant une coche **verte** indique que l’Assistant prévoit la réussite de la conversion des types de données de cette colonne.<br />-   Une icône d’avertissement **jaune** indique que vous devez examiner la conversion qui sera effectuée par l’Assistant. Pour vérifier la conversion, double-cliquez sur la colonne afin d’afficher la boîte de dialogue **Détails de la conversion de colonne** . Pour plus d’informations, consultez [Boîte de dialogue Détails de la conversion de colonne](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />-   Une icône d’erreur **rouge** indique que l’Assistant n’est pas en mesure d’effectuer la conversion de manière fiable.|  
 |**Colonne source**|Nom de la colonne source.|  
 |**Type de source**|Type de données de la colonne source.|  
 |**Colonne de destination**|Nom de la colonne de destination.|  
 |**Type de destination**|Type de données de la colonne de destination.|  
-|**Convertir**|Spécifiez s’il faut poursuivre la conversion planifiée :<br /> - Cochez la case pour que l’Assistant poursuive la conversion planifiée.<br />- Décochez la case pour annuler la conversion des types de données.|  
+|**Convert**|Spécifiez s’il faut poursuivre la conversion planifiée :<br /> - Cochez la case pour que l’Assistant poursuive la conversion planifiée.<br />- Décochez la case pour annuler la conversion des types de données.|  
 |**En cas d’erreur**|Spécifiez comment l'Assistant gère les erreurs :<br /> -   Utiliser le paramètre **En cas d’erreur (global)** , que vous pouvez spécifier en bas de cette page.<br />-   Échouer avec une erreur et arrêter le processus d’importation ou d’exportation.<br />-   Ignorer l’erreur.|  
 |**En cas de troncation**|Spécifiez comment l'Assistant gère les troncations :<br /> -   Utiliser le paramètre **En cas de troncation (global)** , que vous pouvez spécifier en bas de cette page.<br />-   Échouer avec une erreur et arrêter le processus d’importation ou d’exportation.<br />-   Ignorer la troncation.|  
 
@@ -86,12 +86,12 @@ Cet exemple montre les valeurs par défaut pour les deux options globales de ges
 
  **En cas d’erreur (global)**  
  Spécifiez comment l'Assistant gère les erreurs :  
- -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Il s'agit de la valeur par défaut.
+ -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Il s’agit de la valeur par défaut.
  -   Ignorez l'erreur et poursuivez le processus d'importation ou d'exportation.  
   
  **En cas de troncation (global)**  
  Spécifiez comment l’Assistant gère les troncations de données :  
- -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Il s'agit de la valeur par défaut.
+ -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Il s’agit de la valeur par défaut.
  -   Ignorez la troncation et poursuivez le processus d'importation ou d'exportation.  
    
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?  

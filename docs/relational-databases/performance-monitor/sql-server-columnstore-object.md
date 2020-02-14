@@ -11,10 +11,10 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 334a8388b7abc217123071fdc37c9e1091f6a3fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987134"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server, objet columnstore
@@ -22,7 +22,7 @@ ms.locfileid: "67987134"
 
   L’objet **SQLServer:Columnstore** fournit des compteurs permettant de surveiller l’exécution des index columnstore dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Le tableau suivant décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
+ Le tableau suivant décrit les compteurs **Columnstore** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs ColumnStore|Description|  
 |--------------------------|-----------------|  
@@ -30,7 +30,7 @@ ms.locfileid: "67987134"
 |**Rowgroups delta compressés**|Nombre de rowgroups delta compressés.|  
 |**Rowgroups delta créés**|Nombre de rowgroups delta créés.|  
 |**Taux d’accès au cache de segments**|Pourcentage de segments de colonne détectés dans le pool columnstore sans devoir effectuer de lecture à partir du disque.|  
-|**Base du taux d’accès au cache de segments**|À usage interne uniquement|
+|**Base du taux d’accès au cache de segments**|À usage interne uniquement.|
 |**Lectures de segments/s**|Nombre de lectures de segments physiques effectuées.|  
 |**Total des tampons de suppression migrés**|Nombre de nettoyages du tampon de suppression par le moteur de tuple.|  
 |**Total des évaluations de la stratégie de fusion**|Nombre d’évaluations de la stratégie de fusion pour columnstore.|  

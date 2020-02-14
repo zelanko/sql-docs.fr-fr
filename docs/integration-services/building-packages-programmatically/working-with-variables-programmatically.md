@@ -23,10 +23,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299077"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilisation de variables par programmation
@@ -50,7 +50,7 @@ ms.locfileid: "71299077"
   
 -   Vous pouvez créer des variables personnalisées pour tous les types de conteneurs : packages, conteneurs de **boucles Foreach**, conteneurs de **boucles For**, conteneurs de **séquences**, TaskHosts et gestionnaires d’événements. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## <a name="scope"></a>Portée  
+## <a name="scope"></a>Étendue  
  Chaque conteneur possède sa propre collection <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Lorsqu'une nouvelle variable est créée, elle se trouve dans la portée de son conteneur parent. Le conteneur de packages se trouvant au sommet de la hiérarchie de conteneurs, les variables avec une portée de package fonctionnent comme les variables globales et sont visibles pour tous les conteneurs contenus dans le package. La collection de variables du conteneur est également accessible par les enfants du conteneur via la collection <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, en utilisant le nom de variable ou l'index de la variable dans la collection.  
   
  Parce que la visibilité d'une variable s'étend du haut vers le bas, les variables déclarées au niveau du package sont visibles pour tous les conteneurs situés dans le package. Par conséquent, la collection <xref:Microsoft.SqlServer.Dts.Runtime.Variables> sur un conteneur inclut toutes les variables qui appartiennent à son parent en plus de ses propres variables.  
@@ -59,7 +59,7 @@ ms.locfileid: "71299077"
   
  Si un package exécute d'autres packages, les variables définies dans la portée du package appelant sont disponibles pour le package appelé. La seule exception se produit lorsqu'une variable de même nom existe dans le package appelé. Lorsque cette collision se produit, la valeur de la variable dans le package appelé remplace celle du package appelant. Les variables définies dans la portée du package appelé ne sont jamais de nouveau disponibles pour le package appelant.  
   
- L'exemple de code suivant crée une variable, `myCustomVar`, par programme, à la portée du package, puis parcourt toutes les variables visibles pour le package, en imprimant leur nom, leur type de données et leur valeur.  
+ L'exemple de code suivant crée une variable, `myCustomVar`, programmatiquement, à la portée du package, puis parcourt toutes les variables visibles pour le package, en imprimant leur nom, leur type de données et leur valeur.  
   
 ```csharp  
 using System;  

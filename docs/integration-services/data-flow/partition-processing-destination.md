@@ -20,10 +20,10 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23292c0ac898ca035bca4b499de4bfc3fe2a7ebc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292155"
 ---
 # <a name="partition-processing-destination"></a>Destination de traitement de partition
@@ -33,7 +33,7 @@ ms.locfileid: "71292155"
 
   La destination de traitement de partition charge et traite une partition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les partitions, consultez [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
- La destination de traitement de partition regroupe les fonctionnalités suivantes :  
+ La destination de traitement de partition regroupe les fonctionnalités suivantes :  
   
 -   options permettant de choisir entre un traitement incrémentiel, un traitement complet ou un traitement de mise à jour ;  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71292155"
   
  Cette destination comporte une entrée. Elle ne prend pas en charge de sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

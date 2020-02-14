@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127303"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516550"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68127303"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
 -   **Procédures :**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68127303"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Enregistrez tous les Service Packs et correctifs logiciels appliqués à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le classement actuel. Vous devrez réappliquer ces mises à jour après avoir reconstruit les bases de données système.  
+2.  Enregistrez tous les correctifs logiciels appliqués à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le classement actuel. Vous devez réappliquer ces correctifs logiciels après avoir reconstruit les bases de données système.  
   
     ```  
     SELECT  
@@ -106,7 +106,7 @@ ms.locfileid: "68127303"
     |/ACTION=REBUILDDATABASE|Spécifie que le programme d'installation doit recréer les bases de données système.|  
     |/INSTANCENAME=*Nom_Instance*|Représente le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour l'instance par défaut, entrez MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe **sysadmin** . Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** . Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **&#42;&#42; Remarque sur la sécurité &#42;&#42;** Le compte **sa** est un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bien connu, souvent ciblé par les utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion **sa** .<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
+    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe du compte d’**administrateur système (sa)** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **&#42;&#42; Remarque sur la sécurité &#42;&#42;** Le compte **sa** est un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bien connu, souvent ciblé par les utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion **sa** .<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
     |[ /SQLCOLLATION=*NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> **\*\* Important \*\*** La modification du classement de niveau serveur ne modifie pas le classement des bases de données utilisateur existantes. En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Spécifie le nombre de fichiers de données tempdb Cette valeur peut être augmentée jusqu’à 8 ou jusqu’au nombre de cœurs, la valeur la plus élevée étant applicable.<br /><br /> Valeur par défaut : 8 ou le nombre de cœurs (la plus petite valeur des deux).|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo de chaque fichier de données tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8|  
@@ -140,7 +140,7 @@ ms.locfileid: "68127303"
 -   Vérifier que les valeurs de configuration à l'échelle du serveur correspondent à celles que vous avez enregistrées précédemment.  
   
 ##  <a name="Resource"></a> Reconstruire la base de données resource  
- La procédure suivante reconstruit la base de données système resource. La reconstruction de la base de données resource entraîne la perte de tous les Service Packs et correctifs logiciels, qui devront par conséquent être réappliqués.  
+ La procédure suivante reconstruit la base de données système resource. La reconstruction de la base de données resource entraîne la perte de tous les correctifs logiciels, qui doivent donc être réappliqués.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Pour reconstruire la base de données système resource :  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68127303"
   
 2.  Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la ligne de commande à l'aide de la commande : `NET START MSSQLSERVER /T3608`  
   
-     Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Dans une autre fenêtre de ligne de commande, détachez la base de données **msdb** à l’aide de la commande suivante, en remplaçant *\<nom_serveur>* par l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68127303"
   
 7.  À l'aide du Bloc-notes Windows, ouvrez le fichier **instmsdb.out** et vérifiez qu'il ne présente aucune erreur.  
   
-8.  Réappliquez tous les Service Packs ou les correctifs logiciels installés sur l'instance.  
+8.  Réappliquez les correctifs logiciels installés sur l’instance.  
   
 9. Recréez le contenu de l'utilisateur stocké dans la base de données **msdb** , tel que les travaux, l'alerte, etc.  
   

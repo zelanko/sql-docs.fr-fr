@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296197"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestionnaires d'événements Integration Services (SSIS)
@@ -47,11 +47,11 @@ ms.locfileid: "71296197"
   
  Le diagramme qui suit montre un package simple composé d'un conteneur de boucles For contenant une tâche d'exécution SQL.  
   
- ![Package, boucle For, hôte de tâche et tâche d’exécution SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Package, boucle For, hôte de tâche et tâche d’exécution SQL")  
+ ![Package, boucle For, hôte de tâche et tâche d'exécution SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Package, boucle For, hôte de tâche et tâche d'exécution SQL")  
   
  Seul le package possède un gestionnaire d’événements (pour son événement **OnError** ). Si une erreur se produit pendant l’exécution de la tâche d’exécution SQL, le gestionnaire d’événements **OnError** du package s’exécute. Le diagramme qui suit montre la séquence d’appels qui conduit à l’exécution du gestionnaire d’événements **OnError** du package.  
   
- ![Flux de gestionnaire d’événements](../integration-services/media/mw-dts-eventhandlers.gif "Flux de gestionnaire d’événements")  
+ ![Flux de gestionnaire d'événements](../integration-services/media/mw-dts-eventhandlers.gif "Flux de gestionnaire d’événements")  
   
  Les gestionnaires d'événements sont membres d'une collection de gestionnaires d'événements. Tous les conteneurs incluent cette collection. Si vous créez le package à l’aide du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , vous pouvez afficher les membres des collections de gestionnaires d’événements dans les dossiers **Gestionnaires d’événements** de l’onglet **Explorateur de package** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -130,7 +130,7 @@ Lors de l'exécution, les conteneurs et les tâches déclenchent des événement
   
  Pour plus d’informations sur la définition de ces propriétés dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consultez [Définir les propriétés d’une tâche ou d’un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
- Pour plus d'informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ Pour plus d’informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur l’ajout d’un gestionnaire d’événements à un package, consultez [Ajouter un gestionnaire d’événements à un package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  

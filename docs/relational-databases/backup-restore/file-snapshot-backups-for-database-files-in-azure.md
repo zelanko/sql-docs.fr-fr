@@ -11,17 +11,17 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086281"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La sauvegarde d’instantanés de fichiers utilise des instantanés Azure pour obtenir des sauvegardes quasi instantanées et des restaurations plus rapides pour les fichiers de base de données stockés avec le service de stockage d’objets blob Azure. Cette fonctionnalité vous permet de simplifier vos stratégies de sauvegarde et de restauration. Pour une démonstration en situation réelle, consultez [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(Démonstration de la restauration à un point dans le temps). Pour plus d’informations sur le stockage de fichiers de base de données à l’aide du service Stockage Blob Azure, consultez [Fichiers de données SQL Server dans Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
- ![diagramme architectural de sauvegarde d’instantané](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagramme architectural de sauvegarde d’instantané")  
+ ![diagramme architectural de sauvegardes d’instantanés](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagramme architectural de sauvegardes d’instantanés")  
   
  **Télécharger**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68086281"
 ### <a name="what-is-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>Qu’est-ce qu’une sauvegarde de capture instantanée de fichier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ?  
  Une sauvegarde d’instantanés de fichiers se compose d’un ensemble d’instantanés Azure d’objets blob contenant les fichiers de base de données et un fichier de sauvegarde renfermant des pointeurs vers ces instantanés de fichiers. Chaque instantané de fichier est stocké dans le conteneur avec l’objet blob de base. Vous pouvez spécifier que le fichier de sauvegarde lui-même soit écrit sur un périphérique URL, sur disque ou sur bande. La sauvegarde sur un périphérique URL est recommandée. Pour plus d’informations sur la sauvegarde, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) et sur la sauvegarde des URL, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
- ![architecture de la fonctionnalité de capture instantanée](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architecture de la fonctionnalité de capture instantanée")  
+ ![architecture de la fonctionnalité d’instantané](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architecture de la fonctionnalité d’instantané")  
   
  En cas de suppression de l’objet blob de base, le jeu de sauvegarde est invalidé et vous ne pouvez pas supprimer un objet blob qui contient des instantanés de fichiers (sauf si vous choisissez expressément de supprimer un objet blob avec tous ses instantanés de fichiers). En outre, la suppression d’une base de données ou d’un fichier de données ne supprime pas l’objet blob de base ou l’un de ses instantanés de fichiers. De plus, la suppression du fichier de sauvegarde ne supprime pas les instantanés de fichiers dans le jeu de sauvegarde. Pour supprimer un jeu de sauvegarde de capture instantanée de fichier, utilisez la procédure stockée système **sys.sp_delete_backup** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68086281"
  **Suppression de captures instantanées de fichiers de sauvegarde orphelines :** vous pouvez avoir des captures instantanées de fichiers orphelines si le fichier de sauvegarde a été supprimé sans utiliser la procédure stockée système **sys.sp_delete_backup** ou si une base de données ou un fichier de base de données a été supprimé alors que des captures instantanées de fichiers de sauvegarde étaient associées aux objets blob contenant cette base de données ou ce fichier de base de données. Pour identifier les captures instantanées de fichiers pouvant être orphelines, utilisez la fonction système **sys.fn_db_backup_file_snapshots** pour répertorier toutes les captures instantanées des fichiers de base de données. Pour identifier les instantanés de fichiers qui font partie d’un jeu de sauvegarde d’instantanés de fichiers spécifique, utilisez la procédure stockée système RESTORE FILELISTONLY. Vous pouvez ensuite utiliser la procédure stockée système **sys.sp_delete_backup_file_snapshot** pour supprimer une capture instantanée de fichier de sauvegarde devenue orpheline. Vous trouverez des exemples d’utilisation de cette fonction système et de ces procédures stockées système à la fin de cette rubrique. Pour plus d’informations, consultez [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md), [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md), [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) et [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
 ### <a name="considerations-and-limitations"></a>Observations et limitations  
- **Stockage Premium :** quand vous utilisez le stockage Premium, les limitations suivantes s’appliquent :  
+ **Stockage premium :** quand vous utilisez le stockage Premium, les limitations suivantes s’appliquent :  
   
 -   Le fichier de sauvegarde ne peut pas être stocké à l’aide du stockage Premium.  
   
@@ -148,7 +148,7 @@ GO
 ```  
   
 ## <a name="viewing-database-backup-file-snapshots"></a>Affichage des instantanés de fichiers de sauvegarde de base de données  
- Pour afficher les captures instantanées de fichiers de l’objet blob de base pour chaque fichier de base de données, utilisez la fonction système **sys.fn_db_backup_file_snapshots** . Cette fonction système vous permet d’afficher tous les instantanés de fichiers de sauvegarde de chaque objet blob de base pour une base de données stockée à l’aide du service de stockage d’objets blob Azure. Cette fonction sert notamment à identifier les captures instantanées de fichiers de sauvegarde d’une base de données qui restent quand le fichier de sauvegarde pour un jeu de sauvegarde de captures instantanées de fichiers est supprimé à l’aide d’un mécanisme autre que la procédure stockée système **sys.sp_delete_backup** . Pour déterminer les captures instantanées de fichiers de sauvegarde qui font partie de jeux de sauvegarde intacts et celles qui n’en font pas partie, utilisez la procédure stockée système **RESTORE FILELISTONLY** pour répertorier les captures instantanées de fichiers appartenant à chaque fichier de sauvegarde. Pour plus d’informations, consultez [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) et [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Pour afficher les captures instantanées de fichiers de l’objet blob de base pour chaque fichier de base de données, utilisez la fonction système **sys.fn_db_backup_file_snapshots** . Cette fonction système vous permet d’afficher tous les instantanés de fichiers de sauvegarde de chaque objet blob de base pour une base de données stockée à l’aide du service de stockage d’objets blob Azure. Cette fonction sert notamment à identifier les captures instantanées de fichiers de sauvegarde d’une base de données qui restent quand le fichier de sauvegarde pour un jeu de sauvegarde de captures instantanées de fichiers est supprimé à l’aide d’un mécanisme autre que la procédure stockée système **sys.sp_delete_backup** . Pour déterminer les captures instantanées de fichiers de sauvegarde qui font partie de jeux de sauvegarde intacts et celles qui n’en font pas partie, utilisez la procédure stockée système **RESTORE FILELISTONLY**  pour répertorier les captures instantanées de fichiers appartenant à chaque fichier de sauvegarde. Pour plus d’informations, consultez [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) et [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  L’exemple suivant retourne la liste de tous les instantanés de fichiers de sauvegarde pour la base de données spécifiée.  
   
@@ -163,7 +163,7 @@ GO
 ```  
   
 ## <a name="deleting-an-individual-database-backup-file-snapshot"></a>Suppression d’un instantané de fichier de sauvegarde de base de données  
- Pour supprimer une capture instantanée de fichier de sauvegarde d’un objet blob de base de base de données, utilisez la procédure stockée système **sys.sp_delete_backup_file_snapshot** . Cette procédure stockée système sert notamment à supprimer les fichiers de captures instantanées de fichiers orphelines qui restent après la suppression d’un fichier de sauvegarde à l’aide d’une méthode autre que la procédure stockée système **sys.sp_delete_backup**. Pour plus d’informations, consultez [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
+ Pour supprimer une capture instantanée de fichier de sauvegarde d’un objet blob de base de base de données, utilisez la procédure stockée système **sys.sp_delete_backup_file_snapshot** . Cette procédure stockée système sert notamment à supprimer les fichiers de captures instantanées de fichiers orphelines qui restent après la suppression d’un fichier de sauvegarde à l’aide d’une méthode autre que la procédure stockée système **sys.sp_delete_backup** . Pour plus d’informations, consultez [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
   
 > [!WARNING]  
 >  La suppression d’un instantané de fichier qui fait partie d’un jeu de sauvegarde d’instantanés de fichiers invalide le jeu de sauvegarde.  

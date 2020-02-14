@@ -27,13 +27,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914866"
 ---
-# <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
+# <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie le numéro d'identification d'un objet de la base de données pour un objet défini avec l'étendue d'un schéma.  
@@ -41,7 +41,7 @@ ms.locfileid: "67914866"
 > [!IMPORTANT]  
 >  Il n'est pas possible d'exécuter des requêtes sur des objets qui ne sont pas définis avec l'étendue d'un schéma, tels que des déclencheurs DDL, en utilisant OBJECT_ID. Pour les objets qui ne figurent pas dans la vue de catalogue [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md), vous pouvez obtenir leurs numéros d’identification en interrogeant la vue de catalogue appropriée. Par exemple, pour renvoyer le numéro d’identification d’un déclencheur DDL, utilisez `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  Type de l'objet défini avec l'étendue du schéma. *object_type* est de type **varchar** ou **nvarchar**. Si *object_type* est de type **varchar**, il est converti implicitement en **nvarchar**. Pour obtenir la liste des types d’objets, consultez la colonne **type** de [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 ## <a name="exceptions"></a>Exceptions  
  Pour un index spatial, OBJECT_ID retourne la valeur NULL.  
@@ -76,7 +76,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-object-id-for-a-specified-object"></a>A. Renvoi de l'identificateur d'un objet spécifié  
+### <a name="a-returning-the-object-id-for-a-specified-object"></a>R. Renvoi de l'identificateur d'un objet spécifié  
  L'exemple suivant renvoie l'ID d'objet de la table `Production.WorkOrder` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -97,7 +97,7 @@ DROP TABLE dbo.AWBuildVersion;
 GO  
 ```  
   
-### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>C. Utilisation de OBJECT_ID pour spécifier la valeur d'un paramètre d'une fonction système  
+### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. Utilisation de OBJECT_ID pour spécifier la valeur d'un paramètre d'une fonction système  
  L’exemple suivant retourne des informations pour tous les index et partitions de la table `Person.Address` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] à l’aide de la fonction [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).  
   
 > [!IMPORTANT]  

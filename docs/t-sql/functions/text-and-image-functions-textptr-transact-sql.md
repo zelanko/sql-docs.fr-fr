@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099033"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Fonctions texte et image - TEXTPTR (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68099033"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Aucune fonctionnalité de remplacement n'est disponible.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +72,7 @@ TEXTPTR ( column )
 > [!NOTE]  
 >  Pour exécuter les exemples suivants, vous devez installer la base de données **pubs**.  
   
-### <a name="a-using-textptr"></a>A. Utilisation de TEXTPTR  
+### <a name="a-using-textptr"></a>R. Utilisation de TEXTPTR  
  L’exemple qui suit utilise la fonction `TEXTPTR` pour rechercher le `logo` de la colonne **image** associé à `New Moon Books` dans la table `pub_info` de la base de données `pubs`. Le pointeur de texte identifie la variable locale `@ptrval.`.  
   
 ```  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816734"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922888"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Créer, modifier et supprimer des FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ GO
  La commande DROP TABLE échoue si des descripteurs de fichiers sont ouverts dans l’espace de noms du fichier du FileTable. Pour plus d’informations sur la fermeture de descripteurs ouverts, consultez [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> D'autres objets de base de données sont créés lorsque vous créez un FileTable  
- Lorsque vous créez un nouveau FileTable, quelques contraintes et index définis par le système sont également créés. Vous ne pouvez pas modifier ou supprimer ces objets ; ils disparaissent uniquement lorsque le FileTable lui-même est supprimé. Pour consulter la liste de ces objets, interrogez l’affichage catalogue [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
+ Lorsque vous créez un nouveau FileTable, quelques contraintes et index définis par le système sont également créés. Vous ne pouvez pas modifier ou supprimer ces objets ; ils disparaissent uniquement lorsque le FileTable lui-même est supprimé. Pour consulter la liste de ces objets, interrogez l’affichage catalogue [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
 ```sql  
 --View all objects for all filetables, unsorted  
@@ -161,7 +161,7 @@ GO
   
 |||  
 |-|-|  
-|**Columns**|**Type d'index**|  
+|**Colonnes**|**Type d'index**|  
 |[path_locator] ASC|Clé primaire, non-cluster|  
 |[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, non-cluster|  
 |[stream_id] ASC|Unique, non-cluster|  

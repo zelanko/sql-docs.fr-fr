@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb7b029527eec87c87b9b21b4da8aff5e289424e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032017"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Création de procédures stockées compilées en mode natif
@@ -25,7 +25,7 @@ Les procédures stockées compilées en mode natif n'implémentent pas la surfac
   
 À l'inverse, plusieurs fonctionnalités [!INCLUDE[tsql](../../includes/tsql-md.md)] ne sont prises en charge que pour les procédures stockées compilées en mode natif :  
   
--   Blocs Atomic. Pour plus d’informations, voir [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
+-   Blocs Atomic. Pour plus d’informations, consultez [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
 -   Contraintes **NOT NULL** sur les paramètres et les variables. Vous ne pouvez pas affecter de valeurs **NULL** aux paramètres ou aux variables déclarés en tant que **NOT NULL**. Pour plus d’informations, consultez [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
@@ -33,7 +33,7 @@ Les procédures stockées compilées en mode natif n'implémentent pas la surfac
   
     -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(initialisation de valeur requise)*  
   
-    -   SET @myVarchar **= null**; -- *(compilation, mais échec au moment de l’exécution)*  
+    -   SET @myVarchar **= null**; -- *(Compilation, mais échec au moment de l’exécution.)*  
   
 -   Liaison de schéma des procédures stockées compilées en mode natif.  
   

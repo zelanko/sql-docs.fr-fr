@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ccd04bec4416fdf5bb5f2137dc2f86e69a9a2ab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914346"
 ---
-# <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
+# <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Calcule un centile spécifique pour les valeurs triées dans la totalité d’un ensemble de lignes ou dans des partitions distinctes de l’ensemble dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une valeur de centile donnée *P*, PERCENTILE_DISC trie les valeurs de l’expression dans la clause ORDER BY. Il retourne ensuite la valeur ayant la plus petite valeur CUME_DIST donnée (pour la même spécification de tri) supérieure ou égale à *P*. Par exemple, PERCENTILE_DISC (0.5) calcule le cinquantième percentile (autrement dit, la valeur médiane) d’une expression. PERCENTILE_DISC calcule le centile à partir d’une distribution discrète des valeurs de la colonne. Le résultat est égal à une valeur spécifique dans la colonne.  
   
- ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions syntaxiques &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  WITHIN GROUP **(** ORDER BY *expression_order_by* [ **ASC** | DESC)**  
  Spécifie la liste des valeurs à trier et sur lesquelles calculer le percentile. Un seul argument *order_by_expression* est autorisé. L’ordre de tri par défaut est croissant. La liste des valeurs peut être d’un des types de données qui sont valides pour l’opération de tri.  
   
- OVER **(** \<clause_partition_by>)**  
+ OVER **(** \<partition_by_clause>)**  
  Divise le jeu de résultats de la clause FROM en partitions. La fonction de centile est appliquée à ces partitions. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Il n’est pas possible de spécifier la \<clause ORDER BY> ou la \<clause ROWS ou RANGE> dans une fonction PERCENTILE_DISC.  
   
 ## <a name="return-types"></a>Types de retour  

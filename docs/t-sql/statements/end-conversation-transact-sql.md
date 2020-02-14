@@ -25,10 +25,10 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 26051de067dd496d25cfcc3c2cb0f71715ed3145
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211362"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211362"
 
   Met fin à un côté d'une conversation existante.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,12 +57,12 @@ END CONVERSATION conversation_handle
  Est le code d’erreur. *failure_code* est de type **int**. Le code d’échec est un code défini par l’utilisateur qui est inclus dans le message d’erreur envoyé à l’autre côté de la conversation. Le code d'échec doit être supérieur à 0.  
   
  DESCRIPTION =*failure_text*  
- Est le message d’erreur. *failure_text* est de type **nvarchar(3000)**. Le texte d'échec est un texte défini par l'utilisateur qui est inclus dans le message d'erreur envoyé à l'autre côté de la conversation.  
+ Est le message d’erreur. *failure_text* est de type **nvarchar(3000)** . Le texte d'échec est un texte défini par l'utilisateur qui est inclus dans le message d'erreur envoyé à l'autre côté de la conversation.  
   
  WITH CLEANUP  
  Supprime tous les messages et les entrées d'affichage catalogue pour un côté d'une conversation qui ne peut pas se terminer normalement. L'autre côté de la conversation n'est pas notifié du nettoyage. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime le point de terminaison, tous les messages de la conversation dans la file d’attente de transmission, ainsi que tous les messages pour la conversation dans la file d’attente du service. Les administrateurs peuvent utiliser cette option pour supprimer des conversations qui ne peuvent pas se terminer normalement. Si, par exemple, le service distant a été supprimé définitivement, un administrateur peut utiliser WITH CLEANUP pour supprimer les conversations avec ce service. N’utilisez pas WITH CLEANUP dans le code d’une application [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Si END CONVERSATION WITH CLEANUP est exécuté avant que le point de terminaison de réception n'accuse réception d'un message, le point de terminaison d'envoi renverra le message. Cela peut éventuellement entraîner la réexécution du dialogue.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Mettre fin à une conversation verrouille le groupe de conversations auquel appartient le *conversation_handle* fourni. Lorsqu'une conversation se termine, [!INCLUDE[ssSB](../../includes/sssb-md.md)] supprime tous les messages qui la concernent de la file d'attente du service.  
   
  Une fois qu'une conversation est terminée, aucune application ne peut plus envoyer ni recevoir des messages pour cette conversation. Les deux participants d'une conversation doivent appeler END CONVERSATION pour achever la conversation. Si [!INCLUDE[ssSB](../../includes/sssb-md.md)] n'a pas reçu de message de fin de dialogue ou de message d'erreur de la part de l'autre participant de la conversation, [!INCLUDE[ssSB](../../includes/sssb-md.md)] avertit l'autre participant que la conversation est terminée. Dans ce cas, bien que le handle de conversation ne soit plus valide, le point de terminaison de la conversation reste actif jusqu'à ce que l'instance qui héberge le service distant accuse réception du message.  
@@ -90,7 +90,7 @@ END CONVERSATION conversation_handle
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-ending-a-conversation"></a>A. Fin d'une conversation  
+### <a name="a-ending-a-conversation"></a>R. Fin d'une conversation  
  Cet exemple met fin au dialogue spécifié par `@dialog_handle`.  
   
 ```  
@@ -129,7 +129,7 @@ COMMIT TRANSACTION ;
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  

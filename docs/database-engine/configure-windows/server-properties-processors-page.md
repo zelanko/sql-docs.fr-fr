@@ -13,10 +13,10 @@ ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 42eaf4bc1742c5d9ff101c308d6c120ceb8f3ef8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026122"
 ---
 # <a name="server-properties---processors-page"></a>Propriétés du serveur - Page Processeurs
@@ -28,7 +28,7 @@ ms.locfileid: "68026122"
  Affecte des processeurs à des threads spécifiques afin d'éliminer les recharges de processeurs et de réduire la migration des threads entre les processeurs. Pour plus d’informations, consultez [affinity mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md).  
   
  **Affinité d'E/S**  
- Lie les E/S disque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un sous-ensemble spécifié d’UC. Pour plus d’informations, consultez [affinity Input-Output mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md).  
+ Lie les E/S disque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un sous-ensemble spécifié de processeurs. Pour plus d’informations, consultez [affinity Input-Output mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md).  
   
  **Définir automatiquement le masque d'affinité du processeur pour tous les processeurs**  
  Autorise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à définir l'affinité du processeur.  

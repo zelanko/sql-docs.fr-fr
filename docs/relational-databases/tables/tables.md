@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127373"
 ---
 # <a name="tables"></a>Tables
@@ -37,7 +37,7 @@ Les tables sont des objets de base de données qui contiennent toutes les donné
 
 ### <a name="partitioned-tables"></a>Tables partitionnées
 
-Les tables partitionnées sont des tables dont les données sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers dans une base de données. Le partitionnement permet une gestion plus simple des tables et index volumineux. Vous pouvez en effet accéder à des sous-ensembles de données ou les gérer de manière rapide et efficace, tout en préservant l'intégrité de la collection globale. Par défaut, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge jusqu'à 15 000 partitions. Pour plus d’informations, consultez [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
+Les tables partitionnées sont des tables dont les données sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers dans une base de données. Le partitionnement permet une gestion plus simple des tables et index volumineux. Vous pouvez en effet accéder à des sous-ensembles de données ou les gérer de manière rapide et efficace, tout en préservant l'intégrité de la collection globale. Par défaut, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge jusqu'à 15 000 partitions. Pour plus d’informations, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ### <a name="temporary-tables"></a>Tables temporaires
 
@@ -96,7 +96,7 @@ Les tableaux larges ont les conséquences suivantes sur les performances :
 |Explique comment modifier le nom d'une colonne.|[Renommer des colonnes &#40;moteur de base de données&#41;](../../relational-databases/tables/rename-columns-database-engine.md)|
 |Explique comment copier des colonnes d'une table vers une autre, en copiant uniquement la définition de la colonne ou la définition et les données.|[Copier des colonnes d’une table vers une autre &#40;moteur de base de données&#41;](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|
 |Explique comment modifier une définition de colonne, en modifiant le type de données ou une autre propriété.|[Modifier des colonnes &#40;moteur de base de données&#41;](../../relational-databases/tables/modify-columns-database-engine.md)|
-|Explique comment modifier l'ordre dans lequel les colonnes apparaissent.|[Changer l’ordre des colonnes dans une table](../../relational-databases/tables/change-column-order-in-a-table.md)|
+|Explique comment modifier l'ordre dans lequel les colonnes apparaissent.|[Modifier l’ordre des colonnes dans une table](../../relational-databases/tables/change-column-order-in-a-table.md)|
 |Explique comment créer une colonne calculée dans une table.|[Spécifier les colonnes calculées dans une table](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|
 |Explique comment spécifier une valeur par défaut pour une colonne. Cette valeur est utilisée si une autre valeur n'est pas fournie.|[Spécifier des valeurs par défaut pour les colonnes](../../relational-databases/tables/specify-default-values-for-columns.md)|
 

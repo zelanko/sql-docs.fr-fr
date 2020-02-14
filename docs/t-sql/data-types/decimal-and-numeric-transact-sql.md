@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682106"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal et numeric (Transact-SQL)
@@ -46,9 +46,9 @@ Nombre total maximal de chiffres décimaux à stocker. Ce nombre inclut le côt�
 >  Informatica prend uniquement en charge 16 chiffres significatifs, quelles que soient la précision et l’échelle spécifiées.  
   
 *s* (échelle)  
-Nombre de chiffres décimaux stockés à droite de la virgule. Ce nombre est soustrait de *p* afin de déterminer le nombre maximal de chiffres à gauche de la virgule décimale. La mise à l’échelle doit être une valeur comprise entre 0 et *p*et peut uniquement être spécifiée si la précision est indiquée. La valeur par défaut de l’échelle est 0, par conséquent 0 <= *s* \<= *p*. Les tailles de stockage maximales varient en fonction de la précision.
+Nombre de chiffres décimaux stockés à droite de la virgule. Ce nombre est soustrait de *p* afin de déterminer le nombre maximal de chiffres à gauche de la virgule décimale. La mise à l’échelle doit être une valeur comprise entre 0 et *p*et peut uniquement être spécifiée si la précision est indiquée. La valeur par défaut de l’échelle est de 0, par conséquent 0 <= *s* \<= *p*. Les tailles de stockage maximales varient en fonction de la précision.
   
-|Précision|Taille de stockage (octets)|  
+|Precision|Taille de stockage (octets)|  
 |---|---|
 |1-9|5|  
 |10-19|9|  

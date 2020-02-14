@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091432"
 ---
 # <a name="xml-format-files-sql-server"></a>Fichiers de format XML (SQL Server)
@@ -199,14 +199,14 @@ ms.locfileid: "68091432"
   
  Chaque élément \<FIELD> est indépendant des autres. Un champ est décrit en termes des attributs suivants :  
   
-|Attribut FIELD|Description|Facultatif /<br /><br /> Requis|  
+|Attribut FIELD|Description|Facultatif /<br /><br /> Obligatoire|  
 |---------------------|-----------------|------------------------------|  
-|ID **="** _fieldID_ **"**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> est mappé à \<COLUMN SOURCE **="** _fieldID_ **"** />|Requis|  
+|ID **="** _fieldID_ **"**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> est mappé à \<COLUMN SOURCE **="** _fieldID_ **"** />|Obligatoire|  
 |xsi:type **="** _fieldType_ **"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de l'instance de l'élément. La valeur de *fieldType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.|Obligatoire (selon le type de données)|  
 |LENGTH **="** _n_ **"**|Cet attribut définit la longueur pour une instance d'un type de données à longueur fixe.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |PREFIX_LENGTH **="** _p_ **"**|Cet attribut définit la longueur de préfixe pour une représentation de données binaires. La valeur PREFIX_LENGTH, *p*, doit correspondre à l’une des valeurs suivantes : 1, 2, 4 ou 8.|Facultatif sauf s'il est requis par la valeur xsi:type|  
-|MAX_LENGTH **="** _m_ **"**|Cet attribut est le nombre maximal d'octets pouvant être stockés dans un champ donné. Sans table cible, la longueur maximale de la colonne est inconnue. L'attribut MAX_LENGTH limite la longueur maximale d'une colonne de caractères en sortie, limitant ainsi le stockage alloué pour la valeur de la colonne. Ceci est particulièrement pratique lors de l'utilisation de l'option BULK de la fonction OPENROWSET dans une clause SELECT FROM.<br /><br /> Cette valeur de *m* doit être un entier positif. Par défaut, la longueur maximale est de 8 000 caractères pour une colonne **char** et de 4 000 caractères pour une colonne **nchar** .|Ce paramètre est facultatif|  
-|COLLATION **="** _collationName_ **"**|COLLATION est uniquement autorisé pour les champs caractères. Pour obtenir la liste des noms du classement SQL, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Ce paramètre est facultatif|  
+|MAX_LENGTH **="** _m_ **"**|Cet attribut est le nombre maximal d'octets pouvant être stockés dans un champ donné. Sans table cible, la longueur maximale de la colonne est inconnue. L'attribut MAX_LENGTH limite la longueur maximale d'une colonne de caractères en sortie, limitant ainsi le stockage alloué pour la valeur de la colonne. Ceci est particulièrement pratique lors de l'utilisation de l'option BULK de la fonction OPENROWSET dans une clause SELECT FROM.<br /><br /> Cette valeur de *m* doit être un entier positif. Par défaut, la longueur maximale est de 8 000 caractères pour une colonne **char** et de 4 000 caractères pour une colonne **nchar** .|Facultatif|  
+|COLLATION **="** _collationName_ **"**|COLLATION est uniquement autorisé pour les champs caractères. Pour obtenir la liste des noms du classement SQL, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Facultatif|  
 |TERMINATOR **= "** _terminator_ **"**|Cet attribut spécifie la marque de fin d'un champ de données. La marque de fin peut être n'importe quel caractère. La marque de fin doit être un caractère unique ne faisant pas partie des données.<br /><br /> Par défaut, la marque de fin de champ est le caractère tabulation (représenté par \t). Pour représenter une marque de paragraphe, utilisez \r\n.|Utilisé uniquement avec un xsi:type de données caractères, qui nécessite cet attribut|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Valeurs Xsi:type de l’élément \<FIELD>  
@@ -225,7 +225,7 @@ ms.locfileid: "68091432"
 |**CharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
 |**NCharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
   
- Pour plus d’informations sur les types de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ Pour plus d’informations sur les types de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 ####  <a name="AttrOfColumnElement"></a> Attributs de l’élément \<COLUMN>  
  Cette section décrit les attributs de l’élément \<COLUMN>, qui sont récapitulés dans la syntaxe de schéma suivante :  
@@ -252,11 +252,11 @@ ms.locfileid: "68091432"
   
  Un champ est mappé à une colonne dans la table cible à l'aide des attributs suivants :  
   
-|Attribut COLUMN|Description|Facultatif /<br /><br /> Requis|  
+|Attribut COLUMN|Description|Facultatif /<br /><br /> Obligatoire|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="** _fieldID_ **"**|Spécifie l'ID du champ mappé à la colonne.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> est mappé à \<FIELD ID **="** _fieldID_ **"** />|Requis|  
-|NAME = "*columnName*"|Spécifie le nom de la colonne dans l'ensemble de lignes représenté par le fichier de format. Ce nom de colonne est utilisé pour identifier la colonne dans le jeu de résultats, et il ne doit pas nécessairement correspondre au nom de colonne utilisé dans la table cible.|Requis|  
-|xsi **:** type **="** _ColumnType_ **"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de données de l'instance de l'élément. La valeur de *ColumnType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.<br /><br /> Remarque : Les valeurs possibles de *ColumnType* et leurs attributs associés sont répertoriés dans le tableau relatif à l’élément \<COLUMN> dans la section [Valeurs Xsi:type de l’élément &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Ce paramètre est facultatif|  
+|SOURCE **="** _fieldID_ **"**|Spécifie l'ID du champ mappé à la colonne.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> est mappé à \<FIELD ID **="** _fieldID_ **"** />|Obligatoire|  
+|NAME = "*columnName*"|Spécifie le nom de la colonne dans l'ensemble de lignes représenté par le fichier de format. Ce nom de colonne est utilisé pour identifier la colonne dans le jeu de résultats, et il ne doit pas nécessairement correspondre au nom de colonne utilisé dans la table cible.|Obligatoire|  
+|xsi **:** type **="** _ColumnType_ **"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de données de l'instance de l'élément. La valeur de *ColumnType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.<br /><br /> Remarque : Les valeurs possibles de *ColumnType* et leurs attributs associés sont répertoriés dans le tableau relatif à l’élément \<COLUMN> dans la section [Valeurs Xsi:type de l’élément &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Facultatif|  
 |LENGTH **="** _n_ **"**|Définit la longueur d'une instance d'un type de données à longueur fixe. LENGTH est utilisé uniquement lorsque xsi:type est un type de données string.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données string)|  
 |PRECISION **="** _n_ **"**|Nombre de chiffres qui composent un nombre. Par exemple, le nombre 123,45 a une précision de 5.<br /><br /> Cette valeur doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données variable-number)|  
 |SCALE **="** _int_ **"**|Indique le nombre de chiffres à droite du point décimal (notre virgule) dans un nombre. Par exemple, le nombre 123,45 a une précision de 2.<br /><br /> La valeur doit être un entier.|Facultatif (disponible uniquement si xsi:type est un type de données variable-number)|  
@@ -269,7 +269,7 @@ ms.locfileid: "68091432"
   
 |Catégorie de type|Types de données \<COLUMN>|Attribut(s) XML requis<br /><br /> pour le type de données|Attribut(s) XML facultatif(s)<br /><br /> pour le type de données|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Fixe|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**et **SQLUNIQUEID**|Aucun.|NULLABLE|  
+|Résolution|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**et **SQLUNIQUEID**|Aucun.|NULLABLE|  
 |Nombre variable|**SQLDECIMAL** et **SQLNUMERIC**|Aucun.|NULLABLE, PRECISION, SCALE|  
 |LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**et **SQLUDT**|Aucun.|NULLABLE|  
 |LOB caractère|**SQLNTEXT**|Aucun.|NULLABLE|  

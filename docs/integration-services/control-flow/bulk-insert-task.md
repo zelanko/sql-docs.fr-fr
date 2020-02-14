@@ -19,10 +19,10 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294330"
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
@@ -102,8 +102,8 @@ ms.locfileid: "71294330"
   
 -   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Configuration par programme de la tâche d'insertion en bloc  
- Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
+### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Configuration programmatique de la tâche d'insertion en bloc  
+ Pour plus d'informations sur la définition programmatique de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71294330"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(Vous pouvez obtenir l’erreur « Impossible de préparer l’insertion en bloc SSIS pour l’insertion de données »sur les systèmes UAC), sur support.microsoft.com.  
+-   Article technique, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693), sur support.microsoft.com.  
   
 -   Article technique, [Guide des performances de chargement des données](https://go.microsoft.com/fwlink/?LinkId=233700), sur le site msdn.microsoft.com.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71294330"
  Pour en savoir plus sur l’utilisation des insertions en bloc, consultez [Tâche d’insertion en bloc](../../integration-services/control-flow/bulk-insert-task.md) et [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ### <a name="options"></a>Options  
- **Connexion**  
+ **Connection**  
  Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour créer une connexion.  
   
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "71294330"
 |**Utiliser un fichier**|Sélectionnez un fichier contenant la spécification de format. Cette option affiche l'option dynamique **FormatFile**.|  
 |**Spécifier**|Spécifiez le format. Cette option affiche les options dynamiques **RowDelimiter** et **ColumnDelimiter**.|  
   
- **Fichier**  
+ **File**  
  Sélectionnez un gestionnaire de connexions de fichiers ou de fichiers plats dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour créer une connexion.  
   
  L'emplacement du fichier dépend du moteur de base de données SQL Server spécifié dans le gestionnaire de connexions pour cette tâche. Le fichier texte doit être accessible au moteur de base de données SQL Server situé sur un disque dur local du serveur ou via un partage ou un lecteur mappé à SQL Server. Le fichier n'est pas accessible au runtime SSIS.  
@@ -169,7 +169,7 @@ ms.locfileid: "71294330"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin d'attribuer un nom et décrire la tâche d'insertion en bloc.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Permet d'attribuer un nom unique à la tâche d'insertion en bloc. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -179,7 +179,7 @@ ms.locfileid: "71294330"
  Permet de fournir une description à la tâche d'insertion en bloc.  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>Éditeur de tâche d'insertion en bloc (page Options)
-  Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d'insertion en bloc copie des volumes importants de données dans une table ou une vue [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d’insertion en bloc copie des volumes importants de données dans une table ou une vue [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Pour en savoir plus sur l’utilisation des insertions en bloc, consultez [Tâche d’insertion en bloc](../../integration-services/control-flow/bulk-insert-task.md) et [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -204,7 +204,7 @@ ms.locfileid: "71294330"
 |----------|----------------|  
 |**Contraintes de validation**|Permet de vérifier les contraintes s'appliquant à la table et aux colonnes.|  
 |**Conserver les valeurs NULL**|Permet de conserver les valeurs Null pendant l'opération d'insertion en bloc au lieu d'insérer des valeurs par défaut dans les colonnes vides.|  
-|**Activer l'insertion d'identité**|Permet d'insérer des valeurs existantes dans une colonne d'identité.|  
+|**Activer l’insertion d’identité**|Permet d'insérer des valeurs existantes dans une colonne d'identité.|  
 |**Verrou de table**|Permet de verrouiller la table lors de l'opération d'insertion en bloc.|  
 |**Exécuter les déclencheurs**|Lance tout déclencheur d'insertion, de mise à jour ou de suppression sur la table.|  
   

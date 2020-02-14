@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706232"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941113"
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Pour que le réplica principal d’AG 2 accepte les insertions, les mises à jou
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Exigences des version et éditions de SQL Server pour les groupes de disponibilité distribués
 
-Les groupes de disponibilité distribués dans SQL Server 2017 ou version ultérieure peuvent combiner des versions principales de SQL Server dans le même groupe de disponibilité distribué. Le groupe de disponibilité contenant le réplica principal en lecture/écriture peut être d’une version identique ou antérieure aux autres groupes de disponibilité membres du groupe de disponibilité distribué. Les autres groupes de disponibilité peuvent être de la même version ou d’une version ultérieure. Ce scénario s’applique aux opérations de mise à niveau et de migration. Par exemple, si le groupe de disponibilité qui contient le réplica principal en lecture/écriture est SQL Server 2016, mais que vous souhaitez effectuer une mise à niveau ou une migration vers SQL Server 2017 ou une version ultérieure, l’autre groupe de disponibilité membre du groupe de disponibilité distribué peut être configuré avec SQL Server 2017.
+Les groupes de disponibilité distribués dans SQL Server 2017 ou ultérieur peuvent combiner des versions principales de SQL Server dans le même groupe de disponibilité distribué. Le groupe de disponibilité contenant le réplica principal en lecture/écriture peut être d’une version identique ou antérieure aux autres groupes de disponibilité membres du groupe de disponibilité distribué. Les autres groupes de disponibilité peuvent être de la même version ou d’une version ultérieure. Ce scénario s’applique aux opérations de mise à niveau et de migration. Par exemple, si le groupe de disponibilité qui contient le réplica principal en lecture/écriture est SQL Server 2016, mais que vous souhaitez effectuer une mise à niveau ou une migration vers SQL Server 2017 ou une version ultérieure, l’autre groupe de disponibilité membre du groupe de disponibilité distribué peut être configuré avec SQL Server 2017.
 
 Étant donné que la fonctionnalité de groupes de disponibilité distribués n’existe pas dans SQL Server 2012 ou 2014, les groupes de disponibilité qui ont été créés dans ces versions ne peuvent pas participer à des groupes de disponibilité distribués. 
 
@@ -148,7 +148,7 @@ Dans la figure suivante, le groupe de disponibilité AG 1 est le réplica princ
 
 Dans les deux exemples précédents, les trois groupes de disponibilité peuvent comprendre jusqu’à 27 réplicas en tout, qui peuvent tous être utilisés pour des requêtes en lecture seule. 
 
-Le [routage en lecture seule]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) ne fonctionne pas complètement avec les groupes de disponibilité distribués. Plus spécifiquement :
+Le [routage en lecture seule]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) ne fonctionne pas complètement avec les groupes de disponibilité distribués. Plus précisément :
 
 1. Le routage en lecture seule peut être configuré et fonctionne pour le groupe de disponibilité principal du groupe de disponibilité distribué. 
 2. Le routage en lecture seule peut être configuré, mais ne fonctionne pas pour le groupe de disponibilité secondaire du groupe de disponibilité distribué. Toutes les requêtes, si elles utilisent l’écouteur pour se connecter au groupe de disponibilité secondaire, accèdent au réplica principal du groupe de disponibilité secondaire. Sinon, vous devez configurer chaque réplica pour autoriser toutes les connexions en tant que réplica secondaire et y accéder directement. Toutefois, le routage en lecture seule fonctionne si le groupe de disponibilité secondaire devient principal après un basculement. Ce comportement pourrait être modifié dans une mise à jour vers SQL Server 2016 ou dans une future version de SQL Server.

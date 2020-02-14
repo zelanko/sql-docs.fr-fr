@@ -1,39 +1,47 @@
 ---
-title: Base de données en mémoire | Microsoft Docs
-ms.date: 05/22/2019
+title: Fonctionnalités et technologies des systèmes de base de données en mémoire
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
-- in-memory database
-- feature, in-memory database
+- in-memory systems
+- in-memory technologies
+- in-memory features
+- database, in-memory database
+- system, in-memory system
+- features, in-memory features
 - in-memory
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: d61ea85f5c1d7784faaf1d094e2fa858bffcd8c2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255413"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831594"
 ---
-# <a name="in-memory-database"></a>Base de données en mémoire
+# <a name="in-memory-database-systems-and-technologies"></a>Technologies des systèmes de base de données en mémoire
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-« Base de données en mémoire » est un terme général désignant les fonctionnalités dans SQL Server qui tirent parti des technologies en mémoire. Cette page sera mise à jour au fil du développement de nouvelles fonctionnalités en mémoire.
+Cette page constitue une référence pour les fonctionnalités et les technologies en mémoire disponibles dans SQL Server. Le concept de système de base de données en mémoire fait référence à un système qui a été conçu pour tirer parti des capacités de mémoire plus importantes qu’offrent les systèmes de base de données modernes. Une base de données en mémoire peut être de nature relationnelle ou non relationnelle.
 
-## <a name="hybrid-buffer-pool"></a>Pool de mémoires tampons hybride
+Il est souvent supposé que les performances d’un système de base de données en mémoire sont principalement dues au fait qu’il est plus rapide d’accéder aux données résidant en mémoire qu’aux données qui se trouvent sur des sous-systèmes de disque, même les plus rapides (selon plusieurs ordres de grandeur). Toutefois, de nombreuses charges de travail SQL Server peuvent faire rentrer l’intégralité de leur ensemble de travail dans la mémoire disponible. De nombreux systèmes de base de données en mémoire peuvent conserver les données sur le disque et ne pas toujours être en mesure de faire rentrer l’ensemble des données dans la mémoire disponible.
+
+Pour les charges de travail de bases de données relationnelles, c’est un cache volatile rapide qui est principalement utilisé sur les appareils beaucoup plus lents mais durables. Cela nécessite des approches particulières quant à la gestion des charges de travail. Des taux de transfert de mémoire plus rapides, une plus grande capacité ou même une mémoire persistante peuvent faciliter le développement de nouvelles fonctionnalités et technologies et favoriser l’apparition de nouvelles approches concernant la gestion des charges de travail de base de données relationnelle.
+
+## <a name="hybrid-buffer-pool"></a>Pool de tampons hybride
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Le [pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md) permet au moteur de base de données d’accéder directement aux pages de données dans les fichiers de base de données stockés sur des appareils à mémoire persistante (PMEM).
+Le [pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md) étend le pool de mémoires tampons des fichiers de base de données résidant sur des supports de stockage à mémoire persistante adressables par octets, aussi bien pour les plateformes Windows que pour les plateformes Linux avec [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-## <a name="memory-optimized-tempdb-metadata"></a>Métadonnées tempdb à mémoire optimisée
+## <a name="memory-optimized-tempdb-metadata"></a>Métadonnée `tempdb` à mémoire optimisée
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -43,14 +51,16 @@ Le [pool de mémoires tampons hybride](../database-engine/configure-windows/hybr
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[OLTP en mémoire](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) est la technologie de premier plan disponible dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../includes/sssds-md.md)] pour optimiser les performances du traitement transactionnel, de l’ingestion et du chargement des données, et des scénarios de données temporaires.
+L’[OLTP en mémoire](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) est une technologie de base de données disponible dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../includes/sssds-md.md)] qui permet d’optimiser les performances du traitement transactionnel, de l’ingestion et du chargement des données, et des scénarios de données temporaires.
 
-**S’applique à  :** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-## <a name="persistent-memory-support-for-linux"></a>Prise en charge de la mémoire persistante pour Linux
+## <a name="configuring-persistent-memory-support-for-linux"></a>Configuration de la prise en charge de la mémoire persistante pour Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] ajoute la prise en charge des appareils à mémoire persistante (PMEM) pour Linux, fournissant une mise en compatibilité complète des fichiers de données et de journaux de transactions placés dans la [mémoire persistante](../linux/sql-server-linux-configure-pmem.md).
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] explique comment configurer la mémoire persistante (PMEM) à l’aide de la [mémoire persistante](../linux/sql-server-linux-configure-pmem.md) de l’utilitaire `ndctl`.
 
-**S’applique à  :** [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+## <a name="persisted-log-buffer"></a>Mémoire tampon du journal persistant
+
+Le Service Pack 1 de [!INCLUDE[ssSQL16](../includes/sssql16-md.md)] apporte une optimisation des performances pour les charges de travail gourmandes en écriture qui étaient liées par les attentes WRITELOG. La mémoire persistante est utilisée pour stocker la mémoire tampon du journal. Cette mémoire tampon, qui est de petite taille (20 Mo par base de données utilisateur), doit être vidée sur le disque afin que les transactions écrites dans le journal des transactions soient renforcées. Pour les charges de travail OLTP gourmandes en écriture, ce mécanisme de vidage peut devenir un goulot d’étranglement. Lorsque la mémoire tampon du journal se trouve dans la mémoire persistante, le nombre d’opérations nécessaires pour renforcer le journal est réduit, ce qui améliore les temps de transaction globaux et augmente les performances des charges de travail. Ce processus s’est d’abord appelé [mise en cache de la fin du journal]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Toutefois, une contradiction était perçue entre les [sauvegardes de fin de journal](./backup-restore/tail-log-backups-sql-server.md) et la compréhension traditionnelle selon laquelle la fin du journal correspond à la partie du journal des transactions qui est renforcée, mais pas encore sauvegardée. Étant donné que le nom officiel de cette fonctionnalité est Mémoire tampon du journal persistant, c’est lui que nous avons utilisé dans cet article.
+
+Consultez [Ajouter une mémoire tampon de journal persistant à une base de données](./databases/add-persisted-log-buffer.md).

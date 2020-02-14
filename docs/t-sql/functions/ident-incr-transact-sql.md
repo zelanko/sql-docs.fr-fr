@@ -20,10 +20,10 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843682"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73843682"
 
 Retourne la valeur d’incrément spécifiée lors de la création d’une colonne d’identité d’une table ou d’une vue.  
   
-![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur p
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. Renvoi de la valeur incrémentielle d'une table spécifiée  
+### <a name="a-returning-the-increment-value-for-a-specified-table"></a>R. Renvoi de la valeur incrémentielle d'une table spécifiée  
  L'exemple suivant renvoie la valeur incrémentielle pour la table `Person.Address` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  

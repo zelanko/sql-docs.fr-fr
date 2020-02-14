@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296245"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Spécifier la copie ou l'interrogation de table (Assistant Importation et Exportation SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "71296245"
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Capture d’écran de la page Spécifier la copie ou l’interrogation de table    
  La capture d’écran suivante montre la page **Spécifier la copie ou l’interrogation de table** de l’Assistant.    
     
- ![Page Spécifier la copie ou l’interrogation de table de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/table-copy-or-query.png "Page Spécifier la copie ou l’interrogation de table de l’Assistant Importation et Exportation")    
+ ![Page Copie ou interrogation de table de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/table-copy-or-query.png "Page Copie ou interrogation de table de l’Assistant Importation et Exportation")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Indiquez s’il faut copier une table entière ou écrire une requête 
  **Copier les données à partir d’une ou plusieurs tables ou vues**    

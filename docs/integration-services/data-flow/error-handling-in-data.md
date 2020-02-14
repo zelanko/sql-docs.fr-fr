@@ -23,10 +23,10 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292762"
 ---
 # <a name="error-handling-in-data"></a>Gestion des erreurs dans les données
@@ -69,7 +69,7 @@ Utilisez la boîte de dialogue **Configurer l'affichage des erreurs** pour défi
  **Colonne**  
  Affiche les colonnes de sortie que vous avez sélectionnées dans la boîte de dialogue Éditeur de transformation.  
   
- **Erreur**  
+ **Error**  
  Le cas échéant, indiquez ce qui doit se passer en cas d'erreur : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
  **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
@@ -113,7 +113,7 @@ Utilisez la boîte de dialogue **Configurer l'affichage des erreurs** pour défi
   
 -   Vous pouvez visualiser à la fois les descriptions d’erreur et les noms de colonne en attachant une Visionneuse de données à la sortie d’erreur. Dans le concepteur SSIS, cliquez avec le bouton droit sur la flèche rouge conduisant à une sortie d’erreur et sélectionnez **Activer la visionneuse de données**.  
   
--   Vous pouvez rechercher des noms de colonne en activant la journalisation et en sélectionnant l’événement **DiagnosticEx** . Cet événement consigne un mappage de colonnes de flux de données dans le journal. Vous pouvez ensuite rechercher le nom de colonne à partir de son identificateur dans ce mappage de colonnes. Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe. Pour plus d’informations sur la journalisation, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+-   Vous pouvez rechercher des noms de colonne en activant la journalisation et en sélectionnant l’événement **DiagnosticEx** . Cet événement consigne un mappage de colonnes de flux de données dans le journal. Vous pouvez ensuite rechercher le nom de colonne à partir de son identificateur dans ce mappage de colonnes. Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe. Pour plus d’informations sur la journalisation, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
      Voici un exemple de mappage de colonnes de flux de données.  
   
@@ -152,7 +152,7 @@ Utilisez la boîte de dialogue **Configurer l'affichage des erreurs** pour défi
  [Flux de données](../../integration-services/data-flow/data-flow.md)   
  [Transformer des données avec des transformations](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Connecter des composants avec des chemins](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
- [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)   
+ [Tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
   
   

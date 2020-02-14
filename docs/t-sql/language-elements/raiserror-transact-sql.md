@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252040"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72252040"
 
   Génère un message d'erreur et lance le traitement d'erreur pour la session. RAISERROR peut soit faire référence à un message défini par l’utilisateur et stocké dans la vue de catalogue sys.messages, soit générer un message de manière dynamique. Le message est retourné en tant que message d’erreur du serveur à l’application appelante ou à un bloc CATCH associé d’une structure TRY...CATCH. Les nouvelles applications doivent utiliser [THROW](../../t-sql/language-elements/throw-transact-sql.md) à la place.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -213,7 +213,7 @@ GO
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-error-information-from-a-catch-block"></a>A. Renvoi d'informations d'erreur depuis un bloc CATCH  
+### <a name="a-returning-error-information-from-a-catch-block"></a>R. Renvoi d'informations d'erreur depuis un bloc CATCH  
  L'exemple de code ci-dessous indique comment utiliser `RAISERROR` à l'intérieur d'un bloc `TRY` pour que l'exécution passe au bloc `CATCH` associé. Il explique également comment utiliser `RAISERROR` pour retourner des informations sur l'erreur qui a appelé le bloc `CATCH`.  
   
 > [!NOTE]  

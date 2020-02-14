@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298016"
 ---
 # <a name="audit-transformation"></a>transformation d'audit
@@ -77,8 +77,8 @@ ms.locfileid: "71298016"
 |**Nom du package**|Insérez le nom du package.|  
 |**ID de version**|Insérez le GUID qui identifie de manière unique la version du package.|  
 |**Heure de début de l'exécution**|Insérez l'heure à laquelle l'exécution du package a commencé.|  
-|**Nom de l'ordinateur**|Insérez le nom de l'ordinateur sur lequel le package a été lancé.|  
-|**User name**|Insérez le nom de connexion de l'utilisateur qui a lancé le package.|  
+|**Nom de la machine**|Insérez le nom de l'ordinateur sur lequel le package a été lancé.|  
+|**Nom d'utilisateur**|Insérez le nom de connexion de l'utilisateur qui a lancé le package.|  
 |**Nom de la tâche**|Insérez le nom de la tâche de flux de données à laquelle la transformation d'audit est associée.|  
 |**ID de la tâche**|Insérez le GUID qui identifie de manière unique le flux de données à laquelle la transformation d'audit est associée.|  
   

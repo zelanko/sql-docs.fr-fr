@@ -13,10 +13,10 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68110947"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Autres abonnés non SQL Server
@@ -60,7 +60,7 @@ ms.locfileid: "68110947"
   
 -   **IDBProperties**  
   
- Si le fournisseur prend en charge l'interface **IDBInfo** , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise cette interface pour extraire des informations, telles que le caractère identificateur entre guillemets, la longueur maximale des instructions SQL et le nombre maximal de caractères que peuvent compter les noms de tables et de colonnes.  
+ Si le fournisseur prend en charge l’interface **IDBInfo**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise cette interface pour extraire des informations, telles que le caractère identificateur entre guillemets, la longueur maximale des instructions SQL et le nombre maximal de caractères que peuvent compter les noms de tables et de colonnes.  
   
 ### <a name="session-object-interfaces"></a>Interfaces de l'objet Session  
  Les interfaces suivantes sont nécessaires :  
@@ -115,6 +115,6 @@ ms.locfileid: "68110947"
  Pour plus d'informations, reportez-vous à la documentation qui accompagne votre fournisseur OLE DB.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+ [Abonnés non SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

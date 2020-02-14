@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056411"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Préparer des données à une exportation ou une importation en bloc
@@ -58,7 +58,7 @@ ms.locfileid: "74056411"
 -   Chaque champ du fichier de données doit être compatible avec la colonne correspondante de la table cible. Par exemple, un champ **int** ne peut pas être chargé dans une colonne **datetime** . Pour plus d’informations, consultez [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md) et [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
-    >  Pour spécifier un sous-ensemble de lignes à importer depuis un fichier de données au lieu de procéder avec le fichier entier, vous pouvez utiliser une commande **bcp** avec le commutateur **-F** *first_row* et/ou le commutateur **-L** *last_row*. Pour plus d’informations, consultez [bcp Utility](../../tools/bcp-utility.md).  
+    >  Pour spécifier un sous-ensemble de lignes d’un fichier de données à importer au lieu du fichier tout entier, vous pouvez utiliser une commande **bcp** avec le commutateur **-F** *first_row* et/ou le commutateur **-L** *last_row*. Pour plus d’informations, consultez [bcp Utility](../../tools/bcp-utility.md).  
   
 -   Pour importer des données à partir de fichiers de données contenant des champs de longueur fixe ou de largeur fixe, utilisez un fichier de format. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74056411"
 |Ajout d'informations sur l'utilisation du fournisseur OLE DB pour Jet afin d'importer des données CSV.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   

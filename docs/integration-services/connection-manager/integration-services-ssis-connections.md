@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ed4c8c8feacdd41d2e806a4d2d663f639633e07
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294431"
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
@@ -35,7 +35,7 @@ ms.locfileid: "71294431"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des connexions pour effectuer différentes tâches et pour implémenter des fonctionnalités [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des connexions pour effectuer différentes tâches et pour implémenter des fonctionnalités [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
 -   Connexion à des banques de données sources et de destination telles que du texte, des données XML, des classeurs Excel et des bases de données relationnelles pour extraire et charger des données.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71294431"
   
  Un package peut utiliser plusieurs instances d'un type de gestionnaire de connexions et vous pouvez définir les propriétés sur chaque instance. Au moment de l'exécution, chaque instance d'un type de gestionnaire de connexions crée une connexion qui possède des attributs différents.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit différents types de gestionnaires de connexions qui permettent aux packages d'établir une connexion à divers serveurs et à diverses sources de données :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit différents types de gestionnaires de connexions qui permettent aux packages d’établir une connexion à divers serveurs et à diverses sources de données :  
   
 -   Il y a des gestionnaires de connexions intégrés que le programme d'installation installe lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -81,7 +81,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
 >  Pour plus d’informations sur les deux modèles et sur la conversion d’un projet en modèle de déploiement de projet, consultez [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
 
 ### <a name="built-in-connection-managers"></a>Gestionnaires de connexions intégrés  
- Le tableau suivant répertorie les types de gestionnaires de connexions fournis par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Le tableau suivant liste les types de gestionnaires de connexions fournis par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 |Type|Description|Rubrique|  
 |----------|-----------------|-----------|  
@@ -95,7 +95,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
 |FTP|Établit une connexion à un serveur FTP.|[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|  
 |HTTP|Établit une connexion à un serveur Web.|[Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md)|  
 |MSMQ|Établit une connexion à une file d'attente de messages.|[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|  
-|MSOLAP100|Établit une connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
+|MSOLAP100|Établit une connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
 |MULTIFILE|Établit une connexion à plusieurs fichiers et dossiers.|[Gestionnaire de connexions de fichiers multiples](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Établit une connexion à plusieurs fichiers et dossiers de données.|[Gestionnaire de connexions de fichiers plats multiples](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
 |OLEDB|Établit une connexion à une source de données au moyen d'un fournisseur OLE DB.|[Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
@@ -123,7 +123,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
 ## <a name="create-connection-managers"></a>Créer des gestionnaires de connexions
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose différents gestionnaires de connexions pour répondre aux besoins de tâches qui se connectent à différents types de serveurs et de sources de données. Les gestionnaires de connexions sont utilisés par les composants de flux de données qui extraient et chargent des données dans différents types de banques de données et par les modules fournisseurs d'informations qui enregistrent des journaux sur un serveur, dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans un fichier. Par exemple, un package contenant une tâche Envoyer un message utilise un gestionnaire de connexions SMTP pour se connecter à un serveur SMTP (Simple Mail Transfer Protocol). Un package contenant une tâche d'exécution SQL peut utiliser un gestionnaire de connexions OLE DB pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
- Pour créer et configurer automatiquement des gestionnaires de connexions quand vous créez un package, vous pouvez utiliser l’Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cet Assistant vous aide aussi à créer et configurer les sources et destinations qui utilisent les gestionnaires de connexions. Pour plus d’informations, consultez [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
+ Pour créer et configurer automatiquement des gestionnaires de connexions quand vous créez un package, vous pouvez utiliser l’Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cet Assistant vous aide aussi à créer et configurer les sources et destinations qui utilisent les gestionnaires de connexions. Pour plus d'informations, consultez [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
  Pour créer manuellement un nouveau gestionnaire de connexions et l'ajouter à un package existant, utilisez la zone **Gestionnaires de connexions** sous les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Dans la zone **Gestionnaire de connexions** , vous devez choisir le type de gestionnaire de connexions à créer, puis définir ses propriétés dans la boîte de dialogue fournie à cet effet dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Pour plus d'informations, consultez la section « Utilisation de la zone Gestionnaire de connexions », plus loin dans cette rubrique.  
   
@@ -345,6 +345,6 @@ Tous les gestionnaires de connexions peuvent être configurés à l'aide de la f
   
 -   Article technique [Extraction et chargement des données SharePoint dans SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826), sur msdn.microsoft.com.  
   
--   Article technique, [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696) (Le message d’erreur « DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER’» s’affiche lors de l’utilisation du gestionnaire de connexions Oracle dans SSIS), sur le site support.microsoft.com.  
+-   Article technique, [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696)(Le message d’erreur « DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER’» s’affiche lors de l’utilisation du gestionnaire de connexions Oracle dans SSIS), sur le site support.microsoft.com.  
   
   

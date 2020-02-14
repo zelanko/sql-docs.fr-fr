@@ -21,10 +21,10 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef381f9ff470422ed85b81832b1078d6c8767dcf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292884"
 ---
 # <a name="dimension-processing-destination"></a>Destination de traitement de dimension
@@ -32,9 +32,9 @@ ms.locfileid: "71292884"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  La destination de traitement de dimension charge et traite une dimension [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour plus d’informations sur les dimensions, consultez [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
+  La destination de traitement de dimension charge et traite une dimension [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les dimensions, consultez [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
   
- La destination de traitement de dimension regroupe les fonctionnalités suivantes :  
+ La destination de traitement de dimension regroupe les fonctionnalités suivantes :  
   
 -   options permettant de choisir entre un traitement incrémentiel, un traitement complet ou un traitement de mise à jour ;  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71292884"
   
  Cette destination comporte une entrée. Elle ne prend pas en charge de sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l’une des rubriques suivantes :  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71292884"
 |-----------|-----------------|  
 |**Ajouter (incrémentiel)**|Permet d'effectuer un traitement incrémentiel de la dimension.|  
 |**Complète**|Permet d'effectuer un traitement complet de la dimension.|  
-|**Update**|Permet d'effectuer un traitement de mise à jour de la dimension.|  
+|**Mettre à jour**|Permet d'effectuer un traitement de mise à jour de la dimension.|  
   
 ## <a name="dimension-processing-destination-editor-mappings-page"></a>Éditeur de destination de traitement de dimension (page Mappages)
   Utilisez la page **Mappages** de la boîte de dialogue **Éditeur de destination de traitement de dimension** pour mapper des colonnes d'entrée à des colonnes de dimension.  

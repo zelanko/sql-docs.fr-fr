@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001789"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utiliser le mode EXPLICIT avec FOR XML
@@ -82,7 +82,7 @@ ms.locfileid: "68001789"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   La dernière ligne identifie la valeur 2 comme numéro **Tag** et la valeur 1 comme numéro de balise **Parent**. Par conséquent, un autre élément enfant <`Order`> est ajouté à l'élément parent <`Customer`>.  
+    -   La dernière ligne identifie la valeur 2 comme numéro **Tag** et la valeur 1 comme numéro de balise **Parent** . Par conséquent, un autre élément enfant <`Order`> est ajouté à l'élément parent <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -94,7 +94,7 @@ ms.locfileid: "68001789"
         </Customer>  
         ```  
   
- En résumé, les valeurs des colonnes de métadonnées **Tag** et **Parent**, les informations fournies dans les noms de colonnes et le classement correct des lignes génèrent le document XML souhaité lorsque vous utilisez le mode EXPLICIT.  
+ En résumé, les valeurs des colonnes de métadonnées **Tag** et **Parent** , les informations fournies dans les noms de colonnes et le classement correct des lignes génèrent le document XML souhaité lorsque vous utilisez le mode EXPLICIT.  
   
 ### <a name="universal-table-row-ordering"></a>Classement des lignes de la table universelle  
  Lors de la construction du document XML, les lignes de la table universelle sont traitées dans l'ordre. Par conséquent, pour extraire les instances enfants adéquates associées à leur parent, vous devez trier les lignes de l'ensemble de lignes de manière à ce que chaque nœud parent soit immédiatement suivi de ses enfants.  

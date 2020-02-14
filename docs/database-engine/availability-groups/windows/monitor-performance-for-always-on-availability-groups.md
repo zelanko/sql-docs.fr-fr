@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014682"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Superviser les performances des groupes de disponibilité Always On
@@ -24,14 +24,14 @@ ms.locfileid: "68014682"
 ##  <a name="data-synchronization-process"></a>Processus de synchronisation des données  
  Pour estimer le temps nécessaire à la synchronisation complète et identifier le goulot d’étranglement, vous devez comprendre le processus de synchronisation. Un goulot d’étranglement des performances peut se trouver n’importe où dans le processus, et sa localisation peut vous aider à explorer plus en détail les problèmes sous-jacents. La figure et le tableau suivants illustrent le processus de synchronisation de données :  
   
- ![Synchronisation des données de groupe de disponibilité](media/always-onag-datasynchronization.gif "Synchronisation des données de groupe de disponibilité")  
+ ![Synchronisation des données du groupe de disponibilité](media/always-onag-datasynchronization.gif "Synchronisation des données du groupe de disponibilité")  
   
 |||||  
 |-|-|-|-|  
-|**Sequence**|**Description de l’étape**|**Commentaires**|**Métriques utiles**|  
+|**Séquence**|**Description de l’étape**|**Commentaires**|**Métriques utiles**|  
 |1|Génération du journal|Les données de journal sont vidées sur le disque. Ce journal doit être répliqué sur les réplicas secondaires. Les enregistrements de journal entrent dans la file d’attente d’envoi.|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capture|Les journaux de chaque base de données sont capturés et envoyés à la file d’attente du partenaire correspondant (un par paire base de données-réplica). Ce processus de capture s’exécute en continu tant que le réplica de disponibilité est connecté et que le déplacement des données n’est pas suspendu pour une raison quelconque. La paire base de données-réplica indique Synchronisation ou Synchronisé. Si le processus de capture ne peut pas analyser et empiler les messages suffisamment vite, la file d’attente d’envoi du journal augmente.|[Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), qui est une agrégation de la somme de tous les messages de base de données en file d’attente pour ce réplica de disponibilité.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (Ko) et [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (Ko/s) sur le réplica principal.|  
-|3|Send|Les messages dans la file d’attente de chaque base de données-réplica sont dépilés et envoyés sur le réseau au réplica secondaire respectif.|[SQL Server : réplica de disponibilité > octets envoyés au transport/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
+|3|Envoyer|Les messages dans la file d’attente de chaque base de données-réplica sont dépilés et envoyés sur le réseau au réplica secondaire respectif.|[SQL Server : réplica de disponibilité > octets envoyés au transport/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Réception et mise en cache|Chaque réplica secondaire reçoit et met en cache le message.|Compteur de performances [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Renforcer|Le journal est vidé sur le réplica secondaire pour renforcement. Après le vidage du journal, un accusé de réception est renvoyé au réplica principal.<br /><br /> Une fois le journal renforcé, la perte de données est évitée.|Compteur de performances [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Type d’attente [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Rétablir|Les pages vidées sont restaurées par progression sur le réplica secondaire. Les pages sont conservées dans la file d’attente de restauration par progression jusqu’au démarrage de la restauration par progression.|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (Ko) et [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Type d’attente [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
@@ -43,8 +43,8 @@ ms.locfileid: "68014682"
   
 |||||  
 |-|-|-|-|  
-|**Level**|**Nombre de portes**|**Nombre de messages**|**Métriques utiles**|  
-|Transport|1 par réplica de disponibilité|8192|Événement étendu **database_transport_flow_control_action**|  
+|**Niveau**|**Nombre de portes**|**Nombre de messages**|**Métriques utiles**|  
+|Transport|1 par réplica de disponibilité|8 192|Événement étendu **database_transport_flow_control_action**|  
 |Base de données|1 par base de données de disponibilité|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Événement étendu **hadron_database_flow_control_action**|  
   
  Une fois le seuil de messages atteint sur l’une des portes, les messages de journal ne sont plus envoyés à un réplica spécifique ou pour une base de données spécifique. Les messages peuvent être envoyés après l’obtention des accusés de réception pour les messages envoyés afin de faire passer le nombre de messages envoyés sous le seuil.  
@@ -56,7 +56,7 @@ ms.locfileid: "68014682"
 ##  <a name="estimating-failover-time-rto"></a>Estimation du temps de basculement (RTO)  
  Le RTO dans votre SLA dépend du temps de basculement de votre implémentation Always On à un moment donné. Il peut être calculé à l’aide de la formule suivante :  
   
- ![Calcul du RTO de groupes de disponibilité](media/always-on-rto.gif "Calcul du RTO de groupes de disponibilité")  
+ ![Calcul de l’objectif de temps de récupération (RTO) des groupes de disponibilité](media/always-on-rto.gif "Calcul de l’objectif de temps de récupération (RTO) des groupes de disponibilité")  
   
 > [!IMPORTANT]  
 >  Si un groupe de disponibilité contient plusieurs bases de données de disponibilité, celle avec la valeur Tfailover la plus élevée devient la valeur de limitation pour la conformité au RTO.  
@@ -65,7 +65,7 @@ ms.locfileid: "68014682"
   
  Pour que le réplica secondaire soit prêt pour le basculement, il suffit que la restauration par progression rattrape son retard et arrive à la fin du journal. Le temps de restauration par progression, Tredo, est calculé à l’aide de la formule suivante :  
   
- ![Calcul du temps de restauration par progression de groupes de disponibilité](media/always-on-redo.gif "Calcul du temps de restauration par progression de groupes de disponibilité")  
+ ![Calcul de l’objectif de temps de restauration des groupes de disponibilité](media/always-on-redo.gif "Calcul de l’objectif de temps de restauration des groupes de disponibilité")  
   
  où *redo_queue* est la valeur dans [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) et *redo_rate* la valeur dans [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68014682"
 ## <a name="estimating-potential-data-loss-rpo"></a>Estimation du risque de perte de données (RPO)  
  Le RPO dans votre SLA dépend du risque de perte de données de votre implémentation Always On à un moment donné. Ce risque de perte de données peut être calculé à l’aide de la formule suivante :  
   
- ![Calcul du RPO de groupes de disponibilité](media/always-on-rpo.gif "Calcul du RPO de groupes de disponibilité")  
+ ![Calcul de l’objectif de point de récupération (RPO) des groupes de disponibilité](media/always-on-rpo.gif "Calcul de l’objectif de point de récupération (RPO) des groupes de disponibilité")  
   
  où *log_send_queue* est la valeur de [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) et *log generation rate* la valeur de [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md).  
   
@@ -441,14 +441,14 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
   
 |Scénario|Description|  
 |--------------|-----------------|  
-|[Dépanner : Dépassement de RTO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rto.md)|Après un basculement automatique ou un basculement manuel planifié sans perte de données, le temps de basculement dépasse votre RTO. Vous pouvez aussi constater que votre estimation du temps de basculement d’un réplica secondaire avec validation synchrone (par exemple, un partenaire de basculement automatique) dépasse votre RTO.|  
-|[Dépanner : Dépassement de RPO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rpo.md)|À l’issue d’un basculement manuel forcé, la perte de données est supérieure à votre RPO. Vous pouvez aussi constater que votre calcul de la perte de données potentielle d’un réplica secondaire avec validation asynchrone dépasse votre RPO.|  
-|[Dépanner : Les changements sur le réplica principal ne sont pas répercutés sur le réplica secondaire](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L’application cliente mène à bien une mise à jour sur le réplica principal, mais l’exécution d’une requête sur le réplica secondaire montre que le changement n’a pas été répercuté.|  
+|[Résolution du problème : Dépassement de RTO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rto.md)|Après un basculement automatique ou un basculement manuel planifié sans perte de données, le temps de basculement dépasse votre RTO. Vous pouvez aussi constater que votre estimation du temps de basculement d’un réplica secondaire avec validation synchrone (par exemple, un partenaire de basculement automatique) dépasse votre RTO.|  
+|[Résolution du problème : Dépassement de RPO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rpo.md)|À l’issue d’un basculement manuel forcé, la perte de données est supérieure à votre RPO. Vous pouvez aussi constater que votre calcul de la perte de données potentielle d’un réplica secondaire avec validation asynchrone dépasse votre RPO.|  
+|[Résolution du problème : Les changements sur le réplica principal ne sont pas répercutés sur le réplica secondaire](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L’application cliente mène à bien une mise à jour sur le réplica principal, mais l’exécution d’une requête sur le réplica secondaire montre que le changement n’a pas été répercuté.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Événements étendus utiles  
  Les événements étendus suivants sont utiles dans le cadre de la résolution des problèmes liés aux réplicas dans l’état **Synchronisation**.  
   
-|Nom d'événement|Catégorie|Channel|Réplica de disponibilité|  
+|Nom de l'événement|Category|Channel|Réplica de disponibilité|  
 |----------------|--------------|-------------|--------------------------|  
 |redo_caught_up|transactions|Débogage|Secondary|  
 |redo_worker_entry|transactions|Débogage|Secondary|  

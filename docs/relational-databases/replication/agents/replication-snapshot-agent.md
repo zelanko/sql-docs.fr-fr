@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710351"
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
@@ -83,7 +83,7 @@ snapshot [ -?]
  Imprime tous les paramètres disponibles.  
   
  **-Publisher**  _server_name_[ **\\** _instance\_name_]  
- Nom du serveur de publication. Spécifiez server_name pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server\_name_ **\\** _instance\_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ Nom du serveur de publication. Spécifiez server_name pour l’instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server\_name_ **\\** _instance\_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-Publication** _publication_  
  Nom de la publication. Ce paramètre est uniquement valide si la publication est configurée de telle sorte qu'un instantané soit toujours disponible pour les nouveaux abonnements ou les abonnements réinitialisés.  
@@ -91,8 +91,8 @@ snapshot [ -?]
  **-70Subscribers**  
  Doit être utilisé si des Abonnés exécutent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version 7.0.  
   
- **-BcpBatchSize** _taille_\_ *lot*\_ *bcp*  
- Nombre de lignes à envoyer dans une opération de copie en bloc. Lorsque vous effectuez une opération **bcp in** , la taille du lot correspond au nombre de lignes à envoyer au serveur en une transaction, mais aussi au nombre de lignes à envoyer avant que l’Agent de distribution ne journalise un message de progression **bcp** . Lorsque vous effectuez une opération **bcp out** , une taille de lot fixe de 1000 est utilisée. La valeur 0 indique qu'aucune journalisation de message n'est autorisée.  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
+ Nombre de lignes à envoyer dans une opération de copie en bloc. Lorsque vous effectuez une opération **bcp in** , la taille du lot correspond au nombre de lignes à envoyer au serveur en une transaction, mais aussi au nombre de lignes à envoyer avant que l'Agent de distribution ne journalise un message de progression **bcp** . Lorsque vous effectuez une opération **bcp out** , une taille de lot fixe de 1000 est utilisée. La valeur 0 indique qu'aucune journalisation de message n'est autorisée.  
   
  **-DefinitionFile** _def_path_and_file_name_  
  Chemin d'accès du fichier de définition d'agent. Un fichier de définition d'agent contient des arguments de ligne de commande pour l'agent. Le contenu du fichier est analysé en tant que fichier exécutable. Utilisez des guillemets doubles (") pour spécifier des valeurs d'argument qui contiennent des caractères arbitraires.  

@@ -24,10 +24,10 @@ ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995356"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -138,17 +138,17 @@ EXEC sp_xml_removedocument @docHandle;
   
  Le tableau ci-dessous décrit la structure de la table du bord.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID unique du nœud du document.<br /><br /> L'ID de l'élément racine a pour valeur 0. Les valeurs négatives d'ID sont réservées.|  
 |**parentid**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent. Toutefois, cela dépend du NodeType du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
-|**node type**|**Int**|Identifie le type de nœud et est un entier qui correspond à la numérotation des types de nœud XML de modèle d'objet XML (DOM).<br /><br /> Valeurs susceptibles d'apparaître dans cette colonne pour indiquer le type de nœud :<br /><br /> **1** = Nœud d’élément<br /><br /> **2** = Nœud d’attribut<br /><br /> **3** = Nœud texte<br /><br /> **4** = Nœud de section CDATA<br /><br /> **5** = Nœud de référence d’entité<br /><br /> **6** = Nœud d’entité<br /><br /> **7** = Nœud d’instructions de traitement<br /><br /> **8** = Nœud de commentaire<br /><br /> **9** = Nœud de document<br /><br /> **10** = Nœud de type de document<br /><br /> **11** = Nœud de fragment de document<br /><br /> **12** = Nœud de notation<br /><br /> Pour plus d'informations, consultez la rubrique « Propriété nodeType » dans le Kit de développement logiciel Microsoft XML (MSXML).|  
+|**node type**|**int**|Identifie le type de nœud et est un entier qui correspond à la numérotation des types de nœud XML de modèle d'objet XML (DOM).<br /><br /> Valeurs susceptibles d'apparaître dans cette colonne pour indiquer le type de nœud :<br /><br /> **1** = Nœud d’élément<br /><br /> **2** = Nœud d’attribut<br /><br /> **3** = Nœud texte<br /><br /> **4** = Nœud de section CDATA<br /><br /> **5** = Nœud de référence d’entité<br /><br /> **6** = Nœud d’entité<br /><br /> **7** = Nœud d’instructions de traitement<br /><br /> **8** = Nœud de commentaire<br /><br /> **9** = Nœud de document<br /><br /> **10** = Nœud de type de document<br /><br /> **11** = Nœud de fragment de document<br /><br /> **12** = Nœud de notation<br /><br /> Pour plus d'informations, consultez la rubrique « Propriété nodeType » dans le Kit de développement logiciel Microsoft XML (MSXML).|  
 |**localname**|**nvarchar(max)**|Fournit le nom local de l'élément ou de l'attribut. A pour valeur NULL si l'objet DOM est dépourvu de nom.|  
 |**prefix**|**nvarchar(max)**|Préfixe de l'espace de noms du nom de nœud.|  
 |**namespaceuri**|**nvarchar(max)**|URI de l'espace de noms du nœud. Si la valeur est NULL, aucun espace de noms n'est présent.|  
 |**datatype**|**nvarchar(max)**|Type de données réel de la ligne d'élément ou d'attribut, NULL sinon. Le type de données est déduit de la DTD en ligne ou du schéma en ligne.|  
 |**prev**|**bigint**|ID XML de l'élément frère précédent. Vaut NULL en l'absence de frère précédent direct.|  
-|**texte**|**ntext**|Contient la valeur d'attribut ou le contenu de l'élément dans sa forme textuelle. Ou a pour valeur NULL, si l'entrée de la table du bord ne nécessite pas de valeur.|  
+|**text**|**ntext**|Contient la valeur d'attribut ou le contenu de l'élément dans sa forme textuelle. Ou a pour valeur NULL, si l'entrée de la table du bord ne nécessite pas de valeur.|  
   
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Utilisation de la clause WITH pour spécifier une table existante  
  Vous pouvez utiliser la clause WITH pour spécifier le nom d'une table existante. Pour cela, spécifiez simplement le nom d'une table existante dont le schéma permet à OPENXML de générer l'ensemble de lignes.  

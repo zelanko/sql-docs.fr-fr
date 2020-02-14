@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065821"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Mise en miroir de bases de données ALTER DATABASE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68065821"
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 > [!NOTE]
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.
 
 Contrôle la mise en miroir d'une base de données. Les valeurs spécifiées avec les options de mise en miroir de bases de données s'appliquent aux deux copies de la base de données et à l'ensemble de la session de mise en miroir de bases de données. Une seule \<database_mirroring_option> est autorisée par instruction ALTER DATABASE.
 
@@ -38,7 +38,7 @@ Contrôle la mise en miroir d'une base de données. Les valeurs spécifiées ave
 
 Pour connaître les options d’ALTER DATABASE, consultez [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Pour connaître les options d’ALTER DATABASE SET, consultez [Options ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,7 +70,7 @@ SET { <partner_option> | <witness_option> }
 > [!NOTE]
 > Les options de mise en miroir de bases de données ALTER DATABASE ne sont pas disponibles pour une base de données autonome.
 
-*database_name* correspond au nom de la base de données à modifier.
+*database_name* Spécifie le nom de la base de données à modifier.
 
 PARTNER \<partner_option> contrôle les propriétés de base de données qui définissent les partenaires de basculement d’une session de mise en miroir de bases de données ainsi que leur comportement. Certaines options de SET PARTNER peuvent être définies sur l'un et l'autre des serveurs partenaires tandis que d'autres sont réservées au serveur principal ou au serveur miroir. Pour plus d'informations, consultez les options PARTNER individuelles décrites ci-dessous. Une clause SET PARTNER affecte les deux copies de la base de données, indépendamment du serveur partenaire sur lequel elle est spécifiée.
 
@@ -93,7 +93,7 @@ La valeur de *partner_server* est une adresse réseau de serveur. La syntaxe est
 
 TCP **://** _\<adresse-système>_ **:** _\<port>_
 
-où
+where
 
 - *\<system-address>* est une chaîne, telle qu’un nom de système, un nom de domaine complet ou une adresse IP, qui identifie de manière unique l’ordinateur de destination.
 - *\<port>* est un numéro de port associé au point de terminaison de mise en miroir de l’instance du serveur partenaire.
@@ -189,7 +189,7 @@ OFF supprime le témoin d’une session de mise en miroir de bases de données. 
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. Création d'une session de mise en miroir de bases de données avec un témoin
+### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>R. Création d'une session de mise en miroir de bases de données avec un témoin
 
 Pour configurer la mise en miroir de bases de données avec un témoin, vous devez configurer la sécurité, préparer la base de données miroir et utiliser ALTER DATABASE pour définir les serveurs partenaires. Pour obtenir un exemple illustrant la procédure d’installation complète, consultez [Configuration de la mise en miroir de bases de données](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 

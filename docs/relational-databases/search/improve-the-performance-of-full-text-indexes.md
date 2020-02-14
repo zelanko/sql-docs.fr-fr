@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021222"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
@@ -152,7 +152,7 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
   
  #### <a name="example-setting-max-server-memory"></a>Exemple : configuration de la mémoire maximum du serveur  
   
- Cet exemple utilise les instructions [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) et [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir **mémoire maximum du serveur** sur la valeur calculée pour *M* dans l’exemple précédent, `7052`:  
+ Cet exemple utilise les instructions [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) et [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir la **mémoire maximale du serveur** sur la valeur calculée pour *M* dans l’exemple précédent, `7052` :  
   
 ```  
 USE master;  

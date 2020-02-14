@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939201"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
@@ -34,7 +34,7 @@ ms.locfileid: "67939201"
   
 -   Colonnes d'index utilisées dans des filtres de lignes et des filtres de jointure.  
   
-     Si vous utilisez un filtre de lignes sur un article publié, créez un index sur chacune des colonnes utilisées dans la clause WHERE du filtre. S'il n'y a pas d'index, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit lire chaque ligne de la table pour déterminer si la ligne doit être incluse dans la partition. Avec un index, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut localiser rapidement les lignes à inclure. Le traitement le plus rapide s'effectue si la réplication peut résoudre complètement la clause WHERE du filtre à partir de l'index seul.  
+     Si vous utilisez un filtre de lignes sur un article publié, créez un index sur chacune des colonnes utilisées dans la clause WHERE du filtre. S’il n’y a pas d’index, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit lire chaque ligne de la table pour déterminer si la ligne doit être incluse dans la partition. Avec un index, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut localiser rapidement les lignes à inclure. Le traitement le plus rapide s'effectue si la réplication peut résoudre complètement la clause WHERE du filtre à partir de l'index seul.  
   
      L'indexation de toutes les colonnes utilisées dans des filtres de jointure est également importante. À chaque exécution, l'Agent de fusion recherche dans la table de base quelles lignes de la table parente et quelles lignes des tables associées sont incluses dans une partition. La création d'un index sur les colonnes jointes dispense [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de devoir lire chaque ligne de la table à chaque exécution de l'Agent de fusion.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67939201"
   
 -   Utilisez des partitions précalculées avec des filtres paramétrés (cette fonctionnalité est utilisée par défaut). Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Les partitions précalculées imposent plusieurs limitations au fonctionnement du filtrage. Si votre application ne peut pas s'adapter à ces limitations, définissez l'option **keep_partition_changes** à **True**, ce qui permet d'obtenir un gain de performances. Pour plus d’informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Les partitions précalculées imposent plusieurs limitations au fonctionnement du filtrage. Si votre application ne peut pas s'adapter à ces limitations, définissez l'option **keep_partition_changes** à **True**, ce qui permet d'obtenir un gain de performances. Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Utilisez des partitions qui ne se chevauchent pas si les données sont filtrées mais pas partagées entre les utilisateurs.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67939201"
   
 -   Si un abonnement est synchronisé par le biais d’une connexion rapide et si des modifications sont envoyées à partir du serveur de publication et à partir de l’Abonné, utilisez le paramètre **–ParallelUploadDownload** pour l’Agent de fusion.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **–ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **–ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez les pages suivantes :  
   
     -   [Utiliser des profils d’agent de réplication](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "67939201"
   
 -   Lorsque vous synchroniser des lignes de données avec une grande quantité de données (par exemple, des lignes avec des colonnes LOB), la synchronisation Web peur exiger une allocation supplémentaire de mémoire et nuire aux performances. Cette situation se produit lorsque l'Agent de fusion génère un message XML qui contient trop de lignes de données avec de gros volumes de données. Si l'Agent de fusion consomme trop de ressources lors de la synchronisation Web, réduisez le nombre de lignes transmises dans un seul message de l'une des manières suivantes :  
   
-    -   Utilisez le profil de liaison lente de l'Agent de fusion. Pour plus d’informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+    -   Utilisez le profil de liaison lente de l'Agent de fusion. Pour plus d'informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
     -   Réduisez les paramètres **- DownloadGenerationsPerBatch** et **- UploadGenerationsPerBatch** de l’Agent de fusion à une valeur de 10 maximum. La valeur par défaut de ces paramètres est 50.  
   

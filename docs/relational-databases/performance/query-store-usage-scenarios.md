@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909821"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
@@ -29,7 +29,7 @@ ms.locfileid: "72909821"
 -   Identifier et paramétrer les principales requêtes consommatrices de ressources  
 -   Test A/B  
 -   Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
--   Identifier et améliorer les charges de travail ad hoc  
+-   Identifier et améliorer les charges de travail ad hoc  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Repérer et résoudre des requêtes avec des régressions de choix de plan  
  Quand il exécute des requêtes classiques, l’optimiseur de requête peut décider de choisir un autre plan, car des entrées importantes ont changé : la cardinalité des données a changé, des index ont été créés, changés ou supprimés, les statistiques ont été mises à jour, etc. Dans l’ensemble, le nouveau plan est mieux ou sensiblement le même que le plan précédemment utilisé. Toutefois, dans certains cas, quand le nouveau plan est nettement plus mauvais, cette situation est qualifiée de « régression due à un changement de plan ». Avant le Magasin des requêtes, il était difficile d’identifier et de résoudre ce problème, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournissait pas de magasin de données intégré permettant aux utilisateurs de rechercher les plans d’exécution qui étaient utilisés dans le temps.  
@@ -74,7 +74,7 @@ Quand vous identifiez une requête dont les performances ne sont pas optimales, 
   
 -   Ajout de nouveau matériel pour le serveur.  
   
--   Création d’index absents sur des tables référencées par des requêtes coûteuses.  
+-   Création d’index manquants sur des tables référencées par des requêtes coûteuses.  
   
 -   Application d’une stratégie de filtrage pour la sécurité au niveau des lignes. Pour plus d’informations, consultez [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) (Optimisation de la sécurité au niveau des lignes avec le Magasin des requêtes).  
   
@@ -127,15 +127,15 @@ Avant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les utilisateurs étaie
   
 5.  Utilisez le Magasin des requêtes pour l’analyse et la correction des régressions : dans l’ensemble, les changements de l’optimiseur de requête doivent produire de meilleurs plans. Toutefois, le Magasin des requêtes est un moyen facile d’identifier les régressions de choix de plan et de les corriger à l’aide du mécanisme de forçage d’application du plan. Avec [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], cette étape est désormais automatique grâce à la fonctionnalité [Correction du plan automatique](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction).  
 
-    A.  En cas de régression, forcez le précédent plan connu adéquat dans le Magasin des requêtes.  
+    a.  En cas de régression, forcez le précédent plan connu adéquat dans le Magasin des requêtes.  
   
-    B.  Si des plans de requête ne peuvent pas être forcés ou si les performances restent insuffisantes, envisagez de revenir au [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) précédent et de faire appel au support technique Microsoft.  
+    b.  Si des plans de requête ne peuvent pas être forcés ou si les performances restent insuffisantes, envisagez de revenir au [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) précédent et de faire appel au support technique Microsoft.  
     
 > [!TIP]
-> Utilisez la tâche [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Mettre à niveau la base de données* pour mettre à niveau la [compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades). Consultez [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) pour plus d’informations.
+> Utilisez la tâche *Mettre à niveau la base de données* de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour mettre à niveau le [niveau de compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades). Consultez [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) pour plus d’informations.
   
-## <a name="identify-and-improve-ad-hoc-workloads"></a>Identifier et améliorer les charges de travail ad hoc  
-Certaines charges de travail n’ont pas de requêtes dominantes que vous pouvez paramétrer pour améliorer les performances globales de l’application. Ces charges de travail se caractérisent généralement par un nombre relativement important de requêtes différentes, chacune consommant une partie des ressources système. Chacune étant unique, ces requêtes sont exécutées très rarement (généralement une seule fois, d’où leur nom de « requêtes ad hoc »). Leur consommation d’exécution n’est donc pas critique. Par ailleurs, étant donné que l’application génère en permanence de nouvelles requêtes, une part importante des ressources système sont consacrées à la compilation des requêtes, ce qui n’est pas optimal. Cette situation n’est pas non plus idéale pour le magasin de requêtes car un grand nombre de requêtes et de plans inondent l’espace que vous avez réservé. De ce fait, il est probable que le magasin de requêtes se retrouvera très rapidement en mode lecture seule. Si vous avez activé **Stratégie de nettoyage basée sur la taille** ([fortement recommandé](best-practice-with-the-query-store.md) pour toujours maintenir le magasin de requêtes activé et en cours d’exécution), le processus en arrière-plan nettoie les structures du magasin de requêtes qui, la plupart du temps, utilisent également d’importantes ressources système.  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>Identifier et améliorer les charges de travail ad hoc  
+Certaines charges de travail n’ont pas de requêtes dominantes que vous pouvez ajuster pour améliorer les performances globales de l’application. Ces charges de travail se caractérisent généralement par un nombre relativement important de requêtes différentes, chacune consommant une partie des ressources système. Chacune étant unique, ces requêtes sont exécutées très rarement (généralement une seule fois, d’où leur nom de « requêtes ad hoc »). Leur consommation d’exécution n’est donc pas critique. Par ailleurs, étant donné que l’application génère en permanence de nouvelles requêtes, une part importante des ressources système sont consacrées à la compilation des requêtes, ce qui n’est pas optimal. Cette situation n’est pas non plus idéale pour le magasin de requêtes car un grand nombre de requêtes et de plans inondent l’espace que vous avez réservé. De ce fait, il est probable que le magasin de requêtes se retrouvera très rapidement en mode lecture seule. Si vous avez activé **Stratégie de nettoyage basée sur la taille** ([fortement recommandé](best-practice-with-the-query-store.md) pour toujours maintenir le magasin de requêtes activé et en cours d’exécution), le processus en arrière-plan nettoie les structures du magasin de requêtes qui, la plupart du temps, utilisent également d’importantes ressources système.  
   
  L’affichage **Principales requêtes consommatrices de ressources** vous donne une première indication de la nature ad hoc de votre charge de travail :  
   

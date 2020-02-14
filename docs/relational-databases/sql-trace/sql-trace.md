@@ -11,10 +11,10 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133239"
 ---
 # <a name="sql-trace"></a>Trace SQL
@@ -37,8 +37,8 @@ Les sources d'événement peuvent être n'importe quelle source produisant l'év
 ## <a name="sql-trace-terminology"></a>Terminologie associée à Trace SQL  
 Les termes suivants décrivent les concepts fondamentaux de Trace SQL.  
   
- **Événement**  
- Action survenue dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ **Event**  
+ Action survenue dans une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  **Colonne de données**  
  Attribut d'un événement.  
@@ -81,13 +81,13 @@ La trace SQL utilise les colonnes de données du résultat de la trace pour déc
 |**Binary Data**|2|Valeur binaire qui dépend de la classe d'événements capturée dans la trace.|  
 |**ClientProcessID**|9|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|  
 |**ColumnPermissions**|44|Indique si une autorisation au niveau de la colonne a été définie. Vous pouvez analyser le texte de l'instruction pour déterminer quelles autorisations ont été appliquées à quelles colonnes.|  
-|**Unité centrale**|18|Temps processeur (en millisecondes) utilisé par l'événement.|  
-|**ID de la base de données**|3|ID de la base de données spécifiée par l’instruction USE de *nom_base_de_données* ou celui de la base de données par défaut si aucune instruction USE de *nom_base_de_données*n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|  
+|**UC**|18|Temps processeur (en millisecondes) utilisé par l'événement.|  
+|**ID de base de données**|3|ID de la base de données spécifiée par l’instruction USE de *nom_base_de_données* ou celui de la base de données par défaut si aucune instruction USE de *nom_base_de_données*n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|  
 |**DatabaseName**|35|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|  
 |**DBUserName**|40|Nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du client.|  
-|**Duration**|13|Durée (en microsecondes) de l'événement.<br /><br /> Le serveur signale la durée d’un événement en microsecondes (un millionième, ou 10<sup>-6</sup>, de seconde) et le temps UC utilisé par l’événement en millisecondes (un millième, ou 10<sup>-3</sup>, de seconde). L'interface utilisateur graphique de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche par défaut la colonne **Durée** en millisecondes. Cependant, quand la trace est enregistrée dans un fichier ou une table de base de données, la valeur de la colonne **Durée** est mentionnée en microsecondes.|  
+|**Durée**|13|Durée (en microsecondes) de l'événement.<br /><br /> Le serveur signale la durée d’un événement en microsecondes (un millionième, ou 10<sup>-6</sup>, de seconde) et le temps UC utilisé par l’événement en millisecondes (un millième, ou 10<sup>-3</sup>, de seconde). L'interface utilisateur graphique de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche par défaut la colonne **Durée** en millisecondes. Cependant, quand la trace est enregistrée dans un fichier ou une table de base de données, la valeur de la colonne **Durée** est mentionnée en microsecondes.|  
 |**EndTime**|15|Heure de fin de l'événement. Cette colonne n’est pas remplie pour les classes d’événements faisant référence au démarrage d’un événement, comme par exemple **SQL:BatchStarting** ou **SP:Starting**.|  
-|**Erreur**|31|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans **sysmessages**.|  
+|**Error**|31|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans **sysmessages**.|  
 |**EventClass**|27|Type de classe d'événements capturée.|  
 |**EventSequence**|51|Numéro de séquence de cet événement.|  
 |**EventSubClass**|21|Type de sous-classe d'événements, qui fournit des informations complémentaires concernant chaque classe d'événements. Par exemple, les valeurs de sous-classe d’événements pour la classe d’événements **Execution Warning** représentent le type d’avertissement pour l’exécution :<br /><br /> **1** = Attente de requête. La requête doit attendre les ressources (telles que la mémoire) pour s'exécuter.<br /><br /> **2** = Expiration du délai d’attente de requête. La requête a dépassé le délai d'attente d'obtention des ressources nécessaires pour s'exécuter. Cette colonne de données n'est pas remplie pour toutes les classes d'événements.|  
@@ -116,7 +116,7 @@ La trace SQL utilise les colonnes de données du résultat de la trace pour déc
 |**OwnerID**|58|Pour les événements de verrou uniquement. Type de l'objet qui possède un verrou.|  
 |**OwnerName**|37|Nom d'utilisateur de base de données du propriétaire de l'objet.|  
 |**ParentName**|59|Nom du schéma qui contient l'objet.|  
-|**Autorisations**|19|Valeur entière représentant le type d'autorisations vérifiées. Valeurs possibles :<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (procédures uniquement)<br /><br /> **4096** = SELECT ANY (au moins une colonne)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
+|**autorisations**|19|Valeur entière représentant le type d'autorisations vérifiées. Les valeurs sont les suivantes :<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (procédures uniquement)<br /><br /> **4096** = SELECT ANY (au moins une colonne)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|Nom du fournisseur OLE DB.|  
 |**Reads**|16|Nombre d'opérations de lecture sur le disque logique effectuées par le serveur pour l'événement. Ces opérations de lecture comprennent toutes les lectures des tables et des tampons pendant l'exécution de l'instruction.|  
 |**RequestID**|49|ID de la demande qui contient l'instruction.|  
@@ -124,13 +124,13 @@ La trace SQL utilise les colonnes de données du résultat de la trace pour déc
 |**RowCounts**|48|Nombre de lignes du traitement.|  
 |**ServerName**|26|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|  
 |**SessionLoginName**|64|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de **Login1** et que vous exécutez une instruction en tant que **Login2**, **SessionLoginName** affiche **Login1**, tandis que **LoginName** affiche **Login2**. Cette colonne de données affiche les noms de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|  
-|**Severity**|20|Niveau de gravité de l'événement d'exception.|  
+|**Niveau de gravité**|20|Niveau de gravité de l'événement d'exception.|  
 |**SourceDatabaseID**|62|ID de la base de données contenant la source de l'objet.|  
 |**SPID**|12|ID de processus serveur (SPID) affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|  
 |**SqlHandle**|63|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être transmise à **sys.dm_exec_sql_text()** pour récupérer le texte SQL associé.|  
 |**StartTime**|14|Heure de début de l'événement, le cas échéant.|  
-|**État**|30|Code d'état d'erreur.|  
-|**Réussi**|23|Indique si l'événement a réussi. Ces valeurs comprennent :<br /><br /> **1** = réussite<br /><br /> **0** = échec<br /><br /> Par exemple, **1** signifie la réussite de la vérification d’autorisations et **0** l’échec de cette vérification.|  
+|**State**|30|Code d’état d’erreur.|  
+|**Success**|23|Indique si l'événement a réussi. Ces valeurs comprennent :<br /><br /> **1** = réussite<br /><br /> **0** = échec<br /><br /> Par exemple, **1** signifie la réussite de la vérification d’autorisations et **0** l’échec de cette vérification.|  
 |**TargetLoginName**|42|Pour les actions qui ciblent une connexion, nom de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetLoginSid**|43|Pour les actions qui ciblent une connexion, SID de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetUserName**|39|Pour les actions qui ciblent un utilisateur de base de données, nom de cet utilisateur, par exemple pour accorder une autorisation à un utilisateur.|  

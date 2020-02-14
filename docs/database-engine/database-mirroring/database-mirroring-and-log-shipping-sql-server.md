@@ -14,10 +14,10 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006465"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mise en miroir de bases de données et copie des journaux de transaction (SQL Server)
@@ -64,7 +64,7 @@ ms.locfileid: "68006465"
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Basculement d'une base de données principale vers une base de données miroir  
  La figure suivante illustre la manière dont la copie des journaux de transaction et la mise en miroir de bases de données interagissent lorsque la mise en miroir s'exécute en mode haute sécurité avec basculement automatique. Initialement, **Server_A** est à la fois le serveur du principal pour la mise en miroir et le serveur principal pour la copie des journaux de transaction. **Server_B** est le serveur miroir et est également configuré comme serveur principal actuellement inactif. **Server_C** et **Server_D** sont des serveurs secondaires de copie des journaux de transaction. Pour optimiser la disponibilité de la session de copie des journaux de transaction, l'emplacement de sauvegarde se trouve dans un répertoire de partage situé sur un ordinateur hôte distinct.  
   
- ![Copie des journaux de transaction et mise en miroir de bases de données](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Copie des journaux de transaction et mise en miroir de bases de données")  
+ ![Envoi de journaux et mise en miroir de bases de données](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Envoi de journaux et mise en miroir de bases de données")  
   
  Après un basculement de mise en miroir, le nom du serveur principal défini sur le serveur secondaire reste inchangé. .  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68006465"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>Configuration simultanée de la mise en miroir et de la copie des journaux de transaction  
  Pour configurer simultanément la mise en miroir de bases de données et la copie des journaux de transaction, les étapes suivantes sont requises :  
   
-1.  Restaurer les sauvegardes de la base de données principale/primaire à l'aide de NORECOVERY sur une autre instance du serveur afin de les utiliser ultérieurement comme base de données miroir de la mise en miroir de base de données pour la base de données principale/primaire. Pour plus d’informations, consultez [Préparer une base de données miroir pour la mise en miroir &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Restaurer les sauvegardes de la base de données principale/primaire à l'aide de NORECOVERY sur une autre instance du serveur afin de les utiliser ultérieurement comme base de données miroir de la mise en miroir de base de données pour la base de données principale/primaire. Pour plus d’informations, consultez [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 2.  Configurer la mise en miroir de bases de données. Pour plus d’informations, consultez [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) ou [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   

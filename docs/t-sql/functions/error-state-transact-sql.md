@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094615"
 ---
-# <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
+# <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Retourne le numéro d’état de l’erreur qui a provoqué l’exécution du bloc CATCH d’une construction TRY...CATCH.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,9 +44,9 @@ ERROR_STATE ( )
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Lorsqu'elle est appelée dans un bloc CATCH, elle renvoie le numéro d'état du message d'erreur à l'origine de l'exécution du bloc CATCH.  
   
  Retourne NULL si l'appel a lieu en dehors de l'étendue d'un bloc CATCH.  
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>A. Utilisation d'ERROR_STATE dans un bloc CATCH  
+### <a name="a-using-error_state-in-a-catch-block"></a>R. Utilisation d'ERROR_STATE dans un bloc CATCH  
  L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. L'état de l'erreur est renvoyé.  
   
 ```sql  
@@ -80,7 +80,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilisation d'ERROR_STATE dans un bloc CATCH avec d'autres outils de gestion des erreurs  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilisation d'ERROR_STATE dans un bloc CATCH avec d'autres outils de gestion des erreurs  
  L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Outre l'état de l'erreur, la procédure renvoie également les informations relatives à l'erreur.  
   
 ```sql  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilisation d'ERROR_STATE dans un bloc CATCH avec d'autres outils de gestion des erreurs  
+### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilisation d'ERROR_STATE dans un bloc CATCH avec d'autres outils de gestion des erreurs  
  L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Outre l'état de l'erreur, la procédure renvoie également les informations relatives à l'erreur.  
   
 ```sql  

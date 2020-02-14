@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896134"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out
@@ -70,7 +70,7 @@ Pour installer la fonctionnalité Scale Out Master, utilisez l’Assistant Insta
     * Laissez le processus d’installation créer un certificat SSL auto-signé par défaut en cliquant sur **Créer un certificat SSL**.  Le certificat par défaut est installé sous Autorités de certification racines de confiance, Ordinateur local. Vous pouvez spécifier les noms communs dans ce certificat. Le nom d’hôte du point de terminaison principal doit être inclus dans les noms communs. Par défaut, le nom de machine et l’adresse IP du nœud Master sont inclus.
     * Sélectionnez un certificat SSL existant sur l’ordinateur local en cliquant sur **Utiliser un certificat SSL existant**, puis sur **Parcourir** pour sélectionner un certificat. L’empreinte numérique du certificat s’affiche dans la zone de texte. Cliquez sur **Parcourir** pour afficher les certificats stockés dans Autorités de certification racines de confiance, Ordinateur local. Le certificat que vous sélectionnez doit être stocké ici.       
 
-    ![Configuration de Master 2](media/master-config-2.PNG "Configuration de Master 2")
+    ![Configuration de Master 2](media/master-config-2.PNG "Configuration de Master 2")
   
 5.  Terminez l’Assistant Installation de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
@@ -105,7 +105,7 @@ Pour installer la fonctionnalité Scale Out Worker, utilisez l’Assistant Insta
 
 2.  Dans la page **Configuration du serveur** , sélectionnez le compte pour exécuter le **service SQL Server Integration Services Scale Out Worker** et sélectionnez le **Type de démarrage**.
 
-    ![Configuration du serveur 2](media/server-config-2.PNG "Configuration du serveur 2")
+    ![Configuration de Serveur 2](media/server-config-2.PNG "Configuration de Serveur 2")
 
 3.  Dans la page **Configuration d’Integration Services Scale Out Worker** , spécifiez le point de terminaison pour la connexion à Scale Out Master. 
 
@@ -113,7 +113,7 @@ Pour installer la fonctionnalité Scale Out Worker, utilisez l’Assistant Insta
 
     - Pour un environnement à **plusieurs ordinateurs**, le point de terminaison se compose du nom ou de l’adresse IP de l’ordinateur où Scale Out Master est installé et du numéro de port spécifié pendant l’installation de Scale Out Master.
    
-    ![Configuration de Worker 1](media/worker-config.PNG "Configuration de Worker 1")    
+    ![Configuration de Worker 1](media/worker-config.PNG "Configuration de Worker 1")    
 
     > [!NOTE]
     > Vous pouvez également ignorer la configuration de Worker à ce stade et associer Scale Out Worker à Scale Out Master en utilisant [Scale Out Manager](integration-services-ssis-scale-out-manager.md) après l’installation.
@@ -122,7 +122,7 @@ Pour installer la fonctionnalité Scale Out Worker, utilisez l’Assistant Insta
   
     Cliquez sur **Parcourir** pour rechercher le fichier de certificat (*.cer). Pour utiliser le certificat SSL par défaut, sélectionnez le fichier `SSISScaleOutMaster.cer` situé sous `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` sur l’ordinateur où Scale Out Master est installé.   
 
-    ![Configuration de Worker 2](media/worker-config-2.PNG "Configuration de Worker 2")
+    ![Configuration de Worker 2](media/worker-config-2.PNG "Configuration de Worker 2")
 
     > [!NOTE]
     > Quand le certificat SSL utilisé par Scale Out Master est auto-signé, un certificat SSL client correspondant doit être installé sur l’ordinateur avec Scale Out Worker. Si vous fournissez le chemin de fichier du certificat client SSL dans la page **Configuration d’Integration Services Scale Out Worker**, le certificat est installé automatiquement. Sinon, vous devez installer le certificat manuellement plus tard. 

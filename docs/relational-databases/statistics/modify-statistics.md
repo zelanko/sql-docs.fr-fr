@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6f34bf5db992f1d7062f9def1805996701eda5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906208"
 ---
 # <a name="modify-statistics"></a>Modifier des statistiques
@@ -61,7 +61,7 @@ ms.locfileid: "72906208"
   
 5.  Cliquez avec le bouton droit sur l’objet de statistiques à modifier et sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Propriétés des statistiques** *statistics_name* dialog box, on the **General** page, click **Add**, **Remove**, **Move Up**, or **Move Down**, ou toute combinaison, pour modifier les propriétés des statistiques. Gardez à l’esprit que l’emplacement d’une colonne dans la grille **Colonnes de statistiques** peut avoir une incidence notable sur l’utilité des statistiques.  
+6.  Dans la boîte de dialogue **Propriétés des statistiques** *nom_statistiques*, dans la page **Général**, cliquez sur **Ajouter**, **Supprimer**, **Monter**, **Descendre**, ou sur une combinaison de ces commandes, pour modifier les propriétés des statistiques. Gardez à l’esprit que l’emplacement d’une colonne dans la grille **Colonnes de statistiques** peut avoir une incidence notable sur l’utilité des statistiques.  
   
 7.  Cliquez sur **OK**.  
 

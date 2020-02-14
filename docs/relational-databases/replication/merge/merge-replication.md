@@ -14,10 +14,10 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0392ff8153a5125dadc20eefa96a6a9dfc521f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033210"
 ---
 # <a name="merge-replication"></a>Réplication de fusion
@@ -40,7 +40,7 @@ ms.locfileid: "68033210"
   
  La réplication de fusion est implémentée par l'Agent d'instantané et l'Agent de fusion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si la publication est non filtrée ou si elle utilise des filtres statiques, l'Agent d'instantané crée un  instantané unique. Si la publication utilise des filtres paramétrés, l'Agent d'instantané crée un instantané pour chaque partition de données. L'Agent de fusion applique les instantanés initiaux aux Abonnés. Il fusionne également les modifications de données incrémentielles effectuées sur le serveur de publication ou les Abonnés après la création de l'instantané initial, puis détecte et résout les éventuels conflits en fonction des règles que vous avez définies.  
   
- Pour permettre le suivi des modifications, la réplication de fusion (ainsi que la réplication transactionnelle avec mise à jour d'abonnements en attente) doit pouvoir identifier de manière unique chaque ligne dans chaque table publiée. Pour ce faire, la réplication de fusion ajoute la colonne **rowguid** à chaque table, à moins que la table ne dispose déjà d'une colonne de type de données **uniqueidentifier** avec la propriété **ROWGUIDCOL** définie (auquel cas cette colonne est utilisée). Si la table est supprimée de la publication, la colonne **rowguid** est supprimée ; si une colonne existante était utilisée pour le suivi, la colonne n'est pas supprimée. Aucun filtre ne doit inclure le **rowguidcol** utilisé par la réplication pour identifier les lignes. La fonction **newid()** est fournie en tant que fonction par défaut pour la colonne **rowguid** . Toutefois, les clients peuvent fournir un GUID pour chaque ligne, si nécessaire. Toutefois, ne fournissez pas la valeur 00000000-0000-0000-0000-000000000000.  
+ Pour permettre le suivi des modifications, la réplication de fusion (ainsi que la réplication transactionnelle avec mise à jour d'abonnements en attente) doit pouvoir identifier de manière unique chaque ligne dans chaque table publiée. Pour ce faire, la réplication de fusion ajoute la colonne **rowguid** à chaque table, à moins que la table ne dispose déjà d'une colonne de type de données **uniqueidentifier** avec la propriété **ROWGUIDCOL** définie (auquel cas cette colonne est utilisée). Si la table est supprimée de la publication, la colonne **rowguid** est supprimée, si une colonne existante était utilisée pour le suivi, la colonne n'est pas supprimée. Aucun filtre ne doit inclure le **rowguidcol** utilisé par la réplication pour identifier les lignes. La fonction **newid()** est fournie en tant que fonction par défaut pour la colonne **rowguid** . Toutefois, les clients peuvent fournir un GUID pour chaque ligne, si nécessaire. Toutefois, ne fournissez pas la valeur 00000000-0000-0000-0000-000000000000.  
   
  Le diagramme suivant montre les composants utilisés dans la réplication de fusion.  
   

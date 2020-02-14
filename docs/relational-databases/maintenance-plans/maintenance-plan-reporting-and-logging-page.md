@@ -13,10 +13,10 @@ ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2905877f907e932be058a07ba3a9fbbd892e7ae6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115697"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Plan de maintenance, (Page Création de rapports et enregistrement)
@@ -25,7 +25,7 @@ ms.locfileid: "68115697"
   
 ## <a name="options"></a>Options  
  **Générer un rapport de fichier texte**  
- Indiquez si [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit générer un rapport de fichier texte.  
+ Indiquez si [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit écrire un rapport de fichier texte.  
   
  **Créer un nouveau fichier**  
  Crée un nouveau fichier de rapport pour chaque exécution du plan de maintenance. Par défaut, les fichiers de rapport sont enregistrés sur l'ordinateur hébergeant l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant ce plan de maintenance, dans le dossier qui a été défini en tant que dossier des journaux par défaut au moment de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour spécifier un autre dossier, entrez le chemin d’accès complet du dossier dans la zone de texte **Dossier** ou cliquez sur le bouton Parcourir ( **...** ) pour naviguer jusqu’au dossier de votre choix.  
@@ -45,7 +45,7 @@ ms.locfileid: "68115697"
  **Connexion à un serveur distant**  
  Enregistre l'historique du plan de maintenance sur un serveur distant.  
   
- **Connexion**  
+ **Connection**  
  Spécifie les informations de connexion à utiliser pour se connecter à un serveur distant.  
   
  **Nouveau**  

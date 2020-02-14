@@ -17,13 +17,13 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282621"
 ---
-# <a name="performance-counters"></a>Compteurs de performances
+# <a name="performance-counters"></a>Compteurs de performance
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "71282621"
 ## <a name="obtain-performance-counter-statistics"></a>Obtenir des statistiques sur les compteurs de performance  
  Pour les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez obtenir des statistiques sur les compteurs de performances à l’aide de la fonction [dm_execution_performance_counters &#40;base de données SSISDB&#41;](../../integration-services/functions-dm-execution-performance-counters.md).  
   
- Dans l'exemple suivant, la fonction retourne des statistiques pour une exécution en cours ayant l'ID 34.  
+ Dans l'exemple suivant, la fonction retourne des statistiques pour une exécution en cours ayant l'ID 34.  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
@@ -83,7 +83,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   Cette procédure décrit comment ajouter un journal pour les compteurs de performances fournis par le moteur de flux de données.  
   
 > [!NOTE]  
->  Si vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur qui exécute [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], puis que vous mettez à niveau cet ordinateur vers [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], le processus de mise à niveau supprime les compteurs de performances [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de l’ordinateur. Pour restaurer les compteurs de performances de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur l’ordinateur, exécutez le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode réparation.  
+>  Si vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur qui exécute [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], puis que vous mettez à niveau cet ordinateur vers [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], le processus de mise à niveau supprime les compteurs de performances de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de l’ordinateur. Pour restaurer les compteurs de performances de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur l’ordinateur, exécutez l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode réparation.  
   
 ### <a name="to-add-logging-of-performance-counters"></a>Pour ajouter un journal des compteurs de performances  
   
@@ -107,7 +107,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
     -   Sélectionnez **Sélectionner les compteurs dans la liste** et sélectionnez les compteurs de performances à utiliser.  
   
-9. Cliquez sur **Ajouter**.  
+9. Cliquez sur **Add**.  
   
 10. Cliquez sur **Fermer**.  
   

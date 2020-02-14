@@ -12,10 +12,10 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296349"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Boîte de dialogue Détails de la conversion de colonne (Assistant Importation et Exportation SQL Server)
@@ -37,7 +37,7 @@ Dans cet exemple, vous voyez les éléments répertoriés ici.
 -   L’Assistant conclut : *Cette colonne ne doit pas être convertie*.
  
   
- ![Page Conversion de colonne de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/column-conversion.png "Page Conversion de colonne de l’Assistant Importation et Exportation") 
+ ![Page Conversion de colonnes de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/column-conversion.png "Page Conversion de colonnes de l’Assistant Importation et Exportation") 
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez passé en revue les détails de la conversion de colonne et cliqué sur **OK**, la boîte de dialogue **Détails de la conversion de colonne** vous renvoie à la page **Vérifier le mappage de type de données** . Pour plus d’informations, consultez [Vérifier le mappage de type de données](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  

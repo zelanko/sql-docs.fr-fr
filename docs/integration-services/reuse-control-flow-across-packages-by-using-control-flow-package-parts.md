@@ -16,10 +16,10 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fa693e4e5c8f21b9d8fc8ad02369bff7623b59e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295786"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Réutiliser un flux de contrôle sur des packages à l’aide de composants de package de flux de contrôle
@@ -36,14 +36,14 @@ ms.locfileid: "71295786"
   
  Un nouveau fichier de composant portant l’extension « .dtsxp » est créé dans le dossier **Package Parts | Control Flow** (Composants de Package | Flux de contrôle). En même temps, un nouvel élément du même nom est ajouté à la boîte à outils SSIS. (L’élément de boîte à outils est visible uniquement pendant que vous avez un projet contenant le composants ouvert dans Visual Studio.)  
   
- ![Modèles de flux de contrôle dans la boîte à outils](../integration-services/media/control-flow-templates-in-toolbox.png "Modèles de flux de contrôle dans la boîte à outils")  
+ ![Contrôler les modèles de flux dans la boîte à outils](../integration-services/media/control-flow-templates-in-toolbox.png "Contrôler les modèles de flux dans la boîte à outils")  
   
 ## <a name="design-a-control-flow-package-part"></a>Concevoir un composant de package de flux de contrôle  
  Pour ouvrir l’éditeur de composant de package, double-cliquez sur le fichier du composant dans l’Explorateur de solutions. Vous pouvez concevoir le composant de la même manière qu’un package.  
   
- ![Étape 1 de la conception de modèle de flux de contrôle](../integration-services/media/control-flow-template-design-step-1.png "Étape 1 de la conception de modèle de flux de contrôle")  
+ ![Étape 1 de la conception du modèle de flux de contrôle](../integration-services/media/control-flow-template-design-step-1.png "Étape 1 de la conception du modèle de flux de contrôle")  
   
- ![Étape 2 de la conception de modèle de flux de contrôle](../integration-services/media/control-flow-template-design-step-2.png "Étape 2 de la conception de modèle de flux de contrôle")  
+ ![Étape 2 de la conception du modèle de flux de contrôle](../integration-services/media/control-flow-template-design-step-2.png "Étape 2 de la conception du modèle de flux de contrôle")  
   
  Vérifiez que les composants du flux de contrôle présentent les limitations suivantes.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71295786"
   
  ![Ajouter un nouveau modèle de flux de contrôle à partir du menu](../integration-services/media/control-flow-templates-add-from-menu.png "Ajouter un nouveau modèle de flux de contrôle à partir du menu")  
   
- ![Boîte de dialogue Ajouter une copie de modèles existants](../integration-services/media/control-flow-templates-add-copy-dialog.png "Boîte de dialogue Ajouter une copie de modèles existants")  
+ ![Ajouter une copie des modèles existants, boîte de dialogue](../integration-services/media/control-flow-templates-add-copy-dialog.png "Ajouter une copie des modèles existants, boîte de dialogue")  
   
  **Options**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71295786"
 ### <a name="connection-managers-tab"></a>Onglet Connection Managers (Gestionnaires de connexions)  
  L’onglet **Connection Managers** (Gestionnaires de connexions) dans la boîte de dialogue **Package Part Configuration**  (Configuration de composant de package) permet de spécifier les propriétés des gestionnaires de connexions pour l’instance de composant.  
   
- ![Onglet Gestionnaires de connexions de la boîte de dialogue Configuration du modèle](../integration-services/media/template-configuration-connection-managers-tab.png "Onglet Gestionnaires de connexions de la boîte de dialogue Configuration du modèle")  
+ ![Onglet Gestionnaire de connexions de la boîte de dialogue Configuration du modèle](../integration-services/media/template-configuration-connection-managers-tab.png "Onglet Gestionnaire de connexions de la boîte de dialogue Configuration du modèle")  
   
  Le tableau dans le volet gauche répertorie tous les gestionnaires de connexions définis dans le composant de flux de contrôle. Choisissez le gestionnaire de connexions à configurer.  
   
@@ -152,6 +152,6 @@ ms.locfileid: "71295786"
   
  Le diagramme ci-dessous illustre la relation entre les composants (fichiers « .dtsxp »), le concepteur SSIS et le runtime SSIS.  
   
- ![Fichiers de modèles de flux de contrôle et flux](../integration-services/media/control-flow-templates-intro.png "Fichiers de modèles de flux de contrôle et flux")  
+ ![Fichiers de modèles de flux de contrôle et de flux](../integration-services/media/control-flow-templates-intro.png "Fichiers de modèles de flux de contrôle et de flux")  
   
   

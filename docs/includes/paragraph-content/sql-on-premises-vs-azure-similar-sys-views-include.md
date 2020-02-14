@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6fd7bb2b8be38becc87c4dc8cb353594459a8dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220152"
----
 
 <!--
 ### Code examples for Azure cloud differ slightly from on-premises
@@ -18,14 +10,14 @@ Certains exemples de code Transact-SQL écrits pour une instance locale de SQL 
 - **server\_** &nbsp; - &nbsp; _préfixe pour l’instance locale_
 - **database\_** &nbsp; - &nbsp; _préfixe pour le service Azure SQL DB dans le cloud_
 
-À titre d’illustration, le tableau suivant liste et compare deux sous-ensembles de vues système. Par souci de concision, les sous-ensembles sont limités aux noms de vues qui contiennent également la chaîne `_event`. Les sous-ensembles ont des préfixes de noms différents car ils proviennent de deux systèmes de bases de données différents.
+À titre d’illustration, le tableau suivant liste et compare deux sous-ensembles de vues système. Par souci de concision, les sous-ensembles sont limités aux noms de vues qui contiennent également la chaîne `_event`. Les sous-ensembles ont des préfixes de noms différents parce qu’ils proviennent de deux systèmes de bases de données différents.
 
 | Nom de l’instance 2017 locale | Nom du service cloud |
 | :------------------------- | :---------------------- |
 | server_event_notifications<br />server_event_notifications<br />server_event_notifications<br />server_event_session_fields<br />server_event_session_targets<br />server_event_sessions<br />server_events<br />server_trigger_events | database_event_session_actions<br />database_event_session_events<br />database_event_session_fields<br />database_event_session_targets<br />database_event_sessions |
 | &nbsp; | &nbsp; |
 
-Les deux listes du tableau précédent sont exactes à compter de juin 2019. Toutefois, le contenu du tableau présenté ici peut devenir obsolète car il ne sera pas tenu à jour dans ce document. Pour obtenir des listes exactes, exécutez l’instruction T-SQL SELECT suivante. Exécutez deux fois l’instruction SELECT : une fois sur chaque système de base de données.
+Les deux listes du tableau précédent sont exactes à compter de juin 2019. Toutefois, le contenu du tableau présenté ici peut devenir obsolète parce qu’il ne sera pas tenu à jour ici. Pour obtenir des listes exactes, exécutez l’instruction T-SQL SELECT suivante. Exécutez deux fois l’instruction SELECT : une fois sur chaque système de base de données.
 
 ```sql
 SELECT name

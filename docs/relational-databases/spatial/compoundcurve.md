@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b409d9b7c0c832ed5c4ff95a21cdc305f61d16b0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909206"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909739"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ L’illustration suivante montre des types de **CompoundCurve** valides.
   
 1.  Toutes les instances contenues par l’instance **CompoundCurve** sont des instances de segment d’arc de cercle acceptées. Pour plus d’informations sur les instances de segment d’arc de cercle acceptées, consultez [LineString](../../relational-databases/spatial/linestring.md) et [CircularString](../../relational-databases/spatial/circularstring.md).  
   
-2.  Tous les segments d’arc de cercle dans l’instance **CompoundCurve** sont connectés. Le premier point de chaque segment d'arc de cercle suivant est identique au dernier point du segment d'arc de cercle précédent.  
+2.  Tous les segments d’arc de cercle dans l’instance **CompoundCurve** sont connectés. Le premier point de chaque segment d’arc de cercle suivant est identique au dernier point du segment d’arc de cercle précédent.  
   
     > [!NOTE]  
     > Cela inclut les coordonnées Z et M. Ainsi, les quatre coordonnées X, Y, Z et M doivent être identiques.  
@@ -94,7 +94,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. Instanciation d'une instance geometry avec un CompooundCurve vide  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>R. Instanciation d'une instance geometry avec un CompooundCurve vide  
  L'exemple suivant montre comment créer une instance `CompoundCurve` vide :  
   
 ```sql  
@@ -187,9 +187,9 @@ Le périmètre du Cercle deux est approximativement de 4?, ce qui correspond à 
   
 ## <a name="see-also"></a>Voir aussi  
  [STIsValid &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
- [STLength &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
+ [STLength &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
- [STEndpoint &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   
+ [STEndPoint &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)   

@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298298"
 ---
 # <a name="foreach-loop-container"></a>Conteneur de boucles Foreach
@@ -44,7 +44,7 @@ ms.locfileid: "71298298"
 
   Le conteneur de boucles Foreach définit un flux de contrôle répétitif dans un package. La mise en œuvre de la boucle est similaire à la structure de bouclage **Foreach** des langages de programmation. Dans un package, le bouclage repose sur l'utilisation d'un énumérateur Foreach.  Le conteneur de boucles Foreach répète le flux de contrôle pour chaque membre d'un énumérateur spécifié.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit les types d'énumérateur suivants :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit les types d’énumérateur suivants :  
   
 -   Foreach ADO Enumerator, pour l'énumération des lignes des tables. Par exemple, vous pouvez obtenir les lignes d'un ensemble d'enregistrements ADO.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "71298298"
   
  Le tableau suivant récapitule les informations requises pour chaque type d'énumérateur.  
   
-|Énumérateur|Configuration requise|  
+|Énumérateur|Exigences de configuration|  
 |----------------|--------------------------------|  
 |Foreach ADO|Spécifiez la variable source de l'objet ADO et le mode de l'énumérateur. La variable doit être du type Object.|  
 |Foreach ADO.NET Schema Rowset|Spécifiez la connexion à une base de données et le schéma à énumérer.|  
@@ -187,7 +187,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Pour en savoir plus sur le conteneur de boucles Foreach et sa configuration, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) et [Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Attribuez un nom unique au conteneur de boucle Foreach. Ce nom est utilisé en tant qu'étiquette dans l'icône de tâche et dans les journaux.  
   
 > [!NOTE]  
@@ -237,7 +237,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
   
 -   Si des fichiers sont ajoutés, il peut être difficile de déterminer quels fichiers la boucle Foreach a affecté.  
   
- **Dossier**  
+ **Folder**  
  Permet d'indiquer le chemin du dossier racine à énumérer.  
   
  **Parcourir**  
@@ -282,7 +282,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **Type de données de la colonne**  
  Permet d'afficher le type de données de la colonne active.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un élément, puis cliquez sur **Supprimer** pour le supprimer de la liste.  
   
  **Colonnes**  
@@ -313,7 +313,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET Schema Rowset Enumerator  
  Vous utilisez l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach pour énumérer un schéma pour une source de données spécifiée. Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL, vous pouvez utiliser l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach pour énumérer des schémas tels que les colonnes de la base de données **AdventureWorks** , et la tâche d'exécution SQL pour obtenir les autorisations de schéma.  
   
- **Connexion**  
+ **Connection**  
  Sélectionnez un gestionnaire de connexions ADO.NET dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
 > [!IMPORTANT]  
@@ -358,7 +358,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
   
  Si **DocumentSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
- **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **DocumentSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
@@ -420,7 +420,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO Enumerator  
  L'énumérateur Foreach SMO permet d'énumérer des objets SQL-SMO (SQL Server Management Object). Par exemple, si la boucle Foreach inclut une tâche d’exécution SQL, vous pouvez utiliser l’énumérateur Foreach SMO pour énumérer les tables de la base de données **AdventureWorks** et exécuter des requêtes qui comptent le nombre de lignes dans chaque table.  
   
- **Connexion**  
+ **Connection**  
  Sélectionnez un gestionnaire de connexions ADO.NET existant ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  Rubriques connexes : [Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurer le gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
@@ -471,7 +471,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Spécifiez le nom du conteneur d’objets blob qui contient les fichiers d’objets blob à énumérer.
   
  **Répertoire d’objets blob**  
- Spécifiez le répertoire d’objets blob qui contient les fichiers d’objets blob à énumérer. Le répertoire d’objets blob est une structure hiérarchique virtuelle.  
+ Spécifiez le répertoire d’objets blob qui contient les fichiers d’objets blob à énumérer. Le répertoire d’objet blob est une structure hiérarchique virtuelle.  
   
  **Rechercher de manière récursive**  
  Spécifiez s’il faut rechercher de manière récursive dans les sous-répertoires.
@@ -526,7 +526,7 @@ Pour plus d’informations, consultez [cet](https://docs.microsoft.com/azure/sto
   
  Pour en savoir plus sur l’utilisation du conteneur de boucles Foreach dans un package Integration Services, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md). Pour en savoir plus sur la façon de le configurer, consultez [Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
- Le didacticiel « Création d’un package ETL simple » de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut une leçon sur l’ajout et la configuration d’une boucle Foreach.  
+ Le tutoriel « Création d’un package ETL simple » de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut une leçon sur l’ajout et la configuration d’une boucle Foreach.  
   
 ### <a name="options"></a>Options  
  **Variable**  
@@ -558,7 +558,7 @@ Utilisez la boîte de dialogue **Restrictions de schéma** pour définir les res
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
- **Texte**  
+ **Text**  
  Entrez le texte qui définit les restrictions.  
  
 ## <a name="for-each-item-columns-dialog-box"></a>Colonnes For Each Item (boîte de dialogue)
@@ -574,7 +574,7 @@ Utilisez la boîte de dialogue **Colonnes For Each Item** pour définir les colo
  **Ajouter**  
  Ajoutez une nouvelle colonne.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez une colonne, puis cliquez sur **Supprimer**.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>Sélectionner l'énumération SMO, boîte de dialogue

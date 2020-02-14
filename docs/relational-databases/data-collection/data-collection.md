@@ -14,10 +14,10 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140748"
 ---
 # <a name="data-collection"></a>Collecte de données
@@ -33,7 +33,7 @@ ms.locfileid: "68140748"
   
  L'illustration suivante montre l'intégration du collecteur de données dans la stratégie globale de la collecte et de la gestion de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Rôle du collecteur de données dans la gestion des données](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "Rôle du collecteur de données dans la gestion des données")  
+ ![Rôle du collecteur de données dans la Gestion des données](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "Rôle du collecteur de données dans la Gestion des données")  
   
 ## <a name="concepts"></a>Concepts  
  Le collecteur de données est intégré à l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], et il utilise ces deux composants de manière intensive. Avant de vous servir du collecteur de données, vous devez donc comprendre certains concepts liés à chacun de ces composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,11 +42,11 @@ ms.locfileid: "68140748"
   
 -   Travail  
   
--   Étape du travail  
+-   Étape de travail  
   
 -   Planification du travail  
   
--   Sous-système  
+-   Subsystem  
   
 -   Comptes proxy  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68140748"
 |----------------------|-----------|  
 |Gérer différents aspects de la collecte de données, tels que l’activation ou la désactivation de la collecte de données, la modification de la configuration d’un jeu d’éléments de collecte ou la consultation des données dans l’entrepôt de données de gestion.|[Gérer la collecte de données](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Utiliser des rapports pour obtenir des informations afin de contrôler la capacité système et de résoudre les problèmes de performances système.|[Rapports de jeux d’éléments de collecte de données système](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
-|Utiliser l’entrepôt de données de gestion pour collecter des données d’un serveur qui est une cible de collecte de données.|[entrepôt de données de gestion](../../relational-databases/data-collection/management-data-warehouse.md)| 
+|Utiliser l’entrepôt de données de gestion pour collecter des données d’un serveur qui est une cible de collecte de données.|[Entrepôt de données de gestion](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |Exploiter les fonctions de trace côté serveur de SQL Server Profiler pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique.| [Utiliser SQL Server Profiler pour créer un jeu d’éléments de collecte Trace SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   

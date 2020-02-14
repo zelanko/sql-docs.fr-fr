@@ -17,10 +17,10 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294063"
 ---
 # <a name="integration-services-containers"></a>Conteneurs Integration Services
@@ -46,7 +46,7 @@ ms.locfileid: "71294063"
 |[Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md)|Exécute un flux de contrôle de façon répétitive à l'aide d'un énumérateur.|  
 |[Conteneur de boucles For](../../integration-services/control-flow/for-loop-container.md)|Exécute un flux de contrôle de façon répétitive en testant une condition.|  
 |[Conteneur de séquences](../../integration-services/control-flow/sequence-container.md)|Regroupe les tâches et les conteneurs en flux de contrôle représentant des sous-ensembles du flux de contrôle des packages.|  
-|[Conteneur d'hôte de tâche](../../integration-services/control-flow/task-host-container.md)|Fournit des services à une seule tâche.|  
+|[Conteneur d’hôte de tâche](../../integration-services/control-flow/task-host-container.md)|Fournit des services à une seule tâche.|  
   
  Les packages et les gestionnaires d'événements sont également des types de conteneurs. Pour plus d’informations, consultez [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md) et [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
@@ -65,12 +65,12 @@ ms.locfileid: "71294063"
 |**ForcedExecutionValueType**|Type de données de **ForcedExecutionValue**. La valeur par défaut de cette propriété est **Int32**.|  
 |**ForceExecutionResult**|Valeur qui indique le résultat forcé de l'exécution du package ou conteneur. Cette propriété peut prendre les valeurs **None**, **Success**, **Failure**et **Completion**. La valeur par défaut de cette propriété est **None**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
 |**ForceExecutionValue**|Valeur booléenne qui indique si la valeur d'exécution facultative du conteneur doit être forcée de contenir une valeur particulière. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
-|**ID**|Identificateur global unique du conteneur, affecté lors de la création du package. Cette propriété est en lecture seule.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
+|**Identifiant**|Identificateur global unique du conteneur, affecté lors de la création du package. Cette propriété est en lecture seule.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
 |**IsolationLevel**|Niveau d'isolation de la transaction sur conteneur. Cette propriété peut prendre les valeurs **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**et **Snapshot**. La valeur par défaut de cette propriété est **Serializable**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**LocaleID**|Paramètre régional Microsoft Win32. La valeur par défaut de cette propriété est le paramètre régional du système d'exploitation sur l'ordinateur local.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |**LoggingMode**|Valeur qui indique le comportement de journalisation du conteneur. Ces valeurs sont **Disabled**, **Enabled**et **UseParentSetting**. La valeur par défaut de cette propriété est **UseParentSetting**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |**MaximumErrorCount**|Nombre maximal d'erreurs pouvant se produire avant l'arrêt de l'exécution d'un conteneur. La valeur par défaut de cette propriété est **1**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
-|**Name**|Nom du conteneur.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
+|**Nom**|nom du conteneur.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |**TransactionOption**|Participation transactionnelle du conteneur. Cette propriété peut prendre les valeurs **NotSupported**, **Supported**et **Required**. La valeur par défaut de cette propriété est **Supported**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
  Pour plus d'informations sur toutes les propriétés disponibles pour les conteneurs de boucle Foreach, les conteneurs de boucle For, les conteneurs Sequence et les conteneurs d'hôte de tâche lorsqu'ils sont configurés par programmation, consultez les rubriques API [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] suivantes :  

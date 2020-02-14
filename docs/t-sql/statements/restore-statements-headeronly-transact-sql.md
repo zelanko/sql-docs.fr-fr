@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983029"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instructions RESTORE – HEADERONLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73983029"
 > [!NOTE]  
 >  Pour une description des arguments, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -91,7 +91,7 @@ FROM <backup_device>
 > [!NOTE]
 >  Par sa nature, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format autorise la cohabitation de jeux de sauvegarde créés avec d’autres logiciels sur le même support que les jeux de sauvegarde [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le jeu de résultats renvoyé par RESTORE HEADERONLY inclue une ligne pour chacun de ces autres jeux de sauvegardes.  
   
-|Nom de colonne|Type de données|Description des jeux de sauvegardes SQL Server|  
+|Nom de la colonne|Type de données|Description des jeux de sauvegardes SQL Server|  
 |-----------------|---------------|--------------------------------------------|  
 |**BackupName**|**nvarchar(128)**|Nom du jeu de sauvegardes.|  
 |**BackupDescription**|**nvarchar(255)**|Description du jeu de sauvegardes.|  
@@ -103,7 +103,7 @@ FROM <backup_device>
 |**UserName**|**nvarchar(128)**|Nom de l'utilisateur qui a effectué l'opération de sauvegarde.|  
 |**ServerName**|**nvarchar(128)**|Nom du serveur qui a permis l'écriture du jeu de sauvegardes.|  
 |**DatabaseName**|**nvarchar(128)**|Nom de la base de données qui a été sauvegardée.|  
-|**DatabaseVersion**|**Int**|Version de la base de données à partir de laquelle la sauvegarde a été créée.|  
+|**DatabaseVersion**|**int**|Version de la base de données à partir de laquelle la sauvegarde a été créée.|  
 |**DatabaseCreationDate**|**datetime**|Date et heure de création de la base de données.|  
 |**BackupSize**|**numeric(20,0)**|Taille de la sauvegarde en octets.|  
 |**FirstLSN**|**numeric(25,0)**|Numéro séquentiel dans le journal correspondant au premier enregistrement du journal dans le jeu de sauvegarde.|  
@@ -114,15 +114,15 @@ FROM <backup_device>
 |**BackupFinishDate**|**datetime**|Date et heure de fin de l'opération de sauvegarde.|  
 |**SortOrder**|**smallint**|Ordre de tri du serveur. Cette colonne n'est valide que pour les sauvegardes de base de données. Fourni pour la compatibilité ascendante.|  
 |**CodePage**|**smallint**|Page de codes du serveur ou jeu de caractères utilisé par le serveur.|  
-|**UnicodeLocaleId**|**Int**|Option de configuration de ID locale Unicode du serveur utilisée pour le tri des données caractères Unicode. Fourni pour la compatibilité ascendante.|  
-|**UnicodeComparisonStyle**|**Int**|Option de configuration du style de comparaison Unicode du serveur qui offre un contrôle supplémentaire du tri des données Unicode. Fourni pour la compatibilité ascendante.|  
+|**UnicodeLocaleId**|**int**|Option de configuration de ID locale Unicode du serveur utilisée pour le tri des données caractères Unicode. Fourni pour la compatibilité ascendante.|  
+|**UnicodeComparisonStyle**|**int**|Option de configuration du style de comparaison Unicode du serveur qui offre un contrôle supplémentaire du tri des données Unicode. Fourni pour la compatibilité ascendante.|  
 |**CompatibilityLevel**|**tinyint**|Paramètre de niveau de compatibilité de la base à partir de laquelle la sauvegarde a été créée.|  
-|**SoftwareVendorId**|**Int**|Numéro d'identification du fournisseur de logiciel. Pour SQL Server, ce numéro est **4608** (ou, en hexadécimal, **0x1200**).|  
-|**SoftwareVersionMajor**|**Int**|Numéro de version principal du serveur qui a créé le jeu de sauvegardes.|  
-|**SoftwareVersionMinor**|**Int**|Numéro de version secondaire du serveur qui a créé le jeu de sauvegardes.|  
-|**SoftwareVersionBuild**|**Int**|Numéro de build du serveur qui a créé le jeu de sauvegardes.|  
+|**SoftwareVendorId**|**int**|Numéro d'identification du fournisseur de logiciel. Pour SQL Server, ce numéro est **4608** (ou, en hexadécimal, **0x1200**).|  
+|**SoftwareVersionMajor**|**int**|Numéro de version principal du serveur qui a créé le jeu de sauvegardes.|  
+|**SoftwareVersionMinor**|**int**|Numéro de version secondaire du serveur qui a créé le jeu de sauvegardes.|  
+|**SoftwareVersionBuild**|**int**|Numéro de build du serveur qui a créé le jeu de sauvegardes.|  
 |**MachineName**|**nvarchar(128)**|Nom de l'ordinateur qui a effectué l'opération de sauvegarde.|  
-|**Indicateurs**|**Int**|Signification des différents bits d’indicateurs avec la valeur **1** :<br /><br /> **1** = La sauvegarde de journal contient des opérations de journalisation en bloc.<br /><br /> **2** = Sauvegarde d’instantané.<br /><br /> **4** = La base de données était accessible en lecture seule au moment de la sauvegarde.<br /><br /> **8** = La base de données était accessible en mode mono-utilisateur au moment de la sauvegarde.<br /><br /> **16** = La sauvegarde contient des sommes de contrôle de sauvegarde.<br /><br /> **32** = La base de données a été endommagée pendant la sauvegarde, mais l’opération de sauvegarde doit continuer malgré les erreurs.<br /><br /> **64** = Sauvegarde de la fin du journal.<br /><br /> **128** = Sauvegarde de la fin du journal avec des métadonnées incomplètes.<br /><br /> **256** = Sauvegarde de la fin du journal avec NORECOVERY.<br /><br /> **Important :** Au lieu d’utiliser des **indicateurs**, nous vous conseillons les colonnes de valeur booléenne individuelles (listées ci-dessous, en commençant à **HasBulkLoggedData**, jusqu’à **IsCopyOnly**).|  
+|**Indicateurs**|**int**|Signification des différents bits d’indicateurs avec la valeur **1** :<br /><br /> **1** = La sauvegarde de journal contient des opérations de journalisation en bloc.<br /><br /> **2** = Sauvegarde d’instantané.<br /><br /> **4** = La base de données était accessible en lecture seule au moment de la sauvegarde.<br /><br /> **8** = La base de données était accessible en mode mono-utilisateur au moment de la sauvegarde.<br /><br /> **16** = La sauvegarde contient des sommes de contrôle de sauvegarde.<br /><br /> **32** = La base de données a été endommagée pendant la sauvegarde, mais l’opération de sauvegarde doit continuer malgré les erreurs.<br /><br /> **64** = Sauvegarde de la fin du journal.<br /><br /> **128** = Sauvegarde de la fin du journal avec des métadonnées incomplètes.<br /><br /> **256** = Sauvegarde de la fin du journal avec NORECOVERY.<br /><br /> **Important :** Au lieu d’utiliser des **indicateurs**, nous vous conseillons les colonnes de valeur booléenne individuelles (listées ci-dessous, en commençant à **HasBulkLoggedData**, jusqu’à **IsCopyOnly**).|  
 |**BindingID**|**uniqueidentifier**|ID de liaison de la base de données. Cela correspond à **sys.database_recovery_status database_guid**. Lors de la restauration d'une base de données, une nouvelle valeur est attribuée. Voir aussi **FamilyGUID** (ci-dessous).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID de la fourchette de récupération de fin. Cette colonne correspond à **last_recovery_fork_guid** dans la table [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).<br /><br /> Pour les sauvegardes de données, **RecoveryForkID** équivaut à **FirstRecoveryForkID**.|  
 |**Classement**|**nvarchar(128)**|Classement utilisé par la base de données.|  
@@ -157,7 +157,7 @@ FROM <backup_device>
  Un client peut utiliser RESTORE HEADERONLY pour récupérer toutes les informations des en-têtes de sauvegarde pour toutes les sauvegardes figurant sur une unité particulière. Pour chaque sauvegarde réalisée sur une unité de sauvegarde, le serveur envoie les informations d'en-tête sous forme de ligne.  
   
 ## <a name="security"></a>Sécurité  
- Une opération de sauvegarde peut éventuellement spécifier des mots de passe pour un support de sauvegarde, un jeu de sauvegarde ou les deux. Lorsqu'un mot de passe a été défini sur un support de sauvegarde ou un jeu de sauvegarde, vous devez entrer le ou les mots de passe corrects dans l'instruction RESTORE. Ces mots de passe empêchent les opérations de restauration non autorisées, ainsi que les ajouts non autorisés de jeux de sauvegarde sur les supports à l’aide des outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, un mot de passe n'empêche pas d'écraser les supports en cas d'utilisation de l'option FORMAT de l'instruction BACKUP.  
+ Une opération de sauvegarde peut éventuellement spécifier des mots de passe pour un support de sauvegarde, un jeu de sauvegarde ou les deux. Lorsqu'un mot de passe a été défini sur un support de sauvegarde ou un jeu de sauvegarde, vous devez entrer le ou les mots de passe corrects dans l'instruction RESTORE. Ces mots de passe empêchent les opérations non autorisées de restauration et d’ajout de jeux de sauvegarde au support à l’aide d’outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, un mot de passe n'empêche pas d'écraser les supports en cas d'utilisation de l'option FORMAT de l'instruction BACKUP.  
   
 > [!IMPORTANT]  
 >  Le niveau de protection de ce mot de passe est faible. Son but est d'éviter que des utilisateurs autorisés ou non autorisés effectuent une restauration incorrecte à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En aucun cas, elle n'empêche la lecture des données de la sauvegarde par d'autres moyens ou le remplacement du mot de passe. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La bonne pratique en matière de protection des sauvegardes consiste à stocker les bandes de sauvegarde dans un emplacement sûr ou à sauvegarder les fichiers disque protégés par une liste de contrôle d’accès (ACL). La liste de contrôle d'accès doit être définie à la racine du répertoire dans lequel les sauvegardes sont effectuées.  

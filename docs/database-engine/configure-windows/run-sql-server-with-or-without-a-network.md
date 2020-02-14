@@ -22,15 +22,15 @@ ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: db02b300e0f327a9186fb9b9af612d8f3f1ec452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67915991"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>Exécuter SQL Server avec ou sans réseau
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut s'exécuter sur un réseau ou fonctionner sans réseau.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut s’exécuter sur un réseau ou fonctionner sans réseau.  
   
 ## <a name="running-sql-server-on-a-network"></a>Exécution de SQL Server sur un réseau  
  Pour permettre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de communiquer en réseau, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en cours d'exécution. Par défaut, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows démarre automatiquement le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré. Pour savoir si le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est lancé, à l'invite de commandes tapez :  
@@ -52,6 +52,6 @@ ms.locfileid: "67915991"
   
  Quand vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale sans spécifier le nom d'un serveur, vous utilisez un canal de communication local. Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale en spécifiant explicitement le nom d'un serveur, vous utilisez soit un canal réseau, soit un autre mécanisme de réseau IPC, comme IPX/SPX (Internetwork Packet Exchange/Sequenced Packet Exchange) (si vous avez configuré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une utilisation multi-réseau). Comme une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome ne gère pas les canaux de communication réseau, vous devez omettre l’argument **/** _<nom_serveur>_ , devenu inutile, quand vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un client. Par exemple, pour vous connecter à une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de **osql**, tapez :  
   
- **osql /Usa /P** _\<Mot_de_passe_sa>_  
+ **osql /Usa /P** _\<saPassword>_  
   
   

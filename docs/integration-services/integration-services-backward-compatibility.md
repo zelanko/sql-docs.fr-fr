@@ -18,10 +18,10 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296240"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilité descendante d'Integration Services
@@ -33,13 +33,13 @@ ms.locfileid: "71296240"
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>Fonctionnalités Integration Services déconseillées dans SQL Server 2016
 
-Cette rubrique décrit les fonctionnalités déconseillées d’ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] encore disponibles dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. N’utilisez pas de fonctions déconseillées dans les nouvelles applications.  
+Cette rubrique décrit les fonctionnalités dépréciées d’[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] encore disponibles dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. N’utilisez pas de fonctions déconseillées dans les nouvelles applications.  
   
  Il n'existe aucune fonctionnalité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déconseillée dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ## <a name="discontinued-integration-services-functionality-in-sql-server-2016"></a>Fonctionnalités Integration Services abandonnées dans SQL Server 2016
 
-Cette rubrique décrit les fonctionnalités d’ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui ne sont plus disponibles dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+Cette rubrique décrit les fonctionnalités d’[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui ne sont plus disponibles dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Aucune fonctionnalité Integration Services n’a été supprimée dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 

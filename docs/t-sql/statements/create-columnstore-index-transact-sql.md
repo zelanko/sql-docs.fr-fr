@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729927"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -45,7 +45,7 @@ Convertissez une table rowstore en index cluster columnstore ou créez un index 
 > Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer la table en tant qu’index cluster columnstore.   Il n’est plus nécessaire de créer d’abord une table rowstore, puis de la convertir en index cluster columnstore.  
 
 > [!TIP]
-> Pour des informations sur les règles de conception d’index, consultez le [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+> Pour obtenir des informations sur les règles de conception d’index, consultez le [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 Passez aux exemples :  
 -   [Exemples de conversion d’une table rowstore en columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
@@ -55,11 +55,11 @@ Passez aux scénarios :
 -   [Index columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
 -   [Index columnstore pour l’entreposage des données](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
-En savoir plus :  
+En savoir plus :  
 -   [Guide des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [Synthèse des fonctionnalités des index columnstore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -120,7 +120,7 @@ Certaines options ne sont pas disponibles dans toutes les versions du moteur de 
 | COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 | DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE (clause) | Néant | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| WHERE (clause) | N/A | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 
 Toutes les options sont disponibles dans Azure SQL Database.
 
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Pour plus d’informations, consultez [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) et [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delai* [ Minutes ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *délai* [ minutes ]  
    Pour une table sur disque, le *délai* spécifie le nombre minimal de minutes pendant lesquelles un rowgroup delta à l’état CLOSED doit rester dans le rowgroup delta avant que SQL Server puisse le compresser dans le rowgroup compressé. Étant donné que les tables sur disque ne surveillent pas les durées d’insertion et de mise à jour sur chaque ligne, SQL Server applique le délai aux rowgroups delta à l’état CLOSED.  
    La valeur par défaut est 0 minute.  
    
@@ -250,7 +250,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<délai>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<délai>[minutes]  
    Spécifie une durée minimale pendant laquelle une ligne doit rester dans un rowgroup delta avant qu’elle ne soit éligible pour la migration vers un rowgroup compressé. Par exemple, un client peut décider que si une ligne reste inchangée pendant 120 minutes, elle est éligible à la compression dans le format de stockage en colonnes. Pour les index columnstore des tables sur disque, nous ne suivons pas l’heure à laquelle une ligne a été insérée ou mise à jour, mais nous utilisons au lieu de cela l’heure de fermeture du rowgroup delta comme proxy pour la ligne. La durée par défaut est de 0 minute. Une ligne est migrée vers un stockage en colonnes après l’accumulation de 1 million de lignes dans un rowgroup delta et après avoir été marquée comme fermée.  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
@@ -309,15 +309,15 @@ Les options SET figurant dans la colonne Valeur requise sont requises chaque foi
 - L'opération INSERT, UPDATE, DELETE ou MERGE modifie les données dans un index filtré.  
 - L’index filtré est utilisé par l’optimiseur de requête pour générer le plan de requête.  
   
-    |Options définies|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
+    |Options définies|Valeur requise|Valeur de serveur par défaut|Default<br /><br /> Valeur OLE DB et ODBC|Default<br /><br /> Valeur DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
+    |ANSI_PADDING|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
+    |ANSI_WARNINGS*|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
+    |ARITHABORT|ACTIVÉ|ACTIVÉ|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|   
+    |QUOTED_IDENTIFIER|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|   
   
      *L'affectation de la valeur ON à ANSI_WARNINGS affecte de manière implicite la valeur ON à ARITHABORT, lorsque le niveau de compatibilité de la base de données est d'au moins 90. Si le niveau de compatibilité de la base de données est au maximum de 80, la valeur ON doit être affectée de manière explicite à l'option ARITHABORT.  
   
@@ -346,9 +346,9 @@ Les options SET figurant dans la colonne Valeur requise sont requises chaque foi
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
 -   SMALLMONEY  
--   BIGINT  
--   INT  
--   smallint  
+-   bigint  
+-   int  
+-   SMALLINT  
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
@@ -370,7 +370,7 @@ Si la table sous-jacente a une colonne d’un type de données non pris en charg
 -   rowversion (et timestamp)  
 -   sql_variant  
 -   Types CLR (hierarchyid et types spatiaux)  
--   xml  
+-   Xml  
 -   uniqueidentifier (S’applique à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Index columnstore non-cluster :**
@@ -418,7 +418,7 @@ Ces limitations s’appliquent uniquement à [!INCLUDE[ssSQL14](../../includes/s
 
 ##  <a name="convert"></a> Exemples de conversion d’une table rowstore en columnstore  
   
-### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Convertir un segment dans un index cluster columnstore  
+### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>R. Convertir un segment dans un index cluster columnstore  
  Cet exemple crée une table en tant que segment puis la convertit en un index columnstore cluster nommé cci_Simple. Cela modifie le stockage de la table entière qui change de rowstore en columnstore.  
   
 ```sql  
@@ -603,7 +603,7 @@ WITH ( DROP_EXISTING = ON );
   
 ##  <a name="nonclustered"></a> Exemples d’index columnstore non-cluster  
   
-### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Créer un index columnstore comme index secondaire sur une table rowstore  
+### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>R. Créer un index columnstore comme index secondaire sur une table rowstore  
  Cet exemple crée un index columnstore non-cluster sur une table rowstore. Un seul index columnstore peut être créé dans ce cas de figure. L’index columnstore nécessite un stockage supplémentaire, car il contient une copie des données dans la table rowstore. Cet exemple crée une table simple et un index cluster, puis montre la syntaxe de création d'un index columnstore non-cluster.  
   
 ```sql  
@@ -670,7 +670,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Changer un index cluster en index cluster columnstore  
+### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>R. Changer un index cluster en index cluster columnstore  
  En utilisant l’instruction CREATE CLUSTERED COLUMNSTORE INDEX avec DROP_EXISTING = ON, vous pouvez :  
   
 -   Changer un index cluster en index cluster columnstore.  

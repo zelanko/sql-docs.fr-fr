@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942808"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
@@ -54,7 +54,7 @@ ms.locfileid: "67942808"
 ## <a name="populating-data-and-delta-files"></a>Remplissage des fichiers de données et des fichiers delta  
  Les fichiers de données et delta sont remplis en fonction des enregistrements du journal des transactions générés par les transactions validées sur les tables optimisées en mémoire ; des informations concernant les lignes insérées et supprimées sont ajoutées dans les fichiers de données et delta appropriés. Contrairement aux tables sur disque où les pages de données/index sont vidées avec des E/S aléatoires lorsque le point de contrôle est effectué, la persistance de la table optimisée en mémoire est une opération en arrière-plan continue. Plusieurs fichiers delta sont accédés car une transaction peut supprimer ou mettre à jour toute ligne ayant été insérée par une transaction précédente. Les informations de suppression sont toujours ajoutées à la fin du fichier delta. Par exemple, une transaction avec un horodateur de validation de 600 insère une nouvelle ligne et supprime les lignes insérées par les transactions ayant un horodateur de validation de 150, 250 et 450, comme le montre l'illustration ci-après. Les quatre opérations d'E/S de fichier (trois pour les lignes supprimées et une pour les nouvelles lignes insérées) sont des opérations Append-Only sur les fichiers de données et delta correspondants.  
   
- ![Lecture des enregistrements du journal des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "Lecture des enregistrements du journal des tables optimisées en mémoire")  
+ ![Lecture des enregistrements de journal pour les tables à mémoire optimisée.](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "Lecture des enregistrements de journal pour les tables à mémoire optimisée.")  
   
 ## <a name="accessing-data-and-delta-files"></a>Accès aux fichiers de données et aux fichiers delta  
  Les paires de fichiers de données et delta sont accessibles dans les cas suivants.  
@@ -82,7 +82,7 @@ ms.locfileid: "67942808"
   
  Dans l'exemple ci-dessous, le groupe de fichiers de la table mémoire optimisée contient quatre paires de fichiers de données et delta ayant l'horodateur 500 et contenant des données issues de transactions précédentes. Par exemple, les lignes du premier fichier de données correspondent aux transactions avec un horodateur supérieur à 100 et inférieur ou égal à 200 ; alternativement représenté comme (100, 200]. Le deuxième et le troisième fichiers de données affichent un taux de remplissage inférieur à 50 % après prise en compte des lignes marquées comme supprimées. L'opération de fusion associe ces deux paires de fichiers de point de contrôle et crée une paire de fichiers de point de contrôle contenant des transactions avec un horodateur supérieur à 200 et inférieur ou égal à 400, qui est la plage combinée de ces deux paires de fichiers de point de contrôle. Vous voyez une autre paire de fichiers de point de contrôle avec une plage (500, 600] et un fichier delta non vide pour la plage de transactions (200, 400] indique que l'opération de fusion peut être effectuée en même temps que l'activité transactionnelle comprenant la suppression de plus de lignes des paires de fichiers de point de contrôle source.  
   
- ![Le diagramme affiche le groupe de fichiers de table optimisé en mémoire](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "Le diagramme affiche le groupe de fichiers de table optimisé en mémoire")  
+ ![Le diagramme présente le groupe de fichiers de table à mémoire optimisée](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "Le diagramme présente le groupe de fichiers de table à mémoire optimisée")  
   
  Un thread d'arrière-plan évalue toutes les paires de fichiers de point de contrôle fermées à l'aide d'une stratégie de fusion, puis initie une ou plusieurs demandes de fusion pour les paires de fichiers de point de contrôle qualifiées. Ces demandes de fusion sont traitées par le thread de point de contrôle hors connexion. L'évaluation de la stratégie de fusion est effectuée périodiquement et lorsqu'un point de contrôle est fermé.  
   
@@ -109,6 +109,6 @@ ms.locfileid: "67942808"
  Vous pouvez forcer manuellement le point de contrôle suivi de la sauvegarde du journal pour accélérer le garbage collection. Dans les scénarios de production, les points de contrôle automatiques et les sauvegardes de fichier journal effectuées dans le cadre de la stratégie de sauvegarde basculent sans problème les paires de fichiers de point de contrôle vers ces phases sans aucune intervention manuelle. L'impact du processus de garbage collection est le suivant : les bases de données avec des tables mémoire optimisées peuvent avoir une plus grande taille de stockage comparée à leur taille en mémoire. Sans le point de contrôle et les sauvegardes de journaux, l’encombrement sur le disque des fichiers de point de contrôle continue de croître.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Création et gestion du stockage des objets à mémoire optimisée](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

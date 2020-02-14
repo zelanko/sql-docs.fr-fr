@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296947"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
@@ -71,7 +71,7 @@ ms.locfileid: "71296947"
  Lorsque vous installez le composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est également installé. Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est démarré et le type de démarrage du service est défini comme étant automatique. Toutefois, vous devez également installer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour utiliser le service afin de gérer les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stockés et en cours d'exécution.  
   
 > [!NOTE]
-> Pour vous connecter directement à une instance du service Integration Services existante, vous devez utiliser la version de SQL Server Management Studio (SSMS) correspondant à la version de SQL Server sur lequel s’exécute le service Integration Services. Par exemple, pour vous connecter au service Integration Services existant s’exécutant sur une instance de SQL Server 2016, vous devez utiliser la version de SSMS publiée pour SQL Server 2016. [Téléchargez SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+> Pour vous connecter directement à une instance du service Integration Services existant, vous devez utiliser la version de SQL Server Management Studio (SSMS) correspondant à la version de SQL Server sur lequel s’exécute le service Integration Services. Par exemple, pour vous connecter au service Integration Services existant s’exécutant sur une instance de SQL Server 2016, vous devez utiliser la version de SSMS publiée pour SQL Server 2016. [Téléchargez SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >   Dans la boîte de dialogue **Se connecter au serveur** de SSMS, vous ne pouvez pas entrer le nom d’un serveur sur lequel une version antérieure du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s’exécute. Toutefois, pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant.   
   
@@ -91,9 +91,9 @@ ms.locfileid: "71296947"
   
 ## <a name="set-the-properties-of-the-service"></a>Définir les propriétés du service
   
- Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gère et surveille les packages dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Lors de l'installation initiale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est démarré et le type de démarrage du service est un démarrage automatique.  
+ Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gère et surveille les packages dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Lors de l'installation initiale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est démarré et le type de démarrage du service est un démarrage automatique.  
   
- Après avoir installé le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez définir les propriétés du service en utilisant le composant logiciel enfichable Gestionnaire de configuration SQL Server ou Services MMC.  
+ Après avoir installé le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez définir les propriétés du service en utilisant le composant logiciel enfichable Gestionnaire de configuration SQL Server ou Services MMC.  
   
  Pour configurer d'autres fonctionnalités importantes du service, y compris les emplacements auxquels il stocke et gère les packages, vous devez modifier le fichier de configuration du service.
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296947"
   
 4.  Dans la boîte de dialogue **Propriétés de SQL Server Integration Services** , vous pouvez effectuer les actions suivantes :  
   
-    -   Cliquez sur l'onglet **Général** . Pour activer le service, sélectionnez le type de démarrage manuel ou automatique. Pour désactiver le service, sélectionnez Désactiver dans la zone **Type de démarrage** . Le fait de sélectionner Désactiver n'arrête pas le service s'il est en cours d'exécution.  
+    -   Cliquez sur l’onglet **General** (Général). Pour activer le service, sélectionnez le type de démarrage manuel ou automatique. Pour désactiver le service, sélectionnez Désactiver dans la zone **Type de démarrage** . Le fait de sélectionner Désactiver n'arrête pas le service s'il est en cours d'exécution.  
   
          Si le service est déjà activé, vous pouvez cliquer sur **Arrêter** pour arrêter le service ou sur **Démarrer** pour le démarrer.  
   
@@ -195,7 +195,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 -   Dans le système de fichiers géré par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les packages se trouvent à l’emplacement %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages.  
   
- Ce fichier de configuration spécifie également quelle base de données msdb contient les packages que le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gère. Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est installée au même moment que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si aucune instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est installée au même moment, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance locale par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Ce fichier de configuration spécifie également quelle base de données msdb contient les packages que le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gère. Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est installée au même moment que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas installée au même moment, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance locale par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ### <a name="default-configuration-file-example"></a>Exemple de fichier de configuration par défaut  
  L'exemple suivant présente un fichier de configuration par défaut qui spécifie les paramètres suivants :  
@@ -227,11 +227,11 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file"></a>Modifier le fichier de configuration  
+### <a name="modify-the-configuration-file"></a>Modifiez le fichier de configuration  
  Vous pouvez modifier le fichier de configuration de manière à permettre aux packages de poursuivre leur exécution en cas d'arrêt du service, à afficher des dossiers racine supplémentaires dans l'Explorateur d'objets ou à spécifier un dossier différent ou des dossiers supplémentaires dans le système de fichiers que doit gérer le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Par exemple, vous pouvez créer des dossiers racines supplémentaires de type, **SqlServerFolder**, pour gérer des packages dans les bases de données msdb d’instances supplémentaires du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!NOTE]  
->  Certains caractères ne sont pas valides dans les noms de dossiers. Les caractères valides des noms de dossiers sont déterminés par la classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **System.IO.Path** et le champ **GetInvalidFilenameChars** . Le champ **GetInvalidFilenameChars** fournit un tableau de caractères propre à la plateforme, qui ne peuvent pas être spécifiés dans des arguments de chaîne de chemin transmis aux membres de la classe **Path** . Le jeu des caractères non valides peut varier selon le système de fichiers. En général, les caractères non valides sont le guillemet ("), le caractère « inférieur à » (<) et la barre verticale (|).  
+>  Certains caractères ne sont pas valides dans les noms de dossiers. Les caractères valides des noms de dossiers sont déterminés par la classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**System.IO.Path** et le champ **GetInvalidFilenameChars** . Le champ **GetInvalidFilenameChars** fournit un tableau de caractères propre à la plateforme, qui ne peuvent pas être spécifiés dans des arguments de chaîne de chemin transmis aux membres de la classe **Path** . Le jeu des caractères non valides peut varier selon le système de fichiers. En général, les caractères non valides sont le guillemet ("), le caractère « inférieur à » (<) et la barre verticale (|).  
   
  Cependant, pour gérer des packages stockés dans une instance nommée ou une instance distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez modifier le fichier de configuration. Si vous ne mettez pas à jour le fichier de configuration, vous ne pouvez pas utiliser **l’Explorateur d’objets** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour consulter des packages stockés dans la base de données msdb sur l’instance nommée ou l’instance distante. Si vous essayez d'utiliser l' **Explorateur d'objets** pour consulter ces packages, le message d'erreur suivant apparaît :  
   
@@ -293,7 +293,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 4.  Dans la boîte de dialogue **Se connecter au serveur** , entrez un nom de serveur. Vous pouvez utiliser un point (.), (local) ou **localhost** pour indiquer le serveur local.  
   
-5.  Cliquez sur **Se connecter**.  
+5.  Cliquez sur **Connecter**.  
 
 ## <a name="connect-to-a-remote-ssis-server"></a>Se connecter à un serveur SSIS distant
   
@@ -314,12 +314,12 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 3.  Sélectionnez **Integration Services** dans la liste **Type de serveur** .  
   
-4.  Tapez le nom d’un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans la zone de texte **Nom du serveur** .  
+4.  Tapez le nom d’un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans la zone de texte **Nom du serveur**.  
   
     > [!NOTE]  
     >  Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas spécifique à l'instance. Vous vous connectez au service en utilisant le nom de l'ordinateur sur lequel le service Integration Services s'exécute.  
   
-5.  Cliquez sur **Se connecter**.  
+5.  Cliquez sur **Connecter**.  
   
 > [!NOTE]  
 >  La boîte de dialogue **Rechercher les serveurs** n’affiche pas les instances distantes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. De plus, les options disponibles sous l’onglet **Options de connexion** de la boîte de dialogue **Se connecter au serveur** (cliquez sur le bouton **Options** pour les afficher) ne s’appliquent pas aux connexions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -359,7 +359,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 2.  Dans la page **Applications** de la boîte de dialogue des **propriétés de configuration de Distributed COM** , sélectionnez SQL Server Integration Services 11.0, puis cliquez sur **Propriétés**.  
   
-3.  Sélectionnez la page **Sécurité** .  
+3.  Sélectionnez la page **Security** .  
   
 4.  Utilisez les deux boîtes de dialogue distinctes pour configurer les **autorisations d’accès** et les **autorisations d’exécution**. Aucune distinction entre accès local et accès à distance n'est possible : les autorisations d'accès englobent l'accès local et l'accès à distance, et les autorisations d'exécution incluent l'exécution locale et l'exécution à distance.  
   
@@ -382,7 +382,7 @@ Pour plus d’informations, consultez [Getting Cross Domain Kerberos and Delegat
  Le système de Pare-feu Windows permet d’empêcher l’accès non autorisé à des ressources informatiques via une connexion réseau. Pour accéder à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à travers ce pare-feu, vous devez configurer le pare-feu de façon à autoriser l’accès.  
   
 > [!IMPORTANT]  
->  Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant.
+>  Pour gérer les packages stockés sur un serveur distant, vous n’avez pas besoin de vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant.
   
  Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise le protocole DCOM.
   

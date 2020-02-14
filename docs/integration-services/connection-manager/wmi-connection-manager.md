@@ -17,10 +17,10 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294356"
 ---
 # <a name="wmi-connection-manager"></a>Gestionnaire de connexions WMI
@@ -53,7 +53,7 @@ ms.locfileid: "71294356"
  Pour en savoir plus sur le gestionnaire de connexions WMI, consultez [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Donnez un nom unique au gestionnaire de connexions.  
   
  **Description**  
@@ -68,13 +68,13 @@ ms.locfileid: "71294356"
  **Utiliser l’authentification Windows**  
  Sélectionnez cette option pour utiliser l'authentification Windows. Si vous utilisez l'authentification Windows, vous n'avez pas besoin de fournir un nom d'utilisateur ou un mot de passe pour la connexion.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Si vous n'utilisez pas l'authentification Windows, vous devez fournir un nom d'utilisateur pour la connexion.  
   
  **Mot de passe**  
  Si vous n'utilisez pas l'authentification Windows, vous devez fournir le mot de passe de la connexion.  
   
- **Tester**  
+ **Test**  
  Testez les paramètres du gestionnaire de connexions.  
   
 ## <a name="see-also"></a>Voir aussi  

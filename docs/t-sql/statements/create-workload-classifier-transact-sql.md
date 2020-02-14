@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056491"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831610"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -36,7 +36,7 @@ Crée un objet classifieur à utiliser dans la gestion des charges de travail.  
 > [!NOTE]
 > Le classifieur de charge de travail prend la place de l’affectation de la classe de ressources sp_addrolemember.  Une fois que vous avez créé les classifieurs de charge de travail, exécutez sp_droprolemember pour supprimer tous les mappages de classes de ressources redondants.
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -129,14 +129,17 @@ Spécifie l’importance relative d’une requête.  Elle prend l'une des valeur
 
 Si l’importance n’est pas spécifiée, le paramètre d’importance défini pour le groupe de charge de travail est appliqué.  L’importance par défaut du groupe de charge de travail est définie sur Normal.  L’importance impacte l’ordre dans lequel les requêtes sont planifiées, avec un accès prioritaire aux ressources et aux verrous.
 
-## <a name="classification-parameter-precedence"></a>Précédence des paramètres de classification
+## <a name="classification-parameter-weighting"></a>Pondération des paramètres de classification
 
-Une requête peut être mise en correspondance avec plusieurs classifieurs.  Les paramètres de classifieur sont définis avec une précédence.  Le classifieur correspondant à la précédence la plus élevée est utilisé en premier pour affecter un groupe de charge de travail et une importance.  La précédence s’établit comme suit :
-1. Utilisateur
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+Une requête peut être mise en correspondance avec plusieurs classifieurs.  Les paramètres de classifieur sont pondérés.  Le classifieur correspondant à la pondération la plus élevée est utilisé pour affecter un groupe de charge de travail et une importance.  La pondération se présente comme suit :
+
+|Paramètre du classifieur |Poids   |
+|---------------------|---------|
+|Utilisateur                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 Examinez les configurations de classifieurs suivantes.
 
@@ -151,13 +154,13 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-L’utilisateur `userloginA` est configuré pour les deux classifieurs.  Si userloginA exécute une requête ayant l’étiquette `salesreport` entre 18 h 00 et 7 h, la requête sera classifiée dans le groupe de charge de travail wgDashboards avec une importance élevée (HIGH).  Vous voudrez peut-être classifier cette requête dans le groupe wgUserQueries avec une faible importance (LOW) pour la création de rapports durant les heures creuses, mais la précédence de WLM_LABEL est supérieure à START_TIME/END_TIME.  Dans ce cas, vous pouvez ajouter START_TIME/END_TIME à classiferA.
+L’utilisateur `userloginA` est configuré pour les deux classifieurs.  Si userloginA exécute une requête ayant l’étiquette `salesreport` entre 18 h 00 et 7 h, la requête sera classifiée dans le groupe de charge de travail wgDashboards avec une importance élevée (HIGH).  Vous voudrez peut-être classifier cette requête dans le groupe wgUserQueries avec une faible importance (LOW) pour la création de rapports durant les heures creuses, mais la pondération de WLM_LABEL est supérieure à START_TIME/END_TIME.  La pondération de classiferA est de 80 (64 pour l’utilisateur, plus 16 pour WLM_LABEL).  La pondération de classifierB est de 68 (64 pour l’utilisateur, 4 pour START_TIME/END_TIME).  Dans ce cas, vous pouvez ajouter WLM_LABEL à classiferB.
 
- Pour plus d’informations, consultez la [classification de la charge de travail](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+ Pour plus d’informations, consultez [Pondération des charges de travail](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 
 ## <a name="permissions"></a>Autorisations
 

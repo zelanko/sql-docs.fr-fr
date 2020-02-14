@@ -15,10 +15,10 @@ ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a42a4a17a1eee9222318e2b508b28d190361d85e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012779"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données
@@ -38,7 +38,7 @@ ms.locfileid: "68012779"
 4.  Dans la zone **Entrez les noms d’objets à sélectionner** , tapez le nom du SID par service répertorié dans la rubrique de la documentation en ligne [**Configurer les comptes de service Windows et les autorisations**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). (Pour le nom du SID par service [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilisez **NT SERVICE\MSSQLSERVER** pour une instance par défaut ou **NT SERVICE\MSSQL$InstanceName** pour une instance nommée.)  
   
 5.  Cliquez sur **Vérifier les noms** pour valider l’entrée. (Si la validation échoue, cela peut indiquer que le nom était introuvable. Quand vous cliquez sur **OK**, une boîte de dialogue **Noms multiples trouvés** s’affiche. Sélectionnez maintenant le nom du SID par service, à savoir **MSSQLSERVER** ou **NT SERVICE\MSSQL$InstanceName**, puis cliquez sur **OK**.  Cliquez sur **OK** à nouveau pour revenir à la boîte de dialogue **Autorisations** .)   
-6.  Dans la zone de noms **Groupe ou utilisateur**, sélectionnez le SID par service puis, dans la zone **Autorisations pour** \<nom>, cochez la case **Autoriser** pour **Contrôle total**.  
+6.  Dans la zone de noms **Groupe ou utilisateur**, sélectionnez le SID par service, puis dans la zone **Autorisations pour**  \<nom>, sélectionnez la case à cocher **Autoriser** pour **Contrôle total**.  
   
 7. Cliquez sur **Appliquer**, puis cliquez à deux reprises sur **OK** pour quitter la boîte de dialogue.  
   

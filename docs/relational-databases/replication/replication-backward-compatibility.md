@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d255b4f3599cc9d42f52e860a21941c6e8b95436
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 265f7fa72b6cdcd59ff7c74ec456e533471ddd0a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769742"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287399"
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilité descendante de la réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Les règles générales sont les suivantes :
 -   Toute version convient pour le serveur de publication dès lors qu'elle est inférieure ou égale à celle du serveur de distribution.    
 -   La version de l'Abonné dépend du type de publication :    
     - La version d'un Abonné à une publication transactionnelle peut être n'importe laquelle des deux versions du serveur de publication. Par exemple : un éditeur SQL Server 2012 (11.x) peut avoir des abonnés SQL Server 2014 (12.x) et SQL Server 2016 (13.x), et un éditeur SQL Server 2016 (13.x) peut avoir des abonnés SQL Server 2014 (12.x) et SQL Server 2012 (11.x).     
-    - Un abonné à une publication de fusion peut avoir toute version égale ou inférieure à la version du serveur de publication qui est prise en charge selon le cycle de prise en charge du cycle de vie des versions.  
+    - Un abonné à une publication de fusion peut avoir toute version égale ou inférieure à la version de l’éditeur qui est prise en charge selon le cycle de prise en charge du cycle de vie des versions.  
 
 
 ## <a name="replication-matrix"></a>Matrice de réplication

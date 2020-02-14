@@ -15,10 +15,10 @@ ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084096"
 ---
 # <a name="log-file-viewer-f1-help"></a>Aide sur la visionneuse du fichier journal via la touche F1
@@ -27,25 +27,25 @@ ms.locfileid: "68084096"
   
  Les journaux disponibles dépendent de la manière dont la visionneuse du fichier journal est ouverte. Pour plus d’informations, consultez [Ouvrir la Visionneuse du fichier journal](../../relational-databases/logs/open-log-file-viewer.md).  
   
- Vous pouvez configurer le nombre de lignes qui s’affichent pour les journaux d’audit dans la page **Explorateur d’objets SQL Server/Commandes** de la boîte de dialogue **Outils/Options**. Pour obtenir la description des colonnes qui s’affichent pour les journaux d’audit, consultez [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
+ Vous pouvez configurer le nombre de lignes qui s’affichent pour les journaux d’audit dans la page **Explorateur d’objets SQL Server/Commandes** de la boîte de dialogue **Outils/Options** . Pour obtenir la description des colonnes qui s’affichent pour les journaux d’audit, consultez [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
   
 ## <a name="options"></a>Options  
  **Charger le journal**  
  Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  
   
- **Exporter**  
+ **Export**  
  Ouvre une boîte de dialogue qui vous permet d’exporter les informations figurant dans la grille **Résumé du fichier journal** vers un fichier texte.  
   
  **Actualiser**  
  Actualise l'affichage des journaux sélectionnés. Le bouton **Actualiser** permet de relire les journaux sélectionnés à partir du serveur cible lors de l'application des paramètres de filtre.  
   
- **Filtre**  
+ **Filter**  
  Ouvre une boîte de dialogue qui vous permet de spécifier les paramètres utilisés pour filtrer le fichier journal, notamment **Connexion**, **Date**et d’autres critères de filtre **Général** .  
   
- **Recherche**  
+ **action**  
  Permet de rechercher un texte spécifique dans le fichier journal. La recherche des caractères génériques n'est pas prise en charge.  
   
- **Arrêter**  
+ **Stop**  
  Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
   
  **Résumé du fichier journal**  

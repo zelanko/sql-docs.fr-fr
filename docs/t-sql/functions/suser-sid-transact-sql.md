@@ -25,10 +25,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981748"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73981748"
 
   Renvoie le numéro d'identification de sécurité (SID) correspondant au nom de connexion spécifié.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -70,7 +70,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-suser_sid"></a>A. Utilisation de SUSER_SID  
+### <a name="a-using-suser_sid"></a>R. Utilisation de SUSER_SID  
  L’exemple suivant retourne le numéro d’identification de sécurité (SID) du contexte de sécurité actuel.  
   
 ```  

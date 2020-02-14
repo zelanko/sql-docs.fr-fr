@@ -1,7 +1,7 @@
 ---
 title: Sauvegardes de type copie seule | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2018
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,17 +15,17 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908984"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941042"
 ---
 # <a name="copy-only-backups"></a>Sauvegardes de type copie seule
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Normalement, une sauvegarde modifie la base de données et affecte la restauration des sauvegardes ultérieures. Parfois, cependant, il est utile d'effectuer une sauvegarde à une fin précise sans affecter les procédures globales de sauvegarde et de restauration de la base de données. Pour cela, on peut recourir à une sauvegarde de copie uniquement.  
+Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Normalement, une sauvegarde modifie la base de données et affecte la restauration des sauvegardes ultérieures. Parfois, cependant, il est utile d'effectuer une sauvegarde à une fin précise sans affecter les procédures globales de sauvegarde et de restauration de la base de données. Pour cela, on peut recourir à une sauvegarde de copie uniquement.
   
  Les types de sauvegarde de copie uniquement sont les suivants :  
   
@@ -42,6 +42,9 @@ Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](.
      Le journal des transactions n'est jamais tronqué après une sauvegarde de type copie seule.  
   
  Les sauvegardes de copie uniquement sont enregistrées dans la colonne **is_copy_only** de la table [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) .  
+ 
+ > [!IMPORTANT]  
+> Dans Azure SQL Managed Instance, la sauvegarde de type copie seule ne peut pas être créée pour une base de données chiffrée avec le [chiffrement TDE (Transparent Data Encryption) géré par le service](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). TDE géré par le service utilise une clé interne pour chiffrer les données, et cette clé ne peut pas être exportée. Vous n’avez donc pas pu restaurer la sauvegarde ailleurs. Envisagez d’utiliser [TDE géré par le client](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) pour pouvoir créer des sauvegardes de type copie seule des bases de données chiffrées, mais assurez-vous que la clé de chiffrement est disponible pour une restauration ultérieure.
   
 ## <a name="to-create-a-copy-only-backup"></a>Pour créer une sauvegarde de type copie uniquement  
  Vous pouvez créer une sauvegarde de copie uniquement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  

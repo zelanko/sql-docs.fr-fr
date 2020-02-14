@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68731129"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -46,7 +46,7 @@ Cette fonction retourne le nombre (valeur entière signée) de limites datepart 
   
 Consultez [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md) pour obtenir une fonction qui gère des différences plus importantes entre les valeurs *startdate* et *enddate*. Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -98,9 +98,9 @@ Pour éviter toute ambiguïté, utilisez des années à quatre chiffres. Pour ob
 Consultez *startdate*.
   
 ## <a name="return-type"></a>Type de retour  
- **Int**  
+ **int**  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 
 Différence **int** entre *startdate* et *enddate*, exprimée dans le jeu de limites par *datepart*.
   
@@ -150,7 +150,7 @@ La spécification de `SET DATEFIRST` n’a pas d’effet sur `DATEDIFF`. `DATEDI
 ## <a name="examples"></a>Exemples  
 Ces exemples utilisent différents types d’expressions comme arguments pour les paramètres *startdate* et *enddate*.
   
-### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. Spécification de colonnes pour les dates de début et de fin  
+### <a name="a-specifying-columns-for-startdate-and-enddate"></a>R. Spécification de colonnes pour les dates de début et de fin  
 Cet exemple calcule le nombre de limites de jour qui sont traversées entre les dates de deux colonnes dans une table.
   
 ```sql

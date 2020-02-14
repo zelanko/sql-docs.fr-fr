@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026195"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -40,7 +40,7 @@ Cette fonction ajoute une valeur *number* spécifiée (entier signé) au *datepa
   
 Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,7 +71,7 @@ Partie de *date* à laquelle `DATEADD` ajoute un *number* de type **integer**. C
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
   
-*nombre*  
+*number*  
 Expression qui peut être résolue en [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) ajouté par `DATEADD` au *datepart* de *date*. `DATEADD` accepte les valeurs des variables définies par l’utilisateur pour *number*. `DATEADD` tronque une valeur *number* spécifiée ayant une fraction décimale. Il n’arrondit pas la valeur*number* dans cette situation.
   
 *date*  
@@ -90,7 +90,7 @@ Pour *date*, `DATEADD` accepte une expression de colonne, une expression, un lit
 
 Le type de données de la valeur de retour pour cette méthode est dynamique. Le type de retour dépend de l’argument fourni pour `date`. Si la valeur de `date` est un littéral de chaîne de date, `DATEADD` retourne une valeur **datetime**. Si un autre type de données d’entrée valide est fourni pour `date`, `DATEADD` retourne le même type de données. `DATEADD` lève une erreur si l’échelle en secondes du littéral de chaîne compte plus de trois décimales (.nnn) ou si le littéral de chaîne contient la partie de décalage du fuseau horaire.
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
   
 ## <a name="datepart-argument"></a>Argument datepart  
 **dayofyear**, **day** et **weekday** renvoient la même valeur.
@@ -127,7 +127,7 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Valeurs retournées pour une date smalldatetime et une partie de date seconde ou fractions de seconde  
-La partie des secondes d’une valeur [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) est toujours 00. Pour une valeur *date* **smalldatetime**, les remarques suivantes s’appliquent : 
+La partie des secondes d’une valeur [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) est toujours 00. Pour une valeur *date* **smalldatetime**, les remarques suivantes s’appliquent : 
 
 -   Si *datepart* est **second** et que la valeur de *number* est comprise entre -30 et +29, `DATEADD` ne change rien.  
 -   Si *datepart* est **second** et que la valeur de *number* est inférieure à -30 ou supérieure à +29, `DATEADD` effectue son ajout en commençant à une minute.  
@@ -144,7 +144,7 @@ Utilisez `DATEADD` dans les clauses suivantes :
 + WHERE
   
 ## <a name="fractional-seconds-precision"></a>Précision en fractions de seconde
-`DATEADD` n’autorise aucun ajout si *datepart* est **microsecond** ou **nanosecond** pour les types de données *date* **smalldatetime**, **date** et **datetime**.
+`DATEADD` n’autorise aucun ajout si *datepart* est **microsecond** ou **nanosecond** pour les types de données *date***smalldatetime**, **date** et **datetime**.
   
 Les millisecondes ont une échelle de 3 (0,123), les microsecondes une échelle de 6 (0,123456) et les nanosecondes une échelle de 9 (0,123456789). Les types de données **time**, **datetime2** et **datetimeoffset** ont une échelle maximale de 7 (.1234567). Si *datepart* est **nanosecond**, *number* doit être 100 avant que les fractions de seconde de *date* augmentent. Une valeur *number* comprise entre 1 et 49 est arrondie à 0, et une valeur comprise entre 50 et 99 est arrondie à 100.
   
@@ -184,7 +184,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
   
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>A. Incrémentation d'une partie de date d'un intervalle de 1  
+### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>R. Incrémentation d'une partie de date d'un intervalle de 1  
 Chacune de ces instructions incrémente *datepart* d’un intervalle de 1 :
   
 ```sql

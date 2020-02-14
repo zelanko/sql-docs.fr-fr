@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063145"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
@@ -73,7 +73,7 @@ La taille de ligne est calculée en ajoutant l'en-tête et le corps :
   
 La figure suivante illustre la structure des lignes pour une table qui comporte deux index :  
   
-![Structure des lignes d’une table qui comporte deux index.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Structure des lignes d’une table qui comporte deux index.")  
+![Structure des lignes d’une table qui comporte deux index.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Structure des lignes d'une table qui comporte deux index.")  
   
 Les horodateurs de début et de fin indiquent la période pendant laquelle une version de ligne spécifique est valide. Les transactions commençant dans cet intervalle peuvent consulter cette version de ligne. Pour plus d’informations, consultez [Transactions avec des tables à mémoire optimisée](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
   
@@ -99,14 +99,14 @@ Un horodateur de fin ∞ (infini) indique qu'il s'agit de la version actuellemen
   
 Pour un temps supérieur à 200, la table contient les lignes suivantes :  
   
-|Créer une vue d’abonnement|Ville|  
+|Name|City|  
 |----------|----------|  
-|John|Pékin|  
+|John|Beijing|  
 |Jane|Prague|  
   
 Toutefois, toutes les transactions actives avec une heure de début 100 verront la version de la table suivante :  
   
-|Créer une vue d’abonnement|Ville|  
+|Name|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -124,13 +124,13 @@ Les deux tailles *taille calculée du corps de ligne* et *taille réelle du corp
   
 Le tableau suivant décrit le calcul de la taille du corps de ligne, fourni en tant que *taille réelle du corps de ligne* = SUM(*taille des types superficiels*) + 2 + 2 * *nombre de colonnes de type profond*.  
   
-|Section|Taille|Commentaires|  
+|Section|Size|Commentaires|  
 |-------------|----------|--------------|  
 |Colonnes de type superficiel|SUM ([taille des types superficiels]). Les tailles en octets des différents types sont les suivantes :<br /><br /> **Bit** : 1<br /><br /> **Tinyint** : 1<br /><br /> **Smallint** : 2<br /><br /> **Int** : 4<br /><br /> **Real** : 4<br /><br /> **Smalldatetime** : 4<br /><br /> **Smallmoney** : 4<br /><br /> **Bigint** : 8<br /><br /> **Datetime** : 8<br /><br /> **Datetime2** : 8<br /><br /> **Float** : 8<br /><br /> **Money** : 8<br /><br /> **Numeric** (précision <= 18) : 8<br /><br /> **Time** : 8<br /><br /> **Numeric** (précision > 18) : 16<br /><br /> **Uniqueidentifier** : 16||  
-|Remplissage de colonne superficielle|Les valeurs possibles sont :<br /><br /> 1 s'il y a des colonnes de type profond et la taille de données totale des colonnes superficielles est un nombre impair.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
-|Tableau « offset » pour les colonnes de type profond|Les valeurs possibles sont :<br /><br /> 0 s'il n'y a aucune colonne de type profond<br /><br /> 2 + 2 * [nombre de colonnes de type profond] dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
+|Remplissage de colonne superficielle|Les valeurs possibles sont les suivantes :<br /><br /> 1 s'il y a des colonnes de type profond et la taille de données totale des colonnes superficielles est un nombre impair.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
+|Tableau « offset » pour les colonnes de type profond|Les valeurs possibles sont les suivantes :<br /><br /> 0 s'il n'y a aucune colonne de type profond<br /><br /> 2 + 2 * [nombre de colonnes de type profond] dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Tableau NULL|[nombre de colonnes qui acceptent les valeurs NULL] / 8, arrondi à des octets entiers.|La table comporte un bit pour chaque colonne pouvant avoir la valeur NULL. Cela est arrondi à des octets entiers.|  
-|Remplissage du tableau NULL|Les valeurs possibles sont :<br /><br /> 1 s'il y a des colonnes de type profond et la taille du tableau NULL a un nombre impair d'octets.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
+|Remplissage du tableau NULL|Les valeurs possibles sont les suivantes :<br /><br /> 1 s'il y a des colonnes de type profond et la taille du tableau NULL a un nombre impair d'octets.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Remplissage|S'il n’y a aucune colonne de type profond : 0<br /><br /> En présence de colonnes de type profond, 0-7 octets de remplissage sont ajoutés, selon le plus grand alignement requis par une colonne superficielle. Chaque colonne superficielle requiert un alignement égal à sa taille, comme indiqué précédemment, mais les colonnes GUID nécessitent un alignement d'1 octet (et non de 16) et les colonnes numériques requièrent toujours un alignement de 8 octets (jamais de 16). La plus grande spécification d'alignement entre toutes les colonnes superficielles est utilisée, et un remplissage de 0-7 octets est ajouté de sorte que la taille totale (sans les colonnes de type profond) soit un multiple de l'alignement requis.|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Colonnes de type profond à longueur fixe|SUM(*taille des colonnes de type profond à longueur fixe*)<br /><br /> La taille de chaque colonne est la suivante :<br /><br /> i pour char(i) et binary(i).<br /><br /> 2 * i pour nchar(i)|Les colonnes de type profond à longueur fixe sont des colonnes de type char(i), nchar(i) ou binary(i).|  
 |Colonnes de type profond à longueur variable *taille calculée*|SUM(*taille calculée des colonnes de type profond à longueur variable*)<br /><br /> La taille calculée de chaque colonne est la suivante :<br /><br /> i pour varchar(i) et varbinary(i)<br /><br /> 2 * i pour nvarchar(i)|Cette ligne est uniquement appliquée à la *taille calculée du corps de ligne*.<br /><br /> Les colonnes de type profond à longueur variable sont des colonnes de type varchar(i), nvarchar(i), ou varbinary(i). La taille calculée est déterminée par la longueur maximale (i) de la colonne.|  
@@ -240,6 +240,6 @@ where object_id = object_id('dbo.Orders')
 Le billet de blog [Nouveautés d’OLTP en mémoire dans SQL Server 2016 depuis CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) détaille certaines de ces complexités.   
  
 ## <a name="see-also"></a>Voir aussi  
- [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

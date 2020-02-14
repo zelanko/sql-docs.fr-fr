@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344599"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
@@ -67,7 +67,7 @@ L’utilisateur `dbo` est propriétaire du schéma `dbo`. Le schéma `dbo` est l
 ## <a name="public-server-role-and-database-role"></a>Rôle serveur public et rôle de base de données  
 Chaque connexion appartient au rôle serveur fixe `public` et chaque utilisateur de base de données appartient au rôle de base de données `public`. Quand des autorisations spécifiques sur un élément sécurisable n’ont pas été accordées ni refusées à une connexion ou à un utilisateur, celui-ci ou celle-ci hérite des autorisations accordées à public sur cet élément sécurisable. Le rôle serveur fixe `public` et le rôle de base de données fixe `public` ne peuvent pas être supprimés. Toutefois, vous pouvez révoquer des autorisations des rôles `public`. De nombreuses autorisations sont affectées par défaut aux rôles `public`. La plupart de ces autorisations sont nécessaires pour les opérations de routine dans la base de données (le genre de choses que tout le monde doit pouvoir faire). Soyez prudent lors de la révocation des autorisations de l’utilisateur ou de la connexion public, car cela affecte tous les utilisateurs/connexions. En général, vous ne devez pas refuser d’autorisations à public, car l’instruction deny remplace toutes les instructions grant que vous pouvez exécuter pour des utilisateurs spécifiques. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA et schémas et utilisateurs sys 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA et schémas et utilisateurs sys 
  Chaque base de données inclut deux entités qui apparaissent comme des utilisateurs dans des affichages catalogue : `INFORMATION_SCHEMA` et `sys`. Ces entités sont nécessaires pour une utilisation interne par le moteur de base de données. Elles ne peuvent être ni modifiées ni supprimées.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Connexions SQL Server basées sur des certificats  
@@ -88,7 +88,7 @@ Chaque connexion appartient au rôle serveur fixe `public` et chaque utilisateur
   
   
 ## <a name="related-tasks"></a>Tâches associées  
- Pour plus d’informations sur la conception d’un système d’autorisations, consultez [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
+ Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
  Les rubriques suivantes sont incluses dans cette section de la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
@@ -98,7 +98,7 @@ Chaque connexion appartient au rôle serveur fixe `public` et chaque utilisateur
   
 -   [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   
--   [Rôles d'applications](../../../relational-databases/security/authentication-access/application-roles.md)  
+-   [Rôles d’application](../../../relational-databases/security/authentication-access/application-roles.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)   

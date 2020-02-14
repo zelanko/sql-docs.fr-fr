@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127500"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -581,7 +581,7 @@ La syntaxe ALTER TABLE… ADD/DROP/ALTER INDEX est uniquement prise en charge po
 > En l’absence d’instruction ALTER TABLE, les instructions [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) et [PAD_INDEX](alter-table-index-option-transact-sql.md) ne sont pas prises en charge pour les index sur les tables à mémoire optimisée.
 
 ADD  
-Spécifie qu’une ou plusieurs définitions de colonnes, définitions de colonnes calculées ou contraintes de tables sont ajoutées. Ou bien les colonnes utilisées par le système pour le contrôle de version sont ajoutées. Pour les tables optimisées en mémoire, vous pouvez ajouter un index.
+Spécifie qu'une ou plusieurs définitions de colonnes, définitions de colonnes calculées ou contraintes de tables sont ajoutées. Ou bien les colonnes utilisées par le système pour le contrôle de version sont ajoutées. Pour les tables optimisées en mémoire, vous pouvez ajouter un index.
 
 > [!NOTE]
 > Les nouvelles colonnes sont ajoutées après toutes les colonnes existantes de la table à modifier.
@@ -635,7 +635,7 @@ PERIOD FOR SYSTEM_TIME
 Supprime la spécification pour les colonnes que le système utilisera pour la gestion système des versions.
 
 WITH \<drop_clustered_constraint_option>  
-Spécifie qu’une ou plusieurs options de suppression de contrainte cluster sont définies.
+Spécifie qu'une ou plusieurs options de suppression de contrainte cluster sont définies.
 
 MAXDOP = *max_degree_of_parallelism*  
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -663,7 +663,7 @@ Pour plus d’informations, consultez [Configurer des opérations d’index para
 ONLINE **=** { ON | **OFF** } \<< s’applique à drop_clustered_constraint_option>  
 Indique si les tables sous-jacentes et les index associés sont disponibles pour les requêtes et la modification de données pendant l'opération d'index. La valeur par défaut est OFF. Vous pouvez exécuter REBUILD en tant qu’opération ONLINE.
 
-ON  
+ACTIVÉ  
 Les verrous de table à long terme ne sont pas maintenus pendant la durée de l'opération d'index. Lors de la principale phase de l'indexation, seul le verrou de partage intentionnel (IS, Intent Share) est maintenu sur la table source. Ceci permet d'effectuer des requêtes ou des mises à jour dans la table sous-jacente et à l'opération sur les index de continuer. Au début de l'opération, un verrou partagé (S) est maintenu sur l'objet source pendant une période de temps courte. À la fin de l’opération, pendant une courte période, un verrou S (partagé) est acquis sur la source si un index non-cluster est créé. Ou bien, un verrou SCH-M (modification du schéma) est acquis lorsqu’un index cluster est créé ou supprimé en ligne et lorsqu’un index cluster ou non-cluster est reconstruit. ONLINE ne peut pas prendre la valeur ON si un index est en cours de création sur une table locale temporaire. Seule l'opération de reconstruction de segment monothread est autorisée.
 
 Pour exécuter l’instruction DDL pour **SWITCH** ou une reconstruction d’index en ligne, toutes les transactions bloquantes actives qui s’exécutent sur une table particulière doivent être terminées. Lors de l’exécution, **SWITCH** ou l’opération de reconstruction empêche de nouvelles transactions de commencer et peut affecter de manière significative le débit de la charge de travail et différer temporairement l’accès à la table sous-jacente.
@@ -688,7 +688,7 @@ Spécifie un emplacement où déplacer les lignes de données actuellement au ni
 Spécifie que *constraint_name* est activé ou désactivé. Cette option peut être utilisée seulement avec les contraintes FOREIGN KEY et CHECK. Lorsque NOCHECK est spécifié, la contrainte est désactivée ; les insertions et les mises à jour ultérieures de la colonne ne sont pas validées par rapport aux conditions de la contrainte. Il n'est pas possible de désactiver les contraintes DEFAULT, PRIMARY KEY et UNIQUE.
 
 ALL  
-Spécifie que toutes les contraintes sont désactivées à l’aide de l’option NOCHECK, ou bien activées à l’aide de l’option CHECK.
+Spécifie que toutes les contraintes sont désactivées à l'aide de l'option NOCHECK, ou bien activées à l'aide de l'option CHECK.
 
 { ENABLE | DISABLE } TRIGGER  
 Spécifie que *trigger_name* est activé ou désactivé. Lorsqu’un déclencheur est désactivé, il reste défini pour la table. Toutefois, lorsque les instructions INSERT, UPDATE ou DELETE s’exécutent sur la table, aucune action n’est effectuée dans le déclencheur tant que ce dernier n’est pas réactivé.
@@ -791,7 +791,7 @@ PARTITION = ALL
 Reconstruit toutes les partitions lors de la modification des paramètres de compression de la partition.
 
 REBUILD WITH ( \<rebuild_option> )  
-Toutes les options s’appliquent à une table pourvue d’un index cluster Si la table n'a pas d'index cluster, la structure de segment n'est affectée que par certaines options.
+Toutes les options s'appliquent à une table pourvue d'un index cluster Si la table n'a pas d'index cluster, la structure de segment n'est affectée que par certaines options.
 
 Lorsqu'un paramètre de compression spécifique n'est pas spécifié avec l'opération REBUILD, le paramètre de compression actuel est utilisé pour la partition. Pour retourner la valeur actuelle, interrogez la colonne **data_compression** dans la vue de catalogue **sys.partitions**.
 
@@ -823,7 +823,7 @@ Pour reconstruire plusieurs partitions en même temps, consultez l’article [in
 ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>  
 Spécifie si une seule partition des tables sous-jacentes et les index associés sont disponibles pour modifier des requêtes et des données pendant l'opération d'index. La valeur par défaut est OFF. Vous pouvez exécuter REBUILD en tant qu’opération ONLINE.
 
-ON  
+ACTIVÉ  
 Les verrous de table à long terme ne sont pas maintenus pendant la durée de l'opération d'index. Un verrou S sur la table est requis au début de la reconstruction de l'index, et un verrou Sch-M sur la table à la fin de la reconstruction de l'index en ligne. Bien que les deux verrous soient des verrous de métadonnées courtes, le verrou Sch-M doit attendre que toutes les transactions bloquantes soient terminées. Pendant le temps d'attente, le verrou Sch-M bloque toutes les autres transactions qui attendent derrière ce verrou en cas d'accès à la même table.
 
 > [!NOTE]
@@ -867,13 +867,13 @@ Quand vous activez Stretch pour une table en spécifiant `ON`, vous devez aussi 
 
 **Conditions préalables**. Avant d’activer Stretch pour une table, vous devez l’activer sur le serveur et sur la base de données. Pour plus d'informations, consultez [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
-**Les autorisations**. L’activation de Stretch pour une table ou une base de données nécessite les autorisations db_owner. L’activation de Stretch pour une table nécessite également des autorisations ALTER sur la table.
+**Autorisations**. L’activation de Stretch pour une table ou une base de données nécessite les autorisations db_owner. L’activation de Stretch pour une table nécessite également des autorisations ALTER sur la table.
 
 **Désactivation de Stretch Database pour une table**
 
 Quand vous désactivez Stretch pour une table, vous avez deux options pour les données distantes qui ont déjà été migrées vers Azure. Pour plus d’informations, consultez [Désactiver Stretch Database et récupérer les données distantes](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 
-- Pour désactiver Stretch pour une table et copier les données distantes pour la table d'Azure vers SQL Server, exécutez la commande suivante. Cette commande ne peut pas être annulée.
+- Pour désactiver Stretch Database pour une table et copier les données distantes de la table à partir d’Azure vers SQL Server, exécutez la commande suivante. Cette commande ne peut pas être annulée.
 
     ```sql
     ALTER TABLE <table_name>
@@ -891,7 +891,7 @@ Une fois que toutes les données distantes ont été copiées d'Azure vers SQL S
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
-Après avoir désactivé Stretch Database pour une table, la migration des données s’arrête et les résultats de la requête n'incluent plus les résultats de la table distante.
+Une fois que vous avez désactivé Stretch Database pour une table, la migration des données s’arrête et les résultats de requête n’incluent plus les résultats de la table distante.
 
 La désactivation de Stretch ne supprime pas la table distante. Si vous souhaitez supprimer la table distante, vous devez utiliser le Portail Azure.
 
@@ -901,7 +901,7 @@ La désactivation de Stretch ne supprime pas la table distante. Si vous souhaite
 Spécifie éventuellement un prédicat de filtre pour sélectionner des lignes à migrer à partir d’une table qui contient des données historiques et actuelles. Le prédicat doit appeler une fonction table inline déterministe. Pour plus d’informations, consultez les articles [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) et [Sélectionner les lignes à migrer à l’aide d’une fonction de filtre(Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
 > [!IMPORTANT]
-> Si vous fournissez un prédicat de filtre qui fonctionne mal, la migration des données fonctionne mal également. Stretch Database applique le prédicat de filtre à la table à l’aide de l’opérateur CROSS APPLY.
+> Si vous fournissez un prédicat de filtre qui fonctionne mal, la migration des données fonctionne mal également. Stretch Database applique le prédicat de filtre à la table à l'aide de l'opérateur CROSS APPLY.
 
 Si vous ne spécifiez aucun prédicat de filtre, la table entière est migrée.
 
@@ -1056,7 +1056,7 @@ L’ajout d’une colonne qui met à jour les lignes de la table nécessite l’
 
 ## <a name="Example_Top"></a> Exemples
 
-|Catégorie|Éléments syntaxiques proposés|
+|Category|Éléments syntaxiques proposés|
 |--------------|------------------------------|
 |[Ajout de colonnes et de contraintes](#add)|ADD • PRIMARY KEY avec des options d'index • colonnes éparses et jeux de colonnes •|
 |[Suppression de colonnes et de contraintes](#Drop)|DROP|
@@ -1069,7 +1069,7 @@ L’ajout d’une colonne qui met à jour les lignes de la table nécessite l’
 
 Les exemples fournis dans cette section expliquent comment ajouter des colonnes et des contraintes à une table.
 
-#### <a name="a-adding-a-new-column"></a>A. Ajout d'une nouvelle colonne
+#### <a name="a-adding-a-new-column"></a>R. Ajout d'une nouvelle colonne
 
 L'exemple suivant ajoute une colonne qui accepte les valeurs NULL et pour laquelle aucune valeur n'est spécifiée via une définition DEFAULT. Dans la nouvelle colonne, chaque ligne aura la valeur `NULL`.
 
@@ -1299,7 +1299,7 @@ ALTER TABLE Customers ADD
 
 Les exemples fournis dans cette section expliquent comme supprimer des colonnes et des contraintes.
 
-#### <a name="a-dropping-a-column-or-columns"></a>A. Suppression d'une ou plusieurs colonnes
+#### <a name="a-dropping-a-column-or-columns"></a>R. Suppression d'une ou plusieurs colonnes
 
 Le premier exemple supprime une colonne dans une table. Le second exemple supprime plusieurs colonnes.
 
@@ -1378,11 +1378,11 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") - [Exemples](#Example_Top)
+![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Exemples](#Example_Top)
 
 ### <a name="alter_column"></a> Modification d’une définition de colonne
 
-#### <a name="a-changing-the-data-type-of-a-column"></a>A. Modification du type de données d'une colonne
+#### <a name="a-changing-the-data-type-of-a-column"></a>R. Modification du type de données d'une colonne
 
 L'exemple suivant modifie le type d'une colonne d'une table de `INT` en `DECIMAL`.
 
@@ -1478,7 +1478,7 @@ GO
 
 Les exemples présentés dans cette section montrent comment modifier la définition d'une table.
 
-#### <a name="a-modifying-a-table-to-change-the-compression"></a>A. Modification d'une table pour modifier la compression
+#### <a name="a-modifying-a-table-to-change-the-compression"></a>R. Modification d'une table pour modifier la compression
 
 L'exemple suivant modifie la compression d'une table non partitionnée. Le segment de mémoire ou l'index cluster sera reconstruit. Si la table est un segment, tous les index non cluster associés à la table sont reconstruits.
 
@@ -1594,7 +1594,7 @@ DISABLE CHANGE_TRACKING;
 
 ### <a name="disable_enable"></a>Désactivation et activation des contraintes et des déclencheurs
 
-#### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. Désactivation et réactivation d'une contrainte
+#### <a name="a-disabling-and-re-enabling-a-constraint"></a>R. Désactivation et réactivation d'une contrainte
 
 L'exemple suivant désactive la contrainte définissant les salaires pouvant être inclus dans les données. L'option `NOCHECK CONSTRAINT` est utilisée avec `ALTER TABLE` pour désactiver la contrainte et permettre une insertion qui entraîne généralement une violation de la contrainte. `CHECK CONSTRAINT` réactive la contrainte.
 
@@ -1661,7 +1661,7 @@ GO
 
 ### <a name="online"></a>Opérations en ligne
 
-#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. Reconstruction d'index en ligne à l'aide d'options d'attente à basse priorité
+#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>R. Reconstruction d'index en ligne à l'aide d'options d'attente à basse priorité
 
 L'exemple suivant montre comment effectuer une reconstruction d'index en ligne qui spécifie les options d'attente à basse priorité.
 
@@ -1703,7 +1703,7 @@ Les quatre exemples ci-dessous vous aideront à vous familiariser avec la syntax
 
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-#### <a name="a-add-system-versioning-to-existing-tables"></a>A. Ajouter la gestion système des versions à des tables existantes
+#### <a name="a-add-system-versioning-to-existing-tables"></a>R. Ajouter la gestion système des versions à des tables existantes
 
 L’exemple suivant montre comment ajouter la gestion système des versions à une table existante, et comment créer une table d’historique future. Cet exemple part du principe qu’il existe une table nommée `InsurancePolicy` avec une clé primaire définie. Cet exemple remplit les colonnes de période nouvellement créées pour la gestion système des versions à l’aide des valeurs par défaut pour les heures de début et de fin, car ces valeurs ne peuvent pas être Null. Cet exemple utilise la clause HIDDEN pour s’assurer qu’il n’y a aucun impact sur les applications existantes interagissant avec la table active. Il utilise également HISTORY_RETENTION_PERIOD, qui est disponible uniquement sur [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
@@ -1783,7 +1783,7 @@ DROP TABLE DepartmentHistory;
 
 Les exemples suivants A à C utilisent la table `FactResellerSales` dans la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
 
-### <a name="a-determining-if-a-table-is-partitioned"></a>A. Déterminer si une table est partitionnée
+### <a name="a-determining-if-a-table-is-partitioned"></a>R. Déterminer si une table est partitionnée
 
 La requête suivante renvoie une ou plusieurs lignes si la table `FactResellerSales` est partitionnée. Si la table n'est pas partitionnée, aucune ligne n'est retournée.
 

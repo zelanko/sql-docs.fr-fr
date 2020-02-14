@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136965"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Synchronisation Web pour la réplication de fusion
@@ -30,7 +30,7 @@ ms.locfileid: "68136965"
   
 -   Synchronisation de données d'utilisateurs mobiles via Internet.  
   
--   Synchronisation de données entre bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via un pare-feu d'entreprise.  
+-   Synchronisation de données entre bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via un pare-feu d’entreprise.  
   
  Par exemple, un représentant commercial en déplacement peut se servir de la synchronisation Web. L'entreprise, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], dispose de représentants commerciaux qui se déplacent dans différents magasins et chez différents fournisseurs dans toutes les régions. Lors de déplacements prolongés, les représentants restent à l'hôtel et ont besoin d'un moyen pratique pour charger les chiffres des ventes et télécharger les mises à jour des produits tous les jours en fin de journée.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68136965"
   
  L'illustration suivante montre certains des composants concernés par la synchronisation Web pour la réplication de fusion.  
   
- ![Composants et flux de données de synchronisation Web](../../relational-databases/replication/media/web-sync01.gif "Composants et flux de données de synchronisation Web")  
+ ![Composants et flux de données de synchronisation web](../../relational-databases/replication/media/web-sync01.gif "Composants et flux de données de synchronisation web")  
   
  La synchronisation Web est une option disponible uniquement pour les abonnements par extraction de données (pull) ; un Agent de fusion sera donc toujours exécuté sur l'Abonné. Il peut s'agir de l'Agent de fusion standard, du contrôle ActiveX de l'Agent de fusion, ou d'une application assurant la synchronisation par le biais de Replication Management Objects. Pour spécifier l’emplacement de l’ordinateur exécutant IIS, utilisez le paramètre **–InternetUrl** pour l’Agent de fusion.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68136965"
 3.  L'Agent de fusion sur l'Abonné accepte ensuite la réponse HTTPS et applique les modifications téléchargées à la base de données d'abonnement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Configurer la synchronisation web](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Topologies pour la synchronisation web](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

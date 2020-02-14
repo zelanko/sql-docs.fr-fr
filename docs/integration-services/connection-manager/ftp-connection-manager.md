@@ -17,10 +17,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294422"
 ---
 # <a name="ftp-connection-manager"></a>Gestionnaires de connexion FTP
@@ -78,7 +78,7 @@ ms.locfileid: "71294422"
  **Port du serveur**  
  Spécifiez le numéro de port sur le serveur FTP à utiliser pour la connexion. La valeur par défaut de cette propriété est **21**.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Indiquez un nom d'utilisateur pour accéder au serveur FTP. La valeur par défaut de cette propriété est **anonyme**.  
   
  **Mot de passe**  
@@ -90,7 +90,7 @@ ms.locfileid: "71294422"
  **Utiliser le mode passif**  
  Permet de spécifier si le serveur ou le client initie la connexion. Le serveur initie la connexion en mode actif, alors que le client l'initie en mode passif. La valeur par défaut de cette propriété est **mode actif**.  
   
- **Tentatives**  
+ **Nouvelle tentatives**  
  Spécifiez le nombre de fois que la tâche doit tenter d'établir une connexion. Une valeur égale à **0** indique un nombre illimité de tentatives.  
   
  **Taille de segment (en Ko)**  

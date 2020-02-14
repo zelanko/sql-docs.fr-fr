@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809952"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
@@ -34,7 +34,7 @@ La sécurité au niveau des lignes vous permet d'utiliser l'appartenance à un g
   
 La sécurité au niveau des lignes simplifie la conception et codage de la sécurité dans votre application. La sécurité au niveau des lignes vous aide à implémenter des restrictions sur l'accès aux lignes de données. Par exemple, vous pouvez vous assurer que les collaborateurs accèdent uniquement aux lignes de données qui sont pertinentes pour leur département. Un autre exemple consiste à restreindre l’accès aux données de clients aux seules données relatives à leur entreprise.  
   
-La logique de la restriction d'accès est située dans la couche de base de données plutôt que loin des données d'une autre couche Application. Le système de base de données applique les restrictions d'accès chaque fois que cet accès aux données est tenté à partir d'une couche quelconque. Votre système de sécurité est ainsi rendu plus fiable et plus robuste, grâce à une réduction de sa surface d'exposition.  
+La logique de la restriction d'accès est située dans la couche de base de données plutôt que loin des données d'une autre couche Application. Le système de base de données applique les restrictions d'accès chaque fois que cet accès aux données est tenté à partir d'une couche quelconque. Cela rend votre système de sécurité plus fiable et robuste en réduisant sa surface d’exposition.  
   
 Implémentez une sécurité au niveau des lignes à l’aide de l’instruction [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)], et de prédicats créés en tant que [fonctions table inline](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
@@ -85,7 +85,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
 - Les prédicats BLOCK pour l’opération UPDATE sont divisés en opérations distinctes pour BEFORE et AFTER. Vous ne pouvez donc pas, par exemple, bloquer des utilisateurs en les empêchant de mettre à jour une ligne pour obtenir une valeur supérieure à la valeur actuelle. Si ce type de logique est requis, vous devez utiliser des déclencheurs avec les tables intermédiaires [DELETED et INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) pour référencer ensemble les valeurs anciennes et nouvelles.  
   
-- L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si les colonnes utilisées par la fonction de prédicat n’ont pas été modifiées. Par exemple : Alice ne doit pas être en mesure de modifier un salaire au-delà de 100 000. Alice peut modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 tant que les colonnes référencées dans le prédicat n’ont pas été modifiées.  
+- L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si les colonnes utilisées par la fonction de prédicat n’ont pas été modifiées. Par exemple :  Alice ne doit pas être en mesure de modifier un salaire au-delà de 100 000. Alice peut modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 tant que les colonnes référencées dans le prédicat n’ont pas été modifiées.  
   
 - Aucune modification n’a été apportée aux API bulk, y compris à BULK INSERT. Cela signifie que les prédicats BLOCK AFTER INSERT s’appliquent aux opérations d’insertion en bloc comme s’il s’agissait d’opérations d’insertion standard.  
   
@@ -101,7 +101,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
  Les prédicats de filtre de la sécurité au niveau des lignes sont fonctionnellement équivalents à l'ajout d'une clause **WHERE** . Le prédicat peut être aussi sophistiqué que l'exigent les pratiques professionnelles, ou la clause aussi simple que `WHERE TenantId = 42`.  
   
- En termes plus formels, la sécurité au niveau des lignes introduit le contrôle d'accès basé sur le prédicat. Il comprend une évaluation flexible, centralisée et basée sur un prédicat. Le prédicat peut reposer sur des métadonnées ou sur tout autre critère que l’administrateur définit comme il convient. Le prédicat est utilisé comme critère pour déterminer si l'utilisateur a l'accès approprié aux données en fonction de ses propres attributs. Le contrôle d'accès basé sur l'étiquette peut être implémenté à l'aide du contrôle d'accès basé sur le prédicat.  
+ En termes plus formels, la sécurité au niveau des lignes introduit le contrôle d'accès basé sur le prédicat. Il comprend une évaluation flexible, centralisée et basée sur un prédicat. Le prédicat peut reposer sur des métadonnées ou sur tout autre critère que l’administrateur définit comme il convient. Le prédicat est utilisé comme critère pour déterminer si l'utilisateur a l'accès approprié aux données en fonction de ses propres attributs. Un contrôle d’accès en fonction d’une étiquette peut être implémenté en utilisant un contrôle d’accès en fonction d’un prédicat.  
   
 ## <a name="Permissions"></a> Autorisations
 
@@ -131,7 +131,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
 - Évitez d'utiliser les jointures de table excessives dans les fonctions de prédicat pour optimiser les performances.  
   
- Évitez toute logique de prédicat dépendant d’[options SET](../../t-sql/statements/set-statements-transact-sql.md) propres à la session : s’il est peu probable qu’elles soient utilisées dans des applications pratiques, les fonctions de prédicat dont la logique dépend de certaines options **SET** propres à la session peuvent entraîner des fuites d’informations si des utilisateurs sont en mesure d’exécuter des requêtes arbitraires. Par exemple, une fonction de prédicat qui convertit implicitement une chaîne en **datetime** pourrait filtrer des lignes différentes, selon l’option **SET DATEFORMAT** définie pour la session active. En règle générale, les fonctions de prédicat doivent respecter les règles suivantes :  
+ Évitez toute logique de prédicat dépendant d’[options SET](../../t-sql/statements/set-statements-transact-sql.md) propres à la session : s’il est peu probable qu’elles soient utilisées dans des applications pratiques, les fonctions de prédicat dont la logique dépend de certaines options **SET** propres à la session peuvent entraîner des fuites d’informations si des utilisateurs sont en mesure d’exécuter des requêtes arbitraires. Par exemple, une fonction de prédicat qui convertit implicitement une chaîne en **datetime** pourrait filtrer des lignes différentes, selon l’option **SET DATEFORMAT** définie pour la session active. En règle générale, les fonctions de prédicat doivent respecter les règles suivantes :  
   
 - Les fonctions de prédicat ne doivent pas convertir implicitement des chaînes de caractères en **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**, ou inversement, car ces conversions sont affectées par les options [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) et [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). Utilisez plutôt la fonction **CONVERT** , et spécifiez explicitement le paramètre de style.  
   

@@ -24,10 +24,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291259"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
@@ -73,7 +73,7 @@ ms.locfileid: "71291259"
   
  Les recherches effectuées par la transformation de recherche respectent la casse. Pour éviter les échecs de recherche dus à des différences de casse dans les données, utilisez tout d'abord la transformation de la table des caractères pour convertir les données en majuscules ou minuscules. Incluez ensuite les fonctions UPPER ou LOWER dans l'instruction SQL qui génère la table de référence. Pour plus d’informations, consultez [Transformation de la table de caractères](../../../integration-services/data-flow/transformations/character-map-transformation.md), [UPPER &#40;Transact-SQL&#41;](../../../t-sql/functions/upper-transact-sql.md) et [LOWER &#40;Transact-SQL&#41;](../../../t-sql/functions/lower-transact-sql.md).  
   
- La transformation de recherche a les entrées et sorties suivantes :  
+ La transformation de recherche a les entrées et sorties suivantes :  
   
 -   Entrée.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "71291259"
   
  Lorsque vous rendez le cache persistant dans un fichier, le système le charge plus rapidement, ce qui améliore les performances de la transformation de recherche et du package. N'oubliez pas que lorsque vous utilisez un fichier cache, vous travaillez avec des données qui ne sont pas autant à jour que celles de la base de données.  
   
- La persistance du cache dans un fichier présente les autres avantages suivants :  
+ La persistance du cache dans un fichier présente les autres avantages suivants :  
   
--   ***Partagez le fichier cache entre plusieurs packages. Pour plus d’informations, consultez*** [Implémenter une transformation de recherche en mode Cache complet à l’aide de la transformation du gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***.***  
+-   ***Partagez le fichier cache entre plusieurs packages. Pour plus d’informations, consultez***  [Implémenter une transformation de recherche en mode Cache complet à l’aide de la transformation du gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
   
 -   Déployez le fichier cache avec un package. ***Vous pouvez alors utiliser les données sur plusieurs ordinateurs.*** Pour plus d’informations, consultez [Créer et déployer un cache pour la transformation de recherche](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -157,7 +157,7 @@ ms.locfileid: "71291259"
  **Aucun cache**  
  Générez le dataset de référence pendant l'exécution de la transformation de recherche. Aucune donnée n'est chargée dans le cache.  
   
- **Gestionnaire de connexions du cache**  
+ **Cache connection manager**  
  Configurez la transformation de recherche pour utiliser un gestionnaire de connexions du cache. Cette option n'est disponible que si l'option Cache complet est sélectionnée.  
   
  **Gestionnaire de connexions OLE DB**  
@@ -214,7 +214,7 @@ ms.locfileid: "71291259"
  **Analyser la requête**  
  Contrôle la syntaxe d'une requête.  
   
- **Aperçu**  
+ **Préversion**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . Cette option affiche jusqu'à 200 lignes.  
   
 ### <a name="external-resources"></a>Ressources externes  

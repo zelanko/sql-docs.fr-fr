@@ -15,10 +15,10 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901121"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mappage de type de données pour les serveurs de publication Oracle
@@ -27,7 +27,7 @@ ms.locfileid: "67901121"
   
  Le tableau suivant indique comment les types de données sont mappés par défaut entre Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque les données sont déplacées du serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La colonne Alternatives indique si des mappages de remplacement sont disponibles.  
   
-|Type de données Oracle|Type de données SQL Server|Alternatives|  
+|Type de données Oracle|Type de données SQL Server|Autres solutions|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|Oui|  
 |BLOB|VARBINARY(MAX)|Oui|  
@@ -66,7 +66,7 @@ ms.locfileid: "67901121"
 ### <a name="unsupported-data-types"></a>Types de données non pris en charge  
  Les types de données suivants ne sont pas pris en charge ; les colonnes de ces types ne peuvent pas être répliquées :  
   
--   Types d'objets  
+-   Types d’objets  
   
 -   Types XML  
   

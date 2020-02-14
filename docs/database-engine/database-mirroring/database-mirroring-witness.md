@@ -15,10 +15,10 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043882"
 ---
 # <a name="database-mirroring-witness"></a>Témoin de mise en miroir de base de données
@@ -45,7 +45,7 @@ ms.locfileid: "68043882"
 ##  <a name="InMultipleSessions"></a> Utilisation d'un témoin dans plusieurs sessions  
  Une instance du serveur spécifique peut servir de témoin dans des sessions de mise en miroir de base de données simultanées, à raison d'une session par base de données différente. Différentes sessions ont lieu avec différents partenaires. L'illustration suivante montre une instance de serveur témoin qui participe à deux sessions de mise en miroir de base de données avec différents partenaires.  
   
- ![Instance de serveur témoin pour 2 bases de données](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Instance de serveur témoin pour 2 bases de données")  
+ ![Instance de serveur témoin pour 2 bases de données](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Instance de serveur témoin pour 2 bases de données")  
   
  Une même instance de serveur peut également fonctionner simultanément en tant que témoin au sein de certaines sessions et en tant que partenaire au sein d'autres sessions. En pratique, cependant, une instance de serveur fonctionne typiquement soit en tant que témoin, soit en tant que partenaire. La raison en est que les serveurs partenaires nécessitent des ordinateurs sophistiqués disposant d'un niveau de matériel suffisant pour prendre en charge une base de données de production, alors que le serveur témoin peut s'exécuter sur tout système Windows disponible prenant en charge [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

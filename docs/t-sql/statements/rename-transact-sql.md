@@ -10,10 +10,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141270"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
@@ -55,7 +55,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 Modifiez le nom d’une table définie par l’utilisateur. Spécifiez la table à renommer avec un nom en une, deux ou trois parties. Spécifiez la nouvelle table *new_table_name* avec un nom en une partie.
 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
-**S’APPLIQUE À :** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**S’APPLIQUE À : ** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Modifiez le nom d’une base de données définie par l’utilisateur, de *database_name* à *new_database_name*. Vous ne pouvez pas utiliser les noms de base de données réservés [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ci-dessous pour renommer une base de données :
 
@@ -97,7 +97,7 @@ Le renommage d’une table nécessite un verrou partagé au niveau de l’objet 
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-rename-a-database"></a>A. Renommer une base de données
+### <a name="a-rename-a-database"></a>R. Renommer une base de données
 
 **S’APPLIQUE À :** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] uniquement
 
@@ -109,11 +109,11 @@ RENAME DATABASE AdWorks to AdWorks2;
 
 ```
 
- Quand vous renommez une table, tous les objets et les propriétés associés à la table sont mis à jour pour référencer le nouveau nom de la table. Par exemple, les définitions, les index, les contraintes et les autorisations de la table sont mis à jour. Les vues ne sont pas mises à jour.
+ Quand vous renommez une table, tous les objets et les propriétés associés à la table sont mis à jour pour qu’ils référencent le nouveau nom de la table. Par exemple, les définitions, les index, les contraintes et les autorisations de la table sont mis à jour. Les vues ne sont pas mises à jour.
 
 ### <a name="b-rename-a-table"></a>B. Renommer une table
 
-**S’APPLIQUE À :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**S’APPLIQUE À :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Dans cet exemple, la table Customer est renommée Customer1.
 
@@ -128,7 +128,7 @@ Quand vous renommez une table, tous les objets et les propriétés associés à 
 
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. Déplacer une table vers un schéma différent
 
-**S’APPLIQUE À :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**S’APPLIQUE À :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Si votre intention est de déplacer l’objet vers un autre schéma, utilisez [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md). Par exemple, l’instruction suivante déplace l’élément table du schéma product vers le schéma dbo.
 
@@ -138,7 +138,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. Terminer les sessions avant de renommer une table
 
-**S’APPLIQUE À :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**S’APPLIQUE À :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Il est important de se rappeler qu’une table en cours d’utilisation ne peut pas être renommée. Le renommage d’une table nécessite un verrou exclusif au niveau de la table. Si la table est en cours d’utilisation, vous serez peut-être amené à terminer la session qui utilise la table. Pour terminer une session, vous pouvez utiliser la commande KILL. Utilisez KILL avec précaution, car lorsqu’une session se termine, le travail non validé est annulé. Les sessions dans SQL Data Warehouse ont le préfixe « SID ». Vous devez inclure le préfixe « SID » et le numéro de session lorsque vous appelez la commande KILL. Cet exemple présente une liste de sessions actives ou inactives, puis termine la session « SID1234 ».
 

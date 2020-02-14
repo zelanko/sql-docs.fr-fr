@@ -22,10 +22,10 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6b64ac7463e9a1e3ef62d87d5cf9d6096be275cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998008"
 ---
 # <a name="logging-in-to-sql-server"></a>Connexion à SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "67998008"
   
  Les exemples suivants permettent de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécute sur un ordinateur nommé APPHOST. Si une instance nommée est spécifiée, ces exemples utilisent le nom d'instance SQLEXPRESS.  
   
- **Exemples :**  
+ **Exemples :**  
   
 |Type d'instance|Entrée pour le nom du serveur|  
 |----------------------|-------------------------------|  

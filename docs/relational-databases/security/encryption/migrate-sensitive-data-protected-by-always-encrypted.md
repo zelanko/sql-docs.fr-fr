@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: b96529feb6e6e4c4ac2ad7d4be62474a624392d8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558199"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909909"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Pour charger des données chiffrées sans effectuer de contrôle des métadonné
 ## <a name="data-migration-scenarios"></a>Scénarios de migration de données  
 Le tableau suivant présente les paramètres appropriés recommandés pour plusieurs scénarios de migration.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "|::ref1::|")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Chargement en masse de données chiffrées  
 Procédez comme suit pour charger des données chiffrées.  
@@ -52,7 +52,7 @@ Procédez comme suit pour charger des données chiffrées.
     ```  
 
 ## <a name="potential-for-data-corruption"></a>Risque d’altération des données  
-Une utilisation incorrecte de cette option peut entraîner une altération des données. L’option **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** permet à l’utilisateur d’insérer des données quelconques dans des colonnes chiffrées de la base de données, notamment des données chiffrées avec des clés différentes, chiffrées de manière erronée ou non chiffrées. Si l’utilisateur copie accidentellement des données qui ne sont pas correctement chiffrées à l’aide du schéma de chiffrement (clé de chiffrement de colonne, algorithme, type de chiffrement) défini pour la colonne cible, vous ne serez pas en mesure de déchiffrer les données (les données sont endommagées). Cette option doit être utilisée avec précaution, car il risque d’endommager les données dans la base de données.  
+Une utilisation incorrecte de cette option peut entraîner une altération des données. L’option **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** permet à l’utilisateur d’insérer des données quelconques dans des colonnes chiffrées de la base de données, notamment des données chiffrées avec des clés différentes, chiffrées de manière erronée ou non chiffrées. Si l’utilisateur copie accidentellement des données qui ne sont pas correctement chiffrées à l’aide du schéma de chiffrement (clé de chiffrement de colonne, algorithme, type de chiffrement) défini pour la colonne cible, vous ne serez pas en mesure de déchiffrer les données (les données seront endommagées). Cette option doit être utilisée avec précaution, car il risque d’endommager les données dans la base de données.  
 
 Le scénario suivant indique comment une importation de données incorrecte peut entraîner un endommagement des données :  
 

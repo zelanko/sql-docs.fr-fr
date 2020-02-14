@@ -15,10 +15,10 @@ ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082981"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Contrôle de la réplication avec le Moniteur système
@@ -32,7 +32,7 @@ ms.locfileid: "68082981"
 |Tous les agents|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : Agents de réplication|Exécution en cours|Nombre d'agents de réplication actuellement en cours d'exécution.|  
 |Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantané de réplication|Capture instantanée : commandes livrées/seconde|Nombre de commandes par seconde transmises au serveur de distribution.|  
 |Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantané de réplication|Capture instantanée : transactions livrées/seconde|Nombre de transactions par seconde transmises au serveur de distribution.|  
-|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|LogReader : commandes livrées/seconde|Nombre de commandes par seconde transmises au serveur de distribution.|  
+|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|Lecteur du journal : commandes livrées/seconde|Nombre de commandes par seconde transmises au serveur de distribution.|  
 |l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|Lecteur du journal : transactions livrées/seconde|Nombre de transactions par seconde transmises au serveur de distribution.|  
 |l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Lecteur du journal des réplications|Lecteur du journal : Latence de livraison|Durée, en millisecondes, écoulée entre le moment où les transactions sont appliquées sur le serveur de publication et le moment où elles sont délivrées au serveur de distribution.|  
 |Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Distribution : commandes livrées/seconde|Le nombre de commandes par seconde transmises à l'abonné.|  
@@ -43,6 +43,6 @@ ms.locfileid: "68082981"
 |Agent de fusion|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Fusion de réplication|Modifications téléchargées/seconde|Nombre de lignes par seconde répliquées de l'Abonné au serveur de publication.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Surveillance &#40;réplication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [Supervision &#40;réplication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

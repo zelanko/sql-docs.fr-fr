@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289323"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analyser un plan d’exécution réel
@@ -44,7 +44,7 @@ Le dépannage des performances de requêtes nécessite une réelle expertise en 
 
 2.  Cliquez avec le bouton droit dans une zone vide du plan d’exécution et cliquez sur **Analyser le plan d’exécution réel**. 
 
-    ![Cliquez avec le bouton droit sur Analyser le plan d’exécution réel](../../relational-databases/performance/media/plananalysismenuoption.png "Cliquez avec le bouton droit sur Analyser le plan d’exécution réel")   
+    ![Cliquer avec le bouton droit sur Analyser le plan d’exécution réel](../../relational-databases/performance/media/plananalysismenuoption.png "Cliquer avec le bouton droit sur Analyser le plan d’exécution réel")   
 
 3.  La fenêtre **Analyse du plan d’exécution de requêtes** s’ouvre dans la partie inférieure. L’onglet **Instructions multiples** est utile lors de l’analyse des plans comprenant plusieurs instructions, car il permet d’analyser la bonne instruction.
 

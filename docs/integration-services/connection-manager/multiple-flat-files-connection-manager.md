@@ -23,10 +23,10 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298508"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gestionnaire de connexions de fichiers plats multiples
@@ -58,7 +58,7 @@ ms.locfileid: "71298508"
   
  \<*chemin*>|\<*chemin*>  
   
- Vous pouvez également spécifier plusieurs fichiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte du lecteur C, vous pouvez affecter la valeur C: ***.txt à la propriété** ConnectionString\\.  
+ Vous pouvez également spécifier plusieurs fichiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte du lecteur C, la valeur de la propriété **ConnectionString** peut être définie sur C:\\\*.txt.  
   
  Si un gestionnaire de connexions de fichiers plats multiples référence plusieurs fichiers, tous les fichiers doivent utiliser le même format.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "71298508"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Délimité|Les colonnes sont séparées par les séparateurs spécifiés à la page **Colonnes** .|  
+|Delimited|Les colonnes sont séparées par les séparateurs spécifiés à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe que vous spécifiez en faisant glisser les lignes des marqueurs dans la page **Colonnes** .|  
 |En drapeau à droite|Dans les fichiers en drapeau à droite, toutes les colonnes ont une largeur fixe, sauf la dernière, qui est délimitée par le séparateur de lignes défini dans la page **Colonnes** .|  
   
@@ -238,9 +238,9 @@ ms.locfileid: "71298508"
 |--------------|-----------------|  
 |**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Dans les fichiers en drapeau à droite, chaque colonne a une largeur fixe, sauf la dernière qui est arrêtée par le séparateur de lignes.|  
 |**OutputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Dans la tâche de flux de données, cette valeur permet de définir la largeur de la colonne de sortie pour les fichiers plats sources.<br /><br /> Remarque : Dans le modèle objet, le nom de la propriété est MaximumWidth.|  
-|**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indiquez si les données texte sont qualifiées à l’aide d’un caractère identificateur de texte :<br /><br /> **True** : Les données texte du fichier plat sont qualifiées.<br /><br /> **False** : Les données texte du fichier plat ne sont pas qualifiées.|  
-|**Name**|Précisez un nom de colonne. La valeur par défaut est une liste numérotée de colonnes. Vous pouvez toutefois indiquer un nom descriptif unique de votre choix.|  
+|**Nom**|Précisez un nom de colonne. La valeur par défaut est une liste numérotée de colonnes. Vous pouvez toutefois indiquer un nom descriptif unique de votre choix.|  
 |**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}**  : les colonnes sont délimitées par une combinaison retour chariot/saut de ligne<br /><br /> **{CR}**  : les colonnes sont séparées par un retour chariot<br /><br /> **{LF}**  : les colonnes sont séparées par un saut de ligne<br /><br /> **Point-virgule {;}**  : les colonnes sont délimitées par un point-virgule<br /><br /> **Deux-points {:}**  : les colonnes sont délimitées par un deux-points<br /><br /> **Virgule {,}**  : les colonnes sont délimitées par une virgule<br /><br /> **Tabulation {t}**  : les colonnes sont délimitées par une tabulation<br /><br /> **Barre verticale {&#124;}**  : les colonnes sont délimitées par une barre verticale|  
 |**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
@@ -280,7 +280,7 @@ ms.locfileid: "71298508"
  Permet d'afficher les données d'exemple dans le premier fichier plat sélectionné, divisées en colonnes et en lignes à l'aide des options sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Source du fichier plat](../../integration-services/data-flow/flat-file-source.md)   
+ [Source de fichier plat](../../integration-services/data-flow/flat-file-source.md)   
  [Destination de fichier plat](../../integration-services/data-flow/flat-file-destination.md)   
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

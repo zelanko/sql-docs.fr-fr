@@ -35,15 +35,15 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155568"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utiliser l'Assistant Plan de maintenance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique explique comment créer un plan de maintenance pour un ou plusieurs serveurs à l’aide de l’Assistant Plan de maintenance dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'Assistant Plan de maintenance crée un plan de maintenance que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut exécuter régulièrement. Vous pouvez ainsi réaliser, en fonction d'intervalles spécifiés, diverses tâches d'administration de base de données, notamment des sauvegardes, l'exécution de contrôles d'intégrité de la base de données ou les mises à jour des statistiques de la base de données.  
+  Cette rubrique explique comment créer un plan de maintenance pour un ou plusieurs serveurs à l’aide de l’Assistant Plan de maintenance dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L’Assistant Plan de maintenance crée un plan de maintenance que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut exécuter régulièrement. Vous pouvez ainsi réaliser, en fonction d'intervalles spécifiés, diverses tâches d'administration de base de données, notamment des sauvegardes, l'exécution de contrôles d'intégrité de la base de données ou les mises à jour des statistiques de la base de données.  
     
  
 ##  <a name="Restrictions"></a> Limitations et restrictions  
@@ -157,7 +157,7 @@ Les options supplémentaires suivantes sont disponibles sur cette page.
   
  -  **Toutes les bases de données**  
   
-Génère un plan de maintenance qui exécute cette tâche sur toutes les bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à l'exception de **tempdb**.  
+Génère un plan de maintenance qui exécute cette tâche sur toutes les bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à l'exception de **tempdb**.  
   
 **Bases de données système**  
   
@@ -297,7 +297,7 @@ Case à cocher**Inclure les index**
   
 #### <a name="define-the-history-cleanup-task"></a>Définir la tâche Nettoyage de l'historique  
   
-1.  Dans la page **Définir la tâche Nettoyage de l'historique** , sélectionnez chaque base de données pour laquelle vous souhaitez ignorer l'ancien historique des tâches. Cette tâche utilise les instructions `EXEC sp_purge_jobhistory`, `EXEC sp_maintplan_delete_log`et `EXEC sp_delete_backuphistory` pour supprimer les informations d'historique des tables **msdb** . Lorsque vous avez terminé, cliquez sur **Suivant**.  
+1.  Dans la page **Définir la tâche Nettoyage de l'historique** , sélectionnez chaque base de données pour laquelle vous souhaitez ignorer l'ancien historique des tâches. Cette tâche utilise les instructions `EXEC sp_purge_jobhistory`, `EXEC sp_maintplan_delete_log`et `EXEC sp_delete_backuphistory` pour supprimer les informations d'historique des tables **msdb** . Une fois que vous avez terminé, cliquez sur **Suivant**.  
   
      Les options supplémentaires suivantes sont disponibles sur cette page.  
   
@@ -322,7 +322,7 @@ Case à cocher**Inclure les index**
   
 #### <a name="define-backup-tasks"></a>Définir les tâches de sauvegarde  
   
-1.  Dans la page **Définir la tâche Sauvegarder la base de données (complète)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde complète. La tâche utilise l'instruction `BACKUP DATABASE`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Lorsque vous avez terminé, cliquez sur **Suivant**.  
+1.  Dans la page **Définir la tâche Sauvegarder la base de données (complète)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde complète. La tâche utilise l'instruction `BACKUP DATABASE`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Une fois que vous avez terminé, cliquez sur **Suivant**.  
   
      Les options supplémentaires suivantes sont disponibles sur cette page.  
   
@@ -422,13 +422,13 @@ Case à cocher**Inclure les index**
     |**Compresser la sauvegarde**|Cliquez sur cette option pour compresser la sauvegarde, indépendamment de la valeur par défaut au niveau du serveur.<br /><br /> **\*\* Important \*\*** Par défaut, la compression augmente considérablement l’utilisation de l’UC et l’UC supplémentaire consommée par le processus de compression peut nuire aux opérations simultanées. Par conséquent, il peut être préférable, dans une session où l'utilisation de l'UC est limitée, de créer une sauvegarde compressée de priorité basse à l'aide de Resource Governor. Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Ne pas compresser la sauvegarde**|Cliquez sur cette option pour créer une sauvegarde non compressée, indépendamment de la valeur par défaut au niveau du serveur.|  
   
-2.  Dans la page **Définir la tâche Sauvegarder la base de données (différentielle)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde partielle. Consultez la liste des définitions à l'étape 16 ci-dessus pour plus d'informations sur les options disponibles sur cette page. La tâche utilise l'instruction `BACKUP DATABASE ... WITH DIFFERENTIAL`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Lorsque vous avez terminé, cliquez sur **Suivant**.  
+2.  Dans la page **Définir la tâche Sauvegarder la base de données (différentielle)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde partielle. Consultez la liste des définitions à l'étape 16 ci-dessus pour plus d'informations sur les options disponibles sur cette page. La tâche utilise l'instruction `BACKUP DATABASE ... WITH DIFFERENTIAL`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Une fois que vous avez terminé, cliquez sur **Suivant**.  
   
-3.  Dans la page **Définir la tâche Sauvegarder la base de données (journal des transactions)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde d’un journal des transactions. Consultez la liste des définitions à l'étape 16 ci-dessus pour plus d'informations sur les options disponibles sur cette page. La tâche utilise l'instruction `BACKUP LOG`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Lorsque vous avez terminé, cliquez sur **Suivant**.  
+3.  Dans la page **Définir la tâche Sauvegarder la base de données (journal des transactions)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde d’un journal des transactions. Consultez la liste des définitions à l'étape 16 ci-dessus pour plus d'informations sur les options disponibles sur cette page. La tâche utilise l'instruction `BACKUP LOG`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Une fois que vous avez terminé, cliquez sur **Suivant**.  
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Définir les tâches de nettoyage de maintenance  
   
-1.  Dans la page **Définir la tâche de nettoyage de maintenance** , spécifiez les types de fichiers à supprimer dans le cadre du plan de maintenance, y compris les rapports de texte créés par les plans de maintenance et les fichiers de sauvegarde de la base de données. La tâche utilise l'instruction `EXEC xp_delete_file` . Lorsque vous avez terminé, cliquez sur **Suivant**.  
+1.  Dans la page **Définir la tâche de nettoyage de maintenance** , spécifiez les types de fichiers à supprimer dans le cadre du plan de maintenance, y compris les rapports de texte créés par les plans de maintenance et les fichiers de sauvegarde de la base de données. La tâche utilise l'instruction `EXEC xp_delete_file`. Une fois que vous avez terminé, cliquez sur **Suivant**.  
   
     > **IMPORTANT** Cette tâche ne supprime pas automatiquement les fichiers dans les sous-dossiers du répertoire spécifié. Cette précaution réduit la possibilité d'une attaque malveillante qui utilise la tâche de nettoyage de maintenance pour supprimer des fichiers. Pour supprimer des fichiers dans les sous-dossiers de premier niveau, vous devez sélectionner **Inclure les sous-dossiers de premier niveau**.  
   
@@ -508,7 +508,7 @@ Case à cocher**Inclure les index**
      **Message**  
      Indique les messages d'erreur ou d'avertissement retournés par le processus.  
   
-     **Rapport**  
+     **Report**  
      Crée un rapport qui contient les résultats de l'Assistant Création de partition. Les options sont **Afficher le rapport**, **Enregistrer le rapport dans un fichier**, **Copier le rapport dans le Presse-papiers**et **Envoyer le rapport sous forme de courrier électronique**.  
   
      **Afficher le rapport**  

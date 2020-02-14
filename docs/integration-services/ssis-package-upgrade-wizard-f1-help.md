@@ -19,10 +19,10 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295702"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
@@ -54,11 +54,11 @@ ms.locfileid: "71295702"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**File System**|Indique que les packages à mettre à niveau se trouvent dans un dossier sur l'ordinateur local.<br /><br /> Pour que l'Assistant sauvegarde les packages d'origine avant de les mettre à niveau, les packages d'origine doivent être stockés dans le système de fichiers. Pour plus d'informations, consultez la rubrique de procédure.|  
+|**Système de fichiers**|Indique que les packages à mettre à niveau se trouvent dans un dossier sur l'ordinateur local.<br /><br /> Pour que l'Assistant sauvegarde les packages d'origine avant de les mettre à niveau, les packages d'origine doivent être stockés dans le système de fichiers. Pour plus d'informations, consultez la rubrique de procédure.|  
 |**Magasin de packages SSIS**|Indique que les packages à mettre à niveau se trouvent dans le magasin de packages. Le magasin de packages se compose de l’ensemble des dossiers du système de fichiers gérés par le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
 |**Microsoft SQL Server**|Indique que les packages à mettre à niveau proviennent d’une instance existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
   
- **Dossier**  
+ **Folder**  
  Tapez le nom d’un dossier qui contient les packages à mettre à niveau, ou cliquez sur **Parcourir** et recherchez le dossier.  
   
  **Parcourir**  
@@ -67,11 +67,11 @@ ms.locfileid: "71295702"
 ### <a name="package-source-dynamic-options"></a>Options dynamiques de la source du package  
   
 #### <a name="package-source--ssis-package-store"></a>Source du package = Magasin de packages SSIS  
- **Server**  
+ **Serveur**  
  Tapez le nom du serveur sur lesquels se trouvent les packages à mettre à niveau ou sélectionnez ce serveur dans la liste.  
   
 #### <a name="package-source--microsoft-sql-server"></a>Source du package = Microsoft SQL Server  
- **Server**  
+ **Serveur**  
  Tapez le nom du serveur sur lesquels se trouvent les packages à mettre à niveau ou sélectionnez ce serveur dans la liste.  
   
  **Utiliser l’authentification Windows**  
@@ -80,7 +80,7 @@ ms.locfileid: "71295702"
  **Utiliser l'authentification SQL Server**  
  Permet d’utiliser l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Tapez le nom d’utilisateur que l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisera pour se connecter au serveur.  
   
  **Mot de passe**  
@@ -106,11 +106,11 @@ ms.locfileid: "71295702"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**File System**|Indique que les packages mis à niveau doivent être enregistrés dans un dossier sur l'ordinateur local.|  
+|**Système de fichiers**|Indique que les packages mis à niveau doivent être enregistrés dans un dossier sur l'ordinateur local.|  
 |**Magasin de packages SSIS**|Indique que les packages mis à niveau doivent être enregistrés dans le magasin de packages Integration Services. Le magasin de packages se compose de l'ensemble des dossiers du système de fichiers gérés par Integration Services. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
 |**Microsoft SQL Server**|Indique que les packages mis à niveau doivent enregistrés dans une instance existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> La sélection de cette valeur affiche les options **Source du package** dynamiques correspondantes.|  
   
- **Dossier**  
+ **Folder**  
  Tapez le nom d’un dossier dans lequel enregistrer les packages mis à niveau, ou cliquez sur **Parcourir** et recherchez le dossier.  
   
  **Parcourir**  
@@ -119,11 +119,11 @@ ms.locfileid: "71295702"
 ### <a name="package-source-dynamic-options"></a>Options dynamiques de la source du package  
   
 #### <a name="package-source--ssis-package-store"></a>Source du package = Magasin de packages SSIS  
- **Server**  
+ **Serveur**  
  Tapez le nom du serveur sur lequel les packages de mise à niveau seront enregistrés, ou sélectionnez un serveur dans la liste.  
   
 #### <a name="package-source--microsoft-sql-server"></a>Source du package = Microsoft SQL Server  
- **Server**  
+ **Serveur**  
  Tapez le nom du serveur sur lequel les packages de mise à niveau seront enregistrés, ou sélectionnez ce serveur dans la liste.  
   
  **Utiliser l’authentification Windows**  
@@ -132,7 +132,7 @@ ms.locfileid: "71295702"
  **Utiliser l'authentification SQL Server**  
  Permet d’utiliser l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Tapez le nom d’utilisateur à utiliser pendant l’utilisation de l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur.  
   
  **Mot de passe**  
@@ -233,10 +233,10 @@ ms.locfileid: "71295702"
  **Message**  
  Permet d'afficher les messages d'erreur générés par chaque action.  
   
- **Arrêter**  
+ **Stop**  
  Permet d'arrêter la mise à niveau de packages.  
   
- **Rapport**  
+ **Report**  
  Sélectionnez ce que vous voulez faire avec le rapport qui contient les résultats de la mise à niveau de packages :  
   
 -   Afficher le rapport en ligne.  

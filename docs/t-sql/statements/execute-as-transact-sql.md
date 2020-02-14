@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981005"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287836"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73981005"
   
 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -109,7 +109,7 @@ En dehors d'un module, cette instruction n'a pas d'effet.
   
 Vous pouvez créer une pile de contextes d'exécution en appelant l'instruction EXECUTE AS plusieurs fois sur plusieurs principaux. Lorsqu'elle est appelée, l'instruction REVERT bascule le contexte vers la connexion ou l'utilisateur du niveau supérieur dans la pile de contexte. Pour avoir une démonstration de ce comportement, consultez [Exemple A](#_exampleA).  
   
-##  <a name="_user"></a> Spécification d’un nom d’utilisateur ou de connexion  
+##  <a name="_user"></a> Spécification d’un nom d’utilisateur ou d’un ID de connexion  
  Le nom d’utilisateur ou de connexion spécifié dans EXECUTE AS \<context_specification> doit exister comme principal respectivement dans **sys.database_principals** ou **sys.server_principals**. Sinon, l’instruction EXECUTE AS échoue. De plus, les autorisations IMPERSONATE doivent être accordées sur le principal. Sauf si l’appelant est le propriétaire de la base de données, ou un membre du rôle serveur fixe **sysadmin**, le principal doit exister même quand l’utilisateur a accès à la base de données ou l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fait de son appartenance à un groupe Windows. Par exemple, supposons les conditions suivantes : 
   
 -   Le groupe **CompanyDomain\SQLUsers** a accès à la base de données **Sales**.  
@@ -129,9 +129,9 @@ Si l’utilisateur est orphelin (la connexion associée n’existant plus) et qu
 ## <a name="using-with-no-revert"></a>Utilisation de WITH NO REVERT  
  Lorsque l'instruction EXECUTE AS comporte la clause WITH NO REVERT facultative, le contexte d'exécution d'une session ne peut pas être réinitialisé à l'aide de REVERT ou en exécutant une autre instruction EXECUTE AS. Le contexte défini par l'instruction reste en vigueur jusqu'à ce que la session soit supprimée.  
   
- Quand la clause WITH NO REVERT COOKIE = @*varbinary_variable* est spécifiée, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passe la valeur de cookie à @*varbinary_variable*. Le contexte d’exécution défini par cette instruction peut être restauré vers le contexte précédent uniquement si l’instruction REVERT WITH COOKIE = @*varbinary_variable* appelante contient la même valeur *@varbinary_variable* .  
+ Quand la clause WITH NO REVERT COOKIE = @*varbinary_variable* est spécifiée, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passe la valeur de cookie à @*varbinary_variable*. Le contexte d’exécution défini par cette instruction ne peut être restauré vers le contexte précédent que si l’instruction REVERT WITH COOKIE = @*varbinary_variable* appelante contient la même valeur *\@varbinary_variable*.  
   
- Cette option est utile dans un environnement où le groupement de connexions est utilisé. Le groupement de connexions est la maintenance d'un groupe de connexions de base de données à réutiliser par des applications sur un serveur d'applications. Comme la valeur passée à *@varbinary_variable* n’est connue que de l’appelant de l’instruction EXECUTE AS, celui-ci peut garantir que le contexte d’exécution qu’il établit ne sera pas modifié par un autre utilisateur.  
+ Cette option est utile dans un environnement où le groupement de connexions est utilisé. Le groupement de connexions est la maintenance d'un groupe de connexions de base de données à réutiliser par des applications sur un serveur d'applications. Comme la valeur passée à *\@varbinary_variable* n’est connue que de l’appelant de l’instruction EXECUTE AS, celui-ci peut garantir que le contexte d’exécution qu’il établit ne sera pas modifié par un autre utilisateur.  
   
 ## <a name="determining-the-original-login"></a>Identification de la connexion originale  
  Utilisez la fonction [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) pour retourner le nom de la connexion utilisée pour se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser cette fonction pour renvoyer l'identité de la connexion d'origine dans les sessions où il y a un grand nombre de changements de contexte implicites ou explicites.  

@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134430"
 ---
 # <a name="database-mail-configuration-objects"></a>Objets de configuration de la messagerie de base de données
@@ -51,7 +51,7 @@ ms.locfileid: "68134430"
 ##  <a name="VisualElement"></a> Relation entre les objets configuration de la messagerie de base de données  
  La figure montre deux profils, trois comptes et trois utilisateurs. L'Utilisateur 1 a accès au Profil 1, lequel utilise le Compte 1 et le Compte 2. L'Utilisateur 3 a accès au Profil 2, lequel utilise le Compte 2 et le Compte 3. L'Utilisateur 2 a accès au Profil 1 et au Profil 2.  
   
- ![Relations entre utilisateurs, profils et comptes](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relations entre utilisateurs, profils et comptes")  
+ ![Relations des utilisateurs, profils et comptes](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relations des utilisateurs, profils et comptes")  
   
   
 ##  <a name="DBAccount"></a> Compte de messagerie de base de données  
@@ -117,7 +117,7 @@ ms.locfileid: "68134430"
 |------------------------|----------------|  
 |Décrit comment créer des comptes de messagerie de base de données|[Créer un compte de messagerie de base de données](../../relational-databases/database-mail/create-a-database-mail-account.md)|  
 |Décrit comment créer des profils de messagerie de base de données|[Créer un profil de messagerie de base de données](../../relational-databases/database-mail/create-a-database-mail-profile.md)|  
-|Décrit comment configurer la messagerie de base de données|[Configuration de la Messagerie de base de données](../../relational-databases/database-mail/configure-database-mail.md)|  
+|Décrit comment configurer la messagerie de base de données|[Configurer Database Mail](../../relational-databases/database-mail/configure-database-mail.md)|  
 |Décrit comment créer un script de configuration de messagerie de base de données à l'aide de modèles||  
   
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134430"
   
 ### <a name="database-mail-settings"></a>Paramètres de messagerie de base de données  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Modifie les paramètres de configuration de la messagerie de base de données.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Affiche les paramètres de configuration pour la messagerie de base de données.|  
   
 ### <a name="accounts-and-profiles"></a>Comptes et profils  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Ajoute un compte de messagerie dans un profil de messagerie de base de données.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Supprime un compte de messagerie de base de données.|  
@@ -150,7 +150,7 @@ ms.locfileid: "68134430"
   
 ### <a name="security"></a>Sécurité  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Autorise un principal de la base de données à utiliser un profil de messagerie de base de données.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Supprime l'autorisation d'utiliser un profil de messagerie de base de données public ou privé accordée à un utilisateur de base de données.|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134430"
   
 ### <a name="system-state"></a>État du système  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Démarre le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Arrête le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  

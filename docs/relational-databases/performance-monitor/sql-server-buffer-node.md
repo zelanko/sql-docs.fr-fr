@@ -14,10 +14,10 @@ ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 9011394dccf472499c1c8a8bd1023b7c23009883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987211"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
@@ -25,7 +25,7 @@ ms.locfileid: "67987211"
   L'objet **Nœud de tampon** fournit des compteurs qui complètent les compteurs de l'objet **Gestionnaire de tampons** . Il vous permet de contrôler la distribution des pages du pool de mémoires tampons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour chaque nœud NUMA (Non-Uniform Memory Access). Il existe une instance de l'objet **Nœud de tampon** pour chaque nœud NUMA employé. Dans une architecture non-NUMA, une seule instance de l’objet **Nœud de tampon** est présente.  
   
 ## <a name="buffer-node-performance-objects"></a>Objets de performances du Nœud de tampon  
- Ce tableau décrit les objets de performances du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Nœud de tampon** .  
+ Ce tableau décrit les objets de performance **Nœud de tampon** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs de l'objet Nœud de tampon de SQL Server|Description|  
 |-------------------------------------|-----------------|  

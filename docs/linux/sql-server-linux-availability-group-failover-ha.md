@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70304844"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Basculement du groupe de disponibilité Always On sur Linux
@@ -64,7 +64,7 @@ Pour basculer manuellement une ressource du groupe de disponibilité nommée *ag
 
 #### <a name="removeLocConstraint"> </a> Étape 2. Supprimer la contrainte d’emplacement
 
-À l’occasion d’un déplacement manuel, la commande `pcs` `move` ou la commande `crm` `migrate` ajoute une contrainte d’emplacement pour que la ressource prenne place sur le nouveau nœud cible. Pour afficher la nouvelle contrainte, exécutez la commande suivante après avoir déplacé manuellement la ressource :
+À l’occasion d’un déplacement manuel, la commande `pcs``move` ou la commande `crm``migrate` ajoute une contrainte d’emplacement pour que la ressource prenne place sur le nouveau nœud cible. Pour afficher la nouvelle contrainte, exécutez la commande suivante après avoir déplacé manuellement la ressource :
 
 - **Exemple RHEL/Ubuntu**
 
@@ -102,7 +102,7 @@ Exemple de contrainte créée en raison d’un basculement manuel.
 >[!NOTE]
 >Comme l’opération de basculement automatique n’ajoute pas de contrainte d’emplacement, aucun nettoyage n’est nécessaire. 
 
-Pour plus d'informations, consultez :
+Pour plus d'informations :
 - [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Red Hat - Gestion des ressources de cluster)
 - [Pacemaker - Déplacer des ressources manuellement](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
  [Guide d’administration SLES - Ressources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 

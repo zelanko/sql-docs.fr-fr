@@ -13,10 +13,10 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940926"
 ---
 # <a name="back-up-database-general-page"></a>Sauvegarder la base de données (page Général)
@@ -99,10 +99,10 @@ ms.locfileid: "67940926"
  
  
   
- **Supprimer**  
+ **Remove**  
  Permet de supprimer une ou plusieurs unités sélectionnées de la liste **Sauvegarde sur** .  
   
- **Sommaire**  
+ **Contents**  
 Permet d’afficher le contenu du support pour l’unité sélectionnée, s’il existe.  Le bouton n’exécute pas de fonction quand une **URL** est spécifiée. 
    
 Boîte de dialogue**Sélectionner la destination de la sauvegarde** La boîte de dialogue **Sélectionner la destination de la sauvegarde** s’affiche quand vous sélectionnez **Ajouter**.   L’ensemble d’options qui s’affiche dépend du type de destination sélectionné. 

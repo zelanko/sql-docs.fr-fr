@@ -12,10 +12,10 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113175"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes
@@ -24,7 +24,7 @@ ms.locfileid: "68113175"
 
 La fonctionnalité [Magasin des requêtes](../../relational-databases/performance/how-query-store-collects-data.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] capture automatiquement un historique des requêtes, des plans et des statistiques d’exécution, et conserve ces informations dans la base de données. L’[Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md) prend en charge une nouvelle option permettant d’utiliser le magasin de requêtes pour sélectionner automatiquement une charge de travail appropriée pour le paramétrage. Pour de nombreux utilisateurs, cela peut supprimer la nécessité de collecter de manière explicite une charge de travail pour le paramétrage. Cette fonctionnalité est disponible uniquement si la fonctionnalité de magasin de requêtes est activée pour la base de données. 
   
-Cette fonctionnalité est disponible avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** ou version ultérieure. 
+Cette fonctionnalité est disponible avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** ou version supérieure. 
   
 ## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>Comment paramétrer une charge de travail à partir du magasin de requêtes dans l’interface graphique utilisateur de l’Assistant Paramétrage du moteur de base de données
 Dans l’interface graphique utilisateur de l’Assistant Paramétrage du moteur de base de données, sélectionnez la case d’option **Magasin de requêtes** dans le volet **Général** pour activer cette fonctionnalité (voir la figure ci-dessous).

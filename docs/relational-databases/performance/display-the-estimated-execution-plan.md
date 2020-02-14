@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4d0d5930734bb48c0914300a735f81e3ca2ced38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946869"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Affichage du plan d'exécution estimé
@@ -41,11 +41,11 @@ ms.locfileid: "67946869"
   
 3.  Dans le menu **Requête** , cliquez sur **Afficher le plan d’exécution estimé** ou cliquez sur le bouton **Afficher le plan d’exécution estimé** dans la barre d’outils. Le plan d’exécution estimé s’affiche sous l’onglet **Plan d’exécution** du volet de résultats. 
 
-    ![Bouton Plan d’exécution estimé dans la barre d’outils](../../relational-databases/performance/media/estimatedexecplantoolbar.png "Bouton Plan d’exécution estimé dans la barre d’outils")    
+    ![Bouton Plan d’exécution estimé sur la barre d’outils](../../relational-databases/performance/media/estimatedexecplantoolbar.png "Bouton Plan d’exécution estimé sur la barre d’outils")    
 
     Pour afficher des informations supplémentaires, placez le curseur sur les icônes des opérateurs logiques et physiques, et consultez la description et les propriétés de l'opérateur indiquées dans l'infobulle. Il est également possible d'afficher les propriétés des opérateurs dans la fenêtre Propriétés. Si les propriétés ne sont pas visibles, cliquez avec le bouton droit sur un opérateur, puis cliquez sur **Propriétés**. Sélectionnez l'opérateur de votre choix.  
 
-    ![Cliquez avec le bouton droit sur Propriétés dans l’opérateur de plan](../../relational-databases/performance/media/planproperties.png "Cliquez avec le bouton droit sur Propriétés dans l’opérateur de plan")    
+    ![Cliquer avec le bouton droit sur Propriétés dans l’opérateur de plan](../../relational-databases/performance/media/planproperties.png "Cliquer avec le bouton droit sur Propriétés dans l’opérateur de plan")    
   
 4.  Pour modifier l’affichage du plan d’exécution, cliquez avec le bouton droit sur le plan d’exécution, puis sélectionnez **Zoom avant**, **Zoom arrière**, **Zoom personnalisé**ou **Zoom pour ajuster**. **Zoom avant** et **Zoom arrière** permettent respectivement d’agrandir et de réduire l’affichage du plan d’exécution suivant des pourcentages fixes. **Zoom personnalisé** vous permet de définir votre propre facteur de zoom, par exemple 80 %. Enfin, l’option**Zoom pour ajuster** agrandit le plan de sorte que sa taille soit ajustée en fonction de celle du volet de résultats. Vous pouvez également utiliser une combinaison de la touche Ctrl et de la roulette de votre souris pour activer le **zoom dynamique**.  
 

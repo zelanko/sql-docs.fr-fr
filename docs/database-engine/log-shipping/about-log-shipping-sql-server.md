@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68057913"
 ---
 # <a name="about-log-shipping-sql-server"></a>À propos de la copie des journaux de transaction (SQL Server)
@@ -126,7 +126,7 @@ ms.locfileid: "68057913"
   
  Les instances des serveurs principal et secondaire envoient leur propre historique et leur propre état vers l'instance du serveur moniteur.  
   
- ![Configuration affichant les travaux de sauvegarde, de copie & de restauration](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuration affichant les travaux de sauvegarde, de copie & de restauration")  
+ ![Configuration affichant les travaux de sauvegarde, de copie et de restauration](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuration affichant les travaux de sauvegarde, de copie et de restauration")  
   
 ##  <a name="Interoperability"></a> Interopérabilité  
  La copie des journaux de transaction peut être utilisée avec les fonctionnalités ou les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]suivants :  
@@ -163,6 +163,6 @@ ms.locfileid: "68057913"
 -   [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

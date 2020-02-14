@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811327"
 ---
 # <a name="modify-unique-constraints"></a>Modifier des contraintes uniques
@@ -59,14 +59,14 @@ ms.locfileid: "68811327"
   
 4.  Effectuez l'une des actions décrites dans le tableau suivant :  
   
-    |Pour|Procédez comme suit|  
+    |À|Procédez comme suit|  
     |--------|------------------------|  
     |Changer les colonnes auxquelles la contrainte est associée|1) Dans la grille en dessous de **(Général)** , cliquez sur **Colonnes**, puis sur le bouton de sélection **(...)** , à droite de la propriété.<br /><br /> 2) Dans la boîte de dialogue **Colonnes d’index** , spécifiez la nouvelle colonne, l’ordre de tri, ou les deux, pour l’index.|  
     |Renommer la contrainte|Dans la grille sous **Identité**, tapez un nouveau nom dans la zone **Nom** . Assurez-vous que le nouveau nom n’existe pas déjà dans la liste **Index ou clé unique/primaire sélectionné(e)** .|  
     |Définir l'option clustered|Dans la grille sous **Concepteur de tables**, sélectionnez **Créer sous forme de cluster** et sélectionnez Oui dans la liste déroulante pour créer un index cluster, ou Non pour créer un index non-cluster. Il ne peut exister qu'un seul index cluster par table. Si un index cluster existe dans la table, vous devez effacer ce paramètre sur l'index d'origine.|  
     |Définir un taux de remplissage|Dans la grille sous **Concepteur de tables**, développez la catégorie **Spécification du remplissage** et tapez un entier compris entre 0 et 100 dans la zone **Facteur de remplissage** .|  
   
-5.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
+5.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
 ##  <a name="TsqlProcedure"></a> **Pour modifier une contrainte unique**  
   

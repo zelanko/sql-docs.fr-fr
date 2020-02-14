@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907668"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910242"
 ---
 # <a name="compare-execution-plans"></a>Comparer des plans d’exécution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,6 +102,6 @@ Quand deux plans d’exécution sont comparés, les régions du plan qui **font 
 
     ![Sélectionner deux plans dans le Magasin des requêtes](../../relational-databases/performance/media/plancomparison-querystore.png "Sélectionner deux plans dans le Magasin des requêtes")   
 
-3.  Utilisez le bouton **Comparer les plans pour la requête sélectionnée dans une fenêtre distincte** pour lancer la comparaison des plans. Ensuite, les étapes 4 à 6 de *Pour comparer des plans d’exécution* sont applicables. 
+3.  Utilisez le bouton **Comparer les plans pour la requête sélectionnée dans une fenêtre distincte** pour commencer la comparaison des plans. Ensuite, les étapes 4 à 6 de *Pour comparer des plans d’exécution* sont applicables. 
 
     ![Comparer le plan d'exécution de requêtes dans le Magasin des requêtes](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Comparer le plan d'exécution de requêtes dans le Magasin des requêtes") 

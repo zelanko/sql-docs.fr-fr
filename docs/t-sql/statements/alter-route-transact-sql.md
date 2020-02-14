@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927185"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927185"
   Modifie les informations relatives à un itinéraire existant dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ WITH
  *route_name*  
  Nom de l'itinéraire à modifier. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
- par  
+ WITH  
  Introduit les clauses qui définissent l'itinéraire modifié.  
   
  SERVICE_NAME **='** _service\_name_ **'**  
@@ -144,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-the-service-for-a-route"></a>A. Modification du service d'un itinéraire  
+### <a name="a-changing-the-service-for-a-route"></a>R. Modification du service d'un itinéraire  
  L'exemple suivant l'itinéraire `ExpenseRoute` et le fait pointer vers le service distant `//Adventure-Works.com/Expenses`.  
   
 ```  

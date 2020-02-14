@@ -11,10 +11,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: af27b58b2e4dd1f5e5b743e4a905dfee8cebc497
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73659418"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
@@ -46,7 +46,7 @@ Retourner le plan de requête avec des suggestions pour optimiser les performanc
 
  Nécessite l’autorisation **SHOWPLAN** et l’autorisation d’exécuter *SQL_statement*. Voir [Autorisations : GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
  La valeur de retour de la commande **EXPLAIN** est un document XML ayant la structure illustrée ci-dessous. Ce document XML répertorie toutes les opérations dans le plan de requête pour la requête en question. Chacune opération est délimitée par la balise `<dsql_operation>`. La valeur de retour est de type **nvarchar(max)** .  
   
@@ -81,7 +81,7 @@ Retourner le plan de requête avec des suggestions pour optimiser les performanc
 |--------------------|-------------|-------------|  
 |BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE et TRIM_MOVE|Élément `<operation_cost>` avec ces attributs. Les valeurs reflètent uniquement l’opération locale :<br /><br /> -   *cost* est le coût de l’opérateur local et affiche la durée estimée de l’exécution de l’opération, en millisecondes.<br />-   *accumulative_cost* est la somme de toutes les opérations indiquées dans le plan, y compris les valeurs additionnées pour les opérations en parallèle, en millisecondes.<br />-   *average_rowsize* est la taille de ligne moyenne estimée (en octets) des lignes récupérées et passées durant l’opération.<br />-   *output_rows* est la cardinalité de sortie (nœud) et affiche le nombre de lignes de sortie.<br /><br /> `<location>`: nœuds ou distributions où l’opération va s’exécuter. Les options sont : « Control », « ComputeNode », « AllComputeNodes », « AllDistributions », « SubsetDistributions », « Distribution » et « SubsetNodes ».<br /><br /> `<source_statement>`: données sources pour le déplacement aléatoire.<br /><br /> `<destination_table>`: table temporaire interne dans laquelle les données seront déplacées.<br /><br /> `<shuffle_columns>`: (applicable uniquement aux opérations SHUFFLE_MOVE). La ou les colonnes à utiliser comme colonnes de distribution pour la table temporaire.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
 |MetaDataCreate_Operation|`<source_table>`: table source pour l’opération.<br /><br /> `<destination_table>`: table de destination pour l’opération.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`: voir `<location>` ci-dessus.<br /><br /> `<sql_operation>`: identifie la commande SQL à exécuter sur un nœud.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|ACTIVÉ|`<location>`: voir `<location>` ci-dessus.<br /><br /> `<sql_operation>`: identifie la commande SQL à exécuter sur un nœud.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
 |RemoteOnOperation|`<DestinationCatalog>`: catalogue de destination.<br /><br /> `<DestinationSchema>`: schéma de destination dans DestinationCatalog.<br /><br /> `<DestinationTableName>`: nom de la table de destination ou « TableName ».<br /><br /> `<DestinationDatasource>`: nom de la source de données de destination.<br /><br /> `<Username>` et `<Password>` : ces champs indiquent qu’un nom d’utilisateur et un mot de passe pour la destination peuvent être nécessaires.<br /><br /> `<CreateStatement>`: instruction de création de table pour la base de données de destination.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
 |RETURN|`<resultset>`: identificateur du jeu de résultats.|`<resultset>RS_19</resultset>`|  
 |RND_ID|`<identifier>`: identificateur de l’objet créé.|`<identifier>TEMP_ID_260</identifier>`|  

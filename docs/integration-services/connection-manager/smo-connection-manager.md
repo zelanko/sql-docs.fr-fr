@@ -17,10 +17,10 @@ ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 87400e2216b51bfab0132f369e452f27447b0572
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294398"
 ---
 # <a name="smo-connection-manager"></a>Gestionnaire de connexions SMO
@@ -63,7 +63,7 @@ ms.locfileid: "71294398"
  **Utiliser l’authentification SQL Server**  
  Utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnée.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Si vous avez sélectionné l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Mot de passe**  

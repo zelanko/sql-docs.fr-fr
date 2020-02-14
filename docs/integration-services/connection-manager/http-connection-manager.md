@@ -20,10 +20,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294411"
 ---
 # <a name="http-connection-manager"></a>Gestionnaire de connexions HTTP
@@ -31,7 +31,7 @@ ms.locfileid: "71294411"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Une connexion HTTP permet à un package d'accéder à un serveur Web via HTTP pour l'envoi et la réception de fichiers. La tâche de service Web incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions.  
+  Une connexion HTTP permet à un package d'accéder à un serveur Web via HTTP pour l'envoi et la réception de fichiers. La tâche de service web incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions.  
   
  Quand vous ajoutez un gestionnaire de connexions HTTP à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera converti en connexion HTTP au moment de l’exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection **Connections** du package.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71294411"
  **Utiliser les informations d'identification**  
  Spécifiez si vous voulez que le gestionnaire de connexions HTTP utilise les informations d'identification de sécurité de l'utilisateur pour l'authentification.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
  **Mot de passe**  
@@ -84,7 +84,7 @@ ms.locfileid: "71294411"
  **Utiliser le certificat client**  
  Spécifiez si vous voulez que le gestionnaire de connexions HTTP utilise un certificat client pour l'authentification.  
   
- **Certificat**  
+ **Certificate**  
  Sélectionnez un certificat dans la liste via la boîte de dialogue **Sélectionner un certificat** . La zone de texte affiche le nom associé au certificat.  
   
  **Délai d'expiration (en secondes)**  
@@ -114,7 +114,7 @@ ms.locfileid: "71294411"
  **Utiliser les informations d'identification**  
  Indiquez si vous voulez que le gestionnaire de connexions HTTP utilise les informations d'identification de sécurité pour le serveur proxy.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
  **Mot de passe**  
@@ -129,7 +129,7 @@ ms.locfileid: "71294411"
  **Ajouter**  
  Tapez une adresse pour laquelle vous souhaitez que le gestionnaire de connexions HTTP n'utilise pas le serveur proxy.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez une adresse, puis supprimez-la en cliquant sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: db3e9b71b5e19e4dec55d64f9e0dde75a38947f5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 192beff1882ddb743cd7840067c9b1ce21c32e77
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770779"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288301"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Sécurité de l'agent (Assistant Nouvelle publication)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,17 +28,17 @@ ms.locfileid: "68770779"
   
 -   Agent de lecture du journal pour toutes les publications transactionnelles ;  
   
--   Agent de lecture de la file d'attente pour les publications transactionnelles qui autorisent les abonnements pouvant être mis à jour. Le travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour cet agent est créé si vous avez spécifié l'option **Publication transactionnelle avec abonnements pouvant être mis à jour** dans la page **Type de publication** , quel que soit le type d'abonnements pouvant être mis à jour utilisé. Pour plus d’informations sur les abonnements pouvant être mis à jour, consultez [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+-   Agent de lecture de la file d'attente pour les publications transactionnelles qui autorisent les abonnements pouvant être mis à jour. Le travail de l’Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour cet agent est créé si vous avez spécifié l’option **Publication transactionnelle avec abonnements pouvant être mis à jour** dans la page **Type de publication**, quel que soit le type d’abonnements pouvant être mis à jour que vous utilisez. Pour plus d'informations sur les abonnements pouvant être mis à jour, consultez [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  Pour plus d'informations sur les autorisations requises par les agents et les méthodes préconisées pour la sécurité de la réplication, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) et [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md).  
   
 ## <a name="options"></a>Options  
- **Agent d'instantané**  
+ **Agent d’instantané**  
  Affiché pour toutes les publications. Cliquez sur **Paramètres de sécurité** pour spécifier les paramètres de sécurité dans la boîte de dialogue **Sécurité de l'Agent d'instantané** .  
   
  Cliquez sur **Aide** dans la boîte de dialogue **Sécurité de l'Agent d'instantané** pour obtenir des informations supplémentaires sur les autorisations requises pour les comptes utilisés par l'Agent d'instantané.  
   
- **l'Agent de lecture du journal ;**  
+ **Agent de lecture du journal**  
  Affiché pour toutes les publications transactionnelles. Cliquez sur **Paramètres de sécurité** pour spécifier les paramètres de sécurité dans la boîte de dialogue **Sécurité de l'Agent de lecture du journal** .  
   
  Cliquez sur **Aide** dans la boîte de dialogue **Sécurité de l'Agent de lecture du journal** pour obtenir des informations supplémentaires sur les autorisations requises pour les comptes utilisés par l'Agent de lecture du journal.  
@@ -46,8 +46,8 @@ ms.locfileid: "68770779"
 > [!NOTE]  
 >  Il existe un Agent de lecture du journal pour chaque base de données publiée utilisant la réplication transactionnelle. Si une publication transactionnelle existe déjà dans la base de données, les paramètres de sécurité sont en lecture seule. Vous pouvez modifier les paramètres dans la boîte de dialogue **Propriétés de la publication** ; toutefois, toutes les publications transactionnelles seront affectées dans la base de données.  
   
- **Agent de lecture de la file d'attente**  
- Affiché pour les publications transactionnelles qui autorisent les abonnements pouvant être mis à jour. Cliquez sur **Paramètres de sécurité** pour spécifier les paramètres de sécurité dans la boîte de dialogue **Sécurité de l'Agent de lecture de la file d'attente** . Une fois l'exécution de cet Assistant terminée, un Agent de lecture de la file d'attente est créé. Sa création ne dépend aucunement de la création d'abonnements mis à jour en file d'attente. Si vous n'envisagez pas de créer des abonnements mis à jour en file d'attente , vous pouvez désactiver ce travail. Cliquez avec le bouton droit sur ce travail (nommé sous la forme : *[\<serveur_publication>].\<entier>* .) dans le dossier **Travaux de l’Agent** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis cliquez sur **Désactiver**.  
+ **Agent de lecture de la file d’attente**  
+ Affiché pour les publications transactionnelles qui autorisent les abonnements pouvant être mis à jour. Cliquez sur **Paramètres de sécurité** pour spécifier les paramètres de sécurité dans la boîte de dialogue **Sécurité de l'Agent de lecture de la file d'attente** . Une fois l'exécution de cet Assistant terminée, un Agent de lecture de la file d'attente est créé. Sa création ne dépend aucunement de la création d'abonnements mis à jour en file d'attente. Si vous n'envisagez pas de créer des abonnements mis à jour en file d'attente , vous pouvez désactiver ce travail. Cliquez avec le bouton droit sur ce travail (nommé sous la forme : *[\<serveur_publication>].\<entier>* .) dans le dossier **Travaux de l’Agent**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis cliquez sur **Désactiver**.  
   
  Cliquez sur **Aide** dans la la boîte de dialogue **Sécurité de l'Agent de lecture de la file d'attente** pour obtenir des informations supplémentaires sur les autorisations requises pour les comptes utilisés par l'Agent de lecture de la file d'attente.  
   

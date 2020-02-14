@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142774"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910102"
 ---
 # <a name="best-practices-with-query-store"></a>Bonnes pratiques relatives au Magasin des requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Intervalle de vidange des données (minutes)**  : définit à quelle fréquence les statistiques d’exécution doivent être collectées sur le disque. La fréquence est exprimée en minutes dans l’interface graphique utilisateur (GUI), mais dans [!INCLUDE[tsql](../../includes/tsql-md.md)], elle est exprimée en secondes. La valeur par défaut est de 900 secondes, ce qui correspond à 15 minutes dans l’interface utilisateur graphique. Utilisez une valeur plus élevée si votre charge de travail ne génère pas de grandes quantités de requêtes et de plans différents, ou si vous pouvez supporter une durée de conservation des données plus élevée avant un arrêt de la base de données.
  
 > [!NOTE]
-> L’indicateur de trace 7745 empêche l’écriture sur le disque des données du Magasin des requêtes en cas de commande d’arrêt ou de basculement. Pour plus d’informations, consultez la section [Utiliser des indicateurs de trace sur des serveurs critiques pour améliorer la récupération d’urgence](#Recovery).
+> L’indicateur de trace 7745 empêche l’écriture sur le disque des données du Magasin des requêtes en cas de commande d’arrêt ou de basculement. Pour plus d’informations, consultez la section [Utiliser des indicateurs de trace sur des serveurs critiques](#Recovery).
 
 Utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir une valeur différente pour **Intervalle de vidage des données** :  
   
@@ -109,9 +109,12 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
 -   **Tout** : Capture toutes les requêtes. Cette option est l’option par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 -   **Auto** : les requêtes peu fréquentes et les requêtes dont la durée de compilation et d’exécution n’est pas significative sont ignorées. Les seuils concernant le nombre d’exécutions, la durée de compilation et la durée d’exécution sont déterminés en interne. À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il s’agit de l’option par défaut.
--   **Aucun**: le Magasin des requêtes cesse de capturer les nouvelles requêtes.  
+-   **Aucun** : le Magasin des requêtes cesse de capturer les nouvelles requêtes.  
 -   **Personnalisé** : permet un contrôle supplémentaire et permet d’ajuster la stratégie de collecte des données. Les nouveaux paramètres personnalisés définissent ce qui se passe pendant la durée seuil de la stratégie de capture interne. Il s’agit d’une durée limite pendant laquelle les conditions configurables sont évaluées et, si elles ont la valeur true, la requête peut être capturée par le Magasin des requêtes.
-  
+
+> [!IMPORTANT]
+> Les curseurs, les requêtes dans les procédures stockées et les requêtes compilées en mode natif sont toujours capturés quand le mode de capture du Magasin des requêtes est défini sur **Tous**, **Auto** ou **Personnalisé**. Pour capturer des requêtes compilées en mode natif, activez la collecte des statistiques par requête avec [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
+
  Le script suivant définit QUERY_CAPTURE_MODE sur AUTO :
   
 ```sql  
@@ -210,7 +213,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 |**Principales requêtes consommatrices de ressources**|Choisissez une mesure d’exécution présentant un intérêt et identifiez les requêtes qui ont enregistré les valeurs les plus extrêmes au cours d’un intervalle de temps donné. <br />Utilisez cette vue pour concentrer votre attention sur les requêtes les plus pertinentes, qui ont le plus fort impact sur la consommation en ressources de base de données.|  
 |**Requêtes avec des plans forcés**|Liste les plans forcés à l’aide du Magasin des requêtes. <br />Utilisez cette vue pour accéder rapidement à tous les plans forcés.|  
 |**Requêtes avec variation forte**|Analysez les requêtes ayant une forte variation d’exécution en lien avec les dimensions disponibles, notamment la durée, le temps processeur, les E/S et l’utilisation de la mémoire dans l’intervalle de temps souhaité.<br />Utilisez cette vue pour identifier les requêtes avec des performances extrêmement variables qui peuvent affecter l’expérience utilisateur dans vos applications.|  
-|**Statistiques d’attente des requêtes**|Analysez les catégories d’attente qui sont les plus actives dans une base de données, et les requêtes qui contribuent le plus à la catégorie d’attente sélectionnée.<br />Utilisez cette vue pour analyser les statistiques d’attente et identifier les requêtes susceptibles d’affecter l’expérience utilisateur dans vos applications.<br /><br />S'applique à : à compter de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 et de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
+|**Statistiques d’attente des requêtes**|Analysez les catégories d’attente qui sont les plus actives dans une base de données, et les requêtes qui contribuent le plus à la catégorie d’attente sélectionnée.<br />Utilisez cette vue pour analyser les statistiques d’attente et identifier les requêtes susceptibles d’affecter l’expérience utilisateur dans vos applications.<br /><br />S’applique à : à compter de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 et de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
 |**Requêtes suivies**|Suivez l’exécution des requêtes les plus importantes en temps réel. En règle générale, vous utilisez cette vue quand certaines de vos requêtes sont soumises à des plans forcés et que vous voulez vérifier que les performances des requêtes sont stables.|
   
 > [!TIP]
@@ -227,7 +230,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
        > 
        > |Graphique à base de formes|Signification|  
        > |-------------------|-------------|
-       > |Cercle|Requête terminée, ce qui signifie qu’une exécution normale s’est achevée correctement.|
+       > |Circle|Requête terminée, ce qui signifie qu’une exécution normale s’est achevée correctement.|
        > |Carré|Annulée, ce qui signifie qu’un client est à l’origine de l’abandon de l’exécution.|
        > |Triangle|Échec, ce qui signifie qu’une exception est à l’origine de l’abandon de l’exécution.|
        > 
@@ -324,10 +327,10 @@ FROM sys.database_query_store_options;
   
 |Mode de capture du magasin des requêtes|Scénario|  
 |------------------------|--------------|  
-|**Tous**|Analysez minutieusement votre charge de travail, c’est-à-dire toutes les formes de requêtes, leur fréquence d’exécution et les autres statistiques.<br /><br /> Identifiez les nouvelles requêtes dans votre charge de travail.<br /><br /> Déterminez si des requêtes ad hoc sont utilisées pour identifier les possibilités de paramétrage utilisateur ou automatique.<br /><br />Remarque : Il s’agit du mode de capture par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**Tout**|Analysez minutieusement votre charge de travail, c’est-à-dire toutes les formes de requêtes, leur fréquence d’exécution et les autres statistiques.<br /><br /> Identifiez les nouvelles requêtes dans votre charge de travail.<br /><br /> Détectez si des requêtes ad hoc sont utilisées pour identifier les opportunités de paramétrage défini par l’utilisateur ou automatique.<br /><br />Remarque : Il s’agit du mode de capture par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
 |**Automatique**|Concentrez-vous sur les requêtes pertinentes et actionnables. Les requêtes qui s’exécutent régulièrement ou qui consomment beaucoup de ressources en sont un exemple.<br /><br />Remarque : à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il s’agit du mode de capture par défaut.|  
 |**Aucun**|Vous avez déjà capturé le jeu de requêtes que vous vouliez surveiller dans le runtime et souhaitez éliminer les confusions que pourraient provoquer les autres requêtes.<br /><br /> L’option Aucun est adaptée aux environnements de test et d’évaluation.<br /><br /> Elle est aussi appropriée pour les éditeurs de logiciels qui proposent le magasin de requêtes avec une configuration destinée à surveiller la charge de travail de leur application.<br /><br /> Cette option doit être utilisée avec précaution, car vous risquez de ne pas pouvoir suivre et optimiser de nouvelles requêtes importantes. Évitez d’utiliser l’option Aucun(e) sauf si l’un de vos scénarios l’exige.|  
-|**Personnalisé**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit un mode de capture personnalisé sous la commande `ALTER DATABASE SET QUERY_STORE`. Quand ce mode est activé, vous pouvez affiner la collecte de données sur un serveur spécifique au moyen de configurations supplémentaires du Magasin des requêtes, disponibles sous un nouveau paramètre de stratégie de capture du Magasin des requêtes.<br /><br />Les nouveaux paramètres personnalisés définissent ce qui se passe pendant la durée seuil de la stratégie de capture interne. Il s’agit d’une durée limite pendant laquelle les conditions configurables sont évaluées et, si elles ont la valeur true, la requête peut être capturée par le Magasin des requêtes. Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
+|**Personnalisée**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit un mode de capture personnalisé sous la commande `ALTER DATABASE SET QUERY_STORE`. Quand ce mode est activé, vous pouvez affiner la collecte de données sur un serveur spécifique au moyen de configurations supplémentaires du Magasin des requêtes, disponibles sous un nouveau paramètre de stratégie de capture du Magasin des requêtes.<br /><br />Les nouveaux paramètres personnalisés définissent ce qui se passe pendant la durée seuil de la stratégie de capture interne. Il s’agit d’une durée limite pendant laquelle les conditions configurables sont évaluées et, si elles ont la valeur true, la requête peut être capturée par le Magasin des requêtes. Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
 > Les curseurs, les requêtes dans les procédures stockées et les requêtes compilées en mode natif sont toujours capturés quand le mode de capture du Magasin des requêtes est défini sur **Tous**, **Auto** ou **Personnalisé**. Pour capturer des requêtes compilées en mode natif, activez la collecte des statistiques par requête avec [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
@@ -336,7 +339,7 @@ FROM sys.database_query_store_options;
 Configurez le Magasin des requêtes afin qu’il contienne uniquement les données pertinentes. Ainsi, il s’exécutera toujours en offrant une excellente expérience de résolution des problèmes tout en ayant un impact minimal sur votre charge de travail normale.  
 Le tableau suivant décrit les bonnes pratiques :  
   
-|Meilleure pratique|Paramètre|  
+|Bonne pratique|Paramètre|  
 |-------------------|-------------|  
 |Limiter la conservation des données d’historique.|Configurez la stratégie basée sur la durée pour activer le nettoyage automatique.|  
 |Filtrer les requêtes non pertinentes.|Configurez l’option **Mode de capture du Magasin des requêtes** sur **Auto**.|  

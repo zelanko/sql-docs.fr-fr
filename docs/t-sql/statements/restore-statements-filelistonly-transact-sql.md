@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742977"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Instructions RESTORE - REWINDONLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68742977"
 > [!NOTE]  
 >  Pour une description des arguments, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ FROM <backup_device>
 ```  
 
 > [!NOTE] 
-> Pour spécifier l’emplacement et le nom de fichier du Stockage Blob Microsoft Azure, utilisez le format de l’URL qui est pris en charge à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Cu2. Bien que le stockage Microsoft Azure soit un service, son implémentation est similaire à celle d’un disque ou d’une bande afin d’offrir une expérience de restauration cohérente et fluide pour les trois appareils.
+> Pour spécifier l’emplacement et le nom de fichier du Stockage Blob Microsoft Azure, utilisez le format URL pris en charge à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Cu2. Bien que le stockage Microsoft Azure soit un service, son implémentation est similaire à celle d’un disque ou d’une bande afin d’offrir une expérience de restauration cohérente et fluide pour les trois appareils.
 
 ## <a name="arguments"></a>Arguments  
  Pour voir la description des arguments RESTORE FILELISTONLY, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -86,13 +86,13 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Jeux de résultats  
  Un client peut utiliser RESTORE FILELISTONLY pour obtenir une liste des fichiers contenus dans un jeu de sauvegarde. Ces informations sont retournées sous forme d'un jeu de résultats contenant une ligne par fichier.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Nom logique du fichier.|  
 |PhysicalName|**nvarchar(260)**|Nom physique ou nom système du fichier.|  
 |Type|**char(1)**|Type de fichier (l’un des suivants) :<br /><br /> **L** = Fichier journal Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** = Fichier de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **F** = Catalogue de texte intégral<br /><br /> **S** = FileStream, FileTable ou conteneur [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
 |FileGroupName|**nvarchar(128)** NULL|Nom du groupe de fichiers contenant le fichier.|  
-|Taille|**numeric(20,0)**|Taille actuelle en octets.|  
+|Size|**numeric(20,0)**|Taille actuelle en octets.|  
 |MaxSize|**numeric(20,0)**|Taille maximale autorisée en octets.|  
 |FileID|**bigint**|Identificateur de fichier, unique dans la base de données.|  
 |CreateLSN|**numeric(25,0)**|Numéro séquentiel dans le journal auquel le fichier a été créé.|  
@@ -101,8 +101,8 @@ FROM <backup_device>
 |ReadOnlyLSN|**numeric(25,0) NULL**|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture-écriture à lecture seule (modification la plus récente).|  
 |ReadWriteLSN|**numeric(25,0)** NULL|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture seule à lecture-écriture (modification la plus récente).|  
 |BackupSizeInBytes|**bigint**|Taille de la sauvegarde en octets pour ce fichier.|  
-|SourceBlockSize|**Int**|Taille en octets des blocs du périphérique physique contenant le fichier (pas l'unité de sauvegarde).|  
-|FileGroupID|**Int**|Identificateur du groupe de fichiers.|  
+|SourceBlockSize|**int**|Taille en octets des blocs du périphérique physique contenant le fichier (pas l'unité de sauvegarde).|  
+|FileGroupID|**int**|Identificateur du groupe de fichiers.|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|Pour des sauvegardes différentielles, les modifications avec des numéros séquentiels dans le journal supérieurs ou égaux à **DifferentialBaseLSN** sont incluses.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
 |DifferentialBaseGUID|**uniqueidentifier** NULL|Pour les sauvegardes différentielles, il s'agit de l'identificateur unique de la base différentielle.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
@@ -112,7 +112,7 @@ FROM <backup_device>
 |SnapshotURL|**nvarchar(360)** NULL|URL de l’instantané Azure du fichier de base de données contenu dans la sauvegarde FILE_SNAPSHOT. Retourne NULL en cas d’absence de sauvegarde FILE_SNAPSHOT.|  
   
 ## <a name="security"></a>Sécurité  
- Une opération de sauvegarde peut éventuellement spécifier des mots de passe pour un support de sauvegarde, un jeu de sauvegarde ou les deux. Lorsqu'un mot de passe a été défini sur un support de sauvegarde ou un jeu de sauvegarde, vous devez entrer le ou les mots de passe corrects dans l'instruction RESTORE. Ces mots de passe empêchent les opérations de restauration non autorisées, ainsi que les ajouts non autorisés de jeux de sauvegarde sur les supports à l’aide des outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, un mot de passe n'empêche pas d'écraser les supports en cas d'utilisation de l'option FORMAT de l'instruction BACKUP.  
+ Une opération de sauvegarde peut éventuellement spécifier des mots de passe pour un support de sauvegarde, un jeu de sauvegarde ou les deux. Lorsqu'un mot de passe a été défini sur un support de sauvegarde ou un jeu de sauvegarde, vous devez entrer le ou les mots de passe corrects dans l'instruction RESTORE. Ces mots de passe empêchent les opérations non autorisées de restauration et d’ajout de jeux de sauvegarde au support à l’aide d’outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, un mot de passe n'empêche pas d'écraser les supports en cas d'utilisation de l'option FORMAT de l'instruction BACKUP.  
   
 > [!IMPORTANT]  
 >  Le niveau de protection de ce mot de passe est faible. Son but est d'éviter que des utilisateurs autorisés ou non autorisés effectuent une restauration incorrecte à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En aucun cas, elle n'empêche la lecture des données de la sauvegarde par d'autres moyens ou le remplacement du mot de passe. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] La méthode conseillé en matière de protection des sauvegardes consiste à stocker les bandes de sauvegarde dans un emplacement sûr ou à sauvegarder les fichiers disque protégés par une liste de contrôle d'accès (ACL). La liste de contrôle d'accès doit être définie à la racine du répertoire dans lequel les sauvegardes sont effectuées.  

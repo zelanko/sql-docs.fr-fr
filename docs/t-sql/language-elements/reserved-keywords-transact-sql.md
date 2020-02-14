@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091775"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Mots clés réservés (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68091775"
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
-|AUTHORIZATION|FREETEXTTABLE|REPLICATION|  
+|AUTHORIZATION|FREETEXTTABLE|RÉPLICATION|  
 |BACKUP|FROM|RESTORE|  
 |BEGIN|FULL|RESTRICT|  
 |BETWEEN|FUNCTION|RETURN|  
@@ -78,21 +78,21 @@ ms.locfileid: "68091775"
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|Suppression|ON|UNION|  
+|Suppression|ACTIVÉ|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|Utilisateur|  
-|DROP|\- ou -|VALUES|  
+|DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|par|  
+|EXEC|PRECISION|WITH|  
 |Exécutez|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
@@ -234,7 +234,7 @@ La table suivante répertorie les mots clés réservés qui sont exclusifs à **
 |CLASS|MAP|START|  
 |CLOB|MATCH|STATE|  
 |COLLATION|MEMBER|STATEMENT|  
-|COLLECT|METHOD|STATIC|  
+|COLLECT|MÉTHODE|STATIC|  
 |COMPLETION|MINUTE|STDDEV_POP|  
 |CONDITION|MOD|STDDEV_SAMP|  
 |CONNECT|MODIFIES|STRUCTURE|  
@@ -245,7 +245,7 @@ La table suivante répertorie les mots clés réservés qui sont exclusifs à **
 |CORRESPONDING|NAMES|TEMPORARY|  
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
-|CUBE|NCLOB|TIME|  
+|CUBE|NCLOB|TEMPS|  
 |CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|Non|TIMEZONE_MINUTE|  
@@ -260,9 +260,9 @@ La table suivante répertorie les mots clés réservés qui sont exclusifs à **
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALEUR|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|Paramètre|VAR_SAMP|  
+|DEREF|PARAMÈTRE|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905521"
 ---
 # <a name="view-user-defined-functions"></a>Afficher les fonctions définies par l'utilisateur
@@ -75,7 +75,7 @@ ms.locfileid: "72905521"
      **Sauvegarde de la base de données**  
      Nom de la base de données contenant cette fonction.  
   
-     **Server**  
+     **Serveur**  
      Nom de l'instance actuelle du serveur.  
   
      **Utilisateur**  
@@ -87,7 +87,7 @@ ms.locfileid: "72905521"
      **Exécuter en tant que**  
      Contexte d'exécution de la fonction.  
   
-     **Name**  
+     **Nom**  
      Nom de la fonction actuelle.  
   
      **Schéma**  
@@ -115,7 +115,7 @@ ms.locfileid: "72905521"
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Pour obtenir la définition et les propriétés d'une fonction  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "72905521"
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>Pour obtenir les dépendances d'une fonction  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

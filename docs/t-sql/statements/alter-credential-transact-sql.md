@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: f6ac23553500fbf3092d9450b6f5a222863dc1dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065924"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68065924"
   Modifie les propriétés d'une information d'identification.  
 
 > [!IMPORTANT]
-> Les bonnes pratiques sont des pratiques recommandées ; d’autres sont obligatoires pour effectuer la tâche. ![Icône du lien de la rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de la rubrique")[Conventions syntaxiques de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> Les bonnes pratiques sont des pratiques recommandées. D’autres sont obligatoires pour effectuer la tâche ![Icône du lien de la rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions syntaxiques de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,7 +68,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-the-password-of-a-credential"></a>A. Modification du mot de passe d'une information d'identification  
+### <a name="a-changing-the-password-of-a-credential"></a>R. Modification du mot de passe d'une information d'identification  
  Le code exemple suivant modifie le secret stocké dans l'information d'identification nommée `Saddles`. L'information d'identification contient la connexion Windows `RettigB` et son mot de passe. Le nouveau mot de passe est ajouté à l'information d'identification à l'aide de la clause SECRET.  
   
 ```  

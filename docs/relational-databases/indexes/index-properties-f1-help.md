@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68476299"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
@@ -71,7 +71,7 @@ ms.locfileid: "68476299"
   
  Un index spatial peut être uniquement défini sur une colonne unique qui contient un type de données spatiales (une *colonne spatiale*).  
   
- **Name**  
+ **Nom**  
  Affiche le nom de la colonne utilisée dans la clé d'index.  
   
  **Ordre de tri**  
@@ -89,16 +89,16 @@ ms.locfileid: "68476299"
  **Taille**  
  Affiche le nombre maximal d'octets requis pour stocker le type de données de la colonne. Affiche zéro (0) pour une colonne spatiale ou XML.  
   
- **Identity**  
+ **Identité**  
  Indique si la colonne utilisée dans la clé d'index est une colonne d'identité.  
   
  **Autoriser les valeurs NULL**  
  Indique si la colonne utilisée dans la clé d'index autorise le stockage de valeurs NULL dans la colonne de la table ou de la vue.  
   
  **Ajouter**  
- Ajoute une colonne à la clé d'index. Sélectionnez des colonnes de table dans la boîte de dialogue **Sélectionnez les colonnes dans** *\<nom_table>* qui s’affiche quand vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
+ Ajoute une colonne à la clé d'index. Sélectionnez des colonnes de table dans la boîte de dialogue **Sélectionnez les colonnes dans** *\<nom de la table>* qui s’affiche quand vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
   
- **Supprimer**  
+ **Remove**  
  Supprime la colonne sélectionnée de la clé d'index.  
   
  **Monter**  
@@ -119,7 +119,7 @@ ms.locfileid: "68476299"
  **Case à cocher**  
  Activez pour ajouter des colonnes.  
   
- **Name**  
+ **Nom**  
  Nom de la colonne.  
   
  **Type de données**  
@@ -128,10 +128,10 @@ ms.locfileid: "68476299"
  **Octets**  
  Taille de la colonne en octets.  
   
- **Identity**  
+ **Identité**  
  Affiche **Oui** pour les colonnes d’identité et **Non** pour les autres.  
   
- **Allow Nulls**  
+ **Null autorisé**  
  Affiche **Oui** si la définition de table autorise la présence de valeurs Null dans la colonne. Affiche **Non** si la définition de la table interdit la présence de valeurs Null dans la colonne.  
 
 ##  <a name="Options"></a> Options de la page Options

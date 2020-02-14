@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006351"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modes de fonctionnement de la mise en miroir de bases de données
@@ -54,7 +54,7 @@ ms.locfileid: "68006351"
   
  La figure suivante illustre la configuration d'une session à l'aide du mode hautes performances.  
   
- ![Configuration de serveur partenaire uniquement d’une session](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Configuration de serveur partenaire uniquement d’une session")  
+ ![Configuration de serveur partenaire uniquement d'une session](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Configuration de serveur partenaire uniquement d’une session")  
   
  En mode hautes performances, dès que le serveur principal envoie le journal d'une transaction au serveur miroir, le serveur principal envoie une confirmation au client, sans attendre d'accusé de réception du serveur miroir. Les transactions sont validées sans attendre que le serveur miroir enregistre le journal sur le disque. Le fonctionnement asynchrone permet au serveur principal de s'exécuter avec une latence de transaction minimale.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "68006351"
  Cette section décrit une session de mise en miroir de bases de données du point de vue des paramètres inclus dans la clause ALTER DATABASE et des états de la base de données mise en miroir ainsi que du témoin, le cas échéant. Cette section est destinée aux utilisateurs chargés de mettre en miroir la base de données prioritairement ou exclusivement à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]plutôt que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
->  Au lieu d'utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)], vous pouvez aussi contrôler le mode d'opération d'une session dans l'Explorateur d'objets à travers la page **Mise en miroir** se trouvant dans la boîte de dialogue **Propriétés de la base de données** . Pour plus d'informations, consultez [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+>  Au lieu d'utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)], vous pouvez aussi contrôler le mode d'opération d'une session dans l'Explorateur d'objets à travers la page **Mise en miroir** se trouvant dans la boîte de dialogue **Propriétés de la base de données** . Pour plus d’informations, consultez [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
  **Dans cette section :**  
   

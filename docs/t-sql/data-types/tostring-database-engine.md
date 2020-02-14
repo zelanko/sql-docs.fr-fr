@@ -18,10 +18,10 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000432"
 ---
 # <a name="tostring-database-engine"></a>ToString (moteur de base de données)
@@ -63,7 +63,7 @@ Retourne l'emplacement logique dans la hiérarchie. Par exemple, `/2/1/` représ
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-transact-sql-example-in-a-table"></a>A. Exemple Transact-SQL dans une table  
+### <a name="a-transact-sql-example-in-a-table"></a>R. Exemple Transact-SQL dans une table  
 L’exemple suivant retourne la colonne `OrgNode` à la fois comme un type de données **hierarchyid** et sous un format de chaîne plus lisible :
   
 ```sql

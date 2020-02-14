@@ -21,18 +21,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086716"
 ---
-# <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
+# <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Indique si un principal de base de données spécifié est membre du rôle de base de données spécifié.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +49,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  Nom de l'utilisateur de base de données, du rôle de base de données ou du rôle d'application à vérifier. *database_principal* est de type **sysname**, avec NULL comme valeur par défaut. Si aucune valeur n'est spécifiée, le résultat est basé sur le contexte d'exécution actuel. Si le paramètre contient le mot NULL, retourne NULL.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 |Valeur retournée|Description|  
 |------------------|-----------------|  

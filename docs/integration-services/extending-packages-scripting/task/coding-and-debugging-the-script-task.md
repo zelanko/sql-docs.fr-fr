@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296916"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
@@ -36,7 +36,7 @@ ms.locfileid: "71296916"
   Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.  
   
 ## <a name="script-task-development-environment"></a>Environnement de développement de tâche de script  
- La tâche de script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement de développement du script proprement dit.  
+ La tâche de script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement de développement du script proprement dit.  
   
  Le code de script est écrit dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Vous pouvez spécifier le langage de script en définissant la propriété **ScriptLanguage** dans l’**éditeur de tâche de script**. Si vous préférez utiliser un autre langage de programmation, vous pouvez développer un assembly personnalisé dans le langage de votre choix et appeler ses fonctionnalités à partir du code inclus dans la de script.  
   
@@ -214,7 +214,7 @@ To open Help, press F1.
   
  Le tableau suivant répertorie les principaux membres publics de la classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, qui est exposée au code de la tâche de script par le biais de l’objet **Dts** global. Les rubriques de cette section examinent en détail l'utilisation de ces membres.  
   
-|Membre|Fonction|  
+|Membre|Objectif|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Permet d'accéder aux gestionnaires de connexion définis dans le package.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Fournit une interface d'événements pour permettre à la tâche de script de déclencher des erreurs, des avertissements et des messages d'information.|  

@@ -13,10 +13,10 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025215"
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
@@ -39,10 +39,10 @@ ms.locfileid: "68025215"
   
 -   **Tentative de connexion à**  *nom_instance_serveur*  
   
--   **Connecté à**  *nom_instance_serveur*  
+-   **Connecté à**   *nom_instance_serveur*  
   
     > [!NOTE]  
-    >  Si vous n’êtes pas membre du rôle de serveur fixe **sysadmin** , l’état est **Connecté à** *nom_instance_serveur* **(Autorisations limitées)** .  
+    >  Si vous n’êtes pas membre du rôle de serveur fixe **sysadmin**, l’état est **Connecté à** *nom_instance_serveur* **(Autorisations limitées)** .  
   
  Le nom de chaque instance de serveur partenaire est affiché dans un champ d' *instance de serveur et d'état de la connexion* distinct. Le premier champ affiche le serveur principal au démarrage du moniteur.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68025215"
  **Activé sur «**   *\<instance_serveur>*   **»**  
  Une case à cocher vide indique que l'avertissement est actuellement désactivé sur l'instance de serveur. Pour activer l'avertissement, activez la case à cocher.  
   
- **Seuil sur «**   *\<instance_serveur>*   **»**  
+ **Seuil à «**   *\<instance_serveur>*   **»**  
  Lorsqu'un avertissement est activé, définissez le seuil dans la partie gauche de cette colonne. Un événement se produit si le seuil spécifié est atteint lors de la mise à jour de la table d'état. Si vous désactivez un seuil après avoir configuré une valeur, cette valeur reste dans le champ et sera utilisée lorsque vous activerez de nouveau l'avertissement.  
   
  Lorsqu'un avertissement n'est pas activé, ce champ est inactif.  

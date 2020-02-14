@@ -22,29 +22,57 @@ helpviewer_keywords:
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a55abc5a9554ec68df33310f4f041e9605961c7e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: e7291bc39092d4f65fd69f8c4050bb52a512ef04
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245278"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831735"
 ---
 # <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (Caractère générique - Caractères à exclure) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Recherche la correspondance de chaque caractère ne se trouvant pas dans la plage ou l'ensemble spécifié entre crochets droits.  
+  Recherche la correspondance de chaque caractère ne se trouvant pas dans la plage ou dans l’ensemble spécifié entre crochets droits `[^]`. Ces caractères génériques peuvent être utilisés dans des comparaisons de chaînes qui impliquent des critères spéciaux tels que `LIKE` et `PATINDEX`. 
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant utilise l'opérateur [^] afin de retrouver toutes les personnes répertoriées dans la table `Contact` dont le prénom commence par `Al` mais dont la troisième lettre du prénom n'est pas la lettre `a`.  
+### <a name="a-simple-example"></a>A : Exemple simple   
+ L’exemple suivant utilise l’opérateur [^] afin de retrouver les cinq premières personnes de la table `Contact` dont le prénom commence par `Al`, mais dont la troisième lettre du prénom n’est pas la lettre `a`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName  
+SELECT TOP 5 FirstName, LastName  
 FROM Person.Person  
-WHERE FirstName LIKE 'Al[^a]%'  
-ORDER BY FirstName;  
+WHERE FirstName LIKE 'Al[^a]%';  
 ```  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+FirstName     LastName
+---------     --------
+Alex          Adams
+Alexandra     Adams
+Allison       Adams
+Alisha        Alan
+Alexandra     Alexander
+```
+### <a name="b-searching-for-ranges-of-characters"></a>B : Recherche de plages de caractères
+
+Un jeu de caractères génériques peut inclure des caractères uniques ou des plages de caractères, ainsi que des combinaisons de caractères et de plages. L’exemple suivant utilise l’opérateur [^] pour rechercher une chaîne qui ne commence pas par une lettre ou un chiffre.
+
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[^0-9A-z]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name   name    column_id
+---------     -----------   ----    ---------
+1591676718    JunkTable     _xyz    1
+```
   
 ## <a name="see-also"></a>Voir aussi  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

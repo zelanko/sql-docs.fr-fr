@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987364"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server - Objet Access Methods
@@ -42,7 +42,7 @@ ms.locfileid: "67987364"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** permettent de surveiller l'accès physique aux pages de bases de données sur le disque.  
+ Ce tableau décrit les compteurs **Méthodes d’accès** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs méthodes d'accès de SQL Server|Description|  
 |----------------------------------------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987364"
 |**Utilisation du cookie de page d'arborescence**|Nombre de fois où un cookie de page d'arborescence a été utilisé pendant une recherche d'index depuis qu'aucune modification n'est intervenue sur la page d'arborescence. Le cookie accélère la recherche d'index.|  
 |**Fichiers de travail créés/s**|Nombre de fichiers de travail créés par seconde. Par exemple, il est possible d'utiliser des fichiers de travail pour enregistrer des résultats temporaires de jointures et d'agrégats de hachage.|  
 |**Tables de travail créées/s**|Nombre de tables de travail créées par seconde. Par exemple, il est possible d'utiliser des tables de travail pour enregistrer des résultats temporaires de mise en attente de requêtes, de variables XML et de curseurs.|  
-|**Tables de travail à partir du cache de base**|À usage interne uniquement|  
+|**Tables de travail à partir du cache de base**|À usage interne uniquement.|  
 |**Taux de tables de travail à partir du cache**|Pourcentage de tables de travail créées lorsque les deux premières pages de la table de travail n'étaient pas allouées mais étaient immédiatement disponibles dans la mémoire cache de la table de travail. (Lorsqu'une table de travail est supprimée, deux pages peuvent rester allouées : elles sont placées dans la mémoire cache de la table de travail pour augmenter les performances).|  
   
 ## <a name="see-also"></a>Voir aussi  

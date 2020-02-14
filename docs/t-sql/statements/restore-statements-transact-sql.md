@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530932"
 ---
 # <a name="restore-statements-transact-sql"></a>Instructions RESTORE (Transact-SQL)
@@ -63,7 +63,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ||||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -440,7 +440,7 @@ Tous les exemples partent du principe qu'une sauvegarde complète de la base de 
 
 Parmi les exemples d'instruction RESTORE, citons :
 
-- A. [Restauration d’une base de données complète](#restoring_full_db)
+- R. [Restauration d’une base de données complète](#restoring_full_db)
 - B. [Restauration de sauvegardes complètes et différentielles d’une base de données](#restoring_full_n_differential_db_backups)
 - C. [Restauration d’une base de données en utilisant la syntaxe RESTART](#restoring_db_using_RESTART)
 - D. [Restauration d’une base de données et déplacement des fichiers](#restoring_db_n_move_files)
@@ -735,7 +735,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instance managée Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 Cette commande vous permet de restaurer une base de données complète à partir d’une sauvegarde de base de données complète (restauration complète) depuis un compte Stockage Blob Azure.
 
@@ -980,7 +980,7 @@ Applique un verrou exclusif sur l’objet DATABASE.
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-simple-restore-examples"></a>A. Exemples simples RESTORE
+### <a name="a-simple-restore-examples"></a>R. Exemples simples RESTORE
 
 L’exemple suivant restaure une sauvegarde complète dans la base de données `SalesInvoices2013`. Les fichiers de sauvegarde sont stockés dans le répertoire `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. La base de données SalesInvoices2013 ne doit pas déjà se trouver dans l’appliance cible, car cette commande échouerait avec une erreur.
 

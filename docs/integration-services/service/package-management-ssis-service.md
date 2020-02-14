@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296879"
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
@@ -110,7 +110,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
  Vous pouvez importer ou exporter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] depuis ou vers les emplacements suivants :  
   
--   Vous pouvez importer un package stocké dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans le système de fichiers ou dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Le package importé est enregistré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans un dossier dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+-   Vous pouvez importer un package stocké dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans le système de fichiers ou dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Le package importé est enregistré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans un dossier dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
 -   Vous pouvez exporter un package stocké dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans le système de fichiers ou dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] vers un format ou un emplacement de stockage différent.  
   
@@ -205,7 +205,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
  **Magasin de packages SSIS**  
   
- **Server**  
+ **Serveur**  
  Tapez le nom d’un serveur ou sélectionnez-en un dans la liste.  
   
  **Authentification**  
@@ -214,10 +214,10 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
 > [!IMPORTANT]  
 >  Dans la mesure du possible, utilisez l’authentification Windows.  
   
- **Type d'authentification**  
+ **Type d’authentification**  
  Sélectionnez un type d'authentification.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez un nom d’utilisateur.  
   
  **Mot de passe**  
@@ -241,11 +241,11 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
  **SQL Server**  
   
- **File System**  
+ **Système de fichiers**  
   
  **Magasin de packages SSIS**  
   
- **Server**  
+ **Serveur**  
  Tapez le nom d’un serveur ou sélectionnez-en un dans la liste.  
   
  **Authentification**  
@@ -254,10 +254,10 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
 > [!IMPORTANT]  
 >  Dans la mesure du possible, utilisez l’authentification Windows.  
   
- **Type d'authentification**  
+ **Type d’authentification**  
  Sélectionnez un type d'authentification.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez un nom d’utilisateur.  
   
  **Mot de passe**  
@@ -271,13 +271,13 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
 
 ## <a name="back-up-and-restore-packages"></a>Sauvegarder et restaurer les packages
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les packages peuvent être enregistrés dans le système de fichiers ou dans msdb, une base de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les packages enregistrés dans msdb peuvent être sauvegardés et restaurés à l’aide des fonctionnalités de sauvegarde et de restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Les packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être enregistrés dans le système de fichiers ou dans msdb, base de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les packages enregistrés dans msdb peuvent être sauvegardés et restaurés à l’aide des fonctionnalités de sauvegarde et de restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Pour plus d’informations sur la sauvegarde et la restauration de la base de données msdb, cliquez sur l’une des rubriques suivantes :  
   
--   [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+-   [Sauvegarder et restaurer des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
--   [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
+-   [Sauvegarde et restauration des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend l’utilitaire d’invite de commandes **dtutil** (dtutil.exec) qui permet de gérer les packages. Pour plus d’informations, consultez [dtutil Utility](../../integration-services/dtutil-utility.md).  
   

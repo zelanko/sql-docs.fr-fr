@@ -1,12 +1,4 @@
----
-ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215628"
----
-3. Sur tous les nœuds du cluster, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
+1. Sur tous les nœuds du cluster, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -24,13 +16,13 @@ ms.locfileid: "68215628"
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-2. Définissez le mot de passe pour l’utilisateur par défaut qui est créé pendant l’installation des packages Pacemaker et Corosync. Utilisez le même mot de passe sur tous les nœuds. 
+1. Définissez le mot de passe pour l’utilisateur par défaut qui est créé pendant l’installation des packages Pacemaker et Corosync. Utilisez le même mot de passe sur tous les nœuds. 
 
    ```bash
    sudo passwd hacluster
    ```
 
-3. Pour autoriser les nœuds à rejoindre le cluster après le redémarrage, activez et démarrez le service `pcsd` et Pacemaker. Exécutez la commande suivante sur tous les nœuds.
+1. Pour autoriser les nœuds à rejoindre le cluster après le redémarrage, activez et démarrez le service `pcsd` et Pacemaker. Exécutez la commande suivante sur tous les nœuds.
 
    ```bash
    sudo systemctl enable pcsd
@@ -38,7 +30,9 @@ ms.locfileid: "68215628"
    sudo systemctl enable pacemaker
    ```
 
-4. Créez le cluster. Pour ce faire, exécutez la commande suivante :
+1. Créez le cluster. Pour ce faire, exécutez la commande suivante :
+
+   **RHEL 7** 
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
@@ -46,11 +40,22 @@ ms.locfileid: "68215628"
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```
+
+   **RHEL8**
+
+   Pour RHEL 8, vous devez authentifier les nœuds séparément. Entrez manuellement le nom d’utilisateur et le mot de passe pour hacluster lorsque vous y êtes invité.
+
+   ```bash
+   sudo pcs host auth <node1> <node2> <node3>
+   sudo pcs cluster setup <clusterName> <node1> <node2> <node3>
+   sudo pcs cluster start --all
+   sudo pcs cluster enable --all
+   ```
    
    >[!NOTE]
    >Si vous avez précédemment configuré un cluster sur les mêmes nœuds, vous devez utiliser l’option `--force` pendant l’exécution de `pcs cluster setup`. Cette option revient à exécuter `pcs cluster destroy`. Pour réactiver Pacemaker, exécutez `sudo systemctl enable pacemaker`.
 
-5. Installez l’agent de ressources SQL Server pour SQL Server. Exécutez les commandes suivantes sur tous les nœuds. 
+1. Installez l’agent de ressources SQL Server pour SQL Server. Exécutez les commandes suivantes sur tous les nœuds. 
 
    ```bash
    sudo yum install mssql-server-ha

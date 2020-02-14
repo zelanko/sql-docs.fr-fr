@@ -15,10 +15,10 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e4ad4f9578913e3a6fd9d78e50a7c44e9c8642bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295104"
 ---
 # <a name="debugging-script"></a>Script de débogage
@@ -38,7 +38,7 @@ ms.locfileid: "71295104"
   
 ### <a name="to-set-a-breakpoint-in-visual-studio-for-applications"></a>Pour définir un point d'arrêt dans Visual Studio for Applications  
   
--   [Déboguer un script en définissant des points d'arrêt dans une tâche de script et un composant de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
+-   [Déboguer un script en définissant des points d’arrêt dans une tâche de script et un composant de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  

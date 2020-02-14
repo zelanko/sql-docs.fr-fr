@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981726"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - Clause INTO (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "73981726"
 
 SELECT...INTO crée une table dans le groupe de fichiers par défaut et y insère les lignes résultantes de la requête. Pour afficher la syntaxe SELECT complète, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +63,7 @@ SELECT...INTO crée une table dans le groupe de fichiers par défaut et y insèr
  *groupe_fichiers*    
  Spécifie le nom du groupe de fichiers dans lequel créer la table. Si le groupe de fichiers spécifié n’existe pas dans la base de données, le moteur SQL Server lève une erreur.   
  
- **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.
+ **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.
   
 ## <a name="data-types"></a>Types de données  
  L'attribut FILESTREAM n'est pas transféré dans la nouvelle table. Les objets BLOB FILESTREAM sont copiés et stockés dans la nouvelle table en tant qu’objets BLOB **varbinary(max)** . Sans l’attribut FILESTREAM, le type de données **varbinary(max)** est limité à 2 Go. Si un objet BLOB FILESTREAM dépasse cette valeur, l'erreur 7119 se déclenche et l'instruction s'arrête.  
@@ -106,7 +106,7 @@ L’instruction `SELECT...INTO` s’exécute en deux temps : la nouvelle table 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Création d'une table en spécifiant des colonnes provenant de plusieurs sources  
+### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>R. Création d'une table en spécifiant des colonnes provenant de plusieurs sources  
  L'exemple suivant crée la table `dbo.EmployeeAddresses` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en sélectionnant sept colonnes de diverses tables liées aux salariés et aux adresses.  
   
 ```sql  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Création d'une table en spécifiant des colonnes provenant d'une source de données distante  
  L'exemple suivant illustre l'utilisation de trois méthodes de création d'une table sur le serveur local à partir d'une source de données distante. L'exemple commence par créer un lien vers la source de données distante. Le nom du serveur lié, `MyLinkServer,`, est ensuite spécifié dans la clause FROM de la première instruction SELECT...INTO, ainsi que dans la fonction OPENQUERY de la deuxième instruction SELECT...INTO. La troisième instruction SELECT...INTO utilise la fonction OPENDATASOURCE, qui spécifie directement la source de données distante au lieu d'utiliser le nom du serveur lié.  
   
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ **S’applique à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures  
   
 ```sql
 USE master;  
@@ -214,7 +214,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. Importer à partir d’une table externe créée avec PolyBase  
  Importez des données de Hadoop ou d’Azure Storage dans SQL Server à des fins de stockage permanent. Utilisez `SELECT INTO` pour importer des données référencées par une table externe en vue de leur stockage permanent dans SQL Server. Créez une table relationnelle à la volée, puis créez un index column-store en plus de la table.  
   
- **S’applique à :** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à :** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Création d’une table en tant que copie d’une autre table et chargement de la table dans un groupe de fichiers spécifié
 L’exemple suivant illustre la création d’une table en tant que copie d’une autre table et son chargement dans un autre groupe de fichiers que le groupe de fichiers par défaut de l’utilisateur.
 
- **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.
+ **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

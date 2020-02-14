@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907956"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Dépannage des serveurs de publication Oracle
@@ -25,7 +25,7 @@ ms.locfileid: "72907956"
   Cette rubrique présente une liste de plusieurs problèmes qui peuvent se produire lors de la configuration et de l'utilisation d'un serveur de publication Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Une erreur s'est produite avec le logiciel client et réseau d'Oracle  
- Le compte sous lequel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute sur le serveur de distribution doit avoir des autorisations en lecture et en exécution sur le répertoire (et tous les sous-répertoires) où le logiciel réseau client Oracle est installé. Si les autorisations ne sont pas accordées ou si les composants du client Oracle ne sont pas installés correctement, vous recevez le message d'erreur suivant :  
+ Le compte sous lequel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’exécute sur le serveur de distribution doit disposer d’autorisations de lecture et d’exécution sur le répertoire (et tous les sous-répertoires) où le logiciel réseau client Oracle est installé. Si les autorisations ne sont pas accordées ou si les composants du client Oracle ne sont pas installés correctement, vous recevez le message d'erreur suivant :  
   
  « Échec de la connexion au serveur avec [Fournisseur Microsoft OLE DB pour Oracle]. Les composants client et réseau Oracle sont introuvables. Ces composants sont fournis par Oracle Corporation dans l'installation client d'Oracle Version 7.3.3 (ou ultérieure). Vous ne pourrez pas utiliser ce fournisseur avant d'avoir installé ces composants. »  
   

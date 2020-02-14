@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297550"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Types de données Integration Services dans les expressions
@@ -44,7 +44,7 @@ ms.locfileid: "71297550"
   
  Examinez les expressions dans la capture d’écran suivante.  
   
- ![Types de données String dans les expressions SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Types de données String dans les expressions SSIS")  
+ ![Types de données de chaîne dans les expressions SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Types de données de chaîne dans les expressions SSIS")  
   
 1.  La première s’exécute sans erreur, car la fonction NULL(DT_STR, ...) se trouve à la racine de l’expression.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71297550"
   
  Les exemples suivants illustrent les impacts de la conversion.  
   
- ![Conversion de données dans les expressions SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Conversion de données dans les expressions SSIS")  
+ ![Conversion de chaînes dans les expressions SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Conversion de chaînes dans les expressions SSIS")  
   
 1.  Dans la première expression, la conversion n’est pas au niveau racine de l’expression. l’évaluateur d’expression gère cette conversion intelligemment et convertit le résultat en DT_WSTR (et non en DT_STR). L’expression renvoie DT_WSTR.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71297550"
 >   
 >  Pour éviter des erreurs ou des résultats inattendus, n'écrivez pas de code fondé sur des valeurs numériques précises pour les valeurs **True** et **False**. Si possible, limitez l'utilisation de variables booléennes aux valeurs logiques pour lesquelles elles sont conçues.  
   
- Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour plus d'informations, voir les rubriques suivantes :  
   
 -   [== &#40;Égal&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   

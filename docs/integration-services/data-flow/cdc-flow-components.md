@@ -11,10 +11,10 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293403"
 ---
 # <a name="cdc-flow-components"></a>Composants de flux CDC
@@ -81,7 +81,7 @@ Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** 
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Mise en route avec les composants de capture de données modifiées (CDC)  
  Un package CDC classique traite des modifications sur un groupe de tables. La partie relative au flux de contrôle de base de ce type de package CDC est illustrée dans la figure ci-dessous. Ce package est appelé un package de traitement à flux progressif.  
   
- ![Flux de contrôle d’un package de traitement à flux progressif](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Flux de contrôle d’un package de traitement à flux progressif")  
+ ![Flux de contrôle d’un package de gestion du flux progressif](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Flux de contrôle d’un package de gestion du flux progressif")  
   
  Ce flux de contrôle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient deux tâches de contrôle CDC et la tâche de flux de données. La première tâche appelée **Obtenir la plage de traitement CDC** définit la plage des numéros séquentiels dans le journal (LSN) pour les modifications traitées dans la tâche de flux de données appelée **Modifications des processus**. Cette plage est établie en fonction de ce qui a été traité pendant la dernière exécution de package et de ce qui a été enregistré dans un magasin persistant.  
   
@@ -89,7 +89,7 @@ Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** 
   
  L'illustration suivante montre le flux de données **Modifications des processus** qui indique sur le plan conceptuel la façon dont les modifications sont traitées.  
   
- ![Flux de données Modifications des processus](../../integration-services/data-flow/media/processchangesdataflow.gif "Flux de données Modifications des processus")  
+ ![Flux de données des modifications de processus](../../integration-services/data-flow/media/processchangesdataflow.gif "Flux de données des modifications de processus")  
   
  Les étapes illustrées sont les suivantes :  
   
@@ -173,7 +173,7 @@ Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** 
 ## <a name="cdc-state"></a>État CDC  
  À chaque groupe CDC correspond un état associé qui est représenté par une chaîne avec un format spécifique. Pour plus d'informations, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md). Le tableau suivant répertorie les valeurs d'état CDC possibles.  
   
-|État|Description|  
+|State|Description|  
 |-----------|-----------------|  
 |0-(INITIAL)|État qui existe avant que tous les packages soient exécutés sur le groupe CDC en cours. Il s'agit également de l'état correspondant à une capture de données modifiées vide.<br /><br /> Pour plus d'informations sur les opérations de la tâche de contrôle CDC, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Il s'agit de l'état qui existe lorsque le package de la charge initiale démarre. Il est constaté après l'appel de l'opération **MarkInitialLoadStart** à la tâche de contrôle CDC.<br /><br /> Pour plus d'informations sur les opérations de la tâche de contrôle CDC, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
@@ -188,7 +188,7 @@ Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** 
   
  Par exemple, à la fin d'un package de charge initiale, lorsque le système tente de définir l'état sur ILEND, si l'état est TFSTART, alors le groupe CDC est dans un état d'erreur et le package de mise à jour à flux progressif ne s'exécute pas (le package de charge initiale s'exécute).  
   
- ![Diagramme d’état](../../integration-services/data-flow/media/statediagram.gif "Diagramme d’état")  
+ ![Diagramme d’état](../../integration-services/data-flow/media/statediagram.gif "Diagramme d'état")  
   
  Une fois le package de charge initiale exécuté avec succès, le package de mise à jour à flux progressif s'exécute de façon répétée selon une planification prédéterminée pour traiter les modifications apportées aux tables sources. Chaque exécution du package de mise à jour à flux progressif est une exécution CDC.  
   
@@ -202,7 +202,7 @@ Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** 
   
 -   [Diriger le flux de capture de données modifiées en fonction du type de modification](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
--   [Définir une variable d'état](../../integration-services/data-flow/define-a-state-variable.md)  
+-   [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   

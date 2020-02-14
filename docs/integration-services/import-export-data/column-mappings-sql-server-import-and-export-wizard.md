@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285932"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mappage de colonnes (Assistant Importation et exportation SQL Server)
@@ -32,7 +32,7 @@ Si vous ne voulez pas copier toutes les colonnes dans la table sélectionnée, f
  
  Dans cet exemple, vous voyez que l’Assistant va créer une table de destination, car **Créer la table de destination** est sélectionnée. Par défaut, l’Assistant donne à chaque colonne de la nouvelle table de destination le même nom, le même type de données et les mêmes propriétés que la colonne source correspondante. 
   
- ![Page Mappage de colonnes de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/column-mappings.png "Page Mappage de colonnes de l’Assistant Importation et Exportation")  
+ ![Page Mappages de colonnes de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/column-mappings.png "Page Mappages de colonnes de l’Assistant Importation et Exportation")  
   
 ## <a name="review-the-source-and-destination"></a>Vérifier la source et la destination 
 ![Page mappage de colonnes, section source et destination.](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)
@@ -108,7 +108,7 @@ La liste **Mappages** comprend les colonnes suivantes.
 -    **Précision**  
     Permet de spécifier la précision des données numériques dans la colonne de destination, autrement dit le nombre de chiffres, si applicable.  
   
- -   **Échelle**  
+ -   **Mettre à l'échelle**  
     Spécifiez l’échelle des données numériques dans la colonne de destination, autrement dit le nombre de décimales, si applicable.  
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?  

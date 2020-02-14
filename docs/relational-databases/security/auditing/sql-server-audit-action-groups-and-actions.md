@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2efe63ae57e80e06d616938c0dcdf77dbe055ac6
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929703"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315589"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ ms.locfileid: "70929703"
  Tous les audits sont désactivés lors de leur création initiale.  
   
 ## <a name="server-level-audit-action-groups"></a>Groupes d'actions d'audit de niveau serveur  
- Les groupes d’actions d’audit de niveau serveur sont des actions semblables aux classes d’événements d’audit de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Les groupes d’actions d’audit de niveau serveur sont des actions semblables aux classes d’événements d’audit de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Référence de classe d'événements SQL Server](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Le tableau suivant décrit les groupes d'actions d'audit de niveau serveur et fournit la classe d'événements SQL Server équivalente, le cas échéant.  
   
-|Nom du groupe d'actions|Description|  
+|Nom du groupe d’actions|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois qu'un mot de passe est modifié pour un rôle d'application. Équivaut à la [classe d’événements Audit App Role Change Password](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'un audit est créé, modifié ou supprimé. Cet événement est déclenché chaque fois qu'une spécification d'audit est créée, modifiée ou supprimée. Toute modification apportée à un audit est auditée dans cet audit. Équivaut à la [classe d’événements Audit Change Audit](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -93,6 +93,7 @@ ms.locfileid: "70929703"
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée à un rôle de base de données ou en est supprimée. Cette classe d'événements est déclenchée pour les procédures stockées sp_addrolemember, sp_changegroup et sp_droprolemember. Cet événement est déclenché en cas de modification d'un membre de rôle Base de données dans toute base de données. Équivaut à la [classe d’événements Audit Add Member to DB Role](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Cet événement est déclenché chaque fois qu'un principal émet une commande DBCC. Équivaut à la [classe d’événements Audit DBCC](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données autonome et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Login Failed](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|    
+|FAILED_LOGIN_GROUP|Indique qu'un principal a essayé de se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Login Failed](../../../relational-databases/event-classes/audit-login-failed-event-class.md). Cet audit ne s’applique pas à Azure SQL Database.| 
 |FULLTEXT_GROUP|Indique qu'un événement de texte intégral s'est produit. Équivaut à la [classe d’événements Audit Fulltext](../../../relational-databases/event-classes/audit-fulltext-event-class.md).|  
 |LOGIN_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois qu'un mot de passe de connexion est modifié via une instruction ALTER LOGIN ou une procédure stockée sp_password. Équivaut à la [classe d’événements Audit Login Change Password](../../../relational-databases/event-classes/audit-login-change-password-event-class.md).|  
 |LOGOUT_GROUP|Indique qu'un principal s'est déconnecté de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Logout](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
@@ -116,7 +117,7 @@ ms.locfileid: "70929703"
 |USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données autonome est modifié à l'aide de l'instruction ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Ce groupe surveille les événements déclenchés à l’aide de [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). En règle générale, les déclencheurs ou procédures stockées incluent des appels à **sp_audit_write** pour activer l’audit d’événements importants.|  
   
-### <a name="considerations"></a>Observations  
+### <a name="considerations"></a>Considérations  
  Les groupes d'actions de niveau serveur couvrent les actions sur toute une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Par exemple, toute vérification d'accès à un objet de schéma dans une base de données est enregistrée si le groupe d'actions approprié est ajouté à une spécification de l'audit du serveur. Dans une spécification d'audit de la base de données, seuls les accès aux objets de schéma dans cette base de données sont enregistrés.  
   
  Les actions de niveau serveur ne permettent pas un filtrage détaillé des actions au niveau de la base de données. Un audit de niveau base de données, tel que l'audit d'actions SELECT sur la table Customers pour les connexions dans le groupe Employee est requis pour implémenter le filtrage d'action détaillé. N'incluez pas d'objets dans l'étendue du serveur, tels que les vues système, dans une spécification d'audit de base de données utilisateur.  
@@ -125,11 +126,11 @@ ms.locfileid: "70929703"
  > En raison de la surcharge qu’implique l’activation de l’audit au niveau des transactions, dans [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 et [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 et versions ultérieures, l’audit au niveau des transactions est désactivé par défaut, sauf si la conformité des critères communs est activée.  Si la conformité des critères communs est désactivée, vous pourrez toujours ajouter une action à partir de TRANSACTION_GROUP dans une spécification d’audit. Toutefois, aucune action de transaction ne sera collectée.  Si vous envisagez de configurer toutes les actions d’audit de TRANSACTION_GROUP, activez l’infrastructure d’audit au niveau des transactions en activant la conformité des critères communs (ceci est valable pour [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 et [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 et versions ultérieures).  Notez que dans [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], l’audit au niveau des transactions peut également être désactivé avec l’indicateur de trace 3427 (à partir de la version SP1 CU2).
   
 ## <a name="database-level-audit-action-groups"></a>Groupes d'actions d'audit de niveau base de données  
- Les groupes d’actions d’audit de niveau base de données sont des actions semblables aux classes d’événements d’audit de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur les classes d'événements, consultez [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Les groupes d’actions d’audit de niveau base de données sont des actions semblables aux classes d’événements d’audit de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur les classes d'événements, consultez [Référence de classe d'événements SQL Server](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Le tableau suivant décrit les groupes d'actions d'audit de niveau base de données et fournit leur Classe d'événements SQL Server équivalente le cas échéant.  
   
-|Nom du groupe d'actions|Description|  
+|Nom du groupe d’actions|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois qu'un mot de passe est modifié pour un rôle d'application. Équivaut à la [classe d’événements Audit App Role Change Password](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'un audit est créé, modifié ou supprimé. Cet événement est déclenché chaque fois qu'une spécification d'audit est créée, modifiée ou supprimée. Toute modification apportée à un audit est auditée dans cet audit. Équivaut à la [classe d’événements Audit Change Audit](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -169,7 +170,7 @@ ms.locfileid: "70929703"
 |RECEIVE|Cet événement est déclenché chaque fois qu'une instruction RECEIVE est exécutée.|  
 |REFERENCES|Cet événement est déclenché chaque fois qu'une autorisation REFERENCES est vérifiée.|  
   
-### <a name="considerations"></a>Observations  
+### <a name="considerations"></a>Considérations  
 *  Les actions d'audit de niveau base de données ne s'appliquent pas aux colonnes.  
   
 *  Lorsque le processeur de requêtes paramètre la requête, le paramètre peut apparaître dans le journal des événements d'audit au lieu des valeurs de colonnes de la requête. 
@@ -179,14 +180,14 @@ ms.locfileid: "70929703"
 ## <a name="audit-level-audit-action-groups"></a>Groupes d'actions d'audit de niveau audit  
  Vous pouvez également auditer les actions dans le processus d'audit. Ce peut être dans la portée du serveur ou dans la portée de la base de données. Dans la portée de la base de données, cela se produit seulement pour les spécifications d'audit de la base de données. Le tableau suivant décrit les groupes d'actions d'audit de niveau audit.  
   
-|Nom du groupe d'actions|Description|  
+|Nom du groupe d’actions|Description|  
 |-----------------------|-----------------|  
 |AUDIT_CHANGE_GROUP|Cet événement est déclenché chaque fois que l'une des commandes suivantes est exécutée :<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
 ## <a name="related-content"></a>Contenu associé  
- [Créer un audit du serveur et une spécification d'audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
- [Créer une spécification de l'audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
+ [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   

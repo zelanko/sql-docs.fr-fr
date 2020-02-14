@@ -16,10 +16,10 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846738"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -113,7 +113,7 @@ replmerg [-?]
  Imprime tous les paramètres disponibles.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ Nom du serveur de publication. Spécifiez *server_name* pour l’instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-PublisherDB** _publisher_database_  
  Nom de la base de données du serveur de publication.  
@@ -134,7 +134,7 @@ replmerg [-?]
  Spécifie si l'agent tente d'interroger les transactions répliquées de manière continue. S'il est spécifié, l'Agent interroge les transactions répliquées de la source à des fréquences d'interrogation définies, même s'il n'y a pas de transactions en attente.  
   
  **-DestThreads** _number_of_destination_threads_  
- Spécifie le nombre de threads de destination utilisés par l'Agent de fusion pour appliquer les modifications à la destination. La destination est le serveur de publication au cours du téléchargement ascendant et l'Abonné au cours du téléchargement descendant. La valeur par défaut est 4.  
+ Spécifie le nombre de threads de destination utilisés par l'Agent de fusion pour appliquer les modifications à la destination. La destination est le serveur de publication au cours du téléchargement ascendant et l'Abonné au cours du téléchargement descendant. Valeur par défaut : 4.  
   
  **-DefinitionFile** _def_path_and_file_name_  
  Chemin d'accès du fichier de définition d'agent. Un fichier de définition d'agent contient des arguments d'invite de commandes pour l'agent. Le contenu du fichier est analysé en tant que fichier exécutable. Utilisez des guillemets doubles (") pour spécifier des valeurs d'argument qui contiennent des caractères arbitraires.  
@@ -204,7 +204,7 @@ replmerg [-?]
   
 |Valeur ForceConvergenceLevel|Description|  
 |---------------------------------|-----------------|  
-|**0** (valeur par défaut)|Valeur par défaut. Effectue une fusion standard sans convergence supplémentaire.|  
+|**0** (valeur par défaut)|Par défaut. Effectue une fusion standard sans convergence supplémentaire.|  
 |**1**|Force la convergence pour toutes les générations.|  
 |**2**|Force la convergence pour toutes les générations et corrige les lignages endommagés. Lorsque vous spécifiez cette valeur, indiquez à quel niveau les lignages doivent être corrigés : le serveur de publication, l'Abonné ou bien les deux.|  
   
@@ -227,7 +227,7 @@ replmerg [-?]
 |-------------------------------|-----------------|  
 |**0**|Journalise le dernier message d'état de l'agent, les derniers détails de session et les erreurs éventuelles.|  
 |**1**|Journalise les détails incrémentiels de session à chaque état de session, y compris le pourcentage accompli, ainsi que le dernier message d'état de l'agent, les derniers détails de session et les erreurs éventuelles.|  
-|**2**|Valeur par défaut. Journalise les détails incrémentiels de session à chaque état de session et les détails de session au niveau de l'article, y compris le pourcentage accompli, ainsi que le dernier message d'état de l'agent, les derniers détails de session et les erreurs éventuelles. Les messages de l'état de l'agent sont également journalisés.|  
+|**2**|Par défaut. Journalise les détails incrémentiels de session à chaque état de session et les détails de session au niveau de l'article, y compris le pourcentage accompli, ainsi que le dernier message d'état de l'agent, les derniers détails de session et les erreurs éventuelles. Les messages de l'état de l'agent sont également journalisés.|  
 |**3**|Identique à **-HistoryVerboseLevel** = **2**, à la différence qu'un nombre plus important de messages de progression de l'agent sont journalisés.|  
   
  **-Hostname** _host_name_  

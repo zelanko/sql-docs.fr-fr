@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934824"
 ---
 # <a name="upgrade-master-data-services"></a>Mettre à niveau Master Data Services
@@ -149,7 +149,7 @@ ms.locfileid: "67934824"
 3.  Procédez à la mise à niveau du schéma de base de données MDS, créez une application Web et associez la nouvelle application Web à la base de données MDS mise à niveau. Pour obtenir des instructions, consultez les étapes 2 à 4 dans [Mise à niveau sans mise à niveau du moteur de base de données](#noengine)  
   
 ## <a name="troubleshooting"></a>Dépannage  
- **Problème :** quand vous ouvrez l’application web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], un message d’erreur s’affiche, indiquant que la version du client n’est pas compatible avec la version de la base de données.  
+ **Problème :** quand vous ouvrez l’application web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], un message d’erreur s’affiche, indiquant que la version du client n’est pas compatible avec la version de la base de données.  
   
  **Solution :** ce problème se produit quand une application web Master Data Manager [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tente d’accéder à une base de données qui a été mise à niveau vers [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Vous devez utiliser une application web [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] à la place.  
   

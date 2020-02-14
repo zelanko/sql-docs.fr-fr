@@ -13,12 +13,12 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766ae29c9024afd31b4c2bf353653f9f6b1a079f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123716"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259387"
 ---
 # <a name="create-primary-keys"></a>Créer des clés primaires
 
@@ -83,7 +83,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 ;
 ```
 
-### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>Pour créer une clé primaire avec un index non-cluster dans une nouvelle table
+### <a name="to-create-a-primary-key-with-clustered-index-in-a-new-table"></a>Pour créer une clé primaire avec un index cluster dans une nouvelle table
 
 L'exemple suivant crée une table et définit une clé principale sur la colonne `CustomerID` et un index en cluster sur `TransactionID` dans la base de données AdventureWorks.
 

@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73660791"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
@@ -33,7 +33,7 @@ CREATE TABLE AS SELECT (CTAS) est l’une des fonctionnalités de T-SQL les plus
 > [!NOTE]  
 > CTAS s’ajoute aux fonctionnalités de création de table. Ainsi, au lieu de répéter le contenu de la rubrique CREATE TABLE, cette rubrique décrit les différences entre les instructions CTAS et CREATE TABLE. Pour plus d’informations sur l’instruction CREATE TABLE, consultez [CREATE TABLE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/). 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
 
@@ -166,8 +166,8 @@ Pour éviter un déplacement de données dans les requêtes suivantes, vous pouv
 
 <a name="ctas-copy-table-bk"></a>
 
-### <a name="a-use-ctas-to-copy-a-table"></a>A. Utiliser CTAS pour copier une table 
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
+### <a name="a-use-ctas-to-copy-a-table"></a>R. Utiliser CTAS pour copier une table 
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
 L’une des utilisations les plus courantes de `CTAS` est peut-être celle qui consiste à créer une copie d’une table dans le but de pouvoir modifier le langage de définition de données (DDL). Si par exemple vous avez créé au départ une table de type `ROUND_ROBIN` et que vous voulez maintenant la modifier pour en faire une table distribuée sur une colonne, `CTAS` est la méthode qui vous permettra de modifier la colonne de distribution. `CTAS` permet aussi de modifier le partitionnement, l’indexation ou les types de colonnes.
 
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. Utiliser CTAS pour modifier des attributs de colonne 
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
 Cet exemple utilise CTAS pour modifier des types de données, la possibilité de valeur NULL et le classement pour plusieurs colonnes de la table DimCustomer2.  
   
@@ -300,7 +300,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. Utiliser CTAS pour modifier la méthode de distribution d’une table
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
 Cet exemple simple montre comment modifier la méthode de distribution d’une table. Pour détailler la procédure, il transforme une table de hachage distribuée en table round robin (tourniquet), puis reconvertit cette dernière en table de hachage distribuée. La table finale correspond à la table d’origine. 
 
@@ -351,7 +351,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. Utiliser CTAS pour convertir une table en table répliquée  
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse 
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse 
 
 Cet exemple vaut pour la conversion de tables round robin ou de hachage distribuées en table répliquée. Cet exemple précis va encore plus loin que la méthode précédente de modification du type de distribution.  DimSalesTerritory étant une dimension et probablement une table de plus petite taille, vous pouvez choisir de la recréer sous forme de table répliquée pour éviter que des données soient déplacées au moment de la joindre à d’autres tables. 
 
@@ -375,7 +375,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. Utiliser CTAS pour créer une table avec moins de colonnes
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse 
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse 
 
 L’exemple suivant crée une table distribuée de type round robin nommée `myTable (c, ln)`. La nouvelle table contient seulement deux colonnes. Elle utilise les alias des colonnes dans l’instruction SELECT à la place des noms des colonnes.  
   
@@ -398,7 +398,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. Utiliser un indicateur de requête avec CREATE TABLE AS SELECT (CTAS)  
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
   
 Cette requête présente la syntaxe de base pour utiliser un indicateur de jointure de requête avec l’instruction CTAS. Une fois la requête envoyée, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] applique la stratégie de jointure hachée au moment de générer le plan de requête pour chaque distribution individuelle. Pour plus d’informations sur l’indicateur de requête de jointure hachée, consultez [Clause OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
@@ -421,7 +421,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. Utiliser CTAS pour importer des données à partir du stockage Blob Azure  
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
 Pour importer des données à partir d’une table externe, utilisez simplement CREATE TABLE AS SELECT pour effectuer une sélection dans la table externe. La syntaxe à utiliser pour sélectionner des données dans une table externe à destination de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est la même que celle permettant de sélectionner des données dans une table normale.  
   
@@ -503,7 +503,7 @@ CTAS permet de pallier l’absence de prise en charge de certaines fonctionnalit
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. Utiliser CTAS plutôt que SELECT..INTO  
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
 Le code SQL Server utilise généralement SELECT..INTO pour remplir une table avec les résultats d’une instruction SELECT. Voici un exemple d’instruction SQL Server SELECT..INTO.
 
@@ -530,7 +530,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. Utiliser CTAS et des jointures implicites pour remplacer des jointures ANSI dans la clause `FROM` d’une instruction `UPDATE`  
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
 Imaginez que vous êtes en présence d’une mise à jour complexe qui joint plus de deux tables et exécute l’instruction UPDATE ou DELETE à l’aide de la syntaxe de jointure ANSI.
 
@@ -613,7 +613,7 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. Utiliser CTAS pour spécifier les données à conserver au lieu d’utiliser des jointures ANSI dans la clause FROM d’une instruction DELETE  
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
 Parfois, la meilleure approche pour supprimer des données est d’utiliser `CTAS`. Au lieu de supprimer les données, sélectionnez simplement les données que vous voulez conserver. Cela est particulièrement vrai pour les instructions `DELETE` qui utilisent la syntaxe de jointure ANSI, car SQL Data Warehouse ne prend pas en charge les jointures ANSI dans la clause `FROM` d’une instruction `DELETE`.
 
@@ -641,7 +641,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. Utiliser CTAS pour simplifier les instructions merge  
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
 Les instructions merge peuvent être remplacées, du moins en partie, à l’aide de `CTAS`. Vous pouvez regrouper `INSERT` et `UPDATE` dans une même instruction. Les enregistrements supprimés doivent être fermés dans une deuxième instruction.
 
@@ -679,8 +679,8 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Déclarer explicitement un type de données et la possibilité de valeur NULL de la sortie  
-S'applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. déclarer explicitement le type de données et la possibilité de valeur NULL de la sortie  
+S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
 Au moment de migrer du code SQL Server vers SQL Data Warehouse, il se peut que vous rencontriez un modèle de codage de ce type :
 

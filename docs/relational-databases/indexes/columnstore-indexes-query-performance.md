@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816715"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Index columnstore - Performances des requêtes
@@ -94,21 +94,21 @@ ms.locfileid: "71816715"
 |Opérateurs en mode batch|Contexte d’utilisation|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Commentaires|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |Opérations DML (insert, delete, update, merge)||non|non|non|DML n’est pas une opération en mode batch, car elle n’est pas effectuée en parallèle. Même si nous rendons possible le traitement batch en mode série, l’ajout du traitement des opérations DML en mode batch n’offre pas d’avantages significatifs.|    
-|Columnstore Index Scan|SCAN|N/A|oui|oui|Pour les index columnstore, nous pouvons transmettre le prédicat en mode Push vers le nœud SCAN.|    
-|Columnstore Index Scan (non cluster)|SCAN|oui|oui|oui|oui|    
-|Index Seek||N/A|N/A|non|Nous effectuons une opération de recherche via un index non-cluster en arbre B (B-tree) en rowmode.|    
-|Compute Scalar|Expression ayant pour résultat une valeur scalaire.|oui|oui|oui|Des restrictions s’appliquent au type de données. Cela est vrai pour tous les opérateurs en mode batch.|    
-|Concatenation|UNION et UNION ALL|non|oui|oui||    
-|Filter|Application de prédicats|oui|oui|oui||    
-|Hash Match|Fonctions d’agrégation basées sur le hachage, jointure de hachage externe, jointure de hachage droite, jointure de hachage gauche, jointure interne droite, jointure interne gauche|oui|oui|oui|Restrictions d’agrégation : pas de valeurs min/max pour les chaînes. Les fonctions d’agrégation disponibles sont sum/count/avg/min/max.<br />Restrictions de jointure : pas de jointures sans correspondance de type sur les types non entiers.|    
+|Columnstore Index Scan|SCAN|N/D|Oui|Oui|Pour les index columnstore, nous pouvons transmettre le prédicat en mode Push vers le nœud SCAN.|    
+|Columnstore Index Scan (non cluster)|SCAN|Oui|Oui|Oui|Oui|    
+|Index Seek||N/D|N/D|non|Nous effectuons une opération de recherche via un index non-cluster en arbre B (B-tree) en rowmode.|    
+|Compute Scalar|Expression ayant pour résultat une valeur scalaire.|Oui|Oui|Oui|Des restrictions s’appliquent au type de données. Cela est vrai pour tous les opérateurs en mode batch.|    
+|Concatenation|UNION et UNION ALL|non|Oui|Oui||    
+|Filter|Application de prédicats|Oui|Oui|Oui||    
+|Hash Match|Fonctions d’agrégation basées sur le hachage, jointure de hachage externe, jointure de hachage droite, jointure de hachage gauche, jointure interne droite, jointure interne gauche|Oui|Oui|Oui|Restrictions d’agrégation : pas de valeurs min/max pour les chaînes. Les fonctions d’agrégation disponibles sont sum/count/avg/min/max.<br />Restrictions de jointure : pas de jointures sans correspondance de type sur les types non entiers.|    
 |merge join||non|non|non||    
-|requêtes multithread||oui|oui|oui||    
+|requêtes multithread||Oui|Oui|Oui||    
 |boucles imbriquées||non|non|non||    
-|requêtes à thread unique exécutées sous MAXDOP 1||non|non|oui||    
-|requêtes à thread unique avec un plan de requête série||non|non|oui||    
-|Sort|Tri par clause sur SCAN avec l’index columnstore.|non|non|oui||    
-|Top Sort||non|non|oui||    
-|Window Aggregates||N/A|N/A|oui|Nouvel opérateur dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
+|requêtes à thread unique exécutées sous MAXDOP 1||non|non|Oui||    
+|requêtes à thread unique avec un plan de requête série||non|non|Oui||    
+|sort|Tri par clause sur SCAN avec l’index columnstore.|non|non|Oui||    
+|Top Sort||non|non|Oui||    
+|Window Aggregates||N/D|N/D|Oui|Nouvel opérateur dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup> S’applique à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], aux niveaux Premium [!INCLUDE[ssSDS](../../includes/sssds-md.md)], aux niveaux Standard (S3 et ultérieur) et à tous les niveaux vCore, ainsi qu’à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
@@ -127,7 +127,7 @@ ms.locfileid: "71816715"
     
  L’agrégation en mode Push est encore plus rapide en exécutant une agrégation sans cache des données compressées/encodées et en utilisant SIMD.    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![agrégation en mode push](../../relational-databases/indexes/media/aggregate-pushdown.jpg "Agrégation en mode Push")    
     
 Par exemple, une agrégation en mode Push est effectuée dans les deux requêtes ci-dessous :    
     

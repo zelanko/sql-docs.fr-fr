@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983269"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
@@ -50,7 +50,7 @@ ms.locfileid: "73983269"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Pour démarrer l'Assistant Paramétrage du moteur de base de données dans SQL Server Management Studio  
   
-1.  Dans le menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Outils** , cliquez sur **Assistant Paramétrage du moteur de base de données**.  
+1.  Dans le menu **Outils** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez sur **Assistant Paramétrage du moteur de base de données**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Pour démarrer l'Assistant Paramétrage du moteur de base de données à partir de l'Éditeur de requête SQL Server Management Studio  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73983269"
   
     -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez sur le menu **Outils** , puis sur **SQL Server Profiler**.  
   
-2.  Créez un fichier ou une table de trace comme décrit dans les procédures suivantes, qui utilise le modèle [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **du** :  
+2.  Créez un fichier ou une table de trace comme décrit dans les procédures suivantes, qui utilise le modèle **Réglage** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] :  
   
     -   [Créer une trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -185,7 +185,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
   
 2.  Créez une charge de travail. Pour plus d'informations, consultez [Créer une charge de travail](#Create) plus haut dans cette rubrique.  
   
-3.  Lancez l'Assistant Paramétrage du moteur de base de données, puis connectez-vous à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Démarrer l'Assistant Paramétrage du moteur de base de données](#Start) plus haut dans cette rubrique.  
+3.  Lancez l’Assistant Paramétrage du moteur de base de données, puis connectez-vous à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Démarrer l'Assistant Paramétrage du moteur de base de données](#Start) plus haut dans cette rubrique.  
   
 4.  Sous l'onglet **Général** , tapez un nom dans la zone **Nom de session** pour créer une nouvelle session de paramétrage.  
   
@@ -308,7 +308,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
 ##  <a name="XMLInput"></a> Créer un fichier d'entrée XML  
  Si vous êtes développeur XML expérimenté, vous pouvez créer des fichiers formatés en XML que l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut utiliser pour paramétrer les charges de travail. Pour créer ces fichiers XML, utilisez vos outils XML préférés pour modifier un exemple de fichier ou pour générer une instance à partir du schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Le schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est disponible dans votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'emplacement suivant :  
+ Le schéma XML de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est disponible dans votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’emplacement suivant :  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -320,9 +320,9 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
   
 1.  Créez une charge de travail. Vous pouvez utiliser un fichier ou une table de trace à l'aide du modèle de paramétrage de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], ou bien créer un script [!INCLUDE[tsql](../../includes/tsql-md.md)] qui reproduit une charge de travail représentative de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Créer une charge de travail](#Create) plus haut dans cette rubrique.  
   
-2.  Créez un fichier d'entrée XML par l'une des méthodes suivantes :  
+2.  Créez un fichier d'entrée XML par l'une des méthodes suivantes :  
   
-    -   Copiez et collez l’un des [exemples de fichier d’entrée XML &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-samples-dta.md) dans votre éditeur XML préféré. Modifiez les valeurs pour qu'elles traduisent les arguments appropriés à votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis enregistrez les fichiers XML.  
+    -   Copiez et collez l’un des [exemples de fichier d’entrée XML &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-samples-dta.md) dans votre éditeur XML préféré. Modifiez les valeurs pour qu'elles traduisent les arguments appropriés à votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis enregistrez les fichiers XML.  
   
     -   À l'aide de votre outil XML préféré, générez une instance à partir du schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -360,10 +360,10 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
  **Nom de session**  
  Donnez un nom à la session. Le nom de session associe un nom à la session de paramétrage. Vous pouvez faire référence à ce nom pour revenir ultérieurement à la session de paramétrage.  
   
- **Fichier**  
+ **File**  
  Spécifiez un fichier de script ou de trace .sql pour une charge de travail. Indiquez le chemin d'accès et le nom de fichier dans la zone de texte correspondante. L'Assistant Paramétrage du moteur de base de données suppose que le fichier de trace de la charge de travail est un fichier de substitution. Pour plus d'informations sur les fichiers de substitution, consultez [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **Table de charge de travail**  
+ **Table**  
  Spécifiez une table de trace pour une charge de travail. Indiquez le nom complet de la table de trace dans la zone de texte correspondante sous la forme suivante :  
   
 ```  
@@ -516,7 +516,7 @@ database_name.owner_name.table_name
  Contient des informations relatives à la session de paramétrage actuelle. Pour imprimer le journal, cliquez avec le bouton droit sur celui-ci, puis cliquez sur **Imprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [Afficher et utiliser la sortie de l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
+ [Utilitaire dta](../../tools/dta/dta-utility.md)  
   
   

@@ -22,10 +22,10 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0d2546e349859b8f059623f25b2e8ac971ba5643
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297325"
 ---
 # <a name="developing-a-custom-source-component"></a>Développement d'un composant source personnalisé
@@ -33,7 +33,7 @@ ms.locfileid: "71297325"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet aux développeurs d’écrire des composants sources capables de se connecter à des sources de données personnalisées et de fournir des données, à partir de ces sources, à d’autres composants dans une tâche de flux de données. La possibilité de créer des sources personnalisées est particulièrement utile lorsque vous devez vous connecter à des sources de données qui ne sont pas accessibles à l'aide de l'une des sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existantes.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet aux développeurs d’écrire des composants sources capables de se connecter à des sources de données personnalisées et de fournir des données, à partir de ces sources, à d’autres composants dans une tâche de flux de données. La possibilité de créer des sources personnalisées est particulièrement utile lorsque vous devez vous connecter à des sources de données qui ne sont pas accessibles à l'aide de l'une des sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existantes.  
   
  Les composants sources possèdent une ou plusieurs sorties et zéro entrée. Au moment de la conception, les composants sources permettent de créer et configurer des connexions, lire des métadonnées de colonne à partir de la source de données externe et configurer les colonnes de sortie de la source en fonction de la source de données externe. Pendant l'exécution, ils se connectent à la source de données externe et ajoutent des lignes à une mémoire tampon de sortie. La tâche de flux fournit ensuite cette mémoire tampon de lignes de données aux composants en aval.  
   
@@ -173,7 +173,7 @@ End Sub
   
  La propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> de la colonne détermine les valeurs définies pour les autres propriétés. Le tableau suivant indique les conditions requises sur les propriétés dépendantes de chaque propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Les types de données non répertoriés ont leurs propriétés dépendantes définies sur zéro.  
   
-|DataType|Longueur|Échelle|Précision|CodePage|  
+|DataType|Longueur|Scale|Precision|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Supérieur à 0 et inférieur ou égal à 28.|0|0|  
 |DT_CY|0|0|0|0|  

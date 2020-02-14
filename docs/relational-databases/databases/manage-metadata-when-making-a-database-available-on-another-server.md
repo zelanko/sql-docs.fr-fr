@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119455"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929112"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "74119455"
   
  Certaines applications dépendent d'informations, d'entités et/ou d'objets qui n'appartiennent pas au champ d'action d'une base de données mono-utilisateur. Généralement, une application possède des dépendances sur les bases de données **master** et **msdb** ainsi que la base de données utilisateur. Les informations stockées en dehors d'une base de données utilisateur et nécessaires au bon fonctionnement de cette base de données doivent être disponibles sur l'instance du serveur de destination. Par exemple, les connexions pour une application sont stockées en tant que métadonnées dans la base de données **master** , et doivent être recréées sur le serveur de destination. Si un plan de maintenance d’application ou de base de données dépend des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dont les métadonnées sont stockées dans la base de données **msdb** , vous devez recréer ces travaux sur l’instance du serveur de destination. De la même façon, les métadonnées d’un déclencheur de niveau serveur sont stockées dans la base de données **master**.  
   
- Lorsque vous déplacez la base de données d’une application vers une autre instance de serveur, vous devez recréer toutes les métadonnées des entités et des objets dépendants dans les bases de données **master** et **msdb** sur l’instance du serveur de destination. Par exemple, si une application de base de données utilise des déclencheurs au niveau serveur, il ne suffit pas d'attacher ou de restaurer la base de données sur le nouveau système. La base de données ne fonctionne pas comme prévu, sauf si vous recréez manuellement les métadonnées pour ces déclencheurs dans la base de données **master** .  
+ Quand vous déplacez la base de données d’une application vers une autre instance de serveur, vous devez recréer toutes les métadonnées des entités et des objets dépendants dans les bases de données **master** et **msdb** sur l’instance du serveur de destination. Par exemple, si une application de base de données utilise des déclencheurs au niveau serveur, il ne suffit pas d'attacher ou de restaurer la base de données sur le nouveau système. La base de données ne fonctionne pas comme prévu, sauf si vous recréez manuellement les métadonnées pour ces déclencheurs dans la base de données **master** .  
   
 ##  <a name="information_entities_and_objects"></a> Informations, entités, et objets stockés en dehors des bases de données utilisateur  
  La suite de cet article résume les problèmes susceptibles d’affecter une base de données qui est mise à disposition sur une autre instance de serveur. Vous devrez peut-être recréer un ou plusieurs des types d'informations, d'entités ou d'objets répertoriés dans la liste suivante. Pour consulter un résumé, cliquez sur le lien correspondant à l'élément.  
@@ -66,7 +66,7 @@ ms.locfileid: "74119455"
   
 -   [Informations d'identification](#credentials)  
   
--   [Requêtes de bases de données croisées](#cross_database_queries)  
+-   [Requêtes entre plusieurs bases de données](#cross_database_queries)  
   
 -   [Propriété de la base de données](#database_ownership)  
   
@@ -82,11 +82,11 @@ ms.locfileid: "74119455"
   
 -   [Moteur d'indexation et de recherche en texte intégral pour les propriétés SQL Server](#ifts_service_properties)  
   
--   [Travaux](#jobs)  
+-   [Tâches](#jobs)  
   
 -   [Connexions](#logins)  
   
--   [Autorisations](#permissions)  
+-   [autorisations](#permissions)  
   
 -   [Paramètres de réplication](#replication_settings)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "74119455"
   
   
 ##  <a name="credentials"></a> Informations d'identification  
- Les informations d'identification sont un enregistrement qui contient les informations d'authentification requises pour la connexion à une ressource en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La plupart des informations d'identification sont composées d'un nom de connexion Windows et d'un mot de passe.  
+ Les informations d'identification sont un enregistrement qui contient les informations d'authentification requises pour la connexion à une ressource en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La plupart des informations d'identification sont composées d'un nom de connexion Windows et d'un mot de passe.  
   
  Pour plus d’informations sur cette fonctionnalité, consultez [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "74119455"
  Lorsqu'une base de données est restaurée sur un autre ordinateur, la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'utilisateur Windows à l'origine de l'opération de restauration devient automatiquement le propriétaire de la nouvelle base de données. Lorsque la base de données est restaurée, l'administrateur du système ou le nouveau propriétaire de la base de données peut modifier la propriété de la base de données.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> Requêtes distribuées et serveurs liés  
- Les requêtes distribuées et les serveurs liés sont pris en charge pour les applications OLE DB. Les requêtes distribuées accèdent aux données issues de multiples sources de données hétérogènes sur le même ordinateur ou sur des ordinateurs différents. Une configuration de serveurs liés permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter des commandes sur les sources de données OLE DB hébergées sur des serveurs distants. Pour plus d’informations sur ces fonctionnalités, consultez [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+ Les requêtes distribuées et les serveurs liés sont pris en charge pour les applications OLE DB. Les requêtes distribuées accèdent aux données issues de multiples sources de données hétérogènes sur le même ordinateur ou sur des ordinateurs différents. Une configuration de serveurs liés permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter des commandes sur les sources de données OLE DB hébergées sur des serveurs distants. Pour plus d’informations sur ces fonctionnalités, consultez [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
   
 ##  <a name="encrypted_data"></a> Encrypted Data  
@@ -273,15 +273,15 @@ ms.locfileid: "74119455"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Autorisations GRANT, REVOKE et DENY sur les objets système  
  Les autorisations sur les objets système, tels que les procédures stockées, les procédures stockées étendues, les fonctions et les affichages, sont stockées dans la base de données **master** et doivent être configurées sur l'instance du serveur de destination.  
   
- Pour générer un script pour une partie ou l'intégralité des objets figurant dans la copie initiale de la base de données, vous pouvez utiliser l'Assistant Générer des scripts, et dans la boîte de dialogue **Sélectionner les options de script** , vous attribuez à l'option **Créer un script des autorisations au niveau objet** la valeur **True**.  
+ Pour générer un script pour une partie ou l’intégralité des objets figurant dans la copie initiale de la base de données, vous pouvez utiliser l’Assistant Générer des scripts, et dans la boîte de dialogue **Sélectionner les options de script** , vous attribuez à l’option **Créer un script des autorisations au niveau objet** la valeur **True**.  
   
    > [!IMPORTANT]
    > Si vous générez un script pour les connexions, les mots de passe ne sont pas chiffrés. Si vous disposez de connexions qui utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez modifier le script sur la destination.  
   
- Les objets système sont consultables dans l’affichage catalogue [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Les autorisations sur les objets système sont consultables dans l’affichage catalogue [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) dans la base de données **master**. Pour plus d’informations sur l’interrogation de ces affichages catalogue et l’octroi d’autorisations sur les objets système, consultez [Autorisations d’objet système GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Pour plus d’informations, consultez [Autorisations d’objet système REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) et [Autorisations d’objet système DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
+ Les objets système sont consultables dans l’affichage catalogue [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Les autorisations sur les objets système sont consultables dans l’affichage catalogue [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) dans la base de données **master** . Pour plus d’informations sur l’interrogation de ces affichages catalogue et l’octroi d’autorisations sur les objets système, consultez [Autorisations d’objet système GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Pour plus d’informations, consultez [Autorisations d’objet système REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) et [Autorisations d’objet système DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>Autorisations GRANT, REVOKE et DENY sur une instance de serveur  
- Les autorisations à l'échelle du serveur sont stockées dans la base de données **master** et doivent être configurées sur l'instance du serveur de destination. Pour plus d’informations sur les autorisations serveur d’une instance de serveur, interrogez l’affichage catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) ; pour plus d’informations sur les principaux de serveur, interrogez l’affichage catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) et pour plus d’informations sur l’appartenance aux rôles de serveur, interrogez l’affichage catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
+ Les autorisations à l'échelle du serveur sont stockées dans la base de données **master** et doivent être configurées sur l'instance du serveur de destination. Pour plus d’informations sur les autorisations serveur d’une instance de serveur, interrogez l’affichage catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) ; pour plus d’informations sur les principaux de serveur, interrogez l’affichage catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)et pour plus d’informations sur l’appartenance aux rôles de serveur, interrogez l’affichage catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) .  
   
  Pour plus d’informations, consultez [Autorisations de serveur GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md), [Autorisations de serveur REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) et [Autorisations de serveur DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md).  
   

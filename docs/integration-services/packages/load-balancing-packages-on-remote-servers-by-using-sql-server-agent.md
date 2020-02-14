@@ -15,10 +15,10 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282476"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Équilibrage de charge de packages sur des serveurs distants à l'aide de l'Agent SQL Server
@@ -121,7 +121,7 @@ ms.locfileid: "71282476"
 >  Vous pouvez utiliser une tâche d’exécution SQL qui contient une instruction Transact-SQL **sp_start_job N'nom_package'** . Pour plus d’informations, consultez [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Environnement de débogage  
- Lors du test du package parent, utilisez l'environnement de débogage du concepteur en l'exécutant à l'aide des commandes Déboguer / Démarrer le débogage (F5). Vous pouvez également utiliser l'utilitaire d'invite de commandes, **dtexec**. Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Lors du test du package parent, utilisez l'environnement de débogage du concepteur en l'exécutant à l'aide des commandes Déboguer / Démarrer le débogage (F5). Vous pouvez également utiliser l'utilitaire d'invite de commandes, **dtexec**. Pour plus d'informations, consultez [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md).  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Journalisation des packages à charge équilibrée sur les serveurs distants
   Il est plus facile pour un administrateur de gérer les journaux de tous les packages enfants en cours d'exécution sur différents serveurs lorsque tous ces packages enfants utilisent le même module fournisseur d'informations et qu'ils écrivent tous dans la même destination. Une manière de créer un fichier journal commun pour tous les packages enfants est de configurer les packages enfants de telle sorte qu'ils inscrivent leurs événements dans un module fournisseur d'informations SQL Server. Vous pouvez configurer tous les packages pour qu'ils utilisent la même base de données, le même serveur et la même instance du serveur.  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059293"
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission de données
@@ -177,7 +177,7 @@ Vous pouvez créer par programmation des abonnements par émission de données �
   
 5. Si la base de données d'abonnements n'existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+6. Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 7. Définissez les propriétés suivantes des abonnements :  
   
@@ -217,7 +217,7 @@ Vous pouvez créer par programmation des abonnements par émission de données �
   
 5. Si la base de données d'abonnements n'existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+6. Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 7. Définissez les propriétés suivantes des abonnements :  
   

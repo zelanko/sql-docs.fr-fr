@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056380"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l’aide de bcp (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74056380"
   
  Votre réponse à cette invite dépend de la tâche effectuée :  
   
--   Pour exporter en bloc des données d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données au format de stockage le plus compact possible (format de données natif), vous devez accepter les types de stockage de fichier par défaut fournis par l’utilitaire **bcp**. Pour la liste des types de stockage de fichier natifs, consultez la section « Types de stockage de fichier natifs » plus loin dans cette rubrique.  
+-   Pour exporter des données en bloc d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données au format de stockage le plus compact possible (format de données natif), vous devez accepter les types de stockage de fichier par défaut fournis par l’utilitaire **bcp**. Pour la liste des types de stockage de fichier natifs, consultez la section « Types de stockage de fichier natifs » plus loin dans cette rubrique.  
   
 -   Pour exporter en bloc des données d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données au format caractère, spécifiez le paramètre **char** comme type de stockage de fichier pour toutes les colonnes de la table.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "74056380"
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**texte**|**T**[**ext**]|  
+    |**text**|**T**[**ext**]|  
     |**ntext2**|**W**|  
-    |**binaire**|**x**|  
+    |**binary**|**x**|  
     |**varbinary**|**x**|  
     |**image**|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
@@ -88,9 +88,9 @@ ms.locfileid: "74056380"
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**texte**|SQLCHAR|  
+|**text**|SQLCHAR|  
 |**ntext**|SQLNCHAR|  
-|**binaire**|SQLBINARY|  
+|**binary**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
 |**image**|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
@@ -99,7 +99,7 @@ ms.locfileid: "74056380"
 |**numeric**|SQLNUMERIC|  
 |**float**|SQLFLT8|  
 |**real**|SQLFLT4|  
-|**Int**|SQLINT|  
+|**int**|SQLINT|  
 |**bigint**|SQLBIGINT|  
 |**smallint**|SQLSMALLINT|  
 |**tinyint**|SQLTINYINT|  

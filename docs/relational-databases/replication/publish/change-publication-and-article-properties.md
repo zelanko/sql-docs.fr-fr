@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710968"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286632"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "71710968"
 |Modifier la compression de l'instantané.|**sp_changepublication**|**compress_snapshot**|Nouvel instantané.|  
 |Modifier des options de l'instantané FTP (File Transfer Protocol).|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Nouvel instantané.|  
 |Modifier l'emplacement du script de pré- ou de post-instantané.|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nouvel instantané (également requis si vous modifiez le contenu du script).<br /><br /> La réinitialisation est requise pour appliquer le nouveau script à l'Abonné.|  
-|Activer ou désactiver la prise en charge pour les Abonnés non-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|**sp_changepublication**|**is_enabled_for_het_sub**|Nouvel instantané.|  
+|Activer ou désactiver la prise en charge pour les Abonnés non [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|**sp_changepublication**|**is_enabled_for_het_sub**|Nouvel instantané.|  
 |Modifier les rapports sur les conflits pour les abonnements mis à jour en attente|**sp_changepublication**|**centralized_conflicts**|Ne peut être modifiée qu'en l'absence d'abonnements actifs.|  
 |Modifier la stratégie de résolution des conflits pour les abonnements mis à jour en attente.|**sp_changepublication**|**conflict_policy**|Ne peut être modifiée qu'en l'absence d'abonnements actifs.|  
   
@@ -51,10 +51,10 @@ ms.locfileid: "71710968"
 |Ajouter un filtre de lignes.|**sp_articlefilter**|Tous les paramètres.|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Supprimer un filtre de lignes.|**sp_articlefilter**|`@article`|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier un filtre de lignes.|**sp_articlefilter**|`@filter_clause`|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Modifier un filtre de lignes.|**sp_changearticle**|**Filter**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Modifier un filtre de lignes.|**sp_changearticle**|**filter**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier des options de schéma.|**sp_changearticle**|**schema_option**|Nouvel instantané.|  
 |Modifier comment les tables sont gérées sur l'Abonné avant d'appliquer l'instantané.|**sp_changearticle**|**pre_creation_cmd**|Nouvel instantané.|  
-|Modifier l'état de l'article|**sp_changearticle**|**status**|Nouvel instantané.|  
+|Modifier l'état de l'article|**sp_changearticle**|**statut**|Nouvel instantané.|  
 |Modifier des commandes INSERT, UPDATE ou DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier le nom de la table de destination|**sp_changearticle**|**dest_table**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier le propriétaire de la table de destination (schéma).|**sp_changearticle**|**destination_owner**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
@@ -72,10 +72,10 @@ ms.locfileid: "71710968"
 |Modifier les scripts de pré- ou de post-instantané.|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nouvel instantané (également requis si vous modifiez le contenu du script).<br /><br /> La réinitialisation est requise pour appliquer le nouveau script à l'Abonné.|  
 |Ajouter un filtre de jointure ou un enregistrement logique.|**sp_addmergefilter**|Tous les paramètres.|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Supprimer un filtre de jointure ou un enregistrement logique.|**sp_dropmergefilter**|Tous les paramètres.|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Modifier un filtre de jointure ou un enregistrement logique.|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Nouvel instantané<br /><br /> Réinitialiser les abonnements.|  
+|Modifier un filtre de jointure ou un enregistrement logique.|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Nouvelle capture instantanée<br /><br /> Réinitialiser les abonnements.|  
 |Désactiver l'utilisation de filtres paramétrés (l'activation de filtres paramétrés ne nécessite pas d'actions particulières).|**sp_changemergepublication**|Une valeur **false** pour **dynamic_filters**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Activer ou désactiver l'utilisation de partitions précalculées.|**sp_changemergepublication**|**use_partition_groups**|Nouvel instantané.|  
-|Activer ou désactiver l'optimisation de partition [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] .|**sp_changemergepublication**|**keep_partition_changes**|Réinitialiser les abonnements.|  
+|Activer ou désactiver l’optimisation de partition [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)].|**sp_changemergepublication**|**keep_partition_changes**|Réinitialiser les abonnements.|  
 |Activer ou désactiver la validation de partition d'Abonné.|**sp_changemergepublication**|**validate_subscriber_info**|Réinitialiser les abonnements.|  
 |Modifier le niveau de compatibilité d'une publication en 80sp3 ou inférieur.|**sp_changemergepublication**|**publication_compatibility_level**|Nouvel instantané.|  
   

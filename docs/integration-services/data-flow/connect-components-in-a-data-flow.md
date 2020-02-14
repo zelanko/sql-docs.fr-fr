@@ -14,10 +14,10 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6033c2d21b10755601f9ef82cabd829db5ad820
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293222"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Connecter des composants dans un flux de données
@@ -30,7 +30,7 @@ Le flux de données d’un package est construit sur la surface de conception de
   
  Le diagramme qui suit montre un flux de données simple formé d'un composant source, de deux transformations, d'un composant de destination et des chemins d'accès les connectant.  
   
- ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Flux de données") (Flux de données)  
   
  Une fois deux composants connectés, vous pouvez afficher les métadonnées des données empruntant le chemin et les propriétés du chemin dans **l’Éditeur du chemin d’accès au flux de données**. Pour plus d’informations, consultez [Chemins d’accès d’Integration Services](../../integration-services/data-flow/integration-services-paths.md).  
   

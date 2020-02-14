@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983262"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983262"
 
   Indique si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appartient au rôle de serveur spécifié.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
 |||  
 |-|-|  
-|sysadmin|serveradmin|  
+|administrateur système|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
 |diskadmin|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> public|  
@@ -58,7 +58,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
  Nom du compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à vérifier. *login* est de type **sysname**, avec NULL comme valeur par défaut. Si aucune valeur n’est spécifiée, le résultat est basé sur le contexte d’exécution actuel. Si le paramètre contient le mot NULL, retourne NULL.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 |Valeur retournée|Description|  
 |------------------|-----------------|  

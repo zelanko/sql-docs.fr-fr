@@ -17,10 +17,10 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294210"
 ---
 # <a name="data-profiling-task"></a>Tâche de profilage des données
@@ -96,7 +96,7 @@ ms.locfileid: "71294210"
   
  Les types numériques sont les types **entier** (sauf **bits**), **money**, **smallmoney**, **décimal**, **float**, **réel**et **numérique**.  
   
- \*\* **image**, **texte**, **XML**, **udt**et **variant** sont pris en charge uniquement pour le profil de ratio de colonne Null.  
+ \*\* **image**, **texte**, **XML**, **udt** et **variant** sont pris en charge uniquement pour le profil de ratio de colonne Null.  
   
 ### <a name="valid-tables-and-columns"></a>Tables et colonnes valides  
  Si la table ou colonne est vide, la tâche de profilage des données entreprend les actions suivantes :  
@@ -106,7 +106,7 @@ ms.locfileid: "71294210"
 -   Lorsque toutes les valeurs dans la colonne sélectionnée sont Null, la tâche de profilage des données calcule uniquement le profil de ratio de colonne Null. La tâche ne calcule pas les profils de distribution de longueurs de colonne, de modèle de colonne, de statistiques de colonnes ou de distribution de valeurs de colonne.  
   
 ## <a name="features-of-the-data-profiling-task"></a>Fonctionnalités de la tâche de profilage des données  
- Pratiques, les options de configuration de la tâche de profilage des données sont les suivantes :  
+ Pratiques, les options de configuration de la tâche de profilage des données sont les suivantes :  
   
 -   **Colonnes génériques** Quand vous configurez une demande de profil, la tâche accepte le caractère générique **(\*)** à la place d’un nom de colonne. Cela simplifie la configuration et facilite la découverte des caractéristiques de données inconnues. Lorsque la tâche s'exécute, elle profile chaque colonne ayant un type de données approprié.  
   

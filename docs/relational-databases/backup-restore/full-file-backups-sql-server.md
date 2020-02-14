@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939612"
 ---
 # <a name="full-file-backups-sql-server"></a>Sauvegardes de fichiers complètes (SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "67939612"
 >  Les fichiers individuels peuvent être restaurés à partir d'une sauvegarde de base de données. Toutefois, la localisation et la restauration d'un fichier à partir d'une sauvegarde de base de données prennent plus de temps qu'à partir d'une sauvegarde de fichiers.  
   
 ### <a name="file-backups-and-the-simple-recovery-model"></a>Sauvegardes de fichiers et le mode de récupération simple  
- En mode de récupération simple, vous devez sauvegarder conjointement tous les fichiers en lecture-écriture. Vous pouvez ainsi garantir que la base de données peut être restaurée dans un état cohérent dans le temps. Plutôt que de spécifier individuellement chaque fichier ou groupe de fichier en lecture-écriture, utilisez l'option READ_WRITE_FILEGROUPS. Cette option sauvegarde tous les groupes de fichiers en lecture-écriture dans la base de données. Une sauvegarde qui est créée en spécifiant READ_WRITE_FILEGROUPS est appelée une « sauvegarde partielle ». Pour plus d’informations, consultez [Sauvegardes partielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
+ En mode de récupération simple, vous devez sauvegarder conjointement tous les fichiers en lecture-écriture. Vous pouvez ainsi garantir que la base de données peut être restaurée dans un état cohérent dans le temps. Plutôt que de spécifier individuellement chaque fichier ou groupe de fichier en lecture-écriture, utilisez l'option READ_WRITE_FILEGROUPS. Cette option sauvegarde tous les groupes de fichiers en lecture-écriture dans la base de données. Une sauvegarde qui est créée en spécifiant READ_WRITE_FILEGROUPS est appelée une « sauvegarde partielle ». Pour plus d’informations, consultez [Sauvegardes partielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
 ### <a name="file-backups-and-the-full-recovery-model"></a>Sauvegardes de fichiers et mode de récupération complète  
  En mode de récupération complète, vous devez sauvegarder le journal des transactions, sans tenir compte du reste de votre stratégie de sauvegarde. Un jeu complet de sauvegardes complètes de fichiers associé à un nombre suffisant de sauvegardes de journaux pour couvrir toutes les sauvegardes de fichiers à partir de la première sauvegarde de fichiers, est équivalent à une sauvegarde complète de la base de données.  

@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287874"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
@@ -45,7 +45,7 @@ ms.locfileid: "71287874"
   
 -   Les variables dans les expressions peuvent être mises à jour par les scripts exécutés par la tâche de script et le composant de script.  
   
- Les expressions sont générées à l'aide du langage d'expression [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les expressions peuvent utiliser des variables système ou définies par l'utilisateur, ainsi que des opérateurs, des fonctions et des conversions de type fournis par le langage d'expressions.  
+ Les expressions sont générées avec le langage d’expression [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les expressions peuvent utiliser des variables système ou définies par l'utilisateur, ainsi que des opérateurs, des fonctions et des conversions de type fournis par le langage d'expressions.  
   
 > [!NOTE]  
 >  Les noms des variables définies par l'utilisateur et des variables système respectent la casse.  
@@ -71,7 +71,7 @@ ms.locfileid: "71287874"
   
  Le schéma suivant montre les interfaces utilisateur que vous pouvez utiliser pour ajouter, modifier et supprimer des expressions de propriété.  
   
- ![Interface utilisateur pour les expressions de propriété](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Interface utilisateur pour les expressions de propriété")  
+ ![Interface utilisateur des expressions de propriété](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Interface utilisateur des expressions de propriété")  
   
  Dans la fenêtre **Propriétés** et dans la page **Expressions**, cliquez sur le bouton de navigation **(...)** au niveau de la collection **Expressions** pour ouvrir la boîte de dialogue **Éditeur d’expressions de la propriété**. L'Éditeur d'expressions de la propriété permet de mapper une propriété à une expression et de taper une expression de propriété. Si vous souhaitez utiliser les outils d’expression graphique pour créer, puis valider l’expression, cliquez sur le bouton de navigation **(...)** au niveau de l’expression pour ouvrir la boîte de dialogue **Générateur d’expressions**, puis créez ou modifiez et éventuellement validez l’expression.  
   

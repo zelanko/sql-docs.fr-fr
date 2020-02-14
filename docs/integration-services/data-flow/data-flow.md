@@ -18,18 +18,18 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293145"
 ---
-# <a name="data-flow"></a>Flux de données
+# <a name="data-flow"></a>Data Flow
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit trois types différents de composants de flux de données : les sources, les transformations et les destinations. Les sources extraient les données des banques de données qui peuvent être des tables et des vues de bases de données relationnelles, des fichiers et des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les transformations modifient, synthétisent et nettoient les données. Les destinations chargent les données dans des banques de données ou créent des datasets en mémoire.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit trois types différents de composants de flux de données : les sources, les transformations et les destinations. Les sources extraient les données des banques de données qui peuvent être des tables et des vues de bases de données relationnelles, des fichiers et des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les transformations modifient, synthétisent et nettoient les données. Les destinations chargent les données dans des banques de données ou créent des datasets en mémoire.  
   
 > [!NOTE]  
 >  Lorsque vous créez des fournisseurs personnalisés, vous devez mettre à jour le dossier ProviderDescriptors.xml avec les valeurs de la colonne de métadonnées.  
@@ -103,7 +103,7 @@ ms.locfileid: "71293145"
   
 |Source|Description|  
 |------------|-----------------|  
-|Source Oracle|La source Oracle est le composant source du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut aussi un gestionnaire de connexions et une destination. Pour plus d’informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(en anglais).|  
+|Source Oracle|La source Oracle est le composant source du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut aussi un gestionnaire de connexions et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(en anglais).|  
 |Source SAP BI|La source SAP BI est le composant source du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI inclut aussi un gestionnaire de connexions et une destination. Pour plus d’informations, consultez la page de téléchargement [Feature Pack Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Source Teradata|La source Teradata est le composant source du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut aussi un gestionnaire de connexions et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(en anglais).|  
   
@@ -132,11 +132,11 @@ ms.locfileid: "71293145"
   
 -   [Transformation de tableau croisé dynamique](../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
--   [Transformation d’échantillonnage de lignes](../../integration-services/data-flow/transformations/row-sampling-transformation.md)  
+-   [Transformation d'échantillonnage de lignes](../../integration-services/data-flow/transformations/row-sampling-transformation.md)  
   
 -   [Transformation de tri](../../integration-services/data-flow/transformations/sort-transformation.md)  
   
--   [Transformation UnPivot](../../integration-services/data-flow/transformations/unpivot-transformation.md)  
+-   [Transformation de suppression de tableau croisé dynamique](../../integration-services/data-flow/transformations/unpivot-transformation.md)  
   
  Pour plus d’informations, consultez [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md).  
   
@@ -166,7 +166,7 @@ ms.locfileid: "71293145"
 |------------|-----------------|  
 |Destination Oracle|La destination Oracle est le composant de destination du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut aussi un gestionnaire de connexions et une source. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(en anglais).|  
 |Destination SAP BI|La destination SAP BI est le composant de destination du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI inclut aussi un gestionnaire de connexions et une source. Pour plus d’informations, consultez la page de téléchargement [Feature Pack Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkID=746297).|  
-|Destination Teradata|La destination Teradata est le composant de destination du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut aussi un gestionnaire de connexions et une source. Pour plus d’informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384) (en anglais).|  
+|Destination Teradata|La destination Teradata est le composant de destination du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut aussi un gestionnaire de connexions et une source. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(en anglais).|  
   
  Pour obtenir une démonstration de la manière d’exploiter les gains de performances du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity, consultez [Performance of Microsoft Connector for Oracle by Attunity (vidéo SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369).  
   
@@ -184,7 +184,7 @@ ms.locfileid: "71293145"
 ### <a name="inputs"></a>Entrées  
  Les destinations et les transformations comportent des entrées. Une entrée contient une ou plusieurs colonnes d'entrée qui peuvent faire référence à des colonnes externes si le composant de flux de données a été configuré pour cela. Les entrées peuvent être configurées pour analyser et contrôler le flux de données : Vous pouvez ainsi spécifier si le composant doit échouer en réponse à une erreur, ignorer les erreurs ou rediriger les lignes d’erreur vers la sortie d’erreur. Vous pouvez également donner une description de l'entrée ou mettre à jour le nom de l'entrée. Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , les entrées sont configurées via la boîte de dialogue **Éditeur avancé** . Pour plus d’informations sur **l’Éditeur avancé** , consultez [Interface utilisateur d’Integration Services](../../integration-services/integration-services-user-interface.md).  
   
-### <a name="outputs"></a>Sorties  
+### <a name="outputs"></a>Outputs  
  Les sources et les transformations comportent toujours des sorties. Une sortie contient une ou plusieurs colonnes de sortie qui peuvent faire référence à des colonnes externes si le composant de flux de données a été configuré pour cela. Les sorties peuvent être configurées de manière à fournir des informations utiles pour le traitement en aval des données. Par exemple, vous pouvez indiquer si la sortie est triée. Vous pouvez également donner une description de la sortie ou mettre à jour le nom de la sortie. Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , les sorties sont configurées via la boîte de dialogue **Éditeur avancé** .  
   
 ### <a name="error-outputs"></a>Sorties d'erreurs  
@@ -195,7 +195,7 @@ ms.locfileid: "71293145"
 ### <a name="columns"></a>Colonnes  
  Les entrées, les sorties et les sorties d'erreurs sont des collections de colonnes. Chaque colonne peut être configurée, et les propriétés proposées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] varient en fonction du type de colonne (entrée, sortie ou externe). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet de définir les propriétés des colonnes selon trois méthodes différentes : par programmation, en utilisant les boîtes de dialogue spécifiques aux composants ou via la boîte de dialogue **Éditeur avancé**.  
   
-## <a name="paths"></a>Chemins d'accès  
+## <a name="paths"></a>Chemins  
  Les chemins d'accès connectent les composants des flux de données. Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vous pouvez afficher et modifier les propriétés des chemins, afficher les métadonnées de sortie du point de départ du chemin et attacher des visionneuses de données à un chemin.  
   
  Pour plus d’informations, consultez [Chemins d’accès d’Integration Services](../../integration-services/data-flow/integration-services-paths.md) et [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md).  

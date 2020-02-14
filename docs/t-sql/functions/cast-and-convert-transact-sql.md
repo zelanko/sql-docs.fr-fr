@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843431"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761623"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ CAST ( expression AS data_type [ ( length ) ] )
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="arguments"></a>Arguments  
 *expression*  
@@ -81,20 +81,20 @@ Quand *expression* est un type de données de date ou d’heure, *style* peut pr
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le format de date dans le style arabe à l’aide de l’algorithme koweitien.
   
-|Sans siècle (aa) (<sup>1</sup>)|Avec siècle (aaaa)|Standard|Entrée/sortie (<sup>3</sup>)|  
+|Sans siècle (aa) (<sup>1</sup>)|Avec siècle (aaaa)|standard|Entrée/sortie (<sup>3</sup>)|  
 |---|---|--|---|
 |-|**0** ou **100** (<sup>1,</sup><sup>2</sup>)|Valeur par défaut pour datetime et smalldatetime|mois jj aaaa hh:miAM (ou PM)|  
 |**1**|**101**|États-Unis|  1 = mm/jj/aa<br /> 101 = mm/jj/aaaa|  
 |**2**|**102**|ANSI|  2 = aa.mm.jj<br /> 102 = aaaa.mm.jj|  
 |**3**|**103**|Anglais/Français|  3 = jj/mm/aa<br /> 103 = jj/mm/aaaa|  
-|**4**|**104**|German|  4 = jj.mm.aa<br /> 104 = jj.mm.aaaa|  
+|**4**|**104**|Allemand|  4 = jj.mm.aa<br /> 104 = jj.mm.aaaa|  
 |**5**|**105**|Italien|  5 = jj-mm-aa<br /> 105 = jj-mm-aaaa|  
 |**6**|**106** <sup>(1)</sup>|-|  6 = jj mois aa<br /> 106 = jj mois aaaa|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mois jj, aa<br /> 107 = Mois jj, aaaa|  
 |**8** ou **24**|**108**|-|hh:mi:ss|  
 |-|**9** ou **109** (<sup>1,</sup><sup>2</sup>)|Valeur par défaut + millièmes de secondes|mois jj aaaa hh:mi:ss:mmmAM (ou PM)|  
 |**10**|**110**|États-Unis| 10 = mm-jj-aa<br /> 110 = mm-jj-aaaa|  
-|**11**|**111**|Japon| 11 = aa/mm/jj<br /> 111 = aaaa/mm/jj|  
+|**11**|**111**|JAPON| 11 = aa/mm/jj<br /> 111 = aaaa/mm/jj|  
 |**12**|**112**|ISO| 12 = aammjj<br /> 112 = aaaammjj|  
 |-|**13** ou **113** (<sup>1,</sup><sup>2</sup>)|Valeur par défaut Europe + millièmes de secondes|jj mois aaaa hh:mi:ss:mmm (24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm (24h)|  
@@ -122,7 +122,7 @@ Quand *expression* est un type de données de date ou d’heure, *style* peut pr
 
 <sup>6</sup> Prise en charge uniquement lors de la conversion de données caractères en **datetime** ou **smalldatetime**. Lors de la conversion de données caractères représentant des composants de date ou d’heure uniquement en type de données **datetime** ou **smalldatetime**, le composant d’heure non spécifié est défini sur 00:00:00.000 et le composant de date non spécifié est défini sur 1900-01-01.
   
-<sup>7</sup> L’indicateur de fuseau horaire facultatif **Z** facilite le mappage des valeurs **datetime** XML qui possèdent des informations de fuseau horaire aux valeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** dépourvues d’informations de fuseau horaire. Z indique le fuseau horaire UTC-0. Le décalage HH:MM, dans la direction + ou -, indique d’autres fuseaux horaires. Par exemple : `2006-12-12T23:45:12-08:00`.
+<sup>7</sup> L’indicateur de fuseau horaire facultatif **Z** facilite le mappage des valeurs **datetime** XML comprenant des informations de fuseau horaire aux valeurs **datetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépourvues d’informations de fuseau horaire. Z indique le fuseau horaire UTC-0. Le décalage HH:MM, dans la direction + ou -, indique d’autres fuseaux horaires. Par exemple : `2006-12-12T23:45:12-08:00`.
   
 Quand vous convertissez des données **smalldatetime** en données caractères, les styles comportant des secondes ou des millisecondes affichent des zéros à ces positions. Quand vous convertissez des valeurs **datetime** ou **smalldatetime**, utilisez une longueur de type de données **char** ou **varchar** appropriée pour tronquer les parties de date inutiles.
   
@@ -131,18 +131,18 @@ Quand vous convertissez des données caractères en données **datetimeoffset** 
 ## <a name="float-and-real-styles"></a>Styles float et real
 Quand *expression* est un type **float** ou **real**, *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les autres valeurs sont traitées comme étant 0.
   
-|Valeur|Sortie|  
+|Valeur|Output|  
 |---|---|
 |**0** (valeur par défaut)|6 chiffres maximum. À utiliser pour la notation scientifique si nécessaire.|  
 |**1**|Toujours 8 chiffres. À utiliser obligatoirement pour la notation scientifique.|  
 |**2**|Toujours 16 chiffres. À utiliser obligatoirement pour la notation scientifique.|  
-|**3**|Toujours 17 chiffres. À utiliser pour la conversion sans perte. Avec ce style, la conversion de chaque valeur float ou real distincte en chaîne de caractères distincte est garantie.<br /><br /> **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**3**|Toujours 17 chiffres. À utiliser pour la conversion sans perte. Avec ce style, la conversion de chaque valeur float ou real distincte en chaîne de caractères distincte est garantie.<br /><br /> **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**126, 128, 129**|Incluses pour des raisons d’héritage et peuvent être dépréciées dans une version ultérieure.|  
   
 ## <a name="money-and-smallmoney-styles"></a>Styles money et smallmoney
 Quand *expression* est un type **money** ou **smallmoney**, *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les autres valeurs sont traitées comme étant 0.
   
-|Valeur|Sortie|  
+|Valeur|Output|  
 |---|---|
 |**0** (valeur par défaut)|Pas de virgule tous les trois chiffres à gauche du point décimal, et deux chiffres à droite de celui-ci.<br /><br />Exemple : 4235.98.|  
 |**1**|Insertion d’une virgule tous les trois chiffres à gauche du point décimal, et deux chiffres à droite de celui-ci.<br /><br />Exemple : 3,510.92.|  
@@ -152,7 +152,7 @@ Quand *expression* est un type **money** ou **smallmoney**, *style* peut prendre
 ## <a name="xml-styles"></a>styles xml
 Quand *expression* est un type **xml**, *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les autres valeurs sont traitées comme étant 0.
   
-|Valeur|Sortie|  
+|Valeur|Output|  
 |---|---|
 |**0** (valeur par défaut)|Utilisez le comportement d’analyse par défaut permettant de supprimer les espaces non significatifs et n’autorisant pas de sous-ensemble DTD interne.<br /><br />**Remarque :** Quand vous effectuez une conversion vers le type de données **xml**, les espaces non significatifs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont gérés différemment de ceux dans XML 1.0. Pour plus d’informations, consultez [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Maintien des espaces non significatifs. Ce paramètre de style définit la gestion par défaut de **xml:space** pour correspondre au comportement de **xml:space="preserve"** .|  
@@ -162,10 +162,10 @@ Quand *expression* est un type **xml**, *style* peut prendre l’une des valeurs
 ## <a name="binary-styles"></a>Styles binaires
 Quand *expression* est un type **binary(n)** , **char(n)** , **varbinary(n)** ou **varchar(n)** , *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les valeurs de style qui ne sont pas répertoriées dans le tableau retournent une erreur.
   
-|Valeur|Sortie|  
+|Valeur|Output|  
 |---|---|
 |**0** (valeur par défaut)|Traduit des caractères ASCII en octets binaires ou des octets binaires en caractères ASCII. Chaque caractère ou octet est converti 1:1.<br /><br /> Si *data_type* est un type binaire, les caractères 0x sont ajoutés à gauche du résultat.|  
-|**1**, **2**|Si *data_type* est un type binaire, l’expression doit être une expression de caractères. *L’expression* doit être composée d’un nombre **pair** de chiffres hexadécimaux (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Si le *style* a la valeur 1, les caractères 0x doivent être les deux premiers caractères de l’expression. Si l’expression contient un nombre impair de caractères ou si l’un des caractères n’est pas valide, une erreur est générée.<br /><br /> Si la longueur de l’expression convertie dépasse la longueur de *data_type*, le résultat est tronqué à droite.<br /><br /> Les *data_type* de longueur fixe qui sont plus longs que le résultat converti se voient ajouter des zéros à droite du résultat.<br /><br /> Un *data_type* de type caractère nécessite une expression binaire. Chaque caractère binaire est converti en deux caractères hexadécimaux. Si la longueur de l’expression convertie dépasse la longueur de *data_type*, elle est tronquée à droite.<br /><br /> Si *data_type* est un type caractère de taille fixe et que la longueur du résultat converti est inférieure à la longueur de *data_type*, des espaces sont ajoutés à droite de l’expression convertie pour conserver un nombre pair de chiffres hexadécimaux.<br /><br /> Des caractères 0x sont ajoutés à gauche du résultat converti pour le *style* 1.|  
+|**1**, **2**|Si *data_type* est un type binaire, l’expression doit être une expression de caractères. *L’expression* doit être composée d’un nombre **pair** de chiffres hexadécimaux (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Si *style* a la valeur 1, les caractères 0x doivent être les deux premiers caractères de l’expression. Si l’expression contient un nombre impair de caractères ou si l’un des caractères n’est pas valide, une erreur est générée.<br /><br /> Si la longueur de l’expression convertie dépasse la longueur de *data_type*, le résultat est tronqué à droite.<br /><br /> Les *data_type* de longueur fixe qui sont plus longs que le résultat converti se voient ajouter des zéros à droite du résultat.<br /><br /> Un *data_type* de type caractère nécessite une expression binaire. Chaque caractère binaire est converti en deux caractères hexadécimaux. Si la longueur de l’expression convertie dépasse la longueur de *data_type*, elle est tronquée à droite.<br /><br /> Si *data_type* est un type caractère de taille fixe et que la longueur du résultat converti est inférieure à la longueur de *data_type*, des espaces sont ajoutés à droite de l’expression convertie pour conserver un nombre pair de chiffres hexadécimaux.<br /><br /> Des caractères 0x sont ajoutés à gauche du résultat converti pour le *style* 1.|  
   
 ## <a name="implicit-conversions"></a>Conversions implicites
 Pour les conversions implicites, il n’est pas nécessaire de spécifier la fonction CAST ou CONVERT. En revanche, les conversions explicites requièrent la spécification de la fonction CAST ou CONVERT. L’illustration ci-dessous reprend toutes les conversions de types de données explicites et implicites autorisées pour les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournis par le système. Ces types sont notamment **bigint**, **sql_variant** et **xml**. Aucune conversion implicite d’attribution de valeur n’est effectuée à partir du type de données **sql_variant**, mais une conversion implicite vers **sql_variant** existe.
@@ -269,17 +269,17 @@ Gail        Erickson      Ms.    *
   
 Quand vous convertissez des types de données qui diffèrent par le nombre de décimales, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne parfois une valeur résultante tronquée et une valeur arrondie à d’autres moments. Le tableau suivant illustre ce comportement.
   
-|From|Pour|Comportement|  
+|À partir|À|Comportement|  
 |---|---|---|
-|**numeric**|**numeric**|Arrondi|  
-|**numeric**|**Int**|Tronqué|  
-|**numeric**|**money**|Arrondi|  
-|**money**|**Int**|Arrondi|  
-|**money**|**numeric**|Arrondi|  
-|**float**|**Int**|Tronqué|  
-|**float**|**numeric**|Arrondi<br /><br /> La conversion des valeurs **float** qui utilisent la notation scientifique en **decimal** ou en **numeric** est limitée à des valeurs d’une précision de 17 chiffres uniquement. Toute valeur avec une précision plus élevée que 17 sera arrondie à zéro.|  
-|**float**|**datetime**|Arrondi|  
-|**datetime**|**Int**|Arrondi|  
+|**numeric**|**numeric**|Round|  
+|**numeric**|**int**|Tronquer|  
+|**numeric**|**money**|Round|  
+|**money**|**int**|Round|  
+|**money**|**numeric**|Round|  
+|**float**|**int**|Tronquer|  
+|**float**|**numeric**|Round<br /><br /> La conversion des valeurs **float** qui utilisent la notation scientifique en **decimal** ou en **numeric** est limitée à des valeurs d’une précision de 17 chiffres uniquement. Toute valeur avec une précision plus élevée que 17 sera arrondie à zéro.|  
+|**float**|**datetime**|Round|  
+|**datetime**|**int**|Round|  
   
 Par exemple, les valeurs 10,6496 et -10,6496 peuvent être tronquées ou arrondies pendant la conversion en types **int** ou **numeric** :
   
@@ -340,7 +340,7 @@ La mise à niveau de la base de données vers le niveau de compatibilité 110 e
   
 ## <a name="BKMK_examples"></a> Exemples  
   
-### <a name="a-using-both-cast-and-convert"></a>A. Utilisation simultanée de CAST et CONVERT  
+### <a name="a-using-both-cast-and-convert"></a>R. Utilisation simultanée de CAST et CONVERT  
 Ces exemples récupèrent le nom de chaque produit possédant un `3` comme premier chiffre de son prix et convertit sa valeur `ListPrice` en type `int`.
   
 ```sql
@@ -702,7 +702,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 |104|`SELECT CONVERT(nvarchar, GETDATE(), 104)`|23.08.2019|
 |105|`SELECT CONVERT(nvarchar, GETDATE(), 105)`|23-08-2019|
 |106|`SELECT CONVERT(nvarchar, GETDATE(), 106)`|23 août 2019|
-|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|23 août, 2019|
+|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|23 août 2019|
 |110|`SELECT CONVERT(nvarchar, GETDATE(), 110)`|08-23-2019|
 |111|`SELECT CONVERT(nvarchar, GETDATE(), 111)`|2019/08/23|
 |112|`SELECT CONVERT(nvarchar, GETDATE(), 112)`|20190823|

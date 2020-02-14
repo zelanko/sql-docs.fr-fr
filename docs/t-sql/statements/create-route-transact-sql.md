@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006503"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68006503"
 
   Ajoute un itinéraire à la table de routage de la base de données active. Pour les messages sortants, [!INCLUDE[ssSB](../../includes/sssb-md.md)] détermine l'itinéraire en vérifiant la table de routage dans la base de données locale. Pour les messages de conversations issus d’une autre instance, notamment les messages à transférer, [!INCLUDE[ssSB](../../includes/sssb-md.md)] vérifie les itinéraires dans la base de données **msdb**.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +63,7 @@ WITH
  AUTHORIZATION *owner_name*  
  Définit le propriétaire de l'itinéraire pour l'utilisateur ou le rôle de base de données spécifié. *owner_name* peut correspondre au nom de n’importe quel utilisateur ou rôle valide quand l’utilisateur actif est membre du rôle de base de données fixe **db_owner** ou du rôle serveur fixe **sysadmin**. Sinon, *owner_name* doit être le nom de l’utilisateur actuel, le nom d’un utilisateur pour lequel l’utilisateur actuel a l’autorisation IMPERSONATE ou le nom d’un rôle auquel appartient l’utilisateur actuel. Si cette clause est omise, l'itinéraire appartient à l'utilisateur en cours.  
   
- par  
+ WITH  
  Introduit les clauses qui définissent l'itinéraire créé.  
   
  SERVICE_NAME = **'** _service\_name_ **'**  
@@ -141,7 +141,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. Création d'un itinéraire TCP/IP à l'aide d'un nom DNS  
+### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>R. Création d'un itinéraire TCP/IP à l'aide d'un nom DNS  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/Expenses`. L'itinéraire spécifie que les messages vers ce service utilisent le protocole TCP jusqu'au port `1234` de l'hôte identifié par le nom DNS `www.Adventure-Works.com`. Le serveur cible remet les messages au fur et à mesure de leur réception à l'instance de Service Broker identifiée par l'identificateur unique `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  

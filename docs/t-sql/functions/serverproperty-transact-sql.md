@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18aad5811c34eadfda4a2a7fabfdd7a9997311b5
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127390"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761664"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "74127390"
 
 Retourne des informations de propriété relatives à l'instance du serveur.  
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,13 +54,13 @@ Expression contenant les informations de propriétés à retourner pour le serve
   
 |Propriété|Valeurs retournées|  
 |--------------|---------------------|  
-|BuildClrVersion|Version du CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui a été utilisée lors de la génération de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **nvarchar(128)**|  
+|BuildClrVersion|Version du CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui a été utilisée lors de la génération de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |Classement|Nom du classement par défaut pour le serveur.<br /><br /> NULL = Entrée non valide ou erreur.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |CollationID|ID du classement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Type de données de base : **int**|  
 |ComparisonStyle|Style de comparaison Windows du classement.<br /><br /> Type de données de base : **int**|  
 |ComputerNamePhysicalNetBIOS|Nom NetBIOS de l'ordinateur local sur lequel l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution.<br /><br /> Pour une instance cluster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un cluster de basculement, cette valeur change étant donné que l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bascule sur d'autres nœuds du cluster de basculement.<br /><br /> Sur une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette valeur reste constante et retourne la même valeur que la propriété MachineName.<br /><br /> **Remarque :** Si l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se trouve dans un cluster de basculement et si vous voulez obtenir le nom de l’instance en cluster de basculement, utilisez la propriété MachineName.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |Édition|Édition du produit installée de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez la valeur de cette propriété pour déterminer des fonctionnalités et des limites, telles que les [limites de capacité de calcul des éditions SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Les versions 64 bits du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ajoutent la mention (64 bits) à la version.<br /><br /> Retourne les informations suivantes :<br /><br /> « Enterprise Edition »<br /><br /> « Enterprise Edition : Licence par cœur »<br /><br /> « Enterprise Evaluation Edition »<br /><br /> « Business Intelligence Edition »<br /><br /> « Developer Edition »<br /><br /> « Express Edition »<br /><br /> « Express Edition with Advanced Services »<br /><br /> « Standard Edition »<br /><br /> « Web Edition »<br /><br /> « SQL Azure » indique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Type de données de base : **nvarchar(128)**|  
-|EditionID|EditionID représente l'édition de produit installée de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez la valeur de cette propriété pour déterminer des fonctionnalités et des limites, telles que les [limites de capacité de calcul des éditions SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Licence par cœur<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database et SQL Data Warehouse<br /><br /> Type de données de base : **bigint**|  
+|EditionID|EditionID représente l'édition de produit installée de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez la valeur de cette propriété pour déterminer des fonctionnalités et des limites, telles que les [limites de capacité de calcul des éditions SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Licence par cœur<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database ou Azure Synapse Analytics (anciennement SQL Data Warehouse)<br /><br /> Type de données de base : **bigint**|  
 |EngineEdition|Édition du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée sur le serveur.<br /><br /> 1 = Personal ou Desktop Engine (non disponible dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures)<br /><br /> 2 = Standard (valeur retournée pour Standard, Web et Business Intelligence)<br /><br /> 3 = Enterprise (valeur retournée pour les éditions Evaluation, Developer et Enterprise.)<br /><br /> 4 = Express (valeur retournée pour Express, Express with Tools et Express with Advanced Services)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = Managed Instance<br /><br /> Type de données de base : **int**|  
 |HadrManagerStatus|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Indique si le gestionnaire [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a démarré.<br /><br /> 0 = Non démarré, en attente de communication<br /><br /> 1 = Démarré et en cours d'exécution<br /><br /> 2 = Non démarré et en état d'échec<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.|  
 |InstanceDefaultDataPath|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Nom du chemin par défaut jusqu’aux fichiers de données d’instance.|  

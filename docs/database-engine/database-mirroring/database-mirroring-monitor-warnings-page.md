@@ -13,10 +13,10 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73efd4acedfbce0dcfdea72be63b5b11a086d38f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006384"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Moniteur de mise en miroir de bases de données (Page Avertissements)
@@ -38,7 +38,7 @@ ms.locfileid: "68006384"
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Spécifie le nombre de minutes de transactions pouvant s'accumuler dans la file d'attente d'envoi avant qu'un avertissement ne soit généré sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de durée et s'avère particulièrement approprié en mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Spécifie, en millisecondes, le délai moyen par transaction au terme duquel un avertissement est généré sur le serveur principal. Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression. Cette valeur est utile uniquement en mode haute sécurité.|  
   
- **Seuil à «** _&lt;instance_serveur_ **»**  
+ **Seuil à «**   _&lt;instance_serveur_   **»**  
  Pour chaque avertissement, affiche le cas échéant le seuil spécifié par l'utilisateur actuel pour l'une des instances de serveurs. Le nom complet de l'instance de serveur est spécifié dans l'en-tête de colonne correspondante.  
   
  Pour plus d'informations, consultez la section « Remarques » plus loin dans cette rubrique.  
@@ -49,7 +49,7 @@ ms.locfileid: "68006384"
  Pour plus d'informations, consultez la section « Remarques » plus loin dans cette rubrique.  
   
 ## <a name="remarks"></a>Notes  
- Si aucune information n’est actuellement disponible pour une instance de serveur, le texte affiché dans les cellules de la colonne **Seuil à** correspondante apparaît en filigrane sur un fond gris. Si le moniteur n’est pas connecté à l’instance de serveur, chaque cellule de la grille affiche le texte **Non connecté à** _<nom_système>_ ou **Non connecté à** _nom_système_ **\\** _<nom_instance>_ , selon qu’il s’agit de l’instance par défaut ou d’une instance nommée. Si le moniteur est en attente de retour d’une requête, chaque cellule de la grille affiche le texte **Attente de données...** .  
+ Si aucune information n’est actuellement disponible pour une instance de serveur, le texte affiché dans les cellules de la colonne **Seuil à** correspondante apparaît en filigrane sur un fond gris. Si le moniteur n’est pas connecté à l’instance de serveur, chaque cellule de la grille affiche le texte **Non connecté à** _<NOM_SYSTÈME>_ ou **Non connecté à** _<NOM_SYSTÈME>_ **\\** _<nom_instance>_ , selon qu’il s’agit de l’instance par défaut ou d’une instance nommée. Si le moniteur est en attente de retour d’une requête, chaque cellule de la grille affiche le texte **Attente de données...** .  
   
  Quand des informations sont disponibles, la cellule correspondant à chaque avertissement affiche une valeur de seuil spécifique (ainsi qu’une unité de mesure) ou le texte **Non activé**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68006384"
   
  Le tableau suivant affiche l'ID de l'événement associé à chaque avertissement.  
   
-|Avertissement du moniteur de mise en miroir de bases de données|Nom d'événement|ID d'événement|  
+|Avertissement du moniteur de mise en miroir de bases de données|Nom d'événement|ID de l’événement|  
 |----------------------------------------|----------------|--------------|  
 |**Avertir si le journal non envoyé dépasse le seuil**|Journal non envoyé|32042|  
 |**Avertir si le journal non restauré dépasse le seuil**|Journal non restauré|32043|  

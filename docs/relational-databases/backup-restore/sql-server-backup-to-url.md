@@ -11,10 +11,10 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908821"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
@@ -73,7 +73,7 @@ La sauvegarde d’une grande base de données dans le stockage d’objets Blob e
 - Sauvegarder sur plusieurs objets blob de blocs
 
 ###  <a name="Blob"></a> Service de stockage d’objets blob Microsoft Azure  
- **Compte de stockage :** Le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage Blob Microsoft Azure, commencez par créer un compte de stockage Azure. Pour plus d’informations, voir [Créez un compte de stockage](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+ **Compte de stockage :** Le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage Blob Microsoft Azure, commencez par créer un compte de stockage Azure. Pour plus d’informations, voir [Créez un compte de stockage](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
  **Conteneur :** un conteneur permet de regrouper un ensemble d’objets blob, et peut stocker un nombre illimité d’objets blob. Pour pouvoir écrire une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service de stockage d’objets blob Microsoft Azure, vous devez avoir créé au moins le conteneur racine. Vous pouvez générer un jeton de signature d’accès partagé sur un conteneur, et accorder l’accès aux objets uniquement sur un conteneur spécifique.  
   
@@ -83,7 +83,7 @@ La sauvegarde d’une grande base de données dans le stockage d’objets Blob e
   
  **Capture instantanée Azure :** capture instantanée d’objet blob Azure effectuée à un point dans le temps. Pour plus d’informations, consultez [Création d’un instantané d’objet blob](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend désormais en charge les sauvegardes de captures instantanées Azure de fichiers de base de données stockés dans le service de stockage d’objets blob Microsoft Azure. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
+###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Composants  
  **URL :** Une URL spécifie un URI (Uniform Resource Identifier) pour un fichier de sauvegarde unique. L'URL est utilisée pour indiquer l'emplacement et le nom du fichier de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L’URL doit pointer vers un objet blob réel et pas un simple conteneur. Si l’objet blob n’existe pas, il est créé. Si un objet blob existant est spécifié, la sauvegarde échoue, sauf si l’option « WITH FORMAT » est spécifiée pour remplacer le fichier de sauvegarde existant dans l’objet blob.  
   
  Voici un exemple de valeur d’URL : http[s]://NOMCOMPTE.Blob.core.windows.net/\<CONTENEUR>/\<NOMFICHIER.bak>. HTTPS n'est pas obligatoire, mais est recommandé.  
@@ -120,7 +120,7 @@ La sauvegarde d’une grande base de données dans le stockage d’objets Blob e
   
 ###  <a name="Support"></a> Prise en charge des instructions de sauvegarde/restauration  
   
-|Instruction de sauvegarde/restauration|Pris en charge|Exceptions|Commentaires|
+|Instruction de sauvegarde/restauration|Prise en charge|Exceptions|Commentaires|
 |-|-|-|-|
 |BACKUP|O|BLOCKSIZE et MAXTRANSFERSIZE sont pris en charge pour les objets blob de blocs. Ils ne sont pas pris en charge pour les objets blob de pages. | BACKUP sur un objet blob de blocs nécessite une Signature d’accès partagé enregistrée dans des informations d’identification SQL Server. BACKUP sur un objet blob de pages nécessite la clé de compte de stockage enregistrée dans des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et nécessite de spécifier l’argument WITH CREDENTIAL.|  
 |RESTORE|O||Requiert que les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soient définies, et que l’argument WITH CREDENTIAL soit spécifié si les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont définies en utilisant la clé du compte de stockage comme clé secrète.|  
@@ -136,7 +136,7 @@ La sauvegarde d’une grande base de données dans le stockage d’objets Blob e
   
 ### <a name="support-for-backup-arguments"></a>Prise en charge des arguments de sauvegarde  
 
-|Argument|Pris en charge|Exception|Commentaires|  
+|Argument|Prise en charge|Exception|Commentaires|  
 |-|-|-|-|  
 |DATABASE|O|||  
 |LOG|O|||  
@@ -150,7 +150,7 @@ La sauvegarde d’une grande base de données dans le stockage d’objets Blob e
 |DIFFERENTIAL|O|||  
 |COPY_ONLY|O|||  
 |COMPRESSION&#124;NO_COMPRESSION|O|Non prise en charge pour une sauvegarde de capture instantanée de fichier.||  
-|DESCRIPTION|O|||  
+|Description|O|||  
 |NAME|O|||  
 |EXPIREDATE &#124; RETAINDAYS|-|||  
 |NOINIT &#124; INIT|-||L'ajout aux objets blob n'est pas possible. Pour remplacer une sauvegarde, utilisez l’argument **WITH FORMAT** . Toutefois, lors de l’utilisation de sauvegardes de capture instantanée de fichier (avec l’argument **WITH FILE_SNAPSHOT** ), l’argument **WITH FORMAT** n’est pas autorisé, pour éviter de laisser orphelines des captures instantanées de fichier qui ont été créées avec la sauvegarde d’origine.|  
@@ -173,7 +173,7 @@ La sauvegarde d’une grande base de données dans le stockage d’objets Blob e
   
 ### <a name="support-for-restore-arguments"></a>Prise en charge des arguments de restauration  
   
-|Argument|Pris en charge|Exceptions|Commentaires|  
+|Argument|Prise en charge|Exceptions|Commentaires|  
 |-|-|-|-|  
 |DATABASE|O|||  
 |LOG|O|||  
@@ -239,7 +239,7 @@ Quand vous sélectionnez **URL** comme destination, certaines options de la page
   
  [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
   
- [Créer des informations d'identification - Authentification dans le stockage Azure](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
+ [Créer des informations d’identification - Authentification Azure Storage](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Sauvegarde SQL Server vers une URL à l'aide de l'Assistant Plan de maintenance  
  Comme pour la tâche de sauvegarde décrite précédemment, l’Assistant Plan de maintenance dans SQL Server Management Studio inclut l’option **URL** parmi les options de destination, ainsi que d’autres objets de prise en charge requis pour sauvegarder vers un stockage Azure, telles les informations d’identification SQL. Pour plus d’informations, voir la section **Définir les tâches de sauvegarde** dans [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
@@ -285,7 +285,7 @@ La tâche Restaurer la base de données propose **URL** comme unité à partir d
 >  Pour obtenir un tutoriel sur l’utilisation de SQL Server 2016 avec le service Stockage Blob Microsoft Azure, consultez [Tutoriel : Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Créer une signature d’accès partagé  
- L’exemple suivant crée des signatures d’accès partagé utilisables pour créer des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un conteneur nouvellement créé. Le script crée une signature d’accès partagé associée à une stratégie d’accès stockée. Pour plus d’informations, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Le script écrit également la commande T-SQL requise pour créer les informations d’identification sur SQL Server. 
+ L’exemple suivant crée des signatures d’accès partagé utilisables pour créer des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un conteneur nouvellement créé. Le script crée une signature d’accès partagé associée à une stratégie d’accès stockée. Pour plus d’informations, consultez [Signatures d’accès partagé, partie 1 : Présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Le script écrit également la commande T-SQL requise pour créer les informations d’identification sur SQL Server. 
 
 > [!NOTE] 
 > L’exemple nécessite Microsoft Azure Powershell. Pour plus d’informations sur l’installation et l’utilisation d’Azure Powershell, consultez [Installation et configuration d’Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -372,7 +372,7 @@ Après avoir exécuté le script, copiez la commande `CREATE CREDENTIAL` dans un
    ```  
   
 ###  <a name="complete"></a> Effectuer une sauvegarde complète de la base de données  
- Les exemples suivants effectuent une sauvegarde complète de la base de données AdventureWorks2016 vers le service de stockage d’objets blob Microsoft Azure. Procédez de l'une des manières suivantes :   
+ Les exemples suivants effectuent une sauvegarde complète de la base de données AdventureWorks2016 vers le service de stockage d’objets blob Microsoft Azure. Effectuez l’une des actions suivantes :   
   
   
 2.  **Vers une URL en utilisant une signature d’accès partagé**  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f79996ca171fa6c77daaf4c25bc3c1a8da9420d9
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 8c4c252de5a9d23ecfbaee06ca6322f3b08b275f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165977"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761883"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "74165977"
   
  Vous pouvez outrepasser ce comportement de paramétrage d'une base de données par le biais de repères de plan des façons suivantes :  
   
--   Quand l'option de base de données PARAMETERIZATION a la valeur SIMPLE, vous pouvez spécifier que le paramétrage forcé doit être tenté sur une certaine classe de requêtes. Pour ce faire, créez un repère de plan TEMPLATE sur la forme paramétrable de la requête et spécifiez l’indicateur de requête PARAMETERIZATION FORCED dans la procédure stockée [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) . Ce type de repère de plan peut être considéré comme un moyen de forcer le paramétrage sur une classe de requêtes seulement plutôt que sur toutes les requêtes.  
+-   Quand l'option de base de données PARAMETERIZATION a la valeur SIMPLE, vous pouvez spécifier que le paramétrage forcé doit être tenté sur une certaine classe de requêtes. Pour ce faire, créez un repère de plan TEMPLATE sur la forme paramétrable de la requête et spécifiez l’indicateur de requête PARAMETERIZATION FORCED dans la procédure stockée [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) . Ce type de repère de plan peut être considéré comme un moyen de forcer le paramétrage sur une classe de requêtes seulement plutôt que sur toutes les requêtes. Pour plus d’informations sur le paramétrage simple, consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
--   Quand l'option de base de données PARAMETERIZATION a la valeur FORCED, vous pouvez spécifier que, pour une certaine classe de requêtes, seul un paramétrage simple est tenté, et non pas un paramétrage forcé. Pour ce faire, créez un repère de plan TEMPLATE sur la forme avec paramétrage forcé de la requête et spécifiez l’indicateur de requête PARAMETERIZATION SIMPLE dans la procédure stockée **sp_create_plan_guide**.  
+-   Quand l'option de base de données PARAMETERIZATION a la valeur FORCED, vous pouvez spécifier que, pour une certaine classe de requêtes, seul un paramétrage simple est tenté, et non pas un paramétrage forcé. Pour ce faire, créez un repère de plan TEMPLATE sur la forme avec paramétrage forcé de la requête et spécifiez l’indicateur de requête PARAMETERIZATION SIMPLE dans la procédure stockée **sp_create_plan_guide**.  Pour plus d’informations sur le paramétrage forcé, consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#ForcedParam). 
   
  Supposons la requête suivante portant sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
-```  
+```sql  
 SELECT pi.ProductID, SUM(pi.Quantity) AS Total  
 FROM Production.ProductModel AS pm   
     INNER JOIN Production.ProductInventory AS pi   
@@ -57,7 +57,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 
 Le script suivant peut être utilisé aussi bien pour obtenir la requête paramétrable que pour créer plus tard un repère de plan s'y rapportant :  
   
-```  
+```sql  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   

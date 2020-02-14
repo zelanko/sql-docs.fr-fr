@@ -24,17 +24,17 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006346"
 ---
 # <a name="database-mirroring-sql-server"></a>Mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.  
   
  La*mise en miroir de bases de données* est une solution permettant d'accroître la disponibilité d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La mise en miroir est implémentée individuellement pour chaque base de données et fonctionne uniquement avec les bases de données qui utilisent le mode de restauration complète.  
   
@@ -145,13 +145,13 @@ ms.locfileid: "68006346"
   
  Il existe deux modes de fonctionnement de la mise en miroir. L’un d’entre eux, le *mode haute sécurité* , prend en charge le fonctionnement synchrone. En mode haute sécurité, lorsqu'une session démarre, le serveur miroir synchronise la base de données miroir avec la base de données principale le plus rapidement possible. Dès que les bases de données sont synchronisées, une transaction est validée sur les deux serveurs partenaires, mais au prix d'une latence accrue des transactions.  
   
- Le deuxième mode de fonctionnement, le *mode hautes performances*, s’exécute de manière asynchrone. Le serveur miroir tente de rester à jour par rapport aux enregistrements de journal envoyés par le serveur principal. La base de données miroir peut rester quelque peu en arrière de la base de données principale. Toutefois, l'écart entre les bases de données est faible en général. Cependant, cet écart peut devenir important si le serveur principal est soumis à une charge de travail considérable ou si le système du serveur miroir est surchargé.  
+ Le deuxième mode de fonctionnement, le *mode hautes performances*, s’exécute de manière asynchrone. Le serveur miroir tente de rester à jour par rapport aux enregistrements de journal envoyés par le serveur principal. La base de données miroir peut être un peu en retard par rapport à la base de données principale. Toutefois, l'écart entre les bases de données est faible en général. Cependant, cet écart peut devenir important si le serveur principal est soumis à une charge de travail considérable ou si le système du serveur miroir est surchargé.  
   
  En mode hautes performances, dès que le serveur principal envoie un enregistrement du journal au serveur miroir, le serveur principal envoie une confirmation au client. Il n'attend pas d'accusé de réception du serveur miroir. Cela signifie que les transactions sont validées sans attendre que le serveur miroir enregistre le journal sur le disque. Ce fonctionnement asynchrone permet au serveur principal de s'exécuter avec une latence de transaction minimale, au risque de perdre des données.  
   
  Toutes les sessions de mise en miroir de bases de données prennent en charge un seul serveur principal et un seul serveur miroir. Cette configuration est illustrée dans la figure ci-dessous.  
   
- ![Serveurs partenaires dans une session de mise en miroir de bases de données](../../database-engine/database-mirroring/media/dbm-2-way-session-intro.gif "Serveurs partenaires dans une session de mise en miroir de bases de données")  
+ ![Partenaires dans une session de mise en miroir de bases de données](../../database-engine/database-mirroring/media/dbm-2-way-session-intro.gif "Partenaires dans une session de mise en miroir de bases de données")  
   
  Le mode haute sécurité avec basculement automatique requiert une troisième instance de serveur, appelée *témoin*. Contrairement aux deux autres, le témoin ne dessert pas la base de données. Le témoin prend en charge le basculement automatique en vérifiant que le serveur principal est activé et qu'il fonctionne. Le serveur miroir lance le basculement automatique uniquement si le miroir et le témoin restent connectés l'un à l'autre après que tous les deux aient été déconnectés du serveur principal.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "68006346"
   
 -   Si l'option SAFETY a la valeur OFF, l'opération de mise en miroir de bases de données est asynchrone. La session s'exécute en mode hautes performances et l'option WITNESS doit également avoir la valeur OFF.  
   
- Pour en savoir plus, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
+ Pour plus d'informations, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
   
 ###  <a name="RoleSwitching"></a> Basculement de rôle  
@@ -182,13 +182,13 @@ ms.locfileid: "68006346"
   
  Il existe trois types de basculement de rôle.  
   
--   *Automatic failover*  
+-   *Basculement automatique*  
   
      Ce type requiert le mode haute sécurité et la présence du serveur miroir et d'un témoin. La base de données doit déjà être synchronisée et le témoin doit être connecté au serveur miroir.  
   
      Le rôle du témoin consiste à vérifier si un serveur partenaire donné fonctionne correctement. Si le serveur miroir perd sa connexion au serveur principal, mais que le témoin est toujours connecté au serveur principal, le serveur miroir ne lance pas de basculement. Pour plus d’informations, consultez [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
--   *Manual failover*  
+-   *Basculement manuel*  
   
      Ce type requiert le mode haute sécurité. Les serveurs partenaires doivent être connectés entre eux et la base de données doit déjà être synchronisée.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68006346"
 >  Comme les bases de données mises en miroir sont indépendantes les unes des autres, elles ne peuvent pas basculer en tant que groupe.  
   
 ###  <a name="ClientConnections"></a> Connexions clientes  
- La prise en charge des connexions clientes pour les sessions de mise en miroir de bases de données est proposée par le fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ La prise en charge des connexions clientes pour les sessions de mise en miroir de bases de données est proposée par le fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour en savoir plus, voir [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
   
 ###  <a name="ImpactOfPausing"></a> Effets de la suspension d'une session sur le journal des transactions du principal  
@@ -251,7 +251,7 @@ ms.locfileid: "68006346"
  [Conditions préalables, limitations et recommandations relatives à la mise en miroir de bases de données](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Décrit les conditions préalables et les recommandations relatives à la configuration de la mise en miroir de bases de données.  
   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
  Contient des informations sur les modes d'opération synchrones et asynchrones des sessions de mise en miroir de bases de données, ainsi que sur le basculement des rôles de serveurs partenaires pendant une session de mise en miroir de bases de données.  
   
  [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)  
@@ -260,7 +260,7 @@ ms.locfileid: "68006346"
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)  
  Contient des informations sur le basculement des rôles de serveurs partenaires pendant une session de mise en miroir de bases de données, notamment le basculement automatique, le basculement manuel et le service forcé (avec perte de données possible). Contient également des informations sur l'estimation de l'interruption de service pendant le basculement de rôle.  
   
- [Défaillances possibles pendant la mise en miroir d'une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
+ [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
  Présente le système d'exploitation physique et les problèmes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris les problèmes de blocage et les erreurs logicielles, qui peuvent provoquer un échec dans une session de mise en miroir de bases de données. Explique comment le mécanisme de délai d'attente de la mise en miroir répond aux erreurs logicielles.  
   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
@@ -291,7 +291,7 @@ ms.locfileid: "68006346"
   
 -   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Autoriser l’accès sur le réseau à un point de terminaison de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
   

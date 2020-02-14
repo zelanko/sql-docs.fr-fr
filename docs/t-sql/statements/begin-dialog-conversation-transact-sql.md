@@ -31,10 +31,10 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211375"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "70211375"
 
   Commence un dialogue entre deux services. Un dialogue est une conversation qui fournit les messages exactement dans l'ordre entre deux services.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,13 +68,13 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  Spécifie le service qui initie le dialogue. Le nom spécifié doit être le nom d'un service de la base de données active. La file d'attente spécifiée pour le service initiateur reçoit les messages retournés par le service cible et les messages créés par Service Broker pour cette conversation.  
   
- TO SERVICE **'**_target_service_name_**'**  
- Spécifie le service cible avec lequel le dialogue doit être initialisé. *target_service_name* est de type **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *target_service_name*. La comparaison est donc sensible à la casse et ne tient pas compte du classement actuel.  
+ TO SERVICE **'** _target_service_name_ **'**  
+ Spécifie le service cible avec lequel le dialogue doit être initialisé. *target_service_name* est de type **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *target_service_name*. La comparaison est donc sensible à la casse et ne tient pas compte du classement actuel.  
   
  *service_broker_guid*  
  Spécifie la base de données qui héberge le service cible. Quand plusieurs bases de données hébergent une instance du service cible, vous pouvez communiquer avec une base de données spécifique en spécifiant un *service_broker_guid*.  
   
- *service_broker_guid* est de type **nvarchar(128)**. Pour rechercher la chaîne *service_broker_guid* pour une base de données, exécutez la requête ci-dessous dans la base de données :  
+ *service_broker_guid* est de type **nvarchar(128)** . Pour rechercher la chaîne *service_broker_guid* pour une base de données, exécutez la requête ci-dessous dans la base de données :  
   
 ```  
 SELECT service_broker_guid  
@@ -91,13 +91,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Spécifie le contrat suivi par cette conversation. Le contrat doit déjà exister dans la base de données active. Si le service cible n'accepte pas de nouvelles conversations dans le contrat spécifié, [!INCLUDE[ssSB](../../includes/sssb-md.md)] retourne un message d'erreur sur la conversation. Si cette clause est omise, la conversation suit le contrat nommé **DEFAULT**.  
   
- RELATED_CONVERSATION **=**_related_conversation_handle_  
+ RELATED_CONVERSATION **=** _related_conversation_handle_  
  Spécifie le groupe de conversations existant auquel le nouveau dialogue est ajouté. Si cette clause est spécifiée, le nouveau dialogue appartient au même groupe de conversations que le dialogue spécifié par *related_conversation_handle*. *related_conversation_handle* doit être d’un type implicitement convertible en type **uniqueidentifier**. L’instruction échoue si *related_conversation_handle* ne référence pas un dialogue existant.  
   
- RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
+ RELATED_CONVERSATION_GROUP **=** _related_conversation_group_id_  
  Spécifie le groupe de conversations existant auquel le nouveau dialogue est ajouté. Si cette clause est spécifiée, le nouveau dialogue sera ajouté au groupe de conversations spécifié par *related_conversation_group_id*. *related_conversation_group_id* doit être d’un type implicitement convertible en type **uniqueidentifier**. Si *related_conversation_group_id* ne référence pas un groupe de conversations existant, Service Broker crée un groupe de conversations à l’aide de la chaîne *related_conversation_group_id* spécifiée et met en relation le nouveau dialogue avec ce groupe de conversations.  
   
- LIFETIME **=**_dialog_lifetime_  
+ LIFETIME **=** _dialog_lifetime_  
  Spécifie la durée maximale pendant laquelle le dialogue restera ouvert. Pour que le dialogue s'achève avec succès, les deux points de terminaison doivent explicitement se terminer avant l'expiration de la durée de vie. La valeur *dialog_lifetime* doit être exprimée en secondes. La durée de vie est de type **int**. Si la clause LIFETIME n’est pas spécifiée, la durée de vie du dialogue correspond à la valeur maximale du type de données **int**.  
   
  ENCRYPTION  
@@ -106,7 +106,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Les messages échangés avec les services dans la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont jamais chiffrés. Cependant, la clé principale de base de données et les certificats nécessaires au chiffrement sont requis pour les conversations qui utilisent le chiffrement si les services de la conversation se trouvent dans des bases de données distinctes. Cela permet la poursuite des conversations dans le cas où une des bases de données est déplacée vers une autre instance au cours de la conversation.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Tous les messages font partie intégrante d'une conversation. Par conséquent, un service initiateur doit commencer une conversation avec le service cible avant d'envoyer un message à ce dernier. Les informations spécifiées dans l'instruction BEGIN DIALOG CONVERSATION sont identiques à celles spécifiées dans l'adresse d'une lettre ; [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise ces informations pour remettre les messages au service approprié. Le service spécifié dans la clause TO SERVICE est l'adresse à laquelle les messages sont envoyés. Le service spécifié dans la clause FROM SERVICE est l'adresse de l'expéditeur utilisée pour les messages de réponse.  
   
  La cible d'une conversation n'a pas besoin d'appeler l'instruction BEGIN DIALOG CONVERSATION. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crée une conversation dans la base de données cible lorsque le premier message de la conversation est reçu de l'initiateur.  
@@ -126,7 +126,7 @@ WHERE database_id = DB_ID() ;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-beginning-a-dialog"></a>A. Début d'un dialogue  
+### <a name="a-beginning-a-dialog"></a>R. Début d'un dialogue  
  L'exemple suivant commence une conversation et stocke l'identificateur du dialogue dans `@dialog_handle.` Le service `//Adventure-Works.com/ExpenseClient` est l'initiateur du dialogue et le service `//Adventure-Works.com/Expenses` est la cible du dialogue. Le dialogue respecte le contrat `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
 ```  
@@ -210,7 +210,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    WITH ENCRYPTION = OFF ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   

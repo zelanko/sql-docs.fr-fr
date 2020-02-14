@@ -17,28 +17,28 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903753"
 ---
 # <a name="understanding-database-engine-errors"></a>Présentation des erreurs du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Les erreurs déclenchées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] have the attributes described in the following table.  
+  Les attributs des erreurs déclenchées par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] sont décrits dans le tableau suivant.  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |Numéro d'erreur|Chaque message d'erreur possède un numéro d'erreur unique.|  
 |Chaîne de message d'erreur|Le message d'erreur contient des informations sur la cause probable de l'erreur. De nombreux messages d'erreur ont des variables de substitution contenant des informations telles que le nom de l'objet à l'origine de l'erreur.|  
-|Severity|La gravité indique l'importance de l'erreur. Les erreurs dont le degré de gravité est faible (1 ou 2), sont de simples messages d'information ou des avertissements peu importants. Si le degré de gravité est élevé, le problème doit être résolu le plus rapidement possible. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).|  
-|État|Certains messages d'erreur peuvent apparaître en de multiples endroits du code du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'erreur 1105 par exemple, peut être provoquée par différentes conditions. Un code d'état unique est assigné à chaque condition spécifique qui déclenche une erreur.<br /><br /> Lors de la consultation de bases de données contenant des informations sur les problèmes connus, par exemple la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] , le numéro d'état vous permet de déterminer si le problème enregistré est identique à l'erreur rencontrée. Par exemple, si un article de la Base de connaissances décrit l'erreur 1105 avec le numéro d'état 2, et si le message d'erreur 1105 que vous avez reçu a le numéro d'état 3, il est probable que l'erreur n'a pas la même origine que celle signalée dans l'article.<br /><br /> Un ingénieur du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut également utiliser le code d'état d'une erreur pour déterminer l'emplacement du code source d'où provient ce code d'erreur. Ces informations peuvent apporter des indications supplémentaires sur la façon de diagnostiquer le problème.|  
+|severity|La gravité indique l'importance de l'erreur. Les erreurs dont le degré de gravité est faible (1 ou 2), sont de simples messages d'information ou des avertissements peu importants. Si le degré de gravité est élevé, le problème doit être résolu le plus rapidement possible. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).|  
+|State|Certains messages d'erreur peuvent apparaître en de multiples endroits du code du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'erreur 1105 par exemple, peut être provoquée par différentes conditions. Un code d'état unique est assigné à chaque condition spécifique qui déclenche une erreur.<br /><br /> Lors de la consultation de bases de données contenant des informations sur les problèmes connus, par exemple la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] , le numéro d'état vous permet de déterminer si le problème enregistré est identique à l'erreur rencontrée. Par exemple, si un article de la Base de connaissances décrit l'erreur 1105 avec le numéro d'état 2, et si le message d'erreur 1105 que vous avez reçu a le numéro d'état 3, il est probable que l'erreur n'a pas la même origine que celle signalée dans l'article.<br /><br /> Un ingénieur du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut également utiliser le code d'état d'une erreur pour déterminer l'emplacement du code source d'où provient ce code d'erreur. Ces informations peuvent apporter des indications supplémentaires sur la façon de diagnostiquer le problème.|  
 |Nom de la procédure|Nom de la procédure stockée ou du déclencheur dans lequel l'erreur s'est produite.|  
 |Numéro de ligne|Indique l'instruction qui a provoqué l'erreur dans un traitement, une procédure stockée, un déclencheur ou une fonction.|  
   
  Tous les messages d’erreur système et tous les messages d’erreur définis par l’utilisateur dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont contenus dans l’affichage catalogue **sys.messages** . Vous pouvez utiliser l'instruction RAISERROR pour retourner à une application des messages d'erreur définis par l'utilisateur.  
   
- Toutes les API de base de données, telles que l’espace de noms [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** , ADO (ActiveX Data Objects), OLE DB et ODBC (Open DataBase Connectivity), signalent les attributs d’erreur de base. Ces informations comprennent le numéro de l'erreur et la chaîne du message. Cependant, toutes les API ne signalent pas l'ensemble des autres attributs d'erreur.  
+ Toutes les API de base de données, telles que l’espace de noms **SQLClient** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ADO (ActiveX Data Objects), OLE DB et ODBC (Open DataBase Connectivity) signalent les attributs d’erreur de base. Ces informations comprennent le numéro de l'erreur et la chaîne du message. Cependant, toutes les API ne signalent pas l'ensemble des autres attributs d'erreur.  
   
  Les informations relatives à une erreur qui se produit dans la portée du bloc TRY d’une construction TRY...CATCH peuvent être obtenues en code [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de fonctions telles que ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE dans la portée du bloc CATCH associé. Pour plus d’informations, consultez [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   

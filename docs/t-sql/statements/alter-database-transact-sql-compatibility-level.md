@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127697"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909649"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
 
@@ -48,13 +48,13 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>Arguments
 
-*database_name* correspond au nom de la base de données à modifier.
+*database_name* Spécifie le nom de la base de données à modifier.
 
 COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } correspond à la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquelle la base de données doit être compatible. Les valeurs de niveau de compatibilité suivantes peuvent être configurées (toutes les versions ne prennent pas en charge l’ensemble des niveaux de compatibilité listés ci-dessus) :
 
 <a name="supported-dbcompats"></a>
 
-|Product|Version du moteur de base de données|Désignation du niveau de compatibilité par défaut|Valeurs de niveau de compatibilité prises en charge|
+|Produit|Version du moteur de base de données|Désignation du niveau de compatibilité par défaut|Valeurs de niveau de compatibilité prises en charge|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
@@ -72,7 +72,6 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } correspond �
 > Les numéros de version du moteur de base de données pour SQL Server et Azure SQL Database ne sont pas comparables les uns aux autres. Il s’agit plutôt de numéros de build internes pour ces produits distincts. Le moteur de base de données pour Azure SQL Database repose sur la même base de code que le moteur de base de données SQL Server. Plus important encore, le moteur de base de données dans Azure SQL Database a toujours les bits les plus récents du moteur de base de données SQL. La version 12 d’Azure SQL Database est plus récente que la version 15 de SQL Server.
 
 ## <a name="remarks"></a>Notes
-
 Pour toutes les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité par défaut est associé à la version du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ce niveau est attribué aux nouvelles bases de données, sauf si la base de données **model** a un niveau de compatibilité inférieur. Pour les bases de données attachées ou restaurées à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la base de données conserve son niveau de compatibilité existant si celui-ci correspond au moins à la valeur minimale autorisée pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le déplacement d’une base de données ayant un niveau de compatibilité inférieur à celui autorisé par le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] a pour effet de lui attribuer automatiquement le niveau de compatibilité autorisé le plus bas. Cela s'applique aussi bien aux bases de données système qu'aux bases de données utilisateur.
 
 Voici les comportements auxquels vous pouvez vous attendre avec [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] quand une base de données est attachée ou restaurée et après une mise à niveau sur place :
@@ -152,13 +151,15 @@ Pour plus d’informations, notamment sur le workflow recommandé pour la mise �
 ## <a name="differences-between-compatibility-levels"></a>Comparaison des différents niveaux de compatibilité
 Pour toutes les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité par défaut est associé à la version du [!INCLUDE[ssDE](../../includes/ssde-md.md)], comme vous pouvez le voir dans [ce tableau](#supported-dbcompats). Pour chaque nouvelle tâche de développement, prévoyez toujours de certifier les applications avec le niveau de compatibilité de base de données le plus récent.
 
+La nouvelle syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] n’est pas contrôlée par le niveau de compatibilité de la base de données, sauf si elle risque de créer un conflit avec le code utilisateur [!INCLUDE[tsql](../../includes/tsql-md.md)] et ainsi d’empêcher les applications existantes de fonctionner. Ces exceptions sont documentées dans les sections suivantes de cet article qui décrivent les différences qui existent entre chaque niveau de compatibilité.
+
 Le niveau de compatibilité de base de données offre également une compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], car les bases de données attachées ou restaurées à partir de n’importe quelle version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conservent leur niveau de compatibilité existant (si celui-ci est identique ou supérieur au niveau de compatibilité minimal autorisé). Ceci a été abordé dans la section [Utilisation du niveau de compatibilité pour la compatibilité descendante](#backwardCompat) de cet article.
 
 À partir du niveau de compatibilité de base de données 130, les nouveaux correctifs et nouvelles fonctionnalités qui affectent les plans de requête sont ajoutés uniquement au niveau de compatibilité le plus récent, également appelé « niveau de compatibilité par défaut ». Lors des mises à niveau, cela permet de réduire les risques liés à la dégradation des performances en raison des modifications du plan de requête potentiellement apportées par de nouveaux comportements d’optimisation des requêtes. 
 
 Les principales modifications qui affectent le plan et qui sont ajoutées uniquement au niveau de compatibilité par défaut d’une nouvelle version du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont les suivantes :
 
-1.  **Les correctifs de l’optimiseur de requête publiés pour les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous l’indicateur de trace 4199 sont automatiquement activés avec le niveau de compatibilité par défaut d’une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+1.  **Les correctifs de l’optimiseur de requête publiés pour les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous l’indicateur de trace 4199 sont automatiquement activés avec le niveau de compatibilité par défaut d’une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
     Par exemple, lorsque [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] est sorti, tous les correctifs de l’optimiseur de requête publiés pour les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (et les niveaux de compatibilité de 100 à 120) étaient activés automatiquement pour les bases de données qui utilisaient le niveau de compatibilité par défaut (130) de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Seuls les correctifs post-RTM de l’optimiseur de requête doivent être activés explicitement.
     
@@ -175,9 +176,9 @@ Les principales modifications qui affectent le plan et qui sont ajoutées unique
     
     |Version du moteur de base de données|Niveau de compatibilité de la base de données|TF 4199|Modifications de l’optimiseur de requête de tous les précédents niveaux de compatibilité de base de données|Modifications de l’optimiseur de requête pour la version post-RTM du moteur de base de données|
     |----------|----------|---|------------|--------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 à 120<br /><br /><br />130|Inactif<br />Actif<br /><br />Inactif<br />Actif|**Désactivé**<br />Activé<br /><br />**Activé**<br />Activé|Désactivé<br />Activé<br /><br />Désactivé<br />Activé|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 à 120<br /><br /><br />130<br /><br /><br />140|Inactif<br />Actif<br /><br />Inactif<br />Actif<br /><br />Inactif<br />Actif|**Désactivé**<br />Activé<br /><br />**Activé**<br />Activé<br /><br />**Activé**<br />Activé|Désactivé<br />Activé<br /><br />Désactivé<br />Activé<br /><br />Désactivé<br />Activé|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 à 120<br /><br /><br />130 à 140<br /><br /><br />150|Inactif<br />Actif<br /><br />Inactif<br />Actif<br /><br />Inactif<br />Actif|**Désactivé**<br />Activé<br /><br />**Activé**<br />Activé<br /><br />**Activé**<br />Activé|Désactivé<br />Activé<br /><br />Désactivé<br />Activé<br /><br />Désactivé<br />Activé|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 à 120<br /><br /><br />130|Off<br />Il en va<br /><br />Off<br />Il en va|**Désactivé**<br />activé<br /><br />**Activé**<br />activé|Désactivé<br />activé<br /><br />Désactivé<br />activé|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 à 120<br /><br /><br />130<br /><br /><br />140|Off<br />Il en va<br /><br />Off<br />Il en va<br /><br />Off<br />Il en va|**Désactivé**<br />activé<br /><br />**Activé**<br />activé<br /><br />**Activé**<br />activé|Désactivé<br />activé<br /><br />Désactivé<br />activé<br /><br />Désactivé<br />activé|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 à 120<br /><br /><br />130 à 140<br /><br /><br />150|Off<br />Il en va<br /><br />Off<br />Il en va<br /><br />Off<br />Il en va|**Désactivé**<br />activé<br /><br />**Activé**<br />activé<br /><br />**Activé**<br />activé|Désactivé<br />activé<br /><br />Désactivé<br />activé<br /><br />Désactivé<br />activé|
     
     > [!IMPORTANT]
     > Les correctifs de l’optimiseur de requête qui résolvent les erreurs relatives à des résultats erronés ou à des violations d’accès ne sont pas protégés par l’indicateur de trace 4199. Ces correctifs ne sont pas considérés comme facultatifs.
@@ -192,9 +193,9 @@ Les principales modifications qui affectent le plan et qui sont ajoutées unique
     
     |Version du moteur de base de données|Niveau de compatibilité de la base de données|Nouvelles modifications apportées à la version CE|
     |----------|--------|-------------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|Désactivé<br />Activé|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|Désactivé<br />Activé|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|Désactivé<br />Activé|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|Désactivé<br />activé|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|Désactivé<br />activé|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|Désactivé<br />activé|
     
     <sup>1</sup> Également applicable à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
     
@@ -289,7 +290,7 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 |Lorsque vous créez ou altérez une fonction de partition, les littéraux **datetime** et **smalldatetime** de la fonction sont évalués en supposant que US_English (Anglais États-Unis) est le paramètre de langue.|Le paramètre de langue actuel est utilisé pour évaluer les littéraux **datetime** et **smalldatetime** dans la fonction de partition.|Moyenne|
 |La clause `FOR BROWSE` est autorisée (et ignorée) dans les instructions `INSERT` et `SELECT INTO`.|La clause `FOR BROWSE` n’est pas autorisée dans les instructions `INSERT` et `SELECT INTO`.|Moyenne|
 |Les prédicats de texte intégral sont autorisés dans la clause `OUTPUT`.|Les prédicats de texte intégral ne sont pas autorisés dans la clause `OUTPUT`.|Faible|
-|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` et `DROP FULLTEXT STOPLIST` ne sont pas pris en charge. La liste de mots vides système est associée automatiquement aux nouveaux index de recherche en texte intégral.|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` et `DROP FULLTEXT STOPLIST` sont pris en charge.|Faible|
+|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST`, et `DROP FULLTEXT STOPLIST` ne sont pas pris en charge. La liste de mots vides système est associée automatiquement aux nouveaux index de recherche en texte intégral.|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` et `DROP FULLTEXT STOPLIST` sont pris en charge.|Faible|
 |`MERGE` n’est pas appliqué comme un mot clé réservé.|MERGE est un mot clé entièrement réservé. L’instruction `MERGE` est prise en charge avec les niveaux de compatibilité 100 et 90.|Faible|
 |L’utilisation de l’argument \<dml_table_source> de l’instruction INSERT entraîne une erreur de syntaxe.|Vous pouvez capturer les résultats d'une clause OUTPUT dans une instruction imbriquée INSERT, UPDATE, DELETE ou MERGE, puis les insérer dans une table ou une vue cible. Cette opération s’effectue en utilisant l’argument \<dml_table_source> de l’instruction INSERT.|Faible|
 |Sauf si `NOINDEX` est spécifié, `DBCC CHECKDB` ou `DBCC CHECKTABLE` effectue les vérifications de la cohérence physique et logique sur une table ou une vue indexée, ainsi que sur tous ses index non-cluster et XML. Les index spatiaux ne sont pas pris en charge.|Sauf si `NOINDEX` est spécifié, `DBCC CHECKDB` ou `DBCC CHECKTABLE` effectue les vérifications de la cohérence physique et logique sur une table, ainsi que sur tous ses index non-cluster. Toutefois, seules des vérifications de cohérence physique sont effectuées par défaut sur les index XML, les index spatiaux et les vues indexées.<br /><br /> Si `WITH EXTENDED_LOGICAL_CHECKS` est spécifié, des vérifications logiques sont effectuées sur des vues indexées, des index XML et des index spatiaux, là où ils sont présents. Par défaut, les vérifications de cohérence physique sont effectuées avant les vérifications de cohérence logique. Si `NOINDEX` est également spécifié, seules les vérifications logiques sont effectuées.|Faible|
@@ -333,7 +334,7 @@ Requiert l'autorisation `ALTER` sur la base de données.
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-changing-the-compatibility-level"></a>A. Modification du niveau de compatibilité
+### <a name="a-changing-the-compatibility-level"></a>R. Modification du niveau de compatibilité
 
 L’exemple suivant remplace le niveau de compatibilité de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] par 110, c’est-à-dire, le niveau par défaut pour [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 

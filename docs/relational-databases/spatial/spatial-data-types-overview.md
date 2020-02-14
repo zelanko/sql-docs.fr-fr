@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048523"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
@@ -44,7 +44,7 @@ Exemples de types simples :
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [Polygone](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 Exemples de types de collection :  
@@ -80,7 +80,7 @@ Quand le niveau de compatibilité est égal ou inférieur à 100 dans [!INCLUDE[
 Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** est un type spécial de polygone qui couvre le globe entier. **FullGlobe** a une zone, mais aucune bordure ni sommet.  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anneaux internes et externes non importants dans le type de données `geography`  
-La spécification OGC Simple Features for SQL traite des anneaux externes et internes, mais cette distinction n’a que peu de sens pour le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** ; tout anneau d’un polygone peut être accepté comme étant l’anneau externe.  
+La spécification OGC Simple Features for SQL traite des anneaux externes et internes, mais cette distinction n’a que peu de sens pour le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography**. Tout anneau d’un polygone peut être accepté comme étant l’anneau externe.  
 
 Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites Web suivants :  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
@@ -114,7 +114,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 Remarquez qu’une instance **CircularString** nécessite sept points pour définir le triangle, alors qu’une instance **LineString** n’en nécessite que quatre. En effet, une instance **CircularString** stocke des segments d’arc de cercle et non des segments de ligne. Ainsi, les côtés du triangle stockés dans l’instance **CircularString** sont ABC, CDE et EFA, alors que les côtés du triangle stockés dans l’instance **LineString** sont AC, CE et EA.  
 
-Prenons l'exemple suivant :  
+Prenons l’exemple suivant :  
 
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);

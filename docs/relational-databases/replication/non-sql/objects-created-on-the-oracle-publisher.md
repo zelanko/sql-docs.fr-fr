@@ -13,17 +13,17 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940314"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objets créés sur le serveur de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe des objets de base de données sur le serveur de publication Oracle pour permettre le suivi et la transmission des modifications ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’installe aucun fichier binaire sur le serveur de publication Oracle). Le tableau suivant donne la liste des objets qui sont créés sur le serveur de publication Oracle quand il est identifié en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les descriptions des objets sont données seulement à titre d'information. Il est recommandé de ne pas modifier ces objets.  
   
-|Nom de l’objet|Type d'objet|Description|  
+|Nom d’objet|Type d'objet|Description|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Table de charge de travail|Table de suivi des modifications utilisée pour stocker les informations quand des modifications sont apportées à la table publiée. Une table de suivi des modifications est créée pour chaque table publiée.|  
 |HREPL_Changes|Table de charge de travail|Table utilisée en interne par le travail Xactset pour déterminer le nombre de modifications en attente d'affectation à un ensemble de transactions. Pour plus d’informations sur ce travail, consultez [Réglage des performances pour les serveurs de publication Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  

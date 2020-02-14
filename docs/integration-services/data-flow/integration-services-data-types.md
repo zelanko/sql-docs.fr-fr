@@ -19,10 +19,10 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292418"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
@@ -81,7 +81,7 @@ ms.locfileid: "71292418"
   
 -   Utilisez la transformation de conversion de données pour convertir le type de données d'une colonne en un type différent. Pour plus d’informations, voir [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
--   Utilisez la transformation de colonne dérivée pour créer une copie d'une colonne ayant un type de données différent de celui de la colonne d'origine. Pour plus d’informations, voir [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+-   Utilisez la transformation de colonne dérivée pour créer une copie d'une colonne ayant un type de données différent de celui de la colonne d'origine. Pour plus d'informations, consultez [Transformation de colonne dérivée](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>Conversion entre les chaînes et les types de données de date et d'heure  
  Le tableau suivant répertorie les résultats de la conversion entre des chaînes et des types de données de date et d'heure :  
@@ -113,7 +113,7 @@ ms.locfileid: "71292418"
   
 |Conversion de DT_FILETIME en|Résultats|  
 |-----------------------------|------------|  
-|DT_FILETIME|Aucun changement.|  
+|DT_FILETIME|Aucune modification.|  
 |DT_DATE|Convertit le type de données.|  
 |DT_DBDATE|Supprime la valeur d'heure.|  
 |DT_DBTIME|Supprime la valeur de date.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres fractionnaires que le type de données DT_DBTIME peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -127,7 +127,7 @@ ms.locfileid: "71292418"
 |Conversion de DT_DATE en|Résultats|  
 |-------------------------|------------|  
 |DT_FILETIME|Convertit le type de données.|  
-|DT_DATE|Aucun changement.|  
+|DT_DATE|Aucune modification.|  
 |DT_DBDATE|Supprime la valeur d'heure représentée par le type de données DT_DATA.|  
 |DT_DBTIME|Supprime la valeur de date représentée par le type de données DT_DATE.|  
 |DT_DBTIME2|Supprime la valeur de date représentée par le type de données DT_DATE.|  
@@ -141,7 +141,7 @@ ms.locfileid: "71292418"
 |---------------------------|------------|  
 |DT_FILETIME|Définit zéro pour les champs d'heure dans le type de données DT_FILETIME.|  
 |DT_DATE|Définit zéro pour les champs d'heure dans le type de données DT_DATE.|  
-|DT_DBDATE|Aucun changement.|  
+|DT_DBDATE|Aucune modification.|  
 |DT_DBTIME|Définit zéro pour les champs d'heure dans le type de données DT_DBTIME.|  
 |DT_DBTIME2|Définit zéro pour les champs d'heure dans le type de données DT_DBTIME2.|  
 |DT_DBTIMESTAMP|Définit zéro pour les champs d'heure dans le type de données DT_DBTIMESTAMP.|  
@@ -155,7 +155,7 @@ ms.locfileid: "71292418"
 |DT_FILETIME|Définit la date actuelle pour le champ de date dans le type de données DT_FILETIME.|  
 |DT_DATE|Définit la date actuelle pour le champ de date dans le type de données DT_DATE.|  
 |DT_DBDATE|Définit la date actuelle pour le champ de date dans le type de données DT_DBDATE.|  
-|DT_DBTIME|Aucun changement.|  
+|DT_DBTIME|Aucune modification.|  
 |DT_DBTIME2|Convertit le type de données.|  
 |DT_DBTIMESTAMP|Définit la date actuelle pour le champ de date dans le type de données DT_DBTIMESTAMP.|  
 |DT_DBTIMESTAMP2|Définit la date actuelle pour le champ de date dans le type de données DT_DBTIMESTAMP2.|  
@@ -183,7 +183,7 @@ ms.locfileid: "71292418"
 |DT_DBDATE|Supprime la valeur d'heure représentée par le type de données DT_DBTIMESTAMP.|  
 |DT_DBTIME|Supprime la valeur de date représentée par le type de données DT_DBTIMESTAMP.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIME peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIME2|Supprime la valeur de date représentée par le type de données DT_DBTIMESTAMP.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIME2 peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
-|DT_DBTIMESTAMP|Aucun changement.|  
+|DT_DBTIMESTAMP|Aucune modification.|  
 |DT_DBTIMESTAMP2|Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMP2 peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Définit zéro pour le champ de fuseau horaire dans le type de données DT_DBTIMESTAMPOFFSET.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DBTIMESTAMPOFFSET peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
   
@@ -226,25 +226,25 @@ ms.locfileid: "71292418"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Monétaire (Currency)||||  
+|DT_CY|smallmoney, money|smallmoney, money|Devise||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||Date|Date|Date|  
-|DT_DBTIME||||TIMESTAMP|time|time|  
+|DT_DBTIME||||timestamp|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|INT|INT|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
-|DT_NUMERIC|decimal, numeric|decimal, numeric|Décimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|Unique||real|real|  
-|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
+|DT_I2|SMALLINT|SMALLINT|Court||SMALLINT|SMALLINT|  
+|DT_I4|int|int|Long||INTEGER|INTEGER|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
+|DT_R4|real|real|Unique||real|real|  
+|DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
@@ -252,7 +252,7 @@ ms.locfileid: "71292418"
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
 |DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, défini par l'utilisateur|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
-|DT_TEXT|texte||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
+|DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   
  Pour plus d’informations sur le mappage des types de données dans le flux de données, consultez [Utilisation de types de données dans le flux de données](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   

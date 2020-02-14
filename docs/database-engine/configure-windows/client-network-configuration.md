@@ -19,10 +19,10 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012958"
 ---
 # <a name="client-network-configuration"></a>Configuration du réseau client
@@ -43,7 +43,7 @@ ms.locfileid: "68012958"
   
 -   Clients DB-Library  
   
-     Ces applications incluent l’utilitaire d’invite de commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** et des clients écrits dans DB-Library. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure une prise en charge pour les applications clientes utilisant DB-Library qui se limite aux fonctionnalités de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
+     Ces applications incluent l’utilitaire d’invite de commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** et des clients écrits dans DB-Library. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure une prise en charge pour les applications clientes utilisant DB-Library qui se limite aux fonctionnalités de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
   
 > [!NOTE]  
 >  Bien que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] prenne toujours en charge les connexions des applications existantes qui utilisent les API DB-Library et Embedded SQL, il n'inclut pas les fichiers ni la documentation nécessaires aux tâches de programmation dans les applications qui utilisent ces API. Une version future du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] n'intègrera plus la prise en charge des connexions à partir des applications DB-Library ou Embedded SQL. N'utilisez pas DB-Library ni Embedded SQL pour développer de nouvelles applications. Supprimez toutes les dépendances à DB-Library ou à Embedded SQL lorsque vous modifiez des applications existantes. À la place de ces API, utilisez l’espace de noms SQLClient ou une API telle que OLE DB ou ODBC. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’inclut pas la DLL DB-Library nécessaires à l’exécution de ces applications. Pour exécuter des applications DB-Library ou Embedded SQL, vous devez utiliser la DLL DB-Library à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5, de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 ou de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "68012958"
   
      Les composants réseau client et serveur sont gérés à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , qui associe l'utilitaire réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'utilitaire réseau client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Gestionnaire de services des versions précédentes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le Gestionnaire de configuration est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console). Il apparaît également comme un nœud dans le composant logiciel enfichable Windows Gestion de l'ordinateur. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'activer, de désactiver, de configurer et de classer par priorité des bibliothèques réseau individuelles.  
   
--   Programme d'installation  
+-   Programme d’installation  
   
      Exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour installer les composants réseau sur un ordinateur client. Les bibliothèques réseau individuelles peuvent être activées ou désactivées pendant l'installation si celle-ci est démarrée à partir de l'invite de commandes.  
   

@@ -15,10 +15,10 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095691"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutoriel : Utiliser le service Stockage Blob Azure avec SQL Server 2016
@@ -32,10 +32,10 @@ Ce didacticiel vous montre comment utiliser des fichiers de données SQL Server 
   
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-Pour suivre ce didacticiel, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL. Pour utiliser ce tutoriel, vous avez besoin d'un compte de stockage Azure, de SQL Server Management Studio (SSMS), d'un accès à une instance de SQL Server sur site, d'un accès à une machine virtuelle Azure exécutant SQL Server 2016 et d’une base de données AdventureWorks2016. Par ailleurs, le compte d’utilisateur utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backup operator** avec les autorisations **Modifier des informations d’identification**. 
+Pour suivre ce didacticiel, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL. Pour utiliser ce tutoriel, vous avez besoin d'un compte de stockage Azure, de SQL Server Management Studio (SSMS), d'un accès à une instance de SQL Server sur site, d'un accès à une machine virtuelle Azure exécutant SQL Server 2016 et d’une base de données AdventureWorks2016. Par ailleurs, le compte utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backupoperator** avec les autorisations **modifier les informations d’identification**. 
 
 - Obtenir gratuitement un [compte Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
-- Créer un [compte de stockage Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Créez un [compte de stockage Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Approvisionnez une [machine virtuelle Azure exécutant SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -53,7 +53,7 @@ Une signature d’accès partagé est un URI qui octroie des droits d’accès r
   
 Vous pouvez créer une stratégie d’accès stockée et une signature d’accès partagé à l’aide d’Azure PowerShell, du kit de développement logiciel (SDK) Stockage Azure, de l’API REST Azure ou d’un utilitaire tiers. Ce didacticiel montre comment utiliser un script Azure PowerShell pour effectuer cette tâche. Le script utilise le modèle de déploiement Resource Manager et crée les ressources suivantes :  
   
--   Groupe de ressources   
+-   Resource group   
 -   Compte de stockage  
 -   Conteneur d’objets blob Azure   
 -   Stratégie SAP    
@@ -385,7 +385,7 @@ Pour restaurer une base de données à un point spécifié dans le temps à part
     SELECT COUNT (*) FROM AdventureWorks2016.Production.Location ;
     ```  
   
-5.  Examinez la sortie. Notez qu’après la restauration, le nombre de lignes est 18 389, nombre qui se situe entre les sauvegardes de journal 5 et 6 (le nombre de lignes peut varier).  
+5.  Passez en revue la sortie. Notez qu’après la restauration, le nombre de lignes est 18 389, nombre qui se situe entre les sauvegardes de journal 5 et 6 (le nombre de lignes peut varier).  
   
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
@@ -481,10 +481,10 @@ Pour supprimer le groupe de ressources, exécutez le code powershell suivant :
 ## <a name="see-also"></a>Voir aussi
 
 [Fichiers de données SQL Server dans Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Sauvegardes sous forme d’instantanés de fichier pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Sauvegarde de SQL Server sur une URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
+[Créer un conteneur](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Obtenir la liste de contrôle d’accès du conteneur](https://msdn.microsoft.com/library/azure/dd179469.aspx)
 [Informations d’identification &#40;moteur de base de données&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  

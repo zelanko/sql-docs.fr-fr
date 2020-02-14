@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281946"
 ---
 # <a name="security-overview-integration-services"></a>Vue d'ensemble de la sécurité (Integration Services)
@@ -138,12 +138,12 @@ ms.locfileid: "71281946"
 ## <a name="related-tasks"></a>Tâches associées  
  La liste suivante contient des liens vers les rubriques qui indiquent comment effectuer une tâche particulière relative à la sécurité.  
   
--   [Créer un rôle défini par l'utilisateur](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
+-   [Créer un rôle défini par l’utilisateur](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
   
--   [Affecter un rôle de lecture et d'écriture à un package](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
+-   [Affecter un rôle de lecture et d’écriture à un package](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
   
 -   [Implémenter une stratégie de signature en définissant une valeur du Registre](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#registry)  
   
--   [Signer un package à l'aide d'un certificat numérique](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
+-   [Signer un package à l’aide d’un certificat numérique](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Définir ou modifier le niveau de protection des packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Définir ou changer le niveau de protection des packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  

@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5e18fcc3eda85fb30f816f9010b29f6818237b20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136813"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Objets OLE Automation dans Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] contient plusieurs procédures stockées système qui permettent aux objets OLE Automation d’être référencés dans les lots [!INCLUDE[tsql](../../includes/tsql-md.md)] , les procédures stockées et les déclencheurs. Les procédures stockées système sont exécutées en tant que procédures stockées étendues, et les objets OLE Automation invoqués par les procédures stockées sont exécutés dans l'espace d'adressage d'une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de la même façon que les procédures stockées étendues.  
   
- Les procédures stockées OLE Automation permettent aux lots [!INCLUDE[tsql](../../includes/tsql-md.md)] de faire référence aux objets SQL-DMO et aux objets OLE Automation personnalisés, notamment ceux qui exposent l’interface **IDispatch** . Un serveur OLE in-process personnalisé qui est créé à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] doit disposer d’un gestionnaire d’erreurs (spécifié avec l’instruction **On Error GoTo** ) pour les sous-routines **Class_Initialize** et **Class_Terminate** . Les erreurs non gérées dans les sous-routines **Class_Initialize** et **Class_Terminate** peuvent entraîner des erreurs imprévisibles, comme une violation d’accès dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les gestionnaires d'erreurs sont également recommandés pour les autres sous-routines.  
+ Les procédures stockées OLE Automation permettent aux lots [!INCLUDE[tsql](../../includes/tsql-md.md)] de faire référence aux objets SQL-DMO et aux objets OLE Automation personnalisés, notamment ceux qui exposent l’interface **IDispatch** . Un serveur OLE In-process personnalisé qui est créé à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] doit disposer d’un gestionnaire d’erreurs (spécifié avec l’instruction **On Error GoTo**) pour les sous-routines **Class_Initialize** et **Class_Terminate**. Les erreurs non gérées dans les sous-routines **Class_Initialize** et **Class_Terminate** peuvent entraîner des erreurs imprévisibles, comme une violation d’accès dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les gestionnaires d'erreurs sont également recommandés pour les autres sous-routines.  
   
  Pour utiliser un objet OLE Automation dans [!INCLUDE[tsql](../../includes/tsql-md.md)] , il est nécessaire d’appeler la procédure stockée système **sp_OACreate** pour créer une instance de cet objet dans l’espace d’adressage de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

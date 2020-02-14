@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558667"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831804"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,25 +104,19 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
   
 ## <a name="links-to-specific-tasks"></a>Liens vers des tâches spécifiques 
 
- - [Stocker des stratégies de Gestion basée sur des stratégies.](policy-based-management-storage.md)|  
- - [Configurer des alertes pour informer les administrateurs de stratégie en cas d’échec de stratégie](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [Créer une condition de gestion basée sur des stratégies](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [Stocker des stratégies de la Gestion basée sur des stratégies.](policy-based-management-storage.md)
+ - [Configurer des alertes pour informer les administrateurs de stratégie en cas d’échec de stratégie](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)
+ - [Créer une condition de gestion basée sur des stratégies](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)
  - [Supprimer une condition de gestion basée sur des stratégies](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
- - [Afficher ou modifier les propriétés d'une condition de gestion basée sur des stratégies](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+ - [Afficher ou modifier les propriétés d’une condition de gestion basée sur des stratégies](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)
  - [Exporter une stratégie de gestion basée sur des stratégies](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
- - [Importer une stratégie de gestion basée sur des stratégies](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
+ - [Importer une stratégie de gestion basée sur des stratégies](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)
  - [Évaluer une stratégie de gestion basée sur des stratégies à partir d’un objet](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
- - [Utiliser les facettes de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
+ - [Utiliser les facettes de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)
  - [Contrôler et appliquer les meilleures pratiques à l’aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
-
 
 ## <a name="see-also"></a>Voir aussi  
  
  - [Tutoriel : Créer et appliquer une stratégie Désactivé par défaut](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Tutoriel : Créer et appliquer une stratégie de standards de nommage](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
- 
-
- 
-  
-  

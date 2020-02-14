@@ -13,10 +13,10 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294688"
 ---
 # <a name="manage-a-cdc-instance"></a>Gérer une instance de capture de données modifiées
@@ -34,10 +34,10 @@ ms.locfileid: "71294688"
 ## <a name="what-you-can-do-when-you-display-the-cdc-instance-information"></a>Opérations réalisables lorsque vous affichez les informations d'instance CDC  
  Les actions suivantes s'effectuent à partir du volet droit :  
   
- **Démarrer**  
+ **Start**  
  Cliquez sur **Démarrer** pour démarrer la capture des modifications pour l’instance de capture des données modifiées sélectionnée.  
   
- **Arrêter**  
+ **Stop**  
  Cliquez sur **Arrêter** pour arrêter de capturer des modifications pour l’instance sélectionnée de capture de données modifiées. Lorsque vous arrêtez l'instance de capture de données modifiées, les modifications qui ont été capturées à ce stade ne sont pas perdues et sont remises lorsque l'instance de capture de données modifiées reprend.  
   
  **Réinitialiser**  
@@ -56,7 +56,7 @@ ms.locfileid: "71294688"
 > [!NOTE]  
 >  Lorsque vous exécutez des scripts de journalisation supplémentaires, la boîte de dialogue des informations d'identification Oracle pour l'exécution de script s'ouvre et vous permet de spécifier un nom d'utilisateur et un mot de passe Oracle valides. Pour plus d'informations sur la façon de fournir les informations d'identification Oracle appropriées, consultez [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- **Script de déploiement d'instance CDC**  
+ **Script de déploiement d’instance CDC**  
  Cliquez sur ce lien pour afficher la boîte de dialogue du script de déploiement d'instance de capture de données modifiées qui affiche le script de déploiement d'instance de capture de données modifiées. Pour plus d'informations sur cette boîte de dialogue, consultez [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md).  
   
  **Propriétés**  
@@ -73,10 +73,10 @@ ms.locfileid: "71294688"
   
     |||  
     |-|-|  
-    |![Erreur](../../integration-services/change-data-capture/media/error.gif "Erreur")|**Erreur**. L'instance Oracle CDC n'est pas en cours d'exécution, car une erreur non renouvelable s'est produite. Les sous-états suivants sont disponibles :<br /><br /> **Mauvaise configuration** : une erreur de configuration réclamant une intervention manuelle s’est produite.<br /><br /> **Mot de passe requis** : soit aucun mot de passe n’est défini pour l’instance Oracle CDC, soit le mot de passe n’est pas valide.<br /><br /> **Unexpected**. Toutes les autres erreurs non récupérables.|  
-    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**En cours d’exécution** : l’instance CDC est en cours d’exécution et traite les enregistrements de modification. Les sous-états suivants sont disponibles :<br /><br /> **Inactif** : tous les enregistrements de modification sont traités et stockés dans les tables de modifications cibles. Il n'y a plus de transactions actives.<br /><br /> **En cours de traitement** : il reste des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de modifications.|  
-    |![Arrêter](../../integration-services/change-data-capture/media/stop.gif "Arrêter")|**Arrêté** : L'instance CDC n'est pas en cours d'exécution. L'état Stopped indique que l'instance de capture de données modifiées a été arrêtée de manière régulière.|  
-    |![Paused](../../integration-services/change-data-capture/media/paused.gif "Paused")|**En pause** : l’instance CDC est en cours d’exécution, mais le traitement est interrompu en raison d’une erreur pouvant faire l’objet d’une nouvelle tentative. Les sous-états suivants sont disponibles :<br /><br /> **Déconnecté** : il est impossible d’établir la connexion à la base de données Oracle source. Le traitement reprend lorsque la connexion est restaurée.<br /><br /> **Stockage** : le stockage est saturé. Le traitement reprend lorsque le stockage supplémentaire est disponible.<br /><br /> **Enregistreur d’événements** : l’enregistreur d’événements est connecté à Oracle, mais ne peut pas lire les journaux des transactions Oracle en raison d’un problème temporaire, par exemple un journal des transactions non disponible.|  
+    |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**Error**. L'instance Oracle CDC n'est pas en cours d'exécution, car une erreur non renouvelable s'est produite. Les sous-états suivants sont disponibles :<br /><br /> **Mal configuré** : une erreur de configuration réclamant une intervention manuelle s’est produite.<br /><br /> **Mot de passe requis** : soit aucun mot de passe n’est défini pour l’instance Oracle CDC, soit le mot de passe n’est pas valide.<br /><br /> **Unexpected**. Toutes les autres erreurs non récupérables.|  
+    |![Okay](../../integration-services/change-data-capture/media/okay.gif "OK")|**En cours d’exécution** : l’instance CDC est en cours d’exécution et traite les enregistrements de modification. Les sous-états suivants sont disponibles :<br /><br /> **Inactif** : tous les enregistrements de modification sont traités et stockés dans les tables de modifications cibles. Il n'y a plus de transactions actives.<br /><br /> **En cours de traitement** : il reste des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de modifications.|  
+    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Arrêter")|**Arrêté** : L'instance CDC n'est pas en cours d'exécution. L'état Stopped indique que l'instance de capture de données modifiées a été arrêtée de manière régulière.|  
+    |![En pause](../../integration-services/change-data-capture/media/paused.gif "Suspendu")|**En pause** : l’instance CDC est en cours d’exécution, mais le traitement est interrompu en raison d’une erreur pouvant faire l’objet d’une nouvelle tentative. Les sous-états suivants sont disponibles :<br /><br /> **Déconnecté** : il est impossible d’établir la connexion à la base de données Oracle source. Le traitement reprend lorsque la connexion est restaurée.<br /><br /> **Stockage** : le stockage est saturé. Le traitement reprend lorsque le stockage supplémentaire est disponible.<br /><br /> **Enregistreur d’événements** : l’enregistreur d’événements est connecté à Oracle, mais ne peut pas lire les journaux des transactions Oracle en raison d’un problème temporaire, par exemple un journal des transactions non disponible.|  
   
 -   **État détaillé** : sous-état actuel.  
   
@@ -116,15 +116,15 @@ ms.locfileid: "71294688"
   
  Pour plus d'informations sur ces propriétés et la façon de les modifier, consultez [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
- **Avancé**  
+ **Avancée**  
  Affiche les propriétés avancées pour l'instance de capture de données modifiées et les valeurs de propriété. Cet onglet est en lecture seule. Pour modifier ces propriétés, cliquez avec le bouton droit sur l’instance dans le volet gauche et sélectionnez **Propriétés** ou cliquez sur **Propriétés** dans le volet droit pour ouvrir la boîte de dialogue Propriétés de \<instance>.  
   
  Pour plus d'informations sur ces propriétés et la façon de les modifier, consultez [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Procédure : afficher les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
+ [Guide pratique pour afficher les propriétés d’une instance CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Utiliser l'Assistant Nouvelle instance](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Utiliser l’Assistant Nouvelle instance](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

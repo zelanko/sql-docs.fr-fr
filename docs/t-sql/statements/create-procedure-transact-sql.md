@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982756"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909819"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ Crée une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR
 
 Passez à la section [Exemples simples](#Simple) pour ignorer les détails de la syntaxe et obtenir un exemple rapide de procédure stockée de base.
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -308,7 +308,7 @@ SERIALIZABLE
 -   Si une autre transaction insère de nouvelles lignes avec des valeurs de clés comprises dans la plage de clés lues par l’une des instructions de la transaction actuelle, cette dernière échoue.  
   
 SNAPSHOT  
- Spécifie que les données lues par n’importe quelle instruction d’une transaction représentent la version cohérente d’un point de vue transactionnel des données qui existaient au début de la transaction.  
+ spécifie que les données lues par une instruction dans une transaction sont la version transactionnellement cohérente des données qui existaient au début de la transaction.  
   
 DATEFIRST = *number*  
  **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -356,7 +356,7 @@ Consultez [Exemples](#Examples) à la fin de cette rubrique pour obtenir beaucou
 ## <a name="best-practices"></a>Bonnes pratiques  
  Les suggestions fournies dans cette section peuvent vous aider à améliorer les performances des procédures, même si cette liste n'est pas exhaustive.  
   
--   Utilisez l'instruction SET NOCOUNT ON comme première instruction dans le corps de la procédure. Autrement dit, placez-la juste après le mot clé AS. Cela permet de désactiver les messages renvoyés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au client une fois les instructions SELECT, INSERT, UPDATE, MERGE et DELETE exécutées. Cela permet de conserver la sortie générée à un minimum pour plus de clarté. Toutefois, il n’existe pas d’avantages mesurables en matière de niveaux de performance sur le matériel actuel. Pour plus d’informations, consultez [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   Utilisez l'instruction SET NOCOUNT ON comme première instruction dans le corps de la procédure. Autrement dit, placez-la juste après le mot clé AS. Cela permet de désactiver les messages renvoyés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au client une fois les instructions SELECT, INSERT, UPDATE, MERGE et DELETE exécutées. Cela permet de raccourcir au maximum la sortie générée pour plus de clarté. Toutefois, il n’existe pas d’avantages mesurables concernant les niveaux de performance du matériel actuel. Pour plus d’informations, consultez [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
 -   Utilisez des noms de schémas lorsque vous créez ou référencez des objets de base de données dans la procédure. Il faut moins de temps au [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour résoudre les noms d’objets s’il n’a pas à effectuer des recherches dans plusieurs schémas. Ceci évite également les problèmes d’autorisation et d’accès causés par le schéma par défaut d’un utilisateur qui est affecté lors de la création d’objets sans spécification du schéma.  
   
@@ -489,7 +489,7 @@ GO
   
 ## <a name="Examples"></a> Exemples  
   
-|Catégorie|Éléments syntaxiques proposés|  
+|Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
 |[Syntaxe de base](#BasicSyntax)|CREATE PROCEDURE|  
 |[Passage de paramètres](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • type de paramètre table <br> &nbsp;&nbsp; • CURSOR VARYING|  
@@ -502,7 +502,7 @@ GO
 ###  <a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de l'instruction CREATE PROCEDURE en utilisant la syntaxe minimale requise.  
   
-#### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. Création d'une procédure Transact-SQL simple  
+#### <a name="a-creating-a-simple-transact-sql-procedure"></a>R. Création d'une procédure Transact-SQL simple  
  L'exemple suivant crée une procédure stockée qui retourne tous les employés (prénom et nom), leur poste et le nom de leur service à partir d'une vue de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Cette procédure n'utilise aucun paramètre. L'exemple illustre ensuite trois méthodes permettant d'exécuter la procédure.  
   
 ```sql  
@@ -658,7 +658,7 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- Exécutez `uspGetList` afin de retourner la liste des produits (vélos) provenant de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] et coûtant moins de `$700`. Les paramètres `OUTPUT` `@Cost` et `@ComparePrices` sont utilisés en conjonction avec un langage de contrôle de flux afin de retourner un message dans la fenêtre **Messages**.  
+ Exécutez `uspGetList` afin de retourner la liste des produits (vélos) provenant de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] et coûtant moins de `$700`. Les paramètres `OUTPUT``@Cost` et `@ComparePrices` sont utilisés en conjonction avec un langage de contrôle de flux afin de retourner un message dans la fenêtre **Messages**.  
   
 > [!NOTE]  
 >  La variable OUTPUT doit être définie lors de la création de la procédure et de l'utilisation de la variable. Le nom du paramètre et le nom de la variable ne doivent pas nécessairement correspondre, contrairement au type de données et à la position du paramètre (sauf si vous utilisez `@ListPrice` = *variable*).  

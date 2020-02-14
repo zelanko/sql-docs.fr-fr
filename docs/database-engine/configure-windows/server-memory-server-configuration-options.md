@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028738"
 ---
 # <a name="server-memory-configuration-options"></a>Options de configuration de la mémoire du serveur
@@ -89,7 +89,7 @@ Cette option n’affecte pas la [gestion de la mémoire dynamique](../../relatio
 ### <a name="to-enable-lock-pages-in-memory"></a>Pour activer Verrouiller les pages en mémoire  
 Pour activer l’option Verrouiller les pages en mémoire :  
   
-1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans la zone **Ouvrir** , tapez **gpedit.msc**  
+1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans la zone **Ouvrir** , tapez **gpedit.msc**.  
   
      La boîte de dialogue **Stratégie de groupe** s'affiche.  
   

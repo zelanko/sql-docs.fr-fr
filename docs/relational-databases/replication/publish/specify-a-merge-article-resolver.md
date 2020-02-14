@@ -15,10 +15,10 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846569"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Spécifier un programme de résolution d'articles de fusion
@@ -32,9 +32,9 @@ ms.locfileid: "70846569"
   
     -   Programme de résolution par défaut. Le comportement du programme de résolution par défaut varie selon que l'abonnement est un abonnement client ou serveur. Pour plus d’informations sur la spécification du type d’abonnement, consultez [Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
   
-    -   Programme de résolution personnalisé que vous avez écrit. Il peut s'agir d'un gestionnaire de logique métier (écrit en code managé) ou d'un programme de résolution COM personnalisé. Pour plus d'informations, voir [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Si vous devez implémenter une logique personnalisée qui est exécutée pour chaque ligne répliquée, pas seulement pour les lignes en conflit, consultez [Implémenter un gestionnaire de logique métier pour un article de fusion](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Programme de résolution personnalisé que vous avez écrit. Il peut s'agir d'un gestionnaire de logique métier (écrit en code managé) ou d'un programme de résolution COM personnalisé. Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Si vous devez implémenter une logique personnalisée qui est exécutée pour chaque ligne répliquée, pas seulement pour les lignes en conflit, consultez [Implémenter un gestionnaire de logique métier pour un article de fusion](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Programme de résolution COM standard, inclus avec [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   Programme de résolution COM standard, fourni avec [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Pour utiliser un programme de résolution autre que le programme de résolution par défaut, vous devez le copier sur l'ordinateur exécutant l'Agent de fusion et l'inscrire (si vous utilisez un gestionnaire de logique métier, il doit être également inscrit sur le serveur de publication). L'Agent de fusion s'exécute sur :  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70846569"
  [!code-sql[HowTo#sp_changemerge_resolver](../../../relational-databases/replication/codesnippet/tsql/specify-a-merge-article-_2.sql)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Détection et résolution des conflits de réplication de fusion avancée](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Implémenter un gestionnaire de logique métier pour un article de fusion](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a06374e2803a5e482e6d5a7a665756e38cb7f2f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292447"
 ---
 # <a name="hdfs-file-source"></a>HDFS File Source
@@ -37,7 +37,7 @@ ms.locfileid: "71292447"
 |-----------|-----------------|  
 |**Connexion Hadoop**|Spécifiez un gestionnaire de connexions Hadoop existant ou créez-en un. Ce gestionnaire de connexions indique où se trouvent les fichiers HDFS.|  
 |**Chemin d'accès au fichier**|Spécifiez le nom du fichier HDFS.|  
-|**Format du fichier**|Spécifiez le format du fichier HDFS. Les options disponibles sont Texte et Avro. (Les sources ORC ne sont pas prises en charge.)|  
+|**Format de fichier**|Spécifiez le format du fichier HDFS. Les options disponibles sont Texte et Avro. (Les sources ORC ne sont pas prises en charge.)|  
 |**Caractère séparateur de colonnes**|Si vous avez sélectionné le format Texte, spécifiez le caractère délimiteur de colonne.|  
 |**Noms de colonnes dans la première ligne de données**|Si vous avez sélectionné le format Texte, indiquez si la première ligne du fichier contient les noms de colonnes.|  
   
@@ -45,6 +45,6 @@ ms.locfileid: "71292447"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de connexions Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [HDFS File Destination](../../integration-services/data-flow/hdfs-file-destination.md)  
+ [Destination de fichier HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   

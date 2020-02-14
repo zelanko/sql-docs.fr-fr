@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295816"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Déploiement de packages hérités (SSIS)
@@ -113,10 +113,10 @@ ms.locfileid: "71295816"
 |Type|Description|  
 |----------|-----------------|  
 |Fichier de configuration XML|Un fichier XML contient les configurations. Le fichier XML peut inclure plusieurs configurations.|  
-|Variable d'environnement|Une variable d'environnement contient la configuration.|  
+|Variable d’environnement|Une variable d'environnement contient la configuration.|  
 |Entrée de Registre|Une entrée de Registre contient la configuration.|  
 |Variable de package parent|Une variable dans le package contient la configuration. Ce type de configuration est généralement utilisé pour mettre à jour les propriétés dans les packages enfants.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table|Une table d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient la configuration. La table peut inclure plusieurs configurations.|  
+|Table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Une table d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient la configuration. La table peut inclure plusieurs configurations.|  
   
 #### <a name="xml-configuration-files"></a>Fichiers de configuration XML  
  Si vous sélectionnez le type de configuration **Fichier de configuration XML** , vous pouvez créer un nouveau fichier de configuration, réutiliser un fichier existant et ajouter de nouvelles configurations, ou réutiliser un fichier existant en remplaçant son contenu.  
@@ -215,11 +215,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Une fois l'Assistant terminé, la nouvelle configuration est ajoutée à la liste des configurations dans la boîte de dialogue **Bibliothèque des configurations du package** .  
   
-> **REMARQUE :** La dernière page de l'Assistant Configuration de package, Fin de l'Assistant, répertorie les propriétés cibles dans la configuration. Si vous souhaitez mettre à jour des propriétés pendant l’exécution de packages à l’aide de l’utilitaire d’invite de commandes **dtexec**, vous pouvez générer les chaînes qui représentent les chemins d’accès aux propriétés en exécutant l’Assistant Configuration de package, puis les copier et les coller dans la fenêtre d’invite de commandes pour les utiliser avec l’option set de **dtexec**.  
+> **REMARQUE :** La dernière page de l'Assistant Configuration de package, Fin de l'Assistant, répertorie les propriétés cibles dans la configuration. Si vous souhaitez mettre à jour des propriétés pendant l’exécution de packages à l’aide de l’utilitaire d’invite de commandes **dtexec** , vous pouvez générer les chaînes qui représentent les chemins d’accès aux propriétés en exécutant l’Assistant Configuration de package, puis les copier et les coller dans la fenêtre d’invite de commandes pour les utiliser avec l’option set de **dtexec**.  
   
  Le tableau suivant décrit les colonnes dans la liste des configurations de la boîte de dialogue **Bibliothèque des configurations du package** .  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |**Nom de la configuration**|Le nom de la configuration.|  
 |**Type de configuration**|Le type de la configuration.|  
@@ -262,7 +262,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 > **REMARQUE :** Lorsque les configurations du package sont chargées dans l'ordre souhaité, le chargement est effectué du haut vers le bas de la liste affichée dans la boîte de dialogue **Bibliothèques des configurations du package** . Toutefois, au moment de l'exécution, il se peut que les configurations de package ne soient pas chargées dans l'ordre souhaité. Les configurations de package parent sont notamment chargées après les configurations d'autres types.  
   
- Les configurations de package mettent à jour les valeurs des propriétés des objets de package au moment de l'exécution. Lorsqu'un package est chargé, les valeurs des configurations remplacent les valeurs définies lors du développement du package. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge différents types de configuration. Par exemple, vous pouvez utiliser un fichier XML pouvant contenir plusieurs configurations, ou une variable d'environnement qui contient une seule configuration. Pour plus d'informations, consultez [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Les configurations de package mettent à jour les valeurs des propriétés des objets de package au moment de l'exécution. Lorsqu'un package est chargé, les valeurs des configurations remplacent les valeurs définies lors du développement du package. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge différents types de configuration. Par exemple, vous pouvez utiliser un fichier XML pouvant contenir plusieurs configurations, ou une variable d'environnement qui contient une seule configuration. Pour plus d’informations, consultez [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
 ### <a name="options"></a>Options  
  **Activer les configurations du package**  
@@ -289,7 +289,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Modifier**  
  Modifiez une configuration existante en réexécutant l'Assistant Configuration de package.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez une configuration, puis cliquez sur **Supprimer**.  
   
  **Flèches**  
@@ -309,7 +309,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Ne plus afficher cette page**  
  Option permettant d'ignorer cette page d'accueil la prochaine fois que vous ouvrez l'Assistant.  
   
- **Suivant**  
+ **Next**  
  Permet de passer à la page suivante de l’Assistant.  
   
 ### <a name="select-configuration-type-page"></a>Page Sélectionner le type de configuration  
@@ -329,7 +329,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |**Variable de package parent**|Stocke la configuration en tant que variable dans le package qui contient la tâche.  Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Type de configuration**.|  
 |**SQL Server**|Stocke la configuration dans une table de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Type de configuration**.|  
   
- **Suivant**  
+ **Next**  
  Affiche la page suivante de l'Assistant.  
   
 #### <a name="dynamic-options"></a>Options dynamiques  
@@ -390,7 +390,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Connexion**|Permet de sélectionner une connexion dans la liste ou de cliquer sur **Nouvelle** pour créer une connexion.|  
+|**Connection**|Permet de sélectionner une connexion dans la liste ou de cliquer sur **Nouvelle** pour créer une connexion.|  
 |**Table de configuration**|Permet de sélectionner une table existante ou de cliquer sur **Nouvelle** pour écrire une instruction SQL qui crée une table.|  
 |**Filtre de la configuration**|Permet de sélectionner le nom d'une configuration existante ou de taper un nouveau nom.<br /><br /> Un grand nombre de configurations SQL Server peuvent être stockées dans la même table et chacune d'entre elles peut inclure plusieurs éléments de configuration.<br /><br /> La valeur définie par l'utilisateur est stockée dans la table pour identifier les éléments de configuration qui appartiennent à une configuration particulière.|  
   
@@ -411,7 +411,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Attributs de la propriété**  
  Affiche les attributs d'une propriété.  
   
- **Suivant**  
+ **Next**  
  Permet de passer à la page suivante de l'Assistant.  
   
 ### <a name="completing-the-wizard-page"></a>Page Fin de l’Assistant  
@@ -421,7 +421,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Nom de la configuration**  
  Tapez le nom de la configuration.  
   
- **Aperçu**  
+ **Préversion**  
  Affiche les paramètres utilisés par l'Assistant pour créer la configuration.  
   
  **Terminer**  
@@ -577,7 +577,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Ne plus afficher cette page de démarrage**  
  Ignorer la page de démarrage à la prochaine exécution de l'Assistant.  
   
- **Suivant**  
+ **Next**  
  Permet de passer à la page suivante de l'Assistant.  
   
  **Terminer**  
@@ -592,16 +592,16 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **Rubriques connexes :** [Créer des configurations de package](../../integration-services/packages/create-package-configurations.md)  
   
- **Chemin d'accès**  
+ **Chemin d’accès**  
  Affiche le chemin d'accès de la propriété à configurer.  
   
  **Type**  
  Affiche le type des données de la propriété.  
   
- **Value**  
+ **Valeur**  
  Spécifiez la valeur de la configuration.  
   
- **Suivant**  
+ **Next**  
  Permet de passer à la page suivante de l'Assistant.  
   
  **Terminer**  
@@ -610,7 +610,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="confirm-installation-page"></a>Page Confirmer l'installation  
  La page **Confirmer l’installation** permet de lancer l’installation de packages, de visualiser l’état et les informations que l’Assistant utilise pour installer les fichiers du projet spécifié.  
   
- **Suivant**  
+ **Next**  
  Installe les packages et leurs dépendances et passe à la page suivante de l'Assistant une fois l'installation terminée.  
   
  **État**  
@@ -632,7 +632,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Valider les packages après l'installation**  
  Indique si les packages doivent être validés après installation.  
   
- **Suivant**  
+ **Next**  
  Permet de passer à la page suivante de l'Assistant.  
   
  **Terminer**  
@@ -641,20 +641,20 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="packages-validation-page"></a>Page Validation des packages  
  La page **Validation des packages** permet d’afficher et de suivre la progression de la validation des packages et les résultats de cette validation.  
   
- **Suivant**  
+ **Next**  
  Permet de passer à la page suivante de l'Assistant.  
   
 ### <a name="select-installation-folder-page"></a>Page Sélectionner le dossier d'installation  
  La page **Sélectionner le dossier d’installation** permet de définir le dossier du système de fichiers dans lequel les packages et leurs dépendances sont installés.  
   
 #### <a name="options"></a>Options  
- **Dossier**  
+ **Folder**  
  Définissez le chemin d'accès et le dossier de copie du package et de ses dépendances.  
   
  **Parcourir**  
  Accédez au dossier cible via la boîte de dialogue **Rechercher un dossier** .  
   
- **Suivant**  
+ **Next**  
  Permet de passer à la page suivante de l'Assistant.  
   
  **Terminer**  
@@ -670,10 +670,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Utiliser l'authentification Windows**  
  Permet d'indiquer si la méthode d'authentification Windows doit être utilisée pour ouvrir une session sur le serveur. L'authentification Windows est recommandée pour renforcer la sécurité.  
   
- **Utiliser l'authentification SQL Server**  
+ **Utiliser l’authentification SQL Server**  
  Permet d'indiquer si la méthode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être utilisée pour ouvrir une session sur le serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Indique un nom d'utilisateur.  
   
  **Mot de passe**  
@@ -690,7 +690,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Se fier au serveur pour le chiffrement**  
  Permet d’utiliser les fonctionnalités de sécurité du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour sécuriser les packages.  
   
- **Suivant**  
+ **Next**  
  Permet de passer à la page suivante de l'Assistant.  
   
  **Terminer**  

@@ -13,10 +13,10 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297739"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : Publication d’un package SSIS sous la forme d’une vue SQL
@@ -29,7 +29,7 @@ ms.locfileid: "71297739"
 ## <a name="prerequisites"></a>Conditions préalables requises  
  Pour pouvoir effectuer cette procédure pas à pas, vous devez disposer des logiciels suivants installés sur votre ordinateur.  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou version ultérieure avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou ultérieur avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71297739"
   
     3.  Insérez deux enregistrements avec les données suivantes.  
   
-        |ID|FirstName|LastName|  
+        |id|FIRSTNAME|LASTNAME|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
         |2|Jane|Doe|  
@@ -73,7 +73,7 @@ ms.locfileid: "71297739"
   
     5.  Configurez le composant pour extraire les données de la table **Employee** dans la base de données **TestDB** . Sélectionnez **(local).TestDB** pour le **Gestionnaire de connexions OLE DB**, **Table ou vue** pour le **Mode d’accès aux données**, et **[dbo].[Employee]** pour **Nom de la table ou de la vue**.  
   
-         ![Data Streaming Destination - connexion OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Data Streaming Destination - connexion OLE DB")  
+         ![Data Streaming Destination - Connexion OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Data Streaming Destination - Connexion OLE DB")  
   
 6.  À présent, faites glisser **Data Streaming Destination** de la boîte à outils vers le flux de données. Vous trouverez ce composant dans la section Commun de la boîte à outils.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "71297739"
     > [!NOTE]  
     >  Les types de données suivants ne sont pas pris en charge : text, ntext, image, nvarchar(max), varchar(max) et varbinary(max).  
   
-## <a name="step-3-test-the-sql-view"></a>Étape 3 : Tester la vue SQL  
+## <a name="step-3-test-the-sql-view"></a>Étape 3 : Tester la vue SQL  
  Au cours de cette étape, vous allez exécuter la vue SQL créée par l’Assistant Publication de flux de données SSIS.  
   
 1.  Lancez SQL Server Management Studio.  
@@ -170,7 +170,7 @@ ms.locfileid: "71297739"
   
 4.  Vérifiez que vous voyez bien les résultats du package SSIS.  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>Étape 4 : Vérifier l’exécution du Package SSIS  
+## <a name="step-4-verify-the-ssis-package-execution"></a>Étape 4 : Vérifier l’exécution du Package SSIS  
  Au cours de cette étape, vous allez vérifier que le package SSIS s’est bien exécuté.  
   
 1.  Dans SQL Server Management Studio, développez **Catalogues Integration Services**, développez **SSISDB**, développez le **dossier** où se trouve votre projet SSIS, développez **Projets**, développez votre nœud de projet, puis développez **Packages**.  

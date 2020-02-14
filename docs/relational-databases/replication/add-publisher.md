@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768853"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286891"
 ---
 # <a name="add-publisher"></a>Ajouter un serveur de publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68768853"
   
 ## <a name="options"></a>Options  
  **Ajouter**  
- Cliquez pour sélectionner un type de serveur de publication à ajouter, afin d'ouvrir la boîte de dialogue **Se connecter au serveur** . Les options sont :  
+ Cliquez pour sélectionner un type de serveur de publication à ajouter, afin d'ouvrir la boîte de dialogue **Se connecter au serveur** . Les options sont :  
   
 -   **Ajouter un serveur de publication SQL Server...**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68768853"
   
 -   **Ajouter un serveur de publication Oracle...**  
   
-     Connectez-vous au serveur de distribution [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associé au serveur de publication Oracle à l'aide de la boîte de dialogue **Se connecter au serveur** .  
+     Connectez-vous au serveur de distribution [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associé au serveur de publication Oracle à l’aide de la boîte de dialogue **Se connecter au serveur**.  
   
 -   **Spécifier un serveur de distribution et ajouter ses serveurs de publication…**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68768853"
 > [!NOTE]  
 >  Le serveur de distribution et le serveur de publication sont généralement exécutés sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais le serveur de distribution peut être exécuté sur une autre instance (cette configuration s'appelle un serveur de distribution distant).  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un serveur de publication dans la grille située dans la partie supérieure de la boîte de dialogue et cliquez sur **Supprimer** pour supprimer le serveur de publication de la liste des serveurs de publication à ajouter.  
   
 > [!NOTE]  

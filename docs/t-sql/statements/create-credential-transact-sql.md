@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 35db04fee2cc8d17034414bce9c994db501d5c02
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 45c76487f9165da37d0c5383826b00e85ddf27df
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680890"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286499"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -40,7 +40,7 @@ Crée des informations d’identification au niveau du serveur. Les informations
 > [!NOTE]
 > Pour créer les informations d’identification au niveau de la base de données, utilisez [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Utilisez des informations d’identification au niveau du serveur quand vous avez besoin d’utiliser les mêmes informations d’identification pour plusieurs bases de données sur le serveur. Utilisez des informations d’identification délimitées à la base de données afin d’accroître la portabilité de la base de données. Quand une base de données est déplacée vers un nouveau serveur, les informations d’identification délimitées à la base de données le sont également. Utilisez des informations d’identification délimitées à la base de données sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,7 +87,7 @@ Nécessite l’autorisation **ALTER ANY CREDENTIAL**.
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-basic-example"></a>A. Exemple de base
+### <a name="a-basic-example"></a>R. Exemple de base
 
 L'exemple ci-dessous crée des informations d'identification nommées `AlterEgo`. Les informations d'identification contiennent l'utilisateur Windows `Mary5` et un mot de passe.
 
@@ -99,7 +99,7 @@ GO
 
 ### <a name="b-creating-a-credential-for-ekm"></a>B. Création d'informations d'identification pour EKM
 
-L’exemple suivant utilise un compte précédemment créé, `User1OnEKM`, sur un module EKM au moyen des outils d’administration EKM, avec un type de compte de base et un mot de passe. Le compte **sysadmin** sur le serveur crée des informations d’identification utilisées pour se connecter au compte EKM, et les attribue au compte `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :
+L’exemple suivant utilise un compte précédemment créé, `User1OnEKM`, sur un module EKM au moyen des outils d’administration EKM, avec un type de compte de base et un mot de passe. Le compte **sysadmin** sur le serveur crée des informations d’identification utilisées pour se connecter au compte EKM, et les attribue au compte `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
@@ -108,13 +108,8 @@ CREATE CREDENTIAL CredentialForEKM
 GO
 
 /* Modify the login to assign the cryptographic provider credential */
-ALTER LOGIN Login1
+ALTER LOGIN User1
 ADD CREDENTIAL CredentialForEKM;
-
-/* Modify the login to assign a non cryptographic provider credential */
-ALTER LOGIN Login1
-WITH CREDENTIAL = AlterEgo;
-GO
 ```
 
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Création d'informations d'identification pour EKM à l'aide d’Azure Key Vault

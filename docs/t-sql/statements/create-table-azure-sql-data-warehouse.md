@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729865"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -112,7 +112,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  Spécifie le classement de l’expression. Le classement doit correspondre à l’un des classements Windows pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des classements Windows pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Nom de classement Windows (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
   
  `NULL` | `NOT NULL`  
- Indique si les valeurs `NULL` sont autorisées dans la colonne. La valeur par défaut est `NULL`.  
+ Indique si les valeurs `NULL` sont autorisées dans la colonne. Par défaut, il s’agit de `NULL`.  
   
  [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
  Spécifie la valeur de colonne par défaut.  
@@ -187,7 +187,7 @@ Pour obtenir un tableau des conversions des types de données, consultez la sect
  `datetime2` [ ( *n* ) ]  
 Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions de seconde. La valeur par défaut pour *n* est `7`.  
   
-|Valeur *n*|Précision|Échelle|  
+|Valeur *n*|Precision|Scale|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -213,14 +213,14 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
  `float` [ ( *n* ) ]  
  Type de données numériques approximatives à utiliser avec des données numériques à virgule flottante. Les données à virgule flottante sont approximatives, ce qui signifie que certaines valeurs de ce type de données ne peuvent pas être représentées de manière précise. *n* spécifie le nombre de bits utilisés pour stocker la mantisse de `float` en notation scientifique. *n* détermine la précision et la taille du stockage. Si *n* est spécifié, sa valeur doit être comprise entre `1` et `53`. La valeur par défaut de *n* est `53`.  
   
-| Valeur *n* | Précision | Taille de stockage |  
+| Valeur *n* | Precision | Taille de stockage |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 chiffres  | 4 octets      |  
 | 25-53  | 15 chiffres | 8 octets      |  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] considère *n* comme l’une des deux valeurs possibles. Si `1`<= *n* <= `24`, *n* est considéré comme égal à `24`. Si `25` <= *n* <= `53`, *n* est considéré comme égal à `53`.  
   
- Le type de données [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` est conforme à la norme ISO pour toutes les valeurs de *n* entre `1` et `53`. Le synonyme de double précision est `float(53)`.  
+ Le type de données [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` est conforme à la norme ISO pour toutes les valeurs de *n* entre `1` et `53`. Le synonyme de double précision est `float(53)`.  
   
  `real` [ ( *n* ) ]  
  La définition de real est identique à celle de float. Le synonyme ISO de `real` est `float(24)`.  
@@ -234,7 +234,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
  *scale*  
  Nombre maximal de chiffres décimaux à droite de la virgule. La valeur de *scale* doit être comprise entre `0` et la valeur de *precision*. Vous ne pouvez spécifier *scale* que si *precision* est spécifié. La valeur par défaut de scale est `0` ; par conséquent, `0` <= *scale* <= *precision*. Les tailles de stockage maximales varient en fonction de la précision.  
   
-| Précision | Taille de stockage (octets)  |  
+| Precision | Taille de stockage (octets)  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10-19      |             9 |  
@@ -317,10 +317,10 @@ Une table columnstore est une table stockée colonne par colonne. L’index colu
 
 Pour changer une table rowstore en table columnstore, supprimez tous les index existants de la table et créez un index cluster columnstore. Pour obtenir un exemple, consultez [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
-Pour plus d’informations, consultez ces articles :
+Pour plus d’informations, voir les articles suivants :
 - [Synthèse des fonctionnalités des index columnstore en fonction des versions](https://msdn.microsoft.com/library/dn934994/)
 - [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
-- [Guide des index columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
+- [Description des index columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
@@ -349,7 +349,7 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
 -   Si plusieurs tables temporaires locales sont utilisées dans un traitement, chacune doit avoir un nom unique. Si plusieurs sessions exécutent le même traitement et créent la même table temporaire locale, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ajoute en interne un suffixe numérique au nom de table temporaire locale de sorte que chaque table temporaire locale conserve un nom unique.  
     
 <a name="LockingBehavior"></a>   
-## <a name="locking-behavior"></a>Comportement de verrouillage  
+## <a name="locking-behavior"></a>Comportement du verrouillage  
  Applique un verrou exclusif sur la table. Applique un verrou partagé sur les objets DATABASE, SCHEMA et SCHEMARESOLUTION.  
  
 

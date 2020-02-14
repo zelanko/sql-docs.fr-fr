@@ -23,10 +23,10 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f865a560cb530060cf8f2f0a2f0a6208fcc924ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298592"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
@@ -112,7 +112,7 @@ ms.locfileid: "71298592"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Délimité|Les colonnes sont séparées par les séparateurs spécifiés à la page **Colonnes** .|  
+|Delimited|Les colonnes sont séparées par les séparateurs spécifiés à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
 |En drapeau à droite|Les fichiers en drapeau à droite sont des fichiers dans lesquels chaque colonne a une largeur fixe, à l'exception de la dernière colonne. Un séparateur de lignes s'applique.|  
   
@@ -254,9 +254,9 @@ ms.locfileid: "71298592"
 |--------------|-----------------|  
 |**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Les fichiers en drapeau à droite sont des fichiers dans lesquels chaque colonne a une largeur fixe, à l'exception de la dernière colonne. Un séparateur de lignes s'applique.|  
 |**OutputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur correspond à un nombre de caractères. Dans la tâche de flux de données, cette valeur permet de définir la largeur de la colonne de sortie pour les fichiers plats sources. Dans le modèle objet, le nom de la propriété est MaximumWidth.|  
-|**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : Les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont PAS qualifiées.|  
-|**Name**|Précisez un nom de colonne descriptif. Si vous n'entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|  
+|**Nom**|Précisez un nom de colonne descriptif. Si vous n'entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|  
 |**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}** . Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}** . Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}** . Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}** . Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}** . Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}** . Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}** . Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}** . Les colonnes sont séparées par une barre verticale.|  
 |**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  

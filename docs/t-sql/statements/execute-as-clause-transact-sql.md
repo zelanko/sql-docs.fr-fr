@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155060"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clause EXECUTE AS (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "70155060"
   
  En spécifiant le contexte dans lequel le module s'exécute, vous contrôlez le compte d'utilisateur que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise pour valider les autorisations sur des objets référencés par le module. Cela améliore la souplesse et offre une meilleure gestion des autorisations sur la chaîne d'objets qui existe entre les modules définis par l'utilisateur et les objets qu'ils référencent. Les autorisations doivent être accordées aux utilisateurs uniquement sur le module lui-même, sans qu'il soit nécessaire de leur accorder des autorisations explicites sur les objets référencés. Seul l'utilisateur du module en cours d'exécution doit avoir les autorisations sur les objets auxquels le module accède.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,7 +100,7 @@ DDL Triggers with Database Scope
   
  L’ID utilisateur du contexte d’exécution est stocké dans les métadonnées. Vous pouvez l’afficher dans la colonne **execute_as_principal_id** de la vue de catalogue **sys.sql_modules** ou **sys.assembly_modules**.  
   
- **’** *login_name* **’**  
+ **'** *login_name* **'**  
  Spécifie que les instructions à l’intérieur du module sont exécutées dans le contexte de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée dans *login_name*. Les autorisations sur n’importe quel objet du module sont vérifiées pour l’utilisateur *login_name*. Vous pouvez spécifier *login_name* uniquement pour des déclencheurs DDL sur l’étendue du serveur ou des déclencheurs de connexion.  
   
  *login_name* ne peut pas être un groupe, un rôle, un certificat, une clé ou un compte intégré tel que NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT AUTHORITY\LocalSystem.  

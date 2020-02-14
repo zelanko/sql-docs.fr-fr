@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661216"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuration de la visibilité des métadonnées
@@ -45,7 +45,7 @@ GO
   
 |||  
 |-|-|  
-|Affichages catalogue|Procédures stockées du [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help**|  
+|Affichages catalogue|Procédures stockées **sp_help** du [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |Métadonnées exposant des fonctions intégrées|Affichages des schémas d'information|  
 |vues de compatibilité ;|Propriétés étendues|  
   
@@ -65,7 +65,7 @@ GO
   
 -   Les fonctions intégrées émettant des métadonnées telles que OBJECTPROPERTYEX peuvent renvoyer une valeur NULL.  
   
--   Les procédures stockées [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** peuvent retourner uniquement un sous-ensemble de lignes ou la valeur NULL.  
+-   Les procédures stockées **sp_help** du [!INCLUDE[ssDE](../../includes/ssde-md.md)]peuvent uniquement retourner un sous-ensemble de lignes ou la valeur NULL.  
   
  Les modules SQL, tels que les procédures stockées et les déclencheurs, fonctionnent dans le contexte de sécurité de l'appelant et, par conséquent, auront un accès limité aux métadonnées. Dans le code suivant par exemple, lorsque la procédure stockée tente d'accéder aux métadonnées de la table `myTable` pour laquelle l'appelant n'a aucune autorisation, un jeu de résultats vide est renvoyé. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une ligne est renvoyée.  
   
@@ -106,7 +106,7 @@ GO
   
  Il est théoriquement possible d'imposer l'émission de métadonnées dans les messages d'erreur en manipulant l'ordre d'évaluation de prédicat dans les requêtes. L’éventualité d’ *attaques de type essai et erreur* de cette sorte n’est pas propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle provient implicitement des transformations associatives et commutatives autorisées en algèbre relationnel. Vous pouvez réduire ce risque en limitant les informations retournées dans les messages d'erreur. Pour restreindre encore la visibilité des métadonnées dans ce sens, vous pouvez démarrer le serveur avec l'indicateur de trace 3625. Cet indicateur de trace limite la quantité d'informations affichées dans les messages d'erreur. À son tour, cela contribue à éviter les divulgations forcées. En échange, les messages d'erreur seront succincts et plus difficiles à utiliser à des fins de débogage. Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md) et [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
- Les métadonnées suivantes ne peuvent pas être violées :  
+ Les métadonnées suivantes ne peuvent pas être violées :  
   
 -   Valeur stockée dans la colonne **provider_string** de **sys.servers**. Sans autorisation ALTER ANY LINKED SERVER, un utilisateur verra une valeur NULL dans cette colonne.  
   

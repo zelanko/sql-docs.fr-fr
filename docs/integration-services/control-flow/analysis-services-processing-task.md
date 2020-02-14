@@ -18,10 +18,10 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298466"
 ---
 # <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "71298466"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une série de tâches qui effectuent des opérations de Business Intelligence, telles que l’exécution d’instructions DDL (Data Definition Language) et de requêtes de prédiction d’exploration de données. Pour plus d'informations sur les tâches Business Intelligence associées, cliquez sur l'une des rubriques suivantes :  
   
--   [Tâche DDL d'exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tâche DDL d’exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
 -   [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71298466"
   
  Cette tâche est fréquemment utilisée avec une tâche d'insertion en bloc qui charge des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou avec une tâche de flux qui met en œuvre un flux chargeant des données dans une table. Par exemple, la tâche de flux peut avoir un flux qui extrait des données d’une base de données OLTP (Online Transaction Processing) et les charge dans une table de faits d’un entrepôt de données, à la suite de quoi la tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est appelée pour traiter le cube basé sur l’entrepôt de données.  
   
- La tâche de traitement d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour se connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d'informations, consultez [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
+ La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour se connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d'informations, consultez [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
   
@@ -79,7 +79,7 @@ ms.locfileid: "71298466"
 -   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configuration par programmation de la tâche de traitement Analysis Services  
- Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition programmitque de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
@@ -87,7 +87,7 @@ ms.locfileid: "71298466"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de traitement d’Analysis Services** pour nommer et décrire la tâche de traitement d’Analysis Services.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Donnez un nom unique à la tâche de traitement Analysis Services. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ ms.locfileid: "71298466"
  **Liste d'objets**  
  |Propriété|Description|  
 |--------------|-----------------|  
-|**Nom de l'objet**|Affiche la liste des noms d'objets définis.|  
+|**Nom de l’objet**|Affiche la liste des noms d'objets définis.|  
 |**Type**|Affiche la liste des types des objets définis.|  
 |**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes :** [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Paramètres**|Affiche la liste des paramètres de traitement des objets définis.|  
@@ -129,7 +129,7 @@ ms.locfileid: "71298466"
  **Ajouter**  
  Ajoutez un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à la liste.  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un objet et cliquez sur **Supprimer**.  
   
  **Analyse d'impact**  

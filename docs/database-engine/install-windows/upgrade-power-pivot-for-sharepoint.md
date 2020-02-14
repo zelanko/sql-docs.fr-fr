@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892583"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Mettre à niveau Power Pivot pour SharePoint
@@ -30,7 +30,7 @@ ms.locfileid: "68892583"
   
  **Dans cet article :**  
   
- [Conditions préalables](#bkmk_prereq)  
+ [Composants requis](#bkmk_prereq)  
   
  [Mettre à niveau une batterie de serveurs SharePoint 2013 existante](#bkmk_uprgade_sharepoint2013)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68892583"
 -   Le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) s’installe côte à côte avec les versions antérieures. Par exemple le complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé dans le dossier `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`.  
   
 ##  <a name="bkmk_prereq"></a> Conditions préalables  
- **Autorisations**  
+ **autorisations**  
   
 -   Vous devez être administrateur de la batterie de serveurs pour mettre à niveau une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Vous devez être administrateur local pour exécuter le programme d'installation de SQL Server.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68892583"
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Mettre à niveau une batterie de serveurs SharePoint 2013 existante  
  Pour mettre à niveau [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déployé dans SharePoint 2013, procédez comme suit :  
   
- ![PowerPivot pour la mise à niveau de SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "PowerPivot pour la mise à niveau de SharePoint 2013")  
+ ![Mettre à niveau PowerPivot pour SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "Mettre à niveau PowerPivot pour SharePoint 2013")  
   
 1.  Exécutez le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur un ou plusieurs serveurs principaux [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint. Si le serveur héberge plusieurs instances d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mettez au moins à niveau l'instance **POWERPIVOT** . Voici un récapitulatif des étapes de l'Assistant Installation relatives à la mise à niveau de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
@@ -94,11 +94,11 @@ ms.locfileid: "68892583"
   
 3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, consultez [Télécharger Microsoft SQL Server 2014 PowerPivot pour Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) et [Installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-4.  **Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013** sur un des serveurs d’applications SharePoint pour configurer la batterie de serveurs SharePoint avec les fichiers de solution mis à jour installés par le complément. Vous ne pouvez pas utiliser l'Administration centrale SharePoint pour cette étape. Pour plus d'informations, consultez les documents suivants :  
+4.  **Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013** sur un des serveurs d’applications SharePoint pour configurer la batterie de serveurs SharePoint avec les fichiers de solution mis à jour installés par le complément. Vous ne pouvez pas utiliser l'Administration centrale SharePoint pour cette étape. Pour plus d’informations, consultez les rubriques suivantes :  
   
     1.  Dans la page de démarrage de Windows, tapez **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , puis dans les résultats de recherche, cliquez sur **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013**. Notez que la recherche peut retourner les deux versions de l'outil de configuration.  
   
-         ![Deux outils de configuration de PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "Deux outils de configuration de PowerPivot")  
+         ![deux outils de configuration PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "deux outils de configuration PowerPivot")  
   
          ou  
   
@@ -125,9 +125,9 @@ ms.locfileid: "68892583"
   
     8.  Cliquez sur **OK** pour continuer.  
   
-    9. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les requêtes de connexion concernant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] **échouent** avec des erreurs comme : « **Impossible d’actualiser les données** » ou « **Une erreur s’est produite lors de l’exécution de l’action demandée. Réessayez**. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
+    9. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les requêtes de connexion concernant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**échouent** avec des erreurs comme : « **Impossible d’actualiser les données** » ou « **Une erreur s’est produite lors de l’exécution de l’action demandée. Réessayez**. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
   
-     Pour plus d'informations, consultez les documents suivants :  
+     Pour plus d’informations, consultez les rubriques suivantes :  
   
     -   [Outils de configuration de Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68892583"
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Mettre à niveau une batterie de serveurs SharePoint 2010 existante  
  Pour mettre à niveau [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déployé dans SharePoint 2010, procédez comme suit :  
   
- ![Mise à niveau de PowerPivot pour SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "Mise à niveau de PowerPivot pour SharePoint 2010")  
+ ![Mettre à niveau PowerPivot pour SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "Mettre à niveau PowerPivot pour SharePoint 2010")  
   
 1.  Téléchargez le [Service Pack 2 pour Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) et appliquez-le sur tous les serveurs de la batterie. Vérifiez que l'installation de SharePoint SP2 a réussi. Dans Administration centrale, dans la page Mise à niveau et migration, ouvrez la page Vérifier l'état d’installation du correctif et du produit pour afficher les messages d'état liés au SP2.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68892583"
   
 9. Vérifiez que la mise à niveau a réussi en effectuant les étapes postérieures à la mise à niveau et en vérifiant la version des serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie. Pour plus d’informations, consultez [Tâches de vérification consécutives à la mise à niveau](#verify) dans cet article et la section suivante.  
   
-10. **Dépannage des erreurs**  
+10. **Résolution des erreurs**  
   
      Vous pouvez afficher les informations d'erreur dans le volet Paramètres pour chaque action.  
   
@@ -258,7 +258,7 @@ Get-PowerPivotSystemService
   
 2.  Cliquez avec le bouton droit sur `msmdsrv.exe`, puis sélectionnez **Propriétés**.  
   
-3.  Cliquez sur **Détails**.  
+3.  Cliquez sur **Details**.  
   
 4.  La version du fichier [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] doit être 13.00.\<build majeur>.\<build mineur>.  
   

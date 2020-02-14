@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009452"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761926"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Index columnstore - Entrepôt de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
 ```  
   
 ### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Exemple : Utiliser un index non cluster pour appliquer une contrainte de clé primaire sur une table columnstore  
- Par défaut, une table columnstore n’autorise pas une contrainte de clé primaire. Maintenant, vous pouvez utiliser un index non cluster sur une table columnstore pour appliquer une contrainte de clé primaire. Une clé primaire est équivalente à une contrainte UNIQUE sur une colonne non NULL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente une contrainte UNIQUE comme index non-cluster. En combinant ces faits, l’exemple suivant définit une contrainte UNIQUE sur la valeur accountkey de colonne non NULL. Il en résulte un index non cluster qui applique une contrainte de clé primaire comme une contrainte UNIQUE sur une colonne non NULL.  
+ Par défaut, une table columnstore n’autorise pas une contrainte de clé primaire cluster. Maintenant, vous pouvez utiliser un index non cluster sur une table columnstore pour appliquer une contrainte de clé primaire. Une clé primaire est équivalente à une contrainte UNIQUE sur une colonne non NULL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente une contrainte UNIQUE comme index non-cluster. En combinant ces faits, l’exemple suivant définit une contrainte UNIQUE sur la valeur accountkey de colonne non NULL. Il en résulte un index non cluster qui applique une contrainte de clé primaire comme une contrainte UNIQUE sur une colonne non NULL.  
   
  Ensuite, la table est convertie en un index columnstore en cluster. Lors de la conversion, l’index non cluster est conservé. Il en résulte un index columnstore en cluster avec un index non cluster qui applique une contrainte de clé primaire. Étant donné que toute mise à jour ou insertion dans la table columnstore affectera également l’index non cluster, toutes les opérations qui violent la contrainte unique et la valeur non NULL entraîneront l’échec de toute l’opération.  
   

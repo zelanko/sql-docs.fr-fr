@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085762"
 ---
 # <a name="column-properties-general-page"></a>Propriétés de la colonne (page Général)
@@ -28,7 +28,7 @@ ms.locfileid: "68085762"
  Les informations de cette page sont en lecture seule. Pour modifier la colonne, fermez la boîte de dialogue **Propriétés de la colonne** , développez la table et les colonnes dans l’Explorateur d’objets, cliquez avec le bouton droit sur la colonne, puis cliquez sur **Conception**.  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Nom de la colonne.  
   
  **Type de données**  
@@ -49,10 +49,10 @@ ms.locfileid: "68085762"
  **Texte calculé**  
  Indique l'instruction utilisée pour calculer le texte de la colonne. Pour plus d’informations, consultez [Spécifier les colonnes calculées dans une table](../../relational-databases/tables/specify-computed-columns-in-a-table.md).  
   
- **Identity**  
+ **Identité**  
  Indique si la colonne est la colonne identité de la table. Les valeurs possibles sont **True** et **False**.  
   
- **Valeur initiale de la propriété identity**  
+ **Valeur initiale de la propriété Identity**  
  Indique la valeur de ligne initiale d'une colonne d'identité.  
   
  **Incrément d'identité**  

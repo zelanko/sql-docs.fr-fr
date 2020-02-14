@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68300440"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantanés de base de données (SQL Server)
@@ -109,7 +109,7 @@ Une capture instantanée de base de données est une vue statique en lecture seu
 ##  <a name="LimitationsRequirements"></a> Conditions préalables et limitations relatives aux instantanés de base de données  
  **Dans cette section :**  
   
--   [Conditions préalables](#Prerequisites)  
+-   [Composants requis](#Prerequisites)  
   
 -   [Limitations relatives à la base de données source](#LimitsOnSourceDb)  
   
@@ -197,7 +197,7 @@ Une capture instantanée de base de données est une vue statique en lecture seu
     > [!NOTE]  
     >  Une instruction SELECT exécutée sur un instantané de base de données ne doit pas spécifier de colonne FILESTREAM ; autrement, le message d'erreur suivant est retourné : `Could not continue scan with NOLOCK due to data movement.`  
   
--   Quand les statistiques sur une capture instantanée en lecture seule sont absentes ou obsolètes, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée et gère les statistiques temporaires dans tempdb. Pour plus d'informations, consultez [Statistics](../../relational-databases/statistics/statistics.md).  
+-   Quand les statistiques sur une capture instantanée en lecture seule sont absentes ou obsolètes, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée et gère les statistiques temporaires dans tempdb. Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
 ###  <a name="DiskSpace"></a> Espace disque nécessaire  
  Les instantanés de base de données consomment une grande quantité d'espace disque. Si un instantané de base de données ne dispose plus de suffisamment d'espace disque, il est signalé comme suspect et doit être supprimé. (Toutefois, la base de données source n'est pas affectée ; les opérations sur cette base de données se poursuivent normalement.) Par rapport à une copie complète d'une base de données, les instantanés utilisent beaucoup moins d'espace disque. Un instantané nécessite uniquement un espace de stockage adapté aux pages qui changent au cours de sa durée de vie. En général, les instantanés sont conservés pour une courte durée ; par conséquent, leur taille n'est pas une préoccupation importante.  
@@ -234,7 +234,7 @@ Une capture instantanée de base de données est une vue statique en lecture seu
   
 -   [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
   
--   [Rétablir une base de données dans l'état d'un instantané de base de données](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
+-   [Rétablir une base de données dans l’état d’un instantané de base de données](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   

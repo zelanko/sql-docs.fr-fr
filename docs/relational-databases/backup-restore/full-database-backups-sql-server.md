@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68890067"
 ---
 # <a name="full-database-backups-sql-server"></a>Sauvegardes complètes de bases de données (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "68890067"
 ##  <a name="DbBuRMs"></a> Sauvegardes de base de données en mode de récupération simple  
  En mode de récupération simple, après chaque sauvegarde, la base de données est exposée à des pertes de travaux potentielles en cas de sinistre. Le risque de perte de travail augmente après chaque mise à jour et ce, jusqu'à la sauvegarde suivante, après laquelle le risque de perte de travail redevient nul et un nouveau cycle de risque de perte de travail commence. Le risque de perte de travail augmente au fil du temps entre les sauvegardes. La figure ci-dessous montre le risque de perte de travail pour une stratégie de sauvegarde qui utilise uniquement des sauvegardes complètes de base de données.  
   
- ![Affiche le risque de perte du travail entre les sauvegardes de base de données](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Affiche le risque de perte du travail entre les sauvegardes de base de données")  
+ ![Affiche le risque de perte du travail entre les sauvegardes de base de données](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Montre le risque de perte du travail entre les sauvegardes de base de données")  
   
 ### <a name="example--includetsqlincludestsql-mdmd"></a>Exemple ( [!INCLUDE[tsql](../../includes/tsql-md.md)])  
  L'exemple ci-dessous illustre la création d'une sauvegarde complète de base de données à l'aide de WITH FORMAT afin de remplacer les sauvegardes existantes et créer un jeu de supports.  
@@ -65,7 +65,7 @@ GO
 ##  <a name="DbBuRMf"></a> Sauvegardes de base de données en mode de récupération complète  
  Pour les bases de données qui font appel au mode de récupération complète et au mode de récupération utilisant les journaux de transactions, les sauvegardes de base de données sont nécessaires, mais pas suffisantes. Les sauvegardes des journaux de transactions sont également requises. La figure ci-dessous montre la stratégie de sauvegarde la moins complexe possible en mode de restauration complète.  
   
- ![Séries de sauvegardes complètes de base de données et de sauvegardes de fichier journal](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Séries de sauvegardes complètes de base de données et de sauvegardes de fichier journal")  
+ ![Séries de sauvegardes complètes de base de données et de sauvegardes de journal](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Séries de sauvegardes complètes de base de données et de sauvegardes de journal")  
   
  Pour plus d’informations sur la façon de créer des sauvegardes de journaux, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   

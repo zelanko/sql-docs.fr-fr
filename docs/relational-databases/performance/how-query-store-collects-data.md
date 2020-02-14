@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974362"
 ---
 # <a name="how-query-store-collects-data"></a>Comment le magasin de requêtes collecte les données
@@ -25,10 +25,10 @@ ms.locfileid: "71974362"
 
 Le magasin de requêtes SQL Server fonctionne de manière similaire à un enregistreur de données de vol et collecte constamment des informations de compilation et d’exécution relatives aux requêtes et aux plans. Les données relatives aux requêtes sont conservées dans les tables internes et présentées aux utilisateurs via différentes vues.
   
-## <a name="views"></a>Vues 
+## <a name="views"></a>Les vues 
  Le diagramme suivant montre les affichages du magasin de requêtes et leurs relations logiques avec les informations de compilation présentées sous la forme d'entités bleues :
   
- ![Vues des processus du magasin de requêtes](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
+ ![Vues des processus du Magasin des requêtes](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Description des vues**  
   
 |Affichage|Description|  
@@ -55,17 +55,17 @@ Le magasin de requêtes SQL Server fonctionne de manière similaire à un enregi
   
  Le diagramme suivant illustre les points d’intégration expliqués dans les étapes précédentes :
   
- ![Processus du magasin de requêtes](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
+ ![Processus du Magasin des requêtes](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
 ## <a name="remarks"></a>Notes
  Pour réduire la surcharge d’E/S, les nouvelles données sont capturées en mémoire. Les opérations d’écriture sont mises en file d’attente et vidées sur le disque par la suite. Les informations de requête et de plan, indiquées en tant que Magasin de plans dans le schéma ci-dessous, sont vidées avec une latence minimale. Les statistiques d’exécution, indiquées en tant que Statistiques du runtime, sont conservées en mémoire pendant une période définie avec l’option `DATA_FLUSH_INTERVAL_SECONDS` de l’instruction `SET QUERY_STORE`. Vous pouvez utiliser la boîte de dialogue [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Magasin des requêtes pour entrer une valeur pour **Intervalle de vidage des données (minutes)** , qui est convertie en secondes en interne. 
   
- ![Plan de processus du magasin de requêtes](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
+ ![Plan de processus du Magasin des requêtes](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
   
  Si le système se bloque ou qu’un arrêt se produit lors de l’utilisation de l’[indicateur de trace 7745](../../relational-databases/performance/best-practice-with-the-query-store.md#Recovery), le magasin de requêtes peut perdre les données d’exécution qui ont été collectées mais qui ne sont pas encore persistantes, jusqu’à une fenêtre de temps définie avec `DATA_FLUSH_INTERVAL_SECONDS`. Nous recommandons la valeur par défaut de 900 secondes (15 minutes) en tant qu’équilibre entre les performances de capture de requête et la disponibilité des données.
  
  > [!IMPORTANT] 
- > La limite **Taille maximale (Mo)** n’est pas strictement appliquée. La taille de stockage est vérifiée uniquement lorsque le magasin de requêtes écrit des données sur le disque. Cet intervalle est défini par la valeur **Intervalle de vidage des données**. Si le magasin des requêtes a enfreint la limite de taille maximale entre les vérifications de taille de stockage, il passe en mode lecture seule. Si l’option **Mode de nettoyage basé sur la taille** est activée, le mécanisme de nettoyage permettant d’appliquer la limite de taille maximale est également déclenché.
+ > La limite **Taille maximale (Mo)** n’est pas strictement appliquée. La taille de stockage est vérifiée seulement quand le Magasin des requêtes écrit des données sur le disque. Cet intervalle est défini par la valeur **Intervalle de vidage des données**. Si le Magasin des requêtes a enfreint la limite de taille maximale entre les vérifications de taille de stockage, il passe en mode lecture seule. Si l’option **Mode de nettoyage basé sur la taille** est activée, le mécanisme de nettoyage permettant d’appliquer la limite de taille maximale est également déclenché.
  
  > [!NOTE]
  > Si le système est soumis à une sollicitation élevée de la mémoire, les statistiques d’exécution peuvent être vidées sur le disque plus tôt que ce qui est défini avec `DATA_FLUSH_INTERVAL_SECONDS`.
@@ -74,7 +74,7 @@ Le magasin de requêtes SQL Server fonctionne de manière similaire à un enregi
  
  Si une session est arrêtée ou que l’application cliente redémarre ou se plante, les statistiques de requêtes ne seront pas enregistrées. 
   
- ![Informations sur le plan de processus du magasin de requêtes](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
+ ![Informations sur le plan de processus du Magasin des requêtes](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
 ## <a name="see-also"></a>Voir aussi
  [Surveillance des performances à l’aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  

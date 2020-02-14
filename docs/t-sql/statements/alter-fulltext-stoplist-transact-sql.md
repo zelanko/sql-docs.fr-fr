@@ -22,10 +22,10 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067555"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68067555"
 
   Insère ou supprime un mot vide dans la liste de mots vides de texte intégral par défaut de la base de données active.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,7 +66,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 |Format|Description|  
 |------------|-----------------|  
 |String|*language_term* correspond à la valeur de colonne **alias** dans la vue de compatibilité [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La chaîne doit être placée entre guillemets simples, comme dans **'***language_term***'** .|  
-|Entier|*language_term* est l’identificateur LCID de la langue.|  
+|Integer|*language_term* est l’identificateur LCID de la langue.|  
 |Valeur hexadécimale|*language_term* est 0x suivi de la valeur hexadécimale de l’identificateur LCID. La valeur hexadécimale ne doit pas dépasser huit caractères, y compris les zéros non significatifs. Si la valeur est au format de jeu de caractères codés sur deux octets (DBCS), SQL Server la convertit au format Unicode.|  
   
  ADD **'***stopword***'** LANGUAGE *language_term*  

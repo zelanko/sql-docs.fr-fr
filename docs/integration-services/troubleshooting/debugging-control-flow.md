@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295131"
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
@@ -31,15 +31,15 @@ ms.locfileid: "71295131"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes du flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes du flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge les points d’arrêt sur les conteneurs et les tâches.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] Le concepteur génère des rapports de progression au moment de l’exécution.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] - Le concepteur SSIS fournit des rapports de progression au moment de l’exécution.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] propose des fenêtres de débogage.  
   
-## <a name="breakpoints"></a>Points d'arrêt  
+## <a name="breakpoints"></a>Points d’arrêt  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] Le concepteur propose la boîte de dialogue **Définir des points d’arrêt** dans laquelle vous pouvez définir des points d’arrêt en activant des conditions d’arrêt et en spécifiant le nombre d’occurrences d’un point d’arrêt avant la suspension de l’exécution du package. Les points d'arrêt peuvent être activés au niveau du package ou au niveau du composant. Si des conditions d’arrêt sont activées au niveau de la tâche ou du conteneur, l’icône de point d’arrêt apparaît en regard de la tâche ou du conteneur sur la surface de dessin de l’onglet **Flux de contrôle** . Si les conditions d’arrêt sont activées au niveau du package, l’icône de point d’arrêt apparaît sur l’étiquette de l’onglet **Flux de contrôle** .  
   
  Lorsqu'un point d'arrêt est atteint, l'icône de point d'arrêt se transforme pour vous aider à identifier la source du point d'arrêt. Vous pouvez ajouter, supprimer et modifier des points d'arrêt au cours de l'exécution du package.  
@@ -73,14 +73,14 @@ ms.locfileid: "71295131"
   
 |Type du nombre d'accès|Description|  
 |--------------------|-----------------|  
-|Always|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
+|Toujours|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |Égal au nombre d'accès|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  
 |Supérieur ou égal au nombre d'accès|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est supérieur ou égal au nombre d'accès.|  
 |Multiple du nombre d'accès|L'exécution est suspendue lorsqu'un multiple du nombre d'accès est atteint. Par exemple, si vous définissez cette option sur 5, l'exécution est suspendue une fois toutes les cinq fois.|  
   
 #### <a name="to-set-breakpoints"></a>Pour définir des points d'arrêt  
   
--   [Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur](#debug)  
+-   [Déboguer un package en définissant des points d’arrêt sur une tâche ou un conteneur](#debug)  
   
 ## <a name="progress-reporting"></a>Rapport de progression  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] Le concepteur propose deux types de rapports de progression : les codes de couleur sur l’aire de conception de l’onglet **Flux de contrôle** et les messages de progression sous l’onglet **Progression** .  
@@ -115,7 +115,7 @@ ms.locfileid: "71295131"
 |Fenêtre|Description|  
 |------------|-----------------|  
 |Points d’arrêt|Énumère les points d'arrêt d'un package et donne accès aux options permettant d'activer ou de supprimer des points d'arrêt.|  
-|Sortie|Affiche les messages d’état relatifs aux fonctionnalités de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|Output|Affiche les messages d’état relatifs aux fonctionnalités de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Immédiat|Utilisée pour déboguer et évaluer des expressions, et imprimer des valeurs variables.|  
 
 ## <a name="debug"></a> Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur
@@ -148,15 +148,15 @@ ms.locfileid: "71295131"
  **Activé**  
  Sélectionnez cette option pour activer un point d'arrêt sur un événement.  
   
- **Condition d'arrêt**  
+ **Break Condition**  
  Affichez la liste des événements disponibles sur lesquels définir des points d'arrêt.  
   
- **Type du nombre d'accès**  
+ **Hit Count Type**  
  Spécifiez le moment où le point d'arrêt entre en vigueur.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Always**|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
+|**Toujours**|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |**Égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  
 |**Supérieur ou égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est supérieur ou égal au nombre d'accès.|  
 |**Multiple du nombre d'accès**|L'exécution est suspendue lorsqu'un multiple du nombre d'accès est atteint. Par exemple, si vous définissez cette option sur 5, l'exécution est suspendue une fois toutes les cinq fois.|  

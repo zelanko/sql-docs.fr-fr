@@ -22,10 +22,10 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981896"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981896"
 
   Crée un index de recherche en texte intégral sur une table ou une vue indexée dans une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un seul index de recherche en texte intégral est autorisé par table ou vue indexée et chaque index de recherche en texte intégral s'applique à une seule table ou vue indexée. Un index de recherche en texte intégral peut contenir jusqu'à 1 024 colonnes.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -96,7 +96,7 @@ Si la valeur est au format DBCS (jeu de caractères codés sur deux octets), [!I
   
 Les ressources, telles que les analyseurs lexicaux et les générateurs de formes dérivées, doivent être activées pour la langue spécifiée comme *language_term*. Si ces ressources ne prennent pas en charge la langue spécifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur.  
   
-Utilisez la procédure stockée sp_configure pour accéder aux informations concernant la langue de texte intégral par défaut de l'instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+Utilisez la procédure stockée sp_configure pour accéder aux informations concernant la langue de texte intégral par défaut de l’instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 Pour les colonnes de type non-BLOB et non-XML contenant des données texte dans plusieurs langues, ou lorsque la langue du texte stocké dans la colonne est inconnue, vous pouvez envisager d'utiliser la ressource de langue neutre (0x0). Toutefois, vous devez d'abord comprendre les conséquences possibles de l'utilisation de la ressource de la langue neutre (0x0). Pour obtenir des informations sur les solutions possibles et les conséquences de l’utilisation de la ressource de langue neutre (0x0), consultez [Choisir une langue lors de la création d’un index de recherche en texte intégral](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
@@ -166,9 +166,9 @@ Nous recommandons que la colonne de clé d'index soit un type de données intege
 |Suivi des modifications|WITH NO POPULATION|Résultats|  
 |---------------------|------------------------|------------|  
 |Non activé|Non spécifié|Un remplissage complet est effectué sur l'index.|  
-|Non activé|Specified|Le remplissage de l'index n'a pas lieu tant qu'une instruction ALTER FULLTEXT INDEX...START POPULATION n'a pas été émise.|  
-|Activée.|Spécifié|Une erreur est levée et l'index n'est pas modifié.|  
-|Activé|Non spécifié|Un remplissage complet est effectué sur l'index.|  
+|Non activé|Spécifié|Le remplissage de l'index n'a pas lieu tant qu'une instruction ALTER FULLTEXT INDEX...START POPULATION n'a pas été émise.|  
+|activé|Spécifié|Une erreur est levée et l'index n'est pas modifié.|  
+|activé|Non spécifié|Un remplissage complet est effectué sur l'index.|  
   
  Pour plus d’informations sur l’alimentation d’index les index de recherche en texte intégral, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).  
   
@@ -182,7 +182,7 @@ Si `SET STOPLIST` est spécifié, l’utilisateur doit disposer de l’autorisat
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. Création d'un index unique, d'un catalogue de texte intégral et d'un index de recherche en texte intégral  
+### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>R. Création d'un index unique, d'un catalogue de texte intégral et d'un index de recherche en texte intégral  
  L'exemple ci-après crée un index unique sur la colonne `JobCandidateID` de la table `HumanResources.JobCandidate` de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. L'exemple crée ensuite un catalogue de texte intégral par défaut, `ft`. Enfin, l'exemple crée un index de recherche en texte intégral sur la colonne `Resume`, à l'aide du catalogue `ft` et de la liste de mots vides système.  
   
 ```sql  

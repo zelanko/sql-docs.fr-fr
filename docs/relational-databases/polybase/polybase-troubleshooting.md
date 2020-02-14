@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710489"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909629"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Superviser et dépanner PolyBase
 
@@ -142,7 +142,7 @@ Surveillez et résolvez les problèmes des requêtes PolyBase à l’aide des vu
 
 3. Cliquez avec le bouton droit sur **l’opérateur Remote Query** et sélectionnez **Propriétés**.
 
-4. Copiez et collez la valeur Remote Query dans un éditeur de texte pour afficher le plan de requête distante XML. En voici un exemple :
+4. Copiez et collez la valeur Remote Query dans un éditeur de texte pour afficher le plan de requête distante XML. Voici un exemple.
 
    ```xml  
 
@@ -217,7 +217,7 @@ Après avoir configuré un ensemble d’ordinateurs dans le cadre d’un groupe 
 
 De nos jours, PolyBase n’interagit pas avec les services de haute disponibilité des nœuds de nom tels que Zookeeper ou Knox. Toutefois, vous pouvez utiliser une solution de contournement éprouvée pour fournir cette fonctionnalité.
 
-Solution de contournement : utiliser le nom DNS pour rediriger les connexions vers le nom de nœud actif. Pour ce faire, vous devez vous assurer que la source de données externe utilise un nom DNS pour communiquer avec le nom de nœud. Quand le basculement du nom de nœud se produit, vous devez changer l’adresse IP associée au nom DNS utilisé dans la définition de la source de données externe. Cette opération redirige toutes les nouvelles connexions vers le nœud de nom correct. Les connexions existantes échouent quand le basculement se produit. Pour automatiser ce processus, une « pulsation » peut exécuter un ping sur le nom de nœud actif. Si la pulsation échoue, on peut supposer qu’un basculement a eu lieu, donnant lieu à un basculement automatiquement vers l’adresse IP des bases de données secondaires.
+Solution de contournement : utiliser le nom DNS pour rediriger les connexions vers le nom de nœud actif. Pour ce faire, vous devez vous assurer que la source de données externe utilise un nom DNS pour communiquer avec le nom de nœud. Quand le basculement du nom de nœud se produit, vous devez changer l’adresse IP associée au nom DNS utilisé dans la définition de la source de données externe. Cette opération redirige toutes les nouvelles connexions vers le nœud de nom correct. Les connexions existantes échouent quand le basculement se produit. Pour automatiser ce processus, une « pulsation » peut exécuter un ping sur le nom de nœud actif. Si la pulsation échoue, il est à supposer qu’un basculement s’est produit avec un basculement automatiquement vers l’adresse IP des bases de données secondaires.
 
 ## <a name="error-messages-and-possible-solutions"></a>Messages d’erreur et solutions possibles
 

@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012920"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurer un serveur pour l’écoute sur un port TCP spécifique
@@ -55,7 +55,7 @@ Comme le port 1433 est la norme connue pour [!INCLUDE[ssNoVersion](../../include
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Dans la zone **Port TCP** _, dans_ **Properties** area box, in the **TCP Port** box, type the port number you want this Port TCP address to listen on, and then click **OK**. Plusieurs ports peuvent être spécifiés en les séparant par une virgule.
+4.  Dans **Propriétés** _IP_**n**, dans la zone **Port TCP**, tapez le numéro du port sur lequel vous voulez que cette adresse IP écoute, puis cliquez sur **OK**. Plusieurs ports peuvent être spécifiés en les séparant par une virgule.
 
     > [!NOTE] 
     > Si le paramètre **Écouter tout** sous l’onglet **Protocole** a la valeur « Oui », seules les valeurs **Port TCP** et **TCP Dynamic Port** (Port TCP dynamique) sous la section **IPAll** seront utilisées et les sections **IP**_n_ individuelles seront ignorées dans leur intégralité. Si le paramètre **Écouter tout** a la valeur « Non », les paramètres **Port TCP** et **Port TCP dynamique** sous la section **IPAll** seront ignorés et les paramètres **Port TCP**, **Port TCP dynamique** et **Activé** des sections **IP**_n_ individuelles seront utilisés à la place.

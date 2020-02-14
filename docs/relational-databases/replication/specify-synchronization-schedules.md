@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 69072514931e7e449893124a8f192043b2bf87d7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908341"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287124"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "72908341"
 |-----------|--------------|  
 |Agent de fusion pour les abonnements extraits|**\<Serveur_Publication>-\<Base_de_données_Publication>-\<Publication>-\<Abonné>-\<Base_de_données_Abonnement>-\<entier>**|  
 |Agent de fusion pour abonnements par envoi de données (push)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|  
-|Agent de distribution pour abonnements par envoi de données (push)|**\<Serveur_Publication>-\<Base_de_données_Publication>-\<Publication>-\<Abonné>-\<entier>** <sup>1</sup>|  
-|Agent de distribution pour abonnements par extraction de données (pull)|**\<Serveur_Publication>-\<Base_de_données_Publication>-\<Publication>-\<Abonné>-\<Base_de_données_Abonnement>-\<GUID>** <sup>2</sup>|  
-|Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<Serveur_Publication>-\<Base_de_données_Publication>-\<Publication>-\<Abonné>-\<entier>**|  
+|Agent de distribution pour abonnements par envoi de données (push)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>** <sup>1</sup>|  
+|Agent de distribution pour abonnements par extraction de données (pull)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<BasededonnéesPublication>-\<GUID>** <sup>2</sup>|  
+|Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|  
   
  <sup>1</sup> Pour les abonnements par émission de données aux publications Oracle, il s’agit de **\<Serveur_Publication>-\<Serveur_Publication**> au lieu de **\<Serveur_Publication>-\<Base_de_données_Publication>**  
   
@@ -197,7 +197,7 @@ ms.locfileid: "72908341"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>Pour définir une planification de l'Agent de réplication lorsque vous créez un abonnement par émission de données à une publication transactionnelle  
   
-1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md).  
   
 2.  Avant d'appeler <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> :  
   
@@ -290,7 +290,7 @@ ms.locfileid: "72908341"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>Pour définir une planification de l'Agent de réplication lorsque vous créez un abonnement par émission de données à une publication de fusion  
   
-1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md).  
   
 2.  Avant d'appeler <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> :  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113741"
 ---
 # <a name="data-types-transact-sql"></a>Types de données (Transact-SQL)
@@ -62,7 +62,7 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en fonction de l
 |[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|[numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
 |[decimal](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)|[smallmoney](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)|  
-|[Int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
+|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
 |[money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)||  
   
 ### <a name="approximate-numerics"></a>Valeurs numériques approximatives
@@ -84,7 +84,7 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en fonction de l
 |||  
 |-|-|  
 |[char](../../t-sql/data-types/char-and-varchar-transact-sql.md)|[varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)|  
-|[texte](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+|[text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="unicode-character-strings"></a>Chaînes de caractères Unicode
   
@@ -97,7 +97,7 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en fonction de l
   
 |||  
 |-|-|  
-|[binaire](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
 |[image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="other-data-types"></a>Autres types de données

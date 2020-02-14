@@ -23,10 +23,10 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874518"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "70874518"
 
   Modifie un groupe de disponibilité AlwaysOn existant dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La plupart des arguments ALTER AVAILABILITY GROUP ne sont pris en charge que par le réplica principal actuel. Toutefois, les arguments JOIN, FAILOVER et FORCE_FAILOVER_ALLOW_DATA_LOSS, ne sont pris en charge que sur les réplicas secondaires.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -253,7 +253,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  Vous devez joindre chaque nouveau réplica secondaire au groupe de disponibilité. Pour plus d'informations, consultez la description de l'option JOIN ultérieurement dans cette section.  
   
  \<server_instance>  
- Spécifie l’adresse de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est l’hôte d’un réplica. Le format de l'adresse varie selon que l'instance est l'instance par défaut ou une instance nommée et s'il s'agit d'une instance autonome ou d'une instance de cluster de basculement (FCI). La syntaxe de base est la suivante :  
+ Spécifie l’adresse de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est l’hôte d’un réplica. Le format de l'adresse varie selon que l'instance est l'instance par défaut ou une instance nommée et s'il s'agit d'une instance autonome ou d'une instance de cluster de basculement (FCI). La syntaxe est la suivante :  
   
  { '*nom_système*[\\*nom_instance*]' | '*nom_réseau_FCI*[\\*nom_instance*]' }  
   
@@ -343,7 +343,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
   
 -   0 indique que ce réplica de disponibilité ne sera jamais choisi pour effectuer des sauvegardes. Cela est utile, par exemple, pour un réplica de disponibilité distant sur lequel vous ne souhaitez jamais basculer de sauvegardes.  
   
- Pour plus d’informations, consultez [Secondaires actifs : Sauvegarder sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Spécifie des paramètres spécifiques au rôle qui entreront en vigueur si ce réplica de disponibilité a actuellement le rôle secondaire (autrement dit, chaque fois qu'il s'agit d'un réplica secondaire). Entre parenthèses, spécifiez le l'une ou l'autre, ou les deux options de rôle secondaire. Si vous spécifiez les deux, utilisez une liste séparée par des virgules.  
@@ -362,7 +362,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  ALL  
  Toutes les connexions sont autorisées aux bases de données dans le réplica secondaire pour un accès en lecture seule.  
   
- Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles &#40;Groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires accessibles en lecture &#40;groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie l'URL à utiliser pour le routage des demandes de connexion de tentative de lecture à ce réplica de disponibilité. Il s'agit de l'URL sur laquelle le moteur de base de données SQL Server écoute. En général, l'instance par défaut du moteur de base de données SQL Server écoute le port TCP 1433.  
@@ -560,13 +560,13 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ipv4_address*  
- Spécifie une adresse IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple, `10.120.19.155`.  
+ Spécifie une adresse IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple : `10.120.19.155`.  
   
  *ipv4_mask*  
- Spécifie un masque IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple, `255.255.254.0`.  
+ Spécifie un masque IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple : `255.255.254.0`.  
   
  *ipv6_address*  
- Spécifie une adresse IPv6 pour un écouteur du groupe de disponibilité. Par exemple, `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
+ Spécifie une adresse IPv6 pour un écouteur du groupe de disponibilité. Par exemple : `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
  PORT **=** *listener_port*  
  Spécifie le numéro de port *listener_port* à utiliser par un écouteur du groupe de disponibilité spécifié par une clause WITH IP. Le PORT est facultatif.  

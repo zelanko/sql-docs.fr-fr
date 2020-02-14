@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 591cb0ff055a4a3556ac4b6200d052ffc58a6963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770599"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286916"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Présentation de l'interface du moniteur de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Le moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente une vue, axée sur le serveur de publication ou le serveur de distribution, de toute l'activité de réplication dans un format à deux volets. Vous ajoutez un serveur de publication au moniteur dans le volet gauche tandis que dans le volet droit, le moniteur affiche des informations sur le serveur de publication, ses publications, les abonnements à ces publications ainsi que les divers agents de réplication. Outre la présentation des informations pour la topologie de réplication, le moniteur de réplication vous permet d'effectuer diverses tâches, telles que le démarrage et l'arrêt d'agents, ainsi que la validation des données.  
+  Le Moniteur de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente une vue axée sur le serveur de publication ou le serveur de distribution de toute l’activité de réplication dans un format à deux volets. Vous ajoutez un serveur de publication au moniteur dans le volet gauche tandis que dans le volet droit, le moniteur affiche des informations sur le serveur de publication, ses publications, les abonnements à ces publications ainsi que les divers agents de réplication. Outre la présentation des informations pour la topologie de réplication, le moniteur de réplication vous permet d'effectuer diverses tâches, telles que le démarrage et l'arrêt d'agents, ainsi que la validation des données.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Affichage d'informations relatives à la topologie complète  
  Le volet gauche du Moniteur de réplication affiche  
@@ -221,9 +221,9 @@ ms.locfileid: "68770599"
  Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Affichage d'informations et réalisation de tâches associées aux profils d'agents  
- Le moniteur de réplication inclut plusieurs boîtes de dialogue permettant de gérer les profils d'agents. Les profils d'agents sont des ensembles de paramètres qui déterminent le comportement des agents. Pour plus d’informations, consultez [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Les boîtes de dialogue sont les suivantes :  
+ Le moniteur de réplication inclut plusieurs boîtes de dialogue permettant de gérer les profils d'agents. Les profils d'agents sont des ensembles de paramètres qui déterminent le comportement des agents. Pour plus d'informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Les boîtes de dialogue sont les suivantes :  
   
--   **Profils de l'Agent**  
+-   **Profils de l’Agent**  
   
      Cette boîte de dialogue vous permet de : modifier les propriétés des profils, créer et supprimer des profils, spécifier un profil par défaut et spécifier que tous les agents d'un type donné (tels les Agents d'instantané) doivent utiliser un profil donné.  
   

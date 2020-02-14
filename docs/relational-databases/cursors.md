@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140811"
 ---
 # <a name="cursors"></a>Curseurs
@@ -71,7 +71,7 @@ Un curseur avant uniquement est spécifié avec `FORWARD_ONLY` et `READ_ONLY` et
   
  Les modèles de curseur d'API de base de données considèrent un curseur avant uniquement comme un type distinct de curseur, contrairement à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en compte les curseurs avant uniquement et de défilement en tant qu’options pouvant être appliquées aux curseurs statiques, de jeu de clés et dynamiques. [!INCLUDE[tsql](../includes/tsql-md.md)] Les curseurs prennent en charge les curseurs avant uniquement, statiques, de jeu de clés et dynamiques. Les modèles de curseurs d'API de bases de données supposent que les curseurs statiques, de jeux de clés et dynamiques permettent toujours le défilement. Lorsqu'un attribut ou une propriété de curseur d'API de bases de données est défini comme étant de type avant uniquement, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implémente ce curseur en tant que curseur dynamique avant uniquement.  
   
-### <a name="static"></a>Statique  
+### <a name="static"></a>statique  
  Le jeu de résultats complet d’un curseur statique est créé dans **tempdb** à l’ouverture du curseur. Un curseur statique affiche toujours l'ensemble de résultats tel qu'il était au moment où le curseur a été ouvert. Les curseurs statiques détectent peu ou pas de modifications, mais consomment relativement peu de ressources pendant le défilement.  
   
 Le curseur ne reflète pas les modifications de la base de données qui concernent soit l'appartenance de l'ensemble de résultats, soit les modifications apportées aux valeurs des colonnes des lignes constituant l'ensemble de résultats. Après son ouverture, un curseur statique n’affiche pas les nouvelles lignes insérées dans la base de données, même si celles-ci correspondent aux conditions de recherche de l'instruction `SELECT` du curseur. Si certaines lignes constituant l'ensemble de résultats sont mises à jour par d'autres utilisateurs, les nouvelles valeurs des données ne sont pas affichées dans le curseur statique. Le curseur statique affiche les lignes supprimées de la base de données après l'ouverture du curseur. Aucune opération `UPDATE`, `INSERT` ou `DELETE` n’apparaît dans un curseur statique (à moins qu’il soit fermé et rouvert), ni même les modifications effectuée en utilisant la même connexion que celle qui a ouvert le curseur.  

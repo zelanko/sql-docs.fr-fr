@@ -22,10 +22,10 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297903"
 ---
 # <a name="integration-services-transformations"></a>Transformations Integration Services
@@ -33,7 +33,7 @@ ms.locfileid: "71297903"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Les transformations sont les composants du flux de données d’un package qui agrègent, fusionnent, distribuent et modifient des données. Les transformations peuvent également effectuer des opérations de recherche et générer des échantillons de dataset. Cette section décrit les transformations incluses dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et explique leur fonctionnement.  
+  Les transformations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sont les composants du flux de données d’un package qui agrègent, fusionnent, distribuent et modifient des données. Les transformations peuvent également effectuer des opérations de recherche et générer des échantillons de dataset. Cette section décrit les transformations incluses dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et explique leur fonctionnement.  
   
 ## <a name="business-intelligence-transformations"></a>Transformations Business Intelligence  
  Les transformations suivantes effectuent des opérations décisionnelles telles que le nettoyage de données, l'exploration de texte et l'exécution de requêtes de prédiction d'exploration de données.  
@@ -54,7 +54,7 @@ ms.locfileid: "71297903"
 |Transformation|Description|  
 |--------------------|-----------------|  
 |[Transformation de la table de caractères](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Transformation qui applique des fonctions de chaîne à des données de caractères.|  
-|[Transformation Copie de colonnes](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Transformation qui ajoute des copies de colonnes d'entrée à la sortie de transformation.|  
+|[Transformation de copie de colonnes](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Transformation qui ajoute des copies de colonnes d'entrée à la sortie de transformation.|  
 |[Transformation de conversion de données](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)|Transformation qui convertit le type de données d'une colonne en un type de données différent.|  
 |[Transformation de colonne dérivée](../../../integration-services/data-flow/transformations/derived-column-transformation.md)|Transformation qui remplit des colonnes avec les résultats d'expressions.|  
 |[Transformation d'exportation de colonne](../../../integration-services/data-flow/transformations/export-column-transformation.md)|Transformation qui insère des données dans un fichier à partir d'un flux de données.|  
@@ -69,10 +69,10 @@ ms.locfileid: "71297903"
 |--------------------|-----------------|  
 |[Transformation d'agrégation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Transformation qui effectue des agrégations telles que AVERAGE, SUM et COUNT.|  
 |[Transformation de tri](../../../integration-services/data-flow/transformations/sort-transformation.md)|Transformation qui trie des données.|  
-|[Transformation de l'échantillonnage du pourcentage](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)|Transformation qui crée un échantillon de jeu de données avec un pourcentage spécifiant la taille d'échantillonnage.|  
+|[Transformation d’échantillonnage par pourcentage](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)|Transformation qui crée un échantillon de jeu de données avec un pourcentage spécifiant la taille d'échantillonnage.|  
 |[Transformation d'échantillonnage de lignes](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)|Transformation qui crée un échantillon de jeu de données en spécifiant le nombre de lignes de l'échantillon.|  
 |[Transformation de tableau croisé dynamique](../../../integration-services/data-flow/transformations/pivot-transformation.md)|Transformation qui crée une version moins normalisée d'une table normalisée.|  
-|[Transformation Unpivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md)|Transformation qui crée une version plus normalisée d'une table non normalisée.|  
+|[Transformation de suppression de tableau croisé dynamique](../../../integration-services/data-flow/transformations/unpivot-transformation.md)|Transformation qui crée une version plus normalisée d'une table non normalisée.|  
   
 ## <a name="split-and-join-transformations"></a>Transformations de fractionnement et de jointure  
  Les transformations suivantes distribuent des lignes vers différentes sorties, créent des copies des entrées de transformation, joignent plusieurs entrées en une même entrée et effectuent des opérations de recherche.  

@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981762"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
@@ -51,7 +51,7 @@ ms.locfileid: "73981762"
 > [!CAUTION]  
 >  Étant donné que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d'exécution pour une requête, nous vous recommandons de ne recourir à ces conseils qu'en dernier ressort et seulement si vous êtes un développeur ou un administrateur de base de données expérimenté.  
   
- **S’applique à :**  
+ **S’applique à :**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73981762"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -416,7 +416,7 @@ Toutefois, pour que l'optimiseur prenne en considération les vues indexées pou
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Utilisation de l'indicateur TABLOCK pour spécifier une méthode de verrouillage  
+### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>R. Utilisation de l'indicateur TABLOCK pour spécifier une méthode de verrouillage  
  L'exemple suivant spécifie qu'un verrou partagé est établi sur la table `Production.Product` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et maintenu jusqu'à la fin de l'instruction UPDATE.  
   
 ```sql  

@@ -27,19 +27,19 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ec15aed162c096bc13062ed1ec98b02c0c9ca4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064616"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516250"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Arrête une requête lorsqu'un dépassement de capacité ou une division par zéro se produit durant son exécution.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -70,7 +70,7 @@ Si les options SET ARITHABORT et SET ANSI WARNINGS sont désactivées (OFF) et q
 > [!NOTE]  
 >  Si ni SET ARITHABORT ni SET ARITHIGNORE ne sont définies, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie la valeur NULL avec un message d'avertissement s’affiche après l'exécution de la requête.  
   
-L'affectation de la valeur ON à ANSI_WARNINGS affecte de manière implicite la valeur ON à ARITHABORT, lorsque le niveau de compatibilité de la base de données est d'au moins 90. Si le niveau de compatibilité de base de données est défini à 80 ou moins, la valeur ON doit être affectée de manière explicite à l'option ARITHABORT.  
+Si ANSI_WARNINGS a la valeur ON et que le mode de compatibilité de la base de données est défini sur 90 ou une valeur supérieure, ARITHABORT est implicitement activé, quelle que soit la valeur de son paramètre. Si le niveau de compatibilité de base de données est défini à 80 ou moins, la valeur ON doit être affectée de manière explicite à l'option ARITHABORT.  
   
 Pour l'évaluation de l'expression, si l'option SET ARITHABORT est désactivée (OFF) et qu’une instruction INSERT, DELETE ou UPDATE rencontre une erreur arithmétique, un dépassement de capacité, une division par zéro ou une erreur de domaine, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insère ou met à jour une valeur NULL. Si la colonne cible ne peut pas prendre la valeur NULL, l'action d'insertion ou de mise à jour échoue et l'utilisateur voit une erreur.  
   

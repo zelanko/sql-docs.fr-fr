@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284358"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Fonctionnalités Integration Services prises en charge par les éditions de SQL Server
@@ -39,7 +39,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
     
 ## <a name="ISNew"></a> Nouvelles fonctionnalités Integration Services dans SQL Server 2017
   
-|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out Master|Oui|||||
 |Scale Out Worker|Oui|Oui <sup>1</sup>|TBD|TBD|TBD|
@@ -51,13 +51,13 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 
 ## <a name="IEWiz"></a> Assistant Importation et Exportation SQL Server
 
-|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Assistant Importation et Exportation SQL Server|Oui|Oui|Oui|Oui|Oui|  
 
 ## <a name="IS"></a> Integration Services  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Connecteurs de source de données intégrés|Oui|Oui|||| 
 |Tâches et transformations intégrées|Oui|Oui||||  
@@ -68,7 +68,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 
 ## <a name="ISAA"></a> Integration Services - sources et destinations avancées  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Source et destination Oracle hautes performances par Attunity|Oui|||||  
 |Source et destination hautes performances Teradata par Attunity|Oui|||||  
@@ -79,7 +79,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
   
 ## <a name="ISAT"></a> Integration Services - Tâches et transformations avancées  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Composants de capture de données modifiées par Attunity <sup>1</sup>|Oui|||||  
 |Transformation de requête d'exploration de données|Oui|||||  

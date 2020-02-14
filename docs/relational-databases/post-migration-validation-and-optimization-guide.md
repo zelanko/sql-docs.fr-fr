@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909162"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
@@ -49,7 +49,7 @@ Pour plus d’informations à ce sujet, consultez [Maintenir la stabilité des p
 
 ## <a name="ParameterSniffing"></a> Sensibilité de la détection de paramètres
 
-**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en l’état ne concerne pas ce scénario. 
@@ -70,7 +70,7 @@ Un problème peut se produire quand la première compilation n’a pas utilisé 
 
 ## <a name="MissingIndexes"></a> Index manquants
 
-**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Les index incorrects ou manquants provoquent des suppléments d’E/S qui entraînent un gaspillage de mémoire et d’UC. Cela peut être dû au fait que le profil de charge de travail a changé, par exemple en raison de l’utilisation d’autres prédicats ou à la suite de l’invalidation de la conception d’index existante. Voici comment identifier une mauvaise stratégie d’indexation ou l’existence de changements dans le profil de charge de travail :
 -   Recherchez les index dupliqués, redondants, rarement utilisés et complètement inutilisés.
@@ -88,7 +88,7 @@ Les index incorrects ou manquants provoquent des suppléments d’E/S qui entra�
 
 ## <a name="InabilityPredicates"></a> Incapacité à utiliser les prédicats pour filtrer les données
 
-**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en l’état ne concerne pas ce scénario.
@@ -117,7 +117,7 @@ Voici quelques exemples de prédicats non SARGable :
 
 ## <a name="TableValuedFunctions"></a> Utilisation de fonctions table (à instructions multiples ou inline)
 
-**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en l’état ne concerne pas ce scénario.
@@ -165,7 +165,7 @@ Les fonctions table retournent un type de données de table qui peut représente
 ##  <a name="Additional_Reading"></a> Lecture supplémentaire
 
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Tables à mémoire optimisée](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Fonctions définies par l'utilisateur](../relational-databases/user-defined-functions/user-defined-functions.md)  
 [Variables de table et estimations de lignes - Partie 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
 [Variables de table et estimations de lignes - Partie 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  

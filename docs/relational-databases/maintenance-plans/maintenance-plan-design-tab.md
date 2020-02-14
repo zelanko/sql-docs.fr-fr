@@ -15,10 +15,10 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115740"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de maintenance, onglet Conception
@@ -41,7 +41,7 @@ ms.locfileid: "68115740"
  **Supprimer la planification**  
  Supprimez une planification dans les planifications sélectionnées.  
   
- **Gérer les connexion**  
+ **Gérer les connexions**  
  Affichez la boîte de dialogue **Gérer les connexions** . Permet d'ajouter des connexions d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplémentaires au plan de maintenance. Chaque tâche de maintenance dans l'éditeur de sous-plan peut utiliser ces connexions. Lors de son exécution, le plan de maintenance établit une connexion entre le serveur du plan de maintenance et les serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiés, à l'aide des informations d'identification de connexion.  
   
  **Création de rapport et enregistrement**  
@@ -50,7 +50,7 @@ ms.locfileid: "68115740"
  **Serveurs**  
  Affichez la boîte de dialogue **Serveurs** qui permet de sélectionner les serveurs où sont exécutées les tâches du sous-plan. Cette option est activée uniquement sur des serveurs maîtres dans des environnements multiserveurs. Pour plus d’informations, consultez [Créer un environnement multiserveur](../../ssms/agent/create-a-multiserver-environment.md).  
   
- **Name**  
+ **Nom**  
  Affichez le nom du plan de maintenance. Pour les nouveaux plans de maintenance, le nom est spécifié dans une boîte de dialogue avant l'ouverture du concepteur de plan de maintenance. Pour renommer un plan de maintenance, cliquez dessus avec le bouton droit dans l’Explorateur d’objets, puis cliquez sur **Renommer**.  
   
  **Description**  
@@ -69,7 +69,7 @@ ms.locfileid: "68115740"
   
  Une fois qu'une tâche de maintenance est placée sur la surface de dessin, ses propriétés peuvent être modifiées de manière appropriée. Par exemple, la base de données spécifique à sauvegarder dans une Tâche Sauvegarder la base de données est spécifiée après que la tâche a été ajoutée au plan. Les tâches sur la surface de dessin qui ne sont pas configurées correctement contiennent une icône rouge avec un x blanc.  
   
- Pour ajouter une tâche de maintenance dans un plan, faites glisser l’icône de la tâche à partir de la boîte à outils **Tâches du plan de maintenance** vers la surface de dessin, ou double-cliquez sur la tâche dans la boîte à outils qui ajoute cette tâche à l’aire du concepteur actif. Si la boîte à outils **Tâches du plan de maintenance** n’est pas affichée, cliquez sur **Boîte à outils** dans le menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **View** menu. Développez le nœud **Tâches du plan de maintenance** dans le volet **Boîte à outils** .  
+ Pour ajouter une tâche de maintenance dans un plan, faites glisser l’icône de la tâche à partir de la boîte à outils **Tâches du plan de maintenance** vers la surface de dessin, ou double-cliquez sur la tâche dans la boîte à outils qui ajoute cette tâche à l’aire du concepteur actif. Si la boîte à outils **Tâches du plan de maintenance** n’est pas affichée, choisissez **Boîte à outils** dans le menu **Affichage** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Développez le nœud **Tâches du plan de maintenance** dans le volet **Boîte à outils** .  
   
  Pour supprimer une tâche d’un plan, sélectionnez la tâche dans l’aire du concepteur et appuyez sur la touche **Suppr** ou cliquez avec le bouton droit sur la tâche et cliquez sur **Supprimer**.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "68115740"
  **Modifier**  
  Ouvre la boîte de dialogue de propriétés de la tâche.  
   
- **Désactiver**  
+ **Disable**  
  Rend la tâche provisoirement indisponible.  
   
  **Activer**  
  Restaure une tâche désactivée.  
   
- **Grouper**  
+ **Groupe**  
  Crée un groupe contenant une ou plusieurs tâches.  
   
  **Dissocier**  
@@ -105,7 +105,7 @@ ms.locfileid: "68115740"
  **Redimensionnement automatique**  
  Dimensionne chaque tâche en utilisant la taille optimale pour cette tâche.  
   
- **Réduire**  
+ **Collapse**  
  Masque les tâches au sein d’un groupe.  
   
  **Développer**  

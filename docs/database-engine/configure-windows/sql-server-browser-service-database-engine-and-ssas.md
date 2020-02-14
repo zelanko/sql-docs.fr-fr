@@ -16,15 +16,15 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68028632"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Service SQL Server Browser (moteur de base de données et SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser s’exécute en tant que service Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l'écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contribue aux actions suivantes :  
+  Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser s’exécute en tant que service Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l’écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l’ordinateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contribue aux actions suivantes :  
   
 -   Affichage de la liste des serveurs disponibles  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68028632"
   
 -   Le compte **système local** (non recommandé car doté de privilèges inutiles)  
   
-### <a name="hiding-sql-server"></a>Masquage de SQL Server  
+### <a name="hiding-sql-server"></a>Masquage de SQL Server  
  Les instances masquées sont des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne prennent en charge que les connexions de mémoire partagée. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définissez l'indicateur `HideInstance` pour indiquer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ne doit pas répondre par des informations sur cette instance de serveur.  
   
 ### <a name="using-a-firewall"></a>Utilisation d'un pare-feu  

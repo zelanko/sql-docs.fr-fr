@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037593"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315599"
 ---
 # <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Les fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont deux 
 > Les données et les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être implantés dans les systèmes de fichiers FAT ou NTFS. Sur les systèmes Windows, nous vous recommandons d’utiliser le système de fichiers NTFS pour des raisons de sécurité. 
 
 > [!WARNING]
-> Les fichiers journaux et les groupes de fichiers de données en lecture/écriture ne peuvent pas être implantés dans un système de fichiers compressé NTFS. Seuls les groupes de fichiers secondaires en lecture seule et les bases de données en lecture seule peuvent être implantés dans un système de fichiers compressé NTFS.
+> Les fichiers journaux et les groupes de fichiers de données en lecture/écriture ne sont pas pris en charge dans un système de fichiers compressé NTFS. Seuls les groupes de fichiers secondaires en lecture seule et les bases de données en lecture seule sont autorisés à être placés dans un système de fichiers compressé NTFS.
 > Pour économiser de l’espace, il est fortement recommandé d’utiliser la [compression des données](../../relational-databases/data-compression/data-compression.md) au lieu de la compression du système de fichiers.
 
 Quand plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont en cours d’exécution sur un ordinateur unique, chaque instance reçoit un répertoire par défaut différent pour contenir les fichiers des bases de données créées dans l’instance. Pour plus d’informations, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
@@ -106,7 +106,7 @@ Le format de fichier utilisé par un instantané de base de données pour stocke
 |Principal|Groupe de fichiers qui contient le fichier primaire. Toutes les tables système sont allouées au groupe de fichiers primaire.|  
 |Données optimisées en mémoire|Un groupe de fichiers optimisé en mémoire est basé sur un groupe de fichiers Filestream|  
 |Filestream||    
-|Définie par l'utilisateur|Groupe de fichiers créé par l'utilisateur lorsque celui-ci crée la base de données ou lorsqu'il la modifie ultérieurement.|  
+|Défini par l’utilisateur|Groupe de fichiers créé par l'utilisateur lorsque celui-ci crée la base de données ou lorsqu'il la modifie ultérieurement.|  
   
 ### <a name="default-primary-filegroup"></a>Groupe de fichiers (principal) par défaut  
  Lorsque des objets sont créés dans la base de données, sans spécifier le groupe de fichiers auquel ils appartiennent, ces objets sont affectés au groupe de fichiers par défaut. À tout moment, un groupe de fichiers précis est désigné comme étant le groupe de fichiers par défaut. Les fichiers du groupe de fichiers par défaut doivent être suffisamment volumineux pour contenir tous les nouveaux objets qui ne sont pas affectés à d'autres groupes de fichiers.  

@@ -1,89 +1,95 @@
 ---
-title: Configurer la mémoire persistante (PMEM) pour SQL Server sur Linux
+title: Configurer la mémoire persistante (PMEM)
 description: Cet article explique de façon détaillée comment configurer PMEM sur Linux.
 ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
-ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b5f86dac62c371a9e4dda607cbd9ec7533a187a
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 5d98b728a1966861532a30a4b5dd92824d25f1d5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558608"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831959"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Comment configurer la mémoire persistante (PMEM) pour SQL Server sur Linux
+# <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Configurer la mémoire persistante (PMEM) pour SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article décrit comment configurer la mémoire persistante (PMEM) pour SQL Server sur Linux. La prise en charge de PMEM sur Linux a été introduite dans SQL Server 2019.
+Cet article décrit comment configurer la mémoire persistante (PMEM) pour [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] sur Linux.
 
 ## <a name="overview"></a>Vue d’ensemble
 
-SQL Server 2016 a introduit la prise en charge des DIMM non volatiles et une optimisation appelée [Fin de la mise en cache des journaux sur NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Ces optimisations ont réduit le nombre d’opérations nécessaires pour renforcer la mémoire tampon d’un journal dans un stockage persistant. Ceci est dû à l’accès direct de Windows Server à un appareil de mémoire persistante en mode DAX.
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] dispose d’un certain nombre de fonctionnalités en mémoire qui utilisent la mémoire persistante. Ce document décrit les étapes nécessaires à la configuration de la mémoire persistante pour SQL Server sur Linux.
 
-SQL Server 2019 étend la prise en charge des appareils à mémoire persistante (PMEM) à Linux, fournissant un état d’éveil à la présence d’un environnement virtualisé des fichiers de données et de journaux de transactions placés sur PMEM. L’état d'éveil à la présence d'un environnement virtualisé fait référence à la méthode d’accès au dispositif de stockage à l’aide d'opérations d’espace utilisateur efficaces `memcpy()`. Au lieu de passer par le système de fichiers et la pile de stockage, SQL Server tire parti de la prise en charge de DAX sur Linux pour placer directement les données dans les appareils, ce qui réduit la latence.
+> [!NOTE]
+> Le terme _enlightment_ (« illumination ») a été introduit pour décrire le concept d’utiliser un système de fichiers prenant en charge la mémoire persistante. L’accès direct au système de fichiers à partir d’applications d’espace utilisateur est facilité par l’utilisation du mappage de mémoire (`mmap()`). Lors de la création d’un mappage de mémoire pour un fichier, l’application peut émettre des instructions de chargement/stockage en contournant totalement la pile d’E/S. Il s’agit d’une méthode d’accès aux fichiers « enlightened » (ou illuminée) du point de vue de l’application d’extension hôte (qui est le code de boîte noire qui autorise SQLPAL à interagir avec le système d’exploitation Windows ou Linux).
 
-## <a name="enable-enlightenment-of-database-files"></a>Activer l’état d'éveil à la présence d'un environnement virtualisé des fichiers de base de données
-Pour activer l’état d'éveil à la présence d'un environnement virtualisé de fichiers de base de données dans SQL Server sur Linux, procédez comme suit :
+## <a name="create-namespaces-for-pmem-devices"></a>Créer des espaces de noms pour les appareils PMEM
 
-1. Configurez les appareils.
+### <a name="configure-the-devices"></a>Configurer les appareils
 
-  Dans Linux, utilisez l’utilitaire `ndctl`.
+Dans Linux, utilisez l’utilitaire `ndctl`.
 
-  - Installez `ndctl` pour configurer l’appareil PMEM. Vous pouvez le trouver [ici](https://docs.pmem.io/getting-started-guide/installing-ndctl).
-  - Utilisez [ndctl] pour créer un espace de noms.
+- Installez `ndctl` pour configurer l’appareil PMEM. Vous pouvez le trouver [ici](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+- Utilisez `ndctl` pour créer un espace de noms. Les espaces de noms sont entrelacés sur les NVDIMM PMEM et peuvent fournir différents types d’accès d’espace utilisateur aux régions de la mémoire sur l’appareil. `fsdax` est le mode par défaut et souhaité pour SQL Server.
 
-  ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
-  ```
-
-  >[!NOTE]
-  >Si vous utilisez une version de `ndctl` antérieure à 59, utilisez `--mode=memory`.
-
-  Utilisez `ndctl` pour vérifier l’espace de noms. Un exemple est alors sorti :
-
-```bash
-ndctl list
-[
-  {
-    "dev":"namespace0.0",
-    "mode":"memory",
-    "size":1099511627776,
-    "blockdev":"pmem0",
-    "numa_node":0
-  }
-]
+```bash 
+ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=dev
 ```
 
-  - Créez et montez un appareil PMEM
+Notez que nous avons choisi le mode `fsdax` et que nous utilisons la mémoire système pour stocker les métadonnées par page. Nous vous recommandons d’utiliser `--map=dev`. Cela permet de stocker les métadonnées directement sur l’espace de noms. Le stockage de métadonnées en mémoire avec `--map=mem` est considéré expérimental pour l’instant.
 
-    Par exemple, avec XFS
+Utilisez `ndctl` pour vérifier l’espace de noms. 
+  
+Un exemple est alors sorti :
 
-    ```bash
-    mkfs.xfs -f /dev/pmem0
-    mount -o dax,noatime /dev/pmem0 /mnt/dax
-    xfs_io -c "extsize 2m" /mnt/dax
-    ```
+```bash
+# ndctl list -N
+{
+  "dev":"namespace0.0",
+  "mode":"fsdax",
+  "map":"dev",
+  "size":4294967296,
+  "sector_size":512,
+  "blockdev":"pmem0",
+  "numa_node":0
+}
+```
 
-    Par exemple, avec EXT4
+### <a name="create-and-mount-pmem-device"></a>Créez et montez un appareil PMEM
 
-    ```bash
-    mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
-    mount -o dax,noatime /dev/pmem0 /mnt/dax
-    ```
+Par exemple, avec XFS
 
-  Une fois que l’appareil a été configuré avec ndctl, formaté et monté, vous pouvez y placer des fichiers de base de données. Vous pouvez également créer une nouvelle base de données 
+```bash
+mkfs.xfs -f /dev/pmem0
+mount -o dax,noatime /dev/pmem0 /mnt/dax
+xfs_io -c "extsize 2m" /mnt/dax
+```
 
-1. Étant donné que les appareils PMEM sont O_DIRECT sécurisés, activez l’indicateur de trace 3979 pour désactiver le mécanisme de vidage forcé. Cet indicateur de trace est un indicateur de trace de démarrage qui doit être activé à l’aide de l’utilitaire mssql-conf. Notez qu’il s’agit d’une modification de la configuration qui concerne l’ensemble du serveur et que vous ne devez pas utiliser cet indicateur de trace si vous avez des appareils non conformes à O_DIRECT, qui ont besoin du mécanisme de vidage forcé pour garantir l’intégrité des données. Pour plus d'informations, consultez https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+Par exemple, avec EXT4
 
-1. Redémarrez SQL Server.
+```bash
+mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
+mount -o dax,noatime /dev/pmem0 /mnt/dax
+```
+
+## <a name="technical-considerations"></a>Considérations techniques
+
+- Bloquer l’allocation de 2 Mo pour XFS/EXT4, comme décrit ci-dessus
+- Un mauvais alignement entre l’allocation de bloc et `mmap` entraîne un basculement silencieux sur 4 Ko
+- Les tailles de fichier doivent être un multiple de 2 Mo (modulo 2 Mo)
+- Ne pas désactiver les pages THP (Transparent huge page) (activées par défaut sur la plupart des distributions)
+
+Une fois que l’appareil a été configuré avec `ndctl`, créé et monté, vous pouvez y placer des fichiers de base de données ou créer une nouvelle base de données.
+
+Étant donné que les appareils PMEM sont O_DIRECT-safe (E/S directes), activez l’indicateur de trace 3979 pour désactiver le mécanisme de vidage forcé. Pour plus d’informations, consultez [Support FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Les éléments internes d’accès aux unités forcées sont décrits ici [FUA internals](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur SQL Server sur Linux, consultez [SQL Server sur Linux](sql-server-linux-overview.md).
+Pour des bonnes pratiques de performance pour SQL Server sur Linux, consultez [Bonnes pratiques de performance](sql-server-linux-performance-best-practices.md).
