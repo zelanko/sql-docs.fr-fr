@@ -130,8 +130,8 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 
 Avec l’authentification à l’aide d’AAD ou auprès d’un compte de stockage public, vous n’êtes pas tenu de spécifier CREDENTIAL. 
 
-- Authentification avec la signature d’accès partagé (SAS) *IDENTITY : constante avec une valeur « Shared Access Signature »* 
-  *SECRET : La * [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) *fournit un accès délégué aux ressources de votre compte de stockage.*
+- Authentification avec la signature d’accès partagé (SAS) *IDENTITY: constante avec une valeur « Shared Access Signature »* 
+  *SECRET: La * [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) *fournit un accès délégué aux ressources de votre compte de stockage.*
   Autorisations minimales requises : READ et LIST
 
 - Authentification avec des [*principaux de service*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
