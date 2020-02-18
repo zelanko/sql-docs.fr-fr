@@ -192,7 +192,7 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Catalan (Catalogne)|0x0403|0x0409|Latin1_General_CI_AS|
 |Chinois (Hong Kong R.A.S., RPC)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
 |Chinese (Macao (R.A.S.))|0x1404|0x1404|Latin1_General_CI_AI|
-|Chinois (Macao)|0x21404|0x21404|Latin1_General_CI_AI|
+|Chinois (Macao, R.A.S.)|0x21404|0x21404|Latin1_General_CI_AI|
 |Chinois (RPC)|0x0804|0x0804|Chinese_PRC_CI_AS|
 |Chinois (RPC)|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
 |Chinese (Singapore)|0x1004|0x0804|Chinese_PRC_CI_AS|
@@ -290,7 +290,7 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Norvégien (bokmål, Norvège)|0x0414|0x0414|Latin1_General_CI_AI|
 |Norvégien (Nynorsk, Norvège)|0x0814|0x0414|Latin1_General_CI_AI|
 |Occitan (France)|0x0482|0x040c|French_CI_AS|
-|Oriya (Inde)|0x0448|0x0439|Non disponible au niveau du serveur|
+|Odia (Inde)|0x0448|0x0439|Non disponible au niveau du serveur|
 |Pachtou (Afghanistan)|0x0463|0x0463|Non disponible au niveau du serveur|
 |Persan (Iran)|0x0429|0x0429|Latin1_General_CI_AI|
 |Polonais (Pologne)|0x0415|0x0415|Polish_CI_AS|
@@ -611,7 +611,7 @@ Comme vous venez de le voir, le choix de l’encodage Unicode et du type de donn
 Avant de choisir s’il faut utiliser l’encodage UTF-8 ou UTF-16 pour une base de données ou une colonne, prenez en compte la distribution des données de chaîne qui seront stockées :
 -  Si elle est principalement dans la plage ASCII de 0 à 127 (comme l’anglais), chaque caractère nécessite 1 octet avec UTF-8 et 2 octets avec UTF-16. L’utilisation UFT-8 offre des avantages du stockage. Le fait de transformer un type de données de colonne existant comportant des caractères ASCII de la plage de 0 à 127 de `NCHAR(10)` en `CHAR(10)` et d’utiliser un classement prenant en charge UTF-8 se traduit par une réduction de 50 % des besoins en stockage. Cette réduction correspond au fait que `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même représentation de chaîne Unicode.    
 -  Au-dessus de la plage ASCII, presque tout l’alphabet latin et grec, cyrillique, copte, arménien, hébreu, arabe, syriaque, Tāna et n’ko nécessite 2 octets par caractère dans les encodages UTF-8 et UTF-16. Dans ces cas, il n’y a pas de différences significatives de stockage pour des types de données comparables (par exemple, entre **char** et **nchar**).
--  S’il s’agit principalement d’un script d’Extrême-Orient (par exemple, coréen, chinois ou japonais), chaque caractère nécessite 3 octets en UTF-8 et 2 octets en UTF-16. L’utilisation UFT-16 offre des avantages du stockage. 
+-  S’il s’agit principalement d’un script d’Asie de l'Est (par exemple, coréen, chinois ou japonais), chaque caractère nécessite 3 octets en UTF-8 et 2 octets en UTF-16. L’utilisation UFT-16 offre des avantages du stockage. 
 -  Les caractères figurant dans la plage de 010000 à 10FFFF nécessitent 4 octets en UTF-8 et UTF-16. Dans ces cas, il n’y a pas de différences de stockage pour des types de données comparables (par exemple entre **char** et **nchar**).
 
 Pour d’autres considérations, consultez [Écrire des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md).
