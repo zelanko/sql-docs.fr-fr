@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: Nouveautés
+    - name: What's New
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -130,6 +130,8 @@
           items:
             - name: Instance principale SQL Server
               href: big-data-cluster/configure-sql-server-master-instance.md
+            - name: Configurer Apache Spark et Apache Hadoop
+              href: big-data-cluster/configure-spark-hdfs.md
         - name: Virtualisation de données
           items:
             - name: Données relationnelles
@@ -320,7 +322,7 @@
                       href: relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
                     - name: Disable
                       href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
-                    - name: "Migrer des paramètres à partir de SQL Server\_2014"
+                    - name: "Migrer les paramètres à partir de SQL Server\_2014"
                       href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
             - name: Sauvegarder localement
               items:
@@ -461,6 +463,8 @@
                   href: relational-databases/backup-restore/transaction-log-backups-sql-server.md
                 - name: Bases de données système
                   href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
+                - name: Enregistreur VSS et SQL
+                  href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
             - name: Configuration
               items:
                 - name: Compression
@@ -907,11 +911,11 @@
               items:
                 - name: Surveiller les performances pour les groupes de disponibilité
                   href: database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md
-                - name: 'Dépanner : dépassement de RPO du groupe de disponibilité'
+                - name: "Résoudre les problèmes\_: Dépassement de RPO du groupe de disponibilité"
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md
-                - name: 'Dépanner : dépassement de RTO du groupe de disponibilité'
+                - name: "Résoudre les problèmes\_: Dépassement de RTO du groupe de disponibilité"
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md
-                - name: "Dépanner\_: les changements sur le réplica principal ne sont pas reflétés sur le réplica secondaire"
+                - name: "Résoudre les problèmes\_: Les changements sur le réplica principal ne sont pas reflétés sur le réplica secondaire"
                   href: database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md
                 - name: Outils utiles pour la résolution des problèmes
                   href: database-engine/availability-groups/windows/useful-tools-for-troubleshooting.md
@@ -1037,9 +1041,9 @@
                     - name: Établir une session
                       href: database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
                       items:
-                        - name: "Exemple\_: Configurer avec l’authentification Windows (T-SQL)"
+                        - name: 'Exemple : configurer avec l’authentification Windows (T-SQL)'
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-                        - name: "Exemple\_: Configurer avec des certificats (T-SQL)"
+                        - name: 'Exemple : configurer avec des certificats (T-SQL)'
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
                     - name: Mettre à niveau
                       href: database-engine/database-mirroring/upgrading-mirrored-instances.md
@@ -1113,7 +1117,7 @@
                   href: database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md
                 - name: Basculement de rôle
                   href: database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md
-                - name: "Quorum\_: effets d'un témoin sur la disponibilité de la base de données"
+                - name: "Quorum\_: Effets d’un témoin sur la disponibilité de la base de données"
                   href: database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md
                 - name: Cause possible d’échecs
                   href: database-engine/database-mirroring/possible-failures-during-database-mirroring.md
@@ -1422,7 +1426,7 @@
               href: relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
         - name: FileTables
           items:
-            - name: Conditions préalables requises
+            - name: Prérequis
               href: relational-databases/blob/enable-the-prerequisites-for-filetable.md
             - name: 'Créer, modifier et supprimer'
               href: relational-databases/blob/create-alter-and-drop-filetables.md
@@ -1757,7 +1761,7 @@
           items:
             - name: Utilisation du type de données hierarchyid
               href: relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
-            - name: 'Leçon 1 : Conversion d''une table en structure hiérarchique'
+            - name: "Leçon\_1\_: Conversion d’une table en une structure hiérarchique"
               href: relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
             - name: "Leçon\_2\_: Création et gestion de données dans une table hiérarchique"
               href: relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
@@ -1981,19 +1985,19 @@
             - name: Mode RAW
               href: relational-databases/xml/use-raw-mode-with-for-xml.md
               items:
-                - name: 'Exemple : récupération des informations de modèle de produit au format XML'
+                - name: 'Exemple : Récupération des informations de modèle de produit au format XML'
                   href: relational-databases/xml/example-retrieving-product-model-information-as-xml.md
                 - name: 'Exemple : spécification de XSINIL avec la directive ELEMENTS'
                   href: relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
-                - name: "Exemple\_: demande de schémas comme résultats avec les options XMLDATA et XMLSCHEMA"
+                - name: 'Exemple : Demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA'
                   href: relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-                - name: "Exemple\_: extraction de données binaires"
+                - name: 'Exemple : Extraction de données binaires'
                   href: relational-databases/xml/example-retrieving-binary-data.md
-                - name: "Exemple\_: renommage de l’élément <row>"
+                - name: 'Exemple : Renommage de l’élément <row>'
                   href: relational-databases/xml/example-renaming-the-row-element.md
-                - name: 'Exemple : spécification d''un élément racine pour les données XML générées par FOR XML'
+                - name: 'Exemple : Spécification d’un élément racine pour les données XML générées par FOR XML'
                   href: relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-                - name: 'Exemple: interrogation de colonnes de type XML'
+                - name: 'Exemple : interrogation de colonnes de type XML'
                   href: relational-databases/xml/example-querying-xmltype-columns.md
             - name: mode AUTO
               href: relational-databases/xml/use-auto-mode-with-for-xml.md
@@ -2002,30 +2006,30 @@
                   href: relational-databases/xml/use-the-binary-base64-option.md
                 - name: Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées
                   href: relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
-                - name: 'Exemples : utilisation du mode AUTO'
+                - name: 'Exemples : Utilisation du mode AUTO'
                   href: relational-databases/xml/examples-using-auto-mode.md
             - name: Mode EXPLICIT
               href: relational-databases/xml/use-explicit-mode-with-for-xml.md
               items:
-                - name: 'Exemple : extraction d''informations sur les employés'
+                - name: 'Exemple : Extraction d’informations sur les employés'
                   href: relational-databases/xml/example-retrieving-employee-information.md
-                - name: 'Exemple : spécification de la directive ELEMENT'
+                - name: 'Exemple : Spécification de la directive ELEMENT'
                   href: relational-databases/xml/example-specifying-the-element-directive.md
                 - name: 'Exemple : spécification de la directive ELEMENTXSINIL'
                   href: relational-databases/xml/example-specifying-the-elementxsinil-directive.md
-                - name: 'Exemple : construction de frères à l''aide du mode EXPLICIT'
+                - name: 'Exemple : Construction de frères à l’aide du mode EXPLICIT'
                   href: relational-databases/xml/example-constructing-siblings-with-explicit-mode.md
-                - name: "Exemple\_: spécification des directives ID et IDREF"
+                - name: 'Exemple : Spécification des directives ID et IDREF'
                   href: relational-databases/xml/example-specifying-the-id-and-idref-directives.md
-                - name: "Exemple\_: spécification des directives ID et IDREFS"
+                - name: 'Exemple : Spécification des directives ID et IDREFS'
                   href: relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md
                 - name: 'Exemple : spécification de la directive HIDE'
                   href: relational-databases/xml/example-specifying-the-hide-directive.md
-                - name: "Exemple\_: spécification de la directive ELEMENT et de l’encodage d’entité"
+                - name: 'Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité'
                   href: relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md
-                - name: 'Exemple : spécification de la directive CDATA'
+                - name: 'Exemple : Spécification de la directive CDATA'
                   href: relational-databases/xml/example-specifying-the-cdata-directive.md
-                - name: 'Exemple : spécification de la directive XMLTEXT'
+                - name: 'Exemple : Spécification de la directive XMLTEXT'
                   href: relational-databases/xml/example-specifying-the-xmltext-directive.md
             - name: Mode Path
               href: relational-databases/xml/use-path-mode-with-for-xml.md
@@ -2044,7 +2048,7 @@
                   href: relational-databases/xml/columns-that-contain-a-null-value-by-default.md
                 - name: Prise en charge d'espace de noms en mode PATH
                   href: relational-databases/xml/namespace-support-in-path-mode.md
-                - name: 'Exemples : utilisation du mode PATH'
+                - name: 'Exemples : Utilisation du mode PATH'
                   href: relational-databases/xml/examples-using-path-mode.md
             - name: Requêtes imbriquées
               href: relational-databases/xml/use-nested-for-xml-queries.md
@@ -2075,7 +2079,7 @@
         - name: OPENXML
           href: relational-databases/xml/openxml-sql-server.md
           items:
-            - name: 'Exemples : utilisation de OPENXML'
+            - name: 'Exemples : Utilisation de OPENXML'
               href: relational-databases/xml/examples-using-openxml.md
             - name: Spécifier des métapropriétés
               href: relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -2707,31 +2711,31 @@
           items:
             - name: Signets
               href: relational-databases/native-client-ole-db-rowsets/bookmarks.md
-            - name: Création d'un ensemble de lignes avec IOpenRowset
+            - name: Créer un ensemble de lignes avec IOpenRowset
               href: relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md
-            - name: 'Création d''ensembles de lignes avec ICommand::Execute'
+            - name: 'Créer des ensembles de lignes avec ICommand::Execute'
               href: relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md
-            - name: Extraction d'une ligne unique avec IRow
+            - name: Extraire une ligne unique avec IRow
               href: relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md
-            - name: 'Récupération de données BLOB avec IRow::GetColumns et ISequentialStream'
+            - name: 'Extraire des données BLOB avec IRow::GetColumns et ISequentialStream'
               href: relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
-            - name: 'Récupération de données BLOB avec IRow::Open et ISequentialStream'
+            - name: 'Extraire des données BLOB avec IRow::Open & ISequentialStream'
               href: relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
-            - name: Récupération de lignes - Prochaine position de récupération (fetch)
+            - name: Extraire des lignes - Prochaine position d’extraction
               href: relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md
-            - name: Extraction de lignes
+            - name: Extraire des lignes
               href: relational-databases/native-client-ole-db-rowsets/fetching-rows.md
             - name: Propriétés et comportements des ensembles de lignes
               href: relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md
             - name: Ensembles de lignes et curseurs
               href: relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md
-            - name: Resynchronisation des lignes dans un ensemble de lignes
+            - name: Resynchroniser les lignes d’un ensemble de lignes
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
-            - name: Mise à jour des données dans les ensembles de lignes
+            - name: Mettre à jour les données dans les ensembles de lignes
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md
-            - name: Mise à jour des données dans les curseurs
+            - name: Mettre à jour les données dans les curseurs
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md
-            - name: 'Utilisation d''IRow::GetColumns'
+            - name: 'Utiliser IRow::GetColumns'
               href: relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md
         - name: Objets blob et objets OLE
           href: relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
@@ -2986,7 +2990,7 @@
                   href: relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
                 - name: Obtenir une authentification Kerberos mutuelle
                   href: relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md
-                - name: "Procédure\_: insérer des lignes dans la colonne de géographie"
+                - name: "Procédure\_: Insérer des lignes dans la colonne de géographie"
                   href: relational-databases/native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
                 - name: "Gestion des colonnes texte et image\_- Utiliser des colonnes de données à l’exécution"
                   href: relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
@@ -3308,7 +3312,7 @@
         - name: Colonnes de texte et d’image
           href: relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
           items:
-            - name: Colonnes de texte et d'image liées et non liées
+            - name: Colonnes de texte et d’image liées et non liées
               href: relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
             - name: 'Data-at-Execution et colonnes text, ntext ou image'
               href: relational-databases/native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
@@ -3514,7 +3518,7 @@
       items:
         - name: Vue d’ensemble
           items:
-            - name: Nouveautés
+            - name: What's New
               href: relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md
             - name: Spécifications
               href: relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
@@ -3529,7 +3533,7 @@
           items:
             - name: Côté client et côté serveur
               href: relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-            - name: Côté client contre côté serveur
+            - name: Côté client et Côté serveur
               href: relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
             - name: Côté client
               href: relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -4117,9 +4121,9 @@
         - name: Concepts liés aux événements de serveur
           href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
           items:
-            - name: "Exemple\_: création d’une alerte SQL Server Agent avec le fournisseur WMI"
+            - name: 'Exemple : Création d’une alerte SQL Server Agent avec le fournisseur WMI'
               href: relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-            - name: "Exemple\_: utilisation du fournisseur d’événements WMI avec le .NET\_Framework"
+            - name: "Exemple : Utilisation du fournisseur d’événements WMI avec le .NET\_Framework"
               href: relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
             - name: Présentation des événements de serveur
               href: relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md
@@ -4159,7 +4163,7 @@
   items:
     - name: Vue d’ensemble
       items:
-        - name: Nouveautés
+        - name: What's New
           href: sql-server/install/what-s-new-in-sql-server-installation.md
         - name: Spécifications de capacité maximale
           href: sql-server/maximum-capacity-specifications-for-sql-server.md
@@ -4708,7 +4712,7 @@
               items:
                 - name: Créer un domaine
                   href: data-quality-services/create-a-domain.md
-                - name: 'Gestion de l''arborescence du domaine : Liste des domaines'
+                - name: "Gestion de l’arborescence du domaine\_: Liste des domaines"
                   href: data-quality-services/domain-management-domain-list.md
                 - name: Définir des propriétés de domaine
                   href: data-quality-services/set-domain-properties.md
@@ -6103,10 +6107,10 @@
                   href: relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
                 - name: Vérifier le paramètre de l'option Max Worker Threads
                   href: relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-            - name: 'Didacticiel : Administration de serveurs à l''aide de la Gestion basée sur des stratégies'
+            - name: "Tutoriel\_: Administration de serveurs à l’aide de la Gestion basée sur des stratégies"
               href: relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
               items:
-                - name: "Leçon\_1\_: Créer et appliquer une stratégie désactivée par défaut"
+                - name: "Leçon\_1\_: Créer et appliquer une stratégie Désactivé par défaut"
                   href: relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
                 - name: "Leçon\_2\_: Créer et appliquer une stratégie de standards de nommage"
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
@@ -6275,7 +6279,7 @@
           items:
             - name: Démarrages rapides
               items:
-                - name: 'Démarrage rapide : Événements étendus dans SQL Server'
+                - name: "Démarrage rapide\_: Événements étendus dans SQL Server"
                   href: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
             - name: Tutoriels
               items:
@@ -7067,7 +7071,7 @@
               items:
                 - name: Se connecter à un référentiel MDS
                   href: master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
-            - name: 'Vue d’ensemble : exportation de données vers Excel (Complément MDS pour Excel)'
+            - name: "Présentation\_: Exportation de données vers Excel (Complément MDS pour Excel)"
               href: master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
               items:
                 - name: Filtrer les données avant l’exportation
@@ -7083,7 +7087,7 @@
                   href: master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
                 - name: Actualisation des données
                   href: master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
-            - name: 'Vue d’ensemble : importation de données à partir d’Excel (complément MDS pour Excel)'
+            - name: "Présentation\_: Importation de données depuis Excel (Complément Master Data Services pour Excel)"
               href: master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
               items:
                 - name: Publier des données d’Excel dans MDS
@@ -7189,7 +7193,7 @@
                   href: master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md
                 - name: Initier des actions en fonction de modifications de valeurs d'attribut
                   href: master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md
-        - name: "Vue d’ensemble\_: Importation de données à partir de tables"
+        - name: "Présentation\_: Importation de données à partir de tables"
           href: master-data-services/overview-importing-data-from-tables-master-data-services.md
           items:
             - name: Importer des données à partir de tables
@@ -7329,7 +7333,7 @@
               href: master-data-services/create-a-collection-master-data-services.md
             - name: Ajouter des membres à une collection
               href: master-data-services/add-members-to-a-collection-master-data-services.md
-        - name: "Vue d’ensemble\_: Exportation des données"
+        - name: "Présentation\_: Exporting Data"
           href: master-data-services/overview-exporting-data-master-data-services.md
           items:
             - name: Créer une vue d’abonnement pour exporter des données
@@ -7525,17 +7529,17 @@
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
                 - name: Permuter des clés Always Encrypted
                   items:
-                    - name: Permuter des clés Always Encrypted en utilisant SSMS
+                    - name: SQL Server Management Studio (SSMS)
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
-                    - name: Permuter des clés Always Encrypted à l’aide de PowerShell
+                    - name: PowerShell
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
                 - name: Configurer des colonnes avec Always Encrypted
                   items:
-                    - name: Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted
+                    - name: Assistant
                       href: relational-databases/security/encryption/always-encrypted-wizard.md
-                    - name: Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec PowerShell
+                    - name: PowerShell
                       href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                    - name: Configurer le chiffrement de colonne en utilisant Always Encrypted avec un package DAC
+                    - name: package DAC
                       href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
                 - name: Interroger des colonnes avec Always Encrypted
                   items:
@@ -7543,13 +7547,13 @@
                       href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
                 - name: Migrer des données sensibles protégées avec Always Encrypted
                   items:
-                    - name: Exporter et importer des bases de données avec Always Encrypted
+                    - name: L’exportation et l’importation
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
-                    - name: Sauvegarder et restaurer des bases de données avec Always Encrypted
+                    - name: Sauvegarde et restauration
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
-                    - name: Migrer des données à l’aide de l’Assistant Importation et Exportation
+                    - name: Migrer des données avec l’Assistant Importation et Exportation
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
-                    - name: Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted
+                    - name: Charger en bloc des données chiffrées dans les colonnes
                       href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: Développer des applications à l’aide d’Always Encrypted
                   items:
@@ -7963,11 +7967,11 @@
             - name: Tutoriels
               href: tools/dta/tutorial-database-engine-tuning-advisor.md
               items:
-                - name: 'Leçon 1 : navigation de base dans l''Assistant Paramétrage du moteur de base de données'
+                - name: "Leçon\_1\_: Navigation de base dans l’Assistant Paramétrage du moteur de base de données"
                   href: tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-                - name: 'Leçon 2 : utilisation de l''Assistant Paramétrage du moteur de base de données'
+                - name: "Leçon\_2\_: Utilisation de l’Assistant Paramétrage du moteur de base de données"
                   href: tools/dta/lesson-2-using-database-engine-tuning-advisor.md
-                - name: 'Leçon 3 : Utilisation de l''utilitaire de ligne de commande dta'
+                - name: "Leçon\_3\_: Utilisation de l’utilitaire de ligne de commande\_dta"
                   href: tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
     - name: Distributed Replay
       href: tools/distributed-replay/sql-server-distributed-replay.md
@@ -8200,29 +8204,29 @@
               href: ssdt/check-for-updates-dialog-box.md
             - name: Paramètres du projet de base de données
               href: ssdt/database-project-settings.md
-            - name: "Procédure\_: parcourir les objets d'un projet Base de données SQL Server"
+            - name: "Procédure\_: Parcourir les objets d’un projet de base de données SQL Server"
               href: ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
             - name: Fenêtre Opérations des outils de données
               href: ssdt/data-tools-operations-window.md
             - name: Options de l’Éditeur T-SQL
               href: ssdt/transact-sql-editor-options.md
-            - name: "Procédure\_: créer un nouveau projet de base de données"
+            - name: "Procédure\_: Créer un projet de base de données"
               href: ssdt/how-to-create-a-new-database-project.md
-            - name: "Procédure\_: utiliser le schéma pour comparer différentes définitions de base de données"
+            - name: "Procédure\_: Utiliser Comparer les schémas pour comparer différentes définitions de base de données"
               href: ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
-            - name: "Guide pratique\_: générer et déployer sur une base de données locale"
+            - name: "Procédure\_: Générer et déployer dans une base de données locale"
               href: ssdt/how-to-build-and-deploy-to-a-local-database.md
-            - name: "Procédure\_: utiliser des objets Microsoft SQL\_Server\_2012 dans votre projet"
+            - name: "Procédure\_: Utiliser des objets Microsoft SQL\_Server\_2012 dans un projet"
               href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
-            - name: "Procédure\_: utilisation des objets de base de données CLR"
+            - name: "Procédure\_: Travailler avec des objets de base de données CLR"
               href: ssdt/how-to-work-with-clr-database-objects.md
-            - name: "Procédure\_: créer une capture instantanée d'un projet"
+            - name: "Procédure\_: Créer une capture instantanée d’un projet"
               href: ssdt/how-to-create-a-snapshot-of-a-project.md
-            - name: "Guide pratique\_: Changer la plateforme cible et publier un projet de base de données"
+            - name: "Procédure\_: Modifier la plateforme cible et publier un projet de base de données"
               href: ssdt/how-to-change-target-platform-and-publish-a-database-project.md
-            - name: "Guide pratique\_: Convertir des projets de base de données Visual Studio\_2010 en projets de base de données SQL\_Server et recibler vers une autre plateforme"
+            - name: "Procédure\_: Convertir des projets de base de données Visual Studio\_2010 en projets de base de données SQL\_Server et recibler vers une autre plateforme"
               href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-            - name: "Guide pratique\_: Spécifier des scripts de prédéploiement et de post-déploiement"
+            - name: "Procédure\_: Spécifier des scripts de prédéploiement et de post-déploiement"
               href: ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
             - name: Développement de base de données orienté projet à l'aide des outils en ligne de commande
               href: ssdt/project-oriented-database-development-using-command-line-tools.md
@@ -8232,58 +8236,58 @@
             - name: Développement de base de données connectée
               href: ssdt/connected-database-development.md
               items:
-                - name: "Guide pratique\_: Se connecter à une base de données et parcourir les objets existants"
+                - name: "Procédure\_: Se connecter à une base de données et parcourir les objets existants"
                   href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
-                - name: "Procédure\_: créer des objets de base de données à l'aide du Concepteur de tables"
+                - name: "Procédure\_: Créer des objets de base de données avec le Concepteur de tables"
                   href: ssdt/how-to-create-database-objects-using-table-designer.md
-                - name: "Procédure\_: mettre à jour une base de données connectée avec Power Buffer"
+                - name: "Procédure\_: Mettre à jour une base de données connectée avec Power Buffer"
                   href: ssdt/how-to-update-a-connected-database-with-power-buffer.md
                 - name: Boîte de dialogue Filtrer et trier
                   href: ssdt/filter-and-sort-dialog-box.md
-                - name: "Procédure\_: créer de nouveaux objets de base de données à l'aide de requêtes"
+                - name: "Procédure\_: Créer de nouveaux objets de base de données à l’aide de requêtes"
                   href: ssdt/how-to-create-new-database-objects-using-queries.md
-                - name: "Procédure\_: modifier une table existante à l'aide de requêtes"
+                - name: "Procédure\_: Modifier une table existante à l’aide de requêtes"
                   href: ssdt/how-to-edit-an-existing-table-using-queries.md
-                - name: "Guide pratique\_: Afficher et modifier des données dans une table"
+                - name: "Procédure\_: Afficher et modifier des données dans une table"
                   href: ssdt/how-to-view-and-edit-data-in-a-table.md
-                - name: "Guide pratique\_: Supprimer des objets et résoudre des dépendances"
+                - name: "Procédure\_: Supprimer des objets et résoudre des dépendances"
                   href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
-                - name: "Procédure\_: cloner une base de données existante"
+                - name: "Procédure\_: Cloner une base de données existante"
                   href: ssdt/how-to-clone-an-existing-database.md
                 - name: 'Extraire, publier et enregistrer des fichiers .dacpac'
                   href: ssdt/extract-publish-and-register-dacpac-files.md
             - name: Comparer et synchroniser des données d’une ou plusieurs tables avec des données d’une base de données de référence
               href: ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
               items:
-                - name: "Guide pratique\_: Comparer et synchroniser les données de deux bases de données"
+                - name: "Procédure\_: Comparer et synchroniser les données de deux bases de données"
                   href: ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
-                - name: 'Guide pratique : Voir les différences entre les données'
+                - name: "Procédure\_: Afficher les différences entre les données"
                   href: ssdt/how-to-view-data-differences.md
                 - name: Utiliser l’Éditeur T-SQL pour modifier et exécuter des scripts
                   href: ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-                - name: "Guide pratique\_: Structurer et ajouter des extraits de code dans un script T-SQL"
+                - name: "Procédure\_: Structurer et ajouter des extraits de code dans un script T-SQL"
                   href: ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
-                - name: "Procédure\_: naviguer entre des scripts"
+                - name: "Procédure\_: Naviguer entre des scripts"
                   href: ssdt/how-to-navigate-between-scripts.md
-                - name: "Guide pratique\_: Utiliser Renommer et Refactorisation pour apporter des modifications à vos objets de base de données"
+                - name: "Procédure\_: Utiliser Renommer et Refactorisation pour apporter des modifications à vos objets de base de données"
                   href: ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
-                - name: "Procédure\_: exécuter une requête partielle"
+                - name: "Procédure\_: Exécuter une requête partielle"
                   href: ssdt/how-to-execute-a-partial-query.md
-                - name: "Procédure\_: déboguer des procédures stockées"
+                - name: "Procédure\_: Déboguer des procédures stockées"
                   href: ssdt/how-to-debug-stored-procedures.md
                 - name: Analyser les performances de script
                   href: ssdt/analyze-script-performance.md
             - name: 'Gérer des tables et des relations, et résoudre les erreurs'
               href: ssdt/manage-tables-relationships-and-fix-errors.md
               items:
-                - name: "Guide pratique\_: Utiliser le Concepteur de tables pour gérer les tables et les relations"
+                - name: "Procédure\_: Utiliser le Concepteur de tables pour gérer les tables et les relations"
                   href: ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md
-                - name: "Procédure\_: résoudre les erreurs"
+                - name: "Procédure\_: Corriger les erreurs"
                   href: ssdt/how-to-fix-errors.md
             - name: Vérification du code de la base de données à l'aide de tests unitaires SQL Server
               href: ssdt/verifying-database-code-by-using-sql-server-unit-tests.md
               items:
-                - name: "Procédure pas à pas\_: Créer et exécuter un test unitaire SQL Server"
+                - name: "Procédure pas à pas\_: Création et exécution d’un test unitaire SQL Server"
                   href: ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md
                 - name: Création et définition de tests unitaires SQL Server
                   href: ssdt/creating-and-defining-sql-server-unit-tests.md
@@ -8296,19 +8300,19 @@
                       href: ssdt/using-test-conditions-in-sql-server-unit-tests.md
                     - name: Utilisation d’assertions T-SQL dans les tests unitaires SQL Server
                       href: ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
-                    - name: "Procédure\_: créer un projet de test pour un test unitaire de base de données SQL Server"
+                    - name: "Procédure\_: Créer un projet de test pour un test unitaire de base de données SQL Server"
                       href: ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
-                    - name: "Procédure\_: créer un test unitaire SQL Server vide"
+                    - name: "Procédure\_: Créer un test unitaire SQL Server vide"
                       href: ssdt/how-to-create-an-empty-sql-server-unit-test.md
-                    - name: "Guide pratique\_: Créer des tests unitaires SQL Server pour des fonctions, des déclencheurs et des procédures stockées"
+                    - name: "Procédure\_: Créer des tests unitaires SQL Server pour des fonctions, des déclencheurs et des procédures stockées"
                       href: ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-                    - name: "Procédure\_: ajouter des conditions de test à des tests unitaires SQL Server"
+                    - name: "Procédure\_: Ajouter des conditions de test à des tests unitaires SQL Server"
                       href: ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md
-                    - name: "Procédure\_: ouvrir un test unitaire SQL Server à modifier"
+                    - name: "Procédure\_: Ouvrir un test unitaire SQL Server à modifier"
                       href: ssdt/how-to-open-a-sql-server-unit-test-to-edit.md
-                    - name: "Procédure\_: écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction"
+                    - name: "Procédure\_: Écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction"
                       href: ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
-                    - name: "Procédure\_: configurer l'exécution de test unitaire SQL Server"
+                    - name: "Procédure\_: Configurer l’exécution de test unitaire SQL Server"
                       href: ssdt/how-to-configure-sql-server-unit-test-execution.md
                     - name: Vue d’ensemble des chaînes de connexion et des autorisations
                       href: ssdt/overview-of-connection-strings-and-permissions.md
@@ -8317,11 +8321,11 @@
                 - name: Exécution de tests unitaires SQL Server
                   href: ssdt/running-sql-server-unit-tests.md
                   items:
-                    - name: "Procédure\_: déboguer des objets de base de données"
+                    - name: "Procédure\_: Déboguer des objets de base de données"
                       href: ssdt/how-to-debug-database-objects.md
                     - name: "Procédure\_: exécuter des tests unitaires SQL Server en utilisant Team Foundation Build"
                       href: ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md
-                    - name: "Procédure\_: exécuter des tests unitaires SQL Server"
+                    - name: "Procédure\_: Exécuter des tests unitaires SQL Server"
                       href: ssdt/how-to-run-sql-server-unit-tests.md
                     - name: Interprétation des résultats des tests unitaires SQL Server
                       href: ssdt/interpreting-sql-server-unit-test-results.md
@@ -8330,11 +8334,11 @@
                 - name: Conditions de test personnalisées pour les tests unitaires SQL Server
                   href: ssdt/custom-test-conditions-for-sql-server-unit-tests.md
                   items:
-                    - name: "Procédure\_: créer des conditions de test pour le Concepteur de test unitaire SQL Server"
+                    - name: "Procédure\_: Créer des conditions de test pour le Concepteur de test unitaire SQL Server"
                       href: ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
-                    - name: "Procédure pas à pas\_: utilisation d'une condition de test personnalisée pour vérifier le résultat d'une procédure stockée"
+                    - name: "Procédure pas à pas\_: Utiliser une condition de test personnalisée pour vérifier les résultats d’une procédure stockée"
                       href: ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
-                    - name: "Procédure\_: mettre à niveau une condition de test personnalisée Visual Studio\_2010 d'une version antérieure vers SQL Server Data Tools"
+                    - name: "Procédure\_: Mettre à niveau une condition de test personnalisée Visual Studio\_2010 d’une version antérieure vers SQL Server Data Tools"
                       href: ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
                 - name: "Dépannage des problèmes liés aux tests unitaires de base de données SQL\_Server"
                   href: ssdt/troubleshooting-sql-server-database-unit-testing-issues.md
@@ -8344,7 +8348,7 @@
                 - name: Personnaliser la génération et le déploiement de bases de données à l’aide de contributeurs de génération et de déploiement
                   href: ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md
                   items:
-                    - name: 'Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle'
+                    - name: "Procédure pas à pas\_: Étendre la génération du projet de base de données à la génération de statistiques de modèle"
                       href: ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md
                     - name: "Procédure pas à pas\_: Étendre le déploiement du projet de base de données pour analyser le plan de déploiement"
                       href: ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
@@ -8355,7 +8359,7 @@
                   items:
                     - name: "Procédure pas à pas\_: création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server"
                       href: ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
-                - name: "Guide pratique\_: Installer et gérer des extensions de fonctionnalités"
+                - name: "Procédure\_: Installer et gérer des extensions de fonctionnalités"
                   href: ssdt/how-to-install-and-manage-feature-extensions.md
             - name: Autorisations nécessaires pour SQL Server Data Tools
               href: ssdt/required-permissions-for-sql-server-data-tools.md
@@ -9730,9 +9734,9 @@
         - name: Mise en route
           href: relational-databases/tutorial-getting-started-with-the-database-engine.md
           items:
-            - name: 'Leçon 1 : Connexion au moteur de base de données'
+            - name: "Leçon\_1\_: Connexion au moteur de base de données"
               href: relational-databases/lesson-1-connecting-to-the-database-engine.md
-            - name: 'Leçon 2 : Connexion depuis un autre ordinateur'
+            - name: "Leçon\_2\_: Connexion depuis un autre ordinateur"
               href: relational-databases/lesson-2-connecting-from-another-computer.md
         - name: Signature de procédures stockées à l'aide d'un certificat
           href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
@@ -9743,9 +9747,9 @@
     - name: Écriture d’instructions T-SQL
       href: t-sql/tutorial-writing-transact-sql-statements.md
       items:
-        - name: "Leçon 1\_: Créer et interroger des objets de base de données"
+        - name: "Leçon\_1\_: Créer et interroger des objets de base de données"
           href: t-sql/lesson-1-creating-database-objects.md
-        - name: "Leçon 2\_: Configurer des autorisations sur des objets de base de données"
+        - name: "Leçon\_2\_: Configurer des autorisations sur des objets de base de données"
           href: t-sql/lesson-2-configuring-permissions-on-database-objects.md
         - name: "Leçon\_3\_: Supprimer des objets de base de données"
           href: t-sql/lesson-3-deleting-database-objects.md
@@ -10910,7 +10914,7 @@
         - name: Catégorie d'événement de rapport de progression
           href: relational-databases/event-classes/progress-report-event-category.md
           items:
-            - name: 'Classe d''événements Progress Report: Online Index Operation'
+            - name: "Rapport de progression\_: Classe d'événements Online Index Operation Event Class"
               href: relational-databases/event-classes/progress-report-online-index-operation-event-class.md
         - name: Catégorie d'événement Notifications de requêtes
           href: relational-databases/event-classes/query-notifications-event-category.md
@@ -11073,25 +11077,25 @@
               href: relational-databases/event-classes/dtctransaction-event-class.md
             - name: SQLTransaction (classe d'événements)
               href: relational-databases/event-classes/sqltransaction-event-class.md
-            - name: 'TM: Begin Tran Completed, classe d''événements'
+            - name: "TM\_: Begin Tran Completed (classe d'événements)"
               href: relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-            - name: 'TM: Begin Tran Starting, classe d''événements'
+            - name: "TM\_: Begin Tran Starting (classe d'événements)"
               href: relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-            - name: 'TM: Commit Tran Completed, classe d''événements'
+            - name: "TM\_: Commit Tran Completed (classe d'événements)"
               href: relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-            - name: 'TM: Commit Tran Starting, classe d''événements'
+            - name: "TM\_: Commit Tran Starting (classe d'événements)"
               href: relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-            - name: 'TM: Promote Tran Completed, classe d''événements'
+            - name: "TM\_: Promote Tran Completed (classe d'événements)"
               href: relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-            - name: 'TM: Promote Tran Starting, classe d''événements'
+            - name: "TM\_: Promote Tran Starting (classe d'événements)"
               href: relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-            - name: 'TM: Rollback Tran Completed, classe d''événements'
+            - name: "TM\_: Rollback Tran Completed (classe d'événements)"
               href: relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-            - name: 'TM: Rollback Tran Starting, classe d''événements'
+            - name: "TM\_: Rollback Tran Starting (classe d'événements)"
               href: relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-            - name: 'TM: Save Tran Completed, classe d''événements'
+            - name: "TM\_: Save Tran Completed (classe d'événements)"
               href: relational-databases/event-classes/tm-save-tran-completed-event-class.md
-            - name: 'TM: Save Tran Starting, classe d''événements'
+            - name: "TM\_: Save Tran Starting (classe d'événements)"
               href: relational-databases/event-classes/tm-save-tran-starting-event-class.md
             - name: TransactionLog (classe d'événements)
               href: relational-databases/event-classes/transactionlog-event-class.md
@@ -14644,7 +14648,7 @@
               href: t-sql/data-types/getancestor-database-engine.md
             - name: GetDescendant
               href: t-sql/data-types/getdescendant-database-engine.md
-            - name: GetLevel)
+            - name: GetLevel
               href: t-sql/data-types/getlevel-database-engine.md
             - name: GetRoot
               href: t-sql/data-types/getroot-database-engine.md
