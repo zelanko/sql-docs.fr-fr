@@ -1,11 +1,7 @@
 ---
-title: Paramètres du projet de base de données | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Paramètres du projet de base de données
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
@@ -40,14 +36,19 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912852"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241681"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
+
 Vous utilisez des paramètres de projet de base de données pour contrôler des aspects de vos configurations de build, de débogage et de bases de données. Ces paramètres peuvent être répartis dans les catégories suivantes :  
   
 -   [Paramètres du projet](#bkmk_proj_settings)  
@@ -58,13 +59,13 @@ Vous utilisez des paramètres de projet de base de données pour contrôler des 
   
 -   [SQLCLR et Build SQLCLR](#bkmk_sqlclr_sqlclrbuild)  
   
--   [Build](#bkmk_build)  
+-   [Créer](#bkmk_build)  
   
 -   [Variables SQLCMD](#bkmk_sqlcmd_variables)  
   
 -   [Événements de build](#bkmk_build_events)  
   
--   [Débogage](#bkmk_debug)  
+-   [Déboguer](#bkmk_debug)  
   
 -   [Chemins d'accès des références](#bkmk_ref_paths)  
   
@@ -93,8 +94,8 @@ Les paramètres du tableau suivant s'appliquent à toutes les configurations de 
 |Générique|||  
 |Schéma par défaut|dbo|Spécifie le schéma par défaut dans lequel les objets SQLCLR et Transact\-SQL sont créés. Vous pouvez ignorer ce paramètre en spécifiant le schéma directement sur les objets.|  
 |Inclure le nom du schéma dans le nom de fichier|non|Spécifie si les noms de fichiers incluent le schéma comme un préfixe (par exemple, dbo.Products.table.sql). Si cette case à cocher est désactivée, les noms de fichiers pour les objets prennent la forme ObjectName.ObjectType.sql (par exemple, Products.table.sql).|  
-|Valider la casse des identificateurs|oui|Spécifie si la casse des identificateurs dans les objets SQL du projet est validée lors de la génération du projet. Cette option s'applique aux projets de base de données qui spécifient un classement respectant la casse pour la base de données.|  
-|Paramètres de la base de données|Paramètres par défaut basés sur les paramètres de configuration standard d'une base de données.|Le mode de classement et les paramètres au niveau de la base de données pour une base de données SQL Server sont des exemples de paramètres que vous pouvez spécifier.|  
+|Valider la casse des identificateurs|Oui|Spécifie si la casse des identificateurs dans les objets SQL du projet est validée lors de la génération du projet. Cette option s'applique aux projets de base de données qui spécifient un classement respectant la casse pour la base de données.|  
+|Paramètres de base de données|Paramètres par défaut basés sur les paramètres de configuration standard d'une base de données.|Le mode de classement et les paramètres au niveau de la base de données pour une base de données SQL Server sont des exemples de paramètres que vous pouvez spécifier.|  
   
 ## <a name="bkmk_evf"></a>Vérification Transact-SQL étendue  
   
@@ -177,7 +178,7 @@ Vous pouvez choisir une configuration de build pour chaque projet de base de don
   
 1.  Dans l' **Explorateur de solutions**, cliquez sur le nœud de solution pour lequel vous voulez spécifier une configuration de build.  
   
-2.  Dans le menu **Générer** , cliquez sur **Gestionnaire de configurations**. La boîte de dialogue **Gestionnaire de configurations** s'affiche.  
+2.  Dans le menu **Générer**, cliquez sur **Gestionnaire de configuration**. La boîte de dialogue **Gestionnaire de configurations** s’affiche.  
   
     Indiquez les paramètres de configuration à utiliser pour chaque projet de votre solution.  
   
@@ -221,8 +222,8 @@ Vous pouvez utiliser ces paramètres pour contrôler le débogage de votre proje
 |Chaîne de connexion cible|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Spécifie les informations de connexion du serveur de base de données que vous souhaitez cibler pour la configuration de build spécifiée. La chaîne de connexion par défaut est spécifiée par rapport à une instance LocalDB SQL Server et une base de données.|  
 |Déployer les propriétés de la base de données|Oui|Spécifie si les paramètres DatabaseProerties.DatabaseProperties sont déployés ou mis à jour lorsque vous déployez le projet de base de données.|  
 |Toujours recréer la base de données|Non|Spécifie si la base de données doit être supprimée et recréée au lieu d'effectuer une mise à niveau incrémentielle. Vous pouvez cocher cette case par exemple si vous souhaitez exécuter des tests unitaires de bases de données par rapport à un déploiement propre de la base de données. Si cette case à cocher est désactivée, la base de données existante sera mise à jour au lieu d'être supprimée et recréée.|  
-|Bloquer le déploiement incrémentiel si une perte de données peut se produire|oui|Spécifie si le déploiement s'arrête si une mise à jour entraîne la perte de données. Si cette case à cocher est activée, les modifications susceptibles de créer une perte de données entraînent l'arrêt du déploiement avec une erreur, ce qui empêche toute perte des données. Par exemple, le déploiement s'arrête si une colonne `varchar(50)` a été remplacée par une colonne `varchar(30)`.<br /><br />**REMARQUE :** le déploiement est bloqué uniquement si les tables dans lesquelles une perte de données peut se produire contiennent des données. Le déploiement se poursuit si aucune donnée n'a été perdue.|  
-|Objets DROP dans la cible mais pas dans le projet|non|Spécifie si les objets qui sont dans la base de données cible, mais pas dans le projet de base de données, doivent être supprimés dans le cadre du script de déploiement. Vous pouvez exclure des fichiers de votre projet pour les supprimer temporairement de votre script de compilation. Toutefois, il est possible que vous souhaitiez laisser les versions existantes de ces objets dans la base de données cible. Cette case à cocher n'a aucun effet si la case **Toujours recréer la base de données** est cochée, car la base de données sera supprimée.|  
+|Bloquer le déploiement incrémentiel si une perte de données peut se produire|Oui|Spécifie si le déploiement s'arrête si une mise à jour entraîne la perte de données. Si cette case à cocher est activée, les modifications susceptibles de créer une perte de données entraînent l'arrêt du déploiement avec une erreur, ce qui empêche toute perte des données. Par exemple, le déploiement s'arrête si une colonne `varchar(50)` a été remplacée par une colonne `varchar(30)`.<br /><br />**REMARQUE :** le déploiement est bloqué uniquement si les tables dans lesquelles une perte de données peut se produire contiennent des données. Le déploiement se poursuit si aucune donnée n'a été perdue.|  
+|Objets DROP dans la cible mais pas dans le projet|Non|Spécifie si les objets qui sont dans la base de données cible, mais pas dans le projet de base de données, doivent être supprimés dans le cadre du script de déploiement. Vous pouvez exclure des fichiers de votre projet pour les supprimer temporairement de votre script de compilation. Toutefois, il est possible que vous souhaitiez laisser les versions existantes de ces objets dans la base de données cible. Cette case à cocher n'a aucun effet si la case **Toujours recréer la base de données** est cochée, car la base de données sera supprimée.|  
 |Ne pas utiliser d'instructions ALTER ASSEMBLY pour mettre à jour les types CLR|Non|Spécifie si les instructions ALTER ASSEMBLY permettent de mettre à jour des types CLR (Common Language Run-time) ou si l'objet qui instancie le type CLR doit plutôt être supprimé et recréé lors du déploiement de modifications.|  
 |Avancé...|Non|Bouton de commande qui vous permet de spécifier les options qui contrôlent les événements et le comportement du déploiement.|  
   

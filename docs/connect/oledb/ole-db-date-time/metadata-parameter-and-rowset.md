@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995099"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Métadonnées - Paramètres et ensembles de lignes
@@ -68,9 +68,9 @@ ms.locfileid: "67995099"
   
  Le paramètre *bPrecision* est ignoré.  
   
- « DBPARAMFLAGS_SS_ISVARIABLESCALE » est ignoré lors de l'envoi de données au serveur. Les applications peuvent forcer l’utilisation de types TDS (Tabular Data Stream) hérités en utilisant les noms de types spécifiques au fournisseur « **datetime** » et « **smalldatetime** ». En cas de connexion à des serveurs [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou ultérieur), le format « **datetime2** » est utilisé et une conversion serveur implicite se produit si nécessaire, quand le nom de type est « **datetime2** » ou « DBTYPE_DBTIMESTAMP ». *bScale* est ignoré si les noms de types spécifiques au fournisseur «**DateTime**» ou «**smalldatetime**» sont utilisés. Sinon, les applications doivent s’assurer que *bScale* est correctement défini. Les applications mises à niveau à partir de MDAC et OLE DB pilote [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] pour SQL Server à partir de qui utilisent «DBTYPE_DBTIMESTAMP» échouent si elles ne définissent pas correctement *bScale* . En cas de connexion à instances de serveur antérieures à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], une valeur *bScale* autre que 0 ou 3 avec « DBTYPE_DBTIMESTAMP » est une erreur, et E_FAIL est retourné.  
+ « DBPARAMFLAGS_SS_ISVARIABLESCALE » est ignoré lors de l'envoi de données au serveur. Les applications peuvent forcer l’utilisation de types TDS (Tabular Data Stream) hérités en utilisant les noms de types spécifiques au fournisseur « **datetime** » et « **smalldatetime** ». En cas de connexion à des serveurs [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou ultérieur), le format « **datetime2** » est utilisé et une conversion serveur implicite se produit si nécessaire, quand le nom de type est « **datetime2** » ou « DBTYPE_DBTIMESTAMP ». *bScale* est ignoré si les noms de types spécifiques au fournisseur « **DateTime** » ou « **smalldatetime** » sont utilisés. Dans le cas contraire, les applications doivent s’assurer que *bScale* est correctement défini. Les applications mises à niveau à partir de MDAC et OLE DB Driver pour SQL Server à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] qui utilisent « DBTYPE_DBTIMESTAMP » échouent si elles ne définissent pas *bScale* correctement. En cas de connexion à instances de serveur antérieures à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], une valeur *bScale* autre que 0 ou 3 avec « DBTYPE_DBTIMESTAMP » est une erreur, et E_FAIL est retourné.  
   
- Quand ICommandWithParameters:: SetParameterInfo n’est pas appelé, le fournisseur implique le type de serveur à partir du type de liaison tel que spécifié dans IAccessor:: CreateAccessor, comme suit:  
+ Quand ICommandWithParameters::SetParameterInfo n’est pas appelé, le fournisseur implique le type de serveur à partir du type de liaison, tel que spécifié dans IAccessor::CreateAccessor, comme suit :  
   
 |Type de liaison|*pwszDataSourceType*<br /><br /> (spécifique au fournisseur)|  
 |------------------|----------------------------------------------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "67995099"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **IColumnsRowset:: GetColumnsRowset** retourne les colonnes suivantes:  
+ **IColumnsRowset::GetColumnsRowset** retourne les colonnes suivantes :  
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  

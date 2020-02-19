@@ -7,28 +7,28 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: ed9beea680575bba7fb01fc56af147e20b39218a
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 3f435e44ef6fb7fb7ff777e2b5361482fcde9a98
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452042"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251115"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Opérations de données SQL Server dans ADO.NET
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Télécharger ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Cette section décrit SQL Server fonctionnalités et fonctionnalités spécifiques à la Fournisseur de données Microsoft SqlClient pour SQL Server (<xref:Microsoft.Data.SqlClient>).  
+Cette section décrit les fonctionnalités SQL Server spécifiques au fournisseur de données Microsoft SqlClient pour SQL Server (<xref:Microsoft.Data.SqlClient>).  
   
 ## <a name="in-this-section"></a>Contenu de cette section  
 [Opérations de copie en bloc dans SQL Server](bulk-copy-operations-sql-server.md)  
 Décrit la fonctionnalité de copie en bloc pour le fournisseur de données .NET pour SQL Server.  
   
 [MARS (Multiple Active Result Sets)](multiple-active-result-sets-mars.md)  
-Décrit comment avoir plusieurs <xref:Microsoft.Data.SqlClient.SqlDataReader> ouvertes sur une connexion lorsque chaque instance de <xref:Microsoft.Data.SqlClient.SqlDataReader> est démarrée à partir d’une commande distincte.  
+Décrit comment avoir plusieurs instances <xref:Microsoft.Data.SqlClient.SqlDataReader> ouvertes sur une connexion lorsque chaque instance de <xref:Microsoft.Data.SqlClient.SqlDataReader> est démarrée à partir d’une commande distincte.  
   
 [Opérations asynchrones](asynchronous-operations.md)  
 Décrit comment effectuer des opérations de base de données asynchrones à l’aide d’une API modélisée d’après le modèle asynchrone utilisé par le .NET Framework.  

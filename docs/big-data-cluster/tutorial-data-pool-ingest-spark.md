@@ -1,20 +1,21 @@
 ---
 title: Ingérer des données avec des travaux Spark
-titleSuffix: SQL Server big data clusters
-description: Ce tutoriel montre comment ingérer des données dans le pool de données d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] à l’aide de travaux Spark dans Azure Data Studio.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: shivsood
-ms.date: 08/21/2019
+titleSuffix: SQL Server Big Data Clusters
+description: Ce tutoriel montre comment ingérer des données dans le pool de données d’un cluster Big Data SQL Server à l’aide de travaux Spark dans Azure Data Studio.
+author: rajmera3
+ms.author: raajmera
+ms.reviewer: mikeray
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119199"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776529"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutoriel : Ingérer des données dans un pool de données SQL Server avec des travaux Spark
 
@@ -50,6 +51,23 @@ Les étapes suivantes permettent de créer une table externe nommée **web_click
 
    ![Requête d’instance maître SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
+1. Créez des autorisations pour le connecteur MSSQL-Spark.
+   ```sql
+   USE Sales
+   CREATE LOGIN sample_user  WITH PASSWORD ='password123!#' 
+   CREATE USER sample_user FROM LOGIN sample_user
+
+   -- To create external tables in data pools
+   GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
+
+   -- To create external table
+   GRANT CREATE TABLE TO sample_user;
+   GRANT ALTER ANY SCHEMA TO sample_user;
+
+   ALTER ROLE [db_datareader] ADD MEMBER sample_user
+   ALTER ROLE [db_datawriter] ADD MEMBER sample_user
+   ```
+
 1. Créez une source de données externe dans le pool de données, si elle n’existe pas déjà.
 
    ```sql
@@ -74,8 +92,15 @@ Les étapes suivantes permettent de créer une table externe nommée **web_click
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. Dans la version CTP 3.1, la création du pool de données est asynchrone. Toutefois, il n’existe aucun moyen de déterminer quand l’opération a été effectuée. Attendez deux minutes pour vérifier que le pool de données a bien été créé avant de continuer.
+   
+1. Créez une connexion pour les pools de données et fournissez des autorisations à l’utilisateur.
+   ```sql 
+   EXECUTE( ' Use Sales; CREATE LOGIN sample_user  WITH PASSWORD = ''password123!#'' ;') AT  DATA_SOURCE SqlDataPool;
+
+   EXECUTE('Use Sales; CREATE USER sample_user; ALTER ROLE [db_datareader] ADD MEMBER sample_user;  ALTER ROLE [db_datawriter] ADD MEMBER sample_user;') AT DATA_SOURCE SqlDataPool;
+   ```
+   
+La création d’une table externe de pool de données est une opération bloquante. Le contrôle renvoie une valeur lorsque la table spécifiée a été créée sur tous les nœuds du pool de données principal. Si une défaillance s’est produite pendant l’opération de création, un message d’erreur est renvoyé à l’appelant.
 
 ## <a name="start-a-spark-streaming-job"></a>Démarrer un travail de streaming Spark
 
@@ -125,14 +150,14 @@ L’étape suivante consiste à créer un travail de streaming Spark afin de cha
                   .option("dataPoolDataSource",datasource_name).save()
                }.start()
 
-      query.processAllAvailable()
       query.awaitTermination(40000)
+      query.stop()
       ```
 ## <a name="query-the-data"></a>Interroger les données
 
 Les étapes suivantes montrent que le travail de streaming Spark a chargé les données HDFS dans le pool de données.
 
-1. Avant d’interroger les données ingérées, examinez l’état d’exécution Spark, y compris l’ID d’application Yarn, l’interface utilisateur Spark et les journaux de pilote.
+1. Avant d’interroger les données ingérées, examinez l’état d’exécution Spark, y compris l’ID d’application Yarn, l’interface utilisateur Spark et les journaux de pilote. Ces informations s’affichent dans le notebook lors du démarrage initial de l’application Spark.
 
    ![Détails de l’exécution du travail](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 

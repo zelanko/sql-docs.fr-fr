@@ -1,6 +1,6 @@
 ---
 title: Exécuter une procédure stockée avec ODBC CALL et traiter la sortie | Microsoft Docs
-description: Traiter les codes de retour et les paramètres de sortie à l’aide du pilote OLE DB pour SQL Server
+description: Traiter les codes de retour et les paramètres de sortie à l’aide d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015629"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécuter une procédure stockée avec ODBC CALL et traiter la sortie
@@ -36,13 +36,13 @@ ms.locfileid: "68015629"
   
 2.  Créez un jeu de liaisons (un pour chaque marqueur de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-3.  Créez un accesseur pour les paramètres définis à l’aide de la méthode **IAccessor:: CreateAccessor** . **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
+3.  Créez un accesseur pour les paramètres définis à l'aide de la méthode **IAccessor::CreateAccessor**. **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
   
 4.  Remplissez la structure DBPARAMS.  
   
 5.  Appelez la commande **Execute** (dans ce cas, un appel à une procédure stockée).  
   
-6.  Traitez l’ensemble de lignes et libérez-le à l’aide de la méthode **IRowset:: Release** .  
+6.  Traitez l'ensemble de lignes et libérez-le à l'aide de la méthode **IRowset::Release**.  
   
 7.  Traitez les valeurs de codes de retour et de paramètres de sortie reçues à partir de la procédure stockée.  
   

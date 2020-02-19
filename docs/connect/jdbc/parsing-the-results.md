@@ -12,10 +12,10 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 127c97ec155ef1e19df4103b12a6e10b8b67fe74
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027859"
 ---
 # <a name="parsing-the-results"></a>Analyse des résultats
@@ -24,11 +24,11 @@ ms.locfileid: "69027859"
 
 Cet article explique comment SQL Server s’attend à ce que les utilisateurs traitent entièrement les résultats renvoyés par une requête.
 
-## <a name="update-counts-and-result-sets"></a>Nombres de mises à jour et ensembles de résultats
+## <a name="update-counts-and-result-sets"></a>Compteurs de mises à jour et de jeux de résultats
 
-Cette section présente les deux résultats les plus courants renvoyés par SQL Server: nombre de mises à jour et jeu de résultats. En général, toute requête exécutée par un utilisateur entraîne le retour de l’un de ces résultats. les utilisateurs sont censés gérer à la fois lors du traitement des résultats.
+Cette section présente les deux résultats les plus courants renvoyés par SQL Server : Les compteurs de mises à jour et de jeux de résultats. En général, toute requête exécutée par un utilisateur entraîne le retour d’un de ces résultats. Les utilisateurs sont censés gérer les deux lors du traitement des résultats.
 
-Le code suivant est un exemple de la façon dont un utilisateur peut itérer au sein de tous les résultats à partir du serveur:
+Le code suivant est un exemple de la façon dont un utilisateur peut itérer à travers tous les résultats du serveur :
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -48,7 +48,7 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 ```
 
 ## <a name="exceptions"></a>Exceptions
-Lorsque vous exécutez une instruction qui génère une erreur ou un message d’information, SQL Server répond différemment selon qu’elle peut générer un plan d’exécution. Le message d’erreur peut être levé immédiatement après l’exécution de l’instruction ou il peut nécessiter un jeu de résultats distinct. Dans ce dernier cas, les applications doivent analyser le jeu de résultats pour récupérer l’exception.
+Lorsque vous exécutez une instruction qui génère une erreur ou un message d’information, SQL Server répond différemment selon qu’il peut ou non générer un plan d’exécution. Le message d’erreur peut être levé immédiatement après l’exécution de l’instruction, ou il peut nécessiter un jeu de résultats distinct. Dans ce dernier cas, les applications doivent analyser le jeu de résultats pour récupérer l’exception.
 
 Lorsque SQL Server ne parvient pas à générer un plan d’exécution, l’exception est levée immédiatement.
 
@@ -61,7 +61,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Lorsque SQL Server retourne un message d’erreur dans un jeu de résultats, le jeu de résultats doit être traité pour récupérer l’exception.
+Lorsque SQL Server renvoie un message d’erreur dans un jeu de résultats, le jeu de résultats doit être traité pour récupérer l’exception.
 
 ```java
 String SQL = "SELECT 1/0;";
@@ -99,9 +99,9 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Dans le cas de `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, une exception est levée immédiatement `execute()` sur `SELECT 1` et n’est pas exécutée du tout.
+Dans le cas de `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, une exception est levée immédiatement sur `execute()`, et `SELECT 1` n’est pas exécuté du tout.
 
-Si l’erreur de SQL Server a une gravité `0` de `9`à, elle est considérée comme un message d’information et renvoyée sous la forme `SQLWarning`.
+Si l’erreur de SQL Server a une gravité de `0` à `9`, elle est considérée comme un message d’information et renvoyée comme `SQLWarning`.
 
 ```java
 String SQL = "RAISERROR ('WarningLevel5', 5, 2);";

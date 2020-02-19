@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 72827ffa7866b624c50a83c0d3695f0f011cfe5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994674"
 ---
 # <a name="set-large-data-ole-db"></a>Définir des données volumineuses (OLE DB)
@@ -41,7 +41,7 @@ ms.locfileid: "67994674"
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
-3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l'élément **wType** dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l'élément **pObject** de sorte qu'il pointe vers la structure DBOBJECT que vous avez créée.  
+3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l’élément **wType** dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l’élément **pObject** de sorte qu’il pointe vers la structure DBOBJECT que vous avez créée.  
   
 4.  Créez un accesseur à l'aide des informations de liaison du tableau des structures DBBINDINGS.  
   

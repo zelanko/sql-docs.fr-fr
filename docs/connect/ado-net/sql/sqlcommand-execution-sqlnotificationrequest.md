@@ -9,21 +9,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 892f11e2d81e3a0733a1f0747c0b72c72ebc79fc
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 5477b655554dceaa5f43b7d099e0fc156340f558
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451947"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75233811"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Exécution de SqlCommand avec une SqlNotificationRequest
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Télécharger ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Un <xref:Microsoft.Data.SqlClient.SqlCommand> peut être configuré pour générer une notification lorsque les données sont modifiées après avoir été extraites du serveur et que le jeu de résultats est différent si la requête a été exécutée à nouveau. Cela est utile dans les scénarios où vous souhaitez utiliser des files d’attente de notification personnalisées sur le serveur ou lorsque vous ne souhaitez pas conserver les objets actifs.
+Une <xref:Microsoft.Data.SqlClient.SqlCommand> peut être configurée pour générer une notification lorsque les données sont modifiées après avoir été extraites du serveur et que le jeu de résultats serait différent si la requête était exécutée à nouveau. Cela est utile dans les scénarios où vous souhaitez utiliser des files d’attente de notification personnalisées sur le serveur ou lorsque vous ne souhaitez pas conserver d’objets actifs.
 
 ## <a name="creating-the-notification-request"></a>Création de la demande de notification
 
@@ -34,13 +34,13 @@ Quand la commande avec la notification associée est exécutée, toute modificat
 La manière dont vous interrogez la file d’attente SQL Server et interprétez le message est propre à votre application. L’application est responsable de l’interrogation de la file d’attente et de la réaction en fonction du contenu du message.
 
 > [!NOTE]
-> Lors de l’utilisation de SQL Server demandes de notification avec <xref:Microsoft.Data.SqlClient.SqlDependency>, créez votre propre nom de file d’attente au lieu d’utiliser le nom du service par défaut.
+> Lors de l’utilisation des requêtes de notification SQL Server avec <xref:Microsoft.Data.SqlClient.SqlDependency>, créez votre propre nom de file d’attente au lieu d’utiliser le nom de service par défaut.
 
-Il n’existe aucun nouvel élément de sécurité côté client pour <xref:Microsoft.Data.Sql.SqlNotificationRequest>. Il s’agit principalement d’une fonctionnalité de serveur, et le serveur a créé des privilèges spéciaux dont les utilisateurs doivent disposer pour demander une notification.
+Il n’existe aucun nouvel élément de sécurité côté client pour <xref:Microsoft.Data.Sql.SqlNotificationRequest>. Il s’agit principalement d’une fonctionnalité serveur, et le serveur a créé des privilèges spéciaux que les utilisateurs doivent posséder pour demander une notification.
 
 ### <a name="example"></a>Exemple
 
-Le fragment de code suivant montre comment créer un <xref:Microsoft.Data.Sql.SqlNotificationRequest> et l’associer à un <xref:Microsoft.Data.SqlClient.SqlCommand>.
+Le fragment de code suivant montre comment créer une <xref:Microsoft.Data.Sql.SqlNotificationRequest> et l’associer à une <xref:Microsoft.Data.SqlClient.SqlCommand>.
 
 ```csharp
 // Assume connection is an open SqlConnection.

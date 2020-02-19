@@ -1,27 +1,26 @@
 ---
-title: 'Démarrage rapide : Créer des scripts Python'
-titleSuffix: SQL Server Machine Learning Services
-description: Créez et exécutez des scripts Python simples dans une instance SQL Server avec SQL Server Machine Learning Services.
+title: 'Démarrage rapide : Exécuter des scripts Python'
+description: Exécuter un jeu de scripts Python simples avec SQL Server Machine Learning Services. Découvrez comment utiliser la procédure stockée sp_execute_external_script pour exécuter ce script dans une instance SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8409eaf8129d7c8eb2eecd5a1157a17444341734
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727023"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831913"
 ---
-# <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Démarrage rapide : Créer et exécuter des scripts Python simples avec SQL Server Machine Learning Services
+# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Démarrage rapide : Exécuter des scripts Python simples avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans ce démarrage rapide, vous allez créer et exécuter un ensemble de scripts Python simples en utilisant [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). Vous allez découvrir comment encapsuler un script Python bien formé dans la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) et comment exécuter ce script dans une instance SQL Server.
+Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts Python simples en utilisant [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). Vous allez découvrir comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter ce script dans une instance SQL Server.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
@@ -159,7 +158,7 @@ Pour le moment, utilisons les variables d’entrée et de sortie par défaut de 
     Notez que Python respecte la casse. Les variables d’entrée et de sortie utilisées dans le script Python (**SQL_out**, **SQL_in**) doivent correspondre aux noms définis avec `@input_data_1_name` et `@output_data_1_name`, y compris la casse.
 
    > [!TIP]
-   > Vous ne pouvez passer qu’un seul dataset d’entrée comme paramètre, et vous ne pouvez retourner qu’un seul dataset. Toutefois, vous pouvez appeler d’autres jeux de données à partir de votre code Python et retourner des sorties d’autres types en plus du jeu de données. Vous pouvez aussi ajouter le mot clé OUTPUT à n’importe quel paramètre pour qu’il soit retourné avec les résultats.
+   > Un seul jeu de données d’entrée peut être passé en tant que paramètre, et un seul jeu de données peut être renvoyé. Toutefois, vous pouvez appeler d’autres jeux de données à partir de votre code Python et retourner des sorties d’autres types en plus du jeu de données. Vous pouvez également ajouter le mot clé OUTPUT à n’importe quel paramètre pour qu’il soit retourné avec les résultats.
 
 1. Vous pouvez aussi générer des valeurs en utilisant simplement le script Python sans données d’entrée (`@input_data_1` est vide).
 
@@ -225,40 +224,27 @@ Pour afficher la liste des packages Python installés avec leur version, exécut
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
     , @script = N'
-import pip
-for i in pip.get_installed_distributions():
-    print(i)
+import pkg_resources
+import pandas
+dists = [str(d) for d in pkg_resources.working_set]
+OutputDataSet = pandas.DataFrame(dists)
 '
+WITH RESULT SETS(([Package] NVARCHAR(max)))
 GO
 ```
 
-La sortie provient de la fonction `pip.get_installed_distributions()` dans Python et elle est renvoyée en tant que messages `STDOUT`.
+La liste provient de `pkg_resources.working_set` dans Python et est renvoyée à SQL en tant que trame de données.
 
 **Résultats**
 
-```text
-STDOUT message(s) from external script:
-xlwt 1.2.0
-XlsxWriter 0.9.6
-xlrd 1.0.0
-win-unicode-console 0.5
-widgetsnbextension 2.0.0
-wheel 0.29.0
-Werkzeug 0.12.1
-wcwidth 0.1.7
-unicodecsv 0.14.1
-traitlets 4.3.2
-tornado 4.4.2
-toolz 0.8.2
-. . .
-```
+:::image type="content" source="media/python-package-list.png" alt-text="Répertorier tous les packages Python ayant été installés":::
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour savoir comment utiliser des structures de données quand Python est utilisé dans SQL Server Machine Learning Services, suivez ce guide de démarrage rapide :
 
 > [!div class="nextstepaction"]
-> [Gérer les objets et types de données en utilisant Python dans SQL Server Machine Learning Services](quickstart-python-data-structures.md)
+> [Démarrage rapide : Structures de données et objets en utilisant Python dans SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
 Pour plus d’informations sur l’utilisation de Python dans SQL Server Machine Learning Services, consultez les articles suivants :
 

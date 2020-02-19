@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706354"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831390"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Utiliser un script Python pour déployer un cluster Big Data SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Exécuter le script de déploiement
 
-Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce script crée un service AKS dans Azure, puis déploie un cluster Big Data SQL Server 2019 sur AKS. Vous pouvez également modifier le script avec d’autres [variables d’environnement](deployment-guidance.md#configfile) pour créer un déploiement personnalisé.
+Procédez comme suit pour exécuter le script de déploiement dans une invite bash Windows PowerShell ou Linux. Ce script crée un service AKS dans Azure, puis déploie un cluster Big Data SQL Server 2019 sur AKS. Vous pouvez également modifier le script avec d’autres [variables d’environnement](deployment-guidance.md#configfile) pour créer un déploiement personnalisé.
 
 1. Exécutez le script avec la commande suivante :
 
@@ -88,8 +88,6 @@ Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce scri
    > Le compte SQL Server `sa` est désactivé durant le déploiement de clusters Big Data. Un nouveau compte de connexion d’administrateur système est provisionné dans l’instance maître de SQL Server avec le même nom que celui spécifié pour l’entrée du **Nom d’utilisateur** et le mot de passe correspondant à l’entrée du **Mot de passe**. Les mêmes valeurs correspondant à **Nom d’utilisateur** et **Mot de passe** sont utilisées pour provisionner un utilisateur administrateur de contrôleur. Le seul utilisateur pris en charge pour la passerelle (Knox) est **root**, et le mot de passe est le même que ci-dessus.
 
 1. Le script commence par créer un cluster AKS avec les paramètres que vous avez spécifiés. Cette étape prend plusieurs minutes.
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>Superviser l’état
 

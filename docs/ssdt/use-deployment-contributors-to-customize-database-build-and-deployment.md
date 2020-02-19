@@ -1,23 +1,24 @@
 ---
-title: Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Personnaliser les déploiements de bases de données à l’aide de contributeurs de déploiement
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110575"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256253"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement
+
 Visual Studio fournit des points d'extensibilité que vous pouvez utiliser pour modifier le comportement des actions de génération et de déploiement pour les projets de base de données.  
   
 ## <a name="available-extensibility-points"></a>Points d'extensibilité disponibles  

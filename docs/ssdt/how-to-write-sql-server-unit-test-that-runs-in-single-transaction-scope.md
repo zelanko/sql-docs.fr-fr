@@ -1,23 +1,24 @@
 ---
-title: 'Procédure : écrire un test unitaire SQL Server qui s’exécute dans l’étendue d’une seule transaction | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Écrire un test unitaire SQL Server qui s'exécute sur l'étendue d'une seule transaction
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119882"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246489"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procédure : Écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction
+
 Modifiez les tests unitaires de façon à ce qu'ils s'exécutent dans l'étendue d'une transaction. Si vous adoptez cette approche, vous pouvez restaurer les modifications apportées par le test une fois le test terminé. Les procédures suivantes expliquent comment effectuer les tâches suivantes :  
   
 -   Créer une transaction dans votre script de test Transact\-SQL qui utilise **BEGIN TRANSACTION** et **ROLLBACK TRANSACTION**.  
@@ -26,7 +27,7 @@ Modifiez les tests unitaires de façon à ce qu'ils s'exécutent dans l'étendue
   
 -   Créer une transaction pour toutes les méthodes de test dans une classe de test donnée.  
   
-**Conditions préalables**  
+**Composants requis**  
   
 Pour certaines procédures de cette rubrique, le service Distributed Transaction Coordinator doit être en cours d'exécution sur l'ordinateur sur lequel vous exécutez des tests unitaires. Pour plus d'informations, consultez la procédure figurant à la fin de cette rubrique.  
   

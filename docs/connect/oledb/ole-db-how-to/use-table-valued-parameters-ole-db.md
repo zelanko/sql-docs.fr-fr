@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994600"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Utiliser des paramètres table (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994600"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure. L'exemple réalise les actions suivantes :  
+  Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure. L’exemple fait ce qui suit :  
   
 -   Création de paramètres table à l’aide de la découverte dynamique via IOpenRowset::OpenRowset.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "67994600"
   
 -   Utilisation des propriétés de paramètre personnalisées à l'aide de ISSCommandWithParameters.  
   
--   Affiche la gestion des erreurs pour les erreurs de MSOLEDBSQL.  
+-   Affichage de la gestion des erreurs pour les erreurs de MSOLEDBSQL.  
   
- Pour plus d’informations sur les paramètres table, consultez [paramètres &#40;table OLE DB pilote pour SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Pour plus d’informations sur les paramètres table, consultez [Paramètres table &#40;OLE DB Driver pour SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Exemple  
  La première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) crée la base de données utilisée par l'exemple.  

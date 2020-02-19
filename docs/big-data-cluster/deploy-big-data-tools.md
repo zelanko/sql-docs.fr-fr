@@ -5,16 +5,16 @@ description: Découvrez comment installer les outils utilisés avec les [!INCLUD
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 964b6db780564797e35c4a40377227d3b56e4a3e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532229"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721689"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installer les outils de Big Data SQL Server 2019
 
@@ -26,7 +26,7 @@ Cet article décrit les outils clients qui doivent être installés pour la cré
 
 Le tableau suivant liste les outils de cluster Big Data courants et explique comment les installer :
 
-| Outil | Requis | Description | Installation |
+| Outil | Obligatoire | Description | Installation |
 |---|---|---|---|
 | `python` | Oui | Python est un langage de programmation de haut niveau, orienté objet, interprété et doté d’une sémantique dynamique. De nombreuses parties des clusters Big Data pour SQL Server utilisent Python. | [Installer python](#python)|
 | `azdata` | Oui | Outil en ligne de commande pour l’installation et la gestion d’un cluster Big Data. | [Installer](deploy-install-azdata.md) |
@@ -34,7 +34,7 @@ Le tableau suivant liste les outils de cluster Big Data courants et explique com
 | **Azure Data Studio** | Oui | Outil graphique multiplateforme permettant d’interroger SQL Server. | [Installer](https://aka.ms/getazuredatastudio) |
 | **Extension de virtualisation de données** | Oui | Extension pour Azure Data Studio qui fournit un Assistant Virtualisation de données. | [Installer](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | Pour AKS | Interface de ligne de commande moderne pour la gestion des services Azure. Utilisée avec les déploiements de cluster Big Data AKS ([plus d’informations](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installer](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
-| **mssql-cli** | Ce paramètre est facultatif | Interface de ligne de commande moderne permettant d’interroger SQL Server ([plus d’informations](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **mssql-cli** | Facultatif | Interface de ligne de commande moderne permettant d’interroger SQL Server ([plus d’informations](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Pour certains scripts | Outil en ligne de commande hérité permettant d’interroger SQL Server ([plus d’informations](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Pour certains scripts | Outil en ligne de commande pour transférer des données avec des URL. | [Windows](https://curl.haxx.se/windows/) \| Linux : installer le package d’installation |
 
@@ -58,7 +58,7 @@ Le tableau précédent indique tous les outils courants qui sont utilisés avec 
 - `azdata`
 - `kubectl`
 - **Azure Data Studio**
-- **Extension SQL Server 2019**
+- **Extension de virtualisation de données**
 
 Les autres outils sont requis uniquement dans certains scénarios. **Azure CLI** peut être utilisé pour gérer les services Azure associés aux déploiements AKS. **mssql-cli** est un outil facultatif mais utile qui vous permet de vous connecter à l’instance maître SQL Server dans le cluster et d’exécuter des requêtes à partir de la ligne de commande. Pour leur part, **sqlcmd** et `curl` sont nécessaires si vous envisagez d’installer des exemples de données avec le script GitHub.
 
@@ -66,7 +66,7 @@ Les autres outils sont requis uniquement dans certains scénarios. **Azure CLI**
 
 1. Sur une machine disposant d’un accès à Internet, téléchargez l’un des fichiers compressés suivants contenant Python :
 
-   | Système d’exploitation | Télécharger |
+   | Système d’exploitation | Téléchargement |
    |---|---|
    | Windows | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |

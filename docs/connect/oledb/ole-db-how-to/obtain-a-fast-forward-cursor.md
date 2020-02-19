@@ -1,6 +1,6 @@
 ---
 title: Obtenir un curseur FAST_FORWARD | Microsoft Docs
-description: Obtenir un curseur FAST_FORWARD à l’aide du pilote OLE DB pour SQL Server
+description: Obtenir un curseur FAST_FORWARD à l’aide d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994738"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Obtenir un curseur FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Obtenir un curseur FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67994738"
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Pour obtenir un curseur FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Pour obtenir un curseur FAST_FORWARD  
   
 1.  Établissez une connexion à la source de données.  
   

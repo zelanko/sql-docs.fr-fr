@@ -1,23 +1,24 @@
 ---
-title: Vérifier le code de la base de données à l’aide de tests unitaires SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Vérification du code de la base de données à l'aide de tests unitaires SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140950"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243487"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Vérification du code de la base de données à l'aide de tests unitaires SQL Server
+
 Vous pouvez utiliser des tests unitaires SQL Server pour établir l’état de référence de votre base de données, puis pour vérifier les modifications apportées par la suite aux objets de base de données.  
   
 Pour établir l’état de référence d’une base de données, vous allez créer un projet de test et écrire des ensembles de Transact\-SQL qui s’appliquent à vos objets de base de données. Grâce à ces tests, vous pouvez vérifier dans un environnement de développement isolé si ces objets fonctionnent comme prévu. Les tests unitaires SQL Server fonctionnent bien en association avec le développement de base de données hors connexion à l’aide de projets de base de données SQL Server (voir [Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md) pour plus d’informations). Dès que vous aurez votre ensemble de référence de tests unitaires SQL Server, vous pourrez les utiliser pour vérifier que la base de données fonctionne avant d’archiver les modifications auprès de la gestion de version.  
@@ -48,7 +49,7 @@ Dans le tableau suivant, vous pouvez trouver des descriptions de tâches courant
 |**Exécuter des tests unitaires SQL Server :** après avoir défini un ou plusieurs tests unitaires, exécutez-les, déboguez les problèmes, puis examinez les résultats des tests.|[Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)|  
 |**Gérer des groupes de tests (Visual Studio 2010) :** organisez les tests en groupes, s’ils doivent être exécutés simultanément. Les listes de tests sont encore prises en charge, mais pour les nouveaux groupes de tests, envisagez plutôt des catégories de tests. Par exemple, vous pourriez créer une catégorie de test pour vos déclencheurs ou tous les objets d’un *schéma* en particulier.|[Définir des catégories de test pour regrouper des tests](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[Définir des listes de tests pour regrouper des tests](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
 |**Archiver les projets de test et les tests dans la gestion de version :** après avoir exécuté vos tests et vérifié qu’ils fonctionnent correctement, vous devez archiver votre projet de test et tous les fichiers associés dans la gestion de version afin que tous les membres de votre équipe puissent les exécuter. Si vous archivez votre projet de test dans la gestion de version avec votre projet de base de données SQL Server, vous pourrez facilement restaurer les versions compatibles de la base de données et des tests de base de données.|[Ajouter des fichiers à la gestion de version](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[Utiliser les fenêtres Archiver et Modifications en attente](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
-|**Définir des conditions de test personnalisées :** vous pouvez créer des conditions de test personnalisées si vous devez tester le comportement non couvert par l’ensemble de conditions de test par défaut. Vous devez distribuer ces conditions à tous les membres de l'équipe souhaitant exécuter les tests qui utilisent les nouvelles conditions.|[Scénario : définir des conditions de test personnalisées pour les tests unitaires SQL Server](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
+|**Définir des conditions de test personnalisées :** vous pouvez créer des conditions de test personnalisées si vous devez tester le comportement non couvert par l’ensemble de conditions de test par défaut. Vous devez distribuer ces conditions à tous les membres de l'équipe souhaitant exécuter les tests qui utilisent les nouvelles conditions.|[Scénario : définir des conditions de test personnalisées pour les tests unitaires SQL Server](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
 |**Mettre à jour les tests unitaires existants :** si vos tests unitaires de base de données ont été créés dans une version précédente de Visual Studio, vous devez les mettre à niveau pour qu’ils puissent se générer et s’exécuter avec cette version.<br /><br />**REMARQUE :** si vous ouvrez une solution contenant à la fois un projet de base de données et un projet de test unitaire de base de données provenant d’une version antérieure de Visual Studio, vous devrez mettre à niveau le projet de base de données. Vous ne serez pas invité à mettre à niveau les projets de test unitaire de base de données, qui doivent être mis à niveau manuellement.|[Mettre à niveau un projet de test antérieur contenant des tests unitaires de base de données](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
 |**Extensibilité :** vous pouvez étendre SQL Server Data Tools en créant des extensions de fonctionnalités.|[Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)|  
 |**Résoudre les problèmes :** pour en savoir plus sur la résolution des problèmes courants rencontrés avec les tests unitaires SQL Server.|[Résoudre les problèmes liés aux tests unitaires de base de données SQL Server](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
@@ -58,5 +59,5 @@ Dans le tableau suivant, vous pouvez trouver des descriptions de tâches courant
 Les tests unitaires de base de données sont particulièrement efficaces s’ils sont utilisés conjointement avec le développement de projets hors connexion à l’aide de projets de base de données SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Outils de données SQL Server](../ssdt/sql-server-data-tools.md)  
+[SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
   

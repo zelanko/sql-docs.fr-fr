@@ -1,23 +1,24 @@
 ---
-title: 'Procédure : Spécifier des scripts de prédéploiement et de post-déploiement | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Spécifier les scripts de pré ou de post-déploiement
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199300"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244268"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procédure : Spécifier des scripts de prédéploiement et de post-déploiement
+
 Les scripts de prédéploiement et de post-déploiement exécutent des instructions Transact\-SQL avant et après le script de déploiement principal, qui est généré à partir du projet de base de données. Le script de prédéploiement ne sera pas exécuté lors de la mise à jour des cibles à partir des résultats de comparaison des schémas dans Visual Studio. Un projet peut comporter un script de prédéploiement et un script de post-déploiement. Ces scripts peuvent être utilisés à de nombreuses fins. Par exemple :  
   
 -   Un script de prédéploiement peut copier les données d'une table qui est modifiée dans une table temporaire avant de les remettre en forme et de les appliquer à la table modifiée dans un script de post-déploiement.  

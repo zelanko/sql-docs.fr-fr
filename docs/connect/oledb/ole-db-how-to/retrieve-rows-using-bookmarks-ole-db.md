@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b2ab2e7be75e10ff97fcf254f885bfaa9dd25ec9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994708"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Récupérer des lignes à l'aide de signets (OLE DB)
@@ -28,7 +28,7 @@ ms.locfileid: "67994708"
   Le consommateur attribue au champ **dwFlag** de la structure de liaison la valeur DBCOLUMNSINFO_ISBOOKMARK pour indiquer que la colonne est utilisée comme signet. Le consommateur définit également la propriété d'ensemble de lignes DBPROP_BOOKMARKS avec la valeur VARIANT_TRUE. Cela permet à la colonne 0 d'être présente dans l'ensemble de lignes. **IRowsetLocate::GetRowsAt** est ensuite utilisé pour extraire les lignes, en commençant par la ligne spécifiée par un offset à partir d'un signet.  
   
 > [!IMPORTANT]  
->  Utilisez l'authentification Windows quand c'est possible. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>Pour extraire des lignes à l'aide de signets  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904309"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831627"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guide de navigation dans la documentation de SQL Server 
 
@@ -22,7 +22,7 @@ Cette rubrique fournit des conseils et des astuces pour naviguer dans l’espace
 
 ## <a name="hub-page"></a>Page hub
 
-La page hub de SQL Server, qui se trouve sur [https://aka.ms/sqldocs ](https://aka.ms/sqldocs), constitue le point d’entrée pour toute recherche de contenu sur SQL Server.
+La page hub de SQL Server, qui se trouve sur [https://aka.ms/sqldocs](https://aka.ms/sqldocs), constitue le point d’entrée pour toute recherche de contenu sur SQL Server.
 
 Vous pouvez revenir à cette page à tout moment en sélectionnant **Documentation SQL** dans l’en-tête situé en haut de chaque page de la documentation technique de SQL Server : 
 
@@ -37,7 +37,7 @@ Si vous souhaitez créer un fichier PDF, cliquez sur le lien **Télécharger le
 
 ![Télécharger le PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>Indicateurs de navigation dans la table des matières
+## <a name="toc-symbols"></a>Symboles de la table des matières 
 
 Les entrées de la table des matières se terminant par `>`, vous dirigent vers une documentation technique comprenant une table des matières différente. 
 
@@ -51,7 +51,7 @@ Si vous accédez à l’une de ces pages, vous pouvez revenir à la page techniq
 
 ![Revenir à la table des matières SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>Conseil de recherche dans la table des matières
+## <a name="toc-search"></a>Recherche dans la table des matières 
 Sur docs.microsoft.com, vous pouvez rechercher du contenu dans la table des matières à l’aide de la zone de filtre située dans la partie supérieure : 
 
 ![Utiliser la zone de filtre](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -70,7 +70,6 @@ Sélectionnez **All SQL** \> **Hide nothing** (Tout SQL > Ne rien masquer) pour
 La barre de navigation, qui se trouve sous l’en-tête et au-dessus de la table des matières, indique l’emplacement de l’article que vous consultez dans la table des matières.  Elle vous aide non seulement à voir le contexte du contenu que vous lisez, mais aussi à remonter l’arborescence de la table des matières :
 
 ![Barre de navigation de la documentation SQL](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>Navigation dans la section d’un article
 
@@ -95,4 +94,4 @@ Vous pouvez également envoyer des commentaires et des suggestions d’ordre gé
 
 - Bien démarrer avec la [documentation technique de SQL Server](index.yml).
 - Pour plus d’informations sur la procédure à suivre pour envoyer des commentaires ou obtenir de l’aide sur SQL Server, consultez la page [Obtenir de l’aide](sql-server-get-help.md). 
-- Pour accéder rapidement à tous les tutoriels et guides de démarrage rapide, accédez au [Centre de formation SQL Server](../lp/sql-server/sql-education-center.md).
+- Pour accéder rapidement à tous les didacticiels et guides de démarrage rapide, consultez [Ressources SQL éducatives](../sql-server/educational-sql-resources.yml).

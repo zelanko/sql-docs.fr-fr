@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993976"
 ---
 # <a name="supporting-distributed-transactions"></a>Prise en charge des transactions distribuées
@@ -32,7 +32,7 @@ ms.locfileid: "67993976"
 
   Les consommateurs du pilote OLE DB pour SQL Server peuvent utiliser la méthode **ITransactionJoin::JoinTransaction** pour participer à une transaction distribuée coordonnée par MS DTC (Microsoft Distributed Transaction Coordinator).  
   
- MS DTC expose les objets COM qui permettent aux clients d'initialiser des transactions coordonnées et d'y participer sur plusieurs connexions à diverses banques de données. Pour lancer une transaction, le pilote OLE DB pour SQL Server consommateur utilise l’interface MS DTC **ITransactionDispenser** . Le membre **BeginTransaction** de **ITransactionDispenser** retourne une référence sur un objet de transaction distribué. Cette référence est transmise au pilote OLE DB pour SQL Server à l’aide de **JoinTransaction**.  
+ MS DTC expose les objets COM qui permettent aux clients d'initialiser des transactions coordonnées et d'y participer sur plusieurs connexions à diverses banques de données. Pour initialiser une transaction, le consommateur du fournisseur OLE DB Driver pour SQL Server utilise l'interface MS DTC **ITransactionDispenser**. Le membre **BeginTransaction** de **ITransactionDispenser** retourne une référence sur un objet de transaction distribué. Cette référence est passée au fournisseur OLE DB Driver pour SQL Server à l'aide de **JoinTransaction**.  
   
  MS DTC prend en charge l'abandon et la validation asynchrones sur les transactions distribuées. Pour la notification sur l’état de transaction asynchrone, le consommateur implémente l’interface **ITransactionOutcomeEvents** et connecte l’interface à un objet de transaction MS DTC.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "67993976"
 |Paramètre|Description|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Pointeur vers un objet de transaction MS DTC.|  
-|*IsoLevel*|Ignoré par le pilote OLE DB pour SQL Server. Le niveau d'isolation pour les transactions coordonnées MS DTC est déterminé lorsque le consommateur acquiert un objet de transaction à partir de MS DTC.|  
-|*IsoFlags*|Doit être égal à 0. Le pilote OLE DB pour SQL Server retourne XACT_E_NOISORETAIN si une autre valeur est spécifiée par le consommateur.|  
-|*POtherOptions*|Si la valeur n’est pas NULL, le pilote OLE DB pour SQL Server demande l’objet d’options à partir de l’interface. Le pilote OLE DB pour SQL Server retourne XACT_E_NOTIMEOUT si le membre *ulTimeout* de l’objet options n’est pas égal à zéro. Le pilote OLE DB pour SQL Server ignore la valeur du membre *szDescription* .|  
+|*IsoLevel*|Ignoré par le fournisseur OLE DB Driver pour SQL Server. Le niveau d'isolation pour les transactions coordonnées MS DTC est déterminé lorsque le consommateur acquiert un objet de transaction à partir de MS DTC.|  
+|*IsoFlags*|Doit être égal à 0. Le fournisseur OLE DB Driver pour SQL Server retourne XACT_E_NOISORETAIN si toute autre valeur est spécifiée par le consommateur.|  
+|*POtherOptions*|Si la valeur est différente de NULL, le fournisseur OLE DB Driver pour SQL Server demande l'objet d'options de l'interface. Le fournisseur OLE DB Driver pour SQL Server retourne XACT_E_NOTIMEOUT si le membre *ulTimeout* de l'objet d'options est différent de zéro. Le fournisseur OLE DB Driver pour SQL Server ignore la valeur du membre *szDescription*.|  
   
  Cet exemple coordonne la transaction à l'aide de MS DTC.  
   

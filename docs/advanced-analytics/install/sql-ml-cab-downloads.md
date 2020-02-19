@@ -1,37 +1,46 @@
 ---
 title: Télécharger les mises à jour pour une installation hors connexion
-description: Téléchargez les fichiers de package R et Python CAB pour SQL Server Machine Learning Services et SQL Server 2016 R Services.
+description: Téléchargez les fichiers CAB Python et R pour SQL Server Machine Learning Services. Ces fichiers CAB contiennent des mises à jour de la fonctionnalité Machine Learning Services (Python et R) et sont utilisés lors de l’installation de SQL Server sur un serveur sans accès à Internet.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e7266d90e04071c242145fc0df2e59ce86d86a16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727626"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776523"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Téléchargement des fichiers CAB pour les mises à jour cumulatives sur les instances d’analytique en base de données SQL Server
+# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Téléchargement des fichiers CAB pour les mises à jour cumulatives de SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Les instances SQL Server configurées pour l’analyse dans la base de données incluent les fonctionnalités R et Python. Ces fonctionnalités sont proposées dans les fichiers CAB, installés et pris en charge via le programme d’installation de SQL Server. Sur les appareils connectés à Internet, les mises à jour CAB sont généralement appliquées via Windows Update. Sur les serveurs déconnectés, les fichiers CAB doivent être téléchargés et appliqués manuellement. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Téléchargez les fichiers CAB Python et R pour SQL Server Machine Learning Services. Ces fichiers CAB contiennent des mises à jour de la fonctionnalité Machine Learning Services (Python et R) et sont utilisés lors de l’installation de SQL Server sur un serveur sans accès à Internet.
+::: moniker-end
 
-Cet article fournit des liens de téléchargement vers des fichiers CAB pour chaque mise à jour cumulée. Pour plus d’informations sur les installations hors connexion, consultez [Installer des composants de Machine learning SQL Server sans accès à Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Téléchargez les fichiers CAB Python et R pour SQL Server 2016 R Services. Ces fichiers CAB contiennent des mises à jour de la fonctionnalité R Services et sont utilisés lors de l’installation de SQL Server sur un serveur sans accès à Internet.
+::: moniker-end
+
+Vous trouverez ci-dessous des liens de téléchargement vers des fichiers CAB pour chaque mise à jour cumulée. Pour plus d’informations sur les installations hors connexion, consultez [Installer des composants de Machine learning SQL Server sans accès à Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-Commencez avec une installation de base.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Commencez avec une installation de base. Sur SQL Server Machine Learning Services, la version initiale est l’installation de base. 
+::: moniker-end
 
-+ Sur SQL Server Machine Learning Services, la version initiale est l’installation de base. 
-+ Sur SQL Server services R 2016, vous pouvez commencer par la version initiale, SP1 ou SP2. 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Commencez avec une installation de base.  Sur SQL Server services R 2016, vous pouvez commencer par la version initiale, SP1 ou SP2. 
+::: moniker-end
 
-Vous pouvez également appliquer des mises à jour cumulées à un serveur autonome.
+Vous pouvez également appliquer des mises à jour cumulatives.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -39,7 +48,7 @@ Vous pouvez également appliquer des mises à jour cumulées à un serveur auton
 
 Les fichiers CAB sont répertoriés par ordre chronologique inverse. Lorsque vous téléchargez les fichiers CAB et les transférez vers l’ordinateur cible, placez-les dans un dossier pratique, tel que **Téléchargements** ou le dossier %temp% de l’utilisateur du programme d’installation.
 
-|Version  |Composant | Télécharger le lien  | Problèmes résolus | 
+|Libérer  |Composant | Télécharger le lien  | Problèmes résolus | 
 |---------|----------|----------------|------------------|
 |**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Les binaires du package sont maintenant signés. |
@@ -94,7 +103,7 @@ Les fichiers CAB sont répertoriés par ordre chronologique inverse. Lorsque vou
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -102,7 +111,7 @@ Les fichiers CAB sont répertoriés par ordre chronologique inverse. Lorsque vou
 
 Pour SQL Server 2016 R Services, les versions de base sont soit la version RTM, soit une version Service Pack.
 
-|Version  |Télécharger le lien  |
+|Libérer  |Télécharger le lien  |
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|

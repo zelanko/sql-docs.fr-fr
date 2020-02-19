@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994376"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -44,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Arguments  
  *hChapter*[in]  
- Handle du chapitre. Si l’objet interrogé n’est pas un objet d’ensemble de lignes ou que l’opération ne s’applique pas à un chapitre, il doit être défini sur DB_NULL_HCHAPTER, ce qui est ignoré par le fournisseur.  
+ Handle du chapitre. Si l'objet interrogé n'est pas un objet rowset ou que l'opération ne s'applique pas à un chapitre, vous devez attribuer au handle la valeur DB_NULL_HCHAPTER, celle-ci étant ignorée par le fournisseur.  
   
  *eOperation*[in]  
- L'opération pour laquelle l'état asynchrone est demandé. La valeur suivante doit être utilisée:  
+ L'opération pour laquelle l'état asynchrone est demandé. La valeur suivante doit être utilisée :  
   
  DBASYNCHOP_OPEN : le consommateur demande des informations sur l'ouverture ou le remplissage asynchrone d'un ensemble de lignes ou sur l'initialisation asynchrone d'un objet source de données. Si le fournisseur est un fournisseur conforme à OLE DB 2.5 qui prend en charge la liaison d'URL directe, le consommateur demande des informations sur l'initialisation ou le remplissage asynchrone d'une source de données, d'un ensemble de lignes, d'une ligne ou d'un objet de flux.  
   
@@ -81,8 +81,8 @@ HRESULT GetStatus(
   
  Si *ppwszStatusText* a la valeur Null en entrée, aucune chaîne d'état n'est retournée et le fournisseur retourne des informations sur n'importe quel élément de l'opération ou sur l'opération en général.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="return-code-values"></a>Codet de retour  
+ S_OK  
  Retour réussi de la méthode.  
   
 -   Si *peAsynchPhase* est égal à DBASYNCHPHASE_INITIALIZATION, l'objet n'est pas encore entièrement initialisé ; toute tentative d'appel à d'autres interfaces peut échouer, et le jeu complet d'interfaces peut ne pas être disponible sur l'objet.  

@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127376"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831603"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ Avant de déployer un cluster Big Data SQL Server 2019, commencez par [installe
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Extension SQL Server 2019 pour Azure Data Studio
+- [Extension de virtualisation de données](../azure-data-studio/data-virtualization-extension.md) pour Azure Data Studio
 
 ## <a id="prereqs"></a> Kubernetes - Prérequis
 
@@ -54,7 +54,7 @@ Vous pouvez choisir de déployer Kubernetes de trois manières :
 | **Une ou plusieurs machines (`kubeadm`)** | Cluster Kubernetes déployé sur des machines physiques ou virtuelles à l’aide de `kubeadm` | [Instructions](deploy-with-kubeadm.md) |
 
 > [!TIP]
-> Vous pouvez également générer un script pour déployer AKS et un cluster Big Data en une seule étape. Pour plus d’informations, consultez la procédure à suivre dans un [script Python](quickstart-big-data-cluster-deploy.md) ou dans un [notebook](deploy-notebooks.md) Azure Data Studio.
+> Vous pouvez également créer un script pour déployer AKS et un cluster Big Data en une seule étape. Pour plus d’informations, consultez la procédure à suivre dans un [script Python](quickstart-big-data-cluster-deploy.md) ou dans un [notebook](deploy-notebooks.md) Azure Data Studio.
 
 ### <a name="verify-kubernetes-configuration"></a>Vérifier la configuration de Kubernetes
 
@@ -169,13 +169,13 @@ Vous pouvez également personnaliser votre déploiement pour prendre en charge l
 
 Les variables d’environnement suivantes sont utilisées pour les paramètres de sécurité qui ne sont pas stockés dans un fichier de configuration de déploiement. Notez que les paramètres Docker, à l’exception des informations d’identification, peuvent être définis dans le fichier de configuration.
 
-| Variable d'environnement | Condition requise |Description |
+| Variable d’environnement | Condition requise |Description |
 |---|---|---|
-| `AZDATA_USERNAME` | Requis |Nom d’utilisateur de l’administrateur du cluster Big Data SQL Server. Une connexion sysadmin portant le même nom est créée dans l’instance principale SQL Server. En guise de bonne pratique de sécurité, le compte `sa` est désactivé. |
-| `AZDATA_PASSWORD` | Requis |Mot de passe des comptes d’utilisateur créés ci-dessus. Le même mot de passe est utilisé pour l’utilisateur `root` et pour sécuriser la passerelle Knox et HDFS. |
+| `AZDATA_USERNAME` | Obligatoire |Nom d’utilisateur de l’administrateur du cluster Big Data SQL Server. Une connexion sysadmin portant le même nom est créée dans l’instance principale SQL Server. En guise de bonne pratique de sécurité, le compte `sa` est désactivé. |
+| `AZDATA_PASSWORD` | Obligatoire |Mot de passe des comptes d’utilisateur créés ci-dessus. Le même mot de passe est utilisé pour l’utilisateur `root` et pour sécuriser la passerelle Knox et HDFS. |
 | `ACCEPT_EULA`| Obligatoire pour la première utilisation de `azdata`| Définie sur « oui ». Si vous la définissez en tant que variable d’environnement, elle applique le CLUF à SQL Server et `azdata`. Si vous ne la définissez pas en tant que variable d’environnement, vous pouvez inclure `--accept-eula=yes` dans la première utilisation de la commande `azdata`.|
-| `DOCKER_USERNAME` | Ce paramètre est facultatif | Nom d’utilisateur utilisé pour accéder aux images de conteneur si elles sont stockées dans un dépôt privé. Pour plus d’informations sur l’utilisation d’un dépôt Docker privé pour le déploiement d’un cluster Big Data, consultez la rubrique [Déploiements hors connexion](deploy-offline.md).|
-| `DOCKER_PASSWORD` | Ce paramètre est facultatif |Mot de passe nécessaire pour accéder au dépôt privé ci-dessus. |
+| `DOCKER_USERNAME` | Facultatif | Nom d’utilisateur utilisé pour accéder aux images de conteneur si elles sont stockées dans un dépôt privé. Pour plus d’informations sur l’utilisation d’un dépôt Docker privé pour le déploiement d’un cluster Big Data, consultez la rubrique [Déploiements hors connexion](deploy-offline.md).|
+| `DOCKER_PASSWORD` | Facultatif |Mot de passe nécessaire pour accéder au dépôt privé ci-dessus. |
 
 Ces variables d’environnement doivent être définies avant d’appeler `azdata bdc create`. Si une variable n’est pas définie, vous êtes invité à le faire.
 
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Vous devez utiliser l’utilisateur `root` pour la passerelle Knox avec le mot de passe ci-dessus. `root` est le seul utilisateur pris en charge dans cette configuration d’authentification de base (nom d’utilisateur/mot de passe). Pour l’instance principale SQL Server, le nom d’utilisateur provisionné pour être utilisé avec le mot de passe ci-dessus est `sa`.
+> Vous devez utiliser l’utilisateur `root` pour la passerelle Knox avec le mot de passe ci-dessus. `root` est le seul utilisateur pris en charge dans cette authentification de base (nom d’utilisateur/mot de passe).
+> Pour vous connecter à SQL Server avec l’authentification de base, utilisez les mêmes valeurs que les [variables d’environnement](#env) AZDATA_USERNAME et AZDATA_PASSWORD. 
 
 
 Après avoir défini les variables d’environnement, vous devez exécuter `azdata bdc create` pour déclencher le déploiement. Cet exemple utilise le profil de configuration de cluster créé ci-dessus :
@@ -227,7 +228,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> L’ensemble du processus de déploiement peut durer longtemps en raison du temps nécessaire au téléchargement des images conteneur pour les composants du cluster Big Data. Il ne devrait cependant pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez [Supervision et résolution des problèmes des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
+> L’ensemble du processus de déploiement peut durer longtemps en raison du temps nécessaire au téléchargement des images de conteneur pour les composants du cluster Big Data. Il ne devrait cependant pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez [Supervision et résolution des problèmes de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 Une fois le déploiement terminé, vous êtes notifié dans la sortie :
 

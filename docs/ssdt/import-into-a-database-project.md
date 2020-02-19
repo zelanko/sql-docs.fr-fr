@@ -1,11 +1,7 @@
 ---
-title: Importer dans un projet de base de données | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Importer dans un projet de base de données
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119844"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246451"
 ---
 # <a name="import-into-a-database-project"></a>Importer dans un projet de base de données
+
 Vous pouvez utiliser la fonction Importer pour remplir un projet avec de nouveaux objets provenant d'une base de données active ou d'un fichier .dacpac, ou pour mettre à jour des objets existants dans votre projet avec une nouvelle définition d'un script. Il convient de noter plusieurs différences de comportement entre ces trois choix, comme décrit ci-dessous.  
   
 **Menu Importer**  
@@ -45,7 +46,7 @@ Si la source d'importation contient des scripts de prédéploiement et de post-d
   
 Dossier **Ignoré lors de l’importation**  
   
-![Dossier SSDT Ignoré lors de l’importation](../ssdt/media/ssdt-ignoredonimport.gif "Dossier SSDT Ignoré lors de l’importation")  
+![Dossier des éléments ignorés lors de l'importation dans SSDT](../ssdt/media/ssdt-ignoredonimport.gif "Dossier des éléments ignorés lors de l'importation dans SSDT")  
   
 ## <a name="bkmk_import_source_script"></a>Source d’importation : script (*.sql)  
 Tous les objets de la source d’importation qui n’existent *pas* encore dans le projet seront ajoutés, et tous les ceux qui existent *déjà* remplaceront la définition des objets dans le projet.  

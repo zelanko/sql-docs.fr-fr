@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015389"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -45,7 +45,7 @@ HRESULT SetParameterProperties(
  *rgParamProperties*[in]  
  Tableau de structures SSPARAMPROPS à définir.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  La méthode **ISSCommandWithParameters::SetParameterProperties** retourne les mêmes codes d’erreur que la méthode OLE DB **ICommandProperties::SetProperties** principale.  
   
 ## <a name="remarks"></a>Notes  
@@ -73,7 +73,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Les améliorations du moteur de base de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] données commencent par allow ISSCommandWithParameters:: SetParameterProperties pour obtenir des descriptions plus précises des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par ISSCommandWithParameters:: SetParameterProperties dans les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versions précédentes de. Pour plus d’informations, consultez [Découverte des métadonnées](../../oledb/features/metadata-discovery.md).  
+ Les améliorations apportées au moteur de base de données à compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permettent à ISSCommandWithParameters::SetParameterProperties d'obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées ISSCommandWithParameters::SetParameterProperties dans les versions précédentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Découverte des métadonnées](../../oledb/features/metadata-discovery.md).  
   
 |Membre|Description|  
 |------------|-----------------|  

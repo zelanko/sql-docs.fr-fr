@@ -1,26 +1,27 @@
 ---
-title: Effectuer un déploiement avec un script bash sur un cluster kubeadm mononœud
-titleSuffix: SQL Server big data clusters
+title: Déployer un cluster kubeadm à nœud unique
+titleSuffix: SQL Server Big Data Clusters
 description: Utilisez un script de déploiement bash pour déployer un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] sur un cluster kubeadm mononœud.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: f60256e58339387323f923c85d2b880459455663
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341841"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252103"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Effectuer un déploiement avec un script bash sur un cluster kubeadm mononœud
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dans ce tutoriel, vous utilisez un exemple de script de déploiement bash pour déployer un cluster Kubernetes mononœud à l’aide de kubeadm et un cluster Big Data SQL Server sur ce cluster.  
+Dans ce tutoriel, vous utilisez un exemple de script de déploiement bash pour déployer un cluster Kubernetes mononœud à l’aide de kubeadm et un cluster Big Data SQL Server sur ce cluster.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
@@ -79,7 +80,7 @@ Dans ce tutoriel, vous utilisez un exemple de script de déploiement bash pour d
    azdata --version
    ```
 
-## <a name="cleanup"></a>Nettoyer
+## <a name="cleanup"></a>Nettoyage
 
 Le script [cleanup-bdc.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) est fourni pour faciliter la réinitialisation de l’environnement, si elle est nécessaire. Cependant, nous vous recommandons d’utiliser une machine virtuelle à des fins de test et d’utiliser la fonctionnalité d’instantané dans votre hyperviseur pour restaurer la machine virtuelle à un état propre.
 

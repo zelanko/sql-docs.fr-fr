@@ -1,32 +1,31 @@
 ---
 title: 'Démarrage rapide : Effectuer l’apprentissage d’un modèle dans R'
-titleSuffix: SQL Server Machine Learning Services
-description: Créez un modèle prédictif simple en R à l’aide de SQL Server Machine Learning Services, puis prédisez un résultat en utilisant de nouvelles données.
+description: Dans ce guide de démarrage rapide, vous allez créer et effectuer l’apprentissage d’un modèle prédictif à l’aide de R. Vous allez enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726518"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831722"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Démarrage rapide : Créer un modèle prédictif doté d’un score en R avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans ce guide de démarrage rapide, vous allez créer et effectuer l’apprentissage d’un modèle prédictif à l’aide de R, enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données avec [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+Dans ce guide de démarrage rapide, vous allez créer et effectuer l’apprentissage d’un modèle prédictif à l’aide de R. Vous allez enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données avec [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
 Vous allez créer et exécuter deux procédures stockées qui s’exécutent dans SQL. La première utilise le jeu de données **mtcars** inclus avec R et génère un modèle linéaire généralisé simple (GLM) qui prédit la probabilité qu’un véhicule ait été équipé d’une transmission manuelle. La deuxième procédure concerne le scoring : elle appelle le modèle généré dans la première procédure pour générer un ensemble de prédictions basées sur de nouvelles données. En plaçant le code R dans une procédure stockée SQL, les opérations sont contenues dans SQL et sont réutilisables. Elles peuvent alors être appelées par d’autres procédures stockées et applications clientes.
 
 > [!TIP]
-> Si vous avez besoin de rafraîchir vos connaissances sur les modèles linéaires, consultez le tutoriel suivant, qui décrit le processus d’ajustement des modèles linéaire à l’aide de rxLInMod :  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Ajustement des modèles linéaires)
+> Si vous avez besoin de rafraîchir vos connaissances sur les modèles linéaires, consultez le tutoriel suivant, qui décrit le processus d’ajustement des modèles linéaire à l’aide de rxLInMod :  [Ajustement des modèles linéaires](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
 En suivant ce guide de démarrage rapide, vous apprendrez :
 
@@ -37,11 +36,11 @@ En suivant ce guide de démarrage rapide, vous apprendrez :
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-- Ce démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), ainsi que l’installation du langage R.
+- Ce démarrage rapide nécessite un accès à une instance de SQL Server sur laquelle [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) est installé avec le langage R.
 
-  Votre instance SQL Server peut se trouver sur une machine virtuelle Azure ou être locale. N’oubliez pas que la fonctionnalité de script externe est désactivée par défaut. Par conséquent, vous devrez peut-être [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que le **service SQL Server Launchpad** est en cours d’exécution avant de commencer.
+  Votre instance SQL Server peut se trouver sur une machine virtuelle Azure ou être locale. Sachez simplement que la fonctionnalité de script externe est désactivée par défaut. Avant de commencer, vous serez donc peut-être amené à [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que le **service SQL Server Launchpad** est en cours d’exécution.
 
-- Vous aurez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts R. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce guide de démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Vous aurez aussi besoin d’un outil pour exécuter les requêtes SQL qui contiennent des scripts R. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="create-the-model"></a>Créer le modèle
 
@@ -80,7 +79,7 @@ Pour créer le modèle, vous allez créer des données sources pour l’apprenti
    ```
 
    > [!TIP]
-   > Le runtime R contient de nombreux datasets de tailles diverses. Pour obtenir la liste des datasets installées avec R, tapez `library(help="datasets")` à partir d’une invite de commandes R.
+   > De nombreux jeux de données, petits et grands, sont inclus avec le runtime R. Pour obtenir la liste des datasets installées avec R, tapez `library(help="datasets")` à partir d’une invite de commandes R.
 
 ### <a name="create-and-train-the-model"></a>Créer et effectuer l’apprentissage du modèle
 
@@ -107,7 +106,7 @@ GO
 ```
 
 - Le premier argument de `glm` est le paramètre *formula* qui définit `am` comme étant dépendante de `hp + wt`.
-- Les données d’entrée sont stockées dans la variable `MTCarsData`, qui est remplie par la requête SQL. Si vous n’attribuez pas de nom spécifique à vos données d’entrée, le nom par défaut de la variable est _InputDataSet_.
+- Les données d’entrée sont stockées dans la variable `MTCarsData`, qui est renseignée par la requête SQL. Si vous n’attribuez pas de nom spécifique à vos données d’entrée, le nom de variable par défaut est _InputDataSet_.
 
 ### <a name="store-the-model-in-the-sql-database"></a>Stocker le modèle dans la base de données SQL
 
@@ -132,7 +131,7 @@ Ensuite, stockez le modèle dans une base de données SQL afin de pouvoir l’ut
    ```
 
    > [!TIP]
-   > Si vous exécutez ce code une deuxième fois, vous obtenez cette erreur : Violation de la contrainte CLÉ PRIMAIRE... Impossible d’insérer une clé en double dans l’objet dbo.stopping_distance_models. Vous pouvez éviter cette erreur en mettant à jour le nom de chaque nouveau modèle. Par exemple, vous pouvez opter pour un nom plus descriptif en indiquant par exemple le type du modèle, le jour de sa création, etc.
+   > Si vous exécutez ce code une deuxième fois, vous obtenez cette erreur : Violation de la contrainte CLÉ PRIMAIRE... Impossible d’insérer une clé en double dans l’objet dbo.stopping_distance_models. Pour éviter cette erreur, vous pouvez mettre à jour le nom de chaque nouveau modèle. Vous pouvez par exemple utiliser un nom plus descriptif et y inclure le type de modèle, le jour de sa création, etc.
 
      ```sql
      UPDATE GLM_models
@@ -202,11 +201,11 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 Le script ci-dessus effectue les étapes suivantes :
 
-- Utilisez une instruction SELECT pour obtenir un seul modèle de la table à passer comme paramètre d’entrée.
+- Utilisez une instruction SELECT pour récupérer un modèle dans la table et le passer en tant que paramètre d’entrée.
 
-- Après avoir récupéré le modèle de la table, appelez la fonction `unserialize` sur ce modèle.
+- Après avoir récupéré le modèle dans la table, appelez la fonction `unserialize` sur le modèle.
 
-- Appliquez la fonction `predict` avec les arguments appropriés au modèle et fournissez les nouvelles données d’entrée.
+- Appliquez la fonction `predict` avec les arguments appropriés au modèle de fonction, et fournissez les nouvelles données d’entrée.
 
 > [!NOTE]
 > Dans l’exemple, la fonction `str` est ajoutée pendant le test pour vérifier le schéma de données renvoyées à partir de R. Vous pourrez supprimer l’instruction ultérieurement si vous le souhaitez.

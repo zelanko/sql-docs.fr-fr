@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 529c3189676ce704d10a90902bd44f7f2c8e8f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995205"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres
@@ -38,7 +38,7 @@ ms.locfileid: "67995205"
 |Type de données SQL Server|Type de données OLE DB|  
 |--------------------------|----------------------|  
 |**bigint**|DBTYPE_I8|  
-|**binaire**|DBTYPE_BYTES|  
+|**binary**|DBTYPE_BYTES|  
 |**bit**|DBTYPE_BOOL|  
 |**char**|DBTYPE_STR|  
 |**datetime**|DBTYPE_DBTIMESTAMP|  
@@ -46,7 +46,7 @@ ms.locfileid: "67995205"
 |**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
 |**image**|DBTYPE_BYTES|  
-|**Int**|DBTYPE_I4|  
+|**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
 |**ntext**|DBTYPE_WSTR|  
@@ -58,7 +58,7 @@ ms.locfileid: "67995205"
 |**smallmoney**|DBTYPE_CY|  
 |**sql_variant**|DBTYPE_VARIANT, DBTYPE_SQLVARIANT|  
 |**sysname**|DBTYPE_WSTR|  
-|**texte**|DBTYPE_STR|  
+|**text**|DBTYPE_STR|  
 |**timestamp**|DBTYPE_BYTES|  
 |**tinyint**|DBTYPE_UI1|  
 |**UDT**|DBTYPE_UDT|  
@@ -67,7 +67,7 @@ ms.locfileid: "67995205"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- Le pilote OLE DB pour SQL Server prend en charge les conversions de données demandées par les consommateurs, comme indiqué dans l’illustration.  
+ Le fournisseur OLE DB Driver pour SQL Server prend en charge des conversions de données demandées par le consommateur, comme indiqué dans l'illustration.  
   
  Les objets **sql_variant** peuvent contenir des données de n’importe quel type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], sauf text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp et les types CLR (Common Language Runtime) du Microsoft .NET Framework définis par l’utilisateur. sql_variant ne peut pas être le type de données de base sous-jacent d'une instance de données sql_variant. Par exemple, la colonne peut contenir des valeurs **smallint** pour certaines lignes, des valeurs **float** pour d’autres lignes et des valeurs **char**/**nchar** dans le reste.  
   
@@ -76,26 +76,26 @@ ms.locfileid: "67995205"
   
  Quand des données **sql_variant** sont extraites en tant que DBTYPE_VARIANT, elles sont placées dans une structure VARIANT dans la mémoire tampon. Cependant, les sous-types dans la structure VARIANT peuvent ne pas être mappés aux sous-types définis dans le type de données **sql_variant**. Les données **sql_variant** doivent ensuite être extraites en tant que DBTYPE_SQLVARIANT pour que tous les sous-types correspondent.  
   
-## <a name="dbtypesqlvariant-data-type"></a>Type de données DBTYPE_SQLVARIANT  
+## <a name="dbtype_sqlvariant-data-type"></a>Type de données DBTYPE_SQLVARIANT  
  Pour prendre en charge le type de données **sql_variant**, le pilote OLE DB pour SQL Server expose un type de données spécifique au fournisseur appelé DBTYPE_SQLVARIANT. Quand des données **sql_variant** sont extraites en tant que DBTYPE_SQLVARIANT, elles sont stockées dans une structure SSVARIANT spécifique au fournisseur. La structure SSVARIANT contient tous les sous-types qui correspondent aux sous-types du type de données **sql_variant**.  
   
  La propriété de session SSPROP_ALLOWNATIVEVARIANT doit également avoir la valeur TRUE.  
   
-## <a name="provider-specific-property-sspropallownativevariant"></a>Propriété SSPROP_ALLOWNATIVEVARIANT spécifique au fournisseur  
+## <a name="provider-specific-property-ssprop_allownativevariant"></a>Propriété SSPROP_ALLOWNATIVEVARIANT spécifique au fournisseur  
  Pour extraire des données, vous pouvez spécifier explicitement le type de données à retourner pour une colonne ou un paramètre. **IColumnsInfo** permet également d’obtenir les informations sur les colonnes et d’utiliser ces informations pour effectuer la liaison. Quand **IColumnsInfo** est utilisé pour obtenir des informations sur les colonnes en vue d’effectuer une liaison, si la propriété de session SSPROP_ALLOWNATIVEVARIANT a la valeur FALSE (valeur par défaut), DBTYPE_VARIANT est retourné pour les colonnes **sql_variant**. Si la propriété SSPROP_ALLOWNATIVEVARIANT a la valeur FALSE, DBTYPE_SQLVARIANT n'est pas pris en charge. Si la propriété SSPROP_ALLOWNATIVEVARIANT a la valeur TRUE, le type de colonne est retourné en tant que DBTYPE_SQLVARIANT, auquel cas la mémoire tampon contiendra la structure SSVARIANT. Pour extraire des données **sql_variant** en tant que DBTYPE_SQLVARIANT, la propriété de session SSPROP_ALLOWNATIVEVARIANT doit être définie sur TRUE.  
   
  La propriété SSPROP_ALLOWNATIVEVARIANT est une propriété de session et fait partie du jeu de propriétés DBPROPSET_SQLSERVERSESSION spécifique au fournisseur.  
   
  DBTYPE_VARIANT s'applique à tous les autres fournisseurs OLE DB.  
   
-## <a name="sspropallownativevariant"></a>SSPROP_ALLOWNATIVEVARIANT  
+## <a name="ssprop_allownativevariant"></a>SSPROP_ALLOWNATIVEVARIANT  
  SSPROP_ALLOWNATIVEVARIANT est une propriété de session et fait partie du jeu de propriétés DBPROPSET_SQLSERVERSESSION.  
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Type : VT_BOOL<br /><br /> Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : détermine si les données sont extraites en tant que DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE : le type de colonne est retourné en tant que DBTYPE_SQLVARIANT, auquel cas la mémoire tampon contient la structure SSVARIANT.<br /><br /> VARIANT_FALSE : le type de colonne est retourné en tant que DBTYPE_VARIANT et la mémoire tampon a la structure VARIANT.|  
+|SSPROP_ALLOWNATIVEVARIANT|Tapez : VT_BOOL<br /><br /> R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Détermine si les données sont extraites en tant que DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE : le type de colonne est retourné en tant que DBTYPE_SQLVARIANT, auquel cas la mémoire tampon contient la structure SSVARIANT.<br /><br /> VARIANT_FALSE : le type de colonne est retourné en tant que DBTYPE_VARIANT et la mémoire tampon a la structure VARIANT.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types &#40;de données OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Types de données &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

@@ -5,26 +5,117 @@ description: Découvrez comment mettre à niveau des clusters Big Data SQL Serve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f44ef17a712d0d5a19707cf94e7d3e4196a2aba3
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706309"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75831836"
 ---
-# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Guide pratique pour effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-upgrade-big-data-clusters-2019"></a>Guide pratique pour effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article fournit des conseils sur la façon de mettre à niveau un cluster Big Data SQL Server vers une nouvelle version. Les étapes décrites dans cet article s’appliquent spécifiquement à la mise à niveau d’une préversion vers une mise à jour de Service Release SQL Server 2019.
+Le chemin de mise à niveau dépend de la version actuelle de SQL Server Big Data Cluster (BDC). Pour effectuer une mise à niveau à partir d’une version prise en charge, comme une mise à jour à disponibilité générale (GDR), une mise à jour cumulative (CU) ou une mise à jour QFE (Quick Fix Engineering), vous pouvez mettre à niveau sur place. La mise à niveau sur place à partir d’une version CTP (Customer Technology Preview) ou d’une version Release Candidate de BDC n’est pas prise en charge. Vous devez supprimer et recréer le cluster. Les sections suivantes décrivent les étapes pour chaque scénario :
 
-## <a name="backup-and-delete-the-old-cluster"></a>Sauvegarder et supprimer l’ancien cluster
+- [Mise à niveau à partir d’une version prise en charge](#upgrade-from-supported-release)
+- [Mettre à jour un déploiement BDC à partir d’une version CTP ou Release Candidate](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
-Il n’existe pas de mise à niveau sur place pour les clusters Big Data, le seul moyen de procéder à une mise à niveau vers une nouvelle version release consiste à supprimer et à recréer manuellement le cluster. Chaque version release comporte une version unique d’`azdata`, qui n’est pas compatible avec la version précédente. De plus, si un ancien cluster doit télécharger une image conteneur sur un nouveau nœud, la dernière image risque de ne pas être compatible avec les anciennes images sur le cluster. Notez que l’image la plus récente est tirée (pull) uniquement si vous utilisez l’étiquette d’image `latest` dans le fichier config de déploiement pour les paramètres de conteneur. Par défaut, chaque version release a une étiquette d’image spécifique qui correspond à la version release de SQL Server. Pour effectuer une mise à niveau vers la dernière version, procédez comme suit :
+>[!NOTE]
+>La première version prise en charge des clusters Big Data est SQL Server 2019 GDR1.
+
+## <a name="upgrade-release-notes"></a>Notes de publication de mise à niveau
+
+Avant de continuer, consultez les [notes de mise à niveau pour connaître les problèmes connus](release-notes-big-data-cluster.md#known-issues).
+
+## <a name="upgrade-from-supported-release"></a>Mise à niveau à partir d’une version prise en charge
+
+Cette section explique comment mettre à niveau SQL Server BDC depuis une version prise en charge (à compter de SQL Server 2019 GDR1) vers une version plus récente prise en charge.
+
+1. Sauvegardez l’instance maître SQL Server.
+2. Sauvegardez HDFS.
+
+   ```
+   azdata bdc hdfs cp --from-path <path> --to-path <path>
+   ```
+   
+   Par exemple : 
+
+   ```
+   azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
+   ```
+
+3. Mettez à jour `azdata`.
+
+   Suivez les instructions d’installation de `azdata`. 
+   - [Windows installer](deploy-install-azdata-installer.md)
+   - [Linux avec apt](deploy-install-azdata-linux-package.md)
+   - [Linux avec yum](deploy-install-azdata-yum.md)
+   - [Linux avec zypper](deploy-install-azdata-zypper.md)
+
+   >[!NOTE]
+   >Si `azdata` a été installé avec `pip` vous devez le supprimer manuellement avant de procéder à l’installation avec Windows Installer ou le gestionnaire de package Linux.
+
+1. Mettez à jour le cluster Big Data.
+
+   ```
+   azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
+   ```
+
+   Par exemple, le script suivant utilise la balise d’image `2019-CU1-ubuntu-16.04` :
+
+   ```
+   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   ```
+
+>[!NOTE]
+>Les balises d’image les plus récentes sont disponibles dans les [notes de publication des clusters Big Data SQL Server 2019](release-notes-big-data-cluster.md).
+
+>[!IMPORTANT]
+>Si vous utilisez un dépôt privé pour pré-extraire les images pour le déploiement ou la mise à niveau de BDC, assurez-vous que les images de build actuelles et les images de build >cibles se trouvent dans le dépôt privé. Cela permet une restauration réussie, si nécessaire. En outre, si vous avez modifié les >informations d’identification du dépôt privé depuis le déploiement d’origine, mettez à jour le secret correspondant dans Kubernetes avant de procéder à la mise à niveau. > Il n’existe pas de prise en charge pour la mise à jour des informations d’identification via les variables d’environnement DOCKER_PASSWORD et DOCKER_USERNAME. Mettez à jour le secret >avec [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). La mise à niveau à l’aide de dépôts >privés différents pour les builds actuels et cibles n’est pas prise en charge.
+
+### <a name="increase-the-timeout-for-the-upgrade"></a>Augmentez le délai d’expiration de la mise à niveau
+
+Un délai d’expiration peut se produire si certains composants ne sont pas mis à niveau dans le temps imparti. Le code suivant montre à quoi peut ressembler l’échec :
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+Pour augmenter les délais d’attente pour une mise à niveau, modifiez le mappage de configuration de mise à niveau. Pour modifier le mappage de configuration de mise à niveau :
+
+Exécutez la commande suivante :
+
+   ```bash
+   kubectl edit configmap controller-upgrade-configmap
+   ```
+
+Modifiez les champs suivants :
+
+   **controllerUpgradeTimeoutInMinutes** Spécifie le nombre de minutes à attendre avant la fin de la mise à niveau du contrôleur ou de la base de données du contrôleur. La valeur par défaut est 5. Mettez à jour vers au moins 20.
+   **totalUpgradeTimeoutInMinutes** : Désigne la durée combinée du contrôleur et de la base de données du contrôleur pour terminer la mise à niveau (contrôleur + base de données contrôleur). La valeur par défaut est 10. Mettez à jour vers au moins 40.
+   **componentUpgradeTimeoutInMinutes** : Désigne la durée d’exécution de chaque phase suivante de la mise à niveau. La valeur par défaut est 30. Mettez à jour vers 45.
+
+Enregistrez et quittez.
+
+## <a name="update-a-bdc-deployment-from-ctp-or-release-candidate"></a>Mettre à jour un déploiement BDC à partir d’une version CTP ou Release Candidate
+
+La mise à niveau sur place à partir d’une version CTP ou Release Candidate des clusters Big Data SQL Server n’est pas prise en charge. La section suivante explique comment supprimer et recréer manuellement le cluster.
+
+### <a name="backup-and-delete-the-old-cluster"></a>Sauvegarder et supprimer l’ancien cluster
+
+Il n’existe aucune mise à niveau sur place pour les clusters Big Data déployés avant la version SQL Server 2019 GDR1. La seule façon de mettre à niveau vers une nouvelle version consiste à supprimer le cluster et à le recréer manuellement. Chaque version release comporte une version unique d’`azdata`, qui n’est pas compatible avec la version précédente. En outre, si une nouvelle image de conteneur est téléchargée sur un cluster déployé avec une version antérieure différente, l’image la plus récente peut ne pas être compatible avec les anciennes images sur le cluster. L’image la plus récente est tirée (pull) si vous utilisez l’étiquette d’image `latest` dans le fichier config de déploiement pour les paramètres de conteneur. Par défaut, chaque version release a une étiquette d’image spécifique qui correspond à la version release de SQL Server. Pour effectuer une mise à niveau vers la dernière version, procédez comme suit :
 
 1. Avant de supprimer l’ancien cluster, sauvegardez les données sur l’instance maître SQL Server et sur HDFS. Pour l’instance maître SQL Server, vous pouvez utiliser [Sauvegarde et restauration d’une base de données SQL Server](data-ingestion-restore-database.md). Pour HDFS, vous [pouvez copier les données avec `curl`](data-ingestion-curl.md).
 
@@ -40,7 +131,7 @@ Il n’existe pas de mise à niveau sur place pour les clusters Big Data, le seu
    > [!Note]
    > Si vous exécutez une commande `azdata bdc delete`, tous les objets créés dans l’espace de noms identifié par le nom du cluster Big Data sont supprimés, mais pas l’espace de noms lui-même. Vous pouvez réutiliser l’espace de noms pour d’autres déploiements, à condition qu’il soit vide et qu’aucune autre application n’y ait été créée.
 
-1. Désinstallez l’ancienne version d’`azdata`
+1. Désinstallez l’ancienne version d’`azdata`.
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
@@ -63,7 +154,7 @@ Il n’existe pas de mise à niveau sur place pour les clusters Big Data, le seu
    > [!IMPORTANT]
    > Pour chaque version release, le chemin de la version `n-1` d’`azdata` change. Même si vous avez déjà installé `azdata`, vous devez le réinstaller à partir du chemin le plus récent avant de créer le cluster.
 
-## <a id="azdataversion"></a> Vérifier la version d’azdata
+### <a id="azdataversion"></a> Vérifier la version d’azdata
 
 Avant de déployer un nouveau cluster Big Data, vérifiez que vous utilisez la dernière version de `azdata` avec le paramètre `--version` :
 
@@ -71,7 +162,7 @@ Avant de déployer un nouveau cluster Big Data, vérifiez que vous utilisez la d
 azdata --version
 ```
 
-## <a name="install-the-new-release"></a>Installer la nouvelle version
+### <a name="install-the-new-release"></a>Installer la nouvelle version
 
 Après avoir supprimé le cluster Big Data précédent et installé la dernière version d’`azdata`, déployez le nouveau cluster Big Data à l’aide des instructions de déploiement actuelles. Pour plus d’informations, consultez [Guide pratique pour déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md). Ensuite, restaurez les bases de données ou les fichiers requis.
 

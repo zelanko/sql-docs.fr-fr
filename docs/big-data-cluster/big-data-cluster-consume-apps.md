@@ -5,18 +5,19 @@ description: Consommez une application déployée sur un cluster Big Data SQL Se
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707173"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721404"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>Consommer une application déployée sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] avec un service web RESTful
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Consommer une application déployée sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] avec un service web RESTful
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -28,13 +29,13 @@ Cet article décrit comment consommer une application déployée sur un cluster 
 - [Utilitaire de ligne de commande azdata](deploy-install-azdata.md)
 - Application déployée avec [azdata](big-data-cluster-create-apps.md) ou l’[extension de déploiement d’application](app-deployment-extension.md)
 
-## <a name="capabilities"></a>Fonctions
+## <a name="capabilities"></a>Fonctionnalités
 
 Après avoir déployé une application sur votre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vous pouvez accéder à cette application et la consommer en utilisant un service web RESTful. Vous pouvez ainsi intégrer cette application à partir d’autres applications ou services (par exemple, une application mobile ou un site web). Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **azdata** pour obtenir des informations sur le service web RESTful pour votre application.
 
-|Command |Description |
+|Commande |Description |
 |:---|:---|
-|`azdata app describe` | Décrit l’application. |
+|`azdata app describe` | Décrivez une application. |
 
 Vous pouvez utiliser le paramètre `--help` pour obtenir de l’aide, comme dans l’exemple suivant :
 
@@ -90,7 +91,16 @@ Une des autres méthodes permettant d’obtenir ces informations est de cliquer 
 
 ## <a name="generate-a-jwt-access-token"></a>Générer un jeton d’accès JWT
 
-Pour accéder au service web RESTful pour l’application que vous avez déployée, vous devez d’abord générer un jeton d’accès JWT. Ouvrez l’URL `https://[IP]:[PORT]/docs/swagger.json` dans votre navigateur à l’aide de l’adresse IP et du port que vous avez récupérés en exécutant la commande `describe` ci-dessus. Vous devez vous connecter avec les mêmes informations d’identification que celles utilisées pour `azdata login`.
+Pour accéder au service web RESTful pour l’application que vous avez déployée, vous devez d’abord générer un jeton d’accès JWT. L’URL du jeton d’accès dépend de la version du cluster Big Data. 
+
+|Version |URL|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|CU1 et versions ultérieures| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> Pour plus d’informations sur la version, consultez [l’historique des versions](release-notes-big-data-cluster.md#release-history).
+
+Ouvrez l’URL appropriée dans votre navigateur à l’aide de l’adresse IP et du port que vous avez récupérés en exécutant la commande [`describe`](#retrieve-the-endpoint) ci-dessus. Connectez-vous avec les mêmes informations d’identification que celles utilisées pour `azdata login`.
 
 Collez le contenu de `swagger.json` dans [Swagger Editor](https://editor.swagger.io) pour comprendre les méthodes disponibles :
 
@@ -125,4 +135,4 @@ L’application a été appelée par le biais du service web. Vous pouvez suivre
 
 Vous pouvez également consulter d’autres [exemples de déploiement d’application](https://aka.ms/sql-app-deploy).
 
-Pour plus d’informations sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md)
+Pour plus d’informations sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md).

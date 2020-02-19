@@ -1,21 +1,22 @@
 ---
-title: Notes de publication de SQL Server Management Studio (SSMS) | Microsoft Docs
+title: Notes de publication de (SSMS)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: dnethi
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
-ms.openlocfilehash: cdcc955050ebab5702d22fef60628876bd367757
-ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.openlocfilehash: 6ff730a55a52319082d4af9021d698bf696ec0be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801151"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037116"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -58,6 +59,7 @@ SSMS 18.4 est la dernière version en disponibilité générale de SSMS. Si vou
 | Classification des données | Ajout de la prise en charge d’une stratégie de protection des informations personnalisée pour la classification des données. |
 | Magasin des requêtes | Ajout de la valeur *Plan max par requête* dans les propriétés de la boîte de dialogue. |
 | Magasin des requêtes | Ajout de la prise en charge des nouvelles stratégies de capture personnalisées. |
+| Magasin des requêtes | Ajout du **Mode de capture des statistiques d’attente** aux options **Propriétés de base de données** du **Magasin des requêtes**. |
 | SMO/Création de scripts | Prise en charge du script de vue matérialisée dans SQL DW. |
 | SMO/Création de scripts | Ajout de la prise en charge de *SQL à la demande*. |
 | SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) : ajout de 50 règles d’évaluation (détails sur GitHub). |
@@ -87,13 +89,13 @@ SSMS 18.4 est la dernière version en disponibilité générale de SSMS. Si vou
 | Outils de réplication | Résolution d’un problème qui provoquait une erreur générée par l’application (« Impossible de charger le fichier ou l’assembly... ») lors de la tentative de modification des travaux de l’agent SQL. |
 | SMO/Création de scripts | Résolution d’un problème qui empêchait le fonctionnement de *Générer un script de la table en tant que...* pour SQL DW avec le classement Japanese_BIN2.|
 | SMO/Création de scripts | Résolution d’un problème où ScriptAlter() finissait par exécuter les instructions sur le serveur.|
-| Agent SQL | Résolution d’un problème où l’interface utilisateur de l’opérateur de l’agent ne mettait pas à jour le nom de l’opérateur quand celui-ci était modifié dans l’interface utilisateur et ne faisait pas l’objet d’un script. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647).|
+| SQL Agent | Résolution d’un problème où l’interface utilisateur de l’opérateur de l’agent ne mettait pas à jour le nom de l’opérateur quand celui-ci était modifié dans l’interface utilisateur et ne faisait pas l’objet d’un script. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647).|
 
 ### <a name="known-issues-184"></a>Problèmes connus (18.4)
 
 * Le diagramme de base de données créé à partir de SSMS s’exécutant sur une machine A ne peut pas être modifié sur la machine B (SSMS se plante). Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 
-* Il y a des problèmes de regénération du dessin lors du basculement d’une fenêtre de requête vers une autre. Pour plus d’informations, consultez UserVoice. Pour contourner ce problème, vous pouvez désactiver l’accélération matérielle sous *Outils > Options*.
+* Il y a des problèmes de regénération du dessin lors du basculement d’une fenêtre de requête vers une autre. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). Pour contourner ce problème, vous pouvez désactiver l’accélération matérielle sous *Outils > Options*.
 
 Pour connaître les autres problèmes connus et pour envoyer vos commentaires à l’équipe produit, accédez à [UserVoice](https://feedback.azure.com/forums/908035-sql-server).
 
@@ -101,7 +103,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 
 Téléchargez les versions précédentes de SSMS en cliquant sur le lien des titres dans les sections suivantes :
 
-## <a name="downloadssdtmediadownloadpng-ssms-1831httpsgomicrosoftcomfwlinklinkid2105412"></a>![Télécharger ](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+## <a name="download-ssms-1831"></a>![télécharger](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 Numéro de version : 18.3.1  
 Numéro de build : 15.0.18183.0  
@@ -155,7 +157,7 @@ SSMS 18.3.1 est la dernière version en disponibilité générale de SSMS. Si v
 
 Pour connaître les autres problèmes connus et pour envoyer vos commentaires à l’équipe produit, accédez à [UserVoice](https://feedback.azure.com/forums/908035-sql-server).
 
-## <a name="downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720"></a>![Télécharger](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+## <a name="download-ssms-182"></a>![télécharger](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 Numéro de version : 18.2  
 Numéro de build : 15.0.18142.0  
@@ -202,7 +204,7 @@ Date de publication : 25 juillet 2019
 | [Inscrire des serveurs](register-servers/register-servers.md) | Résolution d’un problème où, lorsque l’utilisateur tentait d’exécuter une requête sur plusieurs serveurs (sous un *groupe* dans Serveurs inscrits) alors que les serveurs inscrits utilisaient l’option *Active Directory - Authentification par mot de passe* ou *Authentification SQL* et que l’utilisateur avait choisi de ne pas enregistrer le mot de passe, SSMS plantait. |
 | Rapports | Résolution d’un problème lors duquel les rapports *Utilisation du disque* ne pouvaient pas être générés lorsque les fichiers de données comportaient de nombreuses étendues. |
 | Outils de réplication | Résolution d’un problème où le moniteur de réplication ne fonctionnait pas avec la base de données de publication et le serveur de distribution du groupe de disponibilité (ce problème avait été résolu dans SSMS 17.x). |
-| Agent SQL | Résolution d’un problème lors duquel l’ajout, l’insertion ou la suppression des étapes d’un travail entraînaient la réinitialisation du focus sur la première ligne au lieu de la ligne active. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892). |
+| SQL Agent | Résolution d’un problème lors duquel l’ajout, l’insertion ou la suppression des étapes d’un travail entraînaient la réinitialisation du focus sur la première ligne au lieu de la ligne active. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892). |
 | SMO/Création de scripts | Résolution d’un problème où *CREATE OR ALTER* ne scriptait pas les objets qui avaient des propriétés étendues. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748). |
 | SMO/Création de scripts | Résolution d’un problème où SSMS ne pouvait pas scripter correctement CREATE EXTERNAL LIBRARY. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089). |
 | SMO/Création de scripts | Résolution d’un problème où, lorsque l’utilisateur tentait d’utiliser l’option *Générer des scripts* sur une base de données contenant plusieurs milliers de tables, la boîte de dialogue de progression semblait figée. |
@@ -225,11 +227,11 @@ Date de publication : 25 juillet 2019
 
 - La boîte de dialogue Propriétés de la connexion peut indiquer que la langue par défaut pour les connexions SQL est l’arabe, quelle que soit la langue par défaut réelle définie pour la connexion. Pour afficher la langue par défaut réelle pour une connexion donnée, utilisez T-SQL afin de sélectionner la valeur **default_language_name** de la connexion dans **master.sys.server_principles**.
 
-## <a name="downloadssdtmediadownloadpng-ssms-181httpsgomicrosoftcomfwlinklinkid2094583"></a>![Télécharger](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+## <a name="download-ssms-181"></a>![télécharger](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Numéro de version : 18.1  
 - Numéro de build : 15.0.18131.0  
-- Date de publication : 11 juin 2019  
+- Date de publication : 11 juin 2019  
 
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
@@ -280,8 +282,8 @@ Date de publication : 25 juillet 2019
 | SMO/création de scripts | Correction d’un problème entraînant l’échec de « Générer un script » sur une table de graphe durant la génération de données. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898466). |
 | SMO/création de scripts | Correction d’un problème empêchant à la méthode EnumObjects() de récupérer le nom de schéma d’un synonyme. |
 | SMO/création de scripts | Correction d’un problème dans UIConnectionInfo.LoadFromStream() empêchant la lecture de la section *AdvancedOptions* (quand un mot de passe n’est pas spécifié). |
-| Agent SQL | Correction d’un problème provoquant le plantage de SSMS lors de l’utilisation de la fenêtre de propriétés d’un travail. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37164244). |
-| Agent SQL | Correction d’un problème lié au fait que le bouton « Afficher » situé dans *Propriétés de l’étape du travail* n’était pas toujours activé, ce qui empêchait l’affichage de la sortie d’une étape de travail donnée. |
+| SQL Agent | Correction d’un problème provoquant le plantage de SSMS lors de l’utilisation de la fenêtre de propriétés d’un travail. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37164244). |
+| SQL Agent | Correction d’un problème lié au fait que le bouton « Afficher » situé dans *Propriétés de l’étape du travail* n’était pas toujours activé, ce qui empêchait l’affichage de la sortie d’une étape de travail donnée. |
 | Interface utilisateur XEvent | Ajout de la colonne « Package » à la liste XEvents pour distinguer les événements portant le même nom. |
 | Interface utilisateur XEvent | Ajout du mappage de type de classe « EXTERNAL LIBRARY » manquant à XEventUI. |
 
@@ -295,7 +297,7 @@ Date de publication : 25 juillet 2019
 
 - Le diagramme de base de données créé à partir de SSMS s’exécutant sur une machine A ne peut pas être modifié sur la machine B (SSMS se plante). Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 
-## <a name="downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649"></a>![télécharger](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+## <a name="download-ssms-180"></a>![télécharger](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - Numéro de version : 18.0  
 - Numéro de build : 15.0.18118.0  
@@ -327,7 +329,7 @@ Date de publication : 25 juillet 2019
 |SSMS n’est plus ajouté à la variable d’environnement PATH|Le chemin de SSMS.EXE (et des outils en général) n’est plus ajouté au chemin. Les utilisateurs peuvent l’ajouter manuellement ou, s’ils utilisent une version moderne de Windows, passer par le menu Démarrer.|
 |Les ID de package ne sont plus nécessaires pour développer des extensions SSMS| Avant, SSMS chargeait de façon sélective uniquement les packages connus, ce qui contraignait les développeurs à inscrire leur propre package. Cela n’est plus le cas.|
 |SSMS général|Exposition de l’option de configuration AUTOGROW_ALL_FILES pour les groupes de fichiers dans SSMS.|
-|SSMS général|Suppression des options risquées « regroupement léger » et « renforcement de priorité » de l’interface graphique utilisateur de SSMS. Pour plus d’informations, consultez l’article [Priority boost details – and why it’s not recommended](https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/) (Détails sur le renforcement de priorité – et pourquoi ce n’est pas recommandé. Texte en anglais).
+|SSMS général|Suppression des options risquées « regroupement léger » et « renforcement de priorité » de l’interface graphique utilisateur de SSMS. Pour plus d’informations, consultez l’article [Priority boost details – and why it’s not recommended](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/) (Détails sur le renforcement de priorité – et pourquoi ce n’est pas recommandé. Texte en anglais).
 |SSMS général|Nouveau menu et nouvelles combinaisons de touches pour la création de fichiers : **CTRL+ALT+N**. **Ctrl+N** permet toujours de créer une requête.|
 |SSMS général|La boîte de dialogue **Nouvelle règle de pare-feu** permet désormais à l’utilisateur de spécifier un nom de règle, au lieu d’en générer un automatiquement pour le compte de l’utilisateur.|
 |SSMS général|Amélioration d’IntelliSense dans l’éditeur, en particulier pour T-SQL v140 et ultérieur.|
@@ -343,7 +345,7 @@ Date de publication : 25 juillet 2019
 |Intégration d’Azure Data Studio|Après un clic droit sur un nœud de base de données dans l’Explorateur d’objets, des menus contextuels s’affichent pour l’utilisateur afin d’exécuter une requête ou créer un nouveau notebook dans Azure Data Studio.|
 |Prise en charge d’Azure SQL| Les propriétés de base de données SLO/Edition/MaxSize acceptent désormais les noms personnalisés, ce qui facilite la prise en charge des futures éditions des bases de données Azure SQL.|
 |Prise en charge d’Azure SQL| Ajout de la prise en charge des références SKU vCore (Usage général et Critique pour l’entreprise) : Gen4_24 et Gen5 en intégralité.|
-|Instance managée Azure SQL|Ajout de « connexions AAD » comme nouveau type de connexion dans SMO et SSMS lors d’une connexion à une instance managée Azure SQL.|
+|Instance gérée d'Azure SQL|Ajout de « connexions AAD » comme nouveau type de connexion dans SMO et SSMS lors d’une connexion à une instance managée Azure SQL.|
 |Always On|Rehachage du temps de récupération estimé (RTO) et de la perte de données estimée (RPO) dans le tableau de bord Always On de SSMS. Consultez la documentation mise à jour à l’adresse [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| La case à cocher Activer Always Encrypted sous le nouvel onglet Always Encrypted de la boîte de dialogue Se connecter au serveur offre désormais un moyen simple d’activer/de désactiver Always Encrypted pour une connexion de base de données.|
 |Always Encrypted avec enclaves sécurisées| Plusieurs améliorations ont été apportées pour prendre en charge Always Encrypted avec enclaves sécurisées dans SQL Server 2019 :  Champ de texte permettant de spécifier l’URL d’attestation d’enclave dans la boîte de dialogue Se connecter au serveur (sous le nouvel onglet Always Encrypted).  Nouvelle case à cocher dans la boîte de dialogue Nouvelle clé principale de colonne permettant d’indiquer si une nouvelle clé principale de colonne doit autoriser les calculs d’enclave.  D’autres boîtes de dialogue de gestion de clés Always Encrypted exposent désormais des informations indiquant sur quelles clés principales de colonne les calculs d’enclave sont autorisés.|
@@ -497,7 +499,7 @@ Date de publication : 25 juillet 2019
 |Scripts d’objets|Correction d’un problème où l’utilisateur est dans l’impossibilité de générer un script pour les statistiques à partir de SQL DW. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296). |
 |Scripts d’objets|Correction d’un problème où l’« Assistant Générer un script » affiche une table incorrecte contenant une erreur de script lorsque le paramètre « Continuer l’exécution du script en cas d’erreur » est défini sur faux.|
 |Scripts d’objets|Génération du script améliorée sur SQL Server 2019.|
-|Profiler|Ajout de l’événement « Agrégation Table réécrire la requête » aux événements de Profiler.|
+|Profileur|Ajout de l’événement « Agrégation Table réécrire la requête » aux événements de Profiler.|
 |Magasin de données des requêtes|Correction d’un problème où une exception « DocumentFrame (SQLEditors) » pouvait être levée.|
 |Magasin de données des requêtes|Correction d’un problème empêchant l’utilisateur de sélectionner AM ou PM sur l’intervalle de début/fin lors de la tentative de définition d’un intervalle de temps personnalisé dans les rapports du magasin de données des requêtes intégré.|
 |Grille des résultats|Correction d’un problème qui activait le mode Contraste élevé (numéros de ligne sélectionnés non visibles).|
@@ -564,9 +566,9 @@ Liste des fonctionnalités dépréciées ou supprimées
 
 - Il y a des problèmes de regénération du dessin lors du basculement d’une fenêtre de requête vers une autre. Pour plus d’informations, consultez [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). Pour contourner ce problème, vous pouvez désactiver l’accélération matérielle sous Outils > Options.
 
-## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+## <a name="download-ssms-1791"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
-- Numéro de version : 17.9.1<br>
+- Numéro de version : 17.9.1<br>
 - Numéro de build : 14.0.17289.0<br>
 - Date de publication : 21 novembre 2018
 
@@ -581,7 +583,7 @@ Liste des fonctionnalités dépréciées ou supprimées
 
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [Français](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [Allemand](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [Italien](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [Japonais](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [Coréen](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [Russe](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [Espagnol](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946"></a>![télécharger](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+## <a name="download-ssms-1653"></a>![télécharger](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 Disponibilité générale | Numéro de build : 13.0.16106.4
 
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [Français](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [Allemand](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [Italien](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [Japonais](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [Coréen](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [Russe](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [Espagnol](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
@@ -606,12 +608,11 @@ Les problèmes suivants ont été résolus dans cette version :
 
 * Correction d’un problème avec la barre de défilement de SQL Designer. [Microsoft Connect - ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* Le menu contextuel pour les tables se bloque momentanément 
+* Le menu contextuel pour les tables se bloque momentanément
 
 * Il peut arriver que SSMS lève des exceptions dans le moniteur d’activité et se bloque. [Microsoft Connect - ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 se bloque avec l’erreur « Le processus a été arrêté en raison d’une erreur interne dans le runtime .NET à l’adresse IP 71AF8579 (71AE0000) avec le code de sortie 80131506 »
-
 
 ## <a name="uninstall-and-reinstall-ssms-17x"></a>Désinstaller et réinstaller SSMS 17.x
 

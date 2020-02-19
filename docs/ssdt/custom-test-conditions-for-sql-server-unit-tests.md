@@ -1,23 +1,24 @@
 ---
-title: Conditions de test personnalisées pour les tests unitaires SQL Server| Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Conditions de test personnalisées pour les tests unitaires SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1292666a44f93d8b8dd551975eed4b7ea46f5ffe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984563"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245529"
 ---
-# <a name="custom-test-conditions--for-sql-server-unit-tests"></a>Conditions de test personnalisées pour les tests unitaires SQL Server
+# <a name="custom-test-conditions-for-sql-server-unit-tests"></a>Conditions de test personnalisées pour les tests unitaires SQL Server
+
 Il est possible d’ajouter des conditions de test personnalisées aux tests unitaires SQL Server. Cependant, vous devez d'abord installer la condition de test pour pouvoir l'utiliser, que vous ayez créé l'extension ou que vous en installiez une créée par un autre utilisateur.  
   
 Avant d'installer une condition de test que vous n'avez pas créée, vous devez connaître les risques suivants :  

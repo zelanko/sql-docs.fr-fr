@@ -1,6 +1,6 @@
 ---
 title: Données de démonstration Taxis de New York pour les didacticiels
-description: Instructions pour télécharger un échantillon de données des taxis de New York et créer une base de données. Ces données sont utilisées dans les didacticiels en langages SQL Server Python et R qui montrent comment incorporer un script dans des procédures stockées SQL Server et des fonctions T-SQL.
+description: Créez une base de données contenant les exemples de données des taxis de la ville de New York. Ce jeu de données est utilisé dans les didacticiels R et Python pour SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/31/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8413456563a85f9c126dd9981e3e6df548cd30c4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727153"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908920"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration Taxis de New York pour les didacticiels SQL Server Python et R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ Cet article explique comment configurer une base de données exemple qui se comp
 
 Pour effectuer cet exercice, vous devez avoir [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou un autre outil capable de restaurer un fichier de sauvegarde de base de données et d’exécuter des requêtes T-SQL.
 
-Les didacticiels et les guides de démarrage rapide utilisant ce jeu de données comprennent entre autres :
+Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données :
 
 + [Découvrir l’analytique en base de données à l’aide de R dans SQL Server](sqldev-in-database-r-for-sql-developers.md)
 + [Découvrir l’analytique en base de données à l’aide de Python dans SQL Server](sqldev-in-database-python-for-sql-developers.md)
@@ -58,7 +58,7 @@ Le tableau suivant récapitule les objets créés dans la base de données de d�
 
 |**Nom de l'objet**|**Type d'objet**|**Description**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | base de données | Crée une base de données et deux tables :<br /><br />Table dbo.nyctaxi_sample : contient le jeu de données principal Taxis de New York. Un index cluster columnstore est ajouté à la table pour améliorer les performances du stockage et des requêtes. L’échantillon de 1 % du jeu de données Taxis de New York sera inséré dans cette table.<br /><br />Table dbo.nyc_taxi_models : permet de rendre persistant le modèle d’analytique avancée entraîné.|
+|**NYCTaxi_Sample** | database | Crée une base de données et deux tables :<br /><br />Table dbo.nyctaxi_sample : contient le jeu de données principal Taxis de New York. Un index cluster columnstore est ajouté à la table pour améliorer les performances du stockage et des requêtes. L’échantillon de 1 % du jeu de données Taxis de New York sera inséré dans cette table.<br /><br />Table dbo.nyc_taxi_models : permet de rendre persistant le modèle d’analytique avancée entraîné.|
 |**fnCalculateDistance** |fonction scalaire | Calcule la distance directe entre les lieux de prise en charge et de dépose. Cette fonction est utilisée pour [Créer des caractéristiques de données](sqldev-create-data-features-using-t-sql.md), [Entraîner et enregistrer un modèle](sqldev-train-and-save-a-model-using-t-sql.md) et [Rendre le modèle R opérationnel](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |fonction table | Crée de nouvelles caractéristiques de données pour l’apprentissage du modèle. Cette fonction est utilisée pour [Créer des caractéristiques de données](sqldev-create-data-features-using-t-sql.md) et [Rendre le modèle R opérationnel](sqldev-operationalize-the-model.md).|
 

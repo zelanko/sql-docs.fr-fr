@@ -1,27 +1,26 @@
 ---
 title: 'Démarrage rapide : Effectuer l’apprentissage d’un modèle avec Python'
-titleSuffix: SQL Server Machine Learning Services
-description: Créez un modèle prédictif simple en Python à l’aide de SQL Server Machine Learning Services, puis prédisez un résultat en utilisant de nouvelles données.
+description: Dans ce guide de démarrage rapide, vous allez créer et former un modèle prédictif à l’aide de Python. Vous allez enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/14/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcf43d57488578020eed09080668156fb926d1b0
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726998"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831764"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Démarrage rapide : Créer et évaluer un modèle prédictif en Python avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans ce guide de démarrage rapide, vous allez créer et effectuer l’apprentissage d’un modèle prédictif à l’aide de Python, enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données avec [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+Dans ce guide de démarrage rapide, vous allez créer et former un modèle prédictif à l’aide de Python. Vous allez enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données avec [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
 Vous allez créer et exécuter deux procédures stockées qui s’exécutent dans SQL. La première utilise le jeu de données classique des iris et génère un modèle bayésien naïf pour prédire une espèce d’iris en fonction des caractéristiques de la fleur. La deuxième procédure concerne le scoring : elle appelle le modèle généré dans la première procédure pour générer un ensemble de prédictions basées sur de nouvelles données. En plaçant le code Python dans une procédure stockée SQL, les opérations sont contenues dans SQL et sont réutilisables. Elles peuvent alors être appelées par d’autres procédures stockées et applications clientes.
 
@@ -34,9 +33,9 @@ En suivant ce guide de démarrage rapide, vous apprendrez :
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-- Ce guide de démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) ainsi que l’installation du langage Python.
+- Ce démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), ainsi que l’installation du langage Python.
 
-- Vous aurez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts Python. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce guide de démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Vous avez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts Python. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 - L’échantillon de données utilisé dans cet exercice est l’échantillon Iris. Suivez les instructions de la page [Données de démonstration Iris](demo-data-iris-in-sql.md) pour créer la base de données exemple **irissql**.
 
@@ -187,4 +186,4 @@ Au final, l’un des avantages est que les processus peuvent être modifiés à 
 
 Pour plus d’informations sur SQL Server Machine Learning Services, consultez :
 
-- [Qu’est-ce que SQL Server Machine Learning Services (Python et R)?](../what-is-sql-server-machine-learning.md)
+- [Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?](../what-is-sql-server-machine-learning.md)

@@ -1,23 +1,24 @@
 ---
-title: 'Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Étendre la génération du projet de base de données à la génération de statistiques de modèle
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069007"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242688"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : Étendre la génération du projet de base de données à la génération de statistiques de modèle
+
 Vous pouvez créer un contributeur de génération pour effectuer des actions personnalisées lorsque vous générez un projet de base de données. Dans cette procédure pas à pas, vous allez créer un contributeur de génération nommé ModelStatistics qui génère des statistiques de base de données SQL lorsque vous créez un projet de base de données. Ce contributeur de génération acceptant des paramètres lorsque vous effectuez la génération, quelques étapes supplémentaires sont nécessaires.  
   
 Au cours de cette procédure pas à pas, vous allez effectuer les tâches principales suivantes :  
@@ -60,7 +61,7 @@ Voici certaines commandes utilisées par l'exemple de contributeur dans cette pr
   
 **Identifier un collaborateur de manière unique**  
   
-Lors de la génération, les contributeurs personnalisés sont chargés à partir d'un répertoire d'extension standard. Les contributeurs de génération sont identifiés par un attribut [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) . Cet attribut est requis afin que les contributeurs puissent être découverts. Cet attribut doit présenter un aspect similaire au suivant :  
+Lors de la génération, les contributeurs personnalisés sont chargés à partir d'un répertoire d'extension standard. Les contributeurs de génération sont identifiés par un attribut [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx). Cet attribut est requis afin que les contributeurs puissent être découverts. Cet attribut doit présenter un aspect similaire au suivant :  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -447,7 +448,7 @@ Pour créer un contributeur de génération, vous devez effectuer les tâches su
   
 8.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
-9. Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+9. Dans le menu **Générer**, cliquez sur **Générer la solution**.  
   
     Ensuite, vous devez installer l'assembly afin qu'il soit chargé lorsque vous générez des projets SQL.  
   
@@ -528,7 +529,7 @@ Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour trans
   
 3.  À l'invite de commandes, accédez au dossier qui contient votre projet SQL.  
   
-4.  À l'invite de commandes, tapez la commande suivante :  
+4.  Saisissez ensuite la commande suivante dans l’invite de commandes :  
   
     ```  
     MSBuild /t:Rebuild MyDatabaseProject.sqlproj /p:BuildContributors=$(BuildContributors);ExampleContributors.ModelStatistics /p:ContributorArguments=$(ContributorArguments);GenerateModelStatistics=true;SortModelStatisticsBy=name;OutDir=.\;  
@@ -587,7 +588,7 @@ Relationships
   
     Les résultats enregistrés sont également conservés dans le fichier XML.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Vous pouvez créer des outils supplémentaires pour effectuer le traitement du fichier XML en sortie. Il s'agit d'un exemple de contributeur de génération. Vous pouvez, par exemple, créer un contributeur de génération pour générer un fichier de dictionnaire de données dans le cadre de la génération.  
   
 ## <a name="see-also"></a>Voir aussi  

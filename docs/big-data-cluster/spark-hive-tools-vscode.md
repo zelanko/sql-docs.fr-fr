@@ -1,20 +1,21 @@
 ---
-title: Exécuter des travaux Spark avec l’extension Spark & Hive Tools for VS Code sur un cluster Big Data SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Exécuter des travaux : Outils de Spark & Hive pour VS Code'
+titleSuffix: SQL Server Big Data Clusters
 description: Envoyez un travail Spark avec l’extension Spark & Hive Tools for Visual Studio Code sur un cluster Big Data SQL Server.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653729"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255917"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Envoyer des travaux Spark sur un cluster Big Data SQL Server dans Visual Studio Code
 
@@ -130,7 +131,7 @@ Avant de pouvoir envoyer des scripts à vos clusters à partir de Visual Studio 
 
 ## <a name="submit-interactive-pyspark-queries"></a>Envoyer des requêtes PySpark interactives
 
-Vous pouvez envoyer des requêtes PySpark interactives en suivant les étapes ci-dessous :
+Suivez les étapes ci-dessous pour envoyer des requêtes PySpark interactives :
 
 1. Réouvrez le dossier **SQLBDCexample** créé [précédemment](#open-work-folder) s’il est fermé.  
 
@@ -144,17 +145,17 @@ Vous pouvez envoyer des requêtes PySpark interactives en suivant les étapes ci
 
 5. Sélectionnez le cluster si vous n’avez pas spécifié de cluster par défaut. Après quelques instants, les résultats **Python Interactive** s’affichent sous un nouvel onglet. Les outils vous permettent également d’envoyer un bloc de code à la place de l’intégralité du fichier de script à l’aide du menu contextuel. 
 
-   ![fenêtre pyspark interactive python interactive](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
+   ![Fenêtre Python interactive dans PySpark Interactive](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. Entrez **« %%info »** , puis appuyez sur **Maj + Entrée** pour afficher les informations relatives au travail. (Facultatif)
+6. Saisissez **« %%info »** , puis appuyez sur **Maj + Entrée** pour afficher les informations sur la tâche. (facultatif)
 
-   ![Afficher les informations sur le travail](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
+   ![Affichage des informations sur la tâche](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
    > [!NOTE] 
    >
-   > Quand l’option **Python Extension Enabled** (Extension Python activée) est décochée dans les paramètres (le paramètre par défaut est activé), les résultats de l’interaction pyspark envoyée utilisent l’ancienne fenêtre.
+   > Si la case **Extension Python activée** n’est pas cochée dans les paramètres (le paramètre est activé par défaut), les résultats d’interaction PySpark envoyés utilisent l’ancienne fenêtre.
    >
-   > ![extension pyspark interactive python désactivée](./media/spark-hive-tools-vscode/pyspark-interactive-python-extension-disabled.png)
+   > ![Extension Python dans Pyspark Interactive désactivée](./media/spark-hive-tools-vscode/pyspark-interactive-python-extension-disabled.png)
 
 
 ## <a name="submit-pyspark-batch-job"></a>Envoyer le travail de traitement par lots PySpark
@@ -173,9 +174,9 @@ Vous pouvez envoyer des requêtes PySpark interactives en suivant les étapes ci
 
 ## <a name="apache-livy-configuration"></a>Configuration d’Apache Livy
 
-La configuration d’[Apache Livy](https://livy.incubator.apache.org/) est prise en charge. Elle peut être définie dans le fichier **.VSCode\settings.json** dans le dossier de l’espace de travail. La configuration de Livy prend uniquement en charge le script Python. Pour plus d’informations, consultez le fichier [Lisez-moi de Livy](https://github.com/cloudera/livy/blob/master/README.rst ).
+La configuration d’[Apache Livy](https://livy.incubator.apache.org/) est prise en charge. Elle peut être définie dans le fichier **.VSCode\settings.json** dans le dossier de l’espace de travail. Actuellement, la configuration Livy prend uniquement en charge le script Python. Pour plus d’informations, consultez le fichier [Lisez-moi de Livy](https://github.com/cloudera/livy/blob/master/README.rst ).
 
-### <a id="triggerlivyconf"></a>**Comment déclencher la configuration de Livy**
+### <a id="triggerlivyconf"></a>**Comment déclencher une configuration Livy**
 
 #### <a name="method-1"></a>Méthode 1
 
@@ -200,36 +201,36 @@ Envoyez un fichier ; notez que le dossier `.vscode` est ajouté automatiquement
 
 **Corps de la demande**
 
-| NAME | description | Type |
+| name | description | type |
 | :- | :- | :- |
 | fichier | Fichier contenant l’application à exécuter | Chemin (obligatoire) |
-| proxyUser | Utilisateur dont l’identité doit être empruntée lors de l’exécution du travail | chaîne |
-| ClassName | Classe principale Java/Spark de l’application | chaîne |
+| proxyUser | Utilisateur dont l’identité doit être empruntée lors de l’exécution du travail | string |
+| ClassName | Classe principale Java/Spark de l’application | string |
 | args | Arguments de ligne de commande pour l’application | Liste de chaînes |
 | jars | Fichiers jar à utiliser dans cette session | Liste de chaînes |
 | pyFiles | Fichiers Python à utiliser dans cette session | Liste de chaînes |
 | files | Fichiers à utiliser dans cette session | Liste de chaînes |
-| driverMemory | Quantité de mémoire à utiliser pour le processus du pilote | chaîne |
-| driverCores | Nombre de cœurs à utiliser pour le processus du pilote | INT |
-| executorMemory | Quantité de mémoire à utiliser par processus d’exécuteur | chaîne |
-| executorCores | Nombre de cœurs à utiliser pour chaque exécuteur | INT |
-| numExecutors | Nombre d’exécuteurs à lancer pour cette session | INT |
+| driverMemory | Quantité de mémoire à utiliser pour le processus du pilote | string |
+| driverCores | Nombre de cœurs à utiliser pour le processus du pilote | int |
+| executorMemory | Quantité de mémoire à utiliser par processus d’exécuteur | string |
+| executorCores | Nombre de cœurs à utiliser pour chaque exécuteur | int |
+| numExecutors | Nombre d’exécuteurs à lancer pour cette session | int |
 | archives | Archives à utiliser dans cette session | Liste de chaînes |
-| queue | Nom de la file d’attente YARN destinataire de l’envoi | chaîne |
-| NAME | Nom de cette session | chaîne |
+| queue | Nom de la file d’attente YARN destinataire de l’envoi | string |
+| name | Nom de cette session | string |
 | conf | Propriétés de configuration de Spark | Mappage clé=valeur |
 
 #### <a name="response-body"></a>Corps de la réponse
 
 Objet de traitement par lots créé.
 
-| NAME | description | Type |
+| name | description | type |
 | :- | :- | :- |
-| id | ID de session | INT |
+| id | ID de session | int |
 | appId | ID d’application de cette session | String |
 | appInfo | Informations détaillées sur l’application | Mappage clé=valeur |
 | log | Lignes de journal | Liste de chaînes |
-| state | État du traitement par lots | chaîne |
+| state | État du traitement par lots | string |
 
 >[!NOTE]
 >La configuration de Livy assignée s’affiche dans le volet de sortie lors de l’envoi du script.

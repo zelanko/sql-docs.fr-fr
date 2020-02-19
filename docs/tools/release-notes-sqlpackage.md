@@ -1,5 +1,5 @@
 ---
-title: Notes de version de DacFx et SqlPackage | Microsoft Docs
+title: Notes de publication de DacFx et de SqlPackage
 description: Notes de publication de Microsoft SqlPackage.
 ms.custom: tools|sos
 ms.date: 02/02/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 11e10f4a29b15efbd2b0ee513080a2000ae7e2f1
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73033052"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241218"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notes de version de SqlPackage.exe
 
@@ -34,10 +34,25 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="1841-sqlpackage"></a>sqlpackage 18.4.1
+
+|Plateforme|Téléchargement|Date de publication|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2113703)|13 décembre 2019|18.4.1|15.0.4630.1|
+|macOS .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2113705)|13 décembre 2019| 18.4.1|15.0.4630.1|
+|Linux .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2113331)|13 décembre 2019| 18.4.1|15.0.4630.1|
+|Windows .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2113704)|13 décembre 2019| 18.4.1|15.0.4630.1|
+
+### <a name="fixes"></a>Correctifs
+| Fix | Détails |
+| :-- | :------ |
+| ScriptDom |  Une régression de l’analyse ScriptDom a été introduite dans la version 18.3.1, où ’RENAME’ n’est pas traité correctement comme un jeton de niveau supérieur, ce qui entraîne l’échec de l’analyse.
+| &nbsp; | &nbsp; |
+
 
 ## <a name="184-sqlpackage"></a>sqlpackage 18.4
 
-|Plateforme|Télécharger|Date de publication|Options de version|Build
+|Plateforme|Téléchargement|Date de publication|Version|Build
 |:---|:---|:---|:---|:---|
 |Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2108813)|29 octobre 2019|18.4|15.0.4573.2|
 |macOS .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2108815)|29 octobre 2019| 18.4|15.0.4573.2|
@@ -48,51 +63,51 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| Déploiement | Ajoutez la prise en charge pour le déploiement sur Azure SQL Data Warehouse (GA). | 
-| Plateforme | SqlPackage .NET Core GA pour macOS, Linux et Windows. | 
-| Sécurité | Supprime la signature du code SHA1. |
-| Déploiement | Ajout de la prise en charge des nouvelles éditions de base de données Azure : GeneralPurpose, BusinessCritical, hyperscale |
-| Déploiement | Ajoutez la prise en charge Managed Instance pour les groupes et utilisateurs AAD. |
-| Déploiement | Prenez en charge le paramètre/AccessToken pour SqlPackage sur .NET Core. |
+| Déploiement | Ajout de la prise en charge pour le déploiement sur Azure SQL Data Warehouse (GA). | 
+| Plateforme | sqlpackage .NET Core GA pour macOS, Linux et Windows. | 
+| Sécurité | Suppression de la signature du code SHA1. |
+| Déploiement | Ajout de la prise en charge des nouvelles éditions des bases de données Azure : GeneralPurpose, BusinessCritical, Hyperscale |
+| Déploiement | Ajout de la prise en charge de Managed Instance pour les groupes et utilisateurs AAD. |
+| Déploiement | Prise en charge du paramètre /AccessToken pour sqlpackage sur .NET Core. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problèmes connus 
 
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| ScriptDom |  Une régression d’analyse ScriptDom a été introduite dans 18.3.1 où’Rename’n’est pas traité correctement comme un jeton de niveau supérieur, ce qui entraîne l’échec de l’analyse. Ce problème sera résolu dans la prochaine version de SqlPackage. | 
+| ScriptDom |  Une régression de l’analyse ScriptDom a été introduite dans la version 18.3.1, où ’RENAME’ n’est pas traité correctement comme un jeton de niveau supérieur, ce qui entraîne l’échec de l’analyse. Ce problème sera résolu dans la prochaine version de sqlpackage. | 
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues-for-net-core"></a>Problèmes connus pour .NET Core
 
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| Importer |  Pour les fichiers. BacPac avec des fichiers compressés d’une taille supérieure à 4 Go, vous devrez peut-être utiliser la version .NET Core de SqlPackage pour effectuer l’importation.  Ce comportement est dû au fait que .NET Core génère des en-têtes zip qui, bien qu’ils soient valides, ne sont pas lisibles par la version .NET Framework complète de SqlPackage. | 
-| Déploiement | Le paramètre/p : Storage = file n’est pas pris en charge. Seule la mémoire est prise en charge sur .NET Core. | 
-| Always Encrypted | SqlPackage .NET Core ne prend pas en charge les colonnes Always Encrypted. | 
-| Sécurité | SqlPackage .NET Core ne prend pas en charge le paramètre/UA pour Multi-Factor Authentication. | 
+| Importer |  Pour les fichiers .BacPac avec des fichiers compressés d’une taille supérieure à 4 Go, vous devrez peut-être utiliser la version .NET Core de sqlpackage pour effectuer l’importation.  Ce comportement est dû au fait que .NET Core génère des en-têtes zip qui, bien qu’ils soient valides, ne sont pas lisibles par la version .NET Framework complète de sqlpackage. | 
+| Déploiement | Le paramètre /p:Storage=File n’est pas pris en charge. Seul Memory est pris en charge sur .NET Core. | 
+| Always Encrypted | sqlpackage .NET Core ne prend pas en charge les colonnes Always Encrypted. | 
+| Sécurité | sqlpackage .NET Core ne prend pas en charge le paramètre /ua pour l’authentification multifacteur. | 
 | Déploiement | Les anciens fichiers .dacpac et .bacpac V2 qui utilisent la sérialisation de données JSON ne sont pas pris en charge. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1831-sqlpackage"></a>SqlPackage 18.3.1
 
-|Plateforme|Télécharger|Date de publication|Options de version|Build
+|Plateforme|Téléchargement|Date de publication|Version|Build
 |:---|:---|:---|:---|:---|
 |Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|13 septembre 2019|18.3.1|15.0.4538.1|
 |macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102894)|13 septembre 2019| 18.3.1|15.0.4538.1|
 |Linux .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102978)|13 septembre 2019| 18.3.1|15.0.4538.1|
-|Windows .NET Core (version préliminaire)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102979)|13 septembre 2019| 18.13.1|15.0.4538.1|
+|Windows .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102979)|13 septembre 2019| 18.13.1|15.0.4538.1|
 
 ### <a name="features"></a>Fonctionnalités
 
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| Déploiement | Ajoutez la prise en charge pour le déploiement sur Azure SQL Data Warehouse (version préliminaire). | 
-| Déploiement | Ajoutez le paramètre/p : DatabaseLockTimeout = (INT32 « 60 ») à SqlPackage. | 
-| Déploiement | Ajoutez le paramètre/p : LongRunningCommandTimeout = (INT32) à SqlPackage. |
-| Exportation/extraction | Ajoutez le paramètre/p : TempDirectoryForTableData = (STRING) à SqlPackage. |
-| Déploiement | Autoriser le chargement des contributeurs de déploiement à partir d’emplacements supplémentaires. Les contributeurs de déploiement sont chargés à partir du même répertoire que la cible. dacpac en cours de déploiement, le répertoire des extensions par rapport au fichier binaire SqlPackage. exe et le paramètre/p : AdditionalDeploymentContributorPaths = (STRING) ajouté à SqlPackage où les emplacements de répertoire supplémentaires peuvent être spécifiés. |
-| Déploiement | Ajoutez la prise en charge de OPTIMIZE_FOR_SEQUENTIAL_KEY. |
+| Déploiement | Ajout de la prise en charge pour le déploiement sur Azure SQL Data Warehouse (préversion). | 
+| Déploiement | Ajout du paramètre /p:DatabaseLockTimeout=(INT32 '60') à sqlpackage. | 
+| Déploiement | Ajout du paramètre /p:LongRunningCommandTimeout=(INT32) à sqlpackage. |
+| Exportation/Extraction | Ajout du paramètre /p:TempDirectoryForTableData=(STRING) à sqlpackage. |
+| Déploiement | Autorisation du chargement de contributeurs de déploiement à partir d’emplacements supplémentaires. Les contributeurs de déploiement sont chargés à partir du même répertoire que la cible .dacpac en cours de déploiement, du répertoire des extensions par rapport au fichier binaire sqlpackage.exe, et du paramètre /p:AdditionalDeploymentContributorPaths=(STRING) ajouté à sqlpackage où des emplacements de répertoire supplémentaires peuvent être spécifiés. |
+| Déploiement | Ajoute de la prise en charge de OPTIMIZE_FOR_SEQUENTIAL_KEY. |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correctifs
@@ -100,19 +115,19 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Fix | Détails |
 | :-- | :------ |
 | Déploiement | Correction pour ignorer les index automatiques afin qu’ils ne soient pas supprimés lors du déploiement. | 
-| Always Encrypted | Correction de la gestion des colonnes Always Encrypted varchar. | 
-| Build/Déploiement | Correctif pour résoudre la méthode nodes () pour les jeux de colonnes XML.| 
-| ScriptDom | Corrigez les cas supplémentaires où la chaîne’URL’a été interprétée comme un jeton de niveau supérieur. | 
-| Graphique | Correction du TSQL généré pour les références de pseudo-colonnes dans les contraintes.  | 
-| Exporter | Générez des mots de passe aléatoires conformes aux exigences de complexité. | 
-| Déploiement | Correctif pour honorer les délais d’attente de commande lors de la récupération de contraintes. | 
-| .NET Core (version préliminaire) | Correction de la journalisation des diagnostics dans un fichier. | 
-| .NET Core (version préliminaire) | Utilisez la diffusion en continu pour exporter des données de table afin de prendre en charge les tables volumineuses. | 
+| Always Encrypted | Correction de la gestion des colonnes varchar Always Encrypted. | 
+| Build/Déploiement | Correctif pour résoudre la méthode nodes() pour les jeux de colonnes XML.| 
+| ScriptDom | Correction des cas supplémentaires où la chaîne « URL » était interprétée comme un jeton de niveau supérieur. | 
+| Graph | Correction du TSQL généré pour les références de pseudo-colonnes dans les contraintes.  | 
+| Exporter | Génération de mots de passe aléatoires conformes aux exigences de complexité. | 
+| Déploiement | Correctif pour honorer les délais d’attente des commandes lors de la récupération de contraintes. | 
+| .NET Core (préversion) | Correction de la journalisation des diagnostics dans un fichier. | 
+| .NET Core (préversion) | Utilisation de la diffusion en continu pour exporter des données de table afin de prendre en charge les tables volumineuses. | 
 | &nbsp; | &nbsp; |
 
 ## <a name="182-sqlpackage"></a>SqlPackage 18.2
 
-|Plateforme|Télécharger|Date de publication|Options de version|Build
+|Plateforme|Téléchargement|Date de publication|Version|Build
 |:---|:---|:---|:---|:---|
 |Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 avril 2019|18.2|15.0.4384.2|
 |macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087247)|15 avril 2019 | 18.2 |15.0.4384.2|
@@ -122,7 +137,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| Graphique | Ajout de la prise en charge des tables de graphe pour les contraintes de bord et les clauses de contrainte de bord. |
+| Graph | Ajout de la prise en charge des tables de graphe pour les contraintes de bord et les clauses de contrainte de bord. |
 | Déploiement | Activation de la règle de validation de modèle afin de prendre en charge 32 colonnes pour les clés d’index avec SQL Server 2016 et les versions ultérieures. |
 | &nbsp; | &nbsp; |
 
@@ -139,8 +154,8 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ## <a name="181-sqlpackage"></a>SqlPackage 18.1
 
-Date de publication : &nbsp; 1er février 2019  
-Build : &nbsp; 15.0.4316.1  
+Date de publication : &nbsp; 1er février 2019  
+Build : &nbsp; 15.0.4316.1  
 Préversion.
 
 ### <a name="features"></a>Fonctionnalités
@@ -160,7 +175,7 @@ Préversion.
 | Performances | Correction des performances afin d’utiliser l’ancien estimateur de cardinalité pour les requêtes de rétroconception. | 
 | Performances | Correction d’un problème important de performances de la comparaison de schéma lors de la génération d’un script. | 
 | Comparaison de schémas | Correction de la logique de détection de dérive du schéma afin d’ignorer certaines sessions d’événements étendus (XEvent). |
-| Graphique | Correction de l’ordre d’importation des tables de graphe. | 
+| Graph | Correction de l’ordre d’importation des tables de graphe. | 
 | Exporter | Correction de l’exportation de tables externes comportant des autorisations d’objet. |
 | &nbsp; | &nbsp; |
 
@@ -177,8 +192,8 @@ Cette version inclut les versions d’évaluation multiplateformes de SqlPackage
 
 ## <a name="180-sqlpackage"></a>SqlPackage 18.0
 
-Date de publication : &nbsp; 24 octobre 2018  
-Build : &nbsp; 15.0.4200.1
+Date de publication : &nbsp; 24 octobre 2018  
+Build : &nbsp; 15.0.4200.1
 
 ### <a name="features"></a>Fonctionnalités
 
@@ -190,21 +205,21 @@ Build : &nbsp; 15.0.4200.1
 | Sécurité | Ajout du paramètre de ligne de commande AccessToken pour spécifier un jeton d’authentification lors de la connexion à SQL Server. | 
 | Importer | Ajout de la prise en charge des flux de types de données BLOB/CLOB pour les importations. | 
 | Déploiement | Ajout de la prise en charge de l’option « INLINE » des fonctions UDF scalaires. | 
-| Graphique | Ajout de la prise en charge de la syntaxe « MERGE » des tables de graphe. |
+| Graph | Ajout de la prise en charge de la syntaxe « MERGE » des tables de graphe. |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correctifs
 
 | Fix | Détails |
 | :-- | :------ |
-| Graphique | Correction des pseudo-colonnes non résolues pour les tables de graphe. |
+| Graph | Correction des pseudo-colonnes non résolues pour les tables de graphe. |
 | Déploiement | Correction de la création d’une base de données avec des groupes de fichiers à mémoire optimisée lorsque des tables à mémoire optimisée sont utilisées. |
 | Déploiement | Correction de l’intégration de propriétés étendues sur les tables externes. |
 | &nbsp; | &nbsp; |
 
 ## <a name="178-sqlpackage"></a>SqlPackage 17.8
 
-Date de publication : &nbsp; 22 juin 2018  
+Date de publication : &nbsp; 22 juin 2018  
 Build : &nbsp; 14.0.4079.2
 
 ### <a name="features"></a>Fonctionnalités
@@ -225,7 +240,7 @@ Build : &nbsp; 14.0.4079.2
 
 ## <a name="1741-sqlpackage"></a>SqlPackage 17.4.1
 
-Date de publication : &nbsp; 25 janvier 2018  
+Date de publication : &nbsp; 25 janvier 2018  
 Build : &nbsp; 14.0.3917.1
 
 ### <a name="features"></a>Fonctionnalités
@@ -241,13 +256,13 @@ Build : &nbsp; 14.0.3917.1
 | Fix | Détails |
 | :-- | :------ |
 | Importer | Lors de l’importation d’un .bacpac Azure SQL Database dans une instance locale, correction des erreurs liées au fait que _Les clés principales de base de données sans mot de passe ne sont pas prises en charge dans cette version de SQL Server_. |
-| Graphique | Correction d’une erreur de pseudo-colonnes non résolue pour les tables de graphe. |
+| Graph | Correction d’une erreur de pseudo-colonnes non résolue pour les tables de graphe. |
 | Comparaison de schémas | Correction de l’authentification SQL pour comparer les schémas. | 
 | &nbsp; | &nbsp; |
 
 ## <a name="1740-sqlpackage"></a>SqlPackage 17.4.0
 
-Date de publication : &nbsp; 12 décembre 2017  
+Date de publication : &nbsp; 12 décembre 2017  
 Build : &nbsp; 14.0.3881.1
 
 ### <a name="features"></a>Fonctionnalités

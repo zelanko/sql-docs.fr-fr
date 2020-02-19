@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff29e4ed9a5986173020530bd691d0c95a89749
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994795"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
@@ -37,13 +37,13 @@ ms.locfileid: "67994795"
   
 2.  Exécutez la commande (dans cet exemple, **ICommandExecute::Execute()** est appelée avec IID_IRow).  
   
-3.  Récupérez les données de la colonne à l’aide de **IRow:: Open ()** ou de **IRow:: GetColumns ()** .  
+3.  Récupérez les données de colonne avec **IRow::Open()** ou **IRow::GetColumns()** .  
   
-    -   **IRow:: Open ()** peut être utilisé pour ouvrir un **ISequentialStream** sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (vous pouvez ensuite utiliser **IStream** ou **ISequentialStream** pour lire les données de la colonne).  
+    -   **IRow::Open()** peut être utilisé pour ouvrir un **ISequentialStream** sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (vous pouvez ensuite utiliser **IStream** ou **ISequentialStream** pour lire les données de la colonne).  
   
     -   Si **IRow::GetColumns()** est utilisé, l’élément **pData** de la structure DBCOLUMNACCESS est configuré de façon à pointer vers un objet de flux.  
   
-4.  Utilisez **ISequentialStream:: Read ()** à plusieurs reprises pour lire le nombre spécifié d’octets dans la mémoire tampon du consommateur.  
+4.  Utilisez **ISequentialStream::Read()** à plusieurs reprises pour lire le nombre spécifié d'octets dans la mémoire tampon du consommateur.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment extraire une seule ligne avec IRow. Dans cet exemple, une colonne est récupérée à la fois de la ligne. Cet exemple illustre l'utilisation de IRow::Open() ainsi que de IRow::GetColumns(). Pour lire les données de la colonne, l'exemple utilise ISequentialStream::Read.  

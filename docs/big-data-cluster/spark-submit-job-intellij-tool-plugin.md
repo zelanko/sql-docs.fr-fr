@@ -1,22 +1,23 @@
 ---
-title: Exécuter des travaux Spark dans Azure Toolkit for IntelliJ sur un cluster Big Data SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Exécuter les travaux Spark : Kit de ressources Azure pour IntelliJ'
+titleSuffix: SQL Server Big Data Clusters
 description: Envoyez des travaux Spark vers des clusters Big Data SQL Server dans Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653715"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244081"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Soumettre des travaux Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans IntelliJ
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Soumettre des travaux Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -51,9 +52,9 @@ Un des principaux scénarios pour [!INCLUDE[big-data-clusters-2019](../includes/
 
 1. Démarrez IntelliJ IDEA, puis créez un projet. Dans la boîte de dialogue **New Project**, effectuez les étapes suivantes : 
 
-   A. Sélectionnez **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** .
+   a. Sélectionnez **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** .
 
-   B. Dans la liste **Build tool** (Outil de build), sélectionnez l’une des options ci-dessous, en fonction de vos besoins :
+   b. Dans la liste **Build tool** (Outil de build), sélectionnez l’une des options ci-dessous, en fonction de vos besoins :
 
       * **Maven**, pour la prise en charge de l’Assistant Création de projet Scala
       * **SBT**, pour la gestion des dépendances et la création du projet Scala
@@ -74,9 +75,9 @@ Un des principaux scénarios pour [!INCLUDE[big-data-clusters-2019](../includes/
 
     ![Sélection du SDK Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Entrez un nom et un emplacement pour le projet.
+   a. Entrez un nom et un emplacement pour le projet.
 
-   B. Dans la liste déroulante **Project SDK** (SDK du projet), sélectionnez **Java 1.8** pour le cluster Spark 2.x, ou sélectionnez **Java 1.7** pour le cluster Spark 1.x.
+   b. Dans la liste déroulante **Project SDK** (SDK du projet), sélectionnez **Java 1.8** pour le cluster Spark 2.x, ou sélectionnez **Java 1.7** pour le cluster Spark 1.x.
 
    c. Dans la liste déroulante **Spark version** (Version Spark), l’Assistant Création de projets Scala affiche la version du SDK Spark et la version du SDK Scala correspondantes. Si la version du cluster Spark est antérieure à la version 2.0, sélectionnez **Spark 1.x**. Sinon, sélectionnez **Spark 2.x**. Cet exemple utilise **Spark 2.0.2 (Scala 2.11.8)** .
 
@@ -84,9 +85,9 @@ Un des principaux scénarios pour [!INCLUDE[big-data-clusters-2019](../includes/
 
 7. Le projet Spark crée automatiquement un artefact. Pour afficher l’artefact, effectuez les étapes suivantes :
 
-   A. Dans le menu **File** (Fichier), sélectionnez **Project Structure** (Structure du projet).
+   a. Dans le menu **File** (Fichier), sélectionnez **Project Structure** (Structure du projet).
 
-   B. Dans la boîte de dialogue **Project Structure**, sélectionnez **Artifacts** pour voir l’artefact par défaut qui a été créé. Vous pouvez également créer votre propre artefact en sélectionnant le signe plus ( **+** ).
+   b. Dans la boîte de dialogue **Project Structure**, sélectionnez **Artifacts** pour voir l’artefact par défaut qui a été créé. Vous pouvez également créer votre propre artefact en sélectionnant le signe plus ( **+** ).
 
       ![Informations sur l’artefact dans la boîte de dialogue](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -106,13 +107,13 @@ Après avoir lié un cluster Big Data SQL Server, vous pouvez envoyer une applic
 
     * Champ **Main class name** (Nom de la classe principale) : La valeur par défaut est la classe principale du fichier sélectionné. Vous pouvez changer la classe en sélectionnant les points de suspension ( **...** ), puis en choisissant une autre classe.   
 
-    * Champ **Job Configurations** :  les valeurs par défaut sont définies comme dans l’image ci-dessus. Vous pouvez changer la valeur ou ajouter une nouvelle clé/valeur pour l’envoi de votre travail. Pour plus d'informations, consultez : [API REST Apache Livy](http://livy.incubator.apache.org./docs/latest/rest-api.html)
+    * Champ **Job Configurations** :  les valeurs par défaut sont définies comme dans l’image ci-dessus. Vous pouvez changer la valeur ou ajouter une nouvelle clé/valeur pour l’envoi de votre travail. Pour plus d'informations : [API REST Apache Livy](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
       ![Boîte de dialogue d’envoi Spark - Signification des configurations de travaux](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
 
     * Champ **Command line arguments** : Pour la classe principale, vous pouvez entrer les valeurs des arguments en les séparant par un espace, si nécessaire.
 
-    * Champs **Referenced Jars** et **Referenced Files** : vous pouvez entrer les chemins des fichiers jar et des fichiers référencés, si vous en avez. Pour plus d'informations, consultez : [Configuration Apache Spark](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
+    * Champs **Referenced Jars** et **Referenced Files** : vous pouvez entrer les chemins des fichiers jar et des fichiers référencés, si vous en avez. Pour plus d'informations : [Configuration Apache Spark](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
 
       ![Boîte de dialogue d’envoi Spark - Signification des fichiers jar](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
@@ -131,7 +132,7 @@ Vous pouvez exécuter la console locale Spark (Scala) ou exécuter la console de
 ### <a name="spark-local-consolescala"></a>Console locale Spark (Scala)
 Veillez à respecter les prérequis WINUTILS.EXE.
 
-1. Dans la barre de menus, accédez à **Run** > **Edit Configurations...** (Exécuter > Modifier les configurations).
+1. Dans la barre de menus, accédez à **Run** > **Edit Configurations...** .
 
 2. Dans la fenêtre **Run/Debug Configurations**, dans le volet de gauche, accédez à **Apache Spark on SQL Server big data cluster** >  **[Spark on SQL] myApp**.
 

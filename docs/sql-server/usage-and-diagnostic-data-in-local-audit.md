@@ -1,6 +1,7 @@
 ---
-title: Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic | Microsoft Docs
-ms.custom: ''
+title: Audit local pour l’utilisation et collecte des données d’utilisation et de diagnostic
+description: En savoir plus sur l’audit local utilisé par SQL Server pour collecter et envoyer des données d’utilisation et de diagnostic à Microsoft.
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984769"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558042"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic (CEIP)
 
@@ -51,7 +52,7 @@ Avant d’activer l’audit local, un administrateur système doit :
 
 1. connaître le nom de l’instance SQL Server et le compte de connexion de service SQL Server CEIP ; 
 
-1. configurer un nouveau dossier pour les fichiers d’audit local ;
+1. Configurez un nouveau dossier pour les fichiers d’audit local.
 
 1. accorder des autorisations au compte de connexion du service SQL Server CEIP ;
 
@@ -107,23 +108,26 @@ Créez un dossier (répertoire d’audit local) où l’audit local écrit les j
 
 1. Accédez au chemin CPE approprié :
 
-   | Options de version | ***Moteur de base de données*** - Clé de Registre |
+   | Version | ***Moteur de base de données*** - Clé de Registre |
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Nom-de-votre-instance*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Nom-de-votre-instance*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Nom-de-votre-instance*\\CPE |
    | &nbsp; | &nbsp; |
 
-   | Options de version | ***Analysis Services*** - Clé de Registre |
+   | Version | ***Analysis Services*** - Clé de Registre |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Nom-de-votre-instance*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Nom-de-votre-instance*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Nom-de-votre-instance*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | Options de version | ***Integration Services*** - Clé de Registre |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | Version | ***Integration Services*** - Clé de Registre |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. Cliquez avec le bouton droit sur le chemin CPE et choisissez **Nouveau**. Sélectionnez **Valeur de chaîne**.
 
@@ -156,6 +160,7 @@ SQL Server CEIP doit reconnaître le paramètre d’audit local immédiatement s
     - Pour Integration Services, 
         - Pour SQL 2016, utilisez *Service CEIP SQL Server Integration Services 13.0*.
         - Pour SQL 2017, utilisez *Service CEIP SQL Server Integration Services 14.0*.
+    - Pour SQL 2019, utilisez *Service CEIP SQL Server Integration Services 15.0*.
 
 1. Cliquez avec le bouton droit sur le service et sélectionnez Redémarrer. 
 
@@ -188,15 +193,15 @@ L’audit local va générer un fichier journal par jour. Les fichiers journaux 
 | En-tête | emitTime, schemaVersion 
 | Machine | operatingSystem 
 | Instance | instanceUniqueID, correlationID, clientVersion 
-| Session | sessionID, traceName 
+| session | sessionID, traceName 
 | Requête | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| data |  données 
+| Données |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Définition et exemples des paires nom/valeur 
 
 Les colonnes répertoriées ci-dessous représentent l’ordre de la sortie du fichier d’audit local. Un hachage à sens unique avec SHA 256 est utilisé pour rendre anonyme les valeurs pour certaines colonnes ci-dessous.  
 
-| Créer une vue d’abonnement | Description | Exemples de valeurs
+| Name | Description | Exemples de valeurs
 |-------|--------| ----------|
 |instanceUniqueID| Identificateur d’instance rendu anonyme | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| Version du schéma de SQLCEIP |  3 
@@ -209,8 +214,8 @@ Les colonnes répertoriées ci-dessous représentent l’ordre de la sortie du f
 |querySetVersion | Version d’un groupe de définitions de requête | 1.0.0.0 
 |traceName | Catégories de traces : (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Un identificateur de la requête | SQLServerProperties.002 
-|données   | La sortie des informations collectées sur queryIdentifier en tant que sortie de requête T-SQL, de session XE ou de l’application |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Requête| Le cas échéant, la définition de requêtes T-SQL liée au queryIdentifier qui génère des données.        Ce composant n’est pas téléchargé par le service SQL Server CEIP. Il est inclus dans l’audit local en tant que référence pour les clients uniquement.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|data   | La sortie des informations collectées sur queryIdentifier en tant que sortie de requête T-SQL, de session XE ou de l’application |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|query| Le cas échéant, la définition de requêtes T-SQL liée au queryIdentifier qui génère des données.        Ce composant n’est pas téléchargé par le service SQL Server CEIP. Il est inclus dans l’audit local en tant que référence pour les clients uniquement.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | Durée nécessaire à l’exécution de la requête avec la catégorie de trace suivante : (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Catégories de trace 

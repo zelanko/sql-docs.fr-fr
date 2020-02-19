@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d8dc9d5100f71fed39c1e4166882230451dd139e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: aa02072e139c2446ae67086ef43668af4403890c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451930"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244012"
 ---
 # <a name="sql-xml-column-values"></a>Valeurs des colonnes SQL XML
 
@@ -26,12 +26,12 @@ ms.locfileid: "72451930"
 SQL Server prend en charge le type de données `xml` et les développeurs peuvent extraire des ensembles de résultats incluant ce type à l’aide d’un comportement standard de la classe <xref:Microsoft.Data.SqlClient.SqlCommand>. Une colonne `xml` peut être récupérée comme n’importe quelle colonne (dans un <xref:Microsoft.Data.SqlClient.SqlDataReader>, par exemple), mais si vous souhaitez utiliser le contenu de la colonne au format XML, vous devez utiliser un <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Exemple  
-L’application console suivante sélectionne deux lignes contenant chacune une colonne `xml` dans la table **Sales.Store** de la base de données **AdventureWorks** pour une instance de <xref:Microsoft.Data.SqlClient.SqlDataReader>. Pour chaque ligne, la valeur de la colonne `xml` est lue à l’aide de la méthode <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> de <xref:Microsoft.Data.SqlClient.SqlDataReader>. La valeur est stockée dans un <xref:System.Xml.XmlReader>. Notez que vous devez utiliser <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> plutôt que la méthode <xref:System.Data.IDataRecord.GetValue%2A> si vous souhaitez définir le contenu sur une variable <xref:System.Data.SqlTypes.SqlXml> ;  <xref:System.Data.IDataRecord.GetValue%2A> retourne la valeur de la colonne `xml` sous la forme d’une chaîne.  
+L’application console suivante sélectionne deux lignes contenant chacune une colonne `xml` dans la table **Sales.Store** de la base de données **AdventureWorks** pour une instance de <xref:Microsoft.Data.SqlClient.SqlDataReader>. Pour chaque ligne, la valeur de la colonne `xml` est lue à l’aide de la méthode <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> de <xref:Microsoft.Data.SqlClient.SqlDataReader>. La valeur est stockée dans un <xref:System.Xml.XmlReader>. Notez que vous devez utiliser <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> plutôt que la méthode <xref:System.Data.IDataRecord.GetValue%2A> si vous souhaitez définir le contenu sur une variable <xref:System.Data.SqlTypes.SqlXml> ; <xref:System.Data.IDataRecord.GetValue%2A> renvoie la valeur de la colonne `xml` sous la forme d’une chaîne.  
   
 > [!NOTE]
 >  L’exemple de base de données **AdventureWorks** n’est pas installé par défaut quand vous installez SQL Server. Vous pouvez l’installer en exécutant le programme d’installation de SQL Server.  
   
-[!code-csharp[DataWorks SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
+[!code-csharp [SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
   
 ## <a name="next-steps"></a>Étapes suivantes
 - <xref:System.Data.SqlTypes.SqlXml>

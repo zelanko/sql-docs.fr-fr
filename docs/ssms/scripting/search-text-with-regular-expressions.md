@@ -1,6 +1,6 @@
 ---
-title: Rechercher du texte avec des expressions régulières | Microsoft Docs
-ms.custom: ''
+title: Rechercher du texte avec des expressions régulières
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,17 +16,17 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dba6a77288a4bebba70372ecf6fbd7a1f05dda6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264170"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253677"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
+Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue **Rechercher et remplacer** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-using-regular-expressions"></a>Pour effectuer une recherche à l’aide d’expressions régulières  
   
@@ -57,7 +57,7 @@ Les expressions régulières sont une notation souple et concise pour rechercher
 |Identificateur C/C++|:i|Représente l'expression ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Chaîne entre guillemets|:q|Représente l’expression (("[^"]*")&#124;('[^']\*')).|  
 |Espace ou tabulation|:b|Représente des caractères de tabulation ou d'espace.|  
-|Entier|:z|Représente l'expression ([0-9]+).|  
+|Integer|:z|Représente l'expression ([0-9]+).|  
   
  La liste de toutes les expressions régulières valides dans les opérations **Rechercher et remplacer** est beaucoup trop longue pour être affichée intégralement dans le **Générateur d'expressions**. Vous pouvez également insérer les expressions régulières suivantes dans une chaîne **Rechercher** :  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c3cf3c1debc03c169c585521b8b46dd8b1365c5
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641156"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479426"
 ---
 # <a name="get-r-package-information"></a>Obtenir des informations sur les packages R
 
@@ -24,9 +24,9 @@ Cet article explique comment en savoir plus sur les packages R installés dans S
 
 ## <a name="default-r-library-location"></a>Emplacement par défaut de la bibliothèque R
 
-Lorsque vous installez Machine Learning avec SQL Server, une seule bibliothèque de packages est créée au niveau de l’instance pour chaque langage que vous installez. Sur Windows, la bibliothèque d’instances est un dossier sécurisé enregistré avec SQL Server.
+Lorsque vous installez Machine Learning avec SQL Server, une seule bibliothèque de packages est créée au niveau de l’instance pour chaque langage que vous installez. Sur Windows, la bibliothèque d’instances est un dossier sécurisé enregistré avec SQL Server.
 
-Tout script qui s’exécute dans la base de données sur SQL Server doit charger les fonctions à partir de la bibliothèque d’instances. SQL Server ne peut pas accéder aux packages installés dans d’autres bibliothèques. Cela s’applique également aux clients distants : tout script R qui s’exécute dans le contexte de calcul du serveur peut uniquement utiliser des packages installés dans la bibliothèque d’instances.
+Tout script qui s’exécute dans la base de données sur SQL Server doit charger les fonctions à partir de la bibliothèque d’instances. SQL Server ne peut pas accéder aux packages installés dans d’autres bibliothèques. Cela s’applique également aux clients distants : tout script R qui s’exécute dans le contexte de calcul du serveur peut uniquement utiliser des packages installés dans la bibliothèque d’instances.
 Pour protéger les ressources du serveur, la bibliothèque d’instances par défaut ne peut être modifiée que par un administrateur de l’ordinateur.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -47,7 +47,7 @@ Le chemin d’accès par défaut aux éléments binaires pour R est le suivant :
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
 ::: moniker-end
 
-Cela suppose d’utiliser l’instance SQL par défaut, MSSQLSERVER. Si SQL Server est installé en tant qu’instance nommée définie par l’utilisateur, le nom donné est utilisé à la place.
+Cela nécessite d’utiliser l’instance SQL par défaut, MSSQLSERVER. Si SQL Server est installé en tant qu’instance nommée définie par l’utilisateur, le nom donné est utilisé à la place.
 
 <!-- I don't think this note is necessary. If you have these other products installed, you'd already know about them.
 > [!NOTE]
@@ -85,27 +85,27 @@ EXECUTE sp_execute_external_script
 
 Les packages R suivants sont installés avec SQL Server R Services.
 
-|. | Options de version | Description |
+|. | Version | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Utilisé pour les contextes de calcul distants, la diffusion en continu, l’exécution parallèle des fonctions rx pour l’importation et la transformation des données, la modélisation, la visualisation et l’analyse. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | Utilisé pour inclure le script R dans les procédures stockées. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Utilisé pour inclure le script R dans les procédures stockées. |
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 Les packages R suivants sont installés avec SQL Server Machine Learning Services lorsque vous sélectionnez la fonctionnalité R au moment de l’installation.
 
-|. | Options de version | Description |
+|. | Version | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Utilisé pour les contextes de calcul distants, la diffusion en continu, l’exécution parallèle des fonctions rx pour l’importation et la transformation des données, la modélisation, la visualisation et l’analyse. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9.2 | Utilisé pour inclure le script R dans les procédures stockées. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.2 | Ajoute des algorithmes d’apprentissage automatique dans R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9.2 | Utilisé pour écrire des instructions MDX dans R. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Utilisé pour inclure le script R dans les procédures stockées. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Ajoute des algorithmes d’apprentissage automatique dans R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Utilisé pour écrire des instructions MDX dans R. |
 
 ::: moniker-end
 
-### <a name="component-upgrades"></a>Mises à niveau de composants
+### <a name="component-upgrades"></a>Mise à niveau des composants
 
 Par défaut, les packages R sont actualisés par le biais des Service Packs et des mises à jour cumulatives. Les packages supplémentaires et les mises à niveau de version complètes des composants de base de R ne sont possibles que par le biais de mises à niveau de produit ou par liaison de la prise en charge de R avec Microsoft Machine Learning Server.
 
@@ -113,7 +113,7 @@ Par défaut, les packages R sont actualisés par le biais des Service Packs et d
 En outre, vous pouvez ajouter des packages MicrosoftML et olapR à une instance SQL Server à l’aide d’une mise à niveau des composants.
 ::: moniker-end
 
-Pour plus d’informations, consultez [Mettre à niveau les composants R et Python dans SQL Server](../install/upgrade-r-and-python.md).
+Pour plus d’informations, consultez la section [Mettre à niveau les composants R et Python dans SQL Server](../install/upgrade-r-and-python.md).
 
 ## <a name="default-open-source-r-packages"></a>Packages R open source par défaut
 
@@ -178,7 +178,12 @@ print(packageDescription("glue"))
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-+ [Installer de nouveaux packages R](../r/install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [Installer des packages avec les outils R](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [Installer de nouveaux packages R avec sqlmlutils](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [Obtenir des informations sur les packages Python](python-package-information.md)
 + [Installer de nouveaux packages Python](../python/install-additional-python-packages-on-sql-server.md)
-+ [Tutoriels sur R et Python](../tutorials/machine-learning-services-tutorials.md)
++ [Tutoriels sur R et sur Python](../tutorials/machine-learning-services-tutorials.md)

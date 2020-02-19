@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844218"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831185"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL
 
@@ -39,7 +39,7 @@ SQL Server 2019 fournit le **connecteur Spark MSSQL** pour les clusters Big Dat
 
 Le tableau suivant décrit les nouveaux paramètres d’interface et ceux qui ont été modifiés :
 
-| Nom de la propriété | Ce paramètre est facultatif | Description |
+| Nom de la propriété | Facultatif | Description |
 |---|---|---|
 | **isolationLevel** | Oui | Décrit le niveau d’isolation de la connexion. La valeur par défaut pour le connecteur MSSQLSpark est **READ_COMMITTED** |
 
@@ -78,10 +78,10 @@ Le connecteur utilise les API d’écriture en bloc SQL Server. Tous les paramè
 
 Pour illustrer l’utilisation du connecteur Spark MSSQL avec ces données, vous pouvez télécharger un exemple de notebook, l’ouvrir dans Azure Data Studio et exécuter chaque bloc de code. Pour plus d’informations sur l’utilisation des notebooks, consultez [Guide pratique pour utiliser des notebooks dans SQL Server](notebooks-guidance.md).
 
-1. À partir d’une ligne de commande PowerShell ou bash, exécutez la commande suivante pour télécharger l’exemple de notebook **mssql_spark_connector.ipynb** :
+1. À partir d’une ligne de commande PowerShell ou bash, exécutez la commande suivante pour télécharger l’exemple de notebook **mssql_spark_connector_non_ad_pyspark.ipynb** :
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"
    ```
 
 1. Dans Azure Data Studio, ouvrez le fichier de l’exemple de notebook. Vérifiez qu’il est connecté à votre passerelle HDFS/Spark pour votre cluster Big Data.

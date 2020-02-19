@@ -1,6 +1,6 @@
 ---
-title: Modification des mots de passe par programmation | Microsoft Docs
-description: Modification des mots de passe par programme à l’aide d’OLE DB pilote pour SQL Server
+title: Modification des mots de passe par programme | Microsoft Docs
+description: Modification des mots de passe par programme à l’aide d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989134"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
@@ -32,7 +32,7 @@ ms.locfileid: "67989134"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À partir de, OLE DB pilote pour SQL Server prend en charge la gestion de l’expiration du mot de passe par programmation via OLE DB pilote et par le biais des modifications apportées aux boîtes de dialogue de **SQL Server connexion**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
+  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB Driver pour SQL Server prend en charge l'expiration du mot de passe par programme via le pilote OLE DB, et via les modifications des boîtes de dialogue **Connexion SQL Server**.  
   
 > [!NOTE]  
 >  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../../relational-databases/security/strong-passwords.md).  
@@ -40,20 +40,20 @@ ms.locfileid: "67989134"
 ## <a name="sql-server-login-error-codes"></a>Codes d'erreur des connexions SQL Server  
  Lorsqu'une connexion ne peut pas être établie en raison de problèmes d'authentification, l'un des codes d'erreur SQL Server suivants est disponible pour aider l'application à établir le diagnostic et la récupération.  
   
-|Code d'erreur SQL Server|Message d'erreur|  
+|Code d'erreur SQL Server|Message d’erreur|  
 |---------------------------|-------------------|  
-|15113|La connexion a échoué pour l'utilisateur '%.*ls' Motif : échec de la validation du mot de passe. Le compte est verrouillé.|  
-|18463|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Impossible d'utiliser le mot de passe pour l'instant.|  
-|18464|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop court.|  
-|18465|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop long.|  
-|18466|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il n'est pas assez complexe.|  
-|18467|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Le mot de passe ne répond pas aux exigences de la DLL de filtre de mots de passe.|  
-|18468|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Une erreur inattendue s'est produite lors de la validation de mot de passe.|  
-|18487|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : le mot de passe associé à ce compte a expiré.|  
-|18488|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : le mot de passe du compte doit être changé.|  
+|15113|Échec de la connexion pour l'utilisateur '%.*ls' Motif : Échec de la validation de mot de passe. Le compte est verrouillé.|  
+|18463|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Impossible d'utiliser le mot de passe pour l'instant.|  
+|18464|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop court.|  
+|18465|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop long.|  
+|18466|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il n'est pas assez complexe.|  
+|18467|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Le mot de passe ne répond pas aux exigences de la DLL de filtre de mots de passe.|  
+|18468|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Une erreur inattendue s'est produite lors de la validation de mot de passe.|  
+|18487|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : le mot de passe associé à ce compte a expiré.|  
+|18488|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : le mot de passe du compte doit être changé.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver pour SQL Server  
- Le pilote OLE DB pour SQL Server prend en charge l’expiration du mot de passe via une interface utilisateur et par programme.  
+ Le fournisseur OLE DB Driver pour SQL Server prend en charge l'expiration de mot de passe via une interface utilisateur et par programme.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiration du mot de passe de l'interface utilisateur OLE DB  
  OLE DB Driver pour SQL Server prend en charge l’expiration de mot de passe par les modifications effectuées dans les boîtes de dialogue de **compte de connexion SQL Server**. Si la valeur de DBPROP_INIT_PROMPT est définie sur DBPROMPT_NOPROMPT, la tentative de connexion initiale échoue si le mot de passe a expiré.  
@@ -89,7 +89,7 @@ ms.locfileid: "67989134"
   
  Si une tentative de modifier le mot de passe échoue de façon inattendue, le serveur retourne le code d'erreur 18468. Une erreur OLEDB standard est retournée à partir de la tentative de connexion.  
   
- Pour plus d’informations sur le jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [propriétés d’initialisation et d’autorisation](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Pour plus d'informations sur le jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [Propriétés d'initialisation et d'autorisation](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Voir aussi  

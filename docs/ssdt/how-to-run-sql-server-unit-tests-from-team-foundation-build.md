@@ -1,23 +1,24 @@
 ---
-title: 'Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035093"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244289"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
+
 Utilisez Team Foundation Build pour exécuter vos tests unitaires SQL Server dans un test de vérification de la génération. Configurez les tests unitaires pour déployer la base de données, générer des données de test, puis exécuter les tests sélectionnés. Si vous n'êtes pas familiarisé avec Team Foundation Build, vous devez vérifier les informations suivantes avant de suivre les procédures de cette rubrique :  
   
 -   [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

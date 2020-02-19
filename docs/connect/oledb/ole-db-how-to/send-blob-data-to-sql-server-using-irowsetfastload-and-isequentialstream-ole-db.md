@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015538"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM (OLE DB)
@@ -34,7 +34,7 @@ ms.locfileid: "68015538"
   
  Étant donné que DBTYPE_IUNKNOWN est spécifié comme type de données dans la liaison, il doit correspondre au type de la colonne ou du paramètre cible. Les conversions ne sont pas possibles lors de l'envoi de données par le biais d'ISequentialStream à partir d'interfaces d'ensemble de lignes. Pour les paramètres, vous devez éviter d'utiliser ICommandWithParameters::SetParameterInfo et de spécifier un type différent pour forcer une conversion ; cela demande au fournisseur de mettre en cache toutes les données BLOB en local et de les convertir avant l'envoi vers SQL Server. La mise en cache d'un objet BLOB volumineux et sa conversion en local n'offrent pas des performances satisfaisantes.  
   
- Pour plus d’informations, consultez [objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Pour plus d’informations, consultez [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

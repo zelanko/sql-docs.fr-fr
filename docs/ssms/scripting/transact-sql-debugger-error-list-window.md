@@ -1,10 +1,8 @@
 ---
-title: Liste d’erreurs, fenêtre (Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Fenêtre Liste d'erreurs
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +12,28 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253631"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243394"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Débogueur Transact-SQL - Fenêtre Liste d’erreurs
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  La [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Liste d’erreurs** répertorie les erreurs syntaxiques et sémantiques générées par le code IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+La **Liste d’erreurs** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] répertorie les erreurs syntaxiques et sémantiques générées par le code IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="features-of-the-error-list"></a>Fonctionnalités de la Liste d'erreurs  
- La **Liste d'erreurs** fournit les fonctionnalités suivantes :  
+
+La **Liste d'erreurs** fournit les fonctionnalités suivantes :  
   
 -   Lorsque vous modifiez des scripts, la **Liste d’erreurs** répertorie les erreurs et les avertissements produits par IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -77,7 +83,7 @@ ms.locfileid: "68253631"
  **Description**  
  Affiche le texte de l'entrée de l'erreur. Les descriptions longues s'étendent sur plusieurs lignes.  
   
- **Fichier**  
+ **File**  
  Affiche le nom du fichier de script qui a généré l'erreur.  
   
  **Ligne**  

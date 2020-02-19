@@ -5,53 +5,24 @@ description: Cet article décrit les dernières mises à jour et les problèmes 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc5928a7e3015545d36900b52ef01a42d9694cc0
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706173"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721651"
 ---
-# <a name="sql-server-big-data-clusters-release-notes"></a>Notes de publication des clusters Big Data SQL Server
+# <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notes de publication des clusters Big Data SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Obtenez des insights en quasi temps réel à partir de toutes vos données avec des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Ceux-ci fournissent un environnement complet permettant d’utiliser des jeux de données volumineux, notamment des fonctionnalités de machine learning et d’IA.
+Les notes de publication suivantes s’appliquent à [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Cet article est divisé en sections pour chaque mise en production. Chaque version a un lien vers un article de support décrivant les modifications CU, ainsi que des liens de téléchargement des packages Linux. L’article répertorie également les [problèmes connus](#known-issues) pour les versions les plus récentes de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
 
-Cet article dresse la liste des mises à jour et des problèmes connus pour les versions les plus récentes des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (clusters BDC).
-
-## <a id="rtm"></a> SQL Server 2019
-
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit les clusters Big Data SQL Server.
-
-Utilisez les clusters Big Data SQL Server pour :
-
-- [Déployer des clusters scalables](../big-data-cluster/deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. 
-- Lire, écrire et traiter les données du Big Data à partir de Transact-SQL ou de Spark.
-- Combiner et analyser facilement des données relationnelles à valeur élevée et un volume important de données du Big Data.
-- Interroger des sources de données externes.
-- Stocker les données du Big Data dans un système HDFS géré par SQL Server.
-- Interroger les données de plusieurs sources de données externes via le cluster.
-- Utiliser les données pour l’IA, le machine learning et d’autres tâches d’analyse.
-- [Déployer et exécuter des applications](../big-data-cluster/concept-application-deployment.md) dans des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
-- Virtualiser les données avec [Polybase](../relational-databases/polybase/polybase-guide.md). Interrogez des données à partir de sources de données SQL Server, Oracle, Teradata, MongoDB et ODBC externes avec des tables externes.
-- Fournir la haute disponibilité pour l’instance principale SQL Server et toutes les bases de données à l’aide de la technologie des groupes de disponibilité Always On.
-
-## <a name="sql-server-version"></a>Version de SQL Server
-
-La version actuelle de SQL Server est `15.0.2070.34`.
-
-## <a name="image-tags"></a>Étiquettes d’image
-
-L’étiquette d’image de cette version est `2019-GDR1-ubuntu-16.04`.
-
-[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
-
-## <a name="supportability"></a>Prise en charge
+## <a name="supported-platforms"></a>Plateformes prises en charge
 
 Cette section explique les plateformes qui sont prises en charge avec les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (clusters BDC).
 
@@ -69,45 +40,160 @@ Cette section explique les plateformes qui sont prises en charge avec les [!INCL
 |Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
 |Ubuntu|16.04|
 
-### <a name="tools"></a>Outils
+### <a name="sql-server-editions"></a>Éditions de SQL Server
+
+|Édition|Notes|
+|---------|---------|
+|Entreprise<br/>standard<br/>Développeur| L’édition du cluster Big Data est déterminée par l’édition de l’instance principale SQL Server. Au moment du déploiement, l’édition Développeur est déployée par défaut. Vous pouvez changer l’édition après le déploiement. Consultez [Configurer l’instance principale SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
+
+## <a name="tools"></a>Outils
 
 |Plateforme|Versions prises en charge|
 |---------|---------|
 |`azdata`|La même version mineure que le serveur doit être utilisée (identique à l’instance principale SQL Server).<br/>Exécutez `azdata –-version` pour valider la version. Actuellement, cette version est `15.0.2070`.|
 |Azure Data Studio|Procurez-vous la dernière version d’[Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
-### <a name="sql-server-editions"></a>Éditions de SQL Server
+## <a name="release-history"></a>Historique des mises en production
 
-|Édition|Remarques|
-|---------|---------|
-|Enterprise<br/>Standard<br/>Développeur| L’édition du cluster Big Data est déterminée par l’édition de l’instance principale SQL Server. Au moment du déploiement, l’édition Développeur est déployée par défaut. Vous pouvez changer l’édition après le déploiement. Consultez [Configurer l’instance principale SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
+La table suivante énumère l’historique des mises en production pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+
+| Libérer               | Version       | Date de publication |
+|-----------------------|---------------|--------------|
+| [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
+| [GDR1](#rtm)            | 15.0.2070.34  | 04-11-2019   |
+
+## <a name="how-to-install-updates"></a>Comment installer les mises à jour
+
+Pour installer les mises à jour, consultez [Comment mettre à niveau [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu1"></a> CU1 (Jan 2020)
+
+Mise à jour cumulative 1 (CU1) pour SQL Server 2019. La version du moteur de base de données SQL Server pour cette version est 15.0.4003.23.
+
+|Version du package | Balise d'image |
+|-----|-----|
+|15.0.4003.23|[2019-CU1-ubuntu-16.04]
+
+## <a id="rtm"></a> GDR1 (Nov 2019)
+
+SQL Server 2019 GDR1 (General Distribution Release 1) : offre une disponibilité générale pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. La version du moteur de base de données SQL Server pour cette version est 15.0.2070.34.
+
+|Version du package | Balise d'image |
+|-----|-----|
+|15.0.2070.34|[2019-GDR1-ubuntu-16.04]
+
+[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>Problèmes connus
 
+### <a name="deployment-with-private-repository"></a>Déploiement avec dépôt privé
+
+- **Problème et impact sur le client** : La mise à niveau à partir d’un dépôt privé a des exigences spécifiques
+
+- **Solution de contournement** : Si vous utilisez un dépôt privé pour pré-extraire les images pour le déploiement ou la mise à niveau de BDC, assurez-vous que les images de build actuelles et les images de build cibles se trouvent dans le dépôt privé. Cela permet une restauration réussie, si nécessaire. En outre, si vous avez modifié les informations d’identification du dépôt privé depuis le déploiement d’origine, mettez à jour le secret correspondant dans Kubernetes avant de procéder à la mise à niveau. `azdata` ne prend pas en charge la mise à jour des informations d’identification via les variables d’environnement `AZDATA_PASSWORD` et `AZDATA_USERNAME`. Mettez à jour le secret à l’aide de [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
+
+La mise à niveau à l’aide de dépôts différents pour les builds actuels et cibles n’est pas prise en charge.
+
+### <a name="upgrade-may-fail-due-to-timeout"></a>La mise à niveau peut échouer en raison du délai d’expiration
+
+- **Problème et impact sur le client** : Une mise à niveau peut échouer en raison du délai d’expiration.
+
+   Le code suivant montre à quoi peut ressembler l’échec :
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+   Cette erreur est plus susceptible de se produire lorsque vous mettez à niveau BDC dans Azure Kubernetes Service (AKS).
+
+- **Solution de contournement** : Augmentez le délai d’expiration de la mise à niveau. 
+
+   Pour augmenter les délais d’attente pour une mise à niveau, modifiez le mappage de configuration de mise à niveau. Pour modifier le mappage de configuration de mise à niveau :
+
+   1. Exécutez la commande suivante :
+
+      ```bash
+      kubectl edit configmap controller-upgrade-configmap
+      ```
+
+   2.   Modifiez les champs suivants :
+
+       **`controllerUpgradeTimeoutInMinutes`** Spécifie le nombre de minutes à attendre avant la fin de la mise à niveau du contrôleur ou de la base de données du contrôleur. La valeur par défaut est 5. Mettez à jour vers au moins 20.
+
+       **`totalUpgradeTimeoutInMinutes`**  : Désigne la durée combinée du contrôleur et de la base de données du contrôleur pour terminer la mise à niveau (contrôleur + base de données contrôleur). La valeur par défaut est 10. Mettez à jour vers au moins 40.
+
+       **`componentUpgradeTimeoutInMinutes`**  : Désigne la durée d’exécution de chaque phase suivante de la mise à niveau.  La valeur par défaut est 30. Mettez à jour vers 45.
+
+   3.   Enregistrez et quittez
+
+   Le script Python ci-dessous est une autre façon de définir le délai d’expiration :
+
+   ```python
+   from kubernetes import client, config
+   import json
+
+   def set_upgrade_timeouts(namespace, controller_timeout=20, controller_total_timeout=40, component_timeout=45):
+       """ Set the timeouts for upgrades
+
+       The timeout settings are as follows
+
+       controllerUpgradeTimeoutInMinutes: sets the max amount of time for the controller
+           or controllerdb to finish upgrading
+
+       totalUpgradeTimeoutInMinutes: sets the max amount of time to wait for both the
+           controller and controllerdb to complete their upgrade
+
+       componentUpgradeTimeoutInMinutes: sets the max amount of time allowed for
+           subsequent phases of the upgrade to complete
+       """
+       config.load_kube_config()
+
+       upgrade_config_map = client.CoreV1Api().read_namespaced_config_map("controller-upgrade-configmap", namespace)
+
+       upgrade_config = json.loads(upgrade_config_map.data["controller-upgrade"])
+
+       upgrade_config["controllerUpgradeTimeoutInMinutes"] = controller_timeout
+
+       upgrade_config["totalUpgradeTimeoutInMinutes"] = controller_total_timeout
+
+       upgrade_config["componentUpgradeTimeoutInMinutes"] = component_timeout
+
+       upgrade_config_map.data["controller-upgrade"] = json.dumps(upgrade_config)
+
+       client.CoreV1Api().patch_namespaced_config_map("controller-upgrade-configmap", namespace, upgrade_config_map)
+   ```
+
 ### <a name="livy-job-submission-from-azure-data-studio-ads-or-curl-fail-with-500-error"></a>Échec de l’envoi de tâches Livy à partir d’Azure Data Studio (ADS) ou de curl avec l’erreur 500
 
-**Problème et impact sur le client** : Dans une configuration à haute disponibilité, les ressources partagées Spark (sparkhead) sont configurées avec plusieurs réplicas. Dans ce cas, vous pouvez rencontrer des échecs lors de l’envoi de tâches Livy à partir d’Azure Data Studio (ADS) ou de `curl`. Pour vérifier, une opération `curl` vers n’importe quel pod sparkhead entraîne un refus de connexion. Par exemple, `curl https://sparkhead-0:8998/` ou `curl https://sparkhead-1:8998` retourne l’erreur 500.
+- **Problème et impact sur le client** : Dans une configuration à haute disponibilité, les ressources partagées Spark `sparkhead` sont configurées avec plusieurs réplicas. Dans ce cas, vous pouvez rencontrer des échecs lors de l’envoi de tâches Livy à partir d’Azure Data Studio (ADS) ou de `curl`. Pour vérifier, une opération `curl` vers n’importe quel pod `sparkhead` entraîne un refus de connexion. Par exemple, `curl https://sparkhead-0:8998/` ou `curl https://sparkhead-1:8998` retourne l’erreur 500.
 
-Ceci est le cas dans les scénarios suivants :
+   Ceci est le cas dans les scénarios suivants :
 
-- Les pods ou les processus Zookeeper pour chaque instance Zookeeper sont redémarrés plusieurs fois.
-- Lorsque la connectivité réseau n’est pas fiable entre le pod Sparkhead et les pods Zookeeper.
+   - Les pods ou les processus Zookeeper pour chaque instance Zookeeper sont redémarrés plusieurs fois.
+   - Lorsque la connectivité réseau n’est pas fiable entre le pod `sparkhead` et les pods Zookeeper.
 
-**Solution de contournement**: Redémarrage des deux serveurs Livy.
+- **Solution de contournement** : Redémarrage des deux serveurs Livy.
 
-```bash
-kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
-```
+   ```bash
+   kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
+   ```
 
-```bash
-kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
-```
+   ```bash
+   kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
+   ```
 
 ### <a name="create-memory-optimized-table-when-master-instance-in-an-availability-group"></a>Créer une table à mémoire optimisée lorsque l’instance principale est dans un groupe de disponibilité
 
 - **Problème et impact sur le client** : Vous ne pouvez pas utiliser le point de terminaison principal exposé pour la connexion aux bases de données du groupe de disponibilité (écouteur) pour créer des tables à mémoire optimisée.
 
-- **Solution de contournement**: Pour créer des tables à mémoire optimisée lorsque l’instance principale SQL Server est une configuration de groupe de disponibilité, [connectez-vous à l’instance SQL Server](deployment-high-availability.md#instance-connect), exposez un point de terminaison, connectez-vous à la base de données SQL Server et créez les tables optimisées en mémoire dans le session créée avec la nouvelle connexion.
+- **Solution de contournement** : Pour créer des tables à mémoire optimisée lorsque l’instance principale SQL Server est une configuration de groupe de disponibilité, [connectez-vous à l’instance SQL Server](deployment-high-availability.md#instance-connect), exposez un point de terminaison, connectez-vous à la base de données SQL Server et créez les tables optimisées en mémoire dans le session créée avec la nouvelle connexion.
 
 ### <a name="insert-to-external-tables-active-directory-authentication-mode"></a>Insérer dans des tables externes en mode d’authentification Active Directory
 
@@ -118,7 +204,13 @@ kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisor
    Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
    ```
 
-- **Solution de contournement**: Modifiez la requête de l’une des manières suivantes. Joignez d’abord la table de pool de stockage à une table locale, ou insérez dans la table locale, puis lisez la table locale pour l’insérer dans le pool de données.
+- **Solution de contournement** : Modifiez la requête de l’une des manières suivantes. Joignez d’abord la table de pool de stockage à une table locale, ou insérez dans la table locale, puis lisez la table locale pour l’insérer dans le pool de données.
+
+### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>Les fonctionnalités de Transparent Data Encryption ne peuvent pas être utilisées avec des bases de données qui font partie du groupe de disponibilité dans l’instance maître SQL Server
+
+- **Problème et impact sur le client** : Dans une configuration à haute disponibilité, les bases de données pour lesquelles le chiffrement est activé ne peuvent pas être utilisées après un basculement, car la clé principale utilisée pour le chiffrement est différente sur chaque réplica. 
+
+- **Solution de contournement** : Il n’existe aucune solution de contournement pour ce problème. Nous vous recommandons de ne pas activer le chiffrement dans cette configuration tant qu’un correctif n’est pas en place.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

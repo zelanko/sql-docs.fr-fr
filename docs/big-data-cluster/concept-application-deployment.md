@@ -1,24 +1,26 @@
 ---
 title: Présentation du déploiement d’application
-titleSuffix: Big Data Clusters for SQL Server 2019
+titleSuffix: SQL Server Big Data Clusters
 description: Cet article décrit le déploiement d’application sur un cluster Big Data pour SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653006"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831569"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Présentation du déploiement d’application sur un cluster Big Data SQL Server 2019
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Présentation du déploiement d’application sur un cluster Big Data
 
-Le déploiement d’application sur le cluster Big Data s’effectue au moyen d’interfaces conçues pour créer, gérer et exécuter des applications. Les applications déployées sur le cluster Big Data bénéficient de la puissance de calcul du cluster et peuvent accéder aux données disponibles sur le cluster. Vous augmentez ainsi la scalabilité et les performances des applications tout en gérant les applications où résident les données.
+Le déploiement d’application sur le cluster Big Data s’effectue au moyen d’interfaces conçues pour créer, gérer et exécuter des applications. Les applications déployées sur le cluster Big Data bénéficient de la puissance de calcul du cluster et peuvent accéder aux données disponibles sur le cluster. Vous augmentez ainsi la scalabilité et les performances des applications tout en gérant les applications où résident les données. Les runtimes d’application pris en charge sur les clusters Big Data SQL Server sont R, Python, SSIS et MLeap.
+
 Les sections suivantes décrivent l’architecture et les fonctionnalités du déploiement d’application.
 
 ## <a name="application-deployment-architecture"></a>Architecture du déploiement d’application

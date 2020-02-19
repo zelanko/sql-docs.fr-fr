@@ -1,5 +1,5 @@
 ---
-title: 'Extraction de colonnes avec IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: Extraire des colonnes avec IRow::GetColumns (OLE DB) | Microsoft Docs
 description: Extraire des colonnes avec IRow::GetColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015580"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
@@ -26,7 +26,7 @@ ms.locfileid: "68015580"
 
   L’interface **IRow** permet un accès direct aux colonnes d’une même ligne dans le jeu de résultats. **IRow** est donc une méthode efficace pour extraire des colonnes d’un jeu de résultats avec une seule ligne.  
   
- Un exemple de code montrant comment extraire une seule ligne avec **IRow** est disponible. Dans cet exemple, une colonne est extraite à la fois de la ligne. L’exemple montre:  
+ Un exemple de code montrant comment extraire une seule ligne avec **IRow** est disponible. Dans cet exemple, une colonne est extraite à la fois de la ligne. L’exemple montre :  
   
 -   comment extraire un groupe de colonnes (de manière consécutive) ;  
   

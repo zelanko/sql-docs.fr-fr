@@ -1,6 +1,6 @@
 ---
-title: Utiliser sqlcmd avec des variables de script | Microsoft Docs
-ms.custom: ''
+title: Utiliser sqlcmd avec des variables de script
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
@@ -18,18 +18,18 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142fd6bdd0ceb39003aba5c8ec8131c9df6427dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262864"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761613"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd : utiliser avec des variables de script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Les variables utilisées dans les scripts sont appelées des variables de script. Ces variables permettent à un script d'être utilisé dans plusieurs scénarios. Par exemple, pour exécuter un script sur plusieurs serveurs, vous pouvez utiliser une variable de script pour le nom du serveur au lieu de modifier le script pour chaque serveur. La modification du nom de serveur fourni à la variable de script permet d'exécuter le même script sur différents serveurs.  
   
- Les variables de script peuvent être définies explicitement à l’aide de la commande **setvar** ou implicitement à l’aide de l’option **sqlcmd-v** .  
+ Les variables de script peuvent être définies explicitement à l’aide de la commande **setvar** ou implicitement à l’aide de l’option **sqlcmd -v** .  
   
  Cette rubrique contient également des exemples de définition de variables d’environnement dans l’invite de commandes Cmd.exe à l’aide de **SET**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68262864"
   
 3.  Interface de commande (**SET X=Y**) définie dans l’invite de commandes avant le démarrage de **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
@@ -100,7 +100,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   Si la valeur de variable contient des guillemets, ceux-ci doivent être placés dans une séquence d'échappement. Par exemple :`setvar MyVar "spac""e"`.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Instructions pour utiliser Cmd.exe SET avec les noms et valeurs de variables  
- Les variables définies à l’aide de SET appartiennent à l’environnement Cmd.exe et peuvent être référencées par **sqlcmd**. Respectez les consignes suivantes :  
+ Les variables définies à l’aide de SET appartiennent à l’environnement Cmd.exe et peuvent être référencées par **sqlcmd**. Tenez compte des recommandations suivantes :  
   
 -   Les noms de variables ne doivent pas contenir d'espaces blancs ou de guillemets.  
   
@@ -109,7 +109,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Variables de script sqlcmd  
  Les variables définies par **sqlcmd** sont reconnues comme des variables de script. Le tableau suivant répertorie les variables de script **sqlcmd** .  
   
-|        Variable         | Option connexe | R/W (Lecture/écriture) |         Valeur par défaut         |
+|        Variable         | Option connexe | R/W (Lecture/écriture) |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER\*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD\*         | -P             | --  | ""                      |
@@ -119,9 +119,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDLOGINTIMEOUT      | -l             | R/W (Lecture/écriture) | "8" (secondes)           |
 | SQLCMDSTATTIMEOUT       | -T             | R/W (Lecture/écriture) | "0" = Attendre indéfiniment |
 | SQLCMDHEADERS           | -H             | R/W (Lecture/écriture) | "0"                     |
-| SQLCMDCOLSEP            | -S             | R/W (Lecture/écriture) | « »                     |
+| SQLCMDCOLSEP            | -S             | R/W (Lecture/écriture) | " "                     |
 | SQLCMDCOLWIDTH          | -w             | R/W (Lecture/écriture) | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | -a             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | R/W (Lecture/écriture) | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | R/W (Lecture/écriture) | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | R/W (Lecture/écriture) | "0" = illimitée         |
@@ -136,7 +136,7 @@ R/W indique que la valeur peut être réinitialisée à l’aide de la commande 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>A. Utilisation de la commande setvar dans un script  
+### <a name="a-using-the-setvar-command-in-a-script"></a>R. Utilisation de la commande setvar dans un script  
  De nombreuses options de **sqlcmd** peuvent être contrôlées dans un script à l’aide de la commande **setvar** . Dans l'exemple suivant, le script `test.sql` est créé ; dans ce dernier, la variable `SQLCMDLOGINTIMEOUT` a la valeur `60` secondes et une variable de script, `server`, a la valeur `testserver`. Le code suivant figure dans le fichier `test.sql`.  
 
 ```
@@ -331,7 +331,7 @@ C:\> sqlcmd
 ```
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser l'utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+ [Utiliser l’utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
  [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   

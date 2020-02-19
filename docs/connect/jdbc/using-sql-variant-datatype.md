@@ -11,26 +11,26 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025844"
 ---
 # <a name="using-sql_variant-data-type"></a>Utilisation du type de données SQL_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-À partir de la version 6.3.0, le pilote JDBC prend en charge le type de données sql_variant. Sql_variant est également pris en charge lors de l’utilisation de fonctionnalités telles que les paramètres table et l’BulkCopy avec certaines limitations mentionnées plus loin dans cette page. Tous les types de données ne peuvent pas être stockés dans le type de données sql_variant. Pour obtenir la liste des types de données pris en charge avec sql_variant, consultez les [documents](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)SQL Server.
+À partir de la version 6.3.0, le pilote JDBC prend en charge le type de données sql_variant. sql_variant est également pris en charge lors de l’utilisation de fonctionnalités telles que les paramètres table et BulkCopy avec certaines limitations mentionnées plus loin dans cette page. Tous les types de données ne peuvent pas être stockés dans le type de données sql_variant. Pour obtenir la liste des types de données pris en charge avec sql_variant, consultez la [Documentation](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) de SQL Server.
 
-##  <a name="populating-and-retrieving-a-table"></a>Remplissage et extraction d’une table:
-En supposant qu’il existe une table avec une colonne sql_variant comme suit:
+##  <a name="populating-and-retrieving-a-table"></a>Remplissage et extraction d’une table :
+En supposant qu’il existe une table avec une colonne sql_variant comme suit :
 
 ```sql
 CREATE TABLE sampleTable (col1 sql_variant)  
 ```
 
-Exemple de script pour insérer des valeurs à l’aide d’une instruction:
+Exemple de script pour insérer des valeurs à l’aide d’une instruction :
 
 ```java
 try (Statement stmt = connection.createStatement()){
@@ -38,7 +38,7 @@ try (Statement stmt = connection.createStatement()){
 }
 ```
 
-Insertion d’une valeur à l’aide de l’instruction préparée:
+Insertion d’une valeur à l’aide d’une instruction préparée :
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into sampleTable values (?)")) {
@@ -47,7 +47,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into sam
 }
 ```      
 
-Si le type sous-jacent des données passées est connu, vous pouvez utiliser la méthode setter respective. Par exemple, `preparedStatement.setInt()` peut être utilisé lors de l’insertion d’une valeur entière.
+Si le type sous-jacent des données passées est connu, vous pouvez utiliser la méthode setter respective. Par exemple, vous pouvez utiliser `preparedStatement.setInt()` lors de l’insertion d’une valeur entière.
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into table values (?)")) {
@@ -56,7 +56,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into tab
 }
 ```
 
-Pour la lecture des valeurs de la table, les getters respectifs peuvent être utilisés. Par exemple, `getInt()` les `getString()` méthodes ou peuvent être utilisées si les valeurs provenant du serveur sont connues:    
+Pour la lecture des valeurs à partir de la table, les getters respectifs peuvent être utilisés. Par exemple, les méthodes `getInt()` ou `getString()` peuvent être utilisées si les valeurs provenant du serveur sont connues :    
 
 ```java
 try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("select * from sampleTable ")) {
@@ -65,14 +65,14 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sql_variant"></a>Utilisation de procédures stockées avec sql_variant:   
-Disposer d’une procédure stockée telle que:     
+## <a name="using-stored-procedures-with-sql_variant"></a>Utiliser des procédures stockées avec sql_variant :   
+Disposer d’une procédure stockée telle que :     
 
 ```java
 String sql = "CREATE PROCEDURE " + inputProc + " @p0 sql_variant OUTPUT AS SELECT TOP 1 @p0=col1 FROM sampleTable ";
 ``` 
     
-Les paramètres de sortie doivent être enregistrés:
+Les paramètres de sortie doivent être enregistrés :
 
 ```java
 try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc + " (?) }")) {
@@ -81,14 +81,14 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sql_variant"></a>Limitations de sql_variant:
-- Lors de l’utilisation de TVP pour remplir une `datetime` table avec une `smalldatetime` `getSmallDateTime()` `getDate()` / `getDateTime()` `date` / / valeur stockée dans un sql_variant, l’appel / de sur un ResultSet ne fonctionne pas et lève l’exception suivante:
+## <a name="limitations-of-sql_variant"></a>Limitations de sql_variant :
+- Quand vous utilisez TVP pour remplir une table avec une valeur stockée `datetime`/`smalldatetime`/`date` dans un sql_variant, l’appel de `getDateTime()`/`getSmallDateTime()`/`getDate()` sur un ResultSet ne fonctionne pas et lève l’exception suivante :
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
    
-    Solution de contournement `getString()` : `getObject()` utilisez ou à la place. 
+    Solution de contournement : utilisez `getString()` ou `getObject()` à la place. 
     
-- L’utilisation de TVP pour remplir une table et l’envoi d’une valeur null dans sql_variant n’est pas prise en charge et lève une exception:
+- L’utilisation de TVP pour remplir une table et l’envoi d’une valeur null dans un sql_variant n’est pas prise en charge et lève une exception :
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 

@@ -9,18 +9,22 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f984871729ea1d92b8da3b90751988fc33e741ff
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532039"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558314"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurer les paramètres de déploiement de services et ressources de cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En commençant avec un ensemble prédéfini de profils de configuration intégrés à l’outil de gestion `azdata`, vous pouvez facilement modifier les paramètres par défaut pour mieux répondre à vos exigences de charge de travail BDC. La structure des fichiers de configuration vous permet de mettre à jour précisément les paramètres de chaque service de la ressource.
+
+Regardez cette vidéo de 13 minutes pour obtenir une vue d’ensemble de la configuration de cluster Big Data :
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
 > Reportez-vous aux articles sur la façon de configurer la **haute disponibilité** pour des composants critiques tels que le [nœud maître SQL Server](deployment-high-availability.md) ou le [nœud de nom HDFS](deployment-high-availability-hdfs-spark.md), afin d’obtenir des détails sur la façon de déployer des services hautement disponibles.
@@ -448,12 +452,12 @@ Ensuite, mettez à jour les fichiers de configuration de déploiement de cluster
 
 ```bash
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
-azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.nodeLabel=bdc-shared"
 
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
-azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
 
 # below can be omitted in which case we will take the node label default from the control.json
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"
@@ -662,4 +666,4 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’utilisation des fichiers de configuration dans les déploiements de cluster Big Data, consultez [Guide pratique pour déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md#configfile).
+Pour plus d’informations sur l’utilisation de fichiers de configuration dans le déploiement de clusters Big Data, consultez [Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md#configfile).

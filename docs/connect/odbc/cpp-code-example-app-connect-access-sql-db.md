@@ -1,5 +1,5 @@
 ---
-title: C++Application ODBC l’accès à une base de données SQL
+title: Application ODBC C++ accédant à une base de données SQL
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541757a8a6919577cfe54c7dd6efa461ae0f1449
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67690553"
 ---
-# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++Exemple d’application ODBC accède à une base de données SQL
+# <a name="c-odbc-example-application-accesses-a-sql-database"></a>Exemple d’application ODBC C++ qui accède à une base de données SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Cela C++ exemple d’application montre comment utiliser les API ODBC pour se connecter à et d’accéder à une base de données SQL.
+Cet exemple d’application C++ suivant montre comment utiliser les API ODBC pour se connecter et accéder à une base de données SQL.
 
-Entre octobre 2013 et juillet 2019, cet exemple C++ application ODBC a été téléchargée 47,300 fois. En juillet 2019 cette source de l’application a été déplacée à partir Code Gallery de Microsoft à cette page Web.
+Entre octobre 2013 et juillet 2019, cet exemple d’application C++ ODBC a été téléchargé 47 300 fois. En juillet 2019, cette source d’application a été déplacée de la Galerie de code Microsoft vers cette page web.
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md
@@ -31,7 +31,7 @@ New as .md file on 2019/July/08.  GeneMi.
 Was:  https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953
 -->
 
-## <a name="a-readmetxt"></a>A. ReadMe.txt
+## <a name="a-readmetxt"></a>R. ReadMe.txt
 
 ```
 Environment Where Tested

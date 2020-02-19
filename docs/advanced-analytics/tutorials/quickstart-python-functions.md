@@ -1,35 +1,34 @@
 ---
-title: 'Démarrage rapide : Écrire des fonctions Python'
-titleSuffix: SQL Server Machine Learning Services
-description: Dans ce guide de démarrage rapide, vous allez découvrir comment écrire une fonction Python pour un calcul statistique avancé avec SQL Server Machine Learning Services.
+title: 'Démarrage rapide : Fonctions Python'
+description: Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de Python avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727010"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831407"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>Démarrage rapide : Écrire des fonctions Python avancées avec SQL Server Machine Learning Services
+# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>Démarrage rapide : Fonctions Python avancées avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Ce guide de démarrage rapide explique comment incorporer les fonctions mathématiques et utilitaires de Python dans une procédure stockée SQL avec SQL Server Machine Learning Services. Les fonctions statistiques avancées qui sont difficiles à implémenter dans T-SQL peuvent être effectuées dans Python avec une seule ligne de code.
+Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de Python avec SQL Server Machine Learning Services. Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en Python avec seulement quelques lignes de code.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-- Ce guide de démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) ainsi que l’installation du langage Python.
+- Ce démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), ainsi que l’installation du langage Python.
 
-  Votre instance SQL Server peut se trouver sur une machine virtuelle Azure ou être locale. N’oubliez pas que la fonctionnalité de script externe est désactivée par défaut. Par conséquent, vous devrez peut-être [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que le **service SQL Server Launchpad** est en cours d’exécution avant de commencer.
+  Votre instance SQL Server peut se trouver sur une machine virtuelle Azure ou être locale. Sachez simplement que la fonctionnalité de script externe est désactivée par défaut. Avant de commencer, vous serez donc peut-être amené à [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que le **service SQL Server Launchpad** est en cours d’exécution.
 
-- Vous aurez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts Python. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce guide de démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Vous avez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts Python. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Créer une procédure stockée pour générer des nombres aléatoires
 
@@ -54,7 +53,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=100, loc=50, scale=3))
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-Vous souhaitez générer plus facilement un autre ensemble de nombres aléatoires ?
+Que se passe-t-il si vous voulez simplifier la génération d’un autre ensemble de nombres alétaoires ?
 
 C’est facile lorsqu’il est combiné avec SQL Server. Vous définissez une procédure stockée qui obtient les arguments de l’utilisateur, puis transmettez ces arguments dans le script Python en tant que variables.
 
@@ -79,7 +78,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=mynumbers, loc=mymean,
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-- La première ligne définit chaque paramètre d’entrée SQL nécessaire pendant l’exécution de la procédure stockée.
+- La première ligne définit chacun des paramètres d’entrée SQL exigés quand la procédure stockée est exécutée.
 
 - La ligne commençant par `@params` définit toutes les variables utilisées par le code Python, ainsi que les types de données SQL correspondants.
 
@@ -120,4 +119,4 @@ Pour créer un modèle Machine Learning à l’aide de Python dans SQL Server, s
 
 Pour plus d’informations sur SQL Server Machine Learning Services, consultez :
 
-- [Qu’est-ce que SQL Server Machine Learning Services (Python et R)?](../what-is-sql-server-machine-learning.md)
+- [Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?](../what-is-sql-server-machine-learning.md)

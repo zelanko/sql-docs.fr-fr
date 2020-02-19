@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706045"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190403"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configurer la hiérarchisation HDFS sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configurer la hiérarchisation HDFS sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,6 +25,11 @@ La hiérarchisation HDFS offre la possibilité de monter un système de fichiers
 ## <a name="hdfs-tiering-overview"></a>Vue d’ensemble de la hiérarchisation HDFS
 
 Avec la hiérarchisation, les applications peuvent accéder de manière fluide aux données d’un grand nombre de magasins externes comme si ces données se trouvaient dans le HDFS local. Le montage est une opération de métadonnées, consistant à copier sur votre HDFS local les métadonnées qui décrivent l’espace de noms sur le système de fichiers externe. Ces métadonnées incluent des informations sur les répertoires et les fichiers externes, ainsi que les autorisations et listes de contrôle d’accès associées. Les données correspondantes sont copiées uniquement à la demande, lors de l’accès aux données par l’intermédiaire d’une requête, par exemple. Vous pouvez désormais accéder aux données du système de fichiers externe à partir du cluster Big Data SQL Server. Vous pouvez exécuter des travaux Spark et des requêtes SQL sur ces données de la même façon que vous les exécutez sur toutes données locales stockées dans HDFS sur le cluster.
+
+Cette vidéo de 7 minutes fournit une vue d’ensemble de la hiérarchisation HDFS :
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ### <a name="caching"></a>Mise en cache
 Aujourd’hui, par défaut, 1 % du stockage HDFS total est réservé à la mise en cache des données montées. La mise en cache est un paramètre global sur les montages.

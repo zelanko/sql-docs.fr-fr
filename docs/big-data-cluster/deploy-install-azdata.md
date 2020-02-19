@@ -1,145 +1,45 @@
 ---
-title: Installer azdata à l’aide de PIP
+title: Installer azdata
 titleSuffix: SQL Server big data clusters
-description: Découvrez comment installer l’outil azdata pour installer et gérer des clusters Big Data avec PIP.
+description: Découvrez comment installer l’outil azdata pour installer et gérer des clusters Big Data.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aaccbae2b4acb745e2cb9ea531f382e0903b528f
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 40338c4083241fedd113bca3a1beb839dbdd3fca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532061"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721700"
 ---
-# <a name="install-azdata-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-pip"></a>Installer `azdata` pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] à l’aide de `pip`
+# <a name="install-azdata"></a>Installer `azdata`
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article explique comment installer l’outil `azdata` Windows ou Linux à l’aide de `pip`.
+`azdata` est un utilitaire en ligne de commande écrit en Python qui permet de démarrer et de gérer les clusters Big Data via des API REST. 
 
-Pour Windows et Linux (distribution Ubuntu), vous pouvez installer avec un [gestionnaire de package](./deploy-install-azdata-installer.md) pour une expérience plus simple.
+## <a name="find-latest-version"></a>Trouver la version la plus récente
 
-## <a id="prerequisites"></a> Conditions préalables
+La liste des fichiers de la dernière version est toujours disponible sur [https://aka.ms/azdata](https://aka.ms/azdata).
 
-`azdata` est un utilitaire en ligne de commande écrit en Python qui permet aux administrateurs de clusters de démarrer et de gérer les clusters Big Data via des API REST. Vous devez utiliser au minimum Python version 3.5. `pip` est requis pour télécharger et installer l’outil `azdata`. Les instructions ci-dessous fournissent des exemples pour Windows et Ubuntu. Pour installer Python sur d’autres plateformes, consultez la [documentation Python](https://wiki.python.org/moin/BeginnersGuide/Download).
-En outre, installez et mettez à jour la dernière version du package Python `requests` :
+Pour connaître la version que vous avez installée et savoir si elle nécessite d’être mise à jour, exécutez `azdata --version`.
 
-```bash
-pip3 install -U requests
-```
+## <a name="os-specific-instructions"></a>Instructions spécifiques au système d’exploitation
 
-> [!IMPORTANT]
-> Si vous installez une version plus récente de clusters Big Data, sauvegardez vos données et supprimez les anciens clusters avant de mettre à niveau `azdata` et d’installer la nouvelle version. Pour plus d’informations, consultez [Mise à niveau vers une nouvelle version](deployment-upgrade.md).
+* [Installer sur Windows](deploy-install-azdata-installer.md)
+* [Installer sur macOS](deploy-install-azdata-macos.md)
+* Installer sur Linux ou le [Sous-système Windows pour Linux (WSL)](/windows/wsl/about/)
+   * [Installer avec apt sur Debian ou Ubuntu](deploy-install-azdata-linux-package.md)
+   * [Installer avec yum sur RHEL ou CentOS](deploy-install-azdata-yum.md)
+   * [Installer avec Zypper sur openSUSE ou SLE](deploy-install-azdata-zypper.md)
+   * [Installer à partir du script](deploy-install-azdata-pip.md)
 
-## <a id="windows"></a> Installation de `azdata` sur Windows
-
-1. Sur un client Windows, téléchargez le package Python nécessaire à partir de [https://www.python.org/downloads/](https://www.python.org/downloads/). Pour Python 3.5.3 et versions ultérieures, pip3 est installé en même temps que Python. 
-
-   > [!TIP] 
-   > Lorsque vous installez Python 3, ajoutez Python à votre chemin (`PATH`). Si vous ne le faites pas, vous pourrez rechercher plus tard l’emplacement de PIP3 et l’ajouter manuellement à `PATH`.
-
-1. Ouvrez une nouvelle session Windows PowerShell afin d’obtenir le chemin le plus récent avec Python.
-
-1. Si des versions précédentes de `azdata` sont installées, il est important de commencer par les désinstaller avant d’installer la dernière version.
-
-   Pour CTP 3.2 ou RC1, exécutez la commande suivante.
-
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   ou Gestionnaire de configuration
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
-   ```
-
-1. Installez `azdata` avec la commande suivante :
-
-   ```powershell
-   pip3 install -r https://aka.ms/azdata
-   ```
-
-## <a id="linux"></a> Installation de `azdata` sur Linux
-
-Sur Linux, vous devez installer Python 3.5, puis mettre à niveau pip. L’exemple suivant montre les commandes qui fonctionnent pour Ubuntu. Pour les autres plateformes Linux, consultez la [documentation Python](https://wiki.python.org/moin/BeginnersGuide/Download).
-
-1. Installez les packages Python nécessaires :
-
-   ```bash
-   sudo apt-get update && \
-   sudo apt-get install -y python3 && \
-   sudo apt-get install -y python3-pip && \
-   sudo apt-get install -y libkrb5-dev && \
-   sudo apt-get install -y libsqlite3-dev && \
-   sudo apt-get install -y unixodbc-dev
-   ```
-
-1. Mettez à niveau pip3 :
-
-   ```bash
-   sudo -H pip3 install --upgrade pip
-   ```
-
-1. Si des versions précédentes de `azdata` sont installées, il est important de commencer par les désinstaller avant d’installer la dernière version.
-
-   Pour CTP 3.2 ou RC1, exécutez la commande suivante.
-
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   ou Gestionnaire de configuration
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
-   ```
-
-1. Installez `azdata` avec la commande suivante :
-
-   ```bash
-   pip3 install -r https://aka.ms/azdata --user
-   ```
-
-   > [!NOTE]
-   > Le commutateur `--user` installe `azdata` dans le répertoire d’installation de l’utilisateur Python. Sur Linux, il s’agit généralement de `~/.local/bin`. Ajoutez ce répertoire à votre chemin ou accédez au répertoire d’installation de l’utilisateur et exécutez `./azdata` à partir de ce répertoire.
-
-## <a id="macOSX"></a> Installer `azdata` sur macOS ou OS X
-
-Pour installer `azdata` sur macOS ou OS X, effectuez les étapes suivantes. Pour chaque étape, exécutez l’exemple dans Terminal.
-
-1. Sur un client macOS, installez [Homebrew](https://brew.sh) si vous ne l’avez pas déjà :
-
-   ```
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   ```
-
-1. Installez Python et PIP, au minimum la version 3.0 :
-
-   ```
-   brew install python3
-   ```
-
-1. Installez des dépendances :
-
-   ```
-   pip3 install -U requests
-   brew install freetds
-   ```
-
-1. Si des versions précédentes de l’outil sont installées, il est important de commencer par les désinstaller avant d’installer la dernière version de `azdata`. La commande suivante supprime la version de `azdata`.
-
-   ```
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
-   ```
-
-1. Installez `azdata` avec la commande suivante :
-
-   ```
-   pip3 install -r https://aka.ms/azdata
-   ```
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters Big Data, consultez [Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+Pour plus d’informations sur les clusters Big Data, consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md).

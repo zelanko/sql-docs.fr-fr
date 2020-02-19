@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993804"
 ---
 # <a name="stored-procedures---running"></a>Procédures stockées - Exécution
@@ -38,7 +38,7 @@ ms.locfileid: "67993804"
   
 -   des fonctionnalités supplémentaires.  
   
- Le pilote OLE DB pour SQL Server prend en charge trois des mécanismes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisés par les procédures stockées pour retourner les données:  
+ Le fournisseur OLE DB Driver pour SQL Server prend en charge trois des mécanismes que les procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent pour retourner des données :  
   
 -   Chaque instruction SELECT dans la procédure génère un jeu de résultats.  
   

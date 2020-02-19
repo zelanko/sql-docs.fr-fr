@@ -1,6 +1,6 @@
 ---
 title: Plusieurs opérations de copie en bloc
-description: Décrit comment effectuer plusieurs opérations de copie en bloc de données dans une instance de SQL Server à l’aide de la classe SqlBulkCopy.
+description: Décrit comment effectuer plusieurs opérations de copie en bloc de données dans une instance SQL Server à l’aide de la classe SqlBulkCopy.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 6cc373224f4df437665cc48edb78ff81b85b8ac1
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 423300788a020a18914a5bd25abac379cbb71500
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452134"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247688"
 ---
 # <a name="multiple-bulk-copy-operations"></a>Plusieurs opérations de copie en bloc
 

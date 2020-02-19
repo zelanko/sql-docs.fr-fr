@@ -1,27 +1,27 @@
 ---
-title: 'Tutoriel Python : Préparer les données'
-description: Dans ce tutoriel, vous allez utiliser Python et la régression linéaire dans SQL Server Machine Learning Services pour prédire le nombre de locations de ski. Vous allez préparer des données à partir d’une base de données SQL Server à l’aide de Python.
+title: 'Tutoriel Python : Préparer les données'
+description: Dans la deuxième partie de cette série de didacticiels en quatre parties, vous utiliserez Python pour préparer des données afin de prédire les locations de ski dans SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/02/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6424a453bff2f0f6d62caa8c9870ccc2ec10d578
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9aeefb0b6fd9ca1a744d132fccf1eedfedbaa6e7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727058"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75681744"
 ---
-# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Tutoriel Python : Préparer des données pour effectuer l’apprentissage d’un modèle de régression linéaire dans SQL Server Machine Learning Services
+# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Tutoriel Python : Préparer des données pour effectuer l’apprentissage d’un modèle de régression linéaire dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans la deuxième partie de cette série de didacticiels en quatre parties, vous allez préparer des données à partir d’une base de données SQL Server à l’aide de Python. Plus loin dans cette série, vous utiliserez ces données pour effectuer l’apprentissage et le déploiement d’un modèle de régression linéaire dans Python avec SQL Server Machine Learning Services.
 
-Dans cet article, vous allez apprendre à :
+Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Charger les données issues de la base de données SQL Server dans une trame de données **pandas**
@@ -45,49 +45,21 @@ Créez un nouveau bloc-notes Python dans Azure Data Studio et exécutez le scrip
 
 Le script Python ci-dessous importe le jeu de données à partir de la table **dbo. rental_data** de votre base de données vers une trame de données pandas **df**.
 
+Dans la chaîne de connexion, remplacez les détails de connexion, le cas échéant.
+
 ```python
-import pandas as pd
+import pyodbc
+import pandas
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
-from revoscalepy import rx_import
 
 # Connection string to your SQL Server instance
-conn_str = 'Driver=SQL Server;Server=<SQL Server>;Database=TutorialDB;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=TutorialDB; Trusted_Connection=yes')
 
-# Define the columns you will import
- column_info = {
-         "Year" : { "type" : "integer" },
-         "Month" : { "type" : "integer" },
-         "Day" : { "type" : "integer" },
-         "RentalCount" : { "type" : "integer" },
-         "WeekDay" : {
-             "type" : "factor",
-             "levels" : ["1", "2", "3", "4", "5", "6", "7"]
-         },
-         "Holiday" : {
-             "type" : "factor",
-             "levels" : ["1", "0"]
-         },
-         "Snow" : {
-             "type" : "factor",
-             "levels" : ["1", "0"]
-         }
-     }
+query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
-# Get the data from the SQL Server table
-data_source = RxSqlServerData(table="dbo.rental_data",
-                               connection_string=conn_str, column_info=column_info)
-computeContext = RxInSqlServer(
-     connection_string = conn_str,
-     num_tasks = 1,
-     auto_cleanup = False
-)
+df = pandas.read_sql(sql=query_str, con=conn_str)
 
-RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-
-# import data source and convert to pandas dataframe
-df = pd.DataFrame(rx_import(input_data = data_source))
 print("Data frame:", df)
 
 # Get all the columns from the dataframe.
@@ -100,16 +72,19 @@ columns = [c for c in columns if c not in ["Year"]]
 Vous devez obtenir des résultats similaires à ce qui suit :
 
 ```results
-Rows Processed: 453
-Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
-0     20        1      1          445     2        2  2014
-1     13        2      2           40     2        5  2014
-2     10        2      3          456     2        1  2013
-3     31        2      3           38     2        2  2014
-4     24        2      4           23     2        5  2014
-5     11        2      2           42     2        4  2015
-6     28        2      4          310     2        1  2013
-...
+Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
+0    2014      1   20          445        2        1     0
+1    2014      2   13           40        5        0     0
+2    2013      3   10          456        1        0     0
+3    2014      3   31           38        2        0     0
+4    2014      4   24           23        5        0     0
+..    ...    ...  ...          ...      ...      ...   ...
+448  2013      2   19           57        3        0     1
+449  2015      3   18           26        4        0     0
+450  2015      3   24           29        3        0     1
+451  2014      3   26           50        4        0     1
+452  2015     12    6          377        1        0     1
+
 [453 rows x 7 columns]
 ```
 
@@ -123,4 +98,4 @@ Dans la deuxième partie de cette série de tutoriels, vous avez effectué les �
 Pour effectuer l’apprentissage d’un modèle de Machine Learning qui utilise des données de la base de données TutorialDB, suivez la troisième partie de cette série de tutoriels :
 
 > [!div class="nextstepaction"]
-> [Tutoriel Python : Effectuer l’apprentissage d’un modèle de régression linéaire](python-ski-rental-linear-regression-train-model.md)
+> [Tutoriel Python : Effectuer l’apprentissage d’un modèle de régression linéaire](python-ski-rental-linear-regression-train-model.md)

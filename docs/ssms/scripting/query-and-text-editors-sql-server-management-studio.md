@@ -1,5 +1,7 @@
 ---
-title: Éditeurs de texte et de requête (SQL Server Management Studio) | Microsoft Docs
+title: Éditeurs de texte et de requête (SSMS)
+description: Découvrez comment utiliser les éditeurs de SQL Server Management Studio (SSMS) pour interroger, modifier et tester des fichiers de manière interactive.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,15 +24,14 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 07ab012f916a86ca8642c81e2bdd87dfc815db2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988159"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558039"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
 
@@ -120,7 +121,7 @@ ms.locfileid: "70988159"
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur XML/A.|[Éditeur XML &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |Décrit comment configurer les options des différents éditeurs, tels que la numérotation des lignes et les options IntelliSense.|[Configurer des éditeurs &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |Décrit les différentes façons d'ouvrir les éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Ouvrir un éditeur &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
-|Décrit comment gérer le mode d'affichage, tel que le retour automatique à la ligne, le fractionnement d'une fenêtre, ou les onglets.|[Gérer l'Éditeur et le mode d'affichage](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
+|Décrit comment gérer le mode d'affichage, tel que le retour automatique à la ligne, le fractionnement d'une fenêtre, ou les onglets.|[Gérer l’Éditeur et le mode d’affichage](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
 |Explique comment définir les options de mise en forme, telles que le texte masqué ou la mise en retrait.|[Gérer la mise en forme du code](../../relational-databases/scripting/manage-code-formatting.md)|  
 |Décrit comment parcourir le texte dans une fenêtre d'éditeur à l'aide de fonctionnalités telles que la recherche incrémentielle ou Atteindre.|[Naviguer dans le code et le texte](../../relational-databases/scripting/navigate-code-and-text.md)|  
 |Explique comment définir les options de codage en couleurs pour différentes classes de syntaxe, ce qui facilite la lecture des instructions complexes.|[Codage en couleurs dans les éditeurs de requête](../../relational-databases/scripting/color-coding-in-query-editors.md)|  
@@ -129,7 +130,7 @@ ms.locfileid: "70988159"
 |Décrit comment effectuer une opération de recherche et de remplacement globale, par exemple lors de la modification des noms des colonnes.|[Recherche et remplacement](../../relational-databases/scripting/search-and-replace.md)|  
 |Décrit comment définir des signets afin de rechercher plus facilement les segments de code importants.|[Gérer les signets](../../relational-databases/scripting/manage-bookmarks.md)|  
 |Explique comment imprimer des scripts ou les résultats dans une fenêtre ou une grille.|[Imprimer le code et les résultats](../../relational-databases/scripting/print-code-and-results.md)|  
-|Décrit comment utiliser les fonctionnalités sqlcmd dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
+|Décrit comment utiliser les fonctionnalités sqlcmd dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
 |Décrit comment utiliser des fonctionnalités IntelliSense telles que la saisie semi-automatique des noms d'objets à mesure que vous les tapez, ou la garantie que les points d'arrêt sont placés dans des emplacements valides.|[IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
 |Décrit comment utiliser les extraits de code dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Les extraits de code sont des modèles pour des instructions ou des blocs couramment utilisés, et peuvent être personnalisés ou étendus pour inclure les extraits de code spécifiques au site.|[Extraits de code Transact-SQL](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code et afficher les informations de débogage telles que les valeurs des variables et des paramètres.|[Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  

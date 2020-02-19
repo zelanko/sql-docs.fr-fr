@@ -1,6 +1,6 @@
 ---
-title: Notes de publication pour (SSRS) 2017 et versions ultérieures | Microsoft Docs
-ms.date: 02/18/2019
+title: Notes de publication pour Reporting Services 2017 et versions ultérieures | Microsoft Docs
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,20 +9,20 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
-ms.translationtype: MTE75
+ms.openlocfilehash: 39049ee5a2561821e0a2284ed66b9b04730998bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533831"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74834249"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notes de publication de SQL Server Reporting Services (SSRS) 2017 et versions ultérieures
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../includes/ssrs-appliesto-2017-and-later.md)]
 
-Cet article décrit les modifications apportées à [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS), pour les versions 2017 et versions ultérieures.
+Cet article décrit les modifications apportées à [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) pour les versions 2017 et ultérieures.
 
-Pour les notes de publication pour les contrôles de visionneuse de rapports, consultez [contrôle des Notes de publication pour la visionneuse de rapports pour Web Forms et WinForms de SSRS](application-integration/release-notes-ssrs-application-integration.md).
+Pour obtenir les notes de publication pour les contrôles Visionneuse de rapports, consultez [Notes de publication des contrôles Visionneuse de rapports pour WebForms et WinForms de SSRS](application-integration/release-notes-ssrs-application-integration.md).
 
 <!--
 We are "standardizing" all our 'Release Notes' style articles:
@@ -50,27 +50,39 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## <a name="1406001451-20191113"></a>14.0.600.1451 2019/11/13 
+
+| Problème résolu | Détails |
+| :---------- | :------ |
+| Mises à jour de sécurité | &nbsp; |
+| Les rapports paginés ne fonctionnaient pas correctement avec les paramètres de filtre quand l’instantané était activé  | &nbsp; |
+| Les utilisateurs avec le rôle Lecteur et les paramètres par défaut n’avaient pas l’autorisation de télécharger des fichiers Excel  | &nbsp; |
+| La mise à niveau vers Power BI Report Server à partir de SQL Server 2016 Reporting Services échouait | &nbsp; |
+| Après la mise à niveau à partir de SQL Server 2012 Reporting Services, les abonnements échouaient avec un message « Un caractère non valide a été trouvé dans l'en-tête du courrier : ','. » | &nbsp; |
+| Outil de configuration : l’annulation des fenêtres modales dans la section Base de données redémarrait le service Reporting Services | &nbsp; |
+| L’expression de propriété BorderStyle des contrôles TextBox n’était pas rendue au format Excel  | &nbsp; |
+| Un problème de pagination pouvait faire que certains rapports étaient bloqués lors du rendu de la même page sans jamais atteindre la dernière page du rapport | &nbsp; |
 
 ## <a name="1406001274-20190701"></a>14.0.600.1274, 01/07/2019
 
-| Résolution du problème | Détails |
+| Problème résolu | Détails |
 | :---------- | :------ |
 | Mises à jour de sécurité | &nbsp; |
 | Impossible de sélectionner les jours de la semaine lors de la création d’une planification hebdomadaire partagée | &nbsp; |
-| Rapport n’affiche pas les retours chariot correctement au format Word | &nbsp; |
-| Aucun travaille plus avec récente SSRS 2017 de System Center Operations Manager(SCOM) 2019 met à niveau | &nbsp; |
-| Une erreur s’est produite lors de l’appel de l’extension d’autorisation pour le Dataset partagé | &nbsp; |
-| Logique modifiée sur la procédure stockée GetAllProperties dans SSRS 2017 et PBIRS, ce qui provoque le point de terminaison de service Web ReportingService2010.GetProperties méthode Impossible d’obtenir toutes les données de rapport lié | &nbsp; |
-| En-tête de ligne de grille simple dans le rapport Mobile disparaît lorsque l’utilisateur clique sur un élément dans la grille | &nbsp; |
-| Impossible d’utiliser le champ de date dans le paramètre d’abonnement piloté par des données | &nbsp; |
-| Tableau matriciel imbriqué montre petite police ou partielle dans SSRS 2016 et versions ultérieures | &nbsp; |
-| Abonnements avec l’erreur de paramètre DateTime en une fois que l’utilisateur avec les modifications des paramètres régionaux différents l’abonnement | &nbsp; |
-| Création d’un abonnement piloté par les données avec l’Extension de remise Null échoue avec « une erreur de remise s’est produite » | &nbsp; |
-| L’encodage des URL est incorrect lors de la définition de la valeur au format de Excel\Word | &nbsp; |
+| Le rapport n’affiche pas les retours chariot correctement au format Word | &nbsp; |
+| System Center Operations Manager (SCOM) 2019 ne fonctionne plus avec les dernières mises à niveau de SSRS 2017 | &nbsp; |
+| Une erreur se produisait lors de l'appel de l'extension d'autorisation pour les jeux de données partagés | &nbsp; |
+| La logique a changé sur la procédure stockée GetAllProperties dans SSRS 2017 et PBIRS, ce qui rend la méthode ReportingService2010.GetPropertie du point de terminaison de service web incapable d’obtenir des données pour le rapport lié | &nbsp; |
+| Un en-tête de ligne de grille simple dans le rapport mobile disparaît en cas de clic sur un élément de la grille | &nbsp; |
+| Impossible d’utiliser le champ de date dans le paramètre d’abonnement contrôlé par les données | &nbsp; |
+| Le tableau matriciel imbriqué affiche une petite police ou une police partielle dans SSRS 2016 et versions ultérieures | &nbsp; |
+| Les abonnements avec le paramètre DateTime subissent une erreur après qu’un utilisateur avec des paramètres régionaux différents modifie l’abonnement | &nbsp; |
+| Échec de la création d’un abonnement piloté par les données avec une extension de remise null avec le message « Une erreur de remise s'est produite » | &nbsp; |
+| L’encodage URL est incorrect lors de la définition de la valeur au format Excel\Word | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 12/02/2019
 
-| Résolution du problème | Détails |
+| Problème résolu | Détails |
 | :---------- | :------ |
 | Les planification des captures instantanées de rapport de cache devient « planification spécifique aux rapports » après modification de l’abonnement. | &nbsp; |
 | rc:Toolbar=false ne fonctionne pas dans Express Edition. | &nbsp; |
@@ -82,7 +94,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Mises à jour de sécurité. | &nbsp; |
 | L’interface utilisateur des rapports liés ne s’affiche pas. | &nbsp; |
 | Certains rapports paginés comportant des contrôles de tableau matriciel imbriqué présentent des polices incorrectes. | &nbsp; |
-| Espace blanc est correctement ajouté à certains des rapports paginés qui contiennent des régions de données de tableau matriciel. | &nbsp; |
+| Un espace blanc est ajouté à tort à certains rapports paginés contenant des régions de données de tableau matriciel. | &nbsp; |
 | Les lignes d’en-tête disparaissent en cas de développement des grilles de données simples d’un rapport mobile. | &nbsp; |
 | &nbsp; | &nbsp; |
 
@@ -90,30 +102,30 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 Le problème suivant a été résolu :
 
-| Résolution du problème | Détails |
+| Problème résolu | Détails |
 | :---------- | :------ |
 | L’authentification personnalisée ne renvoie pas les bonnes informations sur les cookies. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="140600892-20180831"></a>14.0.600.892, 31/08/2018
 
-| Résolution du problème | Détails |
+| Problème résolu | Détails |
 | :---------- | :------ |
 | À cause de la zone de texte dans le rectangle, celui-ci ne peut pas s’agrandir verticalement quand rc:Toolbar=False et que le texte est long. | &nbsp; |
 | La taille du texte ne s’adapte pas si pageHeight est inférieur à 0,5 pouce. | &nbsp; |
-| Un blocage se produit dans la base de données du catalogue SSRS lorsqu’il est utilisé avec CRM. | &nbsp; |
+| Un blocage se produit dans la base de données du catalogue SSRS lors de l’utilisation avec CRM. | &nbsp; |
 | Les en-têtes de colonne alignés verticalement s’affichent mal lors du défilement vers le bas dans un rapport. | &nbsp; |
-| Les utilisateurs ajoutés au rôle de création de rapports de System Center Operations Manager ont accès bloqué au portail web SSRS. | &nbsp; |
-| Caractères thaïlandais n’est pas été correctement exportés dans le fichier PDF. | &nbsp; |
+| Les utilisateurs ajoutés au rôle de création de rapports System Center Operations Manager ne peuvent pas accéder au portail web SSRS. | &nbsp; |
+| Un caractère thaïlandais n’est pas correctement exporté dans le PDF. | &nbsp; |
 | Changement de comportement du rôle Visiteur. | &nbsp; |
 | rc:Toolbar=false ne fonctionne pas dans Express Edition. | &nbsp; |
-| Manquant dans la barre de défilement verticale dans la zone de message du paramètre. | &nbsp; |
+| Barre de défilement verticale manquante dans la zone de message du paramètre. | &nbsp; |
 | Runtime de rapport mobile mis à jour. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="140600744-20180425"></a>14.0.600.744, 25/04/2018
 
-| Résolution du problème | Détails |
+| Problème résolu | Détails |
 | :---------- | :------ |
 | La page Abonnement piloté par les données n’affiche pas l’option de livraison qui a été créée. | &nbsp; |
 | En cas de mise à niveau de SSRS 2012 vers SSRS 2017, RSManagement génère une exception toutes les deux ou trois secondes. | &nbsp; |
@@ -123,11 +135,11 @@ Le problème suivant a été résolu :
 
 ## <a name="140600689-20180228"></a>14.0.600.689, 28/02/2018
 
-| Résolution du problème | Détails |
+| Problème résolu | Détails |
 | :---------- | :------ |
 | La visibilité de Paramètre de rapport dans un rapport lié est rétablie après modification de ses propriétés. | &nbsp; |
 | Le paramètre d’URL rc:Toolbar=false ne fonctionne pas dans Express Edition. | &nbsp; |
-| Présence d’expressions dans une zone de texte avec le CanGrow propriété la valeur false entraîne des valeurs s’affichent ne pas. | &nbsp; |
+| Si vous avez des expressions dans une zone de texte avec la propriété CanGrow définie sur false, les valeurs ne s’affichent pas. | &nbsp; |
 | Le lien _En savoir plus_ est ajouté pour la clé de produit dans le programme d’installation. | &nbsp; |
 | Le portail web avec l’authentification par formulaires personnalisée ignore le cookie à expiration décalé. | &nbsp; |
 | L’exportation dans Word crée une hauteur de ligne inégale si le contenu de la ligne est vide. | &nbsp; |

@@ -1,6 +1,6 @@
 ---
-title: Détection du type de paramètre table | Microsoft Docs
-description: Découverte de type de paramètre table à l’aide d’OLE DB pilote pour SQL Server
+title: Découverte du type de paramètre table | Microsoft Docs
+description: Détection des types des paramètres table avec OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4e824e39a44985dc2f46a1a27c7b5b4e8d05a6dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015305"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Découverte du type de paramètre table
@@ -26,9 +26,9 @@ ms.locfileid: "68015305"
 
   Le consommateur, autrement dit, l’application cliente utilisant le pilote OLE DB pour SQL Server, peut découvrir le type de chaque paramètre de commande si le texte de la commande a été donné au fournisseur OLE DB. Une fois le type d’un paramètre table connu, le consommateur peut découvrir les informations de métadonnées de chacune des colonnes du paramètre table.  
   
- Les informations de type des paramètres de procédure sont prises en charge par ICommandWithParameters:: GetParameterInfo pour la plupart des types de paramètres. Depuis [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], avec l’introduction des types définis par l’utilisateur et du type de données **xml**, la méthode GetParameterInfo n’est plus suffisante, car il n’est pas possible de fournir des informations sur les types définis par l’utilisateur (nom, schéma et catalogue) par le biais de ICommandWithParameters. Une nouvelle interface, ISSCommandWithParameters, a été définie pour fournir des informations sur le type étendu.  
+ Les informations de type des paramètres de procédure sont prises en charge par ICommandWithParameters::GetParameterInfo pour la plupart des types de paramètres. Depuis [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], avec l’introduction des types définis par l’utilisateur et du type de données **xml**, la méthode GetParameterInfo n’est plus suffisante, car il n’est pas possible de fournir des informations sur les types définis par l’utilisateur (nom, schéma et catalogue) par le biais de ICommandWithParameters. Une nouvelle interface, ISSCommandWithParameters, a été définie pour fournir des informations étendues sur les types.  
   
- Pour les paramètres table, vous utilisez également l’interface ISSCommandWithParameters pour découvrir des informations détaillées. Le client appelle ISSCommandWithParameters:: GetParameterInfo après la préparation de l’objet de commande. Pour les paramètres table, le membre *wType* de la structure DBPARAMINFO est défini sur DBTYPE_TABLE par le fournisseur. Le champ *ulParamSize* de la structure DBPARAMINFO a la valeur ~0.  
+ Pour les paramètres table, l'interface ISSCommandWithParameters est également utilisée pour découvrir des informations détaillées. Le client appelle ISSCommandWithParameters::GetParameterInfo après la préparation de l’objet de commande. Pour les paramètres table, le membre *wType* de la structure DBPARAMINFO est défini sur DBTYPE_TABLE par le fournisseur. Le champ *ulParamSize* de la structure DBPARAMINFO a la valeur ~0.  
   
  Le consommateur peut ensuite demander des propriétés supplémentaires (nom de catalogue, nom de schéma et nom du type de paramètre table, tri des colonnes et colonnes par défaut) avec ISSCommandWithParameters::GetParameterProperties.  
   

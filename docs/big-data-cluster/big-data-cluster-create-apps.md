@@ -1,22 +1,23 @@
 ---
 title: Déployer des applications avec azdata
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Déployez un script Python ou R en tant qu’application sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706693"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253146"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Guide pratique pour déployer une application sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Guide pratique pour déployer une application sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -41,20 +42,20 @@ Les types d’applications suivants sont pris en charge :
 - [Cluster Big Data SQL Server 2019](deployment-guidance.md)
 - [Utilitaire de ligne de commande azdata](deploy-install-azdata.md)
 
-## <a name="capabilities"></a>Fonctions
+## <a name="capabilities"></a>Fonctionnalités
 
 Dans SQL Server 2019, vous pouvez créer, supprimer, décrire, initialiser, exécuter et mettre à jour votre application. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **azdata**.
 
-|Command |Description |
+|Commande |Description |
 |:---|:---|
 |`azdata login` | Pour se connecter à un cluster Big Data SQL Server |
-|`azdata app create` | Pour créer une application |
-|`azdata app delete` | Pour supprimer une application |
-|`azdata app describe` | Pour décrire une application |
-|`azdata app init` | Pour démarrer le squelette d’une nouvelle application |
-|`azdata app list` | Pour lister les applications |
-|`azdata app run` | Pour exécuter une application |
-|`azdata app update`| Pour mettre à jour une application |
+|`azdata app create` | Créez une application. |
+|`azdata app delete` | Supprimez une application. |
+|`azdata app describe` | Décrivez une application. |
+|`azdata app init` | Lancez un nouveau squelette d’applications. |
+|`azdata app list` | Répertoriez une ou des applications. |
+|`azdata app run` | Exécutez une application. |
+|`azdata app update`| Mettez à jour une application. |
 
 Vous pouvez utiliser le paramètre `--help` pour obtenir de l’aide, comme dans l’exemple suivant :
 
@@ -64,7 +65,7 @@ azdata app create --help
 
 Les sections suivantes décrivent ces commandes de façon plus détaillée.
 
-## <a name="sign-in"></a>Connexion
+## <a name="sign-in"></a>Se connecter
 
 Avant de déployer ou d’utiliser les applications, connectez-vous à votre cluster Big Data SQL Server à l’aide de la commande `azdata login`. Spécifiez l’adresse IP externe du service `controller-svc-external` (par exemple, `https://ip-address:30080`), ainsi que le nom d’utilisateur et le mot de passe du cluster.
 
@@ -295,4 +296,4 @@ azdata app delete --name add-app --version v1
 
 Pour plus d’informations, découvrez comment intégrer des applications déployées sur des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans vos propres applications en consultant [Consommer des applications sur des clusters Big Data](big-data-cluster-consume-apps.md). Vous pouvez également consulter d’autres [exemples de déploiement d’application](https://aka.ms/sql-app-deploy).
 
-Pour plus d’informations sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md)
+Pour plus d’informations sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md).

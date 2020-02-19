@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8fc245cebdb106eb81af8c5ae1fba6a2bcc041b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015230"
 ---
 # <a name="transactions"></a>Transactions
@@ -26,11 +26,11 @@ ms.locfileid: "68015230"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server implémente la prise en charge des transactions locales. Le consommateur peut utiliser des transactions distribuées ou coordonnées à l'aide de Microsoft Distributed Transaction Coordinator (MS DTC). Pour les consommateurs qui exigent un contrôle des transactions qui couvre plusieurs sessions, le pilote OLE DB pour SQL Server peut joindre des transactions lancées et gérées par MS DTC.  
+  OLE DB Driver pour SQL Server implémente la prise en charge des transactions locales. Le consommateur peut utiliser des transactions distribuées ou coordonnées à l'aide de Microsoft Distributed Transaction Coordinator (MS DTC). Pour les consommateurs qui exigent un contrôle des transactions qui couvre plusieurs sessions, le pilote OLE DB pour SQL Server peut joindre des transactions lancées et gérées par MS DTC.  
   
  Par défaut, le pilote OLE DB pour SQL Server utilise un mode de validation automatique des transactions, dans lequel chaque action discrète dans une session de consommateur comprend une transaction complète sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le mode de validation automatique du pilote OLE DB pour SQL Server est local, et les transactions validées automatiquement ne couvrent jamais plus d’une session.  
   
- Le pilote OLE DB pour SQL Server expose l’interface **ITransactionLocal**, ce qui permet au consommateur d’utiliser explicitement et implicitement des transactions de démarrage sur une connexion unique à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le pilote OLE DB pour SQL Server ne prend pas en charge les transactions locales imbriquées.  
+ Le pilote OLE DB pour SQL Server expose l’interface **ITransactionLocal**, ce qui permet au consommateur d’utiliser explicitement et implicitement des transactions de démarrage sur une connexion unique à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. OLE DB Driver pour SQL Server ne prend pas en charge les transactions locales imbriquées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68015230"
   
 -   [Prise en charge des transactions distribuées](../../oledb/ole-db-transactions/supporting-distributed-transactions.md)  
   
--   [Niveaux &#40;d’isolement OLE DB&#41;](../../oledb/ole-db-transactions/isolation-levels-ole-db.md)  
+-   [Niveaux d'isolation &#40;OLE DB&#41;](../../oledb/ole-db-transactions/isolation-levels-ole-db.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

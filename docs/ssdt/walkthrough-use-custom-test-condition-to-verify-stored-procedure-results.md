@@ -1,23 +1,24 @@
 ---
-title: 'Procédure pas à pas : utilisation d’une condition de test personnalisée pour vérifier le résultat d’une procédure stockée | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Condition de test personnalisée pour vérifier les résultats d’une procédure stockée
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068979"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242661"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procédure pas à pas : Utiliser une condition de test personnalisée pour vérifier les résultats d’une procédure stockée
+
 Dans cette procédure pas à pas d'extension de fonctionnalité, vous allez créer une condition de test, puis vérifier cette fonctionnalité en créant un test unitaire SQL Server. Cette procédure inclut la création d'un projet de bibliothèque de classes pour la condition de test, sa signature et son installation. Si vous disposez déjà d’une condition de test à mettre à jour, consultez [Procédure : mettre à niveau une condition de test personnalisée Visual Studio 2010 d’une version antérieure vers SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 Cette procédure pas à pas décrit les tâches suivantes :  
@@ -63,7 +64,7 @@ Ensuite, signez le projet.
   
 6.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
-7.  Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+7.  Dans le menu **Générer**, cliquez sur **Générer la solution**.  
   
 Ensuite, vous allez ajouter les références nécessaires au projet  
   
@@ -344,7 +345,7 @@ namespace ColumnCountCondition
 Vous allez ensuite générer le projet.  
   
 ## <a name="xxx"></a>Compilation du projet et installation de votre condition de test  
-Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+Dans le menu **Générer**, cliquez sur **Générer la solution**.  
   
 Puis, vous allez copier les informations d'assembly dans le répertoire Extensions. Au démarrage de Visual Studio, les extensions sont identifiées dans le répertoire et les sous-répertoires %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions et mises à disposition :  
   

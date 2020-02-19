@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994726"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Exécuter une procédure stockée avec RPC et traiter la sortie
@@ -38,13 +38,13 @@ ms.locfileid: "67994726"
   
 3.  Créez un jeu de liaisons (une pour chaque fabricant de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-4.  Créez un accesseur pour les paramètres définis à l’aide de la méthode **IAccessor:: CreateAccessor** . **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
+4.  Créez un accesseur pour les paramètres définis à l'aide de la méthode **IAccessor::CreateAccessor**. **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
   
 5.  Remplissez la structure DBPARAMS.  
   
 6.  Appelez la commande **Execute** (dans ce cas, un appel à une procédure stockée).  
   
-7.  Traitez l’ensemble de lignes et libérez-le à l’aide de la méthode **IRowset:: Release** .  
+7.  Traitez l'ensemble de lignes et libérez-le à l'aide de la méthode **IRowset::Release**.  
   
 8.  Traitez les valeurs de codes de retour et de paramètres de sortie reçues à partir de la procédure stockée.  
   

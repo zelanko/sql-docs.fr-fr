@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993922"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Prise en charge des ensembles de lignes de schéma (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "67993922"
   Le pilote OLE DB pour SQL Server prend également en charge le retour des informations de schéma d’un serveur lié lors du traitement de requêtes distribuées [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Bien [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que prenne en charge les synonymes, les métadonnées des synonymes ne sont pas retournées par OLE DB pilote pour les SQL Server.  
+>  Bien que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prenne en charge les synonymes, OLE DB Driver pour SQL Server ne retourne pas les métadonnées de ces derniers.  
   
  Les tableaux suivants répertorient les ensembles de lignes de schéma et les colonnes de restriction prises en charge par le pilote OLE DB pour SQL Server.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67993922"
 ## <a name="in-this-section"></a>Dans cette section  
  [Prise en charge des requêtes distribuées dans les ensembles de lignes de schéma](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [OLE DB de &#40;l’ensemble de lignes LINKEDSERVERS&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [Ensemble de lignes LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation du pilote OLE DB pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   

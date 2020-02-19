@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994575"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  Index de champ dans le fichier de données de l'utilisateur.  
   
  *eUserDataType*[in]  
- Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriés dans le OLE DB pilote pour SQL Server fichier d’en-tête (msoledbsql. h) avec le format BCP_TYPE_XXX, par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un fichier lorsque l'argument **eUserDataType** est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
+ Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriés dans le fichier d'en-tête OLE DB Driver pour SQL Server (msoledbsql.h) au format BCP_TYPE_XXX ; par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un fichier lorsque l’argument **eUserDataType** est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
   
 -   Si la colonne source n'est pas décimale ou numérique, la précision et l'échelle par défaut sont utilisées.  
   
@@ -92,7 +92,7 @@ HRESULT BCPColFmt(
   
  Le fait d'attribuer BCP_LENGTH_NULL à **cbUserData** indique que toutes les valeurs dans les champs de fichier de données sont ou doivent être NULL. Le fait d'attribuer BCP_LENGTH_VARIABLE à **cbUserData** indique que le système doit déterminer la longueur des données pour chaque champ. Pour certains champs, cela peut signifier qu'un indicateur de longueur/null est généré pour précéder les données sur une copie à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ou que l'indicateur est attendu dans les données copiées vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Pour les types de données caractères et binaires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , **cbUserData** peut être BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou une valeur positive. Si **cbUserData** est BCP_LENGTH_VARIABLE, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de marque de fin pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si **cbUserData** est BCP_LENGTH_VARIABLE, le type de données est un type caractère ou binaire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ; et si aucun indicateur de longueur et aucune séquence de marque de fin n'est spécifié, le système retourne un message d'erreur.  
+ Pour les types de données caractères et binaires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], **cbUserData** peut être BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou une valeur positive. Si **cbUserData** est BCP_LENGTH_VARIABLE, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de marque de fin pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si **cbUserData** est BCP_LENGTH_VARIABLE, le type de données est un type caractère ou binaire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si aucun indicateur de longueur ni aucune séquence de terminateur ne sont spécifiés, le système retourne un message d’erreur.  
   
  Si **cbUserData** a la valeur 0 ou une valeur positive, le système utilise **cbUserData** comme longueur de données maximale. Toutefois, si un indicateur de longueur ou une séquence de terminaison est fournie en plus d'une valeur **cbUserData**positive, le système détermine la longueur de données en utilisant la méthode qui entraîne la plus petite quantité de données à copier.  
   
@@ -113,12 +113,12 @@ HRESULT BCPColFmt(
  *idxServerCol*[in]  
  Position ordinale de la colonne dans la table de base de données. Le premier numéro de colonne est 1. La position ordinale d'une colonne est signalée par **IColumnsInfo::GetColumnInfo** ou des méthodes semblables. Si cette valeur est 0, la copie en bloc ignore le champ dans le fichier de données.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="return-code-values"></a>Codet de retour  
+ S_OK  
  S_OK  
   
  E_FAIL  
- Une erreur spécifique au fournisseur s'est produite. Pour obtenir des informations détaillées, utilisez l'interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Une erreur spécifique au fournisseur s’est produite. Pour obtenir des informations détaillées, utilisez l’interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) n’a pas été appelée avant d’appeler cette méthode.  

@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: abff9abb82ad0ff54d9b1126541b98babbd6bd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015300"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Prise en charge du type de paramètre table OLE DB
@@ -27,7 +27,7 @@ ms.locfileid: "68015300"
   Cet article décrit la prise en charge du type OLE DB pour les paramètres table.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Objet d'ensemble de lignes de paramètre table  
- Vous pouvez créer un objet d'ensemble de lignes spécialisé pour des paramètres table. Vous créez l’objet d’ensemble de lignes de paramètre table à l’aide de ITableDefinitionWithConstraints:: CreateTableWithConstraints ou IOpenRowset:: OpenRowset. Pour ce faire, définissez le membre *eKind* du paramètre *pTableID* sur DBKIND_GUID_NAME, et fournissez CLSID_ROWSET_INMEMORY comme membre *guid*. Le nom de type de serveur pour le paramètre table doit être spécifié dans le membre *pwszName* de *pTableID* lors de l’utilisation de IOpenRowset:: OPENROWSET. L’objet d’ensemble de lignes de paramètre table se comporte comme un pilote de OLE DB standard pour SQL Server objet.  
+ Vous pouvez créer un objet d'ensemble de lignes spécialisé pour des paramètres table. Vous créez l’objet d’ensemble de lignes de paramètre table à l’aide de ITableDefinitionWithConstraints::CreateTableWithConstraints ou IOpenRowset::OpenRowset. Pour ce faire, définissez le membre *eKind* du paramètre *pTableID* sur DBKIND_GUID_NAME, et fournissez CLSID_ROWSET_INMEMORY comme membre *guid*. Le nom de type de serveur pour le paramètre table doit être spécifié dans le membre *pwszName* de *pTableID* lors de l’utilisation de IOpenRowset::OpenRowset. L'objet d'ensemble de lignes de paramètre table se comporte comme un objet OLE DB Driver pour SQL Server normal.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -46,7 +46,7 @@ CoType RowsetTVP
 };  
 ```  
   
-## <a name="dbtypetable"></a>DBTYPE_TABLE  
+## <a name="dbtype_table"></a>DBTYPE_TABLE  
  DBTYPE_TABLE est un nouveau type qui représente un type de table. Ce type spécifie des paramètres table dans différentes interfaces OLE DB où un DBTYPE est requis.  
   
 ```  
@@ -58,10 +58,10 @@ CoType RowsetTVP
  Les conversions vers et à partir de DBTYPE_TABLE pour tout autre type ne sont pas prises en charge. IConvertType::CanConvert retourne S_FALSE pour les conversions non prises en charge, pour toute demande autre qu’une conversion DBTYPE_TABLE en DBTYPE_TABLE. Cela suppose DBCONVERTFLAGS_PARAMETER sur l’objet Command.  
   
 ## <a name="methods"></a>Méthodes  
- Pour plus d’informations sur les méthodes de OLE DB qui prennent en charge les paramètres table, consultez [OLE DB méthodes &#40;&#41;de prise en charge de type de paramètre table](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ Pour plus d’informations sur les méthodes de OLE DB qui prennent en charge les paramètres table, consultez [Prise en charge des types de paramètre table OLE DB &#40;Méthodes&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Propriétés  
- Pour plus d’informations sur les propriétés de OLE DB qui prennent en charge les paramètres table, consultez [OLE DB propriétés &#40;&#41;de prise en charge du type de paramètre table](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Pour plus d’informations sur les propriétés de OLE DB qui prennent en charge les paramètres table, consultez [Prise en charge des types de paramètre table OLE DB &#40;Propriétés&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

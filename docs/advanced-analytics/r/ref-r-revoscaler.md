@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706761"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (bibliothèque R dans SQL Server)
@@ -36,7 +36,7 @@ La bibliothèque **RevoScaleR** est distribuée dans plusieurs produits Microsof
 La bibliothèque **RevoScaleR** est basée sur R 3.4.3 et n’est disponible que lorsque vous installez l’un des produits ou téléchargements Microsoft suivants :
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [Services de Machine Learning SQL Server](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou version ultérieure](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 

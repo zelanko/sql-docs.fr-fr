@@ -1,6 +1,6 @@
 ---
 title: Jeu de données de démonstration Iris pour les tutoriels
-Description: Créez une base de données contenant le jeu de données Iris ainsi qu’une table pour stocker des modèles. Ce jeu de données est utilisé dans des exercices qui montrent comment encapsuler le langage R ou du code Python dans une procédure stockée SQL Server.
+Description: Créez une base de données contenant le jeu de données Iris et des modèles prédictifs. Ce jeu de données est utilisé dans les didacticiels R et Python pour SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727098"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908762"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Données de démonstration Iris pour les tutoriels Python et R dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données�
 
 +  [Démarrage rapide : Créer, entraîner et utiliser un modèle Python avec des procédures stockées dans SQL Server](quickstart-python-train-score-in-tsql.md)
 
-## <a name="create-the-database"></a>Créer la base de données
+## <a name="create-the-database"></a>Création de la base de données
 
 1. Démarrez SQL Server Management Studio, puis ouvrez une nouvelle fenêtre **Requête**.  
 
@@ -142,11 +142,11 @@ Vous pouvez obtenir les données Iris intégrées à partir de R ou de Python. V
 
 ## <a name="query-the-data"></a>Interroger les données
 
-En guise d’étape de validation, exécutez une requête pour vérifier que les données ont bien été chargées.
+En guise d’étape de validation, exécutez une requête pour confirmer que les données ont été chargées.
 
 1. Dans l’Explorateur d’objets, sous Bases de données, cliquez avec le bouton droit sur la base de données **irissql**, puis démarrez une nouvelle requête.
 
-2. Exécutez quelques requêtes simples :
+2. Exécutez des requêtes simples :
 
     ```sql
     SELECT TOP(10) * FROM iris_data;

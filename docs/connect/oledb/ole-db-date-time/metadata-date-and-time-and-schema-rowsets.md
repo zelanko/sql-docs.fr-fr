@@ -1,5 +1,5 @@
 ---
-title: Ensembles de lignes de date et d’heure et de schéma | Microsoft Docs
+title: Date et heure et ensembles de lignes de schéma | Microsoft Docs
 description: Date et heure et ensembles de lignes de schéma
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015691"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Métadonnées - Date et heure et ensembles de lignes de schéma
@@ -60,21 +60,21 @@ ms.locfileid: "68015691"
   
  DBCOLUMNFLAGS_SS_ISVARIABLESCALE est valide seulement en cas de connexion à un serveur [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou ultérieur. DBCOLUMNFLAGS_SS_ISFIXEDSCALE est non défini en cas de connexion à des serveurs de bas niveau.  
   
-## <a name="procedureparameters-rowset"></a>Ensemble de lignes PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Ensemble de lignes PROCEDURE_PARAMETERS  
  DATA_TYPE contient les mêmes valeurs que l'ensemble de lignes de schéma COLUMNS et TYPE_NAME contient le type de serveur.  
   
  Une nouvelle colonne, SS_DATETIME_PRECISION, a été ajoutée pour retourner la précision du type comme dans la colonne DATETIME_PRECISION, semblable à l'ensemble de lignes COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Ensemble de lignes PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Ensemble de lignes PROVIDER_TYPES  
  Les lignes suivantes sont retournées pour les types date/heure :  
   
-|Type -><br /><br /> colonne|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type -><br /><br /> Colonne|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|»|»|»|»|»|»|  
-|LITERAL_SUFFIX|»|»|»|»|»|»|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
@@ -95,6 +95,6 @@ ms.locfileid: "68015691"
  Comme OLE DB ne définit MINIMUM_SCALE et MAXIMUM_SCALE que pour les types numériques et décimaux, l’utilisation de ces colonnes par le pilote OLE DB pour SQL Server pour les types time, datetime2 et datetimeoffset n’est pas standard.  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLE DB &#40;de métadonnées&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [Métadonnées &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

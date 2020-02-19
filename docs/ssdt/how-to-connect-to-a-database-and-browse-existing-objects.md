@@ -1,32 +1,33 @@
 ---
-title: 'Procédure : se connecter à une base de données et parcourir les objets existants | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: se connecter à une base de données et parcourir les objets existants
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49049fbbff2397f6492cac385b10c23a66d48a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897326"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75755817"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procédure : se connecter à une base de données et parcourir les objets existants
+
 La connexion à une base de données active, la conception ou la navigation dans son schéma et l'exécution de requêtes relatives à ses objets sont des tâches très courantes pour les administrateurs et les développeurs de base de données. L'Explorateur d'objets SQL Server de Visual Studio contient à présent un nœud **SQL Server** dédié, sous lequel toutes les instances SQL Server connectées et leurs bases de données sont regroupées dans une hiérarchie de type SSMS. Les instances SQL Server connectées peuvent être une instance sur site, telle que le serveur SQL Server 2008 en cours d'exécution, ou une instance SQL Azure hors site.  
   
-La procédure suivante suppose que vous avez déjà installé l'exemple de base de données AdventureWorks. Utilisez [CodePlex](https://msftdbprodsamples.codeplex.com/) pour rechercher et installer des exemples de bases de données pour différentes versions de SQL Server. Si vous préférez, vous pouvez aussi suivre la procédure et utiliser une base de données existante sur votre serveur.  
+La procédure suivante suppose que vous avez déjà installé l'exemple de base de données AdventureWorks. Utilisez [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) pour rechercher et installer des exemples de bases de données pour différentes versions de SQL Server. Si vous préférez, vous pouvez aussi suivre la procédure et utiliser une base de données existante sur votre serveur.  
   
 ### <a name="to-connect-to-a-database-instance"></a>Pour se connecter à une instance de base de données  
   
-1.  Dans Visual Studio, vérifiez que l’**Explorateur d’objets SQL Server** est ouvert. Si ce n'est pas le cas, cliquez sur le menu **Affichage** et sélectionnez **Explorateur d'objets SQL Server**.  
+1.  Dans Visual Studio, vérifiez que l’**Explorateur d’objets SQL Server** est ouvert. Si ce n’est pas le cas, cliquez sur le menu **Affichage** et sélectionnez **Explorateur d’objets SQL Server**.  
   
 2.  Cliquez avec le bouton droit sur le nœud **SQL Server** dans l'**Explorateur d'objets SQL Server**, puis sélectionnez **Ajouter SQL Server**.  
   

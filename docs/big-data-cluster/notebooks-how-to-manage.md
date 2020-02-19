@@ -1,20 +1,21 @@
 ---
-title: Gérer des notebooks dans Azure Data Studio
-titleSuffix: SQL Server big data clusters
+title: 'Gérer des notebooks : Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: Découvrez comment gérer des notebooks dans Azure Data Studio. Cette gestion comprend l’ouverture des notebooks, leur enregistrement, ainsi que la modification de la connexion de votre cluster Big Data.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844274"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244089"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Comment gérer des notebooks dans Azure Data Studio
 
@@ -42,7 +43,7 @@ Sélectionnez **Fichier : Ouvrir** dans le menu Fichier (CTRL + O dans Windows)
 
 ![Ouvrir la boîte de dialogue Ouvrir un fichier en sélectionnant Fichier : Ouvrir](./media/notebooks-how-to-manage/open-file-1.png) 
 
-### <a name="dashboard"></a>Tableau de bord
+### <a name="dashboard"></a>tableau de bord
 
 Cliquez sur **Ouvrir le notebook** dans le tableau de bord pour ouvrir la boîte de dialogue Fichier : Ouvrir.
 

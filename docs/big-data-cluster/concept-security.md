@@ -1,7 +1,7 @@
 ---
 title: Concepts de sécurité
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit les concepts de sécurité des clusters Big Data SQL Server. Il aborde notamment les points de terminaison de cluster et l’authentification des clusters.
+description: Cet article décrit les concepts de sécurité des clusters Big Data SQL Server. Ce contenu aborde notamment les points de terminaison de cluster et l’authentification des clusters.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,24 +9,29 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532378"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253123"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Concepts de sécurité pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="security-concepts-for-big-data-clusters-2019"></a>Concepts de sécurité pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article aborde les principaux concepts liés à la sécurité dans le cluster Big Data
 
-Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] assurent des fonctionnalités d’autorisation et d’authentification uniformes et cohérentes. Un cluster Big Data peut être intégré à Active Directory par le biais d’un déploiement entièrement automatisé qui configure l’intégration Active Directory sur un domaine existant. Une fois qu’un cluster Big Data est configuré avec l’intégration Active Directory, vous pouvez tirer parti des identités et des groupes d’utilisateurs existants pour un accès unifié sur tous les points de terminaison. En outre, une fois que vous avez créé des tables externes dans SQL Server, vous pouvez contrôler l’accès aux sources de données en accordant l’accès à des tables externes aux utilisateurs et groupes Active Directory, en centralisant ainsi les stratégies d’accès aux données à un emplacement unique.
+Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] assurent des fonctionnalités d’autorisation et d’authentification uniformes et cohérentes. Un cluster Big Data peut être intégré à Active Directory (AD) par le biais d’un déploiement entièrement automatisé qui configure l’intégration AD sur un domaine existant. Une fois qu’un cluster Big Data est configuré avec l’intégration AD, vous pouvez tirer parti des identités et des groupes d’utilisateurs existants pour un accès unifié sur tous les points de terminaison. En outre, une fois que vous avez créé des tables externes dans SQL Server, vous pouvez contrôler l’accès aux sources de données en accordant l’accès à des tables externes aux utilisateurs et groupes AD, en centralisant ainsi les stratégies d’accès aux données à un emplacement unique.
 
-## <a name="authentication"></a>Authentification
+Dans cette vidéo de 14 minutes, vous obtiendrez une vue d’ensemble de la sécurité des clusters Big Data :
 
-Les points de terminaison de cluster externes prennent en charge l’authentification Active Directory. Cela signifie que vous pouvez utiliser votre identité AD pour vous authentifier auprès du cluster Big Data.
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
+
+
+## <a name="authentication"></a>Authentication
+
+Les points de terminaison de cluster externes prennent en charge l’authentification AD. Utilisez votre identité AD pour vous authentifier auprès du cluster Big Data.
 
 ### <a name="cluster-endpoints"></a>Points de terminaison de cluster
 
@@ -34,7 +39,7 @@ Il existe cinq points d’entrée pour le cluster Big Data
 
 * Instance maître : point de terminaison TDS permettant d’accéder à l’instance maître SQL Server dans le cluster, à l’aide d’outils de base de données et d’applications comme SSMS ou Azure Data Studio. Lorsque vous utilisez des commandes HDFS ou SQL Server à partir d’azdata, l’outil se connecte aux autres points de terminaison, en fonction de l’opération.
 
-* Passerelle pour accéder aux fichiers HDFS, Spark (Knox) : il s’agit d’un point de terminaison basé sur HTTPS. Ce point de terminaison est utilisé pour accéder à des services tels que webHDFS et Spark.
+* Passerelle pour accéder aux fichiers HDFS, Spark (Knox) ; point de terminaison HTTPS pour accéder à des services tels que webHDFS et Spark.
 
 * Point de terminaison de service de gestion de cluster (contrôleur) : service de gestion de cluster Big Data qui expose les API REST pour gérer le cluster. L’outil azdata nécessite une connexion à ce point de terminaison.
 
@@ -64,15 +69,14 @@ Toutes les communications de SQL Server à SQL Server, telles que l’instance m
 
 ## <a name="basic-administrator-login"></a>Connexion administrateur de base
 
-Vous pouvez choisir de déployer le cluster en mode Active Directory ou à l’aide d’une connexion administrateur de base uniquement. L’utilisation de la connexion administrateur de base seule n’est pas un mode de sécurité pris en charge par la production et est principalement destinée à l’évaluation du produit.
+Vous pouvez choisir de déployer le cluster en mode AD ou à l’aide d’une connexion administrateur de base uniquement. L’utilisation de la connexion administrateur de base seule n’est pas un mode de sécurité pris en charge par la production et est destinée à l’évaluation du produit.
 
-Même si vous choisissez le mode Active Directory, les connexions de base seront créées pour l’administrateur de cluster. Cela fournit une « porte dérobée » en cas de défaillance de la connectivité Active Directory.
+Même si vous choisissez le mode Active Directory, les connexions de base seront créées pour l’administrateur de cluster. Cette fonctionnalité offre un accès alternatif, en cas de défaillance de la connectivité AD.
 
-Lors du déploiement, cette connexion de base se verra accorder des autorisations d’administrateur dans le cluster. Cela signifie que l’utilisateur sera administrateur système dans l’instance maître SQL Server et un administrateur dans le contrôleur de cluster.
+Lors du déploiement, cette connexion de base se verra accorder des autorisations d’administrateur dans le cluster. L’utilisateur de la connexion sera administrateur système dans l’instance maître SQL Server et un administrateur dans le contrôleur de cluster.
 Les composants Hadoop ne prennent pas en charge l’authentification en mode mixte, ce qui signifie qu’il n’est pas possible d’utiliser une connexion administrateur de base pour l’authentification auprès de la passerelle (Knox).
 
-
-Il s’agit des informations d’identification de connexion que vous devez définir lors du déploiement.
+Les informations d’identification de connexion que vous devez définir lors du déploiement.
 
 Nom d’utilisateur d’administrateur de cluster :
  + `AZDATA_USERNAME=<username>`
@@ -87,5 +91,5 @@ Mot de passe d’administrateur de cluster :
 
 Pour en savoir plus sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez les ressources suivantes :
 
-- [Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
+- [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md)
 - [Atelier : Architecture des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

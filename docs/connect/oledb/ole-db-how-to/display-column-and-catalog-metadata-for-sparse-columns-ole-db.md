@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8aa971142e1154f50ebc0cf17107682b47529c68
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874625"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
@@ -24,9 +24,9 @@ ms.locfileid: "70874625"
 
   Cet exemple crée une table à trois colonnes : une colonne éparse, une colonne non éparse et une colonne de jeu de colonnes. L'exemple affiche ensuite les indicateurs OLE DB indiquant la colonne et les métadonnées de catalogue de la colonne non éparse et de la colonne de jeu de colonnes.  
   
- Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses dans OLE DB Driver for SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure. Pour obtenir plus d'informations sur les colonnes éparses, consultez [Prise en charge des colonnes éparses dans OLE DB Driver pour SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
 ```  

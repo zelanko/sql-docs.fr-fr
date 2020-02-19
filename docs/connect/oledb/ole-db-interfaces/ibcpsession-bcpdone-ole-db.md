@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9df2726898fdbd3d877296d4da67738c3f792234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994553"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -37,10 +37,10 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Notes  
- Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s'apparente à l'appel de la méthode [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
+ Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s’apparente à l’appel de la méthode [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="return-code-values"></a>Codet de retour  
+ S_OK  
  S_OK  
   
  E_UNEXPECTED  

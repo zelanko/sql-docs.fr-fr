@@ -1,5 +1,5 @@
 ---
-title: Exemple de types de données spatiales pour le pilote MSSQL JDBC | Microsoft Docs
+title: Exemple de types de données spatiales pour le pilote JDBC MSSQL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027684"
 ---
 # <a name="spatial-data-types-sample"></a>Exemple de types de données spatiales
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Cet [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] exemple d’application montre comment créer, insérer et récupérer des types de données spatiales (Geometry et Geography).
+Cet exemple d’application [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment créer, insérer et récupérer des types de données spatiales (Geometry et Geography).
   
 Le fichier de code de cet exemple, SpatialDataTypes.java, se trouve à l’emplacement suivant :  
 
@@ -37,9 +37,9 @@ Pour exécuter cet exemple d’application, définissez le classpath de façon �
   
 ## <a name="example"></a>Exemple
 
-Dans l’exemple suivant, l’exemple de code crée une table appelée SpatialDataTypesTable_JDBC_Sample qui contient les colonnes «Geometry» et «geography».
+Dans l’exemple suivant, le code crée une table nommée SpatialDataTypesTable_JDBC_Sample qui contient les colonnes « Geometry » et « Geography ».
 
-L’exemple crée d’abord des objets «Geometry» et «Geography» à partir d’un texte bien connu (WKT) représentant un POINT. Elle utilise un SQLServerPreparedStatement avec une requête paramétrable pour mapper les données à chaque colonne en conséquence.
+L’exemple crée d’abord des objets « Geometry » et « Geography » à partir d’un texte bien connu (WKT) représentant un POINT. Il utilise un SQLServerPreparedStatement avec une requête paramétrable pour mapper les données à chaque colonne en conséquence.
 
 Enfin, l’exemple insère les données dans la table et les récupère. Les données sont affichées sous la forme de WKT.
 

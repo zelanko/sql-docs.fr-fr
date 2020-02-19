@@ -1,35 +1,34 @@
 ---
-title: 'Démarrage rapide : Écrire des fonctions R'
-titleSuffix: SQL Server Machine Learning Services
-description: Dans ce démarrage rapide, découvrez comment écrire une fonction R pour un calcul statistique avancé avec SQL Server Machine Learning Services.
+title: 'Démarrage rapide : Fonctions R'
+description: Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de R avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e725282aaacde748b43a37a317037b5471efd009
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e67dcbc35bf5af88d2a7fab37f795cd5cc1d55d9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726886"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831777"
 ---
-# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Démarrage rapide : Écrire des fonctions R avancées avec SQL Server Machine Learning Services
+# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Démarrage rapide : Fonctions R avancées avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Ce démarrage rapide explique comment incorporer les fonctions mathématiques et utilitaires de R dans une procédure stockée SQL avec SQL Server Machine Learning Services. Les fonctions statistiques avancées qui sont difficiles à implémenter dans T-SQL peuvent être créées dans R avec une seule ligne de code.
+Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de R avec SQL Server Machine Learning Services. Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en R avec seulement quelques lignes de code.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-- Ce démarrage rapide nécessite l’accès à une instance de SQL Server avec [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), ainsi que l’installation du langage R.
+- Ce démarrage rapide nécessite un accès à une instance de SQL Server sur laquelle [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) est installé avec le langage R.
 
-  Votre instance SQL Server peut se trouver sur une machine virtuelle Azure ou être locale. N’oubliez pas que la fonctionnalité de script externe est désactivée par défaut. Par conséquent, vous devrez peut-être [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que le **service SQL Server Launchpad** est en cours d’exécution avant de commencer.
+  Votre instance SQL Server peut se trouver sur une machine virtuelle Azure ou être locale. Sachez simplement que la fonctionnalité de script externe est désactivée par défaut. Avant de commencer, vous serez donc peut-être amené à [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que le **service SQL Server Launchpad** est en cours d’exécution.
 
-- Vous aurez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts R. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Vous aurez aussi besoin d’un outil pour exécuter les requêtes SQL qui contiennent des scripts R. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Créer une procédure stockée pour générer des nombres aléatoires
 
@@ -52,7 +51,7 @@ EXECUTE sp_execute_external_script
       WITH RESULT SETS (([Density] float NOT NULL));
 ```
 
-Vous souhaitez générer plus facilement un autre ensemble de nombres aléatoires ?
+Que se passe-t-il si vous voulez simplifier la génération d’un autre ensemble de nombres alétaoires ?
 
 C’est facile lorsqu’il est combiné avec SQL Server. Vous définissez une procédure stockée qui obtient les arguments de l’utilisateur, puis transmettez ces arguments dans le script R en tant que variables.
 
@@ -74,23 +73,23 @@ EXECUTE sp_execute_external_script @language = N'R'
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-- La première ligne définit chaque paramètre d’entrée SQL nécessaire pendant l’exécution de la procédure stockée.
+- La première ligne définit chacun des paramètres d’entrée SQL exigés quand la procédure stockée est exécutée.
 
-- La ligne commençant par `@params` définit toutes les variables utilisées par le code R, ainsi que les types de données SQL correspondants.
+- La ligne commençant par `@params` définit toutes les variables utilisées par le code R et les types de données SQL correspondants.
 
-- Les lignes qui viennent de suite après mappent les noms de paramètres SQL aux noms de variables R correspondants.
+- Les lignes qui suivent immédiatement mappent les noms de paramètres SQL aux noms de variables R correspondants.
 
-Maintenant que vous avez inclus la fonction R dans une procédure stockée, vous pouvez l’appeler facilement et passer des valeurs différentes, comme ceci :
+Maintenant que vous avez wrappé la fonction R dans une procédure stockée, vous pouvez facilement l’appeler et passer des valeurs différentes, comme ceci :
 
 ```sql
 EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
-## <a name="use-r-utility-functions-for-troubleshooting"></a>Utiliser les fonctions utilitaires R pour résoudre les problèmes
+## <a name="use-r-utility-functions-for-troubleshooting"></a>Utiliser des fonctions utilitaires R à des fins de résolution des problèmes
 
 Le package **utils**, installé par défaut propose diverses fonctions utilitaires destinées à analyser l’environnement R actuel. Ces fonctions peuvent être utiles si vous constatez des différences de fonctionnement du code R dans SQL Server et les environnements extérieurs.
 
-Par exemple, vous pouvez utiliser la fonction `memory.limit()` R pour affecter de la mémoire à l’environnement R actif. Comme le package `utils` est installé par défaut mais pas chargé, vous devez utiliser la fonction `library()` pour le charger en premier lieu.
+Par exemple, vous pouvez utiliser la fonction `memory.limit()` R pour obtenir la mémoire de l’environnement R actuel. Étant donné que le package `utils` est installé mais pas chargé par défaut, vous devez utiliser la fonction `library()` pour le charger dans un premier temps.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -111,7 +110,7 @@ WITH RESULT SETS (([Col1] int not null));
 Pour créer un modèle Machine Learning à l’aide de R dans SQL Server, suivez ce démarrage rapide :
 
 > [!div class="nextstepaction"]
-> [Créer et évaluer un modèle prédictif dans R avec SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+> [Créer et scorer un modèle prédictif dans R avec SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 
 Pour plus d’informations sur SQL Server Machine Learning Services, consultez :
 

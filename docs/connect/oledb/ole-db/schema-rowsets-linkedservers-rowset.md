@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993879"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Ensembles de lignes de schéma - Ensemble de lignes LINKEDSERVERS
@@ -29,7 +29,7 @@ ms.locfileid: "67993879"
   
  L'ensemble de lignes **LINKEDSERVERS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de la colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nom d'un serveur lié.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricant ou autre nom identifiant le type de banque de données représenté par le nom du serveur lié.|  

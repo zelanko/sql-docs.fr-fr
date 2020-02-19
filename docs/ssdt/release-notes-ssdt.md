@@ -1,5 +1,5 @@
 ---
-title: Notes de publication pour SQL Server Data Tools (SSDT) | Microsoft Docs
+title: Notes de publication pour SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,16 +7,17 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 08/15/2019
+ms.custom: seo-lt-2019
+ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874890"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688787"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notes de publication pour SQL Server Data Tools (SSDT)
 
@@ -43,6 +44,40 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3,&nbsp; SSDT pour VS 2017
+
+_Mise en production :_ &nbsp; 3 janvier 2020  
+_Numéro de build :_ &nbsp; 14.0.16203.0  
+_SSDT pour Visual Studio 2017._
+
+### <a name="whats-new"></a>Nouveautés
+
+| Nouvel élément | Détails |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Suppression du composant de boîte de réception Source Power Query pour SQL Server 2017. Nous avons maintenant annoncé la source Power Query comme composant prêt à l’emploi pour SQL Server 2017 & 2019, et vous pouvez le télécharger [ici](https://www.microsoft.com/en-us/download/details.aspx?id=100619). |
+| Integration Services (SSIS) | Suppression du composant de boîte de réception Microsoft Oracle Connector pour SQL Server 2019. Nous avons maintenant annoncé le connecteur Microsoft Oracle pour SQL Server 2019 en tant que composant prêt à l’emploi, et vous pouvez le télécharger [ici](https://www.microsoft.com/en-us/download/details.aspx?id=58228). |
+| Integration Services (SSIS) | Correction d’un problème de lancement occasionnel du débogueur SSIS en raison de l’interface IDtsHost non inscrite lorsque la version du serveur cible est SQL Server 2017 ou 2019. |
+| Integration Services (SSIS) | Correction des principaux problèmes de disposition de l’interface utilisateur en mode haute résolution. |
+| Integration Services (SSIS) | .NET Framework mis à niveau vers la version 4.7 pour les tâches/composants de script lorsque la version du serveur cible est SQL Server 2019. |
+| Integration Services (SSIS) | Ajout de la propriété ConnectByProxy dans le gestionnaire de connexions ODBC afin de prendre en charge l’activation du runtime d'intégration auto-hébergé en tant que proxy dans le gestionnaire de connexions ODBC. |
+| Integration Services (SSIS) | Résolution d’un problème où les utilisateurs ne pouvaient pas ajouter de nouvelles sources de données en mode de déploiement de package. |
+| Integration Services (SSIS) | Résolution d’un problème où les utilisateurs ne pouvaient pas déboguer les tâches/composants de script si le code utilisait les nouvelles syntaxes introduites après .NET 4.5. |
+| Integration Services (SSIS) | Résolution d’un problème qui provoquait l’échec de la création du premier Data Factory dans un abonnement Azure via l’assistant de création de runtime d'intégration, en raison de l’absence d’inscription du fournisseur de ressources Data Factory. |
+| Integration Services (SSIS) | Correction du problème à cause duquel l’assistant de connexion SSIS dans ADF ne pouvait pas afficher correctement la liste des comptes de stockage Azure lorsqu’un seul compte de stockage de fichiers était présent dans l’abonnement. |
+| Integration Services (SSIS) | Résolution d’un problème où « Exécuter dans Azure » ne fonctionnait pas lorsque le package comprenait un conteneur. |
+| Integration Services (SSIS) | Résolution d’un problème lié au fait que char(n char) et varchar2(n char) étaient mappés à des types DTS incorrects dans le connecteur Oracle. |
+
+### <a name="known-issues"></a>Problèmes connus
+
+| Problème connu | Détails |
+| :---------- | :------ |
+| La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. | Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés. |
+| SSDT pour Visual Studio 2017 (version supérieure à 15.8) ne prend pas en charge la conception de packages qui contiennent une source/destination Teradata. | Utilisez SSDT pour Visual Studio 2017 (15.8). |
+| La source Power Query peut ne pas prendre en charge OData v4 quand SSIS et SSAS sont installés sur la même instance de Visual Studio. | &nbsp; |
+| La source Power Query peut ne pas prendre en charge l’utilisation d’ODBC pour se connecter à Oracle quand SSIS et SSAS sont installés sur la même instance de Visual Studio. | &nbsp; |
+| La source Power Query n’est pas localisée | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2, SSDT pour VS&nbsp;2017
 
@@ -116,7 +151,7 @@ _SSDT pour Visual Studio 2017._
 | Integration Services (SSIS) | Ajout de la source Power Query (préversion) pour SSIS dans ADF 2017. |
 | Integration Services (SSIS) | Ajouter à nouveau la prise en charge de SQL Server 2012. |
 | Integration Services (SSIS) | Ajout de la source et de la destination Oracle pour SQL Server 2019. |
-| Integration Services (SSIS) | Les sources et destinations Oracle ciblant SQL Server 2019 ont déjà été installées par SSDT. <br/></br> Pour concevoir le package ciblant la version de serveur 2017 ou une version inférieure, téléchargez la version de connecteur Oracle correspondante à partir du site de téléchargement Microsoft et installez-la sur l’ordinateur SSDT. <br/></br> [Connecteur Microsoft Version 5.0 pour Oracle par Attunity ciblant SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [Connecteur Microsoft Version 4.0 pour Oracle par Attunity ciblant SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [Connecteur Microsoft Version 3.0 pour Oracle par Attunity ciblant SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [Connecteur Microsoft Version 2.0 pour Oracle par Attunity ciblant SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | Les sources et destinations Oracle ciblant SQL Server 2019 ont déjà été installées par SSDT. <br/></br> Pour concevoir le package ciblant la version de serveur 2017 ou une version inférieure, téléchargez la version de connecteur Oracle correspondante à partir du site de téléchargement Microsoft et installez-la sur l’ordinateur SSDT. <br/></br> [Connecteur Microsoft Version 5.0 pour Oracle par Attunity ciblant SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Connecteur Microsoft Version 4.0 pour Oracle par Attunity ciblant SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Connecteur Microsoft Version 3.0 pour Oracle par Attunity ciblant SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Connecteur Microsoft Version 2.0 pour Oracle par Attunity ciblant SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283 ) |
 | Integration Services (SSIS) | Correction d’un problème qui empêchait le chargement du composant/de la tâche de script lors de la migration à partir de versions antérieures de SSIS. |
 | Integration Services (SSIS) | Correction d’un problème qui empêchait la visionneuse de données de fonctionner sur Windows 7 SP1 et Windows 8.1. |
 | Integration Services (SSIS) | Correction d’un problème où, dans certains cas, l’enregistrement du package entraînait le plantage de Visual Studio. |
@@ -147,7 +182,7 @@ _SSDT pour Visual Studio 2017._
 
 Correction d’un problème faisant en sorte que le déploiement d’un projet SSIS qui contient des packages contenant la destination Fichier plat/Tâche de script vers Azure-SSIS entraîne l’échec de l’exécution des packages dans Azure-SSIS. 
 
-### <a name="known-issues"></a>Problèmes connus :
+### <a name="known-issues"></a>Problèmes connus :
 
 - La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
 - SSDT pour Visual Studio 2017 (15.8.2) ne prend pas en charge les packages de conception qui contiennent une source/destination Oracle/Teradata. Utilisez SSDT pour Visual Studio 2017 (15.8).
@@ -165,7 +200,7 @@ _SSDT pour Visual Studio 2017._
 1. Ajout de la prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 2. Suppression de la prise en charge de SQL Server 2012.
 
-### <a name="known-issues"></a>Problèmes connus :
+### <a name="known-issues"></a>Problèmes connus :
 
 - La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
 - Le déploiement de projets SSIS qui ont des packages contenant la destination Fichier plat/Tâche de script vers Azure-SSIS entraîne l’échec de l’exécution des packages dans Azure-SSIS.
@@ -191,7 +226,7 @@ _SSDT pour Visual Studio 2017._
 - Implémentation du redémarrage en cours de route lors de l’installation de SSDT sur Windows 10.
 
 
-### <a name="known-issues"></a>Problèmes connus :
+### <a name="known-issues"></a>Problèmes connus :
 
 - La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
 
@@ -213,7 +248,7 @@ _SSDT pour Visual Studio 2017._
 
 - Filtrage de la liste des instances VS de façon à exclure celles qui ne peuvent pas installer SSDT.
 
-### <a name="known-issues"></a>Problèmes connus :
+### <a name="known-issues"></a>Problèmes connus :
 
 - La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
 - L’installation de SSDT sur Windows 10 avec « Installer la nouvelle instance SQL Server Data Tools pour Visual Studio 2017 » échoue sur « L’opération de métafichier demandée n’est pas prise en charge ». Redémarrez l’ordinateur et relancez le programme d’installation SSDT pour continuer l’installation.
@@ -239,7 +274,7 @@ _SSDT pour Visual Studio 2017._
 
 - Résolution du problème empêchant l’installation de SSAS avant l’installation de SSRS et de SSIS dans Visual Studio 15.7.2.
 
-### <a name="known-issues"></a>Problèmes connus :
+### <a name="known-issues"></a>Problèmes connus :
 
 - La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand *ExecuteOutOfProcess* a la valeur *True*. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
 
@@ -269,7 +304,7 @@ _SSDT pour Visual Studio 2017._
 - Ajoutez le lien du « Programme d’amélioration du produit pour SQL Server Data Tools » dans la clause d’exclusion de confidentialité.
 - Résolution du problème où la fenêtre du programme d’installation de Visual Studio apparaissait quand « Installer la nouvelle instance SQL Server Data Tools pour Visual Studio 2017 » était sélectionné
 
-### <a name="known-issues"></a>Problèmes connus :
+### <a name="known-issues"></a>Problèmes connus :
 - La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
 
 ## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2,&nbsp; SSDT pour VS 2017
@@ -326,7 +361,7 @@ SSDT pour Visual Studio 2017 (15.5.0) qui était en préversion est désormais e
 1. Ajout d’une étape de validation de package dans l’Assistant Déploiement lors du déploiement sur le runtime d’intégration Azure-SSIS dans ADF, ce qui permet de détecter les éventuels problèmes de compatibilité dans les packages SSIS à exécuter dans le runtime d’intégration Azure-SSIS. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 1. L’extension SSIS est localisée.
 
-### <a name="bug-fixes"></a>Correctifs de bogues
+### <a name="bug-fixes"></a>Résolution des bogues
 
 **Integration Services (IS)**
 1. Résolution d’un problème qui entraîne l’endommagement de la disposition du gestionnaire de connexions OLE DB et ADO.NET.
@@ -353,7 +388,7 @@ _SSDT pour Visual Studio 2015._
 - Ajout d’une étape de validation de package dans l’Assistant Déploiement lors du déploiement sur le runtime d’intégration Azure-SSIS dans ADF, ce qui permet de détecter les éventuels problèmes de compatibilité dans les packages SSIS à exécuter dans le runtime d’intégration Azure-SSIS. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 
 
-### <a name="bug-fixes"></a>Correctifs de bogues
+### <a name="bug-fixes"></a>Résolution des bogues
 
 **Projets AS (Analysis Services) :**
 - Résolution d’un problème qui pouvait entraîner une exception non gérée lors de l’archivage des modifications du modèle dans TFS.
@@ -545,7 +580,7 @@ _SSDT pour Visual Studio 2015._
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
 
-**Général**
+**Généralités**
 - Mise à jour des références de personnalisation pour SQL Server 2017.
 
 **Projets AS**
@@ -642,7 +677,7 @@ _Prend en charge jusqu’à SQL Server 2017._
         - Excel 
         - Texte/CSV 
         - Xml 
-        - JSON 
+        - Json 
         - Dossier 
         - Base de données Access 
         - Stockage Blob Azure 
@@ -655,7 +690,7 @@ _Prend en charge jusqu’à SQL Server 2017._
 **Projets RS :**
 - Les contrôles RVC intégrable sont désormais disponibles pour la prise en charge de SSRS 2016
 
-### <a name="bug-fixes"></a>Correctifs de bogues
+### <a name="bug-fixes"></a>Résolution des bogues
 **Projets AS :**
 - Correction de la priorité du modèle pour les projets BI pour qu’ils ne s’affichent plus en haut des catégories Nouveaux projets dans VS
 - Correction d’un incident VS susceptible de survenir rarement lors de l’ouverture de la solution SSIS, SSAS ou SSRS

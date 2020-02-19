@@ -1,6 +1,6 @@
 ---
 title: Utilisation de types de valeur élevée | Microsoft Docs
-description: Utilisation de types de valeur élevée avec OLE DB pilote pour SQL Server
+description: Utilisation de types de valeur élevée avec OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988860"
 ---
 # <a name="using-large-value-types"></a>Utilisation de types de valeur élevée
@@ -33,7 +33,7 @@ ms.locfileid: "67988860"
 > [!NOTE]  
 >  La taille maximale des types de données de valeur élevée peut être comprise entre 1 et 8 Ko. Il est aussi possible de spécifier une taille illimitée.  
   
- Auparavant, seuls les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comme **text**, **ntext** et **image** pouvaient atteindre de telles longueurs. Le spécificateur **max** pour **varchar**, **nvarchar** et **varbinary** a rendu ces types de données redondants. Toutefois, du fait que les types de données Long sont toujours disponibles, la plupart des interfaces pour les composants d’accès aux données OLE DB restent identiques. Pour assurer la compatibilité descendante avec les versions antérieures, l’indicateur DBCOLUMNFLAGS_ISLONG dans le pilote OLE DB pour SQL Server reste en cours d’utilisation. Les fournisseurs et les pilotes écrits pour [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures continuent d'utiliser ces termes pour les nouveaux types lorsque la longueur maximale illimitée est spécifiée.  
+ Auparavant, seuls les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comme **text**, **ntext** et **image** pouvaient atteindre de telles longueurs. Le spécificateur **max** pour **varchar**, **nvarchar** et **varbinary** a rendu ces types de données redondants. Toutefois, du fait que les types de données Long sont toujours disponibles, la plupart des interfaces pour les composants d’accès aux données OLE DB restent identiques. Pour assurer la compatibilité descendante avec les versions antérieures, l’indicateur DBCOLUMNFLAGS_ISLONG dans OLE DB Driver pour SQL Server reste utilisé. Les fournisseurs et les pilotes écrits pour [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures continuent d'utiliser ces termes pour les nouveaux types lorsque la longueur maximale illimitée est spécifiée.  
   
 > [!NOTE]  
 >  Vous pouvez également spécifier les types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** comme types de paramètre d’entrée et de sortie de procédures stockées, de types de retour de fonction ou dans des fonctions [CAST et CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "67988860"
   
 -   Lier comme DBTYPE_IUNKNOWN et utiliser la diffusion en continu.  
   
- Lors du signalement de la taille maximale d’une colonne, le pilote OLE DB pour SQL Server signale les éléments suivants:  
+ Lors du signalement de la taille maximale d'une colonne, OLE DB Driver pour SQL Server indique :  
   
 -   soit la taille maximale définie qui, par exemple, est égale à 2 000 pour une colonne **varchar(** 2000 **)** ;  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Pour plus d’informations sur la façon dont le pilote OLE DB pour SQL Server expose des types de données de valeur élevée, consultez [objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Pour plus d’informations sur la façon dont OLE DB Driver pour SQL Server expose les types de données de valeur élevée, consultez [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Utiliser des UDT (OLE DB) CLR volumineux | Microsoft Docs
+title: Utiliser des table UDT CLR volumineuses (OLE DB) | Microsoft Docs
 description: Utiliser des types définis pas l’utilisateur pour des données volumineuses (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 07a3023f61f26bbc4850eaa495f134d87c6a61c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994612"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Utiliser des table UDT CLR volumineuses (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994612"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet exemple indique comment extraire des lignes avec les types volumineux définis par l'utilisateur depuis un jeu de résultats. Pour plus d’informations, consultez [types &#40;CLR volumineux définis par l'&#41;utilisateur OLE DB](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure.  
+  Cet exemple indique comment extraire des lignes avec les types volumineux définis par l'utilisateur depuis un jeu de résultats. Pour plus d’informations, consultez [Types larges CLR définis par l’utilisateur &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple contient deux projets. Un projet crée un assembly (DLL) à partir du code source C#. Cet assembly contient le type CLR. Une table sera ajoutée à la base de données. Une colonne dans la table sera d'un type défini dans l'assembly ; par défaut, cet exemple utilisera la base de données master. Le deuxième projet est une application C native qui lit des données de la table.  

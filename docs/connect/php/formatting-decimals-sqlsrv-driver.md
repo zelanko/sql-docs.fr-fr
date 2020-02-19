@@ -12,31 +12,31 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265145"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Mise en forme des chaînes décimales et valeurs monétaires (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Pour préserver la précision, les [types Decimal ou numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) sont toujours récupérés sous forme de chaînes avec des précisions et des échelles exactes. Si une valeur est inférieure à 1, le zéro non significatif est manquant. Il est identique aux champs Money et smallmoney, car il s’agit de champs décimaux avec une échelle fixe égale à 4.
+Pour préserver la précision, [les types décimaux ou numériques](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) sont toujours récupérés sous forme de chaînes avec des précisions et des échelles exactes. Si une valeur est inférieure à 1, le zéro non significatif est manquant. C’est identique aux champs money et smallmoney, car il s’agit de champs décimaux avec une échelle fixe égale à 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Ajouter des zéros non significatifs s’ils sont manquants
-À partir de la version 5.6.0, `FormatDecimals` l’option est ajoutée aux niveaux de connexion et d’instruction sqlsrv, ce qui permet à l’utilisateur de mettre en forme des chaînes décimales. Cette option attend une valeur booléenne (true ou false) et affecte uniquement la mise en forme des valeurs décimales ou numériques dans les résultats récupérés. En d’autres termes, `FormatDecimals` l’option n’a aucun effet sur d’autres opérations telles que l’insertion ou la mise à jour.
+À partir de la version 5.6.0, l’option `FormatDecimals` est ajoutée aux niveaux de connexion et d’instruction sqlsrv, ce qui permet à l’utilisateur de mettre en forme des chaînes décimales. Cette option attend une valeur booléenne (true ou false) et affecte uniquement la mise en forme des valeurs décimales ou numériques dans les résultats récupérés. En d’autres termes, l’option `FormatDecimals` n’a aucun effet sur les autres opérations, telles que l’insertion ou la mise à jour.
 
 Par défaut, `FormatDecimals` est défini sur **false**. Si la valeur est true, les zéros non significatifs pour les chaînes décimales sont ajoutés pour toute valeur décimale inférieure à 1.
 
 ## <a name="configure-number-of-decimal-places"></a>Configurer le nombre de décimales
-Avec `FormatDecimals` l’option activé, une autre `DecimalPlaces`option,, permet aux utilisateurs de configurer le nombre de décimales lors de l’affichage des données Money et smallmoney. Il accepte les valeurs entières dans la plage [0, 4], et l’arrondi peut se produire lorsqu’il est affiché. Toutefois, les données monétaires sous-jacentes restent les mêmes.
+Si `FormatDecimals` est activé, une autre option, `DecimalPlaces`, permet aux utilisateurs de configurer le nombre de décimales lors de l’affichage des données money et smallmoney. Il accepte les valeurs entières dans la plage [0, 4], et un arrondi peut se produire lorsqu’il est affiché. Toutefois, les données monétaires sous-jacentes restent les mêmes.
 
-Les deux options peuvent être définies au niveau de la connexion ou de l’instruction, et le paramètre de l’instruction remplace toujours le paramètre de connexion correspondant. Notez que l' `DecimalPlaces` option affecte uniquement les données Money et `FormatDecimals` doit avoir la valeur true pour `DecimalPlaces` **que** prenne effet. Dans le cas contraire, la mise en forme `DecimalPlaces` est désactivée, quel que soit le paramètre.
+Les deux options peuvent être définies au niveau de la connexion ou de l’instruction, et le paramètre d’instruction remplace toujours le paramètre de connexion correspondant. Notez que l’option `DecimalPlaces` affecte **uniquement** les données money, et que `FormatDecimals` doit avoir la valeur true pour que `DecimalPlaces` s’applique. Dans le cas contraire, la mise en forme est désactivée, quel que soit le paramètre `DecimalPlaces`.
 
 > [!NOTE]
-> Étant donné que les champs Money ou smallmoney ont l' `DecimalPlaces` échelle 4, la définition de la valeur sur n’importe quel nombre négatif ou toute valeur supérieure à 4 est ignorée. Il n’est pas recommandé d’utiliser des données monétaires mises en forme comme entrées pour un calcul.
+> Étant donné que les champs money ou smallmoney ont l’échelle 4, la définition de la valeur `DecimalPlaces` sur un nombre négatif quelconque ou sur une valeur supérieure à 4 est ignorée. Il n’est pas recommandé d’utiliser des données monétaires mises en forme comme entrées pour un calcul.
 
-## <a name="example---a-simple-fetch"></a>Exemple: extraction simple
+## <a name="example---a-simple-fetch"></a>Exemple : extraction simple
 L’exemple suivant montre comment utiliser les nouvelles options dans une extraction simple.
 
 ```php
@@ -65,10 +65,10 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example---format-the-output-parameter"></a>Exemple: mettre en forme le paramètre de sortie
-Si un champ décimal ou numérique est retourné comme [paramètre de sortie](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), la valeur retournée sera considérée comme une chaîne VARCHAR normale. Toutefois, si SQLSRV_SQLTYPE_DECIMAL ou SQLSRV_SQLTYPE_NUMERIC est spécifié, vous pouvez définir `FormatDecimals` sur true pour vous assurer qu’il n’existe pas de zéro non significatif pour la valeur de chaîne numérique. Pour plus d’informations, veuillez lire [Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+## <a name="example---format-the-output-parameter"></a>Exemple : mettre en forme le paramètre de sortie
+Si un champ décimal ou numérique est renvoyé comme [paramètre de sortie](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), la valeur renvoyée sera considérée comme une chaîne varchar normale. Toutefois, si SQLSRV_SQLTYPE_DECIMAL ou SQLSRV_SQLTYPE_NUMERIC est spécifié, vous pouvez définir `FormatDecimals` sur true pour vous assurer qu’il n’existe pas de zéro non significatif pour la valeur de chaîne numérique. Pour plus d’informations, consultez le [Guide pratique : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
-L’exemple suivant montre comment mettre en forme le paramètre de sortie d’une procédure stockée qui retourne une valeur décimale (8, 4).
+L’exemple suivant montre comment mettre en forme le paramètre de sortie d’une procédure stockée qui renvoie une valeur décimale (8,4).
 
 ```php
 $outString = '';

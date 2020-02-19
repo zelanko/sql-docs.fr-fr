@@ -3,19 +3,19 @@ title: Créer un référentiel avec miniCRAN
 description: Découvrez comment installer des packages R hors connexion en utilisant le package miniCRAN pour créer un référentiel local de packages et de dépendances.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b83a0c016cf16e4df8ef7fcb90b3711eabe4933
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727581"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479476"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Créer un référentiel de packages R local à l’aide de miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Les référentiels de packages sont utiles dans les scénarios suivants :
 
 - **Sécurité** : beaucoup d’utilisateurs de R sont habitués à télécharger et à installer de nouveaux packages R selon leurs besoins à partir de CRAN ou de l’un de ses sites miroir. Toutefois, pour des raisons de sécurité, les serveurs de production qui exécutent [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ne disposent généralement pas d’une connectivité Internet.
 
-- **Installation hors connexion simplifiée** : pour installer un package sur un serveur hors connexion, vous devez également télécharger toutes les dépendances de package. Avec miniCRAN, il est plus facile d’extraire toutes les dépendances dans le format approprié. À l’aide de miniCRAN, vous pouvez éviter les erreurs de dépendance de package lorsque vous préparez des packages à installer avec l’instruction [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+- **Installation hors connexion simplifiée** : pour installer un package sur un serveur hors connexion, vous devez également télécharger toutes les dépendances de package. Avec miniCRAN, il est plus facile d’extraire toutes les dépendances dans le format approprié et d’éviter les erreurs de dépendance.
 
 - **Gestion des versions améliorée** : dans un environnement multi-utilisateur, il existe de bonnes raisons d’éviter d’installer négligemment plusieurs versions des packages sur le serveur. Utilisez un référentiel local pour proposer un ensemble cohérent de packages à vos utilisateurs.
 
@@ -88,7 +88,7 @@ Une fois **miniCRAN** installé et chargé, créez une liste qui spécifie les p
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Créez le référentiel local. Assurez-vous de modifier la version R (si nécessaire) en fonction de la version installée sur votre instance SQL Server. Si vous avez mis à niveau l’un de vos composants, votre version peut être plus récente que la version d’origine. Pour en savoir plus, consultez [Récupérer les informations du package R](../package-management/r-package-information.md).
+3. Créez le référentiel local. Assurez-vous de modifier la version R (si nécessaire) en fonction de la version installée sur votre instance SQL Server. Si vous avez mis à niveau l’un de vos composants, votre version peut être plus récente que la version d’origine. Pour plus d’informations, consultez la section [Obtenir des informations sur le package R](../package-management/r-package-information.md).
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -112,6 +112,11 @@ pdb[, c("Package", "Version", "License")]
 
 Une fois que vous disposez d’un référentiel local contenant les packages dont vous avez besoin, déplacez le référentiel de packages vers l’ordinateur SQL Server. La procédure suivante décrit comment installer les packages à l’aide des outils R.
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> La méthode recommandée pour l’installation de packages consiste à utiliser **sqlmlutils**. Consultez [Installer de nouveaux packages R avec sqlmlutils](install-additional-r-packages-on-sql-server.md).
+::: moniker-end
+
 1. Copiez l’intégralité du dossier contenant le référentiel miniCRAN sur le serveur où vous souhaitez installer les packages. Le dossier présente généralement la structure suivante : 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -124,7 +129,7 @@ Une fois que vous disposez d’un référentiel local contenant les packages don
    - Par exemple, l’emplacement de fichier par défaut pour le fichier RGUI est `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - Par exemple, l’emplacement de fichier pour le fichier RGUI est `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
@@ -189,5 +194,5 @@ Une fois que vous disposez d’un référentiel local contenant les packages don
 
 ## <a name="see-also"></a>Voir aussi
 
-+ [Obtenir des informations sur les packages R](../package-management/r-package-information.md)
++ [Obtenir des informations sur les packages R](../package-management/r-package-information.md)
 + [Tutoriels sur R](../tutorials/sql-server-r-tutorials.md)

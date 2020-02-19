@@ -1,22 +1,23 @@
 ---
 title: Déboguer/diagnostiquer des applications Spark
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Utilisez le serveur d’historique Spark pour déboguer et diagnostiquer les applications Spark s’exécutant sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: d81732079ddc549bb7a04abad938fc551eeed84a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706117"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243944"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Déboguer et diagnostiquer les applications Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans le serveur d’historique Spark
+# <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Déboguer et diagnostiquer les applications Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans le serveur d’historique Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -163,9 +164,9 @@ Sélectionnez l’ID du travail, puis cliquez sur **Diagnosis** dans le menu des
 ### <a name="data-skew"></a>Asymétrie des données
 Cliquez sur l’onglet **Data Skew** ; les tâches asymétriques correspondantes s’affichent en fonction des paramètres spécifiés. 
 
-+ **Specify Parameters** (Spécifier les paramètres) : la première section affiche les paramètres qui sont utilisés pour détecter l’asymétrie des données. La règle intégrée est la suivante : la lecture des données de la tâche est supérieure à trois fois la moyenne des données lues de la tâche, et la lecture des données de la tâche est supérieure à 10 Mo. Si vous souhaitez définir votre propre règle pour les tâches asymétriques, vous pouvez choisir vos paramètres ; les sections **Skewed Stage** (Phase asymétrique) et **Skew Chart** (Graphique des asymétries) sont actualisées en conséquence. 
++ **Spécifier les paramètres** : la première section affiche les paramètres qui sont utilisés pour détecter l’asymétrie des données. La règle intégrée est la suivante : Les données des tâches lues sont trois fois supérieures aux données des tâches lues en moyenne, et les données des tâches lues sont supérieures à 10 Mo. Si vous souhaitez définir votre propre règle pour les tâches asymétriques, vous pouvez choisir vos paramètres ; les sections **Skewed Stage** (Phase asymétrique) et **Skew Chart** (Graphique des asymétries) sont actualisées en conséquence. 
 
-+ **Skewed Stage** : la deuxième section affiche les phases qui ont des tâches asymétriques répondant aux critères spécifiés ci-dessus. S’il y a plusieurs tâches asymétriques dans une phase, la table des phases asymétriques affiche uniquement la tâche la plus asymétrique (par exemple, les données les plus volumineuses pour l’asymétrie des données). 
++ **Phase asymétrique** : la seconde section affiche les phases comportant des tâches asymétriques qui répondent aux critères spécifiés ci-dessus. S’il y a plusieurs tâches asymétriques dans une phase, la table des phases asymétriques affiche uniquement la tâche la plus asymétrique (par exemple, les données les plus volumineuses pour l’asymétrie des données). 
 
     ![Asymétrie des données, section 2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
@@ -176,7 +177,7 @@ Cliquez sur l’onglet **Data Skew** ; les tâches asymétriques correspondante
 ### <a name="time-skew"></a>Asymétrie temporelle
 L’onglet **Time Skew** affiche les tâches asymétriques en fonction de la durée d’exécution des tâches. 
 
-+ **Specify Parameters** : la première section affiche les paramètres qui sont utilisés pour détecter l’asymétrie temporelle. Les critères par défaut pour la détection de l’asymétrie temporelle sont : la durée d’exécution de la tâche est supérieure à trois fois la durée d’exécution moyenne et la durée d’exécution de la tâche est supérieure à 30 secondes. Vous pouvez changer les paramètres en fonction de vos besoins. Les sections **Skewed Stage** et **Skew Chart** affichent les informations sur les phases et les tâches correspondantes, à l’image de l’onglet **Data Skew** ci-dessus.
++ **Spécifier les paramètres** : la première section affiche les paramètres qui sont utilisés pour détecter l’asymétrie temporelle. Par défaut, les critères de détection de l’asymétrie temporelle sont les suivants : la durée d’exécution de la tâche est plus de trois fois supérieure à la durée d’exécution moyenne et supérieure à 30 secondes. Vous pouvez changer les paramètres en fonction de vos besoins. Les sections **Skewed Stage** et **Skew Chart** affichent les informations sur les phases et les tâches correspondantes, à l’image de l’onglet **Data Skew** ci-dessus.
 
 + Cliquez **Time Skew** ; le résultat filtré s’affiche dans la section **Skewed Stage** en fonction des paramètres définis dans la section **Specify Parameters**. Cliquez sur un élément dans la section **Skewed Stage** ; le graphique correspondant est élaboré dans la section 3 et les détails de la tâche s’affichent dans le volet inférieur droit.
 

@@ -1,5 +1,5 @@
 ---
-title: Ensembles de lignes et curseurs de SQL Server | Microsoft Docs
+title: Ensembles de lignes et curseurs SQL Server | Microsoft Docs
 description: Ensembles de lignes et curseurs SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994176"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Ensembles de lignes et curseurs SQL Server
@@ -62,7 +62,7 @@ ms.locfileid: "67994176"
   
  Les consommateurs peuvent demander différents comportements de curseur dans un ensemble de lignes en définissant certaines propriétés d'ensemble de lignes. Si le consommateur ne définit aucune de ces propriétés d’ensemble de lignes ou leur affecte à toutes leur valeur par défaut, le pilote OLE DB pour SQL Server implémente l’ensemble de lignes à l’aide d’un jeu de résultats par défaut. Si une valeur autre que la valeur par défaut est affectée à l’une de ces propriétés, le pilote OLE DB pour SQL Server implémente l’ensemble de lignes à l’aide d’un curseur côté serveur.  
   
- Les propriétés d’ensemble de lignes suivantes indiquent au pilote OLE DB SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’utiliser des curseurs. Certaines propriétés peuvent être combinées avec d'autres sans risque. Par exemple, un ensemble de lignes qui expose les propriétés DBPROP_IRowsetScroll et DBPROP_IRowsetChange sera un ensemble de lignes signet présentant un comportement de mise à jour immédiat. Les autres propriétés s'excluent mutuellement. Par exemple, un ensemble de lignes exposant DBPROP_OTHERINSERT ne peut pas contenir de signets.  
+ Les propriétés d'ensemble de lignes suivantes font en sorte que le fournisseur OLE DB Driver pour SQL Server utilise des curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Certaines propriétés peuvent être combinées avec d'autres sans risque. Par exemple, un ensemble de lignes qui expose les propriétés DBPROP_IRowsetScroll et DBPROP_IRowsetChange sera un ensemble de lignes signet présentant un comportement de mise à jour immédiat. Les autres propriétés s'excluent mutuellement. Par exemple, un ensemble de lignes exposant DBPROP_OTHERINSERT ne peut pas contenir de signets.  
   
 |ID de propriété|Valeur|Comportement d'ensemble de lignes|  
 |-----------------|-----------|---------------------|  
@@ -93,7 +93,7 @@ ms.locfileid: "67994176"
   
  Pour utiliser un certain type de modèle de curseur, recherchez la colonne correspondant au modèle de curseur et recherchez toutes les propriétés d'ensemble de lignes avec la valeur « T » dans la colonne. Affectez la valeur VARIANT_TRUE à ces propriétés d'ensemble de lignes pour utiliser le modèle de curseur spécifique. Les propriétés d'ensemble de lignes avec '-' comme valeur peuvent être définies à VARIANT_TRUE ou VARIANT_FALSE.  
   
-|Propriétés d’ensemble de lignes/modèles de curseur|Valeur par défaut<br /><br /> result<br /><br /> jeu<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|Statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
+|Propriétés d’ensemble de lignes/modèles de curseur|Default<br /><br /> result<br /><br /> set<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

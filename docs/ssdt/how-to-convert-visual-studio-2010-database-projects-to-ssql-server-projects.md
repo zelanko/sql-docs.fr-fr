@@ -1,11 +1,7 @@
 ---
-title: 'Procédure : convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server et recibler vers une autre plateforme | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.projectconversion.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84815176ca9b32614e851800a59ea2951010ce4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d81099054c52b90154bfe6fd42c9d450e17afa01
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897314"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241551"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Procédure : Convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server et recibler vers une autre plateforme
+
 Dans SQL Server Data Tools (SSDT), vous pouvez convertir une base de données SQL Server, des objets CLR et des projets d’application de la couche Données existants créés dans Visual Studio 2010 en nouveau projet de base de données SQL Server. Ainsi, vous pouvez tirer parti de la nouvelle expérience de développement de base de données fournie par SSDT, telle que la mise à jour de l'expérience de modification Transact\-SQL, et de la possibilité de recibler votre projet vers Microsoft SQL Server 2012 et SQL Azure avec validation du code. Le processus de conversion convertit les objets (tables, affichages, procédures stockées, fichiers de propriétés ou scripts) qui possèdent un type équivalent dans SSDT, notamment leurs autorisations et fichiers de stratégie de contrôle DAC. Les artefacts qui ne peuvent pas être convertis sont mis en surbrillance dans un journal/rapport de conversion.  
   
 Le tableau suivant répertorie tous les artefacts de projet pouvant ou non être convertis par SSDT.  

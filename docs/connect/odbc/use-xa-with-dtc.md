@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 03399ea4653df03c873739b24a167d88564c3927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252149"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911113"
 ---
 # <a name="using-xa-transactions"></a>Utilisation de transactions XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "68252149"
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Le Microsoft ODBC Driver for SQL Server à partir de la version 17,3 assure la prise en charge des transactions XA avec le Distributed Transaction Coordinator (DTC) sur Windows, Linux et Mac. L’implémentation XA côté pilote permet à l’application cliente d’envoyer des opérations en série (telles que Démarrer, valider, restaurer une branche de transaction, etc.) au gestionnaire de transactions (TM). Ensuite, le gestionnaire de traduction communique avec le Gestionnaire des ressources (RM) en fonction de ces opérations. Pour plus d’informations sur la spécification XA et l’implémentation Microsoft pour DTC (MS DTC), consultez [fonctionnement: SQL Server DTC (transactions MSDTC et XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+Microsoft ODBC Driver for SQL Server à partir de la version 17.3 assure la prise en charge des transactions XA avec le Distributed Transaction Coordinator (DTC) sur Windows, Linux et Mac. L’implémentation XA côté pilote permet à l’application cliente d’envoyer des opérations en série (telles que Démarrer, Valider, Restaurer une branche de transaction, etc.) au gestionnaire de transactions (TM). Ensuite, le Gestionnaire de transactions communique avec le Gestionnaire des ressources (RM) en fonction de ces opérations. Pour plus d’informations sur la spécification XA et l’implémentation de Microsoft pour DTC (MS DTC), consultez [Fonctionnement : SQL Server DTC (transactions MSDTC et XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
 
 
 
-## <a name="the-xacallparam-structure"></a>Structure XACALLPARAM
+## <a name="the-xacallparam-structure"></a>La structure XACALLPARAM
 
-La `XACALLPARAM` structure définit les informations requises pour une demande du gestionnaire de transactions XA. Il est défini comme suit:
+La structure `XACALLPARAM` définit les informations requises pour une requête du gestionnaire de transactions XA. La définition est la suivante :
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-Taille de la `XACALLPARAM` structure. Cela exclut la taille des données qui suivent `XACALLPARAM`.
+Taille de la structure `XACALLPARAM`. Cela exclut la taille des données qui suivent `XACALLPARAM`.
 
 *opération*  
-Opération XA à passer à la commande TM. Les opérations possibles sont définies dans [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Opération XA à passer à la commande TM. Les opérations possibles sont définies dans [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
 *xid*  
 Identificateur de branche de transaction.
 
 *flags*  
-Indicateurs associés à la demande TM. Les valeurs possibles sont définies dans [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Indicateurs associés à la requête du TM. Les valeurs possibles sont définies dans [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
-*status*  
-Retourne l’état de la TM. Consultez l’en-tête [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) pour connaître les États de retour possibles.
+*statut*  
+Renvoie l’état du TM. Consultez l’en-tête de [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) pour connaître les états de retour possibles.
 
 *sizeData*  
-Taille de la mémoire tampon de `XACALLPARAM`données après. 
+Taille de la mémoire tampon des données qui suivent `XACALLPARAM`. 
 
 *sizeReturned*  
 Taille des données retournées.
 
-Pour effectuer une requête TM, la fonction [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) doit être appelée avec l’attribut _SQL_COPT_SS_ENLIST_IN_XA_ et un pointeur vers l' `XACALLPARAM` objet.  
+Pour effectuer une requête TM, la fonction [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) doit être appelée avec l’attribut _SQL_COPT_SS_ENLIST_IN_XA_ et un pointeur vers l’objet `XACALLPARAM`.  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>Exemple de code 
 
-L’exemple suivant montre comment communiquer avec le gestionnaire de transactions pour les transactions XA et exécuter différentes opérations à partir d’une application cliente. Si le test est exécuté sur Microsoft SQL Server, MS DTC doit être correctement configuré pour activer les transactions XA. Les définitions XA se trouvent dans le fichier d’en-tête [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) . 
+L’exemple suivant montre comment communiquer avec le gestionnaire de transactions pour les transactions XA et exécuter différentes opérations à partir d’une application cliente. Si le test est exécuté sur Microsoft SQL Server, MS DTC doit être correctement configuré pour activer les transactions XA. Les définitions XA se trouvent dans le fichier d’en-tête [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh). 
 
 ```
 
@@ -368,7 +368,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {
-                std::cout << "TestRecover::Successfully commited recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
+                std::cout << "TestRecover::Successfully committed recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
             }
             else
             {
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-La `XATestRunner` classe implémente les appels XA possibles lors de la communication avec le serveur.
+La classe `XATestRunner` implémente les appels XA possibles lors de la communication avec le serveur.
 
 ```
 
@@ -601,7 +601,7 @@ void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
 
 ## <a name="appendix"></a>Annexe
 
-### <a name="xadefsh"></a>xadefs. h
+### <a name="xadefsh"></a>xadefs.h
 
 ```
 // xadefs.h : XA specific definitions.

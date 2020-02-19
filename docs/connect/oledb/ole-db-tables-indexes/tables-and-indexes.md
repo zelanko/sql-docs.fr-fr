@@ -1,6 +1,6 @@
 ---
 title: Tables et index | Microsoft Docs
-description: Création, modification et suppression de tables et d’index à l’aide d’OLE DB pilote pour SQL Server
+description: Création, modification et suppression de tables et d’index à l’aide d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015239"
 ---
 # <a name="tables-and-indexes"></a>Tables et index
@@ -35,13 +35,13 @@ ms.locfileid: "68015239"
   
  La possibilité de créer ou de supprimer des tables et des index dépend des droits d'accès [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de l'utilisateur de l'application consommateur. La suppression d'une table peut être également limitée par la présence de contraintes d'intégrité référentielle déclarative ou d'autres facteurs.  
   
- La plupart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applications ciblant utilisent SQL-DMO au lieu de ces OLE DB pilote pour les interfaces SQL Server. SQL-DMO est une collection d'objets OLE Automation qui prennent en charge toutes les fonctions d'administration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les applications ciblant plusieurs fournisseurs OLE DB utilisent ces interfaces OLE DB génériques qui sont prises en charge par les différents fournisseurs OLE DB.  
+ La plupart des applications ciblant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent SQL-DMO à la place de ces interfaces du fournisseur OLE DB Driver pour SQL Server. SQL-DMO est une collection d'objets OLE Automation qui prennent en charge toutes les fonctions d'administration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les applications ciblant plusieurs fournisseurs OLE DB utilisent ces interfaces OLE DB génériques qui sont prises en charge par les différents fournisseurs OLE DB.  
   
  Dans le jeu de propriétés spécifique au fournisseur DBPROPSET_SQLSERVERCOLUMN, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] définit la propriété suivante.  
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Type : VT_BSTR<br /><br /> L/E (Lecture/Écriture) : écriture<br /><br /> Valeur par défaut : Null<br /><br /> Description : cette propriété est utilisée uniquement dans **ITableDefinition**. La chaîne spécifiée dans cette propriété est utilisée lors de la création d’une instruction [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
+|SSPROP_COL_COLLATIONNAME|Tapez : VT_BSTR<br /><br /> R/W : Write<br /><br /> Valeur par défaut : Null<br /><br /> Description : Cette propriété est utilisée uniquement dans **ITableDefinition**. La chaîne spécifiée dans cette propriété est utilisée lors de la création d’une instruction [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

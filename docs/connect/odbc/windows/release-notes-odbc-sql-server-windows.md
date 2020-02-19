@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041156"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910935"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notes de publication d’ODBC pour SQL Server sur Windows
 
@@ -44,14 +44,22 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5, janvier 2020
+
+| Fonctionnalité ajoutée | Détails |
+| :------------ | :------ |
+| Attribut de connexion SQL_COPT_SS_SPID pour récupérer le SPID sans aller-retour avec le serveur | Consultez [Attributs et mots clés de chaîne de connexion et DSN](../dsn-connection-string-attribute.md). |
+| Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, octobre 2019
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
-| Prise en charge des points de terminaison de Azure Key Vault supplémentaires | Voir [Utilisation d’Always Encrypted avec ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Prise en charge de points de terminaison Azure Key Vault supplémentaires | Voir [Utilisation d’Always Encrypted avec ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Prise en charge de la définition de la version de la classification des données | Consultez [Classification des données](../data-classification.md#bkmk-version). |
-| Le pilote va installer la bibliothèque d’authentification Azure active Drirectory (Adal. dll) utilisée pour l’authentification auprès d’Azure | |
-| Correctifs de bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
+| Inclure la bibliothèque d’authentification Azure Active Directory (adal.dll) dans le programme d’installation | Maintenant incluse dans l’installation du pilote de base, cette opération met à niveau les installations existantes de la Bibliothèque d’authentification Microsoft Active Directory pour SQL Server, en les supprimant de la liste des applications installées dans Windows. |
+| Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="174-july-2019"></a>17.4, juillet 2019
@@ -60,7 +68,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | Always Encrypted avec les enclaves sécurisées. | Voir [Utilisation d’Always Encrypted avec ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Paramètres TCP Keep Alive configurables. | Voir [Connexion à SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
-| Correctifs de bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
+| Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3, février 2019
@@ -70,25 +78,25 @@ GeneMi (and CraigG).  2019/03/30.
 | Mode d’authentification Azure Active Directory Managed Service Identity (avec attribution par le système et l’utilisateur) | Consultez [Utilisation d’Azure Active Directory avec ODBC Driver](../using-azure-active-directory.md). |
 | Possibilité d’envoyer des paramètres d’entrée sur les colonnes Always Encrypted. | Consultez [Limitations du pilote ODBC lors de l’utilisation d’Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Transactions distribuées XA. | [Utilisation de transactions XA](../use-xa-with-dtc.md). |
-| Correctifs de bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
+| Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="172-july-2018"></a>17.2, juillet 2018
+## <a name="172-july-2018"></a>17.2, juillet 2018
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
 | Classification des données pour Azure SQL Database et SQL Server. | Consultez [Classification des données](../data-classification.md). |
 | Prise en charge de l’encodage serveur UTF-8. | &nbsp; |
-| Correctifs de bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
+| Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="171-march-2018"></a>17.1, mars 2018
+## <a name="171-march-2018"></a>17.1, mars 2018
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
-| Prise en charge des attributs de connexion `SQL_COPT_SS_CEKCACHETTL` et `SQL_COPT_SS_TRUSTEDCMKPATHS`. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`)<br/>Permet de contrôler la durée d’existence du cache local des clés de chiffrement de colonne, ainsi que son vidage.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`)<br/>Permet à l’application de limiter les opérations AE à la seule utilisation de la liste spécifiée de clés principales de colonne.<br/><br/> Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Prise en charge des attributs de connexion `SQL_COPT_SS_CEKCACHETTL` et `SQL_COPT_SS_TRUSTEDCMKPATHS`. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>Permet de contrôler la durée d’existence du cache local des clés de chiffrement de colonne, ainsi que son vidage.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>Permet à l’application de limiter les opérations AE à la seule utilisation de la liste spécifiée de clés principales de colonne.<br/><br/> Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Prise en charge de l’authentification interactive Azure Active Directory | &nbsp; |
-| Correctifs de bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
+| Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="17-february-2018"></a>17, février 2018

@@ -1,20 +1,21 @@
 ---
-title: Interroger les données HDFS dans le pool de stockage
-titleSuffix: SQL Server big data clusters
+title: 'Interroger les données HDFS : pool de stockage'
+titleSuffix: SQL Server Big Data Clusters
 description: Ce tutoriel montre comment interroger des données HDFS dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Vous créez une table externe sur les données dans le pool de stockage, puis exécutez une requête.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652446"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226479"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutoriel : Interroger HDFS dans un cluster Big Data SQL Server
 
@@ -30,6 +31,10 @@ Dans ce tutoriel, vous allez apprendre à :
 
 > [!TIP]
 > Si vous préférez, vous pouvez télécharger et exécuter un script pour les commandes de ce tutoriel. Pour obtenir des instructions, consultez les [exemples de virtualisation de données](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) sur GitHub.
+
+Cette vidéo de 7 minutes vous guide tout au long de l’interrogation des données HDFS dans un cluster Big Data :
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a id="prereqs"></a> Conditions préalables
 

@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995118"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
@@ -25,7 +25,7 @@ ms.locfileid: "67995118"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet article fournit des informations sur les types de OLE DB (OLE DB Driver for SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) qui prennent en charge les types de données de date/heure.  
+  Cet article fournit des informations sur les types OLE DB (OLE DB Driver pour SQL Server) qui prennent en charge les types de données de date/heure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres  
  OLE DB fournit deux nouveaux types de données pour prendre en charge les nouveaux types de serveurs : DBTYPE_DBTIME2 et DBTYPE_DBTIMESTAMPOFFSET. Le tableau ci-dessous illustre le mappage complet des types de serveurs :  
@@ -39,7 +39,7 @@ ms.locfileid: "67995118"
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Formats de données : chaînes et littéraux  
+## <a name="data-formats-strings-and-literals"></a>Formats de données : Chaînes et littéraux  
   
 |Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Type de données OLE DB|Format de chaîne pour les conversions clientes|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "67995118"
   
  Une chaîne vide n'est pas un littéral de date et d'heure valide et ne représente pas une valeur NULL. Une tentative de convertir une chaîne vide en valeur de date ou d'heure provoque des erreurs avec SQLState 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».  
   
-## <a name="data-formats-data-structures"></a>Formats de données : structures de données  
+## <a name="data-formats-data-structures"></a>Formats de données : Structures de données  
  Dans les structures spécifiques à OLE DB décrites ci-dessous, OLE DB se conforme aux contraintes suivantes. Celles-ci sont tirées du calendrier grégorien :  
   
 -   La plage des mois s'étend de 1 à 12.  
@@ -85,7 +85,7 @@ ms.locfileid: "67995118"
   
 -   DBTYPE_FILETIME  
   
-### <a name="dbtypedbtime2"></a>DBTYPE_DBTIME2  
+### <a name="dbtype_dbtime2"></a>DBTYPE_DBTIME2  
  Ce struct est complété jusqu'à 12 octets sur les systèmes d'exploitation 32 bits et 64 bits.  
   
 ```  
@@ -97,7 +97,7 @@ typedef struct tagDBTIME2 {
     } DBTIME2;  
 ```  
   
-### <a name="dbtype-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
+### <a name="dbtype_-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
   
 ```  
 typedef struct tagDBTIMESTAMPOFFSET {  
@@ -113,7 +113,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- Si `timezone_hour` est négatif, `timezone_minute` doit être négatif ou égal à zéro. Si `timezone_hour` est positif, `timezone minute` doit être positif ou zéro. Si `timezone_hour` est nul, `timezone minute` peut contenir une valeur comprise entre -59 et +59.  
+ Si `timezone_hour` est négatif, `timezone_minute` doit être négatif ou égal à zéro. Si `timezone_hour` est positif, `timezone minute` doit être positif ou égal à zéro. Si `timezone_hour` est nul, `timezone minute` peut contenir une valeur comprise entre -59 et +59.  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  Ce struct inclut désormais les nouvelles structures, DBTYPE_DBTIME2 et DBTYPE_DBTIMESTAMPOFFSET, et ajoute une échelle de fractions de seconde pour les types appropriés.  
@@ -160,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Les applications qui migrent vers OLE DB pilote pour SQL Server qui utilisent **sql_variant** et s’appuient sur la précision limitée de **DateTime** devront être mises à jour si le schéma sous-jacent est mis à jour pour utiliser **datetime2** plutôt que **DateTime**.  
+ Les applications migrant vers OLE DB Driver pour SQL Server qui utilisent **sql_variante** et s'appuient sur la précision limitée de **datetime** devront être mises à jour si le schéma sous-jacent est mis à jour pour utiliser **datetime2** plutôt que **datetime**.  
   
  Les macros d'accès pour SSVARIANT ont également été étendues avec l'addition des éléments suivants :  
   
@@ -172,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Mappage des types de données dans ITableDefinition::CreateTable  
- Le mappage de type suivant est utilisé avec les structures DBCOLUMNDESC utilisées par ITableDefinition:: CreateTable:  
+ Le mappage de type suivant est utilisé avec les structures DBCOLUMNDESC utilisées par ITableDefinition::CreateTable :  
   
-|Type de données OLE DB (*wType*)|Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Remarques|  
+|Type de données OLE DB (*wType*)|Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Notes|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Le pilote OLE DB pour SQL Server inspecte le membre DBCOLUMDESC *bScale* pour déterminer la précision en fractions de seconde.|  
-|DBTYPE_DBTIME2|**time**(p)|Le pilote OLE DB pour SQL Server inspecte le membre DBCOLUMDESC *bScale* pour déterminer la précision en fractions de seconde.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Le pilote OLE DB pour SQL Server inspecte le membre DBCOLUMDESC *bScale* pour déterminer la précision en fractions de seconde.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Le fournisseur OLE DB Driver pour SQL Server inspecte le membre *bScale* DBCOLUMDESC pour déterminer la précision en fractions de seconde.|  
+|DBTYPE_DBTIME2|**time**(p)|Le fournisseur OLE DB Driver pour SQL Server inspecte le membre *bScale* DBCOLUMDESC pour déterminer la précision en fractions de seconde.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Le fournisseur OLE DB Driver pour SQL Server inspecte le membre *bScale* DBCOLUMDESC pour déterminer la précision en fractions de seconde.|  
   
- Lorsqu’une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, elle peut remplacer le mappage par **datetime2** en fournissant un nom de type dans *pwszTypeName*. Si **DateTime** est spécifié, *bScale* doit avoir la valeur 3. Si **smalldatetime** est spécifié, *bScale* doit avoir la valeur 0. Si *bScale* n’est pas cohérent avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
+ Lorsqu'une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à **dateTime2** en fournissant un nom de type dans *pwszTypeName*. Si **datetime** est spécifié, *bScale* doit avoir la valeur 3. Si **smalldatetime** est spécifié, *bScale* doit avoir la valeur 0. Si *bScale* n’est pas cohérent avec *wType* et *pwszTypeName*, DB_E_BADSCALE est renvoyé.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

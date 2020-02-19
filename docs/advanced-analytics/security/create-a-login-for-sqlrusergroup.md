@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68714961"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Créer un nom de connexion pour SQLRUserGroup
@@ -33,19 +33,19 @@ Vous pouvez contourner l’erreur de connexion en créant un nom de connexion po
 
 2. Dans la boîte de dialogue **Nouvelle connexion**, cliquez sur **Rechercher**. (Ne tapez rien dans la zone pour l’instant.)
     
-     ![Cliquez sur Rechercher pour ajouter un nouveau nom de connexion pour le Machine Learning](media/implied-auth-login1.png "Cliquez sur Rechercher pour ajouter un nouveau nom de connexion pour le Machine Learning")
+     ![Cliquez sur Rechercher pour ajouter une nouvelle connexion à Machine Learning](media/implied-auth-login1.png "Cliquez sur Rechercher pour ajouter une nouvelle connexion à Machine Learning")
 
 3. Dans la zone **Sélectionner un utilisateur ou un groupe**, cliquez sur le bouton **Types d’objets**.
 
-     ![Recherchez des types d’objets pour ajouter un nouveau nom de connexion pour le Machine Learning](media/implied-auth-login2.png "Recherchez des types d’objets pour ajouter un nouveau nom de connexion pour le Machine Learning")
+     ![Rechercher des types d’objet pour ajouter une nouvelle connexion à Machine Learning](media/implied-auth-login2.png "Rechercher des types d’objet pour ajouter une nouvelle connexion à Machine Learning")
 
 4. Dans la boîte de dialogue **Types d’objets**, sélectionnez **Groupes**. Décochez toutes les autres cases.
 
-     ![Sélectionnez Groupes dans la boîte de dialogue Types d’objets](media/implied-auth-login3.png "Sélectionnez Groupes dans la boîte de dialogue Types d’objets")
+     ![Sélectionner des groupes dans la boîte de dialogue Types d’objet](media/implied-auth-login3.png "Sélectionner des groupes dans la boîte de dialogue Types d’objet")
 
 4. Cliquez sur **Avancé**, vérifiez que l’emplacement sur lequel porte la recherche est l’ordinateur actuel, puis cliquez sur **Rechercher**.
 
-     ![Cliquez sur Rechercher pour obtenir la liste des groupes](media/implied-auth-login4.png "Cliquez sur Rechercher pour obtenir la liste des groupes")
+     ![Cliquez sur Rechercher maintenant pour obtenir la liste des groupes](media/implied-auth-login4.png "Cliquez sur Rechercher maintenant pour obtenir la liste des groupes")
 
 5. Faites défiler la liste des comptes de groupe du serveur jusqu’à ce que vous en trouviez un commençant par `SQLRUserGroup`.
     
@@ -66,4 +66,4 @@ Vous pouvez contourner l’erreur de connexion en créant un nom de connexion po
 ## <a name="next-steps"></a>Étapes suivantes
 
 + [Vue d’ensemble de la sécurité](../concepts/security.md)
-+ [Infrastructure d’extensibilité](../concepts/extensibility-framework.md)
++ [Framework d’extensibilité](../concepts/extensibility-framework.md)

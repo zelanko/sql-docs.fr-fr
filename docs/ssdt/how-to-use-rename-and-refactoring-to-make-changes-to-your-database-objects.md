@@ -1,11 +1,7 @@
 ---
-title: 'Procédure : utiliser Renommer et Refactorisation pour apporter des modifications à vos objets de base de données | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Renommer et Refactorisation pour apporter des modifications à vos objets de base de données
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097476"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244242"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Procédure : Utiliser Renommer et Refactorisation pour apporter des modifications à vos objets de base de données
+
 Le menu contextuel Refactoriser de l'Éditeur Transact\-SQL vous permet de renommer ou déplacer un objet vers un autre schéma, et d'afficher un aperçu de toutes les zones affectées avant de valider les modifications. Vous pouvez aussi utiliser le menu Refactoriser pour effectuer une qualification complète de toutes les références à des objets de base de données, ou pour développer les caractères génériques utilisés dans les instructions `SELECT` de votre projet de base de données.  
   
 > [!NOTE]  

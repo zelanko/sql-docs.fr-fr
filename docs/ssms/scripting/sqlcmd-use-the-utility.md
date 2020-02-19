@@ -1,6 +1,6 @@
 ---
-title: Utiliser l’utilitaire sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Utiliser l'utilitaire sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fd1c2eafec0d0dd832e4d01d43195d7ec175485
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: f3e77699ce94f150bc5ec38fa40c400884d38faa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816615"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243459"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Utiliser l’utilitaire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "71816615"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     ou Gestionnaire de configuration  
+     or  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -211,7 +211,7 @@ ms.locfileid: "71816615"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-running-a-script-by-using-sqlcmd"></a>A. Exécution d'un script à l'aide de sqlcmd  
+### <a name="a-running-a-script-by-using-sqlcmd"></a>R. Exécution d'un script à l'aide de sqlcmd  
  Démarrez le Bloc-notes et tapez les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
   
  `USE AdventureWorks2012;`  

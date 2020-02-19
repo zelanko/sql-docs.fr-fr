@@ -1,22 +1,22 @@
 ---
-title: 'Tutoriel Python : Préparer des données en cluster'
-description: Dans la deuxième partie de cette série de tutoriels qui en compte quatre, vous allez préparer les données à partir d’une base de données SQL Server pour effectuer un clustering en Python avec SQL Server Machine Learning Services.
+title: 'Tutoriel Python : Préparer des données en cluster'
+description: Dans la deuxième partie de cette série de tutoriels qui en compte quatre, vous allez préparer les données SQL pour effectuer un clustering en Python avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727088"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305543"
 ---
 # <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Tutoriel : Préparer des données pour classer des clients dans Python avec SQL Server Machine Learning Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "73727088"
 
 Dans la deuxième partie de cette série de didacticiels en quatre parties, vous allez restaurer et préparer des données à partir d’une base de données SQL à l’aide de Python. Plus loin dans cette série, vous utiliserez ces données pour effectuer l’apprentissage et le déploiement d’un modèle de clustering dans Python avec SQL Server Machine Learning Services.
 
-Dans cet article, vous allez apprendre à :
+Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Séparer des clients en fonction de leurs dimensions à l’aide de Python
@@ -44,10 +44,10 @@ Dans la [quatrième partie](python-clustering-model-deploy.md), vous allez crée
 
 Pour préparer le clustering des clients, vous devez d’abord les séparer selon les dimensions suivantes :
 
-* **orderRatio** = renvoie le taux de commandes (nombre total de commandes partiellement ou entièrement renvoyées par rapport au nombre total de commandes)
-* **itemsRatio** = renvoie le taux d’éléments (nombre total d’éléments renvoyés par rapport au nombre d’éléments achetés)
-* **monetaryRatio** = renvoie le taux des montants (montant monétaire total des éléments renvoyés par rapport au montant acheté)
-* **frequency** = renvoie la fréquence
+* **orderRatio** = retourne le taux de commandes (nombre total de commandes partiellement ou entièrement retournées par rapport au nombre total de commandes)
+* **itemsRatio** = retourne le taux d’éléments (nombre total d’éléments retournés par rapport au nombre d’éléments achetés)
+* **monetaryRatio** = retourne le taux des montants (montant monétaire total des éléments retournés par rapport au montant acheté)
+* **frequency** = fréquence de retour
 
 Ouvrez un nouveau bloc-notes dans Azure Data Studio et entrez le script suivant.
 
@@ -55,10 +55,10 @@ Dans la chaîne de connexion, remplacez les détails de connexion, le cas éché
 
 ```python
 # Load packages.
+import pyodbc
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
@@ -69,7 +69,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -115,14 +115,10 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>Charger les données dans une trame de données
 
-Les résultats de la requête sont renvoyés vers Python à l’aide de la fonction **RxSqlServerData** revoscalepy. Dans le cadre du processus, vous utiliserez les informations de colonne que vous avez définies dans le script précédent.
+Les résultats de la requête sont renvoyés à Python à l’aide de la fonction Pandas **read_sql**. Dans le cadre du processus, vous utiliserez les informations de colonne que vous avez définies dans le script précédent.
 
 ```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
-revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-# import data source and convert to pandas dataframe.
-customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+customer_data = pandas.read_sql(input_query, conn_str)
 ```
 
 À présent, affichez le début de la trame de données pour vérifier qu’elle semble correcte.
