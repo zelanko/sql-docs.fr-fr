@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,13 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74307995"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429018"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -40,9 +40,9 @@ Retourne des informations sur chaque requête qui s’exécute dans [!INCLUDE[ss
 |start_time|**DATETIME**|Horodateur lors la réception de la demande. N'accepte pas la valeur NULL.|  
 |status|**nvarchar(30**|Statut de la demande. Il peut s’agir de l’une des propriétés suivantes :<br /><br /> Arrière-plan<br />Exécution en cours<br />Exécutable<br />En état de veille<br />Suspended<br /><br /> N'accepte pas la valeur NULL.|  
 |command|**nvarchar (32)**|Identifie le type de commande en cours de traitement. Les types de commandes courants comprennent notamment :<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Suppression<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Le texte de la demande peut être extrait à l'aide de sys.dm_exec_sql_text avec le paramètre sql_handle correspondant pour la demande. Des processus système internes définissent la commande en fonction du type de tâche à exécuter. Il peut s'agir des tâches suivantes :<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> N'accepte pas la valeur NULL.|  
-|sql_handle|**varbinary (64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Autorise la valeur NULL.|  
-|statement_start_offset|**int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution commencent. Cette valeur peut être utilisée avec les fonctions de gestion dynamique sql_handle, statement_end_offset et sys.dm_exec_sql_text pour extraire l'instruction en cours d'exécution de la demande. Autorise la valeur NULL.|  
-|statement_end_offset|**int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution se terminent. Cette valeur peut être utilisée avec les fonctions de gestion dynamique sql_handle, statement_end_offset et sys.dm_exec_sql_text pour extraire l'instruction en cours d'exécution de la demande. Autorise la valeur NULL.|  
+|sql_handle|**varbinary (64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Autorise la valeur NULL.| 
+|statement_start_offset|**int**|Indique, en octets, à partir de 0, la position de départ de l’instruction en cours d’exécution pour le lot en cours d’exécution ou l’objet persistant. Peut être utilisé avec `sql_handle`, `statement_end_offset`et la fonction de gestion `sys.dm_exec_sql_text` dynamique pour récupérer l’instruction en cours d’exécution pour la demande. Autorise la valeur NULL.|  
+|statement_end_offset|**int**|Indique, en octets, à partir de 0, la position de fin de l’instruction en cours d’exécution pour le lot en cours d’exécution ou l’objet persistant. Peut être utilisé avec `sql_handle`, `statement_start_offset`et la fonction de gestion `sys.dm_exec_sql_text` dynamique pour récupérer l’instruction en cours d’exécution pour la demande. Autorise la valeur NULL.|  
 |plan_handle|**varbinary (64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot en cours d’exécution. Autorise la valeur NULL.|  
 |database_id|**smallint**|ID de la base de données dans laquelle la requête s'exécute. N'accepte pas la valeur NULL.|  
 |user_id|**int**|ID de l'utilisateur qui a envoyé la demande. N'accepte pas la valeur NULL.|  

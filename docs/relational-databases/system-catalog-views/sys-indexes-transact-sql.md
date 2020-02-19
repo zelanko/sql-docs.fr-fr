@@ -1,7 +1,7 @@
 ---
 title: sys. Indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74761478"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179290"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74761478"
 |**allow_row_locks**|**bit**|1 = Index autorisant les verrous de ligne<br /><br /> 0 = Index n'autorisant pas les verrous de ligne<br /><br /> Toujours 0 pour des index columnstore cluster.|  
 |**allow_page_locks**|**bit**|1 = Index autorisant les verrous de page<br /><br /> 0 = Index n'autorisant pas les verrous de page<br /><br /> Toujours 0 pour des index columnstore cluster.|  
 |**has_filter**|**bit**|1 = Index disposant d'un filtre et contenant uniquement les lignes qui satisfont la définition du filtre.<br /><br /> 0 = Index ne disposant pas de filtre.|  
-|**filter_definition**|**nvarchar(max)**|Expression pour le sous-ensemble de lignes inclus dans l'index filtré.<br /><br /> NULL pour un segment de mémoire ou un index non filtré.|  
+|**filter_definition**|**nvarchar(max)**|Expression pour le sous-ensemble de lignes inclus dans l'index filtré.<br /><br /> NULL pour un segment de mémoire, un index non filtré ou des autorisations insuffisantes sur la table.|  
 |**auto_created**|**bit**|1 = l’index a été créé par le paramétrage automatique.<br /><br />0 = l’index a été créé par l’utilisateur.
 |**optimize_for_sequential_key**|**bit**|1 = l’optimisation de l’insertion de la dernière page est activée pour l’index.<br><br>0 = valeur par défaut. L’optimisation de l’insertion de la dernière page de l’index a été désactivée.|
 
