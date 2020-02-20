@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952839"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Méthode getColumns (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- **Chaîne** qui contient le nom du catalogue.  
+ **Chaîne** contenant le nom du catalogue.  
   
  *schema*  
   
@@ -54,7 +54,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Valeur **chaîne** qui contient le modèle du nom de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -65,36 +65,36 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Le jeu de résultats retourné par la méthode getColumns contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nom du catalogue.|  
-|TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
-|TABLE_NAME|**String**|Nom de la table.|  
-|COLUMN_NAME|**String**|Nom de la colonne.|  
+|TABLE_CAT|**Chaîne**|Nom du catalogue.|  
+|TABLE_SCHEM|**Chaîne**|Le nom du schéma de la table.|  
+|TABLE_NAME|**Chaîne**|Nom de la table.|  
+|COLUMN_NAME|**Chaîne**|Nom de la colonne.|  
 |DATA_TYPE|**smallint**|Type de données SQL de java.sql.Types.|  
-|TYPE_NAME|**String**|Nom du type de données.|  
-|COLUMN_SIZE|**Int**|Précision de la colonne.|  
+|TYPE_NAME|**Chaîne**|Nom du type de données.|  
+|COLUMN_SIZE|**int**|Précision de la colonne.|  
 |BUFFER_LENGTH|**smallint**|Taille de transfert des données.|  
 |DECIMAL_DIGITS|**smallint**|Échelle de la colonne.|  
 |NUM_PREC_RADIX|**smallint**|Base de la colonne.|  
-|NULLABLE|**smallint**|Indique si la colonne accepte la valeur Null. Il peut avoir une des valeurs suivantes :<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|Commentaires associés à la colonne.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retourne toujours Null pour cette colonne.|  
-|COLUMN_DEF|**String**|Valeur par défaut de la colonne.|  
+|NULLABLE|**smallint**|Indique si la colonne accepte la valeur Null. Ce peut être l’une des valeurs suivantes :<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
+|Remarques|**Chaîne**|Commentaires associés à la colonne.<br /><br /> **Remarque :**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retourne toujours Null pour cette colonne.|  
+|COLUMN_DEF|**Chaîne**|Valeur par défaut de la colonne.|  
 |SQL_DATA_TYPE|**smallint**|Valeur du type de données SQL tel qu'il apparaît dans le champ TYPE du descripteur. Cette colonne est la même que la colonne DATA_TYPE, excepté pour le type de données datetime et pour le type de données interval de SQL-92. Cette colonne renvoie toujours une valeur.|  
 |SQL_DATETIME_SUB|**smallint**|Code de sous-type pour le type de données datetime et pour le type de données interval de SQL-92. Pour les autres types de données, cette colonne renvoie la valeur NULL.|  
-|CHAR_OCTET_LENGTH|**Int**|Nombre maximal d'octets dans la colonne.|  
-|ORDINAL_POSITION|**Int**|Index de la colonne dans la table.|  
-|IS_NULLABLE|**String**|Indique si la colonne autorise les valeurs Null.|  
+|CHAR_OCTET_LENGTH|**int**|Nombre maximal d'octets dans la colonne.|  
+|ORDINAL_POSITION|**int**|Index de la colonne dans la table.|  
+|IS_NULLABLE|**Chaîne**|Indique si la colonne autorise les valeurs Null.|  
 |SS_IS_SPARSE|**smallint**|Si la colonne est une colonne éparse, la valeur est 1 ; sinon, 0.<sup>1</sup>|  
 |SS_IS_COLUMN_SET|**smallint**|Si la colonne est la colonne éparse column_set, la valeur est 1 ; sinon, 0. <sup>1</sup>|  
 |SS_IS_COMPUTED|**smallint**|Indique si une colonne dans un TABLE_TYPE est une colonne calculée. <sup>1</sup>|  
-|IS_AUTOINCREMENT|**String**|« YES » si la colonne est incrémentée automatiquement. « NO » si la colonne n'est pas incrémentée automatiquement. « » (chaîne vide) si le pilote ne peut pas déterminer si la colonne est incrémentée automatiquement. <sup>1</sup>|  
-|SS_UDT_CATALOG_NAME|**String**|Nom du catalogue qui contient le type défini par l'utilisateur (UDT). <sup>1</sup>|  
-|SS_UDT_SCHEMA_NAME|**String**|Nom du schéma qui contient le type défini par l'utilisateur (UDT). <sup>1</sup>|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|Type défini par l'utilisateur (UDT) du nom complet. <sup>1</sup>|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Nom du catalogue dans lequel un nom de collection de schémas XML est défini. Si le nom du catalogue est introuvable, cette variable contient une chaîne vide. <sup>1</sup>|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Nom du schéma dans lequel un nom de collection de schémas XML est défini. Si le nom du schéma est introuvable, la chaîne est vide. <sup>1</sup>|  
-|SS_XML_SCHEMACOLLECTION_NAME|**String**|Nom d'une collection de schémas XML. Si le nom est introuvable, la chaîne est vide. <sup>1</sup>|  
+|IS_AUTOINCREMENT|**Chaîne**|« YES » si la colonne est incrémentée automatiquement. « NO » si la colonne n'est pas incrémentée automatiquement. « » (chaîne vide) si le pilote ne peut pas déterminer si la colonne est incrémentée automatiquement. <sup>1</sup>|  
+|SS_UDT_CATALOG_NAME|**Chaîne**|Nom du catalogue qui contient le type défini par l'utilisateur (UDT). <sup>1</sup>|  
+|SS_UDT_SCHEMA_NAME|**Chaîne**|Nom du schéma qui contient le type défini par l'utilisateur (UDT). <sup>1</sup>|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**Chaîne**|Type défini par l'utilisateur (UDT) du nom complet. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**Chaîne**|Nom du catalogue dans lequel un nom de collection de schémas XML est défini. Si le nom du catalogue est introuvable, cette variable contient une chaîne vide. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**Chaîne**|Nom du schéma dans lequel un nom de collection de schémas XML est défini. Si le nom du schéma est introuvable, la chaîne est vide. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_NAME|**Chaîne**|Nom d'une collection de schémas XML. Si le nom est introuvable, la chaîne est vide. <sup>1</sup>|  
 |SS_DATA_TYPE|**tinyint**|Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisé par les procédures stockées étendues.<br /><br /> **Remarque** : Pour plus d’informations sur les types de données retournés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez la rubrique « Types de données (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
  (1) Cette colonne sera absente si vous vous connectez à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
@@ -109,7 +109,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Type de retour dans le pilote JDBC version 2.0 (ou en cas de connexion à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]) et constante numérique associée|Type de retour dans le pilote JDBC version 3.0 en cas de connexion à [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] ou ultérieur|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |type défini par l'utilisateur supérieur à 8 Ko|LONGVARBINARY (-4)|VARBINARY (-3)|  
-|geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
+|Geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geometry|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |varbinary(max)|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |nvarchar(max)|LONGVARCHAR (-1) ou LONGNVARCHAR (JDBC 4) (-16)|VARCHAR (12) ou NVARCHAR (JDBC 4) (-9)|  
@@ -124,7 +124,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Type de retour dans le pilote JDBC version 2.0|Type de retour dans le pilote JDBC version 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (métadonnées de base de données)|  
-|xml|1073741823|2147483647 (métadonnées de base de données)|  
+|Xml|1073741823|2147483647 (métadonnées de base de données)|  
 |type défini par l'utilisateur inférieur ou égal à 8 Ko|8 Ko (jeu de résultats et métadonnées de paramètre)|Taille réelle retournée par la procédure stockée.|  
 |time||Longueur en caractères de la représentation de chaîne du type, en tenant compte de la précision maximale autorisée pour le composant fractions de seconde.|  
 |Date||identique à time|  
@@ -141,17 +141,17 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
 |Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Type de retour dans le pilote JDBC version 2.0|Type de retour dans le pilote JDBC version 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
-|varchar(max)|texte|varchar|  
+|varchar(max)|text|varchar|  
 |varbinary(max)|image|varbinary|  
   
  La colonne DECIMAL_DIGITS intègre les modifications suivantes :  
   
 |Type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Pilote JDBC version 2.0|Pilote JDBC version 3.0|  
 |--------------------------------------------------------------|---------------------|---------------------|  
-|time|Null|7 (ou inférieur, si spécifié)|  
-|Date|Null|Null|  
-|datetime2|Null|7 (ou inférieur, si spécifié)|  
-|datetimeoffset|Null|7 (ou inférieur, si spécifié)|  
+|time|null|7 (ou inférieur, si spécifié)|  
+|Date|null|null|  
+|datetime2|null|7 (ou inférieur, si spécifié)|  
+|datetimeoffset|null|7 (ou inférieur, si spécifié)|  
   
  La colonne SQL_DATA_TYPE intègre les modifications suivantes :  
   
@@ -159,10 +159,10 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  
-|xml|-10|-152|  
+|Xml|-10|-152|  
 |type défini par l'utilisateur inférieur ou égal à 8 Ko|-3|-151|  
 |type défini par l'utilisateur supérieur à 8 Ko|Non disponible dans le pilote JDBC version 2.0|-151|  
-|geography|-4|-151|  
+|Geography|-4|-151|  
 |geometry|-4|-151|  
 |hierarchyid|-4|-151|  
 |time|-9|92|  

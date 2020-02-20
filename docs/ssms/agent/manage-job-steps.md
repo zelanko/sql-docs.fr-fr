@@ -1,10 +1,9 @@
 ---
-title: Gérer les étapes de travail | Microsoft Docs
-ms.custom: ''
+title: Gérer les étapes de travail
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,13 +23,15 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dfb4633efcc190782ce62c17d8c7f26f29b8a0a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258041"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256110"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ Les étapes de travail étant exécutées dans le contexte d’un utilisateur [!
   
 -   Des programmes exécutables et des commandes du système d'exploitation  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] Des instructions  
+-   Instructions[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Des tâches  
   
@@ -162,7 +163,7 @@ Lorsque vous créez une étape de travail de commande [!INCLUDE[ssASnoversion](.
   
 -   identifier le serveur de bases de données OLAP sur lequel l'étape de travail doit s'exécuter ;  
   
--   taper l'instruction à exécuter. L’instruction doit être une méthode [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **XML pour** . L’instruction ne doit pas contenir d’enveloppe SOAP complète ou de méthode [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **XML** . Notez que, bien que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prenne en charge les enveloppes SOAP (Simple Object Access Protocol) complètes et la méthode **Discover** , ce n’est pas le cas pour les étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+-   taper l'instruction à exécuter. L’instruction doit être une méthode XML pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute**. L’instruction ne doit pas contenir d’enveloppe SOAP complète ou de méthode XML pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover**. Notez que, bien que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prenne en charge les enveloppes SOAP (Simple Object Access Protocol) complètes et la méthode **Discover** , ce n’est pas le cas pour les étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ### <a name="analysis-services-query-job-steps"></a>Étapes de travail de requête Analysis Services  
 Lorsque vous créez une étape de travail de requête [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , vous devez :  

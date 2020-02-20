@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592312"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190685"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés dans le rapport et datasets partagés (Générateur de rapports et SSRS)
   Un dataset spécifie les données que vous souhaitez utiliser à partir d'une connexion de données. Un dataset est basé sur une connexion de données enregistrée dans le rapport en tant que source de données incorporée ou référence à une source de données partagée sur un serveur de rapports. Le dataset inclut une requête qui spécifie un ensemble de champs. Lorsque vous faites glisser ces champs vers l'aire de conception, vous créez des expressions qui correspondent aux données effectives lorsque le rapport s'exécute.  
@@ -73,9 +73,9 @@ ms.locfileid: "73592312"
   
 -   Jeu de résultats extrait de tous les fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] enregistrés et configurés.  
   
--   Données d'un modèle de rapport qui a été conçu pour une source de données spécifique, avec des entités, des relations d'entités et des champs prédéfinis. Pour plus d’informations, consultez « datasets du rapport » dans la [documentation de Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+-   Données d'un modèle de rapport qui a été conçu pour une source de données spécifique, avec des entités, des relations d'entités et des champs prédéfinis. Pour plus d’informations, consultez « Datasets du rapport » dans la [documentation Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
- Lorsque le rapport est traité au moment de l'exécution, le jeu de résultats réel retourné pour une requête peut comporter aucune ou plusieurs lignes. Les colonnes définies dans la requête peuvent également être manquantes dans la source de données. Les valeurs Null de la source de données sont mappées à la valeur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **System.DBNull.Value**.  
+ Lorsque le rapport est traité au moment de l'exécution, le jeu de résultats réel retourné pour une requête peut comporter aucune ou plusieurs lignes. Les colonnes définies dans la requête peuvent également être manquantes dans la source de données. Les valeurs Null de la source de données sont mappées à la valeur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**System.DBNull.Value**.  
   
  Pour plus d’informations sur l’utilisation de champs de dataset, consultez [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73592312"
   
  La différence entre les deux sources de données réside dans leur mode de création, de stockage et de gestion. Le tableau suivant indique les différences entre les sources de données incorporées et partagées :  
   
-|Description|Source de données<br /><br /> Source de données|Partagés<br /><br /> Source de données|  
+|Description|Embedded<br /><br /> source de données|Partagé<br /><br /> source de données|  
 |-----------------|------------------------------|----------------------------|  
 |La connexion de données est incorporée dans la définition de rapport.|![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")||  
 |Le pointeur vers la connexion de données sur le serveur de rapports est incorporé dans la définition de rapport.||![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
@@ -144,8 +144,8 @@ ms.locfileid: "73592312"
 |--------------|--------------------------------------------|------------------------------------------|  
 |Texte de la requête|Configurez la requête, notamment définissez-la en tant qu'expression.|Impossible de modifier la requête.|  
 |Paramètres de requête|Impossible de référencer des paramètres de rapport<br /><br /> Inclut des valeurs par défaut<br /><br /> Inclut un indicateur en lecture seule|Configurez les paramètres qui ne sont pas marqués en lecture seule dans la définition|  
-|Filtres|Définir les filtres|Impossible d'afficher ou modifier des filtres de dataset qui font partie de la définition<br /><br /> Possibilité de créer des filtres supplémentaires|  
-|Source de données|Doit être une source de données partagée|Impossible de modifier la source de données partagée|  
+|Filtres|Définir des filtres|Impossible d'afficher ou modifier des filtres de dataset qui font partie de la définition<br /><br /> Possibilité de créer des filtres supplémentaires|  
+|source de données|Doit être une source de données partagée|Impossible de modifier la source de données partagée|  
 |Champs|Champs de la commande de requête<br /><br /> Les champs calculés ne font pas partie de la définition de dataset|Possibilité de consulter les champs, mais pas de les modifier<br /><br /> La collection de champs est statique selon la requête au moment où vous avez ajouté le dataset partagé au rapport. Pour mettre à jour, cliquez sur **Actualiser les champs** dans la boîte de dialogue **Propriétés du dataset** . La collection de champs réelle est tout élément retourné par la requête actuelle dans la définition.<br /><br /> Ajouter des champs calculés|  
 |Dataset|Options de données telles que le respect de la casse|Remplacer des options de données dans l'instance|  
   
@@ -219,7 +219,7 @@ ms.locfileid: "73592312"
   
 ## <a name="see-also"></a>Voir aussi  
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
