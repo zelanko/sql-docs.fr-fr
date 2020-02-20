@@ -1,5 +1,5 @@
 ---
-title: Méthode setAsciiStream pour les octets du flux d’entrée-long) | Microsoft Docs
+title: Méthode setAsciiStream pour octets du flux d’entrée – long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c4e5244ba0798fdd02f30faafa3459aa801e8dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975473"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>Méthode setAsciiStream (java.lang.String, java.io.InputStream, long)
@@ -42,13 +42,13 @@ public final void setAsciiStream(java.lang.String parameterName,
   
  *length*  
   
- **Valeur de type long** qui indique le nombre d’octets.  
+ **long** indiquant le nombre d’octets.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream dans l’interface java. Sql. PreparedStatement.  
+ Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream de l’interface java.sql.PreparedStatement.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

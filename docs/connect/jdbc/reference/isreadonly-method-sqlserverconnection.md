@@ -16,10 +16,10 @@ ms.assetid: 902fd2c1-05e0-436e-9779-c048cdb8475a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708060b6192e47a126c9c4c3ea47052c098bb1fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977318"
 ---
 # <a name="isreadonly-method-sqlserverconnection"></a>Méthode isReadOnly (SQLServerConnection)
@@ -37,14 +37,14 @@ ms.locfileid: "67977318"
 public boolean isReadOnly()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si la connexion est en mode lecture seule, **false** dans le cas contraire.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si la connexion est en mode lecture seule, **false** si ce n’est pas le cas.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode isReadOnly est spécifiée par la méthode isReadOnly dans l’interface java. Sql. Connection.  
+ Cette méthode isReadOnly est spécifiée par la méthode isReadOnly de l’interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

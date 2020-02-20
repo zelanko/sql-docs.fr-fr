@@ -1,7 +1,7 @@
 ---
 title: PDO::prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3bb02fefe4e4845a1ab1e7b7a7117845fdaebf13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993205"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941208"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,11 +29,11 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Paramètres
-$*statement*: chaîne qui contient l’instruction SQL.
+$*instruction* : chaîne contenant l’instruction SQL.
 
-*key_pair* : tableau contenant un nom et une valeur d’attribut. Pour plus d'informations, consultez la section Remarques.
+*key_pair* : tableau contenant un nom et une valeur d’attribut. Pour plus d'informations, consultez la section Remarques.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 En cas de réussite, retourne un objet PDOStatement. En cas d’échec, retourne un objet PDOException, ou false en fonction de la valeur de `PDO::ATTR_ERRMODE`.
 
 ## <a name="remarks"></a>Notes
@@ -41,15 +41,15 @@ Le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] n’évalue pas les
 
 Le tableau suivant répertorie les valeurs possibles de *key_pair*.
 
-|Key|Description|
+|Clé|Description|
 |-------|---------------|
-|PDO::ATTR_CURSOR|Spécifie le comportement du curseur. La valeur par défaut est `PDO::CURSOR_FWDONLY`, un curseur avant sans défilement. `PDO::CURSOR_SCROLL` est un curseur avec défilement.<br /><br />Par exemple, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Quand il a la valeur `PDO::CURSOR_SCROLL`, vous pouvez ensuite utiliser `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` pour définir le type de curseur avec défilement, qui est décrit ci-dessous.<br /><br />Pour plus d’informations sur les jeux de résultats et les curseurs dans le pilote PDO_SQLSRV, consultez [Types de curseurs &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|
+|PDO::ATTR_CURSOR|Spécifie le comportement du curseur. La valeur par défaut est `PDO::CURSOR_FWDONLY`, un curseur avant sans défilement. `PDO::CURSOR_SCROLL` est un curseur avec défilement.<br /><br />Par exemple : `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Quand il a la valeur `PDO::CURSOR_SCROLL`, vous pouvez ensuite utiliser `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` pour définir le type de curseur avec défilement, qui est décrit ci-dessous.<br /><br />Pour plus d’informations sur les jeux de résultats et les curseurs dans le pilote PDO_SQLSRV, consultez [Types de curseurs &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|
 |PDO::ATTR_EMULATE_PREPARES|Par défaut, cet attribut a la valeur false, que vous pouvez remplacer par `PDO::ATTR_EMULATE_PREPARES => true`. Pour plus d’informations et pour obtenir un exemple, consultez [Emulate Prepare](#emulate-prepare).|
 |PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|Spécifie le type de curseur avec défilement. Valide uniquement quand `PDO::ATTR_CURSOR` a la valeur `PDO::CURSOR_SCROLL`. Pour savoir quelles valeurs cet attribut peut prendre, voir ci-dessous.|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Spécifie le nombre de décimales pour la mise en forme des valeurs monétaires extraites. Cette option fonctionne uniquement quand `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` a la valeur true. Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Si la valeur est True, spécifie l’exécution de requête directe. False est synonyme d’exécution d’instruction préparée. Pour plus d’informations sur `PDO::SQLSRV_ATTR_DIRECT_QUERY`, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (par défaut)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Spécifie s’il faut récupérer les types de date et d’heure en tant qu’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Pour plus d’informations, consultez [Guide pratique pour récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Spécifie s’il faut récupérer les types de date et d’heure en tant qu’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Pour plus d’informations, consultez [Procédure : Récupérer des types date et heure sous forme d’objets datetime PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Gère les extractions numériques à partir de colonnes avec des types numériques SQL. Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Spécifie s’il faut ajouter des zéros au début des chaînes décimales si nécessaire. Si elle est définie, cette option active l’option `PDO::SQLSRV_ATTR_DECIMAL_PLACES` pour mettre en forme les types monétaires. Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
@@ -139,6 +139,33 @@ print_r($row);
 ?>
 ```
 
+## <a name="example"></a>Exemple
+Les deux extraits de code suivants montrent comment utiliser PDO::prepare avec des données ciblées pour les colonnes CHAR/VARCHAR. Comme l’encodage par défaut pour PDO::prepare est UTF-8, l’utilisateur peut pour éviter les conversions implicites à l’aide de l’option `PDO::SQLSRV_ENCODING_SYSTEM`.
+
+**Option 1 :**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**Option 2 :**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
+```
+
 <a name="emulate-prepare" />
 
 ## <a name="example"></a>Exemple
@@ -209,7 +236,7 @@ L’affectation de la valeur true à `PDO::ATTR_EMULATE_PREPARES` peut contourne
 > [!NOTE]
 > Avec emulate prepares défini sur true, la sécurité des requêtes paramétrables n’est pas activée. Par conséquent, votre application doit garantir que les données liées aux paramètres ne contiennent pas de code Transact-SQL malveillant.
 
-### <a name="encoding"></a>Encoding
+### <a name="encoding"></a>Encodage
 
 Si l’utilisateur souhaite lier des paramètres avec des encodages différents (par exemple UTF-8 ou binaire), l’utilisateur doit indiquer clairement l’encodage dans le script PHP.
 
@@ -217,7 +244,53 @@ Le pilote PDO_SQLSRV vérifie d’abord l’encodage spécifié dans `PDO::bindP
 
 S’il est introuvable, le pilote vérifie si un encodage est défini dans `PDO::prepare()` ou `PDOStatement::setAttribute()`. Autrement, le pilote utilise l’encodage spécifié dans `PDO::__construct()` ou `PDO::setAttribute()`.
 
-### <a name="limitations"></a>Limitations
+En outre, à compter de la version 5.8.0, lors de l’utilisation de PDO::prepare avec `PDO::ATTR_EMULATE_PREPARES` défini sur la valeur true, l’utilisateur peut se servir des [types de chaînes étendues introduits dans PHP 7.2](https://wiki.php.net/rfc/extended-string-types-for-pdo) pour s’assurer que le préfixe `N` est utilisé. Les extraits de code ci-dessous présentent différentes alternatives.
+
+> [!NOTE]
+> Par défaut, emulate prepares est définie sur false, auquel cas les constantes de la chaîne PDO étendue seront ignorées.
+
+**Utilisation de l’option de pilote PDO::SQLSRV_ENCODING_UTF8 lors de la liaison**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**Utilisation de l’attribut PDO::SQLSRV_ATTR_ENCODING**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**Utilisation de la constante PDO PDO::PARAM_STR_NATL**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**Définition du type de paramètre de chaîne par défaut PDO::PARAM_STR_NATL**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+### <a name="limitations"></a>Limites
 
 Comme vous pouvez le voir, la liaison est effectuée en interne par le pilote. Une requête valide est envoyée au serveur pour l’exécution sans aucun paramètre. Comparé au cas ordinaire, il existe certaines limitations quand la fonctionnalité de requête paramétrable n’est pas utilisée.
 
@@ -229,7 +302,7 @@ Comme vous pouvez le voir, la liaison est effectuée en interne par le pilote. U
 - Les espaces réservés en double pour un paramètre encodé en binaire ne fonctionneront pas.
 
 ## <a name="see-also"></a>Voir aussi
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)
 

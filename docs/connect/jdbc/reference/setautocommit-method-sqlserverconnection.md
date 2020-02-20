@@ -16,10 +16,10 @@ ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbf9b18fdc6b590f085b5be6babd64100006163a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975265"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit, méthode (SQLServerConnection)
@@ -37,13 +37,13 @@ public void setAutoCommit(boolean value)
 #### <a name="parameters"></a>Paramètres  
  *value*  
   
- **true** pour activer le mode de validation automatique pour la connexion, **false** pour le désactiver.  
+ **true** afin d’activer le mode de validation automatique pour la connexion, **false** pour le désactiver.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setAutoCommit est spécifiée par la méthode setAutoCommit dans l’interface java. Sql. Connection.  
+ Cette méthode setAutoCommit est spécifiée par la méthode setAutoCommit de l’interface java.sql.Connection.  
   
  Si une connexion est en mode de validation automatique, toutes ses instructions SQL sont exécutées et validées en tant que transactions individuelles. Autrement, ses instructions SQL sont regroupées dans des transactions qui prennent fin avec l’appel de la méthode [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) ou de la méthode [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md). Par défaut, les nouvelles connexions sont en mode de validation automatique.  
   

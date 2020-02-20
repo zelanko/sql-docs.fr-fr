@@ -1,5 +1,5 @@
 ---
-title: Méthode setClob (int, Java. IO. Reader, long) | Microsoft Docs
+title: Méthode setClob (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 589a2c7a12523658fc5fd58afb46dc8bb959a276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974597"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>Méthode setClob (int, java.io.Reader, long)
@@ -34,15 +34,15 @@ public final void setClob(int parameterIndex,
 #### <a name="parameters"></a>Paramètres  
  *parameterIndex*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
  *reader*  
   
- Objet lecteur.  
+ Objet Reader.  
   
  *length*  
   
- Valeur de **type long** qui indique le nombre de caractères dans la valeur de paramètre.  
+ **long** indiquant le nombre de caractères dans la valeur de paramètre.  
   
 ## <a name="remarks"></a>Notes  
  Cette méthode setClob est spécifiée par la méthode setClob de l’interface java.sql.PreparedStatement.  

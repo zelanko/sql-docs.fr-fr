@@ -16,10 +16,10 @@ ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d5a22e4fa9a3bd27da1862b0157324e3fbe9098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977011"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>Méthode isWritable (SQLServerResultSetMetaData)
@@ -37,16 +37,16 @@ public boolean isWritable(int column)
 #### <a name="parameters"></a>Paramètres  
  *column*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si les écritures échouent sur la colonne. Dans le cas contraire, la valeur est **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si les écritures réussissent sur la colonne. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode isWritable est spécifiée par la méthode isWritable dans l’interface java. Sql. ResultSetMetaData.  
+ Cette méthode isWritable est spécifiée par la méthode isWritable de l'interface java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSetMetaData, méthodes](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

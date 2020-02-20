@@ -16,10 +16,10 @@ ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975096"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>Méthode setBinaryStream (SQLServerBlob)
@@ -39,14 +39,14 @@ public java.io.OutputStream setBinaryStream(long pos)
   
  Position dans la valeur BLOB à laquelle démarrer l'écriture.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Flux de sortie.  
   
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream dans l’interface java. Sql. blob.  
+ Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream de l’interface java.sql.Blob.  
   
  Les données dans le BLOB sont remplacées par le flux de sortie à partir de la position spécifiée et peuvent dépasser la longueur initiale du BLOB. Si vous spécifiez une valeur position+1, des octets sont ajoutés. Le passage d'une valeur position+2 ou supérieure (ou inférieure ou égale à zéro) génère une erreur de position.  
   

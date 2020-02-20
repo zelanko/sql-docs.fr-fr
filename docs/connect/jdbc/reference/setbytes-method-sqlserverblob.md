@@ -16,10 +16,10 @@ ms.assetid: cd193265-3a65-4b1e-86ec-7818c3c0c1e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00bc342081260af4740f20e6ec88c02061623b28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974907"
 ---
 # <a name="setbytes-method-sqlserverblob"></a>Méthode setBytes (SQLServerBlob)
@@ -29,7 +29,7 @@ ms.locfileid: "67974907"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[setBytes (long, byte&#91;&#93;)](../../../connect/jdbc/reference/setbytes-method-long-byte.md)|Enregistre le tableau d'octets spécifié dans le BLOB, en démarrant à la position spécifiée, puis retourne le nombre d'octets écrits.|  
 |[setBytes (long, byte&#91;&#93;, int, int)](../../../connect/jdbc/reference/setbytes-method-long-byte-int-int.md)|Écrit tout ou partie du tableau d'octets donné dans le BLOB en commençant à la position, au décalage et à la longueur donnés, puis retourne le nombre d'octets écrits.|  

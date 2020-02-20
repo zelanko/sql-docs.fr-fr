@@ -16,10 +16,10 @@ ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b52007528ee5c3d3caaabc83b158e50156b664e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975697"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>rowInserted, méthode (SQLServerResultSet)
@@ -34,19 +34,19 @@ ms.locfileid: "67975697"
 public boolean rowInserted()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si une ligne a été insérée et que des insertions ont été détectées. Dans le cas contraire, la valeur est **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si une ligne a eu une insertion et que des insertions sont détectées. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode rowUpdated est spécifiée par la méthode rowUpdated dans l’interface java. Sql. ResultSet.  
+ Cette méthode rowUpdated est spécifiée par la méthode rowUpdated dans l’interface java.sql.ResultSet.  
   
  La valeur retournée dépend de la possibilité pour l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) de détecter des insertions visibles.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ne détecte pas les lignes insérées pour un type de curseur.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne détecte les lignes insérées d’aucun type de curseur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

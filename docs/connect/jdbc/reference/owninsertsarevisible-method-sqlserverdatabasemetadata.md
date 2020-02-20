@@ -16,10 +16,10 @@ ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a78b6d90c58f7d04f5a3d9f6c8225cf592153d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976528"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>Méthode ownInsertsAreVisible (SQLServerDatabaseMetaData)
@@ -57,14 +57,14 @@ public boolean ownInsertsAreVisible(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si les insertions sont visibles. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode ownInsertsAreVisible est spécifiée par la méthode ownInsertsAreVisible dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode ownInsertsAreVisible est spécifiée par la méthode ownInsertsAreVisible de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

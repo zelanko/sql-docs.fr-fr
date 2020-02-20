@@ -16,10 +16,10 @@ ms.assetid: e0db2871-3a5f-4fcc-af61-92333042dcd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0fb1020b2e3ebfdc17520110fedf87eb0e6f816e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976118"
 ---
 # <a name="preparestatement-method-javalangstring-javalangstring"></a>prepareStatement, méthode (java.lang.String, java.lang.String)
@@ -42,16 +42,16 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  *columnNames*  
   
- Tableau de **chaînes** de noms de colonnes.  
+ Tableau **chaîne** de noms de colonnes.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet PreparedStatement.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode prepareStatement est spécifiée par la méthode prepareStatement dans l’interface java. Sql. Connection.  
+ Cette méthode prepareStatement est spécifiée par la méthode prepareStatement de l’interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [prepareStatement, méthode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

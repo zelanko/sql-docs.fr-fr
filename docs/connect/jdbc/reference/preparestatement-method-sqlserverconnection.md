@@ -1,5 +1,5 @@
 ---
-title: prepareStatement, méthode (SQLServerConnection) | Microsoft Docs
+title: Méthode prepareStatement (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 744e76a5a41305df909ef29df6c1a1719751064e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976094"
 ---
 # <a name="preparestatement-method-sqlserverconnection"></a>prepareStatement, méthode (SQLServerConnection)
@@ -29,7 +29,7 @@ ms.locfileid: "67976094"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[prepareStatement (java.lang.String)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|Crée un objet [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) servant à envoyer des instructions SQL paramétrables à la base de données.|  
 |[prepareStatement (java.lang.String, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int.md)|Crée un objet [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) servant à envoyer des instructions SQL paramétrables à la base de données et capable de récupérer des clés générées automatiquement.|  

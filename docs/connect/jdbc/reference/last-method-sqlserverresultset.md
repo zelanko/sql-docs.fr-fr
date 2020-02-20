@@ -16,10 +16,10 @@ ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf176794b2fac5a241c14ee494d08ddd4aa98dbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976890"
 ---
 # <a name="last-method-sqlserverresultset"></a>last, méthode (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67976890"
 public boolean last()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si la nouvelle ligne actuelle est valide. **false** s’il n’y a plus de lignes à traiter.  
   
 ## <a name="exceptions"></a>Exceptions  

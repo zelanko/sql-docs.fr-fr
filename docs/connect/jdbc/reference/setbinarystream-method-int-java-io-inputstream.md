@@ -11,10 +11,10 @@ ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 483588eee0a5d1baaf7f2eda4a88372c45836d2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975308"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream"></a>Méthode setBinaryStream (int, java.io.InputStream)
@@ -33,17 +33,17 @@ public final void setAsciiStream(int parameterIndex,
 #### <a name="parameters"></a>Paramètres  
  *parameterIndex*  
   
- **Entier** qui indique le numéro du paramètre.  
+ **int** indiquant le numéro du paramètre.  
   
  *x*  
   
- Objet Java. IO. InputStream.  
+ Objet java.io.InputStream.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream dans l’interface java. Sql. PreparedStatement.  
+ Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream de l’interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [setBinaryStream, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   

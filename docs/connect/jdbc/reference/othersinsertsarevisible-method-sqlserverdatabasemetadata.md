@@ -1,5 +1,5 @@
 ---
-title: Méthode othersInsertsAreVisible, (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Méthode othersInsertsAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d274dec50ef238e0f87f63524d47275bb386810d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976652"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>Méthode othersInsertsAreVisible (SQLServerDatabaseMetaData)
@@ -57,14 +57,14 @@ public boolean othersInsertsAreVisible(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si les insertions sont visibles. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode othersInsertsAreVisible, est spécifiée par la méthode othersInsertsAreVisible, dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode othersInsertsAreVisible, est spécifiée par la méthode othersInsertsAreVisible dans l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
