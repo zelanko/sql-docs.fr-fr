@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel R + T-SQL : Explorer les données'
+title: 'Tutoriel R + T-SQL : Explorer des données'
 description: Tutoriel illustrant l’exploration et la visualisation des données SQL Server à l’aide de fonctions R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,16 +10,16 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73725224"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article fait partie d’un tutoriel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
+Cet article fait partie d’un tutoriel pour développeurs SQL expliquant comment utiliser le langage R dans SQL Server.
 
 Dans cette étape, vous allez examiner les exemples de données, puis générer des tracés à l’aide de [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) à partir de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) et de la fonction générique [hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) en base R. Ces fonctions R sont déjà incluses dans [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
@@ -115,7 +115,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
   
     **Résultats**
     
-    *tracer* *0xFFD8FFE000104A4649...*
+    *tracé* *0xFFD8FFE000104A4649...*
   
 2. Ouvrez une invite de commandes PowerShell et exécutez la commande suivante, en fournissant le nom d’instance, le nom de base de données, le nom d’utilisateur et les informations d’identification appropriés en tant qu’arguments. Pour ceux qui utilisent des identités Windows, vous pouvez remplacer **-U** et **-P** par **-T**.
   

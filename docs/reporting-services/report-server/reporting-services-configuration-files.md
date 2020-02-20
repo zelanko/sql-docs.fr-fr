@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564132"
 ---
 # <a name="reporting-services-configuration-files"></a>Fichiers de configuration de Reporting Services
@@ -45,13 +45,13 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
   depending on the SSRS version
 ```  
   
-|Stockage dans :|Description|Emplacement|  
+|Stockage dans :|Description|Location|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Stocke les paramètres de configuration des fonctionnalités du service Report Server : Gestionnaire de rapports ou portail web, service Web Report Server et traitement en arrière-plan. Pour plus d’informations sur chaque paramètre, consultez [Fichier de configuration RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
+|RSReportServer.config|Stocke les paramètres de configuration des zones de fonctionnalités du service Report Server : Gestionnaire de rapports ou portail web, service web Report Server et traitement en arrière-plan. Pour plus d’informations sur chaque paramètre, consultez [Fichier de configuration RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Stocke les stratégies de sécurité d'accès du code pour les extensions serveur. Pour plus d'informations sur ce fichier, consultez [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
 |RSMgrPolicy.config|Stocke les stratégies de sécurité d'accès du code pour le portail web. Pour plus d'informations sur ce fichier, consultez [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Répertoire d’installation>\Reporting Services\ReportManager|  
 |Web.config pour le service Web Report Server|Inclut uniquement les paramètres requis pour ASP.NET.|\<Répertoire d’installation>\Reporting Services\ReportServer|  
-|Web.config pour le Gestionnaire de rapports|Inclut uniquement les paramètres qui sont requis pour ASP.NET, le cas échéant pour la version SSRS.|\<Répertoire d’installation>\Reporting Services\ReportManager|  
+|Web.config pour le Gestionnaire de rapports|Inclut uniquement les paramètres requis pour ASP.NET, si cela est applicable pour la version SSRS.|\<Répertoire d’installation>\Reporting Services\ReportManager|  
 |ReportingServicesService.exe.config|Stocke les paramètres de configuration qui spécifient les niveaux de trace et les options de journalisation du service Report Server. Pour plus d'informations sur les éléments de ce fichier, consultez [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer\Bin|  
 |Paramètres du Registre|Stocke l'état de la configuration et d'autres paramètres utilisés pour la désinstallation de Reporting Services. Si vous résolvez un problème d'installation ou de configuration, vous pouvez consulter ces paramètres afin d'obtenir des informations sur le mode de configuration du serveur de rapports.<br /><br /> Ne modifiez pas directement ces paramètres, car cela risque de rendre votre installation non valide.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<ID_Instance\> \Setup<br /><br /> **- et -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Services\ReportServer|  
 |RSReportDesigner.config|Stocke les paramètres de configuration du Concepteur de rapports. Pour plus d’informations, consultez [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<lecteur>:\Program Files\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies.|  
@@ -67,11 +67,11 @@ Install path
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|Stockage dans :|Description|Emplacement|  
+|Stockage dans :|Description|Location|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Stocke les paramètres de configuration des fonctionnalités du service Report Server : Gestionnaire de rapports ou portail web, service Web Report Server et traitement en arrière-plan. Pour plus d’informations sur chaque paramètre, consultez [Fichier de configuration RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
+|RSReportServer.config|Stocke les paramètres de configuration des zones de fonctionnalités du service Report Server : Gestionnaire de rapports ou portail web, service web Report Server et traitement en arrière-plan. Pour plus d’informations sur chaque paramètre, consultez [Fichier de configuration RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Stocke les stratégies de sécurité d'accès du code pour les extensions serveur. Pour plus d'informations sur ce fichier, consultez [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
-|Web.config pour le service Web Report Server|Inclut uniquement les paramètres qui sont requis pour ASP.NET, le cas échéant pour la version SSRS.|\<Répertoire d’installation>\Reporting Services\ReportServer|  
+|Web.config pour le service Web Report Server|Inclut uniquement les paramètres requis pour ASP.NET, si cela est applicable pour la version SSRS.|\<Répertoire d’installation>\Reporting Services\ReportServer|  
 |Paramètres du Registre|Stocke l'état de la configuration et d'autres paramètres utilisés pour la désinstallation de Reporting Services. Stocke également des informations sur chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Ne modifiez pas directement ces paramètres, car cela risque de rendre votre installation non valide.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<ID_Instance\> \Setup<br /><br /> Exemple d’ID d’instance : MSSQL13.MSSQLSERVER<br /><br /> **- et -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
 |RSReportDesigner.config|Stocke les paramètres de configuration du Concepteur de rapports. Pour plus d’informations, consultez [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<lecteur>:\Program Files\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies.|  
   

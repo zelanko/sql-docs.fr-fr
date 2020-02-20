@@ -1,6 +1,6 @@
 ---
 title: Créer des objets RxSqlServerData
-description: Tutoriel pas à pas sur la création d’objets de données avec le langage R sur SQL Server.
+description: 'Tutoriel RevoScaleR 2 : Comment créer des objets de données avec le langage R sur SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb6c88c5ce53a072d8cd9611d80cbe621c0fa485
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7869fc3fc67cb24542223c2300cd7b6ebcf1eb41
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727257"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922569"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Créer des objets de données SQL Server avec RxSqlServerData (tutoriel SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cette leçon fait partie du [tutoriel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des fonctions [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 2 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-La leçon 2 est la suite de la création d’une base de données : ajout de tables et chargement de données. Si un administrateur de base de données a créé la base de données et la connexion dans la [leçon 1](deepdive-work-with-sql-server-data-using-r.md), vous pouvez ajouter des tables en utilisant un IDE R comme RStudio ou un outil intégré comme **Rgui**.
+Ce tutoriel est la suite de la création d’une base de données : ajout de tables et chargement de données. Si un administrateur de base de données a créé la base de données et la connexion dans le [tutoriel 2](deepdive-work-with-sql-server-data-using-r.md), vous pouvez ajouter des tables en utilisant un IDE R comme RStudio ou un outil intégré comme **Rgui**.
 
 Dans R, connectez-vous à SQL Server et utilisez des fonctions **RevoScaleR** pour effectuer les tâches suivantes :
 
@@ -145,7 +145,7 @@ Le package **RevoScaleR** contient des fonctions spécifiques aux types de sourc
     
     En supposant que votre chaîne de connexion n’ait rencontré aucun problème, après une courte pause, vous devez voir les résultats suivants :
   
-    *Total lignes écrites : 10 000, Durée totale : 0,466* *Lignes lues : 10 000, Nombre total de lignes traitées : 10 000, Durée totale de la segmentation : 0,577 secondes*
+    *Total lignes écrites : 10 000, Durée totale : 0,466* *Lignes lues : 10 000, Nombre total de lignes traitées : 10 000, Durée totale de la segmentation : 0,577 secondes*
   
 5. Actualisez la liste des tables. Pour vérifier que chaque variable a le type de données correct et qu’elle a été correctement importée, vous pouvez aussi cliquer avec le bouton droit sur la table dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et sélectionner **Sélectionner les 1 000 premières lignes**.
 

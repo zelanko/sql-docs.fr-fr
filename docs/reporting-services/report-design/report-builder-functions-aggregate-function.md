@@ -9,10 +9,10 @@ ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aa6d1892c8aceb4640207bce9bc2321541137b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576390"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Fonctions du Générateur de rapports - Aggregate
@@ -32,7 +32,7 @@ Aggregate(expression, scope)
  *expression*  
  Expression sur laquelle effectuer l'agrégation. Elle doit être une référence de champ simple.  
   
- *portée*  
+ *scope*  
  (**Chaîne**) Nom d’un dataset, d’un groupe ou d’une région de données qui contient les éléments de rapport auxquels appliquer la fonction d’agrégation. *Scope* doit être une constante de type chaîne et ne peut pas être une expression. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
 ## <a name="return-type"></a>Type de retour  

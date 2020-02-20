@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580778"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportation vers Microsoft Excel (Générateur de rapports et SSRS)
@@ -168,8 +168,8 @@ ms.locfileid: "65580778"
   
 |Propriété|Excel 2003|Version actuelle d’Excel|  
 |--------------|----------------|-------------------|  
-|Nombre maximal de colonnes par feuille de travail|256|16,384|  
-|Nombre maximal de lignes par feuille de travail|65,536|1,048,576|  
+|Nombre maximal de colonnes par feuille de travail|256|16 384|  
+|Nombre maximal de lignes par feuille de travail|65 536|1,048,576|  
 |Nombre de couleurs autorisé dans une feuille de travail|56 (palette)<br /><br /> Si plus de 56 couleurs sont utilisées dans le rapport, l'extension de rendu fait correspondre la couleur requise à l'une des 56 couleurs déjà disponibles dans la palette personnalisée.|Approximativement 16 millions (couleurs 24 bits)|  
 |Fichiers compressés ZIP|None|Compression ZIP|  
 |Famille de polices par défaut|Arial|Calibri|  
@@ -206,8 +206,8 @@ ms.locfileid: "65580778"
   
 |Propriétés des éléments de rapport|Description|  
 |-------------------------------|-----------------|  
-|Créé le|Date et heure d'exécution du rapport sous la forme d'une valeur de date/d'heure ISO.|  
-|Author|Report.Author|  
+|Date de création|Date et heure d'exécution du rapport sous la forme d'une valeur de date/d'heure ISO.|  
+|Auteur|Report.Author|  
 |Description|Report.Description|  
 |LastSaved|Date et heure d'exécution du rapport sous la forme d'une valeur de date/d'heure ISO.|  
   

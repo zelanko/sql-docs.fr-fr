@@ -12,10 +12,10 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.date: 03/17/2017
 ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259616"
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentation du développeur Reporting Services
@@ -24,7 +24,7 @@ ms.locfileid: "68259616"
  L'extension de la plateforme [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclut la création de composants et de ressources qui peuvent être utilisées pour l'accès aux données, la remise de rapports, etc. Vous pouvez vendre ces composants et ressources aux sociétés qui utilisent [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans leur organisation.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclut des exemples de programmation et des didacticiels pour vous aider à démarrer. Pour plus d’informations, consultez [Exemples Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) et [Guide du développeur : Didacticiels (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclut des exemples de programmation et des didacticiels pour vous aider à démarrer. Pour plus d’informations, consultez [Exemples Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) et [Guide du développeur : Tutoriels (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Intégration de Reporting Services dans des applications](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "68259616"
  [Accéder au fournisseur WMI de Reporting Services](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  
  Décrit la manière d'utiliser le fournisseur WMI de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour gérer des déploiements de serveurs de rapports.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../reporting-services/reports/report-definition-language-ssrs.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   

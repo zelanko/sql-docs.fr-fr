@@ -18,14 +18,14 @@ ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 302abe3e6fc8639c0db27057973b19c0eb277101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572243"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes Hyperion Essbase
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres d'un cube défini sur la source de données pour créer une requête MDX qui récupère des données lors du traitement du rapport.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres d'un cube défini sur la source de données pour créer une requête MDX qui récupère des données lors du traitement du rapport.  
   
 > [!IMPORTANT]  
 >  Les utilisateurs accèdent aux sources de données lorsqu'ils créent et exécutent des requêtes. Vous devez accorder des autorisations minimales sur les sources de données, telles que des autorisations en lecture seule.  
@@ -63,13 +63,13 @@ ms.locfileid: "65572243"
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. Non disponible pour ce type de source de données.|  
 |**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Actualiser les champs du dataset](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "Actualiser les champs du dataset")|Actualise les métadonnées à partir de la source de données.|  
-|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Affiche la boîte de dialogue **Générateur de membres calculés** . Permet de créer ou de modifier des expressions pour un membre calculé, y compris le paramètre de la propriété **Ordre de résolution** .|  
-|![Bouton bascule pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Bouton bascule pour afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|  
+|![Ajouter un membre calculé](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé")|Affiche la boîte de dialogue **Générateur de membres calculés** . Permet de créer ou de modifier des expressions pour un membre calculé, y compris le paramètre de la propriété **Ordre de résolution** .|  
+|![Basculer pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Basculer pour afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|  
 |![Exécuter automatiquement la requête](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")|Exécute automatiquement la requête et affiche le résultat chaque fois qu'une modification est effectuée, par exemple lorsqu'une colonne est supprimée du volet Données. Les résultats s'affichent dans le volet Données.|  
-|![Supprimer](../../reporting-services/report-data/media/rsqdicon-delete.gif "Supprimer")|Supprime l'élément sélectionné de la requête. Utilisez ce bouton pour supprimer les lignes sélectionnées dans le volet Filtre.|  
+|![Supprimer](../../reporting-services/report-data/media/rsqdicon-delete.gif "DELETE")|Supprime l'élément sélectionné de la requête. Utilisez ce bouton pour supprimer les lignes sélectionnées dans le volet Filtre.|  
 |![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Données.|  
 |![Annuler la requête](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Annuler la requête")|Annule la requête.|  
-|![Basculer en mode Création](../../reporting-services/media/rsqdicon-designmode.gif "Basculer en mode Design")|Bascule entre le mode Création et le mode Requête.|  
+|![Passer en mode Conception](../../reporting-services/media/rsqdicon-designmode.gif "Passer en mode Création")|Bascule entre le mode Création et le mode Requête.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>Concepteur de requêtes graphique en mode Requête  
  Pour basculer vers le mode Requête du concepteur de requêtes graphique, cliquez sur le bouton bascule **Mode Création** dans la barre d'outils. L'illustration suivante présente les composants du Concepteur de requêtes en mode Requête.  
@@ -92,11 +92,11 @@ ms.locfileid: "65572243"
   
 -   **Modifier en tant que texte**  
   
--   **Ajouter un membre calculé** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Ajouter un membre calculé** (![Ajouter un membre calculé](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé"))  
   
--   **Afficher les cellules vides** (![Bouton bascule pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Bouton bascule pour afficher les cellules vides"))  
+-   **Afficher les cellules vides** (![Basculer pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Basculer pour afficher les cellules vides"))  
   
--   **Exécution automatique** (![Exécuter automatiquement la requête](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête"))  
+-   **Exécuter automatiquement** (![Exécuter automatiquement la requête](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête"))  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

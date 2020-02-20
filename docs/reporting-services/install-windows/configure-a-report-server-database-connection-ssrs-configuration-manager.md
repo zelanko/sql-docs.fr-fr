@@ -1,23 +1,24 @@
 ---
-title: Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS) | Microsoft Docs
+title: Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration) | Microsoft Docs
+description: Chaque instance de serveur de rapports nécessite une connexion à la base de données du serveur de rapports qui stocke les rapports, les sources de données partagées, les ressources et les métadonnées gérés par le serveur.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239377"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866036"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -31,7 +32,7 @@ Vous devez configurer une connexion à la base de données du serveur de rapport
 
 - Modification du compte ou du mot de passe de l'utilisateur permettant d'établir la connexion à la base de données. Vous devez uniquement mettre à jour la connexion de base de données lorsque les informations du compte sont stockées dans le fichier RSReportServer.config. Si vous utilisez le compte de service pour la connexion (qui utilise la sécurité intégrée de Windows comme type d'informations d'identification), le mot de passe n'est pas stocké, ce qui évite de mettre à jour les informations de connexion. Pour plus d’informations sur la modification des comptes, consultez [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
 
-- Configuration d'un déploiement avec montée en puissance parallèle de serveurs de rapports La configuration d'un déploiement avec montée en puissance parallèle nécessite la création de plusieurs connexions à une base de données de serveur de rapports. Pour plus d’informations sur cette opération à plusieurs étapes, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+- Configuration d'un déploiement avec montée en puissance parallèle de serveurs de rapports La configuration d'un déploiement avec montée en puissance parallèle nécessite la création de plusieurs connexions à une base de données de serveur de rapports. Pour plus d’informations sur cette opération à plusieurs étapes, consultez [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
 
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Comment Reporting Services se connecte au moteur de base de données
 
@@ -109,7 +110,7 @@ Vous pouvez spécifier une seule connexion [!INCLUDE[ssNoVersion](../../includes
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Lors de l’utilisation d’un Managed Instance Azure SQL pour héberger Reporting Services bases de données 2019, la prise en charge est limitée à l’utilisation de SQL Server informations d’identification de connexion pour la connexion.
+> Lors de l’utilisation d’une instance managée Azure SQL pour héberger des bases de données Reporting Services 2019, la prise en charge est limitée à l’utilisation des informations d’identification de connexion SQL Server pour la connexion.
 
 ::: moniker-end
 

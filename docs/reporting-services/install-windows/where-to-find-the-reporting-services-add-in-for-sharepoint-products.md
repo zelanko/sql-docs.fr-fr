@@ -1,8 +1,10 @@
 ---
-title: Où trouver le complément Reporting Services pour les produits SharePoint | Microsoft Docs
-ms.date: 05/30/2016
+title: Où trouver le complément SSRS pour SharePoint | Microsoft Docs
+description: Le complément SQL Server Reporting Services pour les produits et les technologies SharePoint (rssharepoint.msi) est téléchargeable sur le web et fournit des fonctionnalités pour intégrer un serveur de rapports avec un déploiement de SharePoint.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
@@ -10,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 35d35caf3bf1d16696b88dcba9b81c2274be7234
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866282"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Où trouver le complément Reporting Services pour les produits SharePoint
 

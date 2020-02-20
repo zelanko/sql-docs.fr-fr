@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580317"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65580317"
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
- A. Zone de texte avec une bordure à double trait et divers styles de mise en forme, incluant un lien.  
+ R. Zone de texte avec une bordure à double trait et divers styles de mise en forme, incluant un lien.  
   
  B. Zone de texte avec une bordure en pointillés, un contenu HTML brut et un contenu HTML rendu.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "65580317"
   
  Vous pouvez modifier les options de mise en forme en sélectionnant l'élément à mettre en forme, puis en ouvrant la boîte de dialogue Propriétés de l'élément. Par exemple, si vous souhaitez mettre en forme le contenu de l’intégralité d’une zone de texte ou un mot sélectionné dans la zone de texte, cliquez avec le bouton droit sur l’élément et sélectionnez **Propriétés de la zone de texte**. Vous pouvez ensuite appliquer les styles de mise en forme souhaités.  
   
- Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

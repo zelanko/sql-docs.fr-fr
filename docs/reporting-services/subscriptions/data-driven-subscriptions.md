@@ -12,10 +12,10 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175611"
 ---
 # <a name="data-driven-subscriptions"></a>abonnements pilotés par les données
@@ -45,7 +45,7 @@ ms.locfileid: "66175611"
 
 - Pour plus d’informations sur les éditions de SQL Server qui prennent en charge la fonctionnalité d’abonnement piloté par les données, consultez [Fonctionnalités Microsoft SQL Server Reporting Services prises en charge par ses éditions](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
-- Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les bases de données Oracle et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les données de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les exigences relatives à la source de données des abonnés, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+- Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données Oracle et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les exigences relatives à la source de données des abonnés, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Utilisation des abonnements pilotés par les données  
  Les rubriques suivantes fournissent des informations supplémentaires sur les abonnements pilotés par les données.  

@@ -1,6 +1,7 @@
 ---
-title: 'Leçon 2 : Spécification des informations de connexion (Reporting Services) | Microsoft Docs'
-ms.date: 05/01/2019
+title: 'Leçon 2 : Spécifier des informations de connexion (Reporting Services) | Microsoft Docs'
+description: 'Dans cette leçon, vous définissez une source de données : des informations de connexion utilisées par le rapport pour accéder aux données d’une base de données relationnelle ou d’autres sources.'
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106055"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258461"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécification des informations de connexion (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécifier des informations de connexion (Reporting Services)
 
 Dans la leçon 1, vous avez ajouté un rapport paginé [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] à votre projet Tutorial.
   
@@ -62,8 +63,8 @@ Le Concepteur de rapports ajoute la source de données AdventureWorks2016 au vol
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans cette leçon, vous avez défini une connexion à l’exemple de base de données AdventureWorks2016. Poursuivez avec la [Leçon 3 : Définition d’un dataset pour le rapport de table &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) afin de définir un dataset pour le rapport.
+Dans cette leçon, vous avez défini une connexion à l’exemple de base de données AdventureWorks2016. Passez à la [Leçon 3 : Définition d’un dataset pour le rapport de table &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) afin de définir un dataset pour le rapport.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Connexions de données, sources de données et chaînes de connexion dans Reporting Services](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+[Créer des chaînes de connexion de données - Générateur de rapports et SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

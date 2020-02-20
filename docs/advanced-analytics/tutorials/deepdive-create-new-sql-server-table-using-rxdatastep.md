@@ -1,6 +1,6 @@
 ---
 title: Créer une table avec rxDataStep
-description: Tutoriel pas à pas sur la création d’une table SQL Server à l’aide du langage R sur SQL Server.
+description: 'Tutoriel RevoScaleR 11 : Comment créer une table SQL Server à l’aide du langage R sur SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727247"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947248"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Créer une table SQL Server à l’aide de rxDataStep (tutoriel SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des fonctions [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 11 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Dans cette leçon, vous allez apprendre à déplacer des données entre des trames de données en mémoire, le contexte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des fichiers locaux.
+Dans ce tutoriel, vous allez apprendre à déplacer des données entre des trames de données en mémoire, le contexte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des fichiers locaux.
 
 > [!NOTE]
-> Cette leçon utilise un jeu de données différent. Le jeu de données sur les retards des compagnies aériennes est un jeu de données public qui est largement utilisé pour les expérimentations en matière de Machine Learning. Les fichiers de données utilisés dans cet exemple sont disponibles dans le même répertoire que les autres exemples de produits.
+> Ce tutoriel utilise un jeu de données différent. Le jeu de données sur les retards des compagnies aériennes est un jeu de données public qui est largement utilisé pour les expérimentations en matière de Machine Learning. Les fichiers de données utilisés dans cet exemple sont disponibles dans le même répertoire que les autres exemples de produits.
 
 ## <a name="load-data-from-a-local-xdf-file"></a>Charger des données à partir d’un fichier XDF local
 
-Dans la première partie de ce tutoriel, vous avez utilisé la fonction **RxTextData** pour importer des données dans R à partir d’un fichier texte, puis vous avez utilisé la fonction **RxDataStep** pour déplacer les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Dans la première partie de cette série de tutoriels, vous avez utilisé la fonction **RxTextData** pour importer des données dans R à partir d’un fichier texte, puis vous avez utilisé la fonction **RxDataStep** pour déplacer les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Cette leçon utilise une approche différente qui consiste à utiliser les données à partir d’un fichier enregistré au [format XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Après avoir effectué quelques légères transformations sur les données à l’aide du fichier XDF, vous allez enregistrer les données transformées dans une nouvelle table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Ce tutoriel utilise une approche différente qui consiste à utiliser les données à partir d’un fichier enregistré au [format XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Après avoir effectué quelques légères transformations sur les données à l’aide du fichier XDF, vous allez enregistrer les données transformées dans une nouvelle table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 **Qu’est-ce que XDF ?**
 

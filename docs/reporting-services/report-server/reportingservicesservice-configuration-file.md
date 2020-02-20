@@ -13,10 +13,10 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66506630"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>fichier de configuration ReportingServicesService
@@ -26,7 +26,7 @@ ms.locfileid: "66506630"
 Le fichier ReportingServicesService.exe.config contient les paramètres de configuration de la trace.  
   
 ## <a name="file-location"></a>Emplacement du fichier  
-Ce fichier peut se trouver dans un des chemins d’accès ci-dessous :  
+Ce fichier peut se trouver dans l’un des chemins d’accès ci-dessous :  
 
 ``` Paths  
 \Reporting Services\Report Server\Bin  
@@ -84,10 +84,10 @@ Ce fichier peut se trouver dans un des chemins d’accès ci-dessous :
 |**FileName**|Spécifie la première partie du nom du fichier journal. La valeur spécifiée par **Prefix** complète le reste du nom. Le nom est ReportServerService_ par défaut.|  
 |**FileSizeLimitMb**|Spécifie une taille maximale pour le journal de trace. La taille du fichier est exprimée en mégaoctets. Les valeurs valides vont de 0 à un entier maximal. La valeur par défaut est 32.|  
 |**KeepFilesForDays**|Spécifie le nombre de jours après lequel supprimer un journal de trace. Les valeurs valides vont de 0 à un entier maximal. La valeur par défaut est 14.|  
-|**Prefix**|Spécifie une valeur générée qui distingue une instance de journal d'une autre. Par défaut, des valeurs d'horodatage sont ajoutées aux noms des journaux de trace. Cette valeur est définie sur « tid, time ». Ne modifiez pas ce paramètre.|  
+|**Préfixe**|Spécifie une valeur générée qui distingue une instance de journal d'une autre. Par défaut, des valeurs d'horodatage sont ajoutées aux noms des journaux de trace. Cette valeur est définie sur « tid, time ». Ne modifiez pas ce paramètre.|  
 |**TraceListeners**|Spécifie une cible de sortie du contenu du journal de trace. Vous pouvez spécifier plusieurs cibles ; dans ce cas, utilisez la virgule comme séparateur. Les valeurs valides sont les suivantes :<br /><br /> DebugWindow (par défaut)<br /><br /> File (par défaut)<br /><br /> StdOut|  
 |**TraceFileMode**|Spécifie si les journaux de trace contiennent des données pour une période de 24 heures. Un seul journal de trace doit exister par composant et par jour. Cette valeur est définie sur « Unique » (par défaut). Ne modifiez pas cette valeur.|  
-|**Components**|Spécifie les composants pour lesquels des journaux de trace sont créés. La valeur par défaut est **Tous**. Ce paramètre accepte aussi comme valeur les noms de composants internes. Ne modifiez pas cette valeur.|  
+|**Composants**|Spécifie les composants pour lesquels des journaux de trace sont créés. La valeur par défaut est **Tous**. Ce paramètre accepte aussi comme valeur les noms de composants internes. Ne modifiez pas cette valeur.|  
 |**Runtime**|Spécifie les paramètres de configuration qui prennent en charge la compatibilité descendante avec la version précédente. Des paramètres d'exécution sont utilisés pour rediriger vers la nouvelle version les demandes qui ciblent la version précédente de Microsoft.ReportingServices.Interfaces.<br /><br /> Tous les paramètres de configuration de cette section sont décrits dans la documentation de produit du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Pour plus d'informations, recherchez « Runtime Schema Settings » (en anglais) sur le site Web MSDN ou dans la documentation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
 ## <a name="see-also"></a>Voir aussi  

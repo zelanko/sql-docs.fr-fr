@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517943"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
@@ -39,7 +39,7 @@ ms.locfileid: "72517943"
   
 ##  <a name="BestPractices"></a> Bonnes pratiques  
   
--   Passez en revue les [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][ Notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Passez en revue les [Notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445) de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
   
 -   Installez les logiciels requis. Avant d'exécuter l'installation ou la mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], installez les composants requis suivants pour réduire la durée d'installation. Vous pouvez installer les logiciels requis sur chaque nœud de cluster de basculement, puis redémarrer les nœuds une fois avant d'exécuter le programme d'installation.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72517943"
   
     -   Le formatage d'un lecteur après montage de lecteurs supplémentaires n'est pas pris en charge.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge uniquement le disque local pour l'installation des fichiers tempdb. Assurez-vous que le chemin d'accès spécifié pour les données tempdb et les fichiers journaux sont valides sur tous les nœuds du cluster. Pendant le basculement, si les répertoires tempdb ne sont pas disponibles sur le nœud de basculement cible, la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sera pas en ligne. Pour plus d’informations, consultez [Types de stockage pour les fichiers de données](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) et [Configuration du moteur de base de données – Répertoires de données](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
+-   L'installation du cluster de basculement[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge uniquement le disque local pour l'installation des fichiers tempdb. Assurez-vous que le chemin d'accès spécifié pour les données tempdb et les fichiers journaux sont valides sur tous les nœuds du cluster. Pendant le basculement, si les répertoires tempdb ne sont pas disponibles sur le nœud de basculement cible, la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sera pas en ligne. Pour plus d’informations, consultez [Types de stockage pour les fichiers de données](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) et [Configuration du moteur de base de données – Répertoires de données](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
 -   Si vous déployez un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des composants de la technologie iSCSI, nous vous recommandons de prendre les précautions qui s'imposent. Pour plus d'informations, consultez [Prise en charge de SQL Server sur des composants de la technologie iSCSI](https://go.microsoft.com/fwlink/?LinkId=116960).  
   
@@ -186,7 +186,7 @@ ms.locfileid: "72517943"
 ##  <a name="OS_Support"></a> Vérifiez votre système d'exploitation  
  Assurez-vous que votre système d'exploitation est installé correctement et qu'il prend en charge le clustering de basculement. Le tableau suivant comporte une liste des éditions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des systèmes d'exploitation qui les prennent en charge.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] édition|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
+|Édition de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 bits) x64*|Oui|Oui|Oui**|Oui**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 bits)|Oui|Oui|||  
@@ -202,7 +202,7 @@ ms.locfileid: "72517943"
 ##  <a name="MultiSubnet"></a> Remarques supplémentaires concernant les configurations de sous-réseaux multiples  
  Les sections ci-dessous décrivent les points à garder à l'esprit lors de l'installation d'un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Une configuration de sous-réseaux multiples implique le clustering de plusieurs sous-réseaux et, par conséquent, l'utilisation de plusieurs adresses IP et la modification des dépendances de ressource d'adresse IP.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considérations relatives au système d’exploitation et à l’édition  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considérations relatives au système d’exploitation et à l’édition  
   
 -   Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui prennent en charge un cluster de basculement de plusieurs sous-réseaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -253,10 +253,10 @@ ms.locfileid: "72517943"
 > [!IMPORTANT]  
 >  Si l'instance MSDTC installée dans le groupe de clusters local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] échoue, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'essaie pas automatiquement d'utiliser l'instance de cluster par défaut ou l'instance de MSDTC de l'ordinateur local. Vous devrez supprimer complètement l'instance non réussie de MSDTC du groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour utiliser une autre instance de MSDTC. De même, si vous créez un mappage pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et si l'instance mappée de MSDTC échoue, vos transactions distribuées échoueront également. Si vous souhaitez que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise une autre instance de MSDTC, vous devez ajouter une instance de MSDTC au groupe de clusters local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou supprimer le mappage.  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>Configurer le coordinateur de transactions distribuées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MSDTC)  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>Configurer le coordinateur de transactions distribuées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MSDTC)  
  Une fois que vous avez installé le système d'exploitation et configuré votre cluster, vous devez configurer MSDTC pour qu'il fonctionne dans un cluster à l'aide de l'Administrateur de cluster. L'échec de la mise en cluster de MSDTC ne bloquera pas l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mais les fonctionnalités des applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être affectées si MSDTC n'est pas configuré correctement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Paramètres de l'outil d'analyse de configuration système](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Administration et maintenance de l'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  

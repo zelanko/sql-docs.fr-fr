@@ -9,16 +9,16 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d3eccb52c9a7164285627063f23dbb790b6dfa3c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594064"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244568"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Type de connexion SQL Azure (SSRS)
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] est une base de données relationnelle hébergée basée sur le cloud qui repose sur les technologies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour inclure des données de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Ce type de source de données intégré est basé sur l’extension de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilisez ce type de source de données pour vous connecter à et récupérer des données de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] est une base de données relationnelle hébergée basée sur le cloud qui repose sur les technologies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour inclure des données de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Ce type de source de données intégré est basé sur l’extension de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilisez ce type de source de données pour vous connecter à et récupérer des données de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 Cette extension de données prend en charge des paramètres à valeurs multiples, agrégats de serveur et informations d'identification gérés séparément de la chaîne de connexion.  
   
@@ -43,7 +43,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 Par ailleurs, vous utilisez la boîte de dialogue **Propriétés des sources de données** pour fournir des informations d'identification comme le nom d'utilisateur et le mot de passe. Les options `User Id` et `Password` sont ajoutées automatiquement à la chaîne de connexion, sans qu’il soit nécessaire de les taper.  
   
-Pour obtenir plus d’informations et des exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+Pour obtenir plus d’informations et d’autres exemples sur les chaînes de connexion, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ## <a name="Credentials"></a> Informations d'identification
 
@@ -57,7 +57,7 @@ Sur un client de création de rapports, les options suivantes sont disponibles p
   
 - Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-Pour plus d’informations, consultez [connexions de données, sources de données et &#40;chaînes de connexion&#41; générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
+Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="Query"></a> Requêtes
 
@@ -160,7 +160,7 @@ Vous pouvez utiliser la base de données SQL Azure avec l’authentification dir
 
 Ce scénario est pris en charge à condition que les éléments suivants soient correctement configurés :
 
-- La [Bibliothèque d'authentification Active Directory pour SQL Server (ADALSQL)](https://www.microsoft.com/en-us/download/details.aspx?id=48742) est installée sur le serveur de rapports.
+- La [Bibliothèque d'authentification Active Directory pour SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) est installée sur le serveur de rapports.
 - Les [services de fédération Active Directory (AD FS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) sont configurés dans une optique de fédération entre Active Directory (AD) en local et AAD.
 - La [délégation Kerberos contrainte (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) est configurée du serveur de rapports vers le serveur ADFS.
 - La source de données/le rapport est configuré de façon à s’authentifier auprès de [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) comme l’utilisateur qui consulte le rapport.
@@ -184,7 +184,7 @@ Ces sections de la documentation fournissent des informations de fond d'ordre co
 [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
-[Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 Fournit des informations sur les connexions de données et les sources de données.  
   
 [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

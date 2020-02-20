@@ -11,10 +11,10 @@ ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88bc977ae684351227017e81793cb48749b454e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579947"
 ---
 # <a name="configurationsetting-method---listinstalledsharepointversions"></a>Méthode ConfigurationSetting - ListInstalledSharePointVersions
@@ -42,7 +42,7 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
  *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
@@ -57,7 +57,7 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
 |WSS_V4_Compatible|Une installation [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] compatible avec Office 14 est installée.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

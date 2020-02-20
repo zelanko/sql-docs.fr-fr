@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578237"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
@@ -29,14 +29,14 @@ ms.locfileid: "65578237"
   
 ## <a name="options"></a>Options  
  **Configuration**  
- Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Debug**, **DebugLocal**et **Release**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)** .  
+ Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Debug**, **DebugLocal** et **Release**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)** .  
   
  Pour consulter simultanément les propriétés de plusieurs configurations, sélectionnez **Toutes les configurations** ou **Configurations multiples**.  
   
  Pour créer d’autres configurations, cliquez sur **Gestionnaire de configurations** dans la barre d’outils.  
   
- **Gestionnaire de configurations**  
- Gérer les configurations de l'ensemble de la solution ou ajouter des configurations supplémentaires. Pour plus d’informations, consultez la documentation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
+ **Gestionnaire de configuration**  
+ Gérer les configurations de l'ensemble de la solution ou ajouter des configurations supplémentaires. Pour plus d’informations, consultez la documentation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **OutputPath**  
  Tapez ou collez le chemin d'accès pour stocker la définition de rapport utilisée dans la vérification de la génération, le déploiement et l'aperçu de rapports. Le chemin d'accès doit être différent de celui que vous utilisez pour le projet et un chemin d'accès relatif qui est un dossier enfant sous le chemin d'accès du projet.  
@@ -61,22 +61,22 @@ ms.locfileid: "65578237"
   
  Lors de la publication sur un serveur de rapports s'exécutant en mode natif, spécifiez le chemin complet de la hiérarchie des dossiers à partir de la racines. Par exemple, Dossier1/Dossier2/Dossier3.  
   
- Lors de la publication sur un serveur de rapports s’exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple, `http:\\<servername>\<site>\Documents\MyFolder`.  
+ Lors de la publication sur un serveur de rapports s’exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple : `http:\\<servername>\<site>\Documents\MyFolder`.  
   
  **TargetReportFolder**  
  Nom du dossier dans lequel stocker les rapports publiés. Par défaut, il s'agit du nom du projet de rapport. Si le dossier n'existe pas sur le serveur de rapports, le Générateur de rapports le crée lors de la publication des rapports.  
   
  Lors de la publication sur un serveur de rapports s'exécutant en mode natif, spécifiez le chemin complet de la hiérarchie des dossiers à partir de la racines. Si un dossier se trouve dans un autre dossier, incluez un chemin d'accès vers le dossier à partir de la racine, par exemple Folder1/Folder2/Folder3.  
   
- Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple, `http:\\<servername>\\<site>\Documents\MyFolder`.  
+ Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple : `http:\\<servername>\\<site>\Documents\MyFolder`.  
   
  **TargetServerURL**  
  URL du serveur de rapports cible. Avant de publier un rapport, vous devez affecter à cette propriété une URL de serveur de rapports valide.  
   
- Lors de la publication sur un serveur de rapports s’exécutant en mode natif, utilisez l’URL du répertoire virtuel du serveur de rapports. Par exemple, `http:\\<server>\reportserver`. Il s'agit du répertoire virtuel du serveur de rapports et non du Gestionnaire de rapports. Par défaut, le serveur de rapports est installé dans un répertoire virtuel nommé « reportserver ».  
+ Lors de la publication sur un serveur de rapports s’exécutant en mode natif, utilisez l’URL du répertoire virtuel du serveur de rapports. Par exemple : `http:\\<server>\reportserver`. Il s'agit du répertoire virtuel du serveur de rapports et non du Gestionnaire de rapports. Par défaut, le serveur de rapports est installé dans un répertoire virtuel nommé « reportserver ».  
   
  Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez aucun site, le site de premier niveau par défaut est utilisé. Par exemple : 
-+ `http:\\<servername>`, 
++ `http:\\<servername>` 
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`.  
 

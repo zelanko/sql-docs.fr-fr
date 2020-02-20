@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140262"
 ---
 # <a name="process-large-reports"></a>Traiter les rapports volumineux
@@ -36,7 +36,7 @@ ms.locfileid: "67140262"
 ## <a name="configuration-recommendations"></a>Recommandations relatives à la configuration  
  Les recommandations concernant l'accès, l'exécution et le rendu des rapports sont les suivantes :  
   
--   Concevez le rapport pour la prise en charge de la pagination. Le serveur de rapports renvoie un rapport, une page à la fois. Si le rapport contient une pagination, vous pouvez contrôler la quantité de données transmises au navigateur. Pour plus d’informations, consultez [précharger le Cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
+-   Concevez le rapport pour la prise en charge de la pagination. Le serveur de rapports renvoie un rapport, une page à la fois. Si le rapport contient une pagination, vous pouvez contrôler la quantité de données transmises au navigateur. Pour plus d’informations, consultez [Précharger le cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
   
 -   Configurez le rapport pour qu'il s'exécute en tant qu'instantané de rapport planifié et ainsi empêcher son exécution à la demande. Ne définissez pas de délai d'expiration pour l'exécution du rapport. Exécutez le rapport durant les heures creuses.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "67140262"
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Précharger le cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

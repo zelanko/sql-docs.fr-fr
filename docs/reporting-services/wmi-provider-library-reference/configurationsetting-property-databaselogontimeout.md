@@ -16,10 +16,10 @@ ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85c6268d58cf96eb086399bf41c05526f8c1593a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571258"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>Propriété ConfigurationSetting - DatabaseLogonTimeout
@@ -42,7 +42,7 @@ public Int32 DatabaseLogonTimeout;
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

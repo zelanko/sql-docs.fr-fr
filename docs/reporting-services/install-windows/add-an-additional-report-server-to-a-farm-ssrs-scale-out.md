@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225693"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Ajouter un serveur de rapports supplémentaire à une batterie (montée en puissance SSRS)
@@ -40,7 +40,7 @@ ms.locfileid: "63225693"
   
 -   Le serveur de base de données doit être configuré pour autoriser les connexions de base de données distantes.  S'il ne l'est pas, vous ne pourrez pas joindre le nouveau serveur à la batterie car il ne pourra pas établir de connexion aux bases de données de configuration SharePoint.  
   
--   Le nouveau serveur devra avoir la même version de SharePoint installée que celle exécutée par les serveurs de batterie actuels. Par exemple, si SharePoint 2013 Service Pack 1 (SP1) est déjà installé sur la batterie de serveurs, vous devrez installer aussi le SP1 sur le nouveau serveur pour qu’il puisse rejoindre la batterie.  
+-   Le nouveau serveur devra avoir la même version de SharePoint installée que celle exécutée par les serveurs de batterie actuels. Par exemple, si SharePoint 2013 Service Pack 1 (SP1) est déjà installé sur la batterie de serveurs, vous devez installer aussi le SP1 sur le nouveau serveur pour qu’il puisse rejoindre la batterie de serveurs.  
   
 ##  <a name="bkmk_steps"></a> Étapes  
  Les étapes de cette rubrique partent du principe qu'un administrateur de batterie de serveurs SharePoint installe et configure le serveur. Le diagramme illustre un environnement à trois niveaux classique et les éléments numérotés sont décrits dans la liste suivante :  
@@ -53,7 +53,7 @@ ms.locfileid: "63225693"
   
 -   (4) Représente une solution d'équilibrage de la charge réseau matérielle ou logicielle  
   
- ![Ajout d’un serveur d’applications Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Ajout d’un serveur d’applications Reporting Services")  
+ ![Ajout d'un serveur d'applications Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Ajout d'un serveur d'applications Reporting Services")  
   
  Les étapes suivantes impliquent qu'un administrateur procède à l'installation et à la configuration du serveur. Le serveur sera installé en tant que nouveau serveur d'applications dans la batterie et ne sera pas utilisé comme serveur Web frontal.  
   

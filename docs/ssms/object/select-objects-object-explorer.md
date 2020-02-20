@@ -1,6 +1,6 @@
 ---
-title: Sélectionner des objets (Explorateur d’objets) | Microsoft Docs
-ms.custom: ''
+title: Sélectionner des objets (Explorateur d'objets)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bed66d2d2d7bfcd275cc5674c0ec41edd2a0e1b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c60f25406cb10e6ca6a12abe10a65a8a91fd1f59
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262243"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243531"
 ---
 # <a name="select-objects-object-explorer"></a>Sélectionner des objets (Explorateur d'objets)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,12 +25,12 @@ La boîte de dialogue **Sélectionner des objets** vous permet d’ajouter un ob
   
 ## <a name="options"></a>Options  
 **Sélectionnez ces types d'objets**  
-Affiche la liste des types auxquels les objets à sélectionner appartiennent. Les types incluent les principaux et éléments sécurisables de niveau de base de données et de niveau [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette zone est remplie à partir des sélections effectuées dans la boîte de dialogue **Sélectionner les types d’objets** , accessible à l’aide du bouton **Types d’objets** .  
+Affiche la liste des types auxquels les objets à sélectionner appartiennent. Les types incluent les principaux et éléments sécurisables de niveau de base de données et de niveau [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette zone est remplie à partir des sélections effectuées dans la boîte de dialogue **Sélectionner les types d’objets** , accessible à l’aide du bouton **Types d’objets** .  
   
 **Entrez les noms d'objets à sélectionner**  
 Entrez la liste séparée par des points-virgules des noms des objets à sélectionner. Les objets à sélectionner doivent être d’un type répertorié dans la zone **Sélectionnez ces types d’objets** . Les objets peuvent être sélectionnés dans une liste accessible en cliquant sur le bouton **Parcourir** .  
   
-**Types d'objets**  
+**Types d’objets**  
 Affiche une liste de types d'objets. Sélectionnez un ou plusieurs types en activant les cases à cocher correspondantes.  
   
 **Vérifier les noms**  

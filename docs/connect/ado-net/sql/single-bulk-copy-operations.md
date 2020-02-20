@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 792ebcb5a4365301c31362a748d786c17ddee42a
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 85d24b6695dfe9f592bfefabb13c2042cf3450c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452097"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251169"
 ---
 # <a name="single-bulk-copy-operations"></a>Opérations uniques de copie en bloc
 
@@ -44,20 +44,20 @@ Les étapes générales pour effectuer une opération de copie en bloc sont les 
   
 6. À titre facultatif, mettez à jour les propriétés et appelez de nouveau la méthode **WriteToServer** si nécessaire.  
   
-7. Appelez <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A>, ou encapsulez les opérations de copie en bloc dans une instruction `Using`.  
+7. Appelez <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A> ou enveloppez les opérations de copie en bloc dans une instruction `Using`.  
   
 > [!CAUTION]
 >  Il est préférable que les types de données des colonnes source et cible correspondent. Si les types de données ne correspondent pas, **SqlBulkCopy** tente de convertir chaque valeur source vers le type de données cible en utilisant les règles employées par <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>. Les conversions peuvent affecter les performances et entraîner des erreurs inattendues. Par exemple, un type de données `Double` peut être converti en type de données `Decimal` la plupart du temps, mais pas toujours.  
   
 ## <a name="example"></a>Exemple  
-L’application console suivante montre comment charger des données à l’aide de la classe <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. Dans cet exemple, <xref:Microsoft.Data.SqlClient.SqlDataReader> est utilisé pour copier des données de la table **Production.Product** dans la base de données **AdventureWorks** SQL Server vers une table semblable dans la même base de données.  
+L'application de console suivante montre comment charger des données à l'aide de la classe <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. Dans cet exemple, <xref:Microsoft.Data.SqlClient.SqlDataReader> est utilisé pour copier des données de la table **Production.Product** dans la base de données **AdventureWorks** SQL Server vers une table semblable dans la même base de données.  
   
 > [!IMPORTANT]
 >  Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration de l’exemple de copie en bloc](bulk-copy-example-setup.md). Ce code est fourni uniquement pour illustrer la syntaxe de l’utilisation de **SqlBulkCopy**. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d’utiliser une instruction Transact-SQL `INSERT … SELECT` pour copier les données.  
   
 [!code-csharp[DataWorks SqlBulkCopy_WriteToServer#1](~/../sqlclient/doc/samples/SqlBulkCopy_WriteToServer.cs#1)]
   
-## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Exécution d’une opération de copie en bloc à l’aide de Transact-SQL et de la classe Command  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Exécution d'une opération de copie en bloc à l'aide de Transact-SQL et de la classe de commande  
 L’exemple suivant illustre comment utiliser la méthode <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> pour exécuter l’instruction BULK INSERT.  
   
 > [!NOTE]

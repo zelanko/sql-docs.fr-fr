@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140216"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -32,18 +32,18 @@ ms.locfileid: "67140216"
 
  Pour déterminer si une planification partagée est utilisée de manière active, utilisez l’une des méthodes suivantes :
 
--   **Portail web :** Dans l’onglet **Planifications** de **Paramètres du site**, passez en revue les valeurs des champs Date de la dernière exécution, Date de la prochaine exécution et États. Si une planification ne s'exécute plus parce qu'elle est arrivée à expiration, la date d'expiration apparaît dans le champ État. Pour plus d’informations, consultez [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
+-   **Portail web :** Dans l’onglet **Planifications** de **Paramètres du site**, passez en revue les valeurs des champs Date de la dernière exécution, Date de la prochaine exécution et États. Si une planification ne s'exécute plus parce qu'elle est arrivée à expiration, la date d'expiration apparaît dans le champ État. Pour plus d’informations, consultez [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
--   **SQL Server Management Studio :** affichage le **rapports** page d’une planification partagée donnée. Cette page répertorie tous les rapports et datasets partagés qui utilisent la planification partagée. Pour plus d’informations, consultez [Reporting Services pour SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **SQL Server Management Studio :** Consultez la page **Rapports** d’une planification partagée donnée. Cette page répertorie tous les rapports et datasets partagés qui utilisent la planification partagée. Pour plus d’informations, consultez [Reporting Services pour SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
 
--  **Journaux :** Affichez les journaux des traces ou les fichiers journaux des exécutions des rapports afin de déterminer si ces derniers ont été exécutés aux heures spécifiées par la planification. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
+-  **Journaux :** Affichez les journaux des traces ou les fichiers journaux des exécutions des rapports afin de déterminer si ces derniers se sont exécutés aux heures spécifiées dans la planification. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
 
 ## <a name="when-you-delete-a-shared-schedule"></a>Quand vous supprimez une planification partagée
 Les planifications partagées doivent être supprimées manuellement à l’aide de la page Planifications du portail web ou le dossier Planifications partagées dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Si vous supprimez une planification partagée qui est en cours d'utilisation, toutes les références à cette planification sont remplacées par des planifications spécifiques aux rapports.
 
 Si vous supprimez une planification partagée utilisée par plusieurs rapports et abonnements, le serveur de rapports créera des planifications individuelles pour chaque rapport et abonnement qui a précédemment utilisé la planification partagée. Chaque nouvelle planification individuelle contiendra la date, l'heure et la périodicité spécifiée dans la planification partagée. Notez que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne fournit pas de gestion centrale des planifications individuelles. Si vous supprimez une planification partagée, vous devez désormais gérer les informations de planification pour chaque élément individuel.
 
-**Remarque :**  Si vous n’êtes pas sûr qu’une planification partagée est utilisée, envisagez de la supprimer dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] plutôt qu’à l’aide du portail web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit les mêmes fonctionnalités de gestion des planifications partagées que le Gestionnaire de rapports, mais il fournit également une page Rapports supplémentaire qui indique le nom de chaque rapport utilisant la planification.
+**Remarque :**  Si vous n’êtes pas sûr qu’une planification partagée est utilisée, envisagez de la supprimer dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] plutôt qu’à l’aide du portail web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit les mêmes fonctionnalités de gestion des planifications partagées que le Gestionnaire de rapports, mais il fournit également une page Rapports supplémentaire qui indique le nom de chaque rapport utilisant la planification.
 
  Le fait de supprimer une planification et le fait de provoquer son expiration sont deux opérations différentes. Une date d'expiration sert à arrêter une planification, mais ne la supprime pas. Comme les planifications servent à automatiser un grand nombre de fonctionnalités, elles ne sont jamais supprimées automatiquement. Les planifications expirées fournissent aux administrateurs de serveurs de rapports des éléments de preuve quant à la cause de l'arrêt subit d'un processus automatisé. Sans la présence de la planification expirée, un administrateur de serveur de rapports peut faire une erreur de diagnostic pour un problème ou perdre inutilement du temps à tenter de dépanner un processus qui fonctionne parfaitement.
 
@@ -64,20 +64,20 @@ Une planification spécifique aux rapports arrivée à expiration reste associé
    >[!NOTE]  
    >Si l'option **Paramètres** n'est pas disponible, vous n'êtes pas autorisé à modifier ces paramètres.  
 
-1. Sélectionnez **paramètres du Site** dans le menu déroulant.
+1. Dans le menu déroulant, sélectionnez **Paramètres du site**.
 1. Sélectionnez l'onglet **Planifications** .
-1. Sélectionnez **+ nouvelle planification**. (Pour modifier une planification existante, sélectionnez son nom.)
+1. Sélectionnez **+ Nouvelle planification**. (Pour modifier une planification existante, sélectionnez son nom.)
 1. Tapez un nom descriptif pour la planification.
 1. Sélectionnez **Heure**, **Jour**, **Semaine**ou **Mois**. Cliquez sur **Une fois** pour créer une planification qui ne s'exécute qu'une seule fois. Des options supplémentaires s'affichent lorsque vous spécifiez la base de votre planification.
 1. Si vous le souhaitez, sélectionnez une date de début pour la planification. Par défaut, il s'agit de la date du jour. Vous pouvez reporter le début de la planification en choisissant une date ultérieure.
 1. Sélectionnez éventuellement une date de fin de planification. La planification cesse de s'exécuter à la date indiquée, mais elle n'est pas supprimée.
-1. Sélectionner une heure pour la planification s’exécute.
+1. Sélectionnez l’heure à laquelle la planification doit s’exécuter.
 1. Sélectionnez **OK**.
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>Pour supprimer une planification partagée (portail web)
 
 1. Dans le portail web, sélectionnez **Paramètres** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) dans la barre d’outils.
-2. Sélectionnez **paramètres du Site** dans le menu déroulant.
+2. Dans le menu déroulant, sélectionnez **Paramètres du site**.
 3. Sélectionnez l'onglet **Planifications** .
 4. Activez la case à cocher située en regard de la planification partagée à supprimer, puis sélectionnez **Supprimer**.
 

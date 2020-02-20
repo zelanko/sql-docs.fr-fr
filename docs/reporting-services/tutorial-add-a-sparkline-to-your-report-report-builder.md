@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043104"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports)
 
 Dans ce didacticiel du [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], vous créez une table de base avec un graphique sparkline dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
@@ -23,7 +23,7 @@ Les graphiques sparkline et les barres de données sont des graphiques simples d
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+Durée estimée pour effectuer ce tutoriel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -154,7 +154,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 14. Le tableau est ajouté à l'aire de conception. Il comporte trois colonnes et trois lignes.  
   
-    Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+    Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
@@ -314,7 +314,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 4.  Cliquez sur **Enregistrer**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 
 Ainsi s'achève le didacticiel de création d'un rapport de tableau avec des graphiques sparkline. Pour plus d’informations sur les graphiques sparkline, consultez [Graphiques sparkline et barres de données](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   

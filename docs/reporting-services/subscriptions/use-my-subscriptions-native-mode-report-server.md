@@ -12,10 +12,10 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d4066d5ea8e44fca9b63a24d25e4f18a4f0ccb78
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892322"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Utiliser mes abonnements (serveur de rapports en mode natif)
@@ -51,8 +51,8 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)  
   

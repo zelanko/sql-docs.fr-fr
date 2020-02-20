@@ -12,21 +12,21 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575241"
 ---
 # <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
 
 La base de données du serveur de rapports offre un espace de stockage pour une ou plusieurs instances du serveur de rapports. Comme le schéma de base de données du serveur de rapports peut changer à chaque nouvelle version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il est nécessaire que la version de la base de données corresponde à la version de l'instance du serveur de rapports que vous utilisez. Dans la plupart des cas, une base de données du serveur de rapports peut être mise à niveau automatiquement sans aucune intervention de votre part.  
   
- **Mode natif** : En mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la base de données de serveur de rapports est composée de deux bases de données qui portent les noms par défaut ReportServer et ReportServerTempDB.  
+ **Mode natif :** En mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la base de données de serveur de rapports est composée de deux bases de données qui portent les noms par défaut ReportServer et ReportServerTempDB.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **Mode SharePoint :** en mode SharePoint SQL Server 2016 Reporting Services, la base de données du serveur de rapports est une collection de bases de données créée pour chaque instance de l’application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ **Mode SharePoint :** En mode SharePoint SQL Server 2016 Reporting Services, la base de données du serveur de rapports est une collection de bases de données créée pour chaque instance de l’application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ::: moniker-end
 
@@ -51,7 +51,7 @@ La base de données du serveur de rapports offre un espace de stockage pour une 
   
 2.  Les descripteurs de sécurité sont mis à niveau lors la première utilisation de la base de données de serveur de rapports après la mise à jour du schéma.  
   
-3.  Les rapports publiés et les instantanés de rapports compilés sont mis à jour lors de la première utilisation. Pour plus d'informations, consultez [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+3.  Les rapports publiés et les instantanés de rapports compilés sont mis à jour lors de la première utilisation. Pour plus d'informations, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md).  
   
  Outre la base de données de serveur de rapports, un serveur de rapports utilise également une base de données temporaire. La base de données temporaire est mise à niveau automatiquement lors de la mise à niveau de la base de données de serveur de rapports.  
   

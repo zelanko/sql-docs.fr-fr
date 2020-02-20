@@ -1,7 +1,6 @@
 ---
-title: Configurer Distributed Replay | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Configurer Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +9,18 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023769"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307046"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Les détails de configuration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility sont spécifiés dans les fichiers XML qui se trouvent sur Distributed Replay Controller, sur les clients et à l'emplacement où l'outil d'administration est installé. Il s'agit des fichiers suivants :  
+  Les détails de configuration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay sont spécifiés dans les fichiers XML qui se trouvent sur Distributed Replay Controller, sur les clients et à l’emplacement où l’outil d’administration est installé. Il s'agit des fichiers suivants :  
   
 -   [Fichier de configuration du contrôleur](#DReplayController)  
   
@@ -36,11 +37,11 @@ ms.locfileid: "68023769"
   
  Le niveau de journalisation spécifié par le fichier de configuration du contrôleur inclut les éléments suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML|Description|Valeurs autorisées|Obligatoire|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Niveau de journalisation|`<LoggingLevel>`|Spécifie le niveau de journalisation pour le service contrôleur.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Non. Par défaut, la valeur est `CRITICAL`.|  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  Cet exemple montre un fichier de configuration du contrôleur qui a été modifié pour supprimer les entrées du journal `INFORMATION` et `WARNING` .  
   
 ```  
@@ -50,21 +51,21 @@ ms.locfileid: "68023769"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> Fichier de configuration client : DReplayClient.config  
+##  <a name="DReplayClient"></a> Fichier de configuration du client : DReplayClient.config  
  Lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client démarre, il charge des paramètres de configuration à partir du fichier de configuration client, `DReplayClient.config`. Ce fichier se trouve sur chaque client, dans le dossier où vous avez installé le service Distributed Replay Client :  
   
  **\<chemin d’installation du client>\DReplayClient.config**  
   
  Les paramètres spécifiés par le fichier de configuration client incluent les éléments suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML|Description|Valeurs autorisées|Obligatoire|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Contrôleur|`<Controller>`|Spécifie le nom de l'ordinateur du contrôleur. Le client tentera de s'inscrire auprès de l'environnement Distributed Replay en contactant le contrôleur.|Vous pouvez utiliser «`localhost`» ou «`.`» pour désigner l'ordinateur local.|Non. Par défaut, le client tente de s'inscrire auprès de l'instance du contrôleur qui s'exécute localement («`.`»), s'il existe.|  
 |Répertoire de travail du client|`<WorkingDirectory>`|Correspond au chemin d'accès local sur le client où les fichiers de distribution sont enregistrés.<br /><br /> Les fichiers de ce répertoire sont écrasés lors de la prochaine relecture.|Nom du répertoire complet, en commençant par une lettre de lecteur.|Non. Si aucune valeur n'est spécifiée, les fichiers de distribution seront enregistrés dans le même emplacement que le fichier de configuration client par défaut. Si une valeur est spécifiée et que ce dossier n'existe pas sur le client, le service client ne démarrera pas.|  
 |Répertoire des résultats du client|`<ResultDirectory>`|Correspond au chemin d'accès local sur le client où est enregistré le fichier de trace de résultats de l'activité de relecture (pour le client).<br /><br /> Les fichiers de ce répertoire sont écrasés lors de la prochaine relecture.|Nom du répertoire complet, en commençant par une lettre de lecteur.|Non. Si aucune valeur n'est spécifiée, le fichier de trace de résultats sera enregistré dans le même emplacement que le fichier de configuration client par défaut. Si une valeur est spécifiée et que ce dossier n'existe pas sur le client, le service client ne démarrera pas.|  
 |Niveau de journalisation|`<LoggingLevel>`|Correspond au niveau de journalisation pour le service client.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Non. Par défaut, la valeur est `CRITICAL`.|  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  Cet exemple montre un fichier de configuration client qui a été modifié pour spécifier que le service contrôleur s'exécute sur un autre ordinateur, un ordinateur nommé `Controller1`. Les éléments `WorkingDirectory` et `ResultDirectory` ont été configurés pour utiliser les dossiers `c:\ClientWorkingDir` et `c:\ResultTraceDir`, respectivement. La valeur par défaut du niveau de journalisation a été modifiée pour supprimer les entrées du journal `INFORMATION` et `WARNING` .  
   
 ```  
@@ -86,14 +87,14 @@ ms.locfileid: "68023769"
   
  **\<chemin d’installation de l’outil d’administration>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
- Les paramètres de configuration de prétraitement sont spécifiés dans les éléments XML qui sont enfants de l'élément `<PreprocessModifiers>` dans le fichier de configuration de prétraitement. Ces paramètres sont les suivants :  
+ Les paramètres de configuration de prétraitement sont spécifiés dans les éléments XML qui sont enfants de l'élément `<PreprocessModifiers>` dans le fichier de configuration de prétraitement. Les paramètres suivants sont inclus :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML|Description|Valeurs autorisées|Obligatoire|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Inclure les activités de session système|`<IncSystemSession>`|Indique si les activités de session système lors de la capture seront incluses lors de la relecture.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `No`.|  
 |Durée d'inactivité maximale|`<MaxIdleTime>`|Limite la durée d'inactivité à un nombre absolu (en secondes).|Entier qui est >= -1.<br /><br /> `-1` n'indique aucune modification de la valeur d'origine dans le fichier de trace d'origine.<br /><br /> `0` indique qu'une activité continue à un instant donné dans le temps.|Non. Par défaut, la valeur est `-1`.|  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  Fichier de configuration de prétraitement par défaut :  
   
 ```  
@@ -106,7 +107,7 @@ ms.locfileid: "68023769"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> Fichier de configuration de la relecture : DReplay.exe.replay.config  
+##  <a name="ReplayConfig"></a> Fichier de configuration de relecture : DReplay.exe.replay.config  
  Lorsque vous utilisez l'outil d'administration pour initialiser l'étape de relecture d'événement, l'outil d'administration charge les paramètres de relecture à partir du fichier de configuration de relecture, `DReplay.exe.replay.config`.  
   
  Utilisez le fichier de configuration par défaut ou le paramètre **-c** de l’outil d’administration pour spécifier l’emplacement d’un fichier de configuration de relecture modifié. Pour plus d’informations sur l’utilisation de l’option de relecture de l’outil d’administration, consultez [Option Replay &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -117,10 +118,10 @@ ms.locfileid: "68023769"
   
  Les paramètres de configuration de la relecture sont spécifiés dans les éléments XML qui sont enfants des éléments `<ReplayOptions>` et `<OutputOptions>` du fichier de configuration de relecture.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions >, élément  
+### <a name="replayoptions-element"></a>\<ReplayOptions> Element  
  Les paramètres spécifiés par le fichier de configuration de relecture dans l'élément `<ReplayOptions>` incluent les éléments suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML|Description|Valeurs autorisées|Obligatoire|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (serveur de test)|`<Server>`|Spécifie le nom du serveur et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auxquels la connexion doit être établie.|*nom_serveur*[\\*nom_instance*]<br /><br /> Vous ne pouvez pas utiliser «`localhost`» ou «`.`» pour représenter l'hôte local.|Non, si le nom du serveur est déjà spécifié à l’aide du paramètre **-s**_serveur cible_ avec l’option **replay** de l’outil d’administration.|  
 |Mode de séquencement|`<SequencingMode>`|Spécifie le mode utilisé pour la planification d'événement.|`synchronization` &#124; `stress`|Non. Par défaut, la valeur est `stress`.|  
@@ -132,15 +133,15 @@ ms.locfileid: "68023769"
 |Délai de requête|`<QueryTimeout>`|Spécifie la valeur du délai de requête, en secondes. Cette valeur n'est effective que jusqu'à ce que la première ligne soit retournée.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `3600`.|  
 |Threads par client|`<ThreadsPerClient>`|Spécifie le nombre de threads de relecture à utiliser pour chaque client de relecture.|Entier compris entre `1` et `512`.|Non. Si non spécifié, Distributed Replay utilise une valeur de `255`.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions >, élément  
+### <a name="outputoptions-element"></a>\<OutputOptions> Element  
  Les paramètres spécifiés par le fichier de configuration de relecture dans l'élément `<OutputOptions>` incluent les éléments suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML|Description|Valeurs autorisées|Obligatoire|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Nombre de lignes d'enregistrement|`<RecordRowCount>`|Indique si le nombre de lignes doit être enregistré pour chaque jeu de résultats.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `Yes`.|  
 |Jeu de résultats d'enregistrement|`<RecordResultSet>`|Indique si le contenu de tous les jeux de résultats doit être enregistré.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `No`.|  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  Fichier de configuration de relecture par défaut :  
   
 ```  
@@ -165,22 +166,22 @@ ms.locfileid: "68023769"
 ```  
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Problème possible lors de l’exécution avec le mode de séquencement de synchronisation
- Vous pouvez rencontrer un symptôme dans lequel la fonctionnalité de relecture semble «bloquer», ou relire les événements très lentement. Ce phénomène peut se produire si la trace en cours de relecture s’appuie sur des données et/ou des événements qui n’existent pas dans la base de données cible restaurée. 
+ Vous pouvez rencontrer un symptôme dans lequel la fonctionnalité de relecture semble « bloquer » ou relire les événements très lentement. Ce phénomène peut se produire si la trace en cours de relecture s’appuie sur des données et/ou des événements qui n’existent pas dans la base de données cible restaurée. 
  
- Un exemple est une charge de travail capturée qui utilise WAITFOR, par exemple dans l’instruction WAITFOR RECEIVE de Service Broker. Lors de l’utilisation du mode de séquencement de synchronisation, les lots sont relus en série. Si une insertion se produit sur la base de données source après la sauvegarde de la base de données, mais avant le démarrage de la trace de capture de relecture, la réception WAITFOR émise lors de la relecture peut être amenée à attendre toute la durée du WAITFOR. Événements définis pour être relus après le blocage de la réception WAITFOR. Cela peut entraîner l’affichage du compteur de l’analyseur de performances requêtes de lots/s pour la cible de la base de données de relecture jusqu’à zéro jusqu’à la fin de WAITFOR. 
+ Un exemple est une charge de travail capturée qui utilise WAITFOR, par exemple dans l’instruction WAITFOR RECEIVE de Service Broker. Lors de l’utilisation du mode de séquencement de synchronisation, les lots sont relus en série. Si une instruction INSERT se produit sur la base de données source après la sauvegarde de la base de données, mais avant le démarrage de la trace de capture de relecture, l’instruction WAITFOR RECEIVE émise lors de la relecture peut être amenée à attendre pendant toute la durée de l’instruction WAITFOR. Les événements définis pour relecture après l’instruction WAITFOR RECEIVE seront bloqués. Cela peut causer le compteur de l’analyseur de performances des requêtes par lots/s pour la cible de la base de données de relecture à tomber à zéro jusqu’à la fin de l’instruction WAITFOR. 
  
- Si vous devez utiliser le mode de synchronisation et que vous souhaitez éviter ce comportement, vous devez effectuer les opérations suivantes:
+ Si vous devez utiliser le mode de synchronisation et que vous souhaitez éviter ce comportement, vous devez effectuer les opérations suivantes :
  
 1.  Suspendez les bases de données que vous utiliserez comme cibles de relecture.
 
 2.  Autoriser l’achèvement de toutes les activités en attente.
 
-3.  Sauvegardez les bases de données et autorisez la fin des sauvegardes.
+3.  Sauvegardez les bases de données et autorisez l’achèvement des sauvegardes.
 
 4.  Démarrez la capture de trace de la relecture distribuée et reprenez la charge de travail normale. 
  
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Forum de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   

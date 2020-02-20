@@ -11,22 +11,22 @@ ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576029"
 ---
 # <a name="system-role-properties-management-studio"></a>Propriétés de rôle système (Management Studio)
   La page Rôles système vous permet d'afficher les définitions de rôles système qui sont actuellement définies pour le serveur de rapports. Une définition de rôle système contient une collection nommée de tâches effectuées sur tout le site plutôt que sur un élément individuel. Les définitions de rôles sont attribuées à un utilisateur ou à des groupes pour créer une attribution de rôle. Les tâches contenues dans la définition de rôle spécifient les opérations que peuvent effectuer l'utilisateur ou le groupe.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a deux définitions de rôles système prédéfinies : **Administrateur système** et **Utilisateur système**. Vous pouvez les modifier en changeant la liste des tâches de chacune d'elles, ou vous pouvez créer un rôle système qui prend en charge une autre combinaison de tâches. La modification d'une définition de rôle affecte toutes les attributions de rôles qui contiennent la définition de rôle.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a deux définitions de rôles système prédéfinies : **Administrateur système** et **Utilisateur système**. Vous pouvez les modifier en changeant la liste des tâches de chacune d'elles, ou vous pouvez créer un rôle système qui prend en charge une autre combinaison de tâches. La modification d'une définition de rôle affecte toutes les attributions de rôles qui contiennent la définition de rôle.  
   
 > [!NOTE]  
 >  Les attributions de rôles système sont utilisées uniquement sur un serveur de rapports qui s'exécute en mode natif. Si le serveur de rapports est configuré pour l'intégration SharePoint, cette page n'est pas disponible.  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Spécifie le nom de la définition du rôle système.  
   
  **Description**  

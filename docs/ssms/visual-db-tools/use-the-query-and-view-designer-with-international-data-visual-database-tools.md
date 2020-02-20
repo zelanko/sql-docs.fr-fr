@@ -1,10 +1,9 @@
 ---
-title: Utiliser le Concepteur de requêtes et de vues avec des données internationales | Microsoft Docs
-ms.custom: ''
+title: Utiliser le Concepteur de requêtes et de vues avec des données internationales
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff5eafd8a0a150b40c2383523e269691f0a83b08
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8b2bd268bd46240b5954851946c7546a7f2dbb34
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267412"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246025"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utiliser le Concepteur de requêtes et de vues avec des données internationales (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,6 +58,6 @@ L'ordre de tri des données d'une requête est déterminé par la base de donné
 ## <a name="using-double-byte-characters"></a>Utilisation de caractères codés sur deux octets  
 Les caractères codés sur deux octets, ou caractères DBCS (Double Byte Character Set), peuvent être utilisés pour des noms d'objets de bases de données tels que des noms de tables et de vues ou d'alias. Vous pouvez également les utiliser pour des noms de paramètres et des marqueurs de paramètres. Cependant, vous ne pouvez pas les utiliser dans des éléments du langage SQL tels que des noms de fonctions ou des mots clés SQL.  
   
-## <a name="see-also"></a>Voir aussi  
-[Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-  
+## <a name="see-also"></a>Voir aussi
+
+[Rubriques de procédures relatives au Concepteur de vues et de requêtes](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

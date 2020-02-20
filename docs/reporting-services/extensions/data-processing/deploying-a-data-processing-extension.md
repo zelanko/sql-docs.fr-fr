@@ -13,10 +13,10 @@ ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3e8c86c1ba590ab574e7afe351b3e29c2c918b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194063"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Déploiement d'une extension pour le traitement des données
@@ -27,9 +27,9 @@ ms.locfileid: "63194063"
   
  Le tableau suivant décrit les attributs de l’élément **Extension** pour les extensions pour le traitement des données.  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|**Name**|Nom unique de l'extension, par exemple, « SQL » pour l'extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou « OLEDB » pour l'extension pour le traitement des données OLE DB. La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration.|  
+|**Nom**|Nom unique de l'extension, par exemple, « SQL » pour l'extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou « OLEDB » pour l'extension pour le traitement des données OLE DB. La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration.|  
 |**Type**|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
 |**Visible**|La valeur **false** indique que l’extension pour le traitement des données ne doit pas être visible dans les interfaces utilisateur. Si cet attribut n'est pas défini, la valeur par défaut est **true**.|  
   
@@ -39,8 +39,8 @@ ms.locfileid: "63194063"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Procédure : déployer une extension pour le traitement des données sur un serveur de rapports](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Décrit comment déployer votre extension pour le traitement des données sur un serveur de rapports.|  
-|[Procédure : déployer une extension pour le traitement des données sur le Concepteur de rapports](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Décrit comment déployer votre extension pour le traitement des données sur le Générateur de rapports.|  
+|[Procédure : Déployer une extension pour le traitement des données sur un serveur de rapports](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Décrit comment déployer votre extension pour le traitement des données sur un serveur de rapports.|  
+|[Procédure : Déployer une extension pour le traitement des données sur le Concepteur de rapports](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Décrit comment déployer votre extension pour le traitement des données sur le Générateur de rapports.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

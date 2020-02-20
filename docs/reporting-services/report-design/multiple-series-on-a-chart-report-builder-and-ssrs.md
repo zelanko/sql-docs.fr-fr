@@ -9,10 +9,10 @@ ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8aedfd50c591f3a8aef4855854eed760ce093a7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580627"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Plusieurs séries sur un graphique (Générateur de rapports et SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "65580627"
 ## <a name="using-chart-areas"></a>Utilisation de zones de graphique  
  Le graphique est le conteneur de niveau supérieur qui inclut la bordure externe, le titre du graphique et la légende. Par défaut, le graphique contient une zone de graphique par défaut. La zone de graphique n'est pas visible à la surface du graphique, mais vous pouvez la considérer comme un conteneur qui comprend uniquement les étiquettes d'axe, le titre de l'axe et la zone de traçage d'une ou plusieurs séries. L'illustration suivante montre le concept de zones de graphique dans un unique graphique.  
   
- ![Affiche un diagramme d’une zone de graphique](../../reporting-services/report-design/media/chartareasdiagram.gif "Affiche un diagramme d’une zone de graphique")  
+ ![Affiche un diagramme d'une zone de graphique](../../reporting-services/report-design/media/chartareasdiagram.gif "Affiche un diagramme d'une zone de graphique")  
   
  Dans la boîte de dialogue **Propriétés de la zone de graphique** , vous pouvez spécifier l’orientation 2D et 3D de toutes les séries figurant dans la zone de graphique, aligner plusieurs zones de graphique dans le même graphique et définir les couleurs de la zone de traçage. Lorsqu'une nouvelle zone de graphique est définie sur un graphique qui contient une seule zone de graphique par défaut, l'espace disponible pour une zone de graphique est divisé horizontalement par deux et la nouvelle zone de graphique est positionnée au-dessous de la première zone de graphique.  
   

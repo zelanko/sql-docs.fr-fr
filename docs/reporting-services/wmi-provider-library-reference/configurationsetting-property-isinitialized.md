@@ -16,14 +16,14 @@ ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1d247dacc79e237f06a513aaa8673d4462151b1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573794"
 ---
 # <a name="configurationsetting-property---isinitialized"></a>Propriété ConfigurationSetting - IsInitialized
-  Indique si l'instance de serveur de rapports est initialisée. En lecture seule.  
+  Indique si l'instance de serveur de rapports est initialisée. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ public Boolean DatabaseLogonName;
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

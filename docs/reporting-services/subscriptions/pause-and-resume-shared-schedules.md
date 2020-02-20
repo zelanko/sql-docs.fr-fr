@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578180"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -37,7 +37,7 @@ ms.locfileid: "65578180"
 -   [Suspendre et reprendre des planifications partagées (mode SharePoint)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> Suspendre et reprendre des planifications partagées (mode natif)  
- Pour suspendre et reprendre une planification partagée, utilisez la page Planifications du Gestionnaire de rapports. Vous ne pouvez pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; ce dernier n'a pas les options nécessaires pour vous permettre de suspendre et de reprendre des planifications. Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
+ Pour suspendre et reprendre une planification partagée, utilisez la page Planifications du Gestionnaire de rapports. Vous ne pouvez pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ; ce dernier n'a pas les options nécessaires pour vous permettre de suspendre et de reprendre des planifications. Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Pour suspendre ou reprendre une planification partagée  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65578180"
 ## <a name="see-also"></a>Voir aussi  
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Modifier les fuseaux horaires et les paramètres d’horloge sur un serveur de rapports](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [Gérer un processus en cours d'exécution](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

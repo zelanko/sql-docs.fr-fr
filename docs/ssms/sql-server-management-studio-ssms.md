@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038857"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037175"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Qu’est-ce que SQL Server Management Studio (SSMS) ?
 
@@ -68,7 +68,7 @@ Pour plus d’informations sur la façon d’utiliser [!INCLUDE[ssManStudioFull]
 
 Utiliser SQL Server Management Studio pour activer les fonctionnalités de Reporting Services, administrer le serveur et les bases de données, et gérer des rôles et des travaux.
 
-Vous gérez des planifications partagées à l'aide du dossier Planifications partagées et gérer des bases de données du serveur de rapports (ReportServer, ReportServerTempdb). Vous créez aussi un RSExecRole dans la base de données système Master quand vous déplacez une base de données du serveur de rapports vers un moteur de base de données SQL Server ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Pour plus d’informations sur ces tâches, consultez les articles suivants :  
+Vous gérez des planifications partagées à l'aide du dossier Planifications partagées et gérer des bases de données du serveur de rapports (ReportServer, ReportServerTempdb). Vous créez aussi un RSExecRole dans la base de données système MASTER quand vous déplacez une base de données du serveur de rapports vers un moteur de base de données SQL Server nouveau ou différent ([!INCLUDE[ssDE](../includes/ssde_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]). Pour plus d’informations sur ces tâches, consultez les articles suivants :  
 
 - [Reporting Services dans SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [Administrer une base de données du serveur de rapports](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
@@ -91,6 +91,10 @@ Pour plus d’informations sur les différents paramètres régionaux avec les v
 - À partir de SSMS 17.0, l’équipe SQL Tools a adopté la [stratégie de cycle de vie moderne Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 - Lisez [l’annonce sur la stratégie de cycle de vie moderne](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy). Pour plus d’informations, consultez les [Questions fréquentes (FAQ) sur la politique de cycle de vie moderne](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 - Pour plus d’informations sur la collection de données de diagnostic et l’utilisation des fonctionnalités, consultez le [supplément de confidentialité SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
+
+## <a name="cross-platform-tool"></a>Outil multiplateforme
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

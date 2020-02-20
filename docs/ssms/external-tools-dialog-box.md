@@ -1,6 +1,6 @@
 ---
-title: Outils externes, boîte de dialogue | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Outils externes
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22b70fa3a33404cee302f12ccb98ea03dbdb9aed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: deeb0a237d1982a92e08c056375fca277f095017
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265124"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245033"
 ---
 # <a name="external-tools-dialog-box"></a>Boîte de dialogue Outils externes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Utilisez la boîte de dialogue **Outils externes** pour ajouter des outils externes tels que SQLCMD ou le Bloc-notes au menu **Outils**. L'ajout d'outils externes vous permet de lancer facilement d'autres applications tout en travaillant dans l'environnement [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Vous pouvez spécifier des arguments et un répertoire de travail lors du lancement de l'outil. En outre, la sortie de certains outils peut être affichée dans la fenêtre **Sortie** . La boîte de dialogue **Outils externes** est accessible via le menu **Outils** .  
+Utilisez la boîte de dialogue **Outils externes** pour ajouter des outils externes tels que SQLCMD ou le Bloc-notes au menu **Outils**. L'ajout d'outils externes vous permet de lancer facilement d'autres applications tout en travaillant dans l'environnement [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Vous pouvez spécifier des arguments et un répertoire de travail lors du lancement de l'outil. En outre, la sortie de certains outils peut être affichée dans la fenêtre **Sortie** . La boîte de dialogue **Outils externes** est accessible via le menu **Outils** .  
   
 ## <a name="options"></a>Options  
 **Sommaire du menu**  
@@ -42,7 +42,7 @@ Vide les zones de texte pour que vous puissiez spécifier un nouvel outil.
 Supprime l'outil ou la commande de la liste **Contenu du menu** , ainsi que du menu **Outils** .  
   
 **Titre**  
-Entrez le nom sous lequel l'outil ou la commande sera affiché dans le sous-menu **Outils externes** du menu **Outils** . Faites précéder une des lettres de ce nom du caractère & pour la définir comme touche de raccourci de l'outil. Par exemple, « &SQLCMD » s'afficherait sous la forme SQLCMD dans le menu **Outils**.  
+Entrez le nom sous lequel l'outil ou la commande sera affiché dans le sous-menu **Outils externes** du menu **Outils** . Faites précéder une des lettres de ce nom du caractère & pour la définir comme touche de raccourci de l'outil. Par exemple, « &SQLCMD » s'afficherait sous la forme SQLCMD dans le menu **Outils**.  
   
 **Commande**  
 Spécifiez le chemin d'accès au fichier à lancer.  
@@ -68,13 +68,13 @@ Ferme en même temps que l'outil la fenêtre qu'il a ouverte.
 ## <a name="example"></a>Exemple  
 La saisie des valeurs suivantes dans la boîte de dialogue **Outils externes** crée un élément de menu libellé « DAC » qui, une fois sélectionné, ouvre une invite de commandes et exécute l'utilitaire **sqlcmd** à l'aide de la connexion administrateur dédiée.  
   
-|Zone|Valeur|  
+|Box|Valeur|  
 |-------|---------|  
-|**Title**|DAC|  
+|**Titre**|DAC|  
 |**Commande**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Arguments**|-A|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Arguments des outils externes](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
-[Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
+[Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

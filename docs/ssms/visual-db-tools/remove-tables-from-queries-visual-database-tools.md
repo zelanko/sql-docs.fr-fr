@@ -1,10 +1,9 @@
 ---
-title: Supprimer des tables des requêtes (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Supprimer des tables dans des requêtes
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0b861034b3d95fd653358b91e31352776e1dad3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 32c25c3ded07e84e436b69af5baac5634909998c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255996"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255252"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Supprimer des tables des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Vous pouvez supprimer une table, ou un objet table, dans une requête.  
   
 > [!NOTE]  
-> Lorsque vous procédez à la suppression d'une table ou d'un objet table, cette suppression ne s'effectue que dans la requête en cours et non dans la base de données. Pour plus d’informations sur la suppression d’une table d’une base de données, consultez [Procédure : supprimer les tables d’une base de données (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
+> Lorsque vous procédez à la suppression d'une table ou d'un objet table, cette suppression ne s'effectue que dans la requête en cours et non dans la base de données. Pour plus d’informations sur la suppression d’une table d’une base de données, consultez [Procédure : Supprimer les tables d'une base de données(https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>Pour supprimer une table ou un objet structuré comme une table  
   
@@ -39,10 +40,10 @@ Vous pouvez supprimer une table, ou un objet table, dans une requête.
   
 Quand vous supprimez une table ou un objet table, le Concepteur de requêtes et de vues supprime automatiquement les jointures relatives à cette table ou à cet objet table, ainsi que les références aux colonnes de l’objet dans le **volet SQL** et le **volet Critères**. Si la requête comporte toutefois des expressions complexes relatives à l'objet, la suppression automatique de cet objet ne s'effectue pas tant que toutes les références le concernant n'ont pas été supprimées.  
   
-## <a name="see-also"></a>Voir aussi  
-[Ajouter des tables à des requêtes (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  
-[Créer des alias de tables (Visual Database Tools)](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
-[Spécifier des critères de recherche (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
-[Résumé des résultats d'une requête (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
-[Effectuer des opérations de base concernant les requêtes (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+## <a name="see-also"></a> Voir aussi  
+[Ajouter des tables à des requêtes](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  
+[Créer des alias de table](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
+[Spécifier des critères de recherche](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Résumer les résultats de requête](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Effectuer des opérations de base avec des requêtes](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

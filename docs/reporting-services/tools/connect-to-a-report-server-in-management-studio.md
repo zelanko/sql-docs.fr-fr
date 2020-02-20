@@ -19,10 +19,10 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574108"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Se connecter à un serveur de rapports dans Management Studio
@@ -53,7 +53,7 @@ ms.locfileid: "65574108"
 
 4. Sélectionnez le **Type d’authentification**. Si vous utilisez l’authentification Windows, vous vous connectez à l’aide de vos informations d’identification. Si vous sélectionnez l'authentification de base ou l'authentification par formulaire, tapez les informations relatives au compte et au mot de passe.  
   
-5. Sélectionnez **Se connecter**. Le serveur de rapports apparaît dans l'Explorateur d'objets.  
+5. Sélectionnez **Connecter**. Le serveur de rapports apparaît dans l'Explorateur d'objets.  
 
 6. Cliquez avec le bouton droit sur le nœud du serveur afin de définir les propriétés système et les paramètres par défaut du serveur. Pour plus d’informations, consultez [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).
 
@@ -67,7 +67,7 @@ ms.locfileid: "65574108"
 
 4. Sélectionnez le **Type d’authentification**. Si vous utilisez l'authentification Windows, vous devez vous connecter à l'aide de vos informations d'identification. Si vous sélectionnez l'authentification de base ou l'authentification par formulaire, tapez les informations relatives au compte et au mot de passe.
 
-5. Sélectionnez **Se connecter**. Le serveur de rapports apparaît dans l'Explorateur d'objets.
+5. Sélectionnez **Connecter**. Le serveur de rapports apparaît dans l'Explorateur d'objets.
 
 6. Cliquez avec le bouton droit sur le nœud du serveur afin de définir les propriétés système et les paramètres par défaut du serveur. Pour plus d’informations, consultez [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).
 

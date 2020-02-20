@@ -16,10 +16,10 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581442"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
@@ -50,7 +50,7 @@ ms.locfileid: "65581442"
  La seule limite physique sur la taille du rapport s'applique lors du rendu au format Excel. Les feuilles de calcul ne peuvent pas contenir plus de 65 536 lignes ou 256 colonnes. D'autres formats de rendu ne sont pas soumis à ces limites, par conséquent, la taille est limitée uniquement par la quantité de ressources sur votre serveur.  
   
 > [!NOTE]  
->  Le traitement et le rendu d'un rapport sont opérés en mémoire. Si vous possédez des rapports volumineux ou un grand nombre d'utilisateurs, veillez à réaliser une planification de capacité pour vous assurer que vos utilisateurs sont satisfaits des performances de votre déploiement de serveur de rapports. Pour plus d'informations sur les outils et instructions disponibles, consultez les publications suivantes sur MSDN : [Planning for Scalability and Performance with Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) et [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519)(en anglais).  
+>  Le traitement et le rendu d'un rapport sont opérés en mémoire. Si vous possédez des rapports volumineux ou un grand nombre d'utilisateurs, veillez à réaliser une planification de capacité pour vous assurer que vos utilisateurs sont satisfaits des performances de votre déploiement de serveur de rapports. Pour plus d'informations sur les outils et pour obtenir des instructions, consultez les publications suivantes sur MSDN : [Planification de l'extensibilité et des performances avec Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) et [Utilisation de Visual Studio 2005 pour effectuer un test de charge sur un serveur de rapports SQL Server 2005 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Mesure du stockage des instantanés  
  La taille d'un instantané est directement proportionnelle à la quantité de données dans le rapport. Les instantanés sont généralement bien plus volumineux que les autres éléments stockés sur un serveur de rapports. Leur taille oscille généralement entre quelques mégaoctets et des dizaines de mégaoctets. Si vos rapports sont extrêmement volumineux, il est probable que les instantanés le seront encore plus. En fonction de la fréquence d'utilisation des instantanés et de la configuration de l'historique des rapports, la quantité d'espace disque nécessaire par la base de données du serveur de rapports peut augmenter rapidement en peu de temps.  

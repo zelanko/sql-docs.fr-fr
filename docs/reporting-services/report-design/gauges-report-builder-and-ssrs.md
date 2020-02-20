@@ -157,10 +157,10 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b65ca56f0cb942f5cc5c9fc6b01d4a9df7e0b88e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580277"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
@@ -176,9 +176,9 @@ ms.locfileid: "65580277"
   
  Il existe deux types de jauges : la jauge radiale et la jauge linéaire. L'illustration suivante présente les éléments de base d'une jauge radiale unique dans le panneau de jauge.  
   
- ![Diagramme d’éléments de jauge](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramme d’éléments de jauge")  
+ ![Diagramme d'éléments de jauge](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramme d'éléments de jauge")  
   
- Pour plus d’informations sur l’utilisation des jauges comme indicateurs de performance clés, consultez [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Pour plus d'informations sur l'utilisation de jauges comme indicateurs de performance clés, consultez le [tutoriel : Ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des jauges hors d'un rapport en tant que parties du rapport. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -198,13 +198,13 @@ ms.locfileid: "65580277"
   
  ![rs_RadialGauge](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Options de jauge radiale : Radial, Radial avec mini-jauge, Deux échelles, 90 degrés nord-est, 90 degrés nord-ouest, 90 degrés sud-ouest, 90 degrés sud-est, 180 degrés nord, 180 degrés sud, 180 degrés ouest, 180 degrés est et Métrique.  
+ Options de jauge radiale : Radial, Radial avec mini-jauge, Deux échelles, 90 degrés nord-est, 90 degrés nord-ouest, 90 degrés sud-ouest, 90 degrés sud-est, 180 degrés nord, 180 degrés sud, 180 degrés ouest, 180 degrés est et Compteur.  
   
  **Jauge linéaire**  
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Options de jauge linéaire : Horizontal, Vertical, Pointeurs multiples en forme de barres, Deux échelles, Plage de trois couleurs, Logarithmique, Thermomètre, Thermomètre Fahrenheit/Celsius et Graphique à puces.  
+ Options de jauge linéaire : Horizontal, Vertical, Pointeurs multiples en forme de barres, Deux échelles, Plage de trois couleurs, Logarithmique, Thermomètre, Thermomètre Fahrenheit/Celsius et Graphique à puces.  
   
 ##  <a name="AddingData"></a> Ajout de données à une jauge  
  Une fois que vous avez ajouté une jauge à l'aire de conception, il vous suffit de faire glisser un champ du dataset vers le volet des données de la jauge. Par défaut, la jauge agrège les valeurs du champ en une seule valeur qui est indiquée sur la jauge. Cette valeur est associée au pointeur via la propriété Value. Selon le type de données du champ, la jauge utilise l'agrégat SUM ou COUNT. Lorsque vous utilisez des données numériques qui peuvent être ajoutées, la jauge utilise la fonction SUM. Sinon, elle utilise l'agrégat COUNT. La valeur du pointeur peut utiliser un agrégat différent, ou aucun agrégat.  

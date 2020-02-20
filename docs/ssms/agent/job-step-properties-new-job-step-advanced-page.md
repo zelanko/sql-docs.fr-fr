@@ -1,10 +1,7 @@
 ---
-title: Propriétés de l’étape du travail - Nouvelle étape du travail (page Avancé) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Propriétés de la nouvelle étape du travail (page Avancé)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,21 +9,26 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f9395e9d1f7af28f0ff8a7d3f50d25eb665b7bb9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d51de2031e8187e96eaea3fcb344df133928779
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263305"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242241"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Propriétés de l'étape du travail - Nouvelle étape du travail (page Avancé)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Utilisez cette page pour afficher et modifier les propriétés d'une étape de travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Utilisez cette page pour afficher et changer les propriétés d’une étape de travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Options  
 **Action en cas de succès**  
@@ -42,7 +44,7 @@ Définit le délai d'attente entre les tentatives de reprise par l'Agent [!INCLU
 Définit l'action que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit exécuter si l'étape de travail échoue.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Options des étapes de travail Transact-SQL  
-**fichier de sortie**  
+**Fichier de sortie**  
 Définit le fichier à utiliser comme sortie avec l'étape de travail. Cette option est disponible uniquement pour les membres du rôle serveur fixe **sysadmin** .  
   
 **...**  
@@ -70,7 +72,7 @@ Sélectionnez cette option pour inclure la sortie de l'étape de travail dans l'
 Si vous êtes membre du rôle serveur fixe **sysadmin** , vous pouvez sélectionner une autre connexion SQL pour exécuter cette étape de travail.  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>Options des étapes de travail du système d'exploitation (CmdExec)  
-**fichier de sortie**  
+**Fichier de sortie**  
 Définit le fichier à utiliser comme sortie avec l'étape de travail.  
   
 **...**  
@@ -95,7 +97,7 @@ Ajoute la sortie au contenu existant de la table. Sinon, le contenu précédent 
 Sélectionnez cette option pour inclure la sortie de l'étape de travail dans l'historique des travaux.  
   
 ## <a name="options-for-powershell-job-steps"></a>Options des étapes de travail PowerShell  
-**fichier de sortie**  
+**Fichier de sortie**  
 Définit le fichier à utiliser comme sortie avec l'étape de travail.  
   
 **...**  
@@ -120,14 +122,14 @@ Ajoute la sortie au contenu existant de la table. Sinon, le contenu précédent 
 Sélectionnez cette option pour inclure la sortie de l'étape de travail dans l'historique des travaux.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>Options des étapes de travail de l'Agent de lecture de file d'attente de la réplication  
-**Server**  
+**Serveur**  
 Définit le serveur à utiliser pour l'étape de travail de l'Agent de lecture de file d'attente de la réplication.  
   
 **Sauvegarde de la base de données**  
 Définit la base de données à utiliser pour l'étape de travail de l'Agent de lecture de file d'attente de la réplication.  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>Options des étapes de travail de SQL Server Analysis Services  
-**fichier de sortie**  
+**Fichier de sortie**  
 Définit le fichier à utiliser comme sortie avec l'étape de travail. Cette option est disponible uniquement pour les membres du rôle serveur fixe **sysadmin** .  
   
 **...**  

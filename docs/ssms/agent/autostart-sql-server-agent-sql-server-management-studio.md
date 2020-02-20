@@ -1,10 +1,7 @@
 ---
-title: Démarrer automatiquement l’Agent SQL Server (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Démarrage automatique de SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,21 +10,26 @@ helpviewer_keywords:
 ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e698d8e2d148b2276f2cd9892f4df3765742585c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 2c9a777a7f0a450d69b4fa5944efb79909f55634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553336"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255720"
 ---
-# <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Démarrer automatiquement SQL Server Agent (SQL Server Management Studio)
+# <a name="autostart-sql-server-agent"></a>Démarrage automatique de SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour qu'il redémarre automatiquement en cas d'arrêt inopiné dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour qu’il redémarre automatiquement en cas d’arrêt inopiné dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Avant de commencer  
   
@@ -36,7 +38,7 @@ Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Pour exécuter ses fonctions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour utiliser les informations d'identification d'un compte qui est membre du rôle serveur fixe **sysadmin** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le compte doit avoir les autorisations Windows suivantes :  
   
 -   Ouvrir une session en tant que service (SeServiceLogonRight)  

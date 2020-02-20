@@ -1,21 +1,23 @@
 ---
 title: Installer ou désinstaller le complément Reporting Services pour SharePoint | Microsoft Docs
-ms.date: 08/17/2017
+description: Découvrez comment exécuter le package d’installation du complément Microsoft SQL Server Reporting Services pour les produits SharePoint (rsSharePoint.msi) sur les serveurs SharePoint pour activer les fonctionnalités Reporting Services dans un déploiement SharePoint.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893376"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866352"
 ---
-# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint
+# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -51,9 +53,9 @@ ms.locfileid: "68893376"
 ##  <a name="bkmk_3ways_to_install"></a> Vue d'ensemble des méthodes d'installation  
  Le complément SQL Server 2016 Reporting Services pour les produits SharePoint peut être installé en utilisant l’une des deux méthodes suivantes :  
   
--   **Assistant Installation :** ![remarque](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque")Dans SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
+-   **Assistant Installation :** ![remarque](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque") Dans SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
   
--   **rsSharepoint.msi :** le complément peut être installé directement à partir du support d’installation ou téléchargé et installé. Le fichier rsSharepoint.msi prend en charge à la fois une interface utilisateur graphique et une installation à partir de la ligne de commande. Vous devez exécuter le fichier .msi avec les privilèges d'administrateur ; pour ce faire, commencez par ouvrir une fenêtre d'invite de commandes avec des autorisations élevées, puis exécutez rsSharepoint.msi à partir de la ligne de commande. Pour plus d’informations sur le téléchargement du complément, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **rsSharepoint.msi :** le complément peut être installé directement à partir du support d'installation ou téléchargé et installé. Le fichier rsSharepoint.msi prend en charge à la fois une interface utilisateur graphique et une installation à partir de la ligne de commande. Vous devez exécuter le fichier .msi avec les privilèges d'administrateur ; pour ce faire, commencez par ouvrir une fenêtre d'invite de commandes avec des autorisations élevées, puis exécutez rsSharepoint.msi à partir de la ligne de commande. Pour plus d’informations sur le téléchargement du complément, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
     > [!NOTE]  
     >  Si vous utilisez le commutateur **/q** pour une installation silencieuse à partir de la ligne de commande, le Contrat de Licence Utilisateur Final ne sera pas affiché. Quelle que soit la méthode d'installation, l'utilisation de ce logiciel est régie par un contrat de licence et vous devez respecter les termes contractuels de ce contrat.  
@@ -73,7 +75,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     ou Gestionnaire de configuration  
+     or  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
@@ -101,11 +103,11 @@ Rssharepoint.msi /?
   
     1.  Naviguez vers le dossier qui contient le fichier **rsCustomAction.exe**. Ce fichier est copié sur votre ordinateur pendant l'installation des fichiers seuls du complément. **rsCustomAction.exe** se trouve dans le répertoire **%Temp%** . Pour naviguer jusqu'au fichier, entrez ce qui suit à partir de l'invite de commandes :  
   
-         **CD %temp%** .  
+         **CD %temp%**.  
   
          Le fichier doit se trouver à l’emplacement suivant : **\Users\\<votre_nom\>\AppData\Local\Temp**  
   
-    2.  Tapez la commande suivante : Cette étape de configuration nécessitera plusieurs minutes. Le service W3SVC est redémarré pendant ce processus. Plusieurs messages d'état s'affichent à mesure que le programme copie les fichiers, inscrit les composants et exécute l'Assistant Configuration de produit SharePoint.  
+    2.  Tapez la commande suivante. Cette étape de configuration nécessitera plusieurs minutes. Le service W3SVC est redémarré pendant ce processus. Plusieurs messages d'état s'affichent à mesure que le programme copie les fichiers, inscrit les composants et exécute l'Assistant Configuration de produit SharePoint.  
   
         ```  
         rsCustomAction.exe /i  
@@ -144,7 +146,7 @@ Rssharepoint.msi /?
   
  La désinstallation du complément n'entraîne pas la suppression des éléments suivants :  
   
--   Les comptes de connexion créés pour le compte de service Report Server qui étaient utilisés pour accéder aux bases de données de contenu et de configuration SharePoint. Vous devez supprimer les comptes de connexion pour le compte de service Report Server à partir de l'instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilisée pour héberger les bases de données SharePoint.  
+-   Les comptes de connexion créés pour le compte de service Report Server qui étaient utilisés pour accéder aux bases de données de contenu et de configuration SharePoint. Vous devez supprimer les comptes de connexion pour le compte de service Report Server à partir de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilisée pour héberger les bases de données SharePoint.  
   
 -   Autorisations ou groupes que vous avez créés pour les utilisateurs de rapports. Si vous avez créé des groupes SharePoint ou des niveaux d'autorisation personnalisés pour accorder l'accès aux fonctionnalités du serveur de rapports, vous devez révoquer toutes les autorisations qui ne sont plus nécessaires.  
   
@@ -161,7 +163,7 @@ Rssharepoint.msi /?
   
 3.  Cliquez sur **Supprimer**.  
   
-### <a name="uninstall-from-the-command-line"></a>Désinstallation à partir de la ligne de commande  
+### <a name="uninstall-from-the-command-line"></a>Désinstaller à partir de la ligne de commande  
  Pour désinstaller le complément à partir de la ligne de commande :  
   
 1.  Ouvrez une invite de commandes **avec des autorisations d'administrateur**.  
@@ -259,7 +261,7 @@ Rssharepoint.msi /?
 |Commutateur|Description|  
 |------------|-----------------|  
 |i|Installe les actions personnalisées. Enregistre les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans SharePoint. Redémarre W3SVCservice.|  
-|r|Repair|  
+|r|Réparation|  
 |u|Uninstall. Annule l'enregistrement des composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la batterie de serveurs SharePoint mais conserve les fichiers sur le disque. Redémarre W3SVCservice.|  
 |p|Désinstallation locale. Annule l'enregistrement des composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de l'ordinateur local uniquement. Les fichiers demeurent sur le disque. Redémarre W3SVCservice.|  
 |t|SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005 uniquement. Le commutateur vérifie que le serveur de rapports dispose d'une connexion active à sa base de données.|  
@@ -267,7 +269,7 @@ Rssharepoint.msi /?
 ## <a name="configuring-reporting-services"></a>configuration de Reporting Services  
  Après avoir installé le complément sur les ordinateurs appropriés, configurez le serveur de rapports à partir de l'Administration centrale de SharePoint. Les étapes nécessaires dépendent de l'ordre dans lequel les différentes technologies ont été installées. Pour plus d’informations, consultez [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md) and [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md)   
 [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  

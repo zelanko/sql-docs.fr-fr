@@ -15,10 +15,10 @@ ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492594"
 ---
 # <a name="limit-report-history---reporting-services"></a>Limiter l’historique de rapport - Reporting Services
@@ -40,7 +40,7 @@ ms.locfileid: "67492594"
   
 1.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'au rapport pour lequel configurer l'historique, puis cliquez sur cet élément pour l'ouvrir.  
   
-2.  Cliquez sur l’onglet **Propriétés** .  
+2.  Cliquez sur l’onglet **Propriétés**.  
   
 3.  Cliquez sur l’onglet **Historique** .  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67492594"
   
 1.  Dans le portail web, parcourez l’arborescence jusqu’au rapport pour lequel configurer l’historique, puis cliquez sur cet élément pour l’ouvrir.  
   
-2.  Cliquez sur l’onglet **Propriétés** .  
+2.  Cliquez sur l’onglet **Propriétés**.  
   
 3.  Cliquez sur l’onglet **Historique** .  
   

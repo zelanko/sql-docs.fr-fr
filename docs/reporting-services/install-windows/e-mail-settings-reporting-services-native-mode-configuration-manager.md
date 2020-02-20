@@ -1,8 +1,10 @@
 ---
-title: 'Paramètres d’e-mail : mode natif de Reporting Services (Gestionnaire de configuration)| Microsoft Docs'
-ms.date: 06/01/2016
+title: Paramètres d’e-mail dans SSRS en mode natif (Gestionnaire de configuration)| Microsoft Docs
+description: SQL Server Reporting Services comprend une extension de la remise des e-mails que vous pouvez utiliser pour distribuer les rapports par e-mail.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593817"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866002"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de configuration)
-Reporting Services comprend une extension de la remise des e-mails que vous pouvez utiliser pour distribuer les rapports par courrier électronique. Selon la façon dont vous définissez l'abonnement de messagerie électronique, une remise peut consister en une notification, un lien, une pièce jointe ou un rapport incorporé. L'extension de remise de courrier électronique fonctionne avec votre technologie de serveur de messagerie existante. Le serveur de messagerie doit être un serveur SMTP ou redirecteur. Le serveur de rapports se connecte à un serveur SMTP par le biais de bibliothèques CDO (Collaboration Data Objects) (cdosys.dll) fournies par le système d'exploitation.
+SQL Server Reporting Services comprend une extension de la remise des e-mails que vous pouvez utiliser pour distribuer les rapports par e-mail. Selon la façon dont vous définissez l'abonnement de messagerie électronique, une remise peut consister en une notification, un lien, une pièce jointe ou un rapport incorporé. L'extension de remise de courrier électronique fonctionne avec votre technologie de serveur de messagerie existante. Le serveur de messagerie doit être un serveur SMTP ou redirecteur. Le serveur de rapports se connecte à un serveur SMTP par le biais de bibliothèques CDO (Collaboration Data Objects) (cdosys.dll) fournies par le système d'exploitation.
 
 L'extension de remise du courrier électronique par le serveur de rapports n'est pas configurée par défaut. Vous devez utiliser le Gestionnaire de configuration de Reporting Services pour effectuer une configuration minimale de l'extension. Pour définir des propriétés avancées, vous devez modifier le fichier RSReportServer.config. Si vous ne pouvez pas configurer le serveur de rapports afin qu'il utilise cette extension, vous pouvez remettre les rapports dans un dossier partagé à la place. Pour plus d’informations, consultez Remise par partage de fichiers dans Reporting Services.
 
@@ -109,7 +111,7 @@ L'exemple suivant illustre les paramètres dans le fichier RSreportserver.config
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Options de configuration pour la définition du champ À : dans un message
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Options de configuration pour la définition du champ À : dans un message
 Les abonnements définis par l’utilisateur qui sont créés en fonction des autorisations accordées par la tâche Gérer les abonnements individuels contiennent un nom d’utilisateur prédéfini qui repose sur le compte d’utilisateur de domaine. Quand l’utilisateur crée l’abonnement, le nom du destinataire dans le champ **À :** est configuré automatiquement à l’adresse de la personne qui crée l’abonnement, au moyen du compte d’utilisateur de domaine.
 
 Si vous utilisez un redirecteur ou un serveur SMTP qui utilise des comptes de messagerie différents du compte d'utilisateur de domaine, la remise des rapports échouera lorsque le serveur SMTP tentera de remettre le rapport à cet utilisateur.
@@ -122,7 +124,7 @@ Pour contourner ce problème, vous pouvez modifier les paramètres de configurat
 
 3. Définissez `<DefaultHostName>` au nom DNS (Domain Name System) ou à l'adresse IP du redirecteur ou du serveur SMTP.
 
-4. Enregistrez le fichier.
+4. Enregistrez le fichier .
 
 ## <a name="configuration-options-for-remote-smtp-service"></a>Options de configuration pour le service SMTP distant
 La connexion entre le serveur de rapports et le serveur ou redirecteur SMTP est déterminée par les paramètres de configuration suivants :
@@ -158,7 +160,7 @@ D'autres valeurs utilisées pour le service SMTP distant comprennent ce qui suit
 
 7. Définissez `<From>`. Vous devez spécifier un compte d'utilisateur qui a l'autorisation d'envoyer du courrier depuis le serveur SMTP.
 
-8. Enregistrez le fichier.
+8. Enregistrez le fichier .
 
      Le serveur de rapports utilise automatiquement les nouveaux paramètres ; il n'est pas nécessaire de redémarrer le service. Vous pouvez spécifier des paramètres SMTP supplémentaires pour configurer comment le serveur SMTP est utilisé pour la remise par messagerie du serveur de rapports.
 
@@ -217,10 +219,10 @@ La connexion entre le serveur de rapports et le serveur ou le redirecteur SMTP l
      
 16. Définissez `<From>`. Ce paramètre définit la valeur qui s’affiche sur la ligne **De :** d’un e-mail.
      
-17. Enregistrez le fichier.
+17. Enregistrez le fichier .
   
 ## <a name="see-also"></a>Voir aussi  
-[Gestionnaire de configurations de Reporting Services (mode natif)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Gestionnaire de configuration de Reporting Services (mode natif)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Fichier de configuration Rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

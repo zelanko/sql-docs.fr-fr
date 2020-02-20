@@ -17,10 +17,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893033"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
@@ -48,7 +48,7 @@ Cette page offre une synthèse ainsi que des liens vers des informations plus d�
     - prend en charge des tables d’une taille pouvant atteindre 2 To (à partir de 256 Go) ; 
     - a fait l’objet d’améliorations des index columnstore pour le tri et la prise en charge des groupes de disponibilité AlwaysOn.
 - Nouvelles fonctionnalités de sécurité :
-    - **Always Encrypted :** Quand cette fonctionnalité est activée, seule l’application qui possède la clé de chiffrement peut accéder aux données sensibles chiffrées de la base de données SQL Server 2016. La clé n’est jamais transmise à SQL Server.
+    - **Always Encrypted :** Quand cette fonctionnalité est activée, seule l’application qui possède la clé de chiffrement peut accéder aux données sensibles chiffrées de la base de données SQL Server 2016. La clé n’est jamais transmise à SQL Server.
     - **Dynamic Data Masking :** Si cette fonctionnalité est spécifiée dans la définition de table, les données masquées sont cachées à la plupart des utilisateurs ; seuls les utilisateurs possédant l’autorisation UNMASK peuvent voir la totalité des données.
     - **Sécurité au niveau des lignes :** L’accès aux données peut être restreint au niveau du moteur de base de données, afin que les utilisateurs ne voient que ce qui les concerne. 
 
@@ -58,7 +58,7 @@ SQL Server 2016 Analysis Services offre une amélioration des performances, de l
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** intègre le langage de programmation R, utilisé pour l’analyse statistique, dans SQL Server. 
 - Le nouveau **vérificateur de cohérence de base de données (DBCC)** s’exécute en interne pour détecter les problèmes potentiels d’altération des données.
 - **Direct Query**, qui interroge des données externes en direct plutôt qu’après les avoir importées, prend désormais en charge d’autres sources de données, notamment SQL Azure, Oracle et Teradata. 
-- Il y a beaucoup de nouvelles **fonctions DAX (Data Access Expressions)** .
+- Il y a beaucoup de nouvelles **fonctions DAX (Data Access Expressions)**.
 - Le nouvel espace de noms **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** gère les modèles et les instances en mode tabulaire. 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) a été réusiné de façon à inclure un deuxième assembly, **Microsoft.AnalysisServices.Core.dll**.
 

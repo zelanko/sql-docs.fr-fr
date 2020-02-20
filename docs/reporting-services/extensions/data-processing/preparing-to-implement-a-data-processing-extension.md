@@ -12,10 +12,10 @@ ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193896"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Préparation à l'implémentation d'une extension pour le traitement des données
@@ -64,17 +64,17 @@ ms.locfileid: "63193896"
   
 |Interface|Description|Implémentation|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|Représente une session unique avec une source de données. Dans le cas d'un système de base de données client/serveur, il peut s'agir d'une connexion réseau au serveur.|Requis|  
-|IDbConnectionExtension|Représente des propriétés de connexion supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] relatives à la sécurité et l'authentification.|Ce paramètre est facultatif|  
-|IDbTransaction|Représente une transaction locale.|Requis|  
-|IDbTransactionExtension|Représente des propriétés de transaction supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)].|Ce paramètre est facultatif|  
-|IDbCommand|Représente une requête ou commande utilisée pour une connexion à une source de données.|Requis|  
-|IDbCommandAnalysis|Représente des informations de commande supplémentaires pour analyser une requête et renvoyer une liste de noms de paramètre utilisés dans la requête.|Ce paramètre est facultatif|  
-|IDataParameter|Représente un paramètre ou une paire nom/valeur passée à une commande ou requête.|Requis|  
-|IDataParameterCollection|Représente une collection de tous les paramètres pertinents à une commande ou requête.|Requis|  
-|IDataReader|Fournit une méthode de lecture d'un flux de lignes de données avant uniquement et en lecture seule à partir d'une source de données.|Requis|  
-|IDataReaderExtension|Fournit une méthode de lecture d'un ou plusieurs flux de données avant uniquement de jeux de résultats, obtenue par l'exécution d'une commande au niveau d'une source de données. Cette interface fournit une prise en charge supplémentaire pour les agrégats de champ.|Ce paramètre est facultatif|  
-|IExtension|Fournit la classe de base pour une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Elle permet aussi à un implémenteur d'inclure un nom localisé pour l'extension et de passer des paramètres de configuration du fichier de configuration à l'extension.|Requis|  
+|IDbConnection|Représente une session unique avec une source de données. Dans le cas d'un système de base de données client/serveur, il peut s'agir d'une connexion réseau au serveur.|Obligatoire|  
+|IDbConnectionExtension|Représente des propriétés de connexion supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] relatives à la sécurité et l'authentification.|Facultatif|  
+|IDbTransaction|Représente une transaction locale.|Obligatoire|  
+|IDbTransactionExtension|Représente des propriétés de transaction supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)].|Facultatif|  
+|IDbCommand|Représente une requête ou commande utilisée pour une connexion à une source de données.|Obligatoire|  
+|IDbCommandAnalysis|Représente des informations de commande supplémentaires pour analyser une requête et renvoyer une liste de noms de paramètre utilisés dans la requête.|Facultatif|  
+|IDataParameter|Représente un paramètre ou une paire nom/valeur passée à une commande ou requête.|Obligatoire|  
+|IDataParameterCollection|Représente une collection de tous les paramètres pertinents à une commande ou requête.|Obligatoire|  
+|IDataReader|Fournit une méthode de lecture d'un flux de lignes de données avant uniquement et en lecture seule à partir d'une source de données.|Obligatoire|  
+|IDataReaderExtension|Fournit une méthode de lecture d'un ou plusieurs flux de données avant uniquement de jeux de résultats, obtenue par l'exécution d'une commande au niveau d'une source de données. Cette interface fournit une prise en charge supplémentaire pour les agrégats de champ.|Facultatif|  
+|IExtension|Fournit la classe de base pour une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Elle permet aussi à un implémenteur d'inclure un nom localisé pour l'extension et de passer des paramètres de configuration du fichier de configuration à l'extension.|Obligatoire|  
   
  Les interfaces d'extension pour le traitement des données sont identiques à un sous-ensemble des interfaces, des méthodes et des propriétés du fournisseur de données [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dans la mesure du possible. Pour plus d'informations sur l'implémentation d'un fournisseur de données [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] complet, consultez la rubrique sur l'implémentation d'un fournisseur de données .NET Framework dans votre documentation du Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   

@@ -1,6 +1,6 @@
 ---
 title: Analyse de segmentation dans RevoScaleR
-description: Didacticiel pas à pas sur la segmentation des données pour effectuer une analyse distribuée à l’aide du langage R sur SQL Server.
+description: 'Tutoriel RevoScaleR 12 : Comment segmenter des données pour effectuer une analyse distribuée à l’aide du langage R sur SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727238"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947210"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Effectuer une analyse de segmentation à l’aide de rxDataStep (didacticiel SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des fonctions [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 12 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Dans cette leçon, vous allez utiliser la fonction **rxDataStep** pour traiter les données en segments, plutôt que d’exiger que l’ensemble du jeu de données soit chargé en mémoire et traité en une seule fois, comme avec le langage R traditionnel. La fonction **rxDataStep** lit les segments de données, applique les fonctions R à chaque segment de données l’une après l’autre, puis enregistre la synthèse des résultats de chaque segment dans une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commune. Lorsque toutes les données ont été lues, les résultats sont combinés.
+Dans ce tutoriel, vous allez utiliser la fonction **rxDataStep** pour traiter les données en segments, plutôt que d’exiger que l’ensemble du jeu de données soit chargé en mémoire et traité en une seule fois, comme avec le langage R traditionnel. La fonction **rxDataStep** lit les segments de données, applique les fonctions R à chaque segment de données l’une après l’autre, puis enregistre la synthèse des résultats de chaque segment dans une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commune. Lorsque toutes les données ont été lues, les résultats sont combinés.
 
 > [!TIP]
-> Pour cette leçon, vous calculez une table d’urgence à l’aide de la fonction **table** dans R. Cet exemple est destiné à des fins pédagogiques uniquement. 
+> Pour ce tutoriel, vous calculez une table d’urgence à l’aide de la fonction **table** dans R. Cet exemple est destiné à des fins pédagogiques uniquement. 
 > 
 > Si vous avez besoin de générer des jeux de données réels, nous vous recommandons d’utiliser les fonctions **rxCrossTabs** ou **rxCube** dans **RevoScaleR**, qui sont optimisées pour ce genre d’opération.
 

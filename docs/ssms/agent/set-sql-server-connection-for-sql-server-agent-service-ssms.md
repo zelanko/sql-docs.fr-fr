@@ -1,10 +1,7 @@
 ---
-title: Définir la connexion SQL Server pour le service SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Définir la connexion SQL Server pour le service SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +10,20 @@ helpviewer_keywords:
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e55b3f480ae5c55663249d7a09c7aca89d9216e2
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: d7ed666a2190eeaf55e2f7fcd387cac91e33ca48
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552505"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245871"
 ---
-# <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
+# <a name="set-the-sql-server-connection-for-the-sql-server-agent-service"></a>Définir la connexion SQL Server pour le service SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ Cette rubrique décrit la configuration de la connexion entre l'Agent [!INCLUDE[
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Pour exécuter ses fonctions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour utiliser les informations d'identification d'un compte qui est membre du rôle serveur fixe **sysadmin** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le compte doit avoir les autorisations Windows suivantes :  
   
 -   Ouvrir une session en tant que service (SeServiceLogonRight)  

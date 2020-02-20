@@ -1,10 +1,9 @@
 ---
-title: Propriétés de la table (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de la table
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261576"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242182"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriétés de la table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,17 +36,17 @@ Ces propriétés apparaissent dans la fenêtre Propriétés lorsque vous cliquez
 **Catégorie Identité**  
 Se développe pour afficher les propriétés de **Nom**, **Description**et **Schéma**.  
   
-**Name**  
+**Nom**  
 Affiche le nom de la table. Pour modifier le nom, tapez-le dans la zone de texte.  
   
 > [!CAUTION]  
 > En effet, s’il existe des requêtes, des vues, des fonctions définies par l’utilisateur, des procédures stockées ou des programmes qui font référence à la table, le changement de nom rend tous ces objets non valides.  
   
-**Nom de la base de données**  
+**Database Name**  
 Affiche le nom de la source de données de la table sélectionnée.  
   
 **Description**  
-Indique la description de la table sélectionnée. Pour afficher l’intégralité de la description, ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(…)** situé à droite de la propriété.  
+Indique la description de la table sélectionnée. Pour afficher l’intégralité de la description ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(...)** situé à droite de la propriété.  
   
 **Schéma**  
 Affiche le nom du schéma auquel cette table appartient. (S'applique uniquement à Microsoft SQL Server.)  
@@ -59,10 +60,10 @@ Se développe pour afficher des propriétés pour **Colonne d’identité**, **I
 **Colonne d’identité**  
 Affiche la colonne utilisée comme colonne d'identité de la table. Pour modifier l'identité d'une colonne, choisissez-la dans la liste déroulante. Seules les colonnes d'un type de données numérique s'affichent dans la liste.  
   
-**Is Indexable**  
+**Indexable**  
 Indique si la table peut être indexée. Si la table n'est pas indexable, cela peut être dû au fait que vous n'êtes pas le propriétaire de la table ou que la table contient des colonnes possédant des types de données texte, ntext ou image.  
   
-**Is Replicated**  
+**Répliquée**  
 Indique si la table est répliquée à un autre emplacement.  
   
 **Catégorie Spécification d'espace de données régulière**  
@@ -84,5 +85,5 @@ Affiche la colonne utilisée par Microsoft SQL Server comme colonne ROWGUID de l
 Fournit une liste déroulante dans laquelle vous pouvez choisir le groupe de fichiers des colonnes possédant des types de données texte ou image. Si la table est stockée à l'aide d'un schéma de partition, laissez ce champ vierge.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Concevoir des tables (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Concevoir des tables](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

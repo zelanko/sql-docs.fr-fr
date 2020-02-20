@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571576"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
@@ -40,12 +40,12 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
      L’image suivante affiche le menu **Actions** .  
   
-     ![Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint")  
+     ![Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint")  
   
      Le Concepteur d'alertes de données s'ouvre et affiche les 100 premières lignes du premier flux de données que le rapport génère dans une table.  
   
     > [!NOTE]  
-    >  Si vous ne voyez pas l’option **Nouvelle alerte de données** , le service d’alerte n’est pas configuré sur le site SharePoint ou l’édition d’ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’inclut pas les alertes de données. Pour plus d’informations, consultez [Service Reporting Services SharePoint et applications de service](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
+    >  Si vous ne voyez pas l’option **Nouvelle alerte de données** , le service d’alerte n’est pas configuré sur le site SharePoint ou l’édition d’ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’inclut pas les alertes de données. Pour plus d’informations, consultez [Services Reporting Services SharePoint et applications de service](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
     >   
     >  Si l’option **Nouvelle alerte de données** est grisée, la source de données du rapport est configurée pour utiliser les informations d’identification de sécurité intégrée ou pour demander les informations d’identification. Pour rendre l’option **Nouvelle alerte de données** disponible, vous devez mettre à jour la source de données afin d’utiliser les informations d’identification stockées ou aucune information d’identification.  
   
@@ -69,13 +69,13 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
      Selon le type de données de la colonne sélectionnée, des opérateurs de comparaison différents apparaissent. Si la colonne a un type de données « date », l'icône du calendrier s'affiche en regard de la valeur de seuil pour la règle. Vous pouvez entrer des données en cliquant sur une date dans le calendrier ou en tapant la date.  
   
-     Le Concepteur d’alertes de données fournit deux modes de comparaison : **Mode de saisie de valeur** et **Mode de sélection de champ**. Le mode par défaut est **Mode de saisie de valeur**. Vous pouvez ajouter des clauses OR uniquement quand vous travaillez en **Mode de saisie de valeur** et vous utilisez la comparaison **is** .  
+     Le concepteur d’alertes de données offre deux modes de comparaison : **Mode de saisie de valeur** et **Mode de sélection de champ**. Le mode par défaut est **Mode de saisie de valeur**. Vous pouvez ajouter des clauses OR uniquement quand vous travaillez en **Mode de saisie de valeur** et vous utilisez la comparaison **is** .  
   
 9. Pour ajouter une clause OR, cliquez sur la flèche vers le bas, puis sur **Mode de saisie de valeur**.  
   
 10. Tapez la valeur de comparaison.  
   
-11. Vous pouvez éventuellement cliquer à nouveau sur le bouton de sélection **(...)** .  
+11. Vous pouvez éventuellement cliquer à nouveau sur le bouton de sélection **(...)**.  
   
      Les points de suspension **(...)** apparaissent sur la ligne qui contient la première clause.  
   
@@ -114,16 +114,16 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
 20. Éventuellement, dans la zone de texte **Objet** , mettez à jour la ligne Objet du message d’alerte.  
   
-     L’objet par défaut est **Alerte de données pour \<nom de l’alerte de données>** .  
+     L’objet par défaut est **Alerte de données pour \<nom de l’alerte de données>**.  
   
 21. Éventuellement, dans la zone de texte **Description** , tapez une description pour le message d’alerte.  
   
 22. Cliquez sur **Enregistrer**.  
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Concepteur d'alertes de données](../reporting-services/data-alert-designer.md)   
-[Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

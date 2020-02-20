@@ -15,10 +15,10 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570901"
 ---
 # <a name="authentication-with-the-report-server"></a>Authentification avec le serveur de rapports
@@ -35,7 +35,7 @@ ms.locfileid: "65570901"
 |RSWindowsNegotiate|Negotiate|Oui|Tente d'utiliser Kerberos en premier pour l'authentification intégrée de Windows, mais revient à NTLM si Active Directory ne peut pas accorder de ticket pour la demande du client au serveur de rapports. Negotiate revient à NTLM uniquement si le ticket n'est pas disponible. Si les premières tentatives entraînent une erreur plutôt qu'un ticket manquant, le serveur de rapports n'effectue pas de deuxième tentative.|  
 |RSWindowsNTLM|NTLM|Oui|Utilise NTLM pour l'authentification intégrée de Windows.<br /><br /> Les informations d'identification ne seront pas déléguées ou empruntées sur d'autres demandes. Les demandes suivantes suivent une nouvelle séquence de stimulation/réponse. Selon les paramètres de sécurité du réseau, le système peut demander à un utilisateur des informations d'identification ou la demande d'authentification est gérée de façon transparente.|  
 |RSWindowsKerberos|Kerberos|Non|Utilise Kerberos pour l'authentification intégrée de Windows. La configuration de Kerberos passe par celle des noms des principes du service (SPN) pour vos comptes de service, lequel requiert des privilèges d'administrateur de domaine. Si vous configurez la délégation d'identité à l'aide de Kerberos, le jeton de l'utilisateur qui demande un rapport peut également être utilisé sur une connexion supplémentaire aux sources de données externes qui fournissent des données aux rapports.<br /><br /> Avant de spécifier RSWindowsKerberos, vérifiez que le type de navigateur que vous utilisez prend bien en charge ce dernier. Si vous utilisez Microsoft Edge ou Internet Explorer, l’authentification Kerberos est prise en charge uniquement par l’intermédiaire de Negotiate. Microsoft Edge ou Internet Explorer ne formule pas de demande d’authentification qui spécifie Kerberos directement.|  
-|RSWindowsBasic|Simple|Non|L'authentification de base est définie dans le protocole HTTP et peut être utilisée uniquement pour authentifier des requêtes HTTP au serveur de rapports.<br /><br /> Les informations d'identification sont passées dans la requête HTTP à l'aide de l'encodage en base 64. Si vous avez recours à l'authentification de base, utilisez le protocole SSL (Secure Sockets Layer) pour chiffrer les informations du compte d'utilisateur avant de les envoyer sur le réseau. Le protocole SSL fournit un canal chiffré pour l'envoi d'une demande de connexion du client au serveur de rapports via une connexion HTTP TCP/IP. Pour plus d’informations, consultez [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) (Chiffrer les données confidentielles à l’aide de SSL) sur le site web [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|RSWindowsBasic|De base|Non|L'authentification de base est définie dans le protocole HTTP et peut être utilisée uniquement pour authentifier des requêtes HTTP au serveur de rapports.<br /><br /> Les informations d'identification sont passées dans la requête HTTP à l'aide de l'encodage en base 64. Si vous avez recours à l'authentification de base, utilisez le protocole SSL (Secure Sockets Layer) pour chiffrer les informations du compte d'utilisateur avant de les envoyer sur le réseau. Le protocole SSL fournit un canal chiffré pour l'envoi d'une demande de connexion du client au serveur de rapports via une connexion HTTP TCP/IP. Pour plus d’informations, consultez [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) (Chiffrer les données confidentielles à l’aide de SSL) sur le site web [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
 |Custom|(Anonyme)|Non|L'authentification anonyme dirige le serveur de rapports pour ignorer l'en-tête d'authentification dans une requête HTTP. Le serveur de rapports accepte toutes les demandes, mais appelle une authentification par formulaire [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] personnalisée que vous fournissez pour authentifier l'utilisateur.<br /><br /> Spécifiez **Custom** si vous déployez un module d’authentification personnalisé qui gère toutes les demandes d’authentification sur le serveur de rapports. Vous ne pouvez pas utiliser le type d'authentification Personnalisé avec l'extension d'authentification Windows par défaut.|  
   
 ## <a name="unsupported-authentication-methods"></a>Méthodes d'authentification non prises en charge  
@@ -81,7 +81,7 @@ ms.locfileid: "65570901"
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
 [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
-[Implémentation d'une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[Implémentation d’une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Présentation des extensions de sécurité](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Authentification dans Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   

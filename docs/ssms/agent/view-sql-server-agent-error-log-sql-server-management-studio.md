@@ -1,10 +1,7 @@
 ---
-title: Afficher le journal des erreurs de SQL Server Agent (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Afficher le journal des erreurs de SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08ddb38c46c565e45f4112718d5c7ca48d340aa4
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9166b647ec2921efb460add27ae75a00ea6cb4eb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552110"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257551"
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log"></a>Afficher le journal des erreurs de SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -41,7 +43,7 @@ Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Pour exécuter ses fonctions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour utiliser les informations d'identification d'un compte qui est membre du rôle serveur fixe **sysadmin** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le compte doit avoir les autorisations Windows suivantes :  
   
 -   Ouvrir une session en tant que service (SeServiceLogonRight)  
@@ -56,9 +58,9 @@ Pour plus d’informations sur les autorisations Windows requises pour le compte
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
-#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Pour afficher le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+#### <a name="to-view-the-ssnoversion-agent-error-log"></a>Pour afficher le journal des erreurs de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) pour développer le serveur qui contient le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que vous souhaitez afficher.  
+1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) pour développer le serveur qui contient le journal des erreurs de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez afficher.  
   
 2.  Cliquez sur le signe plus (+) pour développer **Agent SQL Server**.  
   
@@ -71,19 +73,19 @@ Pour plus d’informations sur les autorisations Windows requises pour le compte
     **Charger le journal**  
     Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  
   
-    **Exporter**  
+    **Export**  
     Ouvre une boîte de dialogue qui vous permet d’exporter les informations figurant dans la grille **Résumé du fichier journal** vers un fichier texte.  
   
     **Actualiser**  
     Actualise l'affichage des journaux sélectionnés. Le bouton **Actualiser** permet de relire les journaux sélectionnés à partir du serveur cible lors de l'application des paramètres de filtre.  
   
-    **Filtre**  
+    **Filter**  
     Ouvre une boîte de dialogue qui vous permet de spécifier les paramètres utilisés pour filtrer le fichier journal, notamment **Connexion**, **Date**et d’autres critères de filtre **Général** .  
   
-    **Recherche**  
+    **action**  
     Permet de rechercher un texte spécifique dans le fichier journal. La recherche des caractères génériques n'est pas prise en charge.  
   
-    **Arrêter**  
+    **Stop**  
     Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
   
     **Résumé du fichier journal**  

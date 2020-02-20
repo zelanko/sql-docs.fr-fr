@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571594"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
@@ -57,7 +57,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ##  <a name="AlertDesigner"></a> Interface utilisateur du Concepteur d'alertes de données  
  Le Concepteur d'alertes de données est divisé en zones. La zone où vous sélectionnez le flux des données de rapport, la zone où vous créez des conditions simples ou complexes en ajoutant des règles aux conditions, et ainsi de suite. L'image suivante affiche les zones du Concepteur d'alertes de données.  
   
- ![Zones dans l’interface utilisateur du Concepteur alertes](../reporting-services/media/rs-alertdesigner.gif "Zones dans l’interface utilisateur du Concepteur alertes")  
+ ![Zones dans l'interface utilisateur du Concepteur d’alertes](../reporting-services/media/rs-alertdesigner.gif "Zones dans l'interface utilisateur du Concepteur d’alertes")  
   
   
 ### <a name="alert-data"></a>Données d'alerte  
@@ -73,7 +73,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
  Certains rapports comportent des millions de lignes de données. Le tableau montre uniquement les 100 premières lignes de données dans le flux.  
   
-### <a name="alert-name"></a>Nom de l'alerte  
+### <a name="alert-name"></a>Nom de l’alerte  
  Par défaut, la définition d'alerte a le même nom que le rapport. Vous pouvez remplacer le nom de l'alerte par un autre nom plus explicite. Cela permet de simplifier la gestion de vos alertes et de déterminer quelles alertes doivent être mises à jour, supprimées et ainsi de suite.  
   
  Vous pouvez créer plusieurs alertes sur un rapport. Il est possible d'avoir plusieurs définitions d'alerte avec le même nom, mais il est recommandé de donner un nom unique à l'alerte. Cela facilite la différenciation et la gestion des définitions d'alerte. Vous pouvez consulter la liste de toutes les alertes que vous avez créées dans le Gestionnaire des alertes de données. Pour plus d’informations, consultez [Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md) et [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
@@ -179,7 +179,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ##  <a name="CreateAlert"></a> Créer une définition d'alerte de données  
  Si vous avez accordé des autorisations permettant de consulter des éléments et de créer des alertes dans SharePoint, vous pouvez créer une définition d'alerte de données pour tout rapport que vous êtes autorisé à afficher, tant que le rapport utilise des informations d'identification stockées ou bien aucune information d'identification. Vous exécutez le rapport à partir d'une bibliothèque SharePoint. Les données que vous pouvez utiliser dans le Concepteur d'alertes de données proviennent du rapport. Si le rapport est paramétré, vous devrez peut-être exécuter le rapport en utilisant des valeurs de paramètre différentes pour vous assurer que les données qui vous intéressent s'affichent dans le rapport. Après avoir ouvert le rapport, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport pour ouvrir le Concepteur d’alertes de données. L'image suivante vous indique comment ouvrir le Concepteur d'alertes de données.  
   
- ![Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint")  
+ ![Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint")  
   
  Pour plus d’informations, consultez [Créer une alerte de données dans le Concepteur d’alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
@@ -198,7 +198,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
  Pour modifier une définition d’alerte de données, cliquez avec le bouton droit dans le Gestionnaire des alertes de données et sélectionnez **Modifier**. L'image suivante montre le menu contextuel d'une alerte de données dans le Gestionnaire des alertes de données.  
   
- ![Ouvrir le Concepteur d’alertes de données en cliquant sur Modifier](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Ouvrir le Concepteur d’alertes de données en cliquant sur Modifier")  
+ ![Ouvrir le Concepteur d'alertes de données en cliquant sur Modifier](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Ouvrir le Concepteur d'alertes de données en cliquant sur Modifier")  
   
  Pour plus d’informations, consultez [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
@@ -206,7 +206,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ##  <a name="HowTo"></a> Tâches associées  
  Cette section répertorie les procédures qui vous indiquent comment créer et modifier des alertes.  
   
--   [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modifier une alerte de données dans le concepteur d'alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Créer une alerte de données dans le concepteur d’alertes de données](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 

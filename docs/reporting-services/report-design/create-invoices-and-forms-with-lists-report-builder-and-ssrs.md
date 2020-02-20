@@ -9,16 +9,16 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581508"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Créer des factures et des formulaires avec des listes (Générateur de rapports et SSRS)
   Une région de données de liste est répétée avec chaque groupe ou ligne du dataset du rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une liste peut être utilisée pour créer des formulaires ou des rapports de forme libre, tels que des factures, ou associés à d'autres régions de données. Vous pouvez définir des listes contenant n'importe quel nombre d'éléments de rapport. Une liste peut être imbriquée  
   
- Pour prendre en main les listes rapidement, consultez [Didacticiel : création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Pour rapidement commencer à utiliser les listes, consultez [Tutoriel : Création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des listes hors d'un rapport en tant que parties du rapport. En savoir plus sur les [Parties des rapports (Générateur de rapports et SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "65581508"
 ##  <a name="AddingList"></a> Ajout d'une liste à votre rapport  
  Ajoutez une liste à l'aire de conception depuis l'onglet Insérer sur le ruban. Par défaut, la liste comporte initialement une cellule unique dans une ligne associée au groupe de détails.  
   
- ![Nouvel élément de rapport Liste sur l’aire de conception](../../reporting-services/report-design/media/rs-listtemplatenew.gif "Nouvel élément de rapport Liste sur l’aire de conception")  
+ ![Nouvel élément de rapport Liste sur l'aire de conception](../../reporting-services/report-design/media/rs-listtemplatenew.gif "Nouvel élément de rapport Liste sur l'aire de conception")  
   
  Lorsque vous sélectionnez une liste sur l'aire de conception, des poignées de ligne et de colonne apparaissent, comme représenté dans l'illustration suivante.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "65581508"
   
  L'illustration suivante montre une liste qui affiche des informations sur une commande et comporte les champs suivants : Date, Order, Qty, Product, LineTotal et une image.  
   
- ![Liste en mode Création, 4 champs et une image](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "Liste en mode Création, 4 champs et une image")  
+ ![Liste en mode Conception, 4 champs et une image](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "Liste en mode Conception, 4 champs et une image")  
   
  Dans l'aperçu, la liste se répète pour afficher les données de champ dans un format libre, comme représenté dans l'illustration suivante :  
   
- ![Aperçu d’une liste avec 4 champs et une image](../../reporting-services/report-design/media/rs-basiclistformpreview.gif "Aperçu d’une liste avec 4 champs et une image")  
+ ![Aperçu d'une liste avec 4 champs et une image](../../reporting-services/report-design/media/rs-basiclistformpreview.gif "Aperçu d'une liste avec 4 champs et une image")  
   
 > [!NOTE]  
 >  Les traits en pointillés dans ces illustrations indiquent la disposition libre de chaque valeur de champ. En général, vous n'utilisez pas de traits en pointillés dans un rapport de production.  
@@ -55,11 +55,11 @@ ms.locfileid: "65581508"
   
  Par exemple, vous pouvez incorporer un tableau et un graphique qui affiche différentes vues du même dataset. Vous pouvez ajouter un groupe à la liste afin que les éléments de rapport imbriqués soient utilisés à une seule reprise pour chaque valeur de groupe. L'illustration suivante représente une liste regroupée par catégorie de produit. Notez l'absence de ligne de détails. Deux tableaux sont imbriqués côte à côte dans la liste. Le premier tableau affiche les sous-catégories avec les ventes totales. Le deuxième tableau affiche la catégorie regroupée par zone géographique, avec un graphique représentant la distribution des sous-catégories.  
   
- ![Liste avec 2 tables, dont l’une avec un graphique imbriqué](../../reporting-services/report-design/media/rs-basiclistgroupdesign.gif "Liste avec 2 tables, dont l’une avec un graphique imbriqué")  
+ ![Liste avec 2 tables, dont l'une avec un graphique imbriqué](../../reporting-services/report-design/media/rs-basiclistgroupdesign.gif "Liste avec 2 tables, dont l'une avec un graphique imbriqué")  
   
  Dans l'aperçu, le tableau affiche les ventes totales pour toutes les sous-catégories de bicyclettes et le tableau en regard affiche la répartition des ventes par zone géographique. Grâce à l'utilisation d'une expression pour spécifier la couleur d'arrière-plan du tableau et une palette personnalisée pour le graphique, le premier tableau fournit également la légende des couleurs du graphique.  
   
- ![Aperçu, 2 tables, dont l’une avec un graphique imbriqué](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Aperçu, 2 tables, dont l’une avec un graphique imbriqué")  
+ ![Aperçu, 2 tables, dont l'une avec un graphique imbriqué](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Aperçu, 2 tables, dont l'une avec un graphique imbriqué")  
   
   
 ## <a name="see-also"></a>Voir aussi  

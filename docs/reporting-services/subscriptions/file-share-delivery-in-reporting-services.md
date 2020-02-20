@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278232"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Remise par partage de fichiers dans Reporting Services
@@ -25,7 +25,7 @@ ms.locfileid: "72278232"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint|  
   
  **Dans cette rubrique :**  
   
@@ -68,15 +68,15 @@ ms.locfileid: "72278232"
 ##  <a name="bkmk_file_options"></a> Options de fichier  
  Lorsque vous créez un abonnement de partage de fichiers, vous pouvez configurer le mode de création du nom de fichier et spécifier si le fichier doit remplacer les versions précédentes du rapport. Un nom de fichier complet comprend trois parties : un nom, une extension et du texte ou un nombre ajouté au fichier pour créer un nom de fichier unique.  
   
- **Nom de fichier :** le nom de fichier est basé sur le nom du rapport, mais vous pouvez indiquer un nom personnalisé dans l’abonnement. L'extension est facultative, mais si vous la spécifiez, le serveur de rapports créera une extension qui correspond au format de rendu.  
+ **Nom de fichier :** le nom de fichier par défaut est basé sur le nom du rapport source, mais vous pouvez indiquer un nom personnalisé dans l’abonnement. L'extension est facultative, mais si vous la spécifiez, le serveur de rapports créera une extension qui correspond au format de rendu.  
   
- **Remplacer :** vous pouvez spécifier des options de remplacement afin de réutiliser le même nom de fichier pour chaque remise de rapport ou pour créer un nouveau fichier. Pour remplacer le fichier, vous devez utiliser les mêmes nom et extension de fichier.  
+ **Remplacer :** Vous pouvez spécifier des options de remplacement afin de réutiliser le même nom de fichier pour chaque remise de rapport ou pour créer un nouveau fichier. Pour remplacer le fichier, vous devez utiliser les mêmes nom et extension de fichier.  
   
  Pour créer des noms de fichiers uniques pour la remise de rapport, il existe une autre approche qui consiste à inclure un élément d'horodatage dans le nom de fichier. Pour ce faire, ajoutez la variable **\@timestamp** au nom de fichier (par exemple, *CompanySales@timestamp* ). Avec cette approche, le nom de fichier est unique par définition : il ne sera jamais remplacé.  
   
  L’illustration suivante est un exemple de paramètres correspondant à un abonnement configuré pour la remise de partage de fichiers.  
   
- ![abonnement pour partage de fichiers](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "abonnement pour partage de fichiers")  
+ ![abonnement au partage de fichiers](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "abonnement au partage de fichiers")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   

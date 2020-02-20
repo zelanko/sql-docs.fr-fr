@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 003348fc8ba74420909cb3f74026932a42f97a9b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e96e72540810c42be9f8abd1d656fb2cec0e5d41
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593911"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190948"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Ajouter des données à partir de sources de données externes (SSRS)
   Pour récupérer des données à partir d'une source de données externe, vous utilisez une connexion de données. Les informations de connexion de données sont fournies habituellement par le propriétaire de la source de données externe, qui est chargé d'accorder les autorisations nécessaires et de spécifier les types d'informations d'identification à utiliser. Les informations de connexion de données sont enregistrées en tant que source de données de rapport. Le type de source de données spécifie l'extension de données à utiliser pour récupérer les données.  
@@ -79,7 +79,7 @@ ms.locfileid: "73593911"
 |Rubrique|Type de source de données|  
 |-----------|----------------------|  
 |[Type de connexion SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)])|  
+|[Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
 |[Type de connexion PowerPivot &#40;SSRS&#41;](../../reporting-services/report-data/power-pivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
 |[Type de connexion de liste SharePoint &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Liste SharePoint|  
 |[Type de connexion SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
@@ -97,14 +97,14 @@ ms.locfileid: "73593911"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Fournit une vue d'ensemble de l'accès aux données pour votre rapport.|  
-|[Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Fournit des informations sur les connexions de données et les sources de données.|  
+|[Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Fournit des informations sur les connexions de données et les sources de données.|  
 |[Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Fournit des informations sur les datasets incorporés et partagés.|  
 |[Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Fournit des informations sur la collection de champs de dataset générée par la requête.|  
 |[Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)|Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.|  
 |[Vue d'ensemble des extensions pour le traitement des données](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)|Fournit des informations détaillées sur les extensions de données pour les utilisateurs expérimentés.|  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Outils de création de requêtes &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   

@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579117"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressions (Générateur de rapports et SSRS)
@@ -75,7 +75,7 @@ Les expressions simples utilisent des symboles pour indiquer si la référence e
   
  Le tableau suivant répertorie les types de références que vous pouvez inclure dans une expression :  
   
-|Références|Description|Exemple|  
+|References|Description|Exemple|  
 |----------------|-----------------|-------------|  
 |[Constantes](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|Décrit les constantes auxquelles vous pouvez accéder de manière interactive pour les propriétés qui requièrent des valeurs constantes ; par exemple les couleurs de police.|`="Blue"`|  
 |[Opérateurs](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|Décrit les opérateurs que vous pouvez utiliser pour combiner des références dans une expression. Par exemple, l’opérateur **&** sert à concaténer des chaînes.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
@@ -110,6 +110,6 @@ Les expressions simples utilisent des symboles pour indiquer si la référence e
 -   [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [Didacticiel : introduction aux expressions](Tutorial:%20Introducing%20Expressions.md)
+-   [Tutoriel : Introduction aux expressions](Tutorial:%20Introducing%20Expressions.md)
 -   [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

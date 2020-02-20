@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed100221dd827b84dba935db730d02e8268aac41
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d6c9273abda883b175a46d9695d4d231cc5bc73
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638004"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190752"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
   Vous pouvez utiliser l’extension de traitement des données SQL Server Analysis Services pour récupérer des données d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publié dans une Galerie SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "73638004"
  La chaîne de connexion est l’URL du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publié sur SharePoint dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une autre bibliothèque, par exemple `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Informations d'identification  
- Spécifiez les informations d’identification dont vous avez besoin pour accéder au classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et au site SharePoint, par exemple l’authentification Windows (sécurité intégrée). Pour plus d’informations, consultez [connexions de données, sources de données et &#40;chaînes de connexion&#41; générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Spécifiez les informations d’identification dont vous avez besoin pour accéder au classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et au site SharePoint, par exemple l’authentification Windows (sécurité intégrée). Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="queries"></a>Requêtes  
  Lorsque vous êtes connecté à la source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , utilisez la requête graphique MDX pour créer une requête en explorant et en sélectionnant des données dans les structures de données sous-jacentes. Après avoir créé une requête, exécutez-la pour visualiser des exemples de données dans le volet Résultats.  
@@ -45,7 +45,7 @@ ms.locfileid: "73638004"
 ## <a name="parameters"></a>Paramètres  
  Dans le volet Filtres, sélectionnez l'option **Paramètres** pour qu'un filtre crée automatiquement un paramètre de rapport avec les valeurs disponibles qui correspondent aux sélections de filtre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si vous ouvrez le Générateur de rapports à partir du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , les tableaux croisés dynamiques, les graphiques croisés dynamiques, les segments et autres mises en page et fonctionnalités analytiques du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne sont pas recréés dans le rapport. Le rapport vide inclut une source de données préconfigurée qui pointe vers les données du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . La conception de rapports basés sur un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] peut être fastidieuse et chronophage selon le nombre de segments, de filtres et de tables ou de graphiques que vous voulez recréer dans le rapport. Pour être plus efficace, séparez la présentation des données que vous souhaitez dans un rapport, de la conception [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Les données d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont très compressées, ce qui n’est pas le cas des données récupérées du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’un rapport. Utilisez le concepteur de requêtes pour spécifier des filtres et des paramètres afin de limiter les données à ce qui est absolument nécessaire dans le rapport.  
@@ -60,7 +60,7 @@ ms.locfileid: "73638004"
   
 -   Le rapport ne contient que les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   

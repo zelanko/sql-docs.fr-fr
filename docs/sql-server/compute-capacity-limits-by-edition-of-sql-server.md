@@ -14,10 +14,10 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067574"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul des éditions SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "68067574"
 |1|Un seul|  
 |1..\*|Un ou plus|  
 |0..\*|Zéro ou plus|  
-|1..2|Un ou deux|  
+|1..2|Une ou deux|  
   
 > [!IMPORTANT]  
 > Pour approfondir :  
@@ -61,7 +61,7 @@ ms.locfileid: "68067574"
   
 -   Un processeur physique peut comprendre un ou plusieurs noyaux. Un processeur physique est identique à un package de processeurs ou à un socket.  
   
-Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs noyaux et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si votre ordinateur a deux processeurs à quatre cœurs avec l’hyperthreading activé et deux threads par cœur, vous avez 16 processeurs logiques : 2 processeurs x 4 cœurs par processeur x 2 threads par cœur. À noter que :  
+Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs noyaux et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si votre ordinateur a deux processeurs à quatre cœurs avec l’hyperthreading activé et deux threads par cœur, vous avez 16 processeurs logiques : 2 processeurs x 4 cœurs par processeur x 2 threads par cœur. Il est intéressant de noter que :  
   
 -   La capacité de calcul d'un processeur logique à partir d'un thread unique d'un noyau hyperthreaded est inférieure à la capacité de calcul d'un processeur logique de ce même noyau avec l'hyperthreading désactivé.  
   
@@ -81,7 +81,7 @@ Le tableau suivant présente les limites de capacité de calcul pour une instanc
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Édition Entreprise : contrat de licence selon le nombre de cœurs\*|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Développeur|Maximum du système d'exploitation|Maximum du système d'exploitation|  
-|Standard|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 24 cœurs|  
+|standard|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 24 cœurs|  
 |Express|Limité à moins de 1 socket ou 4 cœurs|Limité à moins de 1 socket ou 4 cœurs|  
 
 \*Édition Entreprise avec licences d’accès client (CAL) + serveur limitées à 20 cœurs par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. (Cette licence n’est pas disponible pour les nouveaux contrats.) Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs.  

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : ajout d’un regroupement et de totaux (Reporting Services) | Microsoft Docs'
+title: 'Leçon 6 : Ajouter un regroupement et des totaux (Reporting Services) | Microsoft Docs'
 ms.date: 04/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65089662"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : Ajout d'un regroupement et de totaux (Reporting Services)
 
 Dans la dernière leçon du tutoriel, vous allez ajouter un regroupement et des totaux à votre rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour organiser et synthétiser vos données.  
 
@@ -28,7 +28,7 @@ Dans la dernière leçon du tutoriel, vous allez ajouter un regroupement et des 
     > [!NOTE]
     > Notez que la poignée de ligne comporte maintenant un crochet, qui indique un groupe. De plus, le tableau présente désormais deux colonnes d’expression `[Date]`, placées de part et d’autre d’une ligne verticale en pointillé.
     >
-    >![groupe date ajouté](media/rs-basictablegroups1design.png "groupe date ajouté")
+    >![date d’ajout du groupe](media/rs-basictablegroups1design.png "date d’ajout du groupe")
 4. Faites glisser le champ `[Order]` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessous du champ **Date** et au-dessus de la ligne **= (Details)** .
 
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
@@ -38,7 +38,7 @@ Dans la dernière leçon du tutoriel, vous allez ajouter un regroupement et des 
 
 5. Supprimez les colonnes d’expression `[Date]` et `[Order]` d’origine à droite du double trait. Sélectionnez les poignées des deux colonnes, cliquez avec le bouton droit et sélectionnez **Supprimer les colonnes**. Le Concepteur de rapports supprime les expressions de ligne, afin que seules les expressions de groupe soient affichées.
 
-    ![Sélectionnez les colonnes à supprimer](media/rs-basictablegroupsdeletecols.gif "Sélectionnez les colonnes à supprimer")
+    ![Sélectionner les colonnes à supprimer](media/rs-basictablegroupsdeletecols.gif "Sélectionner les colonnes à supprimer")
 
 6. Pour mettre en forme la nouvelle colonne `[Date]`, cliquez avec le bouton droit dans la cellule de région de données qui contient l’expression `[Date]`, puis sélectionnez **Propriétés de la zone de texte**.
 7. Sélectionnez **Nombre** dans la zone de liste de la colonne la plus à gauche, et **Date** dans la zone de liste **Catégorie**.
@@ -58,7 +58,7 @@ Dans la dernière leçon du tutoriel, vous allez ajouter un regroupement et des 
 6. Dans le menu **Format**, sélectionnez **Couleur d’arrière-plan** > **Gris clair**.
 7. Sélectionnez **OK** pour appliquer le format.
 
-   ![Mode Création : table de base avec total des commandes](media/rs-basictablesumlinetotaldesign.gif "Mode Création : table de base avec total des commandes")
+   ![Mode Conception : Table de base avec total des commandes](media/rs-basictablesumlinetotaldesign.gif "Mode Conception : Table de base avec total des commandes")
 
 ## <a name="add-the-daily-total-to-the-report"></a>Ajouter le total quotidien au rapport
 
@@ -68,7 +68,7 @@ Dans la dernière leçon du tutoriel, vous allez ajouter un regroupement et des 
 4. Dans le menu **Format**, sélectionnez **Couleur d’arrière-plan** > **Orange**.
 5. Sélectionnez **OK** pour appliquer le format.
 
-   ![Définir la couleur Orange pour l’arrière-plan](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+   ![Définir la couleur d’arrière-plan sur orange](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
 
 ## <a name="add-the-grand-total-to-the-report"></a>Ajouter le total général au rapport
 
@@ -78,13 +78,13 @@ Dans la dernière leçon du tutoriel, vous allez ajouter un regroupement et des 
 4. Dans le menu **Format**, sélectionnez **Couleur d’arrière-plan** > **Bleu clair**.
 5. Sélectionnez **OK** pour appliquer le format.
 
-    ![Mode Création : total général dans la table de base](media/rs-basictablesumgrandtotaldesign.gif "Mode Conception : total général dans la table de base")
+    ![Mode Conception : Total général dans une table de base](media/rs-basictablesumgrandtotaldesign.gif "Mode Conception : Total général dans une table de base")
 
 ## <a name="preview-the-report"></a>Afficher un aperçu du rapport
 
 Pour afficher un aperçu des modifications de mise en forme, sélectionnez l’onglet **Aperçu**. Dans la barre d’outils **Aperçu**, sélectionnez le bouton **Dernière page**, qui ressemble à ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png). Les résultats affichés doivent ressembler à ceci :
 
-   ![Aperçu : table de base avec total général](media/rs-basictablesumgrandtotalpreview.gif "Aperçu : table de base avec total général")
+   ![Préversion : Table de base avec total général](media/rs-basictablesumgrandtotalpreview.gif "Aperçu : Table de base avec total général")
 
 ## <a name="publishing-the-report-to-the-report-server-optional"></a>Publication du rapport sur le *Serveur de rapports* (facultatif)
 
@@ -101,15 +101,15 @@ Une étape facultative consiste à publier le rapport terminé sur le serveur de
 
     Si vous voyez un message semblable à ce qui suit dans la fenêtre **Sortie**, c’est que le déploiement a réussi.
 
-    > ------ Début de la génération : Projet : tutorial, Configuration : Débogage ------  
+    > ------ Build démarrée : Project: tutorial, Configuration: Debug ------  
     > 'Sales Orders.rdl' ignoré. L’élément est à jour.  
     > Fin de la génération -- 0 erreur, 0 avertissement  
-    > ------ Début du déploiement : Projet : tutorial, Configuration : Débogage ------  
+    > ------ Deploy started: Project: tutorial, Configuration: Debug ------  
     > Déploiement vers `https://[server name]/reportserver`  
     > Déploiement du rapport '/tutorial/Sales Orders'.  
     > Fin du déploiement -- 0 erreur, 0 avertissement  
-    > ========== Génération : 1 a réussi ou est à jour, 0 a échoué, 0 a été ignoré ====================  
-    > ========== Déploiement : 1 a réussi, 0 a échoué, 0 a été ignoré ==========  
+    > ========== Build : 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
+    > ========== Deploy: 1 réussi, 0 échoué, 0 ignoré ==========  
 
     Si un message d’erreur semblable au suivant s’affiche, vérifiez que vous disposez des autorisations appropriées sur le serveur de rapports et que vous avez démarré [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] avec des privilèges d’administrateur.
     >

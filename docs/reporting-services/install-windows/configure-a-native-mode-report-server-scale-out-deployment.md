@@ -12,15 +12,15 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593868"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 Le mode natif de Reporting Services prend en charge un modèle de déploiement par montée en puissance parallèle qui vous permet d'exécuter plusieurs instances de serveur de rapports partageant une base de données du serveur de rapports unique. Les déploiements avec montée en puissance parallèle sont utilisés pour augmenter l'évolutivité des serveurs de rapports afin de gérer davantage d'utilisateurs simultanés et de plus grandes charges d'exécution de rapport. Ils peuvent également être utilisés pour dédier des serveurs spécifiques à traiter des rapports interactifs ou planifiés.
 
@@ -75,9 +75,9 @@ Pour SQL Server 2016 Reporting Services et les versions antérieures, les serveu
 
 Les comptes de service utilisés pour l’instance de Reporting Services sont importants dans le contexte d’un déploiement avec montée en puissance parallèle. Vous devez effectuer l’une des actions suivantes lors du déploiement de vos instances de Reporting Services.
 
-**Option 1 :** toutes les instances de Reporting Services doivent être configurées avec le même compte d’utilisateur de domaine pour le compte de service.
+**Option 1 :** Toutes les instances de Reporting Services doivent être configurées avec le même compte d’utilisateur de domaine pour le compte de service.
 
-**Option 2 :** chaque compte de service individuel, qu’il s’agisse ou non d’un compte de domaine, doit disposer des autorisations dbadmin au sein de l’instance de base de données SQL Server qui héberge la base de données de catalogues ReportServer.
+**Option 2 :** Chaque compte de service individuel, qu’il s’agisse ou non d’un compte de domaine, doit disposer des autorisations dbadmin au sein de l’instance de base de données SQL Server qui héberge la base de données de catalogues ReportServer.
 
 Si votre configuration est différente des options ci-dessus, vous risquez de rencontrer des échecs intermittents lors de la modification de tâches avec l’Agent SQL. Une erreur sera alors consignée à la fois dans le journal Reporting Services et sur le portail web lors de la modification d’un abonnement aux rapports.
 
@@ -136,9 +136,9 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
 3.  Dans la page Déploiement avec montée en puissance parallèle, sélectionnez l’instance de serveur de rapports qui doit joindre le déploiement, puis sélectionnez **Ajouter le serveur**.  
   
     > [!NOTE]  
-    >  **Problème :** au moment de joindre une instance de serveur de rapports Reporting Services au déploiement de scale-out, un message d’erreur du type « Accès refusé » peut s’afficher.  
+    >  **Problème :** Au moment de joindre une instance de serveur de rapports Reporting Services au déploiement de scale-out, un message d’erreur du type « Accès refusé » peut s’afficher.  
     >   
-    >  **Solution :** sauvegardez la clé de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la première instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et restaurez la clé dans le deuxième serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Solution de contournement :** Sauvegardez la clé de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la première instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et restaurez la clé dans le deuxième serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Vous devez maintenant être en mesure de vérifier que les deux instances de serveur de rapports sont opérationnelles. Pour vérifier la deuxième instance, vous pouvez utiliser l’outil de configuration de Reporting Services pour vous connecter au serveur de rapports et cliquer sur l’ **URL du service web** ou l’ **URL du portail web**.  
   
@@ -146,8 +146,8 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer un compte de Service](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-[configurer une URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[Configurer un compte de service](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[Configurer une URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Créer une base de données du serveur de rapports en mode natif](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Configurer des URL de serveurs de rapports](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurer une connexion à la base de données du serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

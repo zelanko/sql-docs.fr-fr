@@ -9,10 +9,10 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578831"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Affichage d'une série avec plusieurs plages de données sur un graphique
@@ -37,7 +37,7 @@ ms.locfileid: "65578831"
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>Affichage de plusieurs plages de données à l'aide de séparateurs d'échelle  
  Lorsque vous activez un séparateur d'échelle, le graphique calcule l'emplacement où tracer une ligne dans le graphique. La séparation doit être suffisante entre les plages pour dessiner un séparateur d'échelle. Par défaut, un séparateur d'échelle ne peut être ajouté que si la séparation entre les plages de données représente au moins 25 % du graphique.  
   
- ![Graphique avec séparateur d’échelle](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Graphique avec séparateur d’échelle")  
+ ![Graphique avec changement d'échelle](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Graphique avec changement d'échelle")  
   
 > [!NOTE]  
 >  Vous ne pouvez pas spécifier où placer un séparateur d'échelle sur un graphique. Toutefois, vous pouvez modifier le mode de calcul du séparateur d'échelle, décrit plus loin dans cette rubrique.  

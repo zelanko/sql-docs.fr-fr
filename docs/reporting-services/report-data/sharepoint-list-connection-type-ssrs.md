@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593958"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190695"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
 
@@ -28,7 +28,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  Le concepteur de requêtes affiche automatiquement les listes SharePoint pour lesquelles vous disposez d'autorisations d'accès suffisantes.  
   
- Pour obtenir d’autres exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports. Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports. Les types d'informations d'identification qui peuvent être utilisés avec cette extension de données dépendent de la configuration de la technologie SharePoint pour la liste SharePoint que vous utilisez comme source de données.  
@@ -37,7 +37,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  Le**tableau 1** dresse la liste des rapports déployés sur un site Windows SharePoint hérité. Un site Windows hérité prend en charge uniquement l'authentification Kerberos, NTLM et à base de formulaires (FBA). Le**tableau 2** dresse la liste des rapports déployés sur un site SharePoint basé sur les revendications.  
   
- **tableau 1**  
+ **Tableau 1**  
   
 ||Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
@@ -48,7 +48,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  *Authentification Windows, authentification basée sur des formulaires (FBA), jetons SAML (Secure Application Markup Language), autres fournisseurs d’identité ou combinaison de plusieurs fournisseurs d’authentification indiqués ci-dessus.  
   
- **tableau 2**  
+ **Tableau 2**  
   
 ||Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
@@ -71,7 +71,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  Pour plus d'informations sur la prise en charge de l'authentification par revendications dans la pile Microsoft BI, consultez [Utilisation de l'authentification par revendications dans la pile Microsoft BI](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Requêtes  
  Pour concevoir une requête, créez un dataset selon la source de données, puis ouvrez le concepteur de requêtes associé. Pour plus d’informations, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -169,7 +169,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Fournit des informations sur les connexions de données et les sources de données.  
   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

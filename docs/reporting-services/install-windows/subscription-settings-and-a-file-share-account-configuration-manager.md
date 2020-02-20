@@ -1,22 +1,24 @@
 ---
 title: Paramètres d’abonnement et compte de partage de fichiers (Gestionnaire de configuration) | Microsoft Docs
-ms.date: 05/31/2016
+description: Utilisez la page Paramètres d'abonnement du Gestionnaire de configuration Reporting Services afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651973"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866272"
 ---
-# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Paramètres d'abonnement et compte de partage de fichiers (Gestionnaire de configuration)
+# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Paramètres d'abonnement et compte de partage de fichiers (Gestionnaire de configuration SSRS)
   Utilisez la page **Paramètres d'abonnement** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers. Le compte de partage de fichiers vous permet d'utiliser un jeu unique d'informations d'identification dans plusieurs abonnements qui fournissent des rapports à un partage de fichiers. Au moment de modifier les informations d'identification, vous configurez la modification pour le compte de partage de fichiers et vous n'avez pas besoin de mettre à jour chaque abonnement individuel.  
   
  Les abonnements de partage de fichiers [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent deux flux de travail :  
@@ -36,7 +38,7 @@ ms.locfileid: "62651973"
   
  L'illustration suivante montre ce que voient les utilisateurs dans les abonnements configurés pour la remise par partage de fichiers. L’option **Utiliser le compte Partage de fichiers** est désactivée si aucun compte de partage de fichiers n’a été configuré.  
   
- ![compte de partage de fichiers gestionnaire de configuration](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "compte de partage de fichiers gestionnaire de configuration")  
+ ![compte de partage de fichiers du gestionnaire de configuration](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "compte de partage de fichiers du gestionnaire de configuration")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Empêcher l’escalade des privilèges ou des privilèges élevés  
   

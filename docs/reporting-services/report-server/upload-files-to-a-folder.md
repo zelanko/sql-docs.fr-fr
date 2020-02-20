@@ -17,10 +17,10 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228687"
 ---
 # <a name="upload-files-to-a-folder"></a>Télécharger des fichiers dans un dossier
@@ -33,20 +33,20 @@ ms.locfileid: "67228687"
     >[!NOTE]  
     >Vous pouvez télécharger un fichier de source de données de rapports (.rds) pour créer une source de données partagée. Les fichiers .rds sont utilisables uniquement dans le Générateur de rapports. Ils ne peuvent en aucun cas fournir le contenu d'un élément de source de données partagée que vous définissez et gérez via le portail web. Outre le téléchargement, vous pouvez écrire un script qui crée une source de données partagée en se basant sur un fichier .rds.  
   
- La taille maximale des éléments téléchargés est de 2 Go et peut être définie à l’aide de la propriété MaxFileSizeMb dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ La taille de fichier maximale des éléments chargés est de 2 Go et peut être définie à l’aide de la propriété MaxFileSizeMb dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  Sur un plan visuel, les fichiers que vous téléchargez dans une base de données de serveur de rapports s'affichent dans l'arborescence des dossiers avec les icônes suivantes.  
   
-  ![Icônes de fichier uploadable de serveur de rapports](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
+  ![Icônes de fichiers chargeables du serveur de rapports](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
   
  Lorsque vous téléchargez un fichier, il est toujours placé dans le dossier en cours de sélection. Vous pouvez soit naviguer d'abord vers le dossier où l'élément sera stocké, soit télécharger un fichier puis le déplacer ultérieurement vers son emplacement définitif.  
   
- Pour télécharger un fichier, utilisez le portail web. Votre possibilité de télécharger des fichiers sur un serveur de rapports dépend des tâches incluses dans votre attribution de rôle. Si vous utilisez la sécurité par défaut, les administrateurs locaux peuvent ajouter des éléments à un serveur de rapports. Si la fonctionnalité Mes rapports est activée, tout utilisateur disposant d'un dossier Mes rapports est autorisé à télécharger des éléments dans ce dossier. Si vous utilisez des attributions de rôle personnalisées, l'attribution de rôle doit inclure les tâches prenant en charge la gestion de dossiers.  
+ Pour charger un fichier, utilisez le portail web. Votre possibilité de télécharger des fichiers sur un serveur de rapports dépend des tâches incluses dans votre attribution de rôle. Si vous utilisez la sécurité par défaut, les administrateurs locaux peuvent ajouter des éléments à un serveur de rapports. Si la fonctionnalité Mes rapports est activée, tout utilisateur disposant d'un dossier Mes rapports est autorisé à télécharger des éléments dans ce dossier. Si vous utilisez des attributions de rôle personnalisées, l'attribution de rôle doit inclure les tâches prenant en charge la gestion de dossiers.  
   
-|Pour effectuer cette opération|Incluez ces tâches|  
+|Action à réaliser|Incluez ces tâches|  
 |----------------|-------------------------|  
 |Télécharger un fichier .rdl dans un dossier|Gérer les rapports|  
-|Télécharger un fichier en tant qu'objet binaire|Gérer les ressources|  
+|Télécharger un fichier en tant qu'objet binaire|Gestion des ressources|  
 |Afficher le contenu d'un dossier|Afficher les ressources, afficher les rapports|  
   
 ## <a name="see-also"></a>Voir aussi  

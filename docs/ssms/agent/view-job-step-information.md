@@ -1,10 +1,9 @@
 ---
-title: Afficher des informations sur une étape de travail | Microsoft Docs
-ms.custom: ''
+title: View Job Step Information
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3097703661b74e1d2e33ad12982ea6c2d06f038
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 353f9924a93e14d0617deb143ec2cbe080a465ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260654"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241896"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,14 +49,14 @@ Si l'étape du travail a été configurée pour écrire sa sortie dans une table
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Affichez uniquement les travaux dont vous êtes propriétaire, à moins que vous ne soyez membre du rôle de serveur fixe **sysadmin** . Les membres de ce rôle peuvent afficher tous les travaux et tous les détails d'une étape de travail.  
   
 ## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-job-step-information"></a>Pour afficher des informations sur une étape de travail  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] et développez-la.  
   
 2.  Développez **Agent SQL Server**et **Travaux**, cliquez avec le bouton droit sur le travail contenant l’étape à modifier, puis cliquez sur **Propriétés**.  
   
@@ -65,7 +66,7 @@ Affichez uniquement les travaux dont vous êtes propriétaire, à moins que vous
   
 5.  Dans la page **Général** de la boîte de dialogue **Propriétés de l'étape du travail** , vous pouvez afficher le type d'étape de travail et sa fonction.  
   
-6.  Cliquez sur la page **Avancé** pour afficher les mesures prises par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent si l'étape du travail réussit ou échoue, le nombre de fois où l'étape du travail doit être tentée, l'emplacement où est écrite la sortie de l'étape du travail et l'utilisateur pour lequel elle est exécutée.  
+6.  Cliquez sur la page **Avancé** pour afficher les mesures prises par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si l'étape du travail réussit ou échoue, le nombre de fois où l'étape du travail doit être tentée, l'emplacement où est écrite la sortie de l'étape du travail et l'utilisateur pour lequel elle est exécutée.  
   
 #### <a name="to-view-job-step-output"></a>Pour afficher la sortie d'une étape de travail  
   

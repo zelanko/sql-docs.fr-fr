@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582077"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer une carte ou une couche (Générateur de rapports et SSRS)
@@ -75,7 +75,7 @@ ms.locfileid: "65582077"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point**, **Ligne**ou **Polygone**.  
+2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point**, **Ligne**, ou **Polygone**.  
   
     > [!NOTE]  
     >  Bien qu'il soit possible d'ajouter une couche et de la configurer manuellement, nous vous recommandons d'utiliser l'Assistant Couche pour ajouter de nouvelles couches. Pour lancer l’Assistant à partir de la barre d’outils du volet Carte, cliquez sur le bouton de l’Assistant Couche (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -90,7 +90,7 @@ ms.locfileid: "65582077"
   
     2.  Dans **Dataset analytique**, cliquez sur le nom du dataset qui contient les données analytiques et les champs de correspondance pour générer une relation entre des données analytiques et spatiales.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3.  Cliquez sur **Add**.  
   
     4.  Tapez le nom du champ de correspondance du dataset spatial.  
   
@@ -244,12 +244,12 @@ ms.locfileid: "65582077"
   
     -   Entrez les valeurs de zoom maximale et minimale pour l'affichage de la couche.  
   
-    -   Facultatif. Entrez une valeur pour la transparence.  
+    -   facultatif. Entrez une valeur pour la transparence.  
   
      Vous pouvez également masquer la couche de manière conditionnelle. Pour plus d’informations, consultez [Masquer un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

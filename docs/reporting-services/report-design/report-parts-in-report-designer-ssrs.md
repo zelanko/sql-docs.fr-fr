@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576783"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parties de rapport dans le Concepteur de rapports (SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "65576783"
   
  En général, les parties de rapport fonctionnent de la même façon dans le Concepteur de rapports et dans le Générateur de rapports. Pour en savoir plus sur les fonctionnalités de base, consultez [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- Il existe des différences fondamentales dans la façon dont les parties de rapport fonctionnent dans le Concepteur de rapports. Le flux de travail représente une différence notable. Le Générateur de rapports permet la création combinée : je crée une partie de rapport et le publie. Vous pouvez la réutiliser, la modifier et la republier. Dans le Concepteur de rapports, la publication est unidirectionnelle : je peux publier une partie de rapport à partir du Concepteur de rapports et vous pouvez la réutiliser. Mais je ne peux pas réutiliser une partie de rapport existante dans un rapport dans le Concepteur de rapports. Cette rubrique présente ces différences, après une vue d'ensemble rapide des parties de rapports.  
+ Il existe des différences fondamentales dans la façon dont les parties de rapport fonctionnent dans le Concepteur de rapports. Le flux de travail représente une différence notable. Le Générateur de rapports permet la création collaborative : je crée une partie de rapport et la publie. Vous pouvez la réutiliser, la modifier et la republier. Dans le Concepteur de rapports, la publication est unidirectionnelle : je peux publier une partie de rapport dans le Concepteur de rapports et vous pouvez la réutiliser. Mais je ne peux pas réutiliser une partie de rapport existante dans un rapport dans le Concepteur de rapports. Cette rubrique présente ces différences, après une vue d'ensemble rapide des parties de rapports.  
   
 ##  <a name="ComponentWorkflow"></a> Publication du cycle de vie d'une partie de rapport  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  

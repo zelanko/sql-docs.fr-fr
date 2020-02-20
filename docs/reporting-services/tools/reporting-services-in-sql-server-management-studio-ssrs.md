@@ -11,10 +11,10 @@ ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27fe190bfa73414158d05353c4aa8f244b65b4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140358"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services pour SQL Server Management Studio (SSRS)
@@ -22,9 +22,9 @@ ms.locfileid: "67140358"
   
 -   Activer les fonctionnalités, définir les valeurs par défaut du serveur, et gérer des travaux en cours de exécution.  
   
--   Affichez les rapports personnalisés. Dans l’Explorateur d’objets, la plupart des nœuds affiche une option de rapports personnalisés. Vous devez disposer des autorisations administrateur. Le schéma d'un rapport personnalisé doit correspondre au schéma des rapports installés. Pour plus d’informations, consultez [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md) et [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Affichez les rapports personnalisés. Dans l’Explorateur d’objets, la plupart des nœuds affichent une option de rapports personnalisés. Vous devez disposer des autorisations administrateur. Le schéma d'un rapport personnalisé doit correspondre au schéma des rapports installés. Pour plus d’informations, consultez [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md) et [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
- La section suivante contient des liens vers des articles qui contiennent des instructions détaillées pour effectuer diverses tâches de création de rapports à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous pouvez également créer et gérer des planifications partagées dans le portail web.  
+ La section suivante contient des liens vers des articles contenant des instructions pas à pas pour effectuer diverses tâches de création de rapports à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous pouvez également créer et gérer des planifications partagées dans le portail web.  
   
 ## <a name="in-this-section"></a>Contenu de cette section  
   

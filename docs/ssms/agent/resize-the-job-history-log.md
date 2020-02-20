@@ -1,10 +1,9 @@
 ---
-title: Redimensionner le journal d’historique des travaux | Microsoft Docs
-ms.custom: ''
+title: Resize the Job History Log
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5dea3b0a7eb9076bb778a14a4c8ab1834df0b93e
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 45f53291d70d08fa75ab158db3911c058fdba5c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995844"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253532"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68995844"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Cette rubrique explique comment définir des limites de taille pour les journaux d’historique des travaux de l’Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Cette rubrique explique comment définir des limites de taille pour les journaux d’historique des travaux de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
 -   **Avant de commencer :**  
   

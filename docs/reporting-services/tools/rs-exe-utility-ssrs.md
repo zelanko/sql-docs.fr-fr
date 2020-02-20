@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581284"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilitaire RS.exe (SSRS)
@@ -55,13 +55,13 @@ rs {-?}
  **-i** *input_file*  
  (Obligatoire) Spécifie le fichier .rss à exécuter. Cette valeur peut être un chemin d'accès relatif ou totalement défini au fichier .rss.  
   
- **-s** *URL_serveur*  
+ **-s** *serverURL*  
  (Obligatoire) Spécifie les noms du serveur Web et du répertoire virtuel du serveur de rapports auxquels s'applique le fichier à exécuter. L'URL du serveur de rapports pourrait être par exemple `https://examplewebserver/reportserver`. Le préfixe http:// ou https:// placé au début du nom du serveur est facultatif. Si vous omettez le préfixe, l'environnement d'exécution de scripts du serveur de rapports tente en premier lieu d'utiliser https et, si cela ne fonctionne pas, il essaie avec http.  
   
  **-u** [*domaine*\\]*nom_utilisateur*  
  (Facultatif) Spécifie un compte d'utilisateur utilisé pour se connecter au serveur de rapports. Si **-u** et **-p** sont absents, le compte d’utilisateur Windows actuel est utilisé.  
   
- **-p** *mot_de_passe*  
+ **-p** *password*  
  (Obligatoire si **-u** est spécifié) Spécifie le mot de passe à utiliser avec l’argument **-u** . Cette valeur respecte la casse.  
   
  **-e**  
@@ -83,7 +83,7 @@ rs {-?}
  **-b**  
  (Facultatif) Spécifie que les commandes du fichier script s'exécutent dans un lot. En cas d'échec d'une commande, l'ensemble du lot est annulé. Certaines commandes ne peuvent pas être traitées par lot ; leur exécution se déroule normalement. Seules les exceptions générées qui ne sont pas gérées par le code du script entraînent une annulation. Si le script gère une exception et si l'exécution se poursuit normalement à partir de **Main**, le traitement est validé. Si vous omettez ce paramètre, les commandes s'exécutent sans créer de lot. Pour plus d’informations, voir [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
- **-v** *variable_globale*  
+ **-v** *globalvar*  
  (Facultatif) Spécifie les variables globales utilisées dans le script. Si le script utilise des variables globales, vous devez spécifier cet argument. La valeur que vous spécifiez doit être une valeur correcte définie dans le fichier .rss pour les variables globales. Vous devez spécifier une variable globale pour chaque argument **-v**.  
   
  L’argument **-v** est spécifié sur la ligne de commande et il sert à configurer la valeur pour une variable globale définie dans votre script au moment de l’exécution. Par exemple, si votre script contient une variable nommée *parentFolder*, vous pouvez spécifier un nom pour ce dossier sur la ligne de commande :  
@@ -92,7 +92,7 @@ rs {-?}
   
  Les variables globales sont créées avec les noms donnés et prennent les valeurs fournies. Par exemple, **-v a=** "**1**" **-v b=** "**2**" a pour résultat une variable nommée **a** avec une valeur "**1**" et une variable **b** avec une valeur "**2**".  
   
- Les variables globales sont accessibles à n'importe quelle fonction du script. Une barre oblique inverse suivie d’un guillemet ( **\\"** ) est interprétée comme un guillemet double. Les guillemets sont obligatoires uniquement si la chaîne contient un espace. Les noms de variables doivent être valides pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; ils doivent commencer par un caractère alphabétique ou un trait de soulignement et ne contenir que des lettres, des nombres ou des traits de soulignement. Les mots réservés ne peuvent pas être utilisés en tant que noms de variables. Pour plus d’informations sur l’utilisation de variables globales, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+ Les variables globales sont accessibles à n'importe quelle fonction du script. Une barre oblique inverse suivie d’un guillemet ( **\\"** ) est interprétée comme un guillemet double. Les guillemets sont obligatoires uniquement si la chaîne contient un espace. Les noms de variables doivent être valides pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ; ils doivent commencer par un caractère alphabétique ou un trait de soulignement et ne contenir que des lettres, des nombres ou des traits de soulignement. Les mots réservés ne peuvent pas être utilisés en tant que noms de variables. Pour plus d’informations sur l’utilisation de variables globales, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
  (Facultatif) Génère des messages d'erreur dans le journal des traces. Cet argument ne prend pas de valeur. Pour plus d’informations, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
@@ -120,7 +120,7 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
 >  Pour obtenir un exemple détaillé, consultez [Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-- [Exécuter un fichier de script Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [Exécuter un fichier de scripts Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [Écrire des scripts pour les tâches d'administration et de déploiement](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 - [Écrire des scripts avec l'utilitaire rs.exe et le service Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
 - [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  

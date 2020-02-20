@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259362"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services 
@@ -26,7 +26,7 @@ Un graphique de compartimentage divise la zone de graphique en rectangles repré
 
 Par exemple, dans l’exemple de graphique de compartimentage suivant, le territoire « Southwest » est le plus grand et « Germany » le plus petit. Dans le territoire« Southwest », les « Road Bikes » sont plus importants que les « Mountain Bikes ».  
 
-![exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example.png "exemple_graphique_compartimentage_ssrs")  
+![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-treemap-chart-and-set-up-the-sample-adventureworks-data"></a>Pour insérer un graphique de compartimentage et configurer l’échantillon de données Adventureworks  
 
@@ -35,25 +35,25 @@ Par exemple, dans l’exemple de graphique de compartimentage suivant, le territ
   
 1. Cliquez avec le bouton droit sur l’aire de conception, puis sélectionnez **Insérer** > **Graphique**. Sélectionnez l’icône **Compartimentage**.
 
-    ![icône_graphique_compartimentage_ssrs](../../reporting-services/media/ssrs-treemap-icon.png "icône_graphique_compartimentage_ssrs")  
+    ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
 
 2. Repositionnez et redimensionnez le graphique. Pour l’échantillon de données, un graphique de 5 pouces de large est un bon début.  
   
 3. Ajoutez les champs suivants à partir de l’échantillon de données :  
   
-    * **Values** (Valeurs) : LineTotal (Total de la ligne)
+    * **Valeurs** : LineTotal
     * **Category Groups** (Groupes de catégories) (dans l’ordre suivant) :
         1. CategoryName (Nom de catégorie)
         2. SubcategoryName (Nom de sous-catégorie)
-    * **Series Groups** (Groupes de séries) : TerritoryName (Nom de territoire)  
+    * **Groupes de séries** : TerritoryName  
 
-    ![propriétés_exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "propriétés_exemple_graphique_compartimentage_ssrs")
+    ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
 4. Pour optimiser la taille de page pour la forme générale d’un graphique de compartimentage, positionnez la légende en bas.  
   
 5. Pour ajouter des info-bulles qui affichent la sous-catégorie et le total de la ligne, cliquez sur **LineTotal** (Total de la ligne), puis sélectionnez **Propriétés de la série**.  
   
-     ![propriétés_série_visualisation_ssrs](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "propriétés_série_visualisation_ssrs")  
+     ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
      Définissez la propriété **Tooltip** (Info-bulle) sur la valeur suivante :  
   
@@ -71,7 +71,7 @@ Par exemple, dans l’exemple de graphique de compartimentage suivant, le territ
 
 Dans un graphique en rayons de soleil, la hiérarchie est représentée par une série de cercles. Le plus haut niveau de la hiérarchie se trouve au centre et les niveaux inférieurs de la hiérarchie sont des anneaux affichés à l’extérieur du centre.  Le niveau le plus bas de la hiérarchie est l’anneau extérieur.  
   
-![exemple_graphique_rayons_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-example.png "exemple_graphique_rayons_de_soleil_ssrs")  
+![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-set-up-the-sample-adventureworks-data"></a>Pour insérer un graphique en rayons de soleil et configurer l’échantillon de données Adventureworks
 
@@ -80,20 +80,20 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
 1. Cliquez avec le bouton droit sur l’aire de conception, puis sélectionnez **Insérer** > **Graphique**. Sélectionnez l’icône **Rayons**.
 
-     ![icône_graphique_rayons_de_soleil_ssrs](../../reporting-services/media/ssrs-sunburst-icon.png "icône_graphique_rayons_de_soleil_ssrs")  
+     ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
   
 2. Repositionnez et redimensionnez le graphique. Pour l’échantillon de données, un graphique de 5 pouces de large est un bon début.  
   
 3. Ajoutez les champs suivants à partir de l’échantillon de données :  
 
-    * **Values** (Valeurs) : LineTotal (Total de la ligne)
+    * **Valeurs** : LineTotal
     * **Category Groups** (Groupes de catégories) (dans l’ordre suivant) :
         1. CategoryName (Nom de catégorie)
         2. SubcategoryName (Nom de sous-catégorie)
         3. SalesReasonName (Nom du motif de vente)
-    * **Series Groups** (Groupes de séries) : TerritoryName (Nom de territoire)  
+    * **Groupes de séries** : TerritoryName  
 
-    ![propriétés_exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "propriétés_exemple_graphique_compartimentage_ssrs")
+    ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
 4. Pour optimiser la taille de page pour la forme générale d’un graphique en rayons de soleil, positionnez la légende en bas.  
   
@@ -101,11 +101,11 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
 6. Pour ajouter les valeurs des groupes de catégories au graphique en rayons de soleil en tant qu’étiquettes, définissez la propriété d’étiquette comme suit : **Visible=true** et **UseValueAsLabel=False**.<br /><br /> Les valeurs d’étiquette qui s’affichent sont affectées par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles.  Pour afficher d’autres étiquettes, définissez la propriété **Label Font** (Police de l’étiquette) de **LineTotal** (Total de la ligne) sur **10 pt**, à la place de la valeur par défaut **8 pt**.
 
-    ![propriétés_total_ligne_rayon_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "propriétés_total_ligne_rayon_de_soleil_ssrs")
+    ![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")
   
 7. Si vous voulez utiliser une autre plage de couleurs, modifiez la propriété **Palette** du graphique.  
 
-     ![palette_visualisation_ssrs](../../reporting-services/report-design/media/ssrs-visualization-palette.png "palette_visualisation_ssrs")  
+     ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
 ##  <a name="bkmk_sample_data"></a> Échantillon de données Adventureworks
 
@@ -115,7 +115,7 @@ La requête retourne des données de détail des ventes d’AdventureWorks par s
   
 1. **Obtenez les données**.  
   
-     La requête de cette section porte sur la base de données AdventureWorks disponible en téléchargement sur GitHub :[Adventure Works 2016 Full Database Backup](https://github.com/Microsoft/sql-server-samples/releases).  
+     La requête de cette section porte sur la base de données AdventureWorks disponible au téléchargement sur GitHub : [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Créez une source de données**.  
   
@@ -178,6 +178,6 @@ La requête retourne des données de détail des ventes d’AdventureWorks par s
 
 * [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [Didacticiel : graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Tutoriel : Graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Graphique de compartimentage : applications de visualisation de données de Microsoft Research pour Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Graphique de compartimentage : Applications de visualisation des données de Microsoft Research pour Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

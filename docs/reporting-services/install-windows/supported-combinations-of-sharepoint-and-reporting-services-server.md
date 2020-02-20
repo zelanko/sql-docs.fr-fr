@@ -1,8 +1,10 @@
 ---
 title: Combinaisons de serveurs SharePoint et Reporting Services prises en charge | Microsoft Docs
-ms.date: 07/01/2017
+description: Un serveur de rapports SQL Server Reporting Services installé en mode SharePoint nécessite une version de SharePoint et le complément SQL Server Reporting Services (rsSharePoint.msi) pour les produits SharePoint que vous installez sur les serveurs SharePoint.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
@@ -12,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59cd04ffa97005edc1e957ed4fcefb66685c2256
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
-ms.translationtype: MTE75
+ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995862"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866062"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinaisons de serveurs SharePoint et Reporting Services prises en charge
 
@@ -45,7 +47,7 @@ Un serveur de rapports SQL Server Reporting Services installé en mode SharePoin
 |5|SQL Server 2012 SP4|SQL Server 2014 et SQL Server 2012 SP4|SharePoint 2013|
 |6|SQL Server 2012 SP3|SQL Server 2014 et SQL Server 2012 SP3|SharePoint 2013|
 |7|SQL Server 2012 SP2|SQL Server 2014 et SQL Server 2012 SP2|SharePoint 2013|
-|8|SQL Server 2012 SP1|SQL Server 2014 et SQL Server 2012 SP1|SharePoint 2013|
+|8|SQL Server 2012 SP1|SQL Server 2014 et SQL Server 2012 SP1|SharePoint 2013|
 |9|SQL Server 2012 et SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
 |10|SQL Server 2012|SQL Server 2012|SharePoint 2010|
 |11|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
@@ -55,7 +57,7 @@ Un serveur de rapports SQL Server Reporting Services installé en mode SharePoin
 |15|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
 |16|SQL Server 2008 SP2|SQL Server 2008 et SQL Server 2008 SP2|SharePoint 2007|
 
- *Exception : l’intégration de Power View n’est pas prise en charge.
+ *Exception : L'intégration de Power View n'est pas prise en charge.
 
  Pour obtenir des liens vers les pages de téléchargement des compléments, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
@@ -71,7 +73,7 @@ Un serveur de rapports SQL Server Reporting Services installé en mode SharePoin
 
 - Le complément SQL Server 2008 R2 n'est pas pris en charge par les serveurs de rapports SQL Server 2012 (ou versions ultérieures). Le programme d'installation de SharePoint 2010 installe automatiquement le complément SQL Server 2008 R2. Il doit être désinstallé avant d'installer les nouvelles versions du complément. La mise à niveau sur place du complément n'est pas prise en charge.
 
-- **Mise à niveau :** SharePoint 2010 avec le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installé ne peut pas être mis à niveau sur place vers SharePoint 2013. SharePoint 2013 requiert SQL Server 2012 SP1 ou une version ultérieure du complément et du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d'informations sur la mise à niveau, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- **Mise à niveau :** SharePoint 2010 avec le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installé ne peut pas être mis à niveau sur place vers SharePoint 2013. SharePoint 2013 requiert SQL Server 2012 SP1 ou une version ultérieure du complément et du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d'informations sur la mise à niveau, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

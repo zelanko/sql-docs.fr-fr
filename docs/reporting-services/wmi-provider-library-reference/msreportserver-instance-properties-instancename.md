@@ -16,14 +16,14 @@ ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 966ab7aeaa4d1bb27fdaae8d4f452e6dffc4a269
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569106"
 ---
-# <a name="msreportserverinstance-properties---instancename"></a>Propriétés MSReportServer_Instance - InstanceName
-  Retourne le nom d'une instance du serveur de rapports sur un ordinateur spécifique. En lecture seule.  
+# <a name="msreportserver_instance-properties---instancename"></a>Propriétés MSReportServer_Instance - InstanceName
+  Retourne le nom d'une instance du serveur de rapports sur un ordinateur spécifique. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ public string InstanceName;
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

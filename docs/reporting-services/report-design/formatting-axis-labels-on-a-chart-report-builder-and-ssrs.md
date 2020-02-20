@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575624"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
@@ -59,7 +59,7 @@ ms.locfileid: "65575624"
 |Type de champ de catégorie|Description|Exemple|  
 |-------------------------|-----------------|-------------|  
 |Numérique|Les catégories sont tracées par ordre numérique le long de l'axe des abscisses.|Un état des ventes par numéro d'identification des employés affiche les numéros d'identification des employés le long de l'axe des abscisses.|  
-|Date/heure|Les catégories sont tracées par ordre chronologique le long de l'axe des abscisses.|Un état des ventes par mois affiche des dates mises en forme le long de l'axe des abscisses.|  
+|Date/time|Les catégories sont tracées par ordre chronologique le long de l'axe des abscisses.|Un état des ventes par mois affiche des dates mises en forme le long de l'axe des abscisses.|  
 |Chaînes|Les catégories sont tracées le long de l'axe des abscisses dans l'ordre où elles apparaissent pour la première fois dans la source de données.|Un état des ventes par région affiche des noms de régions le long de l'axe des abscisses.|  
   
  Tous les types de graphiques comportant deux axes sont conçus pour supprimer des étiquettes des axes lorsque les catégories sont trop nombreuses pour s'ajuster à l'affichage, afin de produire une image plus claire sur le graphique et éviter les collisions d'étiquettes.  
@@ -75,7 +75,7 @@ ms.locfileid: "65575624"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Exemple de calcul d'étiquettes d'axe par le graphique  
  Le tableau présenté ici contient des exemples de données de vente à tracer sur un histogramme. Le champ Name est ajouté à la zone Groupes d'abscisses et le champ Quantity est ajouté à la zone Valeurs.  
   
-|Créer une vue d’abonnement|Quantity|  
+|Name|Quantité|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

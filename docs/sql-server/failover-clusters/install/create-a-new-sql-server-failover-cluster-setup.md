@@ -1,7 +1,7 @@
 ---
-title: Créer un cluster de basculement SQL Server (programme d’installation) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Créer un cluster de basculement
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893185"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230479"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68893185"
   
     -   Si le nœud que vous ajoutez a des sous-réseaux supplémentaires ou différents, le programme d'installation vous permet de spécifier des adresses IP supplémentaires. Si le nœud que vous ajoutez se trouve sur un sous-réseau différent, vous devez également confirmer la modification de dépendance de ressource d'adresse IP sur OR. Pour plus d’informations sur les différents scénarios possibles pendant les opérations d’ajout de nœuds, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Option 2 : Installation avancée/entreprise**  
+ **Option n°2 : Installation avancée/entreprise**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise de cluster de basculement comprend les étapes suivantes :  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68893185"
 > [!NOTE]  
 >  Souvenez-vous de l'emplacement du lecteur partagé dans l'Administrateur de cluster avant d'exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous aurez besoin de ces informations pour créer un cluster de basculement.  
   
-### <a name="to-install-a-new-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-integrated-install-with-add-node"></a>Pour installer un nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant l'installation intégrée avec ajout de nœud.  
+### <a name="to-install-a-new-ssnoversion-failover-cluster-using-integrated-install-with-add-node"></a>Pour installer un nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant l'installation intégrée avec ajout de nœud.  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe. Pour plus d’informations sur l’installation des composants requis, consultez [Avant l’installation du clustering de basculement](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
@@ -172,7 +172,7 @@ ms.locfileid: "68893185"
   
      Pour spécifier le même compte d'ouverture de session pour tous les comptes de service dans cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], fournissez les informations d'identification dans les champs en bas de page.  
   
-     **Remarque relative à la sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
+     **Note de sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
      Lorsque vous avez terminé de spécifier les informations de connexion pour les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Suivant**.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "68893185"
   
      Pour spécifier le même compte d'ouverture de session pour tous les comptes de service dans cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], fournissez les informations d'identification dans les champs en bas de page.  
   
-     **Remarque relative à la sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
+     **Note de sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
      Lorsque vous avez terminé de spécifier les informations de connexion pour les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Suivant**.  
   
@@ -342,7 +342,7 @@ ms.locfileid: "68893185"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le programme d’installation exécute un autre ensemble de règles qui sont basées sur les fonctionnalités sélectionnées pour valider votre configuration.  
   
-8.  Utilisez la page Groupe de ressources de cluster pour spécifier le nom du groupe de ressources de cluster où les ressources du serveur virtuel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seront hébergées. Pour spécifier le nom du groupe de ressources de cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous avez le choix entre deux options :  
+8.  Utilisez la page Groupe de ressources de cluster pour spécifier le nom du groupe de ressources de cluster où les ressources du serveur virtuel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seront hébergées. Pour spécifier le nom du groupe de ressources de cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Deux options s'offrent à vous :  
   
     -   Utilisez la liste pour spécifier un groupe existant à utiliser.  
   
@@ -395,12 +395,12 @@ ms.locfileid: "68893185"
   
 19. Après l'installation, la page **Terminé** fournit un lien vers le fichier journal résumé de l'installation et d'autres remarques importantes. Pour terminer le processus d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**. Avec cette procédure, tous les nœuds préparés pour le même cluster de basculement font partie du cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] terminé.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** - Pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations, consultez [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Pour plus d’informations sur l’emplacement des fichiers journaux, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Installer SQL Server 2016 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   

@@ -1,10 +1,9 @@
 ---
-title: Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Naviguer dans le Concepteur de vues et de requêtes
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f9581eca3d6abbefcd897ccc4ce627ca180649b3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5e78aa041929e5b804547db0ef773d40aea7d7c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262301"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224590"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ Vous pouvez travailler dans le Concepteur de requêtes et de vues en vous servan
   
 ## <a name="any-pane"></a>Tous les volets  
   
-|**Pour**|**Appuyez sur**|**Cliquez sur**|  
+|**To**|**Appuyez sur**|**Cliquez sur**|  
 |----------|-------------|-------------|  
 |Vous déplacer entre les volets du Concepteur de requêtes et de vues|F6, Maj+F6|N'importe où dans le volet cible|  
   
@@ -37,7 +38,7 @@ Vous pouvez travailler dans le Concepteur de requêtes et de vues en vous servan
   
 ## <a name="diagram-pane"></a>Volet Schéma  
   
-|**Pour**|**Appuyez sur**|**Cliquez sur**|  
+|**To**|**Appuyez sur**|**Cliquez sur**|  
 |----------|-------------|-------------|  
 |Vous déplacer entre des tables, des objets structurés en tables (et des lignes de jointures le cas échéant)|Tab ou Maj+Tab|Sur l'élément vers lequel vous voulez vous déplacer : table, objet structuré ou ligne de jointure|  
 |Vous déplacer entre les colonnes d'une table ou d'un objet structuré en table|Touches de direction|Dans la colonne à laquelle vous voulez accéder|  
@@ -52,7 +53,7 @@ Pour plus d’informations, consultez [Volet Schéma &#40;Visual Database Tools&
   
 ## <a name="criteria-pane"></a>Volet Critères  
   
-|Pour|Appuyez sur|Cliquez sur|  
+|À|Appuyez sur|Cliquez sur |  
 |------|---------|---------|  
 |Vous déplacer entre les cellules|Touches de direction, TAB ou MAJ+TAB|Sur la cellule cible|  
 |Vous déplacer sur la dernière ligne d'une colonne sélectionnée|Ctrl+Flèche bas||  
@@ -60,7 +61,7 @@ Pour plus d’informations, consultez [Volet Schéma &#40;Visual Database Tools&
 |Vous déplacer sur la cellule située en haut à gauche dans la partie visible de la grille|Ctrl+Origine||  
 |Vous déplacer sur la cellule située en bas à droite|CTRL+FIN||  
 |Vous déplacer dans une liste déroulante|HAUT ou BAS|Sur le bouton dans la cellule|  
-|Sélectionner une colonne entière dans la grille|Ctrl + Espace|Sur l'en-tête de la colonne|  
+|Sélectionner une colonne entière dans la grille|Ctrl + Espace|En-tête de colonne|  
 |Basculer entre le mode Édition et le mode de sélection des cellules|F2||  
 |Copier le texte sélectionné dans la cellule à l'intérieur du Presse-papiers (en mode Édition)|CTRL+C||  
 |Couper le texte sélectionné dans la cellule et le placer dans le Presse-papiers (en mode Édition)|Ctrl+X||  
@@ -87,7 +88,7 @@ Pour plus d’informations, consultez [Volet SQL &#40;Visual Database Tools&#41;
   
 ## <a name="results-pane"></a>Volet Résultats  
   
-|**Pour**|**Appuyez sur**|**Cliquez sur**|  
+|**To**|**Appuyez sur**|**Cliquez sur**|  
 |----------|-------------|-------------|  
 |Vous déplacer entre des cellules|Touches de direction, TAB ou MAJ+TAB|Sur la cellule cible|  
 |Vous déplacer sur la première ou la dernière cellule de la ligne en cours|ORIGINE ou FIN||  
@@ -112,6 +113,6 @@ Pour plus d’informations, consultez [Volet SQL &#40;Visual Database Tools&#41;
   
 Pour plus d’informations, consultez [Volet Résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

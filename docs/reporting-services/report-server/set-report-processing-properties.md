@@ -16,16 +16,16 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140396"
 ---
 # <a name="set-report-processing-properties"></a>Définir les propriétés de traitement d'un rapport
   Les propriétés d'exécution d'un rapport déterminent la façon dont le traitement du rapport s'effectue. Elles doivent être définies individuellement pour chaque rapport.  
   
- Pour définir les propriétés de l’exécution de rapports, accédez au rapport dans le portail web, cliquez sur le rapport, puis sélectionnez **gérer** dans le menu déroulant.
+ Pour définir les propriétés d’exécution de rapport, accédez au rapport dans le portail web, cliquez avec le bouton droit sur le rapport, puis sélectionnez **Gérer** dans le menu déroulant.
   
 ## <a name="report-execution-modes"></a>Modes d'exécution d'un rapport  
  Vous pouvez exécuter un rapport à la demande ou en tant qu'instantané. La section suivante décrit chaque méthode.  

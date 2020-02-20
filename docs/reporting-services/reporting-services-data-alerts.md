@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580068"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
@@ -58,9 +58,9 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
  Lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif ou en mode SharePoint ou lorsque vous utilisez la version autonome du Générateur de rapports, vous pouvez enregistrer des rapports sur un serveur de rapports, votre ordinateur ou une bibliothèque SharePoint. Pour créer des alertes de données sur les rapports, les rapports doivent être enregistrés ou téléchargés sur une bibliothèque SharePoint. Cela signifie que vous ne pouvez pas créer d'alertes sur des rapports enregistrés sur un serveur de rapports en mode natif ou votre ordinateur. Par ailleurs, vous ne pouvez pas créer d'alertes incorporées dans des applications personnalisées.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge divers types d'informations d'identification dans les rapports. Vous pouvez créer des alertes de données sur des rapports avec une source de données configurée pour utiliser des informations d'identification stockées ou bien aucune information d'identification. Vous ne pouvez pas créer d'alertes sur des rapports configurés pour utiliser des informations d'identification de sécurité intégrée ou une invite pour les informations d'identification. Le rapport est exécuté dans le cadre du traitement de la définition d'alerte et ce dernier échoue sans informations d'identification. Pour plus d'informations, consultez les documents suivants :  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge divers types d'informations d'identification dans les rapports. Vous pouvez créer des alertes de données sur des rapports avec une source de données configurée pour utiliser des informations d'identification stockées ou bien aucune information d'identification. Vous ne pouvez pas créer d'alertes sur des rapports configurés pour utiliser des informations d'identification de sécurité intégrée ou une invite pour les informations d'identification. Le rapport est exécuté dans le cadre du traitement de la définition d'alerte et ce dernier échoue sans informations d'identification. Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+-   [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 -   [Rôles et autorisations &#40;Reporting Services&#41;](../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -116,9 +116,9 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
 ##  <a name="InstallAlerting"></a> Installer des alertes de données  
  La fonctionnalité d'alertes de données est disponible uniquement lorsque [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installé en mode SharePoint. Lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, le programme d'installation crée automatiquement la base de données des alertes qui stocke les définitions d'alerte de données et les métadonnées d'alerte, crée deux pages SharePoint pour la gestion des alertes et ajoute le Concepteur d'alertes de données au site SharePoint. Il n'y a pas d'étapes spéciales à effectuer ni d'options à définir pour créer des alertes pendant l'installation.  
   
- Si vous souhaitez en savoir plus sur l’installation de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, dont le nouveau service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et l’application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que vous devez créer et configurer avant de pouvoir utiliser les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consultez [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) dans MSDN Library.  
+ Pour plus d’informations sur l’installation de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, dont le nouveau service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et l’application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qu’il faut créer et configurer pour pouvoir utiliser les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], voir [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) dans MSDN Library.  
   
- Comme le montre le schéma plus haut dans cette rubrique, les alertes de données utilisent des travaux de SQL Server Agent. Pour créer des travaux, SQL Server Agent doit s'exécuter. Il est possible que vous ayez configuré SQL Server Agent pour qu'il démarre automatiquement lors de l'installation d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Sinon, vous pouvez démarrer SQL Server Agent manuellement. Pour plus d’informations, consultez [Configurer l’Agent SQL Server](../ssms/agent/configure-sql-server-agent.md) et [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Comme le montre le schéma plus haut dans cette rubrique, les alertes de données utilisent des travaux de SQL Server Agent. Pour créer des travaux, SQL Server Agent doit s'exécuter. Il est possible que vous ayez configuré SQL Server Agent pour qu'il démarre automatiquement lors de l'installation d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Sinon, vous pouvez démarrer SQL Server Agent manuellement. Pour plus d’informations, consultez [Configurer SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) et [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Vous pouvez utiliser la page **Configurer les abonnements et les alertes** dans l'Administration centrale de SharePoint pour déterminer si SQL Server Agent s'exécute, et pour créer et télécharger les scripts personnalisés [!INCLUDE[tsql](../includes/tsql-md.md)] que vous exécuterez ensuite pour accorder des autorisations à SQL Server Agent. Vous pouvez également générer les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] à l'aide de PowerShell. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -131,7 +131,7 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
  Le tableau suivant répertorie les éléments de configuration des alertes de données, leurs valeurs par défaut, les descriptions et les emplacements.  
   
-|Paramètre|Valeur par défaut|Description|Emplacement|  
+|Paramètre|Valeur par défaut|Description|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Nombre de minutes entre les démarrages du cycle de nettoyage.|Fichier de configuration du serveur de rapports|  
 |AlertingExecutionLogCleanupMinutes|10080|Nombre de minutes pendant lesquelles les entrées du journal des exécutions sont conservées.|Fichier de configuration du serveur de rapports|  
@@ -201,11 +201,11 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
 -   [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prennent en charge deux niveaux d'autorisation : travailleur de l'information et administrateur d'alertes. Le tableau suivant répertorie les autorisations et les tâches utilisateur SharePoint connexes.  
   
-|Type d'utilisateur|Autorisation SharePoint|Description de la tâche|  
+|Type d’utilisateur|Autorisation SharePoint|Description de la tâche|  
 |---------------|---------------------------|----------------------|  
 |Travailleur de l'information|Afficher les éléments<br /><br /> Créer des alertes|Consultez des éléments tels que des rapports et créez des alertes de données reposant sur des rapports. Modification et suppression d'alertes|  
 |Administrateur d'alertes|Gérer les alertes|Consultez la liste de toutes les alertes de données enregistrée sur le site SharePoint et supprimez des alertes.|  
@@ -222,7 +222,7 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
 -   Le type de données dans la source de données sous-jacente a changé et la définition d'alerte n'est plus valide.  
   
-### <a name="logs"></a>Journaux  
+### <a name="logs"></a>Journaux d’activité  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit un certain nombre de journaux qui peuvent vous aider à en savoir plus les rapports exécutés lors du traitement des définitions d'alerte de données, les instances d'alerte de données créées etc. Trois journaux sont particulièrement utiles : le journal d'exécution des alertes, le journal d'exécution du serveur de rapports et le journal des traces du serveur de rapports.  
   
  Pour plus d’informations sur les autres journaux [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consultez [Fichiers journaux et sources de Reporting Services](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
@@ -305,13 +305,13 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
 -   [Enregistrer un rapport dans une bibliothèque SharePoint &#40;Générateur de rapports&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Créer une alerte de données dans le Concepteur d’alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Créer une alerte de données dans le concepteur d’alertes de données](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
 -   [Modifier une alerte de données dans le concepteur d'alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Gérer mes alertes de données dans le gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Gérer toutes les alertes de données sur un site SharePoint dans le gestionnaire des alertes de données](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
 -   [Accorder des autorisations aux utilisateurs et alerter les administrateurs](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   

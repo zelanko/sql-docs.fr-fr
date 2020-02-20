@@ -1,10 +1,9 @@
 ---
-title: Enregistrer des tables sélectionnées dans un schéma (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Enregistrer des tables sélectionnées dans un schéma
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c473a6af4ee2bcf10c482f223d442da0936c0a40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9a5e54642e5ee6250d8c01294f7f618288236cc3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256385"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255078"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Enregistrer des tables sélectionnées dans un schéma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +39,6 @@ Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez appo
     > [!NOTE]  
     > La liste des tables peut contenir d'autres tables en plus de celles que vous avez sélectionnées. Par exemple, si vous changez le type de données d'une colonne qui participe à une relation avec une autre table, les deux tables seront incluses dans cette liste.  
   
-## <a name="see-also"></a>Voir aussi  
-[Utiliser des diagrammes de base de données (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+## <a name="see-also"></a> Voir aussi  
+[Utiliser des diagrammes de base de données](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

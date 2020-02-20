@@ -9,10 +9,10 @@ ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499941"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Préparer les données Excel pour les rapports mobiles Reporting Services
@@ -44,7 +44,7 @@ Lorsque vous préparez un fichier Excel comme un jeu de données pour un rapport
   
 ![SS_MRP_ExcelDataSheet](../../reporting-services/mobile-reports/media/ss-mrp-exceldatasheet.png)  
           
-## <a name="column-headers"></a>En-têtes de colonnes  
+## <a name="column-headers"></a>En-têtes de colonne  
   
 Comme vous pouvez le voir dans l'exemple ci-dessus, la première ligne contient le nom de la mesure de cette colonne. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] conserve ces en-têtes de colonnes pour faciliter la référence dans les paramètres des éléments de la galerie. Cependant les en-têtes de colonne ne sont pas nécessaires. S’ils sont manquants, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] génère les en-têtes en utilisant la convention Excel A,B,C,...,AA,BB,...  
   
@@ -63,7 +63,7 @@ Si une feuille de calcul contient des cellules ou des formules calculées, seule
   
 Il n'existe aucune restriction concernant l’emplacement où vous stockez les fichiers Excel que vous importez dans [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]. Toutefois, si vous déplacez ou renommez le fichier après l'importation, vous ne pourrez pas actualiser ces données via la commande **Actualiser toutes les données** disponible dans la vue Données.   
   
->**Remarque**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] n'actualise pas automatiquement les données Excel. Vous pouvez actualiser les données via la commande [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **de** , mais uniquement si le fichier n'a pas été déplacé.  
+>**Remarque**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] n'actualise pas automatiquement les données Excel. Vous pouvez actualiser les données via la commande **actualiser** de [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], mais uniquement si le fichier n'a pas été déplacé.  
   
 ## <a name="dates"></a>Dates  
   
@@ -84,7 +84,7 @@ L’utilisation de formats de données de feuilles de calcul autres que ceux dé
 Les objets personnalisés dans des feuilles de calcul Excel, notamment les tableaux croisés dynamiques, les visualisations et les images, ne sont pas importés dans [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
   
 ### <a name="see-also"></a>Voir aussi  
-- [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [Préparer des données pour des rapports mobiles Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  Affichez les [rapports mobiles SQL Server et les indicateurs de performance clés dans l’application iPad](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI pour iOS)  
 -  Affichez les [rapports mobiles SQL Server et les indicateurs de performance clés dans l’application iPhone](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI pour iOS)  

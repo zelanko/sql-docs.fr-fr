@@ -1,10 +1,9 @@
 ---
-title: Propriétés du compte de proxy - Nouveau compte de proxy (page Général) | Microsoft Docs
-ms.custom: ''
+title: Propriétés du compte de proxy - Nouveau compte de proxy (page Général)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1dabf36ad4e7c1d24b3fd1d4f5510ec711d715b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 86c381bb502b95fc0875ea45348dc01912ccb64c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266817"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247585"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>Propriétés du compte de proxy - Nouveau compte de proxy (page Général)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,17 +27,17 @@ ms.locfileid: "68266817"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Cette page vous permet d'afficher et de modifier les propriétés d'un compte proxy de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Utilisez cette page pour afficher et changer les propriétés d’un compte proxy [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Options  
 **Nom du proxy**  
 Tapez le nom du proxy.  
   
-**Nom relatif aux informations d'identification**  
+**Nom des informations d’identification**  
 Tapez le nom des informations d'identification du proxy.  
   
 > [!NOTE]  
-> Le nom des informations d'identification spécifié doit correspondre à des informations d'identification existantes. Pour obtenir des informations sur la création d’informations d’identification, consultez [Procédure : Créer un proxy (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
+> Le nom des informations d'identification spécifié doit correspondre à des informations d'identification existantes. Pour obtenir des informations sur la création d’informations d’identification, consultez [Procédure : Créer un proxy](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
   
 **...**  
 Affiche la boîte de dialogue **Sélectionner les informations d'identification** .  

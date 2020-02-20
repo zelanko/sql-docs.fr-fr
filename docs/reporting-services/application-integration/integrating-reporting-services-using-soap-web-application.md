@@ -1,9 +1,11 @@
 ---
-title: À l’aide de l’API SOAP dans une Application Web - Reporting Services | Microsoft Docs
+title: Utiliser l'API SOAP dans les applications web
+description: Vous pouvez accéder aux fonctionnalités complètes du serveur de rapports via l'API SOAP de Reporting Services.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], Web applications
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d9b086f6ec5a57493c96e3a4d0462a44d9c2e3c
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: d7ae6c53033d1ea79a58d566bf57d8ed622e8f8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492777"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796827"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Intégration de Reporting Services à l’aide de SOAP - Application web
   Vous pouvez accéder aux fonctionnalités complètes du serveur de rapports via l'API SOAP de Reporting Services. Étant donné qu'il s'agit d'un service Web, l'API SOAP est facilement accessible afin de fournir des fonctionnalités de création de rapports d'entreprise à vos applications de gestion personnalisées. Vous accédez au service Web Report Server à partir d'une application Web à peu près de la même manière que vous accédez à l'API SOAP à partir d'une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. À l’aide du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez générer une classe proxy qui expose les propriétés et méthodes du service web Report Server et vous permet d’utiliser une infrastructure et des outils familiers pour générer des applications de gestion basées sur la technologie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -49,7 +51,7 @@ ms.locfileid: "67492777"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
- Vous pouvez également utiliser votre application Web pour gérer un serveur de rapports et son contenu. Le portail web, inclus avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], est un exemple d’une application Web qui gère la majorité des tâches que vous procédez généralement à l’aide de Reporting Services. Vous pouvez ajouter les fonctionnalités de gestion de rapports du portail web à vos applications web personnalisées. Par exemple, vous pouvez souhaiter retourner la liste des rapports disponibles dans la base de données du serveur de rapports afin de les afficher dans un contrôle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** pour permettre à vos utilisateurs d’en choisir un. Le code suivant permet de se connecter à la base de données du serveur de rapports et de retourner la liste des éléments contenus dans la base de données du serveur de rapports. Les rapports disponibles sont alors ajoutés à un contrôle ListBox, lequel affiche le chemin d'accès de chaque rapport.  
+ Vous pouvez également utiliser votre application Web pour gérer un serveur de rapports et son contenu. Le portail web, inclus avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], est un exemple d’application web qui gère la plupart des tâches que vous effectuez généralement à l’aide de Reporting Services. Vous pouvez ajouter les fonctionnalités de gestion de rapports du portail web à vos applications web personnalisées. Par exemple, vous pouvez souhaiter retourner la liste des rapports disponibles dans la base de données du serveur de rapports afin de les afficher dans un contrôle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** pour permettre à vos utilisateurs d’en choisir un. Le code suivant permet de se connecter à la base de données du serveur de rapports et de retourner la liste des éléments contenus dans la base de données du serveur de rapports. Les rapports disponibles sont alors ajoutés à un contrôle ListBox, lequel affiche le chemin d'accès de chaque rapport.  
 
 ::: moniker-end
   
@@ -91,10 +93,10 @@ private void Page_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 
  [Création d’applications à l’aide du service web et du .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Intégration de Reporting Services à des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [Intégration de Reporting Services dans des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Utilisation de l’API SOAP dans une application Windows](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
   
   

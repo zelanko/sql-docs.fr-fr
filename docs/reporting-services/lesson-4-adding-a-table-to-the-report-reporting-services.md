@@ -1,6 +1,7 @@
 ---
-title: 'Leçon 4 : ajout d’une table au rapport (Reporting Services) | Microsoft Docs'
-ms.date: 04/29/2019
+title: 'Leçon 4 : Ajouter un tableau au rapport | Microsoft Docs'
+description: Une fois le dataset défini, vous pouvez commencer à concevoir le rapport paginé. Vous créez une disposition de rapport en faisant glisser et en déposant des objets de rapport du volet Boîte à outils vers l’Aire de conception.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,24 +9,24 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106006"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244298"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Leçon 4 : Ajout d'une table au rapport (Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>Leçon 4 : Ajout d’un tableau au rapport (Reporting Services)
 
-Une fois le dataset défini, vous pouvez commencer à concevoir le rapport. Vous créez une disposition de rapport en faisant glisser et en déposant des *objets de rapport* du volet **Boîte à outils** vers l’**Aire de conception**. Voici quelques-uns des types d’objets de rapport existants :
+Une fois le dataset défini, vous pouvez commencer à concevoir le rapport paginé. Vous créez une disposition de rapport en faisant glisser et en déposant des *objets de rapport* du volet **Boîte à outils** vers l’**Aire de conception**. Voici quelques-uns des types d’objets de rapport existants :
 
 - Table de charge de travail
 - Zone de texte
-- image
-- Ligne
+- Image
+- Lignes
 - Rectangle
 - Graphique
-- Carte
+- Mappage
 
 Les éléments qui contiennent des lignes de données répétées de datasets sous-jacents sont appelés *régions de données*. Une fois que vous avez ajouté une région de données, vous pouvez y ajouter des champs. Un rapport de base n’aura qu’une seule région de données. Vous pouvez en ajouter de nouvelles pour afficher des informations supplémentaires, par exemple un graphique.
 
@@ -54,7 +55,7 @@ Les éléments qui contiennent des lignes de données répétées de datasets so
 
 7. Ajoutez le champ `[LineTotal]` de la même façon, en créant une cinquième colonne. L’étiquette de colonne « Line Total » est ajoutée. Le Concepteur de rapports crée automatiquement un nom convivial pour la colonne en fractionnant « LineTotal » en deux mots.
 
-Le diagramme suivant représente une région de données de table qui a été remplie avec les champs suivants : Date, Order, Product, Qty et Line Total.
+Le diagramme suivant représente une région de données de table remplie avec les champs suivants : Date, Order, Product, Qty et Ligne Total.
 ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
 ## <a name="preview-your-report"></a>Afficher un aperçu de votre rapport
@@ -69,7 +70,7 @@ L'affichage d'un aperçu d'un rapport vous permet de visualiser le rapport rendu
 
 Le diagramme suivant représente une partie du rapport en mode **Aperçu**.
 
-   ![Aperçu, lignes de détails d’une table comportant cinq colonnes](media/rs-basictabledetailspreview.png "Aperçu, lignes de détails d’une table comportant cinq colonnes")
+   ![Aperçu, lignes de détails de table avec cinq colonnes](media/rs-basictabledetailspreview.png "Aperçu, lignes de détails de table avec cinq colonnes")
 
 Examinez les valeurs de Date et Line Total. Dans la leçon suivante, vous allez apprendre à les mettre en forme pour qu’elles soient plus lisibles.
 
@@ -78,7 +79,7 @@ Examinez les valeurs de Date et Line Total. Dans la leçon suivante, vous allez 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous avez ajouté une région de données de table à votre rapport, ajouté des champs à la région de données et affiché un aperçu du rapport. Dans la leçon suivante, vous allez apprendre à mettre en forme les en-têtes de colonnes et les expressions de champs. Maintenant, passez à la [Leçon 5 : Mise en forme d’un rapport &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
+Vous avez ajouté une région de données de table à votre rapport, ajouté des champs à la région de données et affiché un aperçu du rapport. Dans la leçon suivante, vous allez apprendre à mettre en forme les en-têtes de colonnes et les expressions de champs. Ensuite, passez à la [Leçon 5 : Mettre en forme un rapport &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
 ## <a name="see-also"></a>Voir aussi
 

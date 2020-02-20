@@ -1,5 +1,6 @@
 ---
-title: 'Leçon 3 : définition d’un dataset destiné à un rapport de table (Reporting Services) | Microsoft Docs'
+title: 'Leçon 3 : Définir un dataset pour le rapport Table | Microsoft Docs'
+description: Après avoir défini une source de données pour le rapport paginé, vous devez spécifier un dataset. Dans SQL Server Reporting Services, les données utilisées par les rapports sont contenues dans des datasets.
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106028"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244305"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Leçon 3 : définition d'un dataset destiné à un rapport de table (Reporting Services)
+# <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>Leçon 3 : Définir un dataset pour le rapport Table - SQL Server Reporting Services
 
-Après avoir défini une source de données, vous devez spécifier un dataset. Dans [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], les données utilisées par les rapports sont contenues dans des *datasets*. Un dataset contient un pointeur vers la source des données et une requête que doivent utiliser le rapport, les champs calculées et les variables.
+Après avoir défini une source de données pour le rapport paginé, vous devez spécifier un dataset. Dans [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], les données utilisées par les rapports sont contenues dans des *datasets*. Un dataset contient un pointeur vers la source des données et une requête que doivent utiliser le rapport, les champs calculées et les variables.
 
 Utilisez le Concepteur de requêtes du Concepteur de rapports pour définir le dataset. Pour ce tutoriel, vous allez créer une requête qui récupère des informations de commande client à partir de la base de données AdventureWorks2016.
 
@@ -60,7 +61,7 @@ Utilisez le Concepteur de requêtes du Concepteur de rapports pour définir le d
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (Facultatif) Sélectionnez le bouton **Concepteur de requêtes**. La requête est affichée dans le *Concepteur de requêtes* textuel. Pour voir les résultats de la requête, sélectionnez le bouton d’**exécution** ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) dans la barre d’outils du **Concepteur de requêtes**. Le dataset affiché contient six champs tirés de quatre tables de la base de données AdventureWorks2016. La requête utilise des fonctionnalités Transact-SQL telles que des alias. Par exemple, la table SalesOrderHeader est intitulée *soh*.
+7. (Facultatif) Sélectionnez le bouton **Concepteur de requêtes**. La requête est affichée dans le *Concepteur de requêtes* textuel. Pour voir les résultats de la requête, sélectionnez le bouton **d’exécution** ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) dans la barre d’outils du **Concepteur de requêtes**. Le dataset affiché contient six champs tirés de quatre tables de la base de données AdventureWorks2016. La requête utilise des fonctionnalités Transact-SQL telles que des alias. Par exemple, la table SalesOrderHeader est intitulée *soh*.
 
 8. Sélectionnez **OK** pour quitter le **Concepteur de requêtes**.
 
@@ -72,7 +73,7 @@ Le volet **Données du rapport** affiche les champs et le dataset AdventureWorks
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous venez de spécifier une requête qui permet de récupérer des données pour votre rapport. Maintenant, vous allez créer la disposition du rapport. Poursuivez avec la [Leçon 4 : Ajout d’une table au rapport &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
+Vous venez de spécifier une requête qui permet de récupérer des données pour votre rapport. Maintenant, vous allez créer la disposition du rapport. Passez à la [Leçon 4 : Ajout d’une table au rapport &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
 
 ## <a name="see-also"></a>Voir aussi
 

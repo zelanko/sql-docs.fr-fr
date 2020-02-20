@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63042961"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Didacticiel : mettre en forme du texte (Générateur de rapports)
+# <a name="tutorial-format-text-report-builder"></a>Tutoriel : Mettre en forme du texte (Générateur de rapports)
 
 Dans ce didacticiel, vous allez vous entraîner à mettre en forme le texte de plusieurs façons dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Vous pouvez expérimenter avec différents formats. 
 
@@ -25,7 +25,7 @@ Après avoir configuré le rapport vierge avec la source de données et le datas
   
 Dans une étape, vous allez sciemment générer une erreur afin de voir pourquoi il s'agit d'une erreur. Vous corrigerez ensuite l'erreur pour obtenir l'effet souhaité.  
     
-Durée estimée pour effectuer le didacticiel : 20 minutes.  
+Durée estimée pour effectuer ce tutoriel : 20 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -50,7 +50,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 
     Si le volet **Données du rapport** n’est pas visible, cochez **Données du rapport** sous l’onglet **Affichage**.
   
-2.  Dans la zone **Nom** , tapez **TextDataSource**  
+2.  Dans la zone **Nom**, tapez : **TextDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
@@ -67,7 +67,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 2.  Vérifiez que la source de données est **TextDataSource**.  
   
-3.  Dans la zone **Nom** , tapez **TextDataset**.  
+3.  Dans la zone **Nom**, tapez : **TextDataset.**  
   
 4.  Vérifiez que le type de requête **Texte** est sélectionné, puis cliquez sur **Concepteur de requêtes**.  
   
@@ -353,9 +353,9 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 4.  Cliquez sur **Enregistrer**.  
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 
-Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. Le [didacticiel : création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
+Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. [Tutoriel : Création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
 
 [Tutoriels du Générateur de rapports ](../reporting-services/report-builder-tutorials.md) 
 [Mise en forme des éléments de rapport](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

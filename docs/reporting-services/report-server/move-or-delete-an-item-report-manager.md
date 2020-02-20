@@ -12,10 +12,10 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581087"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Déplacer ou supprimer un élément (Gestionnaire de rapports)
@@ -28,14 +28,14 @@ ms.locfileid: "65581087"
   
 |Icône|Élément pouvant être déplacé|  
 |----------|-------------------|  
-|![Icône Rapport](../../reporting-services/report-server/media/hlp-16doc.gif "Icône Rapport")|Rapport|  
+|![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Icône de rapport")|Rapport|  
 |![Icône Rapport lié](../../reporting-services/report-server/media/hlp-16linked.gif "Icône Rapport lié")|Rapport lié|  
-|![Icône Dossier](../../reporting-services/report-server/media/hlp-16folder.gif "Icône Dossier")|Dossier|  
-|![Icône Ressource générique](../../reporting-services/report-server/media/hlp-16file.gif "Icône Ressource générique")|Ressource générique|  
-|![Icône Source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "Icône Source de données partagée")|Source de données partagée|  
+|![Icône de dossier](../../reporting-services/report-server/media/hlp-16folder.gif "Icône de dossier")|Dossier|  
+|![icône de ressource générique](../../reporting-services/report-server/media/hlp-16file.gif "icône de ressource générique")|Ressource générique|  
+|![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Icône de source de données partagée")|Source de données partagée|  
 ||Dataset partagé|  
   
- Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
+ Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Pour déplacer un élément à partir de la page Contenu  
   

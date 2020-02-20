@@ -1,6 +1,6 @@
 ---
-title: Aide sur le Gestionnaire de configuration SQL Server | Microsoft Docs
-ms.custom: ''
+title: Aide sur le Gestionnaire de configuration SQL Server
+ms.custom: seo-lt-2019
 ms.date: 02/01/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +13,19 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 8ade0d0e0944b01005866fc5c38e50ce45fae0fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024095"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306956"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Aide sur le Gestionnaire de configuration SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de configurer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la connectivité réseau. Pour créer ou gérer des objets de base de données, configurer la sécurité et écrire des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations sur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
  > [!TIP]
- > Si vous avez besoin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurer sur Linux, utilisez l’outil **MSSQL-conf** . Pour plus d’informations, consultez [configurer SQL Server sur Linux avec l’outil MSSQL-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
+ > Si vous devez configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Linux, utilisez l’outil **mssql-conf**. Pour plus d’informations, consultez [Configurer SQL Server sur Linux avec l’outil mssql-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
 
  Cette section contient les rubriques d'aide accessibles au moyen de la touche F1, relatives aux boîtes de dialogue du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68024095"
 -   Configurer un protocole réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 > [!NOTE]  
->  Pour vous procurer un didacticiel sommaire sur la manière de configurer les protocoles et de se connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consultez [Didacticiel : Mise en route du moteur de base de données](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+>  Pour vous procurer un didacticiel sommaire sur la manière de configurer les protocoles et de vous connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consultez [Tutoriel : Bien démarrer avec le moteur de base de données](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## <a name="sql-server-native-client-configuration"></a>Configuration de SQL Server Native Client  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connectent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la bibliothèque réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de réaliser les tâches suivantes relatives aux applications clientes installées sur cet ordinateur :  
@@ -78,10 +78,10 @@ ms.locfileid: "68024095"
  Étant donné que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un composant logiciel enfichable pour le programme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console, et non un programme autonome, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'apparaît pas en tant qu'application lorsque vous exécutez [!INCLUDE[win8](../../includes/win8-md.md)]. Pour ouvrir le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans l’icône **Rechercher**, sous **Applications**, tapez **SQLServerManager12.msc** (pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) ou **SQLServerManager11.msc** pour ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), puis appuyez sur **Entrée**.  
   
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Services SQL Server](../../tools/configuration-manager/sql-server-services.md)   
  [Configuration du réseau SQL Server](../../tools/configuration-manager/sql-server-network-configuration.md)   
- [Configuration de SQL Server Native Client 11.0](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
+ [Configuration de SQL Native Client 11.0](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
  [Choix d’un protocole réseau](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

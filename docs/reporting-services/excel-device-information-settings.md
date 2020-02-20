@@ -1,6 +1,6 @@
 ---
 title: Paramètres d’informations de périphérique Excel | Microsoft Docs
-ms.date: 03/16/2017
+ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -11,26 +11,28 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e63af3904696e053d7e74419bd7cffdd23aa117
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65504010"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761823"
 ---
 # <a name="excel-device-information-settings"></a>Paramètres d'informations de périphérique Excel
-  Le tableau suivant répertorie les paramètres des informations de périphérique qui permettent un rendu au format [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
+  Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu au format [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
   
 |Paramètre|Valeur|  
 |-------------|-----------|  
 |**OmitDocumentMap**|Indique s'il faut omettre l'explorateur de documents pour les rapports qui le prennent en charge. La valeur par défaut est **false**.|  
 |**OmitFormulas**|Indique s'il faut omettre des formules du rapport rendu. La valeur par défaut est **false**.|  
 |**SimplePageHeaders**|Indique si l'en-tête de page du rapport est rendu dans l'en-tête de page Excel. La valeur **false** indique que l’en-tête de page est rendu dans la première ligne de la feuille de calcul. La valeur par défaut est **false**.|  
+|**DynamicImageDpi**|Résolution d’images dynamiques comme des graphiques, des jauges et des cartes. La valeur par défaut est **96**. (Disponible dans le serveur de rapports Power BI (Janvier 2020) et versions ultérieures)|  
+
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

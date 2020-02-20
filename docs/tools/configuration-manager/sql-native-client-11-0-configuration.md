@@ -1,6 +1,6 @@
 ---
-title: Configuration de SQL Native Client 11,0 | Microsoft Docs
-ms.custom: ''
+title: Configuration de SQL Server Native Client 11.0
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e0b9e07f241892755e4009a942695c0d5d29322
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024245"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306728"
 ---
 # <a name="sql-native-client-110-configuration"></a>Configuration de SQL Server Native Client 11.0
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Cette section contient les rubriques d'aide accessibles au moyen de la touche F1, relatives aux boîtes de dialogue de **Configuration de SQL Server Native Client** du Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est la bibliothèque réseau que les ordinateurs clients utilisent pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à compter de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Cette section contient les rubriques d'aide accessibles au moyen de la touche F1, relatives aux boîtes de dialogue de **Configuration de SQL Server Native Client** du Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est la bibliothèque réseau que les ordinateurs clients utilisent pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à compter de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Les paramètres définis dans la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont utilisés sur l'ordinateur exécutant le programme client. Lorsqu'ils sont configurés sur l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ils n'affectent que les programmes clients en cours d'exécution sur le serveur.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "68024245"
   
     -   [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [Création d'une chaîne de connexion valide à l'aide de canaux nommés](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+    -   [Création d’une chaîne de connexion valide avec des canaux nommés](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

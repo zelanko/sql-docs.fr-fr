@@ -1,6 +1,7 @@
 ---
-title: Ajouter des dépendances à une ressource SQL Server | Microsoft Docs
-ms.custom: ''
+title: Ajouter des dépendances à une ressource FCI SQL Server
+descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063826"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822063"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Ajouter des dépendances à une ressource SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique explique comment ajouter des dépendances à une ressource d’instance de cluster de basculement (FCI) Always On à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
+  Cette rubrique explique comment ajouter des dépendances à une ressource d’instance de cluster de basculement (FCI) Always On à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
 -   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Prérequis](#Prerequisites)  
   
@@ -54,7 +55,7 @@ ms.locfileid: "68063826"
   
      Si vous installez MS DTC dans votre groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et si d'autres ressources dépendent de MS DTC, MS DTC ne sera pas disponible si ce groupe est hors connexion ou lors d'un basculement. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommande de placer MS DTC dans un groupe distinct avec sa propre ressource de disque physique, si possible.  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Si vous installez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans un groupe de ressources WSFC qui comporte plusieurs lecteurs de disques et si vous choisissez de placer vos données sur un des lecteurs, la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sera configurée comme étant dépendante uniquement sur ce lecteur. Pour placer les données ou les journaux sur un autre disque, vous devez d'abord ajouter une dépendance à la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le disque supplémentaire.  
   
 ##  <a name="WinClusManager"></a> Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  

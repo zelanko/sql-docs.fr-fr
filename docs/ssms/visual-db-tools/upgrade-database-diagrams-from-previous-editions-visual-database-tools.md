@@ -1,10 +1,9 @@
 ---
-title: Mettre à niveau des diagrammes de base de données d’éditions antérieures | Microsoft Docs
-ms.custom: ''
+title: Mettre à niveau des diagrammes de base de données d’éditions antérieures
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +17,18 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d28b90273084e9a5b2f9678500efcd68dba924e0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 11617b30fef96d189f5d91f46c3fc272d86a153f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263134"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246047"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des diagrammes de base de données d’éditions antérieures (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Les diagrammes de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l’installation du diagramme de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir plus d’instructions sur la configuration des diagrammes, consultez [Configurer le Concepteur de diagrammes de base de données (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+Les diagrammes de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l’installation du diagramme de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir plus d’instructions sur la configuration des diagrammes, consultez [Configurer le Concepteur de diagrammes de base de données](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Pour mettre à niveau des diagrammes de base de données hérités  
   
@@ -40,6 +41,6 @@ Les diagrammes de base de données créés sur les éditions antérieures de bas
     Cela permet de mettre à niveau les schémas stockés dans la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Comprendre la propriété du diagramme de base de données (Visual Database Tools)](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-[Configurer le Concepteur de diagrammes de base de données (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[Présentation de la propriété du diagramme de base de données](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Configurer le Concepteur de diagrammes de base de données](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   

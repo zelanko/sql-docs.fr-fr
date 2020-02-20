@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573653"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services
@@ -29,7 +29,7 @@ ms.locfileid: "65573653"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Pour définir un paramètre de requête dans MDX en mode Création  
   
-1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur un dataset créé à partir d’un type de source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puis cliquez sur **Requête**. Le Concepteur de requêtes MDX s'ouvre en mode Création.  
+1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur un dataset créé à partir d’un type de source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puis cliquez sur **Requête**. Le Concepteur de requêtes MDX s'ouvre en mode Création.  
   
 2.  Faites glisser une dimension vers la zone de filtre et placez-la sur la première cellule de la colonne **Dimension** .  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65573653"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Pour définir un paramètre de requête dans MDX en mode Requête  
   
-1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur un dataset créé à partir d’un type de source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puis cliquez sur **Requête**. Le Concepteur de requêtes MDX s'ouvre en mode Création.  
+1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur un dataset créé à partir d’un type de source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puis cliquez sur **Requête**. Le Concepteur de requêtes MDX s'ouvre en mode Création.  
   
 2.  Dans la barre d'outils, cliquez sur **Création** pour passer au mode Requête.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65573653"
      Pour afficher le dataset qui fournit des valeurs disponibles pour le paramètre de rapport, cliquez avec le bouton droit sur tout espace vide dans le volet des données de rapport, puis cliquez sur **Afficher les datasets masqués**. Le volet des données de rapport affiche tous les datasets dans le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de connexion Analysis Services pour MDX (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Interface utilisateur du Concepteur de requêtes MDX Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Interface utilisateur du concepteur de requêtes MDX Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

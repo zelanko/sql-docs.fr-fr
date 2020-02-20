@@ -16,10 +16,10 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570868"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>Méthode ConfigurationSetting - InitializeReportServer
@@ -47,7 +47,7 @@ public void InitializeReportServer(string InstallationID,
  *ExtendedErrors[]*  
  [out] Tableau de chaînes contenant les erreurs supplémentaires retournées par l'appel.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
@@ -60,7 +60,7 @@ public void InitializeReportServer(string InstallationID,
  Si la propriété [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) du serveur de rapports a la valeur **true** quand la méthode InitializeReportServer est appelée, la méthode aboutit sans essayer de chiffrer la clé de chiffrement.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

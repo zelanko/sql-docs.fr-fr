@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893455"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Compteurs de performances - Service web MSRS 2011, objets de performance
@@ -33,7 +33,7 @@ ms.locfileid: "68893455"
   
  Pour plus d’informations sur les compteurs de performances en mode SharePoint, consultez [Compteurs de performances du service Web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint &#40;mode SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Compteurs de performance du service Web MSRS 2011](#bkmk_webservice)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68893455"
 |**Total des échecs de traitement**|Nombre d'erreurs de traitement des requêtes pour le service Web du serveur de rapports.|  
 |**Total des threads rejetés**|Nombre total de threads rejetés pour le traitement asynchrone, puis gérés comme processus synchrones dans le même thread. Chaque source de données est traitée sur un thread. Si le volume de threads dépasse la capacité, les threads sont rejetés pour le traitement asynchrone et sont traités ensuite en série.|  
 |**Total des rapports exécutés**|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
-|**Nombre total de demandes**|Nombre total des demandes envoyées au serveur de rapports après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
+|**Total de requêtes**|Nombre total des demandes envoyées au serveur de rapports après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
   
 ##  <a name="bkmk_windowsservice"></a> Compteurs de performance du service Windows MSRS 2011  
  L'objet de performance **MSRS 2011 Windows Service** contrôle le service Windows du serveur de rapports. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement des rapports initialisé via des opérations planifiées. Les opérations planifiées peuvent englober l'abonnement et la remise, les instantanés d'exécution de rapport et l'historique de rapport. Lorsque vous configurez ce compteur, vous pouvez l'appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionner des instances spécifiques.  
@@ -107,7 +107,7 @@ ms.locfileid: "68893455"
 |**Total des échecs de traitement**|Nombre d'erreurs de traitement des demandes dans le service Windows du serveur de rapports.|  
 |**Total des threads rejetés**|Nombre total de threads rejetés pour le traitement asynchrone, puis gérés comme processus synchrone dans le même thread. En cas de charge modérée ou élevée, ce compteur augmente régulièrement.|  
 |**Total des rapports exécutés**|Nombre total de rapports exécutés.|  
-|**Nombre total de demandes**|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est remis à zéro lorsque le domaine d'application se recycle.|  
+|**Total de requêtes**|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est remis à zéro lorsque le domaine d'application se recycle.|  
 |**Total des mises à jour d’instantanés**|Nombre total de mises à jour d'instantanés d'exécution de rapport.|  
   
 ##  <a name="bkmk_powershell"></a> Utiliser des applets de commande PowerShell pour retourner des listes  
@@ -125,7 +125,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Compteurs de performances du service Web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint &#40;mode SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
- [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [Compteurs de performances du service web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint &#40;mode SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [Compteurs de performances pour des objets de performances ReportServer:Service  et ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

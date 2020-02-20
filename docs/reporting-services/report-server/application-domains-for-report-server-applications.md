@@ -12,10 +12,10 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574795"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domaines d'application des applications du serveur de rapports
@@ -36,7 +36,7 @@ ms.locfileid: "65574795"
   
  Le tableau suivant résume le comportement du recyclage de domaine d'application en réponse à ces événements :  
   
-|Événement|Description de l'événement|S'applique à|Configurable|Description de l'opération de recyclage|  
+|Événement|Description de l'événement|S’applique à|Configurable|Description de l'opération de recyclage|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |Opérations de recyclage planifiées qui se produisent à des intervalles prédéfinis|Par défaut, les domaines d'application sont recyclés toutes les 12 heures.<br /><br /> Les opérations de recyclage planifiées sont fréquentes pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] qui favorisent l'intégrité de l'ensemble du processus.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Oui. Le paramètre de configuration**RecycleTime** du fichier RSReportServer.config détermine l'intervalle de recyclage.<br /><br /> **MaxAppDomainUnloadTime** définit le temps d'attente pendant lequel le traitement en arrière-plan est autorisé à s'effectuer.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gère l'opération de recyclage pour le service Web et le Gestionnaire de rapports.<br /><br /> Pour l'application de traitement en arrière-plan, le serveur de rapports crée un domaine d'application des nouveaux travaux ayant démarré à partir de planifications. Les travaux actifs sont autorisés à terminer leur exécution dans le domaine d'application actuel jusqu'à l'expiration du délai.|  
 |Modifications de configuration sur le serveur de rapports|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recycle les domaines d'application en réponse aux modifications du fichier RSReportServer.config.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Non.|Vous ne pouvez pas empêcher les opérations de recyclage d'avoir lieu. Toutefois, les opérations de recyclage qui se produisent en réponse à des modifications de configuration sont gérées de la même façon que les opérations de recyclage planifiées. Des domaines d'application sont créés pour les nouvelles requêtes tandis que les requêtes et travaux actifs finissent de s'exécuter dans le domaine d'application actuel.|  
@@ -56,7 +56,7 @@ ms.locfileid: "65574795"
   
  Les domaines d'application du service Web Report Server, du Gestionnaire de rapports et de l'application de traitement en arrière-plan peuvent être recyclés ensemble ou individuellement, selon les circonstances dans lesquelles le recyclage se produit :  
   
--   Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] affectent uniquement les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] : service Web Report Server et Gestionnaire de rapports. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] recycle les domaines d'application si des modifications sont apportées aux fichiers qu'il surveille. Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] sont généralement indépendantes des opérations de recyclage de l'application de traitement en arrière-plan.  
+-   Les opérations de recyclage lancées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] affectent uniquement les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] : Service web Report Server et Gestionnaire de rapports. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] recycle les domaines d'application si des modifications sont apportées aux fichiers qu'il surveille. Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] sont généralement indépendantes des opérations de recyclage de l'application de traitement en arrière-plan.  
   
 -   En règle générale, les opérations de recyclage débutées par le serveur de rapports affectent le service Web Report Server, le Gestionnaire de rapports et l'application de traitement en arrière-plan. Les opérations de recyclage se produisent en réponse aux modifications des paramètres de configuration et aux redémarrages du service.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65574795"
   
  Le tableau suivant décrit ces éléments.  
   
-|Élément|S'applique à|Définition|  
+|Élément|S’applique à|Définition|  
 |-------------|----------------|----------------|  
 |**RecycleTime**|Tous les trois domaines d'application de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Spécifie la fréquence à laquelle les domaines d'application sont recyclés. La planification du recyclage par défaut est conforme au modèle de 12 heures adopté généralement pour le recyclage de domaine d’application [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Au moment prévu, l'ensemble des nouvelles requêtes est transmis à une nouvelle instance du domaine d'application. Les requêtes actives dans l'instance d'origine sont autorisées à terminer leur exécution. Une fois tous les processus terminés, l'instance d'origine est supprimée et la nouvelle instance devient la seule et unique instance active du domaine d'application.<br /><br /> La valeur par défaut est 720 minutes.|  
 |**MaxAppDomainUnloadTime**|Un domaine d'application de traitement en arrière-plan uniquement|Par défaut, un serveur de rapports alloue un délai d'attente de 30 minutes, durant lequel un domaine d'application est autorisé à s'arrêter au cours d'une opération de recyclage. Si les travaux en cours de traitement ne peuvent pas s'accomplir dans le délai imparti (ou si un travail prend plus de temps que ce qui a été accordé), l'instance du domaine d'application est redémarrée immédiatement. Tous les travaux inachevés prennent fin.<br /><br /> Pour plus d’informations sur l’état ou l’annulation des travaux qui s’exécutent sur le serveur de rapports, consultez [Annuler les travaux du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md).|  

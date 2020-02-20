@@ -9,10 +9,10 @@ ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63129739"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
@@ -20,7 +20,7 @@ Le modèle de données [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-l
   
 Vous pouvez importer les données de deux types de sources :   
   
-* **Fichiers Excel locaux**: sélectionnez un document Excel, puis la ou les feuilles de calcul à importer. Après l’importation, les données sont stockées dans la définition du rapport mobile. Pour actualiser les données provenant du fichier Excel d’origine, utilisez la commande **Actualiser les données** dans le coin supérieur droit de l’onglet [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. En savoir plus sur la [préparation des données Excel pour les rapports mobiles SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
+* **Fichiers Excel locaux** : sélectionnez un document Excel, puis la ou les feuilles de calcul à importer. Après l’importation, les données sont stockées dans la définition du rapport mobile. Pour actualiser les données provenant du fichier Excel d’origine, utilisez la commande **Actualiser les données** dans le coin supérieur droit de l’onglet [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Données**. En savoir plus sur la [préparation des données Excel pour les rapports mobiles SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
 * **Jeux de données partagés de l’Éditeur de rapports mobiles SQL Server** : parcourez la liste des jeux de données publiés sur le serveur et sélectionnez ceux à ajouter au rapport mobile. Les rapports mobiles basés sur les données du serveur restent toujours connectés aux jeux de données du serveur d’origine et reflètent l’état des données sur le serveur. Consultez la [liste des sources de données prises en charge](../report-data/data-sources-supported-by-reporting-services-ssrs.md).   
   
@@ -35,9 +35,9 @@ Chaque élément de l’Éditeur de rapports mobiles SQL Server contient un ou p
 Le composant d’exécution du rapport mobile fournit les valeurs agrégées de la jauge, selon les sélections de l’utilisateur. Notez que la valeur de comparaison de la même instance Jauge radiale peut être liée à un champ d’un autre dataset.   
   
 ### <a name="see-also"></a>Voir aussi  
--  [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+-  [Préparer des données pour des rapports mobiles Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
 - [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-- [Get data from shared datasets](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)
+- [Obtenir des données de jeux de données partagés](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)
 - [Conserver la mise en forme des dates pour Analysis Services dans les rapports mobiles](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 
   
   

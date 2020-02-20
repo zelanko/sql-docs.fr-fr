@@ -9,16 +9,16 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7044e079ddf6aa9ce322a742a78aa83059efca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580282"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des échelles sur une jauge (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une échelle de jauge correspond à la plage de nombres, limités par une valeur minimale et une valeur maximale, indiqués sur une jauge. En général, une échelle de jauge contient des étiquettes et des graduations qui permettent de lire avec précision la valeur indiquée par le pointeur de la jauge. Une échelle de jauge est la plupart du temps associée à un ou plusieurs pointeurs de jauge. Plusieurs échelles sont possibles sur une même jauge.  
   
- ![Vue d’ensemble des éléments sur une échelle de jauge](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Vue d’ensemble des éléments sur une échelle de jauge")  
+ ![Vue d'ensemble d'éléments sur une échelle de jauge](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Vue d'ensemble d'éléments sur une échelle de jauge")  
   
  Contrairement au graphique sur lequel plusieurs groupes sont définis, la jauge affiche seulement une valeur. Vous devez définir les valeurs minimale et maximale de l'échelle. Les intervalles sont calculés automatiquement en fonction des valeurs spécifiées pour le minimum et le maximum.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65580282"
   
  Le rayon de l'échelle correspond à la distance qui sépare le centre de la jauge du milieu de la barre de l'échelle. La valeur du rayon de l'échelle est mesurée en pourcentage du diamètre de la jauge. La valeur du rayon de l'échelle doit, de préférence, être inférieure à 35. Si vous spécifiez une valeur supérieure à 35, l'échelle risque d'être représentée à l'extérieur des limites de la jauge. L'illustration suivante montre comment le rayon de l'échelle est mesuré, par rapport au diamètre de la jauge, sur la barre de l'échelle.  
   
- ![Rayon de l’échelle par rapport à diamètre de la jauge](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Rayon de l’échelle par rapport au diamètre de la jauge")  
+ ![Rayon de l'échelle par rapport au diamètre de la jauge](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Rayon de l'échelle par rapport au diamètre de la jauge")  
   
  L'angle de début correspond à l'angle de rotation, entre 0 et 360, auquel l'échelle commencera. La position zéro (0) se trouve en bas de la jauge et l'angle de début pivote dans le sens des aiguilles d'une montre. Par exemple, l'échelle commence à la position 9 heures avec un angle de début de 90 degrés.  
   

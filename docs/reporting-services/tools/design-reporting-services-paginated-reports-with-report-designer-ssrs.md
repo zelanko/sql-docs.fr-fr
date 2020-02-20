@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577869"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190441"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Concevoir des rapports paginés Reporting Services à l’aide du Concepteur de rapports (SSRS)
 
@@ -44,7 +44,7 @@ Les projets de rapports fonctionnent comme des conteneurs de définitions de rap
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est un outil client. Vous pouvez tester votre solution de création de rapports localement sur votre ordinateur, la déployer dans un environnement de test pour tester la solution de serveur, puis la déployer dans un environnement de production. Après le déploiement, vérifiez que les extensions de traitement des sources de données et les informations d'identification de la source de données sont configurées pour l'environnement de serveur de rapports. Vous pouvez utiliser le gestionnaire de configuration pour gérer les propriétés de différents déploiements. Pour plus d’informations, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Datasets partagés  
  Utilisez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour définir et déployer des datasets partagées pour une solution de création de rapports. Les datasets partagés peuvent être déployés indépendamment des autres éléments dans un projet à l'aide de les propriétés de **OverwriteDatasets** et de **TargetDatasetFolder** . Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -90,7 +90,7 @@ Les rapports paginés sont des fichiers qui sont stockés dans un projet de rapp
  Les parties de rapports peuvent être déployées indépendamment des autres éléments dans un projet à l'aide de **TargetReportPartFolder** et d'autres propriétés. Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 ##  <a name="bkmk_Resources"></a> Ressources  
- Vous pouvez ajouter à votre projet des fichiers liés à votre rapport mais pas traités par le serveur de rapports. Par exemple, vous pouvez ajouter des images pour des illustrations ou des fichiers de formes ESRI pour des données spatiales. Pour plus d'informations, consultez [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
+ Vous pouvez ajouter à votre projet des fichiers liés à votre rapport mais pas traités par le serveur de rapports. Par exemple, vous pouvez ajouter des images pour des illustrations ou des fichiers de formes ESRI pour des données spatiales. Pour plus d’informations, consultez [Ressources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
 ##  <a name="bkmk_ReportLayout"></a> Mise en page de rapport paginé  
  Pour créer une mise en page de rapport, faites glisser des éléments de rapport et des régions de données de la boîte à outils vers l'aire de conception, puis réorganisez-les pour créer la mise en page du rapport. Faites glisser les champs du dataset vers les éléments de l'aire de conception pour ajouter des données au rapport. Pour organiser des données en groupes dans une région de données de tableau matriciel, faites glisser les champs du dataset vers le volet de regroupement. Étant donné que les outils de création de rapport sont essentiellement le moyen de créer des définitions de rapport, l'approche de création de rapports est assez similaire entre le Générateur et le Concepteur de rapports.  

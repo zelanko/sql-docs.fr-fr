@@ -16,10 +16,10 @@ ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aac5b7a237c5aa21b79c1204d7d4560736da56d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580964"
 ---
 # <a name="configurationsetting-method---setunattendedexecutionaccount"></a>Méthode ConfigurationSetting - SetUnattendedExecutionAccount
@@ -47,7 +47,7 @@ public void SetUnattendedExecutionAccount (string UserName,
  *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
@@ -56,7 +56,7 @@ public void SetUnattendedExecutionAccount (string UserName,
  Il est impossible d’utiliser la méthode SetUnattendedExecutionAccount pour exécuter des exécutions sans assistance dans le contexte du service Windows de serveur de rapports.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

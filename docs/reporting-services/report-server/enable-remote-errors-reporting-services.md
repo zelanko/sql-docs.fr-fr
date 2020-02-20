@@ -12,16 +12,16 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593873"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Activer les erreurs distantes (Reporting Services)
   Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété **EnableRemoteErrors** de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Propriétés système de Report Server](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Activer les erreurs distantes pour le mode SharePoint](#bkmk_sharepoint)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73593873"
   
 3.  Cliquez sur **Avancé** pour ouvrir la page de propriétés. Pour plus d’informations, consultez [Propriétés du serveur &#40;page Avancé&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md).  
   
-4.  Dans la section **sécurité** , dans **EnableRemoteErrors**, sélectionnez **true**.  
+4.  Dans la section **Sécurité**, dans **EnableRemoteErrors**, sélectionnez **True**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

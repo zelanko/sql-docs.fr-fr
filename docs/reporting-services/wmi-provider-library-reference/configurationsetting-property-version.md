@@ -11,14 +11,14 @@ ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 60c7c5b3e49dff88ff6f55c3f97052c7ae38ef92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570153"
 ---
 # <a name="configurationsetting-property---version"></a>Propriété ConfigurationSetting - Version
-  Retourne la version du serveur de rapports au format Major.Minor.Build.Revision. En lecture seule.  
+  Retourne la version du serveur de rapports au format Major.Minor.Build.Revision. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ public string Version;
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

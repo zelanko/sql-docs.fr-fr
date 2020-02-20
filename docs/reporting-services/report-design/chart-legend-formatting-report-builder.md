@@ -26,16 +26,16 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3306bc4f093a3f05c3caf37d212a8e585ac201c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581670"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Légende de graphique - Mise en forme (Générateur de rapports)
   La légende du graphique contient des descriptions pour chaque catégorie d'un graphique. Une légende contient toujours un ou plusieurs éléments de légende. Chaque élément de légende consiste en une zone colorée qui représente les séries et une chaîne de texte qui décrit ces dernières, comme indiqué dans l'illustration ci-dessous.  
   
- ![Diagramme d’une légende de graphique](../../reporting-services/report-design/media/rs-legenddiagram.gif "Diagramme d’une légende de graphique")  
+ ![Diagramme d'une légende de graphique](../../reporting-services/report-design/media/rs-legenddiagram.gif "Diagramme d'une légende de graphique")  
   
  Un élément de légende est relié à une série individuelle sur le graphique, à l'exception des graphiques à base de formes, où la légende est reliée aux points de données individuels. Le graphique ajoute automatiquement des éléments à la légende en fonction des séries générées à partir de vos données.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "65581670"
   
  Par défaut, le texte de légende n'est pas optimisé pour s'ajuster à la zone de légende. Pour que le texte de légende s’adapte automatiquement à l’espace alloué, affectez la valeur **False** à la propriété AutoFitTextDisabled et définissez la propriété MinFontSize à la plus petite taille de police que vous pensez être présentable tout en permettant l’optimisation de la légende.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Boîte de dialogue Propriétés de la légende, Général &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
  [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Masquer des éléments de légende dans le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [Masquer des éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

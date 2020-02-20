@@ -9,10 +9,10 @@ ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577782"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
@@ -29,7 +29,7 @@ ms.locfileid: "65577782"
   
 2.  Cliquez avec le bouton droit sur la ligne de données dans la table, pointez sur **Ajouter un groupe** > **Groupe parent** pour ajouter un groupe de tables externe.  
   
-     ![Sélectionner Groupe parent](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Sélectionner Groupe parent")  
+     ![Sélectionner le groupe parent](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Sélectionner le groupe parent")  
   
 3.  Entrez la formule suivante dans la zone d'expression **Regrouper par** , puis cliquez sur **OK** pour ajouter le groupe parent.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65577782"
   
 5.  Cliquez avec le bouton droit sur **Groupe 1** dans la section **Groupes de lignes** , puis cliquez sur **Propriétés du groupe**.  
   
-     ![Afficher les propriétés du groupe](../../reporting-services/report-builder/media/groupproperties-updated.png "Afficher les propriétés de groupe")  
+     ![Afficher les propriétés de groupe](../../reporting-services/report-builder/media/groupproperties-updated.png "Afficher les propriétés de groupe")  
   
 6.  Dans la page **Tri** de la boîte de dialogue **Propriétés du groupe** , sélectionnez l'option de tri par défaut et cliquez sur **Supprimer**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65577782"
   
 7.  Dans la page **Sauts de page** , cliquez sur **Entre chaque instance d'un groupe** , puis cliquez sur **OK**.  
   
-     ![Définir des sauts de page](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Définir des sauts de page")  
+     ![Définir les sauts de page](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Définir les sauts de page")  
   
 8.  Enregistrez le rapport. Lors de l'exportation vers Excel, plusieurs feuilles de calcul sont créées, chacune contenant un maximum de 65 000 lignes.  
   

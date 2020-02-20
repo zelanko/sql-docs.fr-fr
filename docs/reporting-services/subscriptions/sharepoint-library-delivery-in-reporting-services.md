@@ -13,10 +13,10 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578067"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Remise à une bibliothèque SharePoint dans Reporting Services
@@ -68,10 +68,10 @@ ms.locfileid: "65578067"
  Nom et extension de fichier  
  Spécifiez le nom et l'extension de fichier du rapport tel que vous souhaitez qu'ils apparaissent dans la bibliothèque cible. Si vous ne spécifiez d'extension de fichier, le serveur de rapports va en créer une basée sur le format de sortie du rapport. Cette valeur est requise. Le nom de fichier ne doit pas inclure les caractères suivants : : \ / * ? " < > | # { } %  
   
- Titre  
+ Intitulé  
  Spécifie une propriété **Titre** facultative pour le rapport dans la bibliothèque cible. Il s'agit d'une propriété standard pour tous les éléments stockés dans une bibliothèque. Les utilisateurs peuvent choisir de montrer ou de masquer cette propriété lorsqu'ils consultent le contenu de la bibliothèque sur un site SharePoint.  
   
- Chemin d'accès  
+ Path  
  Spécifie une URL complète vers la bibliothèque SharePoint, notamment l'application et le site Web SharePoint. Par exemple : `https://mySharePointWeb/MySite/MyDocLib`, où `https://mySharePointWeb` indique l’application web, « MySite » est le site SharePoint et « MyDocLib » est la bibliothèque SharePoint où est remis le rapport.  
   
  Vous ne pouvez pas spécifier une page, un site ou une liste. Le conteneur cible doit être une bibliothèque dans le même site ou batterie de serveurs.  

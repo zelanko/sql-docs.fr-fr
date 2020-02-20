@@ -16,10 +16,10 @@ ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e40c53c5c46d37a996805105563b809ad278b9a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570799"
 ---
 # <a name="configurationsetting-method---deleteencryptionkey"></a>Méthode ConfigurationSetting - DeleteEncryptionKey
@@ -47,14 +47,14 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  *ExtendedErrors[]*  
  [out] Tableau de chaînes contenant les erreurs supplémentaires retournées par l'appel.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre HRESULT indiquant si l'appel de la méthode a abouti ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
  La méthode *DeleteEncryptionKey* supprime les entrées de la table de clés pour les serveurs de rapports qui ont accès aux informations sécurisées dans la base de données du serveur de rapports. Si le paramètre *InstallationID* spécifié ne correspond pas à un ID d'installation figurant dans la base de données, la méthode retourne une erreur.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

@@ -1,6 +1,6 @@
 ---
 title: Épingler des éléments de rapport paginé à des tableaux de bord Power BI - Reporting Services | Microsoft Docs
-ms.date: 12/05/2018
+ms.date: 01/14/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892002"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75952478"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Épingler des éléments de rapport paginé Reporting Services à des tableaux de bord dans Power BI
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] local à un tableau de bord dans le service [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], sous la forme d’une nouvelle vignette.   Pour que vous puissiez épingler des éléments, il faut que votre administrateur intègre au préalable votre serveur de rapports à Azure Active Directory et [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
@@ -40,7 +40,7 @@ Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion
   
 -   Vous devez configurer les rapports pour les informations d’identification stockées si vous voulez que l’élément épinglé s’actualise.  Quand vous épinglez un élément, un abonnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est automatiquement créé pour gérer l’actualisation des données de l’élément sur le tableau de bord.  Si le rapport n’utilise pas d’informations d’identification stockées, une fois l’abonnement actif, la page **Mes abonnements** affiche un message d’erreur similaire à celui-ci.  
   
-    "Erreur de remise Power BI : tableau de bord : IT Spend Analysis Sample, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Elles ne sont pas stockées dans... »
+    « Erreur de livraison Power BI : tableau de bord : Exemple Analyse des dépenses informatiques, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Elles ne sont pas stockées dans... »
  
     Consultez la section « Configurer des informations d’identification stockées pour une source de données propre à un rapport (mode natif) » dans [Stocker les informations d’identification dans une source de données Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
@@ -56,7 +56,7 @@ Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion
   
 ##  <a name="bkmk_to_pin"></a> Pour épingler un élément de rapport  
   
-1. Vérifiez que vous êtes connecté à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Dans le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], sélectionnez l’élément de menu **Mes paramètres** et connectez-vous. Pour plus d'informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](my-settings-for-power-bi-integration-web-portal.md).
+1. Vérifiez que vous êtes connecté à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], sélectionnez l’élément de menu **Mes paramètres** et connectez-vous. Pour plus d'informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -96,44 +96,46 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
   
 ##  <a name="bkmk-troubleshoot"></a> Résoudre les problèmes  
   
--   **Aucun bouton [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dans la barre d’outils de la visionneuse de rapports :** Ce message indique que le serveur de rapports n’a pas été intégré à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Pour plus d’informations, consultez [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **Pas de bouton [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dans la barre d’outils de la visionneuse de rapports :**  Ce message indique que le serveur de rapports n’a pas été intégré à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Pour plus d’informations, consultez [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-- **Impossible d’épingler**: quand vous tentez d’épingler un élément, le message d’erreur suivant s’affiche. Consultez la section [Éléments que vous pouvez épingler](#bkmk_supported_items).  
+- **Impossible d’épingler** : Quand vous tentez d’épingler un élément, le message d’erreur suivant s’affiche : Consultez la section [Éléments que vous pouvez épingler](#bkmk_supported_items).  
   
-      Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+    « Impossible d’épingler : Cette page ne contient aucun élément de rapport que vous puissiez épingler sur [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. »  
   
 -   **Les éléments épinglés affichent des données caduques** dans un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] n’ont pas été mises à jour depuis un certain temps.  Le jeton d’informations d’identification de l’utilisateur a expiré et vous devez vous reconnecter.  L’inscription des informations d’identification de l’utilisateur auprès d’Azure et de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] est valable pendant 90 jours. Dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], cliquez sur **Mes paramètres**. Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
 -   **Les éléments épinglés affichent des données caduques** dans un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] et elle n’ont jamais été actualisées.  Le problème est que le rapport n’est pas configuré pour utiliser des informations d’identification stockées. Un rapport doit utiliser des informations d’identification stockées, car l’action d’épinglage d’un élément de rapport crée un abonnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour gérer la planification de l’actualisation des vignettes. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nécessitent des informations d’identification stockées. La page **Mes abonnements** affiche une message d’erreur similaire à celui-ci :  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    « Erreur de livraison Power BI : tableau de bord : Éléments SSRS, visuel : Image3, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Elles ne sont pas stockées dans la base de données du serveur de rapports ou la source de données de l’utilisateur est configurée pour ne pas exiger d’informations d’identification, mais le compte d’exécution sans assistance n’est pas spécifié. (rsInvalidDataSourceCredentialSetting) »
   
--   **Informations d’identification Power BI expirées :**  vous tentez d’épingler un élément et voyez le message d’erreur suivant s’afficher. Dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], cliquez sur **Mes paramètres** , puis, dans la page Mes paramètres, cliquez sur **Se connecter**. Pour plus d'informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
+-   **Informations d’identification Power BI expirées :**  Vous tentez d’épingler un élément et vous voyez le message d’erreur suivant. Dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], cliquez sur **Mes paramètres** , puis, dans la page Mes paramètres, cliquez sur **Se connecter**. Pour plus d'informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
-        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+    « Impossible d’épingler : Erreur serveur inattendue : Informations d'identification Power BI manquantes, non valides ou expirées. »  
   
--   **Impossible d’épingler**: si vous tentez d’épingler un élément à un tableau de bord qui est en lecture seule, un message d’erreur similaire au suivant s’affiche :  
+-   **Impossible d’épingler** : Si vous tentez d’épingler un élément à un tableau de bord qui est en lecture seule, vous voyez un message d’erreur similaire à celui-ci :  
   
-        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
-  
+    « Erreur de serveur : L’élément « Tableau de bord supprimé 015cf022-8e2f-462e-88e5-75ab0a04c4d0 » est introuvable. (rsItemNotFound) »  
+
+-   **Les vignettes dans les applications Power BI affichent des données obsolètes :** Si vous épinglez un élément de rapport Reporting Services à un tableau de bord, puis que vous distribuez celui-ci dans une application, l’élément de rapport épinglé dans ce tableau de bord ne sera pas mis à jour. 
+
 ##  <a name="bkmk_subscription_management"></a> Gestion des abonnements  
  En plus des problèmes d’abonnement décrits dans la section de dépannage, les informations suivantes vous aideront à gérer les abonnements liés à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
--   **Nom de l’élément modifié :** si un élément de rapport épinglé est renommé ou supprimé, la vignette [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] n’est plus mise à jour et un message d’erreur similaire au suivant s’affiche.  Si vous rétablissez le nom d’origine de l’élément, l’abonnement opère à nouveau et la vignette s’actualise conformément à la planification de celui-ci.  
+-   **Nom de l’élément modifié :** Si un élément de rapport épinglé est renommé ou supprimé, la vignette [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] n’est plus mise à jour et vous voyez un message d’erreur similaire au suivant.  Si vous rétablissez le nom d’origine de l’élément, l’abonnement opère à nouveau et la vignette s’actualise conformément à la planification de celui-ci.  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    « Erreur de livraison Power BI : tableau de bord : Éléments SSRS, visuel : Image1, erreur : Erreur : L’élément de rapport 'Image1' est introuvable. »  
   
-     Vous pouvez également modifier les propriétés de l’abonnement et remplacer le **Nom de l’élément visuel du rapport** par le nom d’élément de rapport approprié. ![changer les éléments visuels utilisés pour l’actualisation de Power BI](../reporting-services/media/ssrs-powerbi-subscription-visual.png "changer les éléments visuels utilisés pour l’actualisation de Power BI")  
+    Vous pouvez également modifier les propriétés de l’abonnement et remplacer le **Nom de l’élément visuel du rapport** par le nom d’élément de rapport approprié. ![modifier le visuel utilisé pour l’actualisation de Power BI](../reporting-services/media/ssrs-powerbi-subscription-visual.png "modifier le visuel utilisé pour l’actualisation de Power BI")  
   
 -   **Supprimer une vignette**. Si vous supprimez une vignette dans [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], l’abonnement associé n’est pas supprimé dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et dans la page **Mes abonnements**. Un message d’erreur similaire au suivant s’affiche. Vous pouvez supprimer l’abonnement  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    « Erreur de livraison Power BI : tableau de bord : Éléments SSRS, visuel : Image3, erreur : L’élément 'Vignette supprimée af7131d9-5eaf-480f-ba45-943a07d19c9f' est introuvable. »  
 
 ## <a name="video"></a>Vidéo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
  [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](my-settings-for-power-bi-integration-web-portal.md)  
  [Tableaux de bord dans Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  

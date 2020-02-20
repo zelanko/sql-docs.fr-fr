@@ -11,10 +11,10 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140477"
 ---
 # <a name="create-the-rsexecrole"></a>Créer le rôle RSExecRole
@@ -59,13 +59,13 @@ ms.locfileid: "67140477"
   
 6.  Ouvrez **Rôles**.  
   
-7.  Cliquez avec le bouton droit sur **Rôles de base de données**, puis sélectionnez **Nouveau rôle de base de données**. Le **rôle de base de données - nouveau** page s’affiche.  
+7.  Cliquez avec le bouton droit sur **Rôles de base de données**, puis sélectionnez **Nouveau rôle de base de données**. La page **Rôle de base de données - Nouveau** s’affiche.  
   
 8.  Dans **Nom du rôle**, tapez **RSExecRole**.  
   
 9. Dans **Propriétaire**, tapez **dbo**.  
   
-10. Sélectionner la page **éléments sécurisables**.  
+10. Sélectionnez la page **Éléments sécurisables**.  
   
 11. Cliquez sur **Rechercher**. La boîte de dialogue **Ajouter des objets** s'affiche. L'option **Objets spécifiques** est sélectionnée par défaut.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67140477"
   
 18. Cliquez sur **OK**, puis à nouveau sur **OK** .  
   
-19. Dans le **Execute** de ligne, dans le **Grant** colonne, sélectionnez la case à cocher.  
+19. Sélectionnez la case à cocher située à l'intersection de la ligne **Exécuter** et de la colonne **Octroyer**.  
   
 20. Répétez ces étapes pour chacune des procédures stockées restantes. **RSExecRole** doit disposer des autorisations d'exécution pour les trois procédures stockées.  
 
@@ -116,7 +116,7 @@ ms.locfileid: "67140477"
   
 7.  Dans Propriétaire, tapez **dbo**.  
   
-8.  Sélectionnez le **éléments sécurisables** page.  
+8.  Sélectionnez la page **Éléments sécurisables**.  
   
 9.  Cliquez sur **Rechercher**. La boîte de dialogue **Ajouter des objets** s'affiche. L'option **Spécifier des objets** est sélectionnée par défaut.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "67140477"
   
 19. Répétez ces étapes pour chacune des procédures stockées restantes. Des autorisations Execute doivent être octroyées à RSExecRole pour les dix procédures stockées.  
   
-20. Toujours dans le **éléments sécurisables** , cliquez sur **recherche** à nouveau. La boîte de dialogue **Ajouter des objets** s'affiche. L'option **Spécifier des objets** est sélectionnée par défaut.  
+20. Toujours dans la page **Éléments sécurisables**, cliquez à nouveau sur **Rechercher**. La boîte de dialogue **Ajouter des objets** s'affiche. L'option **Spécifier des objets** est sélectionnée par défaut.  
   
 21. Cliquez sur **OK**.  
   
@@ -204,15 +204,15 @@ ms.locfileid: "67140477"
   
 2.  Cliquez sur **Base de données**.  
   
-3.  Cliquez sur **Modifier la base de données**.  
+3.  Cliquez sur **Changer la base de données**.  
   
 4.  Cliquez sur **Choisir une base de données de serveur de rapports existante**.  
   
 5.  Entrez le nom de serveur du moteur de base de données. Si vous avez attaché les bases de données du serveur de rapports à une instance nommée, vous devez taper le nom de l’instance au format suivant : \<nom_serveur>\\<nom_instance\>.  
   
-6.  Cliquez sur **Tester la connexion**. Vous devez voir une boîte de dialogue indiquant, « Test de connexion réussi ».
+6.  Cliquez sur **Tester la connexion**. Vous devriez voir une boîte de dialogue indiquant « Test de la connexion réussi ».
   
-7.  Sélectionnez **Ok** pour fermer la boîte de dialogue, puis sélectionnez **suivant**.  
+7.  Sélectionnez **OK** pour fermer la boîte de dialogue, puis **Suivant**.  
   
 8.  Dans Base de données, sélectionnez la base de données du serveur de rapports.  
   

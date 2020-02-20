@@ -1,5 +1,6 @@
 ---
 title: Gérer les propriétaires d’abonnement et exécuter un abonnement - PowerShell | Microsoft Docs
+description: Vous pouvez transférer programmatiquement la propriété d’un abonnement Reporting Services d’un utilisateur à un autre.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -8,17 +9,17 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 04/26/2019
-ms.openlocfilehash: 2a0972f5cd644ed06718791ee20b2c5dfd9a1660
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 01/16/2020
+ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893435"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259327"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gérer les propriétaires d’abonnement et exécuter un abonnement - PowerShell
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 À compter de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez transférer par programmation la propriété d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] d’un utilisateur à un autre. Cette rubrique fournit plusieurs scripts Windows PowerShell que vous pouvez utiliser pour modifier ou simplement dresser la liste des appartenances aux abonnements. Chaque exemple comprend un exemple de syntaxe pour le mode Natif et le mode SharePoint. Une fois que vous avez modifié le propriétaire d'un abonnement, celui-ci s'exécute dans le contexte de sécurité du nouveau propriétaire et le champ User!UserID du rapport affiche la valeur du nouveau propriétaire. Pour plus d’informations sur le modèle objet appelé par les exemples PowerShell, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
@@ -56,23 +57,23 @@ Cette section récapitule les niveaux d'autorisation requis pour utiliser chacun
   
 **Mode natif :**
   
-- Dresser la liste des abonnements : [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sur le rapport ET l’utilisateur est le propriétaire de l’abonnement OU ReadAnySubscription.  
+- Liste des abonnements : [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sur le rapport ET l’utilisateur est le propriétaire de l’abonnement OU ReadAnySubscription.  
   
-- Modifier les abonnements : l'utilisateur doit être membre du groupe BUILTIN\\Administrateurs  
+- Modifier des abonnements : l'utilisateur doit être membre du groupe BUILTIN\\Administrateurs  
   
-- Dresser la liste des enfants : ReadProperties sur Item  
+- Dresser la liste des enfants : ReadProperties on Item  
   
-- Déclencher un événement : GenerateEvents (Système)  
+- Déclencher un événement : GenerateEvents (Système)  
   
  **Mode SharePoint :**
   
-- Dresser la liste des abonnements : ManageAlerts OU [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) sur le rapport ET l’utilisateur est le propriétaire de l’abonnement et il s’agit d’un abonnement planifié.  
+- Liste des abonnements : ManageAlerts OU [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) sur le rapport ET l'utilisateur est le propriétaire de l'abonnement et il s'agit d'un abonnement planifié).  
   
-- Modifier des abonnements : ManageWeb  
+- Modifier des abonnements : ManageWeb  
   
-- Dresser la liste des enfants : ViewListItems  
+- Dresser la liste des enfants : ViewListItems  
   
-- Déclencher l'événement : ManageWeb  
+- Déclencher un événement : ManageWeb  
   
  Pour plus d'informations, consultez [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
@@ -84,7 +85,7 @@ Cette section récapitule les niveaux d'autorisation requis pour utiliser chacun
   
 2. Créez un fichier texte pour chaque script et enregistrez les fichiers dans le dossier c:\scripts. Lorsque vous créez les fichiers .ps1, utilisez le nom mentionné dans chaque exemple de syntaxe de ligne de commande.  
   
-3. Ouvrez une invite de commandes avec des privilèges d'administrateur.  
+3. Ouvrez une invite de commandes avec les privilèges d’administrateur.  
   
 4. Exécutez chaque fichier de script, à l'aide de l'exemple de syntaxe de ligne de commande fourni avec chaque exemple.  
   
@@ -216,7 +217,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  

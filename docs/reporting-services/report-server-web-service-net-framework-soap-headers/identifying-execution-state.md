@@ -14,10 +14,10 @@ ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991589"
 ---
 # <a name="identifying-execution-state"></a>Identification de l'état d'exécution
@@ -37,7 +37,7 @@ ms.locfileid: "62991589"
   
  Le diagramme suivant illustre le chemin d'accès de traitement et de rendu des rapports.  
   
- ![Chemin de traitement/rendu des rapports](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Chemin de traitement/rendu des rapports")  
+ ![Chemin d'accès de traitement/de rendu de rapport](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Chemin d'accès de traitement/de rendu de rapport")  
   
  Pour prendre en charge les fonctions décrites ci-dessus, la méthode de rendu SOAP a été divisée en plusieurs méthodes qui comprennent des phases d'initialisation de l'exécution, de traitement et de rendu.  
   

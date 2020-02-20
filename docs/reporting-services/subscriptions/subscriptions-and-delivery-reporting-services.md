@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578032"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Abonnements et remise (Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65578032"
   
  Vous pouvez créer plusieurs abonnements pour un seul rapport afin de varier les options d'abonnement. Vous pouvez ainsi spécifier différentes valeurs de paramètres pour générer trois versions du même rapport, par exemple un rapport des ventes pour la région Ouest, un autre pour la région Est et un autre pour toutes les ventes.  
   
- ![exemple de flux d’abonnement ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "exemple de flux d’abonnement ssrs")  
+ ![exemple de flux d'abonnement ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "exemple de flux d'abonnement ssrs")  
   
  Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65578032"
   
 -   [Abonnements standard et pilotés par les données](#bkmk_standard_and_datadriven)  
   
--   [Conditions requises pour les abonnements](#bkmk_subscription_requirements)  
+-   [Exigences en matière d’abonnement](#bkmk_subscription_requirements)  
   
 -   [Extensions de remise](#bkmk_delivery_extensions)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65578032"
 ##  <a name="bkmk_standard_and_datadriven"></a> Abonnements standard et pilotés par les données  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge deux types d’abonnements : les abonnements **standard** et les abonnements **pilotés par les données**. Les abonnements standard sont créés et gérés par des utilisateurs individuels. Un abonnement standard se compose de valeurs statiques qui ne peuvent pas changer au cours du traitement. Pour chaque abonnement standard, il y a exactement un jeu d'options de présentation des rapports, d'options de remise et de paramètres de rapport.  
   
- Les abonnements pilotés par les données obtiennent les informations d'abonnement au moment de l'exécution en interrogeant une source de données externe qui fournit les valeurs utilisées pour spécifier un destinataire, des paramètres de rapport ou un format d'application. Vous pouvez utiliser des abonnements pilotés par les données si la taille de votre liste de destinataires est très importante ou si vous voulez modifier la sortie du rapport pour chaque destinataire. Pour cela, vous devez savoir créer des requêtes et comprendre comment les paramètres sont utilisés. En règle générale, les administrateurs de serveur de rapports se chargent de créer et de gérer ces abonnements. Pour plus d'informations, consultez les documents suivants :  
+ Les abonnements pilotés par les données obtiennent les informations d'abonnement au moment de l'exécution en interrogeant une source de données externe qui fournit les valeurs utilisées pour spécifier un destinataire, des paramètres de rapport ou un format d'application. Vous pouvez utiliser des abonnements pilotés par les données si la taille de votre liste de destinataires est très importante ou si vous voulez modifier la sortie du rapport pour chaque destinataire. Pour cela, vous devez savoir créer des requêtes et comprendre comment les paramètres sont utilisés. En règle générale, les administrateurs de serveur de rapports se chargent de créer et de gérer ces abonnements. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "65578032"
 |Informations d'identification stockées|Pour créer un abonnement, il faut que le rapport utilise des informations d'identification stockées ou qu'il n'en utilise pas du tout pour être en mesure d'extraire les données au moment de l'exécution. Vous ne pouvez pas vous abonner à un rapport configuré pour utiliser les informations d'identification empruntées ou déléguées à partir de l'utilisateur actuel pour vous connecter à une source de données externe. Les informations d'identification stockées peuvent être un compte Windows ou un compte d'utilisateur de base de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Vous devez être autorisé à afficher le rapport et à créer des abonnements individuels. L'option**Événements programmés et remise du rapport** doit être activée sur le serveur de rapports. Pour plus d’informations, consultez [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |Valeurs dépendantes de l'utilisateur dans un rapport|Pour les abonnements standard uniquement, vous pouvez créer des abonnements à des rapports qui intègrent des informations de compte d'utilisateur dans un filtre ou sous forme de texte qui apparaît dans le rapport. Dans le rapport, le nom de compte d’utilisateur est spécifié par le biais d’une expression **User!UserID** qui correspond à l’utilisateur actuel. Lorsque vous créez un abonnement, l'utilisateur qui crée l'abonnement est considéré comme l'utilisateur actuel.|  
 |Aucune sécurité de l'élément de modèle|Vous ne pouvez pas vous abonner à un rapport du Générateur de rapports qui utilise un modèle comme source de données si le modèle contient des paramètres de sécurité de l'élément de modèle. Seuls les rapports qui utilisent la sécurité de l'élément de modèle sont inclus dans cette restriction.|  
-|Valeurs de paramètre|Si le rapport utilise des paramètres, une valeur de paramètre doit être spécifiée avec le rapport lui-même ou dans l'abonnement que vous définissez. Si des valeurs par défaut ont été définies dans le rapport, vous pouvez configurer la valeur de paramètre pour les utiliser.|  
+|Valeurs de paramètres|Si le rapport utilise des paramètres, une valeur de paramètre doit être spécifiée avec le rapport lui-même ou dans l'abonnement que vous définissez. Si des valeurs par défaut ont été définies dans le rapport, vous pouvez configurer la valeur de paramètre pour les utiliser.|  
   
 ##  <a name="bkmk_delivery_extensions"></a> Extensions de remise  
  Les abonnements sont traités sur le serveur de rapports et sont distribués via les extensions de remise déployées sur le serveur. Par défaut, vous pouvez créer des abonnements qui envoient des rapports vers un dossier partagé ou une adresse de messagerie. Si le serveur de rapports est configuré en mode intégré SharePoint, vous pouvez également envoyer un rapport vers une bibliothèque SharePoint.  

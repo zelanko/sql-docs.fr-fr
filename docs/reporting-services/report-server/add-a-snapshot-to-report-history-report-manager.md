@@ -1,5 +1,5 @@
 ---
-title: Ajouter un instantané à l’historique de rapport-Reporting Services | Microsoft Docs
+title: Ajouter un instantané à un historique de rapport - Reporting Services | Microsoft Docs
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -9,10 +9,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
 ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251930"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Ajouter un instantané à un historique de rapport
@@ -31,7 +31,7 @@ Les instantanés de rapport ne sont pas enregistrés dans un format de rendu par
   
 3. Cliquez sur **Nouvel instantané**. Un instantané est créé dans la colonne **Lors de l’exécution** .  
     > [!NOTE]
-    > Pour permettre la création d’instantanés, l’administrateur doit configurer l’historique de rapport pour **permettre la création manuelle de l’historique**. Pour plus d’informations, consultez [Limiter l’historique de rapport &#40;Gestionnaire de rapports&#41;](../reports/limit-report-history-report-manager.md).
+    > Pour permettre la création d’instantanés, l’administrateur doit configurer l’historique de rapport sur **Autoriser la création manuelle de l’historique**. Pour plus d’informations, consultez [Limiter l’historique de rapport &#40;Gestionnaire de rapports&#41;](../reports/limit-report-history-report-manager.md).
 
 4. Cliquez sur **Appliquer**.
   
@@ -57,7 +57,7 @@ Les instantanés de rapport ne sont pas enregistrés dans un format de rendu par
   
 3. Cliquez sur **Options d’instantanés**.  
   
-4. Cochez la case **Utilisez la planification ci-dessous pour ajouter des instantanés à l’historique de rapport**. Effectuez l'une des opérations suivantes :  
+4. Cochez la case **Utilisez la planification ci-dessous pour ajouter des instantanés à l’historique de rapport**. Effectuez une des opérations suivantes :  
   
     - Sélectionnez **Planification spécifique aux rapports**. Indiquez les détails de la planification, sélectionnez des dates de début et de fin pour cette opération, puis cliquez sur **OK**.  
 
@@ -78,39 +78,39 @@ Les instantanés de rapport ne sont pas enregistrés dans un format de rendu par
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Pour ajouter manuellement des instantanés à un historique de rapport
   
-1. Dans le portail Web, accédez à l’élément dont vous souhaitez afficher l’historique, puis cliquez dessus avec le bouton droit.  
+1. Dans le portail web, accédez à l’élément dont vous voulez afficher l’historique, puis cliquez dessus avec le bouton droit.  
   
 2. Dans le menu déroulant, sélectionnez **Gérer**.  
   
-3. Sélectionnez l’onglet instantanés d' **historique** .  
+3. Sélectionnez l’onglet **Instantanés d’historique**.  
   
-4. Sur la page instantanés d' **historique** , sélectionnez le **Nouvel instantané d’historique**. Un nouvel instantané est créé et s’affiche en dessous de la date et de l’heure actuelles dans la colonne **créé** .  
+4. Dans la page **Instantanés d’historique**, sélectionnez **Nouvel instantané d’historique**. Un nouvel instantané est créé et s’affiche en dessous avec la date et l’heure actuelles dans la colonne **Créé**.  
   
     > [!NOTE]
-    > Pour permettre la création d’instantanés, l’administrateur doit configurer l’historique de rapport pour **permettre la création manuelle de l’historique**. Pour plus d’informations, consultez [limiter l’historique de rapport (portail Web)](../../reporting-services/reports/limit-report-history-report-manager.md).
+    > Pour permettre la création d’instantanés, l’administrateur doit configurer l’historique de rapport sur **Autoriser la création manuelle de l’historique**. Pour plus d’informations, consultez [Limiter l’historique de rapport (portail web)](../../reporting-services/reports/limit-report-history-report-manager.md).
 
-## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>Pour ajouter des instantanés via une planification à l’historique de rapport
+## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>Pour ajouter des instantanés via une planification à l'historique de rapport
 
-1. Dans le portail Web, accédez à l’élément dont vous souhaitez afficher l’historique, puis cliquez dessus avec le bouton droit.  
+1. Dans le portail web, accédez à l’élément dont vous voulez afficher l’historique, puis cliquez dessus avec le bouton droit.  
   
 2. Dans le menu déroulant, sélectionnez **Gérer**.  
   
-3. Sélectionnez l’onglet instantanés d' **historique** .  
+3. Sélectionnez l’onglet **Instantanés d’historique**.  
   
-4. Sur la page instantanés d' **historique** , sélectionnez le bouton **calendrier et paramètres** .  
+4. Dans la page **Instantanés d’historique**, sélectionnez le bouton **Planification et paramètres**.  
   
-5. Dans la section **planification** , sélectionnez l’une des options ci-dessous, ou les deux, si au moins un choix n’est pas déjà sélectionné:
+5. Dans la section **Planification**, sélectionnez l’une des options ci-dessous, ou les deux, si au moins un choix n’est pas déjà sélectionné :
     - **Créer des instantanés d'historique selon une planification**.  
     - **Autoriser les utilisateurs à créer manuellement des instantanés.**  
   
-6. Dans la section **avancé** , sélectionnez **conserver tous les instantanés d’historique**.  
+6. Dans la section **Avancé**, sélectionnez **Conserver tous les instantanés d’historique**.  
   
-7. Vous pouvez également activer la case à cocher **enregistrer les instantanés de cache dans l’historique de rapport**.  
+7. Vous pouvez aussi cocher la case **Enregistrer également les instantanés de cache dans l’historique de rapport**.  
   
 8.  Sélectionnez **Appliquer** pour enregistrer les paramètres.  
 
     > [!NOTE]  
-    > Pour permettre la création d’instantanés, l’administrateur doit configurer l’historique de rapport pour **permettre la création manuelle de l’historique**. Pour plus d’informations, consultez [limiter l’historique de rapport (portail Web)](../../reporting-services/reports/limit-report-history-report-manager.md).
+    > Pour permettre la création d’instantanés, l’administrateur doit configurer l’historique de rapport sur **Autoriser la création manuelle de l’historique**. Pour plus d’informations, consultez [Limiter l’historique de rapport (portail web)](../../reporting-services/reports/limit-report-history-report-manager.md).
 
 9.  Cliquez sur **Appliquer**.
 
@@ -118,35 +118,35 @@ Les instantanés de rapport ne sont pas enregistrés dans un format de rendu par
   
 1. Pour un rapport déjà configuré pour s'exécuter en tant qu'instantané d'exécution de rapport, vous pouvez définir des propriétés supplémentaires afin d'enregistrer une copie de l'instantané dans l'historique de rapport chaque fois qu'il est actualisé.  
   
-2. Dans le portail Web, accédez à l’élément dont vous souhaitez afficher l’historique, puis cliquez dessus avec le bouton droit.  
+2. Dans le portail web, accédez à l’élément dont vous voulez afficher l’historique, puis cliquez dessus avec le bouton droit.  
   
 3. Dans le menu déroulant, sélectionnez **Gérer**.  
   
-4. Sélectionnez l’onglet instantanés d' **historique** .  
+4. Sélectionnez l’onglet **Instantanés d’historique**.  
   
-5. Sur la page instantanés d' **historique** , sélectionnez le bouton **calendrier et paramètres** .  
+5. Dans la page **Instantanés d’historique**, sélectionnez le bouton **Planification et paramètres**.  
   
-6. Dans la section **planification** , sélectionnez l’une des options ci-dessous, ou les deux, si au moins un choix n’est pas déjà sélectionné:
+6. Dans la section **Planification**, sélectionnez l’une des options ci-dessous, ou les deux, si au moins un choix n’est pas déjà sélectionné :
     - **Créer des instantanés d'historique selon une planification**.  
     - **Autoriser les utilisateurs à créer manuellement des instantanés.**  
   
-7. Dans la section **avancé** , sélectionnez **conserver tous les instantanés d’historique**.  
+7. Dans la section **Avancé**, sélectionnez **Conserver tous les instantanés d’historique**.  
   
-8. Vous pouvez également activer la case à cocher **enregistrer les instantanés de cache dans l’historique de rapport**.  
+8. Vous pouvez aussi cocher la case **Enregistrer également les instantanés de cache dans l’historique de rapport**.  
   
 9. Sélectionnez **Appliquer** pour enregistrer les paramètres.  
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>Pour ajouter automatiquement tous les instantanés à un historique de rapport planifié  
   
-1. Dans le portail Web, accédez à l’élément dont vous souhaitez afficher l’historique, puis cliquez dessus avec le bouton droit.  
+1. Dans le portail web, accédez à l’élément dont vous voulez afficher l’historique, puis cliquez dessus avec le bouton droit.  
   
 2. Dans le menu déroulant, sélectionnez **Gérer**.  
   
-3. Sélectionnez l’onglet instantanés d' **historique** .  
+3. Sélectionnez l’onglet **Instantanés d’historique**.  
   
-4. Sur la page instantanés d' **historique** , sélectionnez le bouton **calendrier et paramètres** .  
+4. Dans la page **Instantanés d’historique**, sélectionnez le bouton **Planification et paramètres**.  
   
-5. Cochez la case **Utilisez la planification ci-dessous pour ajouter des instantanés à l’historique de rapport**. Effectuez l'une des opérations suivantes :  
+5. Cochez la case **Utilisez la planification ci-dessous pour ajouter des instantanés à l’historique de rapport**. Effectuez une des opérations suivantes :  
   
     - Sélectionnez **Planification spécifique aux rapports**. Indiquez les détails de la planification, sélectionnez des dates de début et de fin pour cette opération, puis cliquez sur **OK**.  
 
@@ -157,7 +157,7 @@ Les instantanés de rapport ne sont pas enregistrés dans un format de rendu par
 ## <a name="see-also"></a>Voir aussi
 
 - [Configurer les propriétés d’exécution d’un rapport (portail web)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
-- [Limiter l’historique de rapport (portail Web)](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [Limiter l'historique de rapport (portail web)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Planifications](../../reporting-services/subscriptions/schedules.md)   
 - [Portail web d’un serveur de rapports  &#40;mode natif SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
 

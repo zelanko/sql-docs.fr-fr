@@ -1,7 +1,7 @@
 ---
-title: Désinstaller une instance existante de SQL Server (programme d’installation) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/11/2019
+title: Désinstaller une instanceInstance existante
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251067"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258948"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Désinstaller une instance existante de SQL Server (programme d'installation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "71251067"
  > [!NOTE]
  > Pour désinstaller un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez la fonctionnalité Supprimer un nœud fournie par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour supprimer chaque nœud individuellement. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
 
-## <a name="considerations"></a>Observations
+## <a name="considerations"></a>Considérations
 
 - Pour désinstaller SQL Server, vous devez être administrateur local et disposer des autorisations pour vous connecter en tant que service. 
 - Si votre ordinateur a la quantité *minimale* de mémoire physique nécessaire, augmentez la taille du fichier d’échange à deux fois la quantité de mémoire physique. Une mémoire virtuelle insuffisante peut entraîner la suppression incomplète de SQL Server. 
@@ -55,19 +55,19 @@ ms.locfileid: "71251067"
     > Les bases de données ReportServer sont incluses avec SQL Server Reporting Services.   
 
  
-1.  **Arrêtez tous**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **les services.** Nous vous recommandons d'arrêter tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant de désinstaller les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La désinstallation peut échouer s'il existe des connexions actives.  
+1.  **Arrêtez tous** les **services** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nous vous recommandons d'arrêter tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant de désinstaller les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La désinstallation peut échouer s'il existe des connexions actives.  
   
 1.  **Utiliser un compte bénéficiant des autorisations appropriées** Connectez-vous au serveur à l'aide du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à l'aide d'un compte doté d'autorisations équivalentes. Par exemple, vous pouvez vous connecter au serveur à l'aide d'un compte qui est membre du groupe Administrateurs local.  
   
-## <a name="uninstall"></a>Désinstaller 
+## <a name="uninstall"></a>Désinstaller l’interface 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10 / 2016 +](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10 / 2016 +](#tab/Windows10)
 
 Pour désinstaller SQL Server de Windows 10, Windows Server 2016, et Windows Server 2019 et ultérieur, procédez comme suit : 
 
 1. Pour commencer le processus de suppression, accédez à **Paramètres** à partir du menu Démarrer, puis choisissez **Applications**. 
 1. Recherchez `sql` dans la zone de recherche. 
-1. Sélectionnez **Microsoft SQL Server (Version) (Bits)** . Par exemple, `Microsoft SQL Server 2017 (64-bit)`.
+1. Sélectionnez **Microsoft SQL Server (Version) (Bits)** . Par exemple : `Microsoft SQL Server 2017 (64-bit)`.
 1. Sélectionner **Désinstaller**.
  
     ![Désinstaller SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
@@ -84,12 +84,12 @@ Pour désinstaller SQL Server de Windows 10, Windows Server 2016, et Windows Ser
  
 1. Actualisez la fenêtre **Applications et fonctionnalités** pour vérifier que l’instance de SQL Server a été supprimée avec succès, et déterminez, le cas échéant, les composants de SQL Server qui existent encore. Si vous le souhaitez, supprimez ces composants à partir de cette fenêtre. 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 Pour désinstaller SQL Server de Windows Server 2008, Windows Server 2012 et Windows Server 2012 R2, procédez comme suit : 
 
 1. Pour commencer le processus de suppression, accédez au **Panneau de configuration**, puis sélectionnez **Programmes et fonctionnalités**.
-1. Cliquez avec le bouton droit sur **Microsoft SQL Server (Version) (Bits)** , puis sélectionnez **Désinstaller**. Par exemple, `Microsoft SQL Server 2012 (64-bit)`.  
+1. Cliquez avec le bouton droit sur **Microsoft SQL Server (Version) (Bits)** , puis sélectionnez **Désinstaller**. Par exemple : `Microsoft SQL Server 2012 (64-bit)`.  
   
     ![Désinstaller SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 
@@ -116,6 +116,6 @@ L’article de la base de connaissances [Comment faire pour identifier les probl
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

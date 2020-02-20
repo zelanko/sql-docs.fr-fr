@@ -17,13 +17,13 @@ ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569146"
 ---
-# <a name="msreportserverconfigurationsetting-class"></a>classe MSReportServer_ConfigurationSetting
+# <a name="msreportserver_configurationsetting-class"></a>classe MSReportServer_ConfigurationSetting
   Représente les paramètres d’installation et d’exécution d’une instance de serveur de rapports. Ces paramètres sont stockés dans le fichier de configuration du serveur de rapports.  
   
  Pour obtenir la liste de tous les membres de ce type, consultez [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md).  
@@ -167,7 +167,7 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **Plateforme :** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   

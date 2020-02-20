@@ -1,10 +1,9 @@
 ---
-title: Boîte de dialogue Tables et colonnes (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Tables et colonnes, boîte de dialogue
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29b9d5cc4cccd2c60cf58476bacaba3e9fa95e2e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 342a7701b0b33482e5c83f0703121e3522654866
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263162"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256155"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Boîte de dialogue Tables et colonnes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,5 +47,5 @@ Répertorie les colonnes de la table sélectionnées dans la liste **Table de cl
 > Les colonnes que vous choisissez pour la clé étrangère doivent posséder le même type de données que les colonnes primaires auxquelles elles correspondent. Il doit exister un nombre égal de colonnes dans chacune des clés. Par exemple, si la clé primaire de la table située du côté clé primaire de la relation est composée de deux colonnes, vous devez faire correspondre chacune de ces colonnes à une colonne de la table située du côté clé étrangère de la relation.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : créer des relations entre tables (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[Procédure : Créer des relations entre les tables(https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

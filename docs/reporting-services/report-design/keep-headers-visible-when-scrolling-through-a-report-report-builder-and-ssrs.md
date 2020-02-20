@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61263520f5d519c2b908c753b72c1d5ec7f67e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580139"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Laisser les en-têtes visibles lors du défilement d'un rapport (Générateur de rapports et SSRS)
@@ -27,18 +27,18 @@ ms.locfileid: "65580139"
   
  L'image suivante illustre une table.  
   
- ![Table](../../reporting-services/report-design/media/table.png "Table")  
+ ![Table](../../reporting-services/report-design/media/table.png "Table de charge de travail")  
   
  L'image suivante illustre une matrice.  
   
- ![Matrice](../../reporting-services/report-design/media/matrix.png "Matrice")  
+ ![Matrice](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>Pour garder les en-têtes de groupes de matrice visibles pendant le défilement  
   
-1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis cliquez sur **Propriétés du tableau matriciel**.  
+1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
   
 2.  Sous l'onglet **Général** , sous **En-têtes de lignes** ou **En-têtes de colonnes**, sélectionnez **L'en-tête doit rester visible pendant le défilement**.  
   

@@ -1,24 +1,26 @@
 ---
-title: Versions antérieures de SQL Server Data Tools (SSDT et SSDT-BI) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/05/2018
+title: Versions précédentes de SSDT
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
+ms.reviewer: “”
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 author: markingmyname
 ms.author: maghan
+manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 09/05/2018
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: e51d931d46fe490303df20c1590e721e25f5ab92
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 07504e19591b1f64aac77ebbc825bea58931b536
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290335"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688574"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versions antérieures de SQL Server Data Tools (SSDT et SSDT-BI)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools (SSDT) fournit des modèles de projet et des aires de conception permettant de créer des types de contenu SQL Server (bases de données relationnelles, modèles Analysis Services, rapports Reporting Services et packages Integration Services).  
   
@@ -31,8 +33,9 @@ SSDT offre une compatibilité descendante, ce qui signifie que vous pouvez toujo
 
 Voici les derniers téléchargements au cas où vous rencontreriez des problèmes avec la dernière version, ce qui est peu probable.
 
-|Version de SSDT| Visual Studio 2017|
+|Version de SSDT| Visual Studio 2017|
 |:---|:---|
+|15.9.2|[SSDT pour VS2017 15.9.2](https://go.microsoft.com/fwlink/?linkid=2095463)|
 |15.9.1|[SSDT pour VS2017 15.9.1](https://go.microsoft.com/fwlink/?linkid=2086373)|
 |15.9.0|[SSDT pour VS2017 15.9.0](https://go.microsoft.com/fwlink/?linkid=2052454)|
 |15.8.2|[SSDT pour VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
@@ -90,7 +93,7 @@ BIDS (Business Intelligence Development Studio) est installé via le programme d
   
 Pour SQL Server 2012 ou 2014, vous pouvez utiliser **SSDT-BI pour Visual Studio 2012** ou **SSDT-BI fou Visual Studio 2013**. La seule différence entre les deux est la version de Visual Studio.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Télécharger SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
 [Outils et utilitaires SQL](../tools/overview-sql-tools.md)

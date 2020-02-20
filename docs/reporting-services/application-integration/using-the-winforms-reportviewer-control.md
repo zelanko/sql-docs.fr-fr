@@ -1,23 +1,25 @@
 ---
-title: Utilisation du contrôle WinForms ReportViewer| Microsoft Docs
+title: Utiliser le contrôle WinForms ReportViewer
+description: Pour consulter des rapports déployés sur un serveur de rapports ou situés sur le système de fichiers local, vous pouvez utiliser le contrôle WinForms ReportViewer afin de les restituer dans une application Windows.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195253"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796888"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>Utilisation du contrôle Windows Forms ReportViewer
+# <a name="use-the-winforms-reportviewer-control"></a>Utiliser le contrôle WinForms ReportViewer
   Pour consulter des rapports déployés sur un serveur de rapports ou situés sur le système de fichiers local, vous pouvez utiliser le contrôle WinForms ReportViewer afin de les restituer dans une application Windows.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Pour ajouter le contrôle ReportViewer dans une application Windows  
@@ -157,7 +159,7 @@ End Class
   
      Le fichier Sales Order Detail.rdl doit maintenant faire partie du projet.  
   
-     ![Rapport Sales Order Detail (Détail de la commande)](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Rapport Sales Order Detail (Détail de la commande)")  
+     ![Rapport Sales Order Detail](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Rapport Sales Order Detail (détail de la commande)") (détail de la commande)  
   
 5.  Cliquez avec le bouton droit sur le fichier Sales Order Detail.rdl dans l’Explorateur de solutions et sélectionnez **Renommer**. Renommez le rapport en **Sales Order Detail.rdlc** et appuyez sur Entrée.  
   
@@ -168,7 +170,7 @@ End Class
   
 6.  Après avoir renommé le rapport, sélectionnez le fichier et localisez la fenêtre Propriétés. Affectez à la propriété **Copier dans le répertoire de sortie** la valeur **Copier si plus récent**.  
   
-     ![Paramètre de configuration de la copie vers la sortie](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Paramètre de configuration de la copie vers la sortie")  
+     ![Configuration du paramètre Copier dans la sortie](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configuration du paramètre Copier dans la sortie")  
   
      Si la fenêtre **Propriétés** n’est pas visible, vous pouvez l’ouvrir à partir du menu **Affichage** en sélectionnant **Fenêtre Propriétés**.  
   

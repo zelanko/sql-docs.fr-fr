@@ -12,10 +12,10 @@ ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037874"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Rapports, parties de rapports et définitions de rapports (Générateur de rapports et SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "67037874"
  Abonnez-vous à un rapport dont la remise est effectuée, au format de sortie que vous indiquez, dans une boîte de réception de messagerie électronique ou dans un partage de fichiers. Le format de rendu de rapport par défaut est HTML 4.0. Outre le format HTML, les rapports peuvent être générés dans divers formats de sortie, notamment Excel, Word, XML, PDF, TIFF et CSV. Tout comme les rapports publiés, les rapports rendus ne peuvent être ni modifiés ni réenregistrés sur un serveur de rapports. Pour plus d’informations, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Reporting Services (SSRS) de Concepts](../reporting-services-concepts-ssrs.md) [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Concepts Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md) [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

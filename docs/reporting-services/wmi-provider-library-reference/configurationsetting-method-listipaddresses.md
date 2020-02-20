@@ -11,10 +11,10 @@ ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579935"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>Méthode ConfigurationSetting - ListIPAddresses
@@ -50,7 +50,7 @@ public void ListIPAddresses (out string[] IPAddress,
  *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. La valeur 0 indique que l'appel de la méthode a abouti ; un code d'erreur indique que l'appel n'a pas abouti.  
   
 ## <a name="remarks"></a>Notes  
@@ -59,7 +59,7 @@ public void ListIPAddresses (out string[] IPAddress,
  Si *IsDhcpEnabled* a la valeur **True**, l' *IPAddress* est dynamique. Elle ne doit pas être utilisée pour les liaisons SSL.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

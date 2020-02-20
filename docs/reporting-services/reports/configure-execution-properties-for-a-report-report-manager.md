@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492748"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>Configurer les propriétés d'exécution d'un rapport
@@ -56,26 +56,26 @@ ms.locfileid: "67492748"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
-## <a name="to-configure-report-execution-properties"></a>Pour configurer les propriétés d’exécution d’un rapport  
+## <a name="to-configure-report-execution-properties"></a>Pour configurer les propriétés d'exécution d'un rapport  
   
 Depuis [le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md) :  
   
-1. Accédez au rapport pour lequel vous souhaitez configurer les propriétés de l’exécution.  
+1. Accédez au rapport pour lequel vous voulez configurer les propriétés d'exécution.  
   
-2. Cliquez sur le rapport, puis sélectionnez **gérer** dans le menu déroulant.
+2. Cliquez avec le bouton droit sur le rapport, puis sélectionnez **Gérer** dans le menu déroulant.
 
-3. Sélectionnez le **instantanés d’historique** onglet pour afficher le **instantanés d’historique** page.  
+3. Sélectionnez l’onglet **Instantanés d’historique** pour afficher la page **Instantanés d’historique**.  
   
-4. Sélectionnez **planifications et des paramètres** bouton, puis cochez **créer des instantanés d’historique selon une planification** si elle n’est pas activée.
+4. Sélectionnez le bouton **Planifications et paramètres**, puis cochez **Créer des instantanés d’historique selon une planification**, si ce n’est déjà fait.
   
-5. Sélectionnez un **planification partagée** ou un **planification spécifique aux rapports** comme vous le souhaitez.  
+5. Sélectionnez une **Planification partagée** ou une **Planification spécifique aux rapports** selon vos besoins.  
   
-6. Dans le **avancé** , sélectionnez le texte souhaité **rétention** stratégie pour les instantanés d’historique.  
+6. Dans la section **Avancé**, sélectionnez la stratégie de **rétention** souhaitée pour les instantanés d’historique.  
   
 7. Sélectionnez **Appliquer**.  
   
    >[!NOTE]
-   >Si vous souhaitez créer un instantané immédiatement, sélectionnez le **nouvel instantané d’historique** bouton au lieu du **planifications et des paramètres** bouton et un instantané de rapport seront immédiatement créée.  
+   >Si vous souhaitez créer un instantané immédiatement, sélectionnez le bouton **Nouvel instantané d’historique** au lieu du bouton **Planifications et paramètres**, et un instantané de rapport sera créé immédiatement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   

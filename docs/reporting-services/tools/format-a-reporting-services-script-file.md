@@ -12,10 +12,10 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577800"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formater un fichier de script Reporting Services
@@ -46,12 +46,12 @@ End Sub
 > [!IMPORTANT]  
 >  Les informations d'identification de l'utilisateur sont gérées par l'environnement de script et transmises à travers les arguments d'invite de commandes au moyen de RS.exe. Bien que vous puissiez utiliser la variable *rs* pour définir l’authentification du service web, nous vous recommandons d’utiliser l’environnement de script. Vous n'avez pas besoin d'authentifier le service Web dans le fichier de script lui-même. Pour plus d’informations sur l’authentification de l’environnement de script, consultez [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
- Vous ne déclarez pas d'espaces de noms dans le fichier de script. Grâce à l’environnement de script, plusieurs espaces de noms [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sont disponibles : **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**et **System.IO**.  
+ Vous ne déclarez pas d'espaces de noms dans le fichier de script. L’environnement de script met à votre disposition plusieurs espaces de noms [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utiles : **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** et **System.IO**.  
   
  Pour des exemples de scripts, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)(Exemples SQL Server Reporting Services).  
   
 ## <a name="see-also"></a>Voir aussi  
- [service Web Report Server](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Service web Report Server](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   

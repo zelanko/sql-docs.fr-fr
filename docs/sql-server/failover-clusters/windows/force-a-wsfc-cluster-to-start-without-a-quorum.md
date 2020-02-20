@@ -1,6 +1,7 @@
 ---
-title: Forcer un cluster WSFC à démarrer sans quorum | Microsoft Docs
-ms.custom: ''
+title: Forcer un cluster WSFC à démarrer sans quorum
+description: Décrit comment forcer un cluster de basculement Windows Server à démarrer sans quorum.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044738"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258144"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forcer un cluster WSFC à démarrer sans quorum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +113,7 @@ net.exe start clussvc /forcequorum
   
 -   D'autres fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , telles que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la mise en miroir de bases de données et la copie des journaux de transaction peuvent également nécessiter les actions suivantes pour récupérer les données et rétablir entièrement la haute disponibilité.  
   
-     **Pour plus d'informations, consultez :**  
+     **Pour plus d'informations :**  
   
      [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   

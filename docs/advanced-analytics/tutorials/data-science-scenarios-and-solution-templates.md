@@ -1,6 +1,6 @@
 ---
 title: Modèles de solution de science des données
-description: Cet article présente les modèles qui illustrent les meilleures pratiques et fournissent les bases qui vous aideront à implémenter une solution rapidement. Chaque modèle est conçu pour résoudre un problème spécifique, pour un secteur vertical donné.
+description: Cet article présente les modèles spécifiques au secteur qui illustrent les meilleures pratiques et fournissent les bases qui vous aideront à implémenter une solution de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
@@ -9,17 +9,26 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01893edd0174ec7aeab262b8aeddc3babb8194f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727281"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947277"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scénarios de science des données et modèles de solutions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Les modèles sont des exemples de solutions qui illustrent les bonnes pratiques et fournissent les bases qui vous aideront à implémenter une solution rapidement. Chaque modèle est conçu pour résoudre un problème spécifique, pour un secteur vertical donné. Les tâches dans chaque modèle vont de la préparation des données à la formation du modèle et au calcul des scores, en passant par l’ingénierie des caractéristiques. Utilisez ces modèles pour en savoir plus sur le fonctionnement de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Ensuite, n’hésitez pas à adapter le modèle en fonction de votre propre scénario pour créer votre solution personnalisée. 
+Cet article décrit un certain nombre de modèles de solution de Machine Learning SQL Server. Ces modèles illustrent les bonnes pratiques et fournissent les bases qui vous aideront à implémenter une solution de Machine Learning rapidement. Chaque modèle est conçu pour résoudre un problème de science des données spécifique, pour un secteur vertical donné.
+Les tâches dans chaque modèle vont de la préparation des données à la formation du modèle et au calcul des scores, en passant par l’ingénierie des caractéristiques. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Utilisez ces modèles pour en savoir plus sur le fonctionnement de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Ensuite, n’hésitez pas à adapter le modèle en fonction de votre propre scénario pour créer votre solution personnalisée.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Utilisez ces modèles pour découvrir comment fonctionnent les services de Machine Learning SQL Server. Ensuite, n’hésitez pas à adapter le modèle en fonction de votre propre scénario pour créer votre solution personnalisée.
+::: moniker-end
 
 Chaque solution comprend des exemples de données, du code R ou Python et des procédures stockées SQL, selon les besoins. Le code peut être exécuté dans votre environnement de développement R ou Python préféré, tout en effectuant les calculs dans SQL Server. Dans certains cas, vous pouvez exécuter du code directement à l’aide de T-SQL et d’un outil client SQL, tel que SQL Server Management Studio.
 

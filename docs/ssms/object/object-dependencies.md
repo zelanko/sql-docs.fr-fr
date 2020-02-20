@@ -1,6 +1,6 @@
 ---
-title: Dépendances d’objet | Microsoft Docs
-ms.custom: ''
+title: Dépendances d'objet
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264090"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257163"
 ---
 # <a name="object-dependencies"></a>Dépendances d'objet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,19 +31,19 @@ Utilisez cette boîte de dialogue pour comprendre les dépendances avant de modi
 **Objets qui dépendent de** _\<l’objet sélectionné>_  
 Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et qui dépendent de l'objet sélectionné.  
   
-**Objets dont**  _\<objet sélectionné>_ **dépend**  
+**Objets desquels** _\<l’objet sélectionné>_ **dépend**  
 Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et dont dépend l'objet sélectionné.  
   
 **Dépendances**  
-Cliquez sur **Objets dépendant de** *<selected object>* pour afficher une vue hiérarchique des objets qui dépendent de l'objet sélectionné. Cliquez sur **Objets dont** *<selected object>* **dépend** pour afficher une vue hiérarchique des objets dont dépend l'objet sélectionné.  
+Cliquez sur **Objets qui dépendent de** *<selected object>* pour afficher une vue hiérarchique des objets qui dépendent de l'objet sélectionné. Cliquez sur **Objets desquels** *<selected object>* **dépend** pour afficher une vue hiérarchique des objets dont dépend l'objet sélectionné.  
   
-**Name**  
+**Nom**  
 Affiche le nom de l'objet sélectionné dans l'arborescence **Dépendances** affichée plus haut.  
   
 **Type**  
 Affiche le type de l'objet sélectionné dans l'arborescence **Dépendances** affichée plus haut.  
   
-**Heure de la dernière synchronisation**  
+**Dernière heure de synchronisation**  
 > [!NOTE]  
 > Cette option est disponible uniquement dans la page **Avancé** .  
   
@@ -53,7 +53,7 @@ Spécifie l'heure et date de la dernière mise à jour des informations de dépe
 > [!NOTE]  
 > Cette option est disponible uniquement dans la page **Général** .  
   
-Affiche le type de dépendance entre deux objets. Les valeurs possibles sont les suivantes :  
+Affiche le type de dépendance entre deux objets. Il peut s'agir d'une des méthodes suivantes :  
   
 -   Dépendance liée au schéma  
   

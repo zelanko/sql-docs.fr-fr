@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262901"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrer une installation Reporting Services (mode natif)
@@ -215,7 +215,7 @@ Pour plus d’informations sur les changements effectués dans SQL Server Report
   
     1. [Déploiement d'un assembly personnalisé](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Procédure : déployer un élément de rapport personnalisé](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Procédure : déployer un élément de rapport personnalisé](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [Déploiement d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -256,7 +256,7 @@ Avant de supprimer les clés, il est recommandé de d'abord sauvegarder la clé 
 
 Si vous avez modifié le fichier RSReportServer.config ou RSWebApplication.config dans l'installation précédente, vous devez apporter les mêmes modifications au nouveau fichier RSReportServer.config. La liste suivante résume certaines des raisons pour lesquelles vous avez pu modifier le fichier de configuration précédent et fournit des liens vers des informations supplémentaires sur la manière de configurer les mêmes paramètres dans SQL Server 2016.  
   
-|Personnalisation|Informations|  
+|Personnalisation|Information|  
 |-------------------|-----------------|  
 |Remise du courrier électronique du serveur de rapports avec des paramètres personnalisés|[Paramètres d’e-mail * Mode natif de Reporting Services](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Paramètres d'informations de périphérique|[Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|

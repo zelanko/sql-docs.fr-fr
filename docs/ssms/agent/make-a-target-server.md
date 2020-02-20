@@ -1,5 +1,5 @@
 ---
-title: Créer un serveur cible | Microsoft Docs
+title: Créer un serveur cible
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b151a51a9d68b8459b2564396c5e4bc4c1d00868
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 0c115e8d11a72bb7b066169e4f2a21d570adc366
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552837"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242857"
 ---
 # <a name="make-a-target-server"></a>Créer un serveur cible
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,14 +55,14 @@ Si les étapes du travail utilisant des comptes proxy échouent pendant leur té
   
     Pour résoudre ce problème, vérifiez qu'un compte proxy portant le même nom que le compte proxy du serveur maître sous lequel l'étape s'exécute existe sur le serveur cible.  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Les autorisations d'exécution de cette procédure sont accordées par défaut aux membres du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-make-a-target-server"></a>Pour créer un serveur cible  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] et développez-la.  
   
 2.  Cliquez avec le bouton droit sur **Agent SQL Server**, pointez sur **Administration multiserveur**, puis cliquez sur **Transformer en serveur cible**. L' **Assistant Création d'un serveur cible** vous aide à créer un serveur cible.  
   

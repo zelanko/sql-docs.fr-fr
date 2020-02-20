@@ -1,6 +1,6 @@
 ---
 title: Recherche d’informations supplémentaires sur le pilote SqlClient
-description: Page qui contient des informations utiles concernant le pilote.
+description: Page contenant des informations utiles concernant le pilote.
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: fce101e64123e3fbc1100610aeea03cee16b0e75
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 08ff52be06f976171623b4af91da3ebc1d26d53b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452391"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251032"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Recherche d’informations supplémentaires sur le pilote SqlClient
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Télécharger ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Pour plus d’informations sur le Fournisseur de données Microsoft SqlClient pour le développement de SQL Server en général, consultez les ressources en ligne suivantes :
+Pour plus d’informations sur le Fournisseur de données Microsoft SqlClient et le développement de SQL Server en général, consultez les ressources en ligne suivantes :
 
 ## <a name="remarks"></a>Notes  
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Référentiel GitHub .net CoreFX](https://github.com/dotnet/corefx)|Ce référentiel contient l’implémentation de la bibliothèque pour .NET Core.|
-|[Fournisseur de données Microsoft SqlClient pour le référentiel GitHub SQL Server](https://github.com/dotnet/SqlClient)|Ce référentiel contient le code source pour le pilote SqlClient.|  
-|[Navigateur de l’API .NET](https://docs.microsoft.com/dotnet/api/)|Ce site contient des informations sur l’API .NET pour le pilote.|  
+|[Référentiel .Net CoreFX GitHub](https://github.com/dotnet/corefx)|Ce référentiel contient l’implémentation de la bibliothèque pour .NET Core.|
+|[Fournisseur de données Microsoft SqlClient pour le référentiel SQL Server GitHub](https://github.com/dotnet/SqlClient)|Ce référentiel contient le code source pour le pilote SqlClient.|  
+|[Navigateur d’API .NET](https://docs.microsoft.com/dotnet/api/)|Ce site contient des informations sur l’API .NET pour le pilote.|  
   
 ## <a name="next-steps"></a>Étapes suivantes
  [Vue d’ensemble du pilote SqlClient](overview-sqlclient-driver.md)  

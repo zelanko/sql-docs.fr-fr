@@ -1,9 +1,11 @@
 ---
-title: Intégration de Reporting Services à l’aide de SOAP | Microsoft Docs
+title: Intégrer à l’aide de SOAP
+description: L’API SOAP de Reporting Services fournit plusieurs points de terminaison de service web pour développer des solutions de création de rapports personnalisées.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Server Web service, application integration
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67e87a097ed9b4aac773404b517ae3c69b54680c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c19676b59b2de393f7d68a6660ec33db50c29e09
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741742"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796960"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Intégration de Reporting Services à l'aide de SOAP
   L’API SOAP de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit plusieurs points de terminaison de service web pour développer des solutions de création de rapports personnalisées. Les points de terminaison se répartissent actuellement dans deux catégories : la gestion et l'exécution. Les fonctionnalités de gestion sont exposées par le biais des points de terminaison <xref:ReportService2005>, <xref:ReportService2006> et <xref:ReportService2010>. Le point de terminaison <xref:ReportService2005> est utilisé pour gérer un serveur de rapports configuré en mode natif et le point de terminaison <xref:ReportService2006> est utilisé pour gérer un serveur de rapports configuré pour le mode intégré SharePoint. Le <xref:ReportService2010> fusionne les fonctionnalités de <xref:ReportService2005> et de <xref:ReportService2006> et peut gérer un serveur de rapports configuré pour le mode natif ou intégré SharePoint.  
@@ -36,7 +38,7 @@ ms.locfileid: "62741742"
  [Utilisation de l’API SOAP dans une application web](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
  Décrit comment utiliser l'API SOAP pour intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un environnement Web.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Intégration de Reporting Services dans des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Service web Report Server](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Génération d’applications à l’aide du service web et de .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  

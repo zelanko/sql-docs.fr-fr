@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3add572d240cc09a33f083d9f86a3791afd18c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2ba5d42e04758b0577ca77e761a67b352dbbf163
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500437"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190825"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés et partagés (Générateur de rapports et SSRS)
   Dans un rapport, un dataset représente des données de rapport retournées comme résultat de l'exécution d'une requête sur une source de données externe. Le dataset dépend de la connexion de données qui contient des informations sur la source de données externe. Les données elles-mêmes ne sont pas intégrées dans la définition de rapport. Un dataset contient une commande de requête, une collection de champs, des paramètres, des filtres et des options de données incluant notamment le respect de la casse et le classement. Il existe deux types de datasets :  
@@ -46,8 +46,8 @@ ms.locfileid: "66500437"
     |--------------|--------------------------------------------|------------------------------------------|  
     |Texte de la requête|Configurez la requête, notamment définissez-la en tant qu'expression.|Impossible de modifier la requête.|  
     |Paramètres de requête|Impossible de référencer des paramètres de rapport<br /><br /> Inclut des valeurs par défaut<br /><br /> Inclut un indicateur en lecture seule|Configurez les paramètres qui ne sont pas marqués en lecture seule dans la définition|  
-    |Filtres|Définir les filtres|Impossible d'afficher ou modifier des filtres de dataset qui font partie de la définition<br /><br /> Possibilité de créer des filtres supplémentaires|  
-    |Source de données|Doit être une source de données partagée|Impossible de modifier la source de données partagée|  
+    |Filtres|Définir des filtres|Impossible d'afficher ou modifier des filtres de dataset qui font partie de la définition<br /><br /> Possibilité de créer des filtres supplémentaires|  
+    |source de données|Doit être une source de données partagée|Impossible de modifier la source de données partagée|  
     |Champs|Champs de la commande de requête<br /><br /> Les champs calculés ne font pas partie de la définition de dataset|Possibilité de consulter les champs, mais pas de les modifier<br /><br /> La collection de champs est statique selon la requête au moment où vous avez ajouté le dataset partagé au rapport. Pour mettre à jour, cliquez sur **Actualiser les champs** dans la boîte de dialogue **Propriétés du dataset** . La collection de champs réelle est tout élément retourné par la requête actuelle dans la définition.<br /><br /> Ajouter des champs calculés|  
     |Dataset|Options de données telles que le respect de la casse|Remplacer des options de données dans l'instance|  
   
@@ -56,12 +56,10 @@ ms.locfileid: "66500437"
   
  Pour créer ou modifier un dataset incorporé, utilisez le volet des données de rapport. Après avoir créé un dataset, vous pouvez configurer les propriétés dans la boîte de dialogue **Propriétés du dataset** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Comparer des sources de données incorporées et partagées - Générateur de rapports & SSRS](compare-shared-embedded-data-sources-report-builder-ssrs.md) [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

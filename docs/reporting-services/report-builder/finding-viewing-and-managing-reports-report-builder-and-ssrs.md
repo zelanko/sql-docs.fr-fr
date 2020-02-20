@@ -1,6 +1,7 @@
 ---
-title: Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS) | Microsoft Docs
-ms.date: 05/20/2019
+title: Rechercher, afficher et gérer les rapports (Générateur de rapports et SSRS) | Microsoft Docs
+description: Dans le Générateur de rapports et le Concepteur de rapports, vous pouvez naviguer pour rechercher des rapports paginés, des sources de données partagées, des modèles et d’autres éléments de rapport connexes.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492867"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258102"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
-  Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
+  Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports paginés, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
   
- Dans le Concepteur de rapports, vous pouvez également parcourir votre ordinateur pour rechercher les rapports locaux. Après avoir déployé des rapports sur un serveur de rapports ou un site SharePoint, vous pouvez parcourir le serveur de rapports à l'aide du portail web ou rechercher des rapports sur le site SharePoint. Les rapports et les éléments associés restent disponibles localement après leur déploiement.  
+ Dans le Concepteur de rapports, vous pouvez également parcourir votre ordinateur pour rechercher les rapports paginés locaux. Après avoir déployé des rapports sur un serveur de rapports ou un site SharePoint, vous pouvez parcourir le serveur de rapports à l'aide du portail web ou rechercher des rapports sur le site SharePoint. Les rapports et les éléments associés restent disponibles localement après leur déploiement.  
   
 > [!NOTE]  
 > Vous pouvez utiliser le Générateur de rapports en mode local ou connecté à un serveur de rapports. Certaines limitations sont applicables lorsque vous ne disposez pas d'une connexion active à un serveur de rapports.  
@@ -105,7 +106,7 @@ Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, 
   
  Pour distinguer les éléments de serveur de rapports d'autres éléments sur un site SharePoint, vous pouvez utiliser l'icône pour identifier visuellement un élément ou placer le curseur de la souris sur le type et examiner l'extension du fichier. L'image suivante montre des dossiers et une définition de rapport dans la bibliothèque **Rapports** :  
   
- ![Bibliothèque SharePoint avec éléments de serveur de rapports](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Bibliothèque Sharepoint avec éléments de serveur de rapports")  
+ ![Bibliothèque SharePoint avec éléments de serveur de rapports](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Bibliothèque SharePoint avec éléments de serveur de rapports")  
   
 ### <a name="viewing-reports"></a>Affichage de rapports  
  Les définitions de rapport (fichiers .rdl) que vous téléchargez vers une bibliothèque SharePoint sont affichées par le biais d'un composant WebPart de visionneuse de rapports qui est installé par le complément Reporting Services. Une association aux fichiers .rdl est définie automatiquement lorsque vous installez le complément. Lorsque vous sélectionnez un rapport, il s'ouvre automatiquement dans le composant WebPart. Une fois le rapport ouvert, vous pouvez utiliser la barre d'outils de rapport qui est incluse dans le composant WebPart pour imprimer le rapport, parcourir les pages du rapport, ainsi qu'effectuer des recherches et zoomer dans le rapport. La barre d'outils inclut l'option Exporter vers un flux, qui permet d'exporter le rapport en tant que flux Atom ; elle comprend également un menu **Actions** avec des options permettant d'imprimer, de s'abonner et d'exporter le rapport vers divers formats tels que PDF, Word et Excel. À partir du menu **Actions** , vous pouvez également ouvrir le rapport dans le Générateur de rapports. L'image suivante montre un rapport et les options d'exportation du menu **Action** .  

@@ -1,6 +1,7 @@
 ---
-title: Contrôle des en-têtes de ligne et de colonne (Générateur de rapports et SSRS) | Microsoft Docs
-ms.date: 05/24/2018
+title: Contrôler les en-têtes de ligne et de colonne (Générateur de rapports et SSRS) | Microsoft Docs
+description: Une région de données de table, de matrice ou de liste dans un rapport paginé peut s'étendre sur plusieurs pages horizontalement ou verticalement. Vous pouvez spécifier s'il convient de répéter des en-têtes de lignes ou de colonnes sur chaque page.
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ed08231f0bfd3cf7b505e3064883393470047e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581573"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245361"
 ---
-# <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Contrôle des en-têtes de ligne et de colonne (Générateur de rapports et SSRS)
-  Une région de données de table, de matrice ou de liste peut s'étendre sur plusieurs pages horizontalement ou verticalement. Vous pouvez spécifier s'il convient de répéter des en-têtes de lignes ou de colonnes sur chaque page. Dans un convertisseur interactif, tel que le portail web ou l’aperçu de rapport, vous pouvez également spécifier si les en-têtes de lignes ou de colonnes doivent être figés pour être toujours visibles quand vous faites défiler un rapport horizontalement ou verticalement. Dans une table ou matrice, la première ligne contient habituellement des en-têtes de colonnes qui étiquettent des données dans chaque colonne ; la première colonne contient habituellement des en-têtes de lignes qui étiquettent les données dans chaque ligne. Pour les groupes imbriqués, vous pouvez répéter le jeu initial d'en-têtes de lignes et de colonnes qui contiennent des étiquettes de groupe. Par défaut, une région de données de liste n'inclut pas d'en-têtes.  
+# <a name="control-row--column-headings-report-builder--ssrs"></a>Contrôler les en-têtes de ligne et de colonne (Générateur de rapports et SSRS)
+  Une région de données de table, de matrice ou de liste dans un rapport paginé peut s'étendre sur plusieurs pages horizontalement ou verticalement. Vous pouvez spécifier s'il convient de répéter des en-têtes de lignes ou de colonnes sur chaque page. Dans un convertisseur interactif, tel que le portail web ou l’aperçu de rapport, vous pouvez également spécifier si les en-têtes de lignes ou de colonnes doivent être figés pour être toujours visibles quand vous faites défiler un rapport horizontalement ou verticalement. Dans une table ou matrice, la première ligne contient habituellement des en-têtes de colonnes qui étiquettent des données dans chaque colonne ; la première colonne contient habituellement des en-têtes de lignes qui étiquettent les données dans chaque ligne. Pour les groupes imbriqués, vous pouvez répéter le jeu initial d'en-têtes de lignes et de colonnes qui contiennent des étiquettes de groupe. Par défaut, une région de données de liste n'inclut pas d'en-têtes.  
   
  Votre décision de répéter ou de figer les en-têtes dépend des éléments suivants :  
   
@@ -64,7 +65,7 @@ ms.locfileid: "65581573"
   
  Les traits en pointillés indiquent les quatre zones de tableau matriciel. La zone de groupe de lignes a un en-tête de groupe de lignes qui contrôle les étiquettes de catégorie dans la première colonne. De même, la zone de groupe de colonnes a un en-tête de groupe de colonnes qui contrôle les étiquettes de géographie dans la première ligne. Dans l'aperçu, comme la matrice s'étend horizontalement sur la page, la première ligne affiche les en-têtes de colonnes, comme illustré dans la figure ci-dessous :  
   
- ![Aperçu d’une matrice rendue avec des groupes développés](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Aperçu d’une matrice rendue avec des groupes développés")  
+ ![Aperçu d'une matrice rendue avec des groupes développés](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Aperçu d'une matrice rendue avec des groupes développés")  
   
  Pour répéter ou figer les en-têtes de colonnes sur la première ligne, définissez les propriétés pour les en-têtes de colonnes sur la région de données de tableau matriciel. Les en-têtes de colonnes pour les groupes de colonnes imbriqués sont inclus automatiquement.  
   
@@ -83,7 +84,7 @@ ms.locfileid: "65581573"
   
  Pour répéter ou figer des en-têtes de colonnes, définissez les propriétés sur le membre de tableau matriciel pour la ligne statique qui fait partie de la définition de région de données de tableau matriciel. Pour sélectionner la ligne statique, vous devez utiliser le mode Avancé du volet de regroupement. La figure ci-dessous illustre le volet Groupes de lignes :  
   
- ![Groupes de lignes, table avec 1 ligne statique, 1 ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "Groupes de lignes, table avec 1 ligne statique, 1 ligne dynamique")  
+ ![Groupes de lignes, table avec 1 ligne statique, 1 ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "Groupes de lignes, table avec 1 ligne statique, 1 ligne dynamique")  
   
  En mode Avancé, la figure ci-dessous illustre les membres de tableau matriciel statiques et dynamiques pour les groupes de lignes dans la table :  
   
@@ -110,7 +111,7 @@ ms.locfileid: "65581573"
   
  ![Groupes de lignes, mode avancé avec membres statiques](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Groupes de lignes, mode avancé avec membres statiques")  
   
- Pour les membres de tableau matriciel sont répertoriés **Statique**, (**Statique**) Catégorie et (**Détails**). Un membre de tableau matriciel qui inclut des parenthèses () indique qu'il n'existe pas d'en-tête de groupe correspondant. Pour répéter ou figer des en-têtes de colonnes, sélectionnez le membre de tableau matriciel statique supérieur et définissez les propriétés dans le volet Propriétés.  
+ Pour les membres de tableau matriciel sont répertoriés : **Statique**, (**Statique**) Catégorie et (**Détails**). Un membre de tableau matriciel qui inclut des parenthèses () indique qu'il n'existe pas d'en-tête de groupe correspondant. Pour répéter ou figer des en-têtes de colonnes, sélectionnez le membre de tableau matriciel statique supérieur et définissez les propriétés dans le volet Propriétés.  
   
  [Retour au début](#Top)  
   
@@ -135,9 +136,9 @@ ms.locfileid: "65581573"
   
  Toutefois, cette structure de disposition affiche un jeu différent de membres de tableau matriciel en mode avancé. La figure ci-dessous illustre le volet de regroupement en mode avancé pour cette table :  
   
- ![Groupes de lignes, avancé, aucun en-tête de groupe](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Groupes de lignes, avancé, aucun en-tête de groupe")  
+ ![Groupes de lignes, avancé, aucun en-tête de groupe.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Groupes de lignes, avancé, aucun en-tête de groupe.")  
   
- Dans le volet Groupes de lignes, les membres de tableau matriciel suivants sont répertoriés : (**Statique**), (Catégorie), (**Statique**) et (**Détails**). Pour répéter ou figer les en-têtes de colonne, sélectionnez le membre de tableau matriciel (**Statique**) supérieur et définissez les propriétés dans le volet Propriétés.  
+ Dans le volet Groupes de lignes, les membres de tableau matriciel suivants sont répertoriés : (**Statique**) (Catégorie), (**Statique**) et (**Détails**). Pour répéter ou figer les en-têtes de colonne, sélectionnez le membre de tableau matriciel (**Statique**) supérieur et définissez les propriétés dans le volet Propriétés.  
   
  [Retour au début](#Top)  
   
@@ -158,7 +159,7 @@ ms.locfileid: "65581573"
   
  Pour plus d’informations, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   

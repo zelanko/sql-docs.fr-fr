@@ -1,6 +1,7 @@
 ---
-title: Configurer les paramètres de propriété HealthCheckTimeout | Microsoft Docs
-ms.custom: ''
+title: Configurer HealthCheckTimeout pour le groupe de disponibilité
+description: Configurez HealthCheckTimeout pour un groupe de disponibilité Always On, qui est utilisé pour spécifier le délai d’attente de la DLL de ressource SQL Server avant de signaler une absence de réponse.
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e03c9f0a62896daa192fa33e7b1e0a549b1b46f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002469"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822006"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurer les paramètres de propriété HealthCheckTimeout
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 4.  Sélectionnez l'onglet **Propriétés** , entrez la valeur souhaitée pour la propriété **HealthCheckTimeout** , puis cliquez sur **OK** pour appliquer la modification.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- À l’aide de l’instruction [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) [!INCLUDE[tsql](../../../includes/tsql-md.md)], spécifiez la valeur de la propriété HealthCheckTimeOut.  
+ À l’aide de l’instruction [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)], spécifiez la valeur de la propriété HealthCheckTimeOut.  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  L'exemple suivant définit l'option HealthCheckTimeout sur 15 000 millisecondes (15 secondes).  
@@ -88,7 +89,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

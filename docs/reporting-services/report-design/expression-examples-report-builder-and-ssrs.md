@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68661343"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemples d'expressions (Générateur de rapports et SSRS)
@@ -62,11 +62,11 @@ Pour obtenir des exemples d'expressions pour des utilisations spécifiques, cons
   
 Pour plus d’informations sur les expressions simples et complexes, l’endroit où vous pouvez utiliser des expressions et les types de références que vous pouvez inclure dans une expression, consultez les rubriques sous [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Pour plus d’informations sur le contexte dans lequel les expressions sont évaluées pour calculer des agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutoriel : Introduction aux expressions](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
 ## <a name="functions"></a>Fonctions  
- Dans un rapport, beaucoup d'expressions contiennent des fonctions. Vous pouvez mettre en forme des données, appliquer une logique et accéder aux métadonnées du rapport en utilisant ces fonctions. Vous pouvez écrire des expressions qui utilisent des fonctions de la bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Runtime et des fonctions des espaces de noms <xref:System.Convert> et <xref:System.Math> . Vous pouvez ajouter des références à des fonctions issues d'autres assemblys ou du code personnalisé. Vous pouvez également utiliser des classes à partir de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], y compris <xref:System.Text.RegularExpressions>.  
+ Dans un rapport, beaucoup d'expressions contiennent des fonctions. Vous pouvez mettre en forme des données, appliquer une logique et accéder aux métadonnées du rapport en utilisant ces fonctions. Vous pouvez écrire des expressions qui utilisent des fonctions de la bibliothèque runtime [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et des fonctions des espaces de noms <xref:System.Convert> et <xref:System.Math>. Vous pouvez ajouter des références à des fonctions issues d'autres assemblys ou du code personnalisé. Vous pouvez également utiliser des classes à partir de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], y compris <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="VisualBasicFunctions"></a> Fonctions Visual Basic  
  Vous pouvez utiliser des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour manipuler les données affichées dans des zones de texte ou utilisées pour des paramètres, des propriétés et d'autres zones du rapport. Cette section fournit des exemples décrivant certaines de ces fonctions. Pour plus d'informations, consultez [Membres de la bibliothèque runtime Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
@@ -120,7 +120,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   La fonction **Year** affiche l'année pour une date particulière. Vous pouvez l'utiliser pour grouper des dates ou pour afficher l'année en tant que libellé d'un ensemble de dates. Cette expression affiche l'année pour un groupe donné de dates de commande client. La fonction **Month** et d'autres fonctions peuvent également être utilisées pour manipuler des dates. Pour plus d'informations, consultez la documentation de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+-   La fonction **Year** affiche l'année pour une date particulière. Vous pouvez l'utiliser pour grouper des dates ou pour afficher l'année en tant que libellé d'un ensemble de dates. Cette expression affiche l'année pour un groupe donné de dates de commande client. La fonction **Month** et d'autres fonctions peuvent également être utilisées pour manipuler des dates. Pour plus d’informations, consultez la documentation de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -233,7 +233,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
   
     ```  
   
--   Le **Regex** de l’espace de noms [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sont utiles si vous souhaitez modifier le format de chaînes existantes (par exemple, le format d’un numéro de téléphone). L’expression suivante utilise la fonction **Replace** pour modifier dans un champ le format d’un numéro de téléphone à dix chiffres et le faire passer du format "*nnn*-*nnn*-*nnnn*" au format "(*nnn*) *nnn*-*nnnn*" :  
+-   Les fonctions **Regex** de l’espace de noms [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sont utiles si vous souhaitez modifier le format de chaînes existantes (par exemple, le format d’un numéro de téléphone). L’expression suivante utilise la fonction **Replace** pour modifier dans un champ le format d’un numéro de téléphone à dix chiffres et le faire passer du format "*nnn*-*nnn*-*nnnn*" au format "(*nnn*) *nnn*-*nnnn*" :  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -242,7 +242,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     > [!NOTE]  
     >  Vérifiez que la valeur de Fields!Phone.Value n’a pas d’espaces supplémentaires et est de type <xref:System.String>.  
   
-### <a name="lookup"></a>Lookup  
+### <a name="lookup"></a>Recherche  
   
 -   En spécifiant un champ clé, vous pouvez utiliser la fonction **Lookup** pour récupérer une valeur à partir d’un dataset pour une relation un-à-un, par exemple une paire clé-valeur. L’expression suivante affiche le nom de produit d’un dataset (« Product »), compte tenu de l’identificateur de produit qui doit être mis en correspondance :  
   
@@ -426,7 +426,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =Iif(Fields!Profit.Value < 0, "Red", "Black")  
     ```  
   
-     Vous pouvez également utiliser la variable objet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Me`. Cette variable constitue un autre moyen de faire référence à la valeur d'une zone de texte.  
+     Vous pouvez également utiliser la variable objet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Me`. Cette variable constitue un autre moyen de faire référence à la valeur d'une zone de texte.  
   
      `=Iif(Me.Value < 0, "Red", "Black")`  
   

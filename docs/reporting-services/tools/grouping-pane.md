@@ -14,10 +14,10 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892555"
 ---
 # <a name="grouping-pane"></a>Volet de regroupement
@@ -31,12 +31,12 @@ Quand vous concevez des rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrs
   
 -   **Par défaut** : utilisez le mode par défaut pour ajouter, modifier ou supprimer des groupes. Vous pouvez ajouter des groupes parents, enfants et des groupes de détails en faisant glisser des champs du volet des données de rapport et en les insérant dans la hiérarchie des groupes. Pour ajouter un groupe adjacent, vous devez utiliser le raccourci **Ajouter un groupe** . Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Avancé**: Utilisez le **Mode avancé** pour consulter tous les membres des groupes de lignes et colonnes, et pour définir des propriétés sur les membres statiques. Quand vous créez des groupes ou ajoutez des totaux, les propriétés qui contrôlent la manière dont la région de données de tableau matriciel génère les lignes et les colonnes sur chaque page de rapport sont définies automatiquement. Pour modifier ces propriétés manuellement, vous devez les définir sur le membre du tableau matriciel. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+-   **Avancé**: utilisez le **Mode avancé** pour afficher tous les membres des groupes de lignes et de colonnes et pour définir des propriétés sur les membres statiques. Quand vous créez des groupes ou ajoutez des totaux, les propriétés qui contrôlent la manière dont la région de données de tableau matriciel génère les lignes et les colonnes sur chaque page de rapport sont définies automatiquement. Pour modifier ces propriétés manuellement, vous devez les définir sur le membre du tableau matriciel. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ## <a name="default-mode"></a>Mode par défaut  
  Dans le mode par défaut, les volets Groupes de lignes et Groupes de colonnes affichent une vue hiérarchique pour tous les groupes parents, enfants et adjacents. Un groupe enfant apparaît en retrait sous son groupe parent. Un groupe adjacent apparaît au même niveau de retrait que ses groupes frères. L'illustration suivante montre une région de données de tableau matriciel avec des groupes de lignes imbriqués, et des groupes de colonnes imbriqués et adjacents.  
   
- ![Tableau matriciel, groupes de lignes et de colonnes adjacentes imbriqués](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tableau matriciel, groupes de lignes et de colonnes adjacentes imbriqués")  
+ ![Tableau matriciel, groupes de lignes et de colonnes adjacentes et imbriquées](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tableau matriciel, groupes de lignes et de colonnes adjacentes et imbriquées")  
   
  Le volet de regroupement affiche les groupes de lignes et de colonnes correspondants. Dans l'illustration suivante, le groupe basé sur la sous-catégorie a été sélectionné dans le volet Groupes de lignes, et la cellule de regroupement [Subcat] est sélectionnée dans la région de données de tableau matriciel :  
   
@@ -55,17 +55,17 @@ Dans la plupart des cas, les propriétés qui contrôlent l'affichage des lignes
 
 Pour modifier les valeurs par défaut, vous devez sélectionner le membre de groupe dans le volet Groupes de lignes ou Groupes de colonnes, et modifier les valeurs dans la fenêtre Propriétés. Si le volet des propriétés n’est pas visible, dans le menu **Affichage** , cliquez sur **Propriétés** , ou appuyez sur **F4**.  Les propriétés suivantes sont disponibles :  
   
--   **FixedData**: propriété booléenne. Pour les en-têtes de ligne et de colonne externes. Fige la zone de groupe de lignes en cas de défilement vertical ou la zone de groupe de colonnes en cas de défilement horizontal dans un convertisseur tel que HTML.  
+-   **FixedData**: Propriété booléenne. Pour les en-têtes de ligne et de colonne externes. Fige la zone de groupe de lignes en cas de défilement vertical ou la zone de groupe de colonnes en cas de défilement horizontal dans un convertisseur tel que HTML.  
   
 -   **HideIfNoRows**: Propriété booléenne. Pour les membres statiques uniquement. Si cette propriété est définie, Hidden et ToggleItem sont ignorés. Masque ce membre si la région de données de tableau matriciel ne contient aucune ligne de données.  
   
--   **KeepTogether**.  
+-   **KeepTogether**:  
   
--   **KeepWithGroup**. Propriété booléenne. Pour les membres de lignes statiques uniquement. Conserve, dans la mesure du possible, cette ligne avec le membre dynamique frère précédent ou suivant, s'il n'est pas masqué.  
+-   **KeepWithGroup**: Propriété booléenne. Pour les membres de lignes statiques uniquement. Conserve, dans la mesure du possible, cette ligne avec le membre dynamique frère précédent ou suivant, s'il n'est pas masqué.  
   
--   **RepeatOnNewPage**. Propriété booléenne. Pour les membres de lignes statiques uniquement et quand KeepWithGroup n’a pas la valeur None. Répète, dans la mesure du possible, cette ligne statique sur chaque page qui comporte au moins une instance du membre dynamique spécifiée par KeepWithGroup.  
+-   **RepeatOnNewPage**: Propriété booléenne. Pour les membres de lignes statiques uniquement et quand KeepWithGroup n’a pas la valeur None. Répète, dans la mesure du possible, cette ligne statique sur chaque page qui comporte au moins une instance du membre dynamique spécifiée par KeepWithGroup.  
   
--   **Hidden**. Propriété booléenne. Indique si la ligne ou la colonne doit être masquée initialement.  
+-   **Hidden**: Propriété booléenne. Indique si la ligne ou la colonne doit être masquée initialement.  
   
 -   **ToggleItem.** Chaîne. Nom de la zone de texte à laquelle ajouter l'image bascule. Cette zone de texte doit être située dans la même étendue de groupe ou dans une étendue contenante.  
   
@@ -77,7 +77,7 @@ Pour modifier les valeurs par défaut, vous devez sélectionner le membre de gro
   
 -   **(Static)** : indique un membre statique sans cellule d’en-tête, également appelé statique masqué.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

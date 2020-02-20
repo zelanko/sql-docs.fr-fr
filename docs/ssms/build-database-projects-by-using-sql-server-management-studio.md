@@ -1,7 +1,5 @@
 ---
-title: Créer des projets de base de données à l’aide de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Générer des projets de base de données
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -15,15 +13,19 @@ helpviewer_keywords:
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07dfe77992cb5e0e8011424d9cea878063a18943
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 503bf99e9300a155a3521f52f8fecd18d3d65005
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267612"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243964"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Créer des projets de base de données à l'aide de SQL Server Management Studio
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Un projet de script de base de données est un ensemble organisé de scripts, d'informations de connexion et de modèles qui sont tous associés à une base de données ou une partie d'une base de données. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour l’administration et la conception de bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans le contexte d’un projet de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inclut des concepteurs, des éditeurs, des guides et des assistants pour aider les utilisateurs lors du développement, du déploiement et de la gestion de bases de données.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  

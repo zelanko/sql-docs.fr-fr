@@ -9,10 +9,10 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579346"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Rapports d'extraction (Générateur de rapports et SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65579346"
 > [!NOTE]  
 >  Lorsque vous utilisez le Générateur de rapports, vous devez être connecté à un serveur de rapports afin d'afficher le rapport d'extraction qui s'ouvre lorsque vous cliquez sur le lien d'extraction dans le rapport principal.  
   
- Pour commencer à utiliser rapidement les rapports d’extraction, consultez [Didacticiel : création d’un rapport principal et d’un rapport d’extraction &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
+ Pour commencer rapidement à utiliser des rapports d'extraction, voir [Tutoriel : Créer un rapport principal et un rapport d’extraction &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Paramètres des rapports d'extraction  
  Un rapport d'extraction comprend généralement des paramètres qui lui sont passés par le rapport de synthèse. Dans l'exemple de rapport de résumé sur les ventes, le rapport de résumé inclut le champ [OrderNumber] dans une zone de texte dans une cellule de table. Le rapport d'extraction comporte un paramètre qui prend le numéro de commande en tant que valeur. Lorsque vous définissez le lien de rapport d'extraction sur la zone de texte pour [OrderNumber], vous affectez également au paramètre du rapport cible la valeur [OrderNumber]. Lorsque l'utilisateur clique sur le numéro de commande dans le rapport de synthèse, le rapport détaillé cible s'ouvre et affiche les informations concernant le numéro commande en question. Pour voir des instructions sur la personnalisation des rapports d’extraction en fonction des valeurs de paramètres, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) et [Fonction InScope &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  

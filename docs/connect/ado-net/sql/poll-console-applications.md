@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452102"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247675"
 ---
 # <a name="polling-in-console-applications"></a>Interrogation dans les applications console
 
@@ -28,7 +28,7 @@ Les opérations asynchrones dans ADO.NET vous permettent de lancer des opératio
 Vous pouvez utiliser la propriété <xref:System.IAsyncResult.IsCompleted%2A> pour déterminer si l’opération est terminée ou non.  
   
 ## <a name="example"></a>Exemple  
-L’application console suivante met à jour des données dans l’exemple de base de données **AdventureWorks**, en opérant de façon asynchrone. Afin d’émuler un processus de longue durée, cet exemple insère une instruction WAITFOR dans le texte de la commande. Normalement, vous n’essayez pas d’exécuter vos commandes plus lentement, mais dans ce cas, il est plus facile de démontrer un comportement asynchrone.  
+L’application console suivante met à jour des données dans l’exemple de base de données **AdventureWorks**, en opérant de façon asynchrone. Afin d’émuler un processus de longue durée, cet exemple insère une instruction WAITFOR dans le texte de la commande. Normalement, vous ne devez pas essayer de ralentir vos commandes, mais dans ce cas, cela simplifie l’illustration du comportement asynchrone.  
   
 ```csharp  
 using System;  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571490"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gestionnaire des alertes de données pour les utilisateurs SharePoint
@@ -27,7 +27,7 @@ ms.locfileid: "65571490"
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit le Gestionnaire des alertes de données pour permettre aux travailleurs de l’information SharePoint de gérer les alertes de données. Ces derniers peuvent afficher les informations relatives aux alertes qu'ils ont créées, supprimer des alertes, ouvrir les définitions d'alerte pour les modifier et exécuter des alertes à la demande. Il peuvent choisir de consulter les alertes d'un seul rapport ou les alertes de tous les rapports. L'illustration suivante montre les fonctionnalités dont les travailleurs de l'information disposent dans le Gestionnaire des alertes de données.
 
-![Fonctionnalités du Gestionnaire d’alertes pour les utilisateurs SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Fonctionnalités du Gestionnaire d’alertes pour les utilisateurs SharePoint")  
+![Fonctionnalités du Gestionnaire d'alertes pour les utilisateurs SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Fonctionnalités du Gestionnaire d'alertes pour les utilisateurs SharePoint")  
 
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
@@ -44,13 +44,13 @@ Quand le site SharePoint autorise les alertes de données, deux pages SharePoint
 ##  <a name="ViewingAlerts"></a> Consulter les informations relatives aux alertes de données  
  Vous pouvez afficher la liste des alertes de données que vous avez créées dans le Concepteur d'alertes de données. Pour ouvrir le Gestionnaire des alertes de données, cliquez avec le bouton droit sur un rapport publié dans une bibliothèque SharePoint. L’image suivante présente l’option **Gérer les alertes de données** dans le menu contextuel du rapport.  
   
- ![Ouvrir le Gestionnaire d’alertes à partir du menu contextuel du rapport](../reporting-services/media/rs-openalertmanager.gif "Ouvrir le Gestionnaire d’alertes à partir du menu contextuel du rapport")  
+ ![Ouvrir le Gestionnaire d'alertes à partir du menu contextuel du rapport](../reporting-services/media/rs-openalertmanager.gif "Ouvrir le Gestionnaire d'alertes à partir du menu contextuel du rapport")  
   
  Le Gestionnaire des alertes de données inclut une table qui répertorie le nom de l'alerte, le nom du rapport, votre nom en tant que créateur de la définition d'alerte, le nombre de messages d'alerte envoyés, la dernière fois que la définition d'alerte a été exécutée, la dernière fois qu'elle a été modifiée et l'état du dernier message d'alerte. Si le message d'alerte ne peut pas être généré ou envoyé, la colonne d'état contient des informations sur l'erreur et vous aide à dépanner l'alerte. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
  Le tableau suivant présente des exemples de données d'une table dans le Gestionnaire des alertes de données. Quand une erreur se produit, le message d’erreur et l’identificateur de l’entrée du journal (GUID) sont inclus dans le champ **État** de la table.  
   
-|Nom de l'alerte|Nom du rapport|Date de création|Alertes envoyées|Dernière exécution|Dernière modification|État|  
+|Nom de l’alerte|Nom du rapport|Créé par|Alertes envoyées|Dernière exécution|Dernière modification|Statut|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|La dernière alerte a été exécutée avec succès et l'alerte a été envoyée.|  
 |UnitsSold|ProductsSalesByQTR|Lauren Johnson|2|7/1/2011|6/28/2011|La dernière alerte a été exécutée avec succès, mais aucune donnée n'a été modifiée et aucune alerte n'a été envoyée.|  
@@ -77,14 +77,14 @@ Quand le site SharePoint autorise les alertes de données, deux pages SharePoint
 ##  <a name="HowTo"></a> Tâches associées  
  Cette section inclut les procédures qui vous expliquent comment gérer vos alertes et modifier vos définitions d'alerte.  
   
--   [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [Gérer mes alertes de données dans le gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
 -   [Modifier une alerte de données dans le concepteur d'alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepteur d’alertes de données](../reporting-services/data-alert-designer.md)   
+[Concepteur d'alertes de données](../reporting-services/data-alert-designer.md)   
 [Créer une alerte de données dans le Concepteur d'alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 

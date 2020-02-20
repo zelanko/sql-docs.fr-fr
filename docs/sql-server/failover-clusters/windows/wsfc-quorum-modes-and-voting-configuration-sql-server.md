@@ -1,6 +1,7 @@
 ---
-title: Modes de quorum WSFC et configuration de vote (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Modes de quorum WSFC et configuration de vote
+descriptoin: 'A description of the quroum modes and voting configuration used by the Windows Server Failover Cluster with a SQL Server failover cluster instance, or an Always On availability group. '
+ms.custom: seo-lt-2019
 ms.date: 10/03/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,30 +14,17 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09dc99233119b39161039f524599b9f36c3128ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107871"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822178"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modes de quorum WSFC et configuration de vote (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Tant les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que les instances de cluster de basculement Always On tirent parti du clustering de basculement Windows Server (WSFC) en tant que technologie de plateforme.  WSFC utilise une approche basée sur le quorum pour la surveillance de l'intégrité globale du cluster et l'optimisation de la tolérance aux pannes au niveau du nœud. Il est très important de disposer d’une connaissance de base de la configuration du vote des nœuds et des modes de quorum WSFC pour concevoir, administrer et dépanner votre solution de récupération d’urgence haute disponibilité Always On.  
   
- **Dans cette rubrique :**  
-  
--   [Détection de l'intégrité du cluster par quorum](#ClusterHealthDetectionbyQuorum)  
-  
--   [Modes de quorum](#QuorumModes)  
-  
--   [Nœuds votants et non-votants](#VotingandNonVotingNodes)  
-  
--   [Réglages recommandés pour le vote du quorum](#RecommendedAdjustmentstoQuorumVoting)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
--   [Contenu connexe](#RelatedContent)  
   
 ##  <a name="ClusterHealthDetectionbyQuorum"></a> Détection de l'intégrité du cluster par quorum  
  Chaque nœud d'un cluster WSFC participe à la communication périodique de pulsation pour partager l'état d'intégrité du nœud avec les autres nœuds. Les nœuds qui ne répondent pas sont considérés comme étant en état d'échec.  
@@ -48,7 +36,7 @@ ms.locfileid: "68107871"
 > [!IMPORTANT]  
 >  Si un cluster WSFC passe hors connexion suite à l'échec du quorum, une intervention manuelle est nécessaire pour le remettre en ligne.  
 >   
->  Pour plus d'informations, consultez : [Reprise d’activité après sinistre WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Pour plus d'informations, consultez les pages suivantes : [Reprise d’activité après sinistre WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Modes de quorum  
  Un *mode de quorum* est configuré au niveau du cluster WSFC afin de dicter la méthodologie utilisée pour le vote du quorum.  L'utilitaire Gestionnaire du cluster de basculement recommande un mode de quorum en fonction du nombre de nœuds du cluster.  
@@ -132,7 +120,7 @@ ms.locfileid: "68107871"
   
 -   [Guide pas à pas des clusters de basculement : Configuration du quorum dans un cluster de basculement](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   

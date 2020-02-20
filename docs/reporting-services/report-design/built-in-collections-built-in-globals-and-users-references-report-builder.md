@@ -9,10 +9,10 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581850"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Collections intégrées - Références à des champs Globals et Users prédéfinis (Générateur de rapports)
@@ -28,12 +28,12 @@ ms.locfileid: "65581850"
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|Date et heure du début de l'exécution du rapport.|  
 |PageNumber|**Integer**|Numéro de page actuel relatif aux sauts de page qui réinitialisent le nombre de pages. Au début du traitement des rapports, la valeur initiale est 1. Le numéro de page est incrémenté pour chaque page rendue.<br /><br /> Pour numéroter les pages à l’intérieur de sauts de page pour un rectangle, une région de données, un groupe de régions de données ou une carte, dans la propriété PageBreak, attribuez à la propriété ResetPageNumber la valeur **True**. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
-|ReportFolder|**String**|Chemin d'accès complet au dossier contenant le rapport. Ce chemin n'inclut pas l'URL du serveur de rapports.|  
-|ReportName|**String**|Nom du rapport tel qu'il est stocké dans la base de données du serveur de rapports.|  
-|ReportServerUrl|**String**|URL du serveur de rapports sur lequel le rapport est en cours d'exécution.|  
+|ReportFolder|**Chaîne**|Chemin d'accès complet au dossier contenant le rapport. Ce chemin n'inclut pas l'URL du serveur de rapports.|  
+|ReportName|**Chaîne**|Nom du rapport tel qu'il est stocké dans la base de données du serveur de rapports.|  
+|ReportServerUrl|**Chaîne**|URL du serveur de rapports sur lequel le rapport est en cours d'exécution.|  
 |TotalPages|**Integer**|Nombre total de pages par rapport aux sauts de page qui réinitialisent PageNumber. Si aucun saut de page n’est défini, cette valeur est identique à celle de OverallTotalPages.<br /><br /> TotalPages peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
-|PageName|**String**|Nom de la page. Au début du traitement d’un rapport, la valeur initiale est celle définie pour la valeur de la propriété de rapport InitialPageName. À mesure que chaque élément de rapport est traité, cette valeur est remplacée par la valeur correspondante de PageName d’un rectangle, d’une région de données, d’un groupe de régions de données ou d’une carte. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageName peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
-|OverallPageNumber|**Entier**|Numéro de la page actuelle pour le rapport entier. Cette valeur n’est pas affectée par ResetPageNumber.<br /><br /> OverallPageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
+|PageName|**Chaîne**|Nom de la page. Au début du traitement d’un rapport, la valeur initiale est celle définie pour la valeur de la propriété de rapport InitialPageName. À mesure que chaque élément de rapport est traité, cette valeur est remplacée par la valeur correspondante de PageName d’un rectangle, d’une région de données, d’un groupe de régions de données ou d’une carte. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageName peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
+|OverallPageNumber|**Integer**|Numéro de la page actuelle pour le rapport entier. Cette valeur n’est pas affectée par ResetPageNumber.<br /><br /> OverallPageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
 |OverallTotalPages|**Integer**|Nombre total de pages pour le rapport entier. Cette valeur n’est pas affectée par ResetPageNumber.<br /><br /> OverallTotalPages peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
 |RenderFormat|**RenderFormat**|Informations sur la demande de rendu actuelle.<br /><br /> Pour plus d'informations, consultez « RenderFormat » dans la section suivante.|  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65581850"
   
 |Membre|Type|Description|  
 |------------|----------|-----------------|  
-|Créer une vue d’abonnement|**String**|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
+|Name|**Chaîne**|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
 |IsInteractive|**Booléen**|Indique si la demande de rendu actuelle utilise un format de rendu interactif.|  
 |DeviceInfo|Collection nom/valeur en lecture seule|Paires clé/valeur pour les paramètres deviceinfo de la demande de rendu actuelle.<br /><br /> Les valeurs de chaîne peuvent être spécifiées en utilisant la clé ou un index dans la collection.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65581850"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   Cette expression fournit le nom du rapport ainsi que l'heure de son exécution. L'heure est mise en forme avec la chaîne de mise en forme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour la date courte :  
+-   Cette expression fournit le nom du rapport ainsi que l'heure de son exécution. Le format des date et heure est déterminé par la chaîne de mise en forme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour la date courte :  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
@@ -72,8 +72,8 @@ ms.locfileid: "65581850"
   
 |**Membre**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
-|**Langage**|**Chaîne**|Langue de l'utilisateur qui exécute le rapport. Par exemple, `en-US`.|  
-|**UserID**|**String**|Identificateur de l'utilisateur qui exécute le rapport. Si vous utilisez l'authentification Windows, cette valeur correspond au compte de domaine de l'utilisateur actuel. La valeur est déterminée par l'extension de sécurité de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , qui peut utiliser l'authentification Windows ou une authentification personnalisée.|  
+|**Langage**|**Chaîne**|Langue de l'utilisateur qui exécute le rapport. Par exemple : `en-US`.|  
+|**l'UserId**|**Chaîne**|Identificateur de l'utilisateur qui exécute le rapport. Si vous utilisez l'authentification Windows, cette valeur correspond au compte de domaine de l'utilisateur actuel. La valeur est déterminée par l'extension de sécurité de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , qui peut utiliser l'authentification Windows ou une authentification personnalisée.|  
  
 ### <a name="using-locale-settings"></a>Utilisation des paramètres régionaux  
  Vous pouvez utiliser des expressions pour faire référence aux paramètres régionaux sur un ordinateur client au moyen de la valeur **User.Language** pour déterminer l'aspect d'un rapport pour l'utilisateur. Par exemple, vous pouvez créer un rapport qui utilise une expression de requête différente en fonction de la valeur d'un paramètre régional. La requête peut changer de façon à récupérer des informations localisées, provenant d'une colonne différente selon la langue indiquée en retour. Vous pouvez également utiliser une expression dans les paramètres de langue du rapport ou des éléments de rapport basés sur cette variable.  

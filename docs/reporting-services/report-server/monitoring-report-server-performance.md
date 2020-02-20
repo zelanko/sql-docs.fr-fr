@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412655"
 ---
 # <a name="monitoring-report-server-performance"></a>Analyse des performances d'un serveur de rapports
@@ -57,7 +57,7 @@ ms.locfileid: "67412655"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Objets de performance de Reporting Services  
-SQL Server 2016 Reporting Services ou version ultérieure (SSRS) comprend les objets de performances suivants :  
+SQL Server 2016 Reporting Services ou version ultérieure (SSRS) comprend les objets de performance suivants :  
   
 -   **Service Web MSRS 2011** et **Service Web MSRS 2011 en mode SharePoint** pour analyser les performances d’un serveur de rapports. Ces objets de performance incluent une collection de compteurs utilisée pour suivre le traitement du serveur de rapports initialisé en général via des opérations de consultation du rapport interactives. Ces compteurs sont réinitialisés à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .  
   
@@ -70,10 +70,10 @@ SQL Server 2016 Reporting Services ou version ultérieure (SSRS) comprend les ob
 ## <a name="other-performance-counters"></a>Autres compteurs de performance  
  Les compteurs de performances [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] personnalisés sont fournis uniquement pour le **Service Web MSRS 2008**, le **Service Windows MSRS 2008**et **Service ReportServer**. Les objets de performance suivants fournissent des données d'analyse des performances supplémentaires pour le serveur de rapports.  
   
-|Objet de performance|Remarques|  
+|Objet de performance|Notes|  
 |------------------------|-----------|  
-|**Données CLR .NET** et **mémoire CLR .NET**|Le portail web utilise [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] les compteurs de performances. Pour plus d'informations, consultez la rubrique relative à l'amélioration des performances et de l'évolutivité des applications .NET, « Improving .NET Application Performance and Scalability » (en anglais) sur MSDN.|  
-|**Traiter**|Ajoutez les compteurs de performances **Temps écoulé** et **ID de processus** pour une instance ReportingServicesService pour suivre le temps de fonctionnement de processus par ID de processus.|  
+|**Données CLR .NET** et **mémoire CLR .NET**|Le portail web utilise les compteurs de performances [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Pour plus d'informations, consultez la rubrique relative à l'amélioration des performances et de l'évolutivité des applications .NET, « Improving .NET Application Performance and Scalability » (en anglais) sur MSDN.|  
+|**Processus**|Ajoutez les compteurs de performances **Temps écoulé** et **ID de processus** pour une instance ReportingServicesService pour suivre le temps de fonctionnement de processus par ID de processus.|  
   
 ## <a name="sharepoint-events"></a>Événements SharePoint  
  En plus des objets de performance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez également vouloir configurer des événements SharePoint si vous exécutez un serveur de rapports en mode intégré SharePoint et avez configuré votre environnement de création de rapports de façon à utiliser un produit SharePoint. Dans cette section, utilisez les événements d'un serveur de rapports en mode intégré SharePoint pour examiner les événements de diagnostic qui peuvent fournir des informations utiles si votre environnement de création de rapports est intégré SharePoint.  

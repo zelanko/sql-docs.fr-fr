@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573319"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
@@ -42,20 +42,20 @@ ms.locfileid: "65573319"
   
 |**Propriété**|**Type**|**Description ou valeur attendue**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Objet**|Précise la valeur de données du champ.|  
+|**Valeur**|**Object**|Précise la valeur de données du champ.|  
 |**IsMissing**|**Booléen**|Indique si le champ figure dans le dataset obtenu.|  
-|**UniqueName**|**String**|Retourne le nom complet d'un niveau. Par exemple, la valeur **UniqueName** valeur d’un employé peut être *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* .|  
-|**BackgroundColor**|**String**|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.|  
-|**Color**|**String**|Retourne la couleur de premier plan définie dans la base de données pour l'élément.|  
-|**FontFamily**|**String**|Retourne le nom de la police définie dans la base de données pour l'élément.|  
-|**FontSize**|**String**|Retourne la taille en points de la police définie dans la base de données pour l'élément.|  
-|**FontWeight**|**String**|Retourne l'épaisseur de la police définie dans la base de données pour l'élément.|  
-|**FontStyle**|**String**|Retourne le style de la police définie dans la base de données pour l'élément.|  
-|**TextDecoration**|**String**|Retourne la mise en forme de texte spéciale définie dans la base de données pour l'élément.|  
-|**FormattedValue**|**String**|Retourne la valeur mise en forme d'une mesure ou d'un chiffre clé. Par exemple, la propriété **FormattedValue** de **Sales Amount Quota** retourne un format monétaire semblable à $1,124,400.00.|  
-|**Clé**|**Objet**|Retourne la clé d'un niveau.|  
+|**UniqueName**|**Chaîne**|Retourne le nom complet d'un niveau. Par exemple, la valeur **UniqueName** valeur d’un employé peut être *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* .|  
+|**BackgroundColor**|**Chaîne**|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.|  
+|**Color**|**Chaîne**|Retourne la couleur de premier plan définie dans la base de données pour l'élément.|  
+|**FontFamily**|**Chaîne**|Retourne le nom de la police définie dans la base de données pour l'élément.|  
+|**FontSize**|**Chaîne**|Retourne la taille en points de la police définie dans la base de données pour l'élément.|  
+|**FontWeight**|**Chaîne**|Retourne l'épaisseur de la police définie dans la base de données pour l'élément.|  
+|**FontStyle**|**Chaîne**|Retourne le style de la police définie dans la base de données pour l'élément.|  
+|**TextDecoration**|**Chaîne**|Retourne la mise en forme de texte spéciale définie dans la base de données pour l'élément.|  
+|**FormattedValue**|**Chaîne**|Retourne la valeur mise en forme d'une mesure ou d'un chiffre clé. Par exemple, la propriété **FormattedValue** de **Sales Amount Quota** retourne un format monétaire semblable à $1,124,400.00.|  
+|**Clé**|**Object**|Retourne la clé d'un niveau.|  
 |**LevelNumber**|**Integer**|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nombre de niveaux ou de dimensions.|  
-|**ParentUniqueName**|**String**|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nom complet du niveau parent.|  
+|**ParentUniqueName**|**Chaîne**|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nom complet du niveau parent.|  
   
 > [!NOTE]  
 >  Ces propriétés de champ étendues ont des valeurs seulement si la source de données (par exemple, le cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) fournit ces valeurs quand votre rapport s’exécute et récupère les données pour ses datasets. Vous pouvez alors faire référence à ces valeurs de propriété de champ à partir de n'importe quelle expression en utilisant la syntaxe décrite dans la section suivante. Cependant, dans la mesure où ces champs sont spécifiques à ce fournisseur de données, les modifications que vous apportez à ces valeurs ne sont pas enregistrées avec la définition du rapport.  
@@ -129,7 +129,7 @@ CELL PROPERTIES
 |Propriété|Valeur|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|VALEUR|2481|  
 |BACK_COLOR|(Null)|  
 |FORE_COLOR|(Null)|  
 |FORMATTED_VALUE|2,481|  

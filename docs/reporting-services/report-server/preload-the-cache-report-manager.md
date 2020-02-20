@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66174993"
 ---
 # <a name="preload-the-cache"></a>Précharger le cache  
@@ -23,7 +23,7 @@ ms.locfileid: "66174993"
   
  Vous pouvez précharger le cache pour un rapport de deux façons :  
   
-1.  Créer un plan d'actualisation du cache pour le rapport. Cette méthode est recommandée.  
+1.  Créer un plan d'actualisation du cache pour le rapport. Ceci est la méthode privilégiée.  
   
 2.  Utilisez l'abonnement piloté par les données pour précharger des instances de rapports paramétrables dans le cache. Cette méthode était la seule permettant de précharger le cache dans les versions de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] antérieures à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66174993"
   
 ## <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Pour précharger le cache en créant un plan d'actualisation du cache  
   
-1. Démarrez le [portail web d’un serveur de rapports](../../reporting-services/web-portal-ssrs-native-mode.md "Le portail web d’un serveur de rapports").  
+1. Lancez [le portail web d’un serveur de rapports](../../reporting-services/web-portal-ssrs-native-mode.md "Portail web d’un serveur de rapports").  
   
 2. Sélectionnez **Parcourir** à partir de l’écran d’accueil et naviguez dans l’arborescence des dossiers pour localiser l’élément que vous souhaitez mettre en cache.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "66174993"
 5. Pour activer la mise en cache pour un jeu de données, sélectionnez la case d’option **Mettre en cache des copies de ce jeu de données et les utiliser en cas de disponibilité**. La section **Expiration du cache** apparaît alors sous celui-ci. Sélectionnez l'une des cases d'option suivantes :
 
     - **Le cache expire au bout de x minutes** (entrez le nombre de minutes pour x souhaité).
-    - **Le cache expire selon une planification**.  Reporting Services fournit des planifications partagées et des planifications spécifiques aux rapports pour vous aider à contrôler le traitement, un contenu cohérent et les performances de la distribution des rapports. Pour plus d’informations, consultez [Créer, modifier et supprimer des planifications](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Créer, modifier et supprimer des planifications"). Vous disposez de plusieurs options sur la façon de créer une planification, dans ce cas pour l’expiration du cache : sélectionnez une des deux options de planification ci-dessous :  
-      - Case d'option **Planification partagée**, puis sélectionnez une planification à partir de la zone de texte déroulante **Sélectionner une planification partagée**. Pour plus d’informations, consultez [Planifications](../../reporting-services/subscriptions/schedules.md "Planifications").  
+    - **Le cache expire selon une planification**.  Reporting Services fournit des planifications partagées et des planifications spécifiques aux rapports pour vous aider à contrôler le traitement, un contenu cohérent et les performances de la distribution des rapports. Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Vous disposez de plusieurs options sur la façon de créer une planification, dans ce cas pour l’expiration du cache : Sélectionnez une des deux options de planification ci-dessous :  
+      - Case d'option **Planification partagée**, puis sélectionnez une planification à partir de la zone de texte déroulante **Sélectionner une planification partagée**. Pour plus d'informations, consultez [Schedules](../../reporting-services/subscriptions/schedules.md "Planifications").  
       - Case d'option **Planification spécifique aux rapports**, puis sélectionnez le lien **Modifier la planification** si nécessaire pour afficher la page *Détails de la planification*.  
 
-         ![La page des détails de planification d’expiration du cache de portail web pour les jeux de données](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Page des détails de la planification de cache du jeu de données")
+         ![Page des détails de planification d’expiration du cache de portail web pour les jeux de données](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Page Détails de la planification du cache du dataset")
 
           Sur cette page, vous pouvez sélectionner :
          - Le type de planification :
            - **Heure** : exécution de la planification chaque : spécifiez les heures et minutes et l’heure de début.
            - **Jour** : sélectionnez une des trois options ci-dessous :  
-              - **Les jours suivants** : (dim, lundi, mardi, mercredi, jeu, ven, sam).
+              - **Les jours suivants** : (Dim, Lun, Mar, Mer, Jeu, Ven, Sam).
               - **Tous les jours ouvrables**
               - **Répéter après ce nombre de jours** : spécifiez un nombre.  
            - **Semaine** : spécifiez les deux éléments suivants :
@@ -94,7 +94,7 @@ ms.locfileid: "66174993"
   
 ## <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Pour précharger le cache avec un rapport spécifique à l'utilisateur en utilisant un abonnement piloté par les données
 
-1. Démarrez le [portail web d’un serveur de rapports](../../reporting-services/web-portal-ssrs-native-mode.md "Le portail web d’un serveur de rapports").  
+1. Lancez [le portail web d’un serveur de rapports](../../reporting-services/web-portal-ssrs-native-mode.md "Portail web d’un serveur de rapports").  
 2. Sélectionnez **Parcourir** à partir de l’écran d’accueil et naviguez dans l’arborescence des dossiers pour localiser le rapport auquel vous souhaitez vous abonner.  
 3. Cliquez avec le bouton de droite sur le rapport, sélectionnez **S’abonner** dans le menu déroulant. La page **Nouveaux abonnements** s’affiche.  
 4. Dans la zone de texte **Description**, saisissez une description de l’abonnement.  
@@ -132,14 +132,14 @@ ms.locfileid: "66174993"
 
 13. Sélectionnez **Créer l'abonnement**.  
   
-14. La page **Abonnements** s’affiche avec votre nouvel abonnement piloté par les données. À partir de cette page, vous pouvez activer l’abonnement lorsque vous êtes prêt, en cochant la case à gauche de celui-ci et en sélectionnant le bouton **Activer**. ![bouton Activer de la page Abonnements](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "Le bouton Activer de la page Abonnements")
+14. La page **Abonnements** s’affiche avec votre nouvel abonnement piloté par les données. À partir de cette page, vous pouvez activer l’abonnement lorsque vous êtes prêt, en cochant la case à gauche de celui-ci et en sélectionnant le bouton **Activer**. ![bouton d’activation de la page abonnements](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "Bouton d’activation sur la page des abonnements")
 
 15. Précisez le moment où l'abonnement doit être traité. Ne choisissez pas l’option **Lorsque les données du rapport sont mises à jour sur le serveur de rapports**. Elle est réservée exclusivement aux instantanés. Si vous voulez utiliser une planification préexistante, sélectionnez **Suivant une planification partagée**.  
   
      Ou, pour créer une planification personnalisée, sélectionnez **Suivant une planification créée pour cet abonnement**, puis **Suivant**. Configurez la planification, puis sélectionnez **Terminer**.  
   
     > [!NOTE]  
-    > Pour que les abonnés reçoivent la version du rapport la plus récente, la planification que vous configurez doit être chronologiquement cohérente par rapport à la planification de la remise du rapport que vous avez définie pour les abonnés. Pour plus d’informations, consultez le [portail web d’un serveur de rapports](../../reporting-services/web-portal-ssrs-native-mode.md  "Le portail web d’un serveur de rapports").  
+    > Pour que les abonnés reçoivent la version du rapport la plus récente, la planification que vous configurez doit être chronologiquement cohérente par rapport à la planification de la remise du rapport que vous avez définie pour les abonnés. Pour plus d’informations, consultez le [portail web d’un serveur de rapports](../../reporting-services/web-portal-ssrs-native-mode.md  "Portail web d’un serveur de rapports").  
   
 16. Configurez les options d'exécution du rapport comme suit. Dans la page du rapport, sélectionnez l’onglet **Propriétés**.  
   

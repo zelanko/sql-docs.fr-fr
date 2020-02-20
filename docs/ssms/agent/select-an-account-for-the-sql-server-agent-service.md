@@ -1,10 +1,7 @@
 ---
-title: Sélectionner un compte pour le service SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 05/04/2017
+title: Sélectionner un compte pour le service SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811554"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253230"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Sélectionner un compte pour le service SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../
   
 -   **Compte intégré**. Vous pouvez choisir un compte dans la liste des comptes de service intégrés Windows suivants :  
   
-    -   Compte**Système local** . Le nom de ce compte est NT AUTHORITY\System. Ce compte puissant bénéficie d'un accès illimité à l'ensemble des ressources système locales. Il est membre du groupe **Administrateurs** Windows de l’ordinateur local et donc membre du rôle serveur fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** .  
+    -   Compte**Système local** . Le nom de ce compte est NT AUTHORITY\System. Ce compte puissant bénéficie d'un accès illimité à l'ensemble des ressources système locales. Il est membre du groupe **Administrateurs** Windows de l’ordinateur local et donc membre du rôle serveur fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**.  
   
         > [!IMPORTANT]  
         > Le **Compte système local** est fourni pour des raisons de compatibilité descendante uniquement. Le compte système local dispose d'autorisations dont l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas besoin. Évitez d'exécuter l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec ce compte. Pour une sécurité optimale, utilisez un compte de domaine Windows disposant des autorisations répertoriées dans la section suivante, « Autorisations de compte de domaine Windows ».  
@@ -75,18 +77,18 @@ Le compte avec lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
 -   Le compte doit être membre du rôle serveur fixe **sysadmin** .  
   
--   Pour utiliser le traitement de travaux multiserveur, le compte doit être membre du rôle de base de données **msdb** **TargetServersRole** sur le serveur maître.  
+-   Pour utiliser le traitement de travaux multiserveur, le compte doit être membre du rôle de base de données **msdb****TargetServersRole** sur le serveur maître.  
   
 ## <a name="supported-service-account-types"></a>Types de comptes de service pris en charge  
 Le tableau ci-dessous répertorie les types de comptes Windows qui peuvent être utilisés pour le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Type de compte de service|Serveur non-cluster|Serveur en cluster|Contrôleur de domaine (non-cluster)|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Compte de domaine Windows (membre du groupe Administrateurs Windows)|Pris en charge|Pris en charge|Pris en charge|  
-|Compte de domaine Windows (non administratif)|Pris en charge<br /><br />Voir la restriction 1 ci-dessous.|Pris en charge<br /><br />Voir la restriction 1 ci-dessous.|Pris en charge<br /><br />Voir la restriction 1 ci-dessous.|  
-|Compte Service réseau (AUTORITE NT\NetworkService)|Pris en charge<br /><br />Voir les restrictions 1, 3 et 4 ci-dessous.|Non pris en charge|Non pris en charge|  
-|Compte d'utilisateur local (non administratif)|Pris en charge<br /><br />Voir la restriction 1 ci-dessous.|Non pris en charge|Non applicable|  
-|Compte système local (AUTORITE NT\System)|Pris en charge<br /><br />Voir la restriction 2 ci-dessous.|Non pris en charge|Pris en charge<br /><br />Voir la restriction 2 ci-dessous.|  
+|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Compte de domaine Windows (membre du groupe Administrateurs Windows)|Prise en charge|Prise en charge|Prise en charge|  
+|Compte de domaine Windows (non administratif)|Prise en charge<br /><br />Voir la restriction 1 ci-dessous.|Prise en charge<br /><br />Voir la restriction 1 ci-dessous.|Prise en charge<br /><br />Voir la restriction 1 ci-dessous.|  
+|Compte Service réseau (AUTORITE NT\NetworkService)|Prise en charge<br /><br />Voir les restrictions 1, 3 et 4 ci-dessous.|Non pris en charge|Non pris en charge|  
+|Compte d'utilisateur local (non administratif)|Prise en charge<br /><br />Voir la restriction 1 ci-dessous.|Non pris en charge|Non applicable|  
+|Compte système local (AUTORITE NT\System)|Prise en charge<br /><br />Voir la restriction 2 ci-dessous.|Non pris en charge|Prise en charge<br /><br />Voir la restriction 2 ci-dessous.|  
 |Compte Service local (AUTORITE NT\LocalService)|Non pris en charge|Non pris en charge|Non pris en charge|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Restriction 1 : utilisation de comptes non administratifs pour l’administration multiserveur  
@@ -118,12 +120,12 @@ Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssN
   
 **Pour spécifier le profil de messagerie de SQL Server Agent**  
   
--   [Procédure : configurer la messagerie de SQL Server Agent en vue de l’utilisation de Database Mail (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Procédure : Configurer SQL Server Agent Mail pour utiliser Database Mail](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Utilisez le Gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit démarrer lorsque le système d'exploitation démarre.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Configuration des comptes de service Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 [Gestion des services à l’aide de SQL Computer Manager](https://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Implémenter la sécurité de l'Agent SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  

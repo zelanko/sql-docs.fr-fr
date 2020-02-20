@@ -1,18 +1,19 @@
 ---
-title: Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS) | Microsoft Docs
+title: Configurer le compte de service Report Server (Gestionnaire de configuration) | Microsoft Docs
+description: Reporting Services est implémenté en tant que service unique qui contient un service web Report Server, un portail web et une application de traitement en arrière-plan utilisée pour le traitement des rapports planifié et la remise d'abonnement.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-ms.custom: seodec18
-ms.date: 12/10/2018
-ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594086"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866022"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS)
 
@@ -36,7 +37,7 @@ ms.locfileid: "73594086"
   
 - Il met à jour automatiquement les autorisations de connexion sur l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilisée pour héberger la base de données du serveur de rapports. Le nouveau compte est ajouté au rôle **RSExecRole**.  
   
-     La connexion de base de données pour l’ancien compte n’est pas supprimée automatiquement. Assurez-vous de supprimer les comptes qui ne sont plus utilisés. Pour plus d’informations, consultez [administrer une &#40;base de données&#41;du serveur de rapports en mode natif SSRS](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
+     La connexion de base de données pour l’ancien compte n’est pas supprimée automatiquement. Assurez-vous de supprimer les comptes qui ne sont plus utilisés. Pour plus d’informations, consultez [Administrer une base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
   
      L’accord des autorisations de base de données à un nouveau compte de service a lieu uniquement si vous avez configuré en premier lieu la connexion de base de données du serveur de rapports de façon à utiliser le compte de service. Si vous avez configuré la connexion de base de données du serveur de rapports de façon à utiliser un compte d'utilisateur de domaine ou une connexion de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les informations de connexion ne sont pas affectées par la mise à jour du compte de service.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "73594086"
   
 5. Lorsque vous êtes invité à sauvegarder la clé symétrique, tapez un nom de fichier et un emplacement pour la sauvegarde de la clé symétrique, entrez un mot de passe pour verrouiller et déverrouiller le fichier, puis cliquez sur **OK**.  
   
-6. Si le serveur de rapports utilise le compte de service pour se connecter à la base de données du serveur de rapports, les informations de connexion sont mises à jour pour utiliser le nouveau compte ou le nouveau mot de passe. La mise à jour des informations de connexion nécessite que vous vous connectiez à la base de données. Si la boîte de dialogue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
+6. Si le serveur de rapports utilise le compte de service pour se connecter à la base de données du serveur de rapports, les informations de connexion sont mises à jour pour utiliser le nouveau compte ou le nouveau mot de passe. La mise à jour des informations de connexion nécessite que vous vous connectiez à la base de données. Si la boîte de dialogue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Connexion à la base de données** s’affiche, entrez les informations d’identification ayant l’autorisation de se connecter à la base de données, puis cliquez sur **OK**.  
   
 7. Lorsque vous êtes invité à restaurer la clé symétrique, tapez le mot de passe spécifié à l’étape 5, puis cliquez sur **OK**.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "73594086"
 |Compte|Explication|  
 |-------------|-----------------|  
 |Comptes d'utilisateurs de domaine|Si vous avez un compte d'utilisateur de domaine Windows qui possède les autorisations minimales requises pour les opérations de serveur de rapports, vous devez l'utiliser.<br /><br /> Un compte d'utilisateur de domaine est recommandé car il isole le service Report Server des autres applications. L'exécution de plusieurs applications sous un compte partagé, tel que Service réseau, accroît le risque qu'un utilisateur malveillant prenne le contrôle du serveur de rapports car une violation de la sécurité pour l'une des applications peut facilement s'étendre à toutes les applications qui s'exécutent sous le même compte.<br /><br /> Si vous utilisez un compte d’utilisateur de domaine, vous devez changer régulièrement le mot de passe si votre organisation impose une stratégie d’expiration des mots de passe. Vous devrez peut-être également inscrire le service avec le compte d'utilisateur. Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Évitez d'utiliser un compte d'utilisateur Windows local. En général, les comptes locaux ne disposent pas des autorisations suffisantes pour accéder aux ressources sur d’autres ordinateurs. Pour plus d’informations sur la manière dont l’utilisation d’un compte local limite la fonctionnalité du serveur de rapports, consultez [Considérations relatives à l’utilisation des comptes locaux](#localaccounts) dans cette rubrique.|  
-|**compte de service virtuel**|**Compte de service virtuel** représente le service Windows. Il s’agit d’un compte intégré doté des privilèges minimaux, qui a les autorisations d’ouverture de session sur le réseau. Ce compte est recommandé si vous n’avez pas de compte d’utilisateur de domaine disponible ou si vous voulez éviter toute interruption de service à cause des stratégies d’expiration de mot de passe.|  
+|**Compte de service virtuel**|**Compte de service virtuel** représente le service Windows. Il s’agit d’un compte intégré doté des privilèges minimaux, qui a les autorisations d’ouverture de session sur le réseau. Ce compte est recommandé si vous n’avez pas de compte d’utilisateur de domaine disponible ou si vous voulez éviter toute interruption de service à cause des stratégies d’expiration de mot de passe.|  
 |**Service réseau**|**Service réseau** est un compte intégré doté des privilèges minimaux, qui a les autorisations d’ouverture de session sur le réseau. <br /><br /> Si vous sélectionnez **Service réseau**, essayez de réduire le nombre d’autres services qui s’exécutent sous le même compte. Une violation de la sécurité pour une des applications compromet la sécurité de toutes les autres applications qui s’exécutent sous le même compte.|  
 |**Service local**|**Service local** est un compte prédéfini qui s’apparente à un compte d’utilisateur Windows local authentifié. Les services qui s’exécutent au moyen du compte **Service local** accèdent aux ressources réseau dans le cadre d’une session nulle, sans informations d’identification. Ce compte ne convient pas aux scénarios de déploiement intranet où le serveur de rapports doit se connecter à une base de données de serveur de rapports distante ou à un contrôleur de domaine réseau afin d'authentifier un utilisateur avant d'ouvrir un rapport ou de traiter un abonnement.|  
 |**Système local**|**Système local** est un compte doté de privilèges élevés qui n’est pas obligatoire pour l’exécution d’un serveur de rapports. Évitez ce compte pour les installations de serveur de rapports. Choisissez un compte de domaine ou **Service réseau** à la place.|  
@@ -111,7 +112,7 @@ Les instructions et les liens suivants de cette section peuvent vous aider à ch
   
 - Les erreurs de réservation d'URL peuvent se produire lorsque vous mettez à jour le compte de service. Chaque réservation d'URL comporte un descripteur de sécurité incluant une liste de contrôle d'accès discrétionnaire (DACL) qui accorde l'autorisation au compte de service d'accepter les demandes sur l'URL. Lorsque vous mettez à jour le compte, l'URL doit être recréée pour mettre à jour la liste DACL avec les nouvelles informations de compte. Si la réservation d’URL ne peut pas être recréée et que vous savez que le compte est valide, essayez de redémarrer l’ordinateur. Si l'erreur persiste, essayez d'utiliser un autre compte.  
   
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

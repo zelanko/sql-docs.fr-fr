@@ -11,10 +11,10 @@ ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571276"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Méthode ConfigurationSetting - RemoveSSLCertificateBinding
@@ -51,20 +51,20 @@ public void RemoveSSLCertificateBindings(string Application,
  *lcid*  
  Paramètres régionaux à utiliser pour les messages d’erreur renvoyés.  
   
- *Erreur*  
+ *Error*  
  [out] Description de l'erreur qui s'est produite.  
   
  *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. La valeur 0 indique que l'appel de la méthode a abouti ; un code d'erreur indique que l'appel n'a pas abouti.  
   
 ## <a name="remarks"></a>Notes  
  Cette méthode supprime la liaison spécifique du fichier rsreportserver.config et éventuellement HTTP.SYS.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

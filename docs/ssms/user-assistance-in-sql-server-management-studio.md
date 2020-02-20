@@ -1,6 +1,6 @@
 ---
-title: Assistance utilisateur de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Assistance utilisateur de SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263393"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252208"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistance utilisateur de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ Les onglets **Sommaire** et **Index** offrent des fonctionnalités et une interf
   
     Fournit un ensemble hiérarchique de pages liées qui contiennent des rubriques associées aux tâches [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] courantes. Le contenu est classé par composant et tâche (rubriques Réplication, par exemple), etc.  
   
--   **Recherche**  
+-   **action**  
   
     Recherche des rubriques avec ou sans filtres prédéfinis. L’option Rechercher dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se trouve dans une page avec onglets distincte. Les utilisateurs peuvent affiner leurs recherches à l'aide d'un ou de plusieurs filtres prédéfinis (type de rubrique, langage ou technologie). Par défaut, l'option Rechercher n'utilise aucun des filtres prédéfinis, et seules les rubriques des collections installées font l'objet des recherches.  
   
@@ -48,7 +48,7 @@ Les onglets **Sommaire** et **Index** offrent des fonctionnalités et une interf
 Aide sur l’aide (Aide de l’Explorateur de documents [!INCLUDE[msCoName](../includes/msconame_md.md)]) permet aux utilisateurs d’avoir accès à la documentation sur la visionneuse de l’aide, mais les rubriques se trouvent dans une collection distincte de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’afficheur d’aide, sélectionnez **Aide sur l’aide** dans le menu ? (Aide) de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>Site MSDN et communautés SQL Server  
-L'aide de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permet également aux utilisateurs d'avoir accès au site MSDN et aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sur le web. Vous pouvez :  
+L'aide de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permet également aux utilisateurs d'avoir accès au site MSDN et aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sur le Web. Vous pouvez :  
   
 -   accéder aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de la page Comment faire ? ;  
   

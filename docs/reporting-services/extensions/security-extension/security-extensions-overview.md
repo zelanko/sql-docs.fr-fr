@@ -11,10 +11,10 @@ ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225875"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>Présentation des extensions de sécurité - Reporting Services (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "63225875"
   
  Les extensions de sécurité étant basées sur une API ouverte et extensible, vous pouvez créer des extensions d'authentification et d'autorisation dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. L'exemple suivant illustre une implémentation d'extension de sécurité type qui utilise une authentification et une autorisation à base de formulaires :  
   
- ![Processus d’extension de sécurité de Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Processus d’extension de sécurité de Reporting Services")  
+ ![Processus d'extension de sécurité de Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Processus d'extension de sécurité de Reporting Services")  
   
  Comme indiqué dans l'illustration, l'authentification et l'autorisation se déroulent comme suit :  
   

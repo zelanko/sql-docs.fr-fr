@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67313980"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurer un serveur de rapports (mode natif de Reporting Services)
@@ -27,9 +27,9 @@ ms.locfileid: "67313980"
   
 -   Une base de données du serveur de rapports qui stocke des données d'application, des rapports et d'autres éléments.  
   
- Le programme d'installation fournit la configuration minimale si vous sélectionnez les options d'installation suivantes : configuration par défaut en mode natif ou configuration par défaut en mode intégré SharePoint. Si vous avez installé le serveur de rapports en mode de fichiers uniquement (option **Installer mais ne pas configurer** dans l’Assistant Installation), seul le compte de service est configuré. L'URL du service Web et la base de données du serveur de rapports doivent être configurés à l'issue de l'installation.  
+ Le programme d'installation configure les paramètres minimum si vous sélectionnez l’une des options d'installation suivantes : Configuration par défaut du mode natif ou configuration par défaut du mode intégré SharePoint. Si vous avez installé le serveur de rapports en mode de fichiers uniquement (option **Installer mais ne pas configurer** dans l’Assistant Installation), seul le compte de service est configuré. L'URL du service Web et la base de données du serveur de rapports doivent être configurés à l'issue de l'installation.  
   
-Il est recommandé de configurer le portail web afin que vous pouvez accorder l’accès utilisateur au serveur de rapports et gérer le contenu du serveur de rapports. Si vous déployez un serveur de rapports en mode intégré SharePoint, utilisez le frontal Web d'un serveur SharePoint pour accorder l'accès.  
+Il est recommandé de configurer le portail web de sorte que vous puissiez accorder à l’utilisateur l’accès au serveur de rapports et gérer le contenu du serveur de rapports. Si vous déployez un serveur de rapports en mode intégré SharePoint, utilisez le frontal Web d'un serveur SharePoint pour accorder l'accès.  
   
  Des fonctionnalités supplémentaires, telles que la messagerie électronique de serveur de rapports et le compte d'exécution sans assistance, peuvent être configurées si nécessaire. Pour plus d’informations, consultez [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
@@ -47,8 +47,8 @@ Il est recommandé de configurer le portail web afin que vous pouvez accorder l�
   
 5.  Suivez les instructions dans « Étapes suivantes » pour achever votre déploiement.  
   
-## <a name="next-steps"></a>Next Steps  
- Pour achever votre déploiement, vous devez configurer le portail web ou l'intégration SharePoint. Pour plus d’informations, consultez [configurer le portail web](../../reporting-services/report-server/configure-web-portal.md).  
+## <a name="next-steps"></a>Étapes suivantes  
+ Pour achever votre déploiement, vous devez configurer le portail web ou l'intégration SharePoint. Pour plus d’informations, consultez [Configurer le portail web](../../reporting-services/report-server/configure-web-portal.md).  
   
  Si le Pare-feu Windows est activé, le port que le serveur de rapports est configuré pour utiliser est très probablement fermé. Un port peut être fermé si une page vide apparaît lorsque vous essayez d'ouvrir le portail web à partir d'un ordinateur client distant. Pour plus d'informations sur la configuration du pare-feu, consultez [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -58,8 +58,8 @@ Il est recommandé de configurer le portail web afin que vous pouvez accorder l�
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [Configurer un serveur de rapports pour l'administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
+ [Configurer un serveur de rapports pour l’administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   

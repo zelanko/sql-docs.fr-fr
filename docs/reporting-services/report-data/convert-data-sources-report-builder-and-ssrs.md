@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bd47c468354cead8a3fd9c2ad5b391988a919b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ad8b75d75b5f9c4bc5b606c4e103c318e23398ed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573186"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190857"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>Convertir des sources de données (Générateur de rapports et SSRS)
   Chaque source de données dans le volet des données de rapport est incorporée et est spécifique au rapport ou est partagée. Dans le Générateur de rapports, une source de données partagée pointe vers une source de données partagée publiée sur un serveur de rapports ou un site SharePoint. Dans le Concepteur de rapports, une source de données partagée pointe vers une source de données partagée dans l’Explorateur de solutions sous le dossier **Sources de données partagées** .  
@@ -41,7 +41,7 @@ ms.locfileid: "65573186"
   
 ### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>Pour convertir une source de données partagée en source incorporée  
   
--   Dans le volet des données de rapport, cliquez avec le bouton droit sur la source de données, ouvrez la boîte de dialogue **Propriétés de la source de données** , puis cliquez sur **Connexion incorporée**. Entrez les informations nécessaires.  
+-   Dans le volet des données de rapport, cliquez avec le bouton droit sur la source de données, ouvrez la boîte de dialogue **Propriétés de la source de données** , puis cliquez sur **Connexion incorporée**. Entrez les informations requises.  
   
      Dans le volet des données de rapport, l'icône de source de données se transforme en icône de source de données partagée.  
   
@@ -49,18 +49,18 @@ ms.locfileid: "65573186"
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>Pour convertir une source de données incorporée en source partagée  
   
--   Dans le volet des données de rapport, cliquez avec le bouton droit sur la source de données pour ouvrir la boîte de dialogue **Propriétés de la source de données** , puis cliquez sur **Connexion incorporée**. Entrez les informations nécessaires.  
+-   Dans le volet des données de rapport, cliquez avec le bouton droit sur la source de données pour ouvrir la boîte de dialogue **Propriétés de la source de données** , puis cliquez sur **Connexion incorporée**. Entrez les informations requises.  
   
      Dans le volet des données de rapport, l'icône de source de données se transforme en icône de source de données partagée.  
   
 #### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>Pour convertir une source de données partagée en source incorporée  
   
--   Dans le volet des données de rapport, cliquez avec le bouton droit sur la source de données, ouvrez la boîte de dialogue **Propriétés de la source de données** , puis cliquez sur **Connexion incorporée**. Entrez les informations nécessaires.  
+-   Dans le volet des données de rapport, cliquez avec le bouton droit sur la source de données, ouvrez la boîte de dialogue **Propriétés de la source de données** , puis cliquez sur **Connexion incorporée**. Entrez les informations requises.  
   
      Dans le volet des données de rapport, l'icône de source de données se transforme en icône de source de données partagée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer des sources de données de rapports](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

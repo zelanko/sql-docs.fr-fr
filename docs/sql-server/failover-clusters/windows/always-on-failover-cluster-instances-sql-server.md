@@ -1,6 +1,7 @@
 ---
-title: Instances de cluster de basculement Always On (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Instances de cluster de basculement Always On
+description: Description de l’instance de cluster de basculement Always On pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063803"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230189"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instances de cluster de basculement Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ ms.locfileid: "68063803"
   
 -   Nom du réseau  
   
--   Adresse IP  
+-   Adresse IP  
   
 -   Disques partagés  
   
@@ -136,7 +137,7 @@ ms.locfileid: "68063803"
  Stockage  
  Contrairement au groupe de disponibilité, une instance FCI doit utiliser le stockage partagé entre tous les nœuds de l’instance FCI pour le stockage des journaux et des bases de données. Le stockage partagé peut se présenter sous la forme de disques de cluster WSFC, de disques sur un réseau SAN, d’espaces de stockage direct (S2D) ou de partages de fichiers sur un serveur SMB. De cette façon, tous les nœuds de l'instance FCI ont la même vue des données d'instance lors d'un basculement. Cela signifie, toutefois, que le stockage partagé présente le risque d'être l'unique point de défaillance et que l'instance FCI dépend de la solution de stockage sous-jacente pour assurer la protection des données.  
   
- Nom du réseau  
+ Nom de réseau  
  Le nom de réseau virtuel (VNN) de l'instance FCI fournit un point de connexion unifié pour l'instance FCI. Cela permet aux applications de se connecter au VNN sans avoir besoin de connaître le nœud actif. Lorsqu'un basculement se produit, le VNN est inscrit sur le nouveau nœud actif après son démarrage. Ce processus est transparent pour un client ou une application se connectant à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ce qui permet de réduire les temps morts auxquels font face l'application ou les clients lors d'une défaillance.  
   
  Adresses IP virtuelles  
@@ -155,7 +156,7 @@ ms.locfileid: "68063803"
 |**Descriptions des rubriques**|**Rubrique**|  
 |----------------------------|---------------|  
 |Décrit comment installer une nouvelle instance FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Explique comment effectuer une mise à niveau vers un cluster de basculement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Mise à niveau d’une instance de cluster de basculement SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
+|Explique comment effectuer une mise à niveau vers un cluster de basculement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Mettre à niveau une instance de cluster de basculement SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Décrit les concepts de clustering de basculement Windows et fournit des liens vers les tâches liées au clustering de basculement Windows.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Vue d’ensemble des clusters de basculement](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2 : [Vue d’ensemble des clusters de basculement](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Décrit les différences de concepts entre les nœuds dans une instance FCI et les réplicas au sein d'un groupe de disponibilité, ainsi que les éléments à prendre en compte pour utiliser une instance FCI pour héberger un réplica pour un groupe de disponibilité.|[Clustering de basculement et groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   

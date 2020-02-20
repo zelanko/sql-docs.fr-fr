@@ -11,10 +11,10 @@ ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193353"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisation dans Reporting Services
@@ -68,7 +68,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>Flux d'autorisation  
  L'autorisation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est contrôlée par l'extension de sécurité actuellement configurée pour s'exécuter sur le serveur. L'autorisation, basée sur les rôles, est limitée aux autorisations et aux opérations fournies par l'architecture de la sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Le diagramme suivant représente le processus permettant d'autoriser des utilisateurs à manipuler des éléments dans la base de données du serveur de rapports :  
   
- ![Flux d’autorisation de sécurité de Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Flux d’autorisation de sécurité de Reporting Services")  
+ ![Flux d'autorisation de sécurité de Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Flux d'autorisation de sécurité de Reporting Services")  
   
  Comme représenté dans ce diagramme, l'autorisation suit la séquence suivante :  
   

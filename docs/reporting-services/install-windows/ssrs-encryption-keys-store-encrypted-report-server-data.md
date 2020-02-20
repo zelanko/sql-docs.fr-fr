@@ -15,10 +15,10 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593476"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Clés de chiffrement SSRS - Stocker des données chiffrées du serveur de rapports
@@ -39,7 +39,7 @@ ms.locfileid: "73593476"
   
      Ce compte est utilisé lorsqu'une connexion à un ordinateur distant est requise et qu'aucune autre information d'identification n'est disponible pour établir la connexion. Ce compte est principalement utilisé pour gérer le traitement de rapports sans assistance qui n'utilise pas d'informations d'identification pour accéder à une source de données. Si vous créez des rapports basés sur des sources de données qui ne nécessitent pas ou n'utilisent pas d'informations d'identification lors de l'accès aux données, vous devez configurer ce compte pour permettre son utilisation par le serveur de rapports.  
   
-     Ce compte se révèle indispensable dans certains cas et seul l’outil de configuration de Reporting Services ou l’utilitaire **rsconfig**peut créer un tel compte. Cette valeur est également stockée dans le fichier rsreportserver.config. Vous devez créer ce compte manuellement. Pour plus d’informations sur ce compte et sur son utilisation, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Ce compte se révèle indispensable dans certains cas et seul l’outil de configuration de Reporting Services ou l’utilitaire **rsconfig**peut créer un tel compte. Cette valeur est également stockée dans le fichier rsreportserver.config. Vous devez créer ce compte manuellement. Pour plus d’informations sur ce compte et sur son utilisation, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 -   Clé symétrique utilisée pour un chiffrement.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73593476"
   
  Dans un déploiement évolutif de serveur de rapports où plusieurs instances de serveur de rapports partagent la même base de données de serveur de rapports, une clé symétrique unique est employée par tous les nœuds de serveur de rapports. Chaque nœud doit avoir une copie de la clé symétrique partagée. Une copie de la clé symétrique est créée automatiquement pour chaque nœud lorsque le déploiement évolutif est configuré. Chaque nœud chiffre sa copie de la clé symétrique à l'aide de la clé publique d'une paire de clés spécifiques de son compte de service Windows. Pour en savoir plus sur la création de la clé symétrique pour les déploiements à instance unique et évolutifs, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
  
- En outre, à partir de 2019, la base de données du serveur de rapports peut être configurée avec Transparent Data Encryption dans SQL Server pour fournir une protection supplémentaire pour vos données au repos.
+ En outre, depuis 2019, la base de données du serveur de rapports peut être configurée avec Transparent Data Encryption dans SQL Server afin de fournir une protection supplémentaire pour vos données au repos.
   
 > [!NOTE]  
 >  Lorsque vous changez le compte du service Report Server Windows, les clés asymétriques peuvent devenir non valides, ce qui affecte les opérations du serveur. Pour éviter ce problème, utilisez toujours l'outil de configuration de Reporting Services pour modifier les paramètres de compte de service. Lorsque vous utilisez l'outil de configuration, les clés sont mises à jour automatiquement. Pour plus d’informations, consultez [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  

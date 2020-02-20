@@ -1,10 +1,9 @@
 ---
-title: Modifier un travail maître SQL Server Agent | Microsoft Docs
-ms.custom: ''
+title: Modifier un travail maître de l'Agent SQL Server
+ms.custom: seo-lt-2019
 ms.date: 02/28/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ef8ca56120197c6f21908b60eccba25043c75596
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 721b9fb2849763dedd8787cc7e24cec4fab90094
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267555"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255830"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Modifier un travail maître de l'Agent SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

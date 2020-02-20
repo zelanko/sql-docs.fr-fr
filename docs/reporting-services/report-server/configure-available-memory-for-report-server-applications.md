@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564023"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
@@ -40,7 +40,7 @@ ms.locfileid: "67564023"
 |---------------------|---------------------|  
 |Faible|Les requêtes actives continuent d'être traitées. Les nouvelles requêtes sont presque toujours acceptées. Les requêtes adressées à l'application de traitement en arrière-plan reçoivent une priorité plus faible que les requêtes adressées au service Web Report Server.|  
 |Moyenne|Les requêtes actives continuent d'être traitées. Les nouvelles requêtes peuvent éventuellement être acceptées. Les requêtes adressées à l'application de traitement en arrière-plan reçoivent une priorité plus faible que les requêtes adressées au service Web Report Server. Les allocations de mémoire pour les trois applications serveur sont réduites ; la réduction est relativement plus importante pour le traitement en arrière-plan, ce qui permet d'offrir davantage de mémoire aux requêtes du service Web.|  
-|Élevée|L'allocation de mémoire est davantage réduite. Les applications serveur qui requièrent plus de mémoire sont refusées. Les requêtes actuelles sont ralenties et mettent plus de temps à s'exécuter. Les nouvelles requêtes ne sont pas acceptées. Le serveur de rapports place les fichiers de données en mémoire sur disque.<br /><br /> Si les contraintes de mémoire deviennent très importantes et s'il n'y a pas de mémoire disponible pour gérer les nouvelles requêtes, le serveur de rapports retourne l'erreur HTTP 503 relative à l'indisponibilité du serveur pendant que les requêtes actives finissent de s'exécuter. Dans certains cas, les domaines d'application peuvent être recyclés pour réduire immédiatement la sollicitation de la mémoire.|  
+|Élevé|L'allocation de mémoire est davantage réduite. Les applications serveur qui requièrent plus de mémoire sont refusées. Les requêtes actuelles sont ralenties et mettent plus de temps à s'exécuter. Les nouvelles requêtes ne sont pas acceptées. Le serveur de rapports place les fichiers de données en mémoire sur disque.<br /><br /> Si les contraintes de mémoire deviennent très importantes et s'il n'y a pas de mémoire disponible pour gérer les nouvelles requêtes, le serveur de rapports retourne l'erreur HTTP 503 relative à l'indisponibilité du serveur pendant que les requêtes actives finissent de s'exécuter. Dans certains cas, les domaines d'application peuvent être recyclés pour réduire immédiatement la sollicitation de la mémoire.|  
   
  Bien que vous ne puissiez pas personnaliser les réponses du serveur de rapports aux différents scénarios de sollicitation de la mémoire, vous pouvez spécifier des paramètres de configuration qui définissent les limites séparant les réponses aux sollicitations élevée, moyenne et faible de la mémoire.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67564023"
   
  L'illustration suivante montre comment les paramètres sont utilisés conjointement pour distinguer les niveaux faible, moyen et élevé de sollicitation de la mémoire :  
   
- ![Paramètres de configuration de l’état de la mémoire](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Paramètres de configuration de l’état de la mémoire")  
+ ![Paramètres de configuration pour l'état de la mémoire](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Paramètres de configuration pour l'état de la mémoire")  
   
  Le tableau suivant décrit les paramètres **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**et **MemoryThreshold** . Les paramètres de configuration sont spécifiés dans le [fichier RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67564023"
 |**MemorySafetyMargin**|Spécifie un pourcentage de **WorkingSetMaximum** qui définit la limite entre les scénarios correspondant à une sollicitation moyenne et basse. Cette valeur est le pourcentage de mémoire disponible réservée au système et ne peut pas être utilisée pour les opérations du serveur de rapports. La valeur par défaut est 80.|  
   
 > [!NOTE]  
->  Les paramètres**MemoryLimit** et **MaximumMemoryLimit** sont obsolètes dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et later versions. Si vous avez mis à niveau une installation existante ou si vous utilisez un fichier RSReportServer.config qui comprend ces paramètres, le serveur de rapports ne lit plus ces valeurs.  
+>  Les paramètres**MemoryLimit** et **MaximumMemoryLimit** sont obsolètes dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures. Si vous avez mis à niveau une installation existante ou si vous utilisez un fichier RSReportServer.config qui comprend ces paramètres, le serveur de rapports ne lit plus ces valeurs.  
   
 #### <a name="example-of-memory-configuration-settings"></a>Exemple de paramètres de configuration de la mémoire  
  L'exemple suivant illustre les paramètres de configuration d'un serveur de rapports qui utilise des valeurs de configuration de la mémoire personnalisées. Pour ajouter **WorkingSetMaximum** ou **WorkingSetMinimum**, vous devez taper les éléments et les valeurs dans le fichier RSReportServer.config. Les deux valeurs sont des entiers qui représentent les kilo-octets de mémoire vive (RAM) que vous allouez aux applications serveur. L'exemple suivant spécifie que l'allocation de mémoire totale pour les applications du serveur de rapports ne peut pas dépasser 4 gigaoctets. Si la valeur par défaut **WorkingSetMinimum** (60 % de **WorkingSetMaximum**) est acceptable, vous pouvez l’omettre et spécifier simplement **WorkingSetMaximum** dans le fichier RSReportServer.config. Cet exemple inclut **WorkingSetMinimum** afin que vous puissiez voir à quoi il ressemble, si vous décidez de l’ajouter :  
@@ -86,7 +86,7 @@ ms.locfileid: "67564023"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>À propos des paramètres de configuration de la mémoire ASP.NET  
- Bien que le portail du service et web du Web Report Server 2016 et versions ultérieur sont des applications HTML5, les versions précédentes sont [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, aucune d'entre elles ne répond aux paramètres de configuration de mémoire que vous spécifiez dans le **processModel**  section de machine.config pour [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications qui s’exécutent dans IIS 5.0 et le mode de compatibilité supérieur. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire du fichier RSReportServer.config uniquement.  
+ Bien que le portail web et le service web Report Server 2016 et versions ultérieures soient des applications HTML5, les versions précédentes sont des applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], aucune d’entre elles ne répond aux paramètres de configuration de la mémoire spécifiés dans la section **processModel** de machine.config pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] qui s’exécutent en mode de compatibilité IIS 5.0 ou ultérieur. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire du fichier RSReportServer.config uniquement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

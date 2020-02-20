@@ -1,9 +1,11 @@
 ---
-title: Intégration de Reporting Services à l’aide des contrôles Visionneuse de rapports | Microsoft Docs
+title: Intégrer avec les contrôles Visionneuse de rapports
+description: Visual Studio fournit deux contrôles Visionneuse de rapports permettant d’intégrer des fonctionnalités d’affichage de rapports dans vos applications.
 ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Viewer controls
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ce8530e2f7afb998c14838efb91c93d0b1cae3c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741872"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796862"
 ---
-# <a name="integrating-reporting-services-using-report-viewer-controls"></a>Intégration de Reporting Services à l’aide des contrôles Visionneuse de rapports
+# <a name="integrate-reporting-services-using-report-viewer-controls"></a>Intégrer Reporting Services à l’aide des contrôles Visionneuse de rapports
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 fournit deux contrôles Visionneuse de rapports permettant d’intégrer des fonctionnalités d’affichage de rapports dans vos applications. Il existe une version pour les applications Windows Forms et une version pour les applications Web Forms. Chaque contrôle offre des fonctionnalités similaires, mais chacun est conçu pour un environnement particulier. Les deux contrôles peuvent traiter des rapports qui ont été déployés sur un serveur de rapports (mode de traitement à distance) ou qui ont été copiés sur un ordinateur où [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’a pas été installé (mode de traitement local).  
   
  Le contrôle Visionneuse de rapports n'offre pas la prise en charge intégrée de l'adaptation dynamique à différents appareils avec différentes résolutions d'écran.  

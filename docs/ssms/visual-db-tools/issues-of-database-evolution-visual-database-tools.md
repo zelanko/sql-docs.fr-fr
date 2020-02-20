@@ -1,10 +1,9 @@
 ---
-title: Problèmes liés à l’évolution d’une base de données (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Problèmes d’évolution des bases de données
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33083fd036f2c52b12380f4186cbccc0c47f86be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 987f808a647966671e155c94a80270b1faf6da30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254251"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75225029"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>Problèmes liés à l'évolution d'une base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +36,6 @@ Si vous modifiez la structure d'une base de données déployée, assurez-vous qu
 Quelle que soit la façon dont vous modifiez le design de la base de données, gardez un historique de ces modifications. Une méthode consiste à conserver des scripts SQL de toutes les modifications que vous avez apportées à la base de données de production.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utilisation des contraintes (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Utilisation des contraintes](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Environnements multi-utilisateurs &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   

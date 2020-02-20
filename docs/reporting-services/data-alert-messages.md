@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571556"
 ---
 # <a name="data-alert-messages"></a>Messages d'alerte de données
@@ -22,7 +22,7 @@ ms.locfileid: "65571556"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Les alertes de données SQL Server Reporting Services autorisent l’envoi de deux types de messages d’alerte de données par e-mail : les messages contenant les résultats de l’alerte de données et les messages contenant des descriptions d’erreur. Les messages contenant des résultats avisent tous les destinataires des modifications apportées aux données d'un rapport dignes d'intérêt et importantes pour les décisions économiques. Si pour une raison quelconque une erreur se produit et les résultats ne sont pas disponibles, un message d'erreur est envoyé à la place.
+Les alertes de données SQL Server Reporting Services fournissent deux types de messages d’alerte de données par e-mail : Messages avec les résultats de l’alerte de données et messages avec les descriptions d’erreur. Les messages contenant des résultats avisent tous les destinataires des modifications apportées aux données d'un rapport dignes d'intérêt et importantes pour les décisions économiques. Si pour une raison quelconque une erreur se produit et les résultats ne sont pas disponibles, un message d'erreur est envoyé à la place.
 
 Le propriétaire de la définition d'alerte de données peut également afficher des informations sur l'instance de l'alerte de données dans le Gestionnaire des alertes de données. Pour plus d’informations, consultez [Gestionnaire des alertes de données pour les utilisateurs SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
@@ -34,11 +34,11 @@ Le propriétaire de la définition d'alerte de données peut également afficher
   
  **Message contenant les résultats**  
   
- ![E-mail d’alerte de données avec des résultats](../reporting-services/media/rs-alertmessageresults.gif "E-mail d’alerte de données avec des résultats")  
+ ![E-mail d’alerte de données avec les résultats](../reporting-services/media/rs-alertmessageresults.gif "E-mail d’alerte de données avec les résultats")  
   
- **Message d'erreur**  
+ **Message d’erreur**  
   
- ![Message d’alerte de données avec un message d’erreur](../reporting-services/media/rs-alertmessageerrror.gif "Message d’alerte de données avec un message d’erreur")  
+ ![E-mail d’alerte de données avec un message d’erreur](../reporting-services/media/rs-alertmessageerrror.gif "E-mail d’alerte de données avec un message d’erreur")  
   
  Les messages incluent les mêmes types d'informations.  
   
@@ -62,9 +62,9 @@ Le propriétaire de la définition d'alerte de données peut également afficher
 ##  <a name="HowTo"></a> Tâches associées  
  Cette section répertorie les procédures de création et de modification des définitions d'alerte de données qui fournissent la plupart des informations sur les éléments affichés dans les messages d'alerte de données.  
   
--   [Créer une alerte de données dans le Concepteur d'alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Créer une alerte de données dans le concepteur d’alertes de données](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Modifier une alerte de données dans le Concepteur d'alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modifier une alerte de données dans le concepteur d'alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 ## <a name="see-also"></a>Voir aussi
 

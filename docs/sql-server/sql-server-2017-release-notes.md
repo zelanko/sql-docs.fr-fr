@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136480"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de publication de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour des informations connexes, consultez :
+Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour plus d’informations, consultez :
 - [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notes de publication de SQL Server sur Linux](../linux/sql-server-linux-release-notes.md)
 - [Mises à jour cumulatives de SQL Server 2017](https://aka.ms/sql2017cu) pour plus d’informations sur la dernière version des mises à jour cumulatives
 
 **Essayer SQL Server**
-- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Télécharger SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Télécharger SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Créer une machine virtuelle ](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Lancer une machine virtuelle avec SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
@@ -43,7 +43,7 @@ Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour 
     3. Recochez **Activer FILESTREAM pour l’accès aux E/S de fichier** avec le nom du partage d’origine, puis cliquez sur **Appliquer**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problème et impact sur le client :**   dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante : `"The model permission cannot be saved. The object guid is not valid"`
+- **Problème et impact sur le client :**  dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante : `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Solution de contournement :** 
   - Accordez l’autorisation sur les sous-nœuds de l’arborescence au lieu de le faire au niveau racine.
@@ -113,7 +113,7 @@ Il n’y a aucune note de publication sur cette version de SQL Server sur Window
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **Problème et impact sur le client :** après l’installation sur un ordinateur où la version 2016 de *TSqlLanguageService.msi* est installée (via le programme d’installation de SQL ou en tant que composant redistribuable autonome), les versions v13.* (SQL 2016) de *Microsoft.SqlServer.Management.SqlParser.dll* et *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* sont supprimées. Toute application qui dépend des versions 2016 de ces assemblys arrête de fonctionner et génèrer une erreur similaire à : *erreur : Impossible de charger le fichier ou l’assembly « Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91 » ou l’une de ses dépendances. Le système ne trouve pas le fichier spécifié.*
+- **Problème et impact sur le client :** après l’installation sur un ordinateur où la version 2016 de *TSqlLanguageService.msi* est installée (via le programme d’installation de SQL ou en tant que composant redistribuable autonome), les versions v13.* (SQL 2016) de *Microsoft.SqlServer.Management.SqlParser.dll* et *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* sont supprimées. Toute application qui dépend des versions 2016 de ces assemblys arrête de fonctionner et génèrer une erreur similaire à : *erreur : Impossible de charger le fichier ou l’assembly « Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91 » ou l’une de ses dépendances. Le système ne peut pas trouver le fichier spécifié.*
 
    En outre, les tentatives pour réinstaller une version 2016 de TSqlLanguageService.msi échouent avec le message : *L’installation du service de langage T-SQL de Microsoft SQL Server 2016 a échoué parce qu’une version supérieure existe déjà sur l’ordinateur*.
 

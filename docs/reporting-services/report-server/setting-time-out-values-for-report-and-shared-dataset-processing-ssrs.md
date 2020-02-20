@@ -1,6 +1,7 @@
 ---
 title: Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un jeu de données partagé (SSRS) | Microsoft Docs
-ms.date: 05/30/2019
+description: Dans Reporting Services, vous pouvez spécifier des valeurs de délai d’attente pour fixer des limites à l’utilisation des ressources système.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506439"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259409"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Définition des valeurs de délai d'attente pour le traitement d'un rapport et d'un dataset partagé (SSRS)
-  Vous pouvez spécifier, à l’aide de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] des valeurs de délai d’attente pour fixer des limites à l’utilisation des ressources système. Le serveur de rapports accepte deux valeurs de délai d'attente :  
+Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez spécifier des valeurs de délai d’attente pour fixer des limites à l’utilisation des ressources système. Les serveurs de rapports acceptent deux valeurs de délai d'attente :  
   
 - Une valeur de délai d'attente de requête de dataset incorporé, qui est le nombre de secondes pendant lequel le serveur de rapports attend une réponse de la base de données. Cette valeur est définie dans un rapport.  
   
@@ -33,7 +34,10 @@ ms.locfileid: "66506439"
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Définition d'un délai de requête pour un dataset incorporé dans un rapport  
  Les valeurs de délai d'attente de la requête sont spécifiées pendant la création du rapport, lors de la définition d'un dataset incorporé. La valeur du délai d’attente est conservée avec le rapport, dans l’élément **Timeout** de la définition de rapport. Elle est par défaut de 30 secondes. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
-  
+ 
+ > [!NOTE]  
+ > Pour les **rapports paginés dans Power BI**, la valeur par défaut est définie sur **600 secondes**.
+ 
  Les utilisateurs autorisés à modifier les propriétés d'un rapport publié peuvent redéfinir cette valeur en modifiant le fichier de définition de rapport.  
   
  Vous pouvez également spécifier une valeur de délai d'attente de requête pour des abonnements pilotés par les données. Le délai d'attente de requête est spécifié dans les pages Abonnement piloté par les données. La valeur spécifiée détermine le temps pendant lequel le serveur de rapports attend la fin du traitement de la requête lors d'une opération de récupération de données à partir de la source de données des abonnés.  

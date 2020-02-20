@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579006"
 ---
 # <a name="manage-a-running-process"></a>Gérer un processus en cours d'exécution
@@ -87,13 +87,13 @@ ms.locfileid: "65579006"
   
 3.  Affectez-lui la valeur **False**.  
   
-4.  Enregistrez le fichier.  
+4.  Enregistrez le fichier .  
   
 5.  Dans le Gestionnaire de rapports, supprimez l’abonnement piloté par les données sous l’onglet Abonnements du rapport ou dans **Mes abonnements**.  
   
 6.  Après avoir supprimé l’abonnement, dans le fichier RSReportServer.config, recherchez **IsNotificationService** et affectez-lui la valeur **True**.  
   
-7.  Enregistrez le fichier.  
+7.  Enregistrez le fichier .  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configuration des paramètres de fréquence pour la récupération de l'état des travaux  
  Un travail en cours d'exécution est stocké dans la base de données temporaire du serveur de rapports. Vous pouvez modifier les paramètres de configuration dans le fichier RSReportServer.config pour contrôler la fréquence d'analyse du serveur de rapports sur les travaux en cours et le laps de temps à la suite duquel l'état d'un travail passe de « nouveau » à « en cours d'exécution ». Le paramètre **RunningRequestsDbCycle** spécifie la fréquence à laquelle le serveur de rapports procède à l’analyse des processus en cours d’exécution. Par défaut, les informations d'état sont enregistrées toutes les 60 secondes. Le paramètre **RunningRequestsAge** précise la durée suite à laquelle l’état d’un nouveau travail évolue vers l’état d’exécution en cours.  
@@ -122,6 +122,6 @@ ms.locfileid: "65579006"
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Contrôle des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

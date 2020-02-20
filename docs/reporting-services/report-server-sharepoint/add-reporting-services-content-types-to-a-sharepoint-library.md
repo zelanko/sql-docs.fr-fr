@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68887746"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Ajouter des types de contenu Reporting Services dans une bibliothèque SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "68887746"
 > [!TIP]  
 >  Si vous **n'avez pas** configuré au préalable les types de contenus d'une bibliothèque, commencez par activer la gestion des types de contenu, puis activez les types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Reportez-vous aux procédures d'activation de la gestion de type de contenu dans une seule bibliothèque de documents.  
   
- **Courte vidéo :** [(SSRS) Enabling Content Types in SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Courte vidéo :** [(SSRS) Enabling Content Types in SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **Dans cette rubrique :**  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68887746"
 8.  Lorsque vous avez terminé d'ajouter les types de contenu, cliquez sur **OK**.  
   
     > [!NOTE]  
-    >  Si le groupe de types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Types de contenu SQL Server Reporting Services** n’est pas visible dans la page **Ajouter des types de contenu** , l’une des conditions suivantes est remplie :  
+    >  Si le groupe de types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**Types de contenu SQL Server Reporting Services** n’est pas visible dans la page **Ajouter des types de contenu** , l’une des conditions suivantes est remplie :  
   
     -   Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint n'est pas installé. Pour plus d’informations, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Cette rubrique contient des informations sur l'installation du complément et les étapes de l'installation uniquement des fichiers du complément afin de contourner les problèmes.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68887746"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Pour activer la gestion des types de contenu pour une bibliothèque de documents (SharePoint 2010)  
   
-1.  Ouvrez la bibliothèque pour laquelle activer plusieurs types de contenu. Dans la barre de menus de la bibliothèque, vous devez voir les menus suivants : **Nouveau**, **Télécharger**, **Actions**et **Paramètres**. Si le menu **Paramètres**n'est pas visible, vous n'êtes pas autorisé à ajouter un type de contenu.  
+1.  Ouvrez la bibliothèque pour laquelle activer plusieurs types de contenu. Dans la barre de menus de la bibliothèque, vous devez voir les menus suivants : **Nouveau**, **Télécharger**, **Actions** et **Paramètres**. Si le menu **Paramètres**n'est pas visible, vous n'êtes pas autorisé à ajouter un type de contenu.  
   
 2.  Dans le ruban **Outils de bibliothèque** , cliquez sur **Bibliothèque**.  
   

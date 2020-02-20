@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580089"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gérer une application de service Reporting Services SharePoint
@@ -34,7 +34,7 @@ ms.locfileid: "65580089"
   
 2.  Cliquez à côté du nom de votre application de service ou sur la colonne **type** pour sélectionner toute la ligne, puis cliquez sur **Propriétés** dans le ruban SharePoint.  
   
- Pour plus d'informations sur les propriétés d'application de service, consultez [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+ Pour plus d'informations sur les propriétés d'application de service, consultez [Étape 3 : Créer une application de service Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 ## <a name="open-service-application-management-pages"></a>Ouvrir les pages de gestion d’une application de service
 
@@ -97,11 +97,11 @@ ms.locfileid: "65580089"
 |Modifier le délai d'expiration de la session|La valeur par défaut est 7200 secondes.|  
 |Modifier la limite du cache de sessions|La valeur par défaut est 5.|  
   
-## <a name="manage-jobs"></a>Gérer les travaux
+## <a name="manage-jobs"></a>Gestion des travaux
 
  Vous pouvez afficher et supprimer les travaux en cours de exécution, par exemple les travaux qui sont créés par les abonnements aux rapports et les abonnements pilotés par les données. Cette page ne permet pas de gérer les abonnements, mais les travaux qui sont déclenchés par un abonnement. Par exemple, un abonnement qui est planifié pour s'exécuter une fois par heure génère un travail une fois par heure, lequel apparaît sur la page **Gérer les travaux** .  
   
- ![gérer les travaux en cours d’exécution](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gérer les travaux en cours d’exécution")  
+ ![gérer les tâches en cours d’exécution](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gérer les tâches en cours d’exécution")  
   
 ## <a name="key-management"></a>Gestion des clés
  Le tableau suivant résume les pages de gestion des clés  
@@ -109,7 +109,7 @@ ms.locfileid: "65580089"
 > [!IMPORTANT]  
 >  Par mesure de sécurité, il est recommandé de modifier régulièrement la clé de chiffrement Reporting Services. Il est recommandé de modifier la clé juste après la mise à niveau d'une version principale de Reporting Services. La modification de la clé après une mise à niveau réduit l'interruption de service provoquée par la modification de la clé de chiffrement Reporting Services hors du cycle de mise à niveau.  
   
-|Radiomessagerie|Description|  
+|Page|Description|  
 |----------|-----------------|  
 |Sauvegarder la clé de chiffrement|1) Tapez un mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe** , puis cliquez sur **Exporter**. Vous obtiendrez un avertissement si le mot de passe que vous avez tapé ne répond pas aux exigences de complexité de la stratégie de domaine.<br /><br /> 2) Vous serez invité à saisir un emplacement où enregistrer le fichier de clé. Il est conseillé de stocker le fichier de clé sur un ordinateur différent de celui qui exécute [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le nom du fichier par défaut est le même que celui de l'application de service.|  
 |Restaurer la clé de chiffrement|1) Tapez le fichier de clé ou accédez-y dans la zone **Emplacement du fichier** .<br /><br /> 2) Dans la zone **Mot de passe** , tapez le mot de passe utilisé pour sauvegarder le fichier de chiffrement.<br /><br /> 3) Cliquez sur **OK**.|  
@@ -152,7 +152,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Tapez le mot de passe.  
   
  **Confirmer le mot de passe**  
- Tapez de nouveau le mot de passe.  
+ Retapez le mot de passe.  
 
 ## <a name="e-mail-settings"></a>Paramètres d’e-mail
 

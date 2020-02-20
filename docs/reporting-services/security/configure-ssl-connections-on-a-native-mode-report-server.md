@@ -11,10 +11,10 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b90383fb387f8593db7aa4ee4760181a7322a475
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028921"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurer des connexions SSL sur un serveur de rapports en mode natif
@@ -82,7 +82,7 @@ ms.locfileid: "69028921"
   
  Les liaisons SSL sont une ressource partagée dans Microsoft Windows. Les modifications apportées par le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou d’autres outils, tels que le Gestionnaire des services IIS, peuvent avoir une incidence sur d’autres applications sur le même ordinateur. Il est recommandé d'utiliser le même outil pour modifier les liaisons que celui utilisé pour les créer.  Par exemple, si vous avez créé des liaisons SSL à l'aide de Configuration Manager, il est alors recommandé d'utiliser cet outil pour gérer le cycle de vie des liaisons. Si vous utilisez le Gestionnaire IIS pour créer des liaisons, il est alors recommandé d'utiliser cet outil pour gérer le cycle de vie des liaisons. Si IIS a été installé sur l'ordinateur avant [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il est recommandé de vérifier la configuration SSL dans IIS avant de configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Si vous supprimez des liaisons SSL pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide du Gestionnaire de configuration Reporting Services, il se peut que SSL ne fonctionne plus pour les sites web sur un serveur exécutant Internet Information Services (IIS) ou sur un autre serveur HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager supprime la clé de Registre suivante: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** lorsque cette clé de Registre est supprimée, la liaison SSL pour IIS est également supprimée. Sans cette liaison, SSL n'est pas fourni pour le protocole HTTPS. Pour diagnostiquer ce problème, utilisez le Gestionnaire IIS ou l’utilitaire de ligne de commande HTTPCFG.exe. Pour résoudre ce problème, restaurez la liaison SSL pour vos sites web à l’aide du Gestionnaire IIS. Afin d'éviter ce problème à l'avenir, utilisez le Gestionnaire IIS pour supprimer les liaisons SSL, puis pour restaurer la liaison pour les sites web de votre choix. Pour plus d’informations, consultez l’article de la Base de connaissances [SSL ne fonctionne plus après la suppression d’une liaison SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Si vous supprimez des liaisons SSL pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide du Gestionnaire de configuration Reporting Services, il se peut que SSL ne fonctionne plus pour les sites web sur un serveur exécutant Internet Information Services (IIS) ou sur un autre serveur HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestionnaire de configuration supprime la clé de Registre suivante : **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Lorsque cette clé de Registre est supprimée, la liaison SSL pour IIS l'est également. Sans cette liaison, SSL n'est pas fourni pour le protocole HTTPS. Pour diagnostiquer ce problème, utilisez le Gestionnaire IIS ou l’utilitaire de ligne de commande HTTPCFG.exe. Pour résoudre ce problème, restaurez la liaison SSL pour vos sites web à l’aide du Gestionnaire IIS. Afin d'éviter ce problème à l'avenir, utilisez le Gestionnaire IIS pour supprimer les liaisons SSL, puis pour restaurer la liaison pour les sites web de votre choix. Pour plus d’informations, consultez l’article de la Base de connaissances [SSL ne fonctionne plus après la suppression d’une liaison SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   

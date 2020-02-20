@@ -15,14 +15,14 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593389"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
-  Le Générateur de rapports et le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fournissent un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer auprès de bases de données relationnelles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
+  Le Générateur de rapports et le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fournissent un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer auprès de bases de données relationnelles [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)], et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
   
 > [!NOTE]  
 >  Dans le Générateur de rapports, vous devez utiliser le Concepteur de requêtes textuel pour spécifier une requête pour les types de source de données Oracle, OLE DB, ODBC et Teradata. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
@@ -96,7 +96,7 @@ ms.locfileid: "73593389"
 |Agrégat|Description|  
 |---------------|-----------------|  
 |Avg|Retourne la moyenne des valeurs d'un groupe. Implémente l'agrégat SQL AVG.|  
-|Compter|Retourne le nombre d'éléments figurant dans un groupe. Implémente l'agrégat SQL COUNT.|  
+|Count|Retourne le nombre d'éléments figurant dans un groupe. Implémente l'agrégat SQL COUNT.|  
 |Count Big|Retourne le nombre d'éléments figurant dans un groupe. Représente l'agrégat SQL COUNT_BIG. La différence entre COUNT et COUNT_BIG est que COUNT_BIG retourne toujours une valeur dont le type de données est **bigint** .|  
 |Min|Renvoie la valeur minimale figurant dans un groupe. Implémente l'agrégat SQL MIN.|  
 |Max|Renvoie la valeur maximale figurant dans un groupe. Implémente l'agrégat SQL MAX.|  
@@ -115,7 +115,7 @@ ms.locfileid: "73593389"
 |VarP Distinct|Retourne des variances statistiques uniques. Implémente une combinaison de l'agrégat VARP et du mot clé DISTINCT.|  
   
 ###  <a name="FunctionParameters"></a> Volet Paramètres de fonction  
- Le volet Paramètres de fonction affiche les paramètres pour une procédure stockée ou une fonction table. Les colonnes suivantes sont affichées :  
+ Le volet Paramètres de fonction affiche les paramètres pour une procédure stockée ou une fonction table. Les colonnes suivantes s’affichent :  
   
 -   **Nom du paramètre** : affiche le nom du paramètre défini par la procédure stockée ou la fonction table.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "73593389"
   
 -   **Monter** et **Descendre** Monte les relations vers le haut ou vers le bas de la liste **Relation** . L'ordre dans lequel les relations sont placées dans la requête peut avoir un impact sur les résultats de la requête. Les relations sont ajoutées à la requête dans l'ordre où elles s'affichent dans la liste **Relation** .  
   
- Les colonnes suivantes sont affichées :  
+ Les colonnes suivantes s’affichent :  
   
 -   **Table de gauche** Affiche le nom de la première table qui fait partie d'une relation de jointure.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "73593389"
 ###  <a name="AppliedFilters"></a> Volet Filtres appliqués  
  Le volet Filtres appliqués affiche les critères utilisés pour limiter le nombre de lignes de données qui sont récupérées au moment de l'exécution. Les critères spécifiés dans ce volet sont utilisés pour générer une clause SQL WHERE. Lorsque vous sélectionnez l'option de paramètre, un paramètre de rapport est automatiquement créé. Les paramètres de rapport basés sur des paramètres de requête permettent à un utilisateur de spécifier des valeurs pour la requête afin de contrôler les données dans le rapport.  
   
- Les colonnes suivantes sont affichées :  
+ Les colonnes suivantes s’affichent :  
   
 -   **Nom du champ** Affiche le nom du champ auquel appliquer les critères.  
   

@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571492"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Prise en charge des déploiements et des versions dans SQL Server Data Tools (SSDT)
@@ -33,7 +33,7 @@ ms.locfileid: "65571492"
   
  Les rapports sont générés avant d'être restitués comme aperçus dans le Concepteur de rapports ou déployés vers le serveur de rapports.  
   
- Définissez les propriétés de configuration dans la boîte de dialogue [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **Propriété du projet** .  
+ Définissez les propriétés de configuration dans la boîte de dialogue [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]**Propriété du projet**.  
   
  Les propriétés de déploiement et de génération sont les suivantes :  
   
@@ -43,31 +43,31 @@ ms.locfileid: "65571492"
   
 -   TargetServerVersion est une propriété de déploiement qui identifie la version attendue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installée sur le serveur de rapports cible spécifié dans la propriété TargetServerURL.  
   
- Lorsque vous spécifiez la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la boîte de dialogue **Propriété du projet** , les rapports ne sont pas rétablis automatiquement à la version antérieure. De ce fait, un projet Report Server peut contenir des rapports des deux versions différentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quand le projet Report Server est déployé, tous les rapports du projet sont convertis dans la version spécifiée dans TargetServerVersion.  
+ Lorsque vous spécifiez la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la boîte de dialogue **Propriété du projet**, les rapports ne sont pas rétablis automatiquement à la version antérieure. De ce fait, un projet Report Server peut contenir des rapports des deux versions différentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quand le projet Report Server est déployé, tous les rapports du projet sont convertis dans la version spécifiée dans TargetServerVersion.  
   
  Vous pouvez ajouter plusieurs configurations de projet à un projet ; chacune est utilisée pour un scénario différent, tel que le déploiement vers différentes versions de serveurs de rapports. Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) et [Pages de propriétés du projet, boîte de dialogue ](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
 ##  <a name="bkmk_SupportedVersions"></a> Versions prises en charge  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l’environnement de développement 32 bits pour les projets Report Server et les modèles de rapport, n’est pas conçu pour fonctionner sur des ordinateurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]et n’est pas installé sur les serveurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Une prise en charge de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est en revanche possible sur des ordinateurs x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l’environnement de développement 32 bits pour les projets de serveur de rapports, n’est pas conçu pour fonctionner sur des ordinateurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] et n’est pas installé sur les serveurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Une prise en charge de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est en revanche possible sur des ordinateurs x64.  
   
  Le tableau suivant décrit les versions prises en charge pour la création et la publication de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
 >  Le schéma n'a pas changé depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-|Type de projet ou de fichier|Options de version|Création de rapports|Publier des rapports|Remarques|  
+|Type de projet ou de fichier|Version|Création de rapports|Publier des rapports|Notes|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Schéma RDL 2016|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Schéma RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Schéma RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL (schéma)|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schéma RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uniquement|Permet une mise à niveau locale de schémas RDL (Report Definition Language) 2003, 2005 et 2008.|  
+|Projet Report Server<br /><br /> or<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Schéma RDL 2016|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|Projet Report Server<br /><br /> or<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Schéma RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projet Report Server<br /><br /> or<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Schéma RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projet Report Server<br /><br /> or<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL (schéma)|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projet Report Server<br /><br /> or<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schéma RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports uniquement|Permet une mise à niveau locale de schémas RDL (Report Definition Language) 2003, 2005 et 2008.|  
   
  Pour plus d’informations sur l’ouverture de rapports dans une version précédente du schéma de définition de rapport, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md). Pour plus d'informations sur des schémas de définition de rapport spécifiques, consultez la rubrique consacrée à la [spécification RDL (Report Definition Language)](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Publication des sources de données et des rapports](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
+ [Publication de sources de données et de rapports](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

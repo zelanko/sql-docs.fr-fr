@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576530"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
@@ -107,12 +107,12 @@ ms.locfileid: "65576530"
   
  Les trois types de tri peuvent être associés dans un même rapport. Par défaut, l'ordre de tri est déterminé par l'ordre dans lequel les données sont retournées par la requête de dataset. Les expressions de tri sont appliquées dans la région de données et le groupe de régions de données. Les tris interactifs sont appliqués après les expressions de tri.  
   
- Pour les expressions qui contiennent des fonctions d'agrégation, la plupart des résultats ne sont pas affectés par l'ordre de tri. Les valeurs de retour des fonctions d’agrégation suivantes sont affectées par l’ordre de tri : First, Last et Previous. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Pour les expressions qui contiennent des fonctions d'agrégation, la plupart des résultats ne sont pas affectés par l'ordre de tri. Les valeurs de retour des fonctions d'agrégation suivantes sont affectées par l'ordre de tri : Premier, Dernier et Précédent. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Tri des données dans une requête de dataset  
  Incluez l'ordre de tri dans la requête de dataset afin de pré-trier les données avant leur extraction pour un rapport. Le tri des données dans la requête est effectué par la source de données et non pas par le processeur de rapports.  
   
- Pour une source de données de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez ajouter une clause ORDER BY à la requête de dataset. Par exemple, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante trie les colonnes Sales et Region by Sales dans la table SalesOrders par ordre décroissant : `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
+ Pour une source de données de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez ajouter une clause ORDER BY à la requête de dataset. Par exemple, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante trie les colonnes Sales et Region by Sales dans la table SalesOrders par ordre décroissant : `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
   
 > [!NOTE]  
 >  Toutes les sources de données ne permettent pas de spécifier l'ordre de tri dans la requête.  
@@ -204,7 +204,7 @@ FROM Production.Product
   
  [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

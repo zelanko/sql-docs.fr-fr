@@ -13,10 +13,10 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67500195"
 ---
 # <a name="role-definitions---predefined-roles"></a>Définitions de rôles - Rôles prédéfinis
@@ -24,7 +24,7 @@ ms.locfileid: "67500195"
   
 ## <a name="how-to-use-predefined-roles"></a>Comment utiliser des rôles prédéfinis  
   
-1. Examinez les rôles prédéfinis pour déterminer si vous pouvez les utiliser en l'état. Si vous devez ajuster les tâches ou définir des rôles supplémentaires, vous devez le faire avant de commencer à assigner des utilisateurs à des rôles spécifiques. Pour créer ou modifier des rôles personnalisés utilisent SQL Server Management Studio. Pour plus d’informations, consultez [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
+1. Examinez les rôles prédéfinis pour déterminer si vous pouvez les utiliser en l'état. Si vous devez ajuster les tâches ou définir des rôles supplémentaires, vous devez le faire avant de commencer à assigner des utilisateurs à des rôles spécifiques. Pour créer ou modifier des rôles personnalisés, utilisez SQL Server Management Studio. Pour plus d’informations, consultez [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
 2. Identifiez les utilisateurs et les groupes qui doivent accéder au serveur de rapports, et à quel niveau. Le rôle **Lecteur** ou le rôle **Générateur de rapports** doit être attribué à la plupart des utilisateurs. Le rôle **Serveur de publication** doit être attribué à un nombre restreint d'utilisateurs. Le rôle **Gestionnaire de contenu**ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
 
@@ -37,7 +37,7 @@ ms.locfileid: "67500195"
   
  Le tableau suivant décrit la portée prédéfinie des rôles :  
   
-|Rôle prédéfini|portée|Description|  
+|Rôle prédéfini|Étendue|Description|  
 |---------------------|-----------|-----------------|  
 |[Rôle du Gestionnaire de contenu](#bkmk_content)|Élément|Peut gérer le contenu dans le serveur de rapports. Cela inclut des dossiers, des rapports et des ressources.|  
 |[Rôle Serveur de publication](#bkmk_publisher)|Élément|Peut publier des rapports et des rapports liés au serveur de rapports.|  
@@ -66,7 +66,7 @@ ms.locfileid: "67500195"
 |Gérer les abonnements individuels|Créer, afficher, modifier et supprimer des abonnements - appartenant à des utilisateurs - à des rapports, liés ou non.|  
 |Gérer l'historique de rapport|Créer, afficher et supprimer l'historique de rapport, afficher les propriétés de l'historique de rapport. Afficher et modifier les paramètres qui déterminent les limites de l'historique des instantanés ainsi que le fonctionnement de la mise en cache.|  
 |Gérer les rapports|Ajouter et supprimer des rapports, modifier des paramètres de rapport, afficher et modifier des propriétés de rapport, afficher et modifier des sources de données qui fournissent du contenu au rapport, afficher et modifier des définitions de rapports et définir des stratégies au niveau du rapport.|  
-|Gérer les ressources|Créer, modifier et supprimer des ressources. Afficher et modifier des propriétés de ressource.|  
+|Gestion des ressources|Créer, modifier et supprimer des ressources. Afficher et modifier des propriétés de ressource.|  
 |Définir des stratégies de sécurité pour les éléments|Définir des stratégies de sécurité pour les rapports, les rapports liés, les dossiers, les ressources et les sources de données. Pour plus d’informations, consultez [Éléments sécurisables](../../reporting-services/security/securable-items.md).|  
 |Afficher les sources de données|Afficher les éléments de source de données partagée dans la hiérarchie de dossiers.|  
 |Afficher les rapports|Exécuter les rapports et afficher les propriétés de rapports.|  
@@ -99,7 +99,7 @@ ms.locfileid: "67500195"
 |Gérer les dossiers|Créer, afficher et supprimer des dossiers ; afficher et modifier des propriétés de dossier.|  
 |Gérer les rapports|Ajouter et supprimer des rapports, modifier des paramètres de rapport, afficher et modifier des propriétés de rapport, afficher et modifier des sources de données qui fournissent du contenu au rapport, afficher et modifier des définitions de rapports.|  
 |Gérer les modèles|Créer, afficher et supprimer des modèles de rapport ; afficher et modifier des propriétés de modèles de rapport.|  
-|Gérer les ressources|Créer, modifier et supprimer des ressources ; afficher et modifier des propriétés de ressource.|  
+|Gestion des ressources|Créer, modifier et supprimer des ressources ; afficher et modifier des propriétés de ressource.|  
   
 ### <a name="customizing-the-publisher-role"></a>Personnalisation du rôle de serveur de publication  
  Modifiez le rôle **Serveur de publication** en fonction de vos besoins. Par exemple, vous pouvez supprimer la tâche « Créer des rapports liés » si vous ne souhaitez pas que les utilisateurs puissent créer et publier des rapports liés, ou ajouter la tâche « Afficher les dossiers » pour que les utilisateurs puissent naviguer dans la hiérarchie de dossiers lorsqu'ils sélectionnent un emplacement pour un nouvel élément.  
@@ -162,7 +162,7 @@ ms.locfileid: "67500195"
 |Gérer les sources de données|Créer et supprimer les éléments de source de données partagée, afficher et modifier les propriétés et le contenu des sources de données.|  
 |Gérer les abonnements individuels|Créer, afficher, modifier et supprimer des abonnements à des rapports, liés ou non.|  
 |Gérer les rapports|Ajouter et supprimer des rapports, modifier des paramètres de rapport, afficher et modifier des propriétés de rapport, afficher et modifier des sources de données qui fournissent du contenu au rapport, afficher et modifier des définitions de rapports et définir des stratégies au niveau du rapport.|  
-|Gérer les ressources|Créer, modifier, puis supprimer des ressources et afficher-les. et modifier des propriétés de ressource.|  
+|Gestion des ressources|Créer, modifier, puis supprimer des ressources et afficher-les. et modifier des propriétés de ressource.|  
 |Afficher les rapports|Exécuter les rapports qui sont stockés dans le dossier Mes Rapports de l'utilisateur et afficher les propriétés des rapports.|  
 |Afficher les sources de données|Afficher les éléments de source de données partagée dans la hiérarchie de dossiers.|  
 |Afficher les ressources|Afficher les ressources et les propriétés des ressources.|  
@@ -186,7 +186,7 @@ ms.locfileid: "67500195"
 |Tâche|Description|  
 |----------|-----------------|  
 |Exécuter les définitions de rapport|Démarrer l'exécution de la définition de rapport sans la publier sur un serveur de rapports.|  
-|Gérer les travaux|Afficher et annuler les travaux en cours d'exécution. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md).|  
+|Gestion des travaux|Afficher et annuler les travaux en cours d'exécution. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md).|  
 |Gérer les propriétés du serveur de rapports|Afficher et modifier les propriétés qui s'appliquent au serveur de rapports et aux éléments gérés par le serveur de rapports.<br /><br /> Cette tâche permet le changement de nom du portail web, l'activation de Mes Rapports et la définition des paramètres par défaut de l'historique de rapport.|  
 |Gérer les rôles|Créer, afficher, modifier et supprimer les définitions de rôles.<br /><br /> Les membres du rôle **Administrateur système** peuvent utiliser la page Paramètres du site pour gérer les rôles.|  
 |Gérer les planifications partagées|Créer, afficher, modifier et supprimer les planifications partagées qui sont utilisées pour exécuter ou actualiser les rapports.|  

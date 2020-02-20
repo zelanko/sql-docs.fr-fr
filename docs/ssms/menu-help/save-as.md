@@ -1,6 +1,6 @@
 ---
-title: Enregistrer sous | Microsoft Docs
-ms.custom: ''
+title: Enregistrer sous
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef6bd7f10ba88988b02dce010f7cce235ad2c751
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 75a385cb2898c48e980f7f6b539d9a21879d8c56
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256992"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240518"
 ---
 # <a name="save-as"></a>Enregistrer sous
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Permet d’enregistrer une instance de l’élément actif à l’emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **Enregistrer** *<file>* **sous** dans le menu **Fichier** (où *<file>* est le nom de l’élément actif), ou appuyez sur Alt+F, A dans l’éditeur de code.  
+Permet d’enregistrer une instance de l’élément actif à l’emplacement spécifié et dans un format de fichier spécifique. Cliquez sur **Enregistrer** *<file>* **sous** dans le menu **Fichier** (où *<file>* est le nom de l’élément actif), ou appuyez sur Alt+F, A dans l’éditeur de code.  
   
 ## <a name="central-panel"></a>Volet central  
 **Enregistrer dans**  
@@ -38,7 +38,7 @@ Utilisez cette option pour afficher le nom de fichier actuel, changer le nom de 
 **Enregistrer en tant que**  
 Utilisez cette option pour choisir un nouveau type de fichier pour l'élément sélectionné. Les types de fichiers proposés représentent tous les types de fichiers disponibles dans lesquels l'élément sélectionné peut être converti.  
   
-**Options d'enregistrement avancées**  
+**Options d’enregistrement avancées**  
 Pour accéder à la boîte de dialogue **Options d’enregistrement avancées**, sélectionnez le petit rectangle à droite du bouton **Enregistrer** , puis cliquez sur **Enregistrer avec l’encodage**. Utilisez cette boîte de dialogue pour spécifier un encodage pour le fichier et les caractères à utiliser en fin de ligne.  
   
 ## <a name="left-panel"></a>Volet gauche  
@@ -52,6 +52,6 @@ Affiche les fichiers et les dossiers contenus dans **Mes Projets** ou à l’emp
 Affiche l’emplacement **Poste de travail** sur votre ordinateur.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Options d'enregistrement avancées](../../ssms/menu-help/advanced-save-options.md)  
+[Options d’enregistrement avancées](../../ssms/menu-help/advanced-save-options.md)  
 [Gérer des fichiers avec encodage](../../ssms/solution/manage-files-with-encoding.md)  
   

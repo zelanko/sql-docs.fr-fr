@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725467"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479412"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutoriel : analytique de données R pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans ce didacticiel pour les programmeurs SQL, vous apprendrez à intégrer R en créant et en déployant une solution de Machine Learning basée sur R à l’aide d’une base de données [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) sur SQL Server. Vous allez utiliser T-SQL, SQL Server Management Studio et une instance du moteur de base de données avec [Machine Learning Services] ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) et la prise en charge du langage R.
+Dans ce didacticiel pour les programmeurs SQL, vous apprendrez à intégrer R en créant et en déployant une solution de Machine Learning basée sur R à l’aide d’une base de données [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) sur SQL Server. Vous allez utiliser T-SQL, SQL Server Management Studio et une instance du moteur de base de données avec [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) et la prise en charge du langage R
 
 Ce didacticiel vous présente les fonctions R utilisées dans un workflow de modélisation des données. Les étapes incluent l’exploration des données, la création et l’apprentissage d’un modèle de classification binaire et le déploiement d’un modèle. Le modèle que vous allez créer prévoit si un trajet est susceptible de générer un pourboire en fonction de l’heure de la journée, de la distance parcourue et de l’emplacement de la prise en charge du passager. 
 
@@ -58,7 +58,7 @@ Vous devez être familiarisé avec les opérations de base de données, telles q
 
 + [Bibliothèques R](../package-management/r-package-information.md)
 
-+ [Autorisations](../security/user-permission.md)
++ [autorisations](../security/user-permission.md)
 
 + [Base de données de démonstration Taxis de New York](demo-data-nyctaxi-in-sql.md)
 

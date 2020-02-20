@@ -1,10 +1,9 @@
 ---
-title: Boîte de dialogue Index - Clés (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Index - Boîte de dialogue Clés
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc4ca010e03090b1ba695247023858b2d1541c40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254341"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224919"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Boîte de dialogue Index - Clés (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,11 +53,11 @@ Spécifie si l’élément sélectionné dans la liste **Clé ou index Primary/U
 **Catégorie Identité**  
 Développée, elle affiche les champs de propriété de **Nom** et **Description**.  
   
-**Name**  
+**Nom**  
 Indique le nom de la clé ou de l'index. Lorsqu'un nouvel index ou une nouvelle clé sont créés, ils obtiennent un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
 **Description**  
-Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
 **Catégorie Concepteur de tables**  
 Développée, elle affiche des informations pour **Créer comme Clustered**.  
@@ -65,7 +66,7 @@ Développée, elle affiche des informations pour **Créer comme Clustered**.
 Rend la clé ou l'index cluster. Un seul index cluster est autorisé par table. Les données contenues dans la table sont stockées dans l'ordre de l'index cluster. Pour plus d’informations, consultez [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md) et [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Spécification de l'espace de données**  
-Développée, elle affiche des informations pour **(Type d’espace de données)** , **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
+Développée, elle affiche des informations pour **(Type d’espace de données)**, **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
   
 **(Type d’espace de données)**  
 Indique si cet index ou cette clé appartiennent à un groupe de fichiers ou à un schéma de partition.  
@@ -114,7 +115,7 @@ Spécifie si le [!INCLUDE[ssDE](../../includes/ssde_md.md)] sous-jacent calcule 
 **Verrouillage de ligne autorisé**  
 Spécifier si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données. Il est recommandé de choisir le paramètre **Oui**.  
   
-## <a name="see-also"></a>Voir aussi  
-[Utilisation des contraintes (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Utilisation des clés (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+## <a name="see-also"></a> Voir aussi  
+[Utilisation des contraintes(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Utilisation des clés(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

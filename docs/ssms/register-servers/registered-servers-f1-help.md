@@ -1,6 +1,6 @@
 ---
-title: Serveurs inscrits – Aide (F1) | Microsoft Docs
-ms.custom: ''
+title: Serveurs inscrits – Aide (F1)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266145"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256226"
 ---
 # <a name="registered-servers-f1-help"></a>Serveurs inscrits – Aide (F1)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68266145"
  **Authentification par formulaire**  
  Connectez-vous au moyen de l’ **Authentification par formulaire** si votre installation Reporting Services est configurée pour utiliser une extension d’authentification personnalisée.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Entrez le nom d'utilisateur à utiliser pour se connecter. Cette option n'est disponible que si vous avez choisi **Authentification de base** ou **Authentification par formulaire**.  
   
  **Mot de passe**  
@@ -91,7 +91,7 @@ ms.locfileid: "68266145"
  **Authentification**  
  L'authentification Windows permet à l'utilisateur de se connecter au moyen de ses informations d'identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, en tant qu'utilisateur Windows ou en tant que membre d'un groupe Windows.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Cette option n'est pas disponible dans cette version.  
   
  **Mot de passe**  
@@ -117,7 +117,7 @@ ms.locfileid: "68266145"
   
 ### <a name="options"></a>Options  
  **Type de serveur**  
- Quand un serveur est inscrit dans Serveurs inscrits, la zone **Type de serveur** est en lecture seule et concorde avec le type de serveur affiché dans Serveurs inscrits. Pour inscrire un autre type de serveur, cliquez sur **Moteur de base de données**, **Serveur d'analyse**, **Reporting Services**, **SQL Server Compact** **Edition**ou **Integration Services** dans la barre d'outils **Serveurs inscrits** avant de commencer à inscrire un nouveau serveur.  
+ Quand un serveur est inscrit dans Serveurs inscrits, la zone **Type de serveur** est en lecture seule et concorde avec le type de serveur affiché dans Serveurs inscrits. Pour inscrire un autre type de serveur, cliquez sur **Moteur de base de données**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** ou **Integration Services** dans la barre d'outils **Serveurs inscrits** avant de commencer à inscrire un nouveau serveur.  
   
  **Nom du serveur**  
  Sélectionnez le serveur auquel vous souhaitez vous connecter. Le dernier serveur avec lequel une connexion a été établie apparaît par défaut.  
@@ -125,7 +125,7 @@ ms.locfileid: "68266145"
  **Authentification**  
  Le mode d'authentification Windows permet à l'utilisateur de se connecter au moyen d'un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Cette option n'est pas disponible dans cette version.  
   
  **Mot de passe**  

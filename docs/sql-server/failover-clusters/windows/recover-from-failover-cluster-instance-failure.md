@@ -1,6 +1,7 @@
 ---
-title: Récupérer à partir d’une défaillance d’instance de cluster de basculement | Microsoft Docs
-ms.custom: ''
+title: Récupérer à partir d’une défaillance de cluster de basculement
+description: Décrit comment récupérer à partir d’une défaillance d’une instance de cluster de basculement SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f962688b69155c6daddc98e6d505a5275741cf86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044698"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821994"
 ---
-# <a name="recover-from-failover-cluster-instance-failure"></a>Récupérer à partir d'une défaillance d'instance de cluster de basculement
+# <a name="recover-from-failover-cluster-instance-failure"></a>Récupérer à partir d’une défaillance de cluster de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment récupérer des échecs de cluster à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement après un basculement dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68044698"
   
 6.  Vérifiez que les comptes administrateurs sont bien les mêmes sur tous les nœuds de cluster.  
   
-7.  Exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] afin d'ajouter le nœud 1 à la FCI. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+7.  Exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] afin d'ajouter le nœud 1 à la FCI. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ##  <a name="Scenario2"></a> Récupérer d'une erreur réparable  
  Utilisez les étapes suivantes pour récupérer suite à une erreur réparable. Dans ce cas, la défaillance est causée par le nœud 1, défectueux ou hors connexion, mais il n'est pas rompu de manière irrémédiable. Cette erreur peut être due à une défaillance du système d'exploitation, à une défaillance matérielle ou à une défaillance dans l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] elle-même.  

@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452112"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251147"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Spécification de valeurs XML comme paramètres
 
@@ -33,7 +33,7 @@ L’application console suivante crée une table dans la base de données **Adve
   
 L’exemple prépare un objet <xref:Microsoft.Data.SqlClient.SqlCommand> pour insérer une ligne dans la nouvelle table. Un fichier enregistré fournit les données XML nécessaires pour la colonne **SalesInfo**.  
   
-Pour créer le fichier nécessaire à l’exécution de l’exemple, créez un nouveau fichier texte dans le même dossier que votre projet. Nommez le fichier MyTestStoreData. Xml. Ouvrez le fichier dans le bloc-notes, puis copiez et collez le texte suivant :  
+Pour créer le fichier nécessaire à l’exécution de l’exemple, créez un nouveau fichier texte dans le même dossier que votre projet. Nommez le fichier MyTestStoreData.xml. Ouvrez le fichier dans Bloc-notes, puis copiez et collez le texte suivant :  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

@@ -1,7 +1,7 @@
 ---
-title: Renommer une instance de cluster de basculement SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Renommer une instance de cluster de basculement
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 612f0171cbb7786374923dc5ed8c257224474a21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063879"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230721"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ ms.locfileid: "68063879"
   
 -   Corrigez les paramètres de registre si l'Agent SQL est configuré pour le transfert d'événements. Pour plus d’informations, consultez [Désigner un serveur de transfert d’événements &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
--   Corrigez les noms d'instance du serveur maître (MSX) et des serveurs cibles (TSX) lorsque le nom réseau du cluster/des ordinateurs est modifié. Pour plus d'informations, consultez les rubriques suivantes :  
+-   Corrigez les noms d'instance du serveur maître (MSX) et des serveurs cibles (TSX) lorsque le nom réseau du cluster/des ordinateurs est modifié. Pour plus d'informations, voir les rubriques suivantes :  
   
-    -   [Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Annuler l’inscription de plusieurs serveurs cibles dans un serveur maître](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Créer un environnement multi-serveur](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Reconfigurez la copie des journaux de transaction afin que le nom de serveur mis à jour soit utilisé dans les journaux de sauvegarde et de restauration. Pour plus d'informations, consultez les rubriques suivantes :  
+-   Reconfigurez la copie des journaux de transaction afin que le nom de serveur mis à jour soit utilisé dans les journaux de sauvegarde et de restauration. Pour plus d'informations, voir les rubriques suivantes :  
   
     -   [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68063879"
   
 -   Mettez à jour les étapes de travail qui dépendent du nom du serveur. Pour plus d’informations, consultez [Gérer les étapes de travail](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

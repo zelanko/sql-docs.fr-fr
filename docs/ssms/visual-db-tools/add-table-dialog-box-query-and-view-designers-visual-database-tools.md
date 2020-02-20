@@ -1,10 +1,7 @@
 ---
-title: Ajouter une table, boîte de dialogue (Concepteurs de requêtes et de vues) (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Ajouter une table, boîte de dialogue (Concepteurs de requêtes et de vues)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +10,19 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89058296254f4aae6d8e27a214416cb76c1f03f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 167b1e86c28a56c9d3159a4e01fe337ba428e1b7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263744"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253399"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Boîte de dialogue Ajouter une table (Concepteurs de requêtes et de vues)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cette boîte de dialogue permet d'ajouter à une requête ou à une vue, des tables, des vues, des fonctions définies par l'utilisateur ou des synonymes.  
   
@@ -31,7 +33,7 @@ Cette boîte de dialogue permet d'ajouter à une requête ou à une vue, des tab
 **Tables**  
 Énumère les tables que vous pouvez ajouter au volet **Schéma** . Pour ajouter une table, sélectionnez-la et cliquez sur **Ajouter**. Pour ajouter plusieurs tables à la fois, sélectionnez-les et cliquez sur **Ajouter**.  
   
-**Vues**  
+**Views**  
 Énumère les vues que vous pouvez ajouter au volet **Schéma** . Pour ajouter une vue, sélectionnez-la et cliquez sur **Ajouter**. Pour ajouter plusieurs vues à la fois, sélectionnez-les et cliquez sur **Ajouter**.  
   
 **Fonctions**  
@@ -46,6 +48,6 @@ Met à jour la liste pour ajouter toutes les modifications apportées à la base
 **Ajouter**  
 Ajoute chaque élément sélectionné.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

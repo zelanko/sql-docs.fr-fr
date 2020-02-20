@@ -16,14 +16,14 @@ ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4787d704141f00c5f0b3c4bf4742bf26feacde60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571040"
 ---
 # <a name="windowsserviceidentityconfigured-property"></a>Propriété WindowsServiceIdentityConfigured
-  Retourne l'identité sous laquelle le service Windows Report Server a été configuré la dernière fois pour son exécution. En lecture seule.  
+  Retourne l'identité sous laquelle le service Windows Report Server a été configuré la dernière fois pour son exécution. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ public string WindowsServiceIdentityConfigured;
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

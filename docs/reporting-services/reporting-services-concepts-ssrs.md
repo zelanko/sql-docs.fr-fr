@@ -9,16 +9,16 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570849"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
-  Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+  Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Concepts du serveur de rapports  
  Un serveur de rapports est un ordinateur sur lequel une instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installée. Un serveur de rapports stocke en interne des éléments tels que des rapports paginés et mobiles, des éléments liés aux rapports et des ressources, des planifications et des abonnements. Un serveur de rapports peut être configuré en tant qu'unique serveur autonome ou comme batterie évolutive, ou il peut être intégré au serveur SharePoint. Vous interagissez avec des éléments de serveur de rapports par le service Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le fournisseur WMI, l'accès URL ou par programmation via des scripts. La façon dont vous interagissez avec un serveur de rapports dépend de la topologie de déploiement et de la configuration.  
@@ -78,13 +78,13 @@ Vous créez des rapports Reporting Services mobiles (fichiers .rsmobile) dans l�
 ### <a name="report-data-connections-and-data-sources"></a>Connexions et sources de données de rapport 
  Les rapports utilisent des connexions de données pour récupérer les données nécessaires lorsqu'une requête s'exécute ou lorsque le rapport est traité. Dans une définition de rapport, la connexion de données est identique à la source de données. Dans la liste correspondante, choisissez un type de connexion de données intégré pour vous connecter à une base de données relationnelle, une base de données multidimensionnelle, un service Web ou toute autre source de données. Les termes suivants sont utilisés lors de la description des connexions de données.  
   
--   **Connexion de données.** Également appelée *Source de données*. Une connexion de données inclut un nom et des propriétés de connexion qui dépendent du type de connexion. Par défaut, une connexion de données n'inclut pas d'informations d'identification. Une connexion de données ne spécifie pas les données à récupérer à partir de la source de données externe. Pour ce faire, vous devez spécifier une requête lorsque vous créez un dataset.  
+-   **Connexion de données** Également appelée *Source de données*. Une connexion de données inclut un nom et des propriétés de connexion qui dépendent du type de connexion. Par défaut, une connexion de données n'inclut pas d'informations d'identification. Une connexion de données ne spécifie pas les données à récupérer à partir de la source de données externe. Pour ce faire, vous devez spécifier une requête lorsque vous créez un dataset.  
   
 -   **Définition de source de données.** Un fichier qui contient la représentation XML d'une source de données de rapport. Lorsqu'un rapport est publié, ses sources de données sont enregistrées sur le serveur de rapports ou le site SharePoint en tant que définitions de source de données, indépendamment de la définition de rapport. Par exemple, un administrateur de serveur de rapports peut mettre à jour la chaîne de connexion ou les informations d'identification. Sur un serveur de rapports natif, le type de fichier est .rds. Sur un site SharePoint, le type de fichier est .rsds.  
   
 -   **Chaîne de connexion.** Une chaîne de connexion est une version de chaîne des propriétés de connexion nécessaires à la connexion à une source de données. Les propriétés de connexion diffèrent selon le type de connexion de données.  
   
--   **Source de données partagée.** Une source de données disponible sur un serveur de rapports ou un site SharePoint, et qui est utilisable par plusieurs rapports.  
+-   **Source de données partagée.** Source de données disponible sur un serveur de rapports ou un site SharePoint, et qui est utilisable par plusieurs rapports.  
   
      Les sources de données partagées sont utiles lorsque vous disposez de sources de données que vous utilisez souvent. Il est recommandé d'utiliser des sources de données partagées dans la mesure du possible. Celles-ci permettent de gérer plus facilement les rapports et l'accès aux rapports, et de sécuriser davantage les rapports et les sources de données auxquelles ils accèdent. Si vous avez besoin d'une source de données partagée, demandez à votre administrateur système d'en créer une pour vous.  
   
@@ -186,7 +186,7 @@ Vous créez des rapports Reporting Services mobiles (fichiers .rsmobile) dans l�
 ##  <a name="bkmk_StagesofReports"></a> Étapes des rapports Reporting Services paginés  
  Une définition de rapport peut être créée, publiée ou enregistrée, compilée, traitée, mise en cache, rendue, affiche, exportée, et enregistrée comme historique. Lorsque vous exécutez un rapport, le serveur de rapports procède en trois étapes : le traitement du rapport, le traitement des données et le rendu. Le traitement des données et du rapport sont réalisés sur une définition de rapport ; les résultats sont dans un format interne intermédiaire. Les rapports au format intermédiaire sont ensuite rendus dans un format d'affichage spécifique. Le diagramme suivant représente les étapes et les éléments de traitement des rapports.  
   
- ![diagramme de traitement des rapports](../reporting-services/media/report-execution.gif "diagramme de traitement des rapports")  
+ ![report processing diagram](../reporting-services/media/report-execution.gif "illustration du traitement d’un rapport")  
 Illustration du traitement d'un rapport  
   
 ### <a name="report-definition"></a>Définition de rapport  

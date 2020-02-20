@@ -14,14 +14,14 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228747"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
-Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu. À compter de SQL Server 2016 Reporting Services ou version ultérieure (SSRS) CTP 3.2, la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] portail web est disponible. Cet article détaille le portail web et l’utilisation du nouveau portail web.  
+Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu. À compter de SQL Server 2016 Reporting Services ou version ultérieure (SSRS) CTP 3.2, le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est disponible. Cet article détaille le portail web et l’utilisation du nouveau portail web.  
   
 > [!NOTE]  
 > La gestion de contenu est différente de l'administration d'un serveur de rapports. Pour plus d’informations sur la gestion de l’environnement d’exécution d’un serveur de rapports, consultez [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -42,7 +42,7 @@ Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion d
   
 -   Équilibrage des demandes de traitement de rapports adressées au serveur en planifiant le traitement des rapports, et en indiquant ceux qui peuvent être exécutés à la demande et ceux qui sont chargés à partir du cache.  
   
--   Octroi d’autorisations d’effectuer des tâches de gestion via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués.  
+-   Octroi d’autorisations pour effectuer des tâches de gestion via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués.  
   
 Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et le portail web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le portail web permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports. Le portail web est un site mis à jour qui autorise la plupart des fonctionnalités du Gestionnaire de rapports (aujourd’hui déconseillé). Pour plus d’informations, consultez [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
@@ -56,9 +56,9 @@ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManSt
   
  Dans le portail web, les éléments que vous pouvez déplacer sont indiqués dans l'arborescence des dossiers. L’image suivante indique l'icône associée à chaque élément pouvant être déplacé.  
   
-  ![Icônes de serveur de rapports pour les éléments pouvant être déplacés](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
+  ![Icônes du serveur de rapports pour les éléments déplaçables](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
- Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les dossiers » et « Gérer les sources de données ».  
+ Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les dossiers » et « Gérer les sources de données ».  
   
 ##  <a name="bkmk_Folders"></a> Dossiers  
  Une hiérarchie de dossiers est utilisée pour l'adressage des éléments stockés et gérés par un serveur de rapports.  Par défaut, la structure des dossiers comporte un nœud racine nommé Accueil et des dossiers réservés qui prennent en charge la fonctionnalité optionnelle Mes rapports. Les dossiers supplémentaires sont définis par l'utilisateur. Les dossiers du serveur de rapports sont utiles si vous souhaitez accorder le même niveau d'accès à plusieurs éléments. Les autorisations que vous définissez sur le dossier peuvent être héritées par les éléments dans le dossier et par les dossiers supplémentaires qui dépendent de ce dossier. Par exemple, vous pouvez créer un jeu de dossiers sous le dossier de base, affecter des autorisations d'équipe à chaque dossier, puis laisser les membres de l'équipe personnaliser les dossiers sous le dossier d'équipe, si nécessaire.  
@@ -92,9 +92,9 @@ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManSt
   
  Le tableau ci-dessous décrit les dossiers prédéfinis qui sont ancrés dans l'arborescence des dossiers et qui fournissent un environnement pour plusieurs fonctionnalités.  
   
-|Dossier|Fonction|  
+|Dossier|Objectif|  
 |------------|-------------|  
-|Dossier de base|Nœud racine de l'arborescence des dossiers|  
+|Accueil|Nœud racine de l'arborescence des dossiers|  
 |Utilisateurs|Ce dossier s'affiche lorsque vous activez la fonctionnalité Mes Rapports. Il contient les sous-dossiers de tous les utilisateurs qui utilisent la fonctionnalité Mes rapports ; l'accès à ces dossiers est limité exclusivement aux administrateurs du serveur de rapports. Chaque nom de sous-dossier correspond au nom de l'utilisateur.|  
 |Mes rapports|Offre un espace de noms personnel pour chaque utilisateur.|  
   
@@ -124,7 +124,7 @@ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManSt
 |Opération|Type de fichier|  
 |---------------|---------------|  
 |Télécharger|Pour télécharger une ressource, vous devez utiliser le portail web si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [Charger un fichier ou un rapport dans le serveur de rapports](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Charger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
-|Publier|Tous les fichiers d'un projet qui ne sont pas des rapports, des parties de rapport, des sources de données ou des datasets, sont téléchargés en tant que ressources. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
+|Publish|Tous les fichiers d'un projet qui ne sont pas des rapports, des parties de rapport, des sources de données ou des datasets, sont téléchargés en tant que ressources. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
   
  Toutes les ressources ont pour origine des fichiers situés sur un système de fichiers. Ceux-ci sont ensuite téléchargés vers un serveur de rapports. À l'exception de la limitation de la taille de fichier par défaut à 4 mégaoctets, imposée par ASP.NET, il n'y a pas de restrictions sur les types de fichiers que vous pouvez télécharger. Cependant, lorsqu'ils sont publiés sur un serveur de rapports en tant que ressources, les types de fichiers ayant des types MIME équivalents offrent une utilisation plus optimale que d'autres. Par exemple, les ressources basées sur des fichiers HTML et JPG s'ouvrent dans une fenêtre de navigateur lorsque l'utilisateur clique sur la ressource choisie ; le fichier HTML est rendu sous forme de page Web et le fichier JPG sous forme d'image à l'intention de l'utilisateur. En revanche, les ressources qui ne disposent pas de types MIME équivalents, par exemple les fichiers d'application de bureau, risquent de ne pas être rendues dans la fenêtre du navigateur.  
   
@@ -142,7 +142,7 @@ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManSt
   
  Pour utiliser une ressource de type image dans un rapport, ajoutez le fichier image au projet et publiez-le avec le rapport. Une fois l'image publiée, vous pouvez mettre à jour la référence de l'image dans le rapport, de sorte qu'elle pointe vers la ressource du serveur de rapports ; il vous suffit ensuite de publier à nouveau le rapport pour enregistrer vos modifications. Vous pouvez désormais mettre à jour l'image indépendamment du rapport en publiant à nouveau la ressource. Le rapport utilise la version la plus actuelle de l'image disponible sur le serveur de rapports.  
   
- Pour plus d’informations, consultez [mettre à jour une ressource (portail web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
+ Pour plus d’informations, consultez [Mise à jour d’une ressource (portail web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
   
 ##  <a name="bkmk_MyReports"></a> Mes rapports  
  Le dossier Mes Rapports est un espace de travail personnel pour chaque utilisateur qui ouvre une session sur un serveur de rapports avec un compte de domaine valide. Ce dossier à usage spécial assure le stockage des rapports en cours d'élaboration, des rapports qui ne sont pas destinés à une large distribution ou des rapports qui ont été modifiés pour un besoin particulier. Vous ne pouvez pas restreindre le nombre ou la taille des éléments qui sont stockés dans un dossier Mes Rapports, ni configurer le dossier Mes Rapports pour qu'il soit partagé entre plusieurs utilisateurs.  
@@ -170,7 +170,7 @@ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManSt
 ## <a name="tasks"></a>Tâches  
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)  
  [Créer, supprimer ou modifier un dossier (portail Web)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
- [Mettre à jour une ressource (portail web)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
+ [Mise à jour d’une ressource (portail web)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -15,10 +15,10 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892814"
 ---
 # <a name="technical-reference-ssrs"></a>Références techniques (SSRS)
@@ -28,14 +28,14 @@ ms.locfileid: "68892814"
  ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Erreurs et événements**  
  [Cause et résolution des erreurs Reporting Services](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Références relatives aux fonctionnalités**  
+ ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Références relatives aux fonctions**  
  [Aide sur le concepteur de rapports via la touche F1](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Aide F1 du Gestionnaire de rapports](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Aide (F1) du Gestionnaire de rapports](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Aide de l'Assistant Rapport](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [Aide de l’Assistant Rapport](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [Visionneuse HTML et barre d’outils des rapports](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   

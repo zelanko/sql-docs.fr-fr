@@ -9,10 +9,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63218939"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
@@ -24,7 +24,7 @@ ms.locfileid: "63218939"
   
 1.  Dans l’onglet **Affichage** , cochez la case **Paramètres** pour afficher le volet Paramètres.  
   
-     ![Accéder au volet Paramètres à partir de l’onglet Affichage](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Accéder au volet Paramètres à partir de l’onglet Affichage")  
+     ![Volet Paramètres d’accès à partir de l’onglet Affichage](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Volet Paramètres d’accès à partir de l’onglet Affichage")  
   
      Le volet apparaît dans la partie supérieure de l’aire de conception.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63218939"
   
 5.  Pour ajouter des colonnes et des lignes au volet ou pour supprimer des colonnes et lignes existantes, cliquez avec le bouton droit sur un emplacement quelconque du volet Paramètres et sélectionnez la commande appropriée dans le menu qui s’affiche.  
   
-     ![Ajouter des colonnes et des lignes dans le volet Paramètres](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Ajouter des colonnes et des lignes dans le volet Paramètres")  
+     ![Ajouter des colonnes et des lignes au volet Paramètres](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Ajouter des colonnes et des lignes au volet Paramètres")  
   
     > [!IMPORTANT]  
     >  Quand vous supprimez une colonne ou une ligne contenant des paramètres, ces paramètres sont supprimés du rapport.  
@@ -59,7 +59,7 @@ ms.locfileid: "63218939"
   
     -   Cliquez avec le bouton droit sur le paramètre dans le volet Paramètres et sélectionnez  **Supprimer**.  
   
-         ![Accéder aux propriétés du paramètre à partir du volet Paramètres](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Accéder aux propriétés du paramètre à partir du volet Paramètres")  
+         ![Supprimer des paramètre dans le volet Paramètres](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Supprimer des paramètre dans le volet Paramètres")  
   
     -   Cliquez avec le bouton droit sur le paramètre dans le volet **Données du rapport** et sélectionnez **Supprimer**.  
   

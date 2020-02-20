@@ -1,6 +1,6 @@
 ---
-title: Comprendre la gestion des fenêtres dans SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Comprendre la gestion des fenêtres dans SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b70475e8dba26c1a5aa660ec8bf59547dc9251c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6e0bc52b8053de12b20e273efefe2f582a6e746c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267586"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245502"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Comprendre la gestion des fenêtres dans SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Certains composants peuvent être configurés en mode avec onglet (les composant
 > [!IMPORTANT]  
 > Lorsqu'un compte de connexion (ou un utilisateur de base de données autonome) se connecte et est authentifié, la connexion met en cache les informations d'identité sur la connexion. Dans le cas d'une connexion d'authentification Windows, ces informations incluent des données sur l'appartenance aux groupes Windows. L'identité de la connexion reste authentifiée tant que la connexion est conservée. Pour imposer des modifications d'identité, une réinitialisation du mot de passe, par exemple, ou la modification de l'appartenance au groupe Windows, le compte de connexion doit fermer une session de l'autorité d'authentification (Windows ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) et ouvrir une nouvelle session. Un membre du rôle serveur fixe **sysadmin** ou tout compte de connexion doté de l’autorisation **ALTER ANY CONNECTION** peut utiliser la commande **KILL** pour mettre fin à une connexion et obliger le compte de connexion à se reconnecter. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] peut réutiliser les informations de connexion lors de l’ouverture de plusieurs connexions dans les fenêtres de l’Explorateur d’objets et de l’éditeur de requête. Fermez toutes les connexions pour imposer une reconnexion.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Environnement SQL Server Management Studio](../ssms/the-sql-server-management-studio-environment.md)  
   

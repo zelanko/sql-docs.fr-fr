@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573264"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes MDX Analysis Services
@@ -37,7 +37,7 @@ ms.locfileid: "65573264"
   
  La figure suivante présente les différents volets du mode Création.  
   
- ![Concepteur de requêtes MDX Analysis Services, mode Création](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Concepteur de requêtes MDX Analysis Services, mode Création")  
+ ![Concepteur de requêtes MDX Analysis Services, mode Conception](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Concepteur de requêtes MDX Analysis Services, mode Conception")  
   
  Le tableau suivant répertorie les volets disponibles dans ce mode :  
   
@@ -66,19 +66,19 @@ ms.locfileid: "65573264"
 |------------|-----------------|  
 |**Modifier en tant que texte**|Non activé pour ce type de source de données.|  
 |**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Basculer vers l’affichage des requêtes DMX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Basculer vers l’affichage des requêtes DMX")|Bascule vers le type de commande MDX.|  
-|![Basculer vers la vue langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Basculer vers la vue langage de requête DMX")|Bascule vers le type de commande DMX.|  
+|![Basculer vers l'affichage des requêtes MDX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Basculer vers l'affichage des requêtes MDX")|Bascule vers le type de commande MDX.|  
+|![Basculer vers l'affichage de langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Basculer vers l'affichage de langage de requête DMX")|Bascule vers le type de commande DMX.|  
 |![Actualiser les données du résultat](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Actualiser les données du résultat")|Actualise les métadonnées à partir de la source de données.|  
-|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Affiche la boîte de dialogue **Générateur de membres calculés** .|  
-|![Bouton bascule pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Bouton bascule pour afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|  
+|![Ajouter un membre calculé](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé")|Affiche la boîte de dialogue **Générateur de membres calculés** .|  
+|![Basculer pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Basculer pour afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|  
 |![Exécuter automatiquement la requête](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")|Exécute automatiquement la requête et affiche le résultat chaque fois qu'une modification est effectuée. Les résultats s'affichent dans le volet Données.|  
 |![Bouton Afficher les agrégations](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations")|Affiche les agrégations dans le volet Données.|  
-|![Supprimer](../../reporting-services/report-data/media/rsqdicon-delete.gif "Supprimer")|Supprime de la requête la colonne sélectionnée dans le volet Données.|  
+|![Supprimer](../../reporting-services/report-data/media/rsqdicon-delete.gif "DELETE")|Supprime de la requête la colonne sélectionnée dans le volet Données.|  
 |![Icône de la boîte de dialogue Paramètres de la requête](../../reporting-services/report-data/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")|Affiche la boîte de dialogue **Paramètres de la requête** . Lorsque vous spécifiez des valeurs pour un paramètre de requête, un paramètre de rapport du même nom est automatiquement créé. Le paramètre de requête prend pour valeur une expression qui fait référence au paramètre de rapport.|  
 |![Bouton Préparer la requête](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "Bouton Préparer la requête")|Prépare la requête.|  
 |![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Données.|  
 |![Annuler la requête](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Annuler la requête")|Annule la requête.|  
-|![Basculer en mode Création](../../reporting-services/media/rsqdicon-designmode.gif "Basculer en mode Design")|Bascule entre le mode Création et le mode Requête.|  
+|![Passer en mode Conception](../../reporting-services/media/rsqdicon-designmode.gif "Passer en mode Création")|Bascule entre le mode Création et le mode Requête.|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>Concepteur de requêtes graphique MDX en mode Requête  
  Pour basculer en mode **Requête** dans le concepteur de requêtes graphique, cliquez sur le bouton bascule **Mode Création** dans la barre d'outils.  
@@ -107,11 +107,11 @@ ms.locfileid: "65573264"
   
 -   **Modifier en tant que texte**  
   
--   **Ajouter un membre calculé** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Ajouter un membre calculé** (![Ajouter un membre calculé](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé"))  
   
--   **Afficher les cellules vides** (![Bouton bascule pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Bouton bascule pour afficher les cellules vides"))  
+-   **Afficher les cellules vides** (![Basculer pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Basculer pour afficher les cellules vides"))  
   
--   **Exécution automatique** (![Exécuter automatiquement la requête](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête"))  
+-   **Exécuter automatiquement** (![Exécuter automatiquement la requête](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête"))  
   
 -   **Afficher les agrégations** (![Bouton Afficher les agrégations](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations"))  
   

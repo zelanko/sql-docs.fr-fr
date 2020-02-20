@@ -16,10 +16,10 @@ ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e86c1964a4ece26115116b8e21c763caaab797b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572225"
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>Méthode ConfigurationSetting - DeleteEncryptedInformation
@@ -42,7 +42,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
  *ExtendedErrors[]*  
  [out] Tableau de chaînes contenant les erreurs supplémentaires retournées par l'appel.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
@@ -59,7 +59,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
  L’appel de la méthode DeleteEncryptedInformation n’affecte pas le fichier de configuration du serveur de rapports.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

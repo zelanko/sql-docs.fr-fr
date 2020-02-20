@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573206"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190870"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Créer, modifier, puis supprimer des sources de données partagées (SSRS)
   Une source de données partagée est un ensemble de propriétés de connexion à la source de données pouvant être référencées par plusieurs rapports, modèles et abonnements pilotés par les données qui s’exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Les sources de données partagées permettent de gérer facilement des propriétés de source de données qui changent souvent dans le temps. Si le compte ou le mot de passe d'un utilisateur change ou bien si vous déplacez la base de données sur un serveur différent, vous pouvez mettre à jour les informations de connexion à un seul endroit.  
@@ -32,10 +32,10 @@ ms.locfileid: "65573206"
   
 |Élément|Description|  
 |----------|-----------------|  
-|Créer une vue d’abonnement|Nom qui identifie l'élément au sein de la hiérarchie des dossiers du serveur de rapports.|  
+|Name|Nom qui identifie l'élément au sein de la hiérarchie des dossiers du serveur de rapports.|  
 |Description|Description qui apparaît avec l’élément dans le portail web quand vous consultez le contenu du dossier.|  
 |Type de connexion|Extension pour le traitement des données utilisée avec la source de données. Vous ne pouvez utiliser que les extensions pour le traitement des données qui sont déployées sur le serveur de rapports. Pour plus d’informations sur les extensions pour le traitement des données incluses dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
-|Chaîne de connexion|Chaîne de connexion pour la base de données. Pour plus d’informations et pour consulter des exemples de chaînes de connexion aux sources de données fréquemment utilisées, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
+|Chaîne de connexion|Chaîne de connexion pour la base de données. Pour plus d’informations et pour consulter des exemples de chaînes de connexion aux sources de données fréquemment utilisées, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Type d'informations d'identification|Spécifie la façon dont les informations d'identification sont obtenues pour la connexion et si elles doivent être utilisées une fois la connexion établie. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
  Une source de données partagée ne contient pas d'informations de requête utilisées pour récupérer des données. La requête est toujours conservée dans une définition de rapport.  
@@ -167,7 +167,7 @@ La suppression d’une source de données partagée désactive tout rapport, mod
   
 4.  Dans **Type de source de données**, sélectionnez le type de source de données dans la liste. Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-5.  Dans **Chaîne de connexion**, spécifiez un pointeur vers la source de données, ainsi que les autres paramètres nécessaires à l'établissement d'une connexion à la source de données externe. Le type de source de données utilisé détermine la syntaxe de la chaîne de connexion. Pour obtenir plus d’informations et des exemples, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+5.  Dans **Chaîne de connexion**, spécifiez un pointeur vers la source de données, ainsi que les autres paramètres nécessaires à l'établissement d'une connexion à la source de données externe. Le type de source de données utilisé détermine la syntaxe de la chaîne de connexion. Pour obtenir plus d’informations et des exemples, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 6.  Dans **Informations d'identification**, spécifiez comment le serveur de rapports obtient les informations d'identification permettant d'accéder à la source de données externe. Les informations d'identification peuvent être stockées, demandées, intégrées ou configurées pour le traitement autonome des rapports.  
   
@@ -213,8 +213,8 @@ La suppression d’une source de données partagée désactive tout rapport, mod
   
      Pour les modèles de rapports, la liste des éléments dépendants affiche les rapports créés dans le Générateur de rapports. Pour les sources de données partagées, la liste des éléments dépendants peut inclure à la fois les rapports et les modèles de rapports.  
   
-## <a name="see-also"></a>Voir aussi  
- [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gérer des sources de données de rapports](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configurer des propriétés de la source de données d’un rapport paginé](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

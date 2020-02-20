@@ -1,10 +1,9 @@
 ---
-title: Représentation des jointures dans le Concepteur de requêtes et de vues (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Représentation des jointures dans le Concepteur de requêtes et de vues
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,25 +13,27 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6318dfe2cc886e3ea2ea10d089023325ff074c95
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7e0d4b8ff645ad918cea32cbbed3eade62017254
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254440"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255867"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Représentation des jointures dans le Concepteur de requêtes et de vues (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Dans le cas de tables jointes, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) représente la jointure graphiquement dans le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) et il utilise la syntaxe SQL dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
-## <a name="diagram-pane"></a>volet Schéma  
+## <a name="diagram-pane"></a>Volet Schéma  
 Dans le volet Schéma, le Concepteur de requêtes et de vues affiche une ligne de jointure entre les colonnes de données impliquées. Il affiche une ligne de jointure par condition de jointure. Par exemple, l'illustration suivante montre une ligne de jointure entre deux tables jointes :  
   
 ![La ligne de jointure illustre la relation entre deux tables](../../ssms/visual-db-tools/media/dv3wbig.gif "La ligne de jointure illustre la relation entre deux tables")  
   
 Si des tables ont plusieurs conditions de jointure, le Concepteur de requêtes et de vues affiche plusieurs lignes de jointure, comme l'illustre l'exemple suivant :  
   
-![Tables jointes à l’aide de plusieurs conditions de jointure](../../ssms/visual-db-tools/media/dv3w9n1.gif "Tables jointes à l’aide de plusieurs conditions de jointure")  
+![Tables jointes à l'aide de plusieurs conditions de jointure](../../ssms/visual-db-tools/media/dv3w9n1.gif "Tables jointes à l'aide de plusieurs conditions de jointure")  
   
 Si les colonnes de données jointes ne sont pas affichées (parce que, par exemple, le rectangle représentant la table ou l'objet table est réduit ou la jointure implique une expression), le Concepteur de requêtes et de vues place la ligne de jointure dans la barre de titre du rectangle représentant la table ou l'objet structuré en table.  
   

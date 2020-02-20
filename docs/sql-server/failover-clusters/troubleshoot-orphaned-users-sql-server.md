@@ -1,6 +1,7 @@
 ---
-title: Résoudre les problèmes liés aux utilisateurs orphelins (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Dépanner des utilisateurs orphelins
+description: Les utilisateurs orphelins se produisent lorsque la connexion d’un utilisateur de la base de données n’existe plus dans la base de données Master. Cette rubrique explique comment identifier et dépanner les utilisateurs orphelins.
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,20 +20,20 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063813"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822051"
 ---
-# <a name="troubleshoot-orphaned-users-sql-server"></a>Résoudre les problèmes liés aux utilisateurs orphelins (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Dépanner des utilisateurs orphelins (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   L’apparition d’utilisateurs orphelins dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se produit lorsqu'un utilisateur de base de données est basé sur un utilisateur dans la base de données **MASTER** , mais que l’utilisateur n’existe plus dans le **MASTER**. Cela peut se produire lorsque l’utilisateur est supprimé, ou lorsque la base de données est déplacée vers un autre serveur sur lequel l’utilisateur n'existe pas. Cette rubrique décrit comment rechercher des utilisateurs orphelins, puis comment les remapper à des utilisateurs.  
   
 > [!NOTE]  
->  Réduisez la possibilité d’apparition d’utilisateurs orphelins en utilisant des utilisateurs de base de données autonome pour les bases de données pouvant être déplacées. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+>  Réduisez la possibilité d’apparition d’utilisateurs orphelins en utilisant des utilisateurs de base de données autonome pour les bases de données pouvant être déplacées. Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="background"></a>Arrière-plan  
  Pour connecter une base de données à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un principal de sécurité (identité de l’utilisateur de base de données) basé sur un utilisateur, le principal doit disposer d’un identifiant valide dans la base de données **master** . Cette connexion est utilisée dans le processus d'authentification chargé de vérifier l’identité du principal pour s’assurer que le principal est autorisé à se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une instance de serveur sont visibles dans l’affichage catalogue **sys.server_principals** et l’affichage de compatibilité **sys.syslogins** .  
@@ -55,7 +56,7 @@ ms.locfileid: "68063813"
   
  Un utilisateur de base de données (basé sur un identifiant) pour lequel la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondante n’est pas définie sur une instance serveur, ou l’est de façon incorrecte, ne peut pas se connecter à cette instance. L'utilisateur devient donc un *utilisateur orphelin* de la base de données sur cette instance du serveur. Le fait de se retrouver orphelin peut se produire si l'utilisateur de base de données est mappé à un SID de connexion absent dans l’instance `master` . Un utilisateur peut devenir orphelin après qu'une base de données a été restaurée ou attachée à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l’identifiant n’a jamais été créé. Un utilisateur de base de données peut également se retrouver orphelin si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondante est supprimée. Même si l’utilisateur est recréé, il aura un SID différent. Ainsi, l'utilisateur de base de données reste orphelin.  
   
-## <a name="to-detect-orphaned-users"></a>Pour détecter des utilisateurs orphelins  
+## <a name="detect-orphaned-users"></a>Détecter des utilisateurs orphelins  
 
 **Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et PDW**
 
@@ -95,7 +96,7 @@ La table `sys.server_principals` n’est pas disponible dans la SQL Database ou 
 
 3. Comparez les deux listes pour déterminer si des SID dans la table `sys.database_principals` de la base de données utilisateur n’ont aucun SID de connexion correspondant dans la table `sql_logins` de la base de données master. 
   
-## <a name="to-resolve-an-orphaned-user"></a>Pour résoudre le cas d'un utilisateur orphelin  
+## <a name="resolve-an-orphaned-user"></a>Résoudre le cas d'un utilisateur orphelin  
 Dans la base de données master, utilisez l’instruction [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) avec l’option SID pour recréer un identifiant manquant, en fournissant le `SID` de l’utilisateur de base de données obtenu dans la section précédente :  
   
 ```  

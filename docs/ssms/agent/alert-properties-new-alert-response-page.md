@@ -1,10 +1,9 @@
 ---
-title: Propriétés de l’alerte - Nouvelle alerte (page Réponse) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de l’alerte - Nouvelle alerte (page Réponse)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1af60c77e97c22dca5a6e2c5e80008261e6fcb8f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c8faf533bd04fb3052fa3678fd1da05cb36129de
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266414"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254507"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Propriétés de l’alerte - Nouvelle alerte (page Réponse)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68266414"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Utilisez cette page pour spécifier un travail que vous souhaitez exécuter et pour obtenir une liste d'opérateurs à notifier en réponse à une alerte de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Utilisez cette page pour spécifier un travail que vous souhaitez exécuter et pour obtenir une liste d’opérateurs à notifier en réponse à une alerte de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="options"></a>Options  
 **Exécuter le travail**  
@@ -59,9 +60,9 @@ Affiche la boîte de dialogue **Nouvel opérateur** , que vous pouvez utiliser p
 **Afficher l'opérateur**  
 Affiche la boîte de dialogue **Propriétés** pour l’opérateur sélectionné. Vous pouvez afficher et modifier les propriétés d’opérateur dans la boîte de dialogue **Propriétés Opérateur**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Alertes](../../ssms/agent/alerts.md)  
-[Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
+[Créer une alerte à l’aide d’un niveau de gravité](../../ssms/agent/create-an-alert-using-severity-level.md)  
 [Alertes](../../ssms/agent/alerts.md)  
 [Edit an Alert](../../ssms/agent/edit-an-alert.md)  
 [Delete an Alert](../../ssms/agent/delete-an-alert.md)  

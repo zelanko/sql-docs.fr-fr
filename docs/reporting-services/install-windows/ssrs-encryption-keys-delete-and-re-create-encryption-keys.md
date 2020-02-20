@@ -1,11 +1,13 @@
 ---
-title: Supprimer et recréer des clés de chiffrement (Gestionnaire de configuration de SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+title: Supprimer et recréer des clés de chiffrement (Gestionnaire de configuration) | Microsoft Docs
+description: La suppression et la recréation de clés de chiffrement sont des activités qui dépassent le cadre d'une simple opération de maintenance des clés de chiffrement.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
-- re-creating encryption keys
+- recreating encryption keys
 - encryption keys [Reporting Services]
 - deleting encryption keys
 - symmetric keys [Reporting Services]
@@ -14,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593534"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866302"
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Clés de chiffrement SSRS - Supprimer et recréer des clés de chiffrement
+# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>Supprimer et recréer des clés de chiffrement (Gestionnaire de configuration SSRS)
   La suppression et la recréation de clés de chiffrement sont des activités qui dépassent le cadre d'une simple opération de maintenance des clés de chiffrement. Vous effectuez ces tâches en réponse à une menace spécifique pesant sur votre serveur de rapports ou comme ultime recours si vous ne pouvez plus accéder à la base de données du serveur de rapports.  
   
 -   Recréez la clé symétrique lorsque vous estimez que la sécurité de la clé existante est compromise. Vous pouvez effectuer cette opération régulièrement en tant que mesure de sécurité.  
   
 -   Supprimez les clés de chiffrement existantes et le contenu chiffré inutilisable lorsqu'il vous est impossible de restaurer la clé symétrique.  
   
-## <a name="re-creating-encryption-keys"></a>recréation des clés de chiffrement  
+## <a name="recreating-encryption-keys"></a>Recréation des clés de chiffrement  
  Si vous avez la preuve que la clé symétrique est connue d'utilisateurs non autorisés ou si votre serveur de rapports a subi une attaque et que vous voulez, par mesure de précaution, réinitialiser la clé symétrique, procédez à une nouvelle création de clé. Cette opération implique un nouveau chiffrement de toutes les valeurs chiffrées à l'aide de la nouvelle valeur. Si vous exécutez plusieurs serveurs de rapports dans un déploiement évolutif, tous les exemplaires de la clé symétrique seront mis à jour avec cette nouvelle valeur. Le serveur de rapports utilise les clés publiques disponibles pour cette clé symétrique qu'il met à jour pour chaque serveur dans le déploiement.  
   
  La création d'une nouvelle clé symétrique n'est possible que si le serveur de rapports est en cours de fonctionnement. Cette opération, ainsi que le nouveau chiffrement de contenu, peuvent perturber les activités du serveur. Vous devez mettre le serveur en mode hors connexion tandis que vous procédez au nouveau chiffrement. Aucune demande ne doit être adressée au serveur de rapports durant cette opération.  
   
  Vous pouvez utiliser l’outil de configuration de Reporting Services ou l’utilitaire **rskeymgmt** pour réinitialiser la clé symétrique et les données chiffrées. Pour plus d’informations sur la création de la clé symétrique, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Procédure de recréation des clés de chiffrement (outil de configuration de Reporting Services)  
+### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>Procédure de recréation des clés de chiffrement (outil de configuration de Reporting Services)  
   
 1.  Désactivez le service web Report Server et l’accès HTTP en modifiant la propriété **IsWebServiceEnabled** dans le fichier rsreportserver.config. Cette étape arrête temporairement l'envoi des demandes d'authentification au serveur de rapports sans arrêter complètement le serveur. Vous devez avoir le service minimal afin de pouvoir recréer les clés.  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73593534"
   
 5.  Réactivez le service web et l’accès HTTP en modifiant la propriété **IsWebServiceEnabled** dans le fichier rsreportserver.config. Effectuez cette action pour toutes les instances si vous utilisez un déploiement évolutif.  
   
-### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Procédure de recréation des clés de chiffrement (rskeymgmt)  
+### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>Procédure de recréation des clés de chiffrement (rskeymgmt)  
   
 1.  Désactivez le service Web Report Server et l'accès HTTP. Suivez les instructions de la procédure précédente pour interrompre les opérations du service Web.  
   
@@ -112,7 +114,7 @@ ms.locfileid: "73593534"
   
 4.  Pour les abonnements utilisant des données chiffrées (ce qui comprend l'extension de remise dans le partage de fichiers et toute extension de remise créées par d'autres développeurs qui utilisent le chiffrement), ouvrez chaque abonnement et retapez les informations d'identification. Les abonnements utilisant la remise par messagerie électronique du serveur de rapports n'ont pas recours aux données chiffrées, ils ne sont donc pas concernés par les modifications apportées à la clé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   

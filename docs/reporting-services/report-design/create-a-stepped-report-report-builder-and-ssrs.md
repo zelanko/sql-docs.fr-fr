@@ -9,16 +9,16 @@ ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581537"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Créer un rapport en escalier (Générateur de rapports et SSRS)
 Un rapport en escalier est un type de rapport paginé  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui affiche des lignes de détails ou des groupes enfants mis en retrait sous un groupe parent dans la même colonne, comme l’illustre l’exemple ci-dessous :  
   
- ![Rendu de rapport en escalier](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendu de rapport en escalier")  
+ ![Rapport par palier rendu](../../reporting-services/report-design/media/steppedreportrendered.gif "Rapport par palier rendu")  
   
  Les rapports traditionnels sous forme de table placent le groupe parent dans une colonne adjacente dans le rapport. La nouvelle région de données de tableau matriciel vous permet d’ajouter un groupe et des lignes de détails ou des groupes enfants à la même colonne. Pour différencier les lignes de groupe des lignes de détails ou de groupes enfants, vous pouvez appliquer une mise en forme telle qu'une couleur de police ou vous pouvez mettre en retrait les lignes de détails.  
   
@@ -50,11 +50,11 @@ Un rapport en escalier est un type de rapport paginé  [!INCLUDE[ssRSnoversion](
   
      L'illustration suivante montre l'apparence de la région de données rendue lorsque vous affichez le rapport.  
   
-     ![Rendu de rapport groupé](../../reporting-services/report-design/media/tablereportrendered.gif "Rendu de rapport groupé")  
+     ![Rapport groupé rendu](../../reporting-services/report-design/media/tablereportrendered.gif "Rapport groupé rendu")  
   
 3.  Pour un rapport par palier, vous n'avez pas besoin de la première colonne qui affiche l'instance de groupe. À la place, copiez la valeur de la cellule d'en-tête de groupe, supprimez la colonne de groupe et collez la valeur dans la première zone de texte de la ligne d'en-tête de groupe. Pour supprimer la colonne de groupe, cliquez avec le bouton droit sur la colonne de groupe ou sur la cellule, puis cliquez sur **Supprimer les colonnes**. L'illustration suivante montre l'apparence de la région de données sur l'aire de conception.  
   
-     ![Région de données avec ligne d’en-tête de groupe](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Région de données avec ligne d’en-tête de groupe")  
+     ![Région de données avec ligne d'en-tête de groupe](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Région de données avec ligne d'en-tête de groupe")  
   
 4.  Pour mettre en retrait les lignes de détails sous la ligne d'en-tête de groupe dans la même colonne, modifiez la marge intérieure de la cellule de données de détail.  
   
@@ -101,7 +101,7 @@ Un rapport en escalier est un type de rapport paginé  [!INCLUDE[ssRSnoversion](
   
 3.  Modifiez la marge intérieure de la cellule qui affiche les données du groupe.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

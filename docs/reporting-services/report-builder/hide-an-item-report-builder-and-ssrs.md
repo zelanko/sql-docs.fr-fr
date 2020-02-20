@@ -12,10 +12,10 @@ ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2a6e57c1e4326f2c8a0f04a515aab7c699778f39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580711"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Masquer un élément (Générateur de rapports et SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "65580711"
   
         > [!NOTE]  
         >  Quand vous spécifiez une expression de visibilité, vous définissez la propriété Hidden de l’élément de rapport, comment indiqué dans l’image suivante. L'expression évaluée affiche l'élément de rapport lorsque la valeur est False et le masque lorsque la valeur est True.   
-        > ![Boîte de dialogue et propriété masquée Properties_Visibility](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Boîte de dialogue et propriété masquée Properties_Visibility")  
+        > ![Boîte de dialogue de visibilité de propriétés et propriété masquée](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Boîte de dialogue de visibilité de propriétés et propriété masquée")  
   
 4.  Cliquez deux fois sur **OK** .  
   

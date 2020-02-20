@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651954"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Configurer les abonnements et les alertes pour les applications de service de SSRS
@@ -28,7 +28,7 @@ ms.locfileid: "62651954"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124 SharePoint 2013|  
   
- ![Autorisations d’accès de l’Agent SQL aux bases de données d’application de service](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Autorisations d’accès de l’Agent SQL aux bases de données d’application de services")  
+ ![Autorisations d'accès SQL Agent aux bases de données d'application de service](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Autorisations d'accès SQL Agent aux bases de données d'application de service")  
   
 ||Description|  
 |------|-----------------|  
@@ -79,9 +79,9 @@ ms.locfileid: "62651954"
   
 4.  Mettez à jour l'applet de commande PowerShell suivant en remplaçant le nom de la base de données du serveur de rapports, le compte du pool d'applications, et le chemin d'accès de l'instruction.  
   
-     **Syntaxe d’applets de commande :** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Syntaxe de cmdlet :** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Exemple d'une applet de commande :** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Exemple de cmdlet :** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>Utilisation du script Transact-SQL  
  Les procédures suivantes peuvent être utilisées avec des scripts téléchargés depuis les pages de configuration ou des scripts créés à l'aide de PowerShell.  
@@ -100,7 +100,7 @@ ms.locfileid: "62651954"
   
     -   Si vous utilisez l'authentification SQL Server pour vous connecter, vous devez fournir un ID de conenxion et un mot de passe.  
   
-3.  Cliquez sur **Se connecter**.  
+3.  Cliquez sur **Connecter**.  
   
 #### <a name="to-run-the-transact-sql-statement"></a>Pour exécuter l'instruction Transact-SQL  
   

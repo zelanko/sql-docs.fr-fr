@@ -1,7 +1,7 @@
 ---
-title: Utiliser plusieurs versions et instances de SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: Utiliser plusieurs versions et instances
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba5e4fdaab769fca0443f6395536dc31207b1374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045662"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258971"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Utiliser plusieurs versions et instances de SQL Server
 
@@ -60,13 +60,13 @@ Vous pouvez mettre à niveau des versions antérieures de SQL Server sur un ordi
   
  Dans chaque version finale principale ou secondaire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le numéro de version est incrémenté afin de la différencier des versions antérieures. Cette modification de la version est utilisée à de nombreuses fins. Cela comprend l'affichage des informations sur la version dans l'interface utilisateur, le contrôle de la manière dont les fichiers sont remplacés pendant la mise à niveau, l'application des Service Packs, et cela joue également le rôle de mécanisme pour la différentiation fonctionnelle entre les versions consécutives.
   
-### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Composants partagés par toutes les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-by-all-versions-of-ssnoversion"></a>Composants partagés par toutes les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  Certains composants sont partagés par toutes les instances de toutes les versions installées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Lorsque vous installez des versions différentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] côte à côte sur le même ordinateur, ces composants sont mis à niveau automatiquement vers la version la plus récente. Ces composants sont habituellement désinstallés automatiquement lorsque la dernière instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désinstallée.
   
  Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser et Enregistreur Microsoft VSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Composants partagés par toutes les instances de la même version principale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Composants partagés par toutes les instances de la même version principale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les versions qui ont le même numéro de version principale partagent certains composants d’une instance à l’autre. Si les composants partagés sont sélectionnés pendant la mise à niveau, les composants existants sont mis à niveau vers la version la plus récente.
   
@@ -78,13 +78,13 @@ Exemples : [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCL
   
 Exemple : .
   
-### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Composants spécifiques à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Composants spécifiques à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Certains composants ou services de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont spécifiques à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ils sont également définis comme étant dépendants de l'instance. Ils partagent la même version que l'instance qui les héberge et sont utilisés exclusivement pour cette instance.
   
 Exemples : [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>Composants qui sont indépendants des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-that-are-independent-of-the-ssnoversion-versions"></a>Composants qui sont indépendants des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Certains composants sont installés pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais sont indépendant des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ils peuvent être partagés par les versions principales ou par toutes les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
@@ -92,7 +92,7 @@ Exemples : Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 Pour plus d’informations sur l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Pour plus d’informations sur la désinstallation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, consultez [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] côte à côte avec les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] côte à côte avec les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Vous pouvez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur exécutant déjà les instances d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si une instance par défaut existe sur l'ordinateur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être installé comme instance nommée.  
   

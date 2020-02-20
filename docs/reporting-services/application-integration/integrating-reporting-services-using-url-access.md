@@ -1,9 +1,11 @@
 ---
-title: Intégration de Reporting Services à l’aide de l’accès URL | Microsoft Docs
+title: Intégrer avec l’accès par URL
+description: Une demande d'URL vous permet d'accéder à un serveur de rapports spécifique ainsi qu'aux rapports, ressources et autres éléments inclus dans la base de données du serveur de rapports.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9609802daff2f5040974deaa5793e7bceb8fcbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 56ef7e673e9002e2144cef37c6d01284888ed483
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660514"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796824"
 ---
-# <a name="integrating-reporting-services-using-url-access"></a>Intégration de Reporting Services à l'aide de l'accès URL
+# <a name="integrate-reporting-services-using-url-access"></a>Intégrer Reporting Services avec l’accès par URL
   Avec l'accès URL, vous accédez aux rapports via l'URL d'un serveur de rapports. Une demande d'URL vous permet d'accéder à un serveur de rapports spécifique ainsi qu'aux rapports, ressources et autres éléments inclus dans la base de données du serveur de rapports. Vous pouvez également personnaliser la consultation des rapports et la navigation pour vos utilisateurs. La chaîne de requête de l'URL contient des paramètres d'informations de périphérique, ainsi que des paramètres de rapport ciblés sur votre rapport et la sortie de rendu choisie. La façon dont le serveur de rapports gère les demandes d'URL dépend des paramètres, des préfixes de paramètres et du type d'élément auquel vous accédez via l'URL.  
   
  Vous pouvez utiliser l'accès URL pour incorporer des liens hypertexte dans des rapports et d'autres éléments de serveur de rapports dans les applications que vous développez, qu'il s'agisse d'un environnement Windows ou Web.  

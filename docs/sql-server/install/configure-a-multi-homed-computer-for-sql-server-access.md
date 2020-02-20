@@ -1,7 +1,7 @@
 ---
-title: Configurer un ordinateur multirésident pour l’accès à SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Configurer un ordinateur multirésident pour l’accès
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126223"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244463"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68126223"
   
 3.  Notez les adresses IPv4 et IPv6 qui sont utilisées. Les autres informations de la liste, telles que les adresses temporaires, les masques de sous-réseau et les passerelles par défaut sont des informations importantes pour la configuration d'un réseau TCP/IP. Toutefois, ces informations ne sont pas utilisées dans cet exemple.  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Pour déterminer les adresses IP et les ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>Pour déterminer les adresses IP et les ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration**.  
   

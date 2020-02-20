@@ -1,6 +1,7 @@
 ---
-title: Administration et maintenance de l’instance de cluster de basculement | Microsoft Docs
-ms.custom: ''
+title: Administration et maintenance de l’instance de cluster de basculement
+description: En savoir plus sur l’administration et la maintenance des instances de cluster de basculement SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002484"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230065"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administration et maintenance de l'instance de cluster de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +60,12 @@ ms.locfileid: "68002484"
 |Explique comment ajouter des dépendances à une ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Ajouter des dépendances à une ressource SQL Server](../../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)|  
 |Kerberos est un protocole d'authentification de réseau conçu pour fournir une authentification renforcée pour applications client/serveur. Kerberos fournit une base d'interopérabilité et permet d'améliorer la sécurité de l'authentification réseau à l'échelle de l'entreprise. Vous pouvez utiliser l’authentification Kerberos avec des instances autonomes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou avec des instances de cluster de basculement Always On.|[Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Fournit des liens vers un contenu qui explique comment activer l'authentification Kerberos||  
-|Décrit la procédure utilisée pour effectuer une récupération suite à échec d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Récupérer à partir d'une défaillance d'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
-|Décrit la procédure utilisée pour modifier la ressource d'adresse IP d'une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modifier l'adresse IP d'une instance de cluster de basculement](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
+|Décrit la procédure utilisée pour effectuer une récupération suite à échec d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Récupérer à partir d’une défaillance de cluster de basculement](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
+|Décrit la procédure utilisée pour modifier la ressource d'adresse IP d'une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modifier l’adresse IP d’une instance de cluster de basculement](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les paramètres de propriété HealthCheckTimeout](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   
  [Configurer les paramètres de propriété FailureConditionLevel](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)   
- [Afficher et lire le journal de diagnostic de l'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
+ [Afficher et lire le journal de diagnostic de l’instance de cluster de basculement](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193847"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentification dans Reporting Services
@@ -100,7 +100,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  L'illustration suivante représente la méthode d'authentification d'utilisateurs auprès du service Web lorsque votre application est déployée avec un serveur de rapports configuré pour utiliser une extension d'authentification personnalisée.  
   
- ![Flux d’authentification de sécurité de Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Flux d’authentification de sécurité de Reporting Services")  
+ ![Flux d'authentification de sécurité de Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Flux d'authentification de sécurité de Reporting Services")  
   
  Comme indiqué dans la figure 2, le processus d'authentification est le suivant :  
   

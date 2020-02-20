@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893241"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
@@ -38,7 +38,7 @@ ms.locfileid: "68893241"
 ##  <a name="bkmk_general"></a> Recommandations générales du journal ULS  
  Le tableau suivant répertorie les catégories et niveaux d'événements recommandés pour l'analyse d'un environnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lorsqu'un événement est journalisé, chaque entrée inclut l'heure à laquelle l'événement a été enregistré, le nom du processus et l'ID du thread.  
   
-|Catégorie|Level|Description|  
+|Category|Level|Description|  
 |--------------|-----------|-----------------|  
 |Base de données|Commentaires|Journalise les événements ayant trait à l'accès aux bases de données.|  
 |Général|Commentaires|Journalise les événements ayant trait à l'accès aux éléments suivants :<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pages Web<br /><br /> Gestionnaire HTTP de la visionneuse de rapports<br /><br /> Accès aux rapports (fichiers .rdl)<br /><br /> Sources de données (fichiers .rsds)<br /><br /> URL sur le site SharePoint (fichiers .smdl)|  
@@ -85,9 +85,9 @@ Get-SPDiagnosticConfig
   
 1.  **Produit : SQL Server Reporting Services**  
   
-2.  **Catégorie :** les noms d’événements associés au serveur sont précédés de « Report Server ». Par exemple les événements « Report Server Alerting Runtime » sont aussi enregistrés dans les fichiers journaux du serveur de rapports.  
+2.  **Catégorie :** Les événements associés au serveur ont les caractères « Report Server », au début du nom. Par exemple les événements « Report Server Alerting Runtime » sont aussi enregistrés dans les fichiers journaux du serveur de rapports.  
   
-3.  **Catégorie :** les événements liés à ou communiqués à partir d’un composant front-end web ne contiennent pas « Report Server ». Par exemple « Service Application Proxy Report Server Alerting Runtime ». Les entrées WFE contiennent un CorrelationID contrairement aux entrées de serveur.  
+3.  **Catégorie :** Les événements liés à ou communiqués à partir d'un composant web front-end ne contiennent pas « Report Server ». Par exemple « Service Application Proxy Report Server Alerting Runtime ». Les entrées WFE contiennent un CorrelationID contrairement aux entrées de serveur.  
   
 ##  <a name="bkmk_list"></a> Liste des événements SQL Server Reporting Services  
  Le tableau suivant contient la liste des événements de la catégorie SQL Server Reporting Services :  
@@ -124,7 +124,7 @@ Get-SPDiagnosticConfig
 |Fournisseur du serveurs de rapports||  
 |Rendu service Web Report Server||  
 |Aperçu des rapports service Web Report Server||  
-|Utilitaire des ressources service Web Report Server|Entrées témoin :<br /><br /> Référence SKU de démarrage des services MediumReporting : évaluation<br /><br /> Copie de MediumEvaluation : 180 jours restants|  
+|Utilitaire des ressources service Web Report Server|Entrées témoin :<br /><br /> Référence SKU de démarrage des services MediumReporting : Évaluation<br /><br /> Copie de MediumEvaluation : 180 jours restants|  
 |Travaux d'exécution service Web Report Server||  
 |Demandes d'exécution service Web Report Server||  
 |Planification service Web Report Server||  
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |Service partagé|Entrées témoin :<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Accès de MediumGranting aux bases de données de contenu.<br /><br /> Instances de MediumProvisioning pour ReportingWebServiceApplication<br /><br /> Modification du compte de service MediumProcessing pour ReportingWebServiceApplication<br /><br /> Autorisations de base de données de MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Afficher un journal avec PowerShell  
- ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Vous pouvez utiliser PowerShell pour retourner la liste d’événements connexes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir d’un fichier journal ULS. Tapez la commande suivante à partir de SharePoint 2010 Management Shell pour obtenir la liste filtrée des lignes du fichier journal ULS nommé UESQL11SPOINT-20110606-1530.log, qui contient « **sql server reporting services** » :  
+ ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Vous pouvez utiliser PowerShell pour retourner la liste d’événements connexes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir d’un fichier journal ULS. Tapez la commande suivante à partir de SharePoint 2010 Management Shell pour obtenir la liste filtrée des lignes du fichier journal ULS nommé UESQL11SPOINT-20110606-1530.log, qui contient « **sql server reporting services** » :  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

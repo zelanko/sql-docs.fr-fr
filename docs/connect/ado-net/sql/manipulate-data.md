@@ -9,30 +9,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: df430bbacb69e1d95d001e4f9340ca60473503cd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7855ef064061957cbc44dfcb4b075ebbd3893325
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452163"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247731"
 ---
 # <a name="manipulating-data"></a>Manipulation de données
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Télécharger ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Avant l’introduction de plusieurs jeux de résultats actifs (MARS), les développeurs devaient utiliser soit plusieurs connexions, soit des curseurs côté serveur pour résoudre certains scénarios. En outre, quand plusieurs connexions étaient utilisées dans une situation transactionnelle, des connexions liées (avec **sp_getbindtoken** et **sp_bindsession**) étaient requises. Les scénarios suivants montrent comment utiliser une connexion compatible MARS au lieu de plusieurs connexions.  
+Avant l’introduction de MARS (Multiple Active Result Set), les développeurs devaient utiliser soit plusieurs connexions, soit des curseurs côté serveur pour résoudre certains scénarios. En outre, quand plusieurs connexions étaient utilisées dans une situation transactionnelle, des connexions liées (avec **sp_getbindtoken** et **sp_bindsession**) étaient requises. Les scénarios suivants montrent comment utiliser une connexion compatible MARS au lieu de plusieurs connexions.  
   
 ## <a name="using-multiple-commands-with-mars"></a>Utilisation de plusieurs commandes avec MARS  
-L’application console suivante montre comment utiliser deux objets <xref:Microsoft.Data.SqlClient.SqlDataReader> avec deux objets <xref:Microsoft.Data.SqlClient.SqlCommand> et un objet <xref:Microsoft.Data.SqlClient.SqlConnection> unique avec MARS activé.  
+L’application Console suivante montre comment utiliser deux objets <xref:Microsoft.Data.SqlClient.SqlDataReader> avec deux objets <xref:Microsoft.Data.SqlClient.SqlCommand> et un objet <xref:Microsoft.Data.SqlClient.SqlConnection> unique avec MARS activé.  
   
 ### <a name="example"></a>Exemple  
-L’exemple ouvre une connexion unique à la base de données **AdventureWorks**. À l’aide d’un objet <xref:Microsoft.Data.SqlClient.SqlCommand>, un <xref:Microsoft.Data.SqlClient.SqlDataReader> est créé. À mesure que le lecteur est utilisé, une deuxième <xref:Microsoft.Data.SqlClient.SqlDataReader> est ouverte, en utilisant les données du premier <xref:Microsoft.Data.SqlClient.SqlDataReader> comme entrée de la clause WHERE pour le second lecteur.  
+L’exemple ouvre une connexion unique à la base de données **AdventureWorks**. À l’aide d’un objet <xref:Microsoft.Data.SqlClient.SqlCommand>, un <xref:Microsoft.Data.SqlClient.SqlDataReader> est créé. À mesure que le lecteur est utilisé, un deuxième <xref:Microsoft.Data.SqlClient.SqlDataReader> est ouvert, en utilisant les données du premier <xref:Microsoft.Data.SqlClient.SqlDataReader> comme entrée de la clause WHERE pour le deuxième lecteur.  
   
 > [!NOTE]
->  L’exemple suivant utilise l’exemple de base de données **AdventureWorks** inclus dans SQL Server. La chaîne de connexion fournie dans l’exemple de code suppose que la base de données est installée et disponible sur l’ordinateur local. Modifiez la chaîne de connexion en fonction des besoins de votre environnement.  
+>  L’exemple suivant utilise l’exemple de base de données **AdventureWorks** inclus dans SQL Server. La chaîne de connexion fournie dans l’exemple de code suppose que la base de données est installée et disponible sur l’ordinateur local. Modifiez la chaîne de connexion en fonction de votre environnement.  
   
 ```csharp  
 using System;  
@@ -106,13 +106,13 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>Lecture et mise à jour des données avec MARS  
-MARS permet l’utilisation d’une connexion pour les opérations de lecture et les opérations DML (Data Manipulation Language) avec plusieurs opérations en attente. Cette fonctionnalité élimine la nécessité pour une application de traiter les erreurs de connexion. En outre, MARS peut remplacer l’utilisateur des curseurs côté serveur, qui consomme généralement davantage de ressources. Pour finir, comme plusieurs opérations peuvent opérer sur une seule connexion, elles peuvent partager le même contexte de transaction, en éliminant la nécessité d’utiliser les procédures stockées **système sp_getbindtoken** et **sp_bindsession**.  
+MARS permet l’utilisation d’une connexion pour les opérations de lecture et les opérations DML (Data Manipulation Language) avec plusieurs opérations en attente. Cette fonctionnalité évite à une application de traiter les erreurs de connexion occupée. En outre, MARS peut remplacer l’utilisateur des curseurs côté serveur, qui consomme généralement davantage de ressources. Pour finir, comme plusieurs opérations peuvent opérer sur une seule connexion, elles peuvent partager le même contexte de transaction, en éliminant la nécessité d’utiliser les procédures stockées **système sp_getbindtoken** et **sp_bindsession**.  
   
 ### <a name="example"></a>Exemple  
-L’application console suivante montre comment utiliser deux objets <xref:Microsoft.Data.SqlClient.SqlDataReader> avec trois objets <xref:Microsoft.Data.SqlClient.SqlCommand> et un objet <xref:Microsoft.Data.SqlClient.SqlConnection> unique avec MARS activé. Le premier objet de commande récupère une liste de fournisseurs dont le niveau de solvabilité est 5. Le second objet de commande utilise l’ID de fournisseur fourni par un <xref:Microsoft.Data.SqlClient.SqlDataReader> pour charger le deuxième <xref:Microsoft.Data.SqlClient.SqlDataReader> avec tous les produits du fournisseur en question. Chaque enregistrement de produit est visité par le deuxième <xref:Microsoft.Data.SqlClient.SqlDataReader>. Un calcul est effectué afin de déterminer ce que doit être le nouveau **OnOrderQty**. Le troisième objet de commande est ensuite utilisé pour mettre à jour la table **ProductVendor** avec la nouvelle valeur. Tout ce processus se déroule au sein d’une seule transaction, qui est restaurée à la fin.  
+L’application Console suivante montre comment utiliser deux objets <xref:Microsoft.Data.SqlClient.SqlDataReader> avec trois objets <xref:Microsoft.Data.SqlClient.SqlCommand> et un objet <xref:Microsoft.Data.SqlClient.SqlConnection> unique avec MARS activé. Le premier objet de commande récupère une liste de fournisseurs dont le niveau de solvabilité est 5. Le deuxième objet de commande utilise l’ID de fournisseur fournie par un <xref:Microsoft.Data.SqlClient.SqlDataReader> pour charger le deuxième <xref:Microsoft.Data.SqlClient.SqlDataReader> avec tous les produits du fournisseur en question. Chaque enregistrement de produit est visité par le deuxième <xref:Microsoft.Data.SqlClient.SqlDataReader>. Un calcul est effectué afin de déterminer ce que doit être le nouveau **OnOrderQty**. Le troisième objet de commande est ensuite utilisé pour mettre à jour la table **ProductVendor** avec la nouvelle valeur. Tout ce processus entier se déroule au sein d’une seule transaction, qui est restaurée à la fin.  
   
 > [!NOTE]
->  L’exemple suivant utilise l’exemple de base de données **AdventureWorks** inclus dans SQL Server. La chaîne de connexion fournie dans l’exemple de code suppose que la base de données est installée et disponible sur l’ordinateur local. Modifiez la chaîne de connexion en fonction des besoins de votre environnement.  
+>  L’exemple suivant utilise l’exemple de base de données **AdventureWorks** inclus dans SQL Server. La chaîne de connexion fournie dans l’exemple de code suppose que la base de données est installée et disponible sur l’ordinateur local. Modifiez la chaîne de connexion en fonction de votre environnement.  
   
 ```csharp  
 using System;  

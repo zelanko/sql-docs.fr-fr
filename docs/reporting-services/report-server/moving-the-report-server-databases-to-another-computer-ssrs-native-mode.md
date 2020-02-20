@@ -1,6 +1,7 @@
 ---
-title: Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+title: Déplacer des bases de données du serveur de rapports vers un autre ordinateur (en mode natif) | Microsoft Docs
+description: Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées dans une installation du moteur de base de données SQL Server vers une instance située sur un autre ordinateur.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619684"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254577"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS)
 
-  Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées dans une installation du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une instance située sur un autre ordinateur. Les bases de données reportserver et reportservertempdb doivent être déplacées ou copiées ensemble. Ces deux bases de données sont requises dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ; la base de données reportservertempdb doit être liée par nom à la base de données reportserver primaire que vous déplacez.  
+  Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées dans une installation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers une instance située sur un autre ordinateur. Les bases de données reportserver et reportservertempdb doivent être déplacées ou copiées ensemble. Ces deux bases de données sont requises dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ; la base de données reportservertempdb doit être liée par nom à la base de données reportserver primaire que vous déplacez.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
  Le déplacement d'une base de données n'a aucune incidence sur les opérations planifiées qui sont actuellement définies pour les éléments du serveur de rapports.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619684"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>Sauvegarde et restauration des bases de données du serveur de rapports  
  Si vous ne pouvez pas procéder à la mise hors connexion du serveur de rapports, vous pouvez utiliser la sauvegarde et la restauration pour déplacer les bases de données du serveur de rapports. Vous devez utiliser des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour les opérations de sauvegarde et de restauration. Une fois les bases de données restaurées, vous devez configurer le serveur de rapports pour qu'il utilise la base de données sur la nouvelle instance de serveur. Pour plus d'informations, consultez les instructions figurant à la fin de cette rubrique.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Utilisation de BACKUP et COPY_ONLY pour sauvegarder les bases de données du serveur de rapports  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>Utilisation de BACKUP et COPY_ONLY pour sauvegarder les bases de données du serveur de rapports  
  Lorsque vous sauvegardez les bases de données, définissez l'argument COPY_ONLY. Veillez à sauvegarder les fichiers de base de données et les fichiers journaux.  
   
 ```  

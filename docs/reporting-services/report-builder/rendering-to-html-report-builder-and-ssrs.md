@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580655"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957443"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendu au format HTML (Générateur de rapports et SSRS)
   L’extension de rendu HTML effectue le rendu d’un rapport paginé au format HTML. Elle peut également produire des pages HTML entièrement formées ou des fragment HTML à incorporer dans d'autres pages HTML. La sortie HTML est générée avec l'encodage UTF-8.  
@@ -84,6 +84,8 @@ ms.locfileid: "65580655"
   
  Des fonctionnalités supplémentaires de recherche sont fournies par le contrôle Web Forms ReportViewer.  
   
+##  <a name="FontsOnClient"></a> Polices sur l'ordinateur client
+ Lorsqu'une police personnalisée est utilisée dans le rapport, l'ordinateur utilisé pour consulter le rapport (l'ordinateur client) doit avoir la police personnalisée installée pour que le rapport s'affiche correctement. Si la police n’est pas installée sur l’ordinateur client, le rapport affiche une police système par défaut au lieu de la police personnalisée.
   
 ##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, notamment le mode de rendu, en modifiant les paramètres d'informations de périphérique. Pour plus d’informations, consultez [Paramètres d’informations de périphérique HTML](../../reporting-services/html-device-information-settings.md).  

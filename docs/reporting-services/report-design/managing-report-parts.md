@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580102"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
@@ -49,12 +49,12 @@ ms.locfileid: "65580102"
   
 |Propriété|Description|Partie de rapport<br /><br /> Critères de recherche de bibliothèque|  
 |--------------|-----------------|---------------------------------------------|  
-|Créer une vue d’abonnement|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
+|Name|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
 |Description|Vous pouvez organiser les noms des parties de rapports de manière à simplifier les recherches des utilisateurs dans la bibliothèque. Par exemple, vous pouvez rechercher la description qui commence par « Ventes>> » pour trouver toutes les parties de rapports impliquant une présentation et des données associées aux ventes.|Oui|  
 |CreatedBy|ID de l'utilisateur qui a ajouté la partie de rapport à la base de données du serveur de rapports. Le format exact dépend de la méthode d'authentification. Par exemple, certaines méthodes d'authentification provoquent l'affichage complet du domaine\nom_utilisateur dans les champs CreatedBy et ModifiedBy.|Oui|  
 |CreationDate|Date à laquelle la partie de rapport a été créée à l'origine.<br /><br /> Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
 |ModifiedBy|ModifiedBy est l'ID de l'utilisateur auteur des dernières modifications apportées à la partie de rapport.|Oui|  
-|ModifiedDate|Date à laquelle la partie de rapport a été modifiée pour la dernière fois sur le serveur.<br /><br /> Ce champ est utilisé dans le cadre de la logique pour déterminer le moment où il existe des mises à jour côté serveur associées à une partie de rapport. Pour plus d'informations, consultez la description de la propriété ComponentID ultérieurement dans cette table.|Oui|  
+|DateModification|Date à laquelle la partie de rapport a été modifiée pour la dernière fois sur le serveur.<br /><br /> Ce champ est utilisé dans le cadre de la logique pour déterminer le moment où il existe des mises à jour côté serveur associées à une partie de rapport. Pour plus d'informations, consultez la description de la propriété ComponentID ultérieurement dans cette table.|Oui|  
 |SubType (*)|SubType est une chaîne qui indique le type de partie de rapport à rechercher, par exemple « Tableau matriciel » ou « Graphique ».|Oui|  
 |ComponentID (*)|ComponentID est un identificateur unique pour la partie de rapport. Il s'agit d'un nouveau champ ajouté au catalogue qui est visible à la fois sur le serveur et sur les applications de création de rapports telles que le Générateur de rapports.<br /><br /> Ce champ est utilisé par les applications clientes lors de la vérification du serveur en vue de détecter des mises à jour d'une partie de rapport. L'application cliente recherche sur le serveur les identificateurs ComponentID qui se trouvent dans le rapport côté client en cours. Lorsqu'il existe un ComponentID correspondant, la valeur ModifiedDate est comparée à la valeur SyncDate côté client de l'élément de rapport.|N0|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65580102"
 |Actions|Role|  
 |-------------|----------|  
 |Ajouter, supprimer, modifier les propriétés de l'élément, gérer la sécurité et télécharger des parties de rapport|Contrôle total|  
-|Ajouter, supprimer, modifier les propriétés de l'élément et télécharger des parties de rapport|Conception<br /><br /> Collaboration|  
+|Ajouter, supprimer, modifier les propriétés de l'élément et télécharger des parties de rapport|Conception<br /><br /> Participez|  
 |Rechercher et réutiliser|Lire<br /><br /> Vue seule|  
   
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité  
@@ -86,10 +86,10 @@ ms.locfileid: "65580102"
   
 -   Les parties de rapports utilisent les mêmes stratégies d’autorisation que le type d’élément « Resource » existant. Dans un dossier, il n'y a aucune différenciation entre les éléments de ressource traditionnels et les parties de rapports, du point de vue de l'héritage de la sécurité. La partie de rapport héritera de la même stratégie d'autorisation que les images qui figurent dans le même dossier. Lorsque cette distinction est nécessaire, la sécurité au niveau des éléments peut être configurée pour les parties de rapports souhaitées. Sinon, vous pouvez placer les parties de rapports dans des dossiers séparés avec les autorisations appropriées configurées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Parties de rapport dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

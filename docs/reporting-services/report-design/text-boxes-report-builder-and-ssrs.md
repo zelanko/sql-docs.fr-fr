@@ -14,10 +14,10 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c2c4ad1faa149a384e42c52e7bbd8437dfc03d6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573728"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Zones de texte (Générateur de rapport et SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "65573728"
   
  L'orientation est définie sur la zone de texte et s'applique à tout le texte de la zone. Vous ne pouvez pas spécifier d'orientation différente pour certaines parties de la zone de texte.  
   
- Pour commencer, consultez la section sur la rotation du texte dans [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md) et consultez [Définir l’orientation d’une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Pour commencer, consultez la section sur la rotation du texte dans le [Tutoriel : Mettre en forme le texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md) et [Définir l’orientation des zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
  [Ajouter, déplacer ou supprimer une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

@@ -1,10 +1,9 @@
 ---
-title: Propriétés de SQL Server Agent (page Système d’alerte) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de SQL Server Agent (page Système d'alerte)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92db1bf98b3a50aa619333ba0107034d24106855
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5b870368136055ea2df6e5473c1b33640cea57b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265313"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75234544"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propriétés de SQL Server Agent (page Système d'alerte)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ Tapez le texte prédéfini, requis par votre système au début de la ligne **À
 **Radiomessagerie**  
 Inclut l'adresse de messagerie du message entre le préfixe et le suffixe.  
   
-**Suffixee**  
+**Suffixe**  
 Tapez le texte prédéfini, requis par votre système de radiomessagerie à la fin de la ligne **À** des messages envoyés à un récepteur de radiomessagerie.  
   
 **Ligne Cc**  
@@ -68,16 +69,16 @@ Spécifie les options relatives à la ligne **Cc** du message.
 **Préfixe**  
 Tapez le texte prédéfini, requis par votre système au début de la ligne **Cc** des messages envoyés à un récepteur de radiomessagerie.  
   
-**Récepteur de radiomessagerie**  
+**Radiomessagerie**  
 Inclut l'adresse de messagerie du message entre le préfixe et le suffixe.  
   
 **Suffixe**  
 Tapez le texte prédéfini, requis par votre système de radiomessagerie à la fin de la ligne **Cc** des messages envoyés à un récepteur de radiomessagerie.  
   
-**Objet**  
+**Subject**  
 Spécifie les options relatives à l'objet du message  
   
-**Prefix**  
+**Préfixe**  
 Tapez le texte prédéfini, requis par votre système de radiomessagerie au début de la ligne **Objet** des messages envoyés à un récepteur de radiomessagerie.  
   
 **Suffixe**  
@@ -111,6 +112,6 @@ Activez cette case à cocher pour permettre le remplacement des jetons pour les 
   
 ## <a name="see-also"></a>Voir aussi  
 [Opérateurs](../../ssms/agent/operators.md)  
-[Configurer la messagerie de SQL Server Agent en vue de l'utilisation de la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+[Configurer la messagerie SQL Server Agent en vue d’utiliser la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
 [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
   

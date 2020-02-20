@@ -1,10 +1,9 @@
 ---
-title: Créer un serveur maître | Microsoft Docs
-ms.custom: ''
+title: Créer un serveur maître
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -21,13 +20,15 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 79f02ab705f6bf340403739ed01d46e8ab11b024
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 816c6b0432f9e5c93ae1ff1f1328e7c05c1a731e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552879"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242207"
 ---
 # <a name="make-a-master-server"></a>Créer un serveur maître
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,14 +57,14 @@ Si les étapes du travail utilisant des comptes proxy échouent pendant leur té
   
     Pour résoudre ce problème, vérifiez qu'un compte proxy portant le même nom que le compte proxy du serveur maître sous lequel l'étape s'exécute existe sur le serveur cible.  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Les autorisations d'exécution de cette procédure sont accordées par défaut aux membres du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-make-a-master-server"></a>Pour créer un serveur maître  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] et développez-la.  
   
 2.  Cliquez avec le bouton droit sur **Agent SQL Server**, pointez sur **Administration multiserveur**, puis cliquez sur **Transformer en serveur maître**. L' **Assistant Serveur maître** vous guide au sein du processus de définition d'un serveur maître et d'ajout de serveurs cibles.  
   
@@ -101,7 +102,7 @@ Les autorisations d'exécution de cette procédure sont accordées par défaut a
     **Ajouter une connexion**  
     Ajoute un serveur à la liste des serveurs cibles sans inscrire le serveur.  
   
-    **Connexion**  
+    **Connection**  
     Modifie les propriétés de connexion du serveur sélectionné.  
   
 5.  Dans la page **Infos d'identification de connexion du serveur maître** , spécifiez si vous souhaitez créer une connexion pour le serveur cible, le cas échéant, et lui attribuer des droits sur le serveur maître.  
@@ -130,7 +131,7 @@ GO;
   
 Pour plus d’informations, consultez [sp_msx_enlist (Transact-SQL)](https://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer un environnement multi-serveur](../../ssms/agent/create-a-multiserver-environment.md)  
 [Administration automatisée à l'échelle d'une entreprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

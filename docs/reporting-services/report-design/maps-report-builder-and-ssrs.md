@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66428972"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Cartes (Générateur de rapports et SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66428972"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- Pour commencer immédiatement à utiliser une carte, consultez [Didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-map-report-report-builder.md) ou [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Pour commencer immédiatement à utiliser une carte, voir [Tutoriel : Rapport cartographique &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-map-report-report-builder.md) ou [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Vous pouvez enregistrer des cartes hors d’un rapport en tant que parties de rapports. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "66428972"
     > [!NOTE]  
     >  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([https://www.census.gov/](https://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Les fichiers de forme TIGER/Line sont mis à disposition gratuitement par le Bureau de recensement des États-Unis. Pour obtenir plus d’informations sur les fichiers de forme TIGER/Line allez à [Fichiers de forme TIGER/Line et documentation technique des fichiers TIGER/Line](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  
   
--   **Fichiers de forme ESRI.** Les fichiers de forme ESRI contiennent des données conformes au format de données spatiales ESRI (Environmental Systems Research Institute, Inc.). Les fichiers de forme ESRI font référence à un jeu de fichiers. Les données enregistrées dans le fichier .shp spécifient des formes géographiques ou géométriques. Les données du fichier .dbf fournissent des attributs pour ces formes. Pour afficher un plan en mode Conception ou pour exécuter un plan à partir du serveur de rapports, les deux fichiers doivent être dans le même dossier. Lorsque vous ajoutez des données spatiales d'un fichier .shp sur votre système de fichiers local, les données spatiales sont incorporées dans votre rapport. Pour récupérer dynamiquement des données spatiales au moment de l'exécution, téléchargez les fichiers de forme sur votre serveur de rapports, puis spécifiez-les comme source pour les données spatiales. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](https://go.microsoft.com/fwlink/?linkid=178814).  
+-   **Fichiers de forme ESRI.** Les fichiers de forme ESRI contiennent des données conformes au format de données spatiales ESRI Format de données spatiales du fichier de forme (ESRI). Les fichiers de forme ESRI font référence à un jeu de fichiers. Les données enregistrées dans le fichier .shp spécifient des formes géographiques ou géométriques. Les données du fichier .dbf fournissent des attributs pour ces formes. Pour afficher un plan en mode Conception ou pour exécuter un plan à partir du serveur de rapports, les deux fichiers doivent être dans le même dossier. Lorsque vous ajoutez des données spatiales d'un fichier .shp sur votre système de fichiers local, les données spatiales sont incorporées dans votre rapport. Pour récupérer dynamiquement des données spatiales au moment de l'exécution, téléchargez les fichiers de forme sur votre serveur de rapports, puis spécifiez-les comme source pour les données spatiales. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 -   **Données spatiales SQL Server stockées dans une base de données.** Vous pouvez utiliser une requête qui spécifie les types de données **SQLGeometry** ou **SQLGeography** dans une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Vue d’ensemble des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66428972"
   
     -   **SpatialData.** Champ contenant des données spatiales qui spécifient la latitude et la longitude de la ville.  
   
-    -   **Name.** Champ spécifiant le nom de la ville.  
+    -   **Nom.** Champ spécifiant le nom de la ville.  
   
     -   **Area.** Champ spécifiant le nom de la région.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66428972"
   
     -   **Aérien.** Affiche un style de vue aérienne sans texte.  
   
-    -   **Hybride.** Affiche une combinaison des styles **Route** et **Aérien** .  
+    -   **Caractère hybride.** Affiche une combinaison des styles **Route** et **Aérien** .  
   
 -   Langue du texte à afficher sur les mosaïques.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66428972"
   
  Si vous n'obtenez pas le résultat souhaité lorsque vous affichez un rapport cartographique, les causes principales peuvent provenir de divers problèmes. Pour vous aider à isoler et à comprendre chaque problème, il est recommandé de travailler avec une seule couche à la fois. Utilisez le volet Carte pour sélectionner une couche et facilement activer/désactiver sa visibilité.  
   
- Pour plus d’informations sur les problèmes de carte de rapport, consultez [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Pour plus d'informations sur les problèmes liés aux rapports cartographiques, voir [Résoudre les problèmes des rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous montrent pas à pas comment utiliser des cartes et des couches dans vos rapports.  
@@ -250,6 +250,6 @@ ms.locfileid: "66428972"
   
  [Ajouter des emplacements personnalisés à une carte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

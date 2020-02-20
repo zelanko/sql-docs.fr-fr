@@ -13,16 +13,16 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826896"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Serveur de rapports Reporting Services (mode natif)
   Un serveur de rapports configuré en mode natif s’exécute comme un serveur d’applications qui fournit toutes les fonctions de traitement et de gestion exclusivement par le biais de composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le portail web pour gérer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rapports. Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer un serveur de rapports en mode natif.  
+ Vous pouvez utiliser soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], soit le portail web pour gérer des rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer un serveur de rapports en mode natif.  
   
  Si le serveur de rapports est configuré pour le mode SharePoint, vous devez utiliser les pages de gestion du contenu du site SharePoint pour gérer les rapports, les sources de données partagées et les autres éléments du serveur de rapports.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66826896"
   
 -   Équilibrage des demandes de traitement de rapports adressées au serveur en planifiant le traitement des rapports, et en indiquant ceux qui peuvent être exécutés à la demande et ceux qui sont chargés à partir du cache.  
   
- L'autorisation d'effectuer des tâches de gestion est accordée via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués. Pour plus d’informations sur ces rôles prédéfinis, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ L'autorisation d'effectuer des tâches de gestion est accordée via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués. Pour plus d’informations sur ces rôles prédéfinis, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le portail web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le portail web permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "66826896"
 |Opération|Type de fichier|  
 |---------------|---------------|  
 |Télécharger|Tous les fichiers sont téléchargés en tant que ressources, sauf les fichiers de définitions de rapports (.rdl) et les fichiers de modèles de rapports (.smdl).<br /><br /> Pour télécharger une ressource, vous devez utiliser le portail web si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [Charger un fichier ou un rapport dans le serveur de rapports](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Charger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
-|Publier|Tous les fichiers d'un projet sont téléchargés en tant que ressources, sauf les fichiers de source de données .rdl, .smdl et .rds. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
+|Publish|Tous les fichiers d'un projet sont téléchargés en tant que ressources, sauf les fichiers de source de données .rdl, .smdl et .rds. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
   
- Toutes les ressources ont pour origine des fichiers situés sur un système de fichiers. Ceux-ci sont ensuite téléchargés vers un serveur de rapports. Il n’existe aucune restriction sur les types de fichiers que vous pouvez charger, les fichiers de taille jusqu'à 1 Go. Cependant, lorsqu'ils sont publiés sur un serveur de rapports en tant que ressources, les types de fichiers ayant des types MIME équivalents offrent une utilisation plus optimale que d'autres. Par exemple, les ressources basées sur des fichiers HTML et JPG s'ouvrent dans une fenêtre de navigateur lorsque l'utilisateur clique sur la ressource choisie ; le fichier HTML est rendu sous forme de page Web et le fichier JPG sous forme d'image à l'intention de l'utilisateur. En revanche, les ressources qui ne disposent pas de types MIME équivalents, par exemple les fichiers d'application de bureau, risquent de ne pas être rendues dans la fenêtre du navigateur.  
+ Toutes les ressources ont pour origine des fichiers situés sur un système de fichiers. Ceux-ci sont ensuite téléchargés vers un serveur de rapports. Il n’existe aucune restriction sur les types de fichiers que vous pouvez charger, les tailles de fichier pouvant atteindre 1 Go. Cependant, lorsqu'ils sont publiés sur un serveur de rapports en tant que ressources, les types de fichiers ayant des types MIME équivalents offrent une utilisation plus optimale que d'autres. Par exemple, les ressources basées sur des fichiers HTML et JPG s'ouvrent dans une fenêtre de navigateur lorsque l'utilisateur clique sur la ressource choisie ; le fichier HTML est rendu sous forme de page Web et le fichier JPG sous forme d'image à l'intention de l'utilisateur. En revanche, les ressources qui ne disposent pas de types MIME équivalents, par exemple les fichiers d'application de bureau, risquent de ne pas être rendues dans la fenêtre du navigateur.  
   
  La visualisation ou non d'une ressource par les utilisateurs d'un rapport dépend des possibilités d'affichage du navigateur. Dans la mesure où les ressources ne sont pas traitées par le serveur de rapports, le navigateur doit fournir la fonctionnalité d'affichage qui permet d'obtenir le rendu d'un type MIME spécifique. Si le navigateur ne peut pas effectuer le rendu du contenu, les utilisateurs qui affichent la ressource ne voient que ses propriétés générales.  
   
@@ -106,6 +106,6 @@ ms.locfileid: "66826896"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Dépanner une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Résoudre les problèmes d’une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

@@ -1,39 +1,39 @@
 ---
-title: Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server
+title: Fonctionnalités prises en charge par différentes éditions - SQL Server Reporting Services | Microsoft Docs
+description: Cette rubrique explique les fonctionnalités SQL Server Reporting Services (SSRS) prises en charge par les différentes éditions de SQL Server. La version d’évaluation de SQL Server est disponible pendant une période d’évaluation de 180 jours.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2019
-ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893286"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516600"
 ---
-# <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server
+# <a name="sql-server-reporting-services-features-supported-by-editions"></a>Fonctionnalités SQL Server Reporting Services prises en charge par les éditions
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Cette rubrique explique les fonctionnalités SQL Server Reporting Services (SSRS) prises en charge par les différentes éditions de SQL Server. La version d’évaluation de SQL Server est disponible pendant une période d’évaluation de 180 jours.  
+
+## <a name="related-links"></a>Liens connexes
   
- Pour obtenir les dernières notes de publication de SQL Server, consultez [Notes de publication de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). Pour plus d’informations sur les nouveautés, consultez [Nouveautés de SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Notes de publication de SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md). 
+ - [Nouveautés de SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Fonctionnalités prises en charge par les éditions de SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
- ## <a name="try-sql-server-2017"></a>Essayer SQL Server 2017
-
-> [![Télécharger SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Télécharger SQL Server 2017 à partir du Centre d’évaluation](https://go.microsoft.com/fwlink/?LinkID=829477)**    
->
-> ![Petite machine virtuelle Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Étendez une machine virtuelle sur laquelle SQL Server 2017 est déjà installé](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+##  <a name="SSRS"></a> SQL Server Reporting Services  
 
 Pour connaître les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez la colonne SQL Server Enterprise dans le tableau suivant.
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
-  
-|Nom de la fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Développeur|  
-|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|Nom de la fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Développeur|  
+|------|---------|---------------|-----------|-------|---------|  
+| Rapports Power BI et classeurs Excel | Oui, avec Software Assurance | | | | Oui |
 |Rapports mobiles et analyse|Oui||||Oui|  
 |Édition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prise en charge pour la base de données du catalogue|Standard ou supérieur|Standard ou supérieur|Web|Express|Standard ou supérieur|  
 |Sources de données prises en charge par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Toutes les éditions   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Web|Express|Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|  
@@ -77,17 +77,18 @@ Pour connaître les fonctionnalités prises en charge par les éditions Evaluati
   
 |Pour cette édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services,|utilisez cette édition de l'instance du moteur de base de données pour héberger la base de données.|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|Enterprise|Éditions Standard ou Enterprise (locales ou distantes)|  
-|Standard|Éditions Standard ou Enterprise (locales ou distantes)|  
+|Entreprise|Éditions Standard ou Enterprise (locales ou distantes)|  
+|standard|Éditions Standard ou Enterprise (locales ou distantes)|  
 |Web|Web Edition (locale uniquement)|  
 |Express with Advanced Services|Express with Advanced Services (local uniquement)|  
-|Evaluation|Evaluation|  
+|Évaluation|Évaluation|  
   
 ##  <a name="BIC"></a> Clients Business Intelligence  
 Les applications logicielles clientes suivantes sont disponibles dans le Centre de téléchargement Microsoft. Elles vous aident à créer des documents Business Intelligence qui s’exécutent sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous hébergez ces documents dans un environnement serveur, utilisez une édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui prend en charge ce type de document. Le tableau suivant identifie quelle édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient les fonctionnalités de serveur obligatoires pour héberger les documents créés dans ces applications clientes.  
   
-|Nom de l’outil|Enterprise|Standard|Web|Express with Advanced Services|Développeur|  
-|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|Nom de l’outil|Entreprise|standard|Web|Express with Advanced Services|Développeur|  
+|---------------|----------------|--------------|------------------------|-------------|---------------| 
+| Power BI Desktop optimisé pour le serveur de rapports Power BI, **.pbix** | Oui, avec Software Assurance | | | | Oui |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** et **.rds**|Oui|Oui|Oui|Oui|Oui|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Oui||||Oui|  
 |Applications Power BI pour appareils mobiles (iOS, Windows 10 et Android), **.rsmobile**|Oui||||Oui|  

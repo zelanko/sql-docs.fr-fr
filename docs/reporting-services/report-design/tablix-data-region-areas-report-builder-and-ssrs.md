@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573948"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Zones de région de données de tableau matriciel (Générateur de rapports et SSRS)
@@ -26,7 +26,7 @@ Les cellules de chaque zone remplissent une fonction distincte. Les cellules ajo
   
 Sur l'aire de conception, les traits en pointillés délimitent les quatre zones d'une région de données de tableau matriciel. L'illustration suivante montre les zones d'une région de tableau matriciel contenant : des groupes de lignes imbriqués dépendant de la catégorie et de la sous-catégorie, des groupes de colonnes imbriqués dépendant de la géographie, du pays et/ou de la région, ainsi qu'un groupe de colonnes adjacent dépendant de l'année.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Zones de régions de données de tableau matriciel](../../reporting-services/report-design/media/rs-tablixareas.gif "Zones de régions de données de tableau matriciel")  
   
  La liste suivante présente chaque zone :  
   

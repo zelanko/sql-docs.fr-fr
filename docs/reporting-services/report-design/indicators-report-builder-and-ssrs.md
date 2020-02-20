@@ -16,10 +16,10 @@ ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 75cda38839aa4ee8a32eb65595b0f8df204983b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580215"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicateurs (Générateur de rapports et SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "65580215"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des icônes d’indicateur et des jeux d’indicateurs intégrés à utiliser tels quels, et vous pouvez également personnaliser des icônes d’indicateur individuelles et des jeux d’indicateurs en fonction de vos besoins.  
   
- Pour plus d’informations sur l’utilisation des indicateurs comme indicateurs de performance clés, consultez [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Pour plus d'informations sur l'utilisation d'indicateurs comme indicateurs de performance clés, consultez le [tutoriel : Ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des indicateurs hors d'un rapport en tant que parties du rapport. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -140,33 +140,33 @@ ms.locfileid: "65580215"
   
 |Séquence d'état|Valeur de début|Valeur de fin|  
 |--------------------|-----------------|---------------|  
-|Rouge|0|3500|  
-|Jaune|3500|5000|  
-|Vert|5000|10000|  
+|Rouge|0|3 500|  
+|Jaune|3 500|5 000|  
+|Vert|5 000|10000|  
   
  La flèche vers le bas rouge représente la valeur 3500 et la flèche horizontale jaune, 5000.  
   
 |Séquence d'état|Valeur de début|Valeur de fin|  
 |--------------------|-----------------|---------------|  
-|Vert|5000|10000|  
-|Jaune|3500|5000|  
-|Rouge|0|3500|  
+|Vert|5 000|10000|  
+|Jaune|3 500|5 000|  
+|Rouge|0|3 500|  
   
  La flèche horizontale jaune représente la valeur 3500 et la flèche vers le haut verte, 5000.  
   
 |Séquence d'état|Valeur de début|Valeur de fin|  
 |--------------------|-----------------|---------------|  
-|Vert|5000|10000|  
-|Rouge|0|3500|  
-|Jaune|3500|5000|  
+|Vert|5 000|10000|  
+|Rouge|0|3 500|  
+|Jaune|3 500|5 000|  
   
  La flèche vers le bas rouge représente la valeur 3500 et la flèche vers le haut verte, 5000.  
   
 |Séquence d'état|Valeur de début|Valeur de fin|  
 |--------------------|-----------------|---------------|  
-|Jaune|3500|5000|  
-|Rouge|0|3500|  
-|Vert|5000|10000|  
+|Jaune|3 500|5 000|  
+|Rouge|0|3 500|  
+|Vert|5 000|10000|  
   
  La flèche vers le bas jaune représente maintenant les deux valeurs 3500 et 5000.  
   
@@ -190,6 +190,6 @@ ms.locfileid: "65580215"
 ## <a name="see-also"></a>Voir aussi  
  [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Graphiques (Générateur de rapports et SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

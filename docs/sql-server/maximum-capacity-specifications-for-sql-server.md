@@ -21,10 +21,10 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008440"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
@@ -55,24 +55,24 @@ ms.locfileid: "72008440"
 |Octets par ligne||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge le stockage avec dépassement de ligne, qui permet d’envoyer hors ligne les colonnes de longueur variable. Seule une racine de 24 octets est stockée dans l'enregistrement principal des colonnes de longueur variable envoyées hors ligne ; par conséquent, la limite effective par ligne est supérieure dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Prise en charge des lignes de grande taille](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Octets par ligne dans les tables optimisées en mémoire||8,060|À compter de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , les tables optimisées en mémoire prennent en charge le stockage hors ligne. Les colonnes de longueur variable sont envoyées hors ligne si la taille maximale de toutes les colonnes dans la table dépasse 8060 octets. Cette décision est prise au moment de la compilation. Seule une référence de huit octets est stockée dans la ligne pour les colonnes stockées hors ligne. Pour plus d’informations, consultez [Taille de la table et des lignes dans les tables optimisées en mémoire](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Octets dans le texte source d'une procédure stockée||Taille de lot inférieure ou 250 Mo||  
-|Octets par colonne **varchar(max)** , **varbinary(max)** , **xml**, **text**ou **image**||2^31-1||  
+|Octets par colonne **varchar(max)**, **varbinary(max)**, **xml**, **text**ou **image**||2^31-1||  
 |Caractères par colonne **ntext** ou **nvarchar (max)**||2^30-1||  
 |Index cluster par table||1||  
 |Colonnes dans les clauses GROUP BY, ORDER BY||Limité uniquement par le nombre d'octets||  
 |Colonnes ou expressions dans une instruction GROUP BY WITH CUBE ou WITH ROLLUP||10||  
 |Colonnes par clé d’index||32|Si la table contient au moins un index XML, la clé de clustering de la table d’utilisateur est limitée à 31 colonnes, car la colonne XML est ajoutée à la clé de clustering du principal index XML. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez inclure des colonnes non-clés dans un index non cluster pour éviter la limitation à un maximum de 32 colonnes clés. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
 |Colonnes par clé étrangère ou par clé primaire||32||  
-|Colonnes par instruction `INSERT`||4,096||  
-|Colonnes par instruction `SELECT`||4,096||  
-|Colonnes par table||1,024|Les tables qui incluent des jeux de colonnes éparses incluent jusqu’à 30 000 colonnes. Consultez [Jeux de colonnes éparses](../relational-databases/tables/use-column-sets.md).|  
-|Colonnes par instruction `UPDATE`||4,096|Des limites différentes s’appliquent aux [jeux de colonnes éparses](../relational-databases/tables/use-column-sets.md).|  
-|Colonnes par vue||1,024||  
+|Colonnes par instruction `INSERT`||4 096||  
+|Colonnes par instruction `SELECT`||4 096||  
+|Colonnes par table||1 024|Les tables qui incluent des jeux de colonnes éparses incluent jusqu’à 30 000 colonnes. Consultez [Jeux de colonnes éparses](../relational-databases/tables/use-column-sets.md).|  
+|Colonnes par instruction `UPDATE`||4 096|Des limites différentes s’appliquent aux [jeux de colonnes éparses](../relational-databases/tables/use-column-sets.md).|  
+|Colonnes par vue||1 024||  
 |Connexions par client||Valeur maximale des connexions configurées||  
 |Taille de la base de données||524 272 téraoctets||  
-|Bases de données par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
-|Groupes de fichiers par base de données||32,767||  
+|Bases de données par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32 767||  
+|Groupes de fichiers par base de données||32 767||  
 |Groupes de fichiers par base de données pour les données optimisées en mémoire||1||  
-|Fichiers par base de données||32,767||  
+|Fichiers par base de données||32 767||  
 |Taille de fichier (données)||16 téraoctets||  
 |Taille de fichier (journal)||2 téraoctets||  
 |Fichiers de données pour les données optimisées en mémoire par base de données||4 096 dans [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Les versions ultérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’imposent pas une telle limite stricte.||  
@@ -90,7 +90,7 @@ ms.locfileid: "72008440"
 |Niveaux de déclencheurs imbriqués||32||  
 |Index non cluster par table||999||  
 |Nombre d'expressions distinctes dans la clause GROUP BY lorsque l'un des éléments suivants est présent : CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  
-|Nombre de jeux de regroupement générés par les opérateurs dans la clause GROUP BY||4,096||  
+|Nombre de jeux de regroupement générés par les opérateurs dans la clause GROUP BY||4 096||  
 |Paramètres par procédure stockée||2,100||  
 |Paramètres par fonction définie par l'utilisateur||2,100||  
 |REFERENCES par table||253||  
@@ -100,7 +100,7 @@ ms.locfileid: "72008440"
 |Statistiques sur les colonnes non indexées||30,000|| 
 |Tables par instruction SELECT||Limité uniquement par les ressources disponibles||  
 |Déclencheurs par table||Limité par le nombre d'objets dans une base de données|Les objets de base de données comprennent des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des déclencheurs, des règles, des valeurs par défaut et des contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|  
-|Connexions utilisateur||32,767||  
+|Connexions utilisateur||32 767||  
 |Index XML||249||  
   
 ##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objets utilitaires  
@@ -112,13 +112,13 @@ ms.locfileid: "72008440"
 |Instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par ordinateur||5|  
 |Nombre total d'instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||200*|  
 |Bases de données utilisateur par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], notamment les applications de la couche Données||50|  
-|Nombre total de bases de données utilisateur par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||1,000|  
+|Nombre total de bases de données utilisateur par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||1 000|  
 |Groupes de fichiers par base de données||1|  
 |Fichiers de données par groupe de fichiers||1|  
 |Fichiers journaux par base de données||1|  
 |Volumes par ordinateur||3|  
   
- \* Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prises en charge par l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
+ * Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prises en charge par l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objets d’application de la couche Données  
  Taille maximale et nombre maximal des différents objets testés dans les applications de la couche Données (DAC) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -128,26 +128,26 @@ ms.locfileid: "72008440"
 |Bases de données par DAC||1|  
 |Objets par DAC*||Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|  
   
- \* Les types d’objets inclus dans la limite sont des utilisateurs, des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des types de données définis par l’utilisateur, des rôles de base de données, des schémas et des types de table définis par l’utilisateur.  
+ * Les types d’objets inclus dans la limite sont des utilisateurs, des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des types de données définis par l’utilisateur, des rôles de base de données, des schémas et des types de table définis par l’utilisateur.  
   
 ##  <a name="Replication"></a> Objets de réplication  
  Taille maximale et nombre maximal des différents objets définis dans la réplication [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objet de réplication||Taille maximale/nombre maximal dans SQL Server (64 bits)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|Articles (publication de fusion)||2048|  
-|Articles (publication d'instantané ou transactionnelle)||32,767|  
+|Articles (publication de fusion)||2 048|  
+|Articles (publication d'instantané ou transactionnelle)||32 767|  
 |Colonnes dans une table* (publication de fusion)||246|  
-|Colonnes dans une table** (publication d’instantané ou transactionnelle[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )||1,000|  
+|Colonnes dans une table** (publication d’instantané ou transactionnelle[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )||1 000|  
 |Colonnes dans une table** (publication d’instantané ou transactionnelle Oracle)||995|  
-|Octets pour une colonne utilisée dans un filtre de lignes (publication de fusion)||1,024|  
+|Octets pour une colonne utilisée dans un filtre de lignes (publication de fusion)||1 024|  
 |Octets pour une colonne utilisée dans un filtre de lignes (publication d'instantané ou transactionnelle)||8,000|  
 
- \* Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
+ * Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
   
  ** La table de base peut inclure le nombre maximal de colonnes autorisées dans la base de données de publication (1 024 pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais les colonnes doivent être filtrées à partir de l’article si elles sont plus nombreuses que le maximum spécifié pour le type de publication.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Paramètres de l'outil d'analyse de configuration système](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

@@ -1,10 +1,7 @@
 ---
-title: Propriétés de l’étape du travail - Nouvelle étape du travail (page Général) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Propriétés d’une nouvelle étape de travail (page Général)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,21 +9,26 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 173f317ba66a9b05bfa6d99bf28f60ecf518ae19
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7c8c707e8a1916041b32a2509e54d6150ea8df9a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267575"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242221"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriétés de l’étape du travail - Nouvelle étape du travail (page Général)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Utilisez cette page pour afficher et modifier les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou pour définir une nouvelle étape de travail.  
+Utilisez cette page pour afficher et changer les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou pour définir une nouvelle étape de travail.  
   
 Pour naviguer vers cette page, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , développez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, cliquez avec le bouton droit sur **Travaux**, cliquez sur **Nouvelles tâches**, sélectionnez la page **Étapes** et cliquez sur **Nouveau**. Vous pouvez également accéder à cette page en cliquant avec le bouton droit sur un travail dans l’Explorateur d’objets, en cliquant sur **Propriétés**, en sélectionnant la page **Étapes** et en cliquant sur **Nouveau**, **Insérer**ou **Modifier**.  
   
@@ -43,17 +45,17 @@ Définissez le compte proxy pour l'étape du travail. Les membres du rôle serve
 **Sauvegarde de la base de données**  
 Définissez la base de données où est exécutée l'étape du travail. Cette option est disponible pour tous les types d'étapes de travail.  
   
-**Command**  
+**Commande**  
 Définissez la commande exécutée par l'étape du travail.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Options des étapes de travail Transact-SQL  
 **Ouvrir**  
 Charge la commande à partir d'un fichier.  
   
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné dans le Presse-papiers.  
   
 **Coller**  
@@ -79,10 +81,10 @@ Tapez le nom du langage des étapes de travail écrites dans un autre langage de
 **Ouvrir**  
 Charge la commande à partir d'un fichier.  
   
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -95,10 +97,10 @@ Tapez le code de sortie renvoyé par la commande pour indiquer la réussite de s
 **Ouvrir**  
 Charge la commande à partir d'un fichier.  
   
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -108,30 +110,30 @@ Colle le contenu du Presse-papiers.
 **Ouvrir**  
 Charge le script à partir d'un fichier.  
   
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte du script.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
 Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>Options pour les étapes de travail Serveur de distribution de réplication  
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
 Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-merge-job-steps"></a>Options pour les étapes de travail Fusion de réplication  
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -141,65 +143,65 @@ Colle le contenu du Presse-papiers.
 **Sauvegarde de la base de données**  
 Base de données à utiliser pour l'étape du travail.  
   
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
 Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>Options pour les étapes de travail d'instantané de réplication  
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
 Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>Options pour les étapes de travail Lecteur du journal des transactions de réplication  
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
 Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-sql-server-analysis-services-command-job-steps"></a>Options pour les étapes de travail Commande SQL Server Analysis Services  
-**Server**  
+**Serveur**  
 Sélectionnez le serveur sur lequel vous souhaitez exécuter l'étape du travail.  
   
 **Ouvrir**  
 Charge la commande à partir d'un fichier.  
   
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
 Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-sql-server-analysis-services-query-job-steps"></a>Options pour les étapes de travail Requête SQL Server Analysis Services  
-**Server**  
+**Serveur**  
 Sélectionnez le serveur sur lequel vous souhaitez exécuter l'étape du travail.  
   
-**Base de données**  
+**Sauvegarde de la base de données**  
 Base de données à utiliser pour l'étape du travail.  
   
 **Ouvrir**  
 Charge la commande à partir d'un fichier.  
   
-**Tout sélectionner**  
+**Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copier**  
+**Copy**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -211,7 +213,7 @@ Colle le contenu du Presse-papiers.
 Spécifiez l'emplacement du package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) et la méthode d'authentification à utiliser. Les options suivantes sont disponibles quand vous sélectionnez cet onglet :  
   
 **Source du package**  
-Spécifiez l'emplacement où est stocké le package [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Choisissez une des options suivantes :  
+Spécifiez l'emplacement où est stocké le package [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Choisissez l’un des éléments suivants :  
   
 -   **SQL Server**  
   
@@ -219,17 +221,17 @@ Spécifiez l'emplacement où est stocké le package [!INCLUDE[ssIS](../../includ
   
 -   **Magasin de packages SSIS**  
   
-**Server**  
+**Serveur**  
 Tapez le nom du serveur où est stocké le package [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Cette option n’est disponible que si **SQL Server** ou **Magasin de packages SSIS** est spécifié dans **Source du package**.  
   
 **Utiliser l'authentification Windows**  
 Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
   
-**Utiliser l'authentification SQL Server**  
+**Utiliser l’authentification SQL Server**  
 Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez cette méthode d’authentification, entrez le **Nom d’utilisateur** et le **Mot de passe**appropriés.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’authentification est fournie pour la compatibilité descendante. Pour une sécurité renforcée, utilisez l'authentification Windows dans la mesure du possible.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fournie dans un souci de compatibilité descendante. Pour une sécurité renforcée, utilisez l'authentification Windows dans la mesure du possible.  
   
 **Package**  
 Tapez l'emplacement du package.  
@@ -246,7 +248,7 @@ Répertorie les fichiers de configuration pour le package.
 **Ajouter**  
 Ajoute un fichier de configuration pour le package.  
   
-**Supprimer**  
+**Remove**  
 Supprime un fichier de configuration pour le package.  
   
 **Monter**  
@@ -264,7 +266,7 @@ Répertorie les fichiers de commandes pour le package.
 **Ajouter**  
 Ajoute un fichier de commandes.  
   
-**Supprimer**  
+**Remove**  
 Supprime le fichier de commandes sélectionné.  
   
 **Monter**  
@@ -321,7 +323,7 @@ Sélectionnez le ClassID du module fournisseur d'informations.
 **Chaîne de configuration**  
 Tapez la chaîne de configuration du module fournisseur d'informations.  
   
-**Supprimer**  
+**Remove**  
 Supprime le module fournisseur d'informations.  
   
 ### <a name="set-values-tab"></a>Onglet Valeurs définies  
@@ -330,10 +332,10 @@ Sous cet onglet, vous pouvez consulter ou modifier les valeurs des propriétés 
 **Chemin de la propriété**  
 Permet de consulter ou de modifier le chemin d'accès de la propriété.  
   
-**Value**  
+**Valeur**  
 Permet de consulter ou de modifier la valeur de la propriété.  
   
-**Supprimer**  
+**Remove**  
 Supprime la propriété.  
   
 ### <a name="verification-tab"></a>Onglet Vérification  
@@ -345,7 +347,7 @@ Exécute uniquement les packages qui ont été signés. Lorsque cette option est
 **Vérifier la build du package**  
 Exécute uniquement les packages dotés d'un numéro de build spécifique. Lorsque cette option est sélectionnée, l'étape du travail échoue si le package n'a pas le numéro de build spécifié.  
   
-**Build**  
+**Créer**  
 Tapez le numéro de build du package.  
   
 **Vérifier l'ID de package**  

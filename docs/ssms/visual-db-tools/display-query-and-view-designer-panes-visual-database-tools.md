@@ -1,10 +1,9 @@
 ---
-title: Afficher les volets du Concepteur de requêtes et de vues (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Afficher les volets du Concepteur de requêtes et de vues
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 27d29536d74f59b9477259ea9f5e335c1c0eae6d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7ce2afd0dd8fd7c63e348b72c9499314494c49ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254858"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244173"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Afficher les volets du Concepteur de requêtes et de vues (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ Le Concepteur de requêtes et de vues est composé de quatre volets distincts : 
   
 2.  Dans le menu **Concepteur de requêtes** , pointez sur **Volet** et cliquez sur le nom du volet à ouvrir.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Ouvrir le Concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   

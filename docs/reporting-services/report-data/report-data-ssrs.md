@@ -1,5 +1,5 @@
 ---
-title: Données des rapports
+title: Présentation des données des rapports dans SQL Server Reporting Services (SSRS)
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -8,28 +8,44 @@ ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: f3aa702eef414fdc92670a51b8d374627797fe3d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 11/18/2019
+ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265556"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190723"
 ---
-# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Données des rapports dans SQL Server Reporting Services (SSRS)
+# <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Présentation des données des rapports dans SQL Server Reporting Services (SSRS)
 
   Les données de rapport peuvent provenir de plusieurs sources de données de votre organisation. Votre première étape lors de la conception d'un rapport consiste à créer des sources de données et des datasets qui représentent les données de rapport sous-jacentes. Chaque source de données inclut des informations de connexion de données. Chaque dataset inclut une commande de requête qui définit le jeu de champs à utiliser comme données d'une source de données. Pour visualiser des données de chaque dataset, ajoutez une région de données, telle qu'une table, une matrice, un graphique ou une carte. Lorsque le rapport est traité, les requêtes s'exécutent sur la source de données, et chaque région de données s'étend autant que nécessaire pour afficher les résultats de la requête pour le dataset.  
 
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
+
+## <a name="data-in-ssrbnoversion"></a>Données dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="BkMk_ReportDataTerms"></a> Termes  
+1.  **Sources de données dans le volet des données de rapport** Une source de données s'affiche dans le volet des données de rapport une fois que vous avez créé une source de données incorporée ou que vous avez ajouté une source de données partagée.  
+  
+2.  **Boîte de dialogue Connexion** Utilisez la boîte de dialogue Connexion pour créer ou coller une chaîne de connexion.  
+  
+3.  **Informations de connexion de données** La chaîne de connexion est passée à l'extension de données.  
+  
+4.  **Informations d'identification** Les informations d'identification sont gérées indépendamment de la chaîne de connexion.  
+  
+5.  **Extension de données/Fournisseur de données** : la connexion aux données peut s’effectuer via plusieurs couches d’accès aux données.  
+  
+6.  **Sources de données externes** Récupérez des données à partir de bases de données relationnelles, bases de données multidimensionnelles, listes SharePoint ou services web.  
+
+
+##  <a name="BkMk_ReportDataTerms"></a> Définition des conditions  
   
 - **Connexion de données** Également appelée *Source de données*. Une connexion de données inclut un nom et des propriétés de connexion qui dépendent du type de connexion. Par défaut, une connexion de données n'inclut pas d'informations d'identification. Une connexion de données ne spécifie pas les données à récupérer à partir de la source de données externe. Pour ce faire, vous devez spécifier une requête lorsque vous créez un dataset.  
   
-- **Définition de source de données.** Un fichier qui contient la représentation XML d'une source de données de rapport. Lorsqu'un rapport est publié, ses sources de données sont enregistrées sur le serveur de rapports ou le site SharePoint en tant que définitions de source de données, indépendamment de la définition de rapport. Par exemple, un administrateur de serveur de rapports peut mettre à jour la chaîne de connexion ou les informations d'identification. Sur un serveur de rapports natif, le type de fichier est .rds. Sur un site SharePoint, le type de fichier est .rsds.  
+- **Définition de source de données.** Un fichier qui contient la représentation XML d'une source de données de rapport. Lorsque vous publiez un rapport, ses sources de données sont enregistrées sur le serveur de rapports ou le site SharePoint en tant que définitions de source de données, indépendantes de la définition de rapport. Par exemple, un administrateur de serveur de rapports peut mettre à jour la chaîne de connexion ou les informations d'identification. Sur un serveur de rapports natif, le type de fichier est .rds. Sur un site SharePoint, le type de fichier est .rsds.  
   
-- **Chaîne de connexion.** Une chaîne de connexion est une version de chaîne des propriétés de connexion nécessaires à la connexion à une source de données. Les propriétés de connexion diffèrent selon le type de connexion de données. Pour obtenir des exemples, consultez [Connexions de données, sources de données et chaînes de connexion](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+- **Chaîne de connexion.** Une chaîne de connexion est une version de chaîne des propriétés de connexion nécessaires à la connexion à une source de données. Les propriétés de connexion diffèrent selon le type de connexion de données. Pour obtenir des exemples, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 - **Source de données partagée.** Source de données disponible sur un serveur de rapports ou un site SharePoint, et qui est utilisable par plusieurs rapports.  
   
@@ -47,11 +63,11 @@ ms.locfileid: "68265556"
   
 - **Données utilisées par les parties de rapports** Les parties de rapport peuvent incluent les données dont elles dépendent. Pour plus d’informations sur les parties de rapport, consultez [Parties de rapport dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-- **Filtrer les données** Les données de rapport peuvent être filtrées dans la requête ou dans le rapport. Vous pouvez utiliser des datasets et interroger des variables pour créer des paramètres en cascade et fournir à l'utilisateur la possibilité de limiter les choix parmi des milliers de sélections à un nombre plus gérable. Vous pouvez filtrer les données dans une table ou un graphique en fonction des valeurs des paramètres ou d'autres valeurs que vous spécifiez.  
+- **Filtrer les données** Les données de rapport peuvent être filtrées dans la requête ou dans le rapport. Vous pouvez utiliser des datasets et des variables de requête pour créer des paramètres en cascade. Avec les paramètres en cascade, les utilisateurs peuvent limiter les choix allant de milliers de sélections à un nombre plus gérable. Vous pouvez filtrer les données dans une table ou un graphique en fonction des valeurs des paramètres ou d'autres valeurs que vous spécifiez.  
   
-- **Paramètres** Les commandes de requête de datasets qui incluent des variables de requêtes créent automatiquement les paramètres de rapport correspondants. Vous pouvez également créer des paramètres manuellement. Lorsque vous affichez un rapport, la barre d'outils Rapport affiche les paramètres. Les utilisateurs peuvent sélectionner des valeurs pour contrôler l'apparence des données de rapport ou du rapport. Pour personnaliser les données du rapport pour un public donné, vous pouvez créer des ensembles de paramètres de rapport avec différentes valeurs par défaut liées à la même définition de rapport ou utiliser le champ prédéfini **UserID** . Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+- **Paramètres** Les commandes de requête de datasets qui incluent des variables de requêtes créent automatiquement les paramètres de rapport correspondants. Vous pouvez également créer des paramètres manuellement. Lorsque vous affichez un rapport, la barre d'outils Rapport affiche les paramètres. Les utilisateurs peuvent sélectionner des valeurs pour contrôler l'apparence des données de rapport ou du rapport. Pour personnaliser les données du rapport pour un public donné, vous pouvez créer des ensembles de paramètres de rapport avec différentes valeurs par défaut liées à la même définition de rapport. Vous pouvez également utiliser le champ intégré **UserID** pour personnaliser les données pour différents publics. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
-- **Alertes de données** Après la publication d'un rapport, vous pouvez créer des alertes sur des données de rapport et recevoir des messages électroniques lorsqu'elle satisfait aux règles que vous spécifiez.  
+- **Alertes de données** Une fois que vous avez publié un rapport, vous pouvez créer des alertes basées sur les données du rapport. Vous recevrez alors des e-mails lorsque l’alerte correspond aux règles que vous avez spécifiées.  
   
 - **Groupe et données agrégées** Les données de rapport peuvent être regroupées et agrégées dans la requête ou dans le rapport. Si vous agrégez des valeurs dans la requête, vous pouvez continuer à combiner des valeurs dans le rapport dans des limites de ce qui est explicite.  Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) et [Fonction d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
@@ -71,7 +87,7 @@ ms.locfileid: "68265556"
   
 - Comprenez les architectures et les outils client/serveur de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, dans le Concepteur de rapports, créez des rapports sur un ordinateur client qui utilise les types de sources de données intégrés. Lorsque vous publiez un rapport, les types de source de données doivent être pris en charge sur le serveur de rapports ou sur le site SharePoint.  Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-- Les sources de données et les datasets sont créés dans un rapport et publiés sur un serveur de rapports ou un site SharePoint à partir d'un outil de création client. Les sources de données peuvent être créées directement sur le serveur de rapports. Une fois qu'ils sont publiés, vous pouvez configurer les informations d'identification et d'autres propriétés sur le serveur de rapports. Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) et [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
+- Les sources de données et les datasets sont créés dans un rapport et publiés sur un serveur de rapports ou un site SharePoint à partir d'un outil de création client. Les sources de données peuvent être créées directement sur le serveur de rapports. Une fois qu'ils sont publiés, vous pouvez configurer les informations d'identification et d'autres propriétés sur le serveur de rapports. Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) et [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
 - Les sources de données que vous pouvez utiliser dépendent des extensions de données de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui sont installées. La prise en charge des sources de données peut être différente selon l'outil de création client, la version du serveur de rapports et la plateforme de serveur de rapports. Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -84,7 +100,7 @@ ms.locfileid: "68265556"
 |||  
 |-|-|  
 |**Tâches courantes**|**Liens**|  
-|Créer des connexions de données|[Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
+|Créer des connexions de données|[Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Créer des datasets et des requêtes|[Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Gérer les sources de données après leur publication|[Gérer des sources de données de rapports](../../reporting-services/report-data/manage-report-data-sources.md)|  
 |Gérer des datasets partagés après leur publication|[Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md)|  

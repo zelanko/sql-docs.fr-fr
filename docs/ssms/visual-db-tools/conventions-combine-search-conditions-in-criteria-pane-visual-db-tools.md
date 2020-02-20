@@ -1,10 +1,9 @@
 ---
-title: Conventions pour la combinaison de conditions de recherche dans le volet Critères | Microsoft Docs
-ms.custom: ''
+title: Conventions pour la combinaison de conditions de recherche dans le volet Critères
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5575530a70eecfc030e457d20596ebc76040cd01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 889b0497959e7ac7b624d7659fba2648166f0a63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260420"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254441"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Conventions pour la combinaison de conditions de recherche dans le volet Critères (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +140,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 Le Concepteur de requêtes et de vues représente cette clause WHERE dans le volet Critères de la manière suivante :  
   
-![Priorité de la clause OR dans le volet Critères](../../ssms/visual-db-tools/media/vs_criteriapane1.gif "Priorité de la clause OR dans le volet Critères")  
+![Précédence de clause OR dans le volet Critères](../../ssms/visual-db-tools/media/vs_criteriapane1.gif "Précédence de clause OR dans le volet Critères")  
   
 En revanche, si les clauses liées par OR sont prioritaires sur une clause AND, la clause AND est répétée pour chaque clause OR. Nous dirons qu'elle est distribuée à chaque clause OR. Par exemple, vous pouvez créer dans le volet SQL une clause WHERE du type suivant :  
   

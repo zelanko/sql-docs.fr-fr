@@ -16,14 +16,14 @@ ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a805b99064325cdcb7ca69a318a7efb95d57c4f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573279"
 ---
 # <a name="configurationsetting-property---instancename"></a>Propriété ConfigurationSetting - InstanceName
-  Spécifie le nom d'une instance de serveur de rapports sur un ordinateur spécifique. En lecture seule.  
+  Spécifie le nom d'une instance de serveur de rapports sur un ordinateur spécifique. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ public string InstanceName;
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

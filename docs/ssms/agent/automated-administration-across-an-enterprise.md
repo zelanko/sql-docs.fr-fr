@@ -1,10 +1,9 @@
 ---
-title: Administration automatisée à l’échelle d’une entreprise | Microsoft Docs
-ms.custom: ''
+title: Administration automatisée à l'échelle d'une entreprise
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 29884599271e85e1ea1be04391fe387092351d55
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 874e2bb1099c047e212cb25f7cac11768c28ce20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252065"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252670"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administration automatisée à l'échelle d'une entreprise
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Pour tirer parti d'une administration multiserveur, vous devez disposer d'au moi
   
 L'illustration suivante décrit la relation entre serveurs maîtres et cibles :  
   
-![Configuration de l’administration multiserveur](../../ssms/agent/media/multisvr.gif "Configuration de l’administration multiserveur")  
+![Configuration d'administration multiserveur](../../ssms/agent/media/multisvr.gif "Configuration d'administration multiserveur")  
   
 Si vous administrez les serveurs départementaux d'une grande société, vous pouvez définir les éléments suivants :  
   
@@ -84,13 +85,13 @@ Contient des informations concernant le transfert d'événements des serveurs ci
 [Paramétrer l'administration automatisée dans une entreprise](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
 Contient des informations décrivant la façon dont l'administration automatisée au sein d'un environnement multiserveur exploite les fonctionnalités d'autoconfiguration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques relatives à la compatibilité descendante pour l’installation du moteur de base de données SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
 [Inscription des serveurs](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
 [sp_delete_targetserver](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
 [sp_delete_targetservergroup](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)  
-[__sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)  
+[_sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)  
 [sp_help_jobserver](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)  
 [sp_help_targetservergroup](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)  
 [sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)  

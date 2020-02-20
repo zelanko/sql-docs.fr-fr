@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593782"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gestionnaire de configurations de Reporting Services (mode natif)
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -76,15 +76,15 @@ Le Gestionnaire de configuration de Reporting Services est installé automatique
 
          Sélectionnez **Gestionnaire de configuration de Reporting Services**.
 
-2. La boîte de dialogue **Connexion de la configuration de Report Server** s'affiche pour que vous spécifiiez l'instance de serveur de rapports à configurer. Sélectionnez **Se connecter**.
+2. La boîte de dialogue **Connexion de la configuration de Report Server** s'affiche pour que vous spécifiiez l'instance de serveur de rapports à configurer. Sélectionnez **Connecter**.
 
 3. Dans **Nom du serveur**, spécifiez le nom de l'ordinateur sur lequel est installée l'instance de serveur de rapports. Le nom de l'ordinateur local apparaît par défaut, mais vous pouvez taper le nom d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante si vous souhaitez vous connecter à un serveur de rapports installé sur un ordinateur distant.
 
 4. Si vous spécifiez un ordinateur distant, cliquez sur **Rechercher** pour établir une connexion.
 
-5. Dans **Report Server Dansstance**, sélectionnez l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous souhaitez configurer. Seules les instances de serveur de rapports pour cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent dans la liste. Vous ne pouvez pas configurer d'instances de versions antérieures de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+5. Dans **Instance du serveur de rapports**, sélectionnez l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous souhaitez configurer. Seules les instances de serveur de rapports pour cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent dans la liste. Vous ne pouvez pas configurer d'instances de versions antérieures de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
-6. Sélectionnez **Se connecter**.
+6. Sélectionnez **Connecter**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

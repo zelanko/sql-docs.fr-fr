@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,19 +13,19 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037958"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutoriel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
 
-  Dans ce didacticiel, vous allez utiliser un assistant pour créer un graphique à secteurs dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous ajoutez ensuite des pourcentages et modifiez légèrement le graphique à secteurs. 
+  Dans ce tutoriel, vous allez utiliser un assistant pour créer un graphique à secteurs dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous ajoutez ensuite des pourcentages et modifiez légèrement le graphique à secteurs. 
   
 Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes aboutissent au même résultat, à savoir un graphique à secteurs semblable à celui de cette illustration :  
   
- ![Générateur de rapports - Graphique à secteurs rapide](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Générateur de rapports - Graphique à secteurs rapide")  
+ ![Graphique rapide à secteurs - Générateur de rapports](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Graphique rapide à secteurs - Générateur de rapports")  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
  Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports. Vous pouvez démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] d’un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint, ou vous pouvez télécharger [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir du Centre de téléchargement Microsoft. Pour plus d’informations, consultez [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
@@ -41,7 +41,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
  [Créer le graphique à secteurs avec des données XML](#CreatePieChartXML)  
   
-### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Utilisation d’une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui contient les données de ce didacticiel  
+### <a name="using-a-tsql-query-that-contains-data-for-this-tutorial"></a>Utilisation d’une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui contient les données de ce didacticiel  
  Vous pouvez copier une requête comprenant des données incluses à partir de cette rubrique et la coller dans l'Assistant. Vous avez besoin du nom d’une instance de SQL Server et d’informations d’identification suffisantes pour accéder en lecture seule aux bases de données. La requête de dataset du didacticiel utilise des données littérales, mais la requête doit être traitée par une instance de SQL Server pour retourner les métadonnées nécessaires à un dataset de rapport.  
   
  L’avantage lié à l’utilisation de la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] vient du fait que tous les autres didacticiels du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] utilisent la même méthode ; par conséquent, vous savez déjà quoi faire lorsque vous effectuez d’autres didacticiels.  
@@ -56,7 +56,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
      La boîte de dialogue **Mise en route** s'affiche.  
   
-     ![Générateur de rapports - Mise en route](../../reporting-services/media/rb-getstarted.png "Générateur de rapports - Mise en route")  
+     ![Bien démarrer - Générateur de rapports](../../reporting-services/media/rb-getstarted.png "Bien démarrer - Générateur de rapports")  
   
      Si la boîte de dialogue **Mise en route** n’apparaît pas, cliquez sur **Fichier** >**Nouveau**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** .  
   
@@ -107,7 +107,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
 11. (Facultatif) Cliquez sur le bouton **Exécuter** ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
   
-     ![Générateur de rapports - Conception d’une requête](../../reporting-services/report-builder/media/rb-designquery.png "Générateur de rapports - Conception d’une requête")  
+     ![Concevoir une requête - Générateur de rapports](../../reporting-services/report-builder/media/rb-designquery.png "Concevoir une requête - Générateur de rapports")  
   
 12. Cliquez sur **Suivant**.  
   
@@ -117,23 +117,23 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
      Notez que ce champ est déplacé automatiquement vers la zone **Valeurs** , car il s'agit d'une valeur numérique.  
   
-     ![Assistant Générateur de rapports - Organiser les champs](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Assistant Générateur de rapports - Organiser les champs")  
+     ![Assistant Organiser les champs - Générateur de rapports](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Assistant Organiser les champs - Générateur de rapports")  
   
 15. Faites glisser le champ **FullName** de la zone **Champs disponibles** vers la zone **Catégories** (ou double-cliquez dessus pour le faire passer dans la zone **Catégories**), puis cliquez sur **Suivant**.  
   
      La page d’aperçu montre le nouveau graphique à secteurs avec données représentationnelles. La légende indique Full Name 1, Full Name 2, etc., plutôt que les noms des agents commerciaux, et la taille des secteurs du graphique est incorrecte. Cela vous donne néanmoins une idée de l'aspect qu'aura votre rapport.  
   
-     ![Générateur de rapports - Aperçu du nouveau graphique](../../reporting-services/report-builder/media/rb-newchartpreview.png "Générateur de rapports - Aperçu du nouveau graphique")  
+     ![Aperçu Nouveau graphique - Générateur de rapports](../../reporting-services/report-builder/media/rb-newchartpreview.png "Aperçu Nouveau graphique - Générateur de rapports")  
   
 16. Cliquez sur **Terminer**.  
   
      Vous voyez à présent votre nouveau rapport de graphique à secteurs dans la vue Design, toujours avec des données représentationnelles.  
   
-     ![Générateur de rapports en mode Création - Nouveau graphique à secteurs](../../reporting-services/report-builder/media/rb-newpiedesign.png "Générateur de rapports en mode Création - Nouveau graphique à secteurs")  
+     ![Nouveau graphique en mode Création - Générateur de rapports](../../reporting-services/report-builder/media/rb-newpiedesign.png "Nouveau graphique en mode Création - Générateur de rapports")  
   
 17. Pour afficher votre graphique à secteurs, cliquez sur **Exécuter** sous l'onglet **Accueil** du ruban.  
   
-     ![Générateur de rapports - Exécution du nouveau graphique](../../reporting-services/report-builder/media/rb-newchartrun.png "Générateur de rapports - Exécution du nouveau graphique")  
+     ![Exécuter le nouveau graphique - Générateur de rapports](../../reporting-services/report-builder/media/rb-newchartrun.png "Exécuter le nouveau graphique - Générateur de rapports")  
   
 18. Pour continuer à modifier votre graphique à secteurs, accédez à [Après l'exécution de l'Assistant](#AfterWizard) dans cet article.  
   

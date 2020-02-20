@@ -12,10 +12,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893441"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Compteurs de performances - Service ReportServer, objets de performance
@@ -26,7 +26,7 @@ ms.locfileid: "68893441"
   
  Les objets de performance sont disponibles dans l’Analyseur de performances Windows (**Perfmon.exe**). Pour plus d'informations, consultez la documentation Windows. [Profilage de runtime](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [ReportServer:compteurs de performance de service (serveur de rapports en mode natif)](#bkmk_ReportServer)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68893441"
 |**Tentatives d’ouverture de session/s**|Taux de tentatives d'ouverture de session.|  
 |**Total d’ouvertures de session réussies**|Nombre d'ouvertures de session réussies pour les types d'authentification RSWindows. Les types d'authentification RSWindows incluent RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos et RSWindowsBasic. La valeur zéro (0) représente l'authentification personnalisée.|  
 |**Ouvertures de session réussies/s**|Taux d'ouvertures de session réussies.|  
-|**État de sollicitation de la mémoire**|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1 : Aucune sollicitation<br /><br /> 2 : Sollicitation faible<br /><br /> 3 : Sollicitation moyenne<br /><br /> 4 : Sollicitation élevée<br /><br /> 5 : Sollicitation dépassée|  
+|**État de sollicitation de la mémoire**|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1 : Aucune sollicitation<br /><br /> 2 : Sollicitation faible<br /><br /> 3 : Sollicitation moyenne<br /><br /> 4 : Sollicitation élevée<br /><br /> 5 : Sollicitation dépassée|  
 |**Nombre de réductions de mémoire**|Nombre d'octets demandés par le serveur pour réduire la mémoire utilisée.|  
 |**Notifications de réduction de mémoire/s**|Nombre de notifications émises par le serveur au cours de la dernière seconde pour réduire la mémoire utilisée. Cette valeur indique la fréquence à laquelle le serveur se trouve en situation de sollicitation de la mémoire.|  
 |**Requêtes déconnectées**|Nombre de requêtes qui sont déconnectées en raison d'un échec de communication.|  
@@ -97,7 +97,7 @@ ms.locfileid: "68893441"
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Compteurs de performances du service Web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Compteurs de performances du service web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Compteurs de performances du service Web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint &#40;mode SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

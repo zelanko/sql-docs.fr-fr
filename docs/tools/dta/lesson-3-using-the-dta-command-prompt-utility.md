@@ -1,10 +1,9 @@
 ---
-title: 'Leçon 3: utilisation de l’utilitaire d’invite de commandes DTA | Microsoft Docs'
-ms.custom: ''
+title: Utilisation de l’utilitaire de ligne de commande dta
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +11,24 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04179ee339f41dde1b9e90d7abc30a00e492f3cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034725"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306974"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Leçon 3 : Utilisation de l'utilitaire de ligne de commande dta
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Leçon 3 : Utilisation de l’utilitaire de ligne de commande dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 L’utilitaire en ligne de commande **dta** offre une fonctionnalité supplémentaire par rapport à celles fournies par l’Assistant Paramétrage du moteur de base de données.  
   
-Vous pouvez utiliser vos outils XML favoris pour créer des fichiers d'entrée pour l'utilitaire en utilisant le schéma XML de l'Assistant Paramétrage du moteur de base de données. Ce schéma est installé lorsque vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et il se trouve dans le dossier : C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
+Vous pouvez utiliser vos outils XML favoris pour créer des fichiers d'entrée pour l'utilitaire en utilisant le schéma XML de l'Assistant Paramétrage du moteur de base de données. Ce schéma est installé lorsque vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et se trouve sous : C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
 Le schéma XML de l'Assistant Paramétrage du moteur de base de données est également disponible en ligne sur ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
-Ce schéma offre plus de souplesse pour définir les options de paramétrage. Par exemple, il permet d'effectuer des analyses de scénarios. Pour réaliser des analyses de scénarios, vous devez spécifier un ensemble de structures de création physiques existantes ou hypothétiques pour la base de données que vous souhaitez paramétrer, puis l'analyser avec l'Assistant Paramétrage du moteur de base de données pour déterminer si cette structure de création physique hypothétique améliorera les performances de traitement des requêtes. Ce type d'analyse permet d'évaluer la nouvelle configuration sans devoir l'implémenter. Si votre structure de création physique hypothétique ne permet pas d'obtenir les améliorations souhaitées en matière de performances, il est facile de la modifier et de l'analyser de nouveau jusqu'à ce que vous ayez atteint la configuration qui produit les résultats requis.  
+Ce schéma offre plus de souplesse pour définir les options de paramétrage. Par exemple, il permet d'effectuer des analyses de scénarios. Pour réaliser des analyses de scénarios, vous devez spécifier un ensemble de structures de création physiques existantes ou hypothétiques pour la base de données que vous souhaitez paramétrer, puis l'analyser avec l'Assistant Paramétrage du moteur de base de données pour déterminer si cette structure de création physique hypothétique améliorera les performances de traitement des requêtes. Ce type d'analyse offre l'avantage de pouvoir évaluer la nouvelle configuration sans avoir à supporter la charge induite par une mise en œuvre effective. Si votre structure de création physique hypothétique ne permet pas d'obtenir les améliorations souhaitées en matière de performances, il est facile de la modifier et de l'analyser de nouveau jusqu'à ce que vous ayez atteint la configuration qui produit les résultats requis.  
   
 De plus, en utilisant le schéma XML de l’Assistant Paramétrage du moteur de base de données et l’utilitaire en ligne de commande **dta** , vous pouvez intégrer la fonctionnalité de l’Assistant Paramétrage du moteur de base de données aux scripts et l’utiliser avec d’autres outils de création de base de données.  
   
@@ -35,7 +36,7 @@ Cette leçon ne couvre pas l'utilisation de la fonction d'entrée XML de l'Assis
   
 Au cours de cette tâche, vous allez démarrer l’utilitaire **dta** et afficher son aide, puis vous allez l’utiliser afin de paramétrer une charge de travail à partir de l’invite de commandes. La charge de travail utilisée est la charge, MyScript.sql, que vous avez créée dans l’exercice sur l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données : [Paramétrage d’une charge de travail](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)  
   
-Le didacticiel utilise l’exemple de base de données AdventureWorks2017. Pour des raisons de sécurité, les exemples de bases de données ne sont pas installés par défaut. Pour installer les exemples de bases de données, consultez [Installation des exemples SQL Server et des exemples de bases de données](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
+Ce tutoriel utilise l’exemple de base de données AdventureWorks2017. Pour des raisons de sécurité, les exemples de bases de données ne sont pas installés par défaut. Pour installer les exemples de bases de données, consultez [Installation des exemples SQL Server et des exemples de bases de données](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
 Les tâches suivantes sont destinées à vous guider pour ouvrir une invite de commandes, démarrer l’utilitaire en ligne de commande **dta** , afficher son aide sur la syntaxe et paramétrer la charge de travail simple, MyScript.sql, que vous avez créée dans le cadre de l’exercice : [Paramétrage d’une charge de travail](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
 
@@ -47,12 +48,12 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 - Téléchargez [l’exemple de base de données AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)
 
 
-Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Les instructions de restauration de bases de données dans SSMS se trouvent ici : [Restaurer une base de données.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > Ce didacticiel est destiné aux utilisateurs familiarisés avec l’utilisation de SQL Server Management Studio et des tâches d’administration de base de données de base. 
+  > Ce tutoriel est destiné aux utilisateurs familiarisés avec l’utilisation de SQL Server Management Studio et les tâches de base d’administration de base de données. 
 
-## <a name="access-dta-command-prompt-utility-help-menu"></a>Menu d’aide de l’utilitaire d’invite de commandes DTA Access
+## <a name="access-dta-command-prompt-utility-help-menu"></a>Accéder au menu d’aide de l’utilitaire de ligne de commande DTA
   
   
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur **Accessoires**, puis cliquez sur **Invite de commandes**.  
@@ -67,7 +68,7 @@ Les instructions de restauration des bases de données dans SSMS se trouvent ici
 
   ![Utilisation de l’aide avec l’utilitaire DTA cmd](media/dta-tutorials/dta-cmd-help.png)
 
-## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Paramétrer une charge de travail simple à l’aide de l’utilitaire d’invite de commandes DTA  
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Paramétrer une charge de travail simple à l'aide de l'utilitaire de ligne de commande DTA  
 
 
   
@@ -92,7 +93,7 @@ Une fois les leçons du didacticiel terminées, reportez-vous aux rubriques suiv
 -   [Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md) : cette rubrique propose des descriptions de la façon d’effectuer des tâches avec cet outil. 
 -   [Utilitaire dta](../../tools/dta/dta-utility.md) : cette rubrique propose des documents de référence sur l’utilitaire en ligne de commande et le fichier XML facultatif que vous pouvez utiliser pour contrôler le fonctionnement de l’utilitaire.  
   
-Pour revenir au début de ce didacticiel, consultez [Didacticiel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
+Pour revenir au début du tutoriel, voir [Tutoriel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels sur le moteur de base de données](../../relational-databases/database-engine-tutorials.md)  

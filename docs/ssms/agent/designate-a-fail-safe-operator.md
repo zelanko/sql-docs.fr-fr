@@ -1,10 +1,9 @@
 ---
-title: Désigner un opérateur de prévention de défaillance | Microsoft Docs
-ms.custom: ''
+title: Désigner un opérateur de prévention de défaillance
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 29a61389b6f09f3393f53114c7e822824a0aa2d7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 1c56acaa84b26192d766097294a5ab2bfd31ab8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552957"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242448"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Désigner un opérateur de prévention de défaillance
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ Un opérateur de prévention de défaillance est un utilisateur qui reçoit l'al
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Seuls les membres du rôle serveur fixe **sysadmin** peuvent désigner des opérateurs de prévention de défaillance.  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
@@ -54,13 +55,13 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent désigner des opér
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -** _nom\_serveur_, sous **Sélectionner une page**, sélectionnez **Système d’alerte**.  
+3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -**_nom\_serveur_, sous **Sélectionner une page**, sélectionnez **Système d’alerte**.  
   
 4.  Sous **Opérateur de prévention de défaillance**, sélectionnez **Activer l’opérateur de prévention de défaillance**.  
   
 5.  Dans la liste **Opérateur** , sélectionnez l’opérateur que vous souhaitez définir comme opérateur de prévention de défaillance.  
   
-6.  Sélectionnez tout ou partie des cases à cocher suivantes pour spécifier comment l’opérateur sera informé : **Messagerie électronique**, **Radiomessagerie** ou **NET SEND**.  
+6.  Sélectionnez tout ou partie des cases à cocher suivantes pour spécifier comment l’opérateur sera informé : **Messagerie électronique**, **Radiomessagerie** ou **Net send**.  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

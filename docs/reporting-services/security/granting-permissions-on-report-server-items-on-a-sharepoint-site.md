@@ -14,10 +14,10 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580035"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint
@@ -56,7 +56,7 @@ ms.locfileid: "65580035"
  Un administrateur de serveur ou un administrateur de la collection de sites peut définir des options qui déterminent si d'autres propriétaires de site peuvent définir des autorisations. Selon votre niveau d'autorisations, vous pourrez ou non créer ou personnaliser des niveaux d'autorisation ou des groupes SharePoint.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Utilisation des niveaux d'autorisation et des groupes SharePoint prédéfinis  
- Dans la documentation produit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] , il est recommandé de faire appel aux groupes standard SharePoint (qui comprennent *Nom de site* **Propriétaires**, *Nom de site* **Membres**, et *Nom de site* **Visiteurs**) et d’affecter les autorisations au niveau du site. La plupart des utilisateurs auxquels vous affectez des autouisations doivent appartenir aux groupes *Nom de site* **Visiteurs** ou *Nom de site* **Membres** . Les autorisations sur le site parent sont héritées sur l'ensemble de l'arborescence de site. Vous pouvez rompre l'héritage des autorisations pour des éléments spécifiques qui nécessitent des restrictions supplémentaires.  
+ Dans la documentation produit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], il est recommandé de faire appel aux groupes standard SharePoint (qui comprennent *Nom de site* **Propriétaires**, *Nom de site* **Membres** et *Nom de site* **Visiteurs**) et d'affecter les autorisations au niveau du site. La plupart des utilisateurs auxquels vous affectez des autorisations doivent appartenir aux groupes *Nom de site* **Visiteurs** ou *Nom de site* **Membres**. Les autorisations sur le site parent sont héritées sur l'ensemble de l'arborescence de site. Vous pouvez rompre l'héritage des autorisations pour des éléments spécifiques qui nécessitent des restrictions supplémentaires.  
   
  Ces groupes SharePoint possèdent les niveaux d'autorisation prédéfinis suivants :  
   
@@ -79,13 +79,13 @@ ms.locfileid: "65580035"
  [Référence autorisations de sites et de listes SharePoint pour des éléments de serveur de rapports](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Fournit une référence de l'ensemble des autorisations de produit SharePoint permettant d'accéder aux opérations de serveur de rapports.  
   
- [Définir des autorisations pour les opérations de serveur de rapports dans une application Web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Définir des autorisations pour des opérations de serveurs de rapports dans une application Web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Décrit les autorisations requises pour la génération d'états ad hoc et offre des stratégies de mise à disposition des fonctionnalités.  
   
- [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Fournit une brève comparaison des groupes SharePoint avec les définitions de rôles prédéfinis dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Contient des instructions pour la création de nouveaux groupes SharePoint autorisés à démarrer le Générateur de rapports et à définir la sécurité des éléments d'un modèle. Cette rubrique contient aussi des instructions générales sur la définition d'autorisations personnalisées pour des opérations ou des éléments de serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  

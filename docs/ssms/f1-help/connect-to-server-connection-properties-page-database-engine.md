@@ -1,6 +1,6 @@
 ---
-title: Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données | Microsoft Docs
-ms.custom: ''
+title: Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
+ms.custom: seo-lt-2019
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93c9069cf3a52cbbfa961737350976c3beda4304
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265099"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245007"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Utilisez cet onglet pour afficher ou spécifier les options de connexion à une dansstance du [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] ou d’dansscription du [!INCLUDE[ssDE](../../includes/ssde_md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** ne s’affichent dans cette boîte de dialogue que quand vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+Utilisez cet onglet pour afficher ou spécifier les options de connexion à une instance du [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] ou d’inscription du [!INCLUDE[ssDE](../../includes/ssde_md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** ne s’affichent dans cette boîte de dialogue que quand vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Se connecter à la base de données**  
-Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez **<default>** , vous vous connectez à la base de données par défaut du serveur. Si vous sélectionnez **<Browse server>** , vous pouvez parcourir l’arborescence du serveur à la recherche de la base de données à laquelle vous souhaitez vous connecter.  
+Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez **<default>**, vous vous connectez à la base de données par défaut du serveur. Si vous sélectionnez **<Browse server>**, vous pouvez parcourir l’arborescence du serveur à la recherche de la base de données à laquelle vous souhaitez vous connecter.  
   
 Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   
@@ -61,18 +61,18 @@ Lorsque vous vous connectez avec l’authentification **Active Directory - Authe
 **Réinitialiser tout**  
 Remplace toutes les valeurs des propriétés de connexion spécifiées manuellement par les valeurs par défaut.  
   
-**Se connecter**  
+**Connexion**  
 Tente d'établir une connexion à l'aide des valeurs indiquées.  
   
 **Options**  
 Cliquez sur cette option pour modifier l’apparence de la boîte de dialogue en masquant les options de connexion serveur supplémentaires, comme la mémorisation du mot de passe.  
   
-**Tester**  
+**Test**  
 Quand vous inscrivez [!INCLUDE[ssDE](../../includes/ssde_md.md)] dans **Serveurs inscrits**, cliquez ici pour tester la connexion.  
   
-**Enregistrer**  
+**Save**  
 Enregistre les paramètres dans **Serveurs inscrits**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Boîte de dialogue Propriétés de la connexion](../../ssms/f1-help/connection-properties-dialog-box.md)  
   

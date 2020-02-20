@@ -1,8 +1,10 @@
 ---
-title: Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration de SSRS) | Microsoft Docs
-ms.date: 05/24/2018
+title: Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration) | Microsoft Docs
+description: Reporting Services en mode natif utilise une base de données SQL Server pour le stockage interne. La base de données est un composant nécessaire et elle permet de stocker les rapports publiés, les modèles, les sources de données partagées, les données de session, les ressources et les métadonnées du serveur.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -10,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593556"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866332"
 ---
-# <a name="create-a-native-mode-report-server-database"></a>Créer une base de données du serveur de rapports en mode natif
+# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -65,13 +67,13 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
   
 5.  Cliquez avec le bouton droit sur **TCP/IP** , puis sélectionnez **Activer**.  
   
-6.  Redémarrage du service.  
+6.  Redémarrez le service.  
   
 7.  Ouvrez votre logiciel de pare-feu, ainsi que le port sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute. Pour l'instance par défaut, il s'agit généralement du port 1433 pour les connexions TCP/IP. Pour plus d’informations, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="to-create-a-local-report-server-database"></a>Pour créer une base de données locale du serveur de rapports  
   
-1.  Démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports pour laquelle vous créez la base de données. Pour plus d’informations, consultez [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports pour laquelle vous créez la base de données. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Dans la page Base de données, sélectionnez **Modifier la base de données**.  
   

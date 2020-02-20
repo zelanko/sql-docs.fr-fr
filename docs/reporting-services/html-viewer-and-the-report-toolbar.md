@@ -12,10 +12,10 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503075"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
@@ -30,11 +30,11 @@ ms.locfileid: "65503075"
   
  La barre d'outils Rapport est identique à celle illustrée ci-dessous. Elle peut être toutefois différente selon les fonctionnalités de rapport ou les options de rendu disponibles.  
   
- ![Report toolbar](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Barre d'outils Rapports](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barre d'outils Rapports")  
   
  Le tableau ci-dessous décrit les fonctionnalités couramment utilisées de la barre d'outils Rapport. Chaque fonctionnalité est identifiée par la commande que vous utilisez pour y accéder.  
   
-|Utilisez cette icône ou cette commande||Pour|  
+|Utilisez cette icône ou cette commande||À|  
 |------------------------------|-|--------|  
 |![Commandes de navigation entre les pages](../reporting-services/media/htmlviewer-pagenav.gif "Commandes de navigation entre les pages")|**Commandes de navigation entre les pages**|Ouvrir la première ou la dernière page d'un rapport, faire défiler un rapport page par page et ouvrir une page particulière d'un rapport. Pour afficher une page spécifique, tapez le numéro de page et appuyez sur Entrée.|  
 |![Commandes d'affichage des pages](../reporting-services/media/htmlviewer-pagesize.gif "Commandes d'affichage des pages")|**Commandes d'affichage des pages**|Agrandir ou réduire la taille de la page d'un rapport. Outre les modifications des pourcentages, vous pouvez sélectionner **Largeur de page** pour ajuster la longueur horizontale d’une page d’un rapport à la fenêtre du navigateur ou **Page entière** pour ajuster la longueur verticale d’un rapport à la fenêtre du navigateur. **Internet Explorer 5.5 et versions ultérieures prennent en charge l'option** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
@@ -43,7 +43,7 @@ ms.locfileid: "65503075"
 |![Icône Explorateur de documents](../reporting-services/media/htmlviewer-docmap.GIF "Icône Explorateur de documents")|**Icône Explorateur de documents**|Afficher ou masquer le volet de l'explorateur de documents dans un rapport qui comprend un explorateur de documents. Un explorateur de documents est un contrôle de navigation entre les rapports similaire au volet de navigation d'un site Web. Vous pouvez cliquer sur des éléments dans l'explorateur de documents pour naviguer jusqu'à un groupe, une page ou un sous-rapport spécifique.|  
 |![Icône Imprimante](../reporting-services/media/printer-icon.gif "Icône Imprimante")|**Icône Imprimante**|Ouvre la boîte de dialogue Imprimer qui permet de spécifier les options d'impression et d'imprimer un rapport. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez le contrôle de l'impression.|  
 ||**Icônes d'affichage ou de masquage**|Afficher ou masquer les champs de valeurs de paramètre et le bouton **Afficher le rapport** dans un rapport qui contient des paramètres.|  
-|![Bouton d’actualisation du navigateur sur la barre d’outils du rapport](../reporting-services/media/htmlviewer-refresh.GIF "Bouton d’actualisation du navigateur sur la barre d’outils du rapport")|**Icône d'actualisation de rapport**|Actualiser le rapport. Les données des rapports actifs seront actualisées. Les rapports mis en cache sont rechargés à partir de l'emplacement où ils sont stockés.|  
+|![Bouton d'actualisation du navigateur sur la barre d'outils du rapport](../reporting-services/media/htmlviewer-refresh.GIF "Bouton d'actualisation du navigateur sur la barre d'outils du rapport")|**Icône d'actualisation de rapport**|Actualiser le rapport. Les données des rapports actifs seront actualisées. Les rapports mis en cache sont rechargés à partir de l'emplacement où ils sont stockés.|  
 |![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icône de source de données**|Sources de données générées à partir de rapports.|  
 |![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Épingler au tableau de bord Power BI**|Épingler des éléments de rapport à un [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Si le bouton n’est pas visible, cela signifie que le serveur de rapports n’a pas été intégré à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  Pour plus d’informations, consultez [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
   

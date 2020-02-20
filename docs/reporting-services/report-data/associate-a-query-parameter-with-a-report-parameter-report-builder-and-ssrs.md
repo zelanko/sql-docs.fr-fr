@@ -12,10 +12,10 @@ ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 45161e43e405586bb441088b89fc24494eb928df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573241"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Associer un paramètre de requête à un paramètre de rapport (Générateur de rapports et SSRS)
@@ -23,13 +23,13 @@ ms.locfileid: "65573241"
   
  Si vous renommez un paramètre de rapport qui est lié à un paramètre de requête, vous devez lier manuellement les paramètres de requête au paramètre de rapport renommé à l'aide de la procédure de cette rubrique.  
   
-> **REMARQUE :** [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> **REMARQUE :** [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-associate-a-query-parameter-with-a-report-parameter"></a>Pour associer un paramètre de requête à un paramètre de rapport  
   
 1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur le dataset, cliquez sur **Propriétés du dataset**, puis sur **Paramètres**.  
   
-    > **REMARQUE :** si le volet des données de rapport n’est pas visible, cliquez sur l’option **Données du rapport** du menu **Affichage** .  
+    > **REMARQUE :** Si le volet des données de rapport n’est pas visible, cliquez sur l’option **Données du rapport** du menu **Affichage** .  
   
 2.  Dans la colonne **Nom du paramètre**, recherchez le nom du paramètre de requête. Les noms de paramètres sont automatiquement renseignés en fonction de la requête. Chaque fois que vous modifiez la requête, la requête est examinée à la recherche de nouveaux paramètres de requête. Les paramètres de requête que vous créez manuellement ne sont pas modifiés lorsque la requête change.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65573241"
   
     -   Dans **Valeur du paramètre**, tapez ou sélectionnez une expression qui correspond à la valeur à passer au paramètre de requête. Il s'agit en général du nom du paramètre de rapport.  
   
-        > **REMARQUE :** vous n’êtes pas limité aux paramètres de rapport comme valeurs pour les paramètres de requête. Vous pouvez utiliser n'importe quelle expression qui correspond à une valeur possible pour les paramètres.  
+        > **REMARQUE :** Vous n'êtes pas limité aux paramètres de rapport comme valeurs pour les paramètres de requête. Vous pouvez utiliser n'importe quelle expression qui correspond à une valeur possible pour les paramètres.  
   
 3.  Répétez l'étape 2 pour indiquer des paramètres de requête supplémentaires.  
   

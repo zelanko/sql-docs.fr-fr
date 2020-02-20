@@ -1,6 +1,7 @@
 ---
-title: Récupération d’urgence WSFC par le quorum forcé (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Reprise d’activité par le quorum forcé
+description: Une intervention manuelle est nécessaire pour la récupération d'une défaillance de quorum. Cet article explique comment forcer le quorum en cas de sinistre d’une instance de cluster de basculement SQL Server (FCI).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904956"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821984"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Récupération d'urgence WSFC par le quorum forcé (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "67904956"
   
 -   **Avant de commencer :**  [Prérequis](#Prerequisites), [Sécurité](#Security)  
   
--   **Récupération d'urgence WSFC par le quorum forcé** [Récupération d'urgence WSFC par le quorum forcé](#Main)  
+-   **Procédure de récupération d'urgence WSFC par le quorum forcé**[Procédure de récupération d'urgence WSFC par le quorum forcé](#Main)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67904956"
 > [!WARNING]  
 >  L'utilisateur doit bien connaître les concepts et les interactions du clustering de basculement Windows Server, des modèles de quorum WSFC, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et de la configuration de déploiement spécifique à l'environnement.  
 >   
->  Pour plus d'informations, consultez :  [Clustering de basculement Windows Server (WSFC) avec SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de quorum WSFC et configuration de vote (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Pour plus d'informations, consultez les pages suivantes :  [Clustering de basculement Windows Server (WSFC) avec SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de quorum WSFC et configuration de vote (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Sécurité  
  L'utilisateur doit être un compte de domaine qui est membre du groupe Administrateurs local sur chaque nœud du cluster WSFC.  
@@ -65,7 +66,7 @@ ms.locfileid: "67904956"
   
      Sur ce nœud, forcez manuellement la mise en ligne du cluster à l'aide de la procédure de quorum forcé.  Pour réduire au minimum la perte de données, sélectionnez le dernier nœud qui hébergeait un réplica principal de groupe de disponibilité.  
   
-     Pour plus d'informations, consultez :  [Forcer un cluster WSFC à démarrer sans quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Pour plus d'informations, consultez les pages suivantes :  [Forcer un cluster WSFC à démarrer sans quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  L'application d'un quorum forcé bloque les contrôles de quorum sur l'ensemble du cluster jusqu'à ce que le cluster WSFC logique atteigne une majorité des votes et passe automatiquement à un mode d'opération de quorum standard.  
@@ -95,7 +96,7 @@ ms.locfileid: "67904956"
     > [!NOTE]  
     >  Si vous exécutez l'Assistant WSFC Valider une configuration alors qu'un écouteur du groupe de disponibilité existe sur le cluster WSFC, l'Assistant génère le message d'avertissement incorrect suivant :  
     >   
-    >  « La propriété RegisterAllProviderIP pour le nom réseau 'Name:<network_name>' est définie sur 1. Pour la configuration de cluster actuelle, cette valeur doit être définie sur 0. »  
+    >  « La propriété RegisterAllProviderIP du nom réseau 'Name:<nom_réseau>' est définie sur 1. Pour la configuration de cluster actuelle, cette valeur doit être définie sur 0. »  
     >   
     >  Veuillez ignorer ce message.  
   

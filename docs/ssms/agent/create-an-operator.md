@@ -1,10 +1,9 @@
 ---
-title: Créer un opérateur | Microsoft Docs
-ms.custom: ''
+title: Créer un opérateur
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27f99081b3af76448732ae887fb6f6059628fd4a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 65c9940c130dbaf27d5b50b73d11b22adb11664e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553045"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258776"
 ---
 # <a name="create-an-operator"></a>Créer un opérateur
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "69553045"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Cette rubrique explique comment configurer un compte d’utilisateur pour qu'il reçoive des notifications relatives aux travaux de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Cette rubrique explique comment configurer un compte d’utilisateur pour qu’il reçoive des notifications relatives aux travaux de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Avant de commencer  
   
@@ -45,7 +46,7 @@ Cette rubrique explique comment configurer un compte d’utilisateur pour qu'il 
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer des opérateurs.  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
@@ -60,7 +61,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer des opérate
   
     Les options suivantes sont disponibles sur la page **Général** de la boîte de dialogue **Nouvel opérateur** :  
   
-    **Name**  
+    **Nom**  
     Permet de modifier le nom de l'opérateur.  
   
     **Activé**  
@@ -92,7 +93,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer des opérate
     **Alertes**  
     Affiche les alertes dans l'instance.  
   
-    **Travaux**  
+    **Tâches**  
     Affiche les travaux dans l'instance.  
   
     **Liste d'alertes**  
@@ -104,10 +105,10 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer des opérate
     **Messagerie électronique**  
     Notifie cet opérateur à l'aide d'un courrier électronique.  
   
-    **Récepteur de radiomessagerie**  
+    **Radiomessagerie**  
     Notifie cet opérateur en envoyant un courrier électronique à son adresse de radiomessagerie.  
   
-    **Net send**  
+    **Envoi réseau**  
     Notifie cet opérateur à l’aide de **net send**.  
   
 4.  Lorsque la création du nouvel opérateur est terminée, cliquez sur **OK**.  
@@ -116,7 +117,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer des opérate
   
 #### <a name="to-create-an-operator"></a>Pour créer un opérateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

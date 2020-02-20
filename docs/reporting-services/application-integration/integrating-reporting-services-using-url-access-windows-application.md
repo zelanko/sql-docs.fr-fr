@@ -1,9 +1,11 @@
 ---
-title: Utilisation de l’accès URL dans une application Windows | Microsoft Docs
+title: Utiliser l’accès URL dans les applications Windows
+description: Même si l'accès URL à un serveur de rapports est optimisé pour un environnement web, vous pouvez également utiliser l'accès URL pour incorporer des rapports Reporting Services dans une application Windows.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Windows applications [Reporting Services]
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012187"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796902"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Intégration de Reporting Services à l’aide de l’accès URL - Application Windows
   Même si l'accès URL à un serveur de rapports est optimisé pour un environnement Web, vous pouvez également utiliser l'accès URL pour incorporer des rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Toutefois, l'accès URL qui nécessite des Windows Forms requiert toujours l'utilisation de la technologie du navigateur Web. Vous pouvez utiliser les scénarios d'intégration suivants avec l'accès URL et les Windows Forms :  
@@ -111,7 +113,7 @@ string url = "https://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Intégration de Reporting Services dans des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Intégration de Reporting Services à l’aide de l’accès URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Intégration de Reporting Services à l’aide de SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   

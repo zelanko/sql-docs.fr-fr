@@ -1,5 +1,5 @@
 ---
-title: Développer avec les API REST pour Reporting Services | Microsoft Docs
+title: Développer à l’aide des API REST
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,16 +9,16 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: ba424fa0c79249a8870962d0df4cdaf383c9aa39
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 48d3cea7dfb57ad771f512806fd0c95528566559
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263032"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75321818"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Développer avec les API REST pour Reporting Services
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 Microsoft SQL Server 2017 Reporting Services prend en charge les API REST (Representational State Transfer). Les API REST sont des points de terminaison de service prenant en charge des opérations HTTP (méthodes) qui fournissent, créent, récupèrent, mettent à jour ou suppriment l’accès aux ressources d’un serveur de rapports.
 
@@ -32,10 +32,10 @@ Une paire demande/réponse d’API REST peut être divisée en cinq composants :
 
 * **L’URI de demande**, qui se compose de : `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Bien que l’URI de demande soit inclus dans l’en-tête de message de la demande, nous l’appelons séparément ici, car la plupart des langages ou des frameworks vous obligent à le transmettre séparément du message de demande.
 
-    * Schéma d’URI : indique le protocole utilisé pour transmettre la demande. Par exemple, `http` ou `https`.
-    * Hôte de l’URI : spécifie le nom de domaine ou l’adresse IP du serveur où le point de terminaison de service REST est hébergé, tel que `myserver.contoso.com`.
-    * Chemin de la ressource : spécifie la ressource ou la collection de ressources, qui peut inclure plusieurs segments utilisés par le service pour déterminer la sélection de ces ressources. Par exemple : `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` peut être utilisé pour obtenir les propriétés spécifiées pour le CatalogItem.
-    * Chaîne de requête (facultative) : fournit des paramètres simples supplémentaires, tels que la version de l’API ou les critères de sélection des ressources.
+    * Schéma d’URI : Indique le protocole utilisé pour transmettre la demande. Par exemple, `http` ou `https`.
+    * Hôte d’URI : Spécifie le nom de domaine ou l’adresse IP du serveur où le point de terminaison du service REST est hébergé, comme `myserver.contoso.com`.
+    * Chemin de la ressource : Spécifie la ressource ou la collection de ressources, qui peut inclure plusieurs segments utilisés par le service pour déterminer la sélection de ces ressources. Par exemple : `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` peut être utilisé pour obtenir les propriétés spécifiées pour le CatalogItem.
+    * Chaîne de requête (facultatif) : Fournit des paramètres simples supplémentaires, comme la version de l’API ou les critères de sélection des ressources.
 
 * Champs d’en-tête du message de requête HTTP :
 

@@ -13,10 +13,10 @@ ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193765"
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
@@ -31,9 +31,9 @@ ms.locfileid: "63193765"
   
  Le tableau suivant décrit les attributs de l’élément **Extension** pour les extensions de remise.  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|**Name**|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
+|**Nom**|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
 |**Type**|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
 |**Visible**|La valeur **false** indique que l’extension de remise ne doit pas être visible dans les interfaces utilisateur. Si cet attribut n'est pas défini, la valeur par défaut est **true**.|  
   

@@ -9,28 +9,28 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5c2d46e3f2b26a8106e75f2bb116907e2f27a7b9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451904"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253382"
 ---
 # <a name="windows-applications-using-callbacks"></a>Applications Windows utilisant des rappels
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Télécharger ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Dans la plupart des scénarios de traitement asynchrone, vous souhaitez démarrer une opération de base de données et continuer à exécuter d’autres processus sans attendre la fin de l’opération de base de données. Toutefois, de nombreux scénarios requièrent une fois que l’opération de base de données est terminée. Dans une application Windows, par exemple, vous souhaiterez peut-être déléguer l’opération de longue durée à un thread d’arrière-plan tout en autorisant le thread d’interface utilisateur à rester réactif. Toutefois, lorsque l’opération de base de données est terminée, vous souhaitez utiliser les résultats pour remplir le formulaire. Ce type de scénario est le mieux implémenté avec un rappel.  
+Dans la plupart des scénarios de traitement asynchrone, vous souhaitez démarrer une opération de base de données et continuer à exécuter d’autres processus sans attendre la fin de l’opération de base de données. Toutefois, de nombreux scénarios requièrent une action une fois l’opération de base de données terminée. Dans une application Windows, par exemple, vous pouvez souhaiter la délégation de l’opération de longue durée à un thread d’arrière-plan permet au thread d’interface utilisateur de rester réactif. Toutefois, lorsque l’opération de base de données est terminée, vous souhaitez utiliser les résultats pour remplir le formulaire. Ce type de scénario est le mieux implémenté avec un rappel.  
   
-Vous définissez un rappel en spécifiant un délégué <xref:System.AsyncCallback> dans la méthode <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> ou <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Le délégué est appelé lorsque l’opération est terminée. Vous pouvez transmettre au délégué une référence au <xref:Microsoft.Data.SqlClient.SqlCommand> lui-même, ce qui facilite l’accès à l’objet <xref:Microsoft.Data.SqlClient.SqlCommand> et l’appel de la méthode `End` appropriée sans avoir à utiliser une variable globale.  
+Vous définissez un rappel en spécifiant un délégué <xref:System.AsyncCallback> dans la méthode <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> ou <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Le délégué est appelé une fois l’opération terminée. Vous pouvez transmettre au délégué une référence à la <xref:Microsoft.Data.SqlClient.SqlCommand> elle-même, ce qui facilite l’accès à l’objet <xref:Microsoft.Data.SqlClient.SqlCommand> et l’appel de la méthode `End` appropriée sans avoir à utiliser une variable globale.  
   
 ## <a name="example"></a>Exemple  
 L’application Windows suivante illustre l’utilisation de la méthode <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, en exécutant une instruction Transact-SQL qui comprend un délai de quelques secondes (en émulant une commande longue).  
   
-Cet exemple illustre un certain nombre de techniques importantes, notamment l’appel d’une méthode qui interagit avec le formulaire à partir d’un thread distinct. En outre, cet exemple montre comment vous devez empêcher les utilisateurs d’exécuter simultanément une commande plusieurs fois, et comment vous devez vous assurer que le formulaire ne se ferme pas avant l’appel de la procédure de rappel.  
+Cet exemple illustre un certain nombre de techniques importantes, notamment l’appel d’une méthode qui interagit avec le formulaire à partir d’un thread distinct. En outre, cet exemple montre comment vous devez empêcher les utilisateurs d’exécuter simultanément une commande plusieurs fois et comment vous devez vous assurer que le formulaire ne se ferme pas avant l’appel de la procédure de rappel.  
   
 Pour configurer cet exemple, créez une nouvelle application Windows. Placez un contrôle <xref:System.Windows.Forms.Button> et deux contrôles <xref:System.Windows.Forms.Label> sur le formulaire (en acceptant le nom par défaut pour chaque contrôle). Ajoutez le code suivant à la classe du formulaire, en modifiant la chaîne de connexion en fonction des besoins de votre environnement.  
   

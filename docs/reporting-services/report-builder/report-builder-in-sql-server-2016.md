@@ -14,10 +14,10 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67688516"
 ---
 # <a name="report-builder-in-sql-server"></a>Générateur de rapports dans SQL Server
@@ -36,7 +36,7 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
   
 -   **Démarrez avec l'Assistant Tableau, Matrice ou Graphique**. Sélectionnez une connexion à une source de données, effectuez un glisser-déplacer de champs pour créer une requête de dataset, sélectionnez une disposition et un style, puis personnalisez votre rapport.  
   
--   **Démarrez avec l'Assistant Carte** pour créer des rapports qui affichent des données agrégées sur un arrière-plan géographique ou géométrique. Les données cartographiques peuvent être des données spatiales provenant d'une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'un fichier de forme ESRI (Environmental Systems Research Institute, Inc.). Vous pouvez également ajouter un arrière-plan de mosaïque [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing.  
+-   **Démarrez avec l'Assistant Carte** pour créer des rapports qui affichent des données agrégées sur un arrière-plan géographique ou géométrique. Les données cartographiques peuvent être des données spatiales provenant d'une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'un fichier de forme ESRI (Environmental Systems Research Institute, Inc.) Vous pouvez également ajouter un arrière-plan de mosaïque [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing.  
   
 -   **Commencez votre rapport avec des parties de rapport**. Les parties de rapports sont des éléments de rapport qui ont été publiés séparément sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint. Elles peuvent être réutilisées dans d’autres rapports. Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que parties de rapports.  
   
@@ -75,7 +75,7 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
 
   [Nouveautés dans SQL Server Reporting Services et le Générateur de rapports](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Décrit les nouvelles fonctionnalités de cette version de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
-  [Didacticiel : création d'un rapport de graphique rapide en mode hors connexion](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Tutoriel : Créer un rapport de graphique rapide en mode hors connexion](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Présente le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et les Assistants disponibles pour vous permettre de créer des rapports. Il fournit un ensemble de données que vous pouvez utiliser pour vous éviter d'avoir à vous connecter à une source de données pour la mise en route.  
   
  [Planification d’un rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
@@ -90,7 +90,7 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
  [Mode création de dataset partagé &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)  
  Explique les différents volets et régions du mode création de dataset partagé.  
   
- [Raccourcis clavier &#40;Générateur de rapports &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [Raccourcis clavier &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Présente les touches de raccourci disponibles pour la navigation et la conception de rapports dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 

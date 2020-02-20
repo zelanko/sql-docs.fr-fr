@@ -1,6 +1,6 @@
 ---
 title: Applications ASP.NET utilisant les handles d’attente
-description: Fournit un exemple montrant comment exécuter plusieurs commandes simultanées à partir d’une page ASP.NET, à l’aide de handles d’attente pour gérer l’opération à l’achèvement de toutes les commandes.
+description: Fournit un exemple montrant comment exécuter plusieurs commandes simultanées à partir d’une page ASP.NET, à l’aide de descripteurs d’attente pour gérer l’opération à l’achèvement de toutes les commandes.
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: f7d242410b5f7aadd74494bb33a7572afe23be54
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 0550b67d32d18aa9095b316816ebcbf3494cf195
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452336"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250966"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Applications ASP.NET utilisant les handles d’attente
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Télécharger ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Les modèles de rappel et d’interrogation pour la gestion des opérations asynchrones sont utiles lorsque votre application ne traite qu’une seule opération asynchrone à la fois. Les modèles d’attente offrent un moyen plus souple de traiter plusieurs opérations asynchrones. Il existe deux modèles d’attente, nommés pour les méthodes de <xref:System.Threading.WaitHandle> utilisées pour les implémenter : le modèle d’attente (any) et le modèle d’attente (tout).  
+Les modèles de rappel et d’interrogation pour la gestion des opérations asynchrones sont utiles lorsque votre application ne traite qu’une seule opération asynchrone à la fois. Les modèles d’attente offrent un moyen plus flexible de traiter plusieurs opérations asynchrones. Il existe deux modèles d'attente nommés pour les méthodes <xref:System.Threading.WaitHandle> utilisées pour leur implémentation : le modèle d’attente (N’importe lequel) et le modèle d’attente (tous).  
   
-Pour utiliser l’un ou l’autre modèle d’attente, vous devez utiliser la propriété <xref:System.IAsyncResult.AsyncWaitHandle%2A> de l’objet <xref:System.IAsyncResult> retourné par les méthodes <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> ou <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Les méthodes <xref:System.Threading.WaitHandle.WaitAny%2A> et <xref:System.Threading.WaitHandle.WaitAll%2A> vous obligent à envoyer les objets <xref:System.Threading.WaitHandle> en tant qu’argument, regroupés dans un tableau.  
+Pour utiliser l’un ou l’autre modèle d’attente, vous devez utiliser la propriété <xref:System.IAsyncResult.AsyncWaitHandle%2A> de l’objet <xref:System.IAsyncResult> retourné par les méthodes <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> ou <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Les méthodes <xref:System.Threading.WaitHandle.WaitAny%2A> et <xref:System.Threading.WaitHandle.WaitAll%2A> vous obligent toutes les deux à envoyer les objets <xref:System.Threading.WaitHandle> comme un argument, rassemblés dans un tableau.  
   
 Les deux méthodes d’attente analysent les opérations asynchrones, en attente de la fin de l’opération. La méthode <xref:System.Threading.WaitHandle.WaitAny%2A> attend que l’une des opérations s’achève ou expire. Une fois que vous savez qu’une opération particulière est achevée, vous pouvez traiter ses résultats puis continuer à attendre l’achèvement ou l’expiration de l’opération suivante. La méthode <xref:System.Threading.WaitHandle.WaitAll%2A> attend que tous les processus du tableau d’instances <xref:System.Threading.WaitHandle> soient achevés ou aient expiré avant de continuer.  
   
-L’avantage des modèles d’attente est plus important lorsque vous devez exécuter plusieurs opérations de longue durée sur des serveurs différents ou lorsque votre serveur est suffisamment puissant pour traiter toutes les requêtes en même temps. Dans les exemples présentés ici, trois requêtes émulent de longs processus en ajoutant des commandes WAITFOR de longueurs différentes à des requêtes SELECT invariables.  
+L’avantage des modèles d’attente est plus important lorsque vous devez exécuter plusieurs opérations de longue durée sur des serveurs différents ou lorsque votre serveur est suffisamment puissant pour traiter toutes les requêtes en même temps. Dans le cadre des exemples ici, trois requêtes émulent de longs processus en ajoutant des commandes WAITFOR de longueurs variées à des requêtes SELECT sans conséquence.  
   
-## <a name="example-wait-any-model"></a>Exemple : modèle d’attente (any)  
-L’exemple suivant illustre la syntaxe : . Une fois les trois processus asynchrones démarrés, la méthode <xref:System.Threading.WaitHandle.WaitAny%2A> est appelée pour attendre l’achèvement de l’un d’eux. À mesure que chaque processus se termine, la méthode <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> est appelée et l’objet <xref:Microsoft.Data.SqlClient.SqlDataReader> résultant est lu. À ce stade, une application réelle utiliserait probablement le <xref:Microsoft.Data.SqlClient.SqlDataReader> pour remplir une partie de la page. Dans cet exemple simple, l’heure de fin du processus est ajoutée à une zone de texte correspondant au processus. Pris ensemble, les heures dans les zones de texte illustrent le point : le code est exécuté chaque fois qu’un processus se termine.  
+## <a name="example-wait-any-model"></a>Exemple : Modèle d'attente (N’importe lequel)  
+L’exemple suivant illustre le modèle d’attente (N’importe lequel). Après le démarrage de trois processus asynchrones, la méthode <xref:System.Threading.WaitHandle.WaitAny%2A> est appelée pour attendre l’achèvement de l’un d’eux. À mesure que chaque processus se termine, la méthode <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> est appelée et l’objet <xref:Microsoft.Data.SqlClient.SqlDataReader> résultant est lu. À ce stade, une application réelle utiliserait probablement le <xref:Microsoft.Data.SqlClient.SqlDataReader> pour remplir une partie de la page. Dans cet exemple simple, l’heure de fin du processus est ajoutée à une zone de texte correspondant au processus. Prises ensemble, ces heures dans les zones de texte illustrent le point suivant : Le code est exécuté chaque fois qu'un processus s'achève.  
   
-Pour configurer cet exemple, créez un projet de site Web ASP.NET. Placez un contrôle <xref:System.Web.UI.WebControls.Button> et quatre contrôles <xref:System.Web.UI.WebControls.TextBox> sur la page (en acceptant le nom par défaut pour chaque contrôle).  
+Pour configurer cet exemple, créez un nouveau projet de site Web ASP.NET. Placez un contrôle <xref:System.Web.UI.WebControls.Button> et quatre contrôles <xref:System.Web.UI.WebControls.TextBox> sur la page (en acceptant le nom par défaut pour chaque contrôle).  
   
 Ajoutez le code suivant à la classe du formulaire, en modifiant la chaîne de connexion en fonction des besoins de votre environnement.  
   
@@ -191,12 +191,12 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>Exemple : modèle d’attente (tout)  
-L’exemple suivant illustre la syntaxe : . Une fois les trois processus asynchrones démarrés, la méthode <xref:System.Threading.WaitHandle.WaitAll%2A> est appelée pour attendre que les processus se terminent ou expirent.  
+## <a name="example-wait-all-model"></a>Exemple : Modèle d’attente (Tous)  
+L’exemple suivant illustre le modèle d’attente (Tous). Après le démarrage de trois processus asynchrones, la méthode <xref:System.Threading.WaitHandle.WaitAll%2A> est appelée pour attendre l’achèvement ou l’expiration des processus.  
   
-À l’instar de l’exemple du modèle d’attente (any), l’heure à laquelle le processus est terminé est ajoutée à une zone de texte correspondant au processus. Là encore, les heures dans les zones de texte illustrent le point : le code suivant la <xref:System.Threading.WaitHandle.WaitAny%2A> méthode est exécutée uniquement une fois que tous les processus sont terminés.  
+Comme dans cet exemple de modèle d’attente (N’importe lequel), l’heure de fin du processus est ajoutée à une zone de texte correspondant au processus. Là encore, ces heures dans les zones de texte illustrent le point suivant : D'après la méthode <xref:System.Threading.WaitHandle.WaitAny%2A>, le code est exécuté uniquement après l'achèvement de tous les processus.  
   
-Pour configurer cet exemple, créez un projet de site Web ASP.NET. Placez un contrôle <xref:System.Web.UI.WebControls.Button> et quatre contrôles <xref:System.Web.UI.WebControls.TextBox> sur la page (en acceptant le nom par défaut pour chaque contrôle).  
+Pour configurer cet exemple, créez un nouveau projet de site Web ASP.NET. Placez un contrôle <xref:System.Web.UI.WebControls.Button> et quatre contrôles <xref:System.Web.UI.WebControls.TextBox> sur la page (en acceptant le nom par défaut pour chaque contrôle).  
   
 Ajoutez le code suivant à la classe du formulaire, en modifiant la chaîne de connexion en fonction des besoins de votre environnement.  
   

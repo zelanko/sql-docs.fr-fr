@@ -1,7 +1,7 @@
 ---
-title: Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: Emplacements des fichiers
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 033090c5650455b16e846200e8b8caf8a3940b48
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: da7f187cc388e08f4d1f0307ba6fae78c58e6489
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055202"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253481"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "74055202"
 >   
 >  Vous ne devez supprimer ni les répertoires suivants ni leur contenu : Binn, Data, Ftdata, HTML ou 1033. Si besoin est, vous pouvez supprimer d'autres répertoires mais il est possible que vous ne puissiez pas récupérer certaines fonctionnalités ou données sans désinstaller puis réinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ne supprimez pas et ne modifiez pas les fichiers .htm se trouvant dans le répertoire HTML. Ils sont nécessaires pour que les outils de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnent correctement.  
   
-## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Fichiers partagés pour toutes les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="shared-files-for-all-instances-of-ssnoversion"></a>Fichiers partagés pour toutes les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Les fichiers communs utilisés par toutes les instances sur un seul ordinateur sont installés dans le dossier [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*lecteur*> est la lettre de lecteur où les composants sont installés. La valeur par défaut est généralement le lecteur C. _nnn_ identifie la version. Le tableau suivant identifie les versions des chemins. \{nn} est la valeur de version utilisée dans l’ID d’instance et le chemin du registre. 
 
-|Options de version|\*nnn*|{nn}|
+|Version|\*nnn*|{nn}|
 |-----|-----|--------|
 |[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| 150| 15| 
 |[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 
@@ -140,7 +140,7 @@ Remarque : le lecteur par défaut associé aux emplacements de fichiers est *lec
 > [!NOTE]
 >  Les fichiers de données se situent généralement dans un répertoire enfant nommé « Data ». Par exemple, spécifiez C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\ pour indiquer le chemin racine du répertoire de données des bases de données système durant la mise à niveau quand les fichiers de données se trouvent sous C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\MSSQL\Data.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration du moteur de base de données – Répertoires de données](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
  [Configuration de Analysis Services – Répertoires de données](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
   

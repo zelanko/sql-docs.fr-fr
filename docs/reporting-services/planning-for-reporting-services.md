@@ -9,10 +9,10 @@ ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68891762"
 ---
 # <a name="planning-for-reporting-services"></a>Planification pour Reporting Services
@@ -25,10 +25,10 @@ ms.locfileid: "68891762"
   
  [Afficher des rapports Reporting Services sur des appareils Microsoft Surface et Apple iOS](https://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Programme d’installation de Reporting Services**  
+ ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Reporting Services**  
  [Serveur de rapports Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Liste de vérification du déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
+ [Liste de vérification de déploiement : installer Reporting Services dans une batterie de serveurs SharePoint existante](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
   
  [Topologies de déploiement pour les fonctionnalités SQL Server BI dans SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   

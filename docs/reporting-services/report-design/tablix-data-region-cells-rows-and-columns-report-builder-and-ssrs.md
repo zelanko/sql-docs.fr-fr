@@ -1,6 +1,7 @@
 ---
-title: Cellules, lignes et colonnes d’une région de données de tableau matriciel (Générateur de rapports et SSRS) | Microsoft Docs
-ms.date: 03/07/2017
+title: Cellules, lignes et colonnes dans un tableau matriciel | Microsoft Docs
+description: Pour contrôler la façon dont les lignes et les colonnes d’une région de données de tableau matriciel présentent les données dans un rapport paginé SQL Server Reporting Services, vous devez comprendre comment les lignes et les colonnes sont spécifiées pour les données de détail, les données de groupe, les étiquettes et les totaux.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -13,14 +14,15 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574715"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252399"
 ---
-# <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)
+# <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Cellules, lignes et colonnes d’une région de données dans un tableau matriciel (Générateur de rapports et SSRS)
+
   Pour contrôler la façon dont les lignes et les colonnes d’une région de données de tableau matriciel présentent les données dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous devez comprendre comment les lignes et les colonnes sont spécifiées pour les données de détail, les données de groupe, les étiquettes et les totaux. Dans la plupart des cas, vous pouvez utiliser les structures par défaut pour afficher vos données dans une table, une matrice ou une liste. Pour plus d’informations, consultez [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) ou [Listes](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Une région de données de tableau matriciel affiche des données de détail dans des lignes et des colonnes de détail et des données groupées dans des lignes et des colonnes de groupe. Quand vous ajoutez des groupes de lignes et de colonnes à une région de données de tableau matriciel, les lignes et les colonnes dans lesquelles les données doivent s’afficher sont ajoutées automatiquement. Vous pouvez ajouter et supprimer manuellement des lignes et des colonnes pour personnaliser une région de données de tableau matriciel et contrôler la manière dont vos données s'affichent dans le rapport.  
@@ -38,8 +40,8 @@ ms.locfileid: "65574715"
   
 |Icône|Description|  
 |----------|-----------------|  
-|![Handle de ligne avec 3 traits parallèles pour la ligne de détails](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "handle de ligne avec 3 traits parallèles pour la ligne de détails")|Seulement le groupe de détails dans la hiérarchie des groupes de lignes|  
-|![Handle de ligne avec la ligne de détails et un groupe externe](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Handle de ligne avec la ligne de détails et un groupe externe")|Un groupe externe et le groupe de détails enfant|  
+|![Handle de ligne avec 3 lignes parallèles pour la ligne de détails](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Handle de ligne avec 3 lignes parallèles pour la ligne de détails")|Seulement le groupe de détails dans la hiérarchie des groupes de lignes|  
+|![Handle de ligne avec ligne de détails et un groupe externe](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Handle de ligne avec ligne de détails et un groupe externe")|Un groupe externe et le groupe de détails enfant|  
 |![Deux crochets parallèles signalant des groupes imbriqués](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "Deux crochets parallèles signalant des groupes imbriqués")|Un groupe externe, un groupe interne ; aucun groupe de détails|  
 |![2 crochets et 3 lignes empilées pour les détails imbriqués](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "2 crochets et 3 lignes empilées pour les détails imbriqués")|Un groupe externe, un groupe interne et le groupe de détails enfant|  
 |![Un groupe externe avec ligne de pied de page, un groupe interne](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "Un groupe externe avec ligne de pied de page, un groupe interne")|Un groupe externe avec une ligne de pied de page pour les totaux et un groupe interne|  
@@ -82,7 +84,7 @@ ms.locfileid: "65574715"
   
  La figure suivante illustre une région de données de tableau matriciel avec un groupe de détails et des groupes de lignes imbriqués.  
   
- ![Mode Création, ajouter des lignes de totaux au groupe et à la table](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Mode Création, ajouter des lignes de totaux au groupe et à la table")  
+ ![Mode Conception, ajoutez des lignes de totaux au groupe et à la table](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Mode Conception, ajoutez des lignes de totaux au groupe et à la table")  
   
  Pour une région de données de tableau matriciel qui affiche des données de détail, le groupe de détails est le groupe enfant le plus profond. Les lignes que vous ajoutez à un groupe de détails se répètent une fois par ligne dans le jeu de résultats de la requête pour le dataset lié à cette région de données de tableau matriciel. La figure suivante illustre la dernière page du rapport rendu. Dans cette figure, vous pouvez voir les dernières lignes de détail et la ligne de sous-total pour la dernière commande.  
   

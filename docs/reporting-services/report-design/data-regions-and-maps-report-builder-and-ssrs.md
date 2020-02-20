@@ -11,10 +11,10 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3ddd2d78cc983e1855007d144193d70035931177
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037831"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Cartes et régions de données (Générateur de rapports et SSRS)
@@ -28,10 +28,10 @@ ms.locfileid: "67037831"
 ## <a name="table"></a>Table de charge de travail  
  Une table est une région de données qui présente les données ligne par ligne. Les colonnes de table sont statiques : vous déterminez le nombre de colonnes lorsque vous concevez votre rapport. Les lignes de table sont dynamiques : elles s'étendent vers le bas pour contenir les données. Vous pouvez ajouter aux tables des groupes, qui organisent les données par champs ou expressions sélectionnés. Pour plus d’informations sur l’ajout d’une table à un rapport, consultez [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
-## <a name="matrix"></a>Matrice  
+## <a name="matrix"></a>Matrix  
  Une matrice est également connue sous le nom d'analyse croisée. Une région de données de type matrice contient à la fois des colonnes et des lignes dynamiques : elles s'étendent pour contenir les données. Une matrice peut posséder des lignes et des colonnes dynamiques, ainsi que des lignes et des colonnes statiques. Les colonnes ou les lignes peuvent contenir d'autres colonnes ou lignes ; en outre, elles peuvent être utilisées pour regrouper des données. En savoir plus sur [l’ajout d’une matrice à un rapport](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
-## <a name="list"></a>Liste  
+## <a name="list"></a>List  
  Une liste est une région de données qui présente les données selon une disposition libre. Vous pouvez organiser les éléments de rapport de façon à créer un formulaire avec des zones de texte, des images et d'autres régions de données placées aux emplacements de votre choix dans la liste. En savoir plus sur [l’ajout d’une liste à un rapport](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ## <a name="chart"></a>Graphique  
@@ -40,7 +40,7 @@ ms.locfileid: "67037831"
 ## <a name="gauge"></a>Jauge  
  Une jauge présente les données sous forme de plage dans laquelle figure un indicateur qui pointe vers une valeur spécifique. Les jauges sont utilisées pour afficher des indicateurs de performance clés (KPI) et d'autres mesures. Les jauges linéaires et circulaires sont des exemples de jauges. En savoir plus sur [l’ajout d’une jauge à un rapport](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
-## <a name="map"></a>Carte  
+## <a name="map"></a>Mappage  
  Une carte vous permet de présenter des données avec un arrière-plan géographique. Les données cartographiques peuvent être des données spatiales d'une requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un fichier de forme ESRI ou des mosaïques Bing [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Les données spatiales sont des jeux des coordonnées qui définissent des polygones représentant des formes ou des zones, des lignes représentant des itinéraires ou des chemins d'accès, et des points représentés par des marqueurs. Vous pouvez associer des données agrégées aux éléments cartographiques pour varier automatiquement leur couleur et taille. Par exemple, vous pouvez faire varier le type de marqueur pour un magasin selon le chiffre d'affaires réalisé ou la couleur pour une route en fonction de la limite de vitesse. Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="data-regions-in-the-report-layout"></a>Régions de données dans la Disposition du rapport  
@@ -62,9 +62,9 @@ ms.locfileid: "67037831"
  Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Reporting Services (SSRS) de Concepts](../reporting-services-concepts-ssrs.md) [rapports, parties de rapports et définitions de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Concepts Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md) [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
- [Reporting Services, didacticiels &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+ [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   

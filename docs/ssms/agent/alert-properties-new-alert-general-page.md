@@ -1,10 +1,9 @@
 ---
-title: Propriétés de l’alerte - Nouvelle alerte (page Général) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de l’alerte - Nouvelle alerte (page Général)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4634821adee5021b986b3f9c87c0416bad33ec6a
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: d889dc5f93abb61dd3d92b736eb483a5a4ba2ff6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383805"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254558"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Propriétés de l’alerte - Nouvelle alerte (page Général)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,10 +28,10 @@ ms.locfileid: "70383805"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Utilisez cette page pour afficher et modifier les propriétés générales des alertes de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Utilisez cette page pour afficher et modifier les propriétés générales des alertes de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
 
 ## <a name="options"></a>Options  
-**Name**  
+**Nom**  
 Modifiez le nom de l'alerte.  
   
 **Activer**  
@@ -52,7 +53,7 @@ Indiquez une base de données pour l’événement, ou sélectionnez **Toutes le
 **Numéro d'erreur**  
 Indique que cet événement répond à une erreur. Précisez le numéro de l'erreur.  
   
-**Severity**  
+**Niveau de gravité**  
 Indique que cet événement répond à un message quelconque d'un niveau de gravité spécifique. Précisez le niveau de gravité.  
   
 **Déclencher une alerte quand le message contient**  
@@ -62,7 +63,7 @@ Filtre les événements d'après une chaîne spécifique. Si cette option est s�
 Spécifiez la chaîne à utiliser pour filtrer les événements.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Alertes de condition de performances de SQL Server  
-**Objet**  
+**Object**  
 Précisez l'objet de performance à surveiller.  
   
 **Compteur**  
@@ -74,7 +75,7 @@ Indiquez l'instance du compteur à surveiller.
 **Alerte si compteur**  
 Spécifiez le comportement du compteur auquel l'alerte répond. Par exemple, vous pouvez faire en sorte que l’alerte réponde à une baisse de la valeur du compteur **Espace disponible dans tempdb (Ko)** en deçà d’une valeur spécifiée, ou à un dépassement d’une valeur spécifiée par la valeur du compteur **Compilations SQL/s** .  
   
-**Value**  
+**Valeur**  
 Spécifiez une valeur pour le compteur.  
   
 ## <a name="wmi-event-alert-options"></a>Options des alertes d'événement WMI  

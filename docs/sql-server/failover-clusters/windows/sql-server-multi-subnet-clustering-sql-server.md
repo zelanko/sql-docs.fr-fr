@@ -1,6 +1,7 @@
 ---
-title: Clustering de sous-réseaux multiples SQL Server (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Clustering de sous-réseaux multiples SQL Server
+description: En savoir plus sur la configuration d’une instance de cluster de basculement SQL Server dans un environnement à plusieurs sous-réseaux.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16f89fcc50ec7db910d88d8ec807cb28c66cde89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044745"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258150"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de sous-réseaux multiples SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "68044745"
     > **REMARQUE :** Cette configuration n'est pas considérée comme une configuration de cluster de basculement de sous-réseaux multiples car les nœuds de clusters se trouvent sur le même ensemble de sous-réseaux.  
   
 ##  <a name="ComponentsAndConcepts"></a> Considérations relatives aux ressources d'adresses IP  
- Dans une configuration de cluster de basculement de sous-réseaux multiples, les adresses IP ne sont pas détenues par tous les nœuds dans le cluster de basculement et ne peuvent pas être toutes en ligne pendant le démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vous pouvez définir la dépendance de ressource d’adresse IP sur **OR**. Cela permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'être en ligne lorsqu'il y a au moins une adresse IP valide avec laquelle il peut être lié.  
+ Dans une configuration de cluster de basculement de sous-réseaux multiples, les adresses IP ne sont pas détenues par tous les nœuds dans le cluster de basculement et ne peuvent pas être toutes en ligne pendant le démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vous pouvez définir la dépendance de ressource d’adresse IP sur **OR**. Cela permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'être en ligne lorsqu'il y a au moins une adresse IP valide avec laquelle il peut être lié.  
   
   > [!NOTE] 
   > - Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], une technologie d'étirement V-LAN a été utilisée dans les configurations de clusters multisites pour exposer une adresse IP unique pour le basculement à travers différents sites. Avec la nouvelle fonctionnalité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permettant de mettre des nœuds de cluster à travers différents sous-réseaux, vous pouvez maintenant configurer des clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à travers plusieurs sites sans implémenter la technologie d'étirement V-LAN.  
@@ -78,7 +79,7 @@ ms.locfileid: "68044745"
   
 |Description du contenu|Rubrique|  
 |-------------------------|-----------|  
-|Installation d'un cluster de basculement SQL Server|[Créer un cluster de basculement SQL Server (programme d'installation)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|Installation d'un cluster de basculement SQL Server|[Créer un cluster de basculement SQL Server (programme d’installation)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Mise à niveau sur place de votre cluster de basculement SQL Server existant|[Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Maintenance de votre cluster de basculement SQL Server existant|[Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |Utiliser le composant logiciel enfichable de gestion du cluster de basculement pour afficher les événements et les journaux WSFC|[Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  

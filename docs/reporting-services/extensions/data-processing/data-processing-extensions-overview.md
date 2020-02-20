@@ -11,10 +11,10 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194196"
 ---
 # <a name="data-processing-extensions-overview"></a>Vue d'ensemble des extensions pour le traitement des données
@@ -38,7 +38,7 @@ ms.locfileid: "63194196"
   
  Vous pouvez développer des extensions pour le traitement des données pour vos propres sources de données ou vous pouvez utiliser les interfaces pour ajouter une couche supplémentaire de traitement des données aux infrastructures de base de données courantes. Vous pouvez déployer vos extensions pour le traitement des données personnalisées pour permettre l'intégration transparente des données dans les serveurs de rapports existants dans votre organisation. Vous pouvez également les utiliser dans le cadre d'une suite de création de rapports personnalisée que vous fournissez à vos consommateurs.  
   
- ![Architecture d’extension pour le traitement de données](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Architecture d’extension pour le traitement de données")  
+ ![Architecture d'extension pour le traitement de données](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Architecture d'extension pour le traitement de données")  
 Architecture de l'extension pour le traitement des données Reporting Services  
   
  Les avantages liés à l'implémentation d'une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] personnalisée sont les suivants :  
@@ -52,7 +52,7 @@ Architecture de l'extension pour le traitement des données Reporting Services
 ## <a name="data-extension-process-flow"></a>Flux de traitement de l'extension de données  
  Avant de développer votre extension de données personnalisée, vous devez comprendre comment le serveur de rapports utilise les extensions de données pour traiter les données. Vous devez également comprendre les constructeurs et les méthodes appelés par le serveur de rapports.  
   
- ![Flux de traitement pour l’extension de traitement de données](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Flux de traitement pour l’extension de traitement de données")  
+ ![Flux de traitement pour l'extension de traitement de données](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Flux de traitement pour l'extension de traitement de données")  
 Flux de traitement pas à pas d'une extension de données appelée par le serveur de rapports  
   
  L'illustration montre la séquence d'événements suivante :  

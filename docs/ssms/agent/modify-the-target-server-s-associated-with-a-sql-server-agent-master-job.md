@@ -1,22 +1,23 @@
 ---
-title: Modifier le serveur cible associé au travail maître de SQL Server Agent | Microsoft Docs
+title: Modifier le serveur cible associé à un travail maître Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 132bca30694cca1581163323dbd714fdb01562d4
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 390e2325b1a65d7c1cb33e873df297734bb6a740
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552850"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245230"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modifier les serveurs cibles associés à un travail maître SQL Server Agent
 
@@ -34,7 +35,7 @@ Un travail maître [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Age
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à moins d'être membre du rôle de serveur fixe **sysadmin** . Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
@@ -49,7 +50,7 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 4.  Cliquez avec le bouton droit sur le travail dans lequel vous voulez modifier le serveur cible, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -** _nom_travail_, sous **Sélectionner une page**, sélectionnez **Cibles**. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Cibles&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
+5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_, sous **Sélectionner une page**, sélectionnez **Cibles**. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Cibles&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -57,7 +58,7 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 #### <a name="to-delete-a-target-server-currently-associated-with-a-sql-server-agent-master-job"></a>Pour exécuter un serveur cible actuellement associé à un travail maître SQL Server Agent  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -79,7 +80,7 @@ Pour plus d’informations, consultez [sp_delete_jobserver (Transact-SQL)](https
   
 #### <a name="to-associate-a-target-server-with-the-current-sql-server-agent-master-job"></a>Pour associer un serveur cible au travail maître SQL Server Agent  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -1,6 +1,6 @@
 ---
 title: Visualiser des données à l’aide de RevoScaleR
-description: Didacticiel pas à pas sur la visualisation des données à l’aide du langage R sur SQL Server.
+description: 'Tutoriel RevoScaleR 6 : Comment visualiser des données à l’aide du langage R sur SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727120"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947360"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualiser des données SQL Server à l’aide de R (didacticiel sur SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des fonctions [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 6 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Dans cette leçon, vous allez utiliser les fonctions de R pour afficher la distribution des valeurs dans la colonne *creditLine* par sexe.
+Dans ce tutoriel, vous allez utiliser les fonctions de R pour afficher la distribution des valeurs dans la colonne *creditLine* par sexe.
 
 > [!div class="checklist"]
 > * Créer des variables min-max pour les entrées d’histogramme
 > * Représenter des données dans un histogramme à l’aide de **rxHistogram** à partir de **RevoScaleR**
 > * Créer une visualisation avec des nuages de points à l’aide de la fonction **levelplot** de **lattice** inclus dans la distribution R de base
 
-Comme cette leçon le montre, vous pouvez associer les fonctions Microsoft et open source dans le même script.
+Comme ce tutoriel le montre, vous pouvez associer des fonctions Microsoft et open source dans le même script.
 
 ## <a name="add-maximum-and-minimum-values"></a>Ajouter des valeurs maximales et minimales
 
-D’après les statistiques de synthèse calculées de la leçon précédente, vous avez trouvé des informations utiles sur les données que vous pouvez placer dans la source de données pour effecteur d’autres calculs. Par exemple, les valeurs minimales et maximales peuvent être utilisées pour créer des histogrammes. Dans cet exercice, ajoutez les valeurs haute et basse de la source de données **RxSqlServerData**.
+D’après les statistiques de synthèse calculées dans le tutoriel précédent, vous avez trouvé des informations utiles sur les données que vous pouvez placer dans la source de données pour effectuer d’autres calculs. Par exemple, les valeurs minimales et maximales peuvent être utilisées pour créer des histogrammes. Dans cet exercice, ajoutez les valeurs haute et basse de la source de données **RxSqlServerData**.
 
 1. Commencez par configurer des variables temporaires.
   
@@ -41,7 +41,7 @@ D’après les statistiques de synthèse calculées de la leçon précédente, v
     var <- sumDF$Name
     ```
   
-2. Utilisez la variable *ccColInfo* créée dans la leçon précédente pour définir les colonnes de la source de données.
+2. Utilisez la variable *ccColInfo* créée dans le tutoriel précédent pour définir les colonnes de la source de données.
   
    Ajoutez de nouvelles colonnes calculées (*numTrans*, *numIntlTrans*et *creditLine*) à la collection de colonnes qui remplacent la définition d’origine. Le script ci-dessous ajoute des facteurs basés sur les valeurs minimales et maximales, obtenus à partir de sumOut, qui stocke la sortie en mémoire de **rxSummary**. 
   

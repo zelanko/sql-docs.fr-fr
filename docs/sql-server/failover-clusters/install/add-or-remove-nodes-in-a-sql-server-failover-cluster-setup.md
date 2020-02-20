@@ -1,7 +1,7 @@
 ---
-title: Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server (programme d’installation) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Ajouter, supprimer des nœuds dans un cluster de basculement
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95d92e72baa3d1f36eb76649a46bb1dcdf35cd4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035239"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230889"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server (programme d'installation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "68035239"
   
 ##  <a name="Add"></a> Ajouter un nœud  
   
-#### <a name="to-add-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant  
+#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
-2.  L'Assistant Installation lancera le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour ajouter un nœud à une instance de cluster de basculement existante, cliquez sur **Installation** dans le volet gauche. Sélectionnez ensuite **Ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
+2.  L'Assistant Installation lancera le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour ajouter un nœud à une instance de cluster de basculement existante, cliquez sur **Installation** dans le volet gauche. Sélectionnez ensuite **Ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68035239"
   
 9. Dans la page Configuration du serveur - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez sélectionnées. Pour les installations de cluster de basculement, les informations de nom de compte et de type de démarrage seront préremplies dans cette page, en fonction des paramètres indiqués pour le nœud actif. Vous devez fournir des mots de passe pour chaque compte. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-     **Remarque relative à la sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
+     **Note de sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
      Lorsque vous avez terminé de spécifier les informations de connexion pour les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Suivant**.  
   
@@ -85,11 +85,11 @@ ms.locfileid: "68035239"
   
 ##  <a name="Remove"></a> Supprimer un nœud  
   
-#### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Pour supprimer un nœud d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant  
+#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Pour supprimer un nœud d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
-2.  L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour supprimer un nœud dans une instance de cluster de basculement existante, cliquez sur **Maintenance** dans le volet gauche, puis sélectionnez **Supprimer un nœud d’un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
+2.  L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour supprimer un nœud dans une instance de cluster de basculement existante, cliquez sur **Maintenance** dans le volet gauche, puis sélectionnez **Supprimer un nœud d’un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -104,6 +104,6 @@ ms.locfileid: "68035239"
 8.  La page Terminé fournit un lien vers le fichier journal résumé pour l'opération de suppression de nœud et d'autres remarques importantes. Pour terminer la suppression du nœud [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**. Pour plus d’informations sur les fichiers journaux d’installation, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [Afficher et lire les fichiers journaux d'installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

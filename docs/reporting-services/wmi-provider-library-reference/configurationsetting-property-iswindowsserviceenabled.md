@@ -16,14 +16,14 @@ ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3a769d8c279ef8d024f790157622799c6fbba129
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573434"
 ---
 # <a name="configurationsetting-property---iswindowsserviceenabled"></a>Propriété ConfigurationSetting - IsWindowsServiceEnabled
-  Indique si le service Windows Report Server est activé. En lecture seule.  
+  Indique si le service Windows Report Server est activé. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ public boolean IsWindowsServiceEnabled;
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

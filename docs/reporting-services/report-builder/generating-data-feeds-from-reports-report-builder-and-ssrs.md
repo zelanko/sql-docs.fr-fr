@@ -9,10 +9,10 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580737"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Génération de flux de données à partir de rapports (Générateur de rapports et SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "65580737"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Le document de service Atom généré à partir de ce rapport inclut deux flux, un pour chacune des colonnes homologues dynamiques : Territory et Year. Le diagramme ci-dessous illustre le contenu de chaque flux.  
+ Le document de service Atom généré à partir de ce rapport inclut deux flux, un pour chacune des colonnes homologues dynamiques : Territory et Year. Le diagramme ci-dessous illustre le contenu de chaque flux.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
@@ -170,15 +170,15 @@ ms.locfileid: "65580737"
 |Élément|Comportement de rendu|  
 |----------|------------------------|  
 |Table de charge de travail|Effectue le rendu en développant la table et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne. Les rapports d'extraction ne sont pas pris en charge.|  
-|Matrice|Effectue le rendu en développant la matrice et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne.|  
-|Liste|Effectue le rendu d'un enregistrement pour chaque instance ou ligne de détails dans la liste.|  
+|Matrix|Effectue le rendu en développant la matrice et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne.|  
+|List|Effectue le rendu d'un enregistrement pour chaque instance ou ligne de détails dans la liste.|  
 |Sous-rapport|L'élément parent est répété pour chaque instance du contenu.|  
 |Graphique|Effectue le rendu d'un enregistrement avec toutes les étiquettes de graphiques pour chaque valeur de graphique. Les étiquettes de séries et de catégories dans les hiérarchies sont aplaties et incluses dans la ligne pour une valeur de graphique.|  
 |Barre de données|Effectue le rendu comme un graphique. En règle générale, une barre de données n'inclut pas de hiérarchies ou d'étiquettes.|  
 |Graphique sparkline|Effectue le rendu comme un graphique. En règle générale, un graphique sparkline n'inclut pas de hiérarchies ou d'étiquettes.|  
 |Jauge|Effectue le rendu en tant qu'enregistrement unique avec les valeurs maximale et minimale de l'échelle linéaire, les valeurs de début et de fin de la plage et la valeur du pointeur.|  
 |Indicateur|Effectue le rendu en tant qu'enregistrement unique avec le nom de l'état actif, les états disponibles et la valeur de données.|  
-|Carte|Génère un flux de données pour chaque région de données cartographiques. Si plusieurs couches utilisent la même région de données, le flux de données les inclut toutes. Le flux de données inclut un enregistrement avec les étiquettes et les valeurs pour chaque membre cartographique de la couche.|  
+|Mappage|Génère un flux de données pour chaque région de données cartographiques. Si plusieurs couches utilisent la même région de données, le flux de données les inclut toutes. Le flux de données inclut un enregistrement avec les étiquettes et les valeurs pour chaque membre cartographique de la couche.|  
   
   
 ##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  

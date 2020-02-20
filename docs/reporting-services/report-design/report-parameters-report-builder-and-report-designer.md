@@ -11,17 +11,17 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68941139"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 ::: moniker-end
 
@@ -31,9 +31,9 @@ ms.locfileid: "68941139"
 
 ::: moniker-end
 
-Cette rubrique décrit les utilisations courantes des paramètres de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les propriétés que vous pouvez définir, et bien d’autres aspects. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports. Vous pouvez utiliser les paramètres de rapport dans les rapports paginés que vous créez dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et dans le Concepteur de rapports, ainsi que dans les rapports mobiles que vous créez dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. En savoir plus sur les [Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+Cette rubrique décrit les utilisations courantes des paramètres de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les propriétés que vous pouvez définir, et bien d’autres aspects. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports. Vous pouvez utiliser les paramètres de rapport dans les rapports paginés que vous créez dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et dans le Concepteur de rapports, ainsi que dans les rapports mobiles que vous créez dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. En savoir plus sur les [Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
 
-Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
 
 ## <a name="bkmk_Common_Uses_for_Parameters"></a> Utilisations courantes des paramètres
 
@@ -71,7 +71,7 @@ Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Dida
 
 Quand vous visualisez un rapport qui comporte des paramètres, la barre d’outils de la visionneuse de rapports affiche chaque paramètre pour vous permettre de spécifier des valeurs de manière interactive. L’illustration suivante montre la zone de paramètres d’un rapport avec les paramètres @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota et @SalesDate.  
 
-![Afficher rapport avec paramètres](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "Afficher rapport avec paramètres")  
+![Afficher un rapport doté de paramètres](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "Afficher un rapport doté de paramètres")  
   
 1. **Volet Paramètres** : la barre d’outils de la visionneuse de rapports affiche une invite et une valeur par défaut pour chaque paramètre. Vous pouvez personnaliser la disposition des paramètres dans le volet Paramètres. Pour plus d’informations, consultez [Personnaliser le volet Paramètres dans un rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
@@ -96,7 +96,7 @@ Vous pouvez créer des paramètres de rapport de différentes façons :
   
  Ajoutez une requête de dataset qui contient des variables ou une procédure stockée de dataset qui contient des paramètres d'entrée. Un paramètre de dataset est créé pour chaque variable ou paramètre d'entrée, et un paramètre de rapport est créé pour chaque paramètre de dataset.  
   
- ![Générateur de rapports - Paramètres - Propriétés du dataset](../../reporting-services/report-design/media/ssrb-paramdatasetprops.png "Générateur de rapports - Paramètres - Propriétés du dataset")  
+ ![Propriétés du dataset du paramètre Générateur de rapports](../../reporting-services/report-design/media/ssrb-paramdatasetprops.png "Propriétés du dataset du paramètre Générateur de rapports")  
   
  Cette image du Générateur de rapports montre :  
   
@@ -148,8 +148,8 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|Créer une vue d’abonnement|Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Le nom des paramètres générés automatiquement correspond au paramètre dans la requête du jeu de données. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
-|Demander|Texte qui apparaît en regard du paramètre dans la barre d'outils de la visionneuse de rapports.|  
+|Name|Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Le nom des paramètres générés automatiquement correspond au paramètre dans la requête du jeu de données. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
+|Prompt|Texte qui apparaît en regard du paramètre dans la barre d'outils de la visionneuse de rapports.|  
 |Type de données|Un paramètre de rapport doit avoir l'un des types de données suivants :<br /><br /> **Boolean**. L'utilisateur sélectionne True ou False à l'aide d'une case d'option.<br /><br /> **DateTime**. L'utilisateur sélectionne une date à l'aide d'un contrôle calendrier.<br /><br /> **Entier**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Float**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Texte**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> Lorsque des valeurs disponibles sont définies pour un paramètre, l'utilisateur peut les sélectionner dans une liste déroulante, même lorsque le type de données est **DateTime**.<br /><br /> Pour plus d'informations sur les types de données de rapport, consultez [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Autoriser une valeur vide|Sélectionnez cette option si la valeur du paramètre peut être une chaîne ou une valeur vide.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur vide soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur vide dans les valeurs disponibles.|  
 |Autoriser les valeurs de type NULL|Sélectionnez cette option si la valeur du paramètre peut être Null.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur Null soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur Null dans les valeurs disponibles.|  
@@ -223,9 +223,9 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
 
 ##  <a name="bkmk_Related_Topics"></a> Sections connexes  
 
- [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
-[Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
+[Concepts de paramètres d’un rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
  [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

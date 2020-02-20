@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574018"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemples d’URL pour les éléments sur un serveur de rapports (mode SharePoint)
@@ -49,14 +49,14 @@ ms.locfileid: "65574018"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL d'un site ou sous-site de serveur SharePoint  
  Lorsque vous déployez un rapport ou une source de données de rapport, vous devez utiliser une URL vers un site et un sous-site SharePoint, le cas échéant. Dans l’URL, le nom du site apparaît juste après le nom du serveur ; par exemple, `https://*servername/site*` ou `https://*servername/site/subsite*`.  
   
- Dans une application web [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , le site et le sous-site correspondent le plus souvent aux onglets du site principal. Pour trouver le nom du site ou du sous-site, cliquez sur **Accueil**, puis sur **Tout le contenu du site**. Faites défiler vers le bas et recherchez **Sites et espaces de travail**. La liste des sites s'affiche dans cette section.  
+ Dans une application web [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], le site et le sous-site correspondent le plus souvent aux onglets du site principal. Pour trouver le nom du site ou du sous-site, cliquez sur **Accueil**, puis sur **Tout le contenu du site**. Faites défiler vers le bas et recherchez **Sites et espaces de travail**. La liste des sites s'affiche dans cette section.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL d'une bibliothèque SharePoint  
  Si vous déployez un rapport ou un élément connexe vers une bibliothèque SharePoint, vous devez utiliser une URL vers la bibliothèque SharePoint. L'URL à utiliser pour une bibliothèque varie selon votre version de SharePoint.  
   
  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la bibliothèque apparaît après le nom du serveur ; par exemple, `https://*servername/*Shared Documents`.  
   
- Dans [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], la bibliothèque apparaît après le site et le sous-site. Par exemple, `https://*servername/site/*Documents`.  
+ Dans [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], la bibliothèque apparaît après le site et le sous-site. Par exemple : `https://*servername/site/*Documents`.  
   
  Pour rechercher les informations de chemin d'accès pour une nouvelle bibliothèque SharePoint ou pour un site inconnu, ouvrez un navigateur et localisez la bibliothèque SharePoint où vous souhaitez publier vos rapports. Si la bibliothèque est vide, téléchargez un fichier. Cliquez avec le bouton droit sur le fichier et sélectionnez **Propriétés** pour ouvrir la fenêtre **Propriétés** . L'adresse du fichier contient les valeurs URL nécessaires à une opération de publication.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65574018"
 ## <a name="examples-of-urls"></a>Exemples d'URL  
  Lors de la publication d'éléments dans une bibliothèque SharePoint, il est important de spécifier des URL complètes vers la bibliothèque cible. Une URL SharePoint complète inclut l'application Web SharePoint, le site, la bibliothèque, le dossier (facultatif), le fichier et l'extension de nom de fichier. Les exemples ci-dessous illustrent la syntaxe à utiliser.  
   
-|Cible|Exemple d'URL|  
+|Cible|Exemple d’URL|  
 |------------|-----------------|  
 |Serveur SharePoint.|`https://TestServer`|  
 |Site ou sous-site de serveur SharePoint.|`https://TestServer/toplevelsite/subsite`|  

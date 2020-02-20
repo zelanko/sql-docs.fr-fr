@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e98421a76fda260c71c691551151bd9dad245a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579969"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190463"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publication des sources de données et des rapports
   Avant de publier votre rapport, vous devez en afficher un aperçu pour voir à quoi il ressemblera une fois exécuté. Vous pouvez continuer à peaufiner sa conception jusqu'à ce que vous soyez satisfait du résultat obtenu.  
@@ -36,8 +36,8 @@ ms.locfileid: "65579969"
  [Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Décrit comment publier un rapport sur un site SharePoint.  
   
-## <a name="see-also"></a>Voir aussi  
- [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   

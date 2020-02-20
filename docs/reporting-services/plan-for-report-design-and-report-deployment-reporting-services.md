@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581247"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports | Reporting Services
@@ -39,26 +39,26 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
 -   [Spécifications RDL (Report Language Definition)](https://go.microsoft.com/fwlink/?linkid=116865)  
   
--   [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+-   [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
  Pour plus d’informations sur les contrôles ReportViewer, consultez [Contrôles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Prise en charge du serveur de rapports et du schéma RDL  
  Un fichier de définition de rapport peut être déployé sur un serveur de rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] des manières suivantes :  
   
--   **Concepteur de rapports :** déployez un rapport du Concepteur de rapports dans [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Concepteur de rapports :** Déployez un rapport à partir du Concepteur de rapports dans [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Générateur de rapports :** enregistrez un rapport sur le serveur de rapports à partir du Générateur de rapports.  
+-   **Générateur de rapports :** Enregistrez un rapport sur le serveur de rapports à partir du Générateur de rapports.  
   
--   **Portail web :** téléchargez un rapport vers un serveur de rapports configuré en mode natif à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+-   **Portail web :** Chargez un rapport vers un serveur de rapports configuré en mode natif à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint :** téléchargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
+-   **SharePoint :** Chargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
 
 ::: moniker-end
   
--   **Par programmation :** publiez par programmation un rapport à l'aide des interfaces SOAP API vers un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Programmatiquement :** Publiez programmatiquement un rapport à l'aide des interfaces API SOAP vers un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Le tableau suivant indique version par version le schéma RDL pris en charge pour le serveur de rapports.  
   
@@ -106,10 +106,10 @@ Dans un déploiement en mode SharePoint, accédez à la bibliothèque de documen
   
 |Contrôle ReportViewer du produit|Version de RDL pour la prévisualisation locale|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>ou<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> ou<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> ou<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>ou<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> ou<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> ou<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|RDL 2005|  
   
- Pour plus d'informations, consultez les documents suivants :  
+ Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Conversion de fichiers RDLC en fichiers RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   
@@ -120,6 +120,6 @@ Dans un déploiement en mode SharePoint, accédez à la bibliothèque de documen
 ## <a name="see-also"></a>Voir aussi  
  [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)   
- [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

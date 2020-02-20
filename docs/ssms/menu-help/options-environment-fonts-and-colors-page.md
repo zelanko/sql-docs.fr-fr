@@ -1,6 +1,6 @@
 ---
-title: Options (Environnement - Page Polices et couleurs) | Microsoft Docs
-ms.custom: ''
+title: Options (Environnement - Page Polices et couleurs)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7270a67f9f040f986b58ee0bb9d0d5366fe05169
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265953"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245725"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Options (Environnement - Page Polices et couleurs)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Répertorie tous les éléments de l'interface utilisateur dont vous pouvez modi
 |Fenêtre Résultats de la recherche|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la fenêtre Résultats de la recherche.|  
 |Fenêtre Sortie|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Sortie.|  
 |Résultats de grille|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres **Résultats de grille** .|  
-|Plan d'exécution|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans le plan d’exécution de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans les requêtes [!INCLUDE[ssEW](../../includes/ssew-md.md)] .|  
+|Plan d'exécution|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans le plan d’exécution de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans les requêtes [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 |Résultats de texte|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la zone **Résultats de texte** des fenêtres Requête.|  
 |Concepteurs Business Intelligence|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la fenêtre Concepteurs Business Intelligence.|  
   
@@ -63,7 +63,7 @@ Voici quelques-uns des éléments affichés.
 **Premier plan**  
 Répertorie les couleurs disponibles pour le premier plan de l’élément sélectionné dans **Éléments affichés**. Dans la mesure où certains éléments sont liés entre eux, veillez à conserver un modèle d'affichage cohérent. Par exemple, si vous changez la couleur de premier plan du texte, la couleur de premier plan des éléments tels que Chaîne est également modifiée.  
   
-**Personnalisé**  
+**Personnalisée**  
 Affiche la boîte de dialogue **Couleurs** , où vous pouvez définir une couleur personnalisée pour l’élément sélectionné dans la liste **Éléments affichés** .  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ Affiche la boîte de dialogue **Couleurs** , où vous pouvez définir une couleu
 **Arrière-plan de l’élément**  
 Propose une palette de couleurs disponibles pour l’arrière-plan de l’élément sélectionné dans **Éléments affichés**. Dans la mesure où certains éléments sont liés entre eux, veillez à conserver un modèle d'affichage cohérent. Par exemple, si vous changez la couleur d'arrière-plan du texte, la couleur d'arrière-plan des éléments tels que Chaîne SQL est également modifiée.  
   
-**Personnalisé**  
+**Personnalisée**  
 Affiche la boîte de dialogue **Couleurs** , où vous pouvez définir une couleur personnalisée pour l’élément sélectionné dans la liste **Éléments affichés** .  
   
 **Gras**  
@@ -81,7 +81,7 @@ Cochez cette case pour afficher le texte des éléments affichés sélectionnés
 **Exemple**  
 Affiche un aperçu du modèle de style, de taille et de couleur des polices correspondant aux valeurs sélectionnées dans **Afficher les paramètres de** et **Éléments affichés**. Vous pouvez utiliser cette zone pour afficher un aperçu des résultats obtenus lorsque vous essayez différentes options de mise en forme.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Codage en couleurs dans les éditeurs de code](../../relational-databases/scripting/color-coding-in-query-editors.md)  
 [Options (Éditeur de texte/onglet Éditeur et page Barre d'état)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
   

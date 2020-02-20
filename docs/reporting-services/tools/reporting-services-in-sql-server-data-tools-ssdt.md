@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889840"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
@@ -43,7 +43,7 @@ ms.locfileid: "68889840"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  
- Le Concepteur de rapports prend en charge deux modes : le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** affiche un rendu du rapport. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
+ Le Concepteur de rapports prend en charge deux modes : le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** en affiche le rendu. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Données du rapport, volet  
  Le volet des données de rapport affiche des champs intégrés, des sources de données, des datasets, des collections de champs, des paramètres de rapport et des images.  
@@ -73,7 +73,7 @@ ms.locfileid: "68889840"
   
  Le volet de regroupement comporte deux modes :  
   
--   **Valeur par défaut.** Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Par défaut** pour afficher tous les groupes de lignes et de colonnes dans un format hiérarchique qui montre la relation des groupes parents, des groupes enfants, des groupes adjacents et des groupes de détails. Un groupe enfant apparaît au niveau de retrait suivant, en dessous de son groupe parent. Un groupe adjacent apparaît au même niveau de retrait que ses groupes homologues ou frères.  
+-   **Par défaut** Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Par défaut** pour afficher tous les groupes de lignes et de colonnes dans un format hiérarchique qui montre la relation des groupes parents, des groupes enfants, des groupes adjacents et des groupes de détails. Un groupe enfant apparaît au niveau de retrait suivant, en dessous de son groupe parent. Un groupe adjacent apparaît au même niveau de retrait que ses groupes homologues ou frères.  
   
      Utilisez le mode par défaut pour ajouter, modifier ou supprimer des groupes. Pour les groupes basés sur un champ de dataset unique, faites glisser le champ du volet Groupes de lignes vers le volet Groupes de colonnes. Vous pouvez insérer le groupe au-dessus ou en dessous d'un groupe existant. Pour ajouter un groupe adjacent, cliquez avec le bouton droit sur le groupe frère et utilisez le menu contextuel. Pour afficher les cellules de tableau matriciel qui appartiennent à un groupe, sélectionnez le groupe dans le volet de regroupement.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "68889840"
   
 -   **Propriétés du rapport** Sélectionnez cette option pour ouvrir la boîte de dialogue **Propriétés du rapport** . Dans cette boîte de dialogue, vous pouvez affecter les propriétés générales du rapport, telles que le nom de l'auteur et l'espacement de la grille, et définir des propriétés pour sa mise en page, notamment le nombre de colonnes et la taille de la page. Vous pouvez également inclure du code personnalisé, des références à des assemblys et à des classes, ainsi que les noms d'éléments de sortie des données, des transformations de données et des schémas de données.  
   
--   **Vue** Basculez entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
+-   **Vue** Basculez entre les deux onglets du Concepteur de rapports : Conception et Aperçu.  
   
 -   **En-tête de page** Ajoutez ou supprimez un en-tête de page dans le rapport. Lorsque vous supprimez un en-tête de page, tous les éléments qu'il contient sont supprimés.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "68889840"
     |Génération du projet sélectionné|CTRL+MAJ+B|  
     |Affichage de la fenêtre Propriétés|F4|  
     |Affichage de la fenêtre Données|CTRL+Alt+D|  
-    |Démarrage du débogage|F5|  
+    |Démarrer le débogage|F5|  
     |Passage d'une fenêtre ouverte à la suivante|F6|  
   
 -   contrôler les éléments sur l'aire de conception du rapport :  
@@ -296,11 +296,11 @@ ms.locfileid: "68889840"
     |Déplacer l'élément de rapport sélectionné|CTRL+Touches de direction|  
     |Augmenter ou diminuer la taille de l'élément de rapport sélectionné|CTRL+MAJ+Touches de direction|  
     |Dans une zone de texte, déplacer le curseur au début du texte d'affichage visible|Ctrl+Origine|  
-    |Dans une zone de texte, déplacer le curseur à la fin du texte d'affichage visible|Ctrl+Fin|  
-    |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'au début du texte d'affichage visible|Maj+Origine|  
-    |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'à la fin du texte d'affichage visible|Maj+Fin|  
+    |Dans une zone de texte, déplacer le curseur à la fin du texte d'affichage visible|CTRL+FIN|  
+    |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'au début du texte d'affichage visible|MAJ+ORIGNE|  
+    |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'à la fin du texte d'affichage visible|MAJ+FIN|  
     |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'au début de l'expression|CTRL+MAJ+ORIGINE|  
-    |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'à la fin de l'expression|Ctrl+Maj+Fin|  
+    |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'à la fin de l'expression|CTRL+MAJ+FIN|  
     |Ouvrir le menu contextuel de l'élément de rapport sélectionné|MAJ+F10+Clé de propriété sur les claviers récents|
   
 ## <a name="next-steps"></a>Étapes suivantes

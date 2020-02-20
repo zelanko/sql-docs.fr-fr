@@ -5,18 +5,18 @@ description: Apprenez à mettre à niveau des clusters Big Data SQL Server dans 
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127443"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253108"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -49,7 +49,7 @@ Cet utilisateur est désigné sous le terme de *compte de service de domaine du 
 
 ### <a name="creating-an-ou"></a>Création d’une unité d’organisation
 
-Sur le contrôleur de domaine, ouvrez **Utilisateurs et ordinateurs Active Directory**. Dans le volet de gauche, cliquez avec le bouton droit sur le répertoire dans lequel vous souhaitez créer votre UO, sélectionnez Nouveau - \> **Unité d’organisation**, puis suivez les invites de l’Assistant pour créer l’unité d’organisation. Vous pouvez également créer une unité d’organisation avec PowerShell :
+Sur le contrôleur de domaine, ouvrez **Utilisateurs et ordinateurs Active Directory**. Dans le volet de gauche, cliquez avec le bouton de droite sur le répertoire dans lequel vous souhaitez créer votre UO, sélectionnez Nouveau -\>**Unité d’organisation**, puis suivez les invites de l’Assistant pour créer l’unité d’organisation. Vous pouvez également créer une unité d’organisation avec PowerShell :
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -160,7 +160,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 ## <a name="provide-security-and-endpoint-parameters"></a>Fournir des paramètres de sécurité et de point de terminaison
 
-Outre les variables d’environnement pour les informations d’identification, vous devez fournir des informations de sécurité et de point de terminaison pour que l’intégration Active Directory fonctionne. Les paramètres obligatoires font automatiquement partie du [profil de déploiement](deployment-guidance.md#configfile) `kubeadm-prod`.
+Outre les variables d’environnement pour les informations d’identification, vous devez fournir des informations de sécurité et de point de terminaison pour que l’intégration Active Directory fonctionne. Les paramètres obligatoires font automatiquement partie du `kubeadm-prod` [profil de déploiement](deployment-guidance.md#configfile).
 
 L’intégration AD nécessite les paramètres suivants. Ajoutez ces paramètres aux fichiers `control.json` et `bdc.json` à l’aide des commandes `config replace` présentées plus loin dans cet article. Tous les exemples ci-dessous utilisent l’exemple de domaine `contoso.local`.
 
@@ -168,19 +168,22 @@ L’intégration AD nécessite les paramètres suivants. Ajoutez ces paramètre
 
 - `security.dnsIpAddresses` : liste des adresses IP des contrôleurs de domaine
 
-- `security.domainControllerFullyQualifiedDns`: Liste des noms de domaine complets de contrôleur de domaine. Le nom de domaine complet contient le nom de l’ordinateur/hôte du contrôleur de domaine. Si vous avez plusieurs contrôleurs de domaine, vous pouvez fournir une liste ici. Exemple : `HOSTNAME.CONTOSO.LOCAL`
+- `security.domainControllerFullyQualifiedDns`: Liste des noms de domaine complets de contrôleur de domaine. Le nom de domaine complet contient le nom de l’ordinateur/hôte du contrôleur de domaine. Si vous avez plusieurs contrôleurs de domaine, vous pouvez fournir une liste ici. Exemple : `HOSTNAME.CONTOSO.LOCAL`
 
 - `security.realm` **Paramètre facultatif** : Dans la majorité des cas, le domaine est égal au nom de domaine. Pour les cas où ils ne sont pas les mêmes, utilisez ce paramètre pour définir le nom du domaine (par exemple, `CONTOSO.LOCAL`).
 
 - `security.domainDnsName`: Nom de votre domaine (par exemple, `contoso.local`).
 
-- `security.clusterAdmins`: Ce paramètre accepte le groupe AD *one-. Les membres de ce groupe obtiennent des autorisations d’administrateur dans le cluster. Cela signifie qu’ils auront des autorisations sysadmin dans SQL Server, des autorisations de superutilisateur dans HDFS et des administrateurs dans le contrôleur.
+- `security.clusterAdmins`: Ce paramètre prend **un groupe AD**. Les membres de ce groupe obtiennent des autorisations d’administrateur dans le cluster. Cela signifie qu’ils auront des autorisations sysadmin dans SQL Server, des autorisations de superutilisateur dans HDFS et d’administrateurs dans le Contrôleur. **Notez que ce groupe doit exister dans AD avant le début du déploiement. Notez également que ce groupe ne peut pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
 
-- `security.clusterUsers`: Liste des groupes Active Directory qui sont des utilisateurs standard (aucune autorisation d’administrateur) dans le cluster Big Data.
+- `security.clusterUsers`: Liste des groupes Active Directory qui sont des utilisateurs standard (aucune autorisation d’administrateur) dans le cluster Big Data. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
 
-- `security.appOwners` **Paramètre facultatif** : Liste des groupes Active Directory qui sont autorisés à créer, supprimer et exécuter une application quelconque.
+- `security.appOwners` **Paramètre facultatif** : Liste des groupes Active Directory qui sont autorisés à créer, supprimer et exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
 
-- `security.appReaders` **Paramètre facultatif** : liste des utilisateurs ou groupes Active Directory qui sont autorisés à exécuter une application quelconque. 
+- `security.appReaders`**Paramètre facultatif** : répertorie des groupes AD qui sont autorisés à exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+
+**Comment vérifier l’étendue d’un groupe AD : **
+[Cliquez ici pour obtenir des instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) pour vérifier l’étendue d’un groupe AD, afin de déterminer s’il s’agit du DomainLocal.
 
 Si vous n’avez pas encore initialisé le fichier de configuration de déploiement, vous pouvez exécuter cette commande pour obtenir une copie de la configuration.
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 Outre les informations ci-dessus, vous devez également fournir des noms DNS pour les différents points de terminaison de cluster. Les entrées DNS utilisant les noms DNS que vous avez fournis seront automatiquement créées sur votre serveur DNS lors du déploiement. Vous utiliserez ces noms lors de la connexion aux différents points de terminaison du cluster. Par exemple, si le nom DNS de l’instance principale SQL est `mastersql`, vous utiliserez `mastersql.contoso.local,31433` pour vous connecter à l’instance principale à partir des outils.
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Le mode Active Directory sécurisé fonctionnera uniquement sur les environnements de déploiement `kubeadm` et non pas sur AKS pour le moment. Le profil de déploiement `kubeadm-prod` comprend les sections de sécurité par défaut.
 
 - Un seul cluster BDC par domaine est autorisé pour l’instant. L’activation de plusieurs clusters BDC par domaine est planifiée pour une version ultérieure.
+
+- Aucun des groupes AD spécifiés dans les configurations de sécurité ne peut être d’une étendue DomainLocal. Vous pouvez vérifier l’étendue d’un groupe AD en suivant [ces instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
