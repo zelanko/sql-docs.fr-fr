@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6779c0892137ee60f011f365e0f3ee4d46b046f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994363"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -41,8 +41,8 @@ HRESULT WaitForAsynchCompletion(
  *dwMillisecTimeOut*[in]  
  Délai en millisecondes.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="return-code-values"></a>Codet de retour  
+ S_OK  
  S_OK  
   
  E_UNEXPECTED  
@@ -63,7 +63,7 @@ HRESULT WaitForAsynchCompletion(
  La propriété relative au délai d'expiration est ignorée pour les opérations asynchrones. Le paramètre de délai d'expiration de **ISSAsynchStatus::WaitForAsynchCompletion** spécifie la durée maximale qui doit s'écouler avant que le contrôle ne soit retourné à l'appelant. Si ce délai expire, DB_S_ASYNCHRONOUS est retourné. L'expiration des délais d'attente n'annule jamais les opérations asynchrones. Si l'application doit annuler une opération asynchrone qui ne se termine pas dans un délai imparti, elle doit attendre l'expiration du délai, puis annuler explicitement l'opération si DB_S_ASYNCHRONOUS est retourné.  
   
 > [!NOTE]  
->  Lors de l'utilisation d'OLE DB Service Components, S_OK peut être retourné lorsque DB_S_ASYNCHRONOUS est attendu ; par conséquent, les applications doivent appeler [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) pour vérifier l'état d'achèvement lorsque S_OK ou DB_S_ASYNCHRONOUS est retourné.  
+>  Quand les composants du service OLE DB sont utilisés, S_OK peut être retourné quand DB_S_ASYNCHRONOUS est attendu ; ainsi, les applications doivent appeler [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) pour vérifier l’état d’achèvement quand S_OK ou DB_S_ASYNCHRONOUS est retourné.  
   
  Si la valeur de *dwMillisecTimeOut* est INFINITE, la méthode **ISSAsynchStatus::WaitForAsynchCompletion** se bloque jusqu'à ce que l'opération soit terminée. Si la valeur de *dwMillisecTimeOut* est 0, la méthode est retournée immédiatement avec l'état de l'opération en attente. Si le délai d’attente expire avant que l’opération ne soit terminée, DB_S_ASYNCHRONOUS est retourné.  
   

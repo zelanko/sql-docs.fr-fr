@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027893"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matrice de support de Microsoft JDBC Driver pour SQL Server
@@ -32,21 +32,21 @@ ms.locfileid: "69027893"
   
 |Nom du pilote|Version de package du pilote|Fichier(s) JAR applicable(s)|Fin du support standard|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.4 pour SQL Server|7.4|MSSQL-JDBC-7.4.1. jre12. jar<br> MSSQL-JDBC-7.4.1. jre11. jar<br> MSSQL-JDBC-7.4.1. jre8. jar|2 août 2024|
+|Microsoft JDBC Driver 7.4 pour SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2 août 2024|
 |Microsoft JDBC Driver 7.2 pour SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 avril 2024|
 |Microsoft JDBC Driver 7.0 pour SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 juillet 2023|  
 |Microsoft JDBC Driver 6.4 pour SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 février 2023|    
 |Microsoft JDBC Driver 6.2 pour SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 juin 2022|    
 |Microsoft JDBC Driver 6.0 pour SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 juillet 2021|    
-|Microsoft JDBC Driver 4.2 pour SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 août 2020|  
-|Microsoft JDBC Driver 4.1 pour SQL Server|4.1|sqljdbc41.jar|12 décembre 2019|  
+|Microsoft JDBC Driver 4.2 pour SQL Server|4,2|sqljdbc42.jar<br>sqljdbc41.jar|24 août 2020|  
+|Microsoft JDBC Driver 4.1 pour SQL Server|4,1|sqljdbc41.jar|12 décembre 2019|  
   
  Le support des pilotes Microsoft JDBC suivants est fini.  
  
 |Nom du pilote|Version de package du pilote|Fin du support standard|  
 |-|-|-|
 |Microsoft JDBC Driver 4.0 pour SQL Server|4.0|6 mars 2017|  
-|Pilote JDBC Microsoft SQL Server 3.0|3|23 avril 2015|  
+|Pilote JDBC Microsoft SQL Server 3.0|3.0|23 avril 2015|  
 |Microsoft SQL Server JDBC Driver 2.0|2|31 décembre 2012|  
 |Pilote JDBC Microsoft SQL Server 2005 1.2|1.2|25 juin 2011|  
 |Microsoft SQL Server 2005 JDBC Driver 1.1|1.1|25 juin 2011|  
@@ -55,7 +55,7 @@ ms.locfileid: "69027893"
   
 ## <a name="sql-version-compatibility"></a>Compatibilité des versions de SQL  
   
-|Version du pilote|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|Version du pilote|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
 |7.4|N|N|O|O|O|O|O|O|O|
 |7.2|N|O|O|O|O|O|O|O|N| 
@@ -64,10 +64,10 @@ ms.locfileid: "69027893"
 |6.2|O|O|O|O|O|O|O|O|N|
 |6.1|O|O|O|O|O|O|O|N|N|
 |6.0|O|O|O|O|O|O|O|N|N|
-|4.2|O|O|O|O|O|O|O|N|N|
-|4.1|O|O|O|O|O|O|O|N|N|
+|4,2|O|O|O|O|O|O|O|N|N|
+|4,1|O|O|O|O|O|O|O|N|N|
 |4.0|O|O|O|O|O|O|O|N|N|
-|3|O|O|A<sup>1</sup>|A<sup>2</sup>|N|A<sup>5</sup>|N|N|N|
+|3.0|O|O|A<sup>1</sup>|A<sup>2</sup>|N|A<sup>5</sup>|N|N|N|
 |2|A<sup>3</sup>|A<sup>3</sup>|N|N|N|N|N|N|N|
 |1.2|A<sup>3</sup>|N|N|N|N|N|N|N|N|
 |1.1|N|N|N|N|N|N|N|N|N|  
@@ -95,15 +95,15 @@ ms.locfileid: "69027893"
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  
-|4.2|1.7, 1.8|4.1, 4.2|  
-|4.1|1.7|4.0|  
+|4,2|1.7, 1.8|4.1, 4.2|  
+|4,1|1.7|4.0|  
 |4.0|1.5, 1.6, 1.7|3.0, 4.0|  
-|3|1.5, 1.6,|3.0, 4.0|  
-|2.0|1.5, 1.6|3.0, 4.0|  
-|1.2|1.4, 1.5, 1.6|3|  
-|1.1|1.4|3|  
-|1.0|1.4|3|  
-|2000|1.4|3|  
+|3.0|1.5, 1.6,|3.0, 4.0|  
+|2|1.5, 1.6|3.0, 4.0|  
+|1.2|1.4, 1.5, 1.6|3.0|  
+|1.1|1.4|3.0|  
+|1.0|1.4|3.0|  
+|2000|1.4|3.0|  
   
 ## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge  
  Le pilote Microsoft JDBC est conçu pour fonctionner sur tout système d’exploitation prenant en charge l’utilisation d’une machine virtuelle Java (JVM). Les plateformes couramment utilisées sont notamment Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX et MacOS.  

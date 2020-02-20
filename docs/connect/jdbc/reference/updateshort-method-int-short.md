@@ -16,10 +16,10 @@ ms.assetid: 155b9189-cb97-4264-b42c-bbda1c7d624f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e146aacff54a934687b57d6b971e02c14d38e0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998327"
 ---
 # <a name="updateshort-method-int-short"></a>Méthode updateShort (int, short)
@@ -38,11 +38,11 @@ public void updateShort(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
  *x*  
   
- Valeur de type **short** .  
+ Valeur **short**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

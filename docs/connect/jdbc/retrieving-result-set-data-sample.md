@@ -1,5 +1,5 @@
 ---
-title: Récupération de l’exemple de données du jeu de résultats | Microsoft Docs
+title: Exemple de récupération des données d’un jeu de résultats | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ac13eff3840434e67321aeb0e151e377d4b929f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027784"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Exemple de récupération des données d'un jeu de résultats
@@ -36,7 +36,7 @@ Pour exécuter cet exemple d’application, définissez le classpath de façon �
 > [!NOTE]  
 > Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Dans l’exemple suivant, l’exemple de code établit une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Ensuite, en utilisant une instruction SQL avec l’objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), il exécute l’instruction SQL et place les données retournées dans un objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).
 

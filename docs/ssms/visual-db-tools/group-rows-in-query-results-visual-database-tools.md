@@ -1,10 +1,7 @@
 ---
-title: Regrouper des lignes dans les résultats de requête (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Regrouper des lignes dans les résultats de requête
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +11,18 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254473"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247196"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Regrouper des lignes dans les résultats de requête (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Pour créer des sous-totaux ou afficher d'autres informations de synthèse pour les sous-ensembles d'une table, créez des groupes à l'aide d'une requête d'agrégation. Chaque groupe synthétise les données pour toutes les lignes de la table qui ont la même valeur.  
   
@@ -55,7 +56,7 @@ Le résultat obtenu peut se présenter comme suit :
   
 1.  Commencez la requête en ajoutant les tables à synthétiser dans le volet Schéma.  
   
-2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Ajouter un groupe par** dans le menu contextuel. Le Concepteur de requêtes et de vues ajoute une colonne **Grouper par** à la grille dans le volet Critères.  
+2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Ajouter un groupe par** dans le menu contextuel. Le Concepteur de requêtes et de vues ajoute une colonne **Group By** à la grille dans le volet Critères.  
   
 3.  Ajoutez la ou les colonnes à grouper dans le volet Critères. Si la colonne doit apparaître dans le résultat de la requête, vérifiez que la colonne **Sortie** est sélectionnée pour la sortie.  
   
@@ -71,9 +72,9 @@ Le résultat obtenu peut se présenter comme suit :
   
 5.  Dans la cellule de la grille **Grouper par** de la colonne à agréger, sélectionnez la fonction d’agrégation appropriée.  
   
-    Le Concepteur de requêtes et de vues assigne automatiquement un alias de colonne à la colonne que vous agrégez. Il est possible de remplacer l'alias généré automatiquement par un autre, plus significatif. Pour plus d’informations, consultez [Créer des alias de colonnes (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+    Le Concepteur de requêtes et de vues assigne automatiquement un alias de colonne à la colonne que vous agrégez. Il est possible de remplacer l'alias généré automatiquement par un autre, plus significatif. Pour plus d’informations, consultez [Créer des alias de colonnes](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-    ![Ajout d’un alias de colonne au jeu de résultats de la requête](../../ssms/visual-db-tools/media/dv3w9e3.gif "Ajout d’un alias de colonne au jeu de résultats de la requête")  
+    ![Ajout d'un alias de colonne au jeu de résultats de la requête](../../ssms/visual-db-tools/media/dv3w9e3.gif "Ajout d'un alias de colonne au jeu de résultats de la requête")  
   
     L’instruction correspondante affichée dans le volet **SQL** peut se présenter comme suit :  
   
@@ -84,5 +85,5 @@ Le résultat obtenu peut se présenter comme suit :
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Trier et regrouper des résultats de requête (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Trier et grouper les résultats de requête](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

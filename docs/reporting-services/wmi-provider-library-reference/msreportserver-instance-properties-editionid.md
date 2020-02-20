@@ -11,14 +11,14 @@ ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3e73d8416c6c475a8cc5225d478a6e85472ceb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571091"
 ---
-# <a name="msreportserverinstance-properties---editionid"></a>Propriétés MSReportServer_Instance - EditionID
-  Retourne l'édition du serveur de rapports. En lecture seule.  
+# <a name="msreportserver_instance-properties---editionid"></a>Propriétés MSReportServer_Instance - EditionID
+  Retourne l'édition du serveur de rapports. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ public uint EditionID;
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

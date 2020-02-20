@@ -1,22 +1,22 @@
 ---
-title: Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio (SSMS)
+title: Se connecter à une instance SQL Server et l’interroger
 description: Tutoriel pour se connecter à une instance SQL Server en utilisant SQL Server Management Studio et en exécutant des requêtes T-SQL de base.
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708329"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162648"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutoriel : Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plat
 
 ## <a name="connect-to-a-sql-server-instance"></a>Se connecter à une instance de SQL Server
 
-1. Démarrez SQL Server Management Studio. La première fois que vous exécutez SSMS, la fenêtre **Se connecter au serveur** s’ouvre. Si elle ne s’ouvre pas, vous pouvez l’ouvrir manuellement en sélectionnant **Explorateur d’objets** > **Se connecter** > **Moteur de base de données**.
+1. Exécutez SQL Server Management Studio. La première fois que vous exécutez SSMS, la fenêtre **Se connecter au serveur** s’ouvre. Si elle ne s’ouvre pas, vous pouvez l’ouvrir manuellement en sélectionnant **Explorateur d’objets** > **Se connecter** > **Moteur de base de données**.
 
     ![Lien Se connecter dans l’Explorateur d’objets](media/connect-query-sql-server/connectobjexp.png)
 
@@ -72,7 +72,7 @@ Pour vérifier que votre connexion au serveur SQL Server a réussi, développez 
   >[!NOTE]
   > Dans ce tutoriel, vous avez utilisé précédemment l’*authentification Windows* pour vous connecter à votre serveur SQL Server local, mais cette méthode n’est pas prise en charge pour SQL Azure DB. De ce fait, c’est l’authentification SQL qui est utilisée dans cette image pour établir une connexion à la base de données SQL Azure DB. Pour plus d’informations, consultez [Authentification locale SQL](../../relational-databases/security/choose-an-authentication-mode.md) et [Authentification SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management). 
 
-## <a name="create-a-database"></a>création d'une base de données ;
+## <a name="create-a-database"></a>Création d'une base de données
 
 Créez une base de données appelée TutorialDB en effectuant les étapes suivantes :
 
@@ -195,11 +195,16 @@ Vous pouvez changer le serveur auquel votre fenêtre de requête actuelle est co
     > [!NOTE]
     > Cette action change uniquement le serveur auquel la fenêtre de requête est connectée, pas le serveur utilisé par l’Explorateur d’objets.
 
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+Vous pouvez également vous connecter et interroger [SQL Server](../../azure-data-studio/quickstart-sql-server.md), une [base de données Azure SQL](../../azure-data-studio/quickstart-sql-database.md) et des [entrepôts de données Azure SQL](../../azure-data-studio/quickstart-sql-dw.md) à l’aide d’Azure Data Studio.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
-La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ces articles vous aident à vous familiariser avec les différentes fonctionnalités disponibles dans SSMS.  Ces articles vous apprennent à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.
+La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ces articles vous aident à vous familiariser avec les différentes fonctionnalités disponibles dans SSMS. Ces articles vous apprennent à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.
 
 * [Création de scripts](scripting-ssms.md)
 * [Utilisation de modèles dans SSMS](../template/templates-ssms.md)
 * [Configuration de SSMS](ssms-configuration.md)
 * [Conseils et astuces supplémentaires pour utiliser SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

@@ -16,10 +16,10 @@ ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80f1177506090d459833f70bdc0b5fdcb115d792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952813"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>Méthode getColumnType (SQLServerResultSetMetaData)
@@ -37,16 +37,16 @@ public int getColumnType(int column)
 #### <a name="parameters"></a>Paramètres  
  *column*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique le type JDBC tel que défini dans Java. Sql. types.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant le type de JDBC défini dans java.sql.Types.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getColumnType est spécifiée par la méthode getColumnType dans l’interface java. Sql. ResultSetMetaData.  
+ Cette méthode getColumnType est spécifiée par la méthode getColumnType dans l'interface java.sql.ResultSetMetaData.  
   
  Le comportement du pilote [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 3.0 a changé pour la colonne DATA_TYPE. Pour plus d’informations, consultez [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   

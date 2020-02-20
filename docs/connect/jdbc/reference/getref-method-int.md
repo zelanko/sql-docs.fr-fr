@@ -16,10 +16,10 @@ ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7796b766ac8593f557e64d2ebb6e324abf0ec82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980590"
 ---
 # <a name="getref-method-int"></a>Méthode getRef (int)
@@ -37,9 +37,9 @@ public java.sql.Ref getRef(int i)
 #### <a name="parameters"></a>Paramètres  
  *i*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet Ref.  
   
 ## <a name="exceptions"></a>Exceptions  

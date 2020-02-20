@@ -11,10 +11,10 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027261"
 ---
 # <a name="understanding-java-ee-support"></a>Présentation de la prise en charge de Java EE
@@ -39,7 +39,7 @@ Pour le pilote JDBC 7.2, le pilote est contenu dans **mssql-jdbc-7.2.2.jre8.jar*
 
 Pour le pilote JDBC 7.4, le pilote est contenu dans **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** ou **mssql-jdbc-7.4.1.jre12.jar**.
   
-Le nom de la classe est utilisé chaque fois que vous chargez le pilote avec la classe JDBC par, et chaque fois que vous spécifiez le nom de classe du pilote dans n’importe quelle configuration de pilote. Par exemple, la configuration d'une source de données dans un serveur d'applications Java EE peut imposer d’entrer le nom de la classe du pilote.  
+Le nom de la classe est utilisé chaque fois que le pilote est chargé avec la classe DriverManager JDBC et chaque fois que le nom de la classe du pilote est spécifié dans n’importe quelle configuration de pilote. Par exemple, la configuration d'une source de données dans un serveur d'applications Java EE peut imposer d’entrer le nom de la classe du pilote.  
   
 ## <a name="data-sources"></a>Sources de données
 

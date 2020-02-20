@@ -13,10 +13,10 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1276097ce011560471e8d25b10d70a240a2dce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015078"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Exemple d’application (pilote SQLSRV)
@@ -26,7 +26,7 @@ L’exemple d’application Évaluations de produits AdventureWorks est une appl
   
 ### <a name="running-the-example-application"></a>Exécution de l’exemple d’application  
   
-1.  Installez [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [prise en main avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
+1.  Installez [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Copiez le code répertorié plus loin dans ce document dans deux fichiers : adventureworks_demo.php et photo.php.  
 3.  Placez les fichiers adventureworks_demo.php et photo.php dans le répertoire racine de votre serveur web.  
 4.  Exécutez l’application en démarrant `https://localhost/adventureworks_demo.php` à partir de votre navigateur.  
@@ -39,7 +39,7 @@ Pour exécuter l’exemple d’application Évaluations de produits AdventureWor
 -   SQL Server 2005 ou SQL Server 2008, avec la base de données [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) attachée, est installé sur l’ordinateur local.  
 -   Un navigateur web est installé.  
   
-## <a name="demonstrates"></a>Montre  
+## <a name="demonstrates"></a>Illustre le  
 L’exemple d’application Évaluations de produits AdventureWorks illustre ce qui suit :  
   
 -   Comment ouvrir une connexion à SQL Server à l’aide de l’authentification Windows.  

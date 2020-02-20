@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java | Microsoft Docs'
+title: 'Étape 3 : Preuve de concept sur la connexion à SQL avec Java | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027507"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de Java
   
-Cet exemple doit être considéré comme une preuve de concept uniquement. L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
+Cet exemple doit être considéré uniquement comme une preuve de concept. L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
   
-## <a name="step-1-connect"></a>Étape 1: se connecter  
+## <a name="step-1-connect"></a>Étape 1 : Se connecter  
   
-Utilisez la classe Connection pour vous connecter à SQL Database.   
+Utilisez la classe de connexion pour vous connecter à la base de données SQL.   
   
 ```java  
 import java.sql.Connection;
@@ -54,7 +54,7 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-2-execute-a-query"></a>Étape 2 : Exécuter une requête  
+## <a name="step-2-execute-a-query"></a>Étape 2 : Exécuter une requête  
 Dans cet exemple, connectez-vous à Azure SQL Database, exécutez une instruction SELECT et retournez les lignes sélectionnées.   
   
 ```java  
@@ -99,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>Étape 3: insérer une ligne  
-Dans cet exemple, exécutez une instruction INSERT, transmettez des paramètres et récupérez la valeur de clé primaire générée automatiquement.   
+## <a name="step-3-insert-a-row"></a>Étape 3 : Insérer une ligne  
+Dans cet exemple, exécutez une instruction INSERT, transmettez les paramètres et récupérez la valeur de clé primaire générée automatiquement.   
   
 ```java  
 import java.sql.Connection;

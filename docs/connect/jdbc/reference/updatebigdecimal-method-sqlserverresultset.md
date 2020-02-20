@@ -16,10 +16,10 @@ ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6231368cd83ffdbff9732c8b7886a7dc4af571e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985408"
 ---
 # <a name="updatebigdecimal-method-sqlserverresultset"></a>updateBigDecimal, méthode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67985408"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[updateBigDecimal (int, java.math.BigDecimal)](../../../connect/jdbc/reference/updatebigdecimal-method-int-java-math-bigdecimal.md)|Met à jour la colonne désignée avec un objet BigDecimal en fonction de l’index de colonne.|  
 |[updateBigDecimal (java.lang.String, java.math.BigDecimal)](../../../connect/jdbc/reference/updatebigdecimal-method-java-lang-string-java-math-bigdecimal.md)|Met à jour la colonne désignée avec un objet BigDecimal en fonction du nom de colonne.|  

@@ -17,16 +17,16 @@ ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992667"
 ---
-# <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
+# <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Récupère le nombre de champs dans un jeu de résultats actif. Cette fonction peut être appelée sur toute instruction préparée, avant ou après l’exécution.  
+Récupère le nombre de champs dans un jeu de résultats actif. Cette fonction peut être appelée sur une instruction préparée, avant ou après l’exécution.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,9 +36,9 @@ sqlsrv_num_fields( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$stmt*: instruction sur laquelle le jeu de résultats ciblé est actif.  
+*$stmt* : instruction sur laquelle le jeu de résultats ciblé est actif.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Valeur entière qui représente le nombre de champs dans le jeu de résultats actif. Si une erreur se produit, la valeur booléenne **false** est retournée.  
   
 ## <a name="example"></a>Exemple  

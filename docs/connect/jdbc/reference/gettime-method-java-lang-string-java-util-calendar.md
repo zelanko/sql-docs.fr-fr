@@ -16,10 +16,10 @@ ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b8f6239fbc229af009fc9745b0f19ed27e7ee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979054"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>Méthode getTime (java.lang.String, java.util.Calendar)
@@ -42,10 +42,10 @@ public java.sql.Time getTime(java.lang.String sCol,
   
  *cal*  
   
- Objet de calendrier.  
+ Objet Calendar.  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet d’heure.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Time.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -53,7 +53,7 @@ public java.sql.Time getTime(java.lang.String sCol,
 ## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
- Consultez le graphique intitulé «conversions de méthode Getter» pour [comprendre](../../../connect/jdbc/understanding-data-type-conversions.md) les conversions de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour voir quels types de données peuvent être récupérés avec cette méthode.  
+ Pour savoir quels sont les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] récupérables avec cette méthode, consultez le graphe intitulé « Conversions de méthodes getter » de la rubrique [Comprendre les conversions de types de données](../../../connect/jdbc/understanding-data-type-conversions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

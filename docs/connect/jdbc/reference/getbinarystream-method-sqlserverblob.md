@@ -11,10 +11,10 @@ ms.assetid: 4fb5a2d3-5db6-4e62-8000-d0f486c7cf46
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75167fbaf5bf3f24b133c1a7d1a3eb7ca4896c6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953912"
 ---
 # <a name="getbinarystream-method-sqlserverblob"></a>Méthode getBinaryStream (SQLServerBlob)
@@ -24,10 +24,10 @@ ms.locfileid: "67953912"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getBinaryStream, méthode &#40;&#41;](../../../connect/jdbc/reference/getbinarystream-method.md)|Retourne un flux d'entrée pour la lecture des données depuis le BLOB.|  
-|[Méthode &#40;getBinaryStream long, long&#41;](../../../connect/jdbc/reference/getbinarystream-method-long-long.md)|Retourne un objet de flux d'entrée qui contient une valeur BLOB partielle à l'aide de la position de début spécifiée et de la longueur.|  
+|[Méthode getBinaryStream &#40;long, long&#41;](../../../connect/jdbc/reference/getbinarystream-method-long-long.md)|Retourne un objet de flux d'entrée qui contient une valeur BLOB partielle à l'aide de la position de début spécifiée et de la longueur.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerBlob, méthodes](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

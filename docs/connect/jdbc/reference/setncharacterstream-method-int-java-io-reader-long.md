@@ -1,5 +1,5 @@
 ---
-title: Méthode setNCharacterStream pour l’objet Java. IO. Reader-long | Microsoft Docs
+title: Méthode setNCharacterStream pour un objet java.io.Reader - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76c59a5e367e3d3e8524a64f5ae7ac6dab85b529
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973951"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>Méthode setNCharacterStream (int, java.io.Reader, long)
@@ -34,7 +34,7 @@ public final void setNCharacterStream(int parameterIndex,
 #### <a name="parameters"></a>Paramètres  
  *parameterIndex*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
  *value*  
   
@@ -42,15 +42,15 @@ public final void setNCharacterStream(int parameterIndex,
   
  *length*  
   
- Valeur de **type long** qui indique le nombre de caractères dans la valeur de paramètre.  
+ **long** indiquant le nombre de caractères dans la valeur de paramètre.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream dans l’interface java. Sql. PreparedStatement.  
+ Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream de l’interface java.sql.PreparedStatement.  
   
- Cette méthode doit être utilisée pour les types de données **nchar**, **nvarchar**, **ntext**et **XML** .  
+ Cette méthode doit être utilisée pour les types de données **NCHAR**, **NVARCHAR**, **NTEXT** et **XML**.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

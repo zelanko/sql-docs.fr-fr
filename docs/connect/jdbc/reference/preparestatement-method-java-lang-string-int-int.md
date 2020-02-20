@@ -16,10 +16,10 @@ ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b192f9055394393c48fa19eda697791ddfe3fa2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976162"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>Méthode prepareStatement (java.lang.String, int, int)
@@ -43,22 +43,22 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
   
  *resultSetType*  
   
- **Entier** qui indique le type de jeu de résultats.  
+ **int** indiquant le type du jeu de résultats.  
   
  *resultSetConcurrency*  
   
- **Entier** qui indique le type de concurrence du jeu de résultats.  
+ **int** indiquant le type de concurrence du jeu de résultats.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet PreparedStatement.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode prepareStatement est spécifiée par la méthode prepareStatement dans l’interface java. Sql. Connection.  
+## <a name="remarks"></a>Notes   
+ Cette méthode prepareStatement est spécifiée par la méthode prepareStatement de l’interface java.sql.Connection.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerConnection, méthodes](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

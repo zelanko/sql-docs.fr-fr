@@ -1,7 +1,7 @@
 ---
 title: PDO::quote | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eeb83be9d9414d0d9380ca1771bf50985e283b98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993166"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916369"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,17 +30,25 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*string*: chaîne à placer entre guillemets.  
+$*string* : chaîne à placer entre guillemets.  
   
 $*parameter_type* : symbole (entier) facultatif indiquant le type de données.  La valeur par défaut est PDO::PARAM_STR.  
+
+De nouvelles constantes PDO ont été introduites dans PHP 7.2 pour prendre en charge la [liaison des chaînes Unicode et non-Unicode](https://wiki.php.net/rfc/extended-string-types-for-pdo). Les chaînes Unicode peuvent être placées entre guillemets avec N comme préfixe (par exemple, N'string' au lieu de 'string').
+
+1. PDO::PARAM_STR_NATL - nouveau type de chaînes Unicode à appliquer comme opérateur au niveau du bit - ou à PDO::PARAM_STR
+1. PDO::PARAM_STR_CHAR - nouveau type de chaînes non-Unicode à appliquer comme opérateur au niveau du bit - OU à PDO::PARAM_STR
+1. PDO::ATTR_DEFAULT_STR_PARAM - définir sur PDO::PARAM_STR_NATL ou PDO::PARAM_STR_CHAR pour indiquer une valeur au niveau du bit OU à PDO::PARAM_STR par défaut
+
+À partir de la version 5.8.0, vous pouvez utiliser ces constantes avec PDO::quote.
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Chaîne entre guillemets qui peut être passée à une instruction SQL, ou false en cas d’échec.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  
@@ -61,8 +69,27 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)
+## <a name="example"></a> Exemple  
+
+Le script suivant montre quelques exemples de la façon dont les types de chaînes étendus affectent PDO::quote() avec PHP 7.2 +.
+
+```
+<?php
+$database = "test";
+$server = "(local)";
+$db = new PDO("sqlsrv:server=$server; Database=$database", "", "");
+
+$db->quote('über', PDO::PARAM_STR | PDO::PARAM_STR_NATL); // N'über'
+$db->quote('foo'); // 'foo'
+
+$db->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$db->quote('über'); // N'über'
+$db->quote('foo', PDO::PARAM_STR | PDO::PARAM_STR_CHAR); // 'foo'
+?>
+```
+  
+## <a name="see-also"></a> Voir aussi  
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

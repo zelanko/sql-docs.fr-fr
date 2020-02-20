@@ -11,10 +11,10 @@ ms.assetid: de095cb3-1111-4154-8996-3c2e529e3000
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf6338d0aee36fedd9011a8467b1d283d7dcae21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972818"
 ---
 # <a name="setsqlxml-method-sqlservercallablestatement"></a>Méthode setSQLXML (SQLServerCallableStatement)
@@ -33,7 +33,7 @@ public final void setSQLXML(java.lang.String parameterName,
 #### <a name="parameters"></a>Paramètres  
  *parameterName*  
   
- **Chaîne** qui indique le nom du paramètre.  
+ **Chaîne** indiquant le nom du paramètre.  
   
  *xmlObject*  
   

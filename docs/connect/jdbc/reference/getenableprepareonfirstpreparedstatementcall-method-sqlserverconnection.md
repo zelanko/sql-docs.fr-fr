@@ -1,5 +1,5 @@
 ---
-title: Méthode Getenableprepareonfirstpreparedstatementcall, (SQLServerConnection) | Microsoft Docs
+title: getEnablePrepareOnFirstPreparedStatementCall, méthode (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac1cf4dbd8c8c14b5c97dbfecbe81d397c1598ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983443"
 ---
 # <a name="getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>getEnablePrepareOnFirstPreparedStatementCall, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Retourne la valeur de la propriété de connexion **enablePrepareOnFirstPreparedStatementCall** . Si la valeur est false, la première exécution appellera sp_executesql et non la préparation d’une instruction. une fois la deuxième exécution effectuée, elle appellera sp_prepexec et configurera un descripteur d’instruction préparé. Les exécutions suivantes appellent sp_execute. Cela évite d’avoir à sp_unprepare sur la fermeture d’instruction préparée si l’instruction n’est exécutée qu’une seule fois. La valeur par défaut de cette option peut être modifiée en appelant setDefaultEnablePrepareOnFirstPreparedStatementCall ().
+ Retourne la valeur de la propriété de connexion **enablePrepareOnFirstPreparedStatementCall**. Si la valeur est false, la première exécution appellera sp_executesql sans préparer d’instruction. À la deuxième exécution, elle appellera sp_prepexec et configurera un handle d’instruction préparée. Les exécutions suivantes appelleront sp_execute. Cela évite d’utiliser sp_unprepare lors de la fermeture de l’instruction préparée si l’instruction n’est exécutée qu’une seule fois. La valeur par défaut de cette option peut être modifiée en appelant setDefaultEnablePrepareOnFirstPreparedStatementCall().
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,14 +34,14 @@ ms.locfileid: "67983443"
 public boolean getEnablePrepareOnFirstPreparedStatementCall()  
 ```  
 
-## <a name="return-value"></a>Valeur retournée
- Valeur **booléenne** qui contient la valeur de la propriété de connexion **enablePrepareOnFirstPreparedStatementCall** .
+## <a name="return-value"></a>Valeur de retour
+ Valeur **booléenne** qui contient la valeur de la propriété de connexion **enablePrepareOnFirstPreparedStatementCall**.
 
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
+ Cette méthode est disponible dans la version 6.4 et versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

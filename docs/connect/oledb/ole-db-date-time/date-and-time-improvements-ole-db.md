@@ -1,5 +1,5 @@
 ---
-title: Améliorations de la date et de l’heure (OLE DB) | Microsoft Docs
+title: Améliorations des types de données de date et d’heure (OLE DB) | Microsoft Docs
 description: Améliorations des types de données de date et d’heure (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c4a93078b84cf5146f94043496bea0fdaed9fc80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015703"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Améliorations des types de données de date et d’heure (OLE DB)
@@ -25,16 +25,16 @@ ms.locfileid: "68015703"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introduit de nouveaux types de données de date et d'heure. Cette section décrit comment ces nouveaux types sont exposés en tant qu’extensions dans OLE DB pilote pour les SQL Server. Pour obtenir une vue d’ensemble du pilote OLE DB pour la prise en charge de SQL Server pour les nouveaux types de données de date et d’heure, consultez améliorations de la date et de l' [heure](../../oledb/features/date-and-time-improvements.md). Pour obtenir un exemple, consultez [utiliser les fonctionnalités &#40;de date et&#41;d’heure améliorées OLE DB](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introduit de nouveaux types de données de date et d'heure. Cette section explique comment ces nouveaux types sont exposés en tant qu'extensions dans OLE DB Driver pour SQL Server. Pour une vue d’ensemble de la prise en charge d’OLE DB Driver pour SQL Server pour les nouveaux types de données de date et d'heure, voir [Améliorations des types de données date et heure](../../oledb/features/date-and-time-improvements.md). Pour obtenir un exemple, voir [Utiliser les fonctionnalités de date et d’heure améliorées &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
- Pour plus d’informations générales sur les types de données de date et d’heure, consultez [DateTime &#40;Transact-SQL&#41;](../../../t-sql/data-types/datetime-transact-sql.md).  
+ Pour plus d'informations sur les types de données de date et d'heure, consultez [datetime &#40;Transact-SQL&#41;](../../../t-sql/data-types/datetime-transact-sql.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Prise en charge des types de données pour les améliorations de date et heure OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- Fournit des informations sur les types de OLE DB (OLE DB Driver for SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) qui prennent en charge les types de données de date et d’heure.  
+ Fournit des informations sur les types OLE DB (OLE DB Driver pour SQL Server) qui prennent en charge les types de données de date et heure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [OLE DB &#40;de métadonnées&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
- Contient des informations sur la structure DBBINDING, **ICommandWithParameters:: GetParameterInfo**, **ICommandWithParameters:: SetParameterInfo**, **IColumnsRowset:: GetColumnsRowset**et**ColumnsInfo:: GetColumnInfo** . Contient aussi des informations sur les mises à jour des ensembles de lignes de schéma OLE DB.  
+ [Métadonnées &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ Contient des informations sur la structure DBBINDING, **ICommandWithParameters::GetParameterInfo**, **ICommandWithParameters::SetParameterInfo**, **IColumnsRowset::GetColumnsRowset** et I**ColumnsInfo::GetColumnInfo**. Contient aussi des informations sur les mises à jour des ensembles de lignes de schéma OLE DB.  
   
  [Liaisons et conversions &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
  Décrit les règles de conversion entre le serveur et le client pour les types date nouveaux et existants.  

@@ -11,10 +11,10 @@ ms.assetid: a8ec22a9-4bbd-4759-9f21-957304ef3a5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5300c381b7b64e90cdd9d6a9d3555ffce6a9af52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996668"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>Méthode updateCharacterStream (java.lang.String, java.io.Reader)
@@ -37,17 +37,17 @@ public void updateCharacterStream(java.lang.String columnLabel,
   
  *reader*  
   
- Objet lecteur.  
+ Objet Reader.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateCharacterStream est spécifiée par la méthode updateCharacterStream dans l’interface java. Sql. ResultSet.  
+ Cette méthode updateCharacterStream est spécifiée par la méthode updateCharacterStream de l’interface java.sql.ResultSet.  
   
  Cette méthode passe les caractères Unicode à partir d’un objet Reader à des colonnes de texte et binaires sélectionnées. Cela inclut toutes les colonnes de texte et les colonnes **binary**, **varbinary**, **varbinary(max)** , **image** et **xml**, mais pas les colonnes **udt**.  
   
- L’utilisation de cette méthode pour les types de données **image**, **Text**et **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut avoir un impact sur les performances.  
+ Utilisée sur les types de données **image**, **text** et **ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cette méthode risque d’avoir un effet sur les performances.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateCharacterStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

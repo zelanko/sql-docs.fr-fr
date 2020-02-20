@@ -1,5 +1,5 @@
 ---
-title: Méthode setNCharacterStream pour lire l’objet-long | Microsoft Docs
+title: Méthode setNCharacterStream pour un objet Reader – long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73bd7fe7d3da0745f66e0a6d883d7024a318c95f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973888"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>Méthode setNCharacterStream (java.lang.String, java.io.Reader, long)
@@ -34,23 +34,23 @@ public final void setNCharacterStream(java.lang.String parameterName,
 #### <a name="parameters"></a>Paramètres  
  *parameterName*  
   
- **Chaîne** qui indique le nom du paramètre.  
+ **Chaîne** indiquant le nom du paramètre.  
   
  *value*  
   
- Objet lecteur.  
+ Objet Reader.  
   
  *length*  
   
- **Valeur de type long** qui indique le nombre de caractères dans le flux.  
+ **long**, qui indique le nombre de caractères dans le flux.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream dans l’interface java. Sql. CallableStatement.  
+ Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream de l’interface java.sql.CallableStatement.  
   
- Cette méthode doit être utilisée pour les types de données **nchar**, **nvarchar**, **ntext**et **XML** .  
+ Cette méthode doit être utilisée pour les types de données **NCHAR**, **NVARCHAR**, **NTEXT** et **XML**.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

@@ -16,10 +16,10 @@ ms.assetid: adb6ae29-025e-4ab3-a6e4-133fc29fb98b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62f43bff794aac306bddb288e9e932e5511f6db1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983456"
 ---
 # <a name="getdriverminorversion-method-sqlserverdatabasemetadata"></a>Méthode getDriverMinorVersion (SQLServerDatabaseMetaData)
@@ -34,16 +34,16 @@ ms.locfileid: "67983456"
 public int getDriverMinorVersion()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique la version mineure du pilote JDBC.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant la version mineure du pilote JDBC.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode getDriverMinorVersion est spécifiée par la méthode getDriverMinorVersion dans l’interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Notes   
+ Cette méthode getDriverMinorVersion est spécifiée par la méthode getDriverMinorVersion de l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Utilisation de données volumineuses | Microsoft Docs
+title: Utiliser des données volumineuses | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aab60ed1db5d7749c4edbc52fcad4bebddf93d52
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025464"
 ---
 # <a name="working-with-large-data"></a>Utilisation de données volumineuses
@@ -25,7 +25,7 @@ Le pilote JDBC prend en charge la mise en mémoire tampon adaptative, ce qui vo
 
 Dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] JDBC Driver version 1.2 pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le mode de mise en mémoire tampon était « **full** » par défaut. Si votre application n’a pas affecté la valeur « **adaptive** » à la propriété de connexion « responseBuffering », soit dans les propriétés de connexion, soit à l’aide de la méthode [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) de l’objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), cela signifie que le pilote prenait en charge la lecture en une seule fois de l’ensemble des résultats à partir du serveur. Pour pouvoir obtenir le comportement de mise en mémoire tampon adaptative, votre application devait affecter explicitement « **adaptive** » à la propriété de connexion « responseBuffering ».  
   
-La valeur **adaptive** représente le mode de mise en mémoire tampon par défaut ; par ailleurs, le pilote JDBC met en mémoire tampon la plus petite quantité de données possible en cas de nécessité. Pour plus d’informations sur l’utilisation de la mise en mémoire tampon adaptative, consultez Utilisation de la [mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md).  
+La valeur **adaptive** représente le mode de mise en mémoire tampon par défaut ; par ailleurs, le pilote JDBC met en mémoire tampon la plus petite quantité de données possible en cas de nécessité. Pour plus d’informations sur la mise en mémoire tampon adaptative, consultez [Utiliser la mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md).  
   
  Les rubriques de cette section décrivent différentes façons de récupérer des données de valeur élevée à partir d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

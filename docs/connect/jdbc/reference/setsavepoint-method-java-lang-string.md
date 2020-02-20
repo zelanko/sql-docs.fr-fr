@@ -16,10 +16,10 @@ ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973091"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>Méthode setSavepoint (java.lang.String)
@@ -39,18 +39,18 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
   
  Valeur **String** contenant le nom du point de sauvegarde.  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet de point d’enregistrement.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet SavePoint.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode setSavePoint est spécifiée par la méthode setSavePoint dans l’interface java. Sql. Connection.  
+## <a name="remarks"></a>Notes   
+ Cette méthode setSavePoint est spécifiée par la méthode setSavePoint de l’interface java.sql.Connection.  
   
  L’argument *sName* est automatiquement placé dans une séquence d’échappement par [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [setSavepoint, méthode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Installer des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais | Microsoft Docs
+title: Installer des versions dans d’autres langues que l’anglais
 description: Installer des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais
 ms.prod: sql
 ms.reviewer: ''
@@ -7,14 +7,14 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: fb1d51121f38aa2adfe0bdfbfcb6c5bcc10d8c4f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265008"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246882"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Installer des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais
 
@@ -41,11 +41,11 @@ Les instructions suivantes dépendent de la version de Windows. Celles qui sont 
 2. Définissez maintenant les paramètres régionaux système afin d’utiliser le module linguistique installé à l’étape précédente en cliquant sur la langue que vous venez d’installer, puis sélectionnez **Définir comme valeur par défaut**.
 3. Lorsque votre système d’exploitation fonctionne dans la langue souhaitée, installez la langue SSMS que vous souhaitez. La première fois que vous installez une nouvelle langue SSMS, utilisez le package complet. Vous pourrez utiliser le package de mise à niveau pour les installations suivantes.
 4. Pour chaque langue à installer qui ne correspond pas à la langue de la première version de SSMS installée, installez le module linguistique Visual Studio 2015 Shell (isolé) correspondant :
-   - Accédez à [ https://connect.microsoft.com/VisualStudio/ExtendVS ](https://connect.microsoft.com/VisualStudio/ExtendVS) (vous devrez peut-être vous connecter et effectuer la procédure de *connexion d’inscription*).
+   - Accédez à [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (vous devrez peut-être vous connecter et effectuer la procédure de *connexion d’inscription*).
    - Téléchargez le module linguistique Visual Studio 2015 Shell (isolé) souhaité, et installez-le.
 
    > [!IMPORTANT]
-   > Suivez les étapes précédentes pour installer le module linguistique Visual Studio 2015 Shell isolé ; n’utilisez pas le lien **Obtenir des langues supplémentaires** qui se trouve sur **Outils** | **Options**  |  **Paramètres internationaux**.
+   > Suivez les étapes précédentes pour installer le module linguistique Visual Studio 2015 Shell isolé ; n’utilisez pas le lien **Obtenir des langues supplémentaires** qui se trouve sur **Outils** | **Options** | **Paramètres internationaux**.
 
 5. Exécutez SSMS et sélectionnez la langue que vous souhaitez utiliser dans :
    - **Outils** | **Options** | **Paramètres internationaux**

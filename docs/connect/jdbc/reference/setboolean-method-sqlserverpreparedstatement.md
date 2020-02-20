@@ -16,10 +16,10 @@ ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62c639c73b629559c36300886781146f3cd14057
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975024"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>setBoolean, méthode (SQLServerPreparedStatement)
@@ -38,11 +38,11 @@ public final void setBoolean(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- **Entier** qui indique le numéro du paramètre.  
+ **int** indiquant le numéro du paramètre.  
   
  *x*  
   
- Valeur **booléenne** , **true** ou **false**.  
+ Valeur **booléenne** (**true** ou **false**).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

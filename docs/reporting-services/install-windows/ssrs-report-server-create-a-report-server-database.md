@@ -1,20 +1,21 @@
 ---
-title: Créer une base de données du serveur de rapports, Gestionnaire de configuration de SSRS | Microsoft Docs
+title: Créer une base de données du serveur de rapports, Gestionnaire de configuration | Microsoft Docs
+description: Le mode natif SQL Server Reporting Services utilise deux bases de données relationnelles SQL Server pour le stockage des objets et des métadonnées du serveur de rapports. Une base de données est utilisée pour le stockage principal et l'autre pour le stockage des données temporaires.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123015"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253307"
 ---
-# <a name="create-a-report-server-database"></a>Créer une base de données du serveur de rapports 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports, Gestionnaire de configuration SSRS  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -70,7 +71,7 @@ La page des **options d’installation du serveur de rapports** n’offre que l�
 
 - Azure SQL Managed Instance
 
-- SQL Server 2019
+- SQL Server 2019
 
 ::: moniker-end
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

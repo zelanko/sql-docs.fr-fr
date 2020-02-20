@@ -11,10 +11,10 @@ ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98069f3b907d923a7eeca295b1c2a0d983c2edc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974555"
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>Méthode setClob (java.lang.String, java.io.Reader, long)
@@ -38,11 +38,11 @@ public final void setClob(java.lang.String parameterName,
   
  *value*  
   
- Objet lecteur.  
+ Objet Reader.  
   
  *length*  
   
- **Valeur de type long** qui indique le nombre de caractères dans le flux.  
+ **long** indiquant le nombre de caractères dans le flux.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

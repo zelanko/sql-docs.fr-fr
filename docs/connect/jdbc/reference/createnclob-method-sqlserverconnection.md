@@ -11,10 +11,10 @@ ms.assetid: fa160884-394e-4fb2-a6e8-0437b81c149d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c2c8a91e3c3f3eee050fefce1d24f87e245cb8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955346"
 ---
 # <a name="createnclob-method-sqlserverconnection"></a>Méthode createNClob (SQLServerConnection)
@@ -29,14 +29,14 @@ ms.locfileid: "67955346"
 public java.sql.NClob createNClob()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet NClob.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode createNClob est spécifiée par la méthode createNClob dans l’interface java. Sql. Connection.  
+ Cette méthode createNClob est spécifiée par la méthode createNClob de l’interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

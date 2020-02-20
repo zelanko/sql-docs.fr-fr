@@ -1,5 +1,5 @@
 ---
-title: Rubriques "Comment" relatives aux OLE DB | Microsoft Docs
+title: Rubriques de procédures OLE DB | Microsoft Docs
 description: Rubriques de procédures OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015617"
 ---
 # <a name="ole-db-how-to-topics"></a>Rubriques de procédures OLE DB
@@ -30,7 +30,7 @@ ms.locfileid: "68015617"
   
 -   [Rubriques de procédures relatives au traitement des résultats &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [Définir des OLE DB &#40;de données volumineuses&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [Définir des données volumineuses &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [Énumérer des sources de données OLE DB &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68015617"
   
 -   [Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Utilisez des UDT &#40;CLR de grande taille OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [Utiliser des types définis pas l’utilisateur pour des données volumineuses &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB)](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

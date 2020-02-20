@@ -11,15 +11,15 @@ ms.assetid: 050548ca-c708-4224-8014-8b7830a860dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3dedb746d1050c87fd1bcc1b38cbd99267170e52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970051"
 ---
 # <a name="sqlserverxaresource-methods"></a>Méthodes SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Pour plus d’informations sur les membres de [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md), consultez [membres SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md).  
+  Pour plus d’informations sur les membres de [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md), consultez [Membres de SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md).  
   
   

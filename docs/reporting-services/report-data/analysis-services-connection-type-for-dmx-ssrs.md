@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fb5f444625f6098ba73a82b1cdf94195319ac59
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 70c8e83ee72386d483f8f17a6be175a102e8580d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892515"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190926"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Type de connexion Analysis Services pour DMX (SSRS)
-  Quand vous créez un dataset à l’aide d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , le Concepteur de rapports affiche le Concepteur de requêtes MDX (Multidimensional Expression) s’il détecte un cube valide. Si aucun cube n'est détecté, mais qu'un modèle d'exploration de données est disponible, le Concepteur de rapports affiche le Concepteur de requêtes DMX (Data Mining Extensions). Pour basculer entre les concepteurs MDX et DMX, cliquez sur le bouton **Type de commande DMX** (![Basculer vers la vue langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Basculer vers la vue langage de requête DMX")) dans la barre d’outils. Utilisez le Concepteur de requêtes DMX pour créer de manière interactive une requête DMX à l'aide d'éléments graphiques. Pour utiliser le Concepteur de requêtes DMX, la source de données que vous spécifiez doit déjà avoir un modèle d'exploration de données qui fournit les données. Les résultats de requête sont convertis en un jeu de lignes à deux dimensions qui sera utilisé dans le rapport.  
+  Quand vous créez un dataset à l’aide d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le Concepteur de rapports affiche le Concepteur de requêtes MDX (Multidimensional Expression) s’il détecte un cube valide. Si aucun cube n'est détecté, mais qu'un modèle d'exploration de données est disponible, le Concepteur de rapports affiche le Concepteur de requêtes DMX (Data Mining Extensions). Pour basculer entre les concepteurs MDX et DMX, cliquez sur le bouton **Type de commande DMX** (![Basculer vers la vue langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Basculer vers l'affichage de langage de requête DMX")) dans la barre d’outils. Utilisez le Concepteur de requêtes DMX pour créer de manière interactive une requête DMX à l'aide d'éléments graphiques. Pour utiliser le Concepteur de requêtes DMX, la source de données que vous spécifiez doit déjà avoir un modèle d'exploration de données qui fournit les données. Les résultats de requête sont convertis en un jeu de lignes à deux dimensions qui sera utilisé dans le rapport.  
   
 > [!NOTE]  
 >  Vous devez former le modèle avant de concevoir le rapport. Pour plus d’informations, consultez [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="design-mode"></a>Mode Création  
- Le Concepteur de requêtes DMX s'ouvre en mode Création. Le mode Création comprend une zone de conception graphique permettant de sélectionner un modèle d'exploration de données et une table d'entrée, ainsi qu'une grille utilisée pour spécifier la requête de prédiction. Il existe deux autres modes dans le Concepteur de requêtes DMX : le mode Requête et le mode Résultat. En mode Requête, la grille du mode Création est remplacée par un volet Requête, qui vous permet de taper des requêtes DMX. En mode Résultat, le jeu de résultats retourné par la requête apparaît dans une grille de données.  
+ Le Concepteur de requêtes DMX s'ouvre en mode Création. Le mode Création comprend une zone de conception graphique permettant de sélectionner un modèle d'exploration de données et une table d'entrée, ainsi qu'une grille utilisée pour spécifier la requête de prédiction. Il existe deux autres modes dans le Concepteur de requêtes DMX : le mode Requête et le mode Résultats. En mode Requête, la grille du mode Création est remplacée par un volet Requête, qui vous permet de taper des requêtes DMX. En mode Résultat, le jeu de résultats retourné par la requête apparaît dans une grille de données.  
   
  Pour changer de mode dans le Concepteur de requêtes DMX, cliquez avec le bouton droit dans la zone de conception, puis sélectionnez **Création** **Requête**ou **Résultat**. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md) et [Récupérer des données d’un modèle d’exploration de données &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md).  
   
 ## <a name="designing-a-prediction-query"></a>Conception d'une requête de prédiction  
- Le volet Création de requête du mode Création contient deux fenêtres : **Modèle d’exploration de données** et **Sélectionner une ou plusieurs tables d’entrée**. La fenêtre **Modèle d’exploration de données** vous permet de sélectionner le modèle d’exploration de données à utiliser dans la requête. La fenêtre **Sélectionner une ou plusieurs tables d’entrée** vous permet de sélectionner la table sur laquelle baser les prévisions. Si vous souhaitez utiliser une requête singleton au lieu d’une table d’entrée, cliquez avec le bouton droit dans le volet Conception de requête, puis sélectionnez **Requête singleton**. La fenêtre **Sélectionner une ou plusieurs tables d’entrée** est remplacée par une fenêtre **Entrée de requête singleton** .  
+ Le volet Conception de requête du mode Création contient deux fenêtres : **Modèle d'exploration de données** et **Sélectionner une ou plusieurs tables d'entrée**. La fenêtre **Modèle d’exploration de données** vous permet de sélectionner le modèle d’exploration de données à utiliser dans la requête. La fenêtre **Sélectionner une ou plusieurs tables d’entrée** vous permet de sélectionner la table sur laquelle baser les prévisions. Si vous souhaitez utiliser une requête singleton au lieu d’une table d’entrée, cliquez avec le bouton droit dans le volet Conception de requête, puis sélectionnez **Requête singleton**. La fenêtre **Sélectionner une ou plusieurs tables d’entrée** est remplacée par une fenêtre **Entrée de requête singleton** .  
   
  En mode Création, faites glisser les champs des fenêtres **Modèle d’exploration de données** et **Sélectionner une ou plusieurs tables d’entrée** vers la colonne **Champ** du volet Grille. Vous pouvez également remplir les colonnes restantes pour spécifier un alias, afficher le champ dans les résultats, regrouper des champs et spécifier un opérateur pour restreindre la valeur de champ à un critère ou argument donné. Si vous utilisez le mode Requête, générez la requête DMX en faisant glisser des champs vers le volet Requête.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "68892515"
 ## <a name="see-also"></a>Voir aussi  
  [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

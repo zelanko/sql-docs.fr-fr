@@ -1,5 +1,5 @@
 ---
-title: Méthode getSchemas (String, String) | Microsoft Docs
+title: Méthode getSchemas (chaîne, chaîne) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5f380123f0fc3f2b23a82b72871622e98c0f185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980090"
 ---
 # <a name="getschemas-method-string-string"></a>Méthode getSchemas (String, String)
@@ -39,7 +39,7 @@ public ResultSet getSchemas(java.lang.String catalog,
   
  Nom d'un schéma. Si elle est **null**, le nom du schéma n’est pas utilisé pour la recherche.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -50,10 +50,10 @@ public ResultSet getSchemas(java.lang.String catalog,
   
  Le jeu de résultats retourné par la méthode getSchemas contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**String**|Nom du schéma.|  
-|TABLE_CATALOG|**String**|Nom de catalogue pour le schéma.|  
+|TABLE_SCHEM|**Chaîne**|Nom du schéma.|  
+|TABLE_CATALOG|**Chaîne**|Nom de catalogue pour le schéma.|  
   
  Les résultats sont classés par TABLE_CATALOG, puis par TABLE_SCHEM. Chaque ligne inclut TABLE_SCHEM comme première colonne et TABLE_CATALOG comme deuxième.  
   

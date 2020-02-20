@@ -1,5 +1,5 @@
 ---
-title: Méthode setAsciiStream pour le flux d’entrée | Microsoft Docs
+title: Méthode setAsciiStream pour flux d’entrée | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: dc2caa44-9eb5-4ed8-a889-36148b50901d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72da8111b115c9c1eda4a328fc2cc173eebea5c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975441"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream"></a>Méthode setAsciiStream (java.lang.String, java.io.InputStream)
@@ -43,7 +43,7 @@ public final void setAsciiStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream dans l’interface java. Sql. PreparedStatement.  
+ Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream de l’interface java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [setAsciiStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   

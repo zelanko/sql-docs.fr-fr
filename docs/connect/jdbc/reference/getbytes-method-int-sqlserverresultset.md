@@ -16,10 +16,10 @@ ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d328a2b1f092686403ba4cbcddf1ad22d733ea06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213735"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>Méthode getBytes (int) (SQLServerResultSet)
@@ -37,22 +37,22 @@ public byte[] getBytes(int columnIndex)
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- Tableau de valeurs d' **octets** .  
+## <a name="return-value"></a>Valeur de retour  
+ Tableau de valeurs **d’octets**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getBytes est spécifiée par la méthode getBytes de l’interface java.sql.ResultSet.  
   
  Cette méthode prend en charge la récupération de toutes les colonnes sous forme d'une lecture brute d'octets à partir du serveur. Elle retourne un tableau d'octets directement à partir du serveur, au format stocké sur le serveur.  
   
- Dans la version précédente du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerResultSet.getBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
+ Dans la version précédente du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerResultSet.getBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [getBytes, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

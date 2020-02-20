@@ -16,10 +16,10 @@ ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4059c3562d679e4f5f8bfdd133ca69a62c1fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972212"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>Méthode setTrustServerCertificate (SQLServerDataSource)
@@ -37,7 +37,7 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
 #### <a name="parameters"></a>Paramètres  
  *trustServerCertificate*  
   
- **true** si le certificat de protocole SSL serveur (SSL) doit être approuvé automatiquement lorsque la couche de communication est chiffrée à l’aide de SSL. Dans le cas contraire, la valeur est **false**.  
+ **true** si le certificat SSL du serveur doit être automatiquement approuvé quand la couche de communication est chiffrée avec SSL. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  
  Si la propriété trustServerCertificate est définie sur **true**, le certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est automatiquement approuvé quand la couche de communication est chiffrée avec SSL. En d’autres termes, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ne validera pas le certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La valeur par défaut est **false**.  

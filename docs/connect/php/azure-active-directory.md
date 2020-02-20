@@ -12,37 +12,37 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265178"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Se connecter à l’aide de l’authentification Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) est une technologie de gestion des ID d’utilisateur centrale qui fonctionne comme alternative à [l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD permet les connexions à Microsoft Azure SQL Database et SQL Data Warehouse avec des identités fédérées dans Azure AD à l’aide d’un nom d’utilisateur et d’un mot de passe, de l’authentification intégrée de Windows ou d’un jeton d’accès Azure AD. Les pilotes PHP pour SQL Server offrent une prise en charge partielle de ces fonctionnalités.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) est une technologie de gestion centralisée des identifiants utilisateur qui représente une solution de substitution à [l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Elle rend possible la connexion à Microsoft Azure SQL Database et à SQL Data Warehouse avec des identités fédérées dans Azure AD à l’aide d’un nom d’utilisateur et d’un mot de passe, de l’authentification intégrée Windows ou d’un jeton d’accès Azure AD. Les pilotes PHP pour SQL Server offrent une prise en charge partielle de ces fonctionnalités.
 
-Pour utiliser Azure ad, utilisez les **mots** clés **Authentication ou AccessToken** (ils s’excluent mutuellement), comme indiqué dans le tableau suivant. Pour plus d’informations techniques, reportez-vous à [la rubrique utilisation de Azure Active Directory avec le pilote ODBC](../../connect/odbc/using-azure-active-directory.md).
+Pour utiliser Azure AD, employez le mot clé **Authentication** ou le mot clé **AccessToken** (mutuellement exclusifs), comme le montre le tableau suivant. Pour plus d’informations techniques, consultez [Utiliser Azure Active Directory avec le pilote ODBC](../../connect/odbc/using-azure-active-directory.md).
 
 |Mot clé|Valeurs|Description|
 |-|-|-|
-|**AccessToken**|Non défini (valeur par défaut)|Mode d’authentification déterminé par les autres mots clés. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md). |
-||Chaîne d’octets|Le jeton d’accès Azure AD extrait d’une réponse JSON OAuth. La chaîne de connexion ne doit pas contenir l’ID d’utilisateur, le mot de passe ou le mot clé d’authentification (requiert le pilote ODBC version 17 ou ultérieure dans Linux ou macOS). |
-|**Authentification**|Non défini (valeur par défaut)|Mode d’authentification déterminé par les autres mots clés. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md). |
-||`SqlPassword`|S’authentifier directement auprès d’une instance de SQL Server (qui peut être une instance Azure) à l’aide d’un nom d’utilisateur et d’un mot de passe. Le nom d’utilisateur et le mot de passe doivent être transmis à la chaîne de connexion à l’aide des mots clés **UID** et **PWD** . |
-||`ActiveDirectoryPassword`|S’authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et d’un mot de passe. Le nom d’utilisateur et le mot de passe doivent être transmis à la chaîne de connexion à l’aide des mots clés **UID** et **PWD** . |
-||`ActiveDirectoryMsi`|Authentifiez-vous à l’aide d’une identité gérée affectée par le système ou d’une identité gérée affectée par l’utilisateur (nécessite le pilote ODBC version 17.3.1.1 ou ultérieure). Pour obtenir une vue d’ensemble et des didacticiels, consultez [qu’est-ce que les identités gérées pour les ressources Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
+|**AccessToken**|Non défini (par défaut)|Mode d’authentification déterminé par les autres mots clés. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md). |
+||Chaîne d’octets|Jeton d’accès Azure AD extrait d’une réponse JSON OAuth. La chaîne de connexion ne doit pas contenir l’identifiant utilisateur, le mot de passe ou le mot clé Authentication (version 17 ou ultérieure du pilote ODBC requise sur Linux ou macOS). |
+|**Authentification**|Non défini (par défaut)|Mode d’authentification déterminé par les autres mots clés. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md). |
+||`SqlPassword`|Authentification directe auprès d’une instance SQL Server (qui peut être une instance Azure) à l’aide d’un nom d’utilisateur et d’un mot de passe, qui doivent être transmis dans chaîne de connexion avec les mots clés **UID** et **PWD**. |
+||`ActiveDirectoryPassword`|Authentification avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et d’un mot de passe, qui doivent être transmis dans chaîne de connexion avec les mots clés **UID** et **PWD**. |
+||`ActiveDirectoryMsi`|Authentification avec une identité managée affectée par le système ou par l’utilisateur (version 17.3.1.1 ou ultérieure du pilote ODBC requise). Pour obtenir une vue d’ensemble et des tutoriels, consultez [À quoi correspondent les identités managées pour les ressources Azure ?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
 
-Le **mot** clé Authentication affecte les paramètres de sécurité de la connexion. S’il est défini dans la chaîne de connexion, par défaut, le mot clé **Encrypt** est défini sur true, ce qui signifie que le client demande un chiffrement. En outre, le certificat de serveur sera validé, quel que soit le paramètre de chiffrement, sauf si **TrustServerCertificate** a la valeur true (**false** par défaut). Cette fonctionnalité est distinguée de l’ancienne méthode de connexion moins sécurisée, dans laquelle le certificat de serveur est validé uniquement lorsque le chiffrement est spécifiquement demandé dans la chaîne de connexion.
+Le mot clé **Authentication** affecte les paramètres de sécurité de la connexion. S’il est défini dans la chaîne de connexion, le mot clé **Encrypt** a alors par défaut la valeur true, ce qui signifie que le client demandera un chiffrement. Par ailleurs, le certificat de serveur sera validé indépendamment du paramètre de chiffrement, sauf si **TrustServerCertificate** a la valeur true (**false** par défaut). Cette fonctionnalité est à distinguer de l’ancienne méthode de connexion, moins sécurisée, selon laquelle le certificat de serveur n’était validé que si le chiffrement était spécifiquement demandé dans la chaîne de connexion.
 
-Lorsque vous utilisez Azure AD avec les pilotes PHP pour SQL Server sur Windows, vous pouvez être invité à installer l' [Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=41950) (non requis pour ODBC 17 +).
+Si vous utilisez Azure AD avec les pilotes PHP pour SQL Server sur Windows, il pourra vous être demandé d’installer [l’Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=41950) (non requis pour la version 17 et les versions ultérieures du pilote ODBC).
 
-#### <a name="limitations"></a>Limitations
+#### <a name="limitations"></a>Limites
 
-Sur Windows, le pilote ODBC sous-jacent prend en charge une  valeur supplémentaire pour le mot clé **Authentication**, **ActiveDirectoryIntegrated**, mais les pilotes php ne prennent pas en charge cette valeur sur n’importe quelle plateforme.
+Sur Windows, le pilote ODBC sous-jacent prend en charge une valeur supplémentaire pour le mot clé **Authentication**, **ActiveDirectoryIntegrated**, mais les pilotes PHP ne la gèrent sur aucune plateforme.
 
-## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>Exemple: connexion à l’aide de SqlPassword et ActiveDirectoryPassword
+## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>Exemple : Connexion avec SqlPassword et ActiveDirectoryPassword
 
 ```php
 <?php
@@ -82,7 +82,7 @@ if ($conn === false) {
 ?>
 ```
 
-## <a name="example---connect-using-the-pdosqlsrv-driver"></a>Exemple-se connecter à l’aide du pilote PDO_SQLSRV
+## <a name="example---connect-using-the-pdo_sqlsrv-driver"></a>Exemple : Connexion avec le pilote PDO_SQLSRV
 
 ```php
 <?php
@@ -120,7 +120,7 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-azure-ad-access-token"></a>Exemple: connexion à l’aide d’un jeton d’accès Azure AD
+## <a name="example---connect-using-azure-ad-access-token"></a>Exemple : Connexion avec un jeton d’accès Azure AD
 
 ### <a name="sqlsrv-driver"></a>Pilote SQLSRV
 
@@ -140,7 +140,7 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="pdosqlsrv-driver"></a>Pilote PDO_SQLSRV
+### <a name="pdo_sqlsrv-driver"></a>Pilote PDO_SQLSRV
 
 ```php
 <?php
@@ -159,11 +159,11 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-managed-identities-for-azure-resources"></a>Exemple: connexion à l’aide d’identités gérées pour les ressources Azure
+## <a name="example---connect-using-managed-identities-for-azure-resources"></a>Exemple : Connexion avec les identités managées pour les ressources Azure
 
-### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>Utilisation de l’identité gérée assignée par le système avec le pilote SQLSRV
+### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>Utiliser l’identité managée affectée par le système avec le pilote SQLSRV
 
-Quand vous vous connectez à l’aide de l’identité gérée affectée par le système, n’utilisez pas les options UID ou PWD.
+Si vous vous connectez avec l’identité managée affectée par le système, n’utilisez pas les options UID et PWD.
 
 ```php
 <?php
@@ -198,11 +198,11 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="using-the-user-assigned-managed-identity-with-pdosqlsrv-driver"></a>Utilisation de l’identité gérée affectée par l’utilisateur avec le pilote PDO_SQLSRV
+### <a name="using-the-user-assigned-managed-identity-with-pdo_sqlsrv-driver"></a>Utiliser l’identité managée affectée par l’utilisateur avec le pilote PDO_SQLSRV
 
-Une identité gérée affectée par l’utilisateur est créée en tant que ressource Azure autonome. Azure crée une identité dans le locataire Azure AD qui est approuvé par l’abonnement en cours d’utilisation. Une fois l’identité créée, l’identité peut être affectée à une ou plusieurs instances de service Azure. Copiez `Object ID` le de cette identité et définissez-le en tant que nom d’utilisateur dans la chaîne de connexion. 
+Une identité managée affectée par l’utilisateur est créée en tant que ressource Azure autonome. Azure crée une identité dans le tenant Azure AD approuvé par l’abonnement utilisé. Une fois l’identité créée, elle peut être affectée à une ou plusieurs instances de service Azure. Copiez la valeur `Object ID` de cette identité et définissez-la comme nom d’utilisateur dans la chaîne de connexion. 
 
-Par conséquent, lors de la connexion à l’aide de l’identité gérée affectée par l’utilisateur, fournissez l’ID d’objet comme nom d’utilisateur, mais omettez le mot de passe.
+Ainsi, lorsque vous vous connecterez avec l’identité managée affectée par l’utilisateur, vous fournirez l’ID objet comme nom d’utilisateur, mais non le mot de passe.
 
 ```php
 <?php
@@ -239,4 +239,4 @@ try {
 ## <a name="see-also"></a>Voir aussi
 [Utilisation d’Azure Active Directory avec ODBC Driver](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
 
-[Qu’est-ce que les identités gérées pour les ressources Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+[Que sont les identités managées pour les ressources Azure ?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

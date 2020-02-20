@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015439"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "68015439"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Retourne un pointeur vers un pilote OLE DB pour SQL Server structure SSERRORINFO contenant les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] détails de l’erreur.  
+  Retourne un pointeur vers la structure SSERRORINFO OLE DB Driver pour SQL Server qui contient les détails de l'erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Le pilote OLE DB pour SQL Server définit l’interface d’erreur **ISQLServerErrorInfo** . Cette interface retourne les détails d’une erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], notamment sa gravité et son état.  
+ OLE DB Driver pour SQL Server définit l'interface d'erreur **ISQLServerErrorInfo**. Cette interface retourne les détails d’une erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], notamment sa gravité et son état.  
 
   
 ## <a name="syntax"></a>Syntaxe  
@@ -48,15 +48,15 @@ HRESULT GetErrorInfo(
  *ppErrorStrings*[out]  
  Pointeur vers un pointeur de chaîne de caractère Unicode. Si la méthode échoue ou qu’il n’existe pas d’informations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associées à l’erreur, le fournisseur n’alloue pas de mémoire et vérifie que l’argument *ppErrorStrings* est un pointeur null en sortie. La libération de l’argument *ppErrorStrings* avec la méthode **IMalloc::Free** libère les trois membres de type chaîne individuels de la structure SSERRORINFO retournée, la mémoire étant allouée dans un bloc.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="return-code-values"></a>Codet de retour  
+ S_OK  
  S_OK  
   
  E_INVALIDARG  
- L’argument *ppSSErrorInfo* ou *ppErrorStrings* a la valeur null.  
+ L'argument *ppSSErrorInfo* ou *ppErrorStrings* était NULL.  
   
  E_OUTOFMEMORY  
- Le pilote OLE DB pour SQL Server n’a pas pu allouer suffisamment de mémoire pour terminer la demande.  
+ OLE DB Driver pour SQL Server n'a pas pu allouer une mémoire suffisante pour compléter la requête.  
   
 ## <a name="remarks"></a>Notes  
  Le pilote OLE DB pour SQL Server alloue de la mémoire pour les chaînes SSERRORINFO et OLECHAR retournées via les pointeurs passés par le consommateur. Le consommateur doit désallouer cette mémoire avec la méthode **IMalloc::Free** quand il n’est plus nécessaire d’accéder aux données d’erreur.  

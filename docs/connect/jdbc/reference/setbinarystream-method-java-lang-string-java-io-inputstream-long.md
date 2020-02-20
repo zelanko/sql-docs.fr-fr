@@ -1,5 +1,5 @@
 ---
-title: Méthode setBinaryStream pour le flux d’entrée-long | Microsoft Docs
+title: Méthode setBinaryStream pour flux d’entrée – long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: d59c7327-c9dc-4e4f-9dff-19e1a3c62eb2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32d909e721e38ac2a459188e31236e43398a28de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975162"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream-long"></a>Méthode setBinaryStream (java.lang.String, java.io.InputStream, long)
@@ -42,13 +42,13 @@ public void setBinaryStream(java.lang.String parameterName,
   
  *length*  
   
- **Valeur de type long** qui indique la longueur du nombre d’octets.  
+ **long** indiquant la longueur en nombre d’octets.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream dans l’interface java. Sql. CallableStatement.  
+ Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream de l’interface java.sql.CallableStatement.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

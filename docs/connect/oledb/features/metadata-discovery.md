@@ -1,6 +1,6 @@
 ---
 title: Découverte des métadonnées | Microsoft Docs
-description: Découverte des métadonnées dans OLE DB pilote pour SQL Server
+description: Découverte des métadonnées dans OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989064"
 ---
 # <a name="metadata-discovery"></a>Découverte des métadonnées
@@ -35,11 +35,11 @@ ms.locfileid: "67989064"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (pour plus d’informations, consultez [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) )  
+-   ICommandWithParameters::GetParameterInfo (voir [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) pour plus d’informations)  
   
  Vous noterez également une amélioration des performances lors de la spécification du format de métadonnées avec IBCPSession::BCPSetBulkMode  
   
- L’amélioration de la découverte des métadonnées dans OLE DB pilote pour SQL Server est possible en raison de l’ajout [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]de deux procédures stockées dans:  
+ La découverte améliorée des métadonnées dans OLE DB Driver pour SQL Server est possible grâce à l'ajout de deux procédures stockées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] :  
   
 -   sp_describe_first_result_set  
   

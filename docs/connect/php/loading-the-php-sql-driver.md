@@ -13,10 +13,10 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3c6614425cf8796bd7ec462a62f9410b9ca5857
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936383"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Chargement des pilotes Microsoft SQL Server pour PHP
@@ -24,14 +24,14 @@ ms.locfileid: "67936383"
 
 Cette rubrique fournit des instructions pour le chargement de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] dans l’espace de processus PHP.  
   
-Vous pouvez télécharger les pilotes prédéfinis pour votre plateforme à partir de la page de projet [Microsoft drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) github. Chaque package d’installation contient des fichiers de pilote SQLSRV et PDO_SQLSRV dans des variantes de thread et non thread. Sur Windows, elles sont également disponibles en variantes 32 bits et 64 bits. Consultez [Configuration système requise pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) pour obtenir la liste des fichiers de pilote contenus dans chaque package. Le fichier de pilote doit correspondre à la version PHP, à l’architecture et à la threadedness de votre environnement PHP.
+Vous pouvez télécharger les pilotes prédéfinis pour votre plateforme sur la page de projet GitHub [Pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases). Chaque package d’installation contient les fichiers de pilote SQLSRV et PDO_SQLSRV dans les variantes avec et sans thread. Sur Windows, ils sont également disponibles en version 32 bits et 64 bits. Pour obtenir la liste des fichiers de pilote contenus dans chaque package, consultez [Configuration système requise pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md). Le fichier de pilote doit correspondre à la version de PHP, à l’architecture et au type (avec/sans thread) de votre environnement PHP.
 
-Sur Linux et macOS, les pilotes peuvent également être installés à l’aide de PECL, comme indiqué dans le [didacticiel d’installation](../../connect/php/installation-tutorial-linux-mac.md).
+Sur Linux et macOS, les pilotes peuvent également être installés avec PECL, suivant le [tutoriel d’installation](../../connect/php/installation-tutorial-linux-mac.md).
 
-Vous pouvez également générer les pilotes à partir de la source lors de la génération `phpize`de PHP ou à l’aide de. Si vous choisissez de générer les pilotes à partir de la source, vous avez la possibilité de les créer de manière statique dans php au lieu de les créer `--enable-sqlsrv=static --with-pdo_sqlsrv=static` en tant qu’extensions partagées en `--enable-sqlsrv=static --with-pdo-sqlsrv=static` ajoutant (sur Linux et MacOS `./configure` ) ou (sur Windows) à la commande lorsque génération de PHP. Pour plus d’informations sur le système de génération `phpize`php et, consultez la [documentation de php](http://php.net/manual/install.php).
+Vous pouvez également générer les pilotes à partir de la source lors de l’étape de build de PHP ou avec `phpize`. Dans ce cas, vous aurez la possibilité de les créer de manière statique dans PHP, et non en tant qu’extensions partagées, en ajoutant `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (sur Linux et macOS) ou `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (sur Windows) à la commande `./configure` pendant l’étape de build de PHP. Pour plus d’informations sur le système de build de PHP et `phpize`, consultez la [Documentation de PHP](http://php.net/manual/install.php).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Déplacement du fichier de pilote dans votre répertoire d’extension  
-Le fichier de pilote doit se trouver dans un répertoire où le runtime PHP peut le trouver. Il est plus facile de placer le fichier de pilote dans votre répertoire d’extension php par défaut pour rechercher le répertoire `php -i | sls extension_dir` par défaut, `php -i | grep extension_dir` exécuter sur Windows ou sur Linux/MacOS. Si vous n’utilisez pas le répertoire d’extension par défaut, spécifiez un répertoire dans le fichier de configuration PHP (php. ini) à l’aide de l’option **extension_dir** Par exemple, sur Windows, si vous avez placé le fichier de pilote dans `c:\php\ext` votre répertoire, ajoutez la ligne suivante à php. ini:
+Le fichier de pilote doit se trouver dans un répertoire accessible au runtime PHP. L’idéal est de le placer dans le répertoire par défaut de l’extension PHP ; pour trouver ce répertoire, exécutez `php -i | sls extension_dir` sur Windows ou `php -i | grep extension_dir` sur Linux/macOS. Si vous n’utilisez pas le répertoire d’extension par défaut, spécifiez un répertoire dans le fichier de configuration PHP (php.ini) avec l’option **extension_dir**. Par exemple, sur Windows, si vous avez placé le fichier de pilote dans votre répertoire `c:\php\ext`, ajoutez la ligne suivante à php.ini :
   
 ```  
 extension_dir = "c:\PHP\ext"  
@@ -40,40 +40,40 @@ extension_dir = "c:\PHP\ext"
 ## <a name="loading-the-driver-at-php-startup"></a>Chargement du pilote au démarrage de PHP  
 Pour charger le pilote SQLSRV au démarrage de PHP, commencez par déplacer un fichier de pilote dans votre répertoire d’extension. Ensuite, procédez comme suit :  
   
-1.  Pour activer le pilote **sqlsrv** , modifiez **php. ini** en ajoutant la ligne suivante à la section extension, en modifiant le nom de fichier comme il convient:  
+1.  Pour activer le pilote **SQLSRV**, modifiez **php.ini** en ajoutant la ligne suivante à la section extension, avec le nom de fichier correspondant :  
   
     Sur Windows : 
     ```  
     extension=php_sqlsrv_72_ts.dll  
     ```  
-    Sur Linux, si vous avez téléchargé les fichiers binaires prédéfinis pour votre distribution: 
+    Sur Linux, si vous avez téléchargé les binaires prédéfinis pour votre distribution : 
     ```  
     extension=php_sqlsrv_72_nts.so  
     ```
-    Si vous avez compilé le binaire SQLSRV à partir de la source ou avec PECL, il sera nommé sqlsrv.so:
+    Si vous avez compilé le binaire SQLSRV à partir de la source ou avec PECL, il sera nommé sqlsrv.so :
     ```
     extension=sqlsrv.so
     ```
   
-2.  Pour activer le pilote **PDO_SQLSRV** , l’extension PDO (PHP Data Objects) doit être disponible, soit en tant qu’extension intégrée, soit en tant qu’extension chargée dynamiquement.
+2.  Pour pouvoir activer le pilote **PDO_SQLSRV**, il est nécessaire que l’extension PDO (PHP Data Objects) soit disponible, soit comme extension intégrée, soit comme extension chargée dynamiquement.
 
-    Sur Windows, les fichiers binaires PHP prédéfinis sont fournis avec PDO intégré. il n’est donc pas nécessaire de modifier php. ini pour le charger. Toutefois, si vous avez compilé php à partir de la source et spécifié une extension PDO distincte à générer, elle est nommée `php_pdo.dll`et vous devez la copier dans votre répertoire d’extension et ajouter la ligne suivante à php. ini:  
+    Sur Windows, l’extension PDO est intégrée dans les binaires PHP prédéfinis. Il n’est donc pas nécessaire de modifier php.ini pour la charger. Toutefois, si vous avez compilé le PHP à partir de la source et spécifié une extension PDO distincte à générer, elle sera nommée `php_pdo.dll`, et vous devrez la copier dans votre répertoire d’extension et ajouter la ligne suivante à php.ini :  
     ```
     extension=php_pdo.dll  
     ```
-    Sur Linux, si vous avez installé PHP à l’aide du gestionnaire de package de votre système, PDO est probablement installé comme une extension chargée dynamiquement nommée pdo.so. L’extension PDO doit être chargée avant l’extension PDO_SQLSRV, sinon le chargement échoue. Les extensions sont généralement chargées à l’aide de fichiers. ini individuels, et ces fichiers sont lus après php. ini. Par conséquent, si pdo.so est chargé par le biais de son propre fichier. ini, un fichier distinct chargeant le pilote PDO_SQLSRV après PDO est requis. 
+    Sur Linux, si vous avez installé PHP à l’aide du gestionnaire de package de votre système, l’extension PDO est probablement installée comme extension chargée dynamiquement sous le nom pdo.so. Elle doit être chargée avant l’extension PDO_SQLSRV, sinon le chargement échouera. Les extensions sont généralement chargées à l’aide de fichiers .ini individuels, qui sont lus après php.ini. Par conséquent, si pdo.so est chargé par le biais de son propre fichier .ini, un fichier distinct permettant de charger le pilote PDO_SQLSRV après PDO est nécessaire. 
 
-    Pour déterminer le répertoire dans lequel se trouvent les fichiers. ini spécifiques à l’extension `php --ini` , exécutez et notez le répertoire `Scan for additional .ini files in:`répertorié sous. Recherchez le fichier qui charge pdo.so--il est probablement préfixé par un nombre, tel que 10-PDO. ini. Le préfixe numérique indique l’ordre de chargement des fichiers. ini, alors que les fichiers qui n’ont pas de préfixe numérique sont chargés par ordre alphabétique. Créez un fichier pour charger le fichier de pilote PDO_SQLSRV appelé 30-pdo_sqlsrv. ini (tout nombre supérieur à celui utilisé par le préfixe PDO. ini) ou PDO_SQLSRV. ini (si PDO. ini n’est pas précédé d’un nombre), puis ajoutez la ligne suivante, en remplaçant le nom de fichier par pose  
+    Pour savoir dans quel répertoire se trouvent les fichiers .ini de chaque extension, exécutez `php --ini` et notez le répertoire indiqué sous `Scan for additional .ini files in:`. Recherchez le fichier qui charge pdo.so : il est probablement préfixé par un nombre, par exemple 10-pdo.ini. Le préfixe numérique indique l’ordre de chargement des fichiers .ini, tandis que les fichiers dépourvus de préfixe numérique sont chargés par ordre alphabétique. Créez un fichier pour charger le fichier de pilote PDO_SQLSRV nommé 30-pdo_sqlsrv.ini (ou n’importe quel autre nombre supérieur au préfixe de pdo.ini) ou pdo_sqlsrv.ini (si pdo.ini n’est pas précédé d’un nombre), puis ajoutez la ligne suivante, avec le nom de fichier correspondant :  
     ```
     extension=php_pdo_sqlsrv_72_nts.so
     ```
-    Comme avec SQLSRV, si vous avez compilé le binaire PDO_SQLSRV à partir de la source ou avec PECL, il sera nommé PDO_SQLSRV. so:
+    Comme pour SQLSRV, si vous avez compilé le binaire PDO_SQLSRV à partir de la source ou avec PECL, il sera nommé pdo_sqlsrv.so :
     ```
     extension=pdo_sqlsrv.so
     ```
-    Copiez ce fichier dans le répertoire qui contient les autres fichiers. ini. 
+    Copiez ce fichier dans le répertoire contenant les autres fichiers .ini. 
 
-    Si vous avez compilé PHP à partir de la source avec la prise en charge de PDO intégrée, vous n’avez pas besoin d’un fichier. ini distinct et vous pouvez ajouter la ligne appropriée ci-dessus à php. ini.
+    Si vous avez compilé PHP à partir de la source avec prise en charge intégrée de PDO, vous n’avez pas besoin d’un fichier .ini distinct et vous pouvez ajouter la ligne correspondante ci-dessus à php.ini.
   
 3.  Redémarrez le serveur web.  
   

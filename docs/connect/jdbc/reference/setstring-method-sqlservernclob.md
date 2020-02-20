@@ -11,22 +11,22 @@ ms.assetid: 2195ec6b-3cd1-4e57-90ba-89d111e20ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3bed8e642cb480c403c3cb1596a6e0e0fd0a9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972612"
 ---
 # <a name="setstring-method-sqlservernclob"></a>Méthode setString (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Écrit la **chaîne** spécifiée dans **NCLOB** , en démarrant à la position spécifiée.  
+  Écrit la **chaîne** spécifiée dans le **NCLOB**, en démarrant à la position spécifiée.  
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[Méthode setString &#40;long, java.lang.String&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Écrit la **chaîne** spécifiée dans **NCLOB** , en démarrant à la position spécifiée.|  
+|[Méthode setString &#40;long, java.lang.String&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Écrit la **chaîne** spécifiée dans le **NCLOB**, en démarrant à la position spécifiée.|  
 |[setString, méthode &#40;long, java.lang.String, int, int&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|Écrit la chaîne spécifiée dans le NCLOB, en commençant à la position spécifiée, en fonction du décalage et de la longueur spécifiés.|  
   
 ## <a name="see-also"></a>Voir aussi  

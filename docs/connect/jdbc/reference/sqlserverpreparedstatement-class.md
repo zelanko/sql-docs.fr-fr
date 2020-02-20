@@ -1,5 +1,5 @@
 ---
-title: SQLServerPreparedStatement, classe | Microsoft Docs
+title: Classe SQLServerPreparedStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970762"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>Classe SQLServerPreparedStatement
@@ -24,9 +24,9 @@ ms.locfileid: "67970762"
   
  **Package :** com.microsoft.sqlserver.jdbc  
   
- **Étend:** SQLServerStatement  
+ **Étend :** SQLServerStatement  
   
- **Implémente :** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
+ **Implémente :** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ public class SQLServerPreparedStatement
   
  SQLServerPreparedStatement prend en charge le traitement par lot au cours duquel un ensemble d’instructions préparées est exécuté en un seul aller-retour à la base de données afin d’améliorer les performances du runtime.  
   
- Cette classe prend en charge la désencapsulation dans la classe SQLServerPreparedStatement, l’interface ISQLServerPreparedStatement, l’interface java. Sql. PreparedStatement et les classes et interfaces prises en charge par SQLServerStatement pour le désencapsulage. Pour plus d’informations, consultez [wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Cette classe prend en charge la désencapsulation (unwrapping) dans la classe SQLServerPreparedStatement, l’interface SQLServerPreparedStatement, l’interface java.sql.PreparedStatement et les classes et interfaces prises en charge par SQLServerPreparedStatement pour la désencapsulation. Pour plus d’informations, consultez [Wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

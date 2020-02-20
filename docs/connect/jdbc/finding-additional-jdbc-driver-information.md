@@ -1,5 +1,5 @@
 ---
-title: Recherche d’informations supplémentaires sur le pilote JDBC | Microsoft Docs
+title: Rechercher des informations supplémentaires sur le pilote JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75047e8c2ea7589247e0c32c7a4710eb6a6e7dbc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028191"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Recherche d'informations supplémentaires sur le pilote JDBC
@@ -27,10 +27,10 @@ ms.locfileid: "69028191"
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Référentiel du pilote JDBC pour SQL Server GitHub](https://github.com/microsoft/mssql-jdbc)|Ce référentiel contient le code source du pilote JDBC pour SQL Server. Utilisez ce site pour interagir directement avec les membres de l’équipe du pilote JDBC. Ici, vous pouvez envoyer des problèmes, fournir des commentaires et contribuer directement au pilote.|
+|[Référentiel GitHub de JDBC Driver pour SQL Server](https://github.com/microsoft/mssql-jdbc)|Ce référentiel contient le code source de JDBC Driver pour SQL Server. Utilisez ce site pour interagir directement avec les membres de l’équipe du pilote JDBC. Vous pouvez envoyer des problèmes, formuler des commentaires et contribuer directement au pilote.|
 |[Centre de développement sur l’accès aux données et le stockage](https://go.microsoft.com/fwlink?linkid=4173)|Ce site propose de la documentation, des articles techniques, des exemples de code et d’autres ressources pour toutes les technologies d’accès aux données [!INCLUDE[msCoName](../../includes/msconame_md.md)].|  
 |[Forum sur l’accès aux données SQL Server](https://go.microsoft.com/fwlink/?LinkId=70651)|Ce site sert de forum de la communauté pour l’accès aux données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via le client natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OLE DB, ODBC, ADO, MDAC, JDBC ou SOAP/HTTP.|  
-|[Blog JDBC](https://go.microsoft.com/fwlink/?LinkId=124746)|Ce blog est utilisé pour fournir des informations sur [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]le.|  
+|[Blog JDBC](https://go.microsoft.com/fwlink/?LinkId=124746)|Ce blog est utilisé pour fournir des informations sur [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  
 

@@ -16,10 +16,10 @@ ms.assetid: f55af4b6-ae5c-41c9-8aa3-8313773f5443
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60194ee2eaae5d209df2579b4351c58e4c3c3fd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955722"
 ---
 # <a name="clearwarnings-method-sqlserverresultset"></a>Méthode clearWarnings (SQLServerResultSet)
@@ -41,7 +41,7 @@ public void clearWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode clearWarnings, est spécifiée par la méthode clearWarnings, dans l’interface java. Sql. ResultSet.  
+ Cette méthode clearWarnings est spécifiée par la méthode clearWarnings de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

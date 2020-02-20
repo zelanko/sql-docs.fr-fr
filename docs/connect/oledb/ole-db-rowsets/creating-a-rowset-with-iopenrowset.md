@@ -1,6 +1,6 @@
 ---
-title: Création d’un ensemble de lignes avec IOpenRowset | Microsoft Docs
-description: Création d’un ensemble de lignes avec l’interface IOpenRowset du pilote OLE DB pour SQL Server
+title: Création d'un ensemble de lignes avec IOpenRowset | Microsoft Docs
+description: Création d'un ensemble de lignes avec l’interface IOpenRowset d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994309"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Création d'un ensemble de lignes avec IOpenRowset
@@ -27,7 +27,7 @@ ms.locfileid: "67994309"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server prend en charge la méthode **IOpenRowset:: OpenRowset** avec les restrictions suivantes:  
+  OLE DB Driver pour SQL Server prend en charge la méthode **IOpenRowset::OpenRowset** avec les restrictions suivantes :  
   
 -   Une vue ou une table de base doit être spécifiée dans une structure d’ID de base de données (DBID) vers laquelle pointe le paramètre *pTableID*.  
   

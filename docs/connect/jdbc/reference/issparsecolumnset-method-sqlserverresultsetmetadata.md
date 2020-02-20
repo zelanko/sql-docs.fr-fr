@@ -11,10 +11,10 @@ ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b902ddf8e9e05900e55492116ee9e22a3dbbccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977220"
 ---
 # <a name="issparsecolumnset-method-sqlserverresultsetmetadata"></a>isSparseColumnSet, méthode (SQLServerResultSetMetaData)
@@ -33,8 +33,8 @@ public boolean isSparseColumnSet(int column)
   
  Index (de base un) de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si une colonne dans un jeu de résultats est un jeu de colonnes éparses; sinon, **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si la colonne du jeu de résultats est un jeu de colonnes éparses ; **false** sinon.  
   
 ## <a name="remarks"></a>Notes  
  Cette méthode ne récupère pas d'informations de la base de données.  

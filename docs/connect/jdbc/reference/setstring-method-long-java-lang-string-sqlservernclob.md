@@ -11,16 +11,16 @@ ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c549d3e1b7b9b63663333a59b263a2aa6ad4113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972668"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>Méthode setString (long, java.lang.String) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Écrit la **chaîne** spécifiée dans **NCLOB** , en démarrant à la position spécifiée.  
+  Écrit la **chaîne** spécifiée dans le **NCLOB**, en démarrant à la position spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +39,7 @@ public int setString(long pos,
   
  String à écrire sur le **NCLOB**.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Nombre de caractères écrits.  
   
 ## <a name="exceptions"></a>Exceptions  

@@ -1,5 +1,5 @@
 ---
-title: Méthode setNull (int, int, Java. lang. String) | Microsoft Docs
+title: Méthode setNull (int, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e59b32581d25370fa86da417fd71c1eb7b67b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973578"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>Méthode setNull (int, int, java.lang.String)
@@ -39,7 +39,7 @@ public final void setNull(int paramIndex,
 #### <a name="parameters"></a>Paramètres  
  *paramIndex*  
   
- **Entier** qui indique le numéro du paramètre.  
+ **int** indiquant le numéro du paramètre.  
   
  *sqlType*  
   
@@ -47,7 +47,7 @@ public final void setNull(int paramIndex,
   
  *typeName*  
   
- **Chaîne** qui indique le nom qualifié complet du paramètre en cours de définition.  
+ **Chaîne** indiquant le nom complet du paramètre en cours de définition.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

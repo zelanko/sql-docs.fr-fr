@@ -1,5 +1,5 @@
 ---
-title: Membres SQLServerResultSet | Microsoft Docs
+title: Membres de SQLServerResultSet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970565"
 ---
 # <a name="sqlserverresultset-members"></a>Membres de SQLServerResultSet
@@ -27,7 +27,7 @@ ms.locfileid: "67970565"
   
 ## <a name="fields"></a>Champs  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Utilisé pour spécifier un type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de concurrence optimiste en lecture/écriture, sans verrou de ligne.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Utilisé pour spécifier un type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de concurrence optimiste en lecture/écriture, sans verrou de ligne.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67970565"
   
 ## <a name="methods"></a>Méthodes  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Déplace le curseur à la ligne spécifiée dans cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|Déplace le curseur après la dernière ligne de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
@@ -71,7 +71,7 @@ ms.locfileid: "67970565"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|Récupère le mode de concurrence de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|Récupère le nom du curseur SQL utilisé par cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|Récupère la valeur de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant qu’objet java.sql.Date dans le langage de programmation Java.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Récupère la valeur de la colonne spécifiée sous la forme d’un objet de[classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Récupère la valeur de la colonne spécifiée en tant qu'objet [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Récupère la valeur de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant que **double** dans le langage de programmation Java.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|Récupère la direction d’extraction pour cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|Récupère la taille d’extraction pour cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
@@ -125,7 +125,7 @@ ms.locfileid: "67970565"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|Met à jour la colonne désignée avec une valeur de flux de caractères.|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|Met à jour la colonne désignée avec une valeur java.sql.Clob.|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|Met à jour la colonne désignée avec une valeur de date.|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|Met à jour une colonne de [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|Met à jour une colonne [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|Met à jour la colonne désignée avec une valeur **double**.|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|Met à jour la colonne désignée avec une valeur **float**.|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|Met à jour la colonne désignée avec une valeur **int**.|  
@@ -151,7 +151,7 @@ ms.locfileid: "67970565"
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

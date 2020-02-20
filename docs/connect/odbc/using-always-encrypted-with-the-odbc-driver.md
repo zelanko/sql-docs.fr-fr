@@ -7,13 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-author: MightyPen
-ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+author: v-chojas
+ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594374"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76706272"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -29,7 +29,7 @@ Cet article fournit des informations sur la façon de développer des applicatio
 
 Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. À cette fin, un pilote compatible avec Always Encrypted, comme ODBC Driver for SQL Server, chiffre et déchiffre de manière transparente les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Always Encrypted *avec les enclaves sécurisées* étend cette fonctionnalité pour activer des fonctionnalités plus complexes sur les données sensibles tout en préservant la confidentialité des données.
 
-Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [Always Encrypted avec les enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Pour plus d’informations, consultez [Always Encrypted (Moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ### <a name="prerequisites"></a>Conditions préalables requises
 
@@ -59,23 +59,26 @@ Notez que l’activation d’Always Encrypted ne suffit pas à la réussite du c
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Activation d’Always Encrypted avec les enclaves sécurisées
 
-À partir de la version 17.4, le pilote prend en charge Always Encrypted avec enclaves sécurisées. Pour permettre l’utilisation de l’enclave lors de la connexion à SQL Server 2019 ou version ultérieure, définissez le `ColumnEncryption` DSN, la chaîne de connexion ou l’attribut de connexion sur le nom du type d’enclave et le protocole d’attestation, ainsi que les données d’attestation associées, séparées par une virgule. Dans la version 17,4, seuls le type d’enclave de [sécurité basée sur la virtualisation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) et le protocole d’attestation du [service Guardian hôte](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , indiqué par `VBS-HGS`, sont pris en charge ; pour l’utiliser, spécifiez l’URL du serveur d’attestations, par exemple :
+> [!NOTE]
+> Sur Linux et Mac, la version 1.0.1 ou une version ultérieure d’OpenSSL est nécessaire pour pouvoir utiliser Always Encrypted avec des enclaves sécurisées.
+
+À partir de la version 17.4, le pilote prend en charge Always Encrypted avec enclaves sécurisées. Pour permettre l’utilisation de l’enclave lors de la connexion à SQL Server 2019 (ou version ultérieure), définissez le nom de source de données `ColumnEncryption`, la chaîne de connexion ou l’attribut de connexion sur le nom du type d’enclave et le protocole d’attestation, ainsi que les données d’attestation associées, séparées par une virgule. Dans la version 17.4, seul le type d’enclave [Sécurité basée sur la virtualisation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) avec le protocole d’attestation [Service Guardian hôte](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server), indiqué par `VBS-HGS`, est pris en charge ; pour l’utiliser, spécifiez l’URL du serveur d’attestation, par exemple :
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
 ```
 
-Si le serveur et le service d’attestation sont configurés correctement, ainsi que les clés CMK et clés CEK compatibles avec les enclaves pour les colonnes souhaitées, vous devez maintenant être en mesure d’exécuter des requêtes qui utilisent l’enclave, telles que le chiffrement sur place et les calculs enrichis, en plus de la fonctionnalités existantes fournies par Always Encrypted. Pour plus d’informations, consultez [configurer Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) .
+Si le serveur et le service d’attestation sont configurés correctement, ainsi que les clés CMK et CEK compatibles avec les enclaves des colonnes souhaitées, vous devriez à présent pouvoir exécuter des requêtes qui utilisent l’enclave, par exemple le chiffrement sur place et les calculs enrichis, en plus des fonctionnalités déjà fournies par Always Encrypted. Pour plus d’informations, consultez [Configurer Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md).
 
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Récupération et modification des données dans des colonnes chiffrées
 
-Une fois que vous avez activé Always Encrypted sur une connexion, vous pouvez utiliser les API ODBC standard. Les API ODBC peuvent récupérer ou modifier des données dans des colonnes de base de données chiffrées. Les éléments de documentation suivants peuvent vous aider :
+Une fois que vous avez activé Always Encrypted sur une connexion, vous pouvez utiliser les API ODBC standard. Les API ODBC peuvent récupérer ou modifier des données dans des colonnes de base de données chiffrées. Les éléments de documentation suivants pourraient vous aider :
 
 - [Exemple de code ODBC](cpp-code-example-app-connect-access-sql-db.md)
 - [Guide de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
 
-Votre application doit disposer des autorisations de base de données requises, et doit être en mesure d’accéder à la clé principale de colonne. Ensuite, le pilote chiffre tous les paramètres de requête qui ciblent des colonnes chiffrées. Le pilote déchiffre également les données récupérées à partir des colonnes chiffrées. Le pilote effectue tout ce chiffrement et déchiffrement sans aucune assistance de votre code source. Pour votre programme, c’est comme si les colonnes ne sont pas chiffrées.
+Votre application doit disposer des autorisations de base de données requises, et avoir accès à la clé principale de colonne. Ensuite, le pilote chiffre tous les paramètres de requête qui ciblent des colonnes chiffrées. Il déchiffre également les données récupérées à partir de colonnes chiffrées. Il effectue toutes ces opérations de chiffrement et de déchiffrement sans aucune assistance de la part de votre code source. Pour votre programme, c’est comme si les colonnes n’étaient pas chiffrées.
 
 Si Always Encrypted n’est pas activé, les requêtes ayant des paramètres qui ciblent des colonnes chiffrées échouent. Les données peuvent toujours être récupérées à partir des colonnes chiffrées, tant que la requête n’a aucun paramètre qui cible des colonnes chiffrées. Toutefois, le pilote ne tentera aucun déchiffrement et l’application recevra les données chiffrées binaires (sous la forme de tableaux d’octets).
 
@@ -113,7 +116,7 @@ Cet exemple insère une ligne dans la table Patients. Notez les points suivants�
 
 - Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont transmises sous forme de paramètres liés (voir [Fonction SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). L’utilisation de paramètres est facultative lors de l’envoi de valeurs aux colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes SSN ou BirthDate ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échoue car le pilote ne tente pas de chiffrer ou de traiter les littéraux dans les requêtes. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
 
-- Le type SQL du paramètre inséré dans la colonne SSN est défini sur SQL_CHAR, qui mappe au type de données SQL Server **char** (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Si le type du paramètre était défini sur SQL_WCHAR, qui mappe à **nchar**, la requête échouerait, car Always Encrypted ne prend pas en charge les conversions côté serveur de valeurs nchar chiffrées en valeurs char chiffrées. Pour plus d’informations sur les mappages de types de données, consultez [ODBC Programmer’s Reference -- Appendix D: Data Types](https://msdn.microsoft.com/library/ms713607.aspx) (Référence du programmeur ODBC -- Annexe D : Types de données).
+- Le type SQL du paramètre inséré dans la colonne SSN est défini sur SQL_CHAR, qui mappe au type de données SQL Server **char** (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Si le type du paramètre était défini sur SQL_WCHAR, qui mappe à **nchar**, la requête échouerait, car Always Encrypted ne prend pas en charge les conversions côté serveur de valeurs nchar chiffrées en valeurs char chiffrées. Pour plus d’informations sur les mappages de type de données, consultez [Guide de référence du programmeur ODBC – Annexe D : Types de données](https://msdn.microsoft.com/library/ms713607.aspx).
 
 ```
     SQL_DATE_STRUCT date;
@@ -161,7 +164,7 @@ L’exemple suivant montre le filtrage de données basé sur des valeurs chiffr�
 - Toutes les valeurs imprimées par le programme sont en texte clair, car le pilote déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
 
 > [!NOTE]
-> Les requêtes peuvent effectuer des comparaisons d’égalité sur des colonnes chiffrées uniquement si le chiffrement est déterministe ou si l’enclave sécurisée est activée. Pour plus d’informations, consultez [Sélection d’un chiffrement déterministe ou aléatoire](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+> Les requêtes ne peuvent effectuer des comparaisons d’égalité sur des colonnes chiffrées que si le chiffrement est déterministe ou que l’enclave sécurisée est activée. Pour plus d’informations, consultez [Sélection d’un chiffrement déterministe ou aléatoire](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 ```
 SQLCHAR SSN[12];
@@ -289,11 +292,11 @@ Pour éviter ce comportement, utilisez l’indicateur `SQL_COLUMN_IGNORE` afin d
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults et SQLDescribeCol
 
-Les programmes d’application peuvent appeler [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx) pour retourner des métadonnées concernant les colonnes dans des instructions préparées.  Quand Always Encrypted est activé, le fait d’appeler `SQLMoreResults` *avant* d’appeler `SQLDescribeCol` provoque l’appel à [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), qui ne retourne pas correctement les métadonnées en clair pour les colonnes chiffrées. Pour éviter ce problème, appelez `SQLDescribeCol` sur les instructions préparées *avant* d’appeler `SQLMoreResults`.
+Les programmes d’application peuvent appeler [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx) pour retourner des métadonnées concernant les colonnes dans des instructions préparées.  Quand Always Encrypted est activé, le fait d’appeler `SQLMoreResults` *avant* `SQLDescribeCol` provoque un appel de [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), qui ne retourne pas correctement les métadonnées en clair des colonnes chiffrées. Pour éviter ce problème, appelez `SQLDescribeCol` sur les instructions préparées *avant* d’appeler `SQLMoreResults`.
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>Contrôle de l’impact d’Always Encrypted sur les performances
 
-Étant donné qu’Always Encrypted est une technologie de chiffrement côté client, la dégradation des performances s’observe côté client, et non dans la base de données. Outre le coût des opérations de chiffrement et de déchiffrement, les autres sources de dégradation des performances côté client sont les suivantes :
+Always Encrypted étant une technologie de chiffrement côté client, la dégradation des performances s’observe côté client, et non dans la base de données. Outre le coût des opérations de chiffrement et de déchiffrement, les autres sources de dégradation des performances côté client sont les suivantes :
 
 - Allers-retours supplémentaires vers la base de données pour récupérer des métadonnées pour les paramètres de requête.
 
@@ -303,7 +306,7 @@ Cette section décrit les outils intégrés d’optimisation des performances da
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Contrôle des allers-retours en vue de la récupération des métadonnées pour les paramètres de requête
 
-Si Always Encrypted est activé pour une connexion, le pilote appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de savoir si des paramètres doivent être chiffrés. Si c’est le cas, elle retourne pour chaque paramètre des informations relatives au chiffrement qui permettent au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : l’application et le développeur d’applications n’ont pas besoin de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées au pilote dans les paramètres.
+Si Always Encrypted est activé pour une connexion, le pilote appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de savoir si des paramètres doivent être chiffrés. Si c’est le cas, elle retourne pour chaque paramètre des informations relatives au chiffrement qui permettent au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : L’application et le développeur d’applications n’ont pas besoin de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées au pilote dans les paramètres.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Comportement d’Always Encrypted par instruction
 
@@ -364,9 +367,9 @@ Pour obtenir la valeur de texte en clair d’une clé ECEK, le pilote obtient d�
 
 ODBC Driver for SQL Server est fourni avec les fournisseurs de magasins de clés intégrés suivants :
 
-| Nom | Description | Nom du fournisseur (de métadonnées) |Disponibilité|
+| Name | Description | Nom du fournisseur (de métadonnées) |Disponibilité|
 |:---|:---|:---|:---|
-|Coffre de clé Azure |Stocke les clés CMK dans un coffre de clés Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
+|Azure Key Vault |Stocke les clés CMK dans un coffre de clés Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Magasin de certificats Windows|Stocke les clés CMK localement dans le magasin de clés Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - Vous (ou votre administrateur de base de données) devez vérifier que le nom du fournisseur (configuré dans les métadonnées de clé principale de colonne) est correct et que le chemin de la clé principale de colonne est conforme au format du chemin de clé pour le fournisseur donné. Il est recommandé de configurer les clés à l’aide d’outils tels que SQL Server Management Studio, qui génère automatiquement des noms de fournisseurs et des chemins de clés valides lors de l’émission de l’instruction [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) .
@@ -378,7 +381,7 @@ ODBC Driver for SQL Server est fourni avec les fournisseurs de magasins de clés
 Azure Key Vault (AKV) est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. ODBC Driver for SQL Server sur Linux, macOS et Windows inclut un fournisseur de magasin de clés principales de colonne intégré pour Azure Key Vault. Pour plus d’informations sur la configuration d’un coffre de clés Azure pour Always Encrypted, consultez [Azure Key Vault – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Qu’est-ce qu’Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) et [Créer et stocker des clés principales de colonne (Azure Key Vault)](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
 
 > [!NOTE]
-> Le pilote ODBC ne prend pas en charge Services ADFS pour l’authentification AKV. Si vous utilisez l’authentification Azure Active Directory sur AKV et que votre configuration de Active Directory comprend des services fédérés, l’authentification peut échouer.
+> Le pilote ODBC ne prend pas en charge les services de fédération Active Directory pour l’authentification AKV. Si vous utilisez l’authentification Azure Active Directory auprès d’AKV et que votre configuration Active Directory comprend des services fédérés, l’authentification risque d’échouer.
 > Sur Linux et macOS, pour les versions 17.2 et ultérieures du pilote, `libcurl` est nécessaire pour utiliser ce fournisseur, mais n’est pas une dépendance explicite dans la mesure où les autres opérations avec le pilote n’en ont pas besoin. Si vous rencontrez une erreur concernant `libcurl`, vérifiez qu’il est installé.
 
 Le pilote prend en charge l’authentification auprès d’Azure Key Vault avec les types d’informations d’identification suivants :
@@ -420,7 +423,7 @@ ODBC Driver for SQL Server sur Windows inclut un fournisseur de magasin de clés
 
 ODBC Driver for SQL Server prend également en charge les fournisseurs de magasins de clés tiers personnalisés à l’aide de l’interface CEKeystoreProvider. Cela permet à une application de charger, d’interroger et de configurer des fournisseurs de magasin de clés afin que le pilote puisse les utiliser pour accéder aux colonnes chiffrées. Les applications peuvent également interagir directement avec un fournisseur de magasin de clés afin de chiffrer des clés CEK pour le stockage dans SQL Server, et effectuer des tâches au-delà de l’accès aux colonnes chiffrées avec ODBC. Pour plus d’informations, consultez [Fournisseurs de magasins de clés personnalisés](../../connect/odbc/custom-keystore-providers.md).
 
-Deux attributs de connexion sont utilisés pour interagir avec les fournisseurs de magasins de clés personnalisés. Celles-ci sont les suivantes :
+Deux attributs de connexion sont utilisés pour interagir avec les fournisseurs de magasins de clés personnalisés. Il s'agit de :
 
 - `SQL_COPT_SS_CEKEYSTOREPROVIDER`
 
@@ -569,7 +572,7 @@ Les [fonctions de copie en bloc SQL](../../relational-databases/native-client-od
 
 - Pour insérer du texte chiffré au format varbinary(max) (tel qu’il a été récupéré ci-dessus, par exemple), donnez la valeur TRUE à l’option `BCPMODIFYENCRYPTED` et effectuez une opération BCP IN. Pour que les données résultantes soient déchiffrables, la clé CEK de la colonne de destination doit être la même que celle avec laquelle le texte chiffré a été obtenu à l’origine.
 
-En cas d’utilisation de l’utilitaire **bcp** : pour contrôler le paramètre `ColumnEncryption`, utilisez l’option -D et spécifiez un nom de source de données contenant la valeur souhaitée. Pour insérer du texte chiffré, veillez à ce que le paramètre `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` de l’utilisateur soit activé.
+Si vous utilisez l’utilitaire **bcp** : pour contrôler le paramètre `ColumnEncryption`, utilisez l’option -D et spécifiez un nom de source de données contenant la valeur souhaitée. Pour insérer du texte chiffré, veillez à ce que le paramètre `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` de l’utilisateur soit activé.
 
 Le tableau suivant fournit un résumé des actions en cas d’opération sur une colonne chiffrée :
 
@@ -582,7 +585,7 @@ Le tableau suivant fournit un résumé des actions en cas d’opération sur une
 
 ### <a name="the-bcpmodifyencrypted-option"></a>Option BCPMODIFYENCRYPTED
 
-Pour prévenir la corruption des données, normalement le serveur n’autorise pas l’insertion de texte chiffré directement dans une colonne chiffrée (toute tentative échouera). Toutefois, pour le chargement en bloc de données chiffrées à l’aide de l’API BCP, l’affectation de la valeur TRUE à l’option [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) `BCPMODIFYENCRYPTED` permet d’insérer directement du texte chiffré et réduit le risque d’endommager les données chiffrées, comparé à la définition de l’option `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` sur le compte d’utilisateur. Néanmoins, les clés doivent correspondre aux données, et il est judicieux d’effectuer des vérifications en lecture seule des données insérées après l’insertion en bloc et avant toute utilisation ultérieure.
+Pour empêcher l’altération des données, le serveur n’autorise en principe pas l’insertion de texte chiffré directement dans une colonne chiffrée (toute tentative échouera). Toutefois, pour le chargement en bloc de données chiffrées avec l’API BCP, si l’option `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) a la valeur TRUE, il est possible d’insérer directement du texte chiffré, ce qui réduit le risque d’altération des données chiffrées par rapport à l’option `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` sur le compte d’utilisateur. Néanmoins, les clés doivent correspondre aux données, et il est judicieux d’effectuer des vérifications en lecture seule des données insérées après l’insertion en bloc et avant toute utilisation ultérieure.
 
 Pour plus d’informations, consultez [Migrer des données sensibles protégées par Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
 
@@ -590,9 +593,9 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-string-keywords"></a>Mots clés de chaîne de connexion
 
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|Les valeurs acceptées sont `Enabled`/`Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` : désactive la fonctionnalité Always Encrypted pour la connexion.<br>*type*,*Data* --(version 17,4 et ultérieure) active Always Encrypted avec l’enclave et le *type*de protocole d’attestation sécurisés, ainsi que les *données*d’attestation associées. <br><br>La valeur par défaut est `Disabled`.|
+|`ColumnEncryption`|Les valeurs acceptées sont `Enabled`/`Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` : désactive la fonctionnalité Always Encrypted pour la connexion.<br>*type*,*données* : (version 17.4 et ultérieures) active Always Encrypted avec l’enclave sécurisée et le *type* de protocole d’attestation, avec les *données* d’attestation associées. <br><br>Par défaut, il s’agit de `Disabled`.|
 |`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Quand `KeyStoreAuthentication` = `KeyVaultPassword`, affectez à cette valeur un nom d’utilisateur principal Azure Active Directory valide. <br>Quand `KeyStoreAuthetication` = `KeyVaultClientSecret`, affectez à cette valeur un ID client d’application Azure Active Directory valide. |
 |`KeyStoreSecret` | Quand `KeyStoreAuthentication` = `KeyVaultPassword`, affectez à cette valeur le mot de passe du nom d’utilisateur correspondant. <br>Quand `KeyStoreAuthentication` = `KeyVaultClientSecret`, affectez à cette valeur le secret d’application associé à un ID client d’application Azure Active Directory valide. |
@@ -600,9 +603,9 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-attributes"></a>Attributs de connexion
 
-|Nom|Type|Description|  
+|Name|Type|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Avant la connexion|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Désactiver Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Activer Always Encrypted<br> pointeur vers *type*, chaîne de*données* --(version 17,4 et ultérieure) activer avec l’enclave sécurisée|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Avant la connexion|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Désactiver Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Activer Always Encrypted<br> pointeur vers *type*,chaîne de *données* : (version 17.4 et ultérieures) activer avec l’enclave sécurisée.|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Après la connexion|[Set] Tenter de charger CEKeystoreProvider<br>[Get] Retourner un nom CEKeystoreProvider|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Après la connexion|[Set] Écrire les données dans CEKeystoreProvider<br>[Get] Lire les données à partir de CEKeystoreProvider|
 |`SQL_COPT_SS_CEKCACHETTL`|Après la connexion|[Set] Définir la durée de vie du cache CEK<br>[Get] Récupérer la durée de vie actuelle du cache CEK|
@@ -610,7 +613,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="statement-attributes"></a>Attributs d'instruction
 
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- Always Encrypted est désactivé pour l’instruction <br>`SQL_CE_RESULTSETONLY` (1) -- Déchiffrement uniquement. Les jeux de résultats et les valeurs de retour sont déchiffrés, et les paramètres ne sont pas chiffrés <br>`SQL_CE_ENABLED` (3) -- Always Encrypted est activé et utilisé pour les paramètres et les résultats|
 
@@ -626,8 +629,29 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|Quand la valeur est TRUE, autorise l’insertion de valeurs varbinary(max) dans une colonne chiffrée. Quand la valeur est FALSE, empêche l’insertion, sauf si les métadonnées de chiffrement et le type correct sont fournis.|
 
+## <a name="troubleshooting"></a>Dépannage
+
+Si vous rencontrez des difficultés avec Always Encrypted, commencez par vérifier les points suivants :
+
+- La clé CEK qui chiffre la colonne souhaitée est présente et accessible sur le serveur.
+
+- La clé CMK qui chiffre le clé CEK comporte des métadonnées accessibles sur le serveur et est également accessible à partir du client.
+
+- `ColumnEncryption` est activé dans le nom de source de données, la chaîne de connexion ou l’attribut de connexion et, si vous utilisez l’enclave sécurisée, est au bon format.
+
+
+Par ailleurs, si vous utilisez l’enclave sécurisée, les échecs d’attestation permettent d’identifier l’étape du processus d’attestation où l’échec s’est produit, selon le tableau suivant :
+
+|Étape|Description|
+|----|-----------|
+|0-99| Réponse d’attestation non valide ou erreur lors de la vérification de la signature. |
+|100-199| Erreur lors de la récupération des certificats à partir de l’URL d’attestation. Vérifiez que `<attestation URL>/v2.0/signingCertificates` est valide et accessible. |
+|200-299| Format inattendu ou incorrect de l’identité de l’enclave. |
+|300-399| Erreur lors de l’établissement d’un canal sécurisé avec l’enclave. |
+
+
 ## <a name="see-also"></a>Voir aussi
 
 - [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
-- [Blog sur Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Blog Chiffrement intégral](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)

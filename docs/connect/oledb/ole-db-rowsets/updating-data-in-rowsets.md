@@ -1,6 +1,6 @@
 ---
 title: Mise à jour des données dans les ensembles de lignes | Microsoft Docs
-description: Mise à jour des données dans les ensembles de lignes à l’aide du pilote OLE DB pour SQL Server
+description: Mise à jour des données dans les ensembles de lignes à l’aide d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e19128d6defa2c154cc8bddbcc4bcaa761b58a2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015340"
 ---
 # <a name="updating-data-in-rowsets"></a>Mise à jour des données dans les ensembles de lignes
@@ -31,9 +31,9 @@ ms.locfileid: "68015340"
 
   Le pilote OLE DB pour SQL Server met à jour les données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsqu’un consommateur met à jour un ensemble de lignes modifiable contenant ces données. Un ensemble de lignes modifiable est créé lorsque le consommateur demande la prise en charge de l’interface **IRowsetChange** ou **IRowsetUpdate**.  
   
- Tous les OLE DB pilote pour les ensembles de lignes modifiables par SQL Server utilisent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des curseurs pour prendre en charge l’ensemble de lignes. La propriété d'ensemble de lignes DBPROP_LOCKMODE modifie le comportement du contrôle concurrentiel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des curseurs et détermine le comportement de l'extraction de lignes d'un ensemble de lignes et la génération d'erreurs d'intégrité des données dans les ensembles de lignes pouvant être mis à jour.  
+ Tous les ensembles de lignes OLE DB Driver pour SQL Server modifiable par le serveur utilisent des curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour prendre en charge l'ensemble de lignes. La propriété d'ensemble de lignes DBPROP_LOCKMODE modifie le comportement du contrôle concurrentiel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des curseurs et détermine le comportement de l'extraction de lignes d'un ensemble de lignes et la génération d'erreurs d'intégrité des données dans les ensembles de lignes pouvant être mis à jour.  
   
- Le pilote OLE DB pour SQL Server prend en charge la synchronisation de ligne avant ou après une mise à jour.  
+ OLE DB Driver pour SQL Server prend en charge la synchronisation de lignes avant ou après une mise à jour.  
   
 > [!NOTE]  
 >  IRowChange::SetColumns permet de définir les valeurs d'une ou de plusieurs colonnes nommées d'un objet ligne.  

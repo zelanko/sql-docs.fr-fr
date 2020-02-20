@@ -9,10 +9,10 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70176286"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports
@@ -53,7 +53,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
 |Historique|**Non**|**Non**||  
 |Paramètres d'historique|Oui|Oui|Les paramètres d'historique sont migrés, cependant les informations d'historique NE SONT PAS migrées.|  
 |Planifications|Oui|Oui|Pour migrer des planifications, il est nécessaire que SQL Server Agent soit en cours de exécution sur le serveur cible. Si SQL Server Agent n’est pas exécuté sur la cible, un message d’erreur semblable au suivant s’affiche :<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
-|Rôles et stratégies système|Oui|Oui|Par défaut, le script ne copie pas de schéma d’autorisation personnalisé entre les serveurs. Le comportement par défaut est que les éléments sont copiés sur le serveur de destination avec l’indicateur « Hériter les autorisations de l’élément parent » défini sur TRUE. Si vous voulez générer un script pour copier les autorisations pour chaque élément, utilisez le commutateur SECURITY.<br /><br /> Si les serveurs sources et cibles **n’ont pas le même mode de serveur de rapports**, par exemple si le serveur source est en mode natif et le serveur cible est en mode SharePoint, et si vous utilisez le commutateur SECURITY, le script tente de mapper les rôles et les groupes par défaut en effectuant une comparaison, comme cela est décrit dans l’article [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Les rôles et les groupes personnalisés ne sont pas copiés sur le serveur de destination.<br /><br /> Quand le script copie entre des serveurs qui **ont le même mode**, et si vous utilisez le commutateur SECURITY, le script crée des rôles (mode natif) ou des groupes (mode SharePoint) sur le serveur de destination.<br /><br /> Si un rôle existe déjà sur le serveur de destination, le script crée un message d’échec similaire au suivant et poursuit la migration des autres éléments. Une fois le script terminé, vérifiez que les rôles sur le serveur de destination sont configurés conformément à vos besoins. Rôles de migration : 8 éléments trouvés.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> **Remarque :** Si un utilisateur qui existe sur le serveur source n’existe pas sur le serveur de destination, le script ne peut pas appliquer les attributions de rôles sur le serveur de destination, même si le commutateur SECURITY est utilisé.|  
+|Rôles et stratégies système|Oui|Oui|Par défaut, le script ne copie pas de schéma d’autorisation personnalisé entre les serveurs. Le comportement par défaut est que les éléments sont copiés sur le serveur de destination avec l’indicateur « Hériter les autorisations de l’élément parent » défini sur TRUE. Si vous voulez générer un script pour copier les autorisations pour chaque élément, utilisez le commutateur SECURITY.<br /><br /> Si les serveurs sources et cibles **n’ont pas le même mode de serveur de rapports**, par exemple si le serveur source est en mode natif et le serveur cible est en mode SharePoint, et si vous utilisez le commutateur SECURITY, le script tente de mapper les rôles et les groupes par défaut en effectuant une comparaison, comme cela est décrit dans l’article [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Les rôles et les groupes personnalisés ne sont pas copiés sur le serveur de destination.<br /><br /> Quand le script copie entre des serveurs qui **ont le même mode**, et si vous utilisez le commutateur SECURITY, le script crée des rôles (mode natif) ou des groupes (mode SharePoint) sur le serveur de destination.<br /><br /> Si un rôle existe déjà sur le serveur de destination, le script crée un message d’échec similaire au suivant et poursuit la migration des autres éléments. Une fois le script terminé, vérifiez que les rôles sur le serveur de destination sont configurés conformément à vos besoins. Rôles de migration : 8 éléments trouvés.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> **Remarque :** Si un utilisateur qui existe sur le serveur source n’existe pas sur le serveur de destination, le script ne peut pas appliquer les attributions de rôles sur le serveur de destination, même si le commutateur SECURITY est utilisé.|  
 |Source de données partagée|Oui|Oui|Le script ne remplace pas les éléments existants sur le serveur cible. Si un élément du même nom existe déjà sur le serveur cible, un message d’erreur similaire au suivant s’affiche :<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Les informations d’identification **NE sont PAS** copiées dans le cadre de la source de données. Une fois que les éléments de contenu sont migrés, mettez à jour les informations d'identification sur le serveur de destination.|  
 |Dataset partagé|Oui|Oui|| 
 |Dossier|Oui|Oui|Le script ne remplace pas les éléments existants sur le serveur cible. Si un élément du même nom existe déjà sur le serveur cible, un message d’erreur similaire au suivant s’affiche :<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -62,7 +62,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
 |Abonnements|Oui|Oui||  
 |Paramètres d'historique|Oui|Oui|Les paramètres d'historique sont migrés, cependant les informations d'historique NE SONT PAS migrées.|  
 |Options de traitement|Oui|Oui||  
-|Options d'actualisation du cache|Oui|Oui|Les paramètres dépendants sont migrés en tant qu'éléments du catalogue. Ce qui suit est un exemple hors du script car il migre un rapport (.rdl) et les paramètres liés tels que les options d'actualisation du cache :<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br />-   Migrating subscription Save in \\\server\public\savedreports as TitleOnly ... SUCCESS<br />-   Migrating history settings for report TitleOnly.rdl ... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 élément.<br />-   Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br />-   Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
+|Options d'actualisation du cache|Oui|Oui|Les paramètres dépendants sont migrés en tant qu'éléments du catalogue. Ce qui suit est un exemple hors du script car il migre un rapport (.rdl) et les paramètres liés tels que les options d'actualisation du cache :<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl : 1 élément trouvé.<br />-   Migrating subscription Save in \\\server\public\savedreports as TitleOnly ... SUCCESS<br />-   Migrating history settings for report TitleOnly.rdl ... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 élément.<br />-   Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl : 1 élément trouvé.<br />-   Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
 |Plans d’actualisation du cache|Oui|Oui||  
 |Images|Oui|Oui||  
 |Parties de rapports|Oui|Oui||  
@@ -70,9 +70,9 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
 ##  <a name="bkmk_required_permissions"></a> Autorisations requises  
  Les autorisations requises pour lire ou écrire des éléments et ressources ne sont pas les mêmes pour toutes les méthodes utilisées dans le script. Le tableau suivant résume les méthodes utilisées pour chaque élément ou ressource et renvoie à une rubrique spécifique. Naviguez vers l’article individuel pour afficher les autorisations requises. Par exemple, la rubrique qui traite de la méthode ListChildren indique les autorisations requises pour :  
   
--   **Autorisations requises en mode natif :** ReadProperties sur Item  
+-   **Autorisations requises en mode natif :** ReadProperties on Item  
   
--   **Autorisations nécessaires en mode SharePoint :** ViewListItems  
+-   **Autorisations requises en mode SharePoint :** ViewListItems  
   
 |Élément ou ressource|Source|Cible|  
 |----------------------|------------|------------|  
@@ -80,7 +80,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
 |Role|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
 |Stratégie système|<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|  
 |Planifier|<xref:ReportService2010.ReportingService2010.ListSchedules%2A>|<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|  
-|Abonnement|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  
+|Subscription|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  
 |Plan d'actualisation du cache|<xref:ReportService2010.ReportingService2010.ListCacheRefreshPlans%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetCacheRefreshPlanProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateCacheRefreshPlan%2A>|  
 |Paramètres|<xref:ReportService2010.ReportingService2010.GetItemParameters%2A>|<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|  
 |Options d'exécution|<xref:ReportService2010.ReportingService2010.GetExecutionOptions%2A>|<xref:ReportService2010.ReportingService2010.SetExecutionOptions%2A>|  
@@ -106,7 +106,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
   
  `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
   
- **Remarques d'utilisation :**  
+ **Notes d’utilisation :**  
   
 -   Le script s'exécute en deux étapes.  
   
@@ -199,7 +199,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
   
 ##  <a name="bkmk_parameter_description"></a> Description des paramètres  
   
-|Paramètre|Description|Requis|  
+|Paramètre|Description|Obligatoire|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|URL du serveur de rapports source|Oui|  
 |**-u** Domain\password **-p** password|Informations d'identification pour le serveur source.|FACULTATIF, les informations d'identification par défaut sont utilisées si manquantes|  
@@ -314,10 +314,10 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
  Réexécutez le script avec l’indicateur **-t** pour voir un message de ce type :  
   
--   System.Exception : Impossible de se connecter au serveur : https://\<nom_serveur>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Échec de la requête avec l’état HTTP 401 : Non autorisé**.   à System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) à System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object [] parameters) à Microsoft.SqlServer.reportingservices2010.reportingservice2010.issslrequired () à Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) à Microsoft.ReportingServices.scripthost.scripthost.determineserverurlsecurity ()---fin de la trace de pile d’exception interne---  
+-   System.Exception : Impossible de se connecter au serveur : https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException : **La demande a échoué avec l'état HTTP 401 : Non autorisé**.   à System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) à System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object [] parameters) à Microsoft.SqlServer.reportingservices2010.reportingservice2010.issslrequired () à Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) à Microsoft.ReportingServices.scripthost.scripthost.determineserverurlsecurity ()---fin de la trace de pile d’exception interne---  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   

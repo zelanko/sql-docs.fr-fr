@@ -16,10 +16,10 @@ ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 995f3f0f63728d397cf51013bd5429943e9cac0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974398"
 ---
 # <a name="setfetchdirection-method-sqlserverstatement"></a>Méthode setFetchDirection (SQLServerStatement)
@@ -40,7 +40,7 @@ public final void setFetchDirection(int nDir)
 #### <a name="parameters"></a>Paramètres  
  *nDir*  
   
- **Entier** qui indique la direction de traitement des lignes, qui peut prendre l’une des valeurs suivantes:  
+ Une valeur **int** qui indique la direction de traitement de la ligne, qui peut être l'une des valeurs suivantes :  
   
  FETCH_FORWARD  
   
@@ -51,10 +51,10 @@ public final void setFetchDirection(int nDir)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode setFetchDirection est spécifiée par la méthode setFetchDirection dans l’interface java. Sql. Statement.  
+## <a name="remarks"></a>Notes   
+ Cette méthode setFetchDirection est spécifiée par la méthode setFetchDirection de l’interface java.sql.Statement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

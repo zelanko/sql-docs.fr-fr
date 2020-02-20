@@ -23,10 +23,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a1deedd8903f69268ebc5e7f5caafaa79a7f7b18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994928"
 ---
 # <a name="return-codes"></a>Codes de retour
@@ -38,15 +38,15 @@ ms.locfileid: "67994928"
   
  Pour plus d’informations sur les codes de retour OLE DB, consultez [Codes de retour (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
- Quand un pilote OLE DB pour SQL Server fonction membre retourne S_OK, la fonction a réussi.  
+ Lorsqu'une fonction membre OLE DB Driver pour SQL Server retourne S_OK, la fonction a réussi.  
   
  Quand une fonction membre du pilote OLE DB pour SQL Server ne retourne pas S_OK, les macros OLE/COM FAILED et IS_ERROR de décompactage de HRESULT peuvent déterminer le succès ou l’échec global d’une fonction.  
   
- Si FAILED ou IS_ERROR retourne la valeur TRUE, le consommateur du pilote OLE DB pour SQL Server a l’information selon laquelle l’exécution de la fonction membre a échoué. Lorsque FAILed ou IS_ERROR retournent FALSe et que le HRESULT n’est pas égal à S_OK, le pilote OLE DB pour SQL Server consommateur est assuré que la fonction a réussi d’une certaine manière. Le consommateur peut extraire des informations détaillées sur ce retour « réussite avec informations » à partir des interfaces d’erreur du pilote OLE DB pour SQL Server. De même, dans le cas où une fonction échoue clairement (la macro FAILED retourne TRUE), les informations d’erreur étendues sont disponibles via les interfaces d’erreur du pilote OLE DB pour SQL Server.  
+ Si FAILED ou IS_ERROR retourne la valeur TRUE, le consommateur du pilote OLE DB pour SQL Server a l’information selon laquelle l’exécution de la fonction membre a échoué. Si FAILED ou IS_ERROR retourne FALSE et que HRESULT n'est pas égal à S_OK, le consommateur OLE DB Driver pour SQL Server est assuré que la fonction a réussi d'une façon ou d'une autre. Le consommateur peut extraire des informations détaillées sur ce retour « réussite avec informations » à partir des interfaces d’erreur du pilote OLE DB pour SQL Server. De même, dans le cas où une fonction échoue clairement (la macro FAILED retourne TRUE), les informations d’erreur étendues sont disponibles via les interfaces d’erreur du pilote OLE DB pour SQL Server.  
   
- OLE DB pilote pour SQL Server les consommateurs rencontrent généralement le retour HRESULT DB_S_ERRORSOCCURRED «réussite avec les informations». En général, les fonctions membres qui retournent DB_S_ERRORSOCCURRED définissent un ou plusieurs paramètres qui remettent les valeurs d'état au consommateur. Il est possible que le consommateur ne dispose d’aucune information d’erreur autre que celle retournée dans les paramètres état-valeur : les consommateurs doivent donc implémenter la logique d’application nécessaire pour extraire les valeurs d’état quand elles sont disponibles.  
+ Les consommateurs OLE DB Driver pour SQL Server rencontrent généralement le retour HRESULT de DB_S_ERRORSOCCURRED « réussi avec informations ». En général, les fonctions membres qui retournent DB_S_ERRORSOCCURRED définissent un ou plusieurs paramètres qui remettent les valeurs d'état au consommateur. Il est possible que le consommateur ne dispose d’aucune information d’erreur autre que celle retournée dans les paramètres état-valeur : les consommateurs doivent donc implémenter la logique d’application nécessaire pour extraire les valeurs d’état quand elles sont disponibles.  
   
- Le pilote OLE DB pour les fonctions membres de SQL Server ne retourne pas le code de réussite S_FALSE. Tous les OLE DB pilote pour SQL Server fonctions membres retournent toujours S_OK pour indiquer la réussite.  
+ Les fonctions membres OLE DB Driver pour SQL Server ne retournent pas le code de réussite S_FALSE. Toutes les fonctions membres OLE DB Driver pour SQL Server retournent toujours S_OK pour indiquer le succès.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Erreurs](../../oledb/ole-db-errors/errors.md)  

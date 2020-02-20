@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149942"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558286"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Voici des exemples de types de prédictions pour lesquels vous pouvez utiliser S
 |-|-|
 |Classification/catégorisation|Diviser automatiquement les commentaires des clients en catégories positives et négatives|
 |Régression/prédiction de valeurs continues|Prédire le prix de maisons en fonction de la taille et de l’emplacement|
-|Détection d’anomalie|Détecter les transactions bancaires frauduleuses |
+|Détection des anomalies|Détecter les transactions bancaires frauduleuses |
 |Recommandations|Suggérer des produits que les acheteurs en ligne peuvent souhaiter acheter, en fonction de leurs achats précédents|
 
 ### <a name="how-to-execute-python-and-r-scripts"></a>Comment exécuter des scripts Python et R
@@ -67,7 +67,7 @@ Vous pouvez exécuter des scripts Python et R dans Machine Learning Services de 
 
 Vous pouvez utiliser des frameworks et des packages open source, en plus des packages d’entreprise Microsoft. Les packages Python et R open source les plus courants sont préinstallés dans Machine Learning Services. Les packages Python et R suivants de Microsoft sont également inclus :
 
-| Langue | Package | Description |
+| Langage | Package | Description |
 |-|-|-|
 | Python | [revoscalepy](python/ref-py-revoscalepy.md) | Package principal pour créer du code Python scalable : transformations et manipulations de données, totalisation statistique, visualisation et nombreuses formes de modélisation. De plus, les fonctions de ce package distribuent automatiquement les charges de travail entre les cœurs disponibles pour un traitement parallèle. |
 | Python | [microsoftml](python/ref-py-microsoftml.md) | Ajoute des algorithmes de machine learning pour créer des modèles personnalisés pour l’analyse des textes, l’analyse des images et l’analyse des sentiments. | 
@@ -75,18 +75,18 @@ Vous pouvez utiliser des frameworks et des packages open source, en plus des pac
 | R | [MicrosoftML (R)](r/ref-r-microsoftml.md) | Ajoute des algorithmes de machine learning pour créer des modèles personnalisés pour l’analyse des textes, l’analyse des images et l’analyse des sentiments. |
 | R | [olapR](r/ref-r-olapr.md) | Fonctions R utilisées pour les requêtes MDX sur un cube OLAP SQL Server Analysis Services. |
 | R | [sqlrutils](r/ref-r-sqlrutils.md) | Mécanisme permettant d’utiliser les scripts R dans une procédure stockée T-SQL, d’inscrire cette procédure auprès d’une base de données et d’exécuter la procédure stockée à partir d’un [environnement de développement R](r/set-up-a-data-science-client.md). |
-| R | [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) est la distribution améliorée de R fournie par Microsoft. Il s’agit d’une plateforme open source complète destinée à l’analyse statistique et à la science des données. Basée sur R et entièrement compatible avec ce langage, elle comprend des fonctionnalités supplémentaires visant à améliorer les performances et la reproductibilité. |
+| R | [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) est la distribution améliorée de R fournie par Microsoft. Il s’agit d’une plate-forme open source complète pour l’analyse statistique et la science des données. Basée sur R et entièrement compatible avec ce langage, elle comprend des fonctionnalités supplémentaires visant à améliorer les performances et la reproductibilité. |
 
 Pour plus d’informations sur les packages installés avec Machine Learning Services et sur l’installation d’autres packages, consultez :
 
 + [Obtenir des informations sur les packages Python](package-management/python-package-information.md)
 + [Installer des packages Python avec sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
-+ [Obtenir des informations sur les packages R](package-management/r-package-information.md)
++ [Obtenir des informations sur les packages R](package-management/r-package-information.md)
 + [Installer de nouveaux packages R avec sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md)
 
 ## <a name="how-do-i-get-started-with-machine-learning-services"></a>Comment bien démarrer avec Machine Learning Services ?
 
-1. [Installez SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md).
+1. [Installer SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md)
 
 1. Configurez vos outils de développement. Vous pouvez utiliser :
 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server les résultats du message | Microsoft Docs
+title: Résultats des messages SQL Server | Microsoft Docs
 description: résultats des messages SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 05d731f418bad21f9e8ec32c620b352c5663994a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994919"
 ---
 # <a name="sql-server-message-results"></a>Résultats des messages SQL Server
@@ -38,9 +38,9 @@ ms.locfileid: "67994919"
   
 -   SET STATISTICS  
   
- Ces instructions retournent un ou plusieurs messages d'information ou entraînent le renvoi par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de messages d'information au lieu de résultats sous forme d'ensemble de lignes ou de nombre. En cas d’exécution réussie, le pilote OLE DB pour SQL Server retourne S_OK et les messages sont disponibles pour le pilote OLE DB pour SQL Server consommateur.  
+ Ces instructions retournent un ou plusieurs messages d'information ou entraînent le renvoi par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de messages d'information au lieu de résultats sous forme d'ensemble de lignes ou de nombre. En cas d'exécution réussie, OLE DB Driver pour SQL Server renvoie S_OK, et les messages sont disponibles pour le consommateur OLE DB Driver pour SQL Server.  
   
- Le pilote OLE DB pour SQL Server retourne S_OK et un ou plusieurs messages d’information sont disponibles à la suite de l' [!INCLUDE[tsql](../../../includes/tsql-md.md)] exécution de nombreuses instructions ou de l’exécution du consommateur d’un pilote OLE DB pour SQL Server fonction membre.  
+ OLE DB Driver pour SQL Server retourne S_OK et possède un ou plusieurs messages d'information disponibles après l'exécution de plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou après l'exécution par le consommateur d'une fonction membre OLE DB Driver pour SQL Server.  
   
  Le consommateur du pilote OLE DB pour SQL Server autorisant la spécification dynamique du texte de la requête doit vérifier les interfaces d’erreur après chaque exécution d’une fonction membre, indépendamment de la valeur du code de retour, de la présence ou de l’absence d’une référence d’interface **IRowset** ou **IMultipleResults** retournée, ou d’un nombre de lignes affectées.  
   

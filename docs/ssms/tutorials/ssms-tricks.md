@@ -1,5 +1,5 @@
 ---
-title: Conseils et astuces pour utiliser SQL Server Management Studio (SSMS)
+title: Conseils et astuces sur l’utilisation de SSMS
 description: Apprenez à commenter et à supprimer les commentaires sur votre code, à mettre en retrait votre texte, à filtrer des objets dans l’Explorateur d’objets, à accéder à votre journal des erreurs SQL Server et à rechercher le nom de votre instance SQL Server à l’aide de SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: d5b52a35bce720e3985a8191335491c50e43c50e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267584"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245511"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Conseils et astuces pour utiliser SQL Server Management Studio (SSMS)
 

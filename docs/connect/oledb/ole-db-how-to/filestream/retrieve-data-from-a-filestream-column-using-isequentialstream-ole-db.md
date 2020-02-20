@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 201314f5869b9b1aab52b2f101f2396656448f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994789"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Récupérer des données d'une colonne FILESTREAM à l'aide d'ISequentialStream (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "67994789"
 
   Cet exemple montre comment utiliser une interface ISequentialStream dans une interface ICommandText pour récupérer un enregistrement unique d'une colonne Filestream.  
   
- Pour plus d’informations sur la fonctionnalité FileStream, consultez [prise en charge de FileStream](../../../oledb/features/filestream-support.md).  
+ Pour plus d'informations sur la fonctionnalité filestream, consultez [Prise en charge de FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Exemple  
  Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  

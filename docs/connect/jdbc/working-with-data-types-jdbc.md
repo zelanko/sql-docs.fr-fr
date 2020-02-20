@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025704"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934445"
 ---
 # <a name="working-with-data-types-jdbc"></a>Utilisation des types de données (JDBC)
 
@@ -36,7 +36,7 @@ Les rubriques de cette section décrivent comment utiliser les types de données
 |-----------|-----------------|  
 |[Exemple de types de données de base](../../connect/jdbc/basic-data-types-sample.md)|Décrit l’utilisation des méthodes getter du jeu de résultats pour récupérer les valeurs des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base, ainsi que l’utilisation des méthodes update du jeu de résultats pour mettre à jour ces valeurs.|  
 |[Exemple de type de données SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Explique comment stocker des données XML dans une base de données relationnelle, comment récupérer des données XML à partir d’une base de données et comment analyser des données XML à l’aide du type de données Java **SQLXML**.|  
-|[Exemple de types de données spatiales](../../connect/jdbc/spatial-data-types-sample.md)|Décrit comment stocker et récupérer des données avec des types de données spatiaux «Geometry» et « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Geography» de base de données avec des types Java de **géométrie** et **Geography** définis par Microsoft JDBC Driver.|
+|[Exemple de types de données spatiales](../../connect/jdbc/spatial-data-types-sample.md)|Explique comment stocker et récupérer des données avec des types de données spatiaux 'Geometry' et 'Geography' d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les types Java **Geometry** et **Geography** définis par Microsoft JDBC Driver.|
 
 ## <a name="see-also"></a>Voir aussi
 

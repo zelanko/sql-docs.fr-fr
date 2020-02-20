@@ -11,13 +11,13 @@ ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0cc8e3e48024e6d5af789919173454d0ee05e56
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027651"
 ---
-# <a name="sqlxml-data-type-sample"></a>Exemple de type de données SQLXML
+# <a name="sqlxml-data-type-sample"></a>exemple de type de données SQLXML
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -42,7 +42,7 @@ Pour exécuter cet exemple d'application, vous devez définir l'instruction clas
 
 L’accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est par ailleurs nécessaire pour pouvoir exécuter cet exemple d’application.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Dans l’exemple suivant, le code établit une connexion à la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], puis appelle la méthode createSampleTables.
 

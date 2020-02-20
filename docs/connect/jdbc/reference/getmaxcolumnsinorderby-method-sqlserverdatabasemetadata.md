@@ -16,10 +16,10 @@ ms.assetid: d6af9bb4-c55d-41f4-a266-d10ebee61194
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60bb089d5c53699cda93c888b959fe71e5ffbfe6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982230"
 ---
 # <a name="getmaxcolumnsinorderby-method-sqlserverdatabasemetadata"></a>Méthode getMaxColumnsInOrderBy (SQLServerDatabaseMetaData)
@@ -34,16 +34,16 @@ ms.locfileid: "67982230"
 public int getMaxColumnsInOrderBy()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique le nombre maximal de colonnes autorisées.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant le nombre maximal de colonnes autorisé.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode getMaxColumnsInOrderBy, est spécifiée par la méthode getMaxColumnsInOrderBy, dans l’interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Notes   
+ Cette méthode getMaxColumnsInOrderBy est spécifiée par la méthode getMaxColumnsInOrderBy de l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

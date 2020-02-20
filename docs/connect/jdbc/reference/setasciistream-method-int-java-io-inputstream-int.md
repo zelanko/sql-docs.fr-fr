@@ -16,10 +16,10 @@ ms.assetid: 9436c39f-f1a1-484a-a75b-776a72ca70f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 978805a1bd275771bdcfbae1616bd49535e2499a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975514"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-int"></a>Méthode setAsciiStream (int, java.io.InputStream, int)
@@ -39,7 +39,7 @@ public final void setAsciiStream(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- **Entier** qui indique le numéro du paramètre.  
+ **int** indiquant le numéro du paramètre.  
   
  *x*  
   
@@ -53,7 +53,7 @@ public final void setAsciiStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream dans l’interface java. Sql. PreparedStatement.  
+ Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream de l’interface java.sql.PreparedStatement.  
   
  Si la longueur du flux diffère de celle spécifiée dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

@@ -16,10 +16,10 @@ ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e803e60568030eb105fa52a15bc2c2bc4b3e8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972291"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>setTransactionIsolation, méthode (SQLServerConnection)
@@ -53,7 +53,7 @@ public void setTransactionIsolation(int level)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setTransactionIsolation est spécifiée par la méthode setTransactionIsolation dans l’interface java. Sql. Connection.  
+ Cette méthode setTransactionIsolation est spécifiée par la méthode setTransactionIsolation de l’interface java.sql.Connection.  
   
  Les transactions ne sont pas validées si cette méthode est appelée au milieu d'une transaction.  
   

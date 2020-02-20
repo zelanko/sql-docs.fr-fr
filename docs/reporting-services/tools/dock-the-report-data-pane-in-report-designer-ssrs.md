@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9720a4d5e975f6bf46c17d2008252e05cf7171f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2480d94a6a6815c18c7464a7441daad1dd3595db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577857"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190415"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancrer le volet des données de rapport dans le Concepteur de rapports (SSRS)
   Dans le Concepteur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le volet des données de rapport affiche une vue hiérarchique des objets de données que vous pouvez utiliser dans un rapport, y compris les sources de données, datasets, champs, paramètres et images. Les sources de données dans cette vue peuvent être incorporées ou représenter des références aux sources de données partagées affichées dans l'Explorateur de solutions.  
@@ -42,6 +42,6 @@ ms.locfileid: "65577857"
   
 ## <a name="see-also"></a>Voir aussi  
  [Données du rapport, volet](../../reporting-services/report-data/report-data-pane.md)   
- [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

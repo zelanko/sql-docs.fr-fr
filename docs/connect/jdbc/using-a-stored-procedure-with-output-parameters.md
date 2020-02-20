@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026834"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Utilisation d'une procédure stockée avec des paramètres de sortie
@@ -28,11 +28,11 @@ Quand vous appelez ce type de procédure stockée avec le pilote JDBC, vous deve
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Pour plus d’informations sur les séquences d’échappement SQL, consultez Utilisation de séquences d' [échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Pour plus d’informations sur les séquences d’échappement SQL, consultez [Utiliser des séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Quand vous construisez la séquence d’échappement `call`, spécifiez les paramètres OUT en utilisant le caractère ? (point d'interrogation). Ce caractère fait office d'espace réservé pour les valeurs de paramètre qui sont retournées par la procédure stockée. Pour spécifier une valeur pour un paramètre OUT, vous devez spécifier le type de données de chaque paramètre avec la méthode [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la classe SQLServerCallableStatement avant d’exécuter la procédure stockée.
 
-La valeur que vous spécifiez pour le paramètre OUT dans la méthode registerOutParameter doit être un des types de données JDBC contenus dans java.sql.Types, qui est mappé à un des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] natifs. Pour plus d’informations sur les types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données JDBC et, consultez [Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+La valeur que vous spécifiez pour le paramètre OUT dans la méthode registerOutParameter doit être un des types de données JDBC contenus dans java.sql.Types, qui est mappé à un des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] natifs. Pour plus d’informations sur les types de données JDBC et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Comprendre les types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 Quand vous passez une valeur à la méthode registerOutParameter pour un paramètre OUT, vous devez spécifier non seulement le type de données à utiliser pour le paramètre, mais également la position ordinale du paramètre ou le nom du paramètre dans la procédure stockée. Par exemple, si votre procédure stockée contient un seul paramètre OUT, sa valeur ordinale est 1 ; si la procédure stockée contient deux paramètres, la première valeur ordinale est 1 et la seconde 2.
 
@@ -82,9 +82,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> Ces exemples utilisent la méthode Execute de la classe SQLServerCallableStatement pour exécuter la procédure stockée. Elle est utilisée parce que la procédure stockée n'a pas retourné de jeu de résultats. Si elle l’avait fait, la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) serait utilisée.
+> Ces exemples utilisent la méthode execute de la classe SQLServerCallableStatement pour exécuter la procédure stockée. Elle est utilisée parce que la procédure stockée n'a pas retourné de jeu de résultats. Si elle l’avait fait, la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) serait utilisée.
 
-Les procédures stockées peuvent retourner des nombres de mises à jour et des jeux de résultats multiples. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] suit la spécification JDBC 3.0, qui stipule que les jeux de résultats et les nombres de mises à jour multiples doivent être récupérés avant les paramètres OUT. Autrement dit, l’application doit récupérer tous les objets ResultSet et les nombres de mises à jour avant de récupérer les paramètres OUT à l’aide des méthodes CallableStatement. Getter. Si tel n’est pas le cas, les objets ResultSet et les nombres de mises à jour qui n’ont pas encore été extraits sont perdus lors de l’extraction des paramètres OUT. Pour plus d’informations sur les nombres de mises à jour et les jeux de résultats multiples, consultez [utilisation d’une procédure stockée avec un nombre de mises à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) et [utilisation de plusieurs jeux de résultats](../../connect/jdbc/using-multiple-result-sets.md).
+Les procédures stockées peuvent retourner des nombres de mises à jour et des jeux de résultats multiples. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] suit la spécification JDBC 3.0, qui stipule que les jeux de résultats et les nombres de mises à jour multiples doivent être récupérés avant les paramètres OUT. Autrement dit, l’application doit extraire tous les objets ResultSet et tous les nombres de mises à jour avant de récupérer les paramètres OUT avec les méthodes CallableStatement.getter. Si tel n’est pas le cas, les objets ResultSet et les nombres de mises à jour qui n’ont pas encore été extraits sont perdus lors de l’extraction des paramètres OUT. Pour plus d’informations sur les nombres de mises à jour et les jeux de résultats multiples, consultez [Utiliser une procédure stockée avec un nombre de mises à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) et [Utiliser plusieurs jeux de résultats](../../connect/jdbc/using-multiple-result-sets.md).
 
 ## <a name="see-also"></a>Voir aussi
 

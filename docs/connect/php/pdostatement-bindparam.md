@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 77b0899d6bc0a73db5e0cfa7794209ab74ed25ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936153"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918655"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,17 +30,17 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*parameter* : identificateur de paramètre (mixte). Pour une instruction qui utilise des espaces réservés nommés, utilisez un nom de paramètre (:name). Pour une instruction préparée qui utilise la syntaxe constituée de points d’interrogation, il s’agit de l’index en base 1 du paramètre.  
+$*parameter* : identificateur de paramètre (mixte). Pour une instruction qui utilise des espaces réservés nommés, utilisez un nom de paramètre (:name). Pour une instruction préparée qui utilise la syntaxe constituée de points d’interrogation, il s’agit de l’index en base 1 du paramètre.  
   
-&$*variable* : nom (mixte) de la variable PHP à lier au paramètre d’instruction SQL.  
+&$*variable* : nom (mixte) de la variable PHP à lier au paramètre d’instruction SQL.  
   
-$*data_type*: constante facultative (entier) PDO::PARAM_*. La valeur par défaut est PDO::PARAM_STR.  
+$*data_type* : constante PDO::PARAM_ * (entière) facultative. La valeur par défaut est PDO::PARAM_STR.  
   
-$*length* : longueur facultative du type de données (entier). Vous pouvez spécifier PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE pour indiquer la taille par défaut quand vous utilisez PDO::PARAM_INT ou PDO::PARAM_BOOL dans $*data_type*.  
+$*length* : longueur du type de données (entière) facultative. Vous pouvez spécifier PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE pour indiquer la taille par défaut quand vous utilisez PDO::PARAM_INT ou PDO::PARAM_BOOL dans $*data_type*.  
   
-$*driver_options*: options spécifiques au pilote (mixte) facultatives. Par exemple, vous pouvez spécifier PDO::SQLSRV_ENCODING_UTF8 pour lier la colonne à une variable en tant que chaîne encodée au format UTF-8.  
+$*driver_options* : options propres au pilote (mixtes) facultatives. Par exemple, vous pouvez spécifier PDO::SQLSRV_ENCODING_UTF8 pour lier la colonne à une variable en tant que chaîne encodée au format UTF-8.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 TRUE en cas de réussite ; sinon, FALSE.  
   
 ## <a name="remarks"></a>Notes  
@@ -99,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Lors de la liaison d’un paramètre de sortie à un type bigint, si la valeur peut se terminer en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), l’utilisation de pdo::P ARAM_INT avec PDO:: SQLSRV_PARAM_OUT_DEFAULT_SIZE peut entraîner l’exception «valeur hors limites». Par conséquent, utilisez à la place le PDO par défaut:P ARAM_STR et indiquez la taille de la chaîne résultante, qui est au plus 21. Il s’agit du nombre maximal de chiffres, y compris le signe négatif, de n’importe quelle valeur bigint. 
+> Lors de la liaison d’un paramètre de sortie à un type bigint, si la valeur est susceptible de se retrouver en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), PDO::PARAM_INT avec PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE risque d’entraîner une exception « valeur hors limites ». Utilisez plutôt la valeur PDO::PARAM_STR par défaut et indiquez la taille de la chaîne résultante, 21 maximum. Il s’agit du nombre maximal de chiffres, y compris le signe négatif, de n’importe quelle valeur bigint. 
 
 ## <a name="example"></a>Exemple  
 Cet exemple de code montre comment utiliser un paramètre d’entrée/sortie.  
@@ -133,7 +133,7 @@ $server = "(local)";
 $conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
 
 // Assume TestTable exists with a decimal field 
-$input = 9223372036854.80000;
+$input = "9223372036854.80000";
 $stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
 // by default it is PDO::PARAM_STR, rounding of a large input value may
 // occur if PDO::PARAM_INT is specified

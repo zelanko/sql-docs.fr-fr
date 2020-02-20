@@ -1,5 +1,5 @@
 ---
-title: Liaisons et conversions (OLE DB) | Microsoft Docs
+title: Liaisons et conversions (OLE DB) | Microsoft Docs
 description: Liaisons et conversions (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: dc86193f40474fc373c1b0e7dd48e579e8548821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015839"
 ---
 # <a name="conversions-ole-db"></a>Conversions (OLE DB)
@@ -26,11 +26,11 @@ ms.locfileid: "68015839"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cette section explique comment effectuer une conversion entre des valeurs **DateTime** et **DateTimeOffset** . Les conversions décrites dans cette section sont soit déjà fournies par OLE DB, soit une extension cohérente de ce dernier.  
+  Cette section explique comment effectuer une conversion entre les valeurs **datetime** et **datetimeoffset**. Les conversions décrites dans cette section sont soit déjà fournies par OLE DB, soit une extension cohérente de ce dernier.  
   
- Le format des littéraux et des chaînes pour les dates et les heures dans OLE DB suit généralement la norme ISO et ne dépend pas des paramètres régionaux du client. Une exception est DBTYPE_DATE où la norme est OLE Automation. Toutefois, étant donné que OLE DB pilote pour les SQL Server convertit uniquement entre les types lorsque des données sont transmises vers ou à partir du client, il n’existe aucun moyen pour une application de forcer OLE DB SQL Server pilote à effectuer une conversion entre les formats DBTYPE_DATE et String. Sinon, les chaînes utilisent les formats suivants (le texte entre crochets indique un élément facultatif) :  
+ Le format des littéraux et des chaînes pour les dates et les heures dans OLE DB suit généralement la norme ISO et ne dépend pas des paramètres régionaux du client. Une exception est DBTYPE_DATE où la norme est OLE Automation. Toutefois, du fait qu’OLE DB Driver pour SQL Server effectue uniquement des conversions entre des types lorsque des données sont transmises vers ou depuis le client, il n'existe aucun moyen de contraindre OLE DB Driver pour SQL Server à effectuer des conversions entre DBTYPE_DATE et un format de chaîne. Sinon, les chaînes utilisent les formats suivants (le texte entre crochets indique un élément facultatif) :  
   
--   Le format des chaînes **DateTime** et **DateTimeOffset** est le suivant:  
+-   Le format des chaînes **datetime** et **datetimeoffset** est le suivant :  
   
      *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -38,14 +38,14 @@ ms.locfileid: "68015839"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   Le format des chaînes de **Date** est le suivant:  
+-   Le format des chaînes **date** est :  
   
      *aaaa*-*mm*-*jj*  
   
 > [!NOTE]  
->  Les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. Le pilote OLE DB pour SQL Server suit le même comportement que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Par conséquent, certaines conversions effectuées par OLE DB pilote pour SQL Server diffèrent de la spécification OLE DB.  
+>  Les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. OLE DB Driver pour SQL Server suit le même comportement que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. C'est pourquoi certaines conversions réalisées par OLE DB Driver pour SQL Server et versions ultérieures diffèrent de la spécification OLE DB.  
   
- Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez la section «formats de données: chaînes et littéraux» dans [type de données prise en charge de OLE DB améliorations de la date et](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)de l’heure.  
+ Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d'informations, consultez la section « Formats de données : chaînes et littéraux » dans [Prise en charge des types de données pour les améliorations de date et d’heure OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Les règles suivantes sont les règles générales de conversion :  
   

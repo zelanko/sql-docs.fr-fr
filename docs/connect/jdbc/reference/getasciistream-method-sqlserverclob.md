@@ -16,10 +16,10 @@ ms.assetid: 134abe5e-5add-4d27-b333-b4b0f4d94c31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dfa7ed5314d75ba0bec0d2a000575e8d9ed4d3fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954136"
 ---
 # <a name="getasciistream-method-sqlserverclob"></a>Méthode getAsciiStream (SQLServerClob)
@@ -34,14 +34,14 @@ ms.locfileid: "67954136"
 public java.io.InputStream getAsciiStream()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Flux d'entrée contenant les données CLOB.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getAsciiStream est spécifiée par la méthode getAsciiStream dans l’interface java. Sql. CLOB.  
+ Cette méthode getAsciiStream est spécifiée par la méthode getAsciiStream de l’interface java.sql.Clob.  
   
  Retourne toujours un flux d'octets et part du principe que les données dans l'objet CLOB présentent un format ASCII car il n'existe aucun moyen de savoir s'il s'agit d'Unicode ou de toute autre page de codes multi-octet.  
   

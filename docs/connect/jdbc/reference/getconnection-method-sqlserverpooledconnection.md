@@ -16,10 +16,10 @@ ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 352d867e444158cb2b8754a9cce1752bc4c2ee4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952693"
 ---
 # <a name="getconnection-method-sqlserverpooledconnection"></a>Méthode getConnection (SQLServerPooledConnection)
@@ -34,16 +34,16 @@ ms.locfileid: "67952693"
 public java.sql.Connection getConnection()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet Connection.  
   
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notes  
- Cette méthode getConnection est spécifiée par la méthode getConnection dans l’interface javax. Sql. PooledConnection.  
+## <a name="remarks"></a>Notes   
+ Cette méthode getConnection est spécifiée par la méthode getConnection de l’interface javax.sql.PooledConnection.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerPooledConnection, méthodes](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   
  [SQLServerPooledConnection, membres](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
  [SQLServerPooledConnection, classe](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  

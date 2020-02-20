@@ -16,10 +16,10 @@ ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5741f8ba74009327befc8f940e1d3b37df6ef1ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972701"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>Méthode setString (long, java.lang.String, int, int)
@@ -54,7 +54,7 @@ public int setString(long pos,
   
  Nombre de caractères à écrire.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Nombre de caractères écrits.  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -66,7 +66,7 @@ public int setString(long pos,
  Les données de caractères sont remplacées, en démarrant à la position spécifiée et peuvent remplacer la longueur initiale de l'objet CLOB. La spécification d'une valeur position+1 permet d'ajouter la chaîne. La spécification d'une valeur position+2 ou supérieure (ou de zéro ou d'une valeur inférieure) génère une erreur de position.  
   
 ## <a name="see-also"></a>Voir aussi  
- [setString, &#40;méthode SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [Méthode setString &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  

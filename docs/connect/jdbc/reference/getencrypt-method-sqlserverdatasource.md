@@ -16,10 +16,10 @@ ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3764ff5b9308b4b370dda14e98787513c28458c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983379"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>Méthode getEncrypt (SQLServerDataSource)
@@ -34,7 +34,7 @@ ms.locfileid: "67983379"
 public boolean getEncypt()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si le chiffrement est activé. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  

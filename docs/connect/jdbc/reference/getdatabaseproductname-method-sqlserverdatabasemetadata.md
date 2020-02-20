@@ -16,10 +16,10 @@ ms.assetid: 548bd099-019f-487c-87cc-6f0b665f164d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62677c494f4f613846fb6ea621fb143f27098267
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984099"
 ---
 # <a name="getdatabaseproductname-method-sqlserverdatabasemetadata"></a>Méthode getDatabaseProductName (SQLServerDatabaseMetaData)
@@ -34,16 +34,16 @@ ms.locfileid: "67984099"
 public java.lang.String getDatabaseProductName()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui contient le nom de produit de la base de données.  
+## <a name="return-value"></a>Valeur de retour  
+ **Chaîne** contenant le nom de produit de la base de données.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode getDatabaseProductName est spécifiée par la méthode getDatabaseProductName dans l’interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Notes   
+ Cette méthode getDatabaseProductName est spécifiée par la méthode getDatabaseProductName de l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

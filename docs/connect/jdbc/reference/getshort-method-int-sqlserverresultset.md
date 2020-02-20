@@ -16,10 +16,10 @@ ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a301a499a1f640703c431b42739f366596f28b55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979894"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort, méthode (int) (SQLServerResultSet)
@@ -37,10 +37,10 @@ public short getShort(int columnIndex)
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- Valeur de type **short** .  
+## <a name="return-value"></a>Valeur de retour  
+ Valeur **short**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

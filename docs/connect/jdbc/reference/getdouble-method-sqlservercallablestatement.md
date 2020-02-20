@@ -1,5 +1,5 @@
 ---
-title: getDouble, méthode (SQLServerCallableStatement) | Microsoft Docs
+title: Méthode getDouble (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f89ce642-9eac-4d5b-b1ba-45aa3031ab3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9cde443dc067e21ff0385e988a312095a04da0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983509"
 ---
 # <a name="getdouble-method-sqlservercallablestatement"></a>Méthode getDouble (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67983509"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getDouble (int)](../../../connect/jdbc/reference/getdouble-method-int.md)|Récupère la valeur du paramètre désigné sous forme d’objet **double** dans le langage de programmation Java en fonction de l’index de paramètre.|  
 |[getDouble (java.lang.String)](../../../connect/jdbc/reference/getdouble-method-java-lang-string.md)|Récupère la valeur du paramètre désigné sous forme d’objet **double** dans le langage de programmation Java en fonction du nom de paramètre.|  

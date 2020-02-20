@@ -16,10 +16,10 @@ ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9dabb3084bf42ed60a408e6158f70f2b9ae20e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977755"
 ---
 # <a name="iscatalogatstart-method-sqlserverdatabasemetadata"></a>Méthode isCatalogAtStart (SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67977755"
 public boolean isCatalogAtStart()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si le nom du catalogue est le premier. Dans le cas contraire, la valeur est **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si le nom du catalogue apparaît en premier. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode isCatalogAtStart est spécifiée par la méthode isCatalogAtStart dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode isCatalogAtStart est spécifiée par la méthode isCatalogAtStart de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

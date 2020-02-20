@@ -16,10 +16,10 @@ ms.assetid: 672dceac-ddfe-43e1-851b-5172b78fed9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fdbd0de626b946d17e46f9a46f92235c3b9e1535
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953785"
 ---
 # <a name="getbigdecimal-method-sqlserverresultset"></a>getBigDecimal, méthode (SQLServerResultSet)
@@ -29,12 +29,12 @@ ms.locfileid: "67953785"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[méthode &#40;getBigDecimal int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de java.math.BigDecimal avec une précision totale.|  
-|[méthode &#40;getBigDecimal int, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-int-sqlserverresultset.md)|(Déconseillé) Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) suivant l’échelle donnée.|  
-|[méthode &#40;getBigDecimal Java. lang. String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-sqlserverresultset.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de java.math.BigDecimal avec une précision totale.|  
-|[méthode &#40;getBigDecimal Java. lang. String, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int-sqlserverresultset.md)|(Déconseillé) Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) suivant l’échelle donnée.|  
+|[Méthode getBigDecimal &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de java.math.BigDecimal avec une précision totale.|  
+|[Méthode getBigDecimal &#40;int, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-int-sqlserverresultset.md)|(Déconseillé) Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) suivant l’échelle donnée.|  
+|[Méthode getBigDecimal &#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-sqlserverresultset.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de java.math.BigDecimal avec une précision totale.|  
+|[Méthode getBigDecimal &#40;java.lang.String, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int-sqlserverresultset.md)|(Déconseillé) Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) suivant l’échelle donnée.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

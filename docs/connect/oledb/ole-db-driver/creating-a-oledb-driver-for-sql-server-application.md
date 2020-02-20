@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4f7861e02b1ed203911f4e3f86575a9688c861fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015666"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Création d’une application de pilote OLE DB pour SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "68015666"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  La création d’un pilote OLE DB pour SQL Server application implique les étapes suivantes:  
+  La création d’une application de pilote OLE DB pour SQL Server implique les étapes suivantes :  
   
 1.  Établissement d'une connexion à une source de données.  
   

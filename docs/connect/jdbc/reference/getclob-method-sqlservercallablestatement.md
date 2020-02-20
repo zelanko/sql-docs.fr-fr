@@ -1,5 +1,5 @@
 ---
-title: Méthode getClob, (SQLServerCallableStatement) | Microsoft Docs
+title: Méthode getClob (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c1824b89-fc2e-4741-b849-7d06108fda97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd533ef2dce654ee1a414499094781f1d5a22c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953019"
 ---
 # <a name="getclob-method-sqlservercallablestatement"></a>Méthode getClob (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953019"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int.md)|Récupère la valeur du paramètre BLOB JDBC désigné sous forme d’objet Clob dans le langage de programmation Java en fonction de l’index de paramètre.|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string.md)|Récupère la valeur du paramètre BLOB JDBC désigné sous forme d’objet Clob dans le langage de programmation Java en fonction du nom de paramètre.|  

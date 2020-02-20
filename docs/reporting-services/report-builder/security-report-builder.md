@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593841"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190097"
 ---
 # <a name="security-report-builder"></a>Sécurité (Générateur de rapports)
-  Le Générateur de rapports est une application cliente de création de rapports conçue pour être utilisée conjointement avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le serveur de rapports peut être configuré pour être utilisé en mode natif en tant que serveur autonome ou en mode intégré SharePoint afin de prendre en charge les rapports sur un site SharePoint.  
+  Le Générateur de rapports est une application cliente de création de rapports conçue pour être utilisée conjointement avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le serveur de rapports peut être configuré pour être utilisé en mode natif en tant que serveur autonome ou en mode intégré SharePoint afin de prendre en charge les rapports sur un site SharePoint.  
   
  Dans le Générateur de rapports, vous pouvez créer des rapports, des datasets partagés et des parties de rapports réutilisables. À partir d'un serveur de rapports ou d'un site SharePoint, vous pouvez modifier des rapports et ajouter des sources de données partagées, des datasets partagés et des parties de rapports partagées.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73593841"
   
  Pour permettre aux autres utilisateurs de rechercher et de trouver des éléments que vous avez publiés pour les partager, vous devez collaborer avec l'administrateur du serveur de rapports afin d'organiser les dossiers de manière à les rendre accessibles à vos utilisateurs. L'accès est nécessaire pour la création de rapports et l'exécution des rapports publiés.  
   
- Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour plus d'informations, voir les rubriques suivantes :  
   
 -   [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -90,10 +90,10 @@ ms.locfileid: "73593841"
   
  Au moment de la conception du rapport, les informations d'identification sont utilisées pour exécuter les requêtes de dataset et afficher l'aperçu du rapport. Au moment de l'exécution, les informations d'identification sont utilisées pour exécuter le rapport et mettre en cache les résultats des requêtes. Vous pouvez également mettre en cache les résultats des requêtes de dataset partagé de manière indépendante. Les informations d'identification peuvent différer au moment de la conception et au moment de l'exécution. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- Pour plus d’informations sur la sécurisation des données, consultez [Security Center pour SQL Server moteur de base de données et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
+ Pour plus d’informations sur la sécurisation des données, consultez [Security Center pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
   
   
- Pour plus d’informations sur les sources de données, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur les sources de données, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Fonctionnement des modèles et des filtres de sécurité  
@@ -107,7 +107,7 @@ ms.locfileid: "73593841"
   
 -   N'utilisez pas de paramètres basés sur des paramètres de requête et qui sont de type **Texte** , à moins que vous ne fournissiez des valeurs valides. Une liste de valeurs disponibles aide l'utilisateur à choisir uniquement des valeurs valides. Sans une liste de valeurs disponibles, vous ne pouvez pas restreindre les valeurs qu'un utilisateur peut entrer.  
   
--   N'utilisez pas la valeur globale [&UserID] pour sécuriser des données privées. En tant que paramètre de rapport, cette valeur peut être spécifiée dans une URL de rapport à l'aide de la syntaxe d'accès URL. L'utilisation de cette valeur dans une expression d'un dataset partagé empêche le dataset d'être mis en cache. Pour plus d’informations, consultez [référence de paramètre d’accès URL](../../reporting-services/url-access-parameter-reference.md).  
+-   N'utilisez pas la valeur globale [&UserID] pour sécuriser des données privées. En tant que paramètre de rapport, cette valeur peut être spécifiée dans une URL de rapport à l'aide de la syntaxe d'accès URL. L'utilisation de cette valeur dans une expression d'un dataset partagé empêche le dataset d'être mis en cache. Pour plus d’informations, consultez [Référence de paramètre d’accès URL](../../reporting-services/url-access-parameter-reference.md).  
   
  Une fois les éléments publiés sur un serveur de rapports, l'administrateur du serveur de rapports peut contribuer à les sécuriser à l'aide d'une sécurité basée sur les rôles ou d'une sécurité au niveau des éléments et des dossiers. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  
   

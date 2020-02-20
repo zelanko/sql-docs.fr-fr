@@ -11,10 +11,10 @@ ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cee317d725b730f50eeef0502f63d7fca6d2c4b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997117"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>Méthode updateBlob (int, java.io.InputStream, long)
@@ -34,7 +34,7 @@ public void updateBlob(int columnIndex,
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
  *inputStream*  
   
@@ -42,7 +42,7 @@ public void updateBlob(int columnIndex,
   
  *length*  
   
- **Valeur de type long** qui indique la longueur du flux.  
+ **long** indiquant la longueur du flux.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

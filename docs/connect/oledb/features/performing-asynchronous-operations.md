@@ -1,6 +1,6 @@
 ---
-title: Exécution d’opérations asynchrones | Microsoft Docs
-description: Exécution d’opérations asynchrones avec OLE DB pilote pour SQL Server
+title: Exécution d’opérations asynchrones Azure | Microsoft Docs
+description: Exécution d’opérations asynchrones avec OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989019"
 ---
 # <a name="performing-asynchronous-operations"></a>Exécution d'opérations asynchrones
@@ -52,7 +52,7 @@ ms.locfileid: "67989019"
 ## <a name="execution-and-rowset-initialization"></a>Exécution et initialisation de l'ensemble de lignes  
  Les applications conçues pour ouvrir de façon asynchrone le résultat de l'exécution d'une commande peuvent définir DBPROPVAL_ASYNCH_INITIALIZE dans la propriété DBPROP_ROWSET_ASYNCH. Lors de la définition de ce bit avant d’appeler **IDBInitialize::Initialize**, **ICommand::Execute**, **IOpenRowset::OpenRowset** ou **IMultipleResults::GetResult**, l’argument *riid* doit avoir pour valeur IID_IDBAsynchStatus, IID_ISSAsynchStatus ou IID_IUnknown.  
   
- La méthode est retournée immédiatement avec S_OK si l’initialisation de l’ensemble de lignes s’effectue immédiatement (ou avec DB_S_ASYNCHRONOUS si l’ensemble de lignes poursuit son initialisation de façon asynchrone) avec *ppRowset* défini en fonction de l’interface demandée sur l’ensemble de lignes. Pour le pilote OLE DB pour SQL Server, cette interface peut uniquement être **IDBAsynchStatus** ou **ISSAsynchStatus**. Jusqu’à ce que l’ensemble de lignes soit entièrement initialisé, cette interface se comporte comme si elle était dans un état suspendu ; par ailleurs, l’appel de **QueryInterface** pour les interfaces autres **qu’IID_IDBAsynchStatus** ou **qu’IID_ISSAsynchStatus** peut retourner E_NOINTERFACE. À moins que le consommateur ne demande explicitement un traitement asynchrone, l'ensemble de lignes est initialisé de façon synchrone. Toutes les interfaces demandées sont disponibles quand **IDBAsynchStaus::GetStatus** ou **ISSAsynchStatus::WaitForAsynchCompletion** est retournée avec l’indication que l’opération asynchrone a été effectuée. Cela ne signifie pas nécessairement que l'ensemble de lignes soit entièrement rempli, mais il est prêt et complètement fonctionnel.  
+ La méthode est retournée immédiatement avec S_OK si l’initialisation de l’ensemble de lignes s’effectue immédiatement (ou avec DB_S_ASYNCHRONOUS si l’ensemble de lignes poursuit son initialisation de façon asynchrone) avec *ppRowset* défini en fonction de l’interface demandée sur l’ensemble de lignes. Pour OLE DB Driver pour SQL Server, cette interface peut être uniquement **IDBAsynchStatus** ou **ISSAsynchStatus**. Jusqu’à ce que l’ensemble de lignes soit entièrement initialisé, cette interface se comporte comme si elle était dans un état suspendu ; par ailleurs, l’appel de **QueryInterface** pour les interfaces autres **qu’IID_IDBAsynchStatus** ou **qu’IID_ISSAsynchStatus** peut retourner E_NOINTERFACE. À moins que le consommateur ne demande explicitement un traitement asynchrone, l'ensemble de lignes est initialisé de façon synchrone. Toutes les interfaces demandées sont disponibles quand **IDBAsynchStaus::GetStatus** ou **ISSAsynchStatus::WaitForAsynchCompletion** est retournée avec l’indication que l’opération asynchrone a été effectuée. Cela ne signifie pas nécessairement que l'ensemble de lignes soit entièrement rempli, mais il est prêt et complètement fonctionnel.  
   
  Si la commande exécutée ne retourne pas d’ensemble de lignes, elle est quand même retournée immédiatement avec un objet qui prend en charge **IDBAsynchStatus**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67989019"
   
  Les interfaces **IDBAsynchStatus** et **ISSAsynchStatus** peuvent ensuite être obtenues en interrogeant l’interface de résultats multiples via **QueryInterface**.  
   
- Quand l’exécution de la commande est terminée, **IMultipleResults** peut être utilisé normalement à une exception près par rapport au traitement synchrone : DB_S_ASYNCHRONOUS peut être retourné, auquel cas **IDBAsynchStatus** ou **ISSAsynchStatus** peut être utilisée pour déterminer le moment où l’opération est achevée.  
+ Une fois l’exécution de la commande terminée, **IMultipleResults** peut être utilisé normalement, à une exception près par rapport au traitement synchrone : DB_S_ASYNCHRONOUS peut être retourné, auquel cas **IDBAsynchStatus** ou **ISSAsynchStatus** peuvent être utilisés pour déterminer le moment où l’opération est achevée.  
   
 ## <a name="examples"></a>Exemples  
  Dans l'exemple suivant, l'application appelle une méthode non bloquante, effectue d'autres traitements, puis retourne au traitement des résultats. **ISSAsynchStatus::WaitForAsynchCompletion** attend l’objet d’événement interne jusqu’à ce que l’opération s’exécutant de manière asynchrone soit terminée ou que le délai spécifié par *dwMilisecTimeOut* soit passé.  

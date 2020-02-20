@@ -1,5 +1,5 @@
 ---
-title: FileStream et OLE DB | Microsoft Docs
+title: Filestream et OLE DB | Microsoft Docs
 description: Filestream et OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8229c20a500680c1b83304bc2e443c20838b5a02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015596"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream et OLE DB
@@ -22,7 +22,7 @@ ms.locfileid: "68015596"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  Cette section contient quatre exemples qui montrent comment utiliser OLE DB Driver for SQL Server avec la fonctionnalité FileStream:  
+  Cette section contient quatre exemples qui illustrent l'utilisation de OLE DB Driver pour SQL Server avec la fonctionnalité Filestream :  
   
 -   [Lire une colonne FILESTREAM dans un fichier avec IBCPSession (OLE DB) &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   

@@ -15,10 +15,10 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67285049"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
@@ -26,7 +26,7 @@ ms.locfileid: "67285049"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.|  
   
  **Dans cet article :**  
   
@@ -43,10 +43,10 @@ ms.locfileid: "67285049"
   
  Le tableau suivant répertorie les valeurs possibles de la colonne **État** .  
   
-|État|Description|  
+|Statut|Description|  
 |------------|-----------------|  
 |Nouvel abonnement|Apparaît la première fois que vous créez l'abonnement.|  
-|Inactif|Apparaît lorsqu’un abonnement ne peut pas être traité. Pour plus d'informations, consultez « Gestion des abonnements inactifs », plus loin dans cet article.|  
+|Inactif|Apparaît lorsqu'un abonnement ne peut pas être traité. Pour plus d'informations, consultez « Gestion des abonnements inactifs », plus loin dans cet article.|  
 |Terminé : \<*nombre*> traité(s) sur un total de \<*nombre*> ; \<*nombre*> erreurs.|Indique l'état de l'exécution d'un abonnement piloté par les données. Ce message provient du processeur de planification et de livraison.|  
 |\<*nombre*> traités|Nombre de notifications que le processeur de planification et de livraison a réussi à remettre ou n'essaie plus de remettre. Lorsqu'une remise pilotée par les données est terminée, le nombre de notifications traitées doit être égal au nombre total de notifications générées.|  
 |\<*nombre*> au total|Nombre total de notifications générées pour la dernière remise de l'abonnement.|  
@@ -76,7 +76,7 @@ ms.locfileid: "67285049"
   
  Voici un exemple de message d'erreur de fichier journal de trace lié aux abonnements :  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Erreur lors de l’envoi du message électronique**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Error sending email**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  Le fichier journal ne contient aucune information indiquant si le rapport a été ouvert ou si la remise a réussi. Une remise réussie signifie qu'aucune erreur n'a été générée par le processeur de planification et de livraison et que le serveur de rapports s'est connecté au serveur de messagerie. Si le message électronique a entraîné l'envoi d'un message d'erreur de non-remise dans la boîte aux lettres de l'utilisateur, cette information ne figurera pas dans le fichier journal. Pour plus d’informations sur les fichiers journaux, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -96,11 +96,11 @@ ms.locfileid: "67285049"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|Date|Traiter|Domaine|Catégorie|Level|Correlation|Message|  
-|5/21/2019 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(vide)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|Date|Process|Domaine|Category|Level|Correlation|Message|  
+|5/21/2019 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(empty)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: Boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Utiliser PowerShell pour surveiller les abonnements  
- Par exemple les scripts PowerShell que vous pouvez utiliser pour vérifier l’état du mode natif ou les abonnements du mode SharePoint, consultez [gérer les propriétaires d’abonnement et exécuter un abonnement - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+ Pour obtenir des exemples de scripts PowerShell permettant de vérifier l'état des abonnements en mode natif ou SharePoint, voir [Gérer les propriétaires d’abonnements et exécuter un abonnement - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ##  <a name="bkmk_manage_inactive"></a> Gestion des abonnements inactifs  
  Lorsqu'un abonnement devient inactif, vous devez soit le supprimer, soit le réactiver en résolvant les conditions sous-jacentes qui empêchent son traitement. Les abonnements peuvent devenir inactifs si certaines conditions empêchant leur traitement se produisent. Ces conditions sont les suivantes :  

@@ -1,5 +1,5 @@
 ---
-title: end, méthode (SQLServerXAResource) | Microsoft Docs
+title: Méthode end (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e6418b27-793b-4b36-8dfb-756aec7bcbba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8aa3da36a6bffbcaf223ea72d4adf5f9e541d90c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955044"
 ---
 # <a name="end-method-sqlserverxaresource"></a>Méthode end (SQLServerXAResource)
@@ -38,19 +38,19 @@ public void end(javax.transaction.xa.Xid xid,
 #### <a name="parameters"></a>Paramètres  
  *xid*  
   
- Objet XID.  
+ Objet Xid.  
   
  *flags*  
   
- Valeur **int** .  
+ Valeur **int**.  
   
 ## <a name="exceptions"></a>Exceptions  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode end est spécifiée par la méthode end de l’interface javax.transaction.xa.XAResource.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerXAResource, méthodes](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource, membres](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource, classe](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Méthode setBytes (long, Byte, int, int) | Microsoft Docs
+title: Méthode setBytes (long, octet, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee4ab641ede4d4ec614a306f9c0e08c9f16aa5ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974941"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes, méthode (long, byte, int, int)
@@ -54,19 +54,19 @@ public int setBytes(long pos,
   
  Nombre d'octets à lire depuis le tableau d'octets dans l'objet BLOB.  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** contenant le nombre d’octets écrits.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** contenant le nombre d’octets écrits.  
   
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode setBytes est spécifiée par la méthode setBytes de l’interface java.sql.Blob.  
   
  Les données sont remplacées en démarrant à la position spécifiée et peuvent dépasser la longueur initiale de l'objet BLOB. La spécification d'une valeur position+1 permet d'ajouter des octets. Le passage d'une valeur position+2 ou supérieure (ou inférieure ou égale à zéro) génère une erreur de position. Si un tableau **d’octets** de longueur zéro est transmis, la méthode retourne zéro, car aucun octet n’a été écrit.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode &#40;SetBytes SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Méthode setBytes &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob, méthodes](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob, membres](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob, classe](../../../connect/jdbc/reference/sqlserverblob-class.md)  

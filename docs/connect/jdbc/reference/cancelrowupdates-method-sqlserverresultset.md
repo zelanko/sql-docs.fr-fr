@@ -16,10 +16,10 @@ ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1598bca994ae41ccee56ca68e12e74e8d18fd0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955799"
 ---
 # <a name="cancelrowupdates-method-sqlserverresultset"></a>cancelRowUpdates, méthode (SQLServerResultSet)
@@ -38,7 +38,7 @@ public void cancelRowUpdates()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode cancelRowUpdates est spécifiée par la méthode cancelRowUpdates dans l’interface java. Sql. ResultSet.  
+ Cette méthode cancelRowUpdates est spécifiée par la méthode cancelRowUpdates de l’interface java.sql.ResultSet.  
   
  Cette méthode peut être appelée après une méthode de programme de mise à jour et avant la méthode [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) afin de restaurer les mises à jour apportées à une ligne. Si aucune mise à jour n’a été effectuée ou que updateRow a déjà été appelée, cette méthode n’a aucun effet.  
   

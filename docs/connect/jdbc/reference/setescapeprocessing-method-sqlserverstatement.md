@@ -16,10 +16,10 @@ ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17df08b401c7e1ae4e1f5d3b386808f11e3bb180
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974294"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>Méthode setEscapeProcessing (SQLServerStatement)
@@ -46,7 +46,7 @@ public final void setEscapeProcessing(boolean enable)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setEscapeProcessing est spécifiée par la méthode setEscapeProcessing dans l’interface java. Sql. Statement.  
+ Cette méthode setEscapeProcessing est spécifiée par la méthode setEscapeProcessing de l’interface java.sql.Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

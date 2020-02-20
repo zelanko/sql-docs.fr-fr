@@ -16,10 +16,10 @@ ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a188d5d98aca0418a2452f29912f62604f3ffa90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972170"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>Méthode setTypeMap (SQLServerConnection)
@@ -45,10 +45,10 @@ public void setTypeMap(java.util.Map map)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode setTypeMap est spécifiée par la méthode setTypeMap dans l’interface java. Sql. Connection.  
+## <a name="remarks"></a>Notes   
+ Cette méthode setTypeMap est spécifiée par la méthode setTypeMap de l’interface java.sql.Connection.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988669"
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
@@ -28,9 +28,9 @@ ms.locfileid: "67988669"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server expose l’interface **ISequentialStream** pour prendre en charge l’accès des consommateurs aux types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et XML comme objets BLOB. La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
+  OLE DB Driver pour SQL Server expose l’interface **ISequentialStream** pour prendre en charge l’accès des consommateurs aux types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et XML comme objets BLOB. La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
   
- Pour obtenir un exemple illustrant cette fonctionnalité, consultez [définir des &#40;OLE DB&#41;de données volumineuses](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Pour obtenir un exemple illustrant cette fonctionnalité, consultez [Définir des données volumineuses &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Le pilote OLE DB pour SQL Server peut utiliser une interface **IStorage** implémentée par le consommateur quand celui-ci fournit le pointeur d’interface dans un accesseur lié pour la modification des données.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "67988669"
   
 -   Lier comme DBTYPE_IUNKNOWN et utiliser la diffusion en continu.  
   
- En cas de liaison à DBTYPE_IUNKNOWN, la fonctionnalité de flux ISequentialStream est utilisée. Le pilote OLE DB pour SQL Server prend en charge la liaison des paramètres de sortie en tant que DBTYPE_IUNKNOWN pour les types de données de valeur élevée. Cela permet de prendre en charge les scénarios dans lesquels une procédure stockée retourne ces types de données comme valeurs de retour, qui sont retournées en tant que DBTYPE_IUNKNOWN au client.  
+ En cas de liaison à DBTYPE_IUNKNOWN, la fonctionnalité de flux ISequentialStream est utilisée. OLE DB Driver pour SQL Server prend en charge la liaison des paramètres de sortie en tant que DBTYPE_IUNKNOWN pour les types de données de valeur élevée. Cela permet de prendre en charge les scénarios dans lesquels une procédure stockée retourne ces types de données comme valeurs de retour, qui seront retournées au client en tant que DBTYPE_IUNKNOWN.  
   
 ## <a name="storage-object-limitations"></a>Limitations des objets de stockage  
   
--   Le pilote OLE DB pour SQL Server ne peut prendre en charge qu’un seul objet de stockage ouvert. Les tentatives d’ouverture de plusieurs objets de stockage (pour obtenir une référence sur plusieurs pointeurs d’interface **ISequentialStream**) retournent DBSTATUS_E_CANTCREATE.  
+-   OLE DB Driver pour SQL Server ne peut prendre en charge qu'un seul objet de stockage ouvert. Les tentatives d’ouverture de plusieurs objets de stockage (pour obtenir une référence sur plusieurs pointeurs d’interface **ISequentialStream**) retournent DBSTATUS_E_CANTCREATE.  
   
 -   Dans le pilote OLE DB pour SQL Server, la valeur par défaut de la propriété en lecture seule de DBPROP_BLOCKINGSTORAGEOBJECTS est VARIANT_TRUE. Cela signifie que si un objet de stockage est actif, certaines méthodes (autres que celles sur les objets de stockage) échouent avec E_UNEXPECTED.  
   

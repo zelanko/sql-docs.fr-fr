@@ -16,10 +16,10 @@ ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ba397d39378e6e45bf63dffa4eb2efbca3b432c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953026"
 ---
 # <a name="getclob-method-javalangstring"></a>Méthode getClob (java.lang.String)
@@ -39,8 +39,8 @@ public java.sql.Clob getClob(java.lang.String sCol)
   
  Valeur **chaîne** qui contient le nom du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet CLOB.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Clob.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

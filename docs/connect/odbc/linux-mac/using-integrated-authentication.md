@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008704"
 ---
 # <a name="using-integrated-authentication"></a>Utilisation de l’authentification intégrée
@@ -24,9 +24,9 @@ ms.locfileid: "68008704"
 
 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS prend en charge les connexions qui utilisent l’authentification intégrée Kerberos. Il prend en charge le centre de distribution de clés (KDC) MIT Kerberos et fonctionne avec l’interface GSSAPI (Generic Security Services Application Program Interface) et les bibliothèques Kerberos v5.
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>Utilisation de l’authentification intégrée pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’une application ODBC  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>Utilisation de l’authentification intégrée pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’une application ODBC  
 
-Vous pouvez activer l’authentification intégrée Kerberos en spécifiant **Trusted_Connection=yes** dans la chaîne de connexion **SQLDriverConnect** ou **SQLConnect**. Par exemple :  
+Vous pouvez activer l’authentification intégrée Kerberos en spécifiant **Trusted_Connection=yes** dans la chaîne de connexion **SQLDriverConnect** ou **SQLConnect**. Par exemple :   
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
@@ -72,7 +72,7 @@ Avant d’être réutilisée, une application doit réinitialiser les connexions
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Utilisation d’Active Directory pour gérer les identités des utilisateurs
 
-Un administrateur système n’a pas besoin de gérer des ensembles distincts d’informations d’identification de connexion pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il est possible de configurer Active Directory comme Centre de distribution de clés pour l’authentification intégrée. Pour plus d’informations, consultez [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos).
+Un administrateur système d’application n’a pas besoin de gérer des ensembles distincts d’informations d’identification de connexion pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il est possible de configurer Active Directory comme Centre de distribution de clés pour l’authentification intégrée. Pour plus d’informations, consultez [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos).
 
 ## <a name="using-linked-server-and-distributed-queries"></a>Utilisation de serveur lié et de requêtes distribuées
 
@@ -94,7 +94,7 @@ Pour accéder à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à
   
 L’utilisation de `-T` avec l’option `-U` ou `-P` constitue une erreur.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>Syntaxe prise en charge pour un SPN inscrit par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>Syntaxe prise en charge pour un SPN inscrit par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 La syntaxe que les noms de principal du service utilisent dans la chaîne de connexion ou les attributs de connexion est la suivante :  
 
@@ -127,7 +127,7 @@ Si l’authentification Kerberos échoue, le pilote ODBC sur Linux ou macOS n’
 
 Pour plus d’informations sur l’authentification des ordinateurs Linux ou macOS avec Active Directory, consultez [Authentifier les clients Linux avec Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) et [Bonnes pratiques pour intégrer OS X à Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Pour plus d’informations sur la configuration de Kerberos, consultez la [documentation MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [Notes de publication](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

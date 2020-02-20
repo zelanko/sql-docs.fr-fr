@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 882dafee6997f4e0a140872847cfa2fdc1109f05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580564"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Composant WebPart Visionneuse de rapports sur un site SharePoint - Reporting Services
@@ -26,7 +26,7 @@ Le composant WebPart Visionneuse de rapports le plus récent peut également fou
 
 Le composant WebPart Visionneuse de rapports était disponible dans le complément Reporting Services pour les produits SharePoint. Il était spécifique aux serveurs de rapports en mode intégré SharePoint. Le mode intégré SharePoint a été déprécié après SQL Server 2016.
 
-Depuis SQL Server 2017, il n’existe qu’un seul mode d’installation pour Reporting Services : le **mode natif**. Vous pouvez incorporer tous les types de rapports à l’aide d’un composant WebPart Visionneuse de pages en indiquant le paramètre d’URL *rs:Embed=true*. L’incorporation de rapports dans les pages SharePoint est un scénario d’intégration demandé par les clients et le composant WebPart Visionneuse de rapports mis à jour permet ce scénario pour les rapports paginés.
+Depuis SQL Server 2017, il n’existe qu’un seul mode d’installation pour Reporting Services : **Mode natif**. Vous pouvez incorporer tous les types de rapports à l’aide d’un composant WebPart Visionneuse de pages en indiquant le paramètre d’URL *rs:Embed=true*. L’incorporation de rapports dans les pages SharePoint est un scénario d’intégration demandé par les clients et le composant WebPart Visionneuse de rapports mis à jour permet ce scénario pour les rapports paginés.
 
 Même si le composant WebPart Visionneuse de pages suffit à incorporer un rapport paginé dans une page SharePoint, le composant WebPart Visionneuse de rapports mis à jour offre des fonctionnalités supplémentaires.
 

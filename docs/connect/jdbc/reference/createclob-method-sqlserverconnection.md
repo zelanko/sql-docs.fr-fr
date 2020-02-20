@@ -11,10 +11,10 @@ ms.assetid: 58b0865a-1cde-4046-9761-51e471294023
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 417a5048d809cb4498c543c589324e151a843a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955395"
 ---
 # <a name="createclob-method-sqlserverconnection"></a>Méthode createClob (SQLServerConnection)
@@ -29,16 +29,16 @@ ms.locfileid: "67955395"
 public java.sql.Clob createClob()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet CLOB.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Clob.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode createClob est spécifiée par la méthode createClob dans l’interface java. Sql. Connection.  
+ Cette méthode createClob est spécifiée par la méthode createClob de l’interface java.sql.Connection.  
   
- Cette méthode remplace la nécessité pour le [constructeur &#40;SQLServerClob SQLServerConnection, Java. lang.&#41;String](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md).  
+ Cette méthode évite d’avoir à utiliser le [Constructeur SQLServerClob &#40;SQLServerConnection, java.lang.String&#41;](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

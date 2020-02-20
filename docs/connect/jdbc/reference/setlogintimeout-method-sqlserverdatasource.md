@@ -16,10 +16,10 @@ ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a64bc643e8d5a9d820b2bcd9cd307f033a869d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974089"
 ---
 # <a name="setlogintimeout-method-sqlserverdatasource"></a>Méthode setLoginTimeout (SQLServerDataSource)
@@ -40,7 +40,7 @@ public void setLoginTimeout(int loginTimeout)
  Valeur **int** représentant le nombre de secondes à attendre. Zéro indique que le délai d'attente correspond au délai d'attente système par défaut, lequel est de 15 secondes.  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setLoginTimeout est spécifiée par la méthode setLoginTimeout dans l’interface javax. Sql. DataSource.  
+ Cette méthode setLoginTimeout est spécifiée par la méthode setLoginTimeout de l’interface javax.sql.DataSource.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

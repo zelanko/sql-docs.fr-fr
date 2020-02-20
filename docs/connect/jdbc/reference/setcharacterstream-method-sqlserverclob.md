@@ -16,10 +16,10 @@ ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974654"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>Méthode setCharacterStream (SQLServerClob)
@@ -39,14 +39,14 @@ public java.io.Writer setCharacterStream(long pos)
   
  Position à laquelle démarrer l'écriture dans l'objet CLOB.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Flux dans lequel les caractères chiffrés Unicode peuvent être écrits.  
   
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setCharacterStream est spécifiée par la méthode setCharacterStream dans l’interface java. Sql. CLOB.  
+ Cette méthode setCharacterStream est spécifiée par la méthode setCharacterStream de l’interface java.sql.Clob.  
   
  Les données de caractères dans le CLOB sont remplacées par l'enregistreur à partir de la position spécifiée et peuvent dépasser la longueur initiale du CLOB. La spécification d'une valeur position+1 permet d'ajouter des caractères. La spécification d'une valeur position+2 ou supérieure (ou de zéro ou d'une valeur inférieure) génère une erreur de position.  
   

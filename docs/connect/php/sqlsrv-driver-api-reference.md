@@ -11,10 +11,10 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3d5a6afaa4580623bade5ac6d7dd5b13a4cbdc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992776"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>référence d’API du pilote SQLSRV
@@ -54,7 +54,7 @@ Le pilote SQLSRV contient les fonctions suivantes :
 |[sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)|Envoie jusqu’à huit kilo-octets (8 Ko) de données au serveur à chaque appel à la fonction.|  
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Fournit des informations sur le serveur.|  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
 [Manuel PHP](https://php.net/manual)  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e286b0a66258b68680e8144d2aa04876dc70092a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936223"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916378"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,18 +30,19 @@ mixed PDO::getAttribute ( $attribute )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$attribute*: un des attributs pris en charge. Consultez la section Notes pour obtenir la liste des attributs pris en charge.  
+*$attribute* : un des attributs pris en charge. Consultez la section Notes pour obtenir la liste des attributs pris en charge.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 En cas de réussite, retourne la valeur d’une option de connexion, un attribut PDO prédéfini ou un attribut de pilote personnalisé. En cas d’échec, retourne la valeur Null.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Le tableau suivant contient la liste des attributs pris en charge.  
   
-|Attribute|Traité par|Valeurs prises en charge|Description|  
+|Attribut|Traité par|Valeurs prises en charge|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Spécifie si les noms de colonne doivent respecter une casse spécifique. PDO::CASE_LOWER impose des noms de colonne en minuscules, PDO::CASE_NATURAL laisse le nom de colonne tel qu’il est retourné par la base de données et PDO::CASE_UPPER impose des noms de colonne en majuscules.<br /><br />La valeur par défaut est PDO::CASE_NATURAL.<br /><br />Cet attribut peut également être défini à l’aide de PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Tableau de chaînes|Décrit les versions du pilote et des bibliothèques associées. Retourne un tableau avec les éléments suivants : la version ODBC (*VerMaj*.*VerMin*), le nom et la version de la DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et la version des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*VerMaj*.*VerMin*.*NuméroBuild*.*Révision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Tableau de chaînes|Décrit les versions du pilote et des bibliothèques associées. Retourne un tableau avec les éléments suivants : la version ODBC (*VerMaj*.*VerMin*), le nom et la version de la DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et la version des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*VerMaj*.*VerMin*.*NuméroBuild*.*Révision*)|  
+|PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|Si non défini sur PDO::PARAM_STR_CHAR, PDO::PARAM_STR_NATL est retourné.|
 |PDO::ATTR_DRIVER_NAME|PDO|String|Retourne toujours « sqlsrv ».|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|Indique la version des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*VerMaj*.*VerMin*.*NuméroBuild*.*Révision*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Spécifie comment les échecs doivent être gérés par le pilote.<br /><br />PDO::ERRMODE_SILENT (valeur par défaut) définit les codes d’erreur et les informations.<br /><br />PDO::ERRMODE_WARNING déclenche un E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION lève une exception.<br /><br />Cet attribut peut également être défini à l’aide de PDO::setAttribute.|  
@@ -53,14 +54,14 @@ Le tableau suivant contient la liste des attributs pris en charge.
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Spécifie une exécution de requête directe ou préparée. Pour plus d’informations, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|Spécifie l’encodage de jeu de caractères utilisé par le pilote pour communiquer avec le serveur.<br /><br />La valeur par défaut est PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|True ou False|Gère les extractions de nombres à partir de colonnes avec des types SQL numériques (bit, entier, smallint, tinyint, float ou real).<br /><br />Quand l’indicateur d’option de connexion ATTR_STRINGIFY_FETCHES est activé, la valeur de retour est une chaîne, même si SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est activé.<br /><br />Quand le type PDO retourné dans la colonne de liaison est PDO_PARAM_INT, la valeur de retour à partir d’une colonne d’entiers est int, même si SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est désactivé.|  
-|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|entier|Définit le délai d’attente de la requête, en secondes.<br /><br />La valeur par défaut est 0, ce qui signifie que le pilote attend indéfiniment les résultats.<br /><br />Les nombres négatifs ne sont pas autorisés.|  
+|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|entier|Définit le délai d’expiration de la requête, en secondes.<br /><br />La valeur par défaut est 0, ce qui signifie que le pilote attend indéfiniment les résultats.<br /><br />Les nombres négatifs ne sont pas autorisés.|  
 
   
 PDO traite certains des attributs prédéfinis tandis qu’il a besoin que le pilote en gère d’autres. Tous les attributs et toutes les options de connexion personnalisés sont gérés par le pilote ; un attribut non pris en charge ou une option de connexion retournent la valeur Null.  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple montre la valeur de l’attribut PDO::ATTR_ERRMODE, avant et après la modification de sa valeur.  
   
 ```  
@@ -87,8 +88,8 @@ print_r($conn->getAttribute( PDO::ATTR_CLIENT_VERSION ));
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)
+## <a name="see-also"></a> Voir aussi  
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

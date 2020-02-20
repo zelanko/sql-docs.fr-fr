@@ -1,5 +1,5 @@
 ---
-title: Execute, méthode () | Microsoft Docs
+title: Méthode execute () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954928"
 ---
 # <a name="execute-method-"></a>Méthode execute ()
@@ -34,7 +34,7 @@ ms.locfileid: "67954928"
 public boolean execute()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si l’instruction retourne un jeu de résultats. **false** si elle retourne un nombre de mises à jour ou aucun résultat.  
   
 ## <a name="exceptions"></a>Exceptions  

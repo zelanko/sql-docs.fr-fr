@@ -16,10 +16,10 @@ ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4f78d918b597d9e336feb58d512c0156eadd4e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974163"
 ---
 # <a name="setint-method-sqlserverpreparedstatement"></a>setInt, méthode (SQLServerPreparedStatement)
@@ -38,11 +38,11 @@ public final void setInt(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- **Entier** qui indique le numéro du paramètre.  
+ **int** indiquant le numéro du paramètre.  
   
  *value*  
   
- Valeur **int** .  
+ Valeur **int**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

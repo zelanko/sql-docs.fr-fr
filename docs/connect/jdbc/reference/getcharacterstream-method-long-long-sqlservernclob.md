@@ -11,10 +11,10 @@ ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10cd57cff29c73a2b99d1489eb122eed37859768
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953270"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>Méthode getCharacterStream (long, long) (SQLServerNClob)
@@ -33,20 +33,20 @@ public java.io.Reader getCharacterStream(long pos,
 #### <a name="parameters"></a>Paramètres  
  *pos*  
   
- Valeur de **type long** qui indique le décalage du premier caractère de la valeur partielle à récupérer.  
+ **long** indiquant le décalage du premier octet vers le premier caractère de la valeur partielle à récupérer.  
   
  *length*  
   
- Valeur de **type long** qui indique la longueur en caractères de la valeur partielle à récupérer.  
+ **long** indiquant la longueur en caractères de la valeur partielle à récupérer.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet Reader contenant les données **NCLOB**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getCharacterStream est spécifiée par la méthode getCharacterStream dans l’interface java. Sql. NClob.  
+ Cette méthode getCharacterStream est spécifiée par la méthode getCharacterStream de l’interface java.sql.NClob.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getCharacterStream, méthode &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

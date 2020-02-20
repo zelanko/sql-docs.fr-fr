@@ -16,10 +16,10 @@ ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9bdf91105e9e7db82f51b5ba9885506e2edd8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953537"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean, méthode (java.lang.String) (SQLServerResultSet)
@@ -39,7 +39,7 @@ public boolean getBoolean(java.lang.String columnName)
   
  Valeur **String** qui contient le nom de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **booléenne**.  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -48,7 +48,7 @@ public boolean getBoolean(java.lang.String columnName)
 ## <a name="remarks"></a>Notes  
  Cette méthode getBoolean est spécifiée par la méthode getBoolean de l’interface java.sql.ResultSet.  
   
- Cette méthode est prise en charge uniquement sur les types de données de nombres et de caractères. Il convertit les valeurs «1», 1 et «**true**» en **true**, et les valeurs «0», 0 et «**false**» en **false**. Pour toutes les autres valeurs, le comportement n'est pas défini.  
+ Cette méthode est prise en charge uniquement sur les types de données de nombres et de caractères. Elle convertit les valeurs « 1 «, 1 et « **true** » en **true**, et les valeurs « 0 », 0 et « **false** » en **false**. Pour toutes les autres valeurs, le comportement n'est pas défini.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthode getBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

@@ -7,26 +7,26 @@ ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028841"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761803"
 ---
 # <a name="sql-server-privacy-supplement"></a>Avenant à la déclaration de confidentialité de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article résume les fonctionnalités Internet qui peuvent collecter et envoyer à Microsoft des données anonymes de diagnostic et d’utilisation des fonctionnalités. SQL Server peut collecter des informations informatiques standard, et les données sur l’utilisation et les performances peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité du produit. Cet article fait office d’addendum à la [déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) générale. La classification des données dans cet article s’applique uniquement aux versions du produit SQL Server local. Elle ne s'applique pas aux éléments suivants :
+Cet article résume les fonctionnalités Internet qui peuvent collecter et envoyer à Microsoft des données anonymes de diagnostic et d’utilisation des fonctionnalités. SQL Server peut collecter des informations informatiques standard, et les données sur l’utilisation et les performances peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité du produit. Si vous installez SQL Server sur une machine virtuelle sur le service Microsoft Azure, des informations sur l’environnement peuvent être envoyées à Microsoft afin que Microsoft puisse inscrire votre ressource de machine virtuelle SQL Server auprès du fournisseur de ressources au sein de votre abonnement Azure, comme décrit plus en détail [ici](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Dans le cadre de l’inscription de la ressource de machine virtuelle SQL Server, l’extension de l’agent IaaS SQL Server peut être installée sur votre machine virtuelle, comme décrit [ici](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). Cet article fait office d’addendum à la [déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) générale. La classification des données dans cet article s’applique uniquement aux versions du produit SQL Server local. Elle ne s'applique pas aux éléments suivants :
 
 - Azure SQL Database
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
-- Database Migration Assistant
+- Assistant Migration de base de données
 - Assistant Migration SQL Server
 - Extension MS-SQL
 
@@ -136,7 +136,7 @@ Microsoft examine les valeurs de nom d’application définies par d’autres pr
 
 ### <a name="permitted-usage-scenarios"></a>Scénarios d’usages autorisés
 
-|Scénario  |Restrictions d'accès  |Conditions de rétention|
+|Scénario  |Restrictions d’accès  |Conditions de rétention|
 |---------|---------|---------|
 |Peut être utilisé par Microsoft pour améliorer les fonctionnalités ou corriger les bogues dans les fonctionnalités actuelles.|Limité à un usage interne Microsoft sans accès à des tiers. |90 jours minimum, 3 ans maximum |
 |Peut être utilisé pour faire des suggestions au client.  Par exemple, « D’après votre utilisation du produit, utilisez la fonctionnalité *X* pour obtenir de meilleures performances ». |Microsoft peut exposer les données au client d’origine, par exemple, à travers des tableaux de bord. |Journaux de sécurité des données client : 3 ans min - 6 ans max |

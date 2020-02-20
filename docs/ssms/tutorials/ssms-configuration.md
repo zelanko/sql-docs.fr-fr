@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Composants et configuration de SQL Server Management Studio'
+title: Composants SSMS et configuration"
 description: Ce tutoriel décrit les composants et les options de configuration de base pour votre environnement SQL Server Management Studio.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -10,22 +10,22 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267077"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247289"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Composants et configuration de SQL Server Management Studio
 
-Ce tutoriel décrit les différents composants de fenêtre dans SQL Server Management Studio (SSMS) et certaines options de configuration de base pour votre espace de travail. Dans cet article, vous apprenez à : 
+Ce tutoriel décrit les différents composants de fenêtre dans SQL Server Management Studio (SSMS) et certaines options de configuration de base pour votre espace de travail. Dans cet article, vous apprendrez comment : 
 
 > [!div class="checklist"]
 > * Identifier les composants qui constituent l’environnement SSMS
 > * Changer la disposition de l’environnement et rétablir la valeur par défaut
 > * Optimiser l’éditeur de requête
-> * Changer la police
+> * Modifier la police
 > * Configurer les options de démarrage
 > * Rétablir la configuration par défaut
 
@@ -116,7 +116,7 @@ Cette section décrit comment changer certains paramètres de base dans SSMS à 
 
     ![Personnaliser une barre d’outils](media/ssms-configuration/toolbar.png)
 
-### <a name="change-the-font"></a>Changer la police
+### <a name="change-the-font"></a>Modifier la police
 
 * Pour changer la police, sélectionnez **Outils** > **Options** > **Polices et couleurs** :
 

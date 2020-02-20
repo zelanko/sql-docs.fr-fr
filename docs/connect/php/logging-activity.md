@@ -1,5 +1,5 @@
 ---
-title: Journalisation de l’activité | Microsoft Docs
+title: Activité de journalisation| Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993329"
 ---
 # <a name="logging-activity"></a>Journalisation de l’activité
@@ -24,7 +24,7 @@ ms.locfileid: "67993329"
 
 Par défaut, les erreurs et avertissements générés par le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ne sont pas enregistrés. Cette rubrique explique comment configurer la journalisation de l’activité.  
   
-## <a name="logging-activity-using-the-pdosqlsrv-driver"></a>Journalisation de l’activité à l’aide du pilote PDO_SQLSRV  
+## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Journalisation de l’activité à l’aide du pilote PDO_SQLSRV  
 La seule configuration disponible pour le pilote PDO_SQLSRV est l’entrée pdo_sqlsrv.log_severity dans le fichier php.ini.  
   
 Ajoutez ce qui suit à la fin de votre fichier php.ini :  
@@ -40,9 +40,9 @@ pdo_sqlsrv.log_severity = <number>
 |---------|---------------|  
 |0|La journalisation est désactivée (valeur par défaut si rien n’est défini).|  
 |-1|Spécifie que les erreurs, les avertissements et les notifications doivent être enregistrés.|  
-|1|Spécifie que les erreurs sont journalisées.|  
-|2|Spécifie que les avertissements sont enregistrés.|  
-|4|Spécifie que les notifications sont journalisées.|  
+|1|Spécifie que les erreurs sont consignées.|  
+|2|Spécifie que les avertissements sont consignés.|  
+|4|Spécifie que les notifications sont consignées.|  
   
 Les informations de journalisation seront ajoutées au fichier phperrors.log.  
   
@@ -64,7 +64,7 @@ Le tableau suivant décrit les constantes que vous pouvez utiliser comme valeur 
 |Valeur (entier équivalent entre parenthèses)|Description|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Active la journalisation de tous les sous-systèmes.|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|Désactive la journalisation. Il s'agit du paramètre par défaut.|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|Désactive la journalisation. Il s’agit de la valeur par défaut.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Active la journalisation de l’activité d’initialisation.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Active la journalisation de l’activité de connexion.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Active la journalisation de l’activité d’instruction.|  
@@ -95,9 +95,9 @@ Le tableau suivant décrit les constantes que vous pouvez utiliser comme valeur 
 |Valeur (entier équivalent entre parenthèses)|Description|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Spécifie que les erreurs, les avertissements et les notifications doivent être enregistrés.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Spécifie que les erreurs sont journalisées. Il s'agit du paramètre par défaut.|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|Spécifie que les avertissements sont enregistrés.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Spécifie que les notifications sont journalisées.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Spécifie que les erreurs sont consignées. Il s’agit de la valeur par défaut.|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|Spécifie que les avertissements sont consignés.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Spécifie que les notifications sont consignées.|  
   
 Vous pouvez définir plusieurs valeurs à la fois pour le paramètre **LogSeverity** à l’aide de l’opérateur logique OR (|). Par exemple, la ligne de code suivante spécifie que les erreurs et les avertissements doivent être enregistrés :  
   

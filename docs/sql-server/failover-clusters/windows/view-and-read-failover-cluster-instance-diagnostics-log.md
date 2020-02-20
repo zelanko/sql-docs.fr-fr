@@ -1,6 +1,7 @@
 ---
-title: Afficher et lire le journal de diagnostic de l’instance de cluster de basculement | Microsoft Docs
-ms.custom: ''
+title: Afficher et lire le journal de diagnostic de l’instance de cluster de basculement
+description: Découvrez comment afficher et lire le journal de diagnostic généré par l’instance de cluster de basculement SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904996"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242883"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Afficher et lire le journal de diagnostic de l'instance de cluster de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +92,7 @@ ORDER BY Time;
  **Pour configurer les propriétés du journal de diagnostics**  
   
 > [!NOTE]  
->  Pour obtenir un exemple de cette procédure, consultez [Exemple (Transact-SQL)](#TsqlExample), plus loin dans cette section.  
+>  Pour obtenir un exemple de cette procédure, consultez [Exemple (Transact-SQL)](#TsqlExample)plus loin dans cette section.  
   
  En utilisant l’instruction DDL (Data Definition Language), **ALTER SERVER CONFIGURATION**, vous pouvez démarrer ou arrêter la journalisation des données de diagnostics capturées par la procédure [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) et définir les paramètres de configuration du journal SQLDIAG, tels que le nombre de substitutions du fichier journal, sa taille et son emplacement. Pour plus d'informations sur la syntaxe, consultez [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
@@ -100,7 +101,7 @@ ORDER BY Time;
 ####  <a name="TsqlExample"></a> Setting diagnostic log options  
  Les exemples de cette section montrent comment définir les valeurs de l'option de journal de diagnostics.  
   
-##### <a name="a-starting-diagnostic-logging"></a>A. Début de la journalisation des diagnostics  
+##### <a name="a-starting-diagnostic-logging"></a>R. Début de la journalisation des diagnostics  
  L'exemple suivant démarre la journalisation de données de diagnostics.  
   
 ```  
@@ -131,6 +132,6 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

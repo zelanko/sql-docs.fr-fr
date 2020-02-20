@@ -1,5 +1,5 @@
 ---
-title: Fonctionnement des niveaux d’isolement | Microsoft Docs
+title: Comprendre les niveaux d’isolation | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027389"
 ---
 # <a name="understanding-isolation-levels"></a>Présentation des niveaux d’isolation
@@ -45,12 +45,12 @@ Plus le niveau d'isolement est faible, plus le nombre de personnes susceptibles 
 
  Le tableau suivant répertorie les effets secondaires de la concurrence provoqués par les différents niveaux d'isolement.  
   
-| Niveau d'isolement  | Lecture erronée | Lecture non reproductible | Fantôme |
+| Niveau d’isolation  | Lecture erronée | Lecture non reproductible | Fantôme |
 | ---------------- | ---------- | ------------------- | ------- |
 | Lecture non validée | Oui        | Oui                 | Oui     |
 | Lecture validée   | Non         | Oui                 | Oui     |
 | Lecture renouvelable  | Non         | Non                  | Oui     |
-| Snapshot         | Non         | Non                  | Non      |
+| Instantané         | Non         | Non                  | Non      |
 | Sérialisable     | Non         | Non                  | Non      |
   
 Les transactions doivent être exécutées à un niveau d'isolement au moins égal à la lecture reproductible afin d'empêcher les pertes de mises à jour qui peuvent se produire lorsque deux transactions récupèrent la même ligne, puis mettent ultérieurement à jour la ligne en fonction des valeurs récupérées initialement. Si les deux transactions mettent à jour des lignes avec une seule instruction UPDATE sans se baser sur les valeurs récupérées auparavant, les mises à jour perdues ne peuvent pas se produire au niveau d’isolation par défaut de la lecture de données validées.  

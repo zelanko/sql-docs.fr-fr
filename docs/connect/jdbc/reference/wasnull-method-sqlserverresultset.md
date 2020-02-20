@@ -16,10 +16,10 @@ ms.assetid: d37f80ef-d72c-4429-ada3-1d685bdab6d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31d3ead452f9f24509382c53e778205f0994769c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68002436"
 ---
 # <a name="wasnull-method-sqlserverresultset"></a>wasNull, méthode (SQLServerResultSet)
@@ -34,8 +34,8 @@ ms.locfileid: "68002436"
 public boolean wasNull()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si la dernière valeur lue était null. Dans le cas contraire, la valeur est **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si la dernière valeur lue était Null. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

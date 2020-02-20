@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403262"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
@@ -91,7 +91,7 @@ ms.locfileid: "66403262"
   
 10. Décochez la case **Nécessite la certification du serveur (https:) pour tous les sites dans cette zone** si vous n’utilisez pas HTTPS pour le site par défaut.  
   
-11. Cliquez sur **Ajouter**.  
+11. Cliquez sur **Add**.  
   
 12. Sélectionnez **OK**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66403262"
   
     ![icône Engrenage](../media/ssrsgearmenu.png).
     >[!TIP]  
-    >**Remarque :** si vous ne voyez pas l’option **Paramètre du site**, fermez et rouvrez votre navigateur et accédez au portail web avec des privilèges d’administrateur.  
+    >**Remarque :** Si vous ne voyez pas l’option **Paramètre du site**, fermez et rouvrez votre navigateur et accédez au portail web avec des privilèges d’administrateur.  
   
 3.  Dans la page Paramètres du Site, sélectionnez **Sécurité**, puis sélectionnez **Ajouter un groupe ou utilisateur**.  
   

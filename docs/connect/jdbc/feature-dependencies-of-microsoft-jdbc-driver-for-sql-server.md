@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7abf0d389217535292260b6a5b055697eb4b19df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028096"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server
@@ -28,15 +28,15 @@ Cet article répertorie les versions dont dépend le pilote JDBC Microsoft pour 
  - `com.microsoft.azure:azure-keyvault` : fournisseur Azure Key Vault pour la fonctionnalité Azure Key Vault Always Encrypted (facultatif)
  - `com.microsoft.azure:adal4j` : bibliothèque Azure Active Directory pour Java pour les fonctionnalités d’authentification Azure Active Directory et Azure Key Vault (facultatif)
  - `com.microsoft.rest:client-runtime` : bibliothèque Azure Active Directory pour Java pour les fonctionnalités d’authentification Azure Active Directory et Azure Key Vault (facultatif)
- - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime pour la fonctionnalité useFmtOnly (facultatif)
- - `org.osgi:org.osgi.core` : bibliothèque OSGi Core pour la prise en charge d’OSGi Framework.
- - `org.osgi:org.osgi.compendium` : bibliothèque OSGi Compendium pour la prise en charge d’OSGi Framework.
+ - `org.antlr:antlr4-runtime`: Fonctionnalité ANTLR 4 Runtime pour useFmtOnly (facultatif)
+ - `org.osgi:org.osgi.core`: bibliothèque OSGi Core pour la prise en charge d’OSGi Framework.
+ - `org.osgi:org.osgi.compendium`: bibliothèque OSGi Compendium pour la prise en charge d’OSGi Framework.
 
 ## <a name="test-time"></a>Durée du test
 
 Les projets spécifiques qui nécessitent une de ces fonctionnalités doivent déclarer explicitement les dépendances respectifs dans leur fichier POM.
 
-**Par exemple :** lorsque vous utilisez la fonctionnalité d’authentification Azure Active Directory, vous devez redéclarer la dépendance `adal4j` dans le fichier POM du projet. Consultez l’extrait de code suivant :
+**Par exemple :** lorsque vous utilisez la fonctionnalité d’authentification Azure Active Directory, vous devez redéclarer la dépendance `adal4j` dans le fichier POM du projet. Consultez l’extrait de code suivant :
 
 ```xml
 <dependency>
@@ -59,7 +59,7 @@ Les projets spécifiques qui nécessitent une de ces fonctionnalités doivent d�
 </dependency>
 ```
 
-**Par exemple :** lorsque vous utilisez la fonctionnalité Azure Key Vault, vous devez redéclarer la dépendance `azure-keyvault` et la dépendance `adal4j` dans le fichier POM du projet. Consultez l’extrait de code suivant :
+**Par exemple :** lorsque vous utilisez la fonctionnalité Azure Key Vault, vous devez redéclarer la dépendance `azure-keyvault` et la dépendance `adal4j` dans le fichier POM du projet. Consultez l’extrait de code suivant :
 
 ```xml
 <dependency>
@@ -93,7 +93,7 @@ Les projets spécifiques qui nécessitent une de ces fonctionnalités doivent d�
 ### <a name="working-with-the-azure-key-vault-provider"></a>Utilisation du fournisseur Azure Key Vault :
 
 - Version 7.4.1 du pilote JDBC - versions des dépendances : Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10) et leurs dépendances ([exemple d'application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Version 7.2.2 du pilote JDBC - versions des dépendances : Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-pour-AutoRest (1.6.5). et leurs dépendances ([exemple d'application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- Version 7.2.2 du pilote JDBC - versions des dépendances : Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5). et leurs dépendances ([exemple d'application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - Version 7.0.0 du pilote JDBC - versions des dépendances : Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0) et leurs dépendances ([exemple d'application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - Version 6.4.0 du pilote JDBC - versions des dépendances : Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0) et leurs dépendances ([exemple d'application](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - Version 6.2.2 du pilote JDBC - versions des dépendances : Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0) et leurs dépendances ([exemple d'application](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
@@ -107,7 +107,7 @@ Les projets spécifiques qui nécessitent une de ces fonctionnalités doivent d�
 ### <a name="working-with-azure-active-directory-authentication"></a>Utilisation de l'authentification Azure Active Directory :
 
 - Version 7.4.1 du pilote JDBC - versions des dépendances : Adal4j (version 1.6.4), Client-Runtime-pour-AutoRest (1.6.10) et leurs dépendances
-- Version 7.2.2 du pilote JDBC - versions des dépendances : Adal4j (version 1.6.3), Client-Runtime-pour-AutoRest (1.6.5) et leurs dépendances
+- Version 7.2.2 du pilote JDBC - versions des dépendances : Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) et leurs dépendances
 - Version 7.0.0 du pilote JDBC - versions des dépendances : Adal4j (version 1.6.0) et ses dépendances
 - Version 6.4.0 du pilote JDBC - versions des dépendances : Adal4j (version 1.4.0) et ses dépendances
 - Version 6.2.2 du pilote JDBC - versions des dépendances : Adal4j (version 1.4.0) et ses dépendances

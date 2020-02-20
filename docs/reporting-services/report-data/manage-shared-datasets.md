@@ -9,10 +9,10 @@ ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67220587"
 ---
 # <a name="manage-shared-datasets"></a>Gérer des datasets partagés
@@ -25,7 +25,7 @@ ms.locfileid: "67220587"
   
 -   Générateur de rapports   Utilisez le mode de création de dataset partagé et enregistrez le dataset partagé sur un serveur de rapports ou un site SharePoint.  
   
--   Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio pour créer des datasets partagés dans le dossier de jeux de données dans l’Explorateur de solutions. Pour publier un dataset partagé, déployez-le dans un serveur de rapports ou un site SharePoint.  
+-   Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio pour créer des datasets partagés sous le dossier Datasets dans l’Explorateur de solutions. Pour publier un dataset partagé, déployez-le dans un serveur de rapports ou un site SharePoint.  
   
 -   Charger un fichier de définition de dataset partagé (.rsd)   Vous pouvez charger un fichier sur le serveur de rapports ou le site SharePoint. Sur un site SharePoint. Un fichier téléchargé n'est pas validé par rapport au schéma jusqu'à ce que le dataset partagé soit en cache ou soit utilisé dans un rapport.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67220587"
   
 |Tâche      |Outil      |Lien      |  
 |----------|----------|----------|  
-|Ajouter un dataset partagé ou modifier les propriétés de la définition du dataset partagé.|Enregistrer dans le Générateur de rapports.<br /><br /> Déployer dans le Concepteur de rapports.<br /><br /> Télécharger un fichier .rsd dans le portail web|[Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Charger un fichier ou un rapport dans le serveur de rapports](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Si vous téléchargez un dataset partagé avant que la source de données partagée dont il dépend soit publiée, vous devez lier manuellement le dataset partagé à la source de données partagée. Pour plus d’informations, consultez [... /.. /Reporting-Services/Work avec les datasets partagés - portail web](../work-with-shared-datasets-web-portal.md).|  
+|Ajouter un dataset partagé ou modifier les propriétés de la définition du dataset partagé.|Enregistrer dans le Générateur de rapports.<br /><br /> Déployer dans le Concepteur de rapports.<br /><br /> Charger un fichier .rsd dans le portail web|[Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Charger un fichier ou un rapport dans le serveur de rapports](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Si vous téléchargez un dataset partagé avant que la source de données partagée dont il dépend soit publiée, vous devez lier manuellement le dataset partagé à la source de données partagée. Pour plus d’informations, consultez [../../reporting-services/Utilisation de datasets partagés - portail web](../work-with-shared-datasets-web-portal.md).|  
 |Modifier les propriétés d'élément de dataset partagé.|portail web|[Utilisation de datasets partagés (portail web)](../../reporting-services/work-with-shared-datasets-web-portal.md)|  
 |Spécifier des propriétés de dataset partagé supplémentaires pour une instance de dataset partagé dans un rapport.|Générateur de rapports Concepteur de rapports|[Boîte de dialogue Propriétés du dataset, Requête (Générateur de rapports)](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)|  
 |Créer une liaison avec une source de données partagée différente pour un dataset partagé.|portail web|[Configurer les propriétés de la source de données d’un rapport paginé - SSRS](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  

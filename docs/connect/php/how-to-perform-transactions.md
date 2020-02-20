@@ -1,5 +1,5 @@
 ---
-title: 'Procédure: effectuer des transactions | Microsoft Docs'
+title: 'Procédure : Réaliser des transactions | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936438"
 ---
-# <a name="how-to-perform-transactions"></a>Procédure : effectuer des transactions
+# <a name="how-to-perform-transactions"></a>Procédure : Effectuer des transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Le pilote SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] propose trois fonctions pour effectuer des transactions :  
@@ -36,7 +36,7 @@ Le pilote PDO_SQLSRV propose trois méthodes pour effectuer des transactions :
   
 -   [PDO::commit](../../connect/php/pdo-commit.md)  
   
--   [PDO::Rollback](../../connect/php/pdo-rollback.md)  
+-   [PDO::rollback](../../connect/php/pdo-rollback.md)  
   
 Consultez [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) pour obtenir un exemple.  
   
@@ -150,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Commentaires  
-Pour mieux mettre l’accent sur le comportement de la transaction, aucune recommandation en matière de gestion des erreurs n’est donnée dans l’exemple précédent. Pour une application de production, nous vous recommandons de vérifier les erreurs dans un appel à une fonction **sqlsrv** et de les gérer en conséquence.
+Pour mieux mettre l’accent sur le comportement de la transaction, aucune recommandation en matière de gestion des erreurs n’est donnée dans l’exemple précédent. Pour une application de production, nous vous recommandons de vérifier s’il existe des erreurs et de les gérer en conséquence dans tout appel à une fonction **sqlsrv**.
   
 ## <a name="see-also"></a>Voir aussi  
 [Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492814"
 ---
 # <a name="create-a-linked-report"></a>Créer un rapport lié
@@ -28,17 +28,17 @@ ms.locfileid: "67492814"
   
 ## <a name="to-create-a-linked-report"></a>Pour créer un rapport lié  
   
-1. Dans le portail web, accédez à l’état souhaité, avec le bouton droit dessus et sélectionnez **gérer** dans le menu déroulant.
+1. Dans le portail web, accédez au rapport souhaité, cliquez dessus avec le bouton droit, puis sélectionnez **Gérer** dans le menu déroulant.
 
-2. Sur le **gérer <reportname>**  page, sélectionnez **créer un rapport lié**.  
+2. Dans la page **Gérer <reportname>** , sélectionnez **Créer un rapport lié**.  
   
 3. Saisissez un nom pour le nouveau rapport lié. Entrez éventuellement une description.  
   
-4. Pour sélectionner un autre dossier pour le rapport, sélectionnez le bouton de sélection (...) à droite de ***emplacement***.  Accédez au nouveau dossier pour le rapport, puis sélectionnez **sélectionnez**. Si vous ne sélectionnez pas un autre dossier, le rapport lié est créé dans le dossier actif.  
+4. Pour sélectionner un autre dossier pour le rapport, cliquez sur le bouton des points de suspension (...) à droite de ***Emplacement***.  Accédez au nouveau dossier du rapport, puis sélectionnez **Sélectionner**. Si vous ne sélectionnez pas un autre dossier, le rapport lié est créé dans le dossier actif.  
   
-5. Sélectionnez **Créer**. Le rapport lié est créé.  
+5. Sélectionnez **Create** (Créer). Le rapport lié est créé.  
 
-6. Sous **avancé**, sélectionnez un autre **délai d’attente de rapport** valeur si vous le souhaitez, puis sélectionnez **appliquer** pour enregistrer les modifications.
+6. Sous **Avancé**, sélectionnez une autre valeur **Délai d’expiration du rapport** si vous le souhaitez, puis sélectionnez **Appliquer** pour enregistrer les modifications.
   
      L'icône d'un rapport lié est différente des autres éléments gérés par un serveur de rapports. L'icône ci-après indique un rapport lié :  
   

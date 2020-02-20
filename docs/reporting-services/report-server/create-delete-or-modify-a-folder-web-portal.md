@@ -9,10 +9,10 @@ ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492854"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Créer, supprimer ou modifier un dossier - Reporting Services
@@ -64,7 +64,7 @@ ms.locfileid: "67492854"
   
 6.  Vous pouvez également supprimer le dossier et son contenu en cliquant sur **Supprimer**.  
   
-7.  Cliquez sur **Appliquer** pour enregistrer vos modifications.  
+7.  Cliquez sur **Appliquer** pour enregistrer les modifications.  
 
 ::: moniker-end
 
@@ -74,39 +74,39 @@ ms.locfileid: "67492854"
   
 1. Ouvrez [le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
-2. Accédez au dossier ou sous-dossier où vous voulez placer le nouveau dossier. Sélectionnez le **accueil** dossier en sélectionnant le **Parcourir** la barre d’outils en haut à gauche de la page pour le créer en haut de l’arborescence des dossiers.  
+2. Accédez au dossier ou au sous-dossier dans lequel vous souhaitez rechercher le nouveau dossier. Sélectionnez le dossier **Accueil** avec le bouton **Parcourir** dans la barre d’outils en haut à gauche de la page pour le créer en haut de l’arborescence des dossiers.  
   
-3. Sélectionnez le **New** bouton situé en haut à droite de la barre d’outils du serveur de rapports et sélectionnez **dossier** dans le menu déroulant.  
+3. Sélectionnez le bouton **Nouveau** en haut à droite de la barre d’outils du serveur de rapports, puis sélectionnez **Dossier** dans le menu déroulant.  
   
-4. Dans le **créer un nouveau dossier (nom du dossier actuel)** boîte de dialogue, entrez le nom du nouveau dossier à créer. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d’URL, par exemple les caractères : \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Vous ne pouvez pas non plus taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
+4. Dans la boîte de dialogue **Créer un nouveau dossier dans (nom du dossier actuel)** , entrez le nom du nouveau dossier à créer. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d’URL, par exemple les caractères : \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Vous ne pouvez pas non plus taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
   
-5. Sélectionnez **créer** pour terminer l’action.  
+5. Sélectionnez **Créer** pour terminer l’action.  
   
 ## <a name="to-delete-a-folder"></a>Pour supprimer un dossier  
   
-1. Dans le portail web, parcourez l’arborescence des dossiers, puis recherchez le dossier que vous souhaitez supprimer.  
+1. Dans le portail web, naviguez dans la hiérarchie de dossiers pour localiser le dossier à supprimer.  
   
-2. Right-click-le dossier, puis sélectionnez **supprimer** dans le menu déroulant.  
+2. Cliquez avec le bouton droit sur le dossier, puis sélectionnez **Supprimer** dans le menu déroulant.  
   
-3. Sélectionnez le **supprimer** situé dans le **supprimer <foldername>**  boîte de dialogue pour confirmer la suppression.  
+3. Sélectionnez le bouton **Supprimer** dans la boîte de dialogue **Supprimer <foldername>** pour confirmer la suppression.  
   
 ## <a name="to-modify-a-folders-properties"></a>Pour modifier les propriétés d’un dossier  
   
-1. Dans le portail web, parcourez l’arborescence des dossiers, puis recherchez le dossier que vous souhaitez supprimer.  
+1. Dans le portail web, naviguez dans la hiérarchie de dossiers pour localiser le dossier à supprimer.  
   
-2. Right-click-le dossier, puis sélectionnez **supprimer** dans le menu déroulant.  
+2. Cliquez avec le bouton droit sur le dossier, puis sélectionnez **Supprimer** dans le menu déroulant.  
   
-3. Sélectionnez l'onglet **Propriétés**. Le **propriétés** page s’affiche par défaut.  
+3. Sélectionnez l’onglet **Properties** (Propriétés). La page **Propriétés** s’affiche par défaut.  
   
-4. Vous pouvez modifier le nom du dossier dans le *nom** zone de texte.  
+4. Vous pouvez modifier le nom du dossier dans la zone de texte *Nom**.  
   
-5. Vous pouvez ajouter ou modifier la description du dossier dans le *Description** zone de texte.  
+5. Vous pouvez ajouter ou modifier la description du dossier dans la zone de texte *Description**.  
   
-6. Vous pouvez masquer ou Annuler-Masquer le dossier en activant ou désactivant la **masquer cet élément** case à cocher respectivement.  
+6. Vous pouvez masquer ou afficher le dossier en cochant ou en décochant la case **Masquer cet élément**, respectivement.  
   
-7. Sélectionnez **appliquer** pour enregistrer les modifications de propriétés.  
+7. Sélectionnez **Appliquer** pour enregistrer les modifications des propriétés.  
   
-8. Si vous le souhaitez, vous pouvez déplacer ou supprimer le dossier en sélectionnant le **déplacer** ou **supprimer** boutons en haut de la **propriétés** page. Consultez le [déplacer ou supprimer un élément (portail web)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) article pour plus d’informations.  
+8. Vous pouvez aussi déplacer ou supprimer le dossier en sélectionnant les boutons **Déplacer** ou **Supprimer** en haut de la page **Propriétés**. Pour plus d’informations, consultez l’article [Déplacer ou supprimer un élément (portail web)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer, supprimer ou modifier un dossier (portail web)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   

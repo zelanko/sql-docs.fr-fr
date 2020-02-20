@@ -16,10 +16,10 @@ ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6b38d58ddf81f0b8439912b865b1d94a7b15ecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981274"
 ---
 # <a name="getnumericfunctions-method-sqlserverdatabasemetadata"></a>Méthode getNumericFunctions (SQLServerDatabaseMetaData)
@@ -34,8 +34,8 @@ ms.locfileid: "67981274"
 public java.lang.String getNumericFunctions()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui contient les fonctions mathématiques disponibles.  
+## <a name="return-value"></a>Valeur de retour  
+ Une **chaîne** qui contient les fonctions mathématiques disponibles.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

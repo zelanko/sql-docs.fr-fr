@@ -1,5 +1,5 @@
 ---
-title: Assistant source de données-écran 1 (pilote ODBC pour SQL Server) | Microsoft Docs
+title: Assistant Source de données, écran 1 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936603"
 ---
 # <a name="data-source-wizard-screen-1"></a>Assistant Source de données, écran 1
@@ -23,7 +23,7 @@ Spécifiez le nom et la description de la source de données, et le nom du serve
     
 ## <a name="options"></a>Options
 
-### <a name="name"></a>Créer une vue d’abonnement
+### <a name="name"></a>Name
 
 Nom de la source de données utilisé par une application ODBC lorsqu'elle demande une connexion à la source de données. Par exemple, "Personnel". Le nom de la source de données est affiché dans la boîte de dialogue Administrateur de la source de données ODBC.
 
@@ -33,7 +33,7 @@ Nom de la source de données utilisé par une application ODBC lorsqu'elle deman
 
 ### <a name="select-or-enter-a-server-name"></a>Sélectionnez ou entrez un nom de serveur.
 
-Nom d’une instance de SQL Server sur votre réseau. Vous devrez spécifier un serveur dans la prochaine zone d'édition.
+Nom d'une instance de SQL Server sur votre réseau. Vous devrez spécifier un serveur dans la prochaine zone d'édition.
 
 Dans la plupart des cas, le pilote ODBC peut se connecter suivant l’ordre de protocole par défaut et le nom du serveur fourni dans cette zone. Utilisez le Gestionnaire de configuration SQL Server si vous souhaitez créer un alias pour le serveur ou configurer des bibliothèques réseau de client.
 
@@ -41,13 +41,13 @@ Vous pouvez entrer "(local)" dans la zone Serveur lorsque vous utilisez le même
 
 Pour plus d’informations sur les noms de serveurs de différents types de réseaux, consultez la documentation d’installation de SQL Server dans la Documentation en ligne de SQL Server.
 
-### <a name="finish"></a>Terminer
+### <a name="finish"></a>Finish
 
 Si toutes les informations nécessaires pour se connecter à SQL Server sont spécifiées sur cet écran, vous pouvez cliquer sur **Terminer**. Des valeurs par défaut sont utilisées pour tous les attributs spécifiés sur d'autres écrans de l'Assistant.
 
 ### <a name="next"></a>Suivant
 
-Pour passer à l’écran suivant de l’Assistant, cliquez sur **suivant**.
+Pour passer à l’écran suivant de l’Assistant, cliquez sur **Suivant**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

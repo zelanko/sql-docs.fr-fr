@@ -11,10 +11,10 @@ ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 835cbbfe7e4d117957eaa811c40c98d9481066ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973650"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>Méthode setNString (int, java.lang.String)
@@ -33,7 +33,7 @@ public final void setNString(int parameterIndex,
 #### <a name="parameters"></a>Paramètres  
  *parameterIndex*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
  *value*  
   
@@ -43,7 +43,7 @@ public final void setNString(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode doit être utilisée pour les types de données **nchar**, **nvarchar**, **ntext**et **XML** .  
+ Cette méthode doit être utilisée pour les types de données **NCHAR**, **NVARCHAR**, **NTEXT** et **XML**.  
   
  Cette méthode setNString est spécifiée par la méthode setNString de l’interface java.sql.PreparedStatement.  
   

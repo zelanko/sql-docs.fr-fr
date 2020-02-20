@@ -16,10 +16,10 @@ ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe53c38e1b3f1633be27f4c82a9c2edfe9820495
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213669"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability, méthode (SQLServerConnection)
@@ -47,7 +47,7 @@ public void setHoldability(int nNewHold)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setHoldability est spécifiée par la méthode setHoldability dans l’interface java. Sql. Connection.  
+ Cette méthode setHoldability est spécifiée par la méthode setHoldability de l’interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

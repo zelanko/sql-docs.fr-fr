@@ -16,10 +16,10 @@ ms.assetid: 58833726-3a7e-46be-ac0e-4c602d865262
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5f71c162b4be606be1aedcc56a0c3f9edcd29db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974200"
 ---
 # <a name="setinstancename-method-sqlserverdatasource"></a>Méthode setInstanceName (SQLServerDataSource)
@@ -37,9 +37,9 @@ public void setInstanceName(java.lang.String instanceName)
 #### <a name="parameters"></a>Paramètres  
  *instanceName*  
   
- **Chaîne** qui contient le nom de l’instance.  
+ **Chaîne** contenant le nom de l’instance.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

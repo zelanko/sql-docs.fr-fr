@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015215"
 ---
 # <a name="stored-procedures"></a>Procédures stockées
@@ -27,7 +27,7 @@ ms.locfileid: "68015215"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Une procédure stockée ([procédures &#40;stockées&#41;moteur de base de données](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge :  
+  Une procédure stockée ([Procédures stockées &#40;moteur de base de données&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge :  
   
 -   Procédures stockées  
   

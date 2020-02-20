@@ -16,10 +16,10 @@ ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 24aed500f5b345e2ba3762bdd7a888fc5f8f31ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954571"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>findColumn, méthode (SQLServerResultSet)
@@ -39,18 +39,18 @@ public int findColumn(java.lang.String columnName)
   
  **String** contenant le nom de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique l’index de colonne.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant l’index de la colonne.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode findColumn est spécifiée par la méthode findColumn dans l’interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Notes   
+ Cette méthode findColumn est spécifiée par la méthode findColumn de l’interface java.sql.ResultSet.  
   
  Si plusieurs colonnes portent le même nom, la méthode findColumn retourne la première correspondance respectant la casse. En l'absence de correspondance respectant la casse, cette méthode retourne la première correspondance ne respectant pas la casse.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

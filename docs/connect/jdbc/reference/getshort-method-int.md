@@ -16,10 +16,10 @@ ms.assetid: cd9773c1-b598-4adb-aaf6-0c0f589cbef5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18161201976c0a00a4d32989667198cd8998223c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979885"
 ---
 # <a name="getshort-method-int"></a>Méthode getShort (int)
@@ -37,10 +37,10 @@ public short getShort(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- Valeur de type **short** .  
+## <a name="return-value"></a>Valeur de retour  
+ Valeur **short**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

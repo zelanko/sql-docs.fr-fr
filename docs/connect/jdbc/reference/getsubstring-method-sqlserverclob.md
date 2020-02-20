@@ -16,10 +16,10 @@ ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979337"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Méthode getSubString (SQLServerClob)
@@ -44,14 +44,14 @@ public java.lang.String getSubString(long pos,
   
  Nombre des caractères consécutifs à copier.  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui est la sous-chaîne spécifiée dans le CLOB.  
+## <a name="return-value"></a>Valeur de retour  
+ **Chaîne** correspondant à la sous-chaîne spécifiée dans le CLOB.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getSubString est spécifiée par la méthode getSubString dans l’interface java. Sql. CLOB.  
+ Cette méthode getSubString est spécifiée par la méthode getSubString de l’interface java.sql.Clob.  
   
  La tentative d'obtention de zéro caractère depuis un CLOB avec une valeur Null ou de longueur zéro retourne une chaîne vide. La tentative d'obtention d'une longueur de caractères quelconque à n'importe quelle position autre que la position 1 dans un CLOB de longueur zéro entraîne la levée d'une exception de position.  
   

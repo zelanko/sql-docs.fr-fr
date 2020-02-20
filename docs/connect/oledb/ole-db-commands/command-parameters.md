@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1ed49ebaffb46b8542247e67ff7c639cec1cca1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016116"
 ---
 # <a name="command-parameters"></a>Paramètres de commande
@@ -34,7 +34,7 @@ ms.locfileid: "68016116"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- Pour améliorer les performances en réduisant le trafic réseau, le pilote OLE DB pour SQL Server ne dérive pas automatiquement les informations de paramètre, à moins que **ICommandWithParameters::GetParameterInfo** ou **ICommandPrepare::Prepare** ne soit appelé avant d’exécuter une commande. Cela signifie que le pilote OLE DB pour SQL Server n’est pas automatiquement:  
+ Pour améliorer les performances en réduisant le trafic réseau, le pilote OLE DB pour SQL Server ne dérive pas automatiquement les informations de paramètre, à moins que **ICommandWithParameters::GetParameterInfo** ou **ICommandPrepare::Prepare** ne soit appelé avant d’exécuter une commande. Cela signifie qu’OLE DB Driver pour SQL Server n’effectue pas automatiquement les opérations suivantes :  
   
 -   La vérification de ce que le type de données spécifié avec **ICommandWithParameters::SetParameterInfo** est correct.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "68016116"
 > [!NOTE]  
 >  Le fournisseur ne prend pas en charge l’appel à **ICommandWithParameters::GetParameterInfo** pour les instructions UPDATE ou DELETE [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenant une clause FROM ; pour les instructions SQL qui dépendent d’une sous-requête contenant des paramètres ; pour les instructions SQL contenant des marqueurs de paramètre dans les deux expressions d’un prédicat de comparaison, like ou quantifié ; ou les requêtes dans lesquelles un des paramètres est un paramètre d’une fonction. Lors du traitement d’un lot d’instructions SQL, le fournisseur ne prend pas non plus en charge l’appel à **ICommandWithParameters::GetParameterInfo** pour les marqueurs de paramètre dans les instructions après la première instruction du lot. Les commentaires (/* \*/) ne sont pas autorisés dans la commande [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Le pilote OLE DB pour SQL Server prend en charge les paramètres d’entrée dans les commandes d’instruction SQL. Dans le cas des commandes d’appel de procédure, le pilote OLE DB pour SQL Server prend en charge les paramètres d’entrée, de sortie et d’entrée/sortie. Les valeurs de paramètre de sortie sont retournées à l'application lors de l'exécution (uniquement si aucun ensemble de lignes n'est retourné) ou lorsque tous les ensembles de lignes retournés sont épuisés par l'application. Pour garantir que les valeurs retournées sont valides, utilisez **IMultipleResults** pour forcer la consommation de l’ensemble de lignes.  
+ OLE DB Driver pour SQL Server prend en charge les paramètres d'entrée dans les commandes d'instruction SQL. Sur les commandes d'appel de procédure, OLE DB Driver pour SQL Server prend en charge les paramètres d'entrée, de sortie et d'entrée/sortie. Les valeurs de paramètre de sortie sont retournées à l'application lors de l'exécution (uniquement si aucun ensemble de lignes n'est retourné) ou lorsque tous les ensembles de lignes retournés sont épuisés par l'application. Pour garantir que les valeurs retournées sont valides, utilisez **IMultipleResults** pour forcer la consommation de l’ensemble de lignes.  
   
  Les noms des paramètres de procédure stockée n'ont pas besoin d'être spécifiés dans une structure DBPARAMBINDINFO. Utilisez NULL pour la valeur du membre *pwszName* afin d’indiquer que le pilote OLE DB pour SQL Server doit ignorer le nom du paramètre et utiliser seulement l’ordinal spécifié dans le membre *rgParamOrdinals* de **ICommandWithParameters::SetParameterInfo**. Si le texte de la commande contient à la fois des paramètres nommés et sans nom, tous les paramètres sans nom doivent être spécifiés avant les paramètres nommés.  
   
- Si le nom d’un paramètre de procédure stockée est spécifié, le pilote OLE DB pour SQL Server vérifie la validité du nom. Le pilote OLE DB pour SQL Server retourne une erreur lorsqu’il reçoit un nom de paramètre erroné du consommateur.  
+ Si le nom d’un paramètre de procédure stockée est spécifié, le pilote OLE DB pour SQL Server vérifie la validité du nom. OLE DB Driver pour SQL Server retourne une erreur lorsqu'il reçoit un nom de paramètre erroné du consommateur.  
   
 > [!NOTE]  
 >  Pour exposer la prise en charge des types XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des types définis par l’utilisateur, le pilote OLE DB pour SQL Server implémente une nouvelle interface [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md).  

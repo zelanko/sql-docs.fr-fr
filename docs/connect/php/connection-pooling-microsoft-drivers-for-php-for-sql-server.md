@@ -13,10 +13,10 @@ ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015123"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Regroupement de connexions (Microsoft Drivers for PHP for SQL Server)
@@ -26,7 +26,7 @@ Voici des points importants à noter sur le regroupement de connexions dans [!IN
   
 -   [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] utilise le regroupement de connexions ODBC.  
   
--   Par défaut, le regroupement de connexions est activé dans Windows. Dans Linux et macOS, les connexions sont regroupées uniquement si le regroupement de connexions est activé pour ODBC (voir [Activation/désactivation du regroupement de connexions](#enablingdisabling-connection-pooling)). Lorsque le regroupement de connexions est activé et que vous vous connectez à un serveur, le pilote tente d’utiliser une connexion regroupée avant d’en créer un nouveau. Si une connexion équivalente est introuvable dans le regroupement, une nouvelle connexion est créée et ajoutée à ce regroupement. Le pilote détermine si les connexions sont équivalentes, par comparaison avec des chaînes de connexion.  
+-   Par défaut, le regroupement de connexions est activé dans Windows. Dans Linux et macOS, les connexions sont regroupées uniquement si le regroupement de connexions est activé pour ODBC (voir [Activation/désactivation du regroupement de connexions](#enablingdisabling-connection-pooling)). Quand le regroupement de connexions est activé et que vous vous connectez à un serveur, le pilote tente d’utiliser une connexion regroupée avant d’en créer une nouvelle. Si une connexion équivalente est introuvable dans le regroupement, une nouvelle connexion est créée et ajoutée à ce regroupement. Le pilote détermine si les connexions sont équivalentes, par comparaison avec des chaînes de connexion.  
   
 -   Quand une connexion du regroupement est utilisée, l’état de la connexion est réinitialisé.  
   
@@ -35,7 +35,7 @@ Voici des points importants à noter sur le regroupement de connexions dans [!IN
 Pour plus d’informations sur le regroupement de connexions, consultez [Regroupement de connexions du Gestionnaire de pilotes](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
 ## <a name="enablingdisabling-connection-pooling"></a>Activation/désactivation du regroupement de connexions
-### <a name="windows"></a>Windows
+### <a name="windows"></a> Windows
 Vous pouvez forcer le pilote à créer une connexion (au lieu de rechercher une connexion équivalente dans le pool de connexions) en affectant à l’attribut *ConnectionPooling* de la chaîne de connexion la valeur **false** (ou 0).  
   
 Si l’attribut *ConnectionPooling* est omis de la chaîne de connexion ou si sa valeur est **true** (ou 1), le pilote crée uniquement une connexion si aucune connexion équivalente n’existe dans le pool de connexions.  
@@ -44,9 +44,9 @@ Pour plus d’informations sur les autres attributs de connexion, consultez [Con
 ### <a name="linux-and-macos"></a>Linux et macOS
 L’attribut *ConnectionPooling* ne peut pas être utilisé pour activer/désactiver le regroupement de connexions. 
 
-Le regroupement de connexions peut être activé/désactivé en modifiant le fichier de configuration Odbcinst. ini. Le pilote doit être rechargé pour que les modifications prennent effet.
+Le regroupement de connexions peut être activé/désactivé en modifiant le fichier de configuration odbcinst.ini. Le pilote doit être rechargé pour que les modifications soient prises en compte.
 
-Définir `Pooling` sur `Yes` et une valeur `CPTimeout` positive dans le fichier Odbcinst. ini active le regroupement de connexions. 
+La définition de `Pooling` sur `Yes` et une valeur de `CPTimeout` positive dans le fichier odbcinst. ini active le regroupement de connexions. 
 ```
 [ODBC]
 Pooling=Yes
@@ -55,7 +55,7 @@ Pooling=Yes
 CPTimeout=<int value>
 ```
   
-Au minimum, le fichier Odbcinst. ini devrait ressembler à l’exemple suivant:
+Au minimum, le fichier odbcinst.ini devrait ressembler à l’exemple suivant :
 
 ```
 [ODBC]
@@ -68,16 +68,16 @@ UsageCount=1
 CPTimeout=120
 ```
 
-L' `Pooling` affectation `No` de la valeur à dans le fichier Odbcinst. ini force le pilote à créer une nouvelle connexion.
+La définition de `Pooling` sur `No` dans le fichier odbcinst.ini force le pilote à créer une nouvelle connexion.
 ```
 [ODBC]
 Pooling=No
 ```
 
-## <a name="remarks"></a>Notes
-- Dans Linux ou macOS, toutes les connexions sont regroupées si le regroupement est activé dans le fichier Odbcinst. ini. Cela signifie que l’option de connexion ConnectionPooling n’a aucun effet. Pour désactiver le regroupement, définissez pooling = non dans le fichier Odbcinst. ini et rechargez les pilotes.
-  - unixODBC < = 2.3.4 (Linux et macOS) risque de ne pas renvoyer les informations de diagnostic appropriées, telles que les messages d’erreur, les avertissements et les messages informatifs
-  - pour cette raison, les pilotes SQLSRV et PDO_SQLSRV peuvent ne pas être en mesure de récupérer correctement les données longues (telles que XML, Binary) sous forme de chaînes. Les données de type long peuvent être extraites en tant que flux de données. Consultez l’exemple ci-dessous pour SQLSRV.
+## <a name="remarks"></a>Notes 
+- Sur Linux ou macOS, toutes les connexions sont regroupées si le regroupement est activé dans le fichier odbcinst.ini. Cela signifie que l’option de connexion ConnectionPooling n’a aucun effet. Pour désactiver le regroupement, définissez Pooling=No dans le fichier odbcinst.ini et rechargez les pilotes.
+  - unixODBC <= 2.3.4 (Linux et macOS) risque de ne pas renvoyer les informations de diagnostic appropriées, notamment les messages d’erreur, les avertissements et les messages informatifs
+  - Pour cette raison, les pilotes SQLSRV et PDO_SQLSRV risquent de ne pas récupérer correctement les données de type Long (XML, binaires, par exemple) sous forme de chaînes. Pour contourner le problème, les données de type Long peuvent être extraites en tant que flux de données. Consultez l’exemple ci-dessous pour SQLSRV.
 
 ```
 <?php
@@ -124,8 +124,8 @@ function getColumn($conn)
 ```
 
 
-## <a name="see-also"></a>Voir aussi  
-[Guide pratique pour se connecter à l’aide de l’authentification Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+## <a name="see-also"></a> Voir aussi  
+[Procédure : Se connecter à l’aide de l’authentification Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Guide pratique pour se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Procédure : Se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

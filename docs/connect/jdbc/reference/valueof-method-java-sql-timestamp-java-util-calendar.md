@@ -11,10 +11,10 @@ ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11d8f8e346fdb0f07770feec815e5aa5fe88355f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001588"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>Méthode valueOf (java.sql.Timestamp, java.util.Calendar)
@@ -36,13 +36,13 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  *calendar*  
   
- Valeur de décalage.  Les composants de date et d’heure de *Calendar* seront définis en fonction de la valeur d' *horodatage* .  
+ Valeur de décalage.  Les composants de date et d’heure de *calendar* sont définis d’après la valeur *timestamp*.  
   
-## <a name="return-value"></a>Valeur retournée  
- Retourne un objet DateTimeOffset représentant le point dans le temps donné par l’objet Java. Sql. Timestamp au fuseau horaire de l’objet Java. util. Calendar donné.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne un objet DateTimeOffset représentant le point dans le temps donné par l’objet java.sql.Timestamp au fuseau horaire de l’objet java.util.Calendar donné.  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode définit également l’objet Java. util. Calendar sur le point dans le temps donné par l’objet Java. Sql. timestamp.  
+ Cette méthode définit également l’objet java.util.Calendar sur le point dans le temps donné par l’objet java.sql.Timestamp.  
   
 ## <a name="see-also"></a>Voir aussi  
  [DateTimeOffset, classe](../../../connect/jdbc/reference/datetimeoffset-class.md)   

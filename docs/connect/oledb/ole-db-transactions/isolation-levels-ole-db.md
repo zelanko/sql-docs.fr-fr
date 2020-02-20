@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993975"
 ---
 # <a name="isolation-levels-ole-db"></a>Niveaux d'isolation (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "67993975"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Les clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent contrôler les niveaux d'isolation des transactions pour une connexion. Pour contrôler le niveau d’isolation des transactions, le pilote OLE DB pour SQL Server consommateur utilise:  
+  Les clients [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent contrôler les niveaux d'isolation des transactions pour une connexion. Pour contrôler le niveau d'isolation des transactions, le consommateur d’OLE DB Driver pour SQL Server utilise :  
   
 -   La propriété DBPROPSET_SESSION DBPROP_SESS_AUTOCOMMITISOLEVELS pour le mode de validation automatique par défaut du pilote OLE DB pour SQL Server.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67993975"
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit le niveau d'isolement d'instantané. Pour plus d’informations, consultez [Utilisation du niveau d’isolement d’instantané](../../oledb/features/working-with-snapshot-isolation.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   
   

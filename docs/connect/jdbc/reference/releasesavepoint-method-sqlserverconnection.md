@@ -16,10 +16,10 @@ ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 406e7f7cbf2cd7656fe50531027c8566cb6c3243
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975762"
 ---
 # <a name="releasesavepoint-method-sqlserverconnection"></a>Méthode releaseSavepoint (SQLServerConnection)
@@ -40,13 +40,13 @@ public void releaseSavepoint(java.sql.Savepoint savepoint)
 #### <a name="parameters"></a>Paramètres  
  *savepoint*  
   
- Objet de point de enregistrement à supprimer.  
+ L’objet SavePoint à supprimer.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode releaseSavepoint est spécifiée par la méthode releaseSavepoint dans l’interface java. Sql. Connection.  
+ Cette méthode releaseSavepoint est spécifiée par la méthode releaseSavepoint de l’interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

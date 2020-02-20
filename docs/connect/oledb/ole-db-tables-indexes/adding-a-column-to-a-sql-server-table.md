@@ -1,6 +1,6 @@
 ---
-title: Ajout d’une colonne à une table SQL Server | Microsoft Docs
-description: Ajout d’une colonne à une table SQL Server à l’aide d’OLE DB pilote pour SQL Server
+title: Ajout d'une colonne à une table SQL Server | Microsoft Docs
+description: Ajout d’une colonne à une table SQL Server à l’aide d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994103"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Ajout d'une colonne à une table SQL Server.
@@ -27,13 +27,13 @@ ms.locfileid: "67994103"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server expose la fonction **ITableDefinition:: AddColumn** . Cela permet aux consommateurs d’ajouter une colonne à une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  OLE DB Driver pour SQL Server expose la fonction **ITableDefinition::AddColumn**. Cela permet aux consommateurs d’ajouter une colonne à une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Lorsque vous ajoutez une colonne à une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table, le pilote OLE DB pour SQL Server consommateur est restreint comme suit:  
+ Lorsque vous ajoutez une colonne à une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le consommateur OLE DB Driver pour SQL Server est contraint comme suit :  
   
 -   Si DBPROP_COL_AUTOINCREMENT est VARIANT_TRUE, DBPROP_COL_NULLABLE doit être VARIANT_FALSE.  
   
--   Si la colonne est définie en utilisant le type de données **timestamp** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], DBPROP_COL_NULLABLE doit être VARIANT_FALSE.  
+-   Si la colonne est définie en utilisant le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp**, DBPROP_COL_NULLABLE doit être VARIANT_FALSE.  
   
 -   Pour toute autre définition de colonne, DBPROP_COL_NULLABLE doit être VARIANT_TRUE.  
   

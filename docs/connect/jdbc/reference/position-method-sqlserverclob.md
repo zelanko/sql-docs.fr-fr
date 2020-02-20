@@ -1,5 +1,5 @@
 ---
-title: position, méthode (SQLServerClob) | Microsoft Docs
+title: Méthode position (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 20e04cb0-34ea-4b7a-ba74-4de13b8645b6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cd2ddc9c0728df5f5fe27227f64d7af035439c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976381"
 ---
 # <a name="position-method-sqlserverclob"></a>Méthode position (SQLServerClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67976381"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[position (java.sql.Clob, long)](../../../connect/jdbc/reference/position-method-java-sql-clob-long.md)|Retourne la position de caractère de l'objet CLOB spécifié dans le CLOB, en fonction de la position de départ donnée.|  
 |[position (java.lang.String, long)](../../../connect/jdbc/reference/position-method-java-lang-string-long.md)|Retourne la position de caractère de la sous-chaîne spécifiée dans l'objet CLOB, en fonction de la position de départ donnée.|  

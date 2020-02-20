@@ -16,10 +16,10 @@ ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed2fa6801b1d81c209abeadece0f463b489091f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974006"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong, méthode (SQLServerPreparedStatement)
@@ -38,11 +38,11 @@ public final void setLong(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- **Entier** qui indique le numéro du paramètre.  
+ **int** indiquant le numéro du paramètre.  
   
  *x*  
   
- Valeur de **type long** .  
+ Valeur **long**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

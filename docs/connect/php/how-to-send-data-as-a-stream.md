@@ -1,5 +1,5 @@
 ---
-title: 'Comment: envoyer des données sous forme de flux | Microsoft Docs'
+title: 'Procédure : Envoyer des données sous forme de flux | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d524e7c7f00b08ce636f8a3b7b945f3e8b349af0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936409"
 ---
-# <a name="how-to-send-data-as-a-stream"></a>Procédure : envoyer des données sous forme de flux
+# <a name="how-to-send-data-as-a-stream"></a>Procédure : Envoyer des données sous forme de flux
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] tire parti des flux PHP pour envoyer des objets volumineux au serveur. Les exemples de cette rubrique montrent comment envoyer des données sous forme de flux. Le premier exemple utilise le pilote SQLSRV pour illustrer le comportement par défaut, qui consiste à envoyer toutes les données de flux au moment de l’exécution de la requête. Le deuxième exemple utilise le pilote SQLSRV pour illustrer comment envoyer au serveur jusqu’à huit kilo-octets (8 Ko) de données de flux en une seule fois.  
   
 Le troisième exemple montre comment envoyer des données de flux au serveur à l’aide du pilote PDO_SQLSRV.  
   
-## <a name="example-sending-stream-data-at-execution"></a>Exemple: envoi de données de flux lors de l’exécution
+## <a name="example-sending-stream-data-at-execution"></a>Exemple : Envoi de données sous forme de flux lors de l’exécution
 L’exemple suivant insère une ligne dans la table *Production.ProductReview* de la base de données AdventureWorks. Les commentaires du client ( *$comments*) sont ouverts en tant que flux avec la fonction PHP [fopen](https://php.net/manual/en/function.fopen.php), puis transmis au serveur à l’exécution de la requête.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console.  
@@ -79,7 +79,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Exemple: envoi de données de flux à l’aide de sqlsrv_send_stream_data
+## <a name="example-sending-stream-data-using-sqlsrv_send_stream_data"></a>Exemple : Envoi de données sous forme de flux en utilisant sqlsrv_send_stream_data
 L’exemple suivant est identique au précédent, sauf que le comportement par défaut qui consiste à envoyer toutes les données de flux lors de l’exécution est désactivé. L’exemple utilise [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) pour envoyer des données de flux au serveur. Jusqu’à huit kilo-octets (8 Ko) de données sont envoyés lors de chaque appel à **sqlsrv_send_stream_data**. Le script compte le nombre d’appels effectués par **sqlsrv_send_stream_data** et affiche le résultat dans la console.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console.  
@@ -143,7 +143,7 @@ sqlsrv_close( $conn);
   
 Même si les exemples de cette rubrique envoient des données de type caractère au serveur, vous pouvez envoyer des données dans n’importe quel format sous forme de flux. Vous pouvez par exemple utiliser les techniques présentées dans cette rubrique pour envoyer des images au format binaire sous forme de flux.  
   
-## <a name="example-sending-an-image-as-a-stream"></a>Exemple: envoi d’une image en tant que flux 
+## <a name="example-sending-an-image-as-a-stream"></a>Exemple : Envoi d’une image sous forme de flux 
   
 ```  
 <?php  

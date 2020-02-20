@@ -16,10 +16,10 @@ ms.assetid: 760e555e-9667-4b40-b0ba-778026ff2923
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58af3c6d8b9d0967ff370047e49a377bf52ec985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974238"
 ---
 # <a name="setfetchsize-method-sqlserverstatement"></a>Méthode setFetchSize (SQLServerStatement)
@@ -37,13 +37,13 @@ public final void setFetchSize(int rows)
 #### <a name="parameters"></a>Paramètres  
  *rows*  
   
- **Entier** qui indique le nombre de lignes à extraire.  
+ **int** indiquant le nombre de lignes à récupérer (fetch).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setFetchSize est spécifiée par la méthode setFetchSize dans l’interface java. Sql. Statement.  
+ Cette méthode setFetchSize est spécifiée par la méthode setFetchSize de l’interface java.sql.Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

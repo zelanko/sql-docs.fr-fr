@@ -16,10 +16,10 @@ ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43c3fb3800b18af27d811fd7679e4b957f1e2113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968953"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>Méthode supportsResultSetConcurrency (SQLServerDatabaseMetaData)
@@ -74,14 +74,14 @@ public boolean supportsResultSetConcurrency(int type,
   
  CONCUR_SS_OPTIMISTIC_VAL  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si pris en charge. Dans le cas contraire, la valeur est **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode supportsResultSetConcurrency est spécifiée par la méthode supportsResultSetConcurrency dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode supportsResultSetConcurrency est spécifiée par la méthode supportsResultSetConcurrency de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

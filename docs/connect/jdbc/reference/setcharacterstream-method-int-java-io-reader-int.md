@@ -16,10 +16,10 @@ ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974772"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>Méthode setCharacterStream (int, java.io.Reader, int)
@@ -39,11 +39,11 @@ public final void setCharacterStream(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- **Entier** qui indique le numéro du paramètre.  
+ **int** indiquant le numéro du paramètre.  
   
  *reader*  
   
- Objet lecteur.  
+ Objet Reader.  
   
  *length*  
   
@@ -53,7 +53,7 @@ public final void setCharacterStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setCharacterStream est spécifiée par la méthode setCharacterStream dans l’interface java. Sql. PreparedStatement.  
+ Cette méthode setCharacterStream est spécifiée par la méthode setCharacterStream de l’interface java.sql.PreparedStatement.  
   
  Si la longueur du flux diffère de celle spécifiée dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

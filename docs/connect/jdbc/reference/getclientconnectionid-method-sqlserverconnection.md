@@ -11,10 +11,10 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953175"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID, méthode (SQLServerConnection)
@@ -28,14 +28,14 @@ ms.locfileid: "67953175"
 public Java.util.UUID SQLServerConnection.getClientConnectionID();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  GUID de 16 octets représentant l'ID de connexion de la dernière tentative de connexion. Ou NULL, s'il y a un échec après le lancement de la demande de connexion et après la négociation de préconnexion.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur l’accès aux informations de diagnostic dans le journal des événements étendus, consultez [accès aux informations de diagnostic dans le journal des événements étendus](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Pour plus d’informations sur l’accès aux informations de diagnostic dans le journal des événements étendus, consultez [Accès aux informations de diagnostic dans le journal des événements étendus](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  L'exemple suivant montre comment obtenir l'ID de connexion :  
   
@@ -56,7 +56,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getclientconnectionid,** fonctionne quelle que soit la version du serveur auquel vous vous connectez, mais les journaux des événements étendus et l’entrée des erreurs de mémoire tampon [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en anneau de connectivité ne seront pas présents dans 2008 R2 et versions antérieures.  
+ **getClientConnectionID** fonctionne quelle que soit la version du serveur auquel vous vous connectez, mais les journaux des événements étendus et l’entrée des erreurs de tampon en anneau de connectivité ne seront pas présents dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 et les versions antérieures.  
   
  Vous pouvez également localiser l'ID de connexion dans le journal des événements étendus si l'échec concerne le serveur et si l'événement étendu permet l'enregistrement de l'ID de connexion. Vous pouvez également trouver l’ID de connexion dans la mémoire tampon de l’anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon de l’anneau de connectivité](https://go.microsoft.com/fwlink/?LinkId=207752)) pour certaines erreurs de connexion. Si l'ID de connexion n'est pas dans la mémoire tampon de l'anneau de connexion, vous pouvez supposer qu'il s'agit d'une erreur réseau.  
   

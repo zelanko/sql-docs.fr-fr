@@ -1,5 +1,5 @@
 ---
-title: Détails de l’erreur de SQL Server | Microsoft Docs
+title: Détail des erreurs SQL Server | Microsoft Docs
 description: Détails des erreurs SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ddc9a1b1a242f9a92b1e854520d16abeb7baf809
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015649"
 ---
 # <a name="sql-server-error-detail"></a>Détail des erreurs SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "68015649"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server définit l’interface d’erreur spécifique au fournisseur [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). L'interface retourne davantage de détails sur une erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s'avère utile en cas d'échec de l'exécution d'une commande ou d'opérations d'ensemble de lignes.  
+  OLE DB Driver pour SQL Server définit l'interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) spécifique au fournisseur. L'interface retourne davantage de détails sur une erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s'avère utile en cas d'échec de l'exécution d'une commande ou d'opérations d'ensemble de lignes.  
   
  Vous pouvez accéder à l’interface **ISQLServerErrorInfo** de deux manières.  
   

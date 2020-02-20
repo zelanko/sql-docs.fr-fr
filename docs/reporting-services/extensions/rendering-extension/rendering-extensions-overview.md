@@ -12,21 +12,21 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193884"
 ---
 # <a name="rendering-extensions-overview"></a>Vue d'ensemble des extensions de rendu
-  Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend sept extensions de rendu : HTML, Excel, Word, CSV ou texte, XML, image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
+  Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut sept extensions de rendu : HTML, Excel, Word, CSV ou Texte, XML, Image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
   
 > [!NOTE]  
 >  Pour déterminer quelles extensions de rendu sont disponibles, vous pouvez consulter la liste des extensions installées dans le fichier RSReportServer.config.  
   
  Le tableau suivant décrit les extensions de rendu incluses avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extension Name|Description|  
+|Nom de l’extension|Description|  
 |--------------------|-----------------|  
 |**XML**|Effectue le rendu d'un rapport au format XML. Le rapport peut être ouvert dans un navigateur. Les transformations supplémentaires qui s'appliquent à cette sortie XML offrent éventuellement une méthode économique pour éviter d'avoir à développer votre propre extension de rendu.|  
 |**CSV**|Effectue le rendu d'un rapport dans lequel les données sont délimitées par des virgules. Le rapport s'ouvre dans un outil d'affichage associé aux formats de fichiers CSV.|  
@@ -46,7 +46,7 @@ ms.locfileid: "63193884"
  Lorsqu'un rapport est traité, le résultat est un modèle objet publiquement exposé connu sous le nom de mdèle objet de rendu (ROM, Rendering Object Model). Le modèle objet de rendu est une collection de classes qui définissent le contenu, la disposition et les données d'un rapport ayant été traité. Le modèle est disponible pour les développeurs qui souhaitent concevoir, développer et déployer des extensions de rendu personnalisées pour [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Le modèle est produit lorsque le serveur de rapports traite la définition XML d'un rapport avec les données de rapport définies par l'utilisateur. Au terme du traitement, le modèle objet public est utilisé par une extension de rendu pour définir la sortie du rapport. Les classes publiques disponibles du modèle sont définies dans l’espace de noms **Microsoft.ReportingServices.OnDemandReportRendering**.  
   
 ## <a name="writing-custom-rendering-extensions"></a>Écriture d'extensions de rendu personnalisées  
- Avant de décider de créer une extension de rendu personnalisée, vous devez réfléchir à des alternatives plus simples. Vous pouvez :  
+ Avant de décider de créer une extension de rendu personnalisée, vous devez réfléchir à des alternatives plus simples. Vous pouvez :  
   
 -   Personnaliser la sortie rendue en spécifiant des paramètres d'informations de périphérique pour les extensions existantes.  
   

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1025ea1de1e349e640b285174ffab694f791fd21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68221647"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Configurer la messagerie électronique pour une application de service Reporting Services
@@ -50,7 +50,7 @@ ms.locfileid: "68221647"
   
 1.  Si votre environnement de messagerie requiert l'authentification NTLM et n'autorise pas l'accès anonyme, vous devez modifier la configuration d'extension de remise par messagerie de vos applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, si vous voyez le message suivant pour **Derniers résultats** sur la page **Gérer les abonnements** .  
   
-    -   Échec de l’envoi du message électronique : le serveur SMTP requiert une connexion sécurisée ou le client n’était pas authentifié. La réponse du serveur était : 5.7.1 Le client n’était pas authentifié. Le message ne sera pas renvoyé.  
+    -   Échec de l’envoi de l’e-mail : Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n’était pas authentifié. Le message ne sera pas renvoyé.  
   
      Modifiez **SMTPAuthenticate** pour utiliser la valeur « 2 ». Cette valeur ne peut pas être modifiée à partir de l'interface utilisateur. L’exemple de script PowerShell suivant met à jour la configuration complète pour l’extension de remise par messagerie du serveur de rapports pour l’application de service nommée « SSRS_TESTAPPLICATION ». Notez que certains nœuds répertoriés dans le script peuvent aussi être définis à partir de l’interface utilisateur, par exemple l’adresse « De ».  
   

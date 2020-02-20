@@ -16,10 +16,10 @@ ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981774"
 ---
 # <a name="getmoreresults-method-int"></a>Méthode getMoreResults (int)
@@ -37,7 +37,7 @@ public final boolean getMoreResults(int mode)
 #### <a name="parameters"></a>Paramètres  
  *mode*  
   
- **Entier** qui indique comment gérer les objets de jeu de résultats actuellement ouverts. Il doit s’agir de l’une des constantes suivantes :  
+ **int** indiquant comment gérer les objets de jeu de résultats actuellement ouverts. Il doit s’agir de l’une des constantes suivantes :  
   
  CLOSE_CURRENT_RESULT  
   
@@ -45,14 +45,14 @@ public final boolean getMoreResults(int mode)
   
  CLOSE_ALL_RESULTS  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si le résultat retourné est un jeu de résultats. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMoreResults est spécifiée par la méthode getMoreResults dans l’interface java. Sql. Statement.  
+ Cette méthode getMoreResults est spécifiée par la méthode getMoreResults de l’interface java.sql.Statement.  
   
  Si la méthode getMoreResults est appelée avant la récupération des résultats, elle se comporte comme spécifié par l’argument *mode* et passe au résultat suivant.  
   

@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7256475421b8666e28eaaf03f3ff4cb9768aa289
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955603"
 ---
 # <a name="closeunreferencedpreparedstatementhandles-method-sqlserverconnection"></a>closeUnreferencedPreparedStatementHandles, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Force l’exécution des demandes de non-préparation pour les instructions préparées ignorées en suspens.
+ Force l’exécution des demandes d’annulation pour les instructions préparées ignorées en suspens.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +39,7 @@ public void closeUnreferencedPreparedStatementHandles()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
 
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
+ Cette méthode est disponible dans la version 6.4 et versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

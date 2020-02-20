@@ -1,5 +1,5 @@
 ---
-title: Membres SQLServerSavepoint | Microsoft Docs
+title: Membres de SQLServerSavepoint | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76a07cf83f7b4356443d2180a48870b80dba4c69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970406"
 ---
 # <a name="sqlserversavepoint-members"></a>Membres de SQLServerSavepoint
@@ -24,7 +24,7 @@ ms.locfileid: "67970406"
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|Initialise une nouvelle instance de la classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) en fonction de la connexion et du nom donnés.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67970406"
   
 ## <a name="methods"></a>Méthodes  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|Obtient le nom de l'étiquette du point de sauvegarde.|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|Obtient l'ID du point de sauvegarde.|  
@@ -49,7 +49,7 @@ ms.locfileid: "67970406"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerSavepoint, classe](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   

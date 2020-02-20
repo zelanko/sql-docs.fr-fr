@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69609301"
 ---
 # <a name="installation-wizard-help"></a>Aide de l’assistant d’installation
@@ -138,7 +138,7 @@ Les répertoires par défaut indiqués dans le tableau suivant sont configurable
 |**Répertoire temporaire**|\<Lecteur:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |Placez le Répertoire temporaire sur le sous-système de stockage haute performance.|  
 |**Répertoire de sauvegarde**|\<Lecteur:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |Il s'agit du répertoire pour les fichiers de sauvegarde par défaut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour des installations de SharePoint, ce répertoire est également l’emplacement où le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] met en cache les fichiers de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].<br /><br /> Vérifier que des autorisations appropriées sont définies pour empêcher la perte de données et que le groupe d'utilisateurs pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dispose des autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
   
-### <a name="considerations"></a>Observations  
+### <a name="considerations"></a>Considérations  
   
 * Lorsque les instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont déployées sur une batterie SharePoint, elles stockent des fichiers d'application, des fichiers de données et des propriétés dans les bases de données de contenu et les bases de données d'application de service.  
   
@@ -171,7 +171,7 @@ Les répertoires par défaut indiqués dans le tableau suivant sont configurable
 |**Répertoire temporaire**|\<Lecteur:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Placez le Répertoire temporaire sur le sous-système de stockage haute performance.|  
 |**Répertoire de sauvegarde**|\<Lecteur:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |Il s'agit du répertoire pour les fichiers de sauvegarde par défaut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour des installations de SharePoint, il s’agit également de l’emplacement où le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] met en cache les fichiers de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].<br /><br /> Vérifiez que des autorisations appropriées sont définies pour empêcher la perte de données et vérifiez que le groupe d'utilisateurs pour le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
   
-#### <a name="considerations"></a>Observations
+#### <a name="considerations"></a>Considérations
   
 * Lorsque les instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont déployées sur une batterie SharePoint, elles stockent des fichiers d'application, des fichiers de données et des propriétés dans les bases de données de contenu et les bases de données d'application de service.  
   
@@ -196,7 +196,7 @@ Les répertoires par défaut indiqués dans le tableau suivant sont configurable
 
 Utilisez cette page pour définir le mode de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ajouter des utilisateurs ou des groupes Windows en tant qu’administrateurs de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Éléments à prendre en considération pour l'exécution de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+### <a name="considerations-for-running-sscurrent"></a>Éléments à prendre en considération pour l'exécution de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le groupe BUILTIN\Administrators était fourni en tant que connexion dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] et les membres du groupe Administrateurs local pouvaient se connecter en utilisant leurs informations d’identification d’administrateur. Cependant, l'utilisation d'autorisations élevées n'est pas une meilleure pratique.
 
@@ -206,7 +206,7 @@ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , le groupe BUILTIN\A
 
 **Mode de sécurité** : Sélectionnez **Authentification Windows** ou **Authentification en mode mixte** pour votre installation.  
   
-**Approvisionnement principal Windows** : Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le groupe local de Windows BUILTIN\Administrateurs a été placé dans le rôle serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**sysadmin**, en octroyant aux administrateurs Windows l'accès à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le groupe BUILTIN\Administrateurs n'est pas configuré dans le rôle serveur **sysadmin**. Au lieu de cela, vous devez configurer de manière explicite des administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les nouvelles installations lors de l'installation.  
+**Approvisionnement principal Windows** : Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le groupe local de Windows BUILTIN\Administrateurs a été placé dans le rôle serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**, en octroyant aux administrateurs Windows l'accès à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le groupe BUILTIN\Administrateurs n'est pas configuré dans le rôle serveur **sysadmin**. Au lieu de cela, vous devez configurer de manière explicite des administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les nouvelles installations lors de l'installation.  
   
 > [!IMPORTANT]  
 > Vous devez configurer de manière explicite des administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les nouvelles installations lors de l'installation. L’installation ne vous permet pas de continuer tant que cette étape n'a pas été terminée.
@@ -245,7 +245,7 @@ Si vous devez choisir l'authentification en mode mixte et utiliser des connexion
 Les mots de passe forts ne peuvent pas être aisément devinés par une personne et ils ne sont pas facilement piratés par un logiciel. Les mots de passe forts ne peuvent pas utiliser des conditions ou des termes interdits, notamment :  
   
 * Une condition vide ou NULL
-* "Password"
+* « Mot de passe »
 * "Admin"
 * "Administrator"
 * "sa"
@@ -279,7 +279,7 @@ Pour spécifier un partage de fichiers SMB comme répertoire, vous devez taper m
 
 `\\<ServerName>\<ShareName>\...`
 
-### <a name="standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="standalone-instance-of-ssnoversion"></a>Instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 Pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le tableau suivant répertorie les types de stockage et les répertoires par défaut pris en charge à configurer lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
@@ -290,11 +290,11 @@ Pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 |**Répertoire racine de données**|Disque local, serveur de fichiers SMB, stockage partagé* |\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure les listes de contrôle d'accès (ACL) pour les répertoires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et rompt l'héritage dans le cadre de la configuration.|  
 |**Répertoire de base de données utilisateur**|Disque local, serveur de fichiers SMB, stockage partagé*|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Les meilleures pratiques recommandées pour les répertoires de données utilisateur dépendent de la charge de travail et des exigences en matière de performances.|  
 |**Répertoire du journal de la base de données utilisateur**|Disque local, serveur de fichiers SMB, stockage partagé*|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Assurez-vous que le répertoire du journal a un espace adéquat.|  
-|**Répertoire de sauvegarde**|Disque local, serveur de fichiers SMB, stockage partagé*|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Définissez les autorisations appropriées pour empêcher la perte de données et vérifiez que le compte d'utilisateur pour le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
+|**Répertoire de sauvegarde**|Disque local, serveur de fichiers SMB, stockage partagé*|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Définissez les autorisations appropriées pour empêcher la perte de données et vérifiez que le compte d'utilisateur pour le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
   
 \* Bien que les disques partagés soient pris en charge, nous ne recommandons pas leur utilisation pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="failover-cluster-instance-of-ssnoversion"></a>Instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le tableau suivant répertorie les types de stockage et les répertoires par défaut pris en charge à configurer lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -303,7 +303,7 @@ Pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../incl
 |**Répertoire racine de données**|Stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **Conseil** : Si le **disque partagé** a été sélectionné dans la page **Sélection du disque du cluster**, la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster**.|L’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure les listes de contrôle d'accès (ACL) pour les répertoires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et rompt l'héritage dans le cadre de la configuration.|  
 |**Répertoire de base de données utilisateur**|Stockage partagé, serveur de fichiers SMB|\<Lecteur:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Conseil** : Si le **disque partagé** a été sélectionné dans la page **Sélection du disque du cluster**, la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster**.|Les meilleures pratiques recommandées pour les répertoires de données utilisateur dépendent de la charge de travail et des exigences en matière de performances.|  
 |**Répertoire du journal de la base de données utilisateur**|Stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Conseil** : Si le **disque partagé** a été sélectionné dans la page **Sélection du disque du cluster**, la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster**.|Assurez-vous que le répertoire du journal a un espace adéquat.|  
-|**Répertoire de sauvegarde**|Disque local, stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Conseil** : Si le **disque partagé** a été sélectionné dans la page **Sélection du disque du cluster**, la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster**.|Définissez les autorisations appropriées pour empêcher la perte de données et vérifiez que le compte d'utilisateur pour le service SQL Server a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
+|**Répertoire de sauvegarde**|Disque local, stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Conseil** : Si le **disque partagé** a été sélectionné dans la page **Sélection du disque du cluster**, la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster**.|Définissez les autorisations appropriées pour empêcher la perte de données et vérifiez que le compte d'utilisateur pour le service SQL Server a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
   
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité
   
@@ -317,7 +317,7 @@ Les suggestions suivantes s'appliquent aux serveurs de fichiers SMB :
   
 * Des privilèges SeSecurityPrivilege sur le serveur de fichiers SMB doivent être accordés au compte utilisé pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour accorder ce privilège, utilisez la console de stratégie de sécurité locale sur le serveur de fichiers pour ajouter le compte utilisé pour l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à la stratégie **Gérer le journal d'audit et de la sécurité** . Ce paramètre se trouve dans la section **Affectations des droits d’utilisateur** sous **Stratégies locales** dans la console Stratégie de sécurité locale.
 
-### <a name="considerations"></a>Observations
+### <a name="considerations"></a>Considérations
   
 * Lors de l'ajout de fonctionnalités à une installation existante, vous ne pouvez ni modifier l'emplacement d'une fonctionnalité précédemment installée, ni spécifier l'emplacement d'une nouvelle fonctionnalité.  
   
@@ -338,7 +338,7 @@ Pour spécifier un partage de fichiers SMB comme répertoire, vous devez taper m
 
 `\\<ServerName>\<ShareName>\....`
   
-### <a name="data-and-log-directories-for-a-standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Répertoires de données et des journaux pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="data-and-log-directories-for-a-standalone-instance-of-ssnoversion"></a>Répertoires de données et des journaux pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Pour les instances autonomes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le tableau suivant répertorie les types de stockage pris en charge et les répertoires par défaut que vous pouvez configurer lors de l’installation.  
   
@@ -349,7 +349,7 @@ Pour les instances autonomes de [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 \* Bien que les disques partagés soient pris en charge, nous ne recommandons pas leur utilisation pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Répertoires de données et des journaux pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-ssnoversion"></a>Répertoires de données et des journaux pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le tableau suivant répertorie les types de stockage et les répertoires par défaut pris en charge à configurer lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -437,7 +437,7 @@ Si cette page est ignorée lors de l’installation, la valeur **max server memo
 
 ### <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur
   
-**Par défaut**: Cette case d’option est sélectionnée par défaut et définit les paramètres **min server memory** et **max server memory** des valeurs par défaut [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
+**Par défaut** : Cette case d’option est sélectionnée par défaut et définit les paramètres **min server memory** et **max server memory** des valeurs par défaut [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
 
 **Recommandé** : Cette case d’option doit être sélectionnée pour accepter les valeurs calculées recommandées ou pour modifier les valeurs calculées en valeurs configurées par l’utilisateur.  
   

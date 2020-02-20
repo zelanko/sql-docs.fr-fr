@@ -16,10 +16,10 @@ ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e93875cfc18ed3992fd1680a0c948e38a31f998e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954975"
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>execute, méthode (java.lang.String, java.lang.String)
@@ -38,13 +38,13 @@ public final boolean execute(java.lang.String sql,
 #### <a name="parameters"></a>Paramètres  
  *sql*  
   
- **Chaîne** qui contient une instruction SQL.  
+ **Chaîne** contenant une instruction SQL.  
   
  *columnNames*  
   
  Tableau de chaînes qui indique les noms de colonne des clés générées automatiquement qui doivent être disponibles.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si le premier résultat est un jeu de résultats. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -54,7 +54,7 @@ public final boolean execute(java.lang.String sql,
  Cette méthode execute est spécifiée par la méthode execute de l’interface java.sql.Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Execute &#40;, méthode SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
+ [Méthode execute &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

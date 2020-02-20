@@ -11,10 +11,10 @@ ms.assetid: 0e5c0579-84b5-4717-b128-0bcd512f6022
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd5c761a44af410a39136942490d4f4ab6241b5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968779"
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>Méthode supportsStoredFunctionsUsingCallSyntax (SQLServerDatabaseMetaData)
@@ -29,14 +29,14 @@ ms.locfileid: "67968779"
 public boolean supportsStoredFunctionsUsingCallSyntax()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si pris en charge. Dans le cas contraire, la valeur est **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode supportsStoredFunctionsUsingCallSyntax est spécifiée par la méthode supportsStoredFunctionsUsingCallSyntax dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode supportsStoredFunctionsUsingCallSyntax est spécifiée par la méthode supportsStoredFunctionsUsingCallSyntax de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

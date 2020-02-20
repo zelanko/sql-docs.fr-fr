@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5843deb0b1d598525efcc657b16fe0b610048a35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983626"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>getDiscardedServerPreparedStatementCount, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Retourne le nombre d’actions d’annulation de préparation d’instruction préparée en suspens.
+ Retourne le nombre d’actions d’annulation d’instructions préparées actuellement en suspens.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,14 +34,14 @@ ms.locfileid: "67983626"
 public int getDiscardedServerPreparedStatementCount()  
 ```  
 
-## <a name="return-value"></a>Valeur retournée
- **Entier** qui contient le nombre d’actions d’annulation de préparation d’instruction préparée en suspens.
+## <a name="return-value"></a>Valeur de retour
+ **Entier** qui contient le nombre d’actions d’annulation d’instructions préparées actuellement en suspens.
 
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
+ Cette méthode est disponible dans la version 6.4 et versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

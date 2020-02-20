@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAConnection, classe | Microsoft Docs
+title: Classe SQLServerXAConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970310"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection, classe
@@ -24,7 +24,7 @@ ms.locfileid: "67970310"
   
  **Package :** com.microsoft.sqlserver.jdbc  
   
- **Étend :** [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
+ **Étend :** [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
  **Implémente :** javax.sql.XAConnection  
   
@@ -35,13 +35,13 @@ ms.locfileid: "67970310"
 public class SQLServerXAConnection  
 ```  
   
-## <a name="remarks"></a>Notes  
- Un objet SQLServerXAConnection peut être inscrit dans une transaction distribuée au moyen d’un objet [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md). Un gestionnaire de transactions, qui fait généralement partie d’un serveur de niveau intermédiaire, gère un objet SQLServerXAConnection via l’objet SQLServerXAResource.  
+## <a name="remarks"></a>Notes   
+ Un objet SQLServerXAConnection peut être inscrit dans une transaction distribuée au moyen d’un objet [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md). Un gestionnaire de transactions, faisant généralement partie d’un serveur de niveau intermédiaire, gère un objet SQLServerXAConnection à travers l’objet SQLServerXAResource.  
   
 > [!NOTE]  
 >  En général, les programmateurs d'applications n'utilisent pas cette interface directement. Elle est principalement utilisée par un gestionnaire de transactions actif dans le serveur de couche intermédiaire.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerXAConnection, membres](../../../connect/jdbc/reference/sqlserverxaconnection-members.md)   
  [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

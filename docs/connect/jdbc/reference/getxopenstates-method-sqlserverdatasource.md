@@ -16,10 +16,10 @@ ms.assetid: de6fdf6b-8345-4490-b35e-7115b61e782e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c263a94b8df0337d05cc8f3ee41df4e2f30fc72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977934"
 ---
 # <a name="getxopenstates-method-sqlserverdatasource"></a>Méthode getXopenStates (SQLServerDataSource)
@@ -34,8 +34,8 @@ ms.locfileid: "67977934"
 public boolean getXopenStates()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **true** si la conversion des États SQL en États conformes compatibles XOPEN est activée. Dans le cas contraire, la valeur est **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si la conversion d’états SQL en états compatibles XOPEN est activée. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  
  Si la propriété xopenStates a la valeur **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] convertit les états SQL en états compatibles XOPEN. La valeur par défaut est **false**, qui entraîne le pilote JDBC à générer des codes d'état SQL 99. Si xopenStates n’a aucune valeur, la méthode getXopenStates retourne la valeur par défaut **false**.  

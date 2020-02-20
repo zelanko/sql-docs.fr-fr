@@ -16,10 +16,10 @@ ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36543107ba8acd635f0e71fde903cab2576a7b17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954070"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>Méthode getAttributes (SQLServerDatabaseMetaData)
@@ -43,7 +43,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- **Chaîne** qui contient le nom du catalogue.  
+ **Chaîne** contenant le nom du catalogue.  
   
  *schemaPattern*  
   
@@ -55,18 +55,18 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
   
  *attributePattern*  
   
- **Chaîne** qui contient le modèle de nom d’attribut.  
+ **Chaîne** contenant le modèle de nom de l’attribut.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode getAttributes est spécifiée par la méthode getAttributes dans l’interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Notes   
+ Cette méthode getAttributes est spécifiée par la méthode getAttributes de l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

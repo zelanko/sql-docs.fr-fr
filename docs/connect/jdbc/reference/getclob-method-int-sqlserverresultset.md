@@ -16,10 +16,10 @@ ms.assetid: 91020fad-a9e2-4ea4-9c72-c63cf6b1051c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dedfec8f5d6f04f4bb9b564dd3dbe0dab3d26b1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953096"
 ---
 # <a name="getclob-method-int-sqlserverresultset"></a>getClob, méthode (int) (SQLServerResultSet)
@@ -37,18 +37,18 @@ public java.sql.Clob getClob(int columnIndex)
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet CLOB.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Clob.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getClob est spécifiée par la méthode getClob de l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [getClob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

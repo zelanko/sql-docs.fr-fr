@@ -11,10 +11,10 @@ ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc31a8ae385f2dbb28db30b299377ab5b38058f9
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68702769"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Questions fréquentes (FAQ) pour ODBC Linux et macOS
@@ -32,18 +32,18 @@ Vous devriez pouvoir compiler et exécuter les applications ODBC que vous avez c
 Le pilote ODBC sur Linux et macOS prend en charge toutes les fonctionnalités de serveur dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] à l’exception de la base de données locale. Pour plus d’informations sur les fonctionnalités de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prises en charge, consultez [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
 **Le pilote prend-il en charge l’authentification Kerberos ?**  
-Oui. Si vous avez déjà configuré un environnement Kerberos, vous devez être en mesure de vous connecter aux serveurs `Trusted_Connection=Yes` à l’aide de l’option de chaîne de connexion ou de DSN. Pour plus d’informations, consultez [Utilisation de l’authentification intégrée](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
+Oui. Si vous disposez déjà d'un environnement Kerberos configuré, vous devriez pouvoir vous connecter à des serveurs en utilisant l'option DSN ou chaîne de connexion `Trusted_Connection=Yes`. Pour plus d’informations, consultez [Utilisation de l’authentification intégrée](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
   
 **Quel encodage Unicode une application doit-elle utiliser ?**  
-UTF-8 pour les données SQL_CHAR et UTF-16 pour les données SQL_WCHAR. En fonction des paramètres régionaux du système et de la version du pilote, les données non UTF-8 de l’un des plusieurs encodages peuvent également être prises en charge. Pour plus d’informations, consultez [instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md).
+UTF-8 pour les données SQL_CHAR et UTF-16 pour les données SQL_WCHAR. En fonction des paramètres régionaux système et de la version du pilote, les données non-UTF-8 dans l'un des différents encodages peuvent également être prises en charge. Pour plus d’informations, consultez [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md).
 
 **Existe-t-il des exemples ODBC que je peux télécharger et exécuter avec le pilote pour le tester ou l’évaluer ?**
 
-Pour obtenir un exemple, consultez la page [Utiliser des exemples ODBC MSDN C ++ existants pour le pilote ODBC sous Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) . Cela s’applique également au pilote ODBC macOS. 
+Pour obtenir un exemple, consultez la page [Utiliser des exemples ODBC MSDN C ++ existants pour le pilote ODBC sous Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) . Ceci s’applique également au pilote ODBC macOS. 
 
-**Le pilote ODBC sur Linux ou macOS est-il Open source?**
+**Le pilote ODBC sur Linux ou macOS est-il open source ?**
 
 Non, les pilotes ODBC sur Linux et macOS ne sont pas des produits open source.  
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 [Installation de Microsoft ODBC Driver for SQL Server sur Linux et macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

@@ -1,6 +1,6 @@
 ---
 title: Obtention de données volumineuses | Microsoft Docs
-description: Obtention de données volumineuses à l’aide du pilote OLE DB pour SQL Server
+description: Obtention de données volumineuses à l’aide d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936534"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
@@ -39,7 +39,7 @@ ms.locfileid: "67936534"
   
  Le consommateur doit extraire une seule ligne de données dans un appel à la méthode **GetNextRows** quand la propriété DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS dans le groupe de propriétés de l’ensemble de lignes. Cela est dû au fait que les données BLOB ne sont pas mises en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
   
- Le pilote OLE DB pour SQL Server ne récupère pas les données volumineuses à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jusqu’à ce que le consommateur l’ait demandé. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
+ OLE DB Driver pour SQL Server n'extrait pas de données volumineuses de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tant que le consommateur ne le lui demande pas. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple extrait une valeur de données volumineuses d'une colonne unique :  

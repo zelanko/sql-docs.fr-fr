@@ -1,10 +1,7 @@
 ---
-title: Utilitaire dta | Microsoft Docs
-ms.custom: ''
-ms.date: 01/09/2017
+title: dta (utilitaire)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,18 +17,24 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/09/2017
+ms.openlocfilehash: 7225e09e0cda9c371d1fc24934f9aeb9a803be9b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981804"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258284"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  L'utilitaire **dta** constitue la version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
-  
- À l'instar de l'Assistant Paramétrage du moteur de base de données, l'utilitaire **dta** analyse une charge de travail et recommande des PDS (Physical Design Structures) pour améliorer les performances du serveur pour cette charge de travail. La charge de travail peut être un cache du plan, un fichier de trace ou une table du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , ou un script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les PDS incluent des index, des vues indexées et un partitionnement. Après l'analyse d'une charge de travail, l'utilitaire **dta** produit une recommandation pour la conception physique des bases de données et peut générer le script nécessaire pour la mise en œuvre de la recommandation. Des charges de travail peuvent être spécifiées à partir de l’invite de commandes avec l’argument **-if** ou **-it** . Vous pouvez aussi spécifier un fichier d’entrée XML à partir de l’invite de commandes avec l’argument **-ix** . Dans ce cas, la charge de travail est spécifiée dans le fichier d'entrée XML.  
+
+L'utilitaire **dta** constitue la version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
+
+À l'instar de l'Assistant Paramétrage du moteur de base de données, l'utilitaire **dta** analyse une charge de travail et recommande des PDS (Physical Design Structures) pour améliorer les performances du serveur pour cette charge de travail. La charge de travail peut être un cache du plan, un fichier de trace ou une table du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , ou un script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les PDS incluent des index, des vues indexées et un partitionnement. Après l'analyse d'une charge de travail, l'utilitaire **dta** produit une recommandation pour la conception physique des bases de données et peut générer le script nécessaire pour la mise en œuvre de la recommandation. Des charges de travail peuvent être spécifiées à partir de l’invite de commandes avec l’argument **-if** ou **-it** . Vous pouvez aussi spécifier un fichier d’entrée XML à partir de l’invite de commandes avec l’argument **-ix** . Dans ce cas, la charge de travail est spécifiée dans le fichier d'entrée XML.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +81,7 @@ dta
   
 ## <a name="arguments"></a>Arguments  
  **-?**  
- Affiche les informations d'utilisation.  
+ Affiche des informations sur l’utilisation.  
   
  **-A** _time_for_tuning_in_minutes_  
  Spécifie la limite de durée de réglage en minutes. **dta** utilise la limite de temps spécifiée pour régler la charge de travail et générer un script avec les modifications de conception physique recommandées. Par défaut, **dta** utilise une durée de réglage de 8 heures. Si la valeur 0 est spécifiée, la durée de réglage est illimitée. **dta** pourra éventuellement achever le réglage de toute la charge de travail avant l'expiration de la limite de durée. Cependant, pour vous assurer que toute la charge de travail est réglée, nous vous recommandons de spécifier une durée de réglage illimitée (-A 0).  
@@ -128,7 +131,7 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** _nom_base_de_données_  
+ **-d** _database_name_  
  Spécifie la première base de données à laquelle **dta** se connecte lors du paramétrage d’une charge de travail. Une seule base de données peut être spécifiée pour cet argument. Par exemple :  
   
 ```  
@@ -177,7 +180,7 @@ dta -d AdventureWorks2012 ...
  Spécifie que les index filtrés soient considérés pour de nouvelles recommandations. Pour plus d'informations, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Spécifie que les index columnstore doivent être considérés pour les nouvelles recommandations. DTA va considérer à la fois les index columnstore cluster et non cluster. Pour plus d'informations, consultez    
+ Spécifie que les index columnstore doivent être considérés pour les nouvelles recommandations. DTA va considérer à la fois les index columnstore cluster et non cluster. Pour plus d'informations, consultez la rubrique    
 [Recommandations relatives aux index columnstore dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -214,14 +217,13 @@ dta -d AdventureWorks2012 ...
   
  **-ip**  
  Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  
- 
+
 **-iq**  
- Spécifie que l’Magasin des requêtes être utilisé comme charge de travail. Les 1 000 premiers événements du Magasin des requêtes pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  Pour plus d’informations, consultez [Magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [Paramétrage de base de données à l’aide des charges de travail du Magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Spécifie que le Magasin des requêtes est utilisé comme charge de travail. Les 1 000 premiers événements du Magasin des requêtes pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  Pour plus d’informations, consultez [Magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [Paramétrage de base de données à l’aide des charges de travail du Magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
      
-  
  **-if** _workload_file_  
  Spécifie le chemin d'accès et le nom du fichier de charge de travail à utiliser comme entrée pour le réglage. Le fichier doit être dans l'un de ces formats : .trc (fichier trace SQL Server Profiler), .sql (fichier SQL) ou .log (fichier de trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Un fichier de charge de travail ou une table de charge travail doit être spécifié.  
   
@@ -241,7 +243,13 @@ dta -d AdventureWorks2012 ...
   
  **-ix** _input_XML_file_name_  
  Spécifie le nom du fichier XML contenant les informations d’entrée **dta** . Ce doit être un document XML valide, conforme à DTASchema.xsd. Les arguments conflictuels spécifiés à partir de l'invite de commandes pour les options de réglage remplacent la valeur correspondante dans ce fichier XML. Une seule exception : configuration spécifiée par l'utilisateur entrée dans le mode évaluation dans le fichier d'entrée XML. Par exemple, si une configuration est entrée dans l'élément **Configuration** du fichier d'entrée XML et si un élément **EvaluateConfiguration** est également spécifié comme l'une des options de réglage, les options de réglage spécifiées dans le fichier d'entrée XML sont prioritaires par rapport à toute option de réglage entrée à partir de l'invite de commandes.  
-  
+
+ **-k** _maxtotalindexes_  
+ Nombre maximal d'index dans la recommandation.  
+
+ **-K** _maxtotalindexes_  
+ Nombre maximal d'index par table.
+
  **-m** _minimum_improvement_  
  Spécifie le pourcentage minimal d'amélioration que la configuration recommandée doit satisfaire.  
   
@@ -251,7 +259,7 @@ dta -d AdventureWorks2012 ...
 |Valeur|Description|  
 |-----------|-----------------|  
 |OFF|Aucune PDS ne peut être créée en ligne.|  
-|ON|Toutes les PDS recommandées peuvent être créées en ligne.|  
+|ACTIVÉ|Toutes les PDS recommandées peuvent être créées en ligne.|  
 |MIXED|L'Assistant Paramétrage du moteur de base de données tente de recommander des PDS pouvant être créées en ligne lorsque cela est possible.|  
   
  Si des index sont créés en ligne, ONLINE = ON est ajouté à sa définition d'objet.  
@@ -266,11 +274,11 @@ dta -n number_of_events -A 0
  Dans ce cas, il est important de spécifier une durée de réglage illimitée (`-A 0`). Sinon, l'Assistant Paramétrage du moteur de base de données utilise par défaut une durée de réglage de 8 heures.
  
  **-I** _time_window_in_hours_   
-   Spécifie la fenêtre de temps (en heures) pendant laquelle une requête doit être exécutée pour être considérée par DTA pour le paramétrage lors de l’utilisation de l’option **-IQ** (charge de travail à partir de magasin des requêtes). 
+   Spécifie la fenêtre de temps (en heures) pendant laquelle une requête doit avoir été exécutée pour être prise en compte par DTA pour le paramétrage lors de l’utilisation de l’option **-iq** (charge de travail à partir du Magasin des requêtes). 
 ```  
 dta -iq -I 48  
 ```  
-Dans ce cas, DTA utilise Magasin des requêtes comme source de la charge de travail et ne tient compte que des requêtes qui ont été exécutées au cours des 48 dernières heures.  
+Dans ce cas, DTA utilise le Magasin des requêtes comme source de la charge de travail et ne tient compte que des requêtes qui ont été exécutées au cours des 48 dernières heures.  
   ||  
 |-|  
 |**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
@@ -347,12 +355,12 @@ Dans ce cas, DTA utilise Magasin des requêtes comme source de la charge de trav
   
  Si les arguments **-Tf** et **-Tl** sont omis, toutes les tables utilisateur dans les bases de données spécifiées sont prises en compte pour le réglage.  
   
- **-TI** _table_list_  
+ **-Tl** _table_list_  
  Spécifie à l'invite de commandes une liste de tables à régler. Placez des virgules entre les noms de table pour les séparer. Si une seule base de données est spécifiée avec l’argument **-D** , les noms de table n’ont pas besoin d’être qualifiés avec un nom de base de données. Sinon, le nom complet au format : *database_name.schema_name.table_name* est obligatoire pour chaque table.  
   
  Cet argument constitue une alternative à l’utilisation d’un fichier de liste de tables ( **-Tf**). Si les deux arguments **-Tl** et **-Tf** sont employés, **dta** échoue et retourne une erreur.  
   
- **-U** _ID_connexion_  
+ **-U** _login_id_  
  Spécifie l'ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-u**  
@@ -390,33 +398,32 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
 ```  
   
  **D. Optimiser des tables spécifiques répertoriées dans un fichier**  
-  
+
  Cet exemple illustre l’utilisation de *table_list_file* (l’argument **-Tf** ). Le contenu du fichier table_list.txt est le suivant :  
-  
-```  
+
+```
 AdventureWorks2012.Sales.Customer  100000  
 AdventureWorks2012.Sales.Store  
 AdventureWorks2012.Production.Product  2000000  
-```  
+```
+
+Le contenu de table_list.txt spécifie que :  
+
+- Seules les tables **Customer**, **Store**et **Product** dans la base de données doivent être réglées.  
   
- Le contenu de table_list.txt spécifie que :  
+- Le nombre de lignes dans les tables **Customer** et **Product** sont par défaut de 100 000 et de 2 000 000, respectivement.  
   
--   Seules les tables **Customer**, **Store**et **Product** dans la base de données doivent être réglées.  
-  
--   Le nombre de lignes dans les tables **Customer** et **Product** sont par défaut de 100 000 et de 2 000 000, respectivement.  
-  
--   Le nombre de lignes dans **Store** doit être évalué au nombre actuel de lignes dans la table.  
-  
- Notez qu’un ou plusieurs espaces peuvent figurer entre le nombre de lignes et le nom de la table précédente dans *table_list_file*.  
-  
- La durée de réglage est de 2 heures (`-A 120`) et la sortie est écrite dans un fichier XML (`-ox XMLTune.xml`).  
-  
-```  
+- Le nombre de lignes dans **Store** doit être évalué au nombre actuel de lignes dans la table.  
+
+    Notez qu’un ou plusieurs espaces peuvent figurer entre le nombre de lignes et le nom de la table précédente dans *table_list_file*.  
+    
+    La durée de réglage est de 2 heures (`-A 120`) et la sortie est écrite dans un fichier XML (`-ox XMLTune.xml`).  
+
+``` 
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
-  
-  
+``` 
+
+## <a name="see-also"></a>Voir aussi
+
+- [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

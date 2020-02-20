@@ -1,5 +1,5 @@
 ---
-title: Connexion à une base de données SQL Azure | Microsoft Docs
+title: Se connecter à une base de données Azure SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155109"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
@@ -25,14 +25,14 @@ Cet article aborde les problèmes rencontrés lors de l’utilisation de [!INCLU
   
 - [Base de données SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Guide pratique pour se connecter à SQL Azure avec JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Procédure : Se connecter à SQL Azure avec JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Connexion avec l’authentification Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Détails
 
-Lors de la connexion [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]à un, vous devez vous connecter à la base de données Master pour appeler **SQLServerDatabaseMetaData. getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData. getCatalogs** utilisez la vue sys. databases pour obtenir les catalogues. Reportez-vous à la discussion sur les autorisations dans [sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) pour comprendre le comportement [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]de **SQLServerDatabaseMetaData. getCatalogs** sur un.  
+Lorsque vous vous connectez à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], connectez-vous à la base de données MASTER pour appeler **SQLServerDatabaseMetaData.getCatalogs**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utilise la vue sys.databases pour récupérer les catalogues. Pour comprendre le comportement de **SQLServerDatabaseMetaData.getCatalogs** sur une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], consultez la discussion relative aux autorisations dans [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## <a name="connections-dropped"></a>Connexions supprimées
 
@@ -44,11 +44,11 @@ Lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], les c
   
 Pour éviter la suppression des connexions inactives par un composant réseau, les paramètres de registre suivants (ou leurs équivalents non Windows) doivent être définis sur le système d'exploitation dans lequel se trouve le pilote.  
   
-|Paramètre de Registre|Valeur recommandée|  
+|Paramètre de registre|Valeur recommandée|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ services \ tcpip \ Parameters \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ services \ tcpip \ Parameters \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ services \ tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Redémarrez l’ordinateur pour appliquer les paramètres du Registre.  
 
@@ -76,13 +76,13 @@ shutdown /r /t 1
 
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>Ajout du nom de serveur à l'ID d'utilisateur dans la chaîne de connexion  
 
-Avant la version 4.0 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous deviez ajouter le nom du serveur à l’ID d’utilisateur dans la chaîne de connexion. Par exemple, user@servername. À compter de la version 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il n’est plus nécessaire d’ajouter @servername à l’ID d’utilisateur dans la chaîne de connexion.  
+Avant la version 4.0 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous deviez ajouter le nom du serveur à l’ID d’utilisateur dans la chaîne de connexion. Par exemple : user@servername. À compter de la version 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il n’est plus nécessaire d’ajouter @servername à l’ID d’utilisateur dans la chaîne de connexion.  
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>L'utilisation du chiffrement requiert la définition de hostNameInCertificate
 
-Avant la version [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2 de, lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **encrypt = true** (si le nom du serveur dans la chaîne de connexion est *ShortName*. *domainName*, affectez à la propriété **hostNameInCertificate** la valeur. \**nom_domaine*.). Cette propriété est facultative depuis la version 7,2 du pilote.
+Avant [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 7.2, vous devez spécifier **hostNameInCertificate** lorsque vous vous connectez à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] si vous choisissez **encrypt=true** (si le nom du serveur dans la chaîne de connexion est *nom_court*.*nom_domaine*, définissez la propriété **hostNameInCertificate** sur \*.*nom_domaine*). Cette propriété est facultative depuis la version 7.2 du pilote.
 
-Par exemple :
+Par exemple : 
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;

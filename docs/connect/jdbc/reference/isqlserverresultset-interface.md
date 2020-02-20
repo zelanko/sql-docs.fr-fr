@@ -11,10 +11,10 @@ ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edbf5a7feb65d39cb5158c42a218f077a3332236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977413"
 ---
 # <a name="isqlserverresultset-interface"></a>Interface ISQLServerResultSet
@@ -38,7 +38,7 @@ public interface ISQLServerResultSet
   
  Cette interface expose les méthodes spécifiques du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] suivantes :  
   
-|Méthode|Pour plus d'informations, consultez|  
+|Méthode|Pour plus d'informations, consultez la rubrique|  
 |------------|-------------------------------|  
 |public microsoft.sql.DateTimeOffset getDateTimeOffset(int)|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-int-sqlserverresultset.md)|  
 |public microsoft.sql.DateTimeOffset getDateTimeOffset(String)|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|  
@@ -47,7 +47,7 @@ public interface ISQLServerResultSet
   
  Cette interface expose les champs spécifiques du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] suivants :  
   
-|Champ|Pour plus d'informations, consultez|  
+|Champ|Pour plus d'informations, consultez la rubrique|  
 |-----------|-------------------------------|  
 |public static final int CONCUR_SS_OPTIMISTIC_CC|[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|  
 |public static final int CONCUR_SS_OPTIMISTIC_CCVAL|[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|  

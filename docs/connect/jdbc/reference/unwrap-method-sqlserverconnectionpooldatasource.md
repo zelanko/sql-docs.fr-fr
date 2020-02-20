@@ -1,5 +1,5 @@
 ---
-title: Unwrap, méthode (SQLServerConnectionPoolDataSource) | Microsoft Docs
+title: Méthode unwrap (SQLServerConnectionPoolDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f5c9b734-2096-4ae4-a284-6b4d1b4a00d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab408e917a1e6c22cdbe320eb19f5c9995c6e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985620"
 ---
 # <a name="unwrap-method-sqlserverconnectionpooldatasource"></a>Méthode unwrap (SQLServerConnectionPoolDataSource)
@@ -34,7 +34,7 @@ public <T> T unwrap(Class<T> iface)
   
  Classe de type **T** définissant une interface.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet qui implémente l'interface spécifiée.  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -47,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  La classe [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) étend la classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Lorsque cette méthode est appelée, l’objet se désencapsule dans les classes [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) et [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md).  
   
- Pour plus d’informations, consultez [wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Pour plus d’informations, consultez [Wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnectionPoolDataSource, méthodes](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

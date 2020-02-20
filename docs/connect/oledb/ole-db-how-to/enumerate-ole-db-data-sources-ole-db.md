@@ -1,6 +1,6 @@
 ---
-title: Énumérer les sources de données de OLE DB (OLE DB) | Microsoft Docs
-description: Énumérer les sources de données OLE DB à l’aide de l’énumérateur MSOLEDBSQL
+title: Énumérer des sources de données OLE DB (OLE DB) | Microsoft Docs
+description: Énumérer des sources de données OLE DB à l’aide de l’énumérateur MSOLEDBSQL
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994832"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Énumérer des sources de données OLE DB (OLE DB)
@@ -51,7 +51,7 @@ ms.locfileid: "67994832"
   
 6.  Appelez **IRowset::GetData**pour récupérer les données de la copie de l'ensemble de lignes de la ligne et traiter ces données.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Compilez avec ole32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
 ```  

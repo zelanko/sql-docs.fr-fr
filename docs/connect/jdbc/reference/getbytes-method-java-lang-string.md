@@ -16,10 +16,10 @@ ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35476869b1e083e66c349439563b4fed5fd8be2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953376"
 ---
 # <a name="getbytes-method-javalangstring"></a>Méthode getBytes (java.lang.String)
@@ -39,14 +39,14 @@ public byte[] getBytes(java.lang.String sCol)
   
  Valeur **chaîne** qui contient le nom du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- Tableau de valeurs d' **octets** .  
+## <a name="return-value"></a>Valeur de retour  
+ Tableau de valeurs **d’octets**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Dans la version précédente du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerCallableStatement.getBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
+ Dans la version précédente du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerCallableStatement.getBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
   
  Cette méthode getBytes est spécifiée par la méthode getBytes de l’interface java.sql.CallableStatement.  
   

@@ -16,10 +16,10 @@ ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b278df5cfa6e3bb80b2b309bf9abf195b249488
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983259"
 ---
 # <a name="getfailoverpartner-method-sqlserverdatasource"></a>Méthode getFailoverPartner (SQLServerDataSource)
@@ -34,13 +34,13 @@ ms.locfileid: "67983259"
 public string getFailoverPartner()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui contient le nom du partenaire de basculement, ou null si aucun n’est défini.  
+## <a name="return-value"></a>Valeur de retour  
+ **Chaîne** contenant le nom du partenaire de basculement, ou Null si aucun n’est défini.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur retournée par cette méthode reflète le nom du partenaire de basculement défini avec la méthode [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

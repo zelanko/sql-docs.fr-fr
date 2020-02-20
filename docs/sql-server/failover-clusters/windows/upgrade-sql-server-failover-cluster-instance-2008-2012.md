@@ -1,6 +1,7 @@
 ---
-title: Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012 | Microsoft Docs
-ms.date: 01/25/2018
+title: 'Mise à niveau d’instances SQL Server : Clusters Windows Server 2012 et versions antérieures'
+description: Décrit comment mettre à niveau vos instances de cluster de basculement SQL Server s’exécutant sur Windows Server 2008, Windows Server 2008 R2 et Windows Server 2012.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904959"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242853"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012
 
@@ -46,8 +47,8 @@ La stratégie de migration appropriée dépend de certains paramètres de la top
 |                                   | Nécessite tous les objets serveur et noms de réseaux virtuels | Nécessite tous les objets serveur et noms de réseaux virtuels | Ne nécessite pas d’objets serveur/de noms de réseaux virtuels\* | Ne nécessite pas d’objets serveur/de noms de réseaux virtuels\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
 | **_Groupes de disponibilité ? (O/N_)**                  | **_O_**                              | **_N_**                                                            | **_O_**    | **_N_**    |
-| **Le cluster utilise l’instance de cluster de basculement SQL uniquement**         | [Scénario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Scénario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Scénario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scénario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
-| **Le cluster utilise des instances autonomes** | [Scénario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Scénario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Scénario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scénario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
+| **Le cluster utilise l’instance de cluster de basculement SQL uniquement**         | [Scénario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Scénario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Scénario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scénario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
+| **Le cluster utilise des instances autonomes** | [Scénario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Scénario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Scénario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scénario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* À l’exception des noms des écouteurs de groupe de disponibilité
 
@@ -270,7 +271,7 @@ La migration d’un cluster qui utilise des groupes de disponibilité avec des r
 
     D’un point de vue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il n’existe aucun problème avec le point de terminaison. Avant la migration, vous devez vérifier qu’aucun processus n’est déjà à l’écoute sur le même port et qu’aucune règle de pare-feu ne bloque ce port, ou qu’il existe une règle de pare-feu autorisant précisément le port.
 
--   **Certificats**
+-   **Certificates**
 
     Les certificats doivent également être sauvegardés et restaurés sur les ordinateurs cibles dans le cas où le certificat devrait être restauré sur un nouvel ordinateur.
 
@@ -282,9 +283,9 @@ La migration d’un cluster qui utilise des groupes de disponibilité avec des r
 
     Les liaisons de service distant fonctionnent comme prévu après la migration, quand tout utilisateur employant une liaison de ce type est correctement migré.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
+### <a name="ssnoversion-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
 
--   **Travaux**
+-   **Tâches**
 
     Les travaux sont correctement migrés avec les bases de données système. Tout utilisateur qui exécute un travail de SQL Agent ou SQL Agent lui-même a les mêmes autorisations sur l’ordinateur cible, comme indiqué dans les conditions préalables.
 

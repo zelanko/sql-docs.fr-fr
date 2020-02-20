@@ -1,5 +1,5 @@
 ---
-title: Fonctionnement des transactions XA | Microsoft Docs
+title: Comprendre les transactions XA | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027225"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947131"
 ---
 # <a name="understanding-xa-transactions"></a>Présentation des transactions XA
 
@@ -23,8 +23,10 @@ ms.locfileid: "69027225"
 
 Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge les transactions distribuées facultatives Java Platform, Enterprise Edition/JDBC 2.0. Les connexions JDBC obtenues à partir de la classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) peuvent participer aux environnements de traitement des transactions distribuées standard, tels que les serveurs d’applications Java Platform, Enterprise Edition (Java EE).  
 
+Dans cet article, XA signifie « Extended Architecture », soit architecture étendue.
+
 > [!WARNING]  
-> Microsoft JDBC Driver 4.2 pour SQL (et versions ultérieures) inclut de nouvelles options de délai d’attente pour la fonctionnalité existante de restauration automatique des transactions non préparées. Pour plus d’informations, consultez [Configuration des paramètres de délai d’attente côté serveur pour la restauration automatique des transactions](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) non préparées plus loin dans cette rubrique.  
+> Microsoft JDBC Driver 4.2 pour SQL (et versions ultérieures) inclut de nouvelles options de délai d’attente pour la fonctionnalité existante de restauration automatique des transactions non préparées. Pour plus d’informations, consultez [Configurer les paramètres du délai d’attente côté serveur pour la restauration automatique des transactions non préparées](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) plus loin dans cette rubrique.  
 
 ## <a name="remarks"></a>Notes
 
@@ -44,9 +46,9 @@ Les recommandations supplémentaires suivantes s'appliquent aux transactions for
 
 - Lorsque vous utilisez des transactions XA avec Microsoft Distributed Transaction Coordinator (MS DTC), vous pouvez remarquer que la version actuelle de MS DTC ne prend pas en charge le comportement de branche XA fortement couplée. Par exemple, MS DTC a un mappage un-à-un entre un ID de transaction de branche XA (XID) et un ID de transaction MS DTC et le travail effectué par les branches XA couplées de manière lâche est isolé.  
   
-     Le correctif logiciel disponible sur la page web [MSDTC et transactions fortement couplées](https://support.microsoft.com/kb/938653) permet la prise en charge des branches XA fortement couplées quand plusieurs branches XA avec le même ID de transaction globale (GTRID) sont mappées à un ID de transaction MS DTC unique. Cette prise en charge permet à plusieurs branches XA fortement couplées de voir les changements apportés à chacune d’elles dans le gestionnaire de ressources, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- MS DTC prend également en charge les branches XA fortement couplées quand plusieurs branches XA portant le même ID de transaction globale (GTRID) sont mappées à un seul ID de transaction MS DTC. Cette prise en charge permet à plusieurs branches XA fortement couplées de voir les changements apportés à chacune d’elles dans le gestionnaire de ressources, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- Un indicateur [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permet aux applications d’utiliser les transactions XA fortement couplées qui ont des ID de transaction de branche XA (BQUAL) différents mais le même ID de transaction global (GTRID) et ID de format (FormatID). Pour pouvoir utiliser cette fonctionnalité, vous devez définir [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sur le paramètre flags de la méthode XAResource. Start:
+- Un indicateur [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permet aux applications d’utiliser les transactions XA fortement couplées qui ont des ID de transaction de branche XA (BQUAL) différents mais le même ID de transaction global (GTRID) et ID de format (FormatID). Pour pouvoir utiliser cette fonctionnalité, vous devez définir [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sur le paramètre flags de la méthode XAResource.start :
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -60,12 +62,12 @@ Les étapes suivantes sont requises si vous souhaitez utiliser des sources de do
 > Les composants de transaction distribuée JDBC sont inclus dans le répertoire xa de l'installation du pilote JDBC. Ces composants incluent les fichiers xa_install.sql et sqljdbc_xa.dll.  
 
 > [!NOTE]  
-> À compter de SQL Server 2019 public Preview CTP 2,0, les composants JDBC de transaction distribuée JDBC sont inclus dans le moteur de SQL Server et peuvent être activés ou désactivés avec une procédure stockée système.
-> Pour permettre aux composants requis d’effectuer des transactions distribuées XA à l’aide du pilote JDBC, exécutez la procédure stockée suivante.
+> À compter de la préversion publique CTP 2.0 de SQL Server 2019, les composants de transaction distribuée JDBC XA sont inclus dans le moteur de SQL Server et peuvent être activés ou désactivés avec une procédure stockée système.
+> Pour permettre aux composants requis d’effectuer des transactions distribuées XA avec le pilote JDBC, exécutez la procédure stockée suivante.
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> Pour désactiver les composants précédemment installés, exécutez la procédure stockée suivante.
+> Pour désactiver les composants installés, exécutez la procédure stockée suivante.
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -108,7 +110,7 @@ Il existe trois façons de vérifier la version actuellement installée de sqljd
   
 1. Ouvrez le répertoire LOG de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doit participer aux transactions distribuées. Sélectionnez et ouvrez le fichier ERRORLOG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recherchez l'expression « Using 'SQLJDBC_XA.dll' version ... » dans le fichier ERRORLOG.  
   
-2. Ouvrez le répertoire Binn de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doit participer aux transactions distribuées. Sélectionnez l’assembly sqljdbc_xa. dll.
+2. Ouvrez le répertoire Binn de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doit participer aux transactions distribuées. Sélectionnez l’assembly sqljdbc_xa.dll.
 
     - Sur Windows Vista et versions ultérieures : cliquez avec le bouton droit sur sqljdbc_xa.dll, puis sélectionnez Propriétés. Cliquez ensuite sur l’onglet **Détails**. Le champ **Version du fichier** indique la version de sqljdbc_xa.dll actuellement installée sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -121,9 +123,9 @@ Il existe trois façons de vérifier la version actuellement installée de sqljd
 
 Il existe deux paramètres du Registre (valeurs DWORD) pour contrôler le comportement du délai d'attente des transactions distribuées :  
   
-- **XADefaultTimeout** (en secondes): valeur de délai d’attente par défaut à utiliser lorsque l’utilisateur ne spécifie pas de délai d’attente. La valeur par défaut est 0.  
+- **XADefaultTimeout** (en secondes) : valeur par défaut du délai d’attente, à utiliser quand l’utilisateur n’en spécifie aucune. La valeur par défaut est 0.  
   
-- **XAMaxTimeout** (en secondes): valeur maximale du délai d’attente qu’un utilisateur peut définir. La valeur par défaut est 0.  
+- **XAMaxTimeout** (en secondes) : valeur maximale du délai d’attente qu’un utilisateur peut définir. La valeur par défaut est 0.  
   
 Ces paramètres sont spécifiques de l'instance SQL Server et doivent être créés sous la clé de Registre suivante :  
 
@@ -159,7 +161,7 @@ Lorsque vous installez une nouvelle version du pilote JDBC, vous devez utiliser 
 > [!IMPORTANT]  
 > Vous devez mettre à niveau le fichier sqljdbc_xa.dll dans une fenêtre de maintenance ou quand aucune transaction MS DTC n’est en cours.
   
-1. Déchargez sqljdbc_xa. dll [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de la commande **DBCC sqljdbc_xa (Free)** .  
+1. Déchargez sqljdbc_xa.dll avec la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] **DBCC sqljdbc_xa (FREE)** .  
   
 2. Copiez le nouveau fichier sqljdbc_xa.dll à partir du répertoire d’installation du pilote JDBC vers le répertoire Binn de chaque ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] susceptible de participer à des transactions distribuées.  
   

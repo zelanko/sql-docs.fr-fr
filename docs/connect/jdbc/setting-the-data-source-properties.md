@@ -11,10 +11,10 @@ ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027736"
 ---
 # <a name="setting-the-data-source-properties"></a>Définition des propriétés de la source de données
@@ -25,7 +25,7 @@ Les sources de données représentent le mécanisme recommandé de création de 
 
 Les produits Java EE, tels que les serveurs d'applications et les moteurs servlet/JSP, vous permettent généralement de configurer des sources de données pour l'accès à la base de données. Toute propriété répertoriée dans la rubrique [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md) peut être spécifiée à n’importe quel endroit où la configuration vous permet d’entrer une propriété en tant que paire propriété=valeur.
 
-Pour plus d’informations sur les sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Pour obtenir un exemple d’utilisation de la classe SQLServerDataSource pour établir une connexion à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données, consultez [exemple de source de données](../../connect/jdbc/data-source-sample.md).
+Pour plus d’informations sur les sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Pour obtenir un exemple d'utilisation de la classe SQLServerDataSource pour établir une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Exemple de source de données](../../connect/jdbc/data-source-sample.md).
 
 ## <a name="see-also"></a>Voir aussi
 

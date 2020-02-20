@@ -1,5 +1,5 @@
 ---
-title: valueOf, méthode (DateTimeOffset) | Microsoft Docs
+title: Méthode valueOf (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 38692b3e-ca7f-4e26-8787-1a34bb13c996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25f5b108451e4e256283d9d72cce8c2c65665538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001553"
 ---
 # <a name="valueof-method-datetimeoffset"></a>Méthode valueOf (DateTimeOffset)
@@ -24,7 +24,7 @@ ms.locfileid: "68001553"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[valueOf(java.sql.Timestamp, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|Crée un objet **DateTimeOffset** représentant un point précis dans le temps d’un décalage particulier par rapport à l’heure GMT selon une valeur java.sql.Timestamp et une valeur indiquant le décalage en minutes.|  
 |[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|Crée un objet **DateTimeOffset** représentant un point précis dans le temps pour un décalage en particulier par rapport à l’heure GMT en fonction d’une valeur java.sql.Timestamp et d’une valeur java.util.Calendar indiquant le décalage.|  

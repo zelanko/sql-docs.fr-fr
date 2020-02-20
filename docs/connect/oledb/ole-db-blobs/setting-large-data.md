@@ -1,6 +1,6 @@
 ---
 title: Définition de données volumineuses | Microsoft Docs
-description: Définition de données volumineuses à l’aide du pilote OLE DB pour SQL Server
+description: Définition de données volumineuses à l’aide d’OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936525"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
@@ -28,7 +28,7 @@ ms.locfileid: "67936525"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Avec le pilote OLE DB pour SQL Server, vous pouvez définir des données BLOB en passant un pointeur vers un objet de stockage consommateur.  
+  Avec OLE DB Driver pour SQL Server, vous pouvez définir des données BLOB en passant un pointeur vers l'objet de stockage d'un consommateur.  
   
  Le consommateur crée un objet de stockage qui contient les données et passe au fournisseur un pointeur vers cet objet de stockage. Le fournisseur lit ensuite les données de l'objet de stockage du consommateur et les écrit dans la colonne BLOB.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67936525"
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
-3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l'élément *wType* dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l'élément *pObject* de sorte qu'il pointe vers la structure DBOBJECT que vous avez créée.  
+3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l’élément *wType* dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l’élément *pObject* de sorte qu’il pointe vers la structure DBOBJECT que vous avez créée.  
   
 4.  Créez un accesseur à l'aide des informations de liaison du tableau des structures DBBINDINGS.  
   

@@ -1,5 +1,5 @@
 ---
-title: Gestion des erreurs | Microsoft Docs
+title: Gérer les erreurs | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028028"
 ---
 # <a name="handling-errors"></a>Gestion des erreurs
@@ -30,23 +30,23 @@ ms.locfileid: "69028028"
   
 -   `getNextException()` retourne l'objet `SQLServerException` suivant ou la valeur « null » s'il n'y a pas d'objet d'exception à retourner.
 
--   `getSQLServerError()`retourne l' `SQLServerError` objet contenant des informations détaillées sur l’exception reçues de SQL Server. Cette méthode retourne la valeur null si aucune erreur de serveur ne s’est produite.
+-   `getSQLServerError()` retourne l’objet `SQLServerError` contenant des informations détaillées sur l’exception envoyée par SQL Server. Cette méthode retourne la valeur Null si aucune erreur de serveur ne s’est produite.
 
-Les méthodes suivantes de la `SQLServerError` classe peuvent être utilisées pour obtenir des détails supplémentaires sur l’erreur générée à partir du serveur.
+Les méthodes suivantes de la classe `SQLServerError` permettent d’obtenir des détails supplémentaires sur l’erreur générée à partir du serveur.
 
--   `SQLServerError.getErrorMessage()`retourne le message d’erreur tel qu’il a été reçu du serveur.
+-   `SQLServerError.getErrorMessage()` retourne le message d’erreur envoyé par le serveur.
 
--   `SQLServerError.getErrorNumber()`retourne un nombre qui identifie le type de l’erreur.
+-   `SQLServerError.getErrorNumber()` retourne un nombre identifiant le type de l’erreur.
 
--   `SQLServerError.getErrorState()`retourne un code d’erreur numérique de SQL Server qui représente une erreur, un avertissement ou un message «aucune donnée trouvée».
+-   `SQLServerError.getErrorState()` retourne un code d’erreur numérique de SQL Server qui représente une erreur, un avertissement ou un message « Aucune donnée trouvée ».
 
--   `SQLServerError.getErrorSeverity()`retourne le niveau de gravité de l’erreur reçue.
+-   `SQLServerError.getErrorSeverity()` retourne le niveau de gravité de l’erreur reçue.
 
--   `SQLServerError.getServerName()`retourne le nom de l’ordinateur qui exécute une instance de SQL Server qui a généré l’erreur.
+-   `SQLServerError.getServerName()` retourne le nom de l’ordinateur exécutant une instance de SQL Server qui a généré l’erreur.
 
--   `SQLServerError.getProcedureName()`retourne le nom de la procédure stockée ou de l’appel de procédure distante (RPC) qui a généré l’erreur.
+-   `SQLServerError.getProcedureName()` retourne le nom de la procédure stockée ou de l’appel de procédure distante (RPC) qui a généré l’erreur.
 
--   `SQLServerError.getLineNumber()`retourne le numéro de ligne dans le lot d’instructions Transact-SQL ou dans la procédure stockée qui a généré l’erreur.
+-   `SQLServerError.getLineNumber()` retourne le numéro de la ligne au sein du lot de commandes Transact-SQL ou de la procédure stockée qui a généré l’erreur.
   
  Dans l’exemple suivant, une connexion ouverte à l’exemple de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est passée à la fonction et une instruction SQL incorrecte est créée, qui ne contient pas de clause FROM. Ensuite, l'instruction est exécutée et une exception SQL est traitée.  
   

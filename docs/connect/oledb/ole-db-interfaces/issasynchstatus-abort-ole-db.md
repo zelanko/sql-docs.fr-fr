@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015427"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -43,12 +43,12 @@ HRESULT Abort(
  Handle du chapitre pour lequel vous souhaitez abandonner l'opération. Si l’objet appelé n’est pas un objet d’ensemble de lignes ou que l’opération ne s’applique pas à un chapitre, l’appelant doit attribuer la valeur DB_NULL_HCHAPTER à *hChapter*.  
   
  *eOperation*[in]  
- L'opération à abandonner. La valeur suivante doit être utilisée:  
+ L'opération à abandonner. La valeur suivante doit être utilisée :  
   
  DBASYNCHOP_OPEN : la demande d'annulation s'applique à l'ouverture ou au remplissage asynchrone d'un ensemble de lignes ou à l'initialisation asynchrone d'un objet source de données.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="return-code-values"></a>Codet de retour  
+ S_OK  
  La demande d'annulation de l'opération asynchrone a été traitée. Cela ne garantit pas que l’opération ait été annulée. Pour déterminer si l'opération a bien été annulée, le consommateur doit appeler [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) et vérifier la présence de DB_E_CANCELED ; toutefois, il est possible qu'il ne soit pas retourné dans l'appel suivant.  
   
  DB_E_CANTCANCEL  

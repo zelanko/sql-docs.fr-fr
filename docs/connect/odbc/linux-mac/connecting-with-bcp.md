@@ -1,5 +1,5 @@
 ---
-title: Connexion avec bcp | Microsoft Docs
+title: Se connecter à bcp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996618"
 ---
 # <a name="connecting-with-bcp"></a>Connexion avec bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-L’utilitaire [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) est disponible dans [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS. Cette page décrit les différences par rapport à la version `bcp`Windows de.
+L’utilitaire [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) est disponible dans [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS. Cette page décrit les différences par rapport à la version Windows de `bcp`.
   
 - La marque de fin de champ est une tabulation (« \t  »).  
   
@@ -78,7 +78,7 @@ Spécifie le numéro de la première ligne à exporter à partir d’une table o
 Pendant l’opération, les colonnes vides doivent conserver une valeur NULL et les colonnes insérées ne doivent pas prendre de valeur par défaut.  
   
 - -l  
-Spécifie un délai de connexion. L’option -l spécifie le nombre de secondes au terme duquel une connexion de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quand vous tentez de vous connecter à un serveur. Le délai d’expiration de connexion par défaut est de 15 secondes. Le délai de connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n'est pas numérique ou n'est pas comprise dans cet intervalle, `bcp` génère un message d'erreur. La valeur 0 spécifie un délai d’expiration infini.
+Spécifie un délai de connexion. L’option -l spécifie le nombre de secondes au terme duquel une connexion de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quand vous tentez de vous connecter à un serveur. Par défaut, le délai d'expiration de la connexion est de 15 secondes. Le délai de connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n'est pas numérique ou n'est pas comprise dans cet intervalle, `bcp` génère un message d'erreur. Une valeur 0 spécifie un délai d’expiration infini.
   
 - -L *last_row*  
 Spécifie le numéro de la dernière ligne à exporter à partir d’une table ou à importer à partir d’un fichier de données.  
@@ -92,17 +92,17 @@ Utilise les types de données (de la base de données) natifs pour effectuer l�
 - -P *password*  
 Spécifie le mot de passe de l’ID de connexion.  
   
-- -Q  
+- -q  
 Exécute l'instruction SET QUOTED_IDENTIFIERS ON dans la connexion entre l'utilitaire `bcp` et une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -r *row_terminator*  
 Spécifie l’indicateur de fin de ligne.  
   
-- -r  
-Spécifie que les données de type devise, date et heure sont copiées en bloc dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant le format régional défini par les paramètres régionaux de l’ordinateur client.  
+- -R  
+Spécifie que les données de type devise, date et heure sont copiées en bloc dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant le format régional défini par les paramètres régionaux de l'ordinateur client.  
   
 - -S *server*  
-Spécifie le nom de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’instance à laquelle se connecter, ou si-D est utilisé, un DSN.  
+Spécifie le nom de l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle se connecter, ou si -D est utilisé, un DSN.  
   
 - -t *field_terminator*  
 Spécifie l’indicateur de fin de champ.  
@@ -111,9 +111,9 @@ Spécifie l’indicateur de fin de champ.
 Spécifie que l’utilitaire `bcp` se connecte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec une connexion approuvée (sécurité intégrée).  
   
 - -U *login_id*  
-Spécifie l’ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+Spécifie l'ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-- -V  
+- -v  
 Indique le numéro de version et le copyright de l'utilitaire `bcp`.  
   
 - -w  

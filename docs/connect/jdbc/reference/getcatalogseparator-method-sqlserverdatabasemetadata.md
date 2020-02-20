@@ -16,10 +16,10 @@ ms.assetid: 0bbd6842-7210-432a-bef4-e15a63f5cc96
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c9c73652c1c0b512c24e2d592323833390c7b0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953331"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>Méthode getCatalogSeparator (SQLServerDatabaseMetaData)
@@ -34,8 +34,8 @@ ms.locfileid: "67953331"
 public java.lang.String getCatalogSeparator()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui contient le séparateur de catalogue.  
+## <a name="return-value"></a>Valeur de retour  
+ **Chaîne** contenant le séparateur du catalogue.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

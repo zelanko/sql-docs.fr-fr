@@ -16,13 +16,13 @@ ms.assetid: f8eb2fc2-f624-4fd5-a408-ae4bb1de4913
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6717c68136614ddff91f852426284915fcd1f6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968445"
 ---
-# <a name="typessdirectforwardonly-field-sqlserverresultset"></a>TYPE_SS_DIRECT_FORWARD_ONLY, champ (SQLServerResultSet)
+# <a name="type_ss_direct_forward_only-field-sqlserverresultset"></a>TYPE_SS_DIRECT_FORWARD_ONLY, champ (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Sert à spécifier un type de curseur avance rapide uniquement, en lecture seule [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -35,9 +35,9 @@ public static final int TYPE_SS_DIRECT_FORWARD_ONLY
 ```  
   
 ## <a name="field-value"></a>Valeur de champ  
- Valeur **int** de 2003.  
+ Une valeur **int** de 2003.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

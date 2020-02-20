@@ -1,5 +1,5 @@
 ---
-title: Syntaxe de commande | Microsoft Docs
+title: Syntaxe de la commande | Microsoft Docs
 description: Syntaxe de commande et procédures stockées
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016122"
 ---
 # <a name="command-syntax"></a>Syntaxe de la commande
@@ -27,7 +27,7 @@ ms.locfileid: "68016122"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server reconnaît la syntaxe de commande spécifiée par la macro DBGUID_SQL. Pour le pilote OLE DB pour SQL Server, le spécificateur indique qu’un amalgame de ODBC SQL, ISO et [!INCLUDE[tsql](../../../includes/tsql-md.md)] est une syntaxe valide. Par exemple, l'instruction SQL suivante utilise une séquence d'échappement ODBC SQL pour spécifier la fonction de chaîne LCASE :  
+  OLE DB Driver pour SQL Server reconnaît la syntaxe de commande spécifiée par la macro DBGUID_SQL. OLE DB Driver pour SQL Server le spécificateur indique qu'un amalgame des syntaxes ODBC SQL, ISO et [!INCLUDE[tsql](../../../includes/tsql-md.md)] correspond à une syntaxe valide. Par exemple, l'instruction SQL suivante utilise une séquence d'échappement ODBC SQL pour spécifier la fonction de chaîne LCASE :  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

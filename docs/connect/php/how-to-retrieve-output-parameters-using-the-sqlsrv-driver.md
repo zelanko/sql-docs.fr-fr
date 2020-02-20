@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour récupérer des paramètres de sortie avec le pilote SQLSRV | Microsoft Docs
+title: 'Procédure : Récupérer des paramètres de sortie avec le pilote SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993399"
 ---
-# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV
+# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique montre comment appeler une procédure stockée dans laquelle un seul paramètre a été défini en tant que paramètre de sortie. Quand vous récupérez un paramètre de sortie ou d’entrée/sortie, tous les résultats retournés par la procédure stockée doivent être consommés pour que la valeur de paramètre retournée soit accessible.  
@@ -32,14 +32,14 @@ Une troncation de données peut se produire quand des types de flux comme SQLSRV
 L’exemple suivant appelle une procédure stockée qui retourne les ventes de l’année jusqu’à ce jour effectuées par un employé spécifique. La variable PHP *$lastName* est un paramètre d’entrée et *$salesYTD* est un paramètre de sortie.  
   
 > [!NOTE]  
-> L’initialisation de *$salesYTD* à 0.0 définit le PHPTYPE retourné sur **float**. Pour garantir l’intégrité du type de données, les paramètres de sortie doivent être initialisés avant d’appeler la procédure stockée, ou bien le PHPTYPE souhaité doit être spécifié. Pour plus d’informations sur la spécification du PHPTYPE, consultez [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+> L’initialisation de *$salesYTD* à 0.0 définit le PHPTYPE retourné sur **float**. Pour garantir l’intégrité du type de données, les paramètres de sortie doivent être initialisés avant d’appeler la procédure stockée, ou bien le PHPTYPE souhaité doit être spécifié. Pour plus d’informations sur la spécification du PHPTYPE, consultez [Guide pratique pour spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Étant donné qu’un seul résultat est retourné par la procédure stockée, *$salesYTD* contient la valeur retournée du paramètre de sortie immédiatement après l’exécution de la procédure stockée.  
   
 > [!NOTE]  
 > Appeler les procédures stockées à l’aide de la syntaxe canonique est la pratique recommandée. Pour plus d’informations sur la syntaxe canonique, consultez [Appel d’une procédure stockée](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -120,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Lors de la liaison d’un paramètre de sortie à un type bigint, si la valeur peut se terminer en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), vous devez spécifier son type de champ SQL comme SQLSRV_SQLTYPE_BIGINT. Dans le cas contraire, une exception «valeur hors limites» peut se produire.
+> Si vous liez un paramètre de sortie à un type bigint et que la valeur se retrouve en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), vous devez spécifier le type de champ SQL SQLSRV_SQLTYPE_BIGINT. Sinon, une exception « valeur hors limites » risque de se produire.
 
 ## <a name="example-2"></a>Exemple 2
-Cet exemple de code montre comment lier une valeur bigint de grande taille en tant que paramètre de sortie.  
+Cet exemple de code montre comment lier une grosse valeur bigint comme paramètre de sortie.  
 
 ```
 <?php
@@ -149,10 +149,10 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>Voir aussi  
-[Guide pratique pour spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+## <a name="see-also"></a> Voir aussi  
+[Procédure : Spécifier le sens du paramètre avec le pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+[Procédure : Récupérer des paramètres d’entrée et de sortie avec le pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
 
 [Récupération de données](../../connect/php/retrieving-data.md)  
   

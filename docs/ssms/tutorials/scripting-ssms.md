@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Générer des scripts d’objet dans SQL Server Management Studio'
+title: Scripts d’objets SSMS
 description: Tutoriel sur la génération de scripts d’objets dans SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, scripts, génération de scripts
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988416"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247297"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Générer des scripts d’objet dans SQL Server Management Studio
 
@@ -135,9 +135,9 @@ La section suivante décrit comment générer le script de la base de données �
 
 5. Sélectionnez **Suivant** pour ouvrir la page **Définir les options de script**. Ici, vous pouvez configurer où enregistrer le script et certaines options avancées supplémentaires. 
 
-    A. Sélectionnez **Enregistrer dans une nouvelle fenêtre de requête**.
+    a. Sélectionnez **Enregistrer dans une nouvelle fenêtre de requête**.
 
-    B. Sélectionnez **Avancé** et vérifiez que ces options sont définies :
+    b. Sélectionnez **Avancé** et vérifiez que ces options sont définies :
 
       * **Générer un script des statistiques** défini sur *Générer un script des statistiques*.
       * **Types de données à inclure dans le script** défini sur *Schéma uniquement*.

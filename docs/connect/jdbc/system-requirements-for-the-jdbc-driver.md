@@ -11,10 +11,10 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027670"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Configuration requise pour le pilote JDBC
@@ -53,9 +53,9 @@ ms.locfileid: "69027670"
   
   |JAR|Compatibilité avec la version de JDBC|Version de Java recommandée|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|MSSQL-JDBC-7.4.1. jre8. jar|4.2|8|Nécessite Java Runtime Environment (JRE) 1.8. JRE 1.7 et les versions antérieures lèvent une exception.<br /><br /> Les nouvelles fonctionnalités de 7,4 incluent: la prise en charge de JDK 12, l’authentification NTLM et useFmtOnly. |    
-|MSSQL-JDBC-7.4.1. jre11. jar|4.3|11|Nécessite un environnement JRE (Java Runtime Environment) 11.0. JRE 10.0 et les versions antérieures lèvent une exception.<br /><br /> Les nouvelles fonctionnalités de 7,4 incluent: la prise en charge de JDK 12, l’authentification NTLM et useFmtOnly. |  
-|MSSQL-JDBC-7.4.1. jre12. jar|4.3|12|Nécessite Java Runtime Environment (JRE) 12.0. JRE 11.0 et les versions antérieures lèvent une exception.<br /><br /> Les nouvelles fonctionnalités de 7,4 incluent: la prise en charge de JDK 12, l’authentification NTLM et useFmtOnly. |   
+|mssql-jdbc-7.4.1.jre8.jar|4,2|8|Nécessite Java Runtime Environment (JRE) 1.8. JRE 1.7 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.4 : prise en charge de JDK 12, authentification NTLM et useFmtOnly. |    
+|mssql-jdbc-7.4.1.jre11.jar|4.3|11|Nécessite un environnement JRE (Java Runtime Environment) 11.0. JRE 10.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.4 : prise en charge de JDK 12, authentification NTLM et useFmtOnly. |  
+|mssql-jdbc-7.4.1.jre12.jar|4.3|12|Nécessite Java Runtime Environment (JRE) 12.0. JRE 11.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.4 : prise en charge de JDK 12, authentification NTLM et useFmtOnly. |   
 
 
   JDBC Driver 7.4 est également disponible sur le référentiel central Maven ; pour l’ajouter à un projet Maven, insérez le code suivant dans le fichier POM. XML :  
@@ -78,7 +78,7 @@ ms.locfileid: "69027670"
   
   |JAR|Compatibilité avec la version de JDBC|Version de Java recommandée|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.2.2.jre8.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.2 : prise en charge de JDK 11, authentification Active Directory Managed Service Identity (MSI), prise en charge d’OSGi, API SQLServerError. |    
+|mssql-jdbc-7.2.2.jre8.jar|4,2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.2 : prise en charge de JDK 11, authentification Active Directory Managed Service Identity (MSI), prise en charge d’OSGi, API SQLServerError. |    
 |mssql-jdbc-7.2.2.jre11.jar|4.3|10|Nécessite un environnement JRE (Java Runtime Environment) 11.0. JRE 10.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.2 : prise en charge de JDK 11, authentification Active Directory Managed Service Identity (MSI), prise en charge d’OSGi, API SQLServerError. |    
 
 
@@ -102,8 +102,8 @@ ms.locfileid: "69027670"
   
   |JAR|Compatibilité avec la version de JDBC|Version de Java recommandée|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.0 : prise en charge de JDK 10, mise à jour du niveau de conformité par défaut pour les spécifications de JDBC 4.2, prise en charge des types de données spatiaux, propriété de connexion cancelQueryTimeout, méthodes Request Boundary, propriété de connexion useBulkCopyForBatchInsert, informations de découverte et de classification de données, extension de la fonctionnalité UTF-8 et prise en charge de CityHash. |    
-|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Nécessite Java Runtime Environment (JRE) 10.0. JRE 9.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.0 : prise en charge de JDK 10, mise à jour du niveau de conformité par défaut pour les spécifications de JDBC 4.2, prise en charge des types de données spatiaux, propriété de connexion cancelQueryTimeout, méthodes Request Boundary, propriété de connexion useBulkCopyForBatchInsert, informations de découverte et de classification de données, extension de la fonctionnalité UTF-8 et prise en charge de CityHash. |    
+|mssql-jdbc-7.0.0.jre8.jar|4,2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.0 : prise en charge de JDK 10, mise à jour du niveau de conformité par défaut aux spécifications de JDBC 4.2, prise en charge des types de données spatiaux, propriété de connexion cancelQueryTimeout, méthodes Request Boundary, propriété de connexion useBulkCopyForBatchInsert, informations de recherche et de classification de données, extension de la fonctionnalité UTF-8 et prise en charge de CityHash. |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Nécessite Java Runtime Environment (JRE) 10.0. JRE 9.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 7.0 : prise en charge de JDK 10, mise à jour du niveau de conformité par défaut aux spécifications de JDBC 4.2, prise en charge des types de données spatiaux, propriété de connexion cancelQueryTimeout, méthodes Request Boundary, propriété de connexion useBulkCopyForBatchInsert, informations de recherche et de classification de données, extension de la fonctionnalité UTF-8 et prise en charge de CityHash. |    
 
 
   JDBC Driver 7.0 est également disponible sur le référentiel central Maven ; pour l’ajouter à un projet Maven, insérez le code suivant dans le fichier POM. XML :  
@@ -126,8 +126,8 @@ ms.locfileid: "69027670"
   
   |JAR|Compatibilité avec la version de JDBC|Version de Java recommandée|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Nécessite Java Runtime Environment (JRE) 7.0. JRE 6.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.4 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées. |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.4 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées. |    
+|mssql-jdbc-6.4.0.jre7.jar|4,1|7|Nécessite Java Runtime Environment (JRE) 7.0. JRE 6.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.4 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées. |  
+|mssql-jdbc-6.4.0.jre8.jar|4,2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.4 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées. |    
 |mssql-jdbc-6.4.0.jre9.jar|4.3|9|Nécessite Java Runtime Environment (JRE) 9.0. JRE 8.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.4 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées. |
 
 JDBC Driver 6.4 est également disponible sur le référentiel central Maven ; pour l’ajouter à un projet Maven, insérez le code suivant dans le fichier POM. XML : 
@@ -150,8 +150,8 @@ JDBC Driver 6.4 est également disponible sur le référentiel central Maven ; p
   
 |JAR|Compatibilité avec la version de JDBC|Version de Java recommandée|Description|  
 |---------|-----------------------------|----------------------|-----------------|
-|mssql-jdbc-6.2.2.jre7.jar|4.1|7|Nécessite Java Runtime Environment (JRE) 7.0. JRE 6.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.2 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées. |  
-|mssql-jdbc-6.2.3.jre8.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.2 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées.|    
+|mssql-jdbc-6.2.2.jre7.jar|4,1|7|Nécessite Java Runtime Environment (JRE) 7.0. JRE 6.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.2 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées. |  
+|mssql-jdbc-6.2.3.jre8.jar|4,2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 6.2 : authentification Azure AD pour Linux, méthode principal/mot de passe pour Kerberos, détection automatique du domaine dans le SPN pour l’authentification entre domaines, délégation Kerberos contrainte, délai d’expiration de requête, délai d’expiration de socket et réutilisation de la gestion des instructions préparées.|    
 
   JDBC Driver 6.2 est également disponible sur le référentiel central Maven ; pour l’ajouter à un projet Maven, insérez le code suivant dans le fichier POM. XML : 
   
@@ -173,8 +173,8 @@ JDBC Driver 6.4 est également disponible sur le référentiel central Maven ; p
   
 |JAR|Compatibilité avec la version de JDBC|Version de Java recommandée|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|Nécessite Java Runtime Environment (JRE) 7.0. JRE 6.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités des packages 6.0 et 4.2 : conformité JDBC 4.1 et copie en bloc.<br /><br /> Nouvelles fonctionnalités du package 6.0 uniquement : Always Encrypted, paramètres table, authentification Azure Active Directory, connexions transparentes aux groupes de disponibilité AlwaysOn, amélioration de la récupération des métadonnées de paramètre pour les requêtes préparées et nom de domaine international (IDN).|  
-|sqljdbc42.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités des packages 6.0 et 4.2 : conformité JDBC 4.1 et 4.2 et copie en bloc.<br /><br /> Nouvelles fonctionnalités du package 6.0 uniquement : Always Encrypted, paramètres table, authentification Azure Active Directory, connexions transparentes aux groupes de disponibilité AlwaysOn, amélioration de la récupération des métadonnées de paramètre pour les requêtes préparées et nom de domaine international (IDN).|  
+|sqljdbc41.jar|4,1|7|Nécessite Java Runtime Environment (JRE) 7.0. JRE 6.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités des packages 6.0 et 4.2 : conformité JDBC 4.1 et copie en bloc.<br /><br /> Nouvelles fonctionnalités supplémentaires du package 6.0 uniquement : Always Encrypted, paramètres table, authentification Azure Active Directory, connexions transparentes aux groupes de disponibilité AlwaysOn, amélioration de la récupération des métadonnées de paramètre pour les requêtes préparées et nom de domaine international (IDN).|  
+|sqljdbc42.jar|4,2|8|Nécessite Java Runtime Environment (JRE) 8.0. JRE 7.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités des packages 6.0 et 4.2 : conformité JDBC 4.1 et 4.2 et copie en bloc.<br /><br /> Nouvelles fonctionnalités supplémentaires du package 6.0 uniquement : Always Encrypted, paramètres table, authentification Azure Active Directory, connexions transparentes aux groupes de disponibilité AlwaysOn, amélioration de la récupération des métadonnées de paramètre pour les requêtes préparées et nom de domaine international (IDN).|  
   
  **Microsoft JDBC Driver 4.1 pour SQL Server :**  
   

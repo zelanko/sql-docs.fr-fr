@@ -11,10 +11,10 @@ ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbe655691ed898dfbb8eac5da5bb28d4d6cde686
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981507"
 ---
 # <a name="getnclob-method-javalangstring"></a>Méthode getNClob (java.lang.String)
@@ -34,8 +34,8 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
   
  Valeur **chaîne** qui contient le nom du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- ANClobobject.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet NClob.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -43,7 +43,7 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
 ## <a name="remarks"></a>Notes  
  Cette méthode getNClob est spécifiée par la méthode getNClob de l’interface java.sql.CallableStatement.  
   
- Cette méthode prend en charge uniquement la récupération des paramètres **nchar**, **nvarchar**, **ntext**et **XML** . L'appel de ces méthodes sur d'autres paramètres de type de données entraîne une exception.  
+ Cette méthode ne permet de récupérer que des paramètres **NCHAR**, **NVARCHAR**, **NTEXT** et **XML**. L'appel de ces méthodes sur d'autres paramètres de type de données entraîne une exception.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getNClob, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

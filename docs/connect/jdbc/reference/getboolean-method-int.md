@@ -16,10 +16,10 @@ ms.assetid: 4d9db847-df22-40ab-8a5c-ec9158c576ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1f83c94559eeedba5ab01e2ffa1835215d40af9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953665"
 ---
 # <a name="getboolean-method-int"></a>Méthode getBoolean (int)
@@ -37,9 +37,9 @@ public boolean getBoolean(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **booléenne**.  
   
 ## <a name="exceptions"></a>Exceptions  

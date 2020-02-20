@@ -16,10 +16,10 @@ ms.assetid: 44e6e9df-4724-4c86-bbd2-ca750c248333
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc7aea1b0b03981d21e9ab3f5e5453c68476a0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982331"
 ---
 # <a name="getmaxcharliterallength-method-sqlserverdatabasemetadata"></a>Méthode getMaxCharLiteralLength (SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67982331"
 public int getMaxCharLiteralLength()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique le nombre maximal de caractères autorisés.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant le nombre maximal de caractères autorisé.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMaxCharLiteralLength est spécifiée par la méthode getMaxCharLiteralLength dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode getMaxCharLiteralLength est spécifiée par la méthode getMaxCharLiteralLength de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

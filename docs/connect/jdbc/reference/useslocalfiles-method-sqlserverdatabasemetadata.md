@@ -16,10 +16,10 @@ ms.assetid: 69afb3a9-ed56-4191-88b8-bc46c03b817b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a88b6645445b9b9a4c644444ad3996377436112f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001596"
 ---
 # <a name="useslocalfiles-method-sqlserverdatabasemetadata"></a>Méthode usesLocalFiles (SQLServerDatabaseMetaData)
@@ -34,16 +34,16 @@ ms.locfileid: "68001596"
 public boolean usesLocalFiles()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si la base de données utilise des fichiers locaux. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode usesLocalFiles est spécifiée par la méthode usesLocalFiles dans l’interface java. Sql. DatabaseMetaData.  
+## <a name="remarks"></a>Notes   
+ Cette méthode usesLocalFiles est spécifiée par la méthode usesLocalFiles de l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

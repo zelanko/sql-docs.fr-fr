@@ -11,10 +11,10 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936206"
 ---
 # <a name="pdoquery"></a>PDO::Query
@@ -30,11 +30,11 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$statement*: instruction SQL à exécuter.  
+*$statement* : instruction SQL à exécuter.  
   
-*$fetch_style* : instructions facultatives sur l’exécution de la requête. Pour plus d’informations, consultez la section Notes. $*fetch_style* dans PDO::query peut être remplacé par $*fetch_style* dans PDO::fetch.  
+*$fetch_style* : instructions facultatives sur l’exécution de la requête. Pour plus d’informations, consultez la section Notes. $*fetch_style* dans PDO::query peut être remplacé par $*fetch_style* dans PDO::fetch.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Si l’appel réussit, PDO::query retourne un objet PDOStatement. Si l’appel échoue, PDO::query génère un objet PDOException ou retourne la valeur false, selon le paramètre de PDO::ATTR_ERRMODE.  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -47,11 +47,11 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT affecte également le comportement de PDO::exec. 
   
 Vous pouvez spécifier les options suivantes pour $*fetch_style*.  
   
-|style|Description|  
+|Style|Description|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Recherche les données dans la colonne spécifiée. La première colonne de la table est la colonne 0.|  
 |PDO::FETCH_CLASS, ’*nom_classe*’, array( *arglist* )|Crée une instance d’une classe et attribue des noms de colonne aux propriétés de la classe. Si le constructeur de classe accepte un ou plusieurs paramètres, vous pouvez également passer un *arglist*.|  
-|PDO:: FETCH_CLASS, '*className*'|Assigne des noms de colonne aux propriétés dans une classe existante.|  
+|PDO::FETCH_CLASS, '*classname*'|Assigne des noms de colonne aux propriétés dans une classe existante.|  
   
 Appelez PDOStatement::closeCursor pour libérer les ressources de base de données associées à l’objet PDOStatement avant de rappeler PDO::query.  
   
@@ -166,7 +166,7 @@ Array
 ```
 
 ## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

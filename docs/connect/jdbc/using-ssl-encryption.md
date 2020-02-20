@@ -11,10 +11,10 @@ ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f769e35477d564365df702bd768ac1953c7affa
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71712973"
 ---
 # <a name="using-encryption"></a>Utilisation du chiffrement
@@ -32,7 +32,7 @@ L’activation du chiffrement TLS améliore la sécurité des données transmise
 Les rubriques de cette section expliquent comment le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge le chiffrement TLS, notamment les nouvelles propriétés de connexion, et comment vous pouvez configurer le magasin d’approbations côté client.  
   
 > [!NOTE]  
-> La propriété de connexion **hostNameInCertificate** est recommandée pour valider un certificat TLS.  
+> La propriété de connexion **hostNameInCertificate** est recommandée pour valider un certificat TLS.  
 
 ## <a name="in-this-section"></a>Contenu de cette section  
 

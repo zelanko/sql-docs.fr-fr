@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892993"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
@@ -28,12 +28,12 @@ ms.locfileid: "68892993"
   
 |Type RDL|Types CLR|  
 |--------------|---------------|  
-|String|Valeur par défaut : String<br /><br /> Chart, GUID, Timespan|  
-|Booléen|Valeur par défaut : Boolean|  
-|Entier|Valeur par défaut : Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Valeur par défaut : DateTime<br /><br /> DateTimeOffset|  
-|float|Valeur par défaut : Double<br /><br /> Single, Decimal|  
-|Binaire|Valeur par défaut : Byte[]|  
+|String|Valeur par défaut : String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Valeur par défaut : Boolean|  
+|Integer|Valeur par défaut : Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|Valeur par défaut : DateTime<br /><br /> DateTimeOffset|  
+|Float|Valeur par défaut : Double<br /><br /> Single, Decimal|  
+|Binary|Valeur par défaut : Byte[]|  
 |Variant|Une des valeurs ci-dessus à l'exception de Byte[]|  
 |VariantArray|Tableau de type Variant|  
 |Sérialisable|Variant ou types marqués avec Serializable ou qui implémentent ISerializable.|  
@@ -66,7 +66,7 @@ ms.locfileid: "68892993"
 -   Vérifiez si l'extension de traitement des données que vous utilisez inclut les métadonnées permettant d'extraire des données préformatées. Par exemple, une requête MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut une propriété étendue FORMATTED_VALUE pour les valeurs de cube qui ont déjà été mises en forme pendant le traitement du cube. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Présentation des types de données des paramètres  
- Les cinq types de données possibles pour les paramètres de rapport sont les suivants : Boolean, DateTime, Integer, Float ou Text (également appelé String). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  
+ Les paramètres de rapport doivent avoir l’un des cinq types de données : Boolean, DateTime, Integer, Float ou Text (également appelé String). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  
   
 > [!NOTE]  
 >  Les paramètres de rapport utilisant le type de données DateTime ne prennent pas en charge les millisecondes. Même s'il est possible de créer un paramètre basé sur des valeurs incluant des millisecondes, vous ne pouvez pas sélectionner de valeur dans une liste déroulante de valeurs disponibles qui comprend des valeurs Date ou Time utilisant des millisecondes.  

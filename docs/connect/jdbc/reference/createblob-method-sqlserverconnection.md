@@ -11,10 +11,10 @@ ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d70c72b860044a7e61b4a6dc5474c465fb60e89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955402"
 ---
 # <a name="createblob-method-sqlserverconnection"></a>Méthode createBlob (SQLServerConnection)
@@ -29,18 +29,18 @@ ms.locfileid: "67955402"
 public java.sql.Blob createBlob()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet BLOB.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Blob.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode createBlob est spécifiée par la méthode createBlob dans l’interface java. Sql. Connection.  
+## <a name="remarks"></a>Notes   
+ Cette méthode createBlob est spécifiée par la méthode createBlob de l’interface java.sql.Connection.  
   
- Cette méthode remplace la nécessité pour le [constructeur &#40;SQLServerBlob SQLServerConnection,&#41;Byte](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md).  
+ Cette méthode évite d’avoir à utiliser le [Constructeur SQLServerBlob &#40;SQLServerConnection, byte&#41;](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

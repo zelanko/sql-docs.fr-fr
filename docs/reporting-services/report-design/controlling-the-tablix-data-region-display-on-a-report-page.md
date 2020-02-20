@@ -9,10 +9,10 @@ ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581527"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Contrôle de l'affichage de la région de données de tableau matriciel sur une page de rapport
@@ -50,7 +50,7 @@ Les régions de données de table, de matrice et de liste sont toutes des exempl
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Contrôle du rendu de groupes de lignes et de colonnes de tableau matriciel  
  Le rendu de groupes de régions de données de tableau matriciel dépend de la structure de groupe. Une région de données du tableau matriciel peut comporter quatre zones, comme indiqué dans l'illustration suivante :  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Zones de régions de données de tableau matriciel](../../reporting-services/report-design/media/rs-tablixareas.gif "Zones de régions de données de tableau matriciel")  
   
  La zone de groupe de lignes et la zone de groupe de colonnes contiennent des en-têtes de groupe. Lorsqu'une région de données de tableau matriciel possède des en-têtes de groupe, vous contrôlez la façon dont les lignes et les colonnes se répètent en définissant des propriétés dans la page **Général** de la boîte de dialogue **Propriétés du tableau matriciel** .  
   

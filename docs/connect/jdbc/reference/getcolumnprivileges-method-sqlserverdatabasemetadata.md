@@ -16,10 +16,10 @@ ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952877"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Méthode getColumnPrivileges (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- **Chaîne** qui contient le nom du catalogue.  
+ **Chaîne** contenant le nom du catalogue.  
   
  *schema*  
   
@@ -54,7 +54,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
   
  Valeur **chaîne** qui contient le modèle du nom de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -65,16 +65,16 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
   
  Le jeu de résultats retourné par la méthode getColumnPrivileges contiendra les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nom du catalogue.|  
-|TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
-|TABLE_NAME|**String**|Nom de la table.|  
-|COLUMN_NAME|**String**|Nom de la colonne.|  
-|GRANTOR|**String**|Objet octroyant l'accès.|  
-|GRANTEE|**String**|Objet bénéficiant de l'accès.|  
-|PRIVILEGE|**String**|Type d'accès octroyé.|  
-|IS_GRANTABLE|**String**|Indique si le bénéficiaire peut accorder ou non l'accès à d'autres utilisateurs.|  
+|TABLE_CAT|**Chaîne**|Nom du catalogue.|  
+|TABLE_SCHEM|**Chaîne**|Le nom du schéma de la table.|  
+|TABLE_NAME|**Chaîne**|Nom de la table.|  
+|COLUMN_NAME|**Chaîne**|Nom de la colonne.|  
+|GRANTOR|**Chaîne**|Objet octroyant l'accès.|  
+|GRANTEE|**Chaîne**|Objet bénéficiant de l'accès.|  
+|PRIVILEGE|**Chaîne**|Type d'accès octroyé.|  
+|IS_GRANTABLE|**Chaîne**|Indique si le bénéficiaire peut accorder ou non l'accès à d'autres utilisateurs.|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getColumnPrivileges, consultez « sp_column_privileges (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

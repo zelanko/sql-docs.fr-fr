@@ -1,5 +1,5 @@
 ---
-title: Commandes générant des résultats à plusieurs ensembles de lignes | Microsoft Docs
+title: Commandes générant des résultats dans plusieurs ensembles de lignes | Microsoft Docs
 description: Commandes générant des résultats dans plusieurs ensembles de lignes
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016058"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Commandes générant des résultats dans plusieurs ensembles de lignes
@@ -29,14 +29,14 @@ ms.locfileid: "68016058"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server peut retourner plusieurs ensembles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lignes à partir d’instructions. Les instructions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retournent des résultats dans plusieurs ensembles de lignes dans les conditions suivantes :  
+  OLE DB Driver pour SQL Server peut retourner plusieurs ensembles de lignes à partir d'instructions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les instructions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retournent des résultats dans plusieurs ensembles de lignes dans les conditions suivantes :  
   
 -   des instructions SQL groupées sont soumises en tant que commande unique ;  
   
 -   des procédures stockées implémentent un lot d'instructions SQL ;  
   
 ## <a name="batches"></a>Lots  
- Le pilote OLE DB pour SQL Server reconnaît le point-virgule comme délimiteur de lot pour les instructions SQL:  
+ OLE DB Driver pour SQL Server reconnaît le point-virgule comme un séparateur de lot pour les instructions SQL :  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

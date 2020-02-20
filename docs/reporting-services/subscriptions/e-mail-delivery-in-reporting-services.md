@@ -13,10 +13,10 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72305043"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
@@ -81,7 +81,7 @@ ms.locfileid: "72305043"
  Pour un serveur de rapports en mode natif, vous pouvez configurer l’extension de remise par e-mail via le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif et en modifiant les fichiers de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Dans le cas d’un serveur de rapports en mode SharePoint, l’extension de remise du courrier électronique est configurée dans les pages de gestion de SharePoint et dans les scripts PowerShell.  
   
  
- Pour des informations sur la configuration d’un serveur de rapports en mode natif, consultez [Paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ Pour des informations sur la configuration d’un serveur de rapports en mode natif, consultez [Paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
  
  
  Pour plus d'informations sur la configuration d'un serveur de rapports en mode SharePoint, consultez :  
@@ -90,7 +90,7 @@ ms.locfileid: "72305043"
 ## <a name="see-also"></a>Voir aussi  
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Attributions de rôles](../../reporting-services/security/role-assignments.md)  
   
   
