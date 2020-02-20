@@ -1,10 +1,9 @@
 ---
-title: Créer des requêtes Make Table (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Créer des requêtes Make Table
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbacf31bf3fcbb9cafd88e57e7c798a584b74ef7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264382"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254333"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Créer des requêtes Make Table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,24 +67,24 @@ Il existe deux conditions préalables à l'exécution correcte d'une requête Ma
   
     Pour créer une table de destination dans une autre base de données, spécifiez un nom de table complet avec le nom de la base de données cible, le propriétaire (si nécessaire) ainsi que le nom de la table.  
   
-4.  Spécifiez les colonnes à copier en les ajoutant à la requête. Pour plus d’informations, consultez [Ajouter des colonnes à des requêtes (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Les colonnes ne sont copiées que si vous les ajoutez à la requête. Pour copier des lignes entières, choisissez **#42; (Toutes les colonnes)** .  
+4.  Spécifiez les colonnes à copier en les ajoutant à la requête. Pour plus d’informations, consultez [Ajouter des colonnes à des requêtes](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Les colonnes ne sont copiées que si vous les ajoutez à la requête. Pour copier des lignes entières, choisissez **#42; (Toutes les colonnes)** .  
   
     Le Concepteur de requêtes et de vues ajoute les colonnes sélectionnées à la colonne **Colonne** du volet Critères.  
   
 5.  Si vous souhaitez copier les lignes dans un ordre précis, spécifiez un ordre de tri. Pour plus d’informations, consultez **Tri et regroupement des résultats de la requête**.  
   
-6.  Spécifiez les lignes à copier en entrant des conditions de recherche. Pour plus d’informations, consultez [Spécifier des critères de recherche (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+6.  Spécifiez les lignes à copier en entrant des conditions de recherche. Pour plus d’informations, consultez [Spécifier les critères de recherche(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     Si vous ne spécifiez pas de condition de recherche, toutes les lignes de la table source seront copiées vers la table de destination.  
   
     > [!NOTE]  
     > Lorsque vous ajoutez, dans le volet Critères, une colonne à utiliser dans une condition de recherche, le Concepteur de requêtes et de vues l'ajoute également à la liste des colonnes à copier. Pour utiliser une colonne dans le cadre de la recherche sans toutefois la copier, désactivez la case à cocher en regard du nom de la colonne dans le rectangle représentant la table ou l'objet de type table.  
   
-7.  Si vous souhaitez copier des informations de synthèse, spécifiez des options Group By. Pour plus d’informations, consultez [Résumer les résultats de la requête (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
+7.  Si vous souhaitez copier des informations de synthèse, spécifiez des options Group By. Pour plus d’informations, consultez [Résumer les résultats de requête(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
   
 Quand vous exécutez une requête Make Table, aucun résultat n’apparaît dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En fait, un message indiquant le nombre de lignes copiées s'affiche.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Types de requêtes (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Rubriques Procédure, Concevoir des requêtes et des vues(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Types de requêtes(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

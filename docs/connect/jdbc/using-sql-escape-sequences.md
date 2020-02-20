@@ -1,5 +1,5 @@
 ---
-title: Utilisation de séquences d’échappement SQL | Microsoft Docs
+title: Utilisation de séquences d'échappement SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025892"
 ---
 # <a name="using-sql-escape-sequences"></a>Utilisation de séquences d'échappement SQL
@@ -89,7 +89,7 @@ où `literal-type` est l’un des éléments suivants :
 | Type littéral | Description | Format de la valeur               |
 | ------------ | ----------- | -------------------------- |
 | d            | Date        | aaaa-mm-jj                 |
-| t            | Time        | hh:mm:ss [1]               |
+| t            | Temps        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | aaaa-mm-jj hh:mm:ss[.f...] |
   
 Par exemple :  
@@ -111,7 +111,7 @@ Une procédure est un objet exécutable stocké dans la base de données. Géné
 
 où `procedure-name` spécifie le nom d’une procédure stockée et `parameter` un paramètre de procédure stockée.  
   
-Pour plus d’informations sur l' `call` utilisation de la séquence d’échappement avec des procédures stockées, consultez [utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+Pour plus d'informations sur l'utilisation de la séquence d'échappement `call` avec des procédures stockées, consultez [Utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Jointures externes
 

@@ -16,10 +16,10 @@ ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7d8c1c63823cd558122746fdc2dbca84d3f64a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981742"
 ---
 # <a name="getmoreresults-method-sqlserverstatement"></a>getMoreResults, méthode (SQLServerStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67981742"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getMoreResults ()](../../../connect/jdbc/reference/getmoreresults-method.md)|Passe au résultat suivant de cet objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getMoreResults (int)](../../../connect/jdbc/reference/getmoreresults-method-int.md)|Passe au résultat suivant de cet objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) et traite tous les objets actuellement ouverts du jeu de résultats suivant les instructions spécifiées par le mode donné.|  

@@ -11,10 +11,10 @@ ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027720"
 ---
 # <a name="sparse-columns"></a>Colonnes éparses
@@ -33,7 +33,7 @@ Le fichier de code de cet exemple, SparseColumns.java, se trouve à l’emplacem
 
 Les jeux de colonnes sont des colonnes calculées qui retournent toutes les colonnes fragmentées sous la forme XML non typée. Vous devez envisager d'utiliser des jeux de colonnes lorsque le nombre de colonnes dans une table est élevé ou supérieur à 1 024 et qu'il serait trop long d'opérer individuellement sur des colonnes fragmentées. Un jeu de colonnes peut contenir jusqu'à 30 000 colonnes.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ### <a name="description"></a>Description
 

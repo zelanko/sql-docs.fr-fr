@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b7e2dde267cf2c5f12140d883114565390d2e5d6
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+ms.openlocfilehash: 49cb24120d6c476e5b03c4a0cad2ddda511a9360
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702708"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911193"
 ---
-# <a name="system-requirements"></a>Configuration système requise
+# <a name="system-requirements"></a>Configuration requise
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Cette rubrique répertorie la configuration requise pour utiliser [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS.
@@ -31,30 +31,37 @@ Cette rubrique répertorie la configuration requise pour utiliser [!INCLUDE[msCo
 
 Les pilotes Linux et macOS sont disponibles uniquement pour les versions 64 bits des systèmes d’exploitation suivants :
 
-|Système d'exploitation|Version du pilote pris en charge|
+|Système d’exploitation|Version du pilote pris en charge|
 |------------------------------------|--------------------------------|
-|Apple OS X 10.11 (El Capitan)|13, 13.1, 17|
-|Apple macOS 10.12 (Sierra)|13, 13.1, 17|
-|Apple macOS 10.13 (High Sierra)|17| 
-|Apple macOS 10.14 (Mojave)|17| 
-|Debian Linux 8|13, 13.1, 17|
-|Debian Linux 9|17|
-|Debian Linux 10|17.4|
-|Red Hat Enterprise Linux 6|13, 13.1, 17|
-|Red Hat Enterprise Linux 7|13, 13.1, 17|
-|RedHat Enterprise Linux 8|17.4|
-|SUSE Linux Enterprise Server 11|13, 13.1, 17 <br /><br /> **Remarque :** ODBC Driver 17 prend uniquement en charge SuSE Linux Enterprise Server 11 SP4|
-|SUSE Linux Enterprise Server 12|13, 13.1, 17|
-|SUSE Linux Enterprise Server 15|17|
-|Ubuntu Linux 14.04|13, 13.1, 17|
+|Apple OS X 10.11 (El Capitan)|13, 13.1, 17.4|
+|Apple macOS 10.12 (Sierra)|13, 13.1, 17.4|
+|Apple macOS 10.13 (High Sierra)|17+| 
+|Apple macOS 10.14 (Mojave)|17+| 
+|Apple macOS 10.15 (Catalina)|17.5+| 
+|Alpine Linux 3.11|17.5+| 
+|Debian Linux 8|13, 13.1, 17.4| 
+|Debian Linux 9|17+|
+|Debian Linux 10|17.4+|
+|Oracle Linux 8|17.5+|
+|Red Hat Enterprise Linux 6|13, 13.1, 17+|
+|Red Hat Enterprise Linux 7|13, 13.1, 17+|
+|RedHat Enterprise Linux 8|17.4+|
+|SUSE Linux Enterprise Server 11|13, 13.1, 17+ <br /><br /> **REMARQUE :** ODBC Driver 17 prend uniquement en charge SUSE Linux Enterprise Server 11 SP4.|
+|SUSE Linux Enterprise Server 12|13, 13.1, 17+|
+|SUSE Linux Enterprise Server 15|17+|
+|Ubuntu Linux 14.04|13, 13.1, 17.4|
 |Ubuntu Linux 15.10|13, 13.1|
-|Ubuntu Linux 16.04|13, 13.1, 17|
+|Ubuntu Linux 16.04|13, 13.1, 17+|
 |Ubuntu Linux 16.10|13, 13.1|
-|Ubuntu Linux 17.04|17| 
-|Ubuntu Linux 17.10|17|
-|Ubuntu Linux 18.04|17| 
-|Ubuntu Linux 18.10|17| 
-|Ubuntu Linux 19.04|17.3| 
+|Ubuntu Linux 17.04|17.4| 
+|Ubuntu Linux 17.10|17.4|
+|Ubuntu Linux 18.04|17+|
+|Ubuntu Linux 18.10|17.4|
+|Ubuntu Linux 19.04|17.3|
+|Ubuntu Linux 19.10|17.5+| 
+
+> [!NOTE]
+> - Les systèmes d’exploitation avec prise en charge active présentent un « + » après la version du pilote. Ceux qui ne comportent pas le signe plus indiquent la dernière version du pilote prise en charge.
 
 Les packages d’installation pour [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 et 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS résolvent automatiquement les dépendances du pilote quand ils sont installés à l’aide du système de gestion des packages de votre distribution, comme décrit dans [Installation du pilote](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
@@ -62,7 +69,7 @@ Les packages d’installation pour [!INCLUDE[msCoName](../../../includes/msconam
   
 -   Gestionnaire de pilotes UnixODBC 2.3.0 64 bits, conçu pour SQLLEN/SQLULEN 64 bits. Les versions ultérieures du Gestionnaire de pilotes UnixODBC 64 bits ne sont pas prises en charge avec le pilote ODBC sur Linux. Consultez la rubrique [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) (éventuellement en anglais) pour plus d'informations.  
   
--   Le pilote ODBC pour **Red Hat Enterprise Linux 5 (64 bits)** requiert les packages suivants que vous pouvez télécharger ici : [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+-   Les packages suivants sont nécessaires pour le pilote ODBC pour **Red Hat Enterprise Linux 5 (64 bits)** , téléchargeable suivant le lien [Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321) :  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -70,7 +77,7 @@ Les packages d’installation pour [!INCLUDE[msCoName](../../../includes/msconam
     -   `krb5-libs`  
     -   `openssl`  
   
--   Le pilote ODBC pour **Red Hat Enterprise Linux 6 (64 bits)** requiert les packages suivants que vous pouvez télécharger ici : [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+-   Les packages suivants sont nécessaires pour le pilote ODBC pour **Red Hat Enterprise Linux 6 (64 bits)** , téléchargeable suivant le lien [Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321) :  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -78,7 +85,7 @@ Les packages d’installation pour [!INCLUDE[msCoName](../../../includes/msconam
     -   `krb5-libs`  
     -   `openssl`  
   
--   Le pilote ODBC pour **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)** requiert les packages suivants que vous pouvez télécharger ici : [Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+-   Les packages suivants sont nécessaires pour le pilote ODBC pour **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)** , téléchargeable suivant le lien [Microsoft ODBC Driver 11 Preview for SQL Server – SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916) :  
     -   `glibc`  
     -   `libstdc++46`  
     -   `libgcc46`  
