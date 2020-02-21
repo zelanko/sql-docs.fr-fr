@@ -16,10 +16,10 @@ ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e2349dbe193834385869f86f87fe4284a967284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983692"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>Méthode getDefaultTransactionIsolation (SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67983692"
 public int getDefaultTransactionIsolation()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique le niveau d’isolation de la transaction par défaut.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant le niveau d’isolation par défaut de la transaction.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getDefaultTransactionIsolation est spécifiée par la méthode getDefaultTransactionIsolation dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode getDefaultTransactionIsolation est spécifiée par la méthode getDefaultTransactionIsolation dans l’interface java.sql.DatabaseMetaData.  
   
  Quand vous utilisez le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] avec une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cette méthode retourne une valeur de TRANSACTION_READ_COMMITTED ou la valeur **int** 2.  
   

@@ -11,10 +11,10 @@ ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57ba9918769655c6823e8837641342f75f3795e5
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71974325"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Télécharger un pilote ODBC pour SQL Server
@@ -28,9 +28,9 @@ ms.locfileid: "71974325"
 ### <a name="linux-and-macos"></a>Linux et macOS
 
 #### <a name="debian"></a>Debian
-- [Packages Debian 10. deb](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
-- [Packages Debian 9. deb](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
-- [Packages Debian 8. deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
+- [Packages Debian 10 .deb](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
+- [Packages Debian 9 .deb](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
+- [Packages Debian 8 .deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 #### <a name="redhat"></a>Red Hat
 - [Packages RedHat 8 .rpm (msodbcsql17-*)](https://packages.microsoft.com/rhel/8/prod/)
@@ -43,16 +43,16 @@ ms.locfileid: "71974325"
 - [SuSE 11 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
-- [Packages Ubuntu 19,04. deb](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
-- [Packages Ubuntu 18,10. deb](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
-- [Packages Ubuntu 18,04. deb](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Packages Ubuntu 16,04. deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
-- [Packages Ubuntu 14,04. deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
+- [Packages Ubuntu 19.04 .deb](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
+- [Packages Ubuntu 18.10 .deb](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
+- [Packages Ubuntu 18.04 .deb](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
+- [Packages Ubuntu 16.04 .deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
+- [Packages Ubuntu 14.04 .deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
 
 #### <a name="macos"></a>macOS
-- [macOS 10,12, 10,13, 10,14 homebrew Formulas](https://github.com/Microsoft/homebrew-mssql-release)
+- [Formule Homebrew macOS 10.12, 10.13, 10.14](https://github.com/Microsoft/homebrew-mssql-release)
 
-Voir aussi [installation du pilote](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Consultez également [Installation du pilote](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server
 
@@ -64,7 +64,7 @@ Voir aussi [installation du pilote](linux-mac/installing-the-microsoft-odbc-driv
 ### <a name="linux-and-macos"></a>Linux et macOS
 
 #### <a name="debian"></a>Debian
-- [Packages Debian 8. deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
+- [Packages Debian 8 .deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### <a name="redhat"></a>Red Hat
 - [RedHat 7 .rpm packages (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
@@ -75,16 +75,16 @@ Voir aussi [installation du pilote](linux-mac/installing-the-microsoft-odbc-driv
 - [SuSE 11 .rpm packages (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
-- [Packages Ubuntu 17,04. deb](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
-- [Packages Ubuntu 16,04. deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Packages Ubuntu 16,10. deb](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
-- [Packages Ubuntu 15,10. deb](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
-- [Packages Ubuntu 14,04. deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
+- [Packages Ubuntu 17.04 .deb](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
+- [Packages Ubuntu 16.04 .deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
+- [Packages Ubuntu 16.10 .deb](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
+- [Packages Ubuntu 15.10 .deb](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
+- [Packages Ubuntu 14.04 .deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
 
 #### <a name="macos"></a>macOS
-- [OS X 10,11 et macOS 10,12, 10,13 Formulas homebrew](https://github.com/Microsoft/homebrew-mssql-release)
+- [Formule Homebrew OS X 10.11 et macOS 10.12, 10.13](https://github.com/Microsoft/homebrew-mssql-release)
 
-Voir aussi [installation du pilote](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Consultez également [Installation du pilote](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server  
 

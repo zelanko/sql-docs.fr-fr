@@ -18,13 +18,13 @@ ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015061"
 ---
-# <a name="sqlsrverrors"></a>sqlsrv_errors
+# <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Retourne des informations étendues sur les erreurs et/ou les avertissements concernant la dernière opération **sqlsrv** effectuée.  
@@ -55,7 +55,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$errorsAndOrWarnings*[FACULTATIF] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
+*$errorsAndOrWarnings*[FACULTATIF] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
   
 |Valeur|Description|  
 |---------|---------------|  
@@ -65,14 +65,14 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
   
 Si aucune valeur de paramètre n’est fournie, les erreurs et avertissements générés par le dernier appel de fonction **sqlsrv** sont retournés.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 **Tableau** de tableaux ou **Null**. Chaque **tableau** inclus dans le **tableau** retourné contient trois paires clé-valeur. Le tableau suivant répertorie chaque clé et sa description :  
   
-|Key|Description|  
+|Clé|Description|  
 |-------|---------------|  
 |SQLSTATE|Pour les erreurs qui proviennent du pilote ODBC, valeur SQLSTATE retournée par ODBC. Pour plus d’informations sur les valeurs SQLSTATE pour ODBC, consultez [Codes d’erreur ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Pour les erreurs qui proviennent de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], valeur SQLSTATE d’IMSSP.<br /><br />Pour les avertissements qui proviennent de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], valeur SQLSTATE de 01SSP.|  
 |code|Pour les erreurs qui proviennent de SQL Server, code d’erreur SQL Server natif.<br /><br />Pour les erreurs qui proviennent du pilote ODBC, code d’erreur retourné par ODBC.<br /><br />Pour les erreurs qui proviennent de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], code d’erreur [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Pour plus d’informations, consultez [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
-|message|Description de l'erreur.|  
+|message|Description de l’erreur.|  
   
 Les valeurs de tableau sont également accessibles avec des clés numériques 0, 1 et 2. Si aucune erreur ou aucun avertissement ne se produisent, **Null** est retourné.  
   

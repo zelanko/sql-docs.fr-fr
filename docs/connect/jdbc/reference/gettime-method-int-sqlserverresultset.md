@@ -16,10 +16,10 @@ ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b862aed00a154cac23df4008da649347f94f000a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979112"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>Méthode getTime (int) (SQLServerResultSet)
@@ -37,10 +37,10 @@ public java.sql.Time getTime(int columnIndex)
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet d’heure.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Temps.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

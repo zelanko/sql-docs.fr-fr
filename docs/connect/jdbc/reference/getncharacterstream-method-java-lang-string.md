@@ -1,5 +1,5 @@
 ---
-title: Méthode getNCharacterStream (Java. lang. String) | Microsoft Docs
+title: Méthode getNCharacterStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 45d2695b-0727-419d-8921-a51d6feef0aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc5e5e72c4b1aedcc9e10ef74ff2946f2fb2d588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981619"
 ---
 # <a name="getncharacterstream-method-javalangstring"></a>Méthode getNCharacterStream (java.lang.String)
@@ -34,16 +34,16 @@ public final java.io.Reader getNCharacterStream(java.lang.String columnLabel)
   
  **String** contenant l’étiquette de colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- AReaderobject.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Reader.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode doit être utilisée lors de l’accès aux paramètres **nchar**, **nvarchar** et **LONGNVARCHAR** .  
+ Cette méthode doit être utilisée lors de l’accès aux paramètres **NCHAR**, **NVARCHAR** et **LONGNVARCHAR**.  
   
- Cette méthode getNCharacterStream est spécifiée par la méthode getNCharacterStream dans l’interface java. Sql. CallableStatement.  
+ Cette méthode getNCharacterStream est spécifiée par la méthode getNCharacterStream de l’interface java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getNCharacterStream, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)   

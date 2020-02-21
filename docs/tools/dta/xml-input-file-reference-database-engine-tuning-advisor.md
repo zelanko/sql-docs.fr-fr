@@ -1,31 +1,29 @@
 ---
-title: Informations de référence sur les fichiers d’entrée XML (Assistant Paramétrage du moteur de base de données) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Référence du fichier d’entrée XML
+titleSuffix: Database Engine Tuning Advisor
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-dev_langs:
-- XML
-helpviewer_keywords:
-- Database Engine Tuning Advisor [SQL Server], XML input files
-- input file reference [Database Engine Tuning Advisor]
-- XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0572c0aa0b4a49a3c0ce471cb8194124fef73cdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 12646cd7f2c737696f8c86d25c9c6bf2d6c2ada8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105784"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247511"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Référence des fichiers d'entrée XML (Assistant Paramétrage du moteur de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage peut utiliser un fichier d’entrée XML pour paramétrer une base de données. Ce fichier XML désigne les bases de données, les tables, les fichiers ou tables de charge de travail et les options de paramétrage à utiliser pendant la session de paramétrage. Vous pouvez également utiliser ce fichier pour indiquer une configuration spécifiée par l'utilisateur afin d'effectuer une évaluation de simulation.  
+
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage peut utiliser un fichier d’entrée XML pour paramétrer une base de données. Ce fichier XML désigne les bases de données, les tables, les fichiers ou tables de charge de travail et les options de paramétrage à utiliser pendant la session de paramétrage. Vous pouvez également utiliser ce fichier pour indiquer une configuration spécifiée par l'utilisateur afin d'effectuer une évaluation de simulation.  
   
  Un fichier d’entrée XML de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] contient une hiérarchie d’éléments XML, chaque élément XML comprenant le texte ou d’autres éléments qui spécifient les paramètres de la session de paramétrage. Le fichier d’entrée XML de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être conforme aux normes pour le XML correctement formé. Tous les éléments respectent la casse. Les éléments sont spécifiés à l'aide de la casse Pascal, ce qui signifie que le premier caractère est en majuscules, tout comme la première lettre des mots concaténés suivants.  
   
@@ -49,7 +47,7 @@ ms.locfileid: "68105784"
   
 -   [Workload, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/workload-element-dta.md)  
   
--   [TuningOptions, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/tuningoptions-element-dta.md)  
+-   [Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
 -   [Configuration, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/configuration-element-dta.md)  
   
@@ -61,23 +59,23 @@ ms.locfileid: "68105784"
   
 ## <a name="workload-elements"></a>Éléments de charge de travail  
   
--   [File, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/file-element-dta.md)  
+-   [Élément File &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/file-element-dta.md)  
   
 -   [Élément Database &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/database-element-for-workload-dta.md)  
   
--   [EventString, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/eventstring-element-dta.md)  
+-   [Élément EventString &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/eventstring-element-dta.md)  
   
 ## <a name="tuning-options-elements"></a>Éléments d'options de paramétrage  
   
--   [TuningTimeInMin, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/tuningtimeinmin-element-dta.md)  
+-   [TuningTimeInMin, élément &#40;DTA&#41;](../../tools/dta/tuningtimeinmin-element-dta.md)  
   
--   [StorageBoundInMB, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/storageboundinmb-element-dta.md)  
+-   [StorageBoundInMB, élément &#40;DTA&#41;](../../tools/dta/storageboundinmb-element-dta.md)  
   
--   [TestServer, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/testserver-element-dta.md)  
+-   [TestServer, élément &#40;DTA&#41;](../../tools/dta/testserver-element-dta.md)  
   
--   [FeatureSet, élément &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
+-   [FeatureSet, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [Partitioning, élément &#40;DTA&#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [Partitioning, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/partitioning-element-dta.md)  
   
 -   [DropOnlyMode, élément &#40;DTA&#41;](../../tools/dta/droponlymode-element-dta.md)  
   
@@ -85,7 +83,7 @@ ms.locfileid: "68105784"
   
 -   [OnlineIndexOperation, élément &#40;DTA&#41;](../../tools/dta/onlineindexoperation-element-dta.md)  
   
--   [DatabaseToConnect, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/databasetoconnect-element-dta.md)  
+-   [DatabaseToConnect, élément &#40;DTA&#41;](../../tools/dta/databasetoconnect-element-dta.md)  
   
 ## <a name="configuration-elements"></a>Éléments de configuration  
   

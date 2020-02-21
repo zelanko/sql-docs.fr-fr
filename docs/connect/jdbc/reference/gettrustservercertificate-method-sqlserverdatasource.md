@@ -16,10 +16,10 @@ ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81d07743dfefe0b0305b1a094a9ae4632d4effd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978579"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>Méthode getTrustServerCertificate (SQLServerDataSource)
@@ -34,7 +34,7 @@ ms.locfileid: "67978579"
 public boolean getTrustServerCertificate()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si trustServerCertificate est activé. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  

@@ -16,10 +16,10 @@ ms.assetid: c86792bb-096e-4c58-8b9e-74491ccf83a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13d8d89a950f57b29c235d823424357dfa8f7bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982756"
 ---
 # <a name="getint-method-int"></a>Méthode getInt (int)
@@ -37,10 +37,10 @@ public int getInt(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- Valeur **int** .  
+## <a name="return-value"></a>Valeur de retour  
+ Valeur **int**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -16,10 +16,10 @@ ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b261a0f02075ffea736899dfa941a4e9f5acfb86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982046"
 ---
 # <a name="getmaxrowsize-method-sqlserverdatabasemetadata"></a>Méthode getMaxRowSize (SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67982046"
 public int getMaxRowSize()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique le nombre maximal d’octets autorisés.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant le nombre maximal d'octets autorisé.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMaxRowSize est spécifiée par la méthode getMaxRowSize dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode getMaxRowSize est spécifiée par la méthode getMaxRowSize de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

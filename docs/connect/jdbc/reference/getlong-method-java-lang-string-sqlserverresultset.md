@@ -16,10 +16,10 @@ ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2cd126601c0861786ba568d9f1bc4814235b61e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982456"
 ---
 # <a name="getlong-method-javalangstring-sqlserverresultset"></a>getLong, méthode (java.lang.String) (SQLServerResultSet)
@@ -39,8 +39,8 @@ public long getLong(java.lang.String columnName)
   
  Valeur **String** qui contient le nom de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- Valeur de **type long** .  
+## <a name="return-value"></a>Valeur de retour  
+ Valeur **long**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -51,7 +51,7 @@ public long getLong(java.lang.String columnName)
  Cette méthode est prise en charge seulement sur les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui peuvent retourner de façon sécurisée une valeur entière, comme bigint, int, smallint, tinyint et bit. L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode &#40;getLong SQLServerResultSet&#41;](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)   
+ [Méthode getLong &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

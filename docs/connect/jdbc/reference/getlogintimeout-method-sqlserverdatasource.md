@@ -16,10 +16,10 @@ ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5fe82d2709aa8efa32408a9d9d86f0f660bed823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982556"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>Méthode getLoginTimeout (SQLServerDataSource)
@@ -34,13 +34,13 @@ ms.locfileid: "67982556"
 public int getLoginTimeout()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **int** représentant le nombre de secondes à attendre.  
   
 ## <a name="remarks"></a>Notes  
  Si l'application ne spécifie pas explicitement une valeur de délai d'attente, cette méthode retourne une valeur par défaut de 15 secondes.  
   
- Cette méthode getLoginTimeout est spécifiée par la méthode getLoginTimeout dans l’interface javax. Sql. DataSource.  
+ Cette méthode getLoginTimeout est spécifiée par la méthode getLoginTimeout de l’interface javax.sql.DataSource.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

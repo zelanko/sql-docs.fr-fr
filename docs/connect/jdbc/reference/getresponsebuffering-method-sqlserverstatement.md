@@ -16,10 +16,10 @@ ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980402"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>Méthode getResponseBuffering (SQLServerStatement)
@@ -34,17 +34,17 @@ ms.locfileid: "67980402"
 public final java.lang.String getResponseBuffering()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui contient une minuscule **complète** ou **adaptative**.  
+## <a name="return-value"></a>Valeur de retour  
+ **Chaîne** contenant une minuscule, **full** ou **adaptative**.  
   
 ## <a name="remarks"></a>Notes  
  **adaptive** consiste à mettre en mémoire tampon le moins de données possible lorsque cela s’impose.  
   
  **full** consiste à lire l’intégralité du résultat du serveur à l’exécution.  
   
- **Adaptive** est la valeur par défaut dans les versions 2,0 et 3,0 du pilote JDBC. **Full** était la valeur par défaut avant la version 2,0 du pilote JDBC.  
+ **adaptive** est la valeur par défaut dans les versions 2.0 et 3.0 du pilote JDBC. **full** était la valeur par défaut avant la version 2.0 du pilote JDBC.  
   
- Pour plus d’informations sur l’utilisation du mode de mise en mémoire tampon des réponses, consultez Utilisation de la [mise en mémoire tampon adaptative](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Pour plus d’informations sur le mode de mise en mémoire tampon des réponses, consultez [Utiliser la mise en mémoire tampon adaptative](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [setResponseBuffering, méthode &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

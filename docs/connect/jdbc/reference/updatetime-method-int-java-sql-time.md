@@ -1,5 +1,5 @@
 ---
-title: Méthode de type dateTime (int, Java. Sql. Time) | Microsoft Docs
+title: Méthode updateTime (int, java.sql.Time) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a4b48fc5d573f8b91c0538956b83ecd15e3d9c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68000266"
 ---
 # <a name="updatetime-method-int-javasqltime"></a>Méthode updateTime (int, java.sql.Time)
@@ -38,7 +38,7 @@ public void updateTime(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
  *x*  
   

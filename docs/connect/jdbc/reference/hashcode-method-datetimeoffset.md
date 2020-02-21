@@ -1,5 +1,5 @@
 ---
-title: Méthode de hachage (DateTimeOffset) | Microsoft Docs
+title: Méthode hashCode (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1c1724bf-b4ec-4ae0-a1c9-63d3f9198a4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b212fc074d56d0b30790aef09f04a326eafa8d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977938"
 ---
 # <a name="hashcode-method-datetimeoffset"></a>Méthode hashCode (DateTimeOffset)
@@ -29,7 +29,7 @@ ms.locfileid: "67977938"
 public int hashCode()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Code de hachage de l'objet.  
   
 ## <a name="see-also"></a>Voir aussi  

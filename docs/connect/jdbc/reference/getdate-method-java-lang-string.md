@@ -1,5 +1,5 @@
 ---
-title: getDate, méthode (Java. lang. String) Parameter | Microsoft Docs
+title: Paramètre de méthode getDate (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c35b9421e0b0f3feceefeed0add197c3a3627e49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983897"
 ---
 # <a name="getdate-method-javalangstring"></a>Méthode getDate (java.lang.String)
@@ -39,8 +39,8 @@ public java.sql.Date getDate(java.lang.String sCol)
   
  Valeur **chaîne** qui contient le nom du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet date.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Date.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -16,10 +16,10 @@ ms.assetid: 89c11327-eae1-4178-9e26-4b484d521c65
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff0e29e95b321d912f19cece28fd1579aeff50a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982350"
 ---
 # <a name="getmaxcatalognamelength-method-sqlserverdatabasemetadata"></a>Méthode getMaxCatalogNameLength (SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67982350"
 public int getMaxCatalogNameLength()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique le nombre maximal de caractères autorisés.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant le nombre maximal de caractères autorisé.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMaxCatalogNameLength est spécifiée par la méthode getMaxCatalogNameLength dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode getMaxCatalogNameLength est spécifiée par la méthode getMaxCatalogNameLength de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

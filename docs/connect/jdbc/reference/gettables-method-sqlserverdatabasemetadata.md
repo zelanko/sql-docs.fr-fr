@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979214"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Méthode getTables (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- **Chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
+ **Chaîne** contenant le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
   
  *schema*  
   
@@ -54,7 +54,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
   
  Tableau de chaînes qui contient les types de tables à inclure. Null indique que tous les types de tables doivent être inclus.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -65,18 +65,18 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
   
  Le jeu de résultats retourné par la méthode getTables contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nom de la base de données qui contient la table spécifiée.|  
-|TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
-|TABLE_NAME|**String**|Nom de la table.|  
-|TABLE_TYPE|**String**|Le type de table.|  
-|REMARKS|**String**|Description de la table.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
-|TYPE_CAT|**String**|Non pris en charge par le pilote JDBC.|  
-|TYPE_SCHEM|**String**|Non pris en charge par le pilote JDBC.|  
-|TYPE_NAME|**String**|Non pris en charge par le pilote JDBC.|  
-|SELF_REFERENCING_COL_NAME|**String**|Non pris en charge par le pilote JDBC.|  
-|REF_GENERATION|**String**|Non pris en charge par le pilote JDBC.|  
+|TABLE_CAT|**Chaîne**|Nom de la base de données qui contient la table spécifiée.|  
+|TABLE_SCHEM|**Chaîne**|Le nom du schéma de la table.|  
+|TABLE_NAME|**Chaîne**|Nom de la table.|  
+|TABLE_TYPE|**Chaîne**|Le type de table.|  
+|Remarques|**Chaîne**|Description de la table.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
+|TYPE_CAT|**Chaîne**|Non pris en charge par le pilote JDBC.|  
+|TYPE_SCHEM|**Chaîne**|Non pris en charge par le pilote JDBC.|  
+|TYPE_NAME|**Chaîne**|Non pris en charge par le pilote JDBC.|  
+|SELF_REFERENCING_COL_NAME|**Chaîne**|Non pris en charge par le pilote JDBC.|  
+|REF_GENERATION|**Chaîne**|Non pris en charge par le pilote JDBC.|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getTables, consultez « sp_tables (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

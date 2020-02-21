@@ -1,6 +1,6 @@
 ---
-title: Application sqlservr | Microsoft Docs
-ms.custom: ''
+title: Application sqlservr
+ms.custom: seo-lt-2019
 ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028970"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305787"
 ---
 # <a name="sqlservr-application"></a>Application sqlservr
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-l’application **sqlservr** démarre, arrête, suspend et poursuit une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d’une invite de commandes.
+L’application **sqlservr** démarre, arrête, suspend et poursuit une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d’une invite de commandes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 ## <a name="arguments"></a>Arguments
 
-**-s** *nom_instance* Spécifie l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de à laquelle se connecter. Si aucune instance nommée n’est spécifiée, **sqlservr** démarre l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**-s** *instance_name* Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Si aucune instance nommée n’est spécifiée, **sqlservr** démarre l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]
 >Lorsque vous démarrez une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous devez utiliser l’application **sqlservr** dans le répertoire approprié de cette instance. Si vous utilisez l’instance par défaut, exécutez **sqlservr** depuis le répertoire \MSSQL\Binn. Si vous utilisez l’instance nommée, exécutez **sqlservr** depuis le répertoire \MSSQL$*nom_instance*\Binn.
@@ -55,11 +55,11 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 > [!NOTE]
 >Avec cette option, vous ne pouvez pas arrêter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en utilisant le Gestionnaire des services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou la commande **net stop** . De plus, si vous vous déconnectez de l’ordinateur, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est arrêté.
 
-**-d** *master_path* ndique le chemin complet du fichier de base de données **master**. Il n’y a pas d’espace entre **-d** et *chemin_master*. Si vous ne spécifiez pas cette option, les paramètres du Registre existant sont utilisés.
+**-d** *master_path* indique le chemin complet du fichier de base de données **master**. Il n’y a pas d’espace entre **-d** et *chemin_master*. Si vous ne spécifiez pas cette option, les paramètres du Registre existant sont utilisés.
 
 **-f** Démarre une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec une configuration minimale. Cette option est utile lorsqu'une valeur de configuration définie (espace mémoire insuffisant, par exemple) a empêché le serveur de démarrer.
 
-**-e** *error_log_path* Indique le chemin d'accès complet au fichier journal des erreurs. S’il n’est pas spécifié, l' `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog` emplacement par défaut est pour `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog` l’instance par défaut et pour une instance nommée. Il n’existe aucun espace entre **-e** et *chemin_du_journal_des_erreurs*.
+**-e** *error_log_path* Indique le chemin complet au fichier journal des erreurs. S’il n’est pas spécifié, l’emplacement par défaut est `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog` pour l'instance par défaut et `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog` pour une instance nommée. Il n’existe aucun espace entre **-e** et *chemin_du_journal_des_erreurs*.
 
 **-l** *master_log_path* Indique le chemin complet du fichier journal des transactions de la base de données **master**. Il n’existe aucun espace entre **-l** et *chemin_du_journal_master*.
 
@@ -80,12 +80,12 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 Dans la plupart des cas, le programme sqlservr.exe est uniquement utilisé pour le dépannage ou pour une maintenance majeure. Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est démarré à partir de l’invite de commandes avec sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne démarre pas en tant que service et vous ne pouvez donc pas arrêter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec des commandes **net** . Les utilisateurs peuvent se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais les outils [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] montrent l'état du service et le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique correctement que le service est arrêté. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] peut se connecter au serveur, mais indique également que le service est arrêté.
 
 ## <a name="compatibility-support"></a>Prise en charge de la compatibilité
-Les paramètres suivants sont obsolètes et ne sont [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]pas pris en charge dans.
+Les paramètres suivants sont obsolètes et ne sont pas pris en charge dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 |Paramètre | Informations complémentaires|
 |:-----|:-----|
-|**-h** | Utilis dans les versions antérieures des instances 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour réserver l'espace d'adressage de mémoire virtuelle pour les métadonnées d'ajout de mémoire à chaud lorsque AWE est activé. Pris en [!INCLUDE[sssql14](../includes/sssql14-md.md)]charge via. Pour plus d’informations, consultez [Fonctionnalités SQL Server supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
-|**-g** | *memory_to_reserve*<br/><br>S’applique aux versions antérieures des instances 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pris en [!INCLUDE[sssql14](../includes/sssql14-md.md)]charge via. Spécifie un nombre entier de mégaoctets (Mo) de mémoire que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] laisse disponible pour des allocations de mémoire à l'intérieur du processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mais hors du pool de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [la documentation SQL Server 2014 sur les options de configuration de la mémoire du serveur](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
+|**-h** | Utilis dans les versions antérieures des instances 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour réserver l'espace d'adressage de mémoire virtuelle pour les métadonnées d'ajout de mémoire à chaud lorsque AWE est activé. Prise en charge via [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Pour plus d’informations, consultez [Fonctionnalités SQL Server supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
+|**-g** | *memory_to_reserve*<br/><br>S’applique aux versions antérieures des instances 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Prise en charge via [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Spécifie un nombre entier de mégaoctets (Mo) de mémoire que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] laisse disponible pour des allocations de mémoire à l'intérieur du processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mais hors du pool de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour en savoir plus, consultez la [documentation 2014 SQL Server sur les options de configuration de la mémoire du serveur](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Voir aussi

@@ -1,6 +1,6 @@
 ---
-title: Nouvel alias (onglet alias) | Microsoft Docs
-ms.custom: ''
+title: Nouvel alias (onglet Alias)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 24b08707a13bd67fcac41df0104ca916bfb2179c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: d691369d3df437cb8312d66f521eb48c20212ca8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010019"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306429"
 ---
 # <a name="new-alias-alias-tab"></a>Nouvel alias (onglet Alias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68010019"
  **Protocole**  
  Protocole utilisé pour la connexion.  
   
- **Server**  
+ **Serveur**  
  Nom de l’instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers laquelle la connexion est établie.  
   
 ## <a name="when-to-use-an-alias"></a>Cas d'utilisation d'un alias  
@@ -54,6 +54,6 @@ ms.locfileid: "68010019"
   
 -   [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
--   [Création d'une chaîne de connexion valide à l'aide de canaux nommés](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+-   [Création d’une chaîne de connexion valide avec des canaux nommés](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

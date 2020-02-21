@@ -1,39 +1,33 @@
 ---
-title: Afficher et analyser des traces avec SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Afficher et analyser des traces
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], viewing traces
-- SQL Server Profiler, viewing traces
-- traces [SQL Server], viewing
-- SQL Server Profiler, troubleshooting
-- troubleshooting [SQL Server], traces
-- events [SQL Server], finding inside trace
-- Profiler [SQL Server Profiler], troubleshooting
-- traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02c30e9b80611753db7194b4114b967f4a286c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: bd9c65d104e6b397ea3483cd3873f4014d7798b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059642"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307782"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Afficher et analyser des traces avec SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour afficher les données d'événement capturées dans une trace. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche les données selon les propriétés de trace définies. L’une des façons d'analyser les données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste à les copier dans un autre programme, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage peut utiliser un fichier de trace qui contient des événements de traitement SQL et d’appels de procédures distantes si la colonne de données **Text** est présente dans la trace. Pour vous assurer que les colonnes et les événements nécessaires sont bien présents pour être utilisés avec l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilisez le modèle de paramétrage prédéfini fourni avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+Utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour afficher les données d'événement capturées dans une trace. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche les données selon les propriétés de trace définies. L’une des façons d'analyser les données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste à les copier dans un autre programme, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage peut utiliser un fichier de trace qui contient des événements de traitement SQL et d’appels de procédures distantes si la colonne de données **Text** est présente dans la trace. Pour vous assurer que les colonnes et les événements nécessaires sont bien présents pour être utilisés avec l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilisez le modèle de paramétrage prédéfini fourni avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Si vous ouvrez une trace en utilisant le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], il n'est pas nécessaire que le fichier de trace porte l'extension .trc si le fichier a été créé par le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou des procédures stockées du système de trace SQL.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] peut également lire les fichiers de trace SQL portant l'extension .log et les fichiers de script SQL génériques. Si vous ouvrez un fichier de trace SQL qui ne porte pas l’extension .log, par exemple le fichier trace.txt, spécifiez **SQLTrace_Log** comme format de fichier.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] peut également lire les fichiers .log de trace SQL et les fichiers de script SQL génériques. Si vous ouvrez un fichier de trace SQL qui ne porte pas l’extension .log, par exemple le fichier trace.txt, spécifiez **SQLTrace_Log** comme format de fichier.  
   
  Vous pouvez configurer le format d'horodatage du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour vous aider dans l'analyse des traces.  
   

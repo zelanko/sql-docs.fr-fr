@@ -11,10 +11,10 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027007"
 ---
 # <a name="using-advanced-data-types"></a>Utilisation des types de données avancés
@@ -30,12 +30,12 @@ Le tableau suivant liste les mappages par défaut entre les types de données av
 |Types SQL Server|Types JDBC (java.sql.Types)|Types langage Java|  
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(par défaut), Blob, InputStream, String|  
-|texte<br /><br /> varchar(max)|LONGVARCHAR|String (par défaut), Clob, InputStream|  
+|text<br /><br /> varchar(max)|LONGVARCHAR|String (par défaut), Clob, InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (par défaut), Clob, NClob|  
-|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
+|Xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (par défaut), byte[], InputStream|  
 |sqlvariant|SQLVARIANT|Object|  
-|geometry<br /><br /> geography|VARBINARY|byte[]|  
+|geometry<br /><br /> Geography|VARBINARY|byte[]|  
 
 
 <sup>1</sup> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge l'envoi et la récupération d'UDT CLR sous forme de données binaires, et non la manipulation des métadonnées CLR.  
@@ -47,7 +47,7 @@ Les sections suivantes proposent des exemples d'utilisation du pilote JDBC et de
 Le pilote JDBC implémente toutes les méthodes des interfaces java.sql.Blob, java.sql.Clob et java.sql.NClob.  
   
 > [!NOTE]  
-> Les valeurs CLOB peuvent être utilisées avec les types de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou version ultérieure) de grande valeur. En particulier, les types CLOB peuvent être utilisés avec les types de données **varchar (max)** et **nvarchar (max)** , les types BLOB peuvent être utilisés avec les types de données **varbinary (max** ) et **image** , et les types NCLOB peuvent être utilisés avec **ntext** et **nvarchar (max )** .  
+> Les valeurs CLOB peuvent être utilisées avec les types de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou version ultérieure) de grande valeur. Les types CLOB peuvent en particulier être utilisés avec les types de données **varchar(max)** et **nvarchar(max)** , les types BLOB peuvent être utilisés avec les types de données **varbinary(max)** et **image** et les types NCLOB peuvent être utilisés avec **ntext** et **nvarchar(max)** .  
 
 ## <a name="large-value-data-types"></a>Types de données de grande valeur
 
@@ -101,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> Cette approche peut également être utilisée pour les valeurs stockées dans des colonnes **Text**, **ntext**et **nvarchar (max)** .  
+> Cette approche peut également être utilisée pour les valeurs stockées dans des colonnes **text**, **ntext** et **nvarchar(max)** .  
 
 Si vous disposez d'une bibliothèque d'images sur le serveur et que vous devez charger des fichiers image binaires entiers dans une colonne **varbinary(max)** , la méthode la plus efficace impliquant le pilote JDBC consiste à utiliser directement les flux, comme dans l’exemple suivant :  
 
@@ -148,7 +148,7 @@ Pour plus d'informations sur les types de données de grande valeur, consultez �
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un type de données **xml** qui vous permet de stocker des documents et des fragments XML dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le type de données **xml** est intégré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et s’apparente à certains égards à d’autres types intégrés, comme **int** et **varchar**. Tout comme d’autres types intégrés, il est possible d’utiliser le type de données **xml** comme type de colonne pour créer une table ; comme type de variable, type de paramètre ou type de retour de fonction ; ou dans les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST et CONVERT.  
   
-Dans le pilote JDBC, le type de données **xml** peut être mappé en tant que chaîne, tableau d’octets, flux, objet CLOB, objet BLOB ou objet SQLXML. Chaîne est la valeur par défaut. À partir de la version 2.0 du pilote JDBC, l'API JDBC 4.0 est prise en charge, ce qui permet l'introduction de l'interface SQLXML. L’interface SQLXML définit des méthodes d’interaction et de manipulation des données XML. Le type de données **SQLXML** est mappé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]au type de données **XML** . Pour savoir comment lire et écrire des données XML dans la base de données relationnelle avec le type de données Java **SQLXML**, consultez [Prise en charge des données XML](../../connect/jdbc/supporting-xml-data.md).  
+Dans le pilote JDBC, le type de données **xml** peut être mappé en tant que chaîne, tableau d’octets, flux, objet CLOB, objet BLOB ou objet SQLXML. La chaîne est la valeur par défaut. À partir de la version 2.0 du pilote JDBC, l'API JDBC 4.0 est prise en charge, ce qui permet l'introduction de l'interface SQLXML. L’interface SQLXML définit des méthodes d’interaction et de manipulation des données XML. Le type de données **SQLXML** correspond au type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**. Pour savoir comment lire et écrire des données XML dans la base de données relationnelle avec le type de données Java **SQLXML**, consultez [Prise en charge des données XML](../../connect/jdbc/supporting-xml-data.md).  
   
 L’implémentation du type de données **xml** dans le pilote JDBC permet la prise en charge des éléments suivants :  
   
@@ -172,11 +172,11 @@ Pour plus d’informations sur les types de données définis par l’utilisateu
   
 ## <a name="sql_variant-data-type"></a>Type de données Sql_variant
 
-Pour plus d’informations sur le type de données sql_variant, consultez [utilisation du type de données sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+Pour plus d’informations sur le type de données sql_variant, consultez [Utilisation du type de données Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Types de données spatiales
 
-Pour plus d’informations sur les types de données spatiales, consultez Utilisation des types de données [spatiaux](../../connect/jdbc/use-spatial-datatypes.md).  
+Pour plus d’informations sur le type de données spatiales, consultez [Utilisation du type de données spatiales](../../connect/jdbc/use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>Voir aussi
 

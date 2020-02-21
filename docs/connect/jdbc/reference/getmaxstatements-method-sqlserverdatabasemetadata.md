@@ -16,10 +16,10 @@ ms.assetid: 71d58431-b671-49c5-939a-f581d1fef7cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2af23d551982787c7c20332f2c48049b95fd83d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981969"
 ---
 # <a name="getmaxstatements-method-sqlserverdatabasemetadata"></a>Méthode getMaxStatements (SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67981969"
 public int getMaxStatements()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **int** indiquant le nombre maximal d’instructions actives autorisé.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMaxStatements est spécifiée par la méthode getMaxStatements dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode getMaxStatements est spécifiée par la méthode getMaxStatements de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

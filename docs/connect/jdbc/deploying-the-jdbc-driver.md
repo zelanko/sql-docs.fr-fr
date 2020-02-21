@@ -11,10 +11,10 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049836"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Déploiement du pilote JDBC
@@ -52,11 +52,11 @@ ms.locfileid: "73049836"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
 
-## <a name="legalities-of-driver-redistribution"></a>Légalités de la redistribution des pilotes
+## <a name="legalities-of-driver-redistribution"></a>Aspects juridiques de la redistribution des pilotes
 
-Les versions 6,0, 6,2, 6,4 et 7,0 du pilote JDBC sont redistribuables. Lisez la clause _Code distribuable_ des contrats de licence.
+Les versions 6.0, 6.2, 6.4 et 7.0 du pilote JDBC sont redistribuables. Lisez la clause _Code distribuable_ des contrats de licence.
 
-Les versions 4. x du pilote JDBC sont anciennes et obsolètes. La prise en charge de 4. x a expiré avant 2018.
+Les versions 4.x du pilote JDBC sont anciennes et obsolètes. La prise en charge de 4.x a expiré avant 2018.
 
 ## <a name="see-also"></a>Voir aussi  
  [Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

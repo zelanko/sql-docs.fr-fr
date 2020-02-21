@@ -16,10 +16,10 @@ ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982828"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>Méthode getImportedKeys (SQLServerDatabaseMetaData)
@@ -39,7 +39,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 #### <a name="parameters"></a>Paramètres  
  *cat*  
   
- **Chaîne** qui contient le nom du catalogue.  
+ **Chaîne** contenant le nom du catalogue.  
   
  *schema*  
   
@@ -49,33 +49,33 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
   
  **Chaîne** qui contient le nom de la table.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getImportedKeys est spécifiée par la méthode getImportedKeys dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode getImportedKeys est spécifiée par la méthode getImportedKeys de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getImportedKeys contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|PKTABLE_CAT|**String**|Nom du catalogue qui contient la table de clés primaires.|  
-|PKTABLE_SCHEM|**String**|Nom du schéma de la table de clés primaires.|  
-|PKTABLE_NAME|**String**|Nom de la table de clés primaires.|  
-|PKCOLUMN_NAME|**String**|Nom de colonne de la clé primaire.|  
-|FKTABLE_CAT|**String**|Nom du catalogue qui contient la table de clés étrangères.|  
-|FKTABLE_SCHEM|**String**|Nom du schéma de la table de clés étrangères.|  
-|FKTABLE_NAME|**String**|Nom de la table de clés étrangères.|  
-|FKCOLUMN_NAME|**String**|Nom de colonne de la clé étrangère.|  
+|PKTABLE_CAT|**Chaîne**|Nom du catalogue qui contient la table de clés primaires.|  
+|PKTABLE_SCHEM|**Chaîne**|Nom du schéma de la table de clés primaires.|  
+|PKTABLE_NAME|**Chaîne**|Nom de la table de clés primaires.|  
+|PKCOLUMN_NAME|**Chaîne**|Nom de colonne de la clé primaire.|  
+|FKTABLE_CAT|**Chaîne**|Nom du catalogue qui contient la table de clés étrangères.|  
+|FKTABLE_SCHEM|**Chaîne**|Nom du schéma de la table de clés étrangères.|  
+|FKTABLE_NAME|**Chaîne**|Nom de la table de clés étrangères.|  
+|FKCOLUMN_NAME|**Chaîne**|Nom de colonne de la clé étrangère.|  
 |KEY_SEQ|**short**|Numéro séquentiel de la colonne dans une clé primaire multicolonne.|  
-|UPDATE_RULE|**short**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une mise à jour. Il peut avoir une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|DELETE_RULE|**short**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une suppression. Il peut avoir une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|FK_NAME|**String**|Nom de la clé étrangère.|  
-|PK_NAME|**String**|Nom de la clé primaire.|  
-|DEFERRABILITY|**short**|Indique si l'évaluation de la contrainte de clé étrangère peut être différée jusqu'à une opération de validation. Il peut avoir une des valeurs suivantes :<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
+|UPDATE_RULE|**short**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une mise à jour. Ce peut être l’une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|DELETE_RULE|**short**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une suppression. Ce peut être l’une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|FK_NAME|**Chaîne**|Nom de la clé étrangère.|  
+|PK_NAME|**Chaîne**|Nom de la clé primaire.|  
+|DEFERRABILITY|**short**|Indique si l'évaluation de la contrainte de clé étrangère peut être différée jusqu'à une opération de validation. Ce peut être l’une des valeurs suivantes :<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getImportedKeys, consultez la rubrique « sp_fkeys (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

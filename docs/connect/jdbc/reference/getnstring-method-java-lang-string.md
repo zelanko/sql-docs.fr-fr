@@ -11,16 +11,16 @@ ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d9362a41e5a48400c1b63d52b2ff89095d119d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981399"
 ---
 # <a name="getnstring-method-javalangstring"></a>Méthode getNString (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère la valeur du paramètre **nchar**, **nvarchar**ou **LONGNVARCHAR** désigné sous la forme d’une chaîne dans le langage de programmation Java.  
+  Récupère la valeur du paramètre **NCHAR**, **NVARCHAR** ou **LONGNVARCHAR** désigné sous forme de chaîne dans le langage de programmation Java.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,8 +34,8 @@ public final java.lang.String getNString(java.lang.String parameterName)
   
  Valeur **chaîne** qui contient le nom du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- AStringobject.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet String.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

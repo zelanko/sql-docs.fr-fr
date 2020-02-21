@@ -16,10 +16,10 @@ ms.assetid: d93c9b70-18c2-44bb-a6de-70a7e940d806
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac7f8ba3b20ba8678891aeb3b14555a1123f06d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980942"
 ---
 # <a name="getparametermode-method-sqlserverparametermetadata"></a>Méthode getParameterMode (SQLServerParameterMetaData)
@@ -37,10 +37,10 @@ public int getParameterMode(int param)
 #### <a name="parameters"></a>Paramètres  
  *param*  
   
- **Entier** qui indique un index de paramètre.  
+ **int** indiquant l’index du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique le mode du paramètre désigné, qui peut prendre l’une des valeurs suivantes:  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant le mode du paramètre désigné, qui peut être l’une des valeurs suivantes :  
   
  ParameterMetaData.parameterModeIn  
   
@@ -54,7 +54,7 @@ public int getParameterMode(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getParameterMode, est spécifiée par la méthode getParameterMode, dans l’interface java. Sql. ParameterMetaData.  
+ Cette méthode getParameterMode est spécifiée par la méthode getParameterMode de l’interface java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerParameterMetaData, méthodes](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

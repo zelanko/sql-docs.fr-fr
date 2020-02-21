@@ -16,10 +16,10 @@ ms.assetid: a56e08ae-6f4e-4dc6-b175-ff457d0d7a81
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6264c962f843a8e7b05c0d3fd0297bb1e4a8fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978953"
 ---
 # <a name="gettimedatefunctions-method-sqlserverdatabasemetadata"></a>Méthode getTimeDateFunctions (SQLServerDatabaseMetaData)
@@ -34,8 +34,8 @@ ms.locfileid: "67978953"
 public java.lang.String getTimeDateFunctions()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui contient une liste des fonctions d’heure et de date.  
+## <a name="return-value"></a>Valeur de retour  
+ **Chaîne** contenant une liste des fonctions d’heure et de date.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

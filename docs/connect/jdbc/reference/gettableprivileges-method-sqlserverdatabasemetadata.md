@@ -16,10 +16,10 @@ ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0fe3b01fd02bf48fb5f38707530e3b3344133e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979224"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>Méthode getTablePrivileges (SQLServerDatabaseMetaData)
@@ -39,7 +39,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- **Chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
+ **Chaîne** contenant le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
   
  *schema*  
   
@@ -49,7 +49,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
   
  **String** contenant le modèle de nom de la table.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -60,15 +60,15 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
   
  Le jeu de résultats retourné par la méthode getTablePrivileges contiendra les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nom du catalogue.|  
-|TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
-|TABLE_NAME|**String**|Nom de la table.|  
-|GRANTOR|**String**|Objet octroyant l'accès.|  
-|GRANTEE|**String**|Objet bénéficiant de l'accès.|  
-|PRIVILEGE|**String**|Type d'accès octroyé.|  
-|IS_GRANTABLE|**String**|Indique si le bénéficiaire peut accorder ou non l'accès à d'autres utilisateurs.|  
+|TABLE_CAT|**Chaîne**|Nom du catalogue.|  
+|TABLE_SCHEM|**Chaîne**|Le nom du schéma de la table.|  
+|TABLE_NAME|**Chaîne**|Nom de la table.|  
+|GRANTOR|**Chaîne**|Objet octroyant l'accès.|  
+|GRANTEE|**Chaîne**|Objet bénéficiant de l'accès.|  
+|PRIVILEGE|**Chaîne**|Type d'accès octroyé.|  
+|IS_GRANTABLE|**Chaîne**|Indique si le bénéficiaire peut accorder ou non l'accès à d'autres utilisateurs.|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getTablePrivileges, consultez la rubrique « sp_table_privileges (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

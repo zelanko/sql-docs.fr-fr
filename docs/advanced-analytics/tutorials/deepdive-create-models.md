@@ -1,6 +1,6 @@
 ---
 title: Créer des modèles R avec RevoScaleR
-description: Tutoriel pas à pas sur la création d’un modèle à l’aide du langage R sur SQL Server.
+description: 'Tutoriel RevoScaleR 7 : comment créer un modèle à l’aide du langage R sur SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 11feb62609cba61a695dd60085461410a38ed0f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727271"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947237"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Créer des modèles R (tutoriel SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des fonctions [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 7 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Vous avez enrichi les données de formation. Il est maintenant temps d’analyser les données à l’aide de la modélisation de régression. Les modèles linéaires sont un outil important dans le monde de l’analyse prédictive. Le package **RevoScaleR** comprend des algorithmes de régression qui peuvent subdiviser la charge de travail et l’exécuter en parallèle.
+Vous avez enrichi les données de formation. Dans ce tutoriel, vous allez analyser les données à l’aide de la modélisation de régression. Les modèles linéaires sont un outil important dans le monde de l’analyse prédictive. Le package **RevoScaleR** comprend des algorithmes de régression qui peuvent subdiviser la charge de travail et l’exécuter en parallèle.
 
 > [!div class="checklist"]
 > * Créer un modèle de régression linéaire

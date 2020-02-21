@@ -1,5 +1,5 @@
 ---
-title: Programmation avec SQLXML | Microsoft Docs
+title: Programmation à l'aide de SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027770"
 ---
 # <a name="programming-with-sqlxml"></a>Programmation à l'aide de SQLXML
@@ -27,11 +27,11 @@ ms.locfileid: "69027770"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Lecture et écriture de données XML à l'aide d'objets SQLXML  
  La liste suivante explique comment utiliser les méthodes de l’API [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] pour lire et écrire des données XML avec des objets SQLXML :  
   
--   Pour créer un objet SQLXML, utilisez la méthode [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Notez que cette méthode crée un objet SQLXML sans aucune donnée. Pour ajouter des données **XML** à l’objet SQLXML, appelez l’une des méthodes suivantes spécifiées dans l’interface SQLXML: SetResult, SetCharacterStream, SetBinaryStream ou SetString.  
+-   Pour créer un objet SQLXML, utilisez la méthode [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Notez que cette méthode crée un objet SQLXML sans aucune donnée. Pour ajouter des données **xml** à l’objet SQLXML, appelez l’une des méthodes suivantes spécifiées dans l’interface SQLXML : setResult, setCharacterStream, setBinaryStream ou setString.  
   
 -   Pour récupérer l’objet SQLXML proprement dit, utilisez les méthodes getSQLXML de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) ou de la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
--   Pour récupérer les données **XML** d’un objet SQLXML, utilisez l’une des méthodes suivantes spécifiées dans l’interface SQLXML: GetSource, GetCharacterStream, GetBinaryStream ou GetString.  
+-   Pour récupérer les données **xml** à partir d’un objet SQLXML, utilisez l’une des méthodes suivantes spécifiées dans l’interface SQLXML : getSource, getCharacterStream, getBinaryStream ou getString.  
   
 -   Pour mettre à jour les données **xml** dans un objet SQLXML, utilisez la méthode [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
@@ -50,14 +50,14 @@ ms.locfileid: "69027770"
   
 |Nom de la méthode|Objet SQLXML getter<br /><br /> (Accessible en lecture)|Objet SQLXML setter<br /><br /> (Accessible en écriture)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|Non pris en charge|Pris en charge|  
-|CallableStatement.setObject()|Non pris en charge|Pris en charge|  
-|PreparedStatement.setSQLXML()|Non pris en charge|Pris en charge|  
-|PreparedStatement.setObject()|Non pris en charge|Pris en charge|  
-|ResultSet.updateSQLXML()|Non pris en charge|Pris en charge|  
-|ResultSet.updateObject()|Non pris en charge|Pris en charge|  
-|ResultSet.getSQLXML()|Pris en charge|Non pris en charge|  
-|CallableStatement.getSQLXML()|Pris en charge|Non pris en charge|  
+|CallableStatement.setSQLXML()|Non pris en charge|Prise en charge|  
+|CallableStatement.setObject()|Non pris en charge|Prise en charge|  
+|PreparedStatement.setSQLXML()|Non pris en charge|Prise en charge|  
+|PreparedStatement.setObject()|Non pris en charge|Prise en charge|  
+|ResultSet.updateSQLXML()|Non pris en charge|Prise en charge|  
+|ResultSet.updateObject()|Non pris en charge|Prise en charge|  
+|ResultSet.getSQLXML()|Prise en charge|Non pris en charge|  
+|CallableStatement.getSQLXML()|Prise en charge|Non pris en charge|  
   
  Comme indiqué dans le tableau ci-dessus, les méthodes SQLXML setter ne fonctionnent pas avec les objets SQLXML accessibles en lecture ; de même, les méthodes getter ne fonctionnent pas avec les objets SQLXML accessibles en écriture.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "69027770"
  Les analyseurs XML ne peuvent pas gérer les valeurs vides. Toutefois, SQL Server permet aux applications de récupérer et de stocker des valeurs vides dans les colonnes de base de données de type de données XML. En d'autres termes, lors de l'analyse des données XML, si la valeur sous-jacente est vide, une exception est levée par l'analyseur. Pour les sorties DOM, le pilote JDBC intercepte cette exception et génère une erreur. Pour les sorties SAX et Stax, l'erreur provient directement de l'analyseur.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Prise en charge de la mise en mémoire tampon adaptative et de SQLXML  
- Les flux de données aux formats binaire et caractère retournés par l'objet SQLXML obéissent aux modes de mise en mémoire tampon adaptative ou de mise en mémoire tampon complète. Par ailleurs, si les analyseurs XML ne sont pas des flux, ils n'obéissent pas aux paramètres de mise en mémoire tampon adaptative ou de mise en mémoire tampon complète. Pour plus d’informations sur la mise en mémoire tampon adaptative, consultez Utilisation de la [mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md).  
+ Les flux de données aux formats binaire et caractère retournés par l'objet SQLXML obéissent aux modes de mise en mémoire tampon adaptative ou de mise en mémoire tampon complète. Par ailleurs, si les analyseurs XML ne sont pas des flux, ils n'obéissent pas aux paramètres de mise en mémoire tampon adaptative ou de mise en mémoire tampon complète. Pour plus d’informations sur la mise en mémoire tampon adaptative, consultez [Utiliser la mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge des données XML](../../connect/jdbc/supporting-xml-data.md)  

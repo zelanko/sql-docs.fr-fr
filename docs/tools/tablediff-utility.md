@@ -1,6 +1,6 @@
 ---
-title: Utilitaire tablediff | Microsoft Docs
-ms.custom: ''
+title: tablediff (utilitaire)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986039"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304806"
 ---
 # <a name="tablediff-utility"></a>tablediff (utilitaire)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,11 +164,11 @@ tablediff
  **-t** _connection_timeouts_  
  Définit le délai d'attente de connexion, en secondes, pour les connexions au serveur source et au serveur de destination.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0**|Réussi|  
+|**0**|Succès|  
 |**1**|Erreur critique|  
 |**2**|Tables différentes|  
   
@@ -183,12 +183,12 @@ tablediff
 |----------------------|---------------------------|  
 |**tinyint**|**smallint**, **int**ou **bigint**|  
 |**smallint**|**int** ou **bigint**|  
-|**Int**|**bigint**|  
+|**int**|**bigint**|  
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
 |**varbinary(max)**|**image**|  
-|**texte**|**varchar(max)**|  
+|**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
 |**image**|**varbinary(max)**|  
   
@@ -208,7 +208,7 @@ tablediff
   
 -   **xml**  
   
--   **texte**  
+-   **text**  
   
 -   **ntext**  
   

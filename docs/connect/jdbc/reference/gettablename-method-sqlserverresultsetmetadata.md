@@ -16,10 +16,10 @@ ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b57f01670b52eaa17102001411458153be481f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979242"
 ---
 # <a name="gettablename-method-sqlserverresultsetmetadata"></a>Méthode getTableName (SQLServerResultSetMetaData)
@@ -37,16 +37,16 @@ public java.lang.String getTableName(int column)
 #### <a name="parameters"></a>Paramètres  
  *column*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **Chaîne** qui contient le nom de la table.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getTableName est spécifiée par la méthode getTableName dans l’interface java. Sql. ResultSetMetaData.  
+ Cette méthode getTableName est spécifiée par la méthode getTableName de l'interface java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSetMetaData, méthodes](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

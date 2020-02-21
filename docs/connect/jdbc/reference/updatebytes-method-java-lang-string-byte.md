@@ -1,5 +1,5 @@
 ---
-title: Méthode updateBytes (Java. lang. String, Byte) | Microsoft Docs
+title: Méthode updateBytes (java.lang.String, octet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19ebdfb5b13cd528e5690fe2eeae9bec35e2134d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996895"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>updateBytes, méthode (java.lang.String, byte)
@@ -42,7 +42,7 @@ public void updateBytes(java.lang.String columnName,
   
  *x*  
   
- Tableau de valeurs d' **octets** .  
+ Tableau de valeurs **d’octets**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,7 +50,7 @@ public void updateBytes(java.lang.String columnName,
 ## <a name="remarks"></a>Notes  
  Cette méthode updateBytes est spécifiée par la méthode updateBytes de l’interface java.sql.ResultSet.  
   
- Dans la version précédente de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerResultSet.updateBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
+ Dans la version précédente de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerResultSet.updateBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateBytes, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebytes-method-sqlserverresultset.md)   

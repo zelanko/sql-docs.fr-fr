@@ -1,6 +1,6 @@
 ---
-title: Propriétés des protocoles clients (onglet ordre) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de protocoles clients (onglet Ordre)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbf7795da30f2a274201ce51e9774390b7611b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 59ffc1332b52d95221541a45ba90fe3e22a89caa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010242"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306526"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propriétés de protocoles clients (onglet Ordre)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "68010242"
   
 ## <a name="options"></a>Options  
  **Protocoles désactivés**  
- Répertorie les protocoles installés mais actuellement non utilisés.  
+ Répertorie les protocoles qui sont installés mais ne sont actuellement pas utilisés.  
   
  **Protocoles activés**  
- Répertorie les protocoles disponibles pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les clients sur cet ordinateur.  
+ Répertorie les protocoles disponibles pour les clients [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur cet ordinateur.  
   
  **>**  
  Active le protocole affiché en surbrillance dans la zone **Protocoles désactivés** , en le déplaçant vers la zone **Protocoles activés** .  
@@ -57,6 +57,6 @@ ms.locfileid: "68010242"
 >  Si le protocole est spécifié par le biais d'un préfixe ou à l'intérieur de la chaîne de connexion, seul le protocole spécifié est essayé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix d'un protocole réseau](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [Choix d’un protocole réseau](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

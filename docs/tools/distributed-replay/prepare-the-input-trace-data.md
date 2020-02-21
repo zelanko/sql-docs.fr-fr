@@ -1,7 +1,6 @@
 ---
-title: Préparer les données de trace d’entrée | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Préparer les données de trace d'entrée
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +9,20 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fbf4e9b2607638d37217dc5862a36446d592b5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 514d11ded0761cd4719b3d3a44b7c91d08d97e04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949994"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307006"
 ---
 # <a name="prepare-the-input-trace-data"></a>Préparer les données de trace d'entrée
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez préparer les données de trace d'entrée en initialisant l'étape de prétraitement de l'outil d'administration de relecture distribuée. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
+
+Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez préparer les données de trace d’entrée en lançant l’étape de prétraitement de l’outil d’administration de relecture distribuée. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
   
  ![Étape de prétraitement Distributed Replay](../../tools/distributed-replay/media/preprocess.gif "Étape de prétraitement Distributed Replay")  
   
@@ -30,7 +33,7 @@ ms.locfileid: "67949994"
   
 ### <a name="to-prepare-the-input-trace-data"></a>Pour préparer les données de trace d'entrée  
   
-1.  **(Facultatif) Modifier les paramètres de configuration du prétraitement**: si vous voulez modifier les paramètres de configuration du prétraitement, tels que filtrer ou non les sessions système ou configurer la durée d’inactivité maximale, vous devez modifier l’élément `<PreprocessModifiers>` du fichier de configuration de prétraitement XML, `DReplay.exe.preprocess.config`. Si vous modifiez le fichier de configuration de prétraitement, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
+1.  **Modifier les paramètres de configuration de l’appareil (facultatif)**  : si vous voulez modifier les paramètres de configuration du prétraitement, tels que filtrer ou non les sessions système ou configurer la durée d’inactivité maximale, vous devez modifier l’élément `<PreprocessModifiers>` du fichier de configuration de prétraitement XML, `DReplay.exe.preprocess.config`. Si vous modifiez le fichier de configuration de prétraitement, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
   
     1.  Faites une copie du fichier par défaut de configuration de prétraitement, `DReplay.exe.preprocess.config`, et renommez le nouveau fichier. Le fichier par défaut de configuration de prétraitement se trouve dans le dossier d'installation de l'outil d'administration.  
   
@@ -40,7 +43,7 @@ ms.locfileid: "67949994"
   
      Pour plus d'informations sur le fichier de configuration de prétraitement, consultez [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-2.  **Initialiser l’étape de prétraitement**: pour préparer les données de trace d’entrée, vous devez exécuter l’outil d’administration avec l’option **preprocess** . Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Initialiser l'étape de prétraitement** : pour préparer les données de trace d'entrée, vous devez exécuter l'outil d'administration avec l'option **prétraiter**. Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Ouvrez l’utilitaire d’invite de commandes Windows (**CMD.exe**) et accédez à l’emplacement d’installation de l’outil d’administration Distributed Replay (**DReplay.exe**).  
   
@@ -62,6 +65,6 @@ ms.locfileid: "67949994"
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

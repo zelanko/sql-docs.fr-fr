@@ -1,5 +1,5 @@
 ---
-title: Méthode getMaxFieldSize, (SQLServerStatement) | Microsoft Docs
+title: Méthode getMaxFieldSize (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a1700cc8bb2bfb54dd9ddee52da54899f764650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982101"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize, méthode (SQLServerStatement)
@@ -34,14 +34,14 @@ ms.locfileid: "67982101"
 public final int getMaxFieldSize()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Entier** qui indique le nombre maximal d’octets qu’une colonne peut contenir, ou 0 s’il n’y a aucune limite.  
+## <a name="return-value"></a>Valeur de retour  
+ **int** indiquant le nombre maximal d’octets qu’une colonne peut contenir, ou 0 s’il n’y a pas de limite.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMaxFieldSize, est spécifiée par la méthode getMaxFieldSize, dans l’interface java. Sql. Statement.  
+ Cette méthode getMaxFieldSize est spécifiée par la méthode getMaxFieldSize de l’interface java.sql.Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, méthodes](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: getDouble, méthode (int) | Microsoft Docs
+title: Méthode getDouble (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b02292225d0f0be0529537f369c2fa760d677486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983595"
 ---
 # <a name="getdouble-method-int"></a>Méthode getDouble (int)
@@ -37,10 +37,10 @@ public double getDouble(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- Valeur de **type double** .  
+## <a name="return-value"></a>Valeur de retour  
+ Une valeur **double**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

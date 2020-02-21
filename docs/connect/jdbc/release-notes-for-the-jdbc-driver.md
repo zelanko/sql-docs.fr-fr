@@ -11,10 +11,10 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027787"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notes de publication pour le pilote JDBC Microsoft
@@ -26,33 +26,33 @@ Cet article répertorie les versions du _pilote JDBC Microsoft pour SQL Server_.
 
 ### <a name="compliance"></a>Conformité
 
-2 août 2019
+2 août 2019
 
 | Modification de conformité | Détails |
 | :---------------- | :------ |
 | Téléchargez les dernières mises à jour du pilote JDBC 7.4. | &bull; &nbsp; [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Entièrement conforme à la spécification de l’API JDBC 4.2. | Les fichiers JAR dans le package 7.4 sont nommés en fonction de la compatibilité avec les versions de Java.<br/><br/>Par exemple, le fichier mssql-jdbc-7.4.1.jre11.jar du package 7.4 doit être utilisé avec Java 11. |
-| Compatible avec le kit de développement Java (JDK) version 12,0, 11,0 et 1,8. | Le pilote JDBC Microsoft 7.4 pour SQL Server est désormais compatible avec JDK (Java Development Kit) version 12.0 en plus de 11.0 et 1.8. |
+| Compatible avec le kit de développement Java (JDK) versions 12.0, 11.0 et 1.8. | Le pilote JDBC Microsoft 7.4 pour SQL Server est désormais compatible avec JDK (Java Development Kit) version 12.0 en plus de 11.0 et 1.8. |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-12"></a>Prise en charge de JDK 12
 
 Le pilote JDBC Microsoft 7.4 pour SQL Server est désormais compatible avec JDK (Java Development Kit) version 12.0 en plus de 11.0 et 1.8.
 
-### <a name="introduces-ntlm-authentication"></a>Présente l’authentification NTLM
+### <a name="introduces-ntlm-authentication"></a>Présente l'authentification NTLM.
 
-| Modification NTLM | Détails |
+| Modification de NTLM | Détails |
 | :--------- | :------ |
 | Prend en charge le mode d’authentification NTLM. | Ce mode d’authentification permet aux clients Windows et non Windows de s’authentifier auprès de SQL Server à l’aide d’utilisateurs de domaine Windows. |
-| Plus de détails et un exemple d’application pour utiliser ce mode d’authentification. | Consultez [connexion à l’aide de l’authentification NTLM](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
+| Plus de détails et un exemple d’application pour utiliser ce mode d’authentification. | Consultez [Se connecter avec l’authentification NTLM](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>Présente l’interrogation des ParameterMetaData via _useFmtOnly_
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>Présente l’interrogation de ParameterMetaData via _useFmtOnly_
 
 | modification de useFmtOnly | Détails |
 | :---------- | :------ |
-| propriété de connexion **useFmtOnly** ajoutée. | Cette fonctionnalité permet aux utilisateurs d’interroger éventuellement ParameterMetaData à `SET FMTONLY ON` l’aide de l’API héritée. Cela est utile pour les scénarios `sp_describe_undeclared_parameters` où ne s’exécute pas comme prévu. |
-| Plus de détails et de limitations. | Voir [Utilisation d’useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| propriété de connexion **useFmtOnly**. | Cette fonctionnalité permet aux utilisateurs d’interroger éventuellement ParameterMetaData via l’API héritée `SET FMTONLY ON`. Cela est utile pour les scénarios où `sp_describe_undeclared_parameters` ne s’exécute pas comme prévu. |
+| Plus de détails et de restrictions. | Voir [Utilisation d’useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>Mise à jour du _kit de développement logiciel (SDK) Microsoft Azure Key Vault pour Java_, version 1.2.1
@@ -69,14 +69,14 @@ Le pilote JDBC Microsoft 7.4 pour SQL Server est désormais compatible avec JDK 
 | Problèmes connus | Détails |
 | :----------- | :------ |
 | Pendant l’utilisation de l’authentification NTLM. | L’activation simultanée de la protection étendue et des connexions chiffrées n’est pas prise en charge actuellement. |
-| Pendant l’utilisation d’useFmtOnly. | Il existe des problèmes avec la fonctionnalité, qui sont dus à des lacunes dans la logique d’analyse SQL. Pour plus d’informations et pour obtenir des suggestions de contournement, consultez [utilisation de useFmtOnly](../../connect/jdbc/using-usefmtonly.md) . |
+| Pendant l’utilisation d’useFmtOnly. | Il existe des problèmes avec la fonctionnalité, qui sont dus à des lacunes dans la logique d’analyse SQL. Consultez [Utilisation de useFmtOnly](../../connect/jdbc/using-usefmtonly.md) pour plus d’informations et pour obtenir des suggestions de contournement. |
 | &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
 ### <a name="compliance"></a>Conformité
 
-16 avril 2019
+Avril 16, 2019
 
 | Modification de conformité | Détails |
 | :---------------- | :------ |
@@ -104,15 +104,15 @@ Le pilote JDBC Microsoft 7.4 pour SQL Server est désormais compatible avec JDK 
 
 | Modification de l’OSGi | Détails |
 | :---------- | :------ |
-| Implémentation **DataSourceFactory** ajoutée. | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`)<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory`) |
-| Implémentation **Activateur** ajoutée. | &bull; &nbsp; `org.osgi.framework.BundleActivator`)<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator`) |
+| Implémentation **DataSourceFactory** ajoutée. | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
+| Implémentation **Activateur** ajoutée. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-_sqlservererror_-apis"></a>Introduit les API _SQLServerError_
 
 | Modification de l’API d’erreur | Détails |
 | :--------------- | :------ |
-| Introduction de l’API SQLServerError. | API getter pour récupérer des détails supplémentaires sur l’erreur générée à partir du serveur.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`)<br/>&bull; &nbsp; `SQLServerError`) |
+| Introduction de l’API SQLServerError. | API getter pour récupérer des détails supplémentaires sur l’erreur générée à partir du serveur.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
 | Détails supplémentaires. | Consultez [Gestion des erreurs](../../connect/jdbc/handling-errors.md). |
 | &nbsp; | &nbsp; |
 
@@ -195,7 +195,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>Mise à jour de la « bibliothèque d’authentification Microsoft Azure Active Directory (ADAL4J) pour Java » : version 1.6.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>Version mise à jour de la « bibliothèque d’authentification Microsoft Azure Active Directory (ADAL4J) pour Java » : 1.6.0
 
 Le pilote JDBC 7.0 Microsoft pour SQL Server a mis à jour sa dépendance Maven sur la « bibliothèque d'authentification Active Directory Microsoft Azure (ADAL4J) pour Java » vers la version 1.6.0. Pour plus d’informations sur les dépendances, consultez [Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
@@ -213,7 +213,7 @@ Le pilote prend en charge la spécification de l’API Java Database Connectivit
 
 ### <a name="added-connection-property-sslprotocol"></a>Ajout d’une propriété de connexion : sslProtocol
 
-Une nouvelle propriété de connexion permet aux utilisateurs de spécifier le mot clé du protocole TLS. Les valeurs possibles sont : « TLS », « TLSv1 », « TLSv1.1 » et « TLSv1.2 ». Pour plus d’informations, consultez [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
+Une nouvelle propriété de connexion permet aux utilisateurs de spécifier le mot clé du protocole TLS. Les valeurs possibles sont les suivantes : « TLS », « TLSv1 », « TLSv1.1 » et « TLSv1.2 ». Pour plus d’informations, consultez [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>Propriété de connexion dépréciée : fipsProvider
 
@@ -251,7 +251,7 @@ Le pilote JDBC a implémenté la mise en cache des métadonnées de l’instruct
 
 Le pilote JDBC prend maintenant en charge l’authentification intégrée Azure Active Directory (Azure AD) sur tous les systèmes d’exploitation pris en charge (Windows, Linux et Mac) avec Kerberos. Sur les systèmes d’exploitation Windows, les utilisateurs peuvent également s’authentifier avec sqljdbc_auth.dll.
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>Mise à jour de la « bibliothèque d’authentification Microsoft Azure Active Directory (ADAL4J) pour Java » : version 1.4.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>Version mise à jour de la « bibliothèque d’authentification Microsoft Azure Active Directory (ADAL4J) pour Java » : 1.4.0
 
 Le pilote JDBC a mis à jour sa dépendance Maven sur la « bibliothèque d'authentification Active Directory Microsoft Azure (ADAL4J) pour Java » vers la version 1.4.0. Pour plus d’informations sur les dépendances, consultez [Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
@@ -297,7 +297,7 @@ Le pilote JDBC 6.1 Microsoft pour SQL Server est parfaitement conforme aux spéc
 
 Le pilote JDBC 6.0 Microsoft pour SQL Server est parfaitement conforme aux spécifications JDBC 4.1. et 4.2. Les fichiers JAR dans le package 6.0 sont nommés en fonction de leur conformité avec la version de l’API JDBC. Par exemple, le fichier sqljdbc42.jar du package 6.0 est compatible avec l’API JDBC 4.2. De même, le fichier sqljdbc41.jar est conforme à l’API JDBC 4.1.
 
-Pour vous assurer d’avoir le bon fichier sqljdbc42.jar ou sqljdbc41.jar, exécutez les lignes de code suivantes. Si la sortie est « Version du pilote : 6.0.7507.100 », c’est que vous disposez du package du pilote JDBC 6.0.
+Pour vous assurer d’avoir le bon fichier sqljdbc42.jar ou sqljdbc41.jar, exécutez les lignes de code suivantes. Si la sortie est « version du pilote : 6.0.7507.100 », vous avez le package de pilote JDBC 6.0.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -330,11 +330,11 @@ Les paramètres table (TVP) fournissent un moyen simple de marshaler plusieurs l
 
 Le pilote prend désormais en charge les connexions transparentes aux groupes de disponibilité Always On. Le pilote détecte rapidement la topologie Always On actuelle de votre infrastructure serveur et se connecte au serveur actif de manière transparente.
 
-## <a name="42"></a>4.2
+## <a name="42"></a>4,2
 
 Le pilote JDBC 4.2 Microsoft pour SQL Server est parfaitement conforme aux spécifications JDBC 4.1. et 4.2. Les fichiers JAR dans le package 4.2 sont nommés en fonction de leur conformité avec la version de l’API JDBC. Par exemple, le fichier sqljdbc42.jar du package 4.2 est compatible avec l’API JDBC 4.2. De même, le fichier sqljdbc41.jar est conforme à l’API JDBC 4.1.
 
-Pour être certain d’avoir le bon fichier sqljdbc42.jar ou sqljdbc41.jar, exécutez les lignes de code suivantes. Si la sortie est « Version du pilote : 4.2.6420.100 », c’est que vous disposez du package du pilote JDBC 4.2.
+Pour être certain d’avoir le bon fichier sqljdbc42.jar ou sqljdbc41.jar, exécutez les lignes de code suivantes. Si la sortie est « version du pilote : 4.2.6420.100 », vous avez le package de pilote JDBC 4.2.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -361,7 +361,7 @@ Le pilote dispose de nouvelles options de délai d’attente pour la restauratio
 
 Le pilote utilise une nouvelle propriété de connexion pour faciliter la flexibilité avec les connexions Kerberos. Pour plus d’informations, consultez [Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
 
-## <a name="41"></a>4.1
+## <a name="41"></a>4,1
 
 ### <a name="support-for-jdk-7"></a>Prise en charge de JDK 7
 

@@ -16,10 +16,10 @@ ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984220"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Méthode getCrossReference (SQLServerDatabaseMetaData)
@@ -42,55 +42,55 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 #### <a name="parameters"></a>Paramètres  
  *cat1*  
   
- **Chaîne** qui contient le nom du catalogue de la table qui contient la clé primaire.  
+ **Chaîne** contenant le nom du catalogue qui contient la table de clés primaires.  
   
  *schem1*  
   
- **Chaîne** qui contient le nom de schéma de la table qui contient la clé primaire.  
+ **Chaîne** contenant le nom du schéma qui contient la table de clés primaires.  
   
  *tab1*  
   
- **Chaîne** qui contient le nom de table de la table qui contient la clé primaire.  
+ **Chaîne** contenant le nom de la table qui contient de clés primaires.  
   
  *cat2*  
   
- **Chaîne** qui contient le nom du catalogue de la table qui contient la clé étrangère.  
+ **Chaîne** contenant le nom du catalogue de la table qui contient la clé étrangère.  
   
  *schem2*  
   
- **Chaîne** qui contient le nom de schéma de la table qui contient la clé étrangère.  
+ **Chaîne** contenant le nom du schéma de la table qui contient la clé étrangère.  
   
  *tab2*  
   
- **Chaîne** qui contient le nom de table de la table qui contient la clé étrangère.  
+ **Chaîne** contenant le nom de la table qui contient la clé étrangère.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getCrossReference est spécifiée par la méthode getCrossReference dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode getCrossReference est spécifiée par la méthode getCrossReference de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getCrossReference contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|PKTABLE_CAT|**String**|Nom du catalogue qui contient la table de clés primaires.|  
-|PKTABLE_SCHEM|**String**|Nom du schéma de la table de clés primaires.|  
-|PKTABLE_NAME|**String**|Nom de la table de clés primaires.|  
-|PKCOLUMN_NAME|**String**|Nom de colonne de la clé primaire.|  
-|FKTABLE_CAT|**String**|Nom du catalogue qui contient la table de clés étrangères.|  
-|FKTABLE_SCHEM|**String**|Nom du schéma de la table de clés étrangères.|  
-|FKTABLE_NAME|**String**|Nom de la table de clés étrangères.|  
-|FKCOLUMN_NAME|**String**|Nom de colonne de la clé étrangère.|  
+|PKTABLE_CAT|**Chaîne**|Nom du catalogue qui contient la table de clés primaires.|  
+|PKTABLE_SCHEM|**Chaîne**|Nom du schéma de la table de clés primaires.|  
+|PKTABLE_NAME|**Chaîne**|Nom de la table de clés primaires.|  
+|PKCOLUMN_NAME|**Chaîne**|Nom de colonne de la clé primaire.|  
+|FKTABLE_CAT|**Chaîne**|Nom du catalogue qui contient la table de clés étrangères.|  
+|FKTABLE_SCHEM|**Chaîne**|Nom du schéma de la table de clés étrangères.|  
+|FKTABLE_NAME|**Chaîne**|Nom de la table de clés étrangères.|  
+|FKCOLUMN_NAME|**Chaîne**|Nom de colonne de la clé étrangère.|  
 |KEY_SEQ|**short**|Numéro séquentiel de la colonne dans une clé primaire multicolonne.|  
-|UPDATE_RULE|**short**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une mise à jour. Il peut avoir une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|DELETE_RULE|**short**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une suppression. Il peut avoir une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|FK_NAME|**String**|Nom de la clé étrangère.|  
-|PK_NAME|**String**|Nom de la clé primaire.|  
-|DEFERRABILITY|**short**|Indique si l'évaluation de la contrainte de clé étrangère peut être différée jusqu'à une opération de validation. Il peut avoir une des valeurs suivantes :<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
+|UPDATE_RULE|**short**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une mise à jour. Ce peut être l’une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|DELETE_RULE|**short**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une suppression. Ce peut être l’une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|FK_NAME|**Chaîne**|Nom de la clé étrangère.|  
+|PK_NAME|**Chaîne**|Nom de la clé primaire.|  
+|DEFERRABILITY|**short**|Indique si l'évaluation de la contrainte de clé étrangère peut être différée jusqu'à une opération de validation. Ce peut être l’une des valeurs suivantes :<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getCrossReference, consultez « sp_fkeys (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -1,6 +1,6 @@
 ---
-title: Utilitaire de profileur | Microsoft Docs
-ms.custom: ''
+title: Utilitaire profiler
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faaf063fc00964ec6d060d03f42acc3e1eaaa33a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105644"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307398"
 ---
 # <a name="profiler-utility"></a>Utilitaire profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ profiler
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
- **/P** *password*  
+ **/P** *mot de passe*  
  Indique un mot de passe spécifié par l'utilisateur pour l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **/E**  
@@ -75,7 +75,7 @@ profiler
  **/A**  *analysis_services_server_name*  
  Spécifie une instance d'Analysis Services. Profiler se connecte automatiquement au serveur spécifié en utilisant les informations d’authentification spécifiées dans les commutateurs **/U** et **/P** ou dans le commutateur **/E** . Pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , utilisez **/A** *analysis_services_server_name\instance_name*.  
   
- **/D** *database*  
+ **/D** *base de données*  
  Spécifie le nom de la base de données à utiliser avec la connexion. Cette option sélectionne la base de données par défaut pour l'utilisateur spécifié si aucune base de données n'est spécifiée.  
   
  **/B "** *trace_table_name* **"**  
@@ -88,10 +88,10 @@ profiler
 /T "standard"  
 ```  
   
- **/F"** *filename* **"**  
+ **/F"** *nom de fichier* **"**  
  Spécifie le chemin et le nom d'un fichier de trace à charger lors du démarrage du générateur de profils. Le chemin complet et le nom de fichier doivent être entre guillemets. Cette option n’est pas utilisable avec **/O**.  
   
- **/O "** *filename*  **"**  
+ **/O "** *nom de fichier*  **"**  
  Spécifie le chemin d'accès et le nom d'un fichier dans lequel les résultats de trace doivent être écrits. Le chemin complet et le nom de fichier doivent être entre guillemets. Cette option n’est pas utilisable avec **/F**.  
   
  **/L** *locale_ID*  

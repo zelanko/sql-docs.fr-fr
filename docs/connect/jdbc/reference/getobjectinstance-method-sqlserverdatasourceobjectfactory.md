@@ -16,10 +16,10 @@ ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981048"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>Méthode getObjectInstance (SQLServerDataSourceObjectFactory)
@@ -42,7 +42,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
   
  Valeur **Object**.  
   
- *nom*  
+ *name*  
   
  Nom de l'objet.  
   
@@ -54,14 +54,14 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
   
  Environnement qui est utilisé dans la création de l'objet.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **Object**.  
   
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getObjectInstance est spécifiée par la méthode getObjectInstance dans l’interface javax. naming. SPI. ObjectFactory.  
+ Cette méthode getObjectInstance est spécifiée par la méthode getObjectInstance dans l'interface javax.naming.spi.ObjectFactory.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSourceObjectFactory, méthodes](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

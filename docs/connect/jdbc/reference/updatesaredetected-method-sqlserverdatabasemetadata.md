@@ -1,5 +1,5 @@
 ---
-title: Méthode updatesAreDetected, (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Méthode updatesAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cb541175-d3a5-4bca-b327-64e2270c0df1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93b9fa705f7d3ed00431db9ca5ff507beffc890d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998338"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>Méthode updatesAreDetected (SQLServerDatabaseMetaData)
@@ -57,14 +57,14 @@ public boolean updatesAreDetected(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si la mise à jour de ligne peut être détectée. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updatesAreDetected, est spécifiée par la méthode updatesAreDetected, dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode updatesAreDetected est spécifiée par la méthode updatesAreDetected de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

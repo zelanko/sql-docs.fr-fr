@@ -11,10 +11,10 @@ ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027113"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Utilisation d'une procédure stockée avec retour d'état
@@ -28,7 +28,7 @@ Quand vous appelez ce type de procédure stockée à l’aide du pilote JDBC, vo
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Pour plus d’informations sur les séquences d’échappement SQL, consultez Utilisation de séquences d' [échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Pour plus d’informations sur les séquences d’échappement SQL, consultez [Utiliser des séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Quand vous construisez la séquence d’échappement `call`, spécifiez le paramètre de retour d’état l’aide du caractère ? (point d'interrogation). Ce caractère fait office d'espace réservé pour la valeur de paramètre qui est retournée par la procédure stockée. Pour spécifier une valeur pour un paramètre de retour d’état, vous devez spécifier le type de données du paramètre à l’aide de la méthode [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la classe SQLServerCallableStatement avant d’exécuter la procédure stockée.
 

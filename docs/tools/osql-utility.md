@@ -1,10 +1,7 @@
 ---
-title: Utilitaire osql | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: Utilitaire osql
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +20,23 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105747"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307365"
 ---
 # <a name="osql-utility"></a>Utilitaire osql
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  L'utilitaire **osql** permet de spécifier des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] , des procédures système, ainsi que des fichiers de script. Pour communiquer avec le serveur, cet utilitaire fait appel à ODBC.  
+
+L'utilitaire **osql** permet de spécifier des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] , des procédures système, ainsi que des fichiers de script. Pour communiquer avec le serveur, cet utilitaire fait appel à ODBC.  
   
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une version future de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez de recourir à ce composant dans un nouveau travail de développement et planifiez la modification des applications qui l'utilisent actuellement. Utilisez plutôt **sqlcmd** . Pour plus d'informations, consultez [sqlcmd Utility](../tools/sqlcmd-utility.md).  
@@ -72,7 +75,7 @@ osql
  **-U** _login_id_  
  ID de connexion de l'utilisateur. Les ID de connexion respectent la casse.  
   
- **-P** _mot de passe_  
+ **-P** _password_  
  Spécifie le mot de passe pour l'utilisateur. Si l’option **-P** n’est pas utilisée, **osql** invite à entrer un mot de passe. Si l’option **-P** est utilisée à la fin de la ligne de commande sans spécifier de mot de passe, **osql** emploie le mot de passe par défaut (NULL).  
   
 > [!IMPORTANT]  
@@ -95,7 +98,7 @@ C:\>osql
  **-E**  
  Utilise une connexion approuvée au lieu de demander un mot de passe.  
   
- **-S** _nom\__ du serveur **\\** [nom de l' _instance\__ ]  
+ **-S** _server\_name_[ **\\** _instance\_name_]  
  Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Spécifiez *server_name* pour vous connecter à l’instance par défaut du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server\_name_ **\\** _instance\_name_ pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur ce serveur. Si aucun serveur n'est spécifié, **osql** se connecte à l'instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur local. Cette option est indispensable lorsque vous exécutez **osql** à partir d'un ordinateur distant connecté au réseau.  
   
  **-H** _wksta_name_  
@@ -208,7 +211,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Commandes OSQL  
  En plus des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] dans **osql**, les commandes ci-dessous sont également disponibles.  
   
-|Command|Description|  
+|Commande|Description|  
 |-------------|-----------------|  
 |GO|Exécute toutes les commandes entrées après le dernier GO.|  
 |RESET|Efface toutes les instructions que vous avez entrées.|  
@@ -264,7 +267,7 @@ osql -E -i titles.qry -o titles.res
  Vous pouvez inclure des commentaires dans une instruction Transact-SQL soumise à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par **osql**. Deux styles de commentaires sont autorisés : `--` et `/*...*/`.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Utilisation d'EXIT pour retourner des résultats dans osql  
- Vous pouvez utiliser le résultat d'une instruction SELECT comme valeur retournée par **osql**. S'il est numérique, la dernière colonne de la dernière ligne de résultats est convertie en entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows transmet la totalité de l'entier de 4 octets. La syntaxe de cette commande est la suivante :  
+ Vous pouvez utiliser le résultat d'une instruction SELECT comme valeur retournée par **osql**. S'il est numérique, la dernière colonne de la dernière ligne de résultats est convertie en entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows transmet la totalité de l'entier de 4 octets. La syntaxe est :  
   
 ```  
 EXIT ( < query > )  
@@ -338,7 +341,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Commentaire &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [-- &#40;Commentaire&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   

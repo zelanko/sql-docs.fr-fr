@@ -16,10 +16,10 @@ ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19a54fbfe280a4a5a16b57befee87a8f46de6a6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998234"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>Méthode updateString (java.lang.String, java.lang.String)
@@ -42,7 +42,7 @@ public void updateString(java.lang.String columnName,
   
  *x*  
   
- Objet **String** .  
+ Objet **String**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -16,10 +16,10 @@ ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f7dfc9609443febe545bd3b6ac7a6cdf75e1756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982933"
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability, méthode (SQLServerConnection)
@@ -34,7 +34,7 @@ ms.locfileid: "67982933"
 public int getHoldability()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **int** contenant l’un des niveaux de mise en attente suivants :  
   
  HOLD_CURSORS_OVER_COMMIT  
@@ -45,7 +45,7 @@ public int getHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getHoldability est spécifiée par la méthode getHoldability dans l’interface java. Sql. Connection.  
+ Cette méthode getHoldability est spécifiée par la méthode getHoldability de l’interface java.sql.Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

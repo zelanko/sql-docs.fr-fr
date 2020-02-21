@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 : Configurer l’environnement de développement pour le développement Node.js | Microsoft Docs'
+title: 'Étape 1 :  configurer l’environnement de développement pour le développement Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68003758"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Node.js
-Vous devrez configurer votre environnement de développement avec les composants requis pour développer une application à l’aide du pilote node. js pour SQL Server.  La méthode la plus courante consiste à utiliser le gestionnaire de package de nœud (NPM) pour installer le module fastidieux, mais vous pouvez télécharger le module fastidieux directement sur [GitHub](https://github.com/pekim/tedious) , si vous le souhaitez.  
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Étape 1 :  Configurer l’environnement de développement pour le développement Node.js
+Vous devrez configurer votre environnement de développement avec les conditions préalables pour développer une application à l’aide du pilote Node.js pour SQL Server.  La méthode la plus courante consiste à utiliser le gestionnaire de package Node (npm) pour installer le module fastidieux, mais vous pouvez télécharger le module fastidieux directement sur [GitHub](https://github.com/pekim/tedious) si vous préférez.  
   
-Notez que le pilote node. js utilise le protocole TDS, qui est activé par défaut dans SQL Server et Azure SQL Database.  Aucune configuration supplémentaire n’est requise.  
+Notez que le pilote Node.js utilise le protocole TDS, qui est activé par défaut dans SQL Server et Azure SQL Database.  Aucune configuration supplémentaire n’est nécessaire.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Installer node. js Runtime et le gestionnaire de package NPM**  
-A. Accédez à [node. js](https://nodejs.org/en/download/)  
-B. Cliquez sur le lien MSI approprié pour Windows Installer.   
-c. Une fois téléchargé, exécutez le fichier MSI pour installer node. js  
+1. **Installer le runtime Node.js et le gestionnaire de package npm**  
+a. Accédez à [Node.js](https://nodejs.org/en/download/)  
+b. Cliquez sur le lien msi approprié du programme d'installation Windows.   
+c. Une fois le téléchargement effectué, exécutez le fichier msi pour installer Node.js  
   
-2. **Ouvrez cmd. exe**  
+2. **Ouvrez cmd.exe**  
   
 3. **Créez un répertoire de projet** et accédez-y.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
-4. **Créez un projet de nœud.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier Package. JSON dans le répertoire de votre projet.  
+4. **Créez un projet Node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier package.json dans le répertoire de votre projet.  
 ```  
 > npm init  
 ```  
@@ -50,21 +50,21 @@ c. Une fois téléchargé, exécutez le fichier MSI pour installer node. js
   
 1.  **Ouvrir le terminal**  
   
-2. **Installer le runtime node. js**  
+2. **Installer le runtime Node.js**  
 ```  
 >sudo apt-get install node  
 ```  
-3. **Installer NPM (node Package Manager)**  
+3. **Installer npm (gestionnaire de package Node)**  
 ```  
 > sudo apt-get install npm  
 ```  
-4. **Créez un répertoire de projet** et accédez-y.    
+4. **Créer un répertoire de projet** et y accéder.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
   
-5. **Créez un projet de nœud.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier Package. JSON dans le répertoire de votre projet.  
+5. **Créer un projet Node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier package.json dans le répertoire de votre projet.  
 ```  
 > sudo npm init  
 ```  
@@ -76,20 +76,20 @@ c. Une fois téléchargé, exécutez le fichier MSI pour installer node. js
   
 ## <a name="mac"></a>Mac  
   
-1. **Installer node. js Runtime et le gestionnaire de package NPM**  
-A. Accédez à [node. js](https://nodejs.org/en/download/)  
-B. Cliquez sur le lien Mac OS installer approprié.  
-c. Une fois le téléchargement terminé, exécutez le dmg pour installer node. js  
+1. **Installer le runtime Node.js et le gestionnaire de package npm**  
+a. Accédez à [Node.js](https://nodejs.org/en/download/)  
+b. Cliquez sur le lien approprié du programme d'installation Mac OS.  
+c. Une fois le téléchargement effectué, exécutez le fichier dmg pour installer Node.js  
   
 2. **Ouvrir le terminal**  
   
-3. **Créez un répertoire de projet** et accédez-y.    
+3. **Créer un répertoire de projet** et y accéder.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
   
-4. **Créez un projet de nœud.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier Package. JSON dans le répertoire de votre projet.  
+4. **Créer un projet Node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier package.json dans le répertoire de votre projet.  
 ```  
 > npm init  
 ```  

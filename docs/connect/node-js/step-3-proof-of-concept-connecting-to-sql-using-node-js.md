@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Preuve de concept pour la connexion à SQL avec Node.js | Microsoft Docs'
+title: 'Étape 3 : preuve de concept pour la connexion à SQL avec Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/23/2019
 ms.prod: sql
@@ -11,23 +11,23 @@ ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68419259"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de Node.js
 
-![Télécharger-DownArrow-cercled](../../ssdt/media/download.png)[pour télécharger le pilote SQL node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Pour télécharger le pilote Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Cet exemple doit être considéré comme une preuve de concept uniquement.  L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft. D’autres exemples qui utilisent les mêmes fonctions cruciales sont disponibles sur GitHub:
+Cet exemple doit être considéré uniquement comme une preuve de concept.  L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft. D’autres exemples utilisant les mêmes fonctions cruciales sont disponibles sur GitHub :
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>Étape 1: se connecter  
+## <a name="step-1-connect"></a>Étape 1 : Se connecter  
   
-La **nouvelle** fonction de connexion est utilisée pour se connecter à SQL Database.  
+La fonction de **nouvelle connexion** est utilisée pour la connexion à la base de données SQL.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -53,10 +53,10 @@ La **nouvelle** fonction de connexion est utilisée pour se connecter à SQL Dat
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Étape 2 : Exécuter une requête  
+## <a name="step-2--execute-a-query"></a>Étape 2 :  Exécuter une requête  
   
   
-Toutes les instructions SQL sont exécutées à l’aide de la fonction **New Request ()** . Si l’instruction retourne des lignes, telles qu’une instruction SELECT, vous pouvez les récupérer à l’aide de la fonction **Request. on ()** . En l’absence de lignes, la fonction Request. on () retourne des listes vides.  
+Toutes les instructions SQL sont exécutées à l'aide de la fonction **new Request()** . Si l'instruction renvoie des lignes, par exemple une instruction select, vous pouvez les récupérer à l'aide de la fonction **request.on()** . S'il n'y a aucune ligne, la fonction request.on() renvoie des listes vides.  
   
   
 ```javascript  
@@ -111,9 +111,9 @@ Toutes les instructions SQL sont exécutées à l’aide de la fonction **New Re
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>Étape 3: insérer une ligne  
+## <a name="step-3-insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez apprendre à exécuter une instruction [Insert](../../t-sql/statements/insert-transact-sql.md) en toute sécurité, à transmettre des paramètres qui protègent votre application de la valeur d' [injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+Dans cet exemple, vous allez découvrir comment exécuter une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) en toute sécurité, passer des paramètres pour protéger votre application de la valeur [Injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```javascript  

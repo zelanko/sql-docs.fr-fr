@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982790"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Méthode getIndexInfo (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 #### <a name="parameters"></a>Paramètres  
  *cat*  
   
- **Chaîne** qui contient le nom du catalogue.  
+ **Chaîne** contenant le nom du catalogue.  
   
  *schema*  
   
@@ -57,9 +57,9 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *approximate*  
   
- **true** si les résultats correspondent à des valeurs approximatives ou obsolètes. **false** si les résultats sont exacts.  
+ **true** si les résultats reflètent des valeurs approximatives ou obsolètes. **false** si les résultats sont exacts.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -70,21 +70,21 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Le jeu de résultats retourné par la méthode getIndexInfo contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nom de la base de données qui contient la table spécifiée.|  
-|TABLE_SCHEM|**String**|Schéma de la table.|  
-|TABLE_NAME|**String**|Nom de la table.|  
+|TABLE_CAT|**Chaîne**|Nom de la base de données qui contient la table spécifiée.|  
+|TABLE_SCHEM|**Chaîne**|Schéma de la table.|  
+|TABLE_NAME|**Chaîne**|Nom de la table.|  
 |NON_UNIQUE|**boolean**|Indique si les valeurs d'index peuvent ne pas être uniques.|  
-|INDEX_QUALIFIER|**String**|Nom du propriétaire de l’index. Il peut avoir la valeur Null lorsque TYPE correspond à tableIndexStatistic.|  
-|INDEX_NAME|**String**|Nom de l’index.|  
-|TYPE|**short**|Type de l’index. Il peut avoir une des valeurs suivantes :<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|INDEX_QUALIFIER|**Chaîne**|Nom du propriétaire de l’index. Il peut avoir la valeur Null lorsque TYPE correspond à tableIndexStatistic.|  
+|INDEX_NAME|**Chaîne**|Nom de l’index.|  
+|TYPE|**short**|Type de l’index. Ce peut être l’une des valeurs suivantes :<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|Position ordinale de la colonne dans l'index. La première colonne dans l'index est 1.|  
-|COLUMN_NAME|**String**|Nom de la colonne.|  
-|ASC_OR_DESC|**String**|Ordre utilisé dans le classement de l'index. Il peut avoir une des valeurs suivantes :<br /><br /> A (croissant)<br /><br /> D (décroissant)<br /><br /> NULL (non applicable)<br /><br /> **Remarque :**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retourne toujours « A ».|  
-|CARDINALITY|**Int**|Nombre de lignes dans la table ou de valeurs uniques dans l'index.|  
-|PAGES|**Int**|Nombre de pages utilisées pour le stockage de l'index ou de la table.|  
-|FILTER_CONDITION|**String**|Condition de filtrage.<br /><br /> **Remarque :**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retourne toujours null.|  
+|COLUMN_NAME|**Chaîne**|Nom de la colonne.|  
+|ASC_OR_DESC|**Chaîne**|Ordre utilisé dans le classement de l'index. Ce peut être l’une des valeurs suivantes :<br /><br /> A (croissant)<br /><br /> D (décroissant)<br /><br /> NULL (non applicable)<br /><br /> **Remarque :**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retourne toujours « A ».|  
+|CARDINALITY|**int**|Nombre de lignes dans la table ou de valeurs uniques dans l'index.|  
+|PAGES|**int**|Nombre de pages utilisées pour le stockage de l'index ou de la table.|  
+|FILTER_CONDITION|**Chaîne**|Condition de filtrage.<br /><br /> **Remarque :**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retourne toujours Null.|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getIndexInfo, consultez « sp_indexes (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

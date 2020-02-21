@@ -11,10 +11,10 @@ ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 851974955b9311efc149ecdff310bfbb1d8869fc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026927"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Utilisation d'une procédure stockée avec un nombre de mises à jour
@@ -26,7 +26,7 @@ Pour modifier les données d’une base de données [!INCLUDE[ssNoVersion](../..
 Une fois l’appel à la procédure stockée configuré à l’aide de la classe SQLServerCallableStatement, vous pouvez appeler la procédure stockée à l’aide de la méthode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) ou de la méthode [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). La méthode executeUpdate retourne une valeur **int** contenant le nombre de lignes affectées par la procédure stockée, au contraire de la méthode execute. Si vous utilisez la méthode execute et souhaitez obtenir le nombre de lignes affectées, vous pouvez appeler la méthode [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) après l’exécution de la procédure stockée.
 
 > [!NOTE]  
-> Si vous souhaitez que le pilote JDBC retourne tous les nombres de mises à jour, y compris les nombres de mises à jour retournées par des déclencheurs qui ont pu se déclencher, définissez la propriété de chaîne de connexion lastUpdateCount sur « false ». Pour plus d’informations sur la propriété lastUpdateCount, consultez [définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
+> Si vous souhaitez que le pilote JDBC retourne tous les nombres de mises à jour, y compris les nombres de mises à jour retournées par des déclencheurs qui ont pu se déclencher, définissez la propriété de chaîne de connexion lastUpdateCount sur « false ». Pour plus d'informations sur la propriété lastUpdateCount, consultez [Paramétrage des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
 
 Par exemple, créez la table et la procédure stockée suivantes, et insérez également des exemples de données dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] :
 

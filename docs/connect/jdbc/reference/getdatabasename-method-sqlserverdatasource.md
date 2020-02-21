@@ -16,10 +16,10 @@ ms.assetid: cffa1602-c045-4e61-abb6-442ade28dbf6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77627c6c41a97812b48dc7a308d8ec9f6f2d4657
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984120"
 ---
 # <a name="getdatabasename-method-sqlserverdatasource"></a>Méthode getDatabaseName (SQLServerDataSource)
@@ -34,8 +34,8 @@ ms.locfileid: "67984120"
 public java.lang.String getDatabaseName()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui contient le nom de la base de données ou null si aucune valeur n’est définie.  
+## <a name="return-value"></a>Valeur de retour  
+ **Chaîne** contenant le nom de base de données ou Null si aucune valeur n’est définie.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,6 +1,6 @@
 ---
-title: Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)
+ms.custom: seo-lt-2019
 ms.date: 01/24/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2cce3ddb17324e234395dcf764855dcffbc44ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b8f767a5ae8bfe691ec5cb8e4128679a6e02ec8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071986"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306386"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)
 
@@ -25,8 +25,8 @@ ms.locfileid: "68071986"
 Utilisez l'onglet **Avancé** dans la boîte de dialogue **Propriétés de Protocoles pour MSSQLSERVER** pour configurer la **protection étendue de l'authentification** du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. La**Protection étendue** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est disponible dans Windows 7 et Windows Server 2008 R2 et est incluse dans les Service Packs pour les précédents systèmes d'exploitation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**. Certains avantages de la **Protection étendue** requièrent de sélectionner l'option **Forcer le chiffrement** sous l'onglet **Indicateurs** .
 
 > [!IMPORTANT]  
-> Windows n'active pas la **protection étendue** par défaut. Pour plus d’informations sur l’activation de la **protection étendue**, consultez les rubriques suivantes:
-> - [Protection \<étendue Windows ExtendedProtection\>](https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
+> Windows n'active pas la **protection étendue** par défaut. Pour plus d’informations sur l’activation de **Protection étendue**, consultez les rubriques suivantes :
+> - [Protection étendue Windows \<extendedProtection\>](https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [Vue d’ensemble de la protection étendue de l'authentification](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
 Pour plus d’informations sur la configuration d’autres services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et pour obtenir une description complète de la **protection étendue**, consultez les informations plus récentes sur [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
@@ -39,11 +39,11 @@ La**protection étendue** est totalement prise en charge par [!INCLUDE[ssNoVersi
 
 Il existe trois valeurs possibles :  
 
-- **Off**: signifie que la **protection étendue** est désactivée. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceptera les connexions de tous les clients, qu'ils soient protégés ou non. La valeur**Off** est compatible avec les anciens systèmes d'exploitation non corrigés, mais elle est moins sécurisée. Utilisez ce paramètre uniquement lorsque vous savez que les systèmes d'exploitation clients ne prennent pas en charge la Protection étendue.
+- **Off** : signifie que la **protection étendue** est désactivée. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceptera les connexions de tous les clients, qu'ils soient protégés ou non. La valeur**Off** est compatible avec les anciens systèmes d'exploitation non corrigés, mais elle est moins sécurisée. Utilisez ce paramètre uniquement lorsque vous savez que les systèmes d'exploitation clients ne prennent pas en charge la Protection étendue.
 
-- **Autorisé** : signifie que la **protection étendue** est requise pour les connexions établies à partir de systèmes d'exploitation qui prennent en charge la **protection étendue**. Les connexions provenant d'applications clientes non protégées qui s'exécutent sur des systèmes d'exploitation clients protégés sont rejetées. La**Protection étendue** est ignorée pour les connexions provenant de systèmes d'exploitation non protégés. Ce paramètre offre une meilleure protection que la valeur **Off**, mais ce n'est pas la configuration la plus sécurisée. Utilisez ce paramètre dans des environnements mixtes, dans lesquels certains systèmes d'exploitation ou applications prennent en charge la **protection étendue** et d'autres non.
+- **Autorisée** : la **protection étendue** est requise pour les connexions établies à partir de systèmes d'exploitation qui la prennent en charge**protection étendue**. Les connexions provenant d'applications clientes non protégées qui s'exécutent sur des systèmes d'exploitation clients protégés sont rejetées. La**Protection étendue** est ignorée pour les connexions provenant de systèmes d'exploitation non protégés. Ce paramètre offre une meilleure protection que la valeur **Off**, mais ce n'est pas la configuration la plus sécurisée. Utilisez ce paramètre dans des environnements mixtes, dans lesquels certains systèmes d'exploitation ou applications prennent en charge la **protection étendue** et d'autres non.
 
-- **Requis**: signifie que pour une connexion soit acceptée, elle doit provenir d’une application protégée sur un système d’exploitation protégé. Ce paramètre est le plus sécurisé des trois options. Toutefois, les connexions à partir de systèmes d’exploitation qui ne prennent pas en charge la **protection étendue** ne pourront pas se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- **Obligatoire** : signifie que pour qu’une connexion soit acceptée, elle doit provenir d’une application protégée sur un système d’exploitation protégé. Ce paramètre est le plus sécurisé des trois options. Cependant, les connexions des systèmes d'exploitation qui ne prennent pas en charge la **protection étendue** ne pourront pas se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ### <a name="accepted-ntlm-spns"></a>SPN NTLM acceptés
 

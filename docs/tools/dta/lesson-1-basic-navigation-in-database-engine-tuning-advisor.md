@@ -1,10 +1,8 @@
 ---
-title: 'Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/01/2017
+title: Navigation de base dans DTA
+description: L’Assistant Paramétrage du moteur de base de données (DTA) fournit une interface graphique utilisateur (GUI) qui permet d’afficher des sessions de paramétrage et des rapports de recommandations de paramétrage.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +10,21 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-dt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034775"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307657"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Leçon 1 : navigation de base dans l'Assistant Paramétrage du moteur de base de données
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 L'Assistant Paramétrage du moteur de base de données fournit une interface graphique utilisateur qui permet d'afficher des sessions de paramétrage et des rapports de recommandations de paramétrage. Cette leçon explique comment démarrer cet outil et comment configurer l'affichage. À la fin de la leçon vous connaîtrez les différentes façons de démarrer cet outil et de configurer son affichage pour l'adapter aux tâches de paramétrage que vous effectuez régulièrement.  
 
 ## <a name="prerequisites"></a>Conditions préalables requises 
@@ -32,28 +36,28 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 - Téléchargez les [exemples de bases de données AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
 
 
-Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Les instructions de restauration de bases de données dans SSMS se trouvent ici : [Restaurer une base de données.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > Ce didacticiel est destiné aux utilisateurs familiarisés avec l’utilisation de SQL Server Management Studio et des tâches d’administration de base de données de base. 
+  > Ce tutoriel est destiné aux utilisateurs familiarisés avec l’utilisation de SQL Server Management Studio et les tâches de base d’administration de base de données. 
   
 
 ## <a name="launch-database-tuning-advisor"></a>Lancement de l’Assistant Paramétrage de base de données 
 Pour commencer, ouvrez l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données (DTA). Pour la première utilisation, un membre du rôle serveur fixe **sysadmin** doit lancer l’Assistant Paramétrage du moteur de base de données pour initialiser l’application. Après l’initialisation, les membres du rôle de base de données fixe **db_owner** peuvent utiliser l’Assistant Paramétrage du moteur de base de données pour paramétrer les bases de données dont ils sont propriétaires. Pour plus d’informations sur l’initialisation de l’Assistant Paramétrage du moteur de base de données, consultez [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Démarrez SSMS (SQL Server Management Studio). Dans le **menu Démarrer**de Windows, pointez sur **tous les programmes** et recherchez **SQL Server Management Studio**. 
+1. Démarrez SSMS (SQL Server Management Studio). Dans le **menu Démarrer** de Windows, pointez sur **Tous les programmes** et recherchez **SQL Server Management Studio**. 
 2. Une fois SSMS ouvert, sélectionnez le menu **Outils** et sélectionnez **Assistant Paramétrage de base de données**. 
 
   ![lancer DTA à partir de SSMS](media/dta-tutorials/launch-dta.png)
 
-3. L’Assistant Paramétrage de base de données démarre et ouvre la boîte de dialogue **se connecter au serveur** . Vérifiez les paramètres par défaut, puis sélectionnez **se connecter** pour vous connecter à votre SQL Server.  
+3. L’Assistant Paramétrage de base de données démarre et ouvre la boîte de dialogue **Se connecter au serveur**. Vérifiez les paramètres par défaut, puis sélectionnez **Se connecter** pour vous connecter à votre serveur SQL Server.  
   
 Par défaut, l'Assistant Paramétrage du moteur de base de données s'ouvre avec la configuration représentée dans l'illustration suivante :  
   
 ![Fenêtre par défaut de l'Assistant Paramétrage du moteur de base de données](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> L’onglet **moniteur de session** affiche le nom de la session, qui correspond au nom de l’utilisateur connecté et aux données actuelles. 
+> L’onglet **Moniteur de session** affiche le nom de la session, qui est le nom de l’utilisateur connecté et des données actuelles. 
   
 Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la première fois, deux volets principaux s'affichent.  
   
@@ -64,7 +68,7 @@ Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la p
 > [!NOTE]
 > L’Assistant Paramétrage du moteur de base de données peut accepter les fichiers XML comme entrée quand un script [!INCLUDE[tsql](../../includes/tsql-md.md)] est importé à partir de l’Éditeur de requête [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Pour plus d’informations, consultez la section sur le lancement de l’Assistant Paramétrage du moteur de base de données à partir de l’Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-## <a name="configure-tool-options-and-layout"></a>Configurer les options et la disposition de l’outil 
+## <a name="configure-tool-options-and-layout"></a>Configurer les options et la disposition des outils 
 
 1.  Dans le menu **Outils** , cliquez sur **Options**.  
 
@@ -85,7 +89,7 @@ Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la p
     -   Par défaut, l'option **Demander avant d'arrêter l'analyse de la session** est activée pour éviter d'arrêter accidentellement une session de paramétrage avant que l'Assistant Paramétrage du moteur de base de données n'ait terminé d'analyser une charge de travail.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

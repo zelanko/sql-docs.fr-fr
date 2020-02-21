@@ -1,56 +1,28 @@
 ---
-title: Boîtes de dialogue SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 07/07/2017
+title: Boîtes de dialogue SQL Server Profiler
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: reference
-f1_keywords:
-- sql13.pro.traceproperties.general.f1;
-- sql13.pro.traceproperties.eventsselection.f1;
-- sql13.pro.traceproperties.eventsselection.f1
-- sql13.pro.traceproperties.general.f1
-- sql13.pro.tracetemplateproperties
-- sql13.pro.edittracetemplateproperties.general.f1
-- sql13.pro.edittracetemplateproperties.eventsselection.f1
-- sql13.pro.tracefileproperties.general.f1
-- sql13.pro.tracefileproperties.eventsselection.f1
-- sql13.pro.performancecounterlimit.f1
-- sql13.pro.replay.tools.generaloptions.f1
-- sql13.pro.replay.tools.sourcetable.f1
-- sql13.pro.replay.tools.destinationtable.f1
-- sql13.pro.replay.generaloptions.f1
-- sql13.pro.replay.generaloptions.advanced.f1
-- sql13.pro.find.f1
-- sql13.pro.organize.columns.f1
-- sql13.pro.editfilter.f1
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], help
-- SQL Server Profiler, help
-- Trace Properties dialog box
-- Trace Template Properties dialog box
-- Trace Files Properties dialog box
-- Performance Counters List dialog box
-- General Options dialog box
-- Select Workload Table dialog box
-- Destination Table dialog box
-- Replay Configuration dialog box
-- Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/07/2017
+ms.openlocfilehash: 24375bafa9123c5bba4adf83fce81427f39722e4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059701"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307855"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Boîtes de dialogue SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft est un outil qui capture les événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un serveur. Ces événements sont enregistrés dans un fichier de trace qui peut être analysé ou utilisé ultérieurement pour relire une série d'étapes spécifique lors d'une tentative de diagnostic d'un problème. Voici les commandes et les paramètres disponibles dans les boîtes de dialogue de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft est un outil qui capture les événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un serveur. Ces événements sont enregistrés dans un fichier de trace qui peut être analysé ou utilisé ultérieurement pour relire une série d'étapes spécifique lors d'une tentative de diagnostic d'un problème. Les commandes et paramètres suivants sont disponibles dans les boîtes de dialogue de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Propriétés de la trace
 ### <a name="general-tab"></a>Onglet Général
 Utilisez l’onglet **Général** de la boîte de dialogue **Propriétés de la trace** pour consulter ou spécifier les propriétés d’une trace.  
@@ -86,7 +58,7 @@ Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Pro
 |**Organiser les colonnes**|Modifie l'ordre des colonnes dans la trace et regroupe les résultats suivant une ou plusieurs colonnes.  
 
 ## <a name="trace-template-properties"></a>Propriétés du modèle de trace 
-### <a name="new-general-tab"></a>Nouveau (onglet général)
+### <a name="new-general-tab"></a>Nouveau (onglet Général)
 Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour créer de nouveaux modèles de trace à l'aide des options suivantes. Pour accéder à cette boîte de dialogue, dans le menu **Fichier** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Nouveau**.
 
 |Élément|Description
@@ -96,7 +68,7 @@ Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modè
 |**Baser le nouveau modèle sur un modèle existant**|Choisissez l'un des modèles de la liste pour servir de base à ce modèle. Tous les événements sélectionnés, colonnes de données et filtres correspondent initialement à ceux du modèle existant et peuvent ensuite être modifiés en fonction des besoins.  
 |**Utiliser comme modèle par défaut pour le type de serveur sélectionné**|Utilisez ce modèle par défaut pour les traces créées pour ce type de serveur.  
 
-### <a name="edit-general-tab"></a>Modifier (onglet général)
+### <a name="edit-general-tab"></a>Modifier (onglet Général)
  Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Modifier le modèle**.  
 
 |Élément|Description
@@ -266,7 +238,7 @@ Utilisez la boîte de dialogue **Rechercher** pour rechercher une trace de carac
 
 |Élément|Description
 |---|---
-|**Rechercher**|Entrez le texte à rechercher. La recherche retourne toute chaîne contenant la chaîne spécifiée. Par exemple, si vous recherchez "Completed", la chaîne "SQL:BatchCompleted" est retournée. Les caractères génériques (*, ?, etc.) ne sont pas pris en charge.  
+|**Rechercher**|Entrez le texte à rechercher. La recherche retourne toute chaîne contenant la chaîne spécifiée. Par exemple, si vous recherchez « Completed », la chaîne « SQL:BatchCompleted » est retournée. Les caractères génériques (*, ?, etc.) ne sont pas pris en charge.  
 |**Rechercher dans la colonne**|Cliquez sur la colonne de données où la recherche doit se faire, ou cliquez sur **\<Toutes les colonnes>** pour effectuer une recherche sur l’ensemble des colonnes de données de la trace.  
 |**Respecter la casse**|Recherche du texte présentant la même casse que celui spécifié dans la zone **Rechercher** . Désactivez cette case à cocher pour rechercher dans la trace des correspondances avec les caractères indiqués mais sans distinction entre les majuscules et les minuscules.  
 |**Mot entier**|Restreint la recherche à des mots entiers. Décochez la case **Mot entier** pour rechercher des caractères spécifiques au sein d’un mot.  
@@ -279,7 +251,7 @@ Utilisez la boîte de dialogue **Organiser les colonnes** pour sélectionner des
 - Le regroupement regroupe toutes les classes d'événements d'un type spécifique dans l'affichage de la fenêtre de trace. Les événements ne sont toutefois pas réduits sous le type de classe d'événements.  
 
 Lorsque vous regroupez ou agrégez des événements dans l'affichage d'une fenêtre de trace, les colonnes sélectionnées pour le regroupement ou l'agrégation restent fixes dans la fenêtre d'affichage, mais vous pouvez faire défiler l'affichage vers la droite ou la gauche pour visualiser toutes les autres colonnes de données.  
-Pour accéder à cette boîte de dialogue, ouvrez une table ou un fichier de trace existant, puis cliquez sur **Propriétés** dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **du** . Dans la boîte de dialogue **Propriétés de la trace** , cliquez sur l'onglet **Sélection des événements** , puis sur **Organiser les colonnes**. Vous pouvez également cliquer sur **Organiser les colonnes** sous l'onglet **Sélection des événements** lorsque vous créez une nouvelle trace.  
+Pour accéder à cette boîte de dialogue, ouvrez une table ou un fichier de trace existant, puis cliquez sur **Propriétés** dans le menu **File** de[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Dans la boîte de dialogue **Propriétés de la trace** , cliquez sur l'onglet **Sélection des événements** , puis sur **Organiser les colonnes**. Vous pouvez également cliquer sur **Organiser les colonnes** sous l'onglet **Sélection des événements** lorsque vous créez une nouvelle trace.  
 Déplacez des noms de colonne de données sous **Groupes** pour regrouper ou agréger des classes d’événements dans la fenêtre de trace.
 - Pour agréger des événements, déplacez une colonne de données vers **Groupes**. Tous les événements d'un type spécifique sont alors réduits sous le nom du type de la classe d'événements dans l'affichage de la fenêtre de trace. Un signe plus ( **+** ) apparaît à gauche du nom de la classe d’événements. Cliquez sur ce signe plus pour développer le type de la classe d'événements et afficher tous les événements. Vous pouvez activer et désactiver l'agrégation et le regroupement en cliquant sur **Vue agrégée** ou sur **Vue groupée** dans le menu **Affichage** .
 - Pour regrouper des événements, déplacez plusieurs colonnes de données vers **Groupes**. Tous les événements d'un type spécifique sont alors regroupés dans l'affichage de la fenêtre de trace, mais les événements ne sont pas réduits sous chaque nom de type de classe d'événements. Vous pouvez basculer entre une vue groupée et une vue non groupée en cliquant sur **Vue groupée** dans le menu Affichage. Lorsque plusieurs colonnes de données sont déplacées vers **Groupes**, l'option de basculement vers **Vue agrégée** n'est pas disponible.
@@ -287,7 +259,7 @@ Déplacez des noms de colonne de données sous **Groupes** pour regrouper ou agr
 |Élément|Description
 |---|---
 |**Colonnes**|Répertorie les colonnes de données qui peuvent être déplacées vers **Groupes**. Cliquez sur le signe plus ( **+** ) à gauche de l’option **Colonnes** pour développer la liste.  
-|**Monter**|Lorsque vous avez sélectionné une colonne de données, cliquez sur **Haut** pour déplacer des colonnes de données vers le haut dans **Groupes**. Vous pouvez également cliquer sur **Haut** pour réorganiser l'affichage des colonnes dans l'affichage de la fenêtre de trace.  
+|**Haut**|Lorsque vous avez sélectionné une colonne de données, cliquez sur **Haut** pour déplacer des colonnes de données vers le haut dans **Groupes**. Vous pouvez également cliquer sur **Haut** pour réorganiser l'affichage des colonnes dans l'affichage de la fenêtre de trace.  
 |**Descendre**|Lorsque vous avez sélectionné une colonne de données, cliquez sur **Bas** pour déplacer des colonnes de données vers le bas dans **Groupes**. Vous pouvez également cliquer sur **Bas** pour réorganiser l'affichage des colonnes dans l'affichage de la fenêtre de trace.  
 
 ## <a name="edit-filter"></a>Modifier le filtre
@@ -296,7 +268,7 @@ Utilisez la boîte de dialogue **Modifier le filtre** pour créer et modifier de
  >Pour les colonnes de données de type chaîne, les critères de filtre s'afficheront en tant que valeur de chaîne LIKE ou NOT LIKE.  
 
 ## <a name="select-template-name"></a>Sélectionnez le nom du modèle
-Utilisez la boîte de dialogue **Sélectionner le nom du modèle** pour sélectionner un modèle de trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existant à exporter vers un fichier du système d'exploitation. Vous pouvez également utiliser cette boîte de dialogue pour sélectionner ou entrer un autre nom afin d'enregistrer un modèle de trace lorsqu'un modèle de trace existant est modifié. Pour accéder à cette boîte de dialogue lorsque vous exportez un modèle, dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Exporter le modèle**. Pour accéder à cette boîte de dialogue lorsque vous changez le nom d'un modèle, dans le menu **Fichier** , pointez sur **Modèles**, sur **Modifier le modèle**, puis cliquez sur **Enregistrer sous**.  
+Utilisez la boîte de dialogue **Sélectionner le nom du modèle** pour sélectionner un modèle de trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existant à exporter vers un fichier du système d'exploitation. Vous pouvez également utiliser cette boîte de dialogue pour sélectionner ou entrer un autre nom afin d'enregistrer un modèle de trace lorsqu'un modèle de trace existant est modifié. Pour accéder à cette boîte de dialogue lorsque vous exportez un modèle, dans le menu **Fichier** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Exporter le modèle**. Pour accéder à cette boîte de dialogue lorsque vous changez le nom d'un modèle, dans le menu **Fichier** , pointez sur **Modèles**, sur **Modifier le modèle**, puis cliquez sur **Enregistrer sous**.  
 
 |Élément|Description
 |---|---

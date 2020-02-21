@@ -16,10 +16,10 @@ ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4f57b300cb402f422b92330bfe33f1e3c61cf4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984187"
 ---
 # <a name="getcursorname-method-sqlserverresultset"></a>Méthode getCursorName (SQLServerResultSet)
@@ -37,14 +37,14 @@ ms.locfileid: "67984187"
 public java.lang.String getCursorName()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
- **Chaîne** qui contient le nom du curseur.  
+## <a name="return-value"></a>Valeur de retour  
+ **Chaîne** contenant le nom du curseur.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getCursorName est spécifiée par la méthode getCursorName dans l’interface java. Sql. ResultSet.  
+ Cette méthode getCursorName est spécifiée par la méthode getCursorName de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

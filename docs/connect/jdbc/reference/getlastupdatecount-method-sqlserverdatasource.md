@@ -16,10 +16,10 @@ ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d284e02be13af60bf7d8e7d447835f7eccd90a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982600"
 ---
 # <a name="getlastupdatecount-method-sqlserverdatasource"></a>Méthode getLastUpdateCount (SQLServerDataSource)
@@ -34,7 +34,7 @@ ms.locfileid: "67982600"
 public boolean getLastUpdateCount()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si lastUpdateCount est activé. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  

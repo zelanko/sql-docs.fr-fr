@@ -16,10 +16,10 @@ ms.assetid: 8b3c3938-e057-4919-9e9f-01eb8a4ad937
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b08ca8e8cb96329d29310f9c0c0e250ab6b10e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978765"
 ---
 # <a name="gettimestamp-method-javalangstring-sqlserverresultset"></a>getTimestamp, méthode (java.lang.String) (SQLServerResultSet)
@@ -39,8 +39,8 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
   
  Valeur **String** qui contient le nom de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet d’horodatage.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Timestamp.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

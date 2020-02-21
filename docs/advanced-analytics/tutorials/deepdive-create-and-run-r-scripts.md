@@ -1,6 +1,6 @@
 ---
 title: Statistiques de synthèse dans RevoScaleR
-description: Tutoriel pas à pas expliquant comment calculer des données statistiques de synthèse à l’aide du langage R sur SQL Server.
+description: 'Tutoriel RevoScaleR 5 : Comment calculer des données statistiques de synthèse à l’aide du langage R sur SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 43745602fc099f1b992eb1d76622ff3d7e6d0916
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727296"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947274"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Calculer des statistiques de synthèse dans R (tutoriel SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cette leçon fait partie du [tutoriel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 5 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Elle utilise les sources de données et les contextes de calcul établis dans les leçons précédentes pour exécuter des scripts R hautes performances au sein de celui-ci. Dans cette leçon, vous utiliserez des contextes de calcul de serveurs locaux et distants pour les tâches suivantes :
+Ce tutoriel utilise les sources de données et les contextes de calcul établis dans les tutoriels précédents pour exécuter des scripts R hautes performances. Dans ce tutoriel, vous utiliserez des contextes de calcul de serveurs locaux et distants pour les tâches suivantes :
 
 > [!div class="checklist"]
 > * Définir le contexte de calcul sur SQL Server
 > * Obtenir des statistiques de synthèse sur des objets de données distantes
 > * Calculer un résumé local
 
-Si vous avez terminé les leçons précédentes, vous devez disposer des contextes de calcul distants suivants : sqlCompute et sqlComputeTrace. Ensuite, vous utiliserez sqlCompute et le contexte de calcul local dans les leçons suivantes.
+Si vous avez terminé les tutoriels précédents, vous devez disposer des contextes de calcul distants suivants : sqlCompute et sqlComputeTrace. Ensuite, vous utiliserez sqlCompute et le contexte de calcul local dans les tutoriels suivants.
 
-Utilisez un IDE R ou **Rgui** pour exécuter le script R dans cette leçon.
+Utilisez un IDE R ou **Rgui** pour exécuter le script R dans ce tutoriel.
 
 ## <a name="compute-summary-statistics-on-remote-data"></a>Obtenir des statistiques de synthèse sur des données distantes
 
@@ -38,9 +38,9 @@ Avant de pouvoir exécuter du code R à distance, vous devez spécifier le conte
 
 Un contexte de calcul reste actif jusqu’à ce que vous le changiez. Cependant, tout script R qui *ne peut pas* être exécuté dans un contexte de serveur distant sera automatiquement exécuté en local.
 
-Pour voir le fonctionnement d’un contexte de calcul, générez des statistiques de synthèse sur la source de données sqlFraudDS sur le serveur distant SQL Server. Cet objet de source de données a été créé au cours de la [leçon deux](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) et il représente la table ccFraudSmall dans la base de données RevoDeepDive. 
+Pour voir le fonctionnement d’un contexte de calcul, générez des statistiques de synthèse sur la source de données sqlFraudDS sur le serveur distant SQL Server. Cet objet de source de données a été créé au cours du [tutoriel deux](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) et représente la table ccFraudSmall dans la base de données RevoDeepDive. 
 
-1. Basculez sur le contexte de calcul sqlCompute créé dans la leçon précédente :
+1. Basculez sur le contexte de calcul sqlCompute créé dans le tutoriel précédent :
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -111,7 +111,7 @@ Number of valid observations: 10000
   
    Les résultats doivent être les mêmes que lorsque vous exécutez **rxSummary** dans le contexte de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Toutefois, l’opération peut être plus rapide ou plus lente. Cela dépend en grande partie de votre connexion à la base de données, car les données sont transférées vers votre ordinateur local pour analyse.
 
-4. Revenez au contexte de calcul distant pour les prochaines leçons.
+4. Revenez au contexte de calcul distant pour les prochains tutoriels.
 
     ```R
     rxSetComputeContext(sqlCompute)

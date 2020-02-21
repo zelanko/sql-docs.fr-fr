@@ -16,10 +16,10 @@ ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979099"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>Méthode getTime (int, java.util.Calendar)
@@ -38,14 +38,14 @@ public java.sql.Time getTime(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
  *cal*  
   
  Objet de calendrier.  
   
-## <a name="return-value"></a>Valeur retournée  
- Objet d’heure.  
+## <a name="return-value"></a>Valeur de retour  
+ Objet Temps.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -53,7 +53,7 @@ public java.sql.Time getTime(int index,
 ## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
- Consultez le graphique intitulé «conversions de méthode Getter» pour [comprendre](../../../connect/jdbc/understanding-data-type-conversions.md) les conversions de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour voir quels types de données peuvent être récupérés avec cette méthode.  
+ Consultez le graphe intitulé « Conversions de méthodes getter » de la rubrique [Comprendre les conversions de types de données](../../../connect/jdbc/understanding-data-type-conversions.md) pour savoir quels sont les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] récupérables avec cette méthode.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

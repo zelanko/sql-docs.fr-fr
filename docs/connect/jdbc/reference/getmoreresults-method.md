@@ -16,10 +16,10 @@ ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcbce9783641376ae142e94ab5e45dc47fe16fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981730"
 ---
 # <a name="getmoreresults-method-"></a>Méthode getMoreResults ()
@@ -34,14 +34,14 @@ ms.locfileid: "67981730"
 public final boolean getMoreResults()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **true** si le résultat retourné est un jeu de résultats. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMoreResults est spécifiée par la méthode getMoreResults dans l’interface java. Sql. Statement.  
+ Cette méthode getMoreResults est spécifiée par la méthode getMoreResults de l'interface java.sql.Statement.  
   
  L’appel de la méthode getMoreResults ferme implicitement tous les objets actuellement ouverts du jeu de résultats qui ont été obtenus avec la méthode [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md).  
   

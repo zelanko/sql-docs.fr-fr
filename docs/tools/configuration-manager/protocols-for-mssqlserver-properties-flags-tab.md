@@ -1,6 +1,6 @@
 ---
-title: Propriétés de Protocoles pour MSSQLSERVER (onglet Indicateurs) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de Protocoles pour MSSQLSERVER (onglet Indicateurs)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,25 +13,25 @@ ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c14273ab80c955536d8e4f754c7af48355547b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb903479b3fb7bd5f5c8ce709a74b797aec68371
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058468"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307745"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Propriétés de Protocoles pour MSSQLSERVER (onglet Indicateurs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Lorsqu'un certificat est installé sur le serveur, utilisez l'onglet **Indicateurs** dans la boîte de dialogue **Propriétés de Protocoles pour MSSQLSERVER** pour afficher ou spécifier les options de chiffrement de protocole et de masquage d'instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être redémarré pour activer ou désactiver le paramètre **ForceEncryption** .  
+  Lorsqu'un certificat est installé sur le serveur, utilisez l'onglet **Indicateurs** dans la boîte de dialogue **Propriétés de Protocoles pour MSSQLSERVER** pour afficher ou spécifier les options de chiffrement de protocole et de masquage d'instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être redémarré pour activer ou désactiver le paramètre **ForceEncryption**.  
   
  Pour chiffrer les connexions, vous devez fournir un certificat au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Si aucun certificat n’est installé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un certificat auto-signé lors du démarrage de l’instance. Ce certificat autosigné peut être utilisé à la place d'un certificat émanant d'une autorité de certification approuvée, mais il ne fournit ni authentification ni non-répudiation.  
   
 > [!CAUTION]  
->  Les connexions SSL (Secure Sockets Layer) chiffrées à l'aide d'un certificat autosigné n'offrent pas une sécurité renforcée. Elles sont vulnérables à des attaques humaines. Ne faites jamais confiance à une connexion SSL utilisant des certificats autosignés dans un environnement de production ou sur des serveurs connectés à Internet.  
+>  Les connexions SSL (Secure Sockets Layer) chiffrées à l'aide d'un certificat autosigné n'offrent pas une sécurité renforcée. Elles sont vulnérables aux attaques de l’intercepteur. Ne faites jamais confiance à une connexion SSL utilisant des certificats autosignés dans un environnement de production ou sur des serveurs connectés à Internet.  
   
  Pour plus d'informations sur le chiffrement, consultez « Chiffrement des connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]» dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Le processus de connexion est toujours chiffré. Quand l’option **ForceEncryption** a la valeur **Oui**, toutes les communications client/serveur sont chiffrées et les clients qui se connectent au [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent être configurés de manière à approuver l’autorité racine du certificat du serveur. Pour plus d’informations, consultez « Procédure : activer des connexions chiffrées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] (Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le processus de connexion est toujours chiffré. Quand l’option **ForceEncryption** a la valeur **Oui**, toutes les communications client/serveur sont chiffrées et les clients qui se connectent au [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent être configurés de manière à approuver l’autorité racine du certificat du serveur. Pour plus d’informations, consultez « Procédure : Activer des connexions chiffrées dans [!INCLUDE[ssDE](../../includes/ssde-md.md)] (Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="cluster-servers"></a>Serveurs clusters  
  Si vous souhaitez utiliser le chiffrement à l'aide d'un cluster de basculement, vous devez installer le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Par exemple, si vous disposez d’un cluster à deux nœuds nommés « test1. *\<votre_société>.* com » et « test2. *\<votre_société*.com », ainsi que d’un serveur virtuel nommé « virtsql », vous devez installer un certificat pour « virtsql. *\<votre_société*.com » sur les deux nœuds. Vous pouvez ensuite activer la case à cocher **ForceEncryption** du **Gestionnaire de configurations SQL Server** pour configurer le chiffrement du cluster de basculement.  
@@ -43,6 +43,6 @@ ms.locfileid: "68058468"
  **HideInstance**  
  Empêche le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser d’exposer cette instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] aux ordinateurs clients dont les utilisateurs tentent de localiser l’instance à l’aide du bouton **Parcourir** . Dans le cas d'instances nommées sur le serveur, les applications clientes doivent spécifier les informations de point de terminaison de protocole pour se connecter. Par exemple, le numéro de port ou le nom de canal nommé, tel que **tcp:server,5000**. Pour plus d'informations, consultez [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md).  
   
- Pour plus d'informations, consultez « Procédure : activer des connexions chiffrées dans le moteur de base de données (Gestionnaire de configuration SQL Server) » dans la documentation en ligne.  
+ Pour plus d’informations, consultez « Procédure : activer les connexions de chiffrement au moteur de base de données (Gestionnaire de configuration SQL Server) » dans la documentation en ligne.  
   
   

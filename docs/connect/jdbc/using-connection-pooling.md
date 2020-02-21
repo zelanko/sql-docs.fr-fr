@@ -1,5 +1,5 @@
 ---
-title: Utilisation du regroupement de connexions | Microsoft Docs
+title: Utilisation d'un regroupement de connexions | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026374"
 ---
 # <a name="using-connection-pooling"></a>Utilisation d'un regroupement de connexions

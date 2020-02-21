@@ -16,10 +16,10 @@ ms.assetid: 94e59366-ca34-4cd5-a6ec-ae32d475ef36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98db08e342f1951df8346ae44e0689dbd7b7dd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981232"
 ---
 # <a name="getobject-method-int-sqlserverresultset"></a>getObject, méthode (int) (SQLServerResultSet)
@@ -37,9 +37,9 @@ public java.lang.Object getObject(int columnIndex)
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **Object**.  
   
 ## <a name="exceptions"></a>Exceptions  

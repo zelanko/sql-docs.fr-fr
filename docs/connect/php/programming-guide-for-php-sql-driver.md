@@ -11,10 +11,10 @@ ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992926"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server
@@ -34,7 +34,7 @@ Cette section contient des rubriques qui vous aident à développer des applicat
 |[Conversion de types de données](../../connect/php/converting-data-types.md)|Explique comment spécifier des types de données et fournit des détails sur les types de données par défaut.|  
 |[Gestion des erreurs et des avertissements](../../connect/php/handling-errors-and-warnings.md)|Explique comment gérer les erreurs et les avertissements.|  
 |[Journalisation de l’activité](../../connect/php/logging-activity.md)|Fournit des informations sur la journalisation des erreurs et des avertissements.|  
-|[Utiliser Always Encrypted avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Fournit des informations sur l’utilisation de Always Encrypted fonctionnalité avec les pilotes PHP.|  
+|[Utiliser Always Encrypted avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Fournit des informations sur l’utilisation de la fonctionnalité Always Encrypted avec les pilotes PHP.|  
 |[Considérations relatives à la sécurité pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Décrit les considérations de sécurité en matière de développement, déploiement et exécution d’applications.|  
   
 ## <a name="see-also"></a>Voir aussi  

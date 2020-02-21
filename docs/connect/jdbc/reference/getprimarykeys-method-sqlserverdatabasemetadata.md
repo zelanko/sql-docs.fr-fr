@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980764"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Méthode getPrimaryKeys (SQLServerDatabaseMetaData)
@@ -39,7 +39,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 #### <a name="parameters"></a>Paramètres  
  *cat*  
   
- **Chaîne** qui contient le nom du catalogue.  
+ **Chaîne** contenant le nom du catalogue.  
   
  *schema*  
   
@@ -49,18 +49,18 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
   
  **Chaîne** qui contient le nom de la table.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getPrimaryKeys, est spécifiée par la méthode getPrimaryKeys, dans l’interface java. Sql. DatabaseMetaData.  
+ Cette méthode getPrimaryKeys est spécifiée par la méthode getPrimaryKeys de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getPrimaryKeys contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|String|Nom de la base de données qui contient la table spécifiée.|  
 |TABLE_SCHEM|String|Schéma de la table.|  

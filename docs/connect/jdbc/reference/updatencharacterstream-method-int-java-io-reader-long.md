@@ -11,10 +11,10 @@ ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03d1ea61a0f14baed7e83e27fbc585c96ee0e2ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998758"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>Méthode updateNCharacterStream (int, java.io.Reader, long)
@@ -34,11 +34,11 @@ public void updateNCharacterStream(int columnIndex,
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- **Entier** qui indique l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
  *x*  
   
- Objet lecteur.  
+ Objet Reader.  
   
  *length*  
   
@@ -48,9 +48,9 @@ public void updateNCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateNCharacterStream est spécifiée par la méthode updateNCharacterStream dans l’interface java. Sql. ResultSet.  
+ Cette méthode updateNCharacterStream est spécifiée par la méthode updateNCharacterStream de l’interface java.sql.ResultSet.  
   
- Cette méthode passe les caractères Unicode d’un objet lecteur aux colonnes **nchar**, **nvarchar (max)** , **ntext**et **XML** sélectionnées. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
+ Cette méthode transmet les caractères Unicode d’un objet Reader aux colonnes **nchar**, **nvarchar(max)** , **ntext** et **xml** sélectionnées. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

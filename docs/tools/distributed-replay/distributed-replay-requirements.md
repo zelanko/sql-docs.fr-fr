@@ -1,7 +1,6 @@
 ---
-title: Configuration requise pour la Distributed Replay | Microsoft Docs
-ms.custom: ''
-ms.date: 01/18/2018
+title: Configuration requise pour Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +8,14 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 12b27321182e19d2a366e44c0a5ad1c325ee486d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 01/18/2018
+ms.openlocfilehash: 1adafe699b1168305042fbe3e9e840ca7a06e703
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075031"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74993620"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68075031"
 ### <a name="input-trace-versions"></a>Versions de trace d'entrée  
  Distributed Replay prend en charge les données de trace d'entrée recueillies dans les versions suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]Mise à jour cumulative 1 et versions ultérieures. Consultez- [SQL Server les mises à jour cumulatives 2017](https://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Mise à jour cumulée 1 et versions ultérieures. Consultez : [SQL Server 2017, mises à jour cumulatives](https://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -91,13 +92,13 @@ ms.locfileid: "68075031"
   
 -   TextData  
   
--   Application Name  
+-   Nom de l’application  
   
 -   LoginName  
   
--   DatabaseName  
+-   nom_base_de_données  
   
--   ID de la base de données  
+-   ID de base de données  
   
 -   HostName  
   
@@ -124,7 +125,7 @@ ms.locfileid: "68075031"
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
   
-## <a name="operating-system-requirements"></a>Système d'exploitation requis  
+## <a name="operating-system-requirements"></a>Configuration requise du système d’exploitation  
  Les systèmes d'exploitation pris en charge pour exécuter l'outil d'administration et les services contrôleur et clients sont les mêmes que dans votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les systèmes d’exploitation pris en charge pour votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Les fonctionnalités Distributed Replay sont prises en charge à la fois sur les systèmes d'exploitation basés sur des processeurs x86 et ceux basés sur des processeurs x64. Pour les systèmes d'exploitation basés sur des processeurs x64, seul le mode Windows on Windows (WOW) est pris en charge.  
@@ -159,7 +160,7 @@ ms.locfileid: "68075031"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Sécurité Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md)   
- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+ [Sécurité de Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md)   
+ [Install Distributed Replay - Présentation](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Application sqlagent90 | Microsoft Docs
-ms.custom: ''
+title: application sqlagent90
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20405a10a2e36232068329542923aae65c10c4e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 5c75d932356d24bd5a268eb27d50deee91a6329f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059592"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307765"
 ---
 # <a name="sqlagent90-application"></a>application sqlagent90
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

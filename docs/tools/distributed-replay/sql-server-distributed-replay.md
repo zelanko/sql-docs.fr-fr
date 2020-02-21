@@ -1,26 +1,26 @@
 ---
-title: SQL Server Distributed Replay | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SQL Server Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-helpviewer_keywords:
-- Distributed Replay
-- SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f71b19977746ecc52817fa0128d6f0a8e681ff5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949919"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74993420"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay vous aide à évaluer l’impact de futures mises à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également l’utiliser pour évaluer l’impact des mises à niveau du matériel et du système d’exploitation, ainsi que des paramétrages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+La fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay vous aide à évaluer l’impact de futures mises à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également l’utiliser pour évaluer l’impact des mises à niveau du matériel et du système d’exploitation, ainsi que des paramétrages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-distributed-replay"></a>Avantages de Distributed Replay  
  Comme avec le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vous pouvez utiliser Distributed Replay pour relire une trace capturée sur un environnement de test mis à niveau. Contrairement au [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], Distributed Replay n'est pas limité à la relecture de la charge de travail d'un seul ordinateur.  
@@ -46,13 +46,13 @@ ms.locfileid: "67949919"
 ## <a name="distributed-replay-concepts"></a>Concepts de Distributed Replay  
  Les composants suivants constituent l'environnement de Distributed Replay :  
   
--   **Outil d’administration Distributed Replay**: une application console, **DReplay.exe**, utilisée pour communiquer avec le contrôleur de relecture distribuée. Utilisez l'outil d'administration pour contrôler la relecture distribuée.  
+-   **Outil d'administration Distributed Replay** : une application console, **DReplay.exe**, utilisée pour communiquer avec le contrôleur de relecture distribuée. Utilisez l'outil d'administration pour contrôler la relecture distribuée.  
   
--   **Contrôleur Distributed Replay**: un ordinateur exécutant le service Windows nommé contrôleur Distributed Replay de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le contrôleur Distributed Replay orchestre les actions des clients de relecture distribuée. Chaque environnement Distributed Replay ne doit contenir qu'une seule instance de contrôleur.  
+-   **Contrôleur Distributed Replay** : un ordinateur exécutant le service Windows nommé contrôleur Distributed Replay [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le contrôleur Distributed Replay orchestre les actions des clients de relecture distribuée. Chaque environnement Distributed Replay ne doit contenir qu'une seule instance de contrôleur.  
   
--   **Clients Distributed Replay**: un ou plusieurs ordinateurs (physiques ou virtuels) qui exécutent le service Windows nommé client Distributed Replay de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les clients Distributed Replay fonctionnent ensemble pour simuler des charges de travail sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque environnement Distributed Replay peut contenir un ou plusieurs clients.  
+-   **Clients Distributed Replay** : un ou plusieurs ordinateurs (physiques ou virtuels) qui exécutent le service Windows nommé client Distributed Replay [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les clients Distributed Replay fonctionnent ensemble pour simuler des charges de travail sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque environnement Distributed Replay peut contenir un ou plusieurs clients.  
   
--   **Serveur cible**: une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que les clients Distributed Replay peuvent utiliser pour relire les données de trace. Nous conseillons de placer le serveur cible dans un environnement de test.  
+-   **Serveur cible** : une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que les clients Distributed Replay peuvent utiliser pour relire les données de trace. Nous conseillons de placer le serveur cible dans un environnement de test.  
   
  L'outil d'administration Distributed Replay, le contrôleur et le client peuvent être installés sur différents ordinateurs ou sur le même ordinateur. Il ne peut exister qu'une instance du contrôleur Distributed Replay ou du service client en cours d'exécution sur le même ordinateur.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67949919"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Explique comment configurer Distributed Replay.|[Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)|  
-|Explique comment préparer les données de trace d'entrée.|[Préparer les données de trace d'entrée](../../tools/distributed-replay/prepare-the-input-trace-data.md)|  
+|Explique comment préparer les données de trace d'entrée.|[Préparer les données de trace d’entrée](../../tools/distributed-replay/prepare-the-input-trace-data.md)|  
 |Explique comment relire les données de trace.|[Relire les données de trace](../../tools/distributed-replay/replay-trace-data.md)|  
 |Décrit comment examiner les résultats des données de trace de Distributed Replay.|[Examiner les résultats de la relecture](../../tools/distributed-replay/review-the-replay-results.md)|  
 |Décrit comment utiliser l’outil d’administration pour lancer, surveiller et annuler des opérations sur le contrôleur.|[Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
