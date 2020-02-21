@@ -1,5 +1,5 @@
 ---
-title: Méthode getXAConnection, (SQLServerXADataSource) | Microsoft Docs
+title: Méthode getXAConnection (SQLServerXADataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cb1d53c9-27f1-4880-8f1d-c32df0d2fb27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce11a1918846d028fd0dd3d9dc10e588dbe3f31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977962"
 ---
 # <a name="getxaconnection-method-sqlserverxadatasource"></a>Méthode getXAConnection (SQLServerXADataSource)
@@ -29,7 +29,7 @@ ms.locfileid: "67977962"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getXAConnection ()](../../../connect/jdbc/reference/getxaconnection-method.md)|Essaie d'établir une connexion de base de données physique qui peut être utilisée dans une transaction distribuée.|  
 |[getXAConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getxaconnection-method-java-lang-string-java-lang-string.md)|Essaie d'établir une connexion de base de données physique à l'aide du nom d'utilisateur et du mot de passe donnés.|  

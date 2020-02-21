@@ -16,10 +16,10 @@ ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df27a5368dfea7f417fb84e2ebe38a8987165aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979972"
 ---
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>Méthode getSendStringParametersAsUnicode (SQLServerDataSource)
@@ -34,13 +34,13 @@ ms.locfileid: "67979972"
 public boolean getSendStringParametersAsUnicode()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Si elle a la valeur **true**, les paramètres de type string sont envoyés au serveur au format UNICODE. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  
  Si la propriété sendStringParametersAsUnicode a la valeur **true** (valeur par défaut), les paramètres de type chaîne sont envoyés au serveur au format UNICODE. Si la propriété sendStringParametersAsUnicode a la valeur **false**, les paramètres de type chaîne sont envoyés au serveur au format ASCII/MBCS, et non UNICODE. Si sendStringParametersAsUnicode n’est pas défini, getSendStringParametersAsUnicode retourne la valeur par défaut (**true**).  
   
- Pour plus d’informations sur la propriété de connexion sendStringParametersAsUnicode, consultez [définition des propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Pour plus d’informations sur la propriété de connexion sendStringParametersAsUnicode, consultez [Définir les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -11,10 +11,10 @@ ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f4dfb22027ca448848d7027232e41359ff1664d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028493"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
@@ -25,7 +25,7 @@ ms.locfileid: "69028493"
 ## <a name="details"></a>Détails  
  Pour les opérations de connexion, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] envoie un ID de connexion cliente. Si la connexion échoue, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://go.microsoft.com/fwlink/?LinkId=207752)) et rechercher le champ **ClientConnectionID** pour obtenir les informations de diagnostic sur l’échec de connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant d’envoyer le paquet de préconnexion, un ID de connexion client n’est pas généré.) L'ID de connexion client est un GUID à 16 octets. Vous pouvez également rechercher l’ID de connexion cliente dans la sortie de la cible des événements étendus, si l’action **client_connection_id** est ajoutée aux événements dans une session d’événements étendus. Si vous avez besoin d’une assistance supplémentaire pour diagnostiquer le pilote client, vous pouvez activer le suivi et réexécuter la commande de connexion, puis observer le champ **ClientConnectionID** dans la trace.  
   
- Vous pouvez récupérer l’ID de connexion du client par programme à l’aide de l' [interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID de connexion sera également présent dans toutes les exceptions liées à la connexion.  
+ Vous pouvez obtenir l'ID de connexion du client programmatiquement avec l’[interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID de connexion sera également présent dans toutes les exceptions liées à la connexion.  
   
  En cas d’erreur de connexion, l’ID de connexion client dans les informations de trace des diagnostics intégrés du serveur et dans la mémoire tampon en anneau de connectivité peut aider à corréler les connexions clientes aux connexions sur le serveur. Pour plus d’informations sur les traces des diagnostics intégrés, consultez [Traçage de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805). Notez que cet article contient également des informations sur la trace des accès aux données, qui ne s'applique pas à [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ; consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md) pour plus d'informations sur la création d'une trace d'accès aux données avec [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   

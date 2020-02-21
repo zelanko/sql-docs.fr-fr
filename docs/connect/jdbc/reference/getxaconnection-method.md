@@ -1,5 +1,5 @@
 ---
-title: Méthode getXAConnection, () | Microsoft Docs
+title: Méthode getXAConnection () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c53cbcc5abcb9fb08999b1d171645b45097eb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977968"
 ---
 # <a name="getxaconnection-method-"></a>Méthode getXAConnection ()
@@ -34,14 +34,14 @@ ms.locfileid: "67977968"
 public javax.sql.XAConnection getXAConnection()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet XAConnection.  
   
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getXAConnection, est spécifiée par la méthode getXAConnection, dans l’interface javax. Sql. XADataSource.  
+ Cette méthode getXAConnection est spécifiée par la méthode getXAConnection dans l'interface javax.sql.XADataSource.  
   
 > [!NOTE]  
 >  Cette méthode est généralement appelée par les implémentations de regroupement de connexions XA et non par le code d'application JDBC normal.  

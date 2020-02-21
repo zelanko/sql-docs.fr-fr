@@ -16,10 +16,10 @@ ms.assetid: fca2d35f-266b-4dc7-9aa9-30a17ee2ecec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 621bffb87631912faa262811cc8a8460ec677cb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978722"
 ---
 # <a name="gettimestamp-method-sqlservercallablestatement"></a>Méthode getTimestamp (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67978722"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getTimestamp (int)](../../../connect/jdbc/reference/gettimestamp-method-int.md)|Récupère la valeur du paramètre désigné en tant qu'objet java.sql.Timestamp dans le langage de programmation Java en fonction de l'index de paramètre.|  
 |[getTimestamp (int, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-int-java-util-calendar.md)|Récupère la valeur du paramètre désigné sous forme d’objet java.sql.Timestamp dans le langage de programmation Java, en fonction de l’index de paramètre, avec un objet Calendar.|  

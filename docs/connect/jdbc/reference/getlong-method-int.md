@@ -16,10 +16,10 @@ ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b19807b810605a42b0036e9ee2cee57da4d20b2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982519"
 ---
 # <a name="getlong-method-int"></a>Méthode getLong (int)
@@ -37,10 +37,10 @@ public long getLong(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **Entier** qui indique l’index du paramètre.  
+ **int** indiquant l’index du paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
- Valeur de **type long** .  
+## <a name="return-value"></a>Valeur de retour  
+ Valeur **long**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

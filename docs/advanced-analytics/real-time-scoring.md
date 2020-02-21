@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 746a9cadfca28aae3bd2781a3daf71aabb8d6e5b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727328"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>Scoring en temps réel avec sp_rxPredict dans SQL Server Machine Learning
@@ -128,7 +128,7 @@ Cette section décrit les étapes à effectuer pour configurer la prédiction **
 
 <a name ="bkmk_enableRtScoring"></a> 
 
-### <a name="step-1-enable-the-real-time-scoring-procedure"></a>Étape 1. Activer la procédure de scoring en temps réel
+### <a name="step-1-enable-the-real-time-scoring-procedure"></a>Étape 1. Activer la procédure de scoring en temps réel
 
 Vous devez activer cette fonctionnalité pour chaque base de données que vous souhaitez utiliser pour le scoring. L’administrateur du serveur doit exécuter l’utilitaire de ligne de commande, RegisterRExt.exe, qui est inclus dans le package RevoScaleR.
 
@@ -161,7 +161,7 @@ Vous devez activer cette fonctionnalité pour chaque base de données que vous s
 > 
 > Dans SQL Server 2017, des mesures de sécurité supplémentaires sont en place pour éviter les problèmes liés à l’intégration du CLR. Ces mesures imposent également des restrictions supplémentaires sur l’utilisation de cette procédure stockée. 
 
-### <a name="step-2-prepare-and-save-the-model"></a>Étape 2. Préparer et enregistrer le modèle
+### <a name="step-2-prepare-and-save-the-model"></a>Étape 2. Préparer et enregistrer le modèle
 
 Le format binaire exigé par sp\_rxPredict est le même que celui exigé pour utiliser la fonction PREDICT. Par conséquent, dans votre code R, incluez un appel à [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) en veillant à spécifier `realtimeScoringOnly = TRUE`, comme dans cet exemple :
 
@@ -169,7 +169,7 @@ Le format binaire exigé par sp\_rxPredict est le même que celui exigé pour ut
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sp_rxpredict"></a>Étape 3. Appeler sp_rxPredict
+### <a name="step-3-call-sp_rxpredict"></a>Étape 3. Appeler sp_rxPredict
 
 Vous appelez sp\_rxPredict comme n’importe quelle autre procédure stockée. Dans la version actuelle, la procédure stockée n’accepte que deux paramètres : _\@model_ pour le modèle au format binaire et _\@inputData_ pour les données à utiliser dans le scoring (données définies en tant que requête SQL valide).
 
