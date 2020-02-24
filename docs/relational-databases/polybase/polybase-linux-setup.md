@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 89987a3b9f202eb1125a08438bb3943b65aaef74
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710535"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173560"
 ---
 # <a name="install-polybase-on-linux"></a>Installer PolyBase sur Linux
 
@@ -101,7 +101,7 @@ Après l’installation, vous devez activer PolyBase pour accéder à ses foncti
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE [WITH OVERRIDE];
+RECONFIGURE WITH OVERRIDE;
 ```
 
 ## <a name="update-polybase"></a>Mettre à jour PolyBase

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c46cf3fbc2138350c50e3f520871b0b6a8efde7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74317030"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173572"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistance des données avec un cluster Big Data SQL Server sur Kubernetes
 
@@ -30,7 +30,7 @@ Voici quelques aspects importants à prendre en compte lorsque vous planifiez la
 
 - Pour réussir le déploiement du cluster Big Data, assurez-vous que le nombre requis de volumes persistants est disponible. Si vous effectuez le déploiement sur un cluster Azure Kubernetes Service (AKS) et que vous utilisez une classe de stockage intégrée (`default` ou `managed-premium`), celle-ci prend en charge le provisionnement dynamique pour les volumes persistants. Ainsi, vous n’avez pas besoin de créer au préalable les volumes persistants, mais vous devez vous assurer que les nœuds worker disponibles dans le cluster AKS peuvent attacher un nombre de disques égal au nombre de volumes persistants nécessaires pour le déploiement. Selon la [taille de machine virtuelle](https://docs.microsoft.com/azure/virtual-machines/linux/sizes) spécifiée pour les nœuds worker, chaque nœud peut attacher un certain nombre de disques. Pour un cluster ayant la taille par défaut (sans haute disponibilité), un minimum de 24 disques est requis. Si vous activez la haute disponibilité ou si vous effectuez un scale-up d’un pool quelconque, veillez à avoir au moins deux volumes persistants pour chaque réplica supplémentaire, quelle que soit la ressource dont vous effectuez l’augmentation.
 
-- Si le provisionneur de stockage pour la classe de stockage que vous fournissez dans la configuration ne prend pas en charge le provisionnement dynamique, vous devez créer au préalable les volumes persistants. Par exemple, le provisionneur `local-storage` n’active pas le provisionnement dynamique. Consultez cet [exemple de script](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) pour des indications sur la façon de procéder dans un cluster Kubernetes déployé avec `kubeadm`.
+- Si le provisionneur de stockage pour la classe de stockage que vous fournissez dans la configuration ne prend pas en charge le provisionnement dynamique, vous devez créer au préalable les volumes persistants. Par exemple, le provisionneur `local-storage` n’active pas le provisionnement dynamique. Consultez cet [exemple de script](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) pour des indications sur la façon de procéder dans un cluster Kubernetes déployé avec `kubeadm`.
 
 - Lorsque vous déployez un cluster Big Data, vous pouvez configurer la même classe de stockage à utiliser par tous les composants du cluster. Mais, en guide de bonne pratique, pour un déploiement en production, différents composants requièrent différentes configurations de stockage pour prendre en charge les différentes charges de travail en termes de taille ou de débit. Vous pouvez remplacer la configuration de stockage par défaut spécifiée dans le contrôleur pour chaque instance principale SQL Server, jeu de données et pool de données. Cet article fournit des exemples sur la procédure à suivre.
 
