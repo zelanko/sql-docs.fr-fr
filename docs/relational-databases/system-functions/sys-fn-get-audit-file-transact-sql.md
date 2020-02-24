@@ -1,7 +1,7 @@
 ---
 title: sys. fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/16/2017
+ms.date: 02/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73981872"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507519"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations à partir d'un fichier d'audit créé par un audit du serveur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -57,7 +57,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **chemin d’accès> \ LoginsAudit_ {GUID} _00_29384. sqlaudit-collecte d’un fichier d’audit spécifique. \<**  
   
- - **Azure SQL Database ou Azure SQL Data Warehouse**:
+ - **Azure SQL Database**:
  
     Cet argument est utilisé pour spécifier une URL d’objet BLOB (y compris le point de terminaison de stockage et le conteneur). Bien qu’il ne prenne pas en charge un caractère générique astérisque, vous pouvez utiliser un préfixe de nom de fichier partiel (au lieu du nom complet de l’objet BLOB) pour collecter plusieurs fichiers (objets BLOB) qui commencent par ce préfixe. Par exemple :
  

@@ -1,7 +1,7 @@
 ---
 title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/20/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942071"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507531"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ EXEC managed_backup.sp_backup_config_schedule
  Durée de la fenêtre de temps de sauvegarde. Notez qu’il n’y a aucune garantie que les sauvegardes seront effectuées pendant la fenêtre de @backup_begin_time temps @backup_durationdéfinie par et. Les opérations de sauvegarde démarrées dans cette fenêtre de temps mais qui dépassent la durée de la fenêtre ne sont pas annulées.  
   
  @log_backup_freq  
- Cela détermine la fréquence des sauvegardes du journal des transactions. Ces sauvegardes se produisent à intervalles réguliers plutôt qu’en fonction de la planification spécifiée pour les sauvegardes de base de données. @log_backup_freqpeut être en minutes ou en heures et 0 est valide, ce qui indique l’absence de sauvegardes du journal. La désactivation des sauvegardes de journaux ne conviendrait que pour les bases de données avec un mode de récupération simple.  
+ Cela détermine la fréquence des sauvegardes du journal des transactions. Ces sauvegardes se produisent à intervalles réguliers plutôt qu’en fonction de la planification spécifiée pour les sauvegardes de base de données. @log_backup_freqpeut être en minutes ou en heures `0:00` et être valide, ce qui indique l’absence de sauvegardes du journal. La désactivation des sauvegardes de journaux ne conviendrait que pour les bases de données avec un mode de récupération simple.  
   
 > [!NOTE]  
->  Si le mode de récupération passe de simple à Full, vous devez reconfigurer le log_backup_freq de 0 à une valeur différente de zéro.  
+>  Si le mode de récupération passe de simple à Full, vous devez reconfigurer le log_backup_freq de `0:00` à une valeur différente de zéro.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  
