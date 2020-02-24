@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910142"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074457"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>Arguments
 
-'*provider_name*' Chaîne de caractères représentant le nom convivial (ou PROGID) du fournisseur OLE DB tel que spécifié dans le Registre. *provider_name* n’a aucune valeur par défaut.
+### <a name="provider_name"></a>'*provider_name*'
+Chaîne de caractères représentant le nom convivial (ou PROGID) du fournisseur OLE DB tel que spécifié dans le Registre. *provider_name* n’a aucune valeur par défaut.
 
 '*datasource*' Constante de chaîne correspondant à une source de données OLE DB spécifique. *datasource* est la propriété DBPROP_INIT_DATASOURCE à transmettre à l’interface IDBProperties du fournisseur pour initialiser ce dernier. En général, cette chaîne comporte le nom du fichier de base de données, le nom d'un serveur de base de données ou un nom que comprend le fournisseur pour retrouver la ou les bases de données.
 
 '*user_id*' Constante de chaîne représentant le nom d’utilisateur passé au fournisseur OLE DB spécifié. *user_id* spécifie le contexte de sécurité de la connexion et est transmis en tant que propriété DBPROP_AUTH_USERID pour initialiser le fournisseur. *user_id* ne peut pas être un ID de connexion Microsoft Windows.
 
 '*password*' Constante de chaîne représentant le mot de passe utilisateur à passer au fournisseur OLE DB. *password* est transmis en tant que propriété DBPROP_AUTH_PASSWORD au moment de l’initialisation du fournisseur. *password* ne peut pas être un mot de passe Microsoft Windows.
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 '*provider_string*' Chaîne de connexion spécifique au fournisseur qui est passée en tant que propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. En général, *provider_string* encapsule toutes les informations de connexion nécessaires à l’initialisation du fournisseur. Pour obtenir la liste des mots clés reconnus par le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB, consultez [Propriétés d’initialisation et d’autorisation](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
@@ -91,9 +101,23 @@ OPENROWSET
 
 *object* Nom d’objet qui identifie de façon unique l’objet à manipuler.
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 '*query*' Constante de chaîne envoyée au fournisseur en vue de son exécution. L'instance locale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne traite pas cette requête, mais traite les résultats de la requête retournés par le fournisseur (requête directe). Les requêtes directes sont utiles lorsque les fournisseurs mettent leurs données tabulaires à disposition non pas par l'intermédiaire de noms de tables, mais uniquement au moyen d'un langage de commande. Les requêtes directes sont prises en charge sur le serveur distant à condition que le fournisseur de requêtes prenne en charge l’objet OLE DB Command et ses interfaces obligatoires. Pour plus d’informations, consultez [Informations de référence sur SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
-BULK Utilise le fournisseur d’ensembles de lignes BULK pour que OPENROWSET lise les données dans un fichier. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET peut lire un fichier de données sans charger les données dans une table cible. Cela permet d’utiliser OPENROWSET avec une instruction SELECT simple.
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+Utilise le fournisseur d'ensembles de lignes BULK pour que OPENROWSET lise les données dans un fichier. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET peut lire un fichier de données sans charger les données dans une table cible. Cela permet d’utiliser OPENROWSET avec une instruction SELECT simple.
 
 > [!IMPORTANT]
 > Azure SQL Database prend uniquement en charge la lecture à partir du Stockage Blob Azure.
@@ -181,10 +205,23 @@ La lecture de *data_file* au format ASCII retourne son contenu sous la forme d�
 
 SINGLE_NCLOB La lecture de *data_file* au format UNICODE retourne son contenu sous la forme d’un ensemble de lignes à une seule ligne et une seule colonne du type **nvarchar(max)** en utilisant le classement de la base de données active.
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>Options de format de fichier d’entrée
 
 FORMAT **=** 'CSV' **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Spécifie un fichier de valeurs séparées par des virgules conforme à la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ='*format_file_path*' Spécifie le chemin complet d’un fichier de format. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de fichiers de format : XML et non-XML.
 

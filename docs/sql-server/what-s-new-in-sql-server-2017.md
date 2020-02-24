@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874826"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478495"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ SQL Server 2017 inclut de nombreuses nouvelles fonctionnalités du moteur de ba
 - Les **améliorations des objets à mémoire optimisée** incluent sp_spaceused et l’élimination de la limite de 8 index pour les tables à mémoire optimisée, sp_rename pour les tables à mémoire optimisée et les modules T-SQL compilés en mode natif, ainsi que CASE et TOP (N) WITH TIES pour les modules T-SQL compilés en mode natif. Les fichiers de groupes de fichiers à mémoire optimisée peuvent maintenant être stockés, sauvegardés et restaurés sur le stockage Azure. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL** est une nouvelle classe d’élément sécurisable, prenant en charge les autorisations CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP et VIEW DEFINITION. ADMINISTER DATABASE BULK OPERATIONS est désormais visible dans sys.fn_builtin_permissions. (CTP 1.0)
 - Le niveau de compatibilité **COMPATIBILITY_LEVEL 140** de base de données a été ajouté. (CTP 1.0).  
-
-Pour plus d’informations, consultez [Nouveautés du moteur de base de données SQL Server 2017](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - La nouvelle fonctionnalité **Scale Out** dans SSIS présente les fonctions nouvelles et modifiées suivantes. Pour plus d’informations, consultez [Nouveautés d’Integration Services dans SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)

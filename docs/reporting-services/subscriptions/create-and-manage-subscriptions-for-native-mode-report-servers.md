@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403256"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971316"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [Créer, modifier ou supprimer des abonnement pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "66403256"
   
  Cet article n'explique pas comment créer un abonnement piloté par les données. Pour savoir comment créer un abonnement piloté par les données, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> Pour créer un abonnement pour un partage de fichiers  
+## <a name="bkmk_create_fileshare_subscription"></a> Pour créer un abonnement pour un partage de fichiers  
   
 1. Naviguez vers [le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66403256"
   
 Le rapport est remis sous forme de fichier statique. Si le rapport comprend des fonctionnalités interactives (par exemple des liens vers des lignes et colonnes supplémentaires), ces fonctionnalités ne sont pas disponibles.  
   
-###  <a name="bkmk_create_email_subscription"></a> Pour créer un abonnement par e-mail  
+##  <a name="bkmk_create_email_subscription"></a> Pour créer un abonnement par e-mail  
   
 1. Naviguez vers [le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -170,4 +170,3 @@ Pour annuler un abonnement qui est en cours de traitement sur le serveur de rapp
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [Le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [Utiliser Mes abonnements &#40;serveur de rapports en mode natif&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  
