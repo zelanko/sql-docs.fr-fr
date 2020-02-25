@@ -30,7 +30,7 @@ Cette rubrique décrit comment utiliser le [!INCLUDE[ssSqlProfiler](../../includ
   
      La boîte de dialogue **Propriétés de la trace** s'affiche.  
   
-    > **REMARQUE :** La boîte de dialogue Propriétés de la trace ne s’affiche pas et la trace démarre en lieu et place, si l’option **Démarrer le suivi juste après avoir établi la connexion** est sélectionnée. Pour désactiver ce paramètre, dans le menu **Outils**, cliquez sur **Options**, puis désactivez la case à cocher Démarrer le suivi juste après avoir établi la connexion.  
+    > **REMARQUE :** La boîte de dialogue **Propriétés de la trace** ne s’affiche pas et la trace démarre en lieu et place, si l’option **Démarrer le suivi juste après avoir établi la connexion** est sélectionnée. Pour désactiver ce paramètre, dans le menu **Outils**, cliquez sur **Options**, puis désactivez la case à cocher Démarrer le suivi juste après avoir établi la connexion.  
   
 2.  Dans la zone **Nom de la trace** , tapez un nom pour la trace.  
   
