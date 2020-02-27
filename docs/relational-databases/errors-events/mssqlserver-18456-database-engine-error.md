@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137094"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146307"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ Pour des raisons de sécurité, le message d'erreur retourné au client masque d
 |12|La connexion est valide mais l'accès au serveur a échoué.|  
 |18|Le mot de passe doit être modifié.|  
 |38, 46|La base de données demandée par l’utilisateur est introuvable.|
+|58| SQL Server est défini pour utiliser l’authentification Windows uniquement et un client tente de se connecter à l’aide de l’authentification SQL. Il se peut également que les SID ne correspondent pas.|
 |102 - 111|Échec d’AAD.|
 |122 - 124|Échec lié à un mot de passe ou nom d’utilisateur vide.|
 |126|La base de données demandée par l’utilisateur n’existe pas.|

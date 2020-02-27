@@ -1,5 +1,5 @@
 ---
-title: Spécification de chemins vers des éléments externes (Générateur de rapports et SSRS) | Microsoft Docs
+title: Spécification de chemins vers des éléments externes (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9848a77ae760fc2c1fa4c4d0ddeaa5b1120ec1ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578475"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080907"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Spécification de chemins d'accès à des éléments externes (Générateur de rapports et SSRS)
   Vous pouvez spécifier des chemins d'accès dans les propriétés d'éléments de rapport pour faire référence à des éléments externes au fichier de définition de rapport et qui sont stockés sur un serveur de rapports. Il peut s'agir notamment de rapports d'extraction, de sous-rapports et de fichiers image.  
@@ -37,9 +37,9 @@ ms.locfileid: "65578475"
   
 -   **Un chemin d'accès complet à l'élément.**  
   
-    -   **Sur un serveur de rapports :** le chemin d’accès commence par **/** , le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
+    -   **Sur un serveur de rapports :** Le chemin d'accès démarre à partir de **/** , le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
   
-    -   **Sur un site SharePoint :** vous devez spécifier le nom de rapport dans une expression en incluant l'URL complète de l'élément et l'extension de fichier .rdl. Par exemple : `="https://server/site/library/folder/Report1.rdl"`.  
+    -   **Sur un site SharePoint :** Vous devez spécifier le nom de rapport dans une expression en incluant l'URL complète de l'élément et l'extension de fichier .rdl. Par exemple : `="https://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter une image externe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

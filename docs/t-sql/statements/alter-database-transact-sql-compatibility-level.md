@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909649"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544894"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
 
@@ -307,6 +307,7 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 |Consultez l’exemple E dans la section Exemples ci-dessous.|Consultez l’exemple F dans la section Exemples ci-dessous.|Faible|
 |La fonction ODBC {fn CONVERT()} utilise le format de date par défaut de la langue. Pour certaines langues, le format par défaut est YDM, ce qui peut provoquer des erreurs de conversion lorsque CONVERT() est associé à d’autres fonctions, telles que `{fn CURDATE()}`, qui attendent un format YMD.|La fonction ODBC `{fn CONVERT()}` utilise le style 121 (format YMD indépendant de la langue) lors de la conversion aux types de données ODBC SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP.|Faible|
 |Les intrinsèques datetime tels que DATEPART ne requièrent pas que les valeurs d'entrée de chaîne soient des littéraux datetime valides. Par exemple, `SELECT DATEPART (year, '2007/05-30')` est compilé correctement.|Les intrinsèques datetime tels que `DATEPART` nécessitent que les valeurs d’entrée de chaîne soient des littéraux datetime valides. L'erreur 241 est retournée lorsqu'un littéral datetime non valide est utilisé.|Faible|
+|Les espaces de fin spécifiés dans le premier paramètre d’entrée de la fonction REPLACE sont supprimés lorsque le paramètre est de type char. Par exemple, dans l’instruction SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>', la valeur 'ABC ' est évaluée de manière incorrecte comme 'ABC'.|Les espaces de fin sont toujours conservés. Pour les applications basées sur le comportement antérieur de la fonction, utilisez la fonction RTRIM lors de la spécification du premier paramètre d’entrée de la fonction. Par exemple, la syntaxe suivante reproduira le comportement SQL Server 2005 SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>'.|Faible|
 
 ## <a name="reserved-keywords"></a>Mots clés réservés
 

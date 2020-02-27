@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f7a1e8d3d6341da5812bb44726c5bf8186d3b19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831943"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054837"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Page Avancé des Propriétés du serveur - Serveur de rapports Power BI et Reporting Services
 
@@ -140,6 +140,9 @@ Indique si la fonctionnalité Mes rapports est activée. La valeur **true** indi
 
 ### <a name="enablepowerbireportexportdata"></a>EnablePowerBIReportExportData 
 (Serveur de rapports Power BI uniquement) Activez l’exportation des données du serveur de rapports Power BI à partir des visuels Power BI. Les valeurs sont True, False.  La valeur par défaut est True. 
+
+### <a name="enablepowerbireportexportunderlyingdata"></a>EnablePowerBIReportExportUnderlyingData 
+(Power BI Report Server uniquement) Indique si un client peut exporter des données sous-jacentes à partir de visuels Power BI dans Power BI Report Server. La valeur true indique que la fonctionnalité est activée.
 
 ### <a name="enableremoteerrors"></a>EnableRemoteErrors
 Inclut les informations externes sur l'erreur (par exemple, les informations d'erreur relatives aux sources de données de rapport) avec les messages d'erreur retournés pour les utilisateurs qui demandent des rapports à partir d'ordinateurs distants. Les valeurs valides sont **true** et **false**. La valeur par défaut est **false**. Pour plus d’informations, consultez [Activer les erreurs distantes &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  

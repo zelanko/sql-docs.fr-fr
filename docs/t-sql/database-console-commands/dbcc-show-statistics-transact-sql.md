@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68116483"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074443"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,7 +96,7 @@ Le tableau suivant décrit les colonnes retournées dans le jeu de résultats lo
   
 |Nom de la colonne|Description|  
 |-----------------|-----------------|  
-|Name|Nom de l'objet de statistiques.|  
+|Nom|Nom de l'objet de statistiques.|  
 |Mis à jour|Date et heure de la dernière mise à jour des statistiques. La fonction [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) offre une autre manière de récupérer ces informations. Pour plus d’informations, consultez la section [Notes](#Remarks) dans cette page.|  
 |Lignes|Nombre total de lignes dans la table ou la vue indexée au moment de la dernière mise à jour des statistiques. Si les statistiques sont filtrées ou correspondent à un index filtré, le nombre de lignes peut être inférieur à celui de la table. Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).|  
 |Lignes échantillonnées|Nombre total de lignes échantillonnées pour le calcul des statistiques. Si Rows Sampled < Rows, l'histogramme et les résultats de densité affichés sont des estimations basées sur les lignes échantillonnées.|  
@@ -158,28 +158,30 @@ L'optimiseur de requête utilise des densités afin d'améliorer les estimations
 ## <a name="restrictions"></a>Restrictions  
  DBCC SHOW_STATISTICS ne fournit pas de statistiques pour les index spatiaux ou columnstore optimisés en mémoire xVelocity.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Autorisations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Pour afficher l’objet des statistiques, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe `sysadmin`, du rôle de base de données fixe `db_owner` ou du rôle de base de données fixe `db_ddladmin`.
-  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 modifie les limites liées aux autorisations et permet aux utilisateurs avec l’autorisation SELECT d’utiliser cette commande. Remarquez que les conditions suivantes doivent être remplies pour que les autorisations SELECT permettent d'exécuter la commande :
+## <a name="permissions-for-ssnoversion-and-sssds"></a>Autorisations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+Pour afficher l’objet de statistiques, l’utilisateur doit disposer de l’autorisation SELECT sur la table.
+Remarquez que les conditions suivantes doivent être remplies pour que les autorisations SELECT permettent d'exécuter la commande :
 -   Les utilisateurs doivent posséder des autorisations sur toutes les colonnes dans l'objet de statistiques.  
 -   Les utilisateurs doivent posséder une autorisation sur toutes les colonnes dans une condition de filtre (le cas échéant).  
--   La table ne peut pas avoir une stratégie de sécurité de niveau ligne.  
+-   La table ne peut pas avoir une stratégie de sécurité de niveau ligne.
+-   Si l’une des colonnes d’un objet de statistiques est masquée par des règles Dynamic Data Masking, l’utilisateur doit disposer de l’autorisation UNMASK en plus de l’autorisation SELECT
+
+Dans les versions antérieures à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe `sysadmin`, du rôle de base de données fixe `db_owner` ou du rôle de base de données fixe `db_ddladmin`.
+[!NOTE]
+Pour rétablir le comportement antérieur à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, utilisez l’indicateur de trace 9485.
   
-Pour désactiver ce comportement, utilisez traceflag 9485.
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Autorisations pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="permissions-for-sssdw-and-sspdw"></a>Autorisations pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS nécessite l’autorisation SELECT sur la table ou l’appartenance à l’un des rôles suivants :
 -   rôle serveur fixe sysadmin  
 -   rôle de base de données fixe db_owner  
 -   rôle de base de données fixe db_ddladmin  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitations et restrictions pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Limitations et restrictions pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS affiche les statistiques stockées dans la base de données shell au niveau du nœud de contrôle. Il n’affiche pas les statistiques créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les nœuds de calcul.
   
 DBCC SHOW_STATISTICS n’est pas pris en charge sur les tables externes.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>R. Retour de toutes les informations statistiques  
 L’exemple suivant affiche toutes les informations statistiques relatives à l’index `AK_Address_rowguid` de la table `Person.Address` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
@@ -196,7 +198,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Afficher le contenu d’un objet des statistiques  
  L’exemple suivant affiche le contenu des statistiques Customer_LastName sur la table DimCustomer.  
   

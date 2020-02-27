@@ -1,5 +1,5 @@
 ---
-title: Exportation au format XML (Générateur de rapports et SSRS) | Microsoft Docs
+title: Exportation au format XML (Générateur de rapports) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580761"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079306"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
   L’extension de rendu XML retourne un rapport paginé au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.  
@@ -80,7 +80,7 @@ ms.locfileid: "65580761"
   
  Les valeurs des variables sont les suivantes :  
   
-|Name|Valeur|  
+|Nom|Valeur|  
 |----------|-----------|  
 |Rapport|Report.DataElementName|  
 |ReportURL|URL absolue URLEncoded d'accès au rapport sur le serveur.|  

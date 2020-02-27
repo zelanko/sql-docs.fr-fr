@@ -1,5 +1,5 @@
 ---
-title: Images (Générateur de rapports et SSRS) | Microsoft Docs
+title: Images (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdcb7800999434cff8b26707ed477c599129e5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1336910c5538ff9d15ff7f2d651aa23e220ca87
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580251"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082081"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Images [Générateur de rapports et SSRS]
   Une image est un élément de rapport qui contient une référence à une image qui est incorporée dans le rapport, stockée dans une base de données, stockée sur le serveur de rapports ou stockée à un autre emplacement sur le Web. Une image peut se répéter avec des lignes de données. Vous pouvez également utiliser une image en guise d'arrière-plan pour certains éléments de rapport.  

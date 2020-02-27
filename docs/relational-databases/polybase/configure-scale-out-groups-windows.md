@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72906886"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256752"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurer des groupes de scale-out PolyBase sur Windows
 
@@ -21,7 +21,7 @@ ms.locfileid: "72906886"
 
 Cet article explique comment configurer un [groupe de scale-out PolyBase](polybase-scale-out-groups.md) sur Windows. Ceci permet de créer un cluster d’instances de SQL Server pour traiter de grands volumes de jeux de données à partir de sources de données externes telles que Hadoop ou le stockage d’objets Blob Azure, sous forme de montée en puissance (scale-out) parallèle pour des performances de requête optimisées.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
   
 - Plusieurs machines dans le même domaine  
   
@@ -51,7 +51,7 @@ Cet exemple présente les étapes de configuration d’un groupe PolyBase à l�
   
    - PQTH4A-CMP02  
   
-2. Compte de domaine : *PQTH4A\PolyBaseUser*  
+2. Compte de domaine : *PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installer SQL Server avec PolyBase sur toutes les machines
 
@@ -61,7 +61,7 @@ Cet exemple présente les étapes de configuration d’un groupe PolyBase à l�
   
 3. Dans la page Configuration du serveur, utilisez le **compte de domaine** PQTH4A\PolyBaseUser pour le moteur SQL Server PolyBase et le service de mouvement de données PolyBase SQL Server.
   
-4. Dans la page Configuration de PolyBase, sélectionnez l’option **Utiliser ce serveur SQL Server comme composant du groupe de scale-out PolyBase**. Elle ouvre le pare-feu pour autoriser les connexions entrantes aux services PolyBase.
+4. Dans la page Configuration de PolyBase, sélectionnez l’option **Utiliser ce serveur SQL Server comme composant du groupe de scale-out PolyBase**. Elle ouvre le pare-feu pour autoriser les connexions entrantes aux services PolyBase. Si le nœud principal est une instance nommée, vous devez ajouter manuellement le port SQL Server au pare-feu Windows sur le nœud principal, et également démarrer SQL Browser sur le nœud principal.
   
 5. Une fois l’installation terminée, exécutez **services.msc**. Vérifiez que SQL Server, le moteur PolyBase et le service de déplacement de données PolyBase sont en cours d’exécution.
   

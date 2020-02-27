@@ -5,16 +5,16 @@ description: Découvrez comment mettre à niveau des clusters Big Data SQL Serve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831836"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256863"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Guide pratique pour effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -34,7 +34,7 @@ Avant de continuer, consultez les [notes de mise à niveau pour connaître les p
 
 ## <a name="upgrade-from-supported-release"></a>Mise à niveau à partir d’une version prise en charge
 
-Cette section explique comment mettre à niveau SQL Server BDC depuis une version prise en charge (à compter de SQL Server 2019 GDR1) vers une version plus récente prise en charge.
+Cette section explique comment mettre à niveau une version de SQL Server BDC prise en charge (à compter de SQL Server 2019 GDR1) vers une version prise en charge plus récente.
 
 1. Sauvegardez l’instance maître SQL Server.
 2. Sauvegardez HDFS.
@@ -76,7 +76,7 @@ Cette section explique comment mettre à niveau SQL Server BDC depuis une versio
 >Les balises d’image les plus récentes sont disponibles dans les [notes de publication des clusters Big Data SQL Server 2019](release-notes-big-data-cluster.md).
 
 >[!IMPORTANT]
->Si vous utilisez un dépôt privé pour pré-extraire les images pour le déploiement ou la mise à niveau de BDC, assurez-vous que les images de build actuelles et les images de build >cibles se trouvent dans le dépôt privé. Cela permet une restauration réussie, si nécessaire. En outre, si vous avez modifié les >informations d’identification du dépôt privé depuis le déploiement d’origine, mettez à jour le secret correspondant dans Kubernetes avant de procéder à la mise à niveau. > Il n’existe pas de prise en charge pour la mise à jour des informations d’identification via les variables d’environnement DOCKER_PASSWORD et DOCKER_USERNAME. Mettez à jour le secret >avec [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). La mise à niveau à l’aide de dépôts >privés différents pour les builds actuels et cibles n’est pas prise en charge.
+>Si vous utilisez un dépôt privé pour pré-extraire les images pour le déploiement ou la mise à niveau de BDC, assurez-vous que les images de build actuelles et les images de build >cibles se trouvent dans le dépôt privé. Cela permet une restauration réussie, si nécessaire. En outre, si vous avez modifié les >informations d’identification du dépôt privé depuis le déploiement d’origine, mettez à jour les variables d'environnement correspondantes DOCKER_PASSWORD et >DOCKER_USERNAME. La mise à niveau avec des dépôts privés différents pour les builds actuelles et cibles n’est pas prise en charge.
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>Augmentez le délai d’expiration de la mise à niveau
 
@@ -93,7 +93,15 @@ Un délai d’expiration peut se produire si certains composants ne sont pas mis
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-Pour augmenter les délais d’attente pour une mise à niveau, modifiez le mappage de configuration de mise à niveau. Pour modifier le mappage de configuration de mise à niveau :
+Pour augmenter les délais d’expiration d’une mise à niveau, utilisez les paramètres **--controller-timeout** et **--component-timeout** afin de spécifier des valeurs plus élevées quand vous effectuez la mise à niveau. Cette option est disponible à compter de SQL Server 2019 CU2 uniquement. Par exemple :
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout** spécifie le nombre de minutes à attendre avant la fin de la mise à niveau du contrôleur ou de la base de données du contrôleur.
+**--component-timeout** spécifie le délai d’exécution de chaque phase suivante de la mise à niveau.
+
+Pour augmenter les délais d’expiration d’une mise à niveau antérieure à la version SQL Server 2019 CU2, modifiez le mappage de configuration de mise à niveau. Pour modifier le mappage de configuration de mise à niveau :
 
 Exécutez la commande suivante :
 
@@ -104,7 +112,7 @@ Exécutez la commande suivante :
 Modifiez les champs suivants :
 
    **controllerUpgradeTimeoutInMinutes** Spécifie le nombre de minutes à attendre avant la fin de la mise à niveau du contrôleur ou de la base de données du contrôleur. La valeur par défaut est 5. Mettez à jour vers au moins 20.
-   **totalUpgradeTimeoutInMinutes** : Désigne la durée combinée du contrôleur et de la base de données du contrôleur pour terminer la mise à niveau (contrôleur + base de données contrôleur). La valeur par défaut est 10. Mettez à jour vers au moins 40.
+   **totalUpgradeTimeoutInMinutes** : Spécifie le délai combiné du contrôleur et de la base de données du contrôleur pour terminer la mise à niveau (contrôleur + base de données contrôleur). La valeur par défaut est 10. Mettez à jour vers au moins 40.
    **componentUpgradeTimeoutInMinutes** : Désigne la durée d’exécution de chaque phase suivante de la mise à niveau. La valeur par défaut est 30. Mettez à jour vers 45.
 
 Enregistrez et quittez.

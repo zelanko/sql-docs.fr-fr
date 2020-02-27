@@ -1,5 +1,5 @@
 ---
-title: Définir l’orientation d’une zone de texte (Générateur de rapports et SSRS) | Microsoft Docs
+title: Définir l’orientation d’une zone de texte (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 119e9f04ddbaf91da420d69343d7fe741fbdd63d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576846"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080999"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Définir l'orientation d'une zone de texte (Générateur de rapports et SSRS)
 Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous pouvez faire pivoter une zone de texte dans différentes directions :   
@@ -42,6 +42,6 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
   
 ## <a name="see-also"></a>Voir aussi  
  [Zones de texte &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   

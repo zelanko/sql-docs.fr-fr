@@ -1,5 +1,5 @@
 ---
-title: Images, zones de texte, rectangles et lignes (Générateur de rapports et SSRS) | Microsoft Docs
+title: Images, zones de texte, rectangles et lignes (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c27c732f04d661d210e089948416d10e3274b9d5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a57bef0be8819674142526d62ec824078ded04e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580235"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082061"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Images, zones de texte, rectangles et lignes (Générateur de rapports et SSRS)
   Outre les régions de données telles que les tableaux, les matrices et les graphiques, les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] utilisent d’autres éléments de rapport, comme des images, des zones de texte ou des rectangles, pour ajouter un attrait visuel, mettre en évidence des informations clés ou fournir des informations connexes. Vous pouvez modifier la mise en forme d'un élément de rapport. Par exemple, vous pouvez ajouter une bordure ou une marge intérieure, modifier la visibilité initiale ou la direction, ou encore spécifier la taille et l'emplacement exacts de l'élément.  

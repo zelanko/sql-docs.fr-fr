@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76706272"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363235"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ Always Encrypted permet aux applications clientes de chiffrer des données sensi
 
 Pour plus d’informations, consultez [Always Encrypted (Moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Prérequis
 
 Configurez Always Encrypted dans votre base de données. Pour cela, vous devez mettre en service des clés Always Encrypted et configurer le chiffrement pour les colonnes de base de données sélectionnées. Si vous n’avez pas déjà une base de données dans laquelle est configuré Always Encrypted, suivez les instructions de [Prise en main d’Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). En particulier, votre base de données doit contenir les définitions de métadonnées pour une clé principale de colonne (CMK), une clé de chiffrement de colonne (CEK) et une table contenant une ou plusieurs colonnes chiffrées à l’aide de cette clé CEK.
 
@@ -367,7 +367,7 @@ Pour obtenir la valeur de texte en clair d’une clé ECEK, le pilote obtient d�
 
 ODBC Driver for SQL Server est fourni avec les fournisseurs de magasins de clés intégrés suivants :
 
-| Name | Description | Nom du fournisseur (de métadonnées) |Disponibilité|
+| Nom | Description | Nom du fournisseur (de métadonnées) |Disponibilité|
 |:---|:---|:---|:---|
 |Azure Key Vault |Stocke les clés CMK dans un coffre de clés Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Magasin de certificats Windows|Stocke les clés CMK localement dans le magasin de clés Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -381,7 +381,7 @@ ODBC Driver for SQL Server est fourni avec les fournisseurs de magasins de clés
 Azure Key Vault (AKV) est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. ODBC Driver for SQL Server sur Linux, macOS et Windows inclut un fournisseur de magasin de clés principales de colonne intégré pour Azure Key Vault. Pour plus d’informations sur la configuration d’un coffre de clés Azure pour Always Encrypted, consultez [Azure Key Vault – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Qu’est-ce qu’Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) et [Créer et stocker des clés principales de colonne (Azure Key Vault)](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
 
 > [!NOTE]
-> Le pilote ODBC ne prend pas en charge les services de fédération Active Directory pour l’authentification AKV. Si vous utilisez l’authentification Azure Active Directory auprès d’AKV et que votre configuration Active Directory comprend des services fédérés, l’authentification risque d’échouer.
+> Le pilote ODBC prend en charge uniquement l’authentification Azure Key Vault directe auprès d’Azure Active Directory. Si vous utilisez l’authentification Azure Active Directory auprès d’Azure Key Vault et que votre configuration Active Directory exige l’authentification auprès d’un point de terminaison ADFS (Active Directory Federation Services), l’authentification risque d’échouer.
 > Sur Linux et macOS, pour les versions 17.2 et ultérieures du pilote, `libcurl` est nécessaire pour utiliser ce fournisseur, mais n’est pas une dépendance explicite dans la mesure où les autres opérations avec le pilote n’en ont pas besoin. Si vous rencontrez une erreur concernant `libcurl`, vérifiez qu’il est installé.
 
 Le pilote prend en charge l’authentification auprès d’Azure Key Vault avec les types d’informations d’identification suivants :
@@ -593,7 +593,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-string-keywords"></a>Mots clés de chaîne de connexion
 
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |`ColumnEncryption`|Les valeurs acceptées sont `Enabled`/`Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` : désactive la fonctionnalité Always Encrypted pour la connexion.<br>*type*,*données* : (version 17.4 et ultérieures) active Always Encrypted avec l’enclave sécurisée et le *type* de protocole d’attestation, avec les *données* d’attestation associées. <br><br>Par défaut, il s’agit de `Disabled`.|
 |`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`, `KeyVaultClientSecret` |
@@ -603,7 +603,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-attributes"></a>Attributs de connexion
 
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Avant la connexion|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Désactiver Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Activer Always Encrypted<br> pointeur vers *type*,chaîne de *données* : (version 17.4 et ultérieures) activer avec l’enclave sécurisée.|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Après la connexion|[Set] Tenter de charger CEKeystoreProvider<br>[Get] Retourner un nom CEKeystoreProvider|
@@ -613,7 +613,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="statement-attributes"></a>Attributs d'instruction
 
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- Always Encrypted est désactivé pour l’instruction <br>`SQL_CE_RESULTSETONLY` (1) -- Déchiffrement uniquement. Les jeux de résultats et les valeurs de retour sont déchiffrés, et les paramètres ne sont pas chiffrés <br>`SQL_CE_ENABLED` (3) -- Always Encrypted est activé et utilisé pour les paramètres et les résultats|
 

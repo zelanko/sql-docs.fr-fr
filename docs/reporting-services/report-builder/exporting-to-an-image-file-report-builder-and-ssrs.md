@@ -1,5 +1,5 @@
 ---
-title: Exportation vers un fichier image (Générateur de rapports et SSRS) | Microsoft Docs | Microsoft Docs
+title: Exportation vers un fichier image (Générateur de rapports) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25b7f94d9e8fcb1fa7ae2c3034286515e51c7fdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581218"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081382"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Exportation vers un fichier image (Générateur de rapports et SSRS)
   L’extension de rendu de type image effectue le rendu d’un rapport paginé dans un fichier bitmap ou un métafichier. Par défaut, l'extension de rendu de type image génère un fichier TIFF du rapport, qui peut être présenté dans plusieurs pages. Lorsque le client reçoit l'image, il peut l'afficher dans une visionneuse d'images et l'imprimer. Cette rubrique fournit des informations spécifiques au rendu de l'image et décrit les exceptions aux règles de rendu.  
   
- L'extension de rendu de type image peut générer des fichiers dans l'un des formats pris en charge par [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG et TIFF. Pour le format TIFF, le nom de fichier du flux principal est *ReportName*.tif. Pour tous les autres formats dont le rendu s’effectue sur la base d’une page par fichier, le nom de fichier est *ReportName_Page.ext* . *ext* est l'extension de fichier pour le format choisi. Pour produire un fichier dans un autre format pris en charge par Image, spécifiez l’une des chaînes répertoriées ci-dessus dans le paramètre **OutputFormatDeviceInfo** .  
+ L'extension de rendu de type image peut générer des fichiers dans l'un des formats pris en charge par [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] : BMP, EMF, EMFPlus, GIF, JPEG, PNG et TIFF. Pour le format TIFF, le nom de fichier du flux principal est *ReportName*.tif. Pour tous les autres formats dont le rendu s’effectue sur la base d’une page par fichier, le nom de fichier est *ReportName_Page.ext* . *ext* est l'extension de fichier pour le format choisi. Pour produire un fichier dans un autre format pris en charge par Image, spécifiez l’une des chaînes répertoriées ci-dessus dans le paramètre **OutputFormatDeviceInfo** .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

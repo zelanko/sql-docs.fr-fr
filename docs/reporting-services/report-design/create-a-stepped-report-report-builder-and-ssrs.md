@@ -1,5 +1,5 @@
 ---
-title: Créer un rapport en escalier (Générateur de rapports et SSRS) | Microsoft Docs
+title: Créer un rapport en escalier (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dca297ff55b9bd845e6fcb8379dcb7cc7147d32e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581537"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080610"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Créer un rapport en escalier (Générateur de rapports et SSRS)
 Un rapport en escalier est un type de rapport paginé  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui affiche des lignes de détails ou des groupes enfants mis en retrait sous un groupe parent dans la même colonne, comme l’illustre l’exemple ci-dessous :  
@@ -101,7 +101,7 @@ Un rapport en escalier est un type de rapport paginé  [!INCLUDE[ssRSnoversion](
   
 3.  Modifiez la marge intérieure de la cellule qui affiche les données du groupe.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

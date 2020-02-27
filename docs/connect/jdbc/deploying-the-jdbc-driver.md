@@ -1,7 +1,7 @@
 ---
 title: Déploiement du pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049836"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004674"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Déploiement du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049836"
 >  Pour obtenir des informations sur le déploiement d'applications Java en général, consultez le site de Java.  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Déploiement du pilote JDBC sur les systèmes Windows  
- Quand vous déployez le pilote JDBC sur des systèmes d’exploitation Windows, vous devez utiliser la version du fichier zip exécutable du package d’installation, généralement appelée `sqljdbc_<version>_<language>.exe`.  
-  
- Pour exécuter le fichier zip exécutable en mode silencieux, vous devez utiliser l’option de ligne de commande `/auto` sur la ligne de commande ou dans un fichier de commandes, comme indiqué ci-après :  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  Quand vous utilisez l’option `/auto`, il ne s’agit pas réellement d’une installation en mode silencieux, car une boîte de dialogue WinZip s’affiche néanmoins sur l’écran de l’utilisateur. Cependant, vous devez l'ignorer ; cette boîte de dialogue se fermera dès que l'opération de décompression sera terminée.  
-  
+ Quand vous déployez le pilote JDBC sur des systèmes d’exploitation Windows, vous devez décompresser le package d’installation zip, généralement appelé `sqljdbc_<version>_<language>.zip`.
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>Déploiement du pilote sur les systèmes UNIX 
  Quand vous déployez le pilote JDBC sur des systèmes d’exploitation UNIX, vous devez utiliser la version du fichier gzip du package d’installation, qui est généralement appelée `sqljdbc_<version>_<language>.tar.gz`.  
   
@@ -54,7 +47,7 @@ ms.locfileid: "73049836"
 
 ## <a name="legalities-of-driver-redistribution"></a>Aspects juridiques de la redistribution des pilotes
 
-Les versions 6.0, 6.2, 6.4 et 7.0 du pilote JDBC sont redistribuables. Lisez la clause _Code distribuable_ des contrats de licence.
+Les versions 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 et 8.2 du pilote JDBC sont redistribuables. Lisez la clause _Code distribuable_ des contrats de licence.
 
 Les versions 4.x du pilote JDBC sont anciennes et obsolètes. La prise en charge de 4.x a expiré avant 2018.
 

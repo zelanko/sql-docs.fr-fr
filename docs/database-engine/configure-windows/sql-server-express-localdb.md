@@ -14,14 +14,14 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73926037"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479722"
 ---
 # <a name="sql-server-express-localdb"></a>Base de données locale SQL Server Express
 
@@ -38,11 +38,11 @@ L'installation de LocalDB copie l'ensemble minimal des fichiers nécessaires pou
  >[!TIP]
  > Vous pouvez également installer LocalDB dans le cadre de l’installation de Visual Studio. Pendant l’installation de Visual Studio, sélectionnez la charge de travail **Développement .NET Desktop**, qui comprend SQL Server Express LocalDB.
 
-- Vous avez un compte Azure ? [Lancez-vous](https://azure.microsoft.com/services/virtual-machines/sql-server/) et démarrez une machine virtuelle avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] déjà installé.
+- Vous avez un compte Azure ? [Lancez-vous](https://azure.microsoft.com/services/virtual-machines/sql-server/) et démarrez une machine virtuelle avec SQL Server déjà installé.
 
 ## <a name="install-localdb"></a>Installer LocalDB
 
-Installez LocalDB par le biais de l’Assistant installation ou à l’aide du programme SqlLocalDB.msi. LocalDB est une option sélectionnable lors de l’installation de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
+Installez LocalDB par le biais de l’Assistant installation ou à l’aide du programme SqlLocalDB.msi. LocalDB est une option proposée quand vous installez SQL Server Express LocalDB. 
  
 Sélectionnez LocalDB dans la page **Sélection de fonctionnalités/Fonctionnalités partagées** lors de l’installation. Il ne peut y avoir qu'une seule installation des fichiers binaires LocalDB pour chaque version majeure de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Plusieurs processus [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être démarrés et utiliseront tous les mêmes fichiers binaires. Une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] démarrée comme LocalDB a les mêmes limitations que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].
 
@@ -112,7 +112,7 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|Name|`LocalDBApp1`|
+|Nom|`LocalDBApp1`|
 |Version|\<Version actuelle>|
 |Nom partagé|""|
 |Propriétaire|"\<votre utilisateur Windows>"|
@@ -134,7 +134,7 @@ Pour plus d'informations sur la résolution des problèmes liés à LocalDB, con
 
 ## <a name="permissions"></a>Autorisations
 
-Une instance de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]LocalDB est une instance créée par un utilisateur pour son propre usage. Tout utilisateur peut créer sur l'ordinateur une base de données à l'aide d'une instance de LocalDB, stocker les fichiers sous son profil utilisateur et exécuter le processus à l'aide de ses informations d'identification. Par défaut, l'accès à l'instance de LocalDB est limité à son propriétaire. Les données contenues dans LocalDB sont protégées via l'accès au système de fichiers de base de données. Si les fichiers de base de données utilisateur sont stockés dans un emplacement partagé, la base de données peut être ouverte par toute personne ayant accès au système de fichiers à cet emplacement en utilisant une instance de LocalDB dont elle est propriétaire. Si les fichiers de base de données sont dans un emplacement protégé, tel que le dossier des données d'utilisateurs, seul cet utilisateur, et tous les administrateurs ayant accès à ce dossier, peuvent ouvrir la base de données. Les fichiers LocalDB ne peuvent être ouverts que par une instance de LocalDB à la fois.
+Une instance SQL Server Express LocalDB est une instance créée par un utilisateur pour son propre usage. Tout utilisateur peut créer sur l'ordinateur une base de données à l'aide d'une instance de LocalDB, stocker les fichiers sous son profil utilisateur et exécuter le processus à l'aide de ses informations d'identification. Par défaut, l'accès à l'instance de LocalDB est limité à son propriétaire. Les données contenues dans LocalDB sont protégées via l'accès au système de fichiers de base de données. Si les fichiers de base de données utilisateur sont stockés dans un emplacement partagé, la base de données peut être ouverte par toute personne ayant accès au système de fichiers à cet emplacement en utilisant une instance de LocalDB dont elle est propriétaire. Si les fichiers de base de données sont dans un emplacement protégé, tel que le dossier des données d'utilisateurs, seul cet utilisateur, et tous les administrateurs ayant accès à ce dossier, peuvent ouvrir la base de données. Les fichiers LocalDB ne peuvent être ouverts que par une instance de LocalDB à la fois.
 
 >[!NOTE]
 >LocalDB s’exécute toujours dans le contexte de sécurité des utilisateurs. Autrement dit, LocalDB ne s’exécute jamais avec les informations d’identification du groupe des administrateurs local. Cela signifie que tous les fichiers de base de données utilisés par une instance LocalDB doivent être accessibles à l’aide du compte Windows de l’utilisateur propriétaire, sans prendre en compte l’appartenance au groupe des administrateurs local.

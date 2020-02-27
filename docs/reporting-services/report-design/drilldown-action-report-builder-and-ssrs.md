@@ -1,5 +1,5 @@
 ---
-title: Action d’exploration (Générateur de rapports et SSRS) | Microsoft Docs
+title: Action d’exploration (Générateur de rapports) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -38,12 +38,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee55b7c5b6e5fc1d65f5914cc2850e204c0c0c2e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a0c286663b339171a2536340ca19213879e22091
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579019"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080466"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Action d'exploration (Générateur de rapports et SSRS)
 En fournissant des icônes plus et moins (+/-) dans une zone de texte, vous pouvez permettre aux utilisateurs de masquer et d’afficher des éléments de manière interactive. Cela s'appelle une action d' *exploration* . Pour une table ou une matrice, vous pouvez afficher ou masquer des colonnes et des lignes statiques ou des colonnes et des lignes qui sont associées à des groupes.  

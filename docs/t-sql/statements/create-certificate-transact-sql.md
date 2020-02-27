@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/22/2019
+ms.date: 02/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d0f1a4e939a6e61881359f1e13a3bbe84cc8e9f9
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982784"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074437"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "73982784"
   
 CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]   
     { FROM <existing_keys> | <generate_new_keys> }  
-    [ ACTIVE FOR BEGIN_DIALOG =  { ON | OFF } ]  
+    [ ACTIVE FOR BEGIN_DIALOG = { ON | OFF } ]  
   
 <existing_keys> ::=   
     ASSEMBLY assembly_name  
@@ -92,7 +92,7 @@ CREATE CERTIFICATE certificate_name
     [ ; ]  
   
 <generate_new_keys> ::=   
-    WITH SUBJECT ='certificate_subject_name'   
+    WITH SUBJECT = 'certificate_subject_name'   
     [ , <date_options> [ ,...n ] ]   
   
 <existing_keys> ::=   
@@ -100,7 +100,7 @@ CREATE CERTIFICATE certificate_name
       FILE ='path_to_file'  
       WITH PRIVATE KEY   
          (   
-           FILE ='path_to_private_key'  
+           FILE = 'path_to_private_key'  
            , DECRYPTION BY PASSWORD ='password'   
          )  
     }  
@@ -119,13 +119,13 @@ CREATE CERTIFICATE certificate_name
  ASSEMBLY *assembly_name*  
  Spécifie un assembly signé qui a déjà été chargé dans la base de données.  
   
- [ EXECUTABLE ] FILE ='*path_to_file*'  
+ [ EXECUTABLE ] FILE = '*path_to_file*'  
  Spécifie le chemin d'accès complet, y compris le nom de fichier, d'un fichier encodé DER qui contient le certificat. Si l'option EXECUTABLE est utilisée, le fichier est une DLL signée par le certificat. *path_to_file* peut être un chemin local ou un chemin UNC d’un emplacement réseau. L’accès au fichier s’effectue dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compte doit posséder les autorisations de système de fichiers requises.  
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la création d’un certificat à partir d’un fichier ou à l’aide de fichiers de clé privée.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la création d’un certificat à partir d’un fichier ou à l’aide de fichiers de clé privée.
   
- BINARY =*asn_encoded_certificate*  
+ BINARY = *asn_encoded_certificate*  
  Bits de certificat encodés par ASN spécifiés comme constante binaire.  
  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
@@ -136,33 +136,33 @@ CREATE CERTIFICATE certificate_name
  Spécifie le chemin d'accès complet, y compris le nom du fichier, à la clé privée. *path_to_private_key* peut être un chemin local ou un chemin UNC d’un emplacement réseau. L’accès au fichier s’effectue dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compte doit posséder les autorisations de système de fichiers nécessaires.  
   
 > [!IMPORTANT]  
->  Cette option n’est pas disponible dans une base de données autonome, ni dans Azure SQL Database.  
+> Cette option n’est pas disponible dans une base de données autonome ni dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- BINARY =*private_key_bits*  
- **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
+ BINARY = *private_key_bits*  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Bits de clé privée spécifiés comme constante binaire. Ces bits peuvent être sous forme chiffrée. Si chiffrés, l'utilisateur doit fournir un mot de passe de déchiffrement. Les contrôles de stratégie de mot de passe ne sont pas exécutés sur ce mot de passe. Les bits de clé privée doivent être dans un format de fichier PVK.  
   
- DECRYPTION BY PASSWORD ='*key_password*'  
+ DECRYPTION BY PASSWORD = '*key_password*'  
  Spécifie le mot de passe requis pour déchiffrer une clé privée récupérée à partir d'un fichier. Cette clause est facultative si la clé privée est protégée par un mot de passe vide. Il n'est pas conseillé d'enregistrer une clé privée dans un fichier sans la protéger par un mot de passe. Si un mot de passe est nécessaire mais qu’aucun mot de passe n’est spécifié, l’instruction échoue.  
   
- ENCRYPTION BY PASSWORD ='*password*'  
+ ENCRYPTION BY PASSWORD = '*password*'  
  Spécifie le mot de passe utilisé pour chiffrer la clé privée. Utilisez cette option seulement si vous voulez chiffrer le certificat à l'aide d'un mot de passe. Si cette clause est omise, la clé privée est chiffrée à l’aide de la clé principale de base de données. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
   
- SUBJECT ='*certificate_subject_name*'  
+ SUBJECT = '*certificate_subject_name*'  
  Le terme *subject* fait référence à un champ dans les métadonnées du certificat, tel que défini dans la norme X.509. L’objet ne doit pas faire plus de 64 caractères, et cette limite est appliquée pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Linux. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows, l’objet peut contenir jusqu’à 128 caractères. Les objets de plus de 128 caractères sont tronqués quand ils sont stockés dans le catalogue, mais l’objet blob (binary large object) qui contient le certificat conserve le nom complet de l’objet.  
   
- START_DATE ='*datetime*'  
+ START_DATE = '*datetime*'  
  Date à laquelle le certificat devient valide. Si cette date n’est pas spécifiée, la date actuelle est attribuée à START_DATE. START_DATE utilise l'heure UTC et peut être spécifié selon tout format convertible en date et heure.  
   
- EXPIRY_DATE ='*datetime*'  
+ EXPIRY_DATE = '*datetime*'  
  Date à laquelle le certificat expire. Si cette date n’est pas spécifiée, EXPIRY_DATE a une valeur égale à un an après START_DATE. EXPIRY_DATE utilise l'heure UTC et peut être spécifié selon tout format convertible en date et heure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker vérifie la date d’expiration. La sauvegarde avec chiffrement à l’aide de certificats vérifie également la date d’expiration et n’autorisera pas la création d’une sauvegarde avec un certificat expiré, mais permettra les restaurations avec un certificat expiré. Toutefois, l’expiration n’est pas appliquée quand le certificat est utilisé pour le chiffrement de la base de données ou le chiffrement intégral (Always Encrypted).  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Met le certificat à disposition de l'initiateur d'une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)]. La valeur par défaut est ON.  
   
 ## <a name="remarks"></a>Notes  
- Un certificat est un élément sécurisable de niveau base de données qui suit la norme X.509 et prend en charge les champs X.509 V1. CREATE CERTIFICATE permet de charger un certificat à partir d’un fichier, d’une constante binaire ou d’un assembly. Cette instruction peut également générer une paire de clés et créer un certificat autosigné.  
+ Un certificat est un élément sécurisable de niveau base de données qui suit la norme X.509 et prend en charge les champs X.509 V1. `CREATE CERTIFICATE` permet de charger un certificat à partir d’un fichier, d’une constante binaire ou d’un assembly. Cette instruction peut également générer une paire de clés et créer un certificat autosigné.  
   
  La clé privée doit être \<= 2500 octets dans un format chiffré. Les clés privées générées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] font 1024 bits jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], et 2 048 bits à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Les clés privées importées à partir d'une source externe ont une longueur minimale de 384 bits et une longueur maximale de 4 096 bits. La longueur d'une clé privée importée doit être un entier multiple de 64 bits. Les certificats utilisés pour le chiffrement transparent des données sont limités à une taille de clé privée de 3456 bits.  
   
@@ -174,17 +174,19 @@ CREATE CERTIFICATE certificate_name
   
  Lorsque vous créez un certificat à partir d'un conteneur, le chargement de la clé privée est facultatif. En revanche, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un certificat autosigné, la clé privée est toujours créée. Par défaut, la clé privée est chiffrée au moyen de la clé principale de base de données. Si la clé principale de base de données n’existe pas et qu’aucun mot de passe n’est spécifié, l’instruction échoue.  
   
- L’option ENCRYPTION BY PASSWORD n’est pas nécessaire quand la clé privée est chiffrée au moyen de la clé principale de base de données. Utilisez cette option seulement quand la clé privée est chiffrée à l’aide d’un mot de passe. Si aucun mot de passe n'est spécifié, la clé privée du certificat sera chiffrée à l'aide de la clé principale de base de données. Si la clé principale de la base de données ne peut pas être ouverte, ne pas spécifier cette clause entraîne une erreur.  
+ L’option `ENCRYPTION BY PASSWORD` n’est pas requise quand la clé privée est chiffrée à l’aide de la clé principale de base de données. Utilisez cette option seulement quand la clé privée est chiffrée à l’aide d’un mot de passe. Si aucun mot de passe n'est spécifié, la clé privée du certificat sera chiffrée à l'aide de la clé principale de base de données. Si la clé principale de la base de données ne peut pas être ouverte, ne pas spécifier cette clause entraîne une erreur.  
   
  Vous n'êtes pas obligé de spécifier un mot de passe de déchiffrement lorsque la clé privée est chiffrée au moyen de la clé principale de base de données.  
   
 > [!NOTE]  
->  Les fonctions intégrées de chiffrement et de signature ne vérifient pas les dates d'expiration des certificats. Les utilisateurs de ces fonctions doivent décider quand vérifier l'expiration des certificats.  
+> Les fonctions intégrées de chiffrement et de signature ne vérifient pas les dates d'expiration des certificats. Les utilisateurs de ces fonctions doivent décider quand vérifier l'expiration des certificats.  
   
- Vous pouvez créer une description binaire d’un certificat à l’aide des fonctions [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) et [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). L’exemple B de l’article **CERTENCODED &#40;Transact-SQL&#41;** utilise **CERTPRIVATEKEY** et [CERTENCODED](../../t-sql/functions/certencoded-transact-sql.md) afin de copier un certificat dans une autre base de données.  
-  
+ Vous pouvez créer une description binaire d’un certificat à l’aide des fonctions [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) et [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). L’exemple B de l’article [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) utilise **CERTPRIVATEKEY** et **CERTENCODED** afin de copier un certificat dans une autre base de données.  
+
+Les algorithmes MD2, MD4, MD5, SHA et SHA1 sont dépréciés dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Jusqu’à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], un certificat auto-signé est créé à l’aide de l’algorithme SHA1. À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], un certificat auto-signé est créé à l’aide de l’algorithme SHA2_256.
+
 ## <a name="permissions"></a>Autorisations  
- Requiert l'autorisation CREATE CERTIFICATE sur la base de données. Les connexions Windows, les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les rôles d’application sont les seuls à pouvoir posséder des certificats. Les groupes et les rôles ne peuvent pas posséder de certificats.  
+ Requiert l'autorisation `CREATE CERTIFICATE` sur la base de données. Les connexions Windows, les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les rôles d’application sont les seuls à pouvoir posséder des certificats. Les groupes et les rôles ne peuvent pas posséder de certificats.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -211,7 +213,7 @@ GO
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la création d’un certificat à partir d’un fichier.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la création d’un certificat à partir d’un fichier.
    
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. Création d'un certificat à partir d'un fichier exécutable signé  
   
@@ -231,11 +233,12 @@ GO
 CREATE CERTIFICATE Shipping19 FROM ASSEMBLY Shipping19;  
 GO  
 ```  
-> [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la création d’un certificat à partir d’un fichier.
 
 > [!IMPORTANT]
-> À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], l’option de configuration de serveur [« CLR strict security »](../../database-engine/configure-windows/clr-strict-security.md) empêche le chargement d’assemblys sans avoir d’abord défini les paramètres de sécurité les concernant. Chargez le certificat, créez une connexion à partir de celui-ci, autorisez `UNSAFE ASSEMBLY` pour cette connexion, puis chargez l’assembly.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge la création d’un certificat à partir d’un fichier.
+
+> [!IMPORTANT]
+> À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], l’option de configuration de serveur ['CLR strict security'](../../database-engine/configure-windows/clr-strict-security.md) empêche le chargement d’assemblys sans avoir d’abord défini les paramètres de sécurité les concernant. Chargez le certificat, créez une connexion à partir de celui-ci, autorisez `UNSAFE ASSEMBLY` pour cette connexion, puis chargez l’assembly.
 
 ### <a name="d-creating-a-self-signed-certificate"></a>D. Création d'un certificat auto-signé  
  L’exemple suivant crée un certificat nommé `Shipping04` sans spécifier de mot de passe de chiffrement. Il est utilisable avec [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].

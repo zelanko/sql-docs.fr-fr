@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002334"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144192"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ Les indicateurs de requête spécifient que les indicateurs affichés doivent ê
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 Force l’optimiseur de requête à ne pas recompiler une requête en raison de modifications enregistrées au niveau des statistiques. KEEPFIXED PLAN permet de garantir qu’une requête n’est recompilée que si le schéma des tables sous-jacentes est modifié ou si **sp_recompile** s’exécute sur ces tables.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
 Empêche la requête d’utiliser un index columnstore non-cluster à mémoire optimisée. Si la requête contient l’indicateur de requête pour éviter l’utilisation de l’index columnstore et un indicateur d’index pour utiliser un index columnstore, les indicateurs sont en conflit et la requête retourne une erreur.  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 Indique à l’optimiseur de requête d’utiliser des données statistiques au lieu des valeurs initiales pour toutes les variables locales quand la requête est compilée et optimisée. Cette optimisation englobe les paramètres créés avec un paramétrage forcé.  
   
 Si vous utilisez OPTIMIZE FOR @variable_name = _constante\_littérale_ et OPTIMIZE FOR UNKNOWN dans le même indicateur de requête, l’optimiseur de requête utilise la _constante\_littérale_ spécifiée pour une valeur spécifique, et UNKNOWN pour les autres valeurs des variables. Les valeurs ne sont utilisées que pendant l'optimisation de la requête, et non pas lors de son exécution.  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 Spécifie les règles de paramétrage que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit appliquer à la requête lors de sa compilation.  
   
@@ -249,6 +250,11 @@ Spécifie les règles de paramétrage que l’optimiseur de requête [!INCLUDE[s
 > Pour plus d’informations, consultez [Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
 SIMPLE indique à l’optimiseur de requête de tenter un paramétrage simple. FORCED indique à l’optimiseur de requête de tenter un paramétrage forcé. Pour plus d’informations, consultez [Paramétrage forcé dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) et [Paramétrage simple dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+
+QUERYTRACEON trace_flag    
+Cette option vous permet d’activer un indicateur de trace affectant le plan uniquement pendant la compilation d’une requête unique. Comme d’autres options de niveau requête, vous pouvez l’utiliser avec des repères de plan pour faire correspondre le texte d’une requête en cours d’exécution à partir de n’importe quelle session, et appliquer automatiquement un indicateur de trace affectant le plan lorsque cette requête est en cours de compilation. L’option QUERYTRACEON est prise en charge seulement pour les indicateurs de trace de l’optimiseur de requête décrits dans le tableau de la section « Informations complémentaires » et dans [Indicateurs de trace](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Toutefois, cette option ne retourne pas d’erreur ni d’avertissement si un numéro d’indicateur de trace non pris en charge est utilisé. Si l’indicateur de trace spécifié n’est pas celui qui affecte un plan d’exécution de requête, l’option est ignorée en mode silencieux.
+
+Plusieurs indicateurs de trace peuvent être spécifiés dans la clause OPTION si QUERYTRACEON trace_flag_number est dupliqué avec des numéros d’indicateur de trace différents.
 
 RECOMPILE  
 Envoie à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l’instruction de générer un nouveau plan temporaire pour la requête et de l’abandonner juste après la fin d’exécution de la requête. Le plan de requête généré ne remplace pas un plan stocké en cache lorsque la même requête s’exécute sans l’indicateur RECOMPILE. Si RECOMPILE n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] met en cache les plans de requête et les réutilise. Lors de la compilation de plans de requête, l’indicateur de requête RECOMPILE utilise les valeurs actuelles des éventuelles variables locales dans la requête. Si la requête se trouve à l’intérieur d’une procédure stockée, les valeurs actuelles sont transmises aux paramètres.  
@@ -600,7 +606,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. Utilisation de QUERYTRACEON HINT  
+ L’exemple suivant utilise les indicateurs de requête QUERYTRACEON. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Vous pouvez activer tous les correctifs affectant le plan contrôlés par l’indicateur de trace 4199 pour une requête particulière avec la requête suivante :
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ Vous pouvez également utiliser plusieurs indicateurs de trace comme dans la requête suivante :
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>Voir aussi  
 [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

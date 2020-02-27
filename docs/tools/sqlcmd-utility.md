@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2ce739f026afc8f61e490cb359b23b7f61c931ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75306686"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544939"
 ---
 # <a name="sqlcmd-utility"></a>Utilitaire sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,8 +53,8 @@ L’utilitaire utilise ODBC pour exécuter des lots Transact-SQL.
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Télécharger la dernière version de l’utilitaire sqlcmd
 
-**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0.x pour SQL Server (x64) (2,6 Mo)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0.x pour SQL Server (x86) (2,3 Mo)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x64) (2,6 Mo)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x86) (2,3 Mo)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 Les outils en ligne de commande sont en disponibilité générale (GA), mais ils sont publiés avec le package d’installation de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -67,11 +67,11 @@ Date de publication : 13 mars 2019
 La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour les fonctionnalités SQL Database, SQL Data Warehouse et Always Encrypted.
 Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour SQL Database et SQL Data Warehouse.
 
-**Configuration système requise** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2. Ce composant nécessite à la fois [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver for SQL Server 17.3.1.1](https://www.microsoft.com/download/details.aspx?id=56567).
+**Configuration requise** Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+
+Ce composant nécessite [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
  
 Pour vérifier la version de SQLCMD, exécutez la commande `sqlcmd -?` et vérifiez que 15.0.1300.359 ou une version ultérieure est en cours d’utilisation.
-
-
 
 > [!NOTE]
 > La version 13.1 ou une version ultérieure est requise pour prendre en charge les authentifications Always Encrypted (`-g`) et Azure Active Directory (`-G`). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)

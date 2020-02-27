@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720934"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173635"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="what-are-big-data-clusters-2019"></a>Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 
 La gestion et la supervision sont fournies par le biais d’une combinaison d’outils en ligne de commande, d’API, de portails et de vues de gestion dynamique.
 
-Vous pouvez utiliser Azure Data Studio pour effectuer diverses tâches sur le cluster Big Data. La nouvelle **extension SQL Server 2019** le permet. Cette extension offre :
-
+Vous pouvez utiliser [Azure Data Studio](../azure-data-studio/what-is.md) pour effectuer diverses tâches sur le cluster Big Data :
 - Des extraits de code intégrés pour les tâches de gestion courantes
 - La possibilité de parcourir le système HDFS, de charger des fichiers, de prévisualiser des fichiers et de créer des répertoires
 - La possibilité de créer, d’ouvrir et d’exécuter des notebooks compatibles Jupyter
-- Un assistant Virtualisation des données pour simplifier la création de sources de données externes
+- Un assistant Virtualisation des données pour simplifier la création de sources de données externes (avec l’**extension de virtualisation de données**).
 
 ## <a id="architecture"></a> Architecture
 

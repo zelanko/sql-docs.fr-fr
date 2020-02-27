@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245304"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179280"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Chaque base de données dispose d’un compteur qui est incrémenté chaque fois
   
 **timestamp** est le synonyme du type de données **rowversion** et est soumis au comportement des synonymes des types de données. Dans les instructions DDL, utilisez **rowversion** au lieu de **timestamp** autant que possible. Pour plus d’informations, consultez [Synonymes des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Le type de données [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp**de** est différent du type de données **timestamp** défini dans la norme ISO.
+Le type de données **timestamp** de [!INCLUDE[tsql](../../includes/tsql-md.md)] est différent du type de données **timestamp** défini dans la norme ISO.
   
 > [!NOTE]  
 >  La syntaxe **timestamp** est dépréciée. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-Vous pouvez utiliser ensuite les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de l'exemple pour implémenter un contrôle d'accès concurrentiel optimiste sur la table `MyTest` pendant la mise à jour.
+Vous pouvez utiliser ensuite les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de l'exemple pour implémenter un contrôle d'accès concurrentiel optimiste sur la table `MyTest` pendant la mise à jour. Le script utilise `<myRv>` pour représenter la valeur **rowversion** de la dernière fois que vous avez lu la ligne. Remplacez la valeur par la valeur **rowversion** réelle. Un exemple de valeur **rowversion** réelle est `0x00000000000007D3`.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -89,7 +89,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -99,12 +99,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv` est la valeur de la colonne **rowversion** pour la ligne qui indique la dernière fois que vous avez lu la ligne. Cette valeur doit être remplacée par la valeur **rowversion** réelle. Un exemple de la valeur **rowversion** réelle est 0x00000000000007D3.
-  
+
+
 Vous pouvez également mettre les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de l'exemple dans une transaction. En interrogeant la variable `@t` dans l'étendue de la transaction, vous pouvez récupérer la colonne `myKey` mise à jour de la table sans réinterroger la table `MyTest`.
-  
-Voici le même exemple avec la syntaxe **timestamp** :
-  
+
+Voici le même exemple avec la syntaxe **timestamp**. Remplacez `<myTS>` par un **horodatage** réel.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -118,7 +118,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

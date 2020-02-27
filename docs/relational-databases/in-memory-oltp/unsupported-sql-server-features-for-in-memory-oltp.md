@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités non prises en charge - OLTP en mémoire
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412512"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558321"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Cette rubrique décrit les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne sont pas prises en charge pour une utilisation avec les objets à mémoire optimisée.  
+Cette rubrique décrit les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne sont pas prises en charge pour une utilisation avec les objets à mémoire optimisée. De plus, la section finale liste les fonctionnalités qui n’étaient pas prises en charge pour l’OLTP en mémoire, mais qui ont ensuite été prises en charge.
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fonctionnalités non prises en charge pour l’OLTP en mémoire  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fonctionnalités non prises en charge pour l’OLTP en mémoire  
 
 Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes ne sont pas prises en charge sur une base de données qui contient des objets à mémoire optimisée (notamment des groupes de fichiers à mémoire optimisée).  
 
@@ -44,7 +44,7 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
 | Mode fibre | Le mode fibre n’est pas pris en charge avec les tables à mémoire optimisée :<br /><br />Si le mode fibre est activé, vous ne pouvez pas créer de bases de données avec des groupes de fichiers à mémoire optimisée ni ajouter de tels groupes aux bases de données existantes.<br /><br />Vous pouvez activer le mode fibre s'il existe déjà des bases de données avec des groupes de fichiers à mémoire optimisée. Cependant, l'activation du mode fibre nécessite un redémarrage du serveur. Dans cette situation, les bases de données avec des groupes de fichiers à mémoire optimisée ne peuvent pas être récupérées. Vous voyez un message d’erreur vous suggérant de désactiver le mode fibre pour pouvoir utiliser les bases de données avec des groupes de fichiers à mémoire optimisée.<br /><br />Si le mode fibre est activé, l’attachement et la restauration de bases de données avec des groupes de fichiers à mémoire optimisée ne s’effectuent pas correctement. Les bases de données sont marquées comme suspectes.<br /><br />Pour plus d’informations, consultez [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Limitation de Service Broker|Impossible d'accéder à une file d'attente à partir d'une procédure stockée compilée en mode natif.<br /><br /> Impossible d'accéder à une file d'attente dans une base de données distante, dans une transaction qui accède à des tables à mémoire optimisée.|  
 |Réplication sur les abonnés|La réplication transactionnelle vers des tables à mémoire optimisée sur les abonnés est prise en charge, mais avec certaines restrictions. Pour plus d’informations, consultez [Abonnés à la réplication de tables optimisées en mémoire](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
-
+|||
 
 #### <a name="cross-database-queries-and-transcations"></a>Requêtes et transactions de bases de données croisées
 
@@ -55,7 +55,7 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
 |---------------|-------------|-----------------|  
 | Bases de données utilisateur, **model** et **msdb**. | Non | Dans la plupart des cas, les requêtes et transactions de bases de données croisées ne sont *pas* prises en charge.<br /><br />Une requête ne peut pas accéder à d’autres bases de données si la requête utilise une table à mémoire optimisée ou une procédure stockée compilée en mode natif. Cette restriction s’applique aux transactions aussi bien qu’aux requêtes.<br /><br />Les exceptions sont les bases de données système **tempdb** et **MASTER**. La base de données **MASTER** est ici accessible en lecture seule. |
 | Base de données **Resource**, **tempdb** | Oui | Dans une transaction qui traite les objets OLTP en mémoire, les bases de données système **Resource** et **tempdb** peuvent être utilisées sans restriction.
-
+||||
 
 ## <a name="scenarios-not-supported"></a>Scénarios non pris en charge.  
   
@@ -69,9 +69,7 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
 - Le type de données ROWVERSION (TIMESTAMP) n’est pas pris en charge. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   
 - La fermeture automatique n’est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.  
-  
-- Les instantanés de base de données ne sont pas pris en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.  
-  
+
 - Une opération DDL transactionnelle, comme CREATE/ALTER/DROP des objets OLTP en mémoire, n’est pas prise en charge dans les transactions utilisateur.  
   
 - Notification d'événements  
@@ -82,7 +80,17 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
 - L’autonomie de la base de donnée ([bases de données autonomes](../../relational-databases/databases/contained-databases.md)) n’est pas prise en charge avec l’OLTP en mémoire.
     - L'authentification de la base de données autonome est prise en charge. Toutefois, tous les objets OLTP en mémoire sont marqués comme étant des « relations contenant-contenu essentielles » dans la vue de gestion dynamique **dm_db_uncontained_entities**.
 
-  
-## <a name="see-also"></a>Voir aussi  
+## <a name="recently-added-supports"></a>Prises en charge ajoutées récemment
+
+Parfois, une version plus récente de SQL Server ajoute la prise en charge d’une fonctionnalité qui n’était auparavant pas prise en charge. Cette section liste les fonctionnalités qui n’étaient pas prises en charge pour l’OLTP en mémoire, mais qui l’ont été ultérieurement.
+
+Dans le tableau suivant, les valeurs de _version_ comme `(15.x)` font référence à la valeur retournée par l’instruction Transact-SQL `SELECT @@Version;`.
+
+| Nom de la fonctionnalité | Version de SQL Server | Commentaires |
+| :----------- | :-------------------- | :------- |
+| Instantanés de base de données | 2019 (15.x) | Les instantanés de base de données sont désormais pris en charge pour les bases de données qui ont un groupe de fichiers MEMORY_OPTIMIZED_DATA. |
+| &nbsp; | &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>Voir aussi
 
 - [Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

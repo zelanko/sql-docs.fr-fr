@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558042"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256652"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic (CEIP)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558042"
 
 Microsoft SQL Server contient des fonctionnalités Internet capables de collecter et d’envoyer des informations sur votre ordinateur ou appareil. Il s’agit des *informations standard de l’ordinateur*. Le composant d’audit local de la [collecte de données d’utilisation et de diagnostic de SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md) écrit les données collectées par le service vers un dossier désigné, représentant les données (journaux) qui peuvent être envoyées à Microsoft. L’objectif de l’audit local est d’autoriser les clients à visualiser toutes les données collectées par Microsoft avec cette fonctionnalité, pour des raisons de conformité, de réglementation ou de validation de la confidentialité.  
 
-À partir de SQL Server 2016 CU2, possibilité de configuration au niveau de l’instance pour le moteur de base de données SQL Server et Analysis Services (SSAS). Dans SQL Server 2016 CU4 et SQL Server 2016 SP1, l’audit local est également activé pour SQL Server Integration Services (SSIS). Les autres composants SQL Server installés pendant la configuration et les outils SQL Server qui sont téléchargés ou installés après la configuration ne possèdent pas de fonctionnalité d’audit local pour les données d’utilisation et de diagnostic.
+Pour SQL Server 2016 CU2 et CU3, l’audit local est configurable au niveau de l’instance pour le moteur de base de données SQL Server et Analysis Services (SSAS). Pour SQL Server 2016 CU4, SQL Server 2016 SP1 et les versions ultérieures, l’audit local est également activé pour SQL Server Integration Services (SSIS). Les autres composants SQL Server installés pendant la configuration et les outils SQL Server qui sont téléchargés ou installés après la configuration ne possèdent pas de fonctionnalité d’audit local pour les données d’utilisation et de diagnostic.
 
 ## <a name="remarks"></a>Notes
 
@@ -38,11 +38,11 @@ Microsoft SQL Server contient des fonctionnalités Internet capables de collecte
 
 Pour refuser la collecte de données, consultez [Activation ou désactivation de l’audit local](#turning-local-audit-on-or-off)
 
-## <a name="prerequisites"></a>Conditions préalables requises 
+## <a name="prerequisites"></a>Prérequis 
 
 Les éléments suivants sont nécessaires pour activer l’audit local sur chaque instance SQL Server : 
 
-1. L’instance est corrigée sur SQL Server 2016 RTM CU2 ou version ultérieure. Pour Integration Services, l’instance est corrigée sur SQL 2016 RTM CU4 ou SQL 2016 SP1
+1. L’instance est corrigée sur SQL Server 2016 RTM CU2 ou version ultérieure. Pour Integration Services, l’instance est corrigée sur SQL 2016 RTM CU4, SQL 2016 SP1 et les versions ultérieures.
 
 1. L’utilisateur doit être un administrateur système ou doit bénéficier d’un rôle ayant accès à l’ajout et à la modification de la clé de Registre, la création des dossiers, la gestion de la sécurité des dossiers et l’arrêter/le démarrage d’un service Windows.  
 
@@ -201,7 +201,7 @@ L’audit local va générer un fichier journal par jour. Les fichiers journaux 
 
 Les colonnes répertoriées ci-dessous représentent l’ordre de la sortie du fichier d’audit local. Un hachage à sens unique avec SHA 256 est utilisé pour rendre anonyme les valeurs pour certaines colonnes ci-dessous.  
 
-| Name | Description | Exemples de valeurs
+| Nom | Description | Exemples de valeurs
 |-------|--------| ----------|
 |instanceUniqueID| Identificateur d’instance rendu anonyme | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| Version du schéma de SQLCEIP |  3 
@@ -320,7 +320,7 @@ Ces fichiers journaux sont écrits au format JSON. Chaque ligne est un objet JSO
 Aucun fichier d’audit local ne sera écrit.
 
 **Que se passe-t-il en cas d’absence de connectivité Internet ou de machine derrière le pare-feu ?**
-Les données d’utilisation et de diagnostic de SQL Server 2016 ne seront pas envoyées à Microsoft. Une tentative d’écriture des journaux d’audit local sera effectuée si la configuration est correcte.
+Les données d’utilisation et de diagnostic de SQL Server ne seront pas envoyées à Microsoft. Une tentative d’écriture des journaux d’audit local sera effectuée si la configuration est correcte.
 
 **Comment les DBA désactivent-ils l’audit local ?**
 Supprimez l’entrée de clé de Registre UserRequestedLocalAuditDirectory.
@@ -333,7 +333,7 @@ Les DBA devront gérer eux-mêmes le nettoyage des fichiers dans le répertoire 
 
 **Y a-t-il un client ou un outil que je peux utiliser pour lire cette sortie JSON ?**
 La sortie peut être lue avec le Bloc-notes, Visual Studio ou le lecteur JSON de votre choix.
-Vous pouvez également lire le fichier JSON et analyser les données dans une instance SQL Server 2016, comme illustré ci-dessous. Pour plus d’informations sur la lecture de fichiers JSON dans SQL Server, visitez [Importation de fichiers JSON dans SQL Server à l’aide de OPENROWSET (BULK) et OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
+Vous pouvez également lire le fichier JSON et analyser les données dans une instance SQL Server comme illustré ci-dessous. Pour plus d’informations sur la lecture de fichiers JSON dans SQL Server, visitez [Importation de fichiers JSON dans SQL Server à l’aide de OPENROWSET (BULK) et OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

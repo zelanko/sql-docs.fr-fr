@@ -1,20 +1,20 @@
 ---
-title: Déployer un cluster Big Data SQL Server en mode Active Directory
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: Déployer en mode Active Directory
+titleSuffix: SQL Server Big Data Cluster
 description: Apprenez à mettre à niveau des clusters Big Data SQL Server dans un domaine Active Directory.
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253108"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544874"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory
 
@@ -164,23 +164,23 @@ Outre les variables d’environnement pour les informations d’identification, 
 
 L’intégration AD nécessite les paramètres suivants. Ajoutez ces paramètres aux fichiers `control.json` et `bdc.json` à l’aide des commandes `config replace` présentées plus loin dans cet article. Tous les exemples ci-dessous utilisent l’exemple de domaine `contoso.local`.
 
-- `security.ouDistinguishedName` : nom unique d’une unité d’organisation (UO) dans laquelle tous les comptes Active Directory créés par le déploiement du cluster seront ajoutés. Si le domaine est appelé `contoso.local`, le nom unique de l’unité d’organisation est : `OU=BDC,DC=contoso,DC=local`.
+- `security.activeDirectory.ouDistinguishedName` : nom unique d’une unité d’organisation (UO) dans laquelle tous les comptes Active Directory créés par le déploiement du cluster seront ajoutés. Si le domaine est appelé `contoso.local`, le nom unique de l’unité d’organisation est : `OU=BDC,DC=contoso,DC=local`.
 
-- `security.dnsIpAddresses` : liste des adresses IP des contrôleurs de domaine
+- `security.activeDirectory.dnsIpAddresses` : liste des adresses IP des contrôleurs de domaine
 
-- `security.domainControllerFullyQualifiedDns`: Liste des noms de domaine complets de contrôleur de domaine. Le nom de domaine complet contient le nom de l’ordinateur/hôte du contrôleur de domaine. Si vous avez plusieurs contrôleurs de domaine, vous pouvez fournir une liste ici. Exemple : `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`: Liste des noms de domaine complets de contrôleur de domaine. Le nom de domaine complet contient le nom de l’ordinateur/hôte du contrôleur de domaine. Si vous avez plusieurs contrôleurs de domaine, vous pouvez fournir une liste ici. Exemple : `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` **Paramètre facultatif** : Dans la majorité des cas, le domaine est égal au nom de domaine. Pour les cas où ils ne sont pas les mêmes, utilisez ce paramètre pour définir le nom du domaine (par exemple, `CONTOSO.LOCAL`).
+- `security.activeDirectory.realm` **Paramètre facultatif** : Dans la majorité des cas, le domaine est égal au nom de domaine. Pour les cas où ils ne sont pas les mêmes, utilisez ce paramètre pour définir le nom du domaine (par exemple, `CONTOSO.LOCAL`).
 
-- `security.domainDnsName`: Nom de votre domaine (par exemple, `contoso.local`).
+- `security.activeDirectory.domainDnsName`: Nom de votre domaine (par exemple, `contoso.local`).
 
-- `security.clusterAdmins`: Ce paramètre prend **un groupe AD**. Les membres de ce groupe obtiennent des autorisations d’administrateur dans le cluster. Cela signifie qu’ils auront des autorisations sysadmin dans SQL Server, des autorisations de superutilisateur dans HDFS et d’administrateurs dans le Contrôleur. **Notez que ce groupe doit exister dans AD avant le début du déploiement. Notez également que ce groupe ne peut pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+- `security.activeDirectory.clusterAdmins`: Ce paramètre prend **un groupe AD**. Les membres de ce groupe obtiennent des autorisations d’administrateur dans le cluster. Cela signifie qu’ils auront des autorisations sysadmin dans SQL Server, des autorisations de superutilisateur dans HDFS et d’administrateurs dans le Contrôleur. **Notez que ce groupe doit exister dans AD avant le début du déploiement. Notez également que ce groupe ne peut pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
 
-- `security.clusterUsers`: Liste des groupes Active Directory qui sont des utilisateurs standard (aucune autorisation d’administrateur) dans le cluster Big Data. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+- `security.activeDirectory.clusterUsers`: Liste des groupes Active Directory qui sont des utilisateurs standard (aucune autorisation d’administrateur) dans le cluster Big Data. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
 
-- `security.appOwners` **Paramètre facultatif** : Liste des groupes Active Directory qui sont autorisés à créer, supprimer et exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+- `security.activeDirectory.appOwners` **Paramètre facultatif** : Liste des groupes Active Directory qui sont autorisés à créer, supprimer et exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
 
-- `security.appReaders`**Paramètre facultatif** : répertorie des groupes AD qui sont autorisés à exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+- `security.activeDirectory.appReaders`**Paramètre facultatif** : répertorie des groupes AD qui sont autorisés à exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
 
 **Comment vérifier l’étendue d’un groupe AD : **
 [Cliquez ici pour obtenir des instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) pour vérifier l’étendue d’un groupe AD, afin de déterminer s’il s’agit du DomainLocal.
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 Pour définir les paramètres ci-dessus dans le fichier `control.json`, utilisez les commandes `azdata` suivantes. Ces commandes remplacent la configuration et fournissent vos propres valeurs avant le déploiement.
 
-L’exemple ci-dessous remplace les valeurs des paramètres associés à Active Directory dans la configuration du déploiement. Les détails du domaine ci-dessous sont des exemples de valeurs.
+ > [!IMPORTANT]
+ > Dans la version SQL Server 2019 CU2, la section de la configuration de la sécurité dans le profil de déploiement a été restructurée : tous les paramètres Active Directory se trouvent maintenant dans le nouveau *activeDirectory* de l’arborescence JSON sous *security* dans le fichier *control.json*.
+
+L’exemple ci-dessous s’applique à SQL Server 2019 CU2. Il montre comment remplacer les valeurs des paramètres Active Directory dans la configuration du déploiement. Les détails du domaine ci-dessous sont des exemples de valeurs.
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+De la même façon, dans les versions antérieures à SQL Server 2019 CU2, vous pouvez exécuter :
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

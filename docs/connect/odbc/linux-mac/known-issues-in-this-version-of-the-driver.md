@@ -11,12 +11,12 @@ helpviewer_keywords:
 - known issues
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c3508277502ad7e3eb3b0e7ff048301c8ed1efdd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e9abed0dcd77e0759e92dc0380a42acfe54852a7
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68008781"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971350"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problèmes connus dans cette version du pilote
 
@@ -25,6 +25,8 @@ ms.locfileid: "68008781"
 Cet article contient une liste de problèmes connus avec Microsoft ODBC Driver 13, 13.1 et 17 for SQL Server sur Linux et macOS.
 
 D’autres problèmes seront publiés sur le [blog de l’équipe du pilote Microsoft ODBC](https://blogs.msdn.com/b/sqlnativeclient/).  
+
+- En raison des limitations de la bibliothèque système, Alpine Linux prend en charge moins de codages de caractères et de paramètres régionaux. Par exemple, en_US.UTF-8 n’est pas disponible. Pour plus d’informations, consultez [musl libc - différences fonctionnelles par rapport à glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html).
 
 - Windows, Linux et macOS convertissent différemment des caractères de la zone PUA (Private Use Area) ou des caractères EUDC (End User-Defined Characters). Les conversions effectuées sur le serveur dans [!INCLUDE[tsql](../../../includes/tsql-md.md)] utilisent la bibliothèque de conversion Windows. Les conversions dans le pilote utilisent les bibliothèques de conversion Windows, Linux ou macOS. Chaque bibliothèque peut produire des résultats différents lors de l’exécution de ces conversions. Pour plus d’informations, voir [Caractères End-User-Defined et Private Use Area](/windows/desktop/Intl/end-user-defined-characters).
 

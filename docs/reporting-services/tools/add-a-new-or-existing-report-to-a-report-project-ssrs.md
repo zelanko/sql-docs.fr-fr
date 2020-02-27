@@ -1,5 +1,5 @@
 ---
-title: Ajouter un nouveau rapport ou un rapport existant à un projet de rapport (SSRS) | Microsoft Docs
+title: Ajouter un nouveau rapport ou un rapport existant à un projet de rapport | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d9afb31b4c2793e7196fda36280fed3d590a32cf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576802"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077892"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Ajouter un nouveau rapport ou un rapport existant à un projet de rapport (SSRS)
   Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez ajouter un nouveau rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en utilisant l’Assistant Rapport ou en ajoutant un nouveau rapport vide à votre projet. Vous pouvez aussi ajouter un rapport existant. Après avoir ajouté un rapport, vous pouvez voir son nom sous le dossier **Rapports** de votre projet.  
@@ -45,7 +45,7 @@ ms.locfileid: "65576802"
   
 2.  Dans **Modèles**, cliquez sur **Rapport**.  
   
-3.  Cliquez sur **Ajouter**.  
+3.  Cliquez sur **Add**.  
   
      Un nouveau rapport vide est ajouté au projet et affiché sur l'aire de conception.  
   

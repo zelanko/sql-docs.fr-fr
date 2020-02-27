@@ -1,5 +1,5 @@
 ---
-title: Références à des collections de variables de rapport et de groupe (Générateur de rapports et SSRS) | Microsoft Docs
+title: Références à des collections de variables de rapport et de groupe (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581778"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081449"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Collections intégrées - Références à des variables de rapport et de groupe (Générateur de rapports)
   Lorsqu'un calcul complexe est utilisé plusieurs fois dans les expressions d'un rapport, vous pouvez créer une variable. Vous pouvez créer une variable de rapport ou une variable de groupe. Les noms de variable doivent être uniques dans un rapport.  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18f91c30715dbf44058a204bd17f9ab1e6e393c6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67902018"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255983"
 ---
 # <a name="hints-transact-sql---join"></a>Indicateurs (Transact-SQL) - Jointure
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67902018"
   
 ## <a name="arguments"></a>Arguments  
  LOOP | HASH | MERGE  
- Spécifie que la jointure dans la requête doit utiliser les boucles, le hachage ou la fusion. L'utilisation des arguments LOOP | HASH | MERGE JOIN applique un type de jointure particulier entre deux tables. LOOP ne peut pas être spécifié en même temps que RIGHT ou FULL en tant que type de jointure.  
+ Spécifie que la jointure dans la requête doit utiliser les boucles, le hachage ou la fusion. L'utilisation des arguments LOOP | HASH | MERGE JOIN applique un type de jointure particulier entre deux tables. LOOP ne peut pas être spécifié en même temps que RIGHT ou FULL en tant que type de jointure. Pour plus d’informations, consultez [Jointures](../../relational-databases/performance/joins.md).
   
  REMOTE  
  Effectue une opération de jointure sur le site de la table de droite. Ceci est utile lorsque la table de gauche est une table locale et que celle de droite est une table distante. L'argument REMOTE ne doit être utilisé que lorsque la table de gauche possède moins de lignes que celle de droite.  

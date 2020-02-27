@@ -1,5 +1,5 @@
 ---
-title: Concepts de paramètres de rapport (Générateur de rapports et SSRS) | Microsoft Docs
+title: Concepts de paramètres de rapport (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d0c5a6501caf8d36e75deb1ae0b90d7ff3a7ea0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e5e7cafdce773969f9e6914a47534f88eb238a4d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037881"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081069"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Concepts de paramètres de rapport (Générateur de rapports et SSRS)
   Vous pouvez ajouter des paramètres à un rapport pour lier des rapports connexes, pour contrôler l'apparence d'un rapport, pour filtrer les données du rapport, ou pour limiter l'étendue d'un rapport à des utilisateurs ou des emplacements spécifiques.  

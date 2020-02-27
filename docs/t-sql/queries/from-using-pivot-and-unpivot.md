@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d776fbae94ae69af10595d7c0d50b84449dd9875
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72305178"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255993"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Utilisation des opérateurs PIVOT et UNPIVOT
 
@@ -157,6 +157,8 @@ Les valeurs uniques retournées par la colonne `EmployeeID` deviennent des champ
   
 > [!IMPORTANT]  
 >  Quand vous utilisez des fonctions d’agrégation avec l’opérateur `PIVOT`, les valeurs NULL présentes dans la colonne de valeurs ne sont pas prises en compte lors du calcul d’une agrégation.  
+
+## <a name="unpivot-example"></a>Exemple UNPIVOT
   
 L’opérateur `UNPIVOT` effectue pratiquement l’opération inverse de l’opérateur `PIVOT`, en transformant des colonnes en lignes. Supposons que la table générée dans l'exemple précédent soit stockée dans la base de données sous le nom `pvt` et que vous souhaitiez transformer les identificateurs de colonne `Emp1`, `Emp2`, `Emp3`, `Emp4` et `Emp5` en valeurs de ligne correspondant à un fournisseur particulier. Cela signifie que vous devez identifier deux colonnes supplémentaires. La colonne qui doit contenir les valeurs de colonne transformées (`Emp1`, `Emp2`,...) est la colonne `Employee` tandis que la colonne destinée à contenir les valeurs existant actuellement dans les colonnes subissant la transformation est la colonne `Orders`. Ces colonnes correspondent respectivement aux paramètres *pivot_column* et *value_column* dans la définition [!INCLUDE[tsql](../../includes/tsql-md.md)]. La requête est la suivante.  
   

@@ -1,5 +1,5 @@
 ---
-title: Exportation vers un fichier CSV (Générateur de rapports et SSRS) | Microsoft Docs
+title: Exportation vers un fichier CSV (Générateur de rapports) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581211"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078366"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
   L’extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports paginés sous la forme d’une représentation aplatie des données d’un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.  

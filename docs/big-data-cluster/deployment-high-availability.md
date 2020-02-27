@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
+ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76115428"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259209"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Déployer un cluster Big Data SQL Server avec une haute disponibilité
 
@@ -197,7 +197,7 @@ Voici un exemple illustrant comment exposer ce point de terminaison, puis ajoute
 
 Limitations et problèmes connus avec les groupes de disponibilité pour l’instance principale SQL Server dans un cluster Big Data :
 
-- Les bases de données créées à la suite de workflows autres que `CREATE DATABASE`, comme `RESTORE DATABSE` et `CREATE DATABASE FROM SNAPSHOT`, ne sont pas automatiquement ajoutées dans le groupe de disponibilité. [Connectez-vous à l’instance](#instance-connect) et ajoutez manuellement la base de données au groupe de disponibilité.
+- Les bases de données créées par le biais de workflows autres que `CREATE DATABASE`, comme `RESTORE DATABASE` et `CREATE DATABASE FROM SNAPSHOT`, ne sont pas automatiquement ajoutées dans le groupe de disponibilité. [Connectez-vous à l’instance](#instance-connect) et ajoutez manuellement la base de données au groupe de disponibilité.
 - Certaines opérations comme l’exécution de paramètres de configuration de serveur avec `sp_configure` nécessitent une connexion à la base de données `master` de l’instance SQL Server, et non pas au groupe de disponibilité `master`. Vous ne pouvez pas utiliser le point de terminaison principal correspondant. Suivez [ces instructions](#instance-connect) pour exposer un point de terminaison et vous connecter à l’instance SQL Server, et exécutez `sp_configure`. Vous pouvez uniquement utiliser l’authentification SQL lors de l’exposition manuelle du point de terminaison pour vous connecter à la base de données `master` de l’instance SQL Server.
 - La configuration de la haute disponibilité doit être créée lors du déploiement du cluster Big Data. Vous ne pouvez pas activer la configuration de la haute disponibilité avec les groupes de disponibilité après le déploiement.
 - Alors que la base de données msdb contenue est incluse dans le groupe de disponibilité et que les travaux de l’agent SQL sont répliqués à travers, les tâches ne sont pas déclenchées conformément à la planification. La solution de contournement consiste à [se connecter à chacune des instances SQL Server](#instance-connect) et à créer les travaux dans l’instance de msdb.

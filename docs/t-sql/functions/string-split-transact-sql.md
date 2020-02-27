@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906833"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179270"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,7 +41,7 @@ Pour changer le niveau de compatibilité d’une base de données, consultez [Af
   
 ## <a name="syntax"></a>Syntaxe  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
@@ -62,6 +62,8 @@ Retourne une table d’une seule colonne dont les lignes sont les sous-chaînes.
 **STRING_SPLIT** prend en entrée une chaîne qui a des sous-chaînes délimitées, et un caractère à utiliser comme délimiteur ou séparateur. STRING_SPLIT produit une table à une seule colonne dont les lignes contiennent les sous-chaînes. Le nom de la colonne de sortie est **value**.
 
 Les lignes résultantes peuvent être dans n’importe quel ordre. Il n’est _pas_ garanti que l’ordre corresponde à l’ordre des sous-chaînes dans la chaîne en entrée. Vous pouvez remplacer l’ordre de tri final avec une clause ORDER BY sur l’instruction SELECT (`ORDER BY value`).
+
+0x0000 (**char(0)** ) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans STRING_SPLIT.
 
 Les sous-chaînes vides de longueur nulle sont présentes quand la chaîne en entrée contient plusieurs occurrences consécutives du caractère délimiteur. Les sous-chaînes vides sont traitées de la même façon que les sous-chaînes contenant du texte. Vous pouvez filtrer les lignes contenant la sous-chaîne vide avec la clause WHERE (`WHERE value <> ''`). Si la chaîne en entrée est NULL, la fonction table STRING_SPLIT retourne une table vide.  
 
@@ -102,7 +104,7 @@ STRING_SPLIT retourne une chaîne vide si aucun élément ne figure entre les s�
 
 La table de produits a une colonne avec une liste de balises séparées par des virgules, illustrée dans l’exemple suivant :  
   
-|ProductId|Name|Balises|  
+|ProductId|Nom|Balises|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,7 +120,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Name|value|  
+|ProductId|Nom|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|Route|  

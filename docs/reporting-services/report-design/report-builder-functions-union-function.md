@@ -1,5 +1,5 @@
 ---
-title: Fonction Union (Générateur de rapports et SSRS) | Microsoft Docs
+title: Fonction Union (Générateur de rapports) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3f1e0f0364eebbd0861edb931b0ee7f46954a7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e760971e012e5144176484d921570bdee8097497
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577160"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081117"
 ---
 # <a name="report-builder-functions---union-function"></a>Fonctions du Générateur de rapports - Union
   Retourne l'union de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.  

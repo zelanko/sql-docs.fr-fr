@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005914"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971446"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connexion avec sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ Dans la version actuelle, les options suivantes sont disponibles :
 - -e Écrire des scripts d’entrée sur le périphérique de sortie standard (stdout).
 
 - -E Utiliser la connexion approuvée (authentification intégrée). Pour savoir comment établir des connexions approuvées qui utilisent l’authentification intégrée à partir d’un client Linux ou macOS, consultez [Utiliser l’authentification intégrée](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] Spécifie les pages de codes d’entrée et de sortie. Le numéro de page de codes est une valeur numérique qui spécifie une page de codes Linux installée.
+(disponible depuis 17.5.1.1)
 
 - -h *nombre_de_lignes*  Spécifier le nombre de lignes à imprimer entre les en-têtes de colonnes.  
   
@@ -97,7 +100,7 @@ Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de dis
   
 - -s *caractère_séparation_colonnes*  Spécifier le caractère de séparation des colonnes.  
 
-- -S [*protocol*:] *server*[**,**_port_]  
+- -S [*protocol*:] *server*[ **,** _port_]  
 Spécifier l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle il faudra se connecter ou, si -D est utilisé, un nom de source de données. Le pilote ODBC sur Linux et macOS impose d’utiliser -S. Il est à noter que le protocole **tcp** est le seul protocole valide.  
   
 - -t *délai_expiration_requête* Spécifier le nombre de secondes accordées pour l’exécution d’une commande (ou une instruction SQL).  
@@ -160,8 +163,6 @@ Dans la version actuelle, les options suivantes ne sont pas disponibles :
 
 - -A Se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec une connexion administrateur dédiée (DAC). Pour plus d’informations sur la façon d’établir une connexion administrateur dédiée, consultez [Recommandations en matière de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
-- -f *page_de_code* Spécifier les pages de codes d’entrée et de sortie.  
-  
 - -L Répertorier les serveurs configurés localement et le nom des serveurs diffusant sur le réseau.  
   
 - -v Créer une variable de script `sqlcmd` pouvant être utilisée dans un script `sqlcmd`.  
@@ -209,22 +210,22 @@ Les entrées suivantes sont prises en charge dans un nom de source de données s
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database=**_nom\_base_de_données_  
+-   **Database=** _nom\_base_de_données_  
   
 -   **Driver=ODBC Driver 11 for SQL Server** ou **Driver=ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server=**_server\_name\_or\_IP\_address_  
+-   **Server=** _server\_name\_or\_IP\_address_  
   
 -   **Trusted_Connection=yes**|**no**  
   
 Dans un nom de source de données, seule l’entrée DRIVER est nécessaire, mais pour établir une connexion à un serveur, `sqlcmd` ou `bcp` a besoin de la valeur de l’entrée SERVER.  
 
-Si vous spécifiez la même option dans le nom de source de données et sur la ligne de commande `sqlcmd` ou `bcp`, l’option de ligne de commande remplace la valeur utilisée dans le nom de source de données. Par exemple, si le nom de source de données comporte une entrée DATABASE et que la ligne de commande `sqlcmd` inclut **-d**, la valeur passée à **-d** est utilisée. Si vous spécifiez **Trusted_Connection=yes** dans le nom de source de données, l’authentification Kerberos est utilisée et le nom d’utilisateur (**-U**) et le mot de passe (**-P**), s’ils sont fournis, sont ignorés.
+Si vous spécifiez la même option dans le nom de source de données et sur la ligne de commande `sqlcmd` ou `bcp`, l’option de ligne de commande remplace la valeur utilisée dans le nom de source de données. Par exemple, si le nom de source de données comporte une entrée DATABASE et que la ligne de commande `sqlcmd` inclut **-d**, la valeur passée à **-d** est utilisée. Si vous spécifiez **Trusted_Connection=yes** dans le nom de source de données, l’authentification Kerberos est utilisée et le nom d’utilisateur ( **-U**) et le mot de passe ( **-P**), s’ils sont fournis, sont ignorés.
 
 Vous pouvez modifier les scripts qui appellent `isql` pour qu’ils utilisent `sqlcmd` en définissant l’alias suivant : `alias isql="sqlcmd -D"`.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Connexion avec **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

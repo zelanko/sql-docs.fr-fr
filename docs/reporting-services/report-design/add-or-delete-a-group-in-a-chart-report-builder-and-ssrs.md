@@ -1,5 +1,5 @@
 ---
-title: Ajouter ou supprimer un groupe dans une région de données (Générateur de rapports et SSRS) | Microsoft Docs
+title: Ajouter ou supprimer un groupe dans un graphique (Générateur de rapports) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b9c8e747ca0ca003e531381a6713b1a083a47d57
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 635ffe754cc4634feff7632cbefc1dccb245039c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581971"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081591"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Ajouter ou supprimer un groupe dans un graphique (Générateur de rapports et SSRS)
 Dans les rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginés, cliquez dans la région de données de graphique pour afficher le volet **Données du graphique** . Créez des groupes en faisant glisser des champs de dataset vers les zones **Groupes de séries** et **Groupes de catégories** . Pour ajouter des groupes imbriqués, ajoutez plusieurs champs à la zone.  

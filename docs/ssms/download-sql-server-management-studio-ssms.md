@@ -22,13 +22,13 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
-ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.date: 02/18/2020
+ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
+ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76761783"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77520942"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -54,7 +54,7 @@ SSMS 18.4 est la dernière version en disponibilité générale de SSMS. Si une
 
 Si vous avez des commentaires ou des suggestions, ou si vous souhaitez signaler des problèmes, la meilleure façon de contacter l’équipe SSMS est de passer par [UserVoice](https://aka.ms/sqlfeedback).
 
-L’installation de SSMS 18.x ne met pas à niveau ni ne remplace les versions 17.x ou antérieures de SSMS. SSMS 18.x s’installe côte à côte avec les versions précédentes pour que vous puissiez utiliser les deux versions. Toutefois, si vous disposez d’une ***préversion*** de SSMS 18.x, vous devez la **désinstaller** avant d’installer SSMS 18.4.
+L’installation de SSMS 18.x ne met pas à niveau ni ne remplace les versions 17.x ou antérieures de SSMS. SSMS 18.x s’installe côte à côte avec les versions précédentes pour que vous puissiez utiliser les deux versions. Toutefois, si vous disposez d’une ***préversion*** de SSMS 18.x, vous devez la **désinstaller** avant d’installer SSMS 18.4. Pour savoir si vous disposez de la *préversion*, accédez à la fenêtre À propos sous Aide.
 
 Si un ordinateur contient des installations côte à côte de SSMS, vérifiez que vous démarrez la version correcte adaptée à vos besoins spécifiques. La version la plus récente s’intitule **Microsoft SQL Server Management Studio 18**
 
@@ -71,25 +71,15 @@ SQL Server Management Studio 18.4 :
 > [!NOTE]
 > Le module SQL Server PowerShell est une installation distincte que vous pouvez effectuer via PowerShell Gallery. Pour plus d'informations, consultez la page [Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md).
 
-## <a name="new-in-this-release-ssms-184"></a>Nouveautés de cette version (SSMS 18.4)
+## <a name="whats-new"></a>Nouveautés
 
-| Nouvel élément | Détails |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Classification des données | Ajout de la prise en charge d’une stratégie de protection des informations personnalisée pour la classification des données. |
-| Magasin des requêtes | Ajout de la valeur *Plan max par requête* dans les propriétés de la boîte de dialogue. |
-| Magasin des requêtes | Ajout de la prise en charge des nouvelles stratégies de capture personnalisées. |
-| SMO/Création de scripts | Prise en charge du script de vue matérialisée dans SQL DW. |
-| SMO/Création de scripts | Ajout de la prise en charge de *SQL à la demande*. |
-| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) : ajout de 50 règles d’évaluation (détails sur GitHub). |
-| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) : ajout d’expressions mathématiques de base et de comparaisons aux conditions des règles. |
-| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) : ajout de la prise en charge de l’objet RegisteredServer. |
-| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) : mise à jour de la façon dont les règles sont stockées au format JSON et mise à jour du mécanisme d’application des remplacements/personnalisations. |
-| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) : mises à jour des règles pour prendre en charge SQL sur Linux. |
-| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) : mise à jour du format JSON de l’ensemble de règles et ajout de la version du schéma. |
-| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) : mise à jour de la sortie des applets de commande pour améliorer la lisibilité des recommandations. |
-| XEvent Profiler | Ajout de l’événement *error_reported* aux sessions XEvent Profiler. |
+Pour plus d’informations, notamment sur les nouveautés de cette version, consultez les [notes de publication de SSMS](release-notes-ssms.md).
 
-Pour plus d’informations sur les nouveautés de cette version, voir les [notes de publication de SSMS](release-notes-ssms.md).
+Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-184) dans cette version.
+
+## <a name="previous-versions"></a>Versions précédentes
+
+Cet article s’applique à la dernière version de SSMS uniquement. Pour télécharger des versions précédentes de SSMS, consultez [Versions précédentes de SSMS](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
 ## <a name="supported-sql-offerings-ssms-184"></a>Offres SQL prises en charge (SSMS 18.4)
 
@@ -113,16 +103,6 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 
 > [!NOTE]
 > SSMS s’exécute uniquement sur Windows (AMD ou Intel). Si vous avez besoin d’un outil qui s’exécute sur d’autres plateformes que Windows, envisagez Azure Data Studio. Azure Data Studio est un nouvel outil multiplateforme qui s’exécute sur macOS, Linux, ainsi que Windows. Pour plus d’informations, consultez [Azure Data Studio](../azure-data-studio/what-is.md).
-
-## <a name="release-notes-ssms-184"></a>Notes de publication (SSMS 18.4)
-
-Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-184) dans cette version.
-
-Pour plus d’informations sur cette version, voir les [notes de publication de SSMS](release-notes-ssms.md).
-
-## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
-
-[Versions antérieures de SQL Server Management Studio](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

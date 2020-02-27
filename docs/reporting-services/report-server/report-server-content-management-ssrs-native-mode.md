@@ -1,5 +1,5 @@
 ---
-title: Gestion du contenu du serveur de rapports (SSRS en mode natif) | Microsoft Docs
+title: Gestion du contenu du serveur de rapports (mode natif) | Microsoft Docs
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67228747"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077985"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
 Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu. À compter de SQL Server 2016 Reporting Services ou version ultérieure (SSRS) CTP 3.2, le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est disponible. Cet article détaille le portail web et l’utilisation du nouveau portail web.  

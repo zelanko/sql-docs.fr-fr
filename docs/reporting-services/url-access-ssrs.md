@@ -1,5 +1,5 @@
 ---
-title: Accès URL (SSRS) | Microsoft Docs
+title: Accès URL | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574246"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078939"
 ---
 # <a name="url-access-ssrs"></a>Accès URL (SSRS)
   L'accès URL du serveur de rapports dans SQL Server Reporting Services (SSRS) vous permet d'envoyer des commandes à un serveur de rapports par la biais d'une demande d'URL. Par exemple, vous pouvez personnaliser le rendu d'un rapport sur un serveur de rapports en mode natif ou dans une bibliothèque SharePoint. Vous avez peut-être affiché le rapport à l'aide d'un ensemble de valeurs de paramètre de rapport, ou vous avez peut-être consulté une page spécifique digne d'intérêt dans le rapport. Vous pouvez encapsuler ces informations dans l'URL à l'aide de paramètres d'accès URL prédéfinis. Vous pouvez personnaliser davantage la façon dont le serveur de rapports traite le rapport en incorporant des paramètres pour les formats de rendu ou pour l'apparence de la visionneuse de rapports. Vous pouvez ensuite coller cette URL directement dans un courrier électronique ou une page Web pour permettre à d'autres utilisateurs d'accéder à votre rapport de la même manière dans le navigateur.  
@@ -102,7 +102,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  Texte d'URL correspondant à la valeur du paramètre utilisé.  
   
- **Remarque :** Pour obtenir la liste des paramètres d’accès URL disponibles, consultez [Référence de paramètre d’accès URL](../reporting-services/url-access-parameter-reference.md). Pour obtenir des exemples où des paramètres de rapport sont passés sur l’URL, consultez [Passer un paramètre de rapport dans une URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
+ **Remarque :** Pour obtenir la liste des paramètres d’accès URL disponibles, consultez [Référence sur les paramètres d’accès URL](../reporting-services/url-access-parameter-reference.md). Pour obtenir des exemples où des paramètres de rapport sont passés sur l’URL, consultez [Passer un paramètre de rapport dans une URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

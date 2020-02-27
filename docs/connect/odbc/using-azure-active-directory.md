@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70176170"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363226"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Utilisation d’Azure Active Directory avec ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "70176170"
 La version 13.1 et les versions ultérieures de Microsoft ODBC Driver for SQL Server permettent aux applications ODBC de se connecter à une instance de SQL Azure à l’aide d’une identité fédérée dans Azure Active Directory avec un nom d’utilisateur/mot de passe, un jeton d’accès Azure Active Directory, une identité Managed Service Identity Azure Active Directory ou l’authentification intégrée Windows (_pilote Windows uniquement_). Dans la version 13.1 du pilote ODBC, l’authentification par jeton d’accès Azure Active Directory concerne _Windows uniquement_. La version 17 et les versions ultérieures du pilote ODBC prennent en charge cette authentification sur toutes les plateformes (Windows, Linux et Mac). Une nouvelle authentification interactive Azure Active Directory avec ID de connexion est introduite dans la version 17.1 du pilote ODBC pour Windows. Une nouvelle méthode d’authentification Managed Service Identity Azure Active Directory a été ajoutée dans la version 17.3.1.1 du pilote ODBC pour les identités managées affectées par le système et par l’utilisateur. Toutes ces méthodes utilisent de nouveaux mots clés de chaîne de connexion et de nom de source de données, ainsi que des attributs de connexion.
 
 > [!NOTE]
-> Le pilote ODBC sur Linux et macOS ne prend pas en charge les services de fédération Active Directory. Si vous utilisez l’authentification par nom d’utilisateur/mot de passe Azure Active Directory à partir d’un client Linux ou macOS et que votre configuration Active Directory comprend des services fédérés, l’authentification risque d’échouer.
+> Le pilote ODBC sur Linux et macOS prend en charge uniquement l’authentification Azure Active Directory directe auprès d’Azure Active Directory. Si vous utilisez l’authentification Azure Active Directory par nom d’utilisateur/mot de passe à partir d’un client Linux ou macOS et que votre configuration Active Directory exige l’authentification du client auprès d’un point de terminaison ADFS (Active Directory Federation Services), l’authentification risque d’échouer.
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>Nouveaux mots clés de chaîne de connexion et de nom de source de données et mots clés modifiés
 
 Le mot clé `Authentication` peut être utilisé en cas de connexion avec un nom de source de données ou une chaîne de connexion pour contrôler le mode d’authentification. La valeur définie dans la chaîne de connexion remplace celle du nom de source de données, si elle existe. La _valeur préattribut_ du paramètre `Authentication` est la valeur calculée à partir des valeurs de chaîne de connexion et de nom de source de données.
 
-|Name|Valeurs|Default|Description|
+|Nom|Valeurs|Default|Description|
 |-|-|-|-|
 |`Authentication`|(non défini), (chaîne vide), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(non défini)|Contrôle le mode d’authentification.<table><tr><th>Valeur<th>Description<tr><td>(non défini)<td>Mode d’authentification déterminé par d’autres mots clés (options de connexion héritées existantes).<tr><td>(chaîne vide)<td>(Chaîne de connexion uniquement.) Remplace et annule une valeur `Authentication` définie dans le nom de source de données.<tr><td>`SqlPassword`<td>Authentification directe auprès d’une instance SQL Server à l’aide d’un nom d’utilisateur et d’un mot de passe.<tr><td>`ActiveDirectoryPassword`<td>Authentification avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et d’un mot de passe.<tr><td>`ActiveDirectoryIntegrated`<td>(_Pilote Windows uniquement_.) Authentification avec une identité Azure Active Directory à l’aide de l’authentification intégrée.<tr><td>`ActiveDirectoryInteractive`<td>(_Pilote Windows uniquement_.) Authentification avec une identité Azure Active Directory à l’aide de l’authentification interactive.<tr><td>`ActiveDirectoryMsi`<td>Authentification avec une identité Azure Active Directory à l’aide de l’authentification Managed Service Identity. Pour l’identité attribuée par l’utilisateur, UID est défini sur l’ID d’objet de l’identité d’utilisateur.</table>|
 |`Encrypt`|(non défini), `Yes`, `No`|(voir description)|Contrôle le chiffrement pour une connexion. Si la valeur préattribut du paramètre `Authentication` n’est pas _none_ dans le nom de source de données ou la chaîne de connexion, la valeur par défaut est `Yes`. Sinon, la valeur par défaut est `No`. Si l’attribut `SQL_COPT_SS_AUTHENTICATION` remplace la valeur préattribut de `Authentication`, définissez explicitement la valeur du chiffrement dans le nom de source de données, la chaîne de connexion ou l’attribut de connexion. La valeur préattribut du chiffrement est `Yes` si la valeur est définie sur `Yes` dans le nom de source de données ou la chaîne de connexion.|

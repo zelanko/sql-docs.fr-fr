@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929900"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558309"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installer des packages Python avec sqlmlutils
 
@@ -27,7 +27,7 @@ Pour plus d’informations sur l’emplacement des packages et les chemins d’i
 > [!NOTE]
 > La commande Python standard `pip install` n’est pas recommandée pour l’ajout de packages Python sur SQL Server 2019. Au lieu de cela, utilisez **sqlmlutils** comme décrit dans cet article.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) doit être installé avec l’option de langage Python.
 
@@ -37,7 +37,7 @@ Pour plus d’informations sur l’emplacement des packages et les chemins d’i
 
 ### <a name="other-considerations"></a>Autres considérations
 
-+ Les packages doivent être conformes à Python 3.5 et s’exécuter sur Windows.
++ Les packages doivent être compatibles avec la version de Python que vous utilisez. Pour savoir quelle version de Python est fournie avec chaque version de SQL Server, consultez les [informations sur les versions de Python et de R dans Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?](../what-is-sql-server-machine-learning.md#versions)
 
 + La bibliothèque de packages Python se trouve dans le dossier Program Files de votre instance SQL Server et, par défaut, l’installation dans ce dossier requiert des autorisations d’administrateur. Pour plus d’informations, consultez [Emplacement de la bibliothèque de packages](../package-management/python-package-information.md#default-python-library-location).
 
@@ -64,7 +64,7 @@ Pour utiliser **sqlmlutils**, vous devez d’abord l’installer sur l’ordinat
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>Ajouter un package Python sur SQL Server
@@ -77,11 +77,11 @@ Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a a
 
 1. Sur l’ordinateur client, ouvrez **Python** ou un environnement Python.
 
-1. Utilisez les commandes suivantes pour installer le package **text-tools**. Remplacez vos propres informations de connexion de base de données SQL Server (si vous n’utilisez pas l’authentification Windows, ajoutez les paramètres `uid` et `pwd`).
+1. Utilisez les commandes suivantes pour installer le package **text-tools**. Remplacez les valeurs existantes par vos propres informations de connexion à la base de données SQL Server.
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 

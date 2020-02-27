@@ -10,22 +10,22 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6662705a3b9e9f946d17b3edfbe158a8ac4f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75325551"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256722"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Que sont les correctifs de sécurité étendus pour SQL Server ?
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fournit des informations sur l’utilisation du service de registre SQL Server pour recevoir des correctifs de sécurité étendus pour [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. Pour plus d’informations sur d’autres options, consultez [options Fin du support](sql-server-end-of-life-overview.md). 
 
 ## <a name="overview"></a>Vue d’ensemble
-
-Une fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a atteint la fin de son cycle de vie de support, vous avez la possibilité de souscrire un abonnement de Correctif de sécurité étendu (ESU) pour vos serveurs et de rester protégé pendant trois ans maximum, jusqu’à ce que vous soyez prêt à effectuer une mise à niveau vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à migrer vers [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Cet abonnement peut être acheté pour vos serveurs locaux ou gratuit en migrant des serveurs locaux vers des machines virtuelles Azure. Vous pouvez ensuite utiliser le service du **Registre SQL Server** dans le Portail Azure pour enregistrer votre instance de fin de support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et télécharger les mises à jour dès qu’elles sont disponibles. 
+Une fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a atteint la fin de son cycle de vie de support, vous avez la possibilité de souscrire un abonnement de Correctif de sécurité étendu (ESU) pour vos serveurs et de rester protégé pendant trois ans maximum, jusqu’à ce que vous soyez prêt à effectuer une mise à niveau vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à migrer vers [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Cet abonnement peut être obtenu de deux manières :
+-  Il peut être acheté pour vos serveurs d’environnement locaux ou hébergés.
+-  Il peut être obtenu gratuitement et activé par défaut quand vous migrez des serveurs locaux vers des machines virtuelles Azure. Vous pouvez ensuite utiliser le service du **Registre SQL Server** dans le Portail Azure pour enregistrer votre instance de fin de support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et télécharger les mises à jour dès qu’elles sont disponibles. 
 
 Microsoft recommande l’application des correctifs ESU dès qu’ils sont disponibles pour protéger votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les correctifs ESU, consultez la [page FAQ ESU](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
@@ -33,9 +33,9 @@ Microsoft recommande l’application des correctifs ESU dès qu’ils sont dispo
 > [Le support étendu de SQL Server 2008 et SQL Server 2008 R2 a pris fin le 10 juillet 2019](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). Pour ces versions, envisagez d’utiliser des correctifs de sécurité étendus décrits dans cet article ou d’autres options de migration. Pour plus d’informations, consultez [Options de fin du support](sql-server-end-of-life-overview.md).
 
 ## <a name="what-are-extended-security-updates"></a>Que sont les correctifs de sécurité étendus
-Les correctifs de sécurité étendus (ESU) pour [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] incluent la fourniture de correctifs de sécurité pour les clients qui ont acheté un abonnement de mise à jour de support étendu. 
+Les correctifs de sécurité étendus (ESU) pour [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] incluent la fourniture de correctifs de sécurité pour les clients qui ont acheté un abonnement de mise à jour de support étendu.
 
-Les ESU sont répartis, **selon leur disponibilité**, une fois la vulnérabilité de la sécurité découverte et évaluée comme **Critique** par le [Centre de réponse aux problèmes de sécurité Microsoft (MSRC)](https://portal.msrc.microsoft.com). Par conséquent, il n’existe pas de cadence de publication régulière pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU. 
+Les ESU sont mis à disposition **si nécessaire** quand une vulnérabilité de la sécurité est découverte et évaluée comme **Critique** par le [Centre de réponse aux problèmes de sécurité Microsoft (MSRC)](https://portal.msrc.microsoft.com). Par conséquent, il n’existe pas de cadence de publication régulière pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU.
 
 Les ESU n’incluent pas :
 - Nouvelles fonctionnalités
@@ -43,34 +43,39 @@ Les ESU n’incluent pas :
 - Correctifs demandés par le client
 
 ### <a name="support"></a>Support
-
 Les ESU n’incluent pas de support technique, mais vous pouvez utiliser un contrat de support actif, tel que [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3) ou un support premier/unifié sur [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] / [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] pour obtenir un support technique sur les charges de travail couvertes par les ESU si vous choisissez de rester en local. Si vous hébergez sur Azure, vous pouvez également utiliser un plan de support Azure pour obtenir un support technique. 
 
   > [!NOTE]
   > Microsoft ne peut pas fournir de support technique pour les instances [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] (à la fois sur site et dans les environnements d’hébergement) qui ne sont pas couvertes par un abonnement ESU. 
 
-## <a name="esu-availability"></a>Disponibilité ESU
+## <a name="esu-availability-and-deployment"></a>Disponibilité et déploiement des ESU
+Les ESU sont disponibles pour les clients qui exécutent leur charge de travail dans Azure, localement ou dans des environnements hébergés.
 
-Les ESU sont disponibles pour les clients qui exécutent leur charge de travail dans Azure, localement ou dans des environnements hébergés. 
+### <a name="azure-virtual-machines"></a>Machines virtuelles Azure
+Si vous migrez vos charges de travail vers des machines Virtuelles Azure (IaaS), vous aurez accès à des correctifs de sécurité étendus pour [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] pendant trois ans au plus après la fin du support, avec **aucuns frais supplémentaires** au-delà du coût d’exécution de la machine virtuelle. Les clients n’ont pas besoin de la Software Assurance pour recevoir des correctifs de sécurité étendus dans Azure. 
 
-**Machines virtuelles Azure** : Si vous migrez vos charges de travail vers des machines Virtuelles Azure (IaaS), vous aurez accès à des correctifs de sécurité étendus pour [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] pendant trois ans au plus après la fin du support, avec **aucuns frais supplémentaires** au-delà du coût d’exécution de la machine virtuelle. Les clients n’ont pas besoin de la Software Assurance pour recevoir des correctifs de sécurité étendus dans Azure. 
+Les machines virtuelles Azure qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur **Windows Server 2008 R2 et versions ultérieures** reçoivent automatiquement des ESU par le biais de canaux de mise à jour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existants quand la machine virtuelle est configurée pour utiliser la [mise à jour corrective automatisée](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-**Environnements locaux ou hébergés** : Si vous disposez de Software Assurance, vous pouvez acheter des correctifs de sécurité étendus jusqu’à trois ans après la date de la fin du support, dans le cadre d’un Accord Entreprise (EA), d’un contrat d’abonnement entreprise (EAS), d’un accord de mise en œuvre serveur et cloud (SCE) ou d’un accord de mise en œuvre pour des solutions Education (EES). Vous pouvez acheter des correctifs de sécurité étendus uniquement pour les serveurs que vous devez couvrir. Vous pouvez acheter des correctifs de sécurité étendus directement auprès de Microsoft ou d’un partenaire de licence Microsoft. 
+Pour les machines virtuelles Azure qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur **Windows Server 2008** et les machines virtuelles qui n’ont ***pas* été configurées pour la [mise à jour corrective automatisée](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** , vous devez télécharger et déployer manuellement les correctifs ESU comme décrit dans la section [Environnements locaux ou hébergés](#on-premises-or-hosted-environments).
+
+### <a name="on-premises-or-hosted-environments"></a>Environnements locaux ou hébergés
+Si vous disposez de Software Assurance, vous pouvez acheter un abonnement aux correctifs de sécurité étendus (ESU, Extended Security Update) pour une durée allant jusqu’à trois ans après la date de la fin du support, dans le cadre d’un Accord Entreprise (EA), d’un contrat d’abonnement entreprise (EAS), d’un accord de mise en œuvre serveur et cloud (SCE) ou d’un accord de mise en œuvre pour des solutions Education (EES). Vous pouvez acheter des ESU uniquement pour les serveurs que vous devez couvrir. Vous pouvez acheter des ESU directement auprès de Microsoft ou d’un partenaire de licence Microsoft. 
+
+Les clients couverts par des accords ESU doivent suivre les étapes suivantes pour télécharger et déployer un correctif ESU :
+-  [Inscrire les instances éligibles](#register-instances-for-esus) auprès du **[registre SQL Server](#create-sql-server-registry)** . 
+-  Une fois l’inscription effectuée, chaque fois que des correctifs ESU sont publiés, un lien est mis à disposition dans le portail Azure pour le téléchargement du package. 
+-  Le package téléchargé peut être déployé sur vos environnements locaux ou hébergés manuellement ou à l’aide de toute solution d’orchestration de mise à jour utilisée dans votre organisation, par exemple Microsoft Endpoint Configuration Manager (anciennement System Center Configuration Manager). 
+
+> [!NOTE]
+> Il s’agit également du processus que les clients devront suivre pour Azure Stack et les machines virtuelles Azure qui ne sont pas configurés pour recevoir des mises à jour automatiques.
 
 Pour plus d’informations, consultez la section [Forum aux questions sur les correctifs de sécurité étendus](https://www.microsoft.com/cloud-platform/extended-security-updates). 
 
-## <a name="esu-delivery"></a>Livraison ESU
-
-**Machines virtuelles Azure** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les clients qui s’exécutent sur Windows Server 2008 R2 et versions ultérieures reçoivent automatiquement des ESU via des canaux de mise à jour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existants à l’aide d’une [ mise à jour corrective automatisée](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). Les machines virtuelles Azure s’exécutant sur Windows Server 2008 ou celles qui n’ont _pas_ été configurées pour la mise à jour corrective automatisée devront implémenter manuellement la méthode d’inscription et de téléchargement locale.  
-
-**Environnements locaux ou hébergés** : Les client couverts par des contrats de correctifs de sécurité étendus peuvent [enregistrer des instances éligibles](#register-instances-for-esus) avec le **registre SQL Server**. Une fois inscrit, chaque fois que des ESU sont disponibles, les clients peuvent utiliser le lien de téléchargement trouvé dans le Portail Azure pour télécharger le package ESU et le déployer dans leurs environnements locaux ou hébergés. Il s’agit également du processus que les clients devront suivre pour Azure Stack et les machines virtuelles Azure qui ne sont pas configurés pour recevoir des mises à jour automatiques.
-
 ## <a name="create-sql-server-registry"></a>Créer un registre SQL Server
-
 Pour enregistrer vos instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibles ESU, vous devez d’abord créer le registre SQL Server dans le Portail Azure. 
 
-  > [!IMPORTANT]
-  > Il n’est pas nécessaire d’enregistrer des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des ESU lors de l’exécution d’une machine virtuelle Azure configurée pour [des mises à jour automatiques](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). 
+> [!IMPORTANT]
+> Il n’est pas nécessaire d’enregistrer des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des ESU lors de l’exécution d’une machine virtuelle Azure configurée pour [des mises à jour automatiques](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). 
 
 Pour créer le registre SQL Server, procédez comme suit :
 

@@ -1,7 +1,7 @@
 ---
 title: Guide d’architecture de traitement des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 02/24/2019
+ms.date: 02/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - row mode execution
 - batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909749"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77466170"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Un plan d'exécution de requête permet de définir :
 
 Le processus de sélection d'un plan d'exécution parmi plusieurs possibles est appelé optimisation. L'optimiseur de requêtes est un des composants les plus importants d'un système de base de données SQL. Bien que l'optimiseur de requête puisse créer une certaine surcharge pour analyser la requête et sélectionner un plan, celle-ci est en général largement compensée par l'adoption d'un plan d'exécution efficace. Prenons l'exemple de deux entrepreneurs en bâtiment à qui l'on commande la même maison. Si l'un d'eux commence par consacrer quelques jours à planifier la construction de cette maison alors que l'autre lance immédiatement la construction sans aucune planification, il est fort probable que celui qui a pris le temps de planifier son projet finira le premier.
 
-L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un optimiseur de requête basé sur les coûts. À chaque plan d'exécution possible est associé un coût exprimé en termes de quantité de ressources informatiques utilisées. L'optimiseur de requêtes doit analyser les plans possibles et opter pour celui dont le coût estimé est le plus faible. Certaines instructions `SELECT` complexes disposent de milliers de plans d’exécution possibles. Dans ce cas, l'optimiseur de requêtes n'analyse pas toutes les combinaisons possibles. Il recourt alors à des algorithmes sophistiqués afin de trouver un plan d'exécution dont le coût se rapproche raisonnablement du minimum possible.
+L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un optimiseur basé sur les coûts. À chaque plan d'exécution possible est associé un coût exprimé en termes de quantité de ressources informatiques utilisées. L'optimiseur de requêtes doit analyser les plans possibles et opter pour celui dont le coût estimé est le plus faible. Certaines instructions `SELECT` complexes disposent de milliers de plans d’exécution possibles. Dans ce cas, l'optimiseur de requêtes n'analyse pas toutes les combinaisons possibles. Il recourt alors à des algorithmes sophistiqués afin de trouver un plan d'exécution dont le coût se rapproche raisonnablement du minimum possible.
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] choisit non seulement le plan d’exécution dont le coût en ressources est le plus faible, mais également celui qui retourne le plus rapidement les résultats à l’utilisateur moyennant un coût en ressources raisonnable. Par exemple, le traitement d'une requête en parallèle monopolise généralement davantage de ressources qu'un traitement en série, mais il est plus rapide. L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un plan d’exécution en parallèle pour retourner les résultats si la charge du serveur n’en est pas affectée de façon rédhibitoire.
 
@@ -127,12 +127,12 @@ Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 1. L’analyseur examine l’instruction `SELECT` et la décompose en unités logiques telles que mots clé, expressions, opérateurs et identificateurs.
 2. Un arbre de requêtes, également appelé arbre de séquence, est créé pour décrire les étapes logiques nécessaires à la transformation des données source au format requis par le jeu de résultats.
-3. L'optimiseur de requête analyse plusieurs méthodes d'accès aux tables source. Il choisit ensuite la série d'étapes qui retourne les résultats le plus rapidement tout en consommant moins de ressources. L'arbre de requêtes est mis à jour pour enregistrer cette série exacte d'étapes. La version optimisée finale de l'arbre de requêtes est nommée plan d'exécution.
+3. L'optimiseur de requête analyse plusieurs méthodes d'accès aux tables source. Il choisit ensuite la série d’étapes qui retournent les résultats le plus rapidement tout en consommant moins de ressources. L'arbre de requêtes est mis à jour pour enregistrer cette série exacte d'étapes. La version optimisée finale de l'arbre de requêtes est nommée plan d'exécution.
 4. Le moteur relationnel lance le plan d'exécution. Pendant le traitement des étapes qui requièrent des données issues des tables de base, le moteur relationnel demande que le moteur de stockage transmette les données des ensembles de lignes demandés à partir du moteur relationnel.
 5. Le moteur relationnel traite les données retournées du moteur de stockage dans le format défini pour le jeu de résultats et retourne ce jeu au client.
 
 ### <a name="ConstantFolding"></a> Assemblage de constantes et évaluation d’expression 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] évalue quelques expressions constantes à l'avance pour améliorer les performances des requêtes. On parle d'assemblage de constantes. Une constante est un littéral [!INCLUDE[tsql](../includes/tsql-md.md)], par exemple 3, 'ABC', '2005-12-31', 1.0e3 ou 0x12345678.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] évalue quelques expressions constantes à l'avance pour améliorer les performances des requêtes. On parle d'assemblage de constantes. Une constante est un littéral [!INCLUDE[tsql](../includes/tsql-md.md)], comme `3`, `'ABC'`, `'2005-12-31'`, `1.0e3` ou `0x12345678`.
 
 #### <a name="foldable-expressions"></a>Expressions pouvant être assemblées
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'assemblage de constantes avec les types d'expressions suivants :
@@ -203,11 +203,11 @@ GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
 BEGIN
-DECLARE @d2 datetime
-SET @d2 = @d+1
-SELECT COUNT(*)
-FROM Sales.SalesOrderHeader
-WHERE OrderDate > @d2
+  DECLARE @d2 datetime
+  SET @d2 = @d+1
+  SELECT COUNT(*)
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate > @d2
 END;
 ```
 
@@ -219,7 +219,7 @@ Les étapes de base décrites pour le traitement d’une instruction `SELECT` s�
 Même les instructions DDL telles que `CREATE PROCEDURE` ou `ALTER TABLE` sont finalement réduites à une série d’opérations relationnelles sur les tables du catalogue système, voire (comme dans le cas de `ALTER TABLE ADD COLUMN`) sur les tables de données.
 
 ### <a name="worktables"></a>Tables de travail
-Le moteur relationnel peut avoir besoin de générer une table de travail pour exécuter une opération logique spécifiée dans une instruction [!INCLUDE[tsql](../includes/tsql-md.md)]. Les tables de travail sont des tables internes utilisées pour le stockage des résultats intermédiaires. Les tables de travail sont générées pour certaines requêtes `GROUP BY`, `ORDER BY`, ou `UNION` . Par exemple, si une clause `ORDER BY` fait référence à des colonnes qui ne sont couvertes par aucun index, le moteur relationnel peut être amené à générer une table de travail pour trier l’ensemble de résultats dans l’ordre demandé. En outre, les tables de travail sont parfois utilisées comme fichiers d'attente pour le stockage temporaire du résultat de l'exécution d'une partie d'un plan de requête. Les tables de travail sont générées dans tempdb et sont automatiquement supprimées lorsqu'elles ne sont plus requises.
+Le moteur relationnel peut avoir besoin de générer une table de travail pour exécuter une opération logique spécifiée dans une instruction [!INCLUDE[tsql](../includes/tsql-md.md)]. Les tables de travail sont des tables internes utilisées pour le stockage des résultats intermédiaires. Les tables de travail sont générées pour certaines requêtes `GROUP BY`, `ORDER BY`, ou `UNION` . Par exemple, si une clause `ORDER BY` fait référence à des colonnes qui ne sont couvertes par aucun index, le moteur relationnel peut être amené à générer une table de travail pour trier le jeu de résultats dans l’ordre demandé. En outre, les tables de travail sont parfois utilisées comme fichiers d'attente pour le stockage temporaire du résultat de l'exécution d'une partie d'un plan de requête. Les tables de travail sont générées dans tempdb et sont automatiquement supprimées lorsqu'elles ne sont plus requises.
 
 ### <a name="view-resolution"></a>Résolution de vues
 Le processeur de requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite différemment les vues indexées et les vues non indexées : 
@@ -240,7 +240,7 @@ CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
 FROM HumanResources.Employee AS h 
 JOIN Person.Person AS p
-ON h.BusinessEntityID = p.BusinessEntityID;
+  ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
@@ -251,16 +251,16 @@ Sur la base de cette vue, les deux instructions [!INCLUDE[tsql](../includes/tsql
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
-ON (soh.SalesPersonID = EmpN.BusinessEntityID)
+  ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
-ON soh.SalesPersonID = e.BusinessEntityID
+  ON soh.SalesPersonID = e.BusinessEntityID
 JOIN AdventureWorks2014.Person.Person AS p
-ON e.BusinessEntityID =p.BusinessEntityID
+  ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
@@ -328,7 +328,7 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * L’option de session `NUMERIC_ROUNDABORT` est désactivée (OFF).
+* L’option de session `NUMERIC_ROUNDABORT` est désactivée (OFF).
 * L'optimiseur de requête trouve une correspondance entre les colonnes d'index des vues et les éléments de la requête, notamment : 
   * Prédicats de la condition de recherche dans la clause WHERE
   * Opérations de jointure
@@ -348,7 +348,6 @@ Une requête ne doit pas obligatoirement référencer explicitement une vue inde
 L’optimiseur de requête traite une vue indexée référencée dans la clause `FROM` comme une vue standard. L'optimiseur de requête développe la définition de la vue dans la requête au début du processus d'optimisation. Ensuite, la mise en correspondance des éléments de la vue indexée est réalisée. La vue indexée peut être utilisée dans le plan d’exécution final sélectionné par l’optimiseur de requête ou, sinon, le plan peut matérialiser les données nécessaires à partir de la vue en accédant aux tables de base référencées par celle-ci. L’optimiseur de requête choisit la solution la plus économique.
 
 #### <a name="using-hints-with-indexed-views"></a>Utilisation d'indicateurs avec les vues indexées
-
 Vous pouvez empêcher l’utilisation d’index de vue pour une requête à l’aide de l’indicateur de requête `EXPAND VIEWS` ou recourir à l’indicateur de table `NOEXPAND` afin d’imposer l’utilisation d’un index pour une vue indexée spécifiée dans la clause `FROM` d’une requête. Toutefois, vous devez laisser l'optimiseur de requête déterminer dynamiquement les meilleures méthodes d'accès à utiliser pour chaque requête. Limitez l’utilisation des indicateurs `EXPAND` et `NOEXPAND` aux cas spécifiques où les tests ont démontré qu’ils améliorent les performances de façon significative.
 
 L’option `EXPAND VIEWS` ordonne à l’optimiseur de requête de ne pas utiliser des index de vue pour toute la requête. 
@@ -364,7 +363,6 @@ En règle générale, quand l’optimiseur de requête fait correspondre une vue
 L'utilisation d'indicateurs n'est pas autorisée dans les définitions de vues indexées. Dans les modes de compatibilité 80 et supérieurs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ignore les indicateurs présents dans les définitions de vues indexées lorsqu'il gère ces définitions ou qu'il exécute des requêtes qui utilisent des vues indexées. Bien que l'utilisation d'indicateurs dans les définitions de vues indexées ne génère pas d'erreur de syntaxe dans le mode de compatibilité 80, ils sont ignorés.
 
 ### <a name="resolving-distributed-partitioned-views"></a>Résolution de vues distribuées partitionnées
-
 Le processeur de requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] optimise les performances des vues partitionnées distribuées. L'aspect le plus important des performances d'une vue distribuée partitionnée est de minimiser la quantité de données à transférer entre des serveurs membres.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] construit des plans intelligents et dynamiques qui utilisent efficacement les requêtes distribuées pour accéder aux données à partir des tables membres distantes : 
@@ -408,34 +406,66 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crée parfois ces types de plans d’exécution dynamique même pour des requêtes qui ne sont pas paramétrables. L’optimiseur peut paramétrer une requête pour que le plan d’exécution puisse être réutilisé. Si l’optimiseur de requête paramètre une requête faisant référence à une vue partitionnée, il ne peut plus supposer que les lignes requises proviendront d’une table de base spécifiée. Il devra alors utiliser des filtres dynamiques dans le plan d'exécution.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Exécution d'une procédure stockée et d'un déclencheur
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stocke uniquement le code source des procédures stockées et des déclencheurs. Quand une procédure stockée ou un déclencheur est exécuté pour la première fois, la source est compilée dans un plan d'exécution. Si la procédure stockée ou le déclencheur doit à nouveau être exécuté alors que le plan d'exécution se trouve encore en mémoire, le moteur relationnel détecte le plan existant et le réutilise. Si le plan est trop ancien et a été évacué de la mémoire, le système crée un nouveau plan. Ce processus est similaire à celui suivi par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour toutes les instructions [!INCLUDE[tsql](../includes/tsql-md.md)]. L’avantage principal en termes de performances dont bénéficient les procédures stockées et les déclencheurs dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par rapport aux lots du code [!INCLUDE[tsql](../includes/tsql-md.md)] dynamique est que leurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] sont toujours les mêmes. Par conséquent, le moteur relationnel les associe facilement à n'importe quel plan d'exécution existant. Les plans des procédures stockées et des déclencheurs sont faciles à réutiliser.
 
 Le plan d'exécution des procédures stockées et des déclencheurs est exécuté séparément du plan d'exécution du traitement qui appelle la procédure stockée ou qui active le déclencheur. Cela permet une meilleure réutilisation des plans d'exécution des procédures stockées et des déclencheurs.
 
 ## <a name="execution-plan-caching-and-reuse"></a>Mise en mémoire cache et réutilisation du plan d'exécution
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispose d'un pool de mémoire utilisé pour stocker les plans d'exécution et les tampons de données. Le pourcentage de ce pool alloué aux plans d'exécution ou aux tampons de données évolue de façon dynamique en fonction de l'état du système. La part du pool de mémoire utilisée pour stocker les plans d’exécution est appelée « cache du plan ».
+
+Le cache du plan dispose de deux magasins pour tous les plans compilés :
+-  Le magasin du cache **Objet Plans** (OBJCP) utilisé pour les plans liés aux objets persistants (procédures stockées, fonctions et déclencheurs).
+-  Le magasin du cache **Plans SQL** (SQLCP) utilisé pour les plans liés aux requêtes automatiquement paramétrées, dynamiques ou préparées.
+
+La requête ci-dessous fournit des informations sur l’utilisation de la mémoire pour ces deux magasins de cache :
+
+```sql
+SELECT * FROM sys.dm_os_memory_clerks
+WHERE name LIKE '%plans%';
+```
+
+> [!NOTE]
+> Le cache du plan comprend deux magasins supplémentaires qui ne sont pas utilisés pour le stockage des plans :     
+> -  Le magasin du cache **Arborescences liées** (PHDR) destiné aux structures de données utilisées pendant la compilation du plan pour les vues, les contraintes et les valeurs par défaut. Ces structures sont appelées « Arborescences liées » ou « Arborescences d’algébrisation ».      
+> -  Le magasin du cache **Procédures stockées étendues** (XPROC) utilisé pour les procédures système prédéfinies, comme `sp_executeSql` ou `xp_cmdshell`, qui sont définies à l’aide d’une DLL et non à l’aide d’instructions Transact-SQL. La structure mise en cache contient uniquement le nom de la fonction et le nom de la DLL dans laquelle la procédure est implémentée.      
 
 Les plans d'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprennent les composants principaux suivants : 
 
-- **Plan d’exécution de requête**     
-  Le corps du plan d'exécution est une structure de données réentrante et en lecture seule qui peut être utilisée par un nombre quelconque d'utilisateurs. Il constitue le plan de requête. Aucun contexte d'utilisateur n'est stocké dans le plan de requête. Il n'y a jamais plus d'une ou deux copies du plan de requête en mémoire : une copie pour toutes les exécutions en série et une autre pour toutes les exécutions en parallèle. La copie en parallèle couvre toutes les exécutions en parallèle, indépendamment de leur degré de parallélisme. 
+- **Plan compilé** (ou Plan de requête)     
+  Le plan de requête produit par le processus de compilation est principalement une structure de données réentrantes en lecture seule utilisée par un nombre quelconque d’utilisateurs. Il stocke des informations sur les éléments suivants :
+  -  Les opérateurs physiques qui implémentent l’opération décrite par des opérateurs logiques. 
+  -  L’ordre de ces opérateurs, qui détermine l’ordre dans lequel les données sont accessibles, filtrées et agrégées. 
+  -  Le nombre de lignes estimées qui transitent par les opérateurs. 
+  
+     > [!NOTE]
+     > Dans les versions plus récentes du [!INCLUDE[ssde_md](../includes/ssde_md.md)], les informations sur les objets de statistiques qui ont été utilisés pour l’[estimation de la cardinalité](../relational-databases/performance/cardinality-estimation-sql-server.md) sont également stockées.
+     
+  -  Les objets de prise en charge qui doivent être créés, par exemple des [tables de données](#worktables) ou des fichiers de travail dans tempdb. 
+  Aucun contexte utilisateur ni aucune information d’exécution n’est stocké dans le plan de requête. Il n'y a jamais plus d'une ou deux copies du plan de requête en mémoire : une copie pour toutes les exécutions en série et une autre pour toutes les exécutions en parallèle. La copie en parallèle couvre toutes les exécutions en parallèle, indépendamment de leur degré de parallélisme.   
+  
 - **Contexte d’exécution**     
-  Chaque utilisateur exécutant actuellement la requête dispose d'une structure de données qui contient les données spécifiques à son exécution, telles que la valeur des paramètres. Cette structure de données constitue le contexte d'exécution. Les structures de données du contexte d'exécution sont réutilisées. Si un utilisateur exécute une requête et qu'une des structures n'est pas en cours d'utilisation, elle est réinitialisée avec le contexte du nouvel utilisateur. 
+  Chaque utilisateur exécutant actuellement la requête dispose d'une structure de données qui contient les données spécifiques à son exécution, telles que la valeur des paramètres. Cette structure de données constitue le contexte d'exécution. Les structures de données du contexte d’exécution sont réutilisées, mais pas leur contenu. Si un autre utilisateur exécute la même requête, les structures de données sont réinitialisées avec le contexte du nouvel utilisateur. 
 
-![execution_context](../relational-databases/media/execution-context.gif)
-
-Quand une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est exécutée dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le moteur relationnel parcourt d’abord le cache de plan afin de voir s’il existe un plan d’exécution pour la même instruction [!INCLUDE[tsql](../includes/tsql-md.md)]. L’instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est considérée comme existante si elle correspond littéralement à une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] exécutée précédemment avec un plan mis en cache, caractère par caractère. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réutilise le plan existant qu’il trouve, évitant ainsi la recompilation de l’instruction [!INCLUDE[tsql](../includes/tsql-md.md)]. S'il n'existe aucun plan d'exécution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en génère un nouveau pour la requête.
+  ![execution_context](../relational-databases/media/execution-context.gif)
 
 > [!NOTE]
-> Certaines instructions [!INCLUDE[tsql](../includes/tsql-md.md)] ne sont pas mises en cache, par exemple les instructions d’opérations en bloc s’exécutant sur rowstore ou les instructions contenant des littéraux de chaîne dont la taille est supérieure à 8 Ko.
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose trois options pour afficher les plans d’exécution :        
+> -  Le ***[Plan d’exécution estimé](../relational-databases/performance/display-the-estimated-execution-plan.md)***, qui est le plan compilé.        
+> -  Le ***[Plan d’exécution réel](../relational-databases/performance/display-an-actual-execution-plan.md)***, qui est identique au plan compilé auquel s’ajoute son contexte d’exécution. Cela inclut les informations d’exécution disponibles à la fin de l’exécution, comme les avertissements d’exécution, ou dans les versions plus récentes du [!INCLUDE[ssde_md](../includes/ssde_md.md)], le temps écoulé et le temps processeur utilisés pendant l’exécution.        
+> -  Les ***[Statistiques des requêtes actives](../relational-databases/performance/live-query-statistics.md)***, qui sont identiques au plan compilé auquel s’ajoute son contexte d’exécution. Cela inclut les informations d’exécution pendant la progression de l’exécution, lesquelles sont mises à jour chaque seconde. Les informations d’exécution incluent, par exemple, le nombre réel de lignes qui transitent par les opérateurs.       
+
+Quand une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est exécutée dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le [!INCLUDE[ssde_md](../includes/ssde_md.md)] parcourt d’abord le cache du plan afin de vérifier qu’il existe un plan d’exécution pour la même instruction [!INCLUDE[tsql](../includes/tsql-md.md)]. L’instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est considérée comme existante si elle correspond littéralement à une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] exécutée précédemment avec un plan mis en cache, caractère par caractère. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réutilise le plan existant qu’il trouve, évitant ainsi la recompilation de l’instruction [!INCLUDE[tsql](../includes/tsql-md.md)]. S’il n’existe aucun plan d’exécution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en génère un nouveau pour la requête.
+
+> [!NOTE]
+> Les plans d’exécution pour certaines instructions [!INCLUDE[tsql](../includes/tsql-md.md)] ne sont pas conservés dans le cache du plan, par exemple les instructions d’opérations en bloc s’exécutant sur rowstore ou les instructions contenant des littéraux de chaîne dont la taille est supérieure à 8 Ko. Ces plans n’existent que pendant l’exécution de la requête.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispose d’un algorithme efficace qui permet de trouver un plan d’exécution existant pour toute instruction [!INCLUDE[tsql](../includes/tsql-md.md)] spécifique. Dans la plupart des systèmes, les ressources minimales utilisées par cette analyse sont inférieures à celles économisées par la réutilisation de plans existants au lieu de la compilation de chaque instruction [!INCLUDE[tsql](../includes/tsql-md.md)].
 
-Les algorithmes qui permettent d’associer de nouvelles instructions [!INCLUDE[tsql](../includes/tsql-md.md)] à des plans d’exécution inutilisés existants dans le cache imposent que toutes les références d’objets soient complètes. Par exemple, supposons que `Person` est le schéma par défaut pour l’utilisateur exécutant les instructions `SELECT` ci-dessous. Même si dans cet exemple, la table `Person` n’a pas besoin d’être totalement apte à s’exécuter, cela signifie que la deuxième instruction n’est associée à aucun plan existant, mais que la troisième l’est :
+Les algorithmes qui permettent d’associer de nouvelles instructions [!INCLUDE[tsql](../includes/tsql-md.md)] à des plans d’exécution inutilisés existants dans le cache du plan imposent que toutes les références d’objets soient complètes. Par exemple, supposons que `Person` est le schéma par défaut pour l’utilisateur exécutant les instructions `SELECT` ci-dessous. Même si dans cet exemple, la table `Person` n’a pas besoin d’être totalement apte à s’exécuter, cela signifie que la deuxième instruction n’est associée à aucun plan existant, mais que la troisième l’est :
 
 ```sql
+USE AdventureWorks2014;
+GO
 SELECT * FROM Person;
 GO
 SELECT * FROM Person.Person;
@@ -444,8 +474,154 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-### <a name="removing-execution-plans-from-the-plan-cache"></a>Suppression de plans d’exécution du cache du plan
+Le changement de l’une des options SET suivantes pour une exécution donnée affecte la capacité à réutiliser des plans, car le [!INCLUDE[ssde_md](../includes/ssde_md.md)] effectue un [pliage de constantes](#ConstantFolding) et ces options affectent les résultats de telles expressions :
 
+|||   
+|-----------|------------|------------|    
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
+|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+
+### <a name="caching-multiple-plans-for-the-same-query"></a>Mise en cache de plusieurs plans pour la même requête 
+Les requêtes et les plans d’exécution sont identifiables de manière unique dans le [!INCLUDE[ssde_md](../includes/ssde_md.md)], à l’instar d’une empreinte digitale :
+-  Le **hachage de plan de requête** est une valeur de hachage binaire calculée sur le plan d’exécution pour une requête donnée et utilisée pour identifier de manière unique des plans d’exécution semblables. 
+-  Le **hachage de requête** est une valeur de hachage binaire calculée sur le texte [!INCLUDE[tsql](../includes/tsql-md.md)] d’une requête qui est utilisée pour identifier de manière unique des requêtes. 
+
+Un plan compilé peut être récupéré à partir du cache du plan à l’aide d’un **handle de plan**. Il s’agit d’un identificateur temporaire qui reste constant uniquement pendant que le plan reste dans le cache. Le handle de plan est une valeur de hachage dérivée du plan compilé de l’ensemble du lot. Le handle de plan pour un plan compilé ne change pas même si une ou plusieurs instructions du lot sont recompilées.
+
+> [!NOTE]
+> Si un plan a été compilé pour un lot plutôt que pour une instruction unique, le plan pour les instructions individuelles du lot peut être récupéré à l’aide du handle de plan et des décalages d’instructions.     
+> La DMV `sys.dm_exec_requests` contient les colonnes `statement_start_offset` et `statement_end_offset` pour chaque enregistrement. Elles font référence à l’instruction en cours d’exécution d’un objet persistant ou d’un lot en cours d’exécution. Pour plus d’informations, consultez [sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).       
+> La DMV `sys.dm_exec_query_stats` contient également ces colonnes pour chaque enregistrement. Elles font référence à la position d’une instruction dans un lot ou un objet persistant. Pour plus d’informations, consultez [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).     
+
+Le texte [!INCLUDE[tsql](../includes/tsql-md.md)] réel d’un lot est stocké dans un espace mémoire distinct du cache du plan, appelé cache **SQL Manager** (SQLMGR). Le texte [!INCLUDE[tsql](../includes/tsql-md.md)] d’un plan compilé peut être récupéré à partir du cache SQL Manager à l’aide d’un **handle SQL**. Il s’agit d’un identificateur temporaire qui reste constant uniquement le temps qu’au moins un plan qui le référence reste dans le cache du plan. Le handle SQL est une valeur de hachage dérivée du texte de l’ensemble du lot et son unicité est garantie pour chaque lot.
+
+> [!NOTE]
+> À l’instar d’un plan compilé, le texte [!INCLUDE[tsql](../includes/tsql-md.md)] est stocké par lot, ce qui inclut les commentaires. Le handle SQL contient le hachage MD5 du texte de l’ensemble du lot et son unicité est garantie pour chaque lot.
+
+La requête ci-dessous fournit des informations sur l’utilisation de la mémoire pour le cache SQL Manager :
+
+```sql
+SELECT * FROM sys.dm_os_memory_objects
+WHERE type = 'MEMOBJ_SQLMGR';
+```
+
+Il existe une relation 1:N entre un handle SQL et des handles de plan. Une telle condition se produit quand la clé de cache des plans compilés est différente. Cela peut être dû à un changement des options SET entre deux exécutions du même lot.
+
+Examinez la procédure stockée suivante :
+
+```sql
+USE WideWorldImporters;
+GO
+CREATE PROCEDURE usp_SalesByCustomer @CID int
+AS
+SELECT * FROM Sales.Customers
+WHERE CustomerID = @CID
+GO
+
+SET ANSI_DEFAULTS ON
+GO
+
+EXEC usp_SalesByCustomer 10
+GO
+```
+
+Vérifiez ce qui se trouve dans le cache du plan en utilisant la requête ci-dessous :
+
+```sql
+SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
+FROM sys.dm_exec_cached_plans AS cp
+CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
+CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
+INNER JOIN sys.dm_exec_query_stats AS qs ON qs.plan_handle = cp.plan_handle
+WHERE text LIKE '%usp_SalesByCustomer%'
+GO
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Exécutez maintenant la procédure stockée avec un autre paramètre, mais n’apportez aucun autre changement au contexte d’exécution :
+
+```sql
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+Vérifiez à nouveau ce qui se trouve dans le cache du plan. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Notez que la valeur `usecounts` est passé à 2, ce qui signifie que le même plan mis en cache a été réutilisé tel quel, car les structures de données du contexte d’exécution ont été réutilisées. Changez maintenant l’option `SET ANSI_DEFAULTS`, puis exécutez la procédure stockée avec le même paramètre.
+
+```sql
+SET ANSI_DEFAULTS OFF
+GO
+
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+Vérifiez à nouveau ce qui se trouve dans le cache du plan. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02B031F111CD01000001000000000000000000000000000000000000000000000000000000
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Notez qu’il y a désormais deux entrées dans la sortie de la DMV `sys.dm_exec_cached_plans` :
+-  La colonne `usecounts` indique la valeur `1` dans le premier enregistrement, qui est le plan exécuté une fois avec `SET ANSI_DEFAULTS OFF`.
+-  La colonne `usecounts` affiche la valeur `2` dans le deuxième enregistrement, qui est le plan exécuté avec `SET ANSI_DEFAULTS ON`, car il a été exécuté deux fois.    
+-  La valeur `memory_object_address` différente fait référence à une entrée de plan d’exécution différente dans le cache du plan. Toutefois, la valeur `sql_handle` est la même pour les deux entrées, car elles font référence au même lot. 
+   -  L’exécution avec `ANSI_DEFAULTS` défini sur OFF a un nouveau `plan_handle`, et il peut être réutilisé pour les appels qui ont le même ensemble d’options SET. Le nouveau handle de plan est nécessaire car le contexte d’exécution a été réinitialisé en raison d’options SET modifiées. Mais cela ne déclenche pas une recompilation : les deux entrées font référence au même plan et à la même requête, comme le prouvent les valeurs `query_plan_hash` et `query_hash` identiques.
+
+Cela signifie que nous avons, dans le cache, deux entrées de plan correspondant au même lot. Cela souligne l’importance de garantir que le cache du plan qui affecte les options SET est le même quand les mêmes requêtes sont exécutées à plusieurs reprises, afin d’optimiser la réutilisation du plan et de maintenir la taille du cache du plan à son minimum requis. 
+
+> [!TIP]
+> Un piège courant est que différents clients peuvent avoir des valeurs par défaut différentes pour les options SET. Par exemple, une connexion effectuée par le biais de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affecte automatiquement à `QUOTED_IDENTIFIER` la valeur ON, alors que SQLCMD définit `QUOTED_IDENTIFIER` sur OFF. L’exécution des mêmes requêtes à partir de ces deux clients donne lieu à plusieurs plans (comme décrit dans l’exemple ci-dessus).
+
+### <a name="removing-execution-plans-from-the-plan-cache"></a>Suppression de plans d’exécution du cache du plan
 Les plans d’exécution restent dans le cache du plan tant qu’il y a suffisamment de mémoire pour les stocker. En cas de sollicitation élevée de la mémoire, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise une approche basée sur les coûts pour identifier les plans d’exécution à supprimer du cache du plan. Pour prendre une décision basée sur les coûts, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] augmente et diminue une variable de coût actuel pour chaque plan d’exécution en fonction des facteurs suivants.
 
 Lorsqu'un processus utilisateur insère un plan d'exécution dans le cache, il définit le coût actuel de sorte qu'il soit égal au coût de compilation de la requête d'origine ; pour les plans d'exécution ad hoc, le processus utilisateur définit le coût actuel à zéro. Ensuite, chaque fois qu'un processus utilisateur fait référence à un plan d'exécution, il réinitialise le coût actuel au coût de compilation d'origine ; pour les plans d'exécution ad hoc, le processus utilisateur augmente le coût actuel. Pour tous les plans, la valeur maximale du coût actuel correspond au coût de compilation d'origine.
@@ -503,14 +679,13 @@ La colonne `recompile_cause` de `sql_statement_recompile` xEvent contient un cod
 
 > [!NOTE]
 > Dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où les événements étendus ne sont pas disponibles, l’événement de trace [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) du profileur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut être utilisé dans le même but de signaler les recompilations au niveau de l’instruction.
-> L’événement de trace [SQL:stmtrecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) signale également les recompilations au niveau de l’instruction, et vous pouvez aussi l’utiliser pour suivre et déboguer les recompilations. Tandis que SP:Recompile est généré uniquement pour les procédures stockées et les déclencheurs, `SQL:StmtRecompile` est généré pour les procédures stockées, les déclencheurs, les lots ad hoc, les lots exécutés à l’aide de `sp_executesql`, les requêtes préparées et le code SQL dynamique.
+> L’événement de trace `SQL:StmtRecompile` signale également les recompilations au niveau de l’instruction, et vous pouvez aussi l’utiliser pour suivre et déboguer les recompilations. Tandis que `SP:Recompile` est généré uniquement pour les procédures stockées et les déclencheurs, `SQL:StmtRecompile` est généré pour les procédures stockées, les déclencheurs, les lots ad hoc, les lots exécutés à l’aide de `sp_executesql`, les requêtes préparées et le code SQL dynamique.
 > La colonne *EventSubClass* de `SP:Recompile` et `SQL:StmtRecompile` contient un code entier qui indique la raison de la recompilation. Les codes sont décrits [ici](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
 > Quand l’option de base de données `AUTO_UPDATE_STATISTICS` a pour valeur `ON`, les requêtes sont recompilées quand elles ciblent des tables ou des vues indexées dont les statistiques ont été mises à jour ou dont les cardinalités ont sensiblement évolué depuis la dernière exécution. Ce comportement s’applique aux tables temporaires, aux tables définies par l’utilisateur standard, ainsi qu’aux tables inserted et deleted créées par des déclencheurs DML. Si les performances des requêtes sont affectées par des recompilations excessives, vous pouvez attribuer à ce paramètre la valeur `OFF`. Quand l’option de base de données `AUTO_UPDATE_STATISTICS` a pour valeur `OFF`, aucune recompilation ne se produit en fonction des statistiques ou des modifications de cardinalité, à l’exception des tables inserted et deleted qui sont créées par des déclencheurs DML `INSTEAD OF`. Comme ces tables sont créées dans tempdb, la recompilation de requêtes qui accèdent à ces tables dépend du paramétrage de `AUTO_UPDATE_STATISTICS` dans tempdb. Dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antérieures à la version 2005, la recompilation des requêtes se poursuit en fonction des modifications de cardinalité apportées aux tables inserted et deleted créées par des déclencheurs DML, même si ce paramètre a pour valeur `OFF`.
 
 ### <a name="PlanReuse"></a> Réutilisation des paramètres et des plans d'exécution
-
 L'utilisation de paramètres, notamment de marqueurs de paramètres dans les applications ADO, OLE DB et ODBC, peut favoriser la réutilisation des plans d'exécution. 
 
 > [!WARNING] 
@@ -579,7 +754,6 @@ WHERE AddressID = 1 + 2;
 Elle peut toutefois être paramétrée conformément aux règles de paramétrage simple. En cas de tentative infructueuse de paramétrage forcé, le paramétrage simple est activé.
 
 ### <a name="SimpleParam"></a> Paramétrage simple
-
 Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l’utilisation de paramètres ou de marqueurs de paramètres dans les instructions Transact-SQL augmente la capacité du moteur relationnel à associer les nouvelles instructions [!INCLUDE[tsql](../includes/tsql-md.md)] aux plans d’exécution préalablement compilés existants.
 
 > [!WARNING] 
@@ -615,7 +789,6 @@ Avec le comportement par défaut du paramétrage simple, [!INCLUDE[ssNoVersion](
 Une autre solution consiste à spécifier que ne soient paramétrables qu'une requête et toutes autres requêtes dont la syntaxe ne se différencie que par les valeurs des paramètres. 
 
 ### <a name="ForcedParam"></a> Paramétrage forcé
-
 Vous pouvez remplacer le comportement de paramétrage simple par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en spécifiant que toutes les instructions `SELECT`, `INSERT`, `UPDATE` et `DELETE` de la base de données soient paramétrables dans certaines limites. Le paramétrage forcé s’active en attribuant la valeur `PARAMETERIZATION` à l’option `FORCED` dans l’instruction `ALTER DATABASE` . Ce type de paramétrage permet d'améliorer les performances de certaines bases de données en réduisant la fréquence des compilations et des recompilations des requêtes. Les bases de données qui peuvent tirer profit du paramétrage forcé sont généralement des bases de données devant gérer un nombre important de requêtes simultanées émanant de sources telles que des applications de point de vente.
 
 Lorsque l’option `PARAMETERIZATION` a la valeur `FORCED`, toute valeur littérale apparaissant dans une instruction `SELECT`, `INSERT`, `UPDATE`ou `DELETE` , dans n’importe quel format, est convertie en paramètre au moment de la compilation de la requête. Les littéraux apparaissant dans les constructions de requêtes suivantes font toutefois exception : 
@@ -654,7 +827,6 @@ Le paramétrage est effectué au niveau des instructions [!INCLUDE[tsql](../incl
 > Les noms des paramètres sont arbitraires. Les utilisateurs et les applications ne doivent par conséquent pas se fier à un ordre particulier d'affectation des noms. En outre, les éléments suivants peuvent varier entre les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les mises à niveau du Service Pack : Les noms des paramètres, le choix des littéraux paramétrés et l’espacement dans le texte paramétré.
 
 #### <a name="data-types-of-parameters"></a>Types de données des paramètres
-
 Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] paramètre des littéraux, les paramètres sont convertis dans les types de données suivants :
 
 * Les littéraux entiers dont la taille correspondrait en d’autres circonstances au type de données int sont paramétrés sur int. Les littéraux de taille plus importante qui font partie d’un prédicat impliquant un opérateur de comparaison quelconque (notamment <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` et `IN`) sont paramétrés sur numeric(38,0). Les littéraux de taille plus importante qui ne font pas partie d’un prédicat impliquant un opérateur de comparaison sont paramétrés sur numeric dont la précision suffit à prendre en charge leur taille et dont l’échelle correspond à 0.
@@ -666,7 +838,6 @@ Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] paramètre des li
 * Les littéraux de type monétaire sont paramétrés sur money.
 
 #### <a name="ForcedParamGuide"></a> Principes d'utilisation du paramétrage forcé
-
 Lorsque vous affectez à l’option `PARAMETERIZATION` la valeur FORCED, tenez compte des points suivants :
 
 * Le paramétrage forcé convertit les constantes des littéraux d'une requête en paramètres lors de la compilation d'une requête. Par conséquent, l'optimiseur de requête peut opter pour des plans d'exécution de requêtes non optimisés. Plus spécifiquement, il est moins probable que l'optimiseur de requête établisse une correspondance avec une vue indexée ou un index d'une colonne calculée. Il peut également opter pour des plans non optimisés dans le cas de requêtes soumises pour des tables partitionnées ou des vues partitionnées et distribuées. Il n'est pas recommandé d'utiliser le paramétrage forcé dans des environnements reposant principalement sur des vues indexées ou des index de colonnes calculées. Dans l’ensemble, l’option `PARAMETERIZATION FORCED` devrait être utilisée exclusivement par des administrateurs de bases de données expérimentés qui se seront assurés que cela n’affectera pas les performances.
@@ -681,7 +852,6 @@ Pour remplacer le comportement de paramétrage forcé, il suffit de spécifier q
 > Quand l’option `PARAMETERIZATION` est définie avec la valeur `FORCED`, le rapport des messages d’erreur peut ne pas être le même que quand l’option `PARAMETERIZATION` est définie avec la valeur `SIMPLE` : davantage de messages d’erreur peuvent être signalés avec le paramétrage forcé qu’avec le paramétrage simple et les numéros de ligne où interviennent les erreurs peuvent ne pas être corrects.
 
 ### <a name="preparing-sql-statements"></a>Préparation des instructions SQL
-
 Le moteur relationnel de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permet la prise en charge intégrale de la préparation des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] avant leur exécution. Si une application doit exécuter une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] plusieurs fois, elle peut recourir à l’API de base de données pour effectuer les opérations suivantes : 
 
 * Préparer l'instruction en une seule fois. L’instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est compilée dans un plan d’exécution.
@@ -734,7 +904,6 @@ Pour plus d’informations sur la résolution des problèmes de détection de pa
 > Pour les requêtes utilisant l’indicateur `RECOMPILE`, les valeurs de paramètres et les valeurs actuelles des variables locales sont détectées. Les valeurs détectées (des paramètres et variables locales) sont celles présentes dans le lot juste avant l’instruction avec l’indicateur `RECOMPILE`. Pour les paramètres en particulier, les valeurs fournies avec l’appel du lot ne sont pas détectées.
 
 ## <a name="parallel-query-processing"></a>Traitement de requêtes en parallèle
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permet les requêtes parallèles afin d'optimiser leur exécution et les opérations d'index sur les ordinateurs dotés de plusieurs processeurs (ou unités centrales). Comme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut exécuter une requête ou une opération d’index en parallèle à l’aide de plusieurs threads de travail du système d’exploitation, l’opération peut être exécutée rapidement et efficacement.
 
 Durant l'optimisation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recherche les requêtes ou les opérations d'index qui pourraient tirer profit d'une exécution en parallèle. Pour ces requêtes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] insère des opérateurs d'échange dans le plan d'exécution de la requête afin de la préparer à l'exécution en parallèle. Un opérateur d'échange est un opérateur dans un plan d'exécution de requêtes qui assure la gestion du processus, la redistribution des données et le contrôle de flux. L’opérateur d’échange inclut les opérateurs logiques `Distribute Streams`, `Repartition Streams`et `Gather Streams` comme sous-types, qui peuvent apparaître dans la sortie Showplan du plan de requête d’une requête parallèle. 
@@ -766,23 +935,22 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 * La requête contient des opérateurs scalaires ou relationnels qui ne peuvent être exécutés en parallèle. Certains opérateurs peuvent entraîner l'exécution d'une section du plan de requête ou de la totalité du plan en mode série.
 
 ### <a name="DOP"></a> Degré de parallélisme
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détecte automatiquement le meilleur degré de parallélisme pour chaque instance d'une exécution de requête en parallèle ou d'une opération DDL (Data Definition Language) d'index. Cette détection se fait sur la base des critères suivants : 
 
 1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne sur un ordinateur doté de plusieurs microprocesseurs ou UC, tel qu'un ordinateur à multitraitement symétrique (SMP, symmetric multiprocessing).  
-  Seuls les ordinateurs dotés de plusieurs UC peuvent utiliser des requêtes en parallèle. 
+   Seuls les ordinateurs dotés de plusieurs UC peuvent utiliser des requêtes en parallèle. 
 
 2. Le nombre de threads de travail disponibles.  
-  Chaque requête ou opération d’index nécessite un certain nombre de threads de travail. Pour être exécuté, un plan parallèle nécessite plus de threads de travail qu’un plan série, le nombre de threads de travail nécessaires allant de pair avec le degré de parallélisme. Quand les threads de travail disponibles sont insuffisants pour un certain degré de parallélisme, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminue automatiquement le degré de parallélisme ou abandonne complètement le plan parallèle dans le contexte de charge de travail spécifié. Ensuite, il exécute le plan série (un thread de travail). 
+   Chaque requête ou opération d’index nécessite un certain nombre de threads de travail. Pour être exécuté, un plan parallèle nécessite plus de threads de travail qu’un plan série, le nombre de threads de travail nécessaires allant de pair avec le degré de parallélisme. Quand les threads de travail disponibles sont insuffisants pour un certain degré de parallélisme, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminue automatiquement le degré de parallélisme ou abandonne complètement le plan parallèle dans le contexte de charge de travail spécifié. Ensuite, il exécute le plan série (un thread de travail). 
 
 3. Le type de requête ou d'opération d'index exécutée.  
-  Les requêtes qui utilisent fortement les cycles microprocesseur et les opérations d'index qui créent ou reconstruisent un index, ou qui suppriment un index cluster, sont les candidates idéales pour un plan parallèle. Par exemple, les jointures de grandes tables, les agrégations importantes et le tri d'ensembles de résultats volumineux s'y prêtent bien. Pour les requêtes simples, typiques des applications de traitement de transactions, il s'avère que la coordination supplémentaire nécessaire à l'exécution d'une requête en parallèle n'est pas rentabilisée par l'augmentation potentielle des performances. Pour faire la distinction entre les requêtes qui tirent profit du parallélisme et les autres, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compare le coût estimé de l’exécution de la requête ou de l’opération d’index à la valeur [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). L’utilisateur peut changer la valeur par défaut (5) à l’aide de [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) si un test approprié a révélé qu’une valeur différente est mieux adaptée pour la charge de travail en cours d’exécution. 
+   Les requêtes qui utilisent fortement les cycles microprocesseur et les opérations d'index qui créent ou reconstruisent un index, ou qui suppriment un index cluster, sont les candidates idéales pour un plan parallèle. Par exemple, les jointures de grandes tables, les agrégations importantes et le tri d'ensembles de résultats volumineux s'y prêtent bien. Pour les requêtes simples, typiques des applications de traitement de transactions, il s'avère que la coordination supplémentaire nécessaire à l'exécution d'une requête en parallèle n'est pas rentabilisée par l'augmentation potentielle des performances. Pour faire la distinction entre les requêtes qui tirent profit du parallélisme et les autres, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compare le coût estimé de l’exécution de la requête ou de l’opération d’index à la valeur [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). L’utilisateur peut changer la valeur par défaut (5) à l’aide de [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) si un test approprié a révélé qu’une valeur différente est mieux adaptée pour la charge de travail en cours d’exécution. 
 
 4. Le nombre de lignes à traiter.  
-  Si l'optimiseur de requête détermine que le nombre de lignes est trop faible, il n'introduit pas les opérateurs d'échange qui servent à distribuer les lignes. Par conséquent, ces opérateurs sont exécutés en série. L'exécution des opérateurs dans un plan série permet d'éviter que les coûts de démarrage, de distribution et de coordination dépassent les bénéfices d'une exécution en parallèle.
+   Si l'optimiseur de requête détermine que le nombre de lignes est trop faible, il n'introduit pas les opérateurs d'échange qui servent à distribuer les lignes. Par conséquent, ces opérateurs sont exécutés en série. L'exécution des opérateurs dans un plan série permet d'éviter que les coûts de démarrage, de distribution et de coordination dépassent les bénéfices d'une exécution en parallèle.
 
 5. Disponibilité des statistiques de distribution actuelles.  
-  Si ce niveau ne peut être atteint, le moteur de base de données envisage de passer à un degré inférieur avant d'abandonner totalement le plan parallèle.  
+   Si ce niveau ne peut être atteint, le moteur de base de données envisage de passer à un degré inférieur avant d'abandonner totalement le plan parallèle.  
   Par exemple, lorsque vous créez un index cluster sur une vue, les statistiques de distribution ne peuvent pas être prises en compte étant donné que l'index en question n'existe pas encore. Dans ce cas, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est incapable de garantir le degré de parallélisme le plus élevé pour l'opération d'index. Toutefois, certains opérateurs, tels que le tri et l'analyse, peuvent malgré tout bénéficier de l'exécution en parallèle.
 
 > [!NOTE]
@@ -795,7 +963,6 @@ Dans un plan d'exécution parallèle de requêtes, les opérateurs insert, updat
 Les curseurs statiques et les curseurs pilotés par jeux de clés peuvent être complétés par des plans d'exécution parallèle. Cependant, le comportement des curseurs dynamiques ne peut être fourni que par une exécution en série. L'optimiseur de requête génère toujours un plan d'exécution en série pour une requête qui fait partie d'un curseur dynamique.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Remplacement des degrés de parallélisme
-
 Vous pouvez utiliser l’option de configuration de serveur [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) sur [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) pour limiter le nombre de processeurs à utiliser dans une exécution de plan parallèle. L’option max degree of parallelism peut être remplacée par des instructions d’exécution de requêtes ou d’opérations d’index individuelles grâce à la spécification de l’indicateur MAXDOP ou de l’option d’index MAXDOP. MAXDOP offre un meilleur contrôle sur les requêtes et les opérations d'index individuelles. Par exemple, vous pouvez utiliser l’option MAXDOP pour contrôler (à savoir augmenter ou réduire) le nombre de processeurs alloués à une opération d’index en ligne. Ceci vous permet d'équilibrer les ressources utilisées par une opération d'index et celles des utilisateurs simultanés. 
 
 L’attribution de la valeur 0 (valeur par défaut) à l’option Degré maximal de parallélisme permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser tous les processeurs disponibles, jusqu’à 64, dans une exécution de plan parallèle. Bien que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] définisse une cible d’exécution de 64 processeurs logiques quand l’option MAXDOP a la valeur 0, une autre valeur peut être définie manuellement si nécessaire. Attribuer la valeur 0 à MAXDOP pour les requêtes et les index permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser tous les processeurs disponibles, 64 au maximum, pour les requêtes ou les index donnés dans une exécution de plan parallèle. MAXDOP n’est pas une valeur appliquée pour toutes les requêtes parallèles, mais plutôt une cible provisoire pour toutes les requêtes éligibles pour le parallélisme. Cela signifie que si le nombre de threads de travail disponibles n’est pas suffisant au moment de l’exécution, une requête peut s’exécuter avec un degré de parallélisme inférieur à l’option MAXDOP.
@@ -803,7 +970,6 @@ L’attribution de la valeur 0 (valeur par défaut) à l’option Degré maxima
 Pour obtenir des recommandations sur la configuration de MAXDOP, consultez cet [Article du support technique Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
 
 ### <a name="parallel-query-example"></a>Exemple de requête en parallèle
-
 La requête suivante compte le nombre de commandes passées dans le courant du trimestre débutant le 1er avril 2000, dont au moins un poste a été livré au client à une date postérieure à la date prévue. Cette requête affiche le nombre de ce type de commandes groupées par priorité de commande et triées en ordre de priorité croissant. 
 
 Cet exemple utilise des noms de tables et de colonnes théoriques.
@@ -913,7 +1079,6 @@ Les phases principales d'une opération d'index parallèle sont les suivantes :
 Les instructions `CREATE TABLE` ou `ALTER TABLE` individuelles peuvent avoir plusieurs contraintes imposant la création d’un index. Ces opérations de création d'index multiples sont exécutées en série, bien que chaque opération de création d'index individuelle puisse être une opération parallèle sur un ordinateur doté de plusieurs UC.
 
 ## <a name="distributed-query-architecture"></a>Architecture des requêtes distribuées
-
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge deux méthodes distinctes pour référencer des sources de données OLE DB hétérogènes dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] :
 
 * Noms de serveurs liés  
@@ -1013,16 +1178,15 @@ L’illustration suivante montre les propriétés de l’opérateur `Clustered I
 
 #### <a name="partitioned-attribute"></a>Attributs partitionnés
 
-Lorsqu’un opérateur tel que `Index Seek` est exécuté sur une table ou un index partitionné, l’attribut `Partitioned` apparaît dans le plan de compilation et au moment de l’exécution et a pour valeur `True` (1). L'attribut ne s'affiche pas lorsqu'il a pour valeur `False` (0).
+Quand un opérateur comme Index Seek est exécuté sur une table ou un index partitionné, l’attribut `Partitioned` apparaît dans le plan au moment de la compilation et au moment de l’exécution, et a pour valeur `True` (1). L'attribut ne s'affiche pas lorsqu'il a pour valeur `False` (0).
 
 L’attribut `Partitioned` peut apparaître dans les opérateurs physiques et logiques suivants :  
-* `Table Scan`  
-* `Index Scan`  
-* `Index Seek`  
-* `Insert`  
-* `Update`  
-* `Delete`  
-* `Merge`  
+|||
+|--------|--------|
+|Table Scan|Index Scan|
+|Index Seek|Insérer|
+|Update|DELETE|
+|Fusionner||
 
 Comme indiqué dans l'illustration précédente, cet attribut est affiché dans les propriétés de l'opérateur dans lequel il est défini. Dans la sortie du plan d’exécution XML, cet attribut apparaît comme `Partitioned="1"` dans le nœud `RelOp` de l’opérateur dans lequel il est défini.
 

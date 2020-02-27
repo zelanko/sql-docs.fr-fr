@@ -1,5 +1,5 @@
 ---
-title: Ajouter un tri interactif à un tableau ou une matrice (Générateur de rapports et SSRS) | Microsoft Docs
+title: Ajouter un tri interactif à un tableau ou à une matrice (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962f07f5e5f6ce00bc21c362ce905bec2773c28c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893806"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081618"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Ajouter un tri interactif à un tableau ou une matrice (Générateur de rapports et SSRS)
   Ajoutez des boutons de tri interactif pour permettre aux utilisateurs de modifier l'ordre de tri des lignes et des colonnes dans les tables et les matrices. Cette fonctionnalité est prise en charge uniquement dans les formats de rendu qui prennent en charge les interactions avec l'utilisateur, tels que le format HTML.  

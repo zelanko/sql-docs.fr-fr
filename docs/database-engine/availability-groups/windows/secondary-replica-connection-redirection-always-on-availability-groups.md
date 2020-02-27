@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235204"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256662"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal (groupes de disponibilité Always On)
 
@@ -46,7 +46,7 @@ Dans les versions antérieures à la [!INCLUDE[sssqlv15-md](../../../includes/ss
 Pour qu’un réplica secondaire redirige les requêtes de connexion en lecture/écriture :
 * Le réplica secondaire doit être en ligne. 
 * Les spécifications `PRIMARY_ROLE` du réplica doivent inclure `READ_WRITE_ROUTING_URL`.
-* La chaîne de connexion doit définir `ApplicationIntent` comme `ReadWrite`, qui est la valeur par défaut.
+* La chaîne de connexion doit être `ReadWrite`. Pour cela, `ApplicationIntent` doit être défini sur `ReadWrite` ou `ApplicationIntent` ne doit pas être défini et la valeur par défaut (`ReadWrite`) doit s’appliquer.
 
 ## <a name="set-read_write_routing_url-option"></a>Définir l’option READ_WRITE_ROUTING_URL
 

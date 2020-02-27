@@ -1,5 +1,5 @@
 ---
-title: Syntaxe du chemin à l’élément pour des données de rapport XML (SSRS) | Microsoft Docs
+title: Syntaxe du chemin de l’élément pour des données de rapport XML | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72173836"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077659"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
   Dans le Concepteur de rapports, vous spécifiez les données à utiliser pour un rapport à partir d'une source de données XML en définissant un chemin d'accès à l'élément qui respecte la casse. Le chemin d'accès à l'élément indique comment parcourir les nœuds hiérarchiques XML et leurs attributs dans la source de données XML. Pour utiliser le chemin de l’élément par défaut, laissez vide la requête du dataset ou le **ElementPath** XML du **Query** XML. Lorsque les données sont extraites de la source de données XML, les nœuds d'élément possédant des valeurs de texte et des attributs de nœud d'élément deviennent des colonnes dans le jeu de résultats. Les valeurs des nœuds et les attributs deviennent les données de ligne lorsque vous exécutez la requête. Les colonnes apparaissent sous la forme de collection de champs de dataset dans le volet des données de rapport. Cette rubrique décrit la syntaxe du chemin d'accès à l'élément.  
@@ -90,7 +90,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Lorsque le chemin d'accès à l'élément est vide, la requête utilise le chemin d'accès à l'élément par défaut : le premier chemin d'accès à une collection de nœuds terminaux. Dans le premier exemple, laisser un chemin d'accès à l'élément vide équivaut à spécifier le chemin d'accès à l'élément /Customers/Customer/Orders/Order. L'ensemble des attributs et des valeurs de nœud, ainsi que le chemin d'accès, sont retournés dans le jeu de résultats, et les noms de nœuds et les noms d'attributs apparaissent en tant que champs du dataset.  
   
- **Exemple #1**: *Vide*  
+ **Exemple 1** : *Vide*  
   
 |JSON|Qté|id|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
@@ -133,7 +133,7 @@ XMLLocalName :: =
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  
   
-#### <a name="xml-document-customersxml"></a>Document XML : Customers.xml  
+#### <a name="xml-document-customersxml"></a>Document XML : Customers.xml  
  Pour vous entraîner avec les exemples de chemin d’élément présentés dans la section précédente, vous pouvez copier ce code XML et l’enregistrer dans une URL à laquelle le Concepteur de rapports peut accéder, puis utiliser le document XML comme source de données XML : par exemple, `https://localhost/Customers.xml`.  
   
 ```  

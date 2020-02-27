@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952350"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255973"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -406,7 +406,7 @@ Spécifie que la connexion concerne l’authentification Azure AD.
 
 PASSWORD **=** '*password*' Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 
-Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
+Les mots de passe respectent la casse. Les mots de passe doivent toujours comporter au moins dix caractères et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
 SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 

@@ -1,5 +1,5 @@
 ---
-title: En-têtes et pieds de page (Générateur de rapports et SSRS) | Microsoft Docs
+title: En-têtes et pieds de page (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576338"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082458"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>En-têtes et pieds de page (Générateur de rapports et SSRS)
   Un rapport peut contenir un en-tête et un pied de page. Ces informations sont situées respectivement le long des bords supérieur et inférieur de chaque page. Les en-têtes et pieds de page peuvent contenir du texte statique, des images, des rectangles, des bordures, une couleur d'arrière-plan, des images d'arrière-plan et des expressions. Les expressions contiennent des références de champs de dataset pour des rapports qui utilisent un seul dataset, ainsi que des appels de fonction d'agrégation qui intègrent le dataset sous forme d'étendue.  

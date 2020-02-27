@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831603"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256878"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
@@ -71,7 +71,7 @@ Après avoir configuré votre cluster Kubernetes, vous pouvez passer au déploie
 
 ## <a name="ensure-you-have-storage-configured"></a>Vérifier que le stockage est configuré
 
-pour que la plupart des déploiements de cluster Big Data disposent d’un stockage persistant. À ce stade, vous devez vous assurer de disposer d’un plan pour la façon dont vous allez fournir un stockage persistant sur le cluster Kubernetes avant de déployer le cluster Big Data.
+La plupart des déploiements de cluster Big Data doivent disposer d’un stockage persistant. À ce stade, vous devez vous assurer de disposer d’un plan pour la façon dont vous allez fournir un stockage persistant sur le cluster Kubernetes avant de déployer le cluster Big Data.
 
 Si vous déployez dans AKS, aucune configuration de stockage n’est nécessaire. AKS fournit des classes de stockage intégrées au provisionnement dynamique. Vous pouvez personnaliser la classe de stockage (`default` ou `managed-premium`) dans le fichier de configuration de déploiement. Les profils intégrés utilisent une classe de stockage `default`. Si vous déployez sur un cluster Kubernetes que vous avez déployé à l’aide de `kubeadm`, vous devez vous veiller à disposer d’un espace de stockage suffisant pour qu’un cluster de l’échelle souhaitée soit disponible et son utilisation configurée. Si vous souhaitez personnaliser la façon dont votre stockage est utilisé, vous devez le faire avant de continuer. Consultez [Persistance des données avec un cluster Big Data SQL Server sur Kubernetes](concept-data-persistence.md).
 

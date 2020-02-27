@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74479431"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558378"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
 
@@ -26,7 +26,7 @@ Cet article décrit comment utiliser des fonctions du package [**sqlmlutils**](h
 > [!NOTE]
 > La commande `install.packages` R standard n’est pas recommandée pour l’ajout de packages R sur SQL Server. Au lieu de cela, utilisez **sqlmlutils** comme décrit dans cet article.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Installez [R](https://www.r-project.org) et [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) sur l’ordinateur client que vous utilisez pour vous connecter à SQL Server. Vous pouvez utiliser n’importe quel IDE R pour exécuter les scripts, mais cet article part du principe que vous utilisez RStudio.
 
@@ -129,13 +129,15 @@ Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a a
 
 1. Sur l’ordinateur client, ouvrez RStudio et créez un fichier de **script R**.
 
-1. Utilisez le script R suivant pour installer le package**glue** à l’aide de **sqlmlutils**. Remplacez vos propres informations de connexion de base de données SQL Server (si vous n’utilisez pas l’authentification Windows, ajoutez les paramètres `uid` et `pwd`).
+1. Utilisez le script R suivant pour installer le package**glue** à l’aide de **sqlmlutils**. Remplacez les valeurs existantes par vos propres informations de connexion à la base de données SQL Server.
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
-     server= "yourserver",
-     database = "yourdatabase")
+     server   = "server",
+     database = "database",
+     uid      = "username",
+     pwd      = "password")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```

@@ -1,7 +1,7 @@
 ---
 title: Utilisation d’Always Encrypted avec le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2020
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae119c85877768f7a3356a139c5aaf3f70dc6f8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75681710"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004604"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilisation d’Always Encrypted avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ Cette page fournit des informations sur la façon de développer des application
 
 Always Encrypted permet aux clients de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. À cette fin, un pilote compatible avec Always Encrypted, comme Microsoft JDBC Driver 6.0 (ou version ultérieure) pour SQL Server, chiffre et déchiffre de manière transparente les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base Always Encrypted et chiffre les valeurs de ces paramètres avant de les envoyer à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (Moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [Informations de référence sur l'API Always Encrypted pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 - Assurez-vous que Microsoft JDBC Driver 6.0 (ou version ultérieure) pour SQL Server est installé sur votre ordinateur de développement. 
 - Téléchargez et installez les fichiers de stratégie Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction.  Veillez à lire le fichier Lisez-moi inclus dans le fichier zip pour obtenir les instructions d’installation et des informations pertinentes sur les éventuels problèmes d’importation/exportation.  
 
@@ -123,7 +123,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Pour obtenir un exemple montrant comment inclure ces dépendances dans un projet Maven, consultez [Télécharger des dépendances ADAL4J et AKV avec Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Avec le fournisseur du magasin de certificats Windows
-SQLServerColumnEncryptionCertificateStoreProvider peut être utilisé pour stocker les clés principales de colonne dans le magasin de certificats Windows. Utilisez l’assistant Always Encrypted SQL Server Management Studio (SSMS) ou d’autres outils pris en charge pour créer les définitions de clé principale de colonne et de clé de chiffrement de colonne dans la base de données. Le même assistant peut servir à générer un certificat auto-signé dans le magasin de certificats Windows, qui peut être utilisé comme clé principale de colonne pour les données Always Encrypted. Pour plus d’informations sur la syntaxe T-SQL de clé principale de colonne et de clé de chiffrement de colonne, consultez [Créer une clé principale de colonne](../../t-sql/statements/create-column-master-key-transact-sql.md) et [Créer une clé de chiffrement de colonne](../../t-sql/statements/create-column-encryption-key-transact-sql.md), respectivement.
+SQLServerColumnEncryptionCertificateStoreProvider peut être utilisé pour stocker les clés principales de colonne dans le magasin de certificats Windows. Utilisez l’assistant Always Encrypted SQL Server Management Studio (SSMS) ou d’autres outils pris en charge pour créer les définitions de clé principale de colonne et de clé de chiffrement de colonne dans la base de données. Le même Assistant peut servir à générer un certificat auto-signé dans le magasin de certificats Windows afin de l’utiliser ensuite comme clé principale de colonne pour les données Always Encrypted. Pour plus d’informations sur la syntaxe T-SQL de clé principale de colonne et de clé de chiffrement de colonne, consultez [Créer une clé principale de colonne](../../t-sql/statements/create-column-master-key-transact-sql.md) et [Créer une clé de chiffrement de colonne](../../t-sql/statements/create-column-encryption-key-transact-sql.md), respectivement.
 
 Le nom de SQLServerColumnEncryptionCertificateStoreProvider est MSSQL_CERTIFICATE_STORE et peut être interrogé par l’API getName() de l’objet fournisseur. Il est automatiquement inscrit par le pilote et peut être utilisé de façon transparente sans modification de l’application.
 
@@ -147,7 +147,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Même si les autres fournisseurs de magasins de clés de cet article sont disponibles sur toutes les plateformes prises en charge par le pilote, l’implémentation SQLServerColumnEncryptionCertificateStoreProvider du pilote JDBC est disponible uniquement sur les systèmes d’exploitation Windows. Il affiche une dépendance sur le fichier sqljdbc_auth. dll disponible dans le package de pilotes. Pour utiliser ce fournisseur, copiez le fichier sqljdbc_auth.dll dans un répertoire sur le chemin du système Windows de l’ordinateur sur lequel le pilote JDBC est installé. Vous pouvez également définir la propriété système java.library.path afin de spécifier le répertoire du fichier sqljdbc_auth.dll. Si vous exécutez une machine virtuelle Java (JVM) 32 bits, utilisez le fichier sqljdbc_auth.dll dans le dossier x86, même si la version du système d'exploitation est x64. Si vous exécutez une machine virtuelle Java (JVM) 64 bits sur un processeur x64, utilisez le fichier sqljdbc_auth.dll dans le dossier x64. Par exemple, si vous utilisez la machine virtuelle Java 32 bits et que le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l’emplacement de la DLL à l’aide de l’argument de machine virtuelle suivant lors du démarrage de l’application Java : `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Même si les autres fournisseurs de magasins de clés de cet article sont disponibles sur toutes les plateformes prises en charge par le pilote, l’implémentation SQLServerColumnEncryptionCertificateStoreProvider du pilote JDBC est disponible uniquement sur les systèmes d’exploitation Windows. Le fournisseur a une dépendance sur le fichier mssql-jdbc_auth-\<version>-\<arch>.dll disponible dans le package de pilotes. Pour utiliser ce fournisseur, copiez le fichier mssql-jdbc_auth-\<version>-\<arch>.dll dans un répertoire sur le chemin du système Windows de l’ordinateur où le pilote JDBC est installé. Vous pouvez également définir la propriété système java.library.path afin de spécifier le répertoire du fichier mssql-jdbc_auth-\<version>-\<arch>.dll. Si vous exécutez une machine virtuelle Java (JVM) 32 bits, utilisez le fichier mssql-jdbc_auth-\<version>-x86.dll dans le dossier x86, même si la version du système d'exploitation est x64. Si vous exécutez une machine virtuelle Java (JVM) 64 bits sur un processeur x64, utilisez le fichier mssql-jdbc_auth-\<version>-x64.dll dans le dossier x64. Par exemple, si vous utilisez la machine virtuelle Java 32 bits et que le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l’emplacement de la DLL à l’aide de l’argument de machine virtuelle suivant lors du démarrage de l’application Java : `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Utilisation du fournisseur de magasin de clés Java
 Le pilote JDBC est fourni avec une implémentation de fournisseur de magasins de clés intégrée pour le magasin de clés Java. Si la propriété de chaîne de connexion **keyStoreAuthentication** est présente dans la chaîne de connexion et qu’elle est définie sur « JavaKeyStorePassword », le pilote instancie et inscrit automatiquement le fournisseur pour le magasin de clés Java. Le nom du fournisseur de magasins de clés Java est MSSQL_JAVA_KEYSTORE. Ce nom peut également être interrogé à l’aide de l’API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 
@@ -177,7 +177,7 @@ La classe SQLServerColumnEncryptionJavaKeyStoreProvider peut être utilisée ave
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
 ```
 
-Cette commande crée une clé publique et l’encapsule dans un certificat auto-signé X.509 stocké dans le magasin de clés `keystore.jks` avec sa clé privée associée. Cette entrée du magasin de clés est identifiée par l’alias `AlwaysEncryptedKey`.
+Cette commande crée une clé publique et la wrappe dans un certificat auto-signé X.509 qui est stocké dans le magasin de clés `keystore.jks` avec sa clé privée associée. Cette entrée du magasin de clés est identifiée par l’alias `AlwaysEncryptedKey`.
 
 Voici un exemple similaire avec un type de magasin PKCS12 :
 
@@ -458,7 +458,7 @@ Cet exemple insère une ligne dans la table Patients. Notez les points suivants�
 - Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont passées en tant que paramètres à l’aide de SQLServerPreparedStatement. L’utilisation de paramètres est facultative lors de l’envoi de valeurs à des colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes chiffrées ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échouera, car le pilote ne sera pas en mesure de déterminer les valeurs des colonnes chiffrées cibles et ne chiffrera donc pas les valeurs. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
 - Toutes les valeurs sont imprimées par le programme sous la forme de texte en clair, car Microsoft JDBC Driver pour SQL Server déchiffre de manière transparente les données récupérées à partir des colonnes chiffrées.
 - Si vous effectuez une recherche avec une clause WHERE, la valeur utilisée dans cette clause WHERE doit être passée en tant que paramètre afin que le pilote puisse la chiffrer de manière transparente avant de l’envoyer à la base de données. Dans l’exemple suivant, le SSN est passé en tant que paramètre, mais LastName est passé en tant que littéral, car LastName n’est pas chiffré.
-- La méthode setter utilisée pour le paramètre ciblant la colonne SSN est setString(), qui est mappée vers le type de données SQL Server char/varchar. Si, pour ce paramètre, la méthode setter utilisée avait été setNString(), qui mappe vers nchar/nvarchar, la requête aurait échoué, car Always Encrypted ne prend pas en charge les conversions de valeurs nchar/nvarchar chiffrées en valeurs char/varchar chiffrées.
+- La méthode setter utilisée pour le paramètre ciblant la colonne SSN est setString(), qui est mappée vers le type de données SQL Server char/varchar. Si, pour ce paramètre, la méthode setter utilisée avait été setNString(), qui est mappée au type de données nchar/nvarchar, la requête aurait échoué, car Always Encrypted ne prend pas en charge les conversions de valeurs nchar/nvarchar chiffrées en valeurs char/varchar chiffrées.
 
 ```java
 // <Insert keystore-specific code here>

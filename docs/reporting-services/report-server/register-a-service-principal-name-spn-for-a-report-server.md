@@ -1,6 +1,6 @@
 ---
 title: Enregistrer un nom de principal du service (SPN) pour un serveur de rapports | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66500234"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256422"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Inscrire un nom de principal du service (SPN) pour un serveur de rapports
   Si vous déployez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un réseau qui utilise le protocole Kerberos pour l'authentification mutuelle, vous devez créer un nom de principal du service (SPN) pour le service Report Server, si vous le configurez pour s'exécuter en tant que compte d'utilisateur de domaine.  
@@ -23,17 +23,18 @@ ms.locfileid: "66500234"
   
  Pour créer un SPN, vous pouvez utiliser l’utilitaire de ligne de commande **SetSPN** . Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
   
 -   [Noms de principaux du service (SPN), syntaxe SetSPN (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  Vous devez être administrateur de domaine pour exécuter l'utilitaire sur le contrôleur de domaine.  
   
 ## <a name="syntax"></a>Syntaxe  
- La syntaxe de commande pour utiliser l'utilitaire SetSPN en vue de créer un SPN pour le serveur de rapports ressemble à ce qui suit :  
+
+Lorsque vous manipulez des noms SPN avec le setspn, vérifiez que ces noms ont été entrés au bon format. Le format d’un nom SPN est le suivant : `<serviceclass>/host:<por>`. La syntaxe de commande pour utiliser l'utilitaire SetSPN en vue de créer un SPN pour le serveur de rapports ressemble à ce qui suit :  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  **SetSPN** est disponible dans Windows Server. L’argument **-s** ajoute un SPN après vérification de l’absence de doublon. **REMARQUE** -s est disponible dans Windows Server depuis Windows Server 2008.  
@@ -44,7 +45,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Inscrire un SPN pour un compte d'utilisateur de domaine  
   
-#### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>Pour inscrire un SPN pour un service Report Server qui s'exécute en tant qu'utilisateur de domaine  
+### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>Pour inscrire un SPN pour un service Report Server qui s'exécute en tant qu'utilisateur de domaine  
   
 1.  Installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et configurez le service Report Server pour qu’il s’exécute en tant que compte d’utilisateur de domaine. Notez que les utilisateurs ne seront pas en mesure de se connecter au serveur de rapports tant que vous n'aurez pas terminé les étapes suivantes.  
   
@@ -55,10 +56,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  Copiez la commande suivante, en remplaçant les valeurs d'espaces réservés par des valeurs réelles valides pour votre réseau :  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     Par exemple : `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    Par exemple : `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  Exécutez la commande.  
   

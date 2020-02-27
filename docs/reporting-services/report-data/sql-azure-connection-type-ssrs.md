@@ -1,5 +1,5 @@
 ---
-title: Type de connexion SQL Azure (SSRS) | Microsoft Docs
+title: Type de connexion SQL Azure | Microsoft Docs
 description: L’extension de données de connexion SQL Azure prend en charge les paramètres à plusieurs valeurs, les agrégats de serveur et les informations d'identification gérées séparément de la chaîne de connexion.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244568"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081760"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Type de connexion SQL Azure (SSRS)
 

@@ -1,5 +1,5 @@
 ---
-title: Type de connexion Hyperion Essbase (SSRS) | Microsoft Docs
+title: Type de connexion Hyperion Essbase | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 61cfc9c83e5d9c2976f5fcb00eab29e91c1f726d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190837"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079019"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Type de connexion Hyperion Essbase (SSRS)
   Pour inclure les données d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Ce type de source de données intégré est basé sur l’extension de données pour [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], ce qui vous permet de récupérer les données multidimensionnelles d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -75,7 +75,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Propriétés de champ prédéfinies  
- Propriétés prédéfinies de champ qui sont généralement prises en charge par plusieurs fournisseurs de données et qui apparaissent dans la requête MDX sous-jacente d'un dataset de rapport. Par exemple, la propriété de dimension MDX MEMBER_UNIQUE_NAME est mappée à la propriété de champ de dataset du rapport prédéfinie **UniqueName**. Pour inclure la valeur de nom unique dans une zone de texte, utilisez l’expression `=Fields!`*\<FieldName>*`.UniqueName`.  
+ Propriétés prédéfinies de champ qui sont généralement prises en charge par plusieurs fournisseurs de données et qui apparaissent dans la requête MDX sous-jacente d'un dataset de rapport. Par exemple, la propriété de dimension MDX MEMBER_UNIQUE_NAME est mappée à la propriété de champ de dataset du rapport prédéfinie **UniqueName**. Pour inclure la valeur de nom unique dans une zone de texte, utilisez l’expression `=Fields!` *\<FieldName>* `.UniqueName`.  
   
  Le tableau suivant dresse la liste des propriétés de champ prédéfinies que vous pouvez utiliser pour une source de données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -92,7 +92,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Propriétés personnalisées  
- Les propriétés de champ personnalisées qui sont prises en charge par un fournisseur de données et qui apparaissent dans la requête MDX sous-jacente pour un dataset de rapport, n'apparaissent pas dans le volet Datasets comme champs sous ce dataset. Par exemple, **Long Names** est une propriété de membre définie pour un niveau de dimension. Pour inclure la valeur dans une zone de texte, utilisez l’expression `=Fields!`*\<FieldName>*`("Long Names")`. Les noms de champs de l'expression respectent la casse.  
+ Les propriétés de champ personnalisées qui sont prises en charge par un fournisseur de données et qui apparaissent dans la requête MDX sous-jacente pour un dataset de rapport, n'apparaissent pas dans le volet Datasets comme champs sous ce dataset. Par exemple, **Long Names** est une propriété de membre définie pour un niveau de dimension. Pour inclure la valeur dans une zone de texte, utilisez l’expression `=Fields!` *\<FieldName>* `("Long Names")`. Les noms de champs de l'expression respectent la casse.  
   
  Pour faire référence à des propriétés étendues personnalisées dans une expression, vous pouvez utiliser la syntaxe suivante :  
   
@@ -142,7 +142,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Fournit des informations détaillées sur l'utilisation de cette extension de données.  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

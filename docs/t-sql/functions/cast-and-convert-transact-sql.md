@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761623"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440686"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -171,7 +171,7 @@ Quand *expression* est un type **binary(n)** , **char(n)** , **varbinary(n)** ou
 Pour les conversions implicites, il n’est pas nécessaire de spécifier la fonction CAST ou CONVERT. En revanche, les conversions explicites requièrent la spécification de la fonction CAST ou CONVERT. L’illustration ci-dessous reprend toutes les conversions de types de données explicites et implicites autorisées pour les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournis par le système. Ces types sont notamment **bigint**, **sql_variant** et **xml**. Aucune conversion implicite d’attribution de valeur n’est effectuée à partir du type de données **sql_variant**, mais une conversion implicite vers **sql_variant** existe.
   
 > [!TIP]  
-> Ce graphique est disponible en fichier PDF téléchargeable dans le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=35834).  
+> Ce graphique est disponible en fichier PNG téléchargeable dans le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=35834).  
   
 ![Table de conversion de type de données](../../t-sql/data-types/media/lrdatahd.png "Table de conversion de type de données")
   
@@ -760,7 +760,7 @@ SELECT @notastring + '1'
 
 La chaîne `'1'` pouvant être convertie en valeur entière 1 dans ce cas, l’instruction SELECT retourne la valeur 2. Quand les types de données fournis sont des entiers, l’opérateur + devient l’opérateur mathématique d’addition, plutôt qu’une concaténation de chaînes.
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>L. Utilisation de CAST et CONVERT  
 Cet exemple récupère le nom de chaque produit possédant un `3` au premier chiffre de son prix et convertit sa valeur `ListPrice` en type **int**. Il utilise la base de données `AdventureWorksDW2016`.

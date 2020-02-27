@@ -1,5 +1,5 @@
 ---
-title: Fonction Aggregate (Générateur de rapports et SSRS) | Microsoft Docs
+title: Fonction Aggregate (Générateur de rapports) | Microsoft Docs
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa6d1892c8aceb4640207bce9bc2321541137b6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0c2590431193fa48bf4467fb30c5abc6cbf5a037
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576390"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079142"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Fonctions du Générateur de rapports - Aggregate
   Retourne un agrégat personnalisé de l'expression spécifiée, comme défini par le fournisseur de données.  

@@ -1,7 +1,7 @@
 ---
 title: Erreurs et événements du moteur de base de données
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -9,16 +9,27 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918191"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146279"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 
 Ce tableau contient les numéros des messages d’erreur et leur description, qui correspond au texte du message d’erreur dans la vue de catalogue sys.messages. Le cas échéant, le numéro d’erreur est un lien vers des informations complémentaires.
+
+Cette liste n’est pas exhaustive. Pour obtenir la liste complète des erreurs, interrogez la vue de catalogue sys.messages avec la requête suivante :
+
+```sql
+SELECT message_id AS Error, severity AS Severity,  
+[Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
+text AS [Description]
+FROM sys.messages
+WHERE language_id = <desired language, such as 1033 for US English>
+ORDER BY message_id
+```
 
 ## <a name="errors--2-to-999"></a>Erreurs -2 à 999
 
@@ -574,7 +585,31 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   971 |   10  |   Non  |   La base de données des ressources a été détectée à deux emplacements différents. Attachement de la base de données des ressources dans le même répertoire que sqlservr.exe à '%.*ls' au lieu de la base de données des ressources actuellement attachée à '%.* ls'.    |
 |   972 |   17  |   Non  |   Impossible d'utiliser la base de données '%d' pendant l'exécution de la procédure. |
 |   973 |   10  |   Oui |   La base de données %ls a été démarrée. FILESTREAM n'est toutefois pas compatible avec les options READ_COMMITTED_SNAPSHOT et ALLOW_SNAPSHOT_ISOLATION. Supprimez les fichiers FILESTREAM et les groupes de fichiers FILESTREAM ou affectez à READ_COMMITTED_SNAPSHOT et ALLOW_SNAPSHOT_ISOLATION la valeur OFF.   |
+|974 | 10  | Non  |  Échec de l’attachement de la base de données des ressources dans le même répertoire que sqlservr.exe à « %.*ls », car les fichiers de base de données n’existent pas.|
+|975 | 10  | Oui |  Impossible de mettre à jour les objets système dans la base de données « %.*ls », car elle est en lecture seule. |
+|976 | 14  | Non  |  La base de données cible « %.*ls » est membre d’un groupe de disponibilité et n’est actuellement pas accessible pour les requêtes. Le déplacement des données est alors suspendu ou le réplica de disponibilité n'est pas activé pour l'accès en lecture. Pour autoriser l’accès en lecture seule à cette base de données et à d’autres bases de données |
+|977 | 10 |  Non  |  Avertissement : l’index associé pour la contrainte « %.*ls » sur object_id « %d » est introuvable dans la base de données « %.* ls ».|
+|978 | 14 |  Non  |  La base de données cible (« %.*ls ») se trouve dans un groupe de disponibilité et est actuellement accessible pour les connexions quand l’intention de l’application est définie en lecture seule. Pour plus d’informations sur l’intention de l’application, consultez la documentation en ligne de SQL Server. |
+|979  | 14 | Non  |  La base de données cible (« %.*ls ») se trouve dans un groupe de disponibilité et n’autorise pas actuellement les connexions en lecture seule. Pour plus d’informations sur l’intention de l’application, consultez la documentation en ligne de SQL Server.|
+|980 |  21 |  Oui |  SQL Server ne peut pas charger la base de données « %.*ls », car elle contient un index columnstore. L’édition de SQL Server actuellement installée |ne prend pas en charge les index columnstore. Désactivez l’index columnstore dans la base de données à l’aide d’une édition de SQL Server prise en charge.|
+|981  |  10 | Non | Le gestionnaire de bases de données utilisera la version de base de données cible %d. |
+|982  |  14 | Non | Impossible d’accéder à la base de données « %.*ls », car aucun réplica secondaire en ligne ne permet l’accès en lecture seule. Vérifiez la configuration du groupe de disponibilité pour vous assurer qu’au moins un réplica secondaire est configuré pour l’accès en lecture seule. Attendez qu’un réplica activé|
+|983 |  14  | Non | Impossible d’accéder à la base de données de disponibilité « %.*ls » car le réplica de base de données n’est pas dans le rôle PRIMARY ou SECONDARY. Les connexions à une base de données de disponibilité ne sont autorisées que lorsque le réplica de base de données est dans le rôle PRIMARY ou SECONDARY. Réexécutez l’opération ultérieurement. |
+|984 | 21  | Oui | Échec de l’exécution d’une copie avec version de sqlscriptdowngrade.dll du dossier Binn vers le dossier Binn\Cache. Échec de l’API VerInstallFile avec le code d’erreur %d.|
+|985 |  10 | Oui  |      Fichier « %ls » installé dans le dossier « %ls ». |
+|986 |  10 | Non   |     Impossible d’obtenir une page de démarrage correcte pour la base de données « %.*ls » après %d tentatives. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
+|987 |  23  |    Oui | Une insertion de clés en double s’est produite lors de la mise à jour des objets système dans la base de données « %.*ls ».|
+|988 |  14  |    Non  | Impossible d’accéder à la base de données « %.*ls » car il manque un quorum de nœuds pour la haute disponibilité. Réexécutez l'opération ultérieurement.|
+|989 |  16  |    Non  | Impossible de mettre hors connexion la base de données hôte avec l’ID %d quand une ou plusieurs de ses bases de données de partition sont marquées comme étant suspectes.|
+|990 |  16  |    Non  | Mise hors connexion de la base de données hôte avec l’ID %d, car une ou plusieurs de ses bases de données de partition sont marquées comme étant suspectes.|
+|991 |  16  |    Non  | Impossible de mettre hors connexion la base de données hôte « %.*ls » quand une ou plusieurs de ses bases de données de partition sont marquées comme étant suspectes.|
+|992 |  16  |    Non  | Échec de l’obtention du verrou partagé sur la base de données « %.*ls ».|
+|993 |  10  |    Non  | La restauration de la base de données '%.*ls' a appliqué l’étape de mise à niveau de la version à partir de %d to %d.|
+|994 |  10  |    Non  | Avertissement : l’index « %.*ls » sur « %.* ls ».« %.*ls » est désactivé, car il contient une colonne calculée.|
+|995 |  10  |    Non  | Avertissement : L’index « %.*ls » sur « %.* ls ».« %.*ls » est désactivé. Il ne peut pas être mis à niveau, car il se trouve sur un groupe de fichiers en lecture seule.|
+|996 |  10  |    Non  | Avertissement : L’index « %.*ls » sur « %.* ls ».« %.*ls » est désactivé. Cet index columnstore ne peut pas être mis à niveau, probablement parce qu’il dépasse la limite de taille des lignes, qui est de « %d » octets.|
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
+
 
 ## <a name="errors-1000-to-1999"></a>Erreurs 1000 à 1999
 
@@ -1674,7 +1709,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3717    |   16  |   Non  |   Impossible de supprimer une contrainte par défaut au moyen d'une instruction DROP DEFAULT. Utilisez ALTER TABLE pour supprimer une contrainte par défaut.   |
 |   3721    |   16  |   Non  |   Impossible de renommer le type '%.*ls' car il est référencé par l'objet '%.* ls'.    |
 |   3723    |   16  |   Non  |   Une instruction DROP INDEX explicite n'est pas autorisée sur l'index '%.*ls'. Celui-ci est actuellement utilisé pour l'application de la contrainte %!s.    |
-|   3724    |   16  |   Non  |   Impossible de %1! le %2! '%3!' parce qu'il est utilisé pour la réplication.  |
+|   3724    |   16  |   Non  |   Impossible de% S_MSG% S_MSG'%. * ls', car il est utilisé pour la réplication.  |
 |   3725    |   16  |   Non  |   La contrainte '%.*ls' est actuellement référencée par la table '%.* ls', contrainte de clé étrangère '%.*ls'.    |
 |   3726    |   16  |   Non  |   Impossible de supprimer l'objet '%.*ls' car il est référencé par une contrainte FOREIGN KEY. |
 |   3727    |   10  |   Non  |   Impossible de supprimer la contrainte. Consultez les erreurs précédentes. |
@@ -1996,7 +2031,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4347    |   16  |   Non  |   La séquence de restauration actuelle a été interrompue précédemment pendant la transition vers l'état en ligne. RESTORE DATABASE WITH RECOVERY peut être utilisé pour effectuer la transition vers l'état en ligne. |
 |   4348    |   16  |   Non  |   La restauration en ligne dans la base de données '%ls' a échoué. Il peut s'avérer nécessaire d'effectuer une restauration hors ligne. Pour lancer cette opération, utilisez l'instruction BACKUP LOG WITH NORECOVERY.  |
 |   4349    |   16  |   Non  |   Le journal dans ce jeu de sauvegarde commence au numéro de séquence d'enregistrement %.*ls, ce qui est trop récent pour une application à la base de données. Cette séquence de restauration doit initialiser le journal pour commencer à LSN %.* ls. Relancez l'instruction RESTORE LOG en utilisant une sauvegarde du journal antérieure.   |
-|   4350    |   16  |   Non  |   La liste de pages fournies avec l'instruction RESTORE PAGE n'est pas correctement mise en forme. Avant que ce problème ne se produise, %d pages ont été correctement identifiées. Le problème s'est produit à l'offset de caractère %d. Assurez-vous que toutes les pages sont identifiées par paires numériques <file>:<page>, les paires étant séparées par des virgules. Par exemple :  PAGE=’1:57,2:31’.   |
+|   4350    |   16  |   Non  |   La liste de pages fournies avec l'instruction RESTORE PAGE n'est pas correctement mise en forme. Avant que ce problème ne se produise, %d pages ont été correctement identifiées. Le problème s'est produit à l'offset de caractère %d. Assurez-vous que toutes les pages sont identifiées par paires numériques <file>:<page>, les paires étant séparées par des virgules. Par exemple : PAGE=’1:57,2:31’.   |
 |   4351    |   16  |   Non  |   Les sauvegardes effectuées sur des versions antérieures de SQL Server ne sont pas prises en charge par fn_dump_dblog. |
 |   4352    |   16  |   Non  |   RESTORE LOG n'est pas pris en charge à partir de cette sauvegarde de données, car le fichier '%ls' est trop ancien. Utilisez une sauvegarde de fichier journal ordinaire pour continuer la séquence de restauration.    |
 |   4353    |   16  |   Non  |   Des réadressages de fichiers en conflit ont été spécifiés pour le fichier '%.*ls'. Une seule clause WITH MOVE doit être spécifiée par nom de fichier logique.    |
@@ -2158,11 +2193,12 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4863    |   16  |   Non  |   Erreur de conversion des données de chargement en masse (troncation) pour la ligne %d, colonne %d (%ls).   |
 |   4864    |   16  |   Non  |   Erreur de conversion des données de chargement en masse (incompatibilité de type ou caractère non valide pour la page de codes spécifiée) pour la ligne %d, colonne %d (%ls).    |
 |   4865    |   16  |   Non  |   Chargement en masse impossible en raison du dépassement du nombre maximal d'erreurs (%d).    |
-|   4866    |   16  |   Non  |   Le chargement en masse a échoué. La colonne est trop longue dans le fichier de données pour la ligne %d, colonne %d. Vérifiez que le terminateur de champ et le terminateur de ligne sont correctement spécifiés.   |
+|   4866    |   16  |   Non  |   Le chargement en masse a échoué. La colonne est trop longue dans le fichier de données pour la ligne %d, colonne %d. Vérifiez que le terminateur de champ et le terminateur de ligne sont correctement spécifiés.   | Échec du chargement en masse en raison d’une valeur de colonne non valide dans le fichier de données CSV %ls sur la ligne %d, colonne %d | 
 |   4867    |   16  |   Non  |   Erreur de conversion des données de chargement en masse (dépassement) pour la ligne %d, colonne %d (%ls). |
 |   4868    |   16  |   Non  |   Le chargement en masse a échoué. La page de codes "%d" n'est pas installée. Installez la page de codes et exécutez à nouveau la commande.   |
 |   4869    |   16  |   Non  |   Le chargement en masse a échoué. Valeur NULL attendue dans la ligne du fichier de données %d, colonne %d. La colonne de destination (%ls) est définie comme NOT NULL.    |
 |   4870    |   16  |   Non  |   Chargement en masse impossible en raison d'une erreur lors de l'écriture du fichier "%ls". Code d'erreur du système d'exploitation %ls.   |
+|   4879    |   16  |   Non  | 
 |   4871    |   16  |   Non  |   Erreur de chargement en masse lors d'une tentative d'enregistrement d'erreurs. |
 |   4872    |   16  |   Non  |   Ligne %d dans le fichier de format "%ls" : ID d'élément en double "%ls".   |
 |   4873    |   16  |   Non  |   Ligne %d dans le fichier de format "%ls" : référence à un ID d'élément inexistant "%ls".    |
@@ -2216,7 +2252,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4926    |   16  |   Non  |   ALTER TABLE ALTER COLUMN DROP ROWGUIDCOL a échoué parce qu'une colonne avec la propriété ROWGUIDCOL existe déjà dans la table '%.*ls'.  |
 |   4927    |   16  |   Non  |   Impossible de donner à la colonne '%.*ls' le type de données %.* ls.  |
 |   4928    |   16  |   Non  |   Impossible de modifier la colonne '%.*ls', car elle est '%.*ls'.    |
-|   4929    |   16  |   Non  |   Impossible de modifier %1! '%2!' parce qu'elle est en cours d'édition pour la réplication.  |
+|   4929    |   16  |   Non  |   Impossible de modifier le% S_MSG'%. * ls', car il est en cours de publication pour la réplication.  |
 |   4933    |   16  |   Non  |   La colonne calculée '%.*ls' dans la table '%.* ls' ne peut pas être persistante car la colonne dépend d'un objet non lié à un schéma.    |
 |   4934    |   16  |   Non  |   La colonne calculée '%.*ls' dans la table '%.* ls' ne peut pas être persistante car la colonne fournit un accès aux données à l'utilisateur ou au système.    |
 |   4935    |   16  |   Non  |   ALTER TABLE ADD COLUMN ne peut pas spécifier un groupe de fichiers FILESTREAM différent de celui qui existe déjà.    |
@@ -5781,7 +5817,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14596   |   16  |   Non  |   Le package DTS '%s' existe dans une autre catégorie.    |
 |   14597   |   16  |   Non  |   L'ID du package DTS '%s' existe déjà sous un autre nom.   |
 |   14598   |   16  |   Non  |   Impossible de supprimer les catégories Local, Repository ou LocalDefault DTS.  |
-|   14599   |   10  |   Non  |   Name    |
+|   14599   |   10  |   Non  |   Nom    |
 |   14600   |   16  |   Non  |   Le proxy "%s" n'a pas obtenu l'autorisation d'utiliser le sous-système "%s".   |
 |   14601   |   16  |   Non  |   L'opérateur "%s" n'est pas activé et ne peut donc pas recevoir de notifications.    |
 |   14602   |   16  |   Non  |   Aucune adresse de messagerie n'a été spécifiée pour l'opérateur "%s".    |

@@ -1,5 +1,5 @@
 ---
-title: Trier des données dans une région de données (Générateur de rapports et SSRS)| Microsoft Docs
+title: Trier des données dans une région de données (Générateur de rapports) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6ad5600def990457834d858b61ba3bad4a241158
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 17c93f66924d6b948264efd9747f72b47bf765a1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65570742"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080969"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Trier des données dans une région de données (Générateur de rapports et SSRS)
   Pour changer l'ordre de tri des données dans une région de données à la première exécution d'un rapport, vous devez définir l'expression de tri sur le groupe ou la région de données. Par défaut, l'expression de tri d'un groupe a automatiquement la même valeur que l'expression de groupe.  
@@ -39,7 +39,7 @@ ms.locfileid: "65570742"
   
 3.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Ajouter**.  
+    1.  Cliquez sur **Add**.  
   
     2.  Tapez ou sélectionnez une expression selon laquelle trier les données.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65570742"
   
 4.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Ajouter**.  
+    1.  Cliquez sur **Add**.  
   
     2.  Tapez ou sélectionnez une expression selon laquelle trier les données.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65570742"
   
 3.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Ajouter**.  
+    1.  Cliquez sur **Add**.  
   
     2.  Sélectionnez l'expression qui correspond à votre champ de regroupement. Vous pouvez vérifier l’expression du champ de regroupement en cliquant sur **Regroupement**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65570742"
   
 3.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Ajouter**.  
+    1.  Cliquez sur **Add**.  
   
     2.  Sélectionnez l'expression qui correspond à votre champ de données. Dans la plupart des cas, il s’agit d’une valeur agrégée, telle que `=Sum(Fields!Quantity.Value)`.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "65570742"
   
 7.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Ajouter**.  
+    1.  Cliquez sur **Add**.  
   
     2.  Sélectionnez l'expression qui correspond à votre champ de regroupement. Vous pouvez vérifier l’expression du champ de regroupement en cliquant sur **Regroupement**.  
   

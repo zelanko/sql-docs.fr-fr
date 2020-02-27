@@ -1,7 +1,7 @@
 ---
 title: Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f3c44f9f133d95a821cac7a1a97fe0c8ca60252
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027893"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004528"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matrice de support de Microsoft JDBC Driver pour SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "69027893"
   Cette page contient la matrice de support et la politique de support de Microsoft JDBC Driver pour SQL Server.  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Matrice et politique de support de Microsoft JDBC Driver  
- La politique de support de Microsoft fournit des informations transparentes et prévisibles concernant la politique de support des produits Microsoft. Les versions 3.0, 4.x, 6.x et 7.x du pilote JDBC bénéficient de cinq ans de support standard à partir de la date de publication du pilote. Le support standard est défini sur le site web de la politique de support de Microsoft.  
+ La politique de support de Microsoft fournit des informations transparentes et prévisibles concernant la politique de support des produits Microsoft. Les versions 3.0, 4.x, 6.x, 7.x et 8.x du pilote JDBC bénéficient de cinq ans de support standard à partir de la date de publication du pilote. Le support standard est défini sur le site web de la politique de support de Microsoft.  
   
  Les options de support étendu et personnalisé ne sont pas disponibles pour le pilote Microsoft JDBC.  
     
@@ -32,6 +32,7 @@ ms.locfileid: "69027893"
   
 |Nom du pilote|Version de package du pilote|Fichier(s) JAR applicable(s)|Fin du support standard|
 |-|-|-|-|  
+|Microsoft JDBC Driver 8.2 pour SQL Server|8,2|mssql-jdbc-8.2.0.jre13.jar<br> mssql-jdbc-8.2.0.jre11.jar<br> mssql-jdbc-8.2.0.jre8.jar|31 janvier 2025|
 |Microsoft JDBC Driver 7.4 pour SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2 août 2024|
 |Microsoft JDBC Driver 7.2 pour SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 avril 2024|
 |Microsoft JDBC Driver 7.0 pour SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 juillet 2023|  
@@ -39,12 +40,12 @@ ms.locfileid: "69027893"
 |Microsoft JDBC Driver 6.2 pour SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 juin 2022|    
 |Microsoft JDBC Driver 6.0 pour SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 juillet 2021|    
 |Microsoft JDBC Driver 4.2 pour SQL Server|4,2|sqljdbc42.jar<br>sqljdbc41.jar|24 août 2020|  
-|Microsoft JDBC Driver 4.1 pour SQL Server|4,1|sqljdbc41.jar|12 décembre 2019|  
   
  Le support des pilotes Microsoft JDBC suivants est fini.  
  
 |Nom du pilote|Version de package du pilote|Fin du support standard|  
 |-|-|-|
+|Microsoft JDBC Driver 4.1 pour SQL Server|4,1|12 décembre 2019| 
 |Microsoft JDBC Driver 4.0 pour SQL Server|4.0|6 mars 2017|  
 |Pilote JDBC Microsoft SQL Server 3.0|3.0|23 avril 2015|  
 |Microsoft SQL Server JDBC Driver 2.0|2|31 décembre 2012|  
@@ -57,6 +58,7 @@ ms.locfileid: "69027893"
   
 |Version du pilote|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
+|8,2|N|N|O|O|O|O|O|O|O|
 |7.4|N|N|O|O|O|O|O|O|O|
 |7.2|N|O|O|O|O|O|O|O|N| 
 |7.0|N|O|O|O|O|O|O|O|N| 
@@ -88,6 +90,7 @@ ms.locfileid: "69027893"
   
 |Version du pilote JDBC|Versions de JRE|Version de l’API JDBC| 
 |-|-|-|  
+|8,2|1.8, 11, 13|4.2, 4.3 (partiellement)|
 |7.4|1.8, 11, 12|4.2, 4.3 (partiellement)|
 |7.2|1.8, 11|4.2, 4.3 (partiellement)|
 |7.0|1.8, 10|4.2, 4.3 (partiellement)|
@@ -108,8 +111,7 @@ ms.locfileid: "69027893"
 ## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge  
  Le pilote Microsoft JDBC est conçu pour fonctionner sur tout système d’exploitation prenant en charge l’utilisation d’une machine virtuelle Java (JVM). Les plateformes couramment utilisées sont notamment Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX et MacOS.  
   
- L’équipe du produit JDBC teste notre pilote sur Windows, Sun Solaris, SUSE Linux et RedHat Linux.  Le support technique est disponible pour les clients sur toutes les plateformes, mais nous sommes susceptibles de vous demander de reproduire le problème sur une plateforme comme Windows.  
-  
+ L’équipe du produit JDBC teste notre pilote sur Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux et macOS.
 ## <a name="application-server-support"></a>Prise en charge des serveurs d’applications  
  Le pilote Microsoft JDBC pour SQL Server est testé avec différents serveurs d’applications.  Pour plus d’informations sur la version du pilote compatible avec leur produit, consultez le fournisseur de votre serveur d’applications.
  

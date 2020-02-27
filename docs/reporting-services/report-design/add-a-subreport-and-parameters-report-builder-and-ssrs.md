@@ -1,5 +1,5 @@
 ---
-title: Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS) | Microsoft Docs
+title: Ajouter un sous-rapport et des paramètres (Générateur de rapports) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f50535bbf4cca1775e963a2733e19dcd4ec7497
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582160"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080670"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS)
   Ajoutez des sous-rapports à un rapport pour créer un rapport principal servant de conteneur à plusieurs rapports connexes. Un sous-rapport est une référence à un autre rapport. Pour connecter les rapports par des valeurs de données (par exemple, pour que plusieurs rapports indiquent des données pour le même client), vous devez désigner un rapport paramétrable (par exemple, un rapport qui affiche les renseignements concernant un client spécifique) en tant que sous-rapport. Lorsque vous ajoutez un sous-rapport au rapport principal, vous pouvez spécifier des paramètres à passer au sous-rapport.  
@@ -50,7 +50,7 @@ ms.locfileid: "65582160"
   
 2.  Dans la boîte de dialogue **Propriétés du sous-rapport** , cliquez sur **Paramètres**.  
   
-3.  Cliquez sur **Ajouter**. Une nouvelle ligne est ajoutée à la grille des paramètres.  
+3.  Cliquez sur **Add**. Une nouvelle ligne est ajoutée à la grille des paramètres.  
   
 4.  Dans la zone **Nom** , tapez le nom d’un paramètre du sous-rapport ou choisissez-le dans la zone de liste. Ce nom doit correspondre au nom d'un paramètre de rapport, pas d'un paramètre de requête, dans le sous-rapport.  
   

@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831610"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429030"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -144,13 +144,13 @@ Une requête peut être mise en correspondance avec plusieurs classifieurs.  Les
 Examinez les configurations de classifieurs suivantes.
 
 ```sql
-CREATE WORKLOAD CLASSIFIER classiferA WITH  
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
 ( WORKLOAD_GROUP = 'wgDashboards'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = HIGH
  ,WLM_LABEL      = 'salereport' )
 
-CREATE WORKLOAD CLASSIFIER classiferB WITH  
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
@@ -158,7 +158,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-L’utilisateur `userloginA` est configuré pour les deux classifieurs.  Si userloginA exécute une requête ayant l’étiquette `salesreport` entre 18 h 00 et 7 h, la requête sera classifiée dans le groupe de charge de travail wgDashboards avec une importance élevée (HIGH).  Vous voudrez peut-être classifier cette requête dans le groupe wgUserQueries avec une faible importance (LOW) pour la création de rapports durant les heures creuses, mais la pondération de WLM_LABEL est supérieure à START_TIME/END_TIME.  La pondération de classiferA est de 80 (64 pour l’utilisateur, plus 16 pour WLM_LABEL).  La pondération de classifierB est de 68 (64 pour l’utilisateur, 4 pour START_TIME/END_TIME).  Dans ce cas, vous pouvez ajouter WLM_LABEL à classiferB.
+L’utilisateur `userloginA` est configuré pour les deux classifieurs.  Si userloginA exécute une requête ayant l’étiquette `salesreport` entre 18 h 00 et 7 h, la requête sera classifiée dans le groupe de charge de travail wgDashboards avec une importance élevée (HIGH).  Vous voudrez peut-être classifier cette requête dans le groupe wgUserQueries avec une faible importance (LOW) pour la création de rapports durant les heures creuses, mais la pondération de WLM_LABEL est supérieure à START_TIME/END_TIME.  La pondération de classifierA est de 80 (64 pour l’utilisateur, plus 16 pour WLM_LABEL).  La pondération de classifierB est de 68 (64 pour l’utilisateur, 4 pour START_TIME/END_TIME).  Dans ce cas, vous pouvez ajouter WLM_LABEL à classifierB.
 
  Pour plus d’informations, consultez [Pondération des charges de travail](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 

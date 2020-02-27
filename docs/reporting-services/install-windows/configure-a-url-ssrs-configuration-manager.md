@@ -1,5 +1,5 @@
 ---
-title: Configurer une URL (Gestionnaire de configuration de SSRS) | Microsoft Docs
+title: Configurer une URL (Configuration Manager) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594116"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077060"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou le service web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application.  
@@ -33,7 +33,7 @@ ms.locfileid: "73594116"
   
  Pour plus d’informations sur le stockage et la gestion des URL, ou sur les problèmes d’interopérabilité, consultez [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) et [Installer côte à côte Reporting Services et Internet Information Services &#40;SSRS en mode natif&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Pour obtenir des exemples d'URL souvent utilisées dans une installation Reporting Services, consultez [Exemples d'URL](#URLExamples) dans cette rubrique.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Avant de créer ou de modifier une URL, souvenez-vous des points suivants :  
   
 -   Vous devez être membre du groupe Administrateurs local sur le serveur de rapports.  
@@ -105,7 +105,7 @@ ms.locfileid: "73594116"
 > 
 >  Pour corriger le problème, supprimez toutes les liaisons, puis créez des liaisons possédant des paramètres uniques, ou configurez l'inscription d'URL Reporting Services à l'aide de caractères génériques.
   
-### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>Pour créer une réservation d’URL pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
+### <a name="to-create-a-url-reservation-for-the-ssrswebportal"></a>Pour créer une réservation d’URL pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
 1.  Démarrez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "73594116"
   
 1.  Dans la page **URL du service web** ou **URL du Gestionnaire de rapports** , cliquez sur **Avancé**.  
   
-2.  Cliquez sur **Ajouter**.  
+2.  Cliquez sur **Add**.  
   
 3.  Cliquez sur l'adresse IP ou le nom d'en-tête de l'hôte. Si vous spécifiez un en-tête de l'hôte, veillez bien à spécifier un nom que le service DNS peut résoudre. Si vous spécifiez un nom de domaine disponible publiquement, indiquez la totalité de l’URL, y compris `https://www`.  
   

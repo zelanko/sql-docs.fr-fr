@@ -1,7 +1,7 @@
 ---
 title: Configuration requise pour le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027670"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004554"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Configuration requise pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "69027670"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Configuration requise pour Java Runtime Environment  
+
+ À compter de Microsoft JDBC Driver 8.2 pour SQL Server, le Kit JDK (Java Development Kit) version 13.0 et l’environnement JRE (Java Runtime Environment) version 13.0 sont pris en charge.
 
  À compter de Microsoft JDBC Driver 7.4 pour SQL Server, le Kit JDK (Java Development Kit) version 12.0 et l’environnement JRE (Java Runtime Environment) version 12.0 sont pris en charge.
 
@@ -42,6 +44,31 @@ ms.locfileid: "69027670"
  À partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], la prise en charge de l’API Spec JDBC (Java Database Connectivity) par le pilote JDBC a été étendue pour inclure l’API JDBC 4.0. L’API JDBC 4.0 a été introduite dans le cadre du kit JDK (Java Development Kit) version 6.0 et de l’environnement JRE (Java Runtime Environment) version 6.0. JDBC 4.0 est un surensemble de l'API JDBC 3.0.
   
  Quand vous déployez le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sur les systèmes d’exploitation Windows et UNIX, vous devez utiliser les packages d’installation, respectivement *sqljdbc_\<version>_enu.exe*, et *sqljdbc_\<version>_enu.tar.gz*. Pour plus d'informations sur le déploiement du pilote JDBC, consultez la rubrique [Déployer le pilote JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+
+**Microsoft JDBC Driver 8.2 pour SQL Server** :  
+
+  JDBC Driver 8.2 comporte trois bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** et **mssql-jdbc-8.2.0.jre13.jar**.
+
+  JDBC Driver 8.2 est conçu pour fonctionner avec toutes les principales machines virtuelles Java et être pris en charge par celles-ci. Toutefois, il est testé uniquement sur OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 et Azul Zulu JRE 13.0.
+  
+  Le tableau suivant récapitule les versions prises en charge par les deux fichiers JAR fournis avec Microsoft JDBC Driver 8.2 pour SQL Server :  
+  
+  |JAR|Compatibilité avec la version de JDBC|Version de Java recommandée|Description|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-8.2.0.jre8.jar|4,2|8|Nécessite Java Runtime Environment (JRE) 1.8. JRE 1.7 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 8.2 : prise en charge de JDK 13, Always Encrypted avec enclaves sécurisées et améliorations des performances avec des données temporelles. |
+|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Nécessite un environnement JRE (Java Runtime Environment) 11.0. JRE 10.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 8.2 : prise en charge de JDK 13, Always Encrypted avec enclaves sécurisées et améliorations des performances avec des données temporelles. |
+|mssql-jdbc-8.2.0.jre13.jar|4.3|13|Nécessite Java Runtime Environment (JRE) 13.0. JRE 11.0 et les versions antérieures lèvent une exception.<br /><br /> Nouvelles fonctionnalités de la version 8.2 : prise en charge de JDK 13, Always Encrypted avec enclaves sécurisées et améliorations des performances avec des données temporelles. |
+
+
+  JDBC Driver 8.2 est également disponible sur le référentiel central Maven ; pour l’ajouter à un projet Maven, ajoutez le code suivant dans le fichier POM. XML :  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>8.2.0.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.4 pour SQL Server :**  
 
@@ -196,7 +223,7 @@ JDBC Driver 6.4 est également disponible sur le référentiel central Maven ; p
  Le pilote JDBC prend en charge les connexions à Azure SQL Database et à SQL Server. Pour les pilotes Microsoft JDBC 4.2 et 4.1 pour SQL Server, la prise en charge commence avec SQL Server 2008.
   
 ## <a name="operating-system-requirements"></a>Système d'exploitation requis  
- Le pilote JDBC est conçu pour fonctionner sur tout système d'exploitation prenant en charge l'utilisation d'une machine virtuelle Java (JVM). Toutefois, seuls les systèmes d'exploitation Sun Solaris, SUSE Linux et Windows ont été testés officiellement.  
+ Le pilote JDBC est conçu pour fonctionner sur tout système d'exploitation prenant en charge l'utilisation d'une machine virtuelle Java (JVM). Toutefois, seuls les systèmes d'exploitation Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, macOS et Windows ont été testés officiellement.  
   
 ## <a name="supported-languages"></a>Langues prises en charge  
  Le pilote JDBC prend en charge tous les classements de colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations sur les classements pris en charge par le pilote JDBC, consultez [Fonctionnalités internationales du pilote JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  

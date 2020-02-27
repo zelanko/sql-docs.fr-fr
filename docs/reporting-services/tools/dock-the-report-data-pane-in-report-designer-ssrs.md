@@ -1,5 +1,5 @@
 ---
-title: Ancrer le volet des données de rapport dans le Concepteur de rapports (SSRS) | Microsoft Docs
+title: Ancrer le volet des données de rapport dans le Concepteur de rapports | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2480d94a6a6815c18c7464a7441daad1dd3595db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190415"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080577"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancrer le volet des données de rapport dans le Concepteur de rapports (SSRS)
   Dans le Concepteur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le volet des données de rapport affiche une vue hiérarchique des objets de données que vous pouvez utiliser dans un rapport, y compris les sources de données, datasets, champs, paramètres et images. Les sources de données dans cette vue peuvent être incorporées ou représenter des références aux sources de données partagées affichées dans l'Explorateur de solutions.  

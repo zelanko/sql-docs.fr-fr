@@ -1,5 +1,5 @@
 ---
-title: Ajouter un filtre (Générateur de rapports et SSRS) | Microsoft Docs
+title: Ajouter un filtre (Générateur de rapports) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574840"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080751"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Ajouter un filtre (Générateur de rapports et SSRS)
   Ajoutez un filtre à un dataset, une région de données ou un groupe lorsque vous souhaitez inclure ou exclure des valeurs spécifiques pour des calculs ou l'affichage. Les filtres sont appliqués dans un premier temps au moment de l'exécution sur le dataset, puis sur la région de données, puis sur le groupe, dans l'ordre de haut en bas des hiérarchies de groupe. Dans une table, une matrice ou une liste, les filtres des groupes de lignes, des groupes de colonnes et des groupes adjacents sont appliqués indépendamment. Dans un graphique, les filtres des groupes de catégories et des groupes de séries sont appliqués indépendamment.  
@@ -31,14 +31,14 @@ ms.locfileid: "65574840"
   
 1.  Ouvrez un rapport en mode **Conception** .  
   
-2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur _Properties de\<_ **région_de_données>** . Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue _Propriétés de\<_ **région_de_données>** s’ouvre.  
+2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur **Properties de** _\<région_de_données>_ . Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue **Propriétés de** _\<région_de_données>_ s’ouvre.  
   
     > [!NOTE]  
     >  Dans une région de données de tableau matriciel, cliquez avec le bouton droit sur la cellule d’angle ou sur une poignée de ligne ou de colonne, puis cliquez sur **Propriétés du tableau matriciel**.  
   
 3.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-4.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
+4.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
   
 5.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65574840"
   
 4.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-5.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
+5.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
   
 6.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65574840"
   
 4.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-5.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
+5.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
   
 6.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "65574840"
   
 4.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-5.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
+5.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
   
 6.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   

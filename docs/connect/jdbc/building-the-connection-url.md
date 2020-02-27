@@ -1,7 +1,7 @@
 ---
 title: Création de l'URL de connexion | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028453"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004534"
 ---
 # <a name="building-the-connection-url"></a>Création de l'URL de connexion
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -92,18 +92,18 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 >  Un espace vide entre les accolades est un littéral qui n'est pas supprimé.  
   
 ##  <a name="Connectingintegrated"></a> Connexion avec une authentification intégrée sous Windows  
- Le pilote JDBC prend en charge l'utilisation d'une authentification intégrée de type 2 sur les systèmes d'exploitation Windows via la propriété de chaîne de connexion integratedSecurity. Pour utiliser l'authentification intégrée, copiez le fichier sqljdbc_auth.dll dans un répertoire sur le chemin du système Windows de l'ordinateur sur lequel le pilote JDBC est installé.  
+ Le pilote JDBC prend en charge l'utilisation d'une authentification intégrée de type 2 sur les systèmes d'exploitation Windows via la propriété de chaîne de connexion integratedSecurity. Pour utiliser l’authentification intégrée, copiez le fichier mssql-jdbc_auth-\<version>-\<arch>.dll dans un répertoire sur le chemin du système Windows de l’ordinateur où le pilote JDBC est installé.  
   
- Les fichiers sqljdbc_auth.dll sont installés à l'emplacement suivant :  
+ Les fichiers mssql-jdbc_auth-\<version>-\<arch>.dll sont installés à l’emplacement suivant :  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
  En ce qui concerne les systèmes d'exploitation pris en charge par [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], consultez [Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) afin d’obtenir la description d’une fonctionnalité ajoutée à [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], qui permet à une application de se connecter à une base de données à l'aide de l'authentification intégrée avec le Kerberos Type 4.  
   
 > [!NOTE]  
->  Si vous exécutez une machine virtuelle Java (JVM) 32 bits, utilisez le fichier sqljdbc_auth.dll dans le dossier x86, même si la version du système d'exploitation est x64. Si vous exécutez une machine virtuelle Java (JVM) 64 bits sur un processeur x64, utilisez le fichier sqljdbc_auth.dll dans le dossier x64.  
+>  Si vous exécutez une machine virtuelle Java (JVM) 32 bits, utilisez le fichier mssql-jdbc_auth-\<version>-\<arch>.dll dans le dossier x86, même si la version du système d'exploitation est x64. Si vous exécutez une machine virtuelle Java (JVM) 64 bits sur un processeur x64, utilisez le fichier mssql-jdbc_auth-\<version>-\<arch>.dll dans le dossier x64.  
   
- Vous pouvez également définir la propriété système java.library.path afin de spécifier le répertoire du fichier sqljdbc_auth.dll. Par exemple, si le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l'emplacement de la DLL à l'aide de l'argument de machine virtuelle suivant lors du démarrage de l'application Java :  
+ Vous pouvez également définir la propriété système java.library.path afin de spécifier le répertoire du fichier mssql-jdbc_auth-\<version>-\<arch>.dll. Par exemple, si le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l'emplacement de la DLL à l'aide de l'argument de machine virtuelle suivant lors du démarrage de l'application Java :  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

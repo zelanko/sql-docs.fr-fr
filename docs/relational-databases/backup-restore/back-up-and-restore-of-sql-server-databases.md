@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75320498"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256742"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ unité de**sauvegarde**
  Vous ne disposez d'aucune stratégie de restauration tant que vous n'avez pas testé vos sauvegardes. Il est essentiel de procéder à une évaluation minutieuse de votre stratégie de sauvegarde pour chacune de vos bases de données en restaurant une copie de la base de données sur un système de test. Vous devez tester la restauration de chaque type de sauvegarde que vous envisagez d'utiliser. Une fois que vous avez restauré la sauvegarde, il est également recommandé d’effectuer des vérifications de cohérence de la base de données via DBCC CHECKDB de la base de données pour valider que le support de sauvegarde n’a pas été endommagé. 
 
 ### <a name="verify-media-stability-and-consistency"></a>Vérifier la stabilité et la cohérence des supports
-Utilisez les options de vérification fournies par les utilitaires de sauvegarde (commande T-SQL BACKUP, plans de maintenance SQL Server, votre solution ou logiciel de sauvegarde, etc.). Pour obtenir un exemple, consultez [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md). Utilisez des fonctionnalités avancées telles que BACKUP CHECKSUM pour détecter les problèmes liés au support de sauvegarde lui-même. Pour plus d’informations, consultez [](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+Utilisez les options de vérification fournies par les utilitaires de sauvegarde (commande T-SQL BACKUP, plans de maintenance SQL Server, votre solution ou logiciel de sauvegarde, etc.). Pour obtenir un exemple, consultez [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md). Utilisez des fonctionnalités avancées telles que BACKUP CHECKSUM pour détecter les problèmes liés au support de sauvegarde lui-même. Pour plus d’informations, consultez [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
 
 ### <a name="document-backuprestore-strategy"></a>Stratégie de sauvegarde/restauration de documents 
 Nous vous recommandons de documenter vos procédures de sauvegarde et de restauration, sans oublier de conserver une copie de la documentation dans votre dossier d'exploitation.

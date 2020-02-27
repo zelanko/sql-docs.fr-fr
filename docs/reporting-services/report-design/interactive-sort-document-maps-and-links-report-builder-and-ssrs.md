@@ -1,5 +1,5 @@
 ---
-title: Tri interactif, Explorateurs de documents et liens (Générateur de rapports et SSRS) | Microsoft Docs
+title: Tri interactif, Explorateurs de documents et liens (Générateur de rapports) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 098250b23287f64a0b52b61b87eb6998169ae7ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 472f2d2962bab1f8a3fc576558012f08946a3755
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593735"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081998"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Tri interactif, Explorateurs de documents et liens (Générateur de rapports et SSRS)
   Dans les environnements Web, vous pouvez ajouter un certain nombre de fonctionnalités qui permettent à vos utilisateurs d'intervenir sur les rapports. Vos utilisateurs peuvent modifier l'ordre de tri des valeurs dans votre rapport, afficher ou masquer des éléments du rapport ou cliquer sur les liens pointant vers d'autres rapports ou des pages Web. Vous pouvez également ajouter une table des matières ou un Explorateur de documents. Vos utilisateurs de rapport peuvent cliquer sur des éléments de la table des matières ou de l'Explorateur de documents pour accéder instantanément aux sections voulues du rapport.  

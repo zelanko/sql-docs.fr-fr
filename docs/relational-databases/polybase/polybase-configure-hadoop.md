@@ -9,12 +9,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255441"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77147419"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
 
@@ -22,7 +22,7 @@ ms.locfileid: "75255441"
 
 L’article explique comment utiliser PolyBase sur une instance SQL Server pour interroger des données externes dans Hadoop.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Si vous n’avez pas installé PolyBase, consultez [Installation de PolyBase](polybase-installation.md). Cet article décrit les prérequis pour l’installation.
 
@@ -40,7 +40,7 @@ L’article explique comment utiliser PolyBase sur une instance SQL Server pour 
   - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 sur Linux
 
 > [!NOTE]
-> PolyBase prend en charge les zones de chiffrement Hadoop à partir de SQL Server 2016 SP1 CU7 et SQL Server 2017 CU3. Si vous utilisez des [groupes de scale-out PolyBase](polybase-scale-out-groups.md), tous les nœuds doivent également être sur une build qui inclut la prise en charge des zones de chiffrement Haddop.
+> PolyBase prend en charge les zones de chiffrement Hadoop à partir de SQL Server 2016 SP1 CU7 et SQL Server 2017 CU3. Si vous utilisez des [groupes de scale-out PolyBase](polybase-scale-out-groups.md), tous les nœuds de calcul doivent également se trouver sur une build qui inclut la prise en charge des zones de chiffrement Hadoop.
 
 ### <a name="configure-hadoop-connectivity"></a>Configurer la connectivité Hadoop
 
@@ -155,7 +155,7 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
 
 PolyBase est approprié pour trois fonctions :  
   
-- Requêtes ad hoc sur des tables externes.  
+- Requêtes ad hoc sur des tables externes.  
 - Importation de données.  
 - Exportation de données.  
 
@@ -163,7 +163,7 @@ Les requêtes suivantes fournissent un exemple avec des données fictives proven
 
 ### <a name="ad-hoc-queries"></a>Requêtes ad hoc  
 
-La requête ad hoc suivante fait une jointure entre des données relationnelles et des données Hadoop. Elle sélectionne les clients qui dépassent la vitesse de 35 mph, en faisant une jointure entre les données structurées sur les clients stockées dans SQL Server et les données des capteurs des véhicules stockées dans Hadoop.  
+La requête ad hoc suivante fait une jointure entre des données relationnelles et des données Hadoop. Elle sélectionne les clients qui dépassent la vitesse de 35 mph, en faisant une jointure entre les données structurées sur les clients stockées dans SQL Server et les données des capteurs des véhicules stockées dans Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,

@@ -1,7 +1,7 @@
 ---
 title: Connexion avec l'authentification Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7019efd6e1071624eb3e89873918fb9eb2775833
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028122"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004649"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connexion avec l'authentification Azure Active Directory
 
@@ -30,7 +30,7 @@ Les propriétés de connexion pour la prise en charge de l’authentification Az
     * **ActiveDirectoryMSI**
         * Prise en charge depuis la version de pilote **v 7.2**, l’authentification `authentication=ActiveDirectoryMSI` peut être utilisée pour se connecter à un Azure SQL Database/Data Warehouse à partir d’une ressource Azure où la prise en charge de l’« identité » est activée. L’authentification **msiClientId** peut également être spécifiée dans les propriétés Connection/DataSource avec ce mode d’authentification, qui doit contenir l’ID client d’une identité de service géré à utiliser pour acquérir le jeton **accessToken** qui permettra d’établir la connexion.
     * **ActiveDirectoryIntegrated**
-        * Prise en charge depuis la version de pilote **v6.0**, l’authentification `authentication=ActiveDirectoryIntegrated` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide de l’authentification intégrée. Pour utiliser ce mode d’authentification, vous devez fédérer les services de fédération Active Directory (AD FS) locaux avec Azure Active Directory dans le cloud. Une fois la configuration terminée, vous pouvez vous connecter en ajoutant la bibliothèque Native « sqljdbc_auth. dll » au chemin de la classe d’application sur le système d’exploitation Windows, ou en configurant un ticket Kerberos pour la prise en charge de l’authentification multiplateforme. Vous pourrez accéder à Azure SQL DB/DW sans être invité à entrer des informations d’identification lorsque vous vous connecterez à un ordinateur joint au domaine.
+        * Prise en charge depuis la version de pilote **v6.0**, l’authentification `authentication=ActiveDirectoryIntegrated` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide de l’authentification intégrée. Pour utiliser ce mode d’authentification, vous devez fédérer les services de fédération Active Directory (AD FS) locaux avec Azure Active Directory dans le cloud. Une fois la configuration terminée, vous pouvez vous connecter en ajoutant la bibliothèque native « mssql-jdbc_auth-\<version>-\<arch>.dll » au chemin de la classe d’application sur le système d’exploitation Windows, ou en configurant un ticket Kerberos pour la prise en charge de l’authentification multiplateforme. Vous pourrez accéder à Azure SQL DB/DW sans être invité à entrer des informations d’identification lorsque vous vous connecterez à un ordinateur joint au domaine.
     * **ActiveDirectoryPassword**
         * Prise en charge depuis la version de pilote **v6.0**, l’authentification `authentication=ActiveDirectoryPassword` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide d’un nom de principal et d’un mot de passe Azure AD.
     * **SqlPassword**
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Connexion à l’aide du mode d’authentification ActiveDirectoryIntegrated
 Avec la version 6,4, le pilote JDBC Microsoft ajoute la prise en charge de l’authentification ActiveDirectoryIntegrated à l’aide d’un ticket Kerberos sur plusieurs plateformes (Windows, Linux et macOS).
-Pour plus d’informations, consultez [Définir le ticket Kerberos sur Windows, Linux et Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac). Sur Windows, sqljdbc_auth. dll peut également être utilisé pour l’authentification ActiveDirectoryIntegrated avec le pilote JDBC.
+Pour plus d’informations, consultez [Définir le ticket Kerberos sur Windows, Linux et Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac). Sur Windows, mssql-jdbc_auth-\<version>-\<arch>.dll peut également être utilisé pour l’authentification ActiveDirectoryIntegrated avec le pilote JDBC.
 
 > [!NOTE]
 >  Si vous utilisez une version antérieure du pilote, activez ce [lien](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) pour les dépendances respectives requises pour utiliser ce mode d’authentification. 
@@ -281,7 +281,7 @@ L’exemple ci-dessous contient une application Java simple qui se connecte à A
     6. Nous n’avons pas besoin de SIGN ON URL. Il vous suffit de fournir tout ce qui suit : « https://mytokentest  ».
     7. Cliquez sur « Créer » en bas du volet.
     9. Toujours dans le portail Azure, cliquez sur l’onglet « Paramètres » de votre application, puis ouvrez l’onglet « Propriétés ».
-    10. Recherchez la valeur d’« ID de l’application » (ID client AKA) et copiez-la, car vous en aurez besoin plus tard lors de la configuration de votre application (par exemple, 1846943b-ad04-4808-aa13-4702d908b5c1). Voir la capture instantanée suivante.
+    10. Recherchez la valeur « ID de l’application » (ou ID client) et copiez-la, car vous en aurez besoin plus tard pour configurer votre application (par exemple, 1846943b-ad04-4808-aa13-4702d908b5c1). Voir la capture instantanée suivante.
     11. Sous la section « Clés », créez une clé en renseignant le champ du nom, en sélectionnant la durée de la clé et en enregistrant la configuration (laissez le champ de la valeur vide). Après l’enregistrement, le champ de la valeur doit être renseigné automatiquement, copiez la valeur générée. Il s’agit du secret du client.
     12. Cliquez sur Azure Active Directory dans le volet de gauche. Sous « Inscriptions des applications », recherchez l’onglet « Points de terminaison ». Copiez l’URL sous « POINT DE TERMINAISON DE JETON OATH 2.0 ». Il s’agit de votre URL STS.
     
