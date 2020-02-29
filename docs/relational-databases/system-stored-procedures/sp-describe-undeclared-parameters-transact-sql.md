@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1205572235b141709cd463476182d9b405446188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908326"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180124"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
   Retourne un jeu de résultats qui contient des métadonnées sur les paramètres [!INCLUDE[tsql](../../includes/tsql-md.md)] non déclarés dans un lot. Considère chaque paramètre utilisé dans le lot ** \@TSQL** , mais non déclaré dans ** \@les paramètres**. Le jeu de résultats retourné contient une ligne pour chaque paramètre de ce genre, avec les informations de type déduites pour ce paramètre. La procédure retourne un jeu de résultats vide si ** \@** le lot d’entrée TSQL n’a pas de paramètres, à l’exception de ceux déclarés dans ** \@params**.  
   
@@ -40,7 +40,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> Pour utiliser cette procédure stockée dans Azure Synapse Analytics (anciennement SQL DW), le niveau de compatibilité d’une base de données doit être supérieur à 10. 
+
 ## <a name="arguments"></a>Arguments  
 `[ \@tsql = ] 'Transact-SQL\_batch'`Une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être de type **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
@@ -60,7 +63,7 @@ sp_describe_undeclared_parameters
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Contient la position ordinale du paramètre dans le jeu de résultats. La position du premier paramètre sera spécifiée comme 1.|  
-|**nomme**|**sysname non NULL**|Contient le nom du paramètre.|  
+|**name**|**sysname non NULL**|Contient le nom du paramètre.|  
 |**suggested_system_type_id**|**int NOT NULL**|Contient le **system_type_id** du type de données du paramètre tel que spécifié dans sys. types.<br /><br /> Pour les types CLR, même si la colonne **system_type_name** retourne la valeur null, cette colonne retourne la valeur 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contient le nom du type de données. Inclut des arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données du paramètre. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type de données CLR défini par l'utilisateur, NULL est retourné dans cette colonne. Si le type du paramètre ne peut pas être déduit, NULL est retourné.|  
 |**suggested_max_length**|**smallint n’est pas NULL**|Consultez sys. Columns. pour **max_length** Description de la colonne.|  
@@ -203,7 +206,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **sql_variant**  
   
-    -   **langage**  
+    -   **xml**  
   
     -   Types CLR définis par le système (**hierarchyid**, **Geometry**, **Geography**)  
   
@@ -222,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Dans ce cas, E (\@p) est Col_Int + \@p et TT (\@p) est de **type int**. **int** est choisi pour \@p, car il ne produit pas de conversions implicites. Tout autre choix de type de données produit au moins une conversion implicite.  
   
-2.  Si plusieurs types de données sont liés pour le plus petit nombre de conversions, le type de données dont la priorité est supérieure est utilisé. Par exemple :  
+2.  Si plusieurs types de données sont liés pour le plus petit nombre de conversions, le type de données dont la priorité est supérieure est utilisé. Par exemple  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

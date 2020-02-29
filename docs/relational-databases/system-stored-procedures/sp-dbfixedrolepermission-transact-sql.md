@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108166"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180112"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Affiche les autorisations d'un rôle de base de données fixe. **sp_dbfixedrolepermission** retourne des informations correctes dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. La sortie ne reflète pas les modifications apportées à la hiérarchie des autorisations [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]qui ont été implémentées dans. Pour plus d’informations, consultez[autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Affiche les autorisations d'un rôle de base de données fixe. **sp_dbfixedrolepermission** retourne des informations correctes dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. La sortie ne reflète pas les modifications apportées à la hiérarchie des autorisations [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]qui ont été implémentées dans. Pour plus d’informations, consultez [rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), qui affiche une liste de rôles de base de données fixes et les autorisations correspondantes.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  

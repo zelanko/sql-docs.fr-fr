@@ -23,100 +23,100 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b83f5842ebb2bb97ebd58142ef69d3a3d153f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bff8df8004c4553d5fa07ebb5ca46863a998bd85
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62836491"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176549"
 ---
 # <a name="enabling-logging-programmatically"></a>Activation de la journalisation par programme
-  Le moteur d'exécution fournit une collection d'objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> qui permettent la capture d'informations spécifiques à un événement au cours de la validation et de l'exécution de package. Les objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> sont disponibles pour les objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, y compris les objets <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> et <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. La journalisation est activée sur des conteneurs individuels, ou sur l'ensemble du package.  
-  
- Un conteneur peut utiliser plusieurs types des modules fournisseurs d'informations disponibles. Il est donc possible de créer et stocker des informations de journal dans de multiples formats. L'inscription d'un objet conteneur dans la journalisation s'effectue en deux étapes : d'abord l'activation de la journalisation, puis la sélection d'un module fournisseur d'informations. Les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> du conteneur permettent de spécifier les événements enregistrés et sélectionner le module fournisseur d'informations.  
-  
-## <a name="enabling-logging"></a>Activation de la journalisation  
- La propriété <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>, disponible dans chaque conteneur capable d'exécuter la journalisation, détermine si les informations d'événements du conteneur doivent être enregistrées dans le journal des événements. Cette propriété est affectée d'une valeur issue de la structure <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> et est héritée du parent du conteneur par défaut. Si le conteneur est un package, et n'a donc pas de parent, la propriété utilise <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>, qui a comme valeur par défaut `Disabled`.  
-  
-### <a name="selecting-a-log-provider"></a>Sélection d'un module fournisseur d'informations  
- Lorsque la propriété <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> a la valeur `Enabled`, un module fournisseur d'informations est ajouté à la collection <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> du conteneur pour terminer le processus. La collection <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> est disponible sur l'objet <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> et contient les modules fournisseurs d'informations sélectionnés pour le conteneur. La méthode <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> est appelée pour créer un fournisseur et l'ajouter à la collection. La méthode retourne ensuite le module fournisseur d'informations qui a été ajouté à la collection. Chaque fournisseur a des paramètres de configuration spécifiques et ces propriétés sont définies à l'aide de la propriété <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
-  
- Le tableau suivant répertorie les modules fournisseurs d'informations disponibles, leur description et leurs informations <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
-  
-|Fournisseur|Description|Propriété ConfigString|  
-|--------------|-----------------|---------------------------|  
-|SQL Server Profiler|Génère des traces SQL qui peuvent être capturées et affichées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. L'extension de nom de fichier par défaut de ce fournisseur est .trc.|Aucune configuration n'est requise.|  
-|SQL Server|Écrit les entrées du journal des événements dans la table **sysssislog** de toute base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert que la connexion à la base de données soit spécifiée, ainsi que le nom de la base de données cible.|  
-|Fichier texte|Écrit les entrées du journal des événements dans des fichiers texte ASCII au format CSV. L'extension de nom de fichier par défaut de ce fournisseur est .log.|Nom d'un gestionnaire de connexions de fichiers.|  
-|Journal des événements Windows|Enregistre dans le journal des événements Windows standard sur l'ordinateur local dans le journal des applications.|Aucune configuration n'est requise.|  
-|Fichier XML|Écrit les entrées du journal des événements dans un fichier au format XML. L'extension de nom de fichier par défaut de ce fournisseur est .xml.|Nom d'un gestionnaire de connexions de fichiers.|  
-  
- Les événements sont inclus dans le journal des événements, ou exclus de celui-ci, selon la définition des propriétés `EventFilterKind` et `EventFilter` du conteneur. La structure `EventFilterKind` contient deux valeurs, `ExclusionFilter` et `InclusionFilter`, qui indiquent si les événements ajoutés à `EventFilter` sont inclus dans le journal des événements. Un tableau de chaînes qui contient les noms des événements faisant l'objet du filtrage est ensuite assigné à la propriété `EventFilter`.  
-  
- Le code suivant active la journalisation sur un package, ajoute le module fournisseur d'informations pour les fichiers texte à la collection <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> et spécifie une liste d'événements à inclure dans la sortie de la journalisation.  
-  
-## <a name="sample"></a>Exemple  
-  
-```csharp  
-using System;  
-using Microsoft.SqlServer.Dts.Runtime;  
-  
-namespace Microsoft.SqlServer.Dts.Samples  
-{  
-  class Program  
-  {  
-    static void Main(string[] args)  
-    {  
-      Package p = new Package();  
-  
-      ConnectionManager loggingConnection = p.Connections.Add("FILE");  
-      loggingConnection.ConnectionString = @"C:\SSISPackageLog.txt";  
-  
-      LogProvider provider = p.LogProviders.Add("DTS.LogProviderTextFile.2");  
-      provider.ConfigString = loggingConnection.Name;  
-      p.LoggingOptions.SelectedLogProviders.Add(provider);  
-      p.LoggingOptions.EventFilterKind = DTSEventFilterKind.Inclusion;  
-      p.LoggingOptions.EventFilter = new String[] { "OnPreExecute",   
-         "OnPostExecute", "OnError", "OnWarning", "OnInformation" };  
-      p.LoggingMode = DTSLoggingMode.Enabled;  
-  
-      // Add tasks and other objects to the package.  
-  
-    }  
-  }  
-}  
-```  
-  
-```vb  
-Imports Microsoft.SqlServer.Dts.Runtime  
-  
-Module Module1  
-  
-  Sub Main()  
-  
-    Dim p As Package = New Package()  
-  
-    Dim loggingConnection As ConnectionManager = p.Connections.Add("FILE")  
-    loggingConnection.ConnectionString = "C:\SSISPackageLog.txt"  
-  
-    Dim provider As LogProvider = p.LogProviders.Add("DTS.LogProviderTextFile.2")  
-    provider.ConfigString = loggingConnection.Name  
-    p.LoggingOptions.SelectedLogProviders.Add(provider)  
-    p.LoggingOptions.EventFilterKind = DTSEventFilterKind.Inclusion  
-    p.LoggingOptions.EventFilter = New String() {"OnPreExecute", _  
-       "OnPostExecute", "OnError", "OnWarning", "OnInformation"}  
-    p.LoggingMode = DTSLoggingMode.Enabled  
-  
-    ' Add tasks and other objects to the package.  
-  
-  End Sub  
-  
-End Module  
-```  
-  
-![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Journalisation Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md)  
-  
-  
+  Le moteur d'exécution fournit une collection d'objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> qui permettent la capture d'informations spécifiques à un événement au cours de la validation et de l'exécution de package. Les objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> sont disponibles pour les objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, y compris les objets <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> et <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. La journalisation est activée sur des conteneurs individuels, ou sur l'ensemble du package.
+
+ Un conteneur peut utiliser plusieurs types des modules fournisseurs d'informations disponibles. Il est donc possible de créer et stocker des informations de journal dans de multiples formats. L'inscription d'un objet conteneur dans la journalisation s'effectue en deux étapes : d'abord l'activation de la journalisation, puis la sélection d'un module fournisseur d'informations. Les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> du conteneur permettent de spécifier les événements enregistrés et sélectionner le module fournisseur d'informations.
+
+## <a name="enabling-logging"></a>Activation de la journalisation
+ La propriété <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>, disponible dans chaque conteneur capable d'exécuter la journalisation, détermine si les informations d'événements du conteneur doivent être enregistrées dans le journal des événements. Cette propriété est affectée d'une valeur issue de la structure <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> et est héritée du parent du conteneur par défaut. Si le conteneur est un package, et n'a donc pas de parent, la propriété utilise <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>, qui a comme valeur par défaut `Disabled`.
+
+### <a name="selecting-a-log-provider"></a>Sélection d'un module fournisseur d'informations
+ Lorsque la propriété <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> a la valeur `Enabled`, un module fournisseur d'informations est ajouté à la collection <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> du conteneur pour terminer le processus. La collection <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> est disponible sur l'objet <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> et contient les modules fournisseurs d'informations sélectionnés pour le conteneur. La méthode <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> est appelée pour créer un fournisseur et l'ajouter à la collection. La méthode retourne ensuite le module fournisseur d'informations qui a été ajouté à la collection. Chaque fournisseur a des paramètres de configuration spécifiques et ces propriétés sont définies à l'aide de la propriété <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.
+
+ Le tableau suivant répertorie les modules fournisseurs d'informations disponibles, leur description et leurs informations <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.
+
+|Fournisseur|Description|Propriété ConfigString|
+|--------------|-----------------|---------------------------|
+|SQL Server Profiler|Génère des traces SQL qui peuvent être capturées et affichées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. L'extension de nom de fichier par défaut de ce fournisseur est .trc.|Aucune configuration n'est requise.|
+|SQL Server|Écrit les entrées du journal des événements dans la table **sysssislog** de toute base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert que la connexion à la base de données soit spécifiée, ainsi que le nom de la base de données cible.|
+|Fichier texte|Écrit les entrées du journal des événements dans des fichiers texte ASCII au format CSV. L'extension de nom de fichier par défaut de ce fournisseur est .log.|Nom d'un gestionnaire de connexions de fichiers.|
+|Journal des événements Windows|Enregistre dans le journal des événements Windows standard sur l'ordinateur local dans le journal des applications.|Aucune configuration n'est requise.|
+|Fichier XML|Écrit les entrées du journal des événements dans un fichier au format XML. L'extension de nom de fichier par défaut de ce fournisseur est .xml.|Nom d'un gestionnaire de connexions de fichiers.|
+
+ Les événements sont inclus dans le journal des événements, ou exclus de celui-ci, selon la définition des propriétés `EventFilterKind` et `EventFilter` du conteneur. La structure `EventFilterKind` contient deux valeurs, `ExclusionFilter` et `InclusionFilter`, qui indiquent si les événements ajoutés à `EventFilter` sont inclus dans le journal des événements. Un tableau de chaînes qui contient les noms des événements faisant l'objet du filtrage est ensuite assigné à la propriété `EventFilter`.
+
+ Le code suivant active la journalisation sur un package, ajoute le module fournisseur d'informations pour les fichiers texte à la collection <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> et spécifie une liste d'événements à inclure dans la sortie de la journalisation.
+
+## <a name="sample"></a>Exemple
+
+```csharp
+using System;
+using Microsoft.SqlServer.Dts.Runtime;
+
+namespace Microsoft.SqlServer.Dts.Samples
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Package p = new Package();
+
+      ConnectionManager loggingConnection = p.Connections.Add("FILE");
+      loggingConnection.ConnectionString = @"C:\SSISPackageLog.txt";
+
+      LogProvider provider = p.LogProviders.Add("DTS.LogProviderTextFile.2");
+      provider.ConfigString = loggingConnection.Name;
+      p.LoggingOptions.SelectedLogProviders.Add(provider);
+      p.LoggingOptions.EventFilterKind = DTSEventFilterKind.Inclusion;
+      p.LoggingOptions.EventFilter = new String[] { "OnPreExecute", 
+         "OnPostExecute", "OnError", "OnWarning", "OnInformation" };
+      p.LoggingMode = DTSLoggingMode.Enabled;
+
+      // Add tasks and other objects to the package.
+
+    }
+  }
+}
+```
+
+```vb
+Imports Microsoft.SqlServer.Dts.Runtime
+
+Module Module1
+
+  Sub Main()
+
+    Dim p As Package = New Package()
+
+    Dim loggingConnection As ConnectionManager = p.Connections.Add("FILE")
+    loggingConnection.ConnectionString = "C:\SSISPackageLog.txt"
+
+    Dim provider As LogProvider = p.LogProviders.Add("DTS.LogProviderTextFile.2")
+    provider.ConfigString = loggingConnection.Name
+    p.LoggingOptions.SelectedLogProviders.Add(provider)
+    p.LoggingOptions.EventFilterKind = DTSEventFilterKind.Inclusion
+    p.LoggingOptions.EventFilter = New String() {"OnPreExecute", _
+       "OnPostExecute", "OnError", "OnWarning", "OnInformation"}
+    p.LoggingMode = DTSLoggingMode.Enabled
+
+    ' Add tasks and other objects to the package.
+
+  End Sub
+
+End Module
+```
+
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
+
+## <a name="see-also"></a>Voir aussi
+ [Journalisation Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md)
+
+

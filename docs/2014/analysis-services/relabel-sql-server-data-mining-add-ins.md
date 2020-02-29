@@ -14,59 +14,59 @@ ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5471720cbd3084c661dec93d9c7f4f680e066b86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7f7d0accb835eb7da23ade6aec405066204fc415
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66070403"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175598"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Réétiqueter (Compléments d'exploration de données SQL Server)
-  ![Icône Office 13 pour l'outil Réétiqueter](media/dm13-relabel.gif "Icône Office 13 pour l'outil Réétiqueter")  
-  
- Le client d'exploration de données pour Excel vous permet de créer de nouvelles étiquettes pour les données afin de faciliter la compréhension des résultats de l'analyse.  
-  
- Les raisons du réétiquetage incluent les suivantes :  
-  
--   Les données contiennent des résultats qui ont été codés, comme 1 pour Homme et 2 pour Femme.  
-  
--   Vous créez des compartiments de valeurs numériques et souhaitez affecter un nom descriptif aux plages.  
-  
--   Vous souhaitez simplifier les noms longs.  
-  
-## <a name="using-the-relabel-wizard"></a>Utilisation de l'Assistant Réétiquetage  
-  
-1.  Dans le ruban **Exploration de données** , cliquez sur **Nettoyer** , puis sélectionnez **Réétiqueter**.  
-  
-2.  Sélectionnez la table ou la plage de données qui contiennent les données à corriger.  
-  
-3.  Dans la page **Réétiqueter** de l'Assistant, sélectionnez une colonne, dans la liste déroulante, ou en cliquant sur la colonne dans le volet des **Échantillons de données** .  
-  
-     Le volet **Échantillons de données** affiche environ 50 lignes de données, mais elles sont échantillonnées pour garantir que vous consultez une bonne répartition des valeurs.  
-  
-     Cliquez sur l'en-tête de colonne **Nombre** pour trier par le nombre de chaque valeur.  
-  
-     Vous pouvez également trier par **Étiquettes d'origine**, ce qui est pratique si vous souhaitez réétiqueter les valeurs les plus élevées ou les plus faibles en premier.  
-  
-4.  Dans la page de données **Réétiqueter** de l'Assistant, examinez les valeurs dans la colonne **Étiquettes d'origine** , et décidez comment vous souhaitez les regrouper ou les modifier.  
-  
-5.  Tapez une nouvelle valeur dans la ligne sous **Nouvelles étiquettes**. Vous pouvez également choisir une valeur dans la liste de valeurs existantes. À mesure que vous entrez des nouvelles valeurs, elles sont disponibles en vue de leur réutilisation.  
-  
-6.  Une fois que vous avez entré suffisamment de lignes, cliquez sur **suivant**, puis dans la page **Sélectionner la destination** , choisissez l’emplacement où vous allez enregistrer les données réparties.  
-  
-    -   **Ajouter en tant que nouvelle colonne dans la feuille de calcul active**  
-  
-         Cliquez pour ajouter une nouvelle colonne au tableau qui contient les nouvelles valeurs.  
-  
-    -   **Copier les données de la feuille comportant les modifications dans une nouvelle feuille de calcul**  
-  
-         Cliquez pour créer une nouvelle feuille de calcul qui contient les données mises à jour.  
-  
-    -   **Changer les données de place**  
-  
-         Cliquez pour remplacer les données d'origine par les nouvelles valeurs.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Exploration et nettoyage des données](exploring-and-cleaning-data.md)  
-  
-  
+  ![Icône Office 13 pour l'outil Réétiqueter](media/dm13-relabel.gif "Icône Office 13 pour l'outil Réétiqueter")
+
+ Le client d'exploration de données pour Excel vous permet de créer de nouvelles étiquettes pour les données afin de faciliter la compréhension des résultats de l'analyse.
+
+ Les raisons du réétiquetage incluent les suivantes :
+
+-   Les données contiennent des résultats qui ont été codés, comme 1 pour Homme et 2 pour Femme.
+
+-   Vous créez des compartiments de valeurs numériques et souhaitez affecter un nom descriptif aux plages.
+
+-   Vous souhaitez simplifier les noms longs.
+
+## <a name="using-the-relabel-wizard"></a>Utilisation de l'Assistant Réétiquetage
+
+1.  Dans le ruban **Exploration de données** , cliquez sur **Nettoyer** , puis sélectionnez **Réétiqueter**.
+
+2.  Sélectionnez la table ou la plage de données qui contiennent les données à corriger.
+
+3.  Dans la page **Réétiqueter** de l'Assistant, sélectionnez une colonne, dans la liste déroulante, ou en cliquant sur la colonne dans le volet des **Échantillons de données** .
+
+     Le volet **Échantillons de données** affiche environ 50 lignes de données, mais elles sont échantillonnées pour garantir que vous consultez une bonne répartition des valeurs.
+
+     Cliquez sur l'en-tête de colonne **Nombre** pour trier par le nombre de chaque valeur.
+
+     Vous pouvez également trier par **Étiquettes d'origine**, ce qui est pratique si vous souhaitez réétiqueter les valeurs les plus élevées ou les plus faibles en premier.
+
+4.  Dans la page de données **Réétiqueter** de l'Assistant, examinez les valeurs dans la colonne **Étiquettes d'origine** , et décidez comment vous souhaitez les regrouper ou les modifier.
+
+5.  Tapez une nouvelle valeur dans la ligne sous **Nouvelles étiquettes**. Vous pouvez également choisir une valeur dans la liste de valeurs existantes. À mesure que vous entrez des nouvelles valeurs, elles sont disponibles en vue de leur réutilisation.
+
+6.  Une fois que vous avez entré suffisamment de lignes, cliquez sur **suivant**, puis dans la page **Sélectionner la destination** , choisissez l’emplacement où vous allez enregistrer les données réparties.
+
+    -   **Ajouter en tant que nouvelle colonne dans la feuille de calcul active**
+
+         Cliquez pour ajouter une nouvelle colonne au tableau qui contient les nouvelles valeurs.
+
+    -   **Copier les données de la feuille comportant les modifications dans une nouvelle feuille de calcul**
+
+         Cliquez pour créer une nouvelle feuille de calcul qui contient les données mises à jour.
+
+    -   **Changer les données de place**
+
+         Cliquez pour remplacer les données d'origine par les nouvelles valeurs.
+
+## <a name="see-also"></a>Voir aussi
+ [Exploration et nettoyage des données](exploring-and-cleaning-data.md)
+
+

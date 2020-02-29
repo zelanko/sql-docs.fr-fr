@@ -16,57 +16,56 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a4d9983da355c244e5d26873f92b4c43159a0e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3e67d718c928785d85712eb5307130af22570c26
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74685440"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78173908"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une gamme complète d’outils et de services prêts à l’emploi pour vous aider à créer, déployer et gérer des rapports pour votre organisation. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] intègre des fonctionnalités de programmation qui vous permettent d'étendre et de personnaliser votre fonctionnalité de création de rapports.  
-  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]est une plateforme de création de rapports basée sur serveur qui fournit des fonctionnalités complètes de création de rapports pour diverses sources de données. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]comprend un ensemble complet d’outils permettant de créer, gérer et remettre des rapports, ainsi que des API qui permettent aux développeurs d’intégrer ou d’étendre le traitement des données et des rapports dans des applications personnalisées. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]les outils fonctionnent dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] l’environnement et sont entièrement intégrés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aux outils et aux composants.  
-  
- Avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vous pouvez créer des rapports de type interactif, tabulaire, graphique ou libre à partir de sources de données XML, relationnelles et multidimensionnelles. Les rapports peuvent inclure une visualisation complète des données, y compris des graphiques, des cartes et des graphiques sparkline. Vous pouvez publier des rapports, planifier leur traitement ou y accéder à la demande. Vous pouvez sélectionner divers formats d’affichage, exporter des rapports vers d'autres applications comme [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]et vous abonner à des rapports publiés. Les rapports que vous créez peuvent être consultés par le biais d'une connexion Internet ou en tant qu'application [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ou site SharePoint. Vous pouvez également créer des alertes de données sur des rapports publiés sur un site SharePoint et recevoir des messages électroniques lorsque les données du rapport sont modifiées.  
-  
- Pour plus d’informations sur les nouvelles [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]fonctionnalités de, consultez [Nouveautés &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
-  
- Pour plus d'informations sur les autres composants, outils et ressources de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , consultez la [Documentation en ligne de SQL Server](../2014-toc/index.yml).  
-  
- **Parcourir le contenu par zone**  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services serveur de rapports](../../2014/reporting-services/reporting-services-report-server.md)  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services des rapports &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [données de rapport &#40;SSRS&#41;](report-data/report-data-ssrs.md)  
-  
- ![](media/hlp-16folder.gif "Icône Dossier") [Paramètres de rapport de l’icône de dossier &#40;Générateur de rapports et de concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [parties de rapport dans Concepteur de rapports &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
-  
- ![](media/hlp-16folder.gif "Icône Dossier") [Planifications](subscriptions/schedules.md) d’icône de dossier  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [abonnements et &#40;de remise Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services des alertes de données](../ssms/agent/alerts.md)  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services sécurité et protection](security/reporting-services-security-and-protection.md)  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [accès URL &#40;SSRS&#41;](url-access-ssrs.md)  
-  
- Extensions d' ![icône de dossier](media/hlp-16folder.gif "Icône Dossier") [&#40;SSRS&#41;](extensions-ssrs.md)  
-  
- ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services outils](tools/reporting-services-tools.md)  
-  
- ![](media/hlp-16folder.gif "Icône Dossier") Informations [de référence sur les erreurs et événements de l’icône de dossier &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
- Informations de référence sur la fonctionnalité d' ![icône de dossier](media/hlp-16folder.gif "Icône Dossier") [&#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
-  
-  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] intègre des fonctionnalités de programmation qui vous permettent d'étendre et de personnaliser votre fonctionnalité de création de rapports.
+
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]est une plateforme de création de rapports basée sur serveur qui fournit des fonctionnalités complètes de création de rapports pour diverses sources de données. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]comprend un ensemble complet d’outils permettant de créer, gérer et remettre des rapports, ainsi que des API qui permettent aux développeurs d’intégrer ou d’étendre le traitement des données et des rapports dans des applications personnalisées. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]les outils fonctionnent dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] l’environnement et sont entièrement intégrés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aux outils et aux composants.
+
+ Avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vous pouvez créer des rapports de type interactif, tabulaire, graphique ou libre à partir de sources de données XML, relationnelles et multidimensionnelles. Les rapports peuvent inclure une visualisation complète des données, y compris des graphiques, des cartes et des graphiques sparkline. Vous pouvez publier des rapports, planifier leur traitement ou y accéder à la demande. Vous pouvez sélectionner divers formats d’affichage, exporter des rapports vers d'autres applications comme [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]et vous abonner à des rapports publiés. Les rapports que vous créez peuvent être consultés par le biais d'une connexion Internet ou en tant qu'application [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ou site SharePoint. Vous pouvez également créer des alertes de données sur des rapports publiés sur un site SharePoint et recevoir des messages électroniques lorsque les données du rapport sont modifiées.
+
+ Pour plus d’informations sur les nouvelles [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]fonctionnalités de, consultez [Nouveautés &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).
+
+ Pour plus d'informations sur les autres composants, outils et ressources de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , consultez la [Documentation en ligne de SQL Server](../2014-toc/index.yml).
+
+ Icône **Parcourir le contenu par dossier de zone** ![](media/hlp-16folder.gif "Icône Dossier") [Reporting Services serveur de rapports](../../2014/reporting-services/reporting-services-report-server.md)
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services des rapports &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [données de rapport &#40;SSRS&#41;](report-data/report-data-ssrs.md)
+
+ ![](media/hlp-16folder.gif "Icône Dossier") [Paramètres de rapport de l’icône de dossier &#40;Générateur de rapports et de concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [parties de rapport dans Concepteur de rapports &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)
+
+ ![](media/hlp-16folder.gif "Icône Dossier") [Planifications](subscriptions/schedules.md) d’icône de dossier
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [abonnements et &#40;de remise Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services des alertes de données](../ssms/agent/alerts.md)
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services sécurité et protection](security/reporting-services-security-and-protection.md)
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [accès URL &#40;SSRS&#41;](url-access-ssrs.md)
+
+ Extensions d' ![icône de dossier](media/hlp-16folder.gif "Icône Dossier") [&#40;SSRS&#41;](extensions-ssrs.md)
+
+ ![Icône de dossier](media/hlp-16folder.gif "Icône Dossier") [Reporting Services outils](tools/reporting-services-tools.md)
+
+ ![](media/hlp-16folder.gif "Icône Dossier") Informations [de référence sur les erreurs et événements de l’icône de dossier &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)
+
+ Informations de référence sur la fonctionnalité d' ![icône de dossier](media/hlp-16folder.gif "Icône Dossier") [&#40;Reporting Services&#41;](feature-reference-reporting-services.md)
+
+## <a name="see-also"></a>Voir aussi
+ [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)
+
+

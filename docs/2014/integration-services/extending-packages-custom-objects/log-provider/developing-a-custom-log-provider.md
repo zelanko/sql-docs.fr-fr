@@ -17,61 +17,49 @@ ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25531ce8e4a405b1e52a0f1f8d81fb536087cff7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768605"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176295"
 ---
 # <a name="developing-a-custom-log-provider"></a>Développement d'un module fournisseur d'informations personnalisé
-  
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possède des fonctions de journalisation étendues qui permettent de capturer les événements qui se produisent pendant l'exécution de package. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers modules fournisseurs d’informations qui permettent de créer et de stocker des journaux dans différents formats, tels que XML, texte et base de données ou dans le journal des événements Windows. Si les modules fournisseurs d'informations et les formats de sortie fournis ne répondent pas totalement à vos besoin, vous pouvez créer un module fournisseur d'informations personnalisé.  
-  
- Pour créer un module fournisseur d'informations personnalisé, vous devez créer une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>, appliquer l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> à la nouvelle classe et substituer les méthodes et propriétés importantes de la classe de base, notamment la propriété <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> et la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>.  
-  
-## <a name="in-this-section"></a>Dans cette section  
- Cette section explique comment créer, configurer et coder un module fournisseur d'informations personnalisé.  
-  
- [Création d'un module fournisseur d'informations personnalisé](creating-a-custom-log-provider.md)  
- Explique comment créer les classes d'un projet de module fournisseur d'informations personnalisé.  
-  
- [Codage d'un module fournisseur d'informations personnalisé](coding-a-custom-log-provider.md)  
- Décrit comment implémenter un module fournisseur d'informations personnalisé en substituant les méthodes et propriétés de la classe de base.  
-  
- [Développement d’une interface utilisateur pour un module fournisseur d’informations personnalisé](developing-a-user-interface-for-a-custom-log-provider.md)  
- Les interfaces utilisateur personnalisées pour les modules fournisseurs d’informations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]personnalisés ne sont pas prises en charge dans.  
-  
-## <a name="related-topics"></a>Rubriques connexes  
-  
-### <a name="information-common-to-all-custom-objects"></a>Informations communes à tous les objets personnalisés  
- Pour obtenir les informations communes à tous les types d'objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :  
-  
- [Développement d’objets personnalisés pour Integration Services](../developing-custom-objects-for-integration-services.md)  
- Décrit les étapes de base permettant d’implémenter tous les types d’objets personnalisés pour [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
-  
- [Persistance des objets personnalisés](../persisting-custom-objects.md)  
- Décrit la persistance personnalisée et explique les situations dans lesquelles elle est nécessaire.  
-  
- [Génération, déploiement et débogage d’objets personnalisés](../building-deploying-and-debugging-custom-objects.md)  
- Décrit les techniques permettant de générer, signer, déployer et déboguer des objets personnalisés.  
-  
-### <a name="information-about-other-custom-objects"></a>Informations sur les autres objets personnalisés  
- Pour plus d’informations sur les autres types d’objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :  
-  
- [Développement d’une tâche personnalisée](../task/developing-a-custom-task.md)  
- Explique comment programmer des tâches personnalisées.  
-  
- [Développement d’un gestionnaire de connexions personnalisé](../connection-manager/developing-a-custom-connection-manager.md)  
- Explique comment programmer des gestionnaires de connexions personnalisés.  
-  
- [Développement d’un énumérateur ForEach personnalisé](../foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
- Décrit comment programmer des énumérateurs personnalisés.  
-  
- [Développement d’un composant de flux de données personnalisé](../data-flow/developing-a-custom-data-flow-component.md)  
- Explique comment programmer des sources, des transformations et des destinations de flux de données personnalisées.  
-  
-![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
-  
-  
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possède des fonctions de journalisation étendues qui permettent de capturer les événements qui se produisent pendant l'exécution de package. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers modules fournisseurs d’informations qui permettent de créer et de stocker des journaux dans différents formats, tels que XML, texte et base de données ou dans le journal des événements Windows. Si les modules fournisseurs d'informations et les formats de sortie fournis ne répondent pas totalement à vos besoin, vous pouvez créer un module fournisseur d'informations personnalisé.
+
+ Pour créer un module fournisseur d'informations personnalisé, vous devez créer une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>, appliquer l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> à la nouvelle classe et substituer les méthodes et propriétés importantes de la classe de base, notamment la propriété <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> et la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>.
+
+## <a name="in-this-section"></a>Dans cette section
+ Cette section explique comment créer, configurer et coder un module fournisseur d'informations personnalisé.
+
+ [Création d’un module fournisseur d’informations personnalisé](creating-a-custom-log-provider.md) Décrit comment créer les classes d’un projet de module fournisseur d’informations personnalisé.
+
+ [Codage d’un module fournisseur d’informations personnalisé](coding-a-custom-log-provider.md) Décrit comment implémenter un module fournisseur d’informations personnalisé en substituant les méthodes et les propriétés de la classe de base.
+
+ [Développement d’une interface utilisateur pour un module fournisseur d’informations personnalisé](developing-a-user-interface-for-a-custom-log-provider.md) Les interfaces utilisateur personnalisées pour les modules fournisseurs d’informations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]personnalisés ne sont pas prises en charge dans.
+
+## <a name="related-topics"></a>Rubriques connexes
+
+### <a name="information-common-to-all-custom-objects"></a>Informations communes à tous les objets personnalisés
+ Pour obtenir les informations communes à tous les types d'objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :
+
+ [Développement d’objets personnalisés pour Integration Services](../developing-custom-objects-for-integration-services.md) Décrit les étapes de base de l’implémentation de tous les types [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]d’objets personnalisés pour.
+
+ [Persistance des objets personnalisés](../persisting-custom-objects.md) Décrit la persistance personnalisée et explique quand elle est nécessaire.
+
+ [Génération, déploiement et débogage d’objets personnalisés](../building-deploying-and-debugging-custom-objects.md) Décrit les techniques permettant de générer, signer, déployer et déboguer des objets personnalisés.
+
+### <a name="information-about-other-custom-objects"></a>Informations sur les autres objets personnalisés
+ Pour plus d’informations sur les autres types d’objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :
+
+ [Développement d’une tâche personnalisée](../task/developing-a-custom-task.md) Explique comment programmer des tâches personnalisées.
+
+ [Développement d’un gestionnaire de connexions personnalisé](../connection-manager/developing-a-custom-connection-manager.md) Explique comment programmer des gestionnaires de connexions personnalisés.
+
+ [Développement d’un énumérateur foreach personnalisé](../foreach-enumerator/developing-a-custom-foreach-enumerator.md) Explique comment programmer des énumérateurs personnalisés.
+
+ [Développement d’un composant de workflow de données personnalisé](../data-flow/developing-a-custom-data-flow-component.md) Explique comment programmer des sources, des transformations et des destinations de workflow de données personnalisées.
+
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
+
+
