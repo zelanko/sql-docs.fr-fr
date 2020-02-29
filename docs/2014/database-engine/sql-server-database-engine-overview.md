@@ -13,34 +13,33 @@ ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 77f7fdb2689d910d6fe9534a5f1f65e1c381b351
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62843793"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175448"
 ---
 # <a name="sql-server-database-engine"></a>Moteur de base de données SQL Server
-  Le [!INCLUDE[ssDE](../includes/ssde-md.md)] est le service central qui permet de stocker, traiter et sécuriser les données. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] permet de contrôler les accès et de traiter rapidement les transactions pour répondre aux besoins des applications consommatrices de données les plus exigeantes de votre entreprise.  
-  
- Utilisez le [!INCLUDE[ssDE](../includes/ssde-md.md)] afin de créer des bases de données relationnelles pour le traitement de transaction en ligne ou les données de traitement analytique en ligne. Ces opérations comprennent la création de tables pour le stockage des données, et les objets de base de données tels que les index, les vues et les procédures stockées pour l'affichage, la gestion et la sécurisation des données. Vous pouvez faire appel à [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour gérer les objets de base de données, et à [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour capturer des événements de serveur.  
-  
- **Parcourir le contenu par zone**  
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Nouveautés (moteur de base de données)](whats-new-in-sql-server-2016.md)  
-  
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [SQL Server moteur de base de données la compatibilité descendante](sql-server-database-engine-backward-compatibility.md)  
-  
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Outils d’administration SQL Server la compatibilité descendante](../../2014/database-engine/sql-server-management-tools-backward-compatibility.md)  
-  
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [fonctionnalités et tâches de base de données](../../2014/database-engine/database-engine-features-and-tasks.md)  
-  
- Informations [techniques de référence](../../2014/database-engine/technical-reference-database-engine.md) sur les ![petites icônes de dossiers de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers")  
-  
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [référence Transact-SQL](/sql/t-sql/language-reference)  
-  
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [référence XQuery](/sql/xquery/xquery-language-reference-sql-server)  
-  
-## <a name="see-also"></a>Voir aussi  
- [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?LinkId=219676)  
-  
-  
+  Le [!INCLUDE[ssDE](../includes/ssde-md.md)] est le service central qui permet de stocker, traiter et sécuriser les données. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] permet de contrôler les accès et de traiter rapidement les transactions pour répondre aux besoins des applications consommatrices de données les plus exigeantes de votre entreprise.
+
+ Utilisez le [!INCLUDE[ssDE](../includes/ssde-md.md)] afin de créer des bases de données relationnelles pour le traitement de transaction en ligne ou les données de traitement analytique en ligne. Ces opérations comprennent la création de tables pour le stockage des données, et les objets de base de données tels que les index, les vues et les procédures stockées pour l'affichage, la gestion et la sécurisation des données. Vous pouvez faire appel à [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour gérer les objets de base de données, et à [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour capturer des événements de serveur.
+
+ Icône **Parcourir le contenu par** ![petite zone dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Nouveautés (moteur de base de données)](whats-new-in-sql-server-2016.md)
+
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [SQL Server moteur de base de données la compatibilité descendante](sql-server-database-engine-backward-compatibility.md)
+
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [Outils d’administration SQL Server la compatibilité descendante](../../2014/database-engine/sql-server-management-tools-backward-compatibility.md)
+
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [fonctionnalités et tâches de base de données](../../2014/database-engine/database-engine-features-and-tasks.md)
+
+ Informations [techniques de référence](../../2014/database-engine/technical-reference-database-engine.md) sur les ![petites icônes de dossiers de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers")
+
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [référence Transact-SQL](/sql/t-sql/language-reference)
+
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") [référence XQuery](/sql/xquery/xquery-language-reference-sql-server)
+
+## <a name="see-also"></a>Voir aussi
+ [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?LinkId=219676)
+
+

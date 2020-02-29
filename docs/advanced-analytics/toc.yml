@@ -37,6 +37,8 @@
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
     - name: Mettre à niveau Python et R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
+    - name: Notebooks Azure Data Studio
+      href: ../advanced-analytics/install/sql-machine-learning-azure-data-studio.md
     - name: Configurer un client Python
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
     - name: Configurer un client R
