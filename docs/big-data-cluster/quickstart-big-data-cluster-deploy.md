@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831390"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608383"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Utiliser un script Python pour déployer un cluster Big Data SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -27,7 +27,7 @@ Dans ce tutoriel, vous utilisez un exemple de script de déploiement Python pour
 
 Le déploiement de cluster Big Data par défaut utilisé ici se compose d’une instance principale SQL, d’une instance de pool de calcul, de deux instances de pool de données et de deux instances de pool de stockage. Les données sont conservées avec des volumes persistants Kubernetes qui utilisent les classes de stockage par défaut d’AKS. La configuration par défaut utilisée dans ce tutoriel est adaptée aux environnements de développement et de test.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Un abonnement Azure.
 - [Outils Big Data](deploy-big-data-tools.md) :
@@ -82,7 +82,7 @@ Procédez comme suit pour exécuter le script de déploiement dans une invite ba
    | **Nom d’utilisateur** | Nom d’utilisateur de l’utilisateur du contrôleur (**admin** par défaut). |
 
    > [!IMPORTANT]
-   > La taille de machine **Standard_L8s** par défaut peut ne pas être disponible dans toutes les régions Azure. Si vous sélectionnez une autre taille de machine, veillez à ce que le nombre total de disques pouvant être attachés sur les nœuds du cluster soit supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, le cluster Big Data nécessite 24 revendications de volumes persistants. Par exemple, la taille de machine [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) prend en charge 32 disques attachés : vous pouvez donc évaluer les clusters Big Data avec un seul nœud de cette taille de machine.
+   > La taille de machine **Standard_L8s** par défaut peut ne pas être disponible dans toutes les régions Azure. Si vous sélectionnez une autre taille de machine, veillez à ce que le nombre total de disques pouvant être attachés sur les nœuds du cluster soit supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, le cluster Big Data nécessite 24 revendications de volumes persistants. Par exemple, la taille de machine [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) prend en charge 32 disques attachés : vous pouvez donc évaluer les clusters Big Data avec un seul nœud de cette taille de machine.
 
    > [!NOTE]
    > Le compte SQL Server `sa` est désactivé durant le déploiement de clusters Big Data. Un nouveau compte de connexion d’administrateur système est provisionné dans l’instance maître de SQL Server avec le même nom que celui spécifié pour l’entrée du **Nom d’utilisateur** et le mot de passe correspondant à l’entrée du **Mot de passe**. Les mêmes valeurs correspondant à **Nom d’utilisateur** et **Mot de passe** sont utilisées pour provisionner un utilisateur administrateur de contrôleur. Le seul utilisateur pris en charge pour la passerelle (Knox) est **root**, et le mot de passe est le même que ci-dessus.
