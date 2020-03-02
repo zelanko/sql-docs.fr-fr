@@ -28,7 +28,7 @@ Traditionnellement, l’intégration de solutions de science des données impliq
 + [Créer et exécuter des scripts R simples dans SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
+Vous trouverez un exemple plus complet de déploiement de code R en production à l’aide des procédures stockées dans [Tutoriel : analytique de données R pour les développeurs SQL](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Recommandations pour l’optimisation du code R pour SQL
 

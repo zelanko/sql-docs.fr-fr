@@ -117,4 +117,4 @@ Pour plus d’informations, consultez [CREATE EXTERNAL LIBRARY](https://docs.mic
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-+ [Tutorial: Search for a string using regular expressions in Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Tutoriel : Rechercher une chaîne à l’aide d’expressions régulières en Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

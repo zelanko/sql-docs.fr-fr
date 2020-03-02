@@ -25,7 +25,7 @@ ms.locfileid: "65581039"
 
 Les utilisateurs SharePoint peuvent consulter la liste des alertes de données qu'ils ont créées et les informations sur les alertes. Ils peuvent également supprimer leurs alertes, ouvrir les définitions d'alerte pour les modifier dans le Concepteur d'alertes de données et les exécuter. L'image suivante affiche les fonctionnalités disponibles aux utilisateurs dans le Gestionnaire des alertes de données.
 
- ![Alert Manager features for SharePoint users](../reporting-services/media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")
+ ![Fonctionnalités du Gestionnaire d'alertes pour les utilisateurs SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Fonctionnalités du Gestionnaire d'alertes pour les utilisateurs SharePoint")
 
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
@@ -36,7 +36,7 @@ Les utilisateurs SharePoint peuvent consulter la liste des alertes de données q
   
 2.  Cliquez sur l’icône pour développer le menu déroulant sur un rapport et cliquez sur **Gérer les alertes de données**. L'image suivante montre le menu déroulant.  
   
-     ![Open Alert Manager from report context menu](../reporting-services/media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
+     ![Ouvrir le Gestionnaire d'alertes à partir du menu contextuel du rapport](../reporting-services/media/rs-openalertmanager.gif "Ouvrir le Gestionnaire d'alertes à partir du menu contextuel du rapport")  
   
      Le Gestionnaire des alertes de données s'ouvre. Par défaut, il répertorie les alertes du rapport que vous avez sélectionné dans la bibliothèque.  
   
