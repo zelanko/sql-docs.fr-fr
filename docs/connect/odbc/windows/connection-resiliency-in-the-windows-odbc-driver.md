@@ -71,7 +71,7 @@ ms.locfileid: "68008432"
 |IMC06|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le pilote du client comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant contient deux fonctions. **func1** montre comment se connecter avec un nom de source de données (DSN) qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows. Le nom de source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et spécifie l’identifiant utilisateur. **func1** then retrieves the number of connection retries with **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ L’exemple suivant contient deux fonctions. **func1** montre comment se connecter avec un nom de source de données (DSN) qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows. Le nom de source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et spécifie l’identifiant utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** utilise **SQLDriverConnect**, le mot clé de chaîne de connexion **ConnectRetryCount** et les attributs de connexion pour récupérer le paramètre pour les tentatives de connexion et l’intervalle avant nouvelle tentative.  
   

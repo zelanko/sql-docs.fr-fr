@@ -1,5 +1,5 @@
 ---
-title: Change the Name of Registered Server or Server Group
+title: Changer le nom d’un serveur ou d’un groupe de serveurs inscrits
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms

@@ -22,7 +22,7 @@ ms.locfileid: "75240534"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+Cette section contient l’aide accessible par le biais de la touche F1 pour les boîtes de dialogue et les pages disponibles dans la barre de menus de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [À propos de SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

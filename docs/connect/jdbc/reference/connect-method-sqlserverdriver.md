@@ -1,5 +1,5 @@
 ---
-title: connect Method (SQLServerDriver) | Microsoft Docs
+title: connect, méthode (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -51,7 +51,7 @@ public java.sql.Connection connect(java.lang.String Url,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- This connect method is specified by the connect method in the java.sql.Driver interface.  
+ Cette méthode connect est spécifiée par la méthode connect dans l’interface java.sql.Driver.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDriver, méthodes](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

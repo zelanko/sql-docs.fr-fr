@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting a hang or crash with SSMS
+title: Résolution des problèmes de blocage ou de plantage avec SSMS
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: dnethi

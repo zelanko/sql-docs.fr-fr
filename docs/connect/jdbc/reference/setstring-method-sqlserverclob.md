@@ -1,5 +1,5 @@
 ---
-title: setString Method (SQLServerClob) | Microsoft Docs
+title: setString, méthode (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.locfileid: "67972651"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|Écrit la chaîne donnéedans le CLOB, en démarrant à la position donnée.|  
 |[setString (long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|Écrit la chaîne donnée dans le CLOB, en démarrant à la position spécifiée et en fonction du décalage et de la longueur donnés.|  
