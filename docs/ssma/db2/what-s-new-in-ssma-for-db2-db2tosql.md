@@ -1,24 +1,40 @@
 ---
 title: Nouveautés de SSMA pour DB2 (DB2ToSQL) | Microsoft Docs
+authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/22/2020
+ms.date: 3/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-author: HJToland3
-ms.author: Shamikg
-ms.openlocfilehash: 9b4fc1f9d0ce1128306f27a5f7bf6658377528cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.author: jtoland;alexiva
+ms.openlocfilehash: 4ddcdb42d7d474b10e9cadd798d1feb4c429161b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76516563"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256835"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Nouveautés de SSMA pour DB2 (DB2ToSQL)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications DB2 dans chaque version.
+
+## <a name="ssma-v87"></a>SSMA v 8.7
+
+La version v 8.7 de SSMA pour DB2 comprend un nouvel analyseur de syntaxe DB2, ainsi que des correctifs mineurs et des améliorations de performances dans l’interface graphique utilisateur.
+
+En outre, SSMA pour DB2 fournit désormais les éléments suivants :
+
+* Correctif pour la découverte de clés étrangères lors de la migration à partir de DB2 sur LUW.
+* Conversion améliorée de `SELECT ... FOR UPDATE` l’instruction.
+* Conversion améliorée pour `COUNT` la fonction dans les tables mq.
+* Conversion des `SAVEPOINT` instructions.
+* Conversion en émulant le comportement DB2's `NULL` pour les `ORDER BY` valeurs de la clause.
+* Analyse de la prise en charge de l’instruction ASSOCIATE RESULT SET.
+
+> [!IMPORTANT]
+> Avec SSMA v 8.5 et versions ultérieures, .NET 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
@@ -30,12 +46,12 @@ Pour tirer parti de ce paramètre, dans SSMA pour DB2, accédez **à outils** > 
 
 En outre, SSMA pour DB2 fournit désormais les éléments suivants :
 
--   Correctif pour la conversion de fonctions qui utilisent des valeurs d’argument par défaut
--   Amélioration de l’analyse des fonctions dans la clause PARAMETER.
-- Possibilité de convertir l’instruction LEAVE.
+* Correctif pour la conversion des fonctions qui utilisent des valeurs d’argument par défaut.
+* Amélioration de l’analyse de `PARAMETER` la clause pour les fonctions.
+* Possibilité de convertir l' `LEAVE` instruction.
 
 > [!IMPORTANT]
-> Avec SSMA v 8.5 et versions ultérieures, .net 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+> Avec SSMA v 8.5 et versions ultérieures, .NET 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -43,34 +59,34 @@ La version v 8.5 de SSMA pour DB2 est améliorée grâce à la prise en charge d
 
 En outre, SSMA pour DB2 a été amélioré avec :
 
-* Prise en charge de l’ajout d’une conversion pour l’instruction obtenir des DIAGNOSTICs avec ROW_NUMBER.
+* Prise en charge de l' `GET DIAGNOSTICS` ajout de `ROW_NUMBER`la conversion pour l’instruction avec.
 * Correction d’un bogue lié à des espaces au début du nom de l’objet qui n’est pas respecté.
 
 > [!IMPORTANT]
-> Avec SSMA v 8.5, .net 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+> Avec SSMA v 8.5, .NET 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 La version v 8.4 de SSMA pour DB2 a été améliorée avec des correctifs ciblés conçus pour résoudre des problèmes d’accessibilité et corriger un bogue lié aux colonnes d’index max (pour autoriser 32 au lieu de 16) pour SQL Server 2016 et versions ultérieures.
 
 > [!IMPORTANT]
-> Avec les versions de SSMA 7,4 à 8,4, .net 4.5.2 est une condition préalable à l’installation.
+> Avec les versions de SSMA 7,4 à 8,4, .NET 4.5.2 est une condition préalable à l’installation.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
 La version 8.3 de SSMA pour DB2 a été améliorée avec des correctifs ciblés conçus pour améliorer les mesures de qualité et de conversion. En outre, cette version de SSMA pour DB2 fournit des correctifs qui :
 
-* Résoudre les problèmes d’accessibilité
-* Ajouter la prise en charge de base pour le type « hierarchyid » dans SQL Server
-* Remplacement de l’utilisation des fonctions TRIM dans les requêtes de découverte z/OS avec RTRIM/LTRIM
-* Autoriser l’utilisateur à spécifier la collection de packages lors de la connexion en mode standard (NULLID par défaut)
-* Ajouter une conversion pour CREATE TABLE comme SELECT
-* Améliorer les conversions pour les tables temporaires globales
-* Résoudre un problème avec la vérification de l’unicité des objets pour classer par ordre de priorité les tables sur les contraintes, si les noms sont en conflit
-* Résoudre un problème de chargement des valeurs de colonne par défaut pour la DATE et l’horodateur pour z/OS
-* Prise en charge d’un caractère de saut de ligne Unicode (également appelé NEL)
-* Résoudre un problème avec la conversion de curseur avec une clause RETURN TO manquante
-* Ajouter la prise en charge des étiquettes et GOTO
+* Résoudre les problèmes d’accessibilité.
+* Ajoutez la prise en `hierarchyid` charge de base pour le type dans SQL Server.
+* Remplacez utilisation des fonctions TRIM dans les requêtes de découverte z `RTRIM` / `LTRIM`/OS par.
+* Autoriser l’utilisateur à spécifier la collection de packages lors de la connexion en mode standard ( `NULLID`valeur par défaut).
+* Ajoutez la conversion `CREATE TABLE AS SELECT`pour.
+* Améliorez les conversions pour les tables temporaires globales.
+* Résolvez un problème avec la vérification de l’unicité des objets pour classer par ordre de priorité les tables sur les contraintes, si les noms sont en conflit.
+* Résolvez un problème de chargement des valeurs de colonne `DATE` par `TIMESTAMP` défaut pour et pour z/OS.
+* Prise en charge d’un caractère de saut de `NEL`ligne Unicode (également appelé).
+* Résolvez un problème avec la conversion de `RETURN TO` curseur avec clause manquante.
+* Ajoutez la prise en charge `GOTO`des étiquettes et.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -111,7 +127,7 @@ La version 8.0 de SSMA pour DB2 a été améliorée pour fournir des correctifs 
 La version v 7.10 de SSMA pour DB2 contient les modifications suivantes :
 
 * Des correctifs ciblés conçus pour fournir des protections de sécurité et de confidentialité supplémentaires pour répondre aux modifications des exigences globales.
-* Correctif pour la conversion de blocs BEGIN-END.
+* Correctif pour la conversion de `BEGIN-END` blocs.
 
 ## <a name="ssma-v79"></a>SSMA v 7.9
 
@@ -126,7 +142,7 @@ La version v 7.9 de SSMA pour DB2 contient les modifications suivantes :
 
 La version 7.8 de SSMA pour DB2 contient les modifications suivantes :
 
-* Modifiez le mappage de type mis en surbrillance dans les paramètres du projet.
+* Modifiez le mappage de type mis en surbrillance dans les *paramètres du projet*.
 * La possibilité pour les utilisateurs de désactiver la télémétrie.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -155,7 +171,7 @@ La version 7.4 de SSMA pour DB2 contient les modifications suivantes :
 * La mesure de qualité et de conversion a été améliorée avec les correctifs ciblés, en fonction des commentaires des clients.
 
   > [!IMPORTANT]
-  > .Net 4.5.2 est une condition préalable à l’installation de SSMA v 7.4. En outre, à compter de la version 7.4, la version 32 bits de SSMA a été supprimée.
+  > .NET 4.5.2 est une condition préalable à l’installation de SSMA v 7.4. En outre, à compter de la version 7.4, la version 32 bits de SSMA a été supprimée.
 
 ## <a name="ssma-v73"></a>SSMA v 7.3
 
@@ -189,7 +205,7 @@ La version 7.1 de SSMA pour DB2 contient les modifications suivantes :
 
 ## <a name="may-2016"></a>Mai 2016
 
-La version 2016 de SSMA pour DB2 contient les modifications suivantes :  
+La version 2016 de SSMA pour DB2 contient les modifications suivantes :
 
 * Ajout de la prise en charge de SQL Server 2016.
 * Ajout de la conversion des tables en mémoire et régulière DB2 pour SQL Server les fonctionnalités in-Memory et hekaton.
@@ -197,9 +213,9 @@ La version 2016 de SSMA pour DB2 contient les modifications suivantes :
 * Ajout de la conversion de tables avec version gérée par le système DB2 en SQL Server tables temporelles.
 * Amélioration de l’analyseur et du programme de résolution DB2.
 * Vérification de l’installation de .NET 2,0 supprimée.
-* Suppression du fichier *. dll inutile du programme d’installation DB2.
-* Correction des commandes « enregistrer le projet » et « ouvrir le projet » pour la console SSMA.
-* Correction de la commande « SecurePassword » pour la console SSMA.
+* Suppression de \*la dll inutile du programme d’installation DB2.
+* Correction `save-project` des `open-project` commandes et de la console SSMA.
+* Correction `securepassword` de la commande pour la console SSMA.
 * Correction du décompte des objets pour le chargement initial.
 * Correction du bogue dans les paramètres globaux.
   
@@ -209,13 +225,13 @@ La version d’évaluation de SSMA de mars 2016 de SSMA pour DB2 ajoute la prise
 
 ## <a name="january-2016"></a>Janvier 2016
 
-La version de maintenance de SSMA pour DB2 de janvier 2016 contient les modifications suivantes :  
+La version de maintenance de SSMA pour DB2 de janvier 2016 contient les modifications suivantes :
   
-* Ajout de la prise en charge d’un certain nombre de fonctions standard.  
-* Correction des erreurs de l’analyseur DB2.  
-* Correction de la prise en charge de DB2 v9 zOS (RFC 5690920).  
-* Correction des erreurs d’identificateur non résolu DB2 lors de la conversion.  
-* Ajout de l’élément de menu de l’affichage du journal à SSMA (RFC 5706203).  
+* Ajout de la prise en charge d’un certain nombre de fonctions standard.
+* Correction des erreurs de l’analyseur DB2.
+* Correction de la prise en charge de DB2 v9 zOS (RFC 5690920).
+* Correction des erreurs d’identificateur non résolu DB2 lors de la conversion.
+* Ajout de l’élément de menu de l’affichage du journal à SSMA (RFC 5706203).
 * Ajout de données de télémétrie.
   
 ## <a name="november-2014"></a>novembre 2014

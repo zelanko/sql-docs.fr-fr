@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15049436b0d1769361ae1cfc47b52bfb503ba763
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632768"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256875"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -30,10 +30,10 @@ ms.locfileid: "73632768"
 |request_id|**nvarchar (32)**|Clé pour cette vue. ID numérique unique associé à la demande.|Unique pour toutes les demandes dans le système.|  
 |session_id|**nvarchar (32)**|ID numérique unique associé à la session dans laquelle cette requête a été exécutée. Consultez [sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
 |status|**nvarchar (32)**|État actuel de la demande.|« Running », « Suspended », « Completed », « Canceled », « failed ».|  
-|submit_time|**DATETIME**|Heure à laquelle la demande a été soumise pour exécution.|**DateTime** valide, plus petit ou égal à l’heure actuelle et à la start_time.|  
-|start_time|**DATETIME**|Heure à laquelle l’exécution de la requête a été démarrée.|NULL pour les demandes mises en file d’attente ; dans le cas contraire, la valeur **DateTime** valide est inférieure ou égale à l’heure actuelle.|  
-|end_compile_time|**DATETIME**|Heure à laquelle le moteur a terminé la compilation de la requête.|NULL pour les requêtes qui n’ont pas encore été compilées ; Sinon, une valeur **DateTime** valide inférieure à start_time et inférieure ou égale à l’heure actuelle.|
-|end_time|**DATETIME**|Heure à laquelle l’exécution de la requête s’est terminée, a échoué ou a été annulée.|NULL pour les demandes en file d’attente ou actives ; dans le cas contraire, un **DateTime** valide est plus petit ou égal à l’heure actuelle.|  
+|submit_time|**datetime**|Heure à laquelle la demande a été soumise pour exécution.|**DateTime** valide, plus petit ou égal à l’heure actuelle et à la start_time.|  
+|start_time|**datetime**|Heure à laquelle l’exécution de la requête a été démarrée.|NULL pour les demandes mises en file d’attente ; dans le cas contraire, la valeur **DateTime** valide est inférieure ou égale à l’heure actuelle.|  
+|end_compile_time|**datetime**|Heure à laquelle le moteur a terminé la compilation de la requête.|NULL pour les requêtes qui n’ont pas encore été compilées ; Sinon, une valeur **DateTime** valide inférieure à start_time et inférieure ou égale à l’heure actuelle.|
+|end_time|**datetime**|Heure à laquelle l’exécution de la requête s’est terminée, a échoué ou a été annulée.|NULL pour les demandes en file d’attente ou actives ; dans le cas contraire, un **DateTime** valide est plus petit ou égal à l’heure actuelle.|  
 |total_elapsed_time|**int**|Temps écoulé durant l’exécution depuis le début de la demande, en millisecondes.|Entre 0 et la différence entre start_time et end_time.</br></br> Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time sera toujours la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée ».</br></br> La valeur maximale en millisecondes est identique à 24,8 jours.|  
 |label|**nvarchar(255)**|Chaîne d’étiquette facultative associée à certaines instructions de requête SELECT.|Toute chaîne contenant « a-z », « A-Z », « 0-9 », « _ ».|  
 |error_id|**nvarchar (36)**|ID unique de l’erreur associée à la demande, le cas échéant.|Consultez [sys. dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); Affectez la valeur NULL si aucune erreur ne s’est produite.|  
@@ -44,10 +44,26 @@ ms.locfileid: "73632768"
 |group_name|**sysname** |Pour les demandes qui utilisent des ressources, group_name est le nom du groupe de charge de travail sous lequel la requête s’exécute.  Si la demande n’utilise pas de ressources, group_name a la valeur null.</br>S’applique à : Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Pour les demandes qui utilisent des ressources, nom du classifieur utilisé pour assigner des ressources et leur importance.||
 |resource_allocation_percentage|**décimal (5, 2)**|Pourcentage de ressources allouées à la demande.</br>S’applique à : Azure SQL Data Warehouse|
-|result_set_cache|**bit**|Indique si une requête terminée était un accès au cache des résultats (1) ou non (0). </br>S’applique à : Azure SQL Data Warehouse|0, 1|
+|result_set_cache|**bit**|Indique si une requête terminée a utilisé le cache du jeu de résultats.  </br>S’applique à : Azure SQL Data Warehouse| 1 = accès au cache de l’ensemble de résultats </br> 0 = absence dans le cache du jeu de résultats </br> Valeurs négatives = raisons pour lesquelles la mise en cache du jeu de résultats n’a pas été utilisée.  Pour plus d’informations, consultez la section Notes.|
 ||||
   
+## <a name="remarks"></a>Notes 
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section métadonnées dans la rubrique [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
+
+ Le result_set_cache est un masque de masque de l’utilisation d’une requête du cache de jeu de résultats.  Cette colonne peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes :  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**1**|Accès au cache du jeu de résultats|  
+|-**0x00**|Absence dans le cache du jeu de résultats|  
+|-**0x01**|La mise en cache du jeu de résultats est désactivée sur la base de données.|  
+|-**0x02**|La mise en cache du jeu de résultats est désactivée sur la session. | 
+|-**0x04**|La mise en cache du jeu de résultats est désactivée en raison de l’absence de sources de données pour la requête.|  
+|-**0x08**|La mise en cache du jeu de résultats est désactivée en raison des prédicats de sécurité au niveau des lignes.|  
+|-**0x10**|La mise en cache du jeu de résultats est désactivée en raison de l’utilisation d’une table système, d’une table temporaire ou d’une table externe dans la requête.|  
+|-**0x20**|La mise en cache du jeu de résultats est désactivée, car la requête contient des constantes d’exécution, des fonctions définies par l’utilisateur ou des fonctions non déterministes.|  
+|-**0x40**|La mise en cache du jeu de résultats est désactivée, car la taille estimée du jeu de résultats est trop importante (> 1 million lignes).|  
+|-**0x80**|La mise en cache du jeu de résultats est désactivée, car le jeu de résultats contient des lignes de grande taille (>64 Ko).|  
   
 ## <a name="permissions"></a>Autorisations
 
