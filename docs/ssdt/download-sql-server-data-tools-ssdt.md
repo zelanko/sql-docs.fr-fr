@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 97f4ebef586d7e0deb77f753ff264120f97cef5a
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544910"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652938"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Télécharger SSDT (SQL Server Data Tools) pour Visual Studio
 
@@ -32,13 +32,16 @@ ms.locfileid: "77544910"
 
 La fonctionnalité SSDT de base pour la création de projets de base de données est toujours intégrée à Visual Studio.
 
-Avec Visual Studio 2019, les fonctionnalités nécessaires pour activer des projets Analysis Services, Integration Services et Reporting Services ont été déplacées dans les extensions Visual Studio (VSIX) respectives. Une installation autonome de SSDT n’est plus nécessaire.
+Avec Visual Studio 2019, les fonctionnalités nécessaires pour activer des projets Analysis Services, Integration Services et Reporting Services ont été déplacées dans les extensions Visual Studio (VSIX) respectives.
+
+> [!NOTE]
+> Il n’existe pas de programme d’installation autonome de SSDT pour Visual Studio 2019.
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Installer SSDT avec Visual Studio 2019
 
 Si [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) est déjà installé, vous pouvez modifier la liste des charges de travail pour inclure SSDT.
 
-* Pour les projets de base de données SQL, sélectionnez **SQL Server Data Tools** sous **Stockage et traitement des données**.
+* Pour les projets SQL Database, sélectionnez **SQL Server Data Tools** sous **Stockage et traitement des données**.
 
    ![Charge de travail de stockage et traitement des données](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -46,7 +49,7 @@ Si [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install
 
 Si vous n’avez pas encore installé Visual Studio 2019, vous pouvez télécharger et installer [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/). 
 
-* Pour les projets de base de données SQL, sélectionnez **SQL Server Data Tools** sous **Stockage et traitement des données** dans la liste des charges de travail pendant l’installation.
+* Pour les projets SQL Database, sélectionnez **SQL Server Data Tools** sous **Stockage et traitement des données** dans la liste des charges de travail lors de l’installation.
 
 * Pour les projets Analysis Services, Integration Services ou Reporting Services, vous pouvez installer les [extensions](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) appropriées en accédant à *Outils > Extensions et mises à jour* ou à partir de la [Place de Marché](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 

@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252687"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608474"
 ---
 # <a name="alerts"></a>Alertes
 
@@ -104,6 +104,12 @@ Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à une condition
   
     > [!NOTE]  
     > Les données de performances sont régulièrement échantillonnées, ce qui peut entraîner un léger décalage (de quelques secondes) entre l'atteinte du seuil et le déclenchement de l'alerte de performance.  
+  
+    > [!NOTE]  
+    > Une variable de journal des événements qui stocke le nom du serveur est limitée à 32 caractères. Par conséquent, si la taille combinée du nom d’hôte et du nom de l’instance est supérieure à 32 caractères, vous pouvez recevoir l’erreur suivante :
+    
+    Avertissement, [466] Échec de la copie du nom de serveur NOM_LONG_SERVEUR_SQL\NOM_LONG_INSTANCE lors de la génération des alertes de compteur de performance.
+  
   
 ## <a name="selecting-a-wmi-event"></a>Sélection d'un événement WMI  
 Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à un événement WMI déterminé. Pour sélectionner un événement WMI, vous devez définir les éléments suivants dans la page [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Général **de la boîte de dialogue** Nouvelle alerte **ou** Propriétés de l’alerte **de** Agent :  

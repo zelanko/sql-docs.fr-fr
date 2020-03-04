@@ -23,14 +23,14 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3360957d62c6af05c6d650c0143f9f45fde3bd19
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68055450"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705874"
 ---
-# <a name="data-compression"></a>Data Compression
+# <a name="data-compression"></a>Compression de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] prennent en charge la compression de page et de ligne pour les tables et les index rowstore, et prennent en charge la compression columnstore et d’archivage columnstore pour les tables et les index columnstore.  
@@ -48,7 +48,7 @@ Pour les tables et les index columnstore, tous utilisent toujours la compression
 -   Pour les tables et les index columnstore partitionnés, l'option de compression d'archivage peut être configurée pour chaque partition et les différentes partitions d'un objet n'ont pas le même paramètre de compression d'archivage.  
   
 > [!NOTE]  
->  Les données peuvent également être compressées à l’aide du format d’algorithme GZIP. Cette étape supplémentaire se révèle particulièrement adaptée pour la compression de portions de données pendant l’archivage d’anciennes données à des fins de stockage à long terme. Les données compressées à l’aide de la fonction COMPRESS ne sont pas indexables. Pour plus d’informations, consultez [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
+> Les données peuvent également être compressées à l’aide du format d’algorithme GZIP. Cette étape supplémentaire se révèle particulièrement adaptée pour la compression de portions de données pendant l’archivage d’anciennes données à des fins de stockage à long terme. Les données compressées avec la fonction `COMPRESS` ne peuvent pas être indexées. Pour plus d’informations, consultez [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
   
 ## <a name="considerations-for-when-you-use-row-and-page-compression"></a>Considérations liées à l'utilisation de compression de page et de ligne  
  En cas d'utilisation de la compression de page et de ligne, assurez-vous de prendre en compte les considérations suivantes :  
@@ -57,7 +57,7 @@ Pour les tables et les index columnstore, tous utilisent toujours la compression
 -   La compression est disponible dans chaque édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
 -   La compression n'est pas disponible pour les tables système.  
 -   La compression permet de stocker davantage de lignes dans une page, mais elle ne modifie pas la taille maximale des lignes d'une table ou d'un index.  
--   Une table ne peut pas être activée pour la compression lorsque la taille de ligne maximale plus la charge mémoire de compression dépasse la taille de ligne maximale de 8 060 octets. Par exemple, une table qui a les colonnes c1**char(8000)** et c2**char(53)** ne peut pas être compressée en raison de la charge de compression supplémentaire. Lorsque le format de stockage VarDecimal est utilisé, le contrôle de taille de ligne est effectué lorsque le format est activé. Pour la compression de ligne et de page, le contrôle de taille de ligne est effectué lorsque l'objet est compressé initialement, puis vérifié à mesure que chaque ligne est insérée ou modifiée. La compression met en vigueur les deux règles suivantes :  
+-   Une table ne peut pas être activée pour la compression lorsque la taille de ligne maximale plus la charge mémoire de compression dépasse la taille de ligne maximale de 8 060 octets. Par exemple, une table qui comporte les colonnes `c1 CHAR(8000)` et `c2 CHAR(53)` ne peut pas être compressée en raison de la charge de compression supplémentaire. Lorsque le format de stockage VarDecimal est utilisé, le contrôle de taille de ligne est effectué lorsque le format est activé. Pour la compression de ligne et de page, le contrôle de taille de ligne est effectué lorsque l'objet est compressé initialement, puis vérifié à mesure que chaque ligne est insérée ou modifiée. La compression met en vigueur les deux règles suivantes :  
     -   Une mise à jour d'un type de longueur fixe doit toujours réussir.  
     -   La désactivation de la compression de données doit toujours réussir. Même si la ligne compressée est adaptée à la taille de la page, ce qui signifie qu'elle est inférieure à 8 060 octets, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] empêche les mises à jour qui ne seraient pas adaptées à la taille de la ligne lorsqu'elle est décompressée.  
 -   Lorsqu'une liste de partitions est spécifiée, le type de compression peut être défini sur ROW, PAGE ou NONE sur chacune des partitions. Si la liste de partitions n'est pas spécifiée, toutes les partitions sont définies avec la propriété de compression de données spécifiée dans l'instruction. Lorsqu'une table ou un index est créé, la compression de données est définie sur NONE, sauf indication contraire. Lorsqu'une table est modifiée, la compression existante est conservée, sauf indication contraire.  
@@ -66,8 +66,8 @@ Pour les tables et les index columnstore, tous utilisent toujours la compression
 -   Lorsqu'un index cluster est créé sur un segment de mémoire, l'index cluster hérite de l'état de compression du segment, à moins qu'un autre état de compression soit spécifié.  
 -   Lorsqu'un segment de mémoire est configuré pour la compression de niveau page, les pages reçoivent la compression de niveau page uniquement des manières suivantes :  
     -   Les données pour lesquelles l'optimisation en bloc est activée sont importées.  
-    -   Les données sont insérées via la syntaxe INSERT INTO... Syntaxe WITH (TABLOCK) et la table n'a pas d'index non-cluster.  
-    -   Une table est reconstruite en exécutant l'instruction ALTER TABLE... REBUILD avec l'option de compression PAGE.  
+    -   Les données sont insérées avec la syntaxe `INSERT INTO ... WITH (TABLOCK)` et la table n’a pas d’index non-cluster.  
+    -   Une table est reconstruite en exécutant l’instruction `ALTER TABLE ... REBUILD` avec l’option de compression PAGE.  
 -   Les changements de page alloués dans un segment de mémoire dans le cadre des opérations DML n’utilisent pas la compression PAGE tant que le segment de mémoire n’est pas reconstruit. Reconstruisez le segment de mémoire en supprimant puis en réappliquant la compression, ou en créant et en supprimant un index cluster.  
 -   La modification du paramètre de compression d'un segment de mémoire nécessite la reconstruction de tous les index non cluster sur la table afin qu'ils aient des pointeurs vers les nouveaux emplacements de ligne dans le segment de mémoire.  
 -   Vous pouvez activer ou désactiver la compression ROW ou PAGE en ligne ou hors connexion. L'activation de la compression sur un segment de mémoire est mono-thread pour une opération en ligne.  
@@ -78,11 +78,11 @@ Pour les tables et les index columnstore, tous utilisent toujours la compression
 -   Les tables qui implémentaient le format de stockage VarDecimal dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] conservent ce paramètre en cas de mise à niveau. Vous pouvez appliquer la compression de ligne à une table qui a le format de stockage VarDecimal. Toutefois, la compression de ligne étant un sur-ensemble du format de stockage VarDecimal, il n'y a aucune raison de conserver le format de stockage VarDecimal. Les valeurs décimales ne bénéficient d'aucune compression supplémentaire lorsque vous combinez le format de stockage VarDecimal avec la compression de ligne. Vous pouvez appliquer la compression de page à une table qui a le format de stockage VarDecimal ; toutefois, les colonnes au format de stockage VarDecimal ne bénéficieront probablement pas d'une compression supplémentaire.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge le format de stockage VarDecimal ; toutefois, la compression au niveau ligne accomplissant les mêmes objectifs, le format de stockage VarDecimal est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge le format de stockage VarDecimal ; toutefois, la compression au niveau ligne accomplissant les mêmes objectifs, le format de stockage VarDecimal est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>À l'aide de la compression Columnstore et de la compression d'archivage Columnstore  
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
   
 ### <a name="basics"></a>Concepts de base  
  Les tables et les index columnstore sont toujours enregistrés avec la compression columnstore. Limitez encore davantage la taille des données columnstore en configurant une compression supplémentaire appelée compression d'archivage.  Pour exécuter la compression d'archivage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute l'algorithme de compression Microsoft XPRESS sur les données. Ajoutez ou supprimez la compression d'archivage en utilisant les types de compression de données suivants :  
@@ -92,7 +92,8 @@ Pour les tables et les index columnstore, tous utilisent toujours la compression
 Pour ajouter la compression d’archivage, utilisez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) avec l’option REBUILD et DATA COMPRESSION = COLUMNSTORE_ARCHIVE.  
   
 #### <a name="examples"></a>Exemples :  
-```  
+
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
   
@@ -107,7 +108,7 @@ Pour supprimer la compression d’archivage et restaurer les données sur la com
   
 #### <a name="examples"></a>Exemples :  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
   
@@ -120,7 +121,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (2,4
   
 L'exemple suivant définit la compression des données à columnstore sur certaines partitions, et à archivage columnstore sur d'autres.  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = ALL WITH (  
     DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (4,5),  
@@ -142,33 +143,37 @@ La procédure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../.
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Impact de la compression sur les tables et les index partitionnés  
  Lorsque vous utilisez la compression des données avec des tables et des index partitionnés, assurez-vous de prendre en compte les considérations suivantes :  
--   Lorsque des partitions sont fractionnées à l'aide de l'instruction ALTER PARTITION, les deux partitions héritent de l'attribut de compression des données de la partition d'origine.  
+-   Quand des partitions sont divisées avec l’instruction `ALTER PARTITION`, les deux partitions héritent de l’attribut de compression des données de la partition d’origine.  
 -   Lorsque deux partitions sont fusionnées, la partition résultante hérite de l'attribut de compression des données de la partition de destination.  
 -   Pour changer une partition, la propriété de compression des données de la partition doit correspondre à la propriété de compression de la table.  
 -   Il existe deux variantes de syntaxe que vous pouvez utiliser pour modifier la compression d'une table ou d'un index partitionné :  
     -   La syntaxe suivante reconstruit uniquement la partition référencée :  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  <option>)  
         ```  
+    
     -   La syntaxe suivante reconstruit la table entière en utilisant le paramètre de compression existant pour toute partition qui n'est pas référencée :  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = ALL   
         WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(<range>),  
         ... )  
         ```  
   
-     Les index partitionnés suivent le même principe à l'aide de l'instruction ALTER INDEX.  
+     Les index partitionnés suivent le même principe avec `ALTER INDEX`.  
   
 -   Lorsqu'un index cluster est supprimé, les partitions des segments de mémoire correspondants conservent leur paramètre de compression des données, à moins que le schéma de partitionnement soit modifié. Si le schéma de partitionnement est modifié, toutes les partitions sont reconstruites dans un état non compressé. Pour supprimer un index cluster et modifier le schéma de partitionnement, vous devez effectuer les opérations suivantes :  
      1. supprimer l'index cluster ;  
-     2. modifier la table en utilisant l'option ALTER TABLE ... REBUILD ... qui spécifie l'option de compression.  
+     2. modifier la table avec l’option `ALTER TABLE ... REBUILD` qui spécifie l’option de compression.  
   
      La suppression d'un index cluster HORS CONNEXION est une opération très rapide, car seuls les niveaux supérieurs des index clusters sont supprimés. Lorsqu'un index cluster est supprimé EN LIGNE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit reconstruire le segment de mémoire deux fois, une fois pour l'étape 1 et une fois pour l'étape 2.  
   
 ## <a name="how-compression-affects-replication"></a>Impact de la compression sur la réplication 
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])).   
+
 Lorsque vous utilisez la compression des données avec la réplication, assurez-vous de prendre en compte les considérations suivantes :  
 -   Quand l’Agent d’instantané génère le script de schéma initial, le nouveau schéma utilise les mêmes paramètres de compression pour la table et ses index. La compression ne peut être activée simplement sur la table et pas sur l'index.  
 -   Pour la réplication transactionnelle, l'option de schéma d'article détermine les objets et propriétés dépendants qui doivent être écrits. Pour plus d’informations, consultez [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
@@ -186,7 +191,7 @@ Le tableau suivant illustre les paramètres de réplication qui contrôlent la c
 |Compresser la table sur l'Abonné si toutes les partitions sont compressées sur le serveur de publication, mais ne pas répliquer le schéma de partition.|False|True|Vérifie si toutes les partitions sont activées pour la compression.<br /><br /> Exclut la compression du script au niveau de la table.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Impact de la compression sur les autres composants SQL Server 
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])).  
    
  La compression se produit dans le moteur de stockage et les données sont présentées à la plupart des autres composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un état non compressé. Cela limite les effets de la compression sur les autres composants de la manière suivante :  
 -   Opérations d'importation et d'exportation en bloc  

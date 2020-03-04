@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0f11b1e7300027d024b5961f73ffa71c7b07a2bd
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909305"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608496"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72909305"
 ##  <a name="Enabling"></a> Activation du magasin de requêtes  
  Le magasin de requêtes n'est pas actif par défaut pour les nouvelles bases de données.  
   
-#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Utiliser la page Magasin des requêtes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+#### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Utiliser la page Magasin des requêtes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur une base de données, puis sur **Propriétés**.  
   
@@ -595,7 +595,7 @@ Quand vous utilisez **sp_query_store_force_plan** , vous pouvez uniquement force
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Considérer l’application forcée du support de l’avance rapide et des curseurs statiques
   
-À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3, le magasin des requêtes prend en charge la possibilité de forcer des plans d’exécution de requêtes pour l’avance rapide et les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] et d’API statiques. Le forçage est pris en charge via `sp_query_store_force_plan` ou via les rapports du magasin des requêtes [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et d’Azure SQL Database (tous les modèles de déploiement), le Magasin des requêtes prend en charge la possibilité de forcer des plans d’exécution de requêtes pour l’avance rapide et les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] et d’API statiques. Le forçage est pris en charge via `sp_query_store_force_plan` ou via les rapports du magasin des requêtes [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Annuler l’application forcée du plan pour une requête
 
