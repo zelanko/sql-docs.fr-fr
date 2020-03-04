@@ -23,12 +23,12 @@ ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 02/18/2020
-ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
-ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
+ms.openlocfilehash: 8045c054d05a1e92eaf18f9aba852d9301f7ef60
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77520942"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652928"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -80,6 +80,30 @@ Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-184) d
 ## <a name="previous-versions"></a>Versions précédentes
 
 Cet article s’applique à la dernière version de SSMS uniquement. Pour télécharger des versions précédentes de SSMS, consultez [Versions précédentes de SSMS](../ssms/release-notes-ssms.md#previous-ssms-releases).
+
+## <a name="unattended-install"></a>Installation sans assistance
+
+Vous pouvez également installer SSMS en utilisant un script d’invite de commandes.
+
+Si vous voulez installer SSMS en arrière-plan sans invite de l’interface utilisateur graphique, suivez les étapes ci-dessous.
+
+1. Lancez l’invite de commandes avec des privilèges élevés.
+
+2. Tapez la commande ci-dessous dans l’invite de commandes.
+
+    ```console
+    start "" <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    ```
+
+    Exemple :
+
+    ```console
+    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    ```
+
+    Vous pouvez aussi passer */Passive* au lieu de */Quiet* pour voir l’interface utilisateur du programme d’installation.
+
+3. Si tout se passe bien, d’après l’exemple, vous pouvez voir SSMS installé sur « %systemdrive%\SSMSto\Common7\IDE\Ssms.exe ». Si un problème s’est produit, vous pouvez inspecter le code d’erreur retourné et examiner le fichier journal %TEMP%\SSMSSetup.
 
 ## <a name="supported-sql-offerings-ssms-184"></a>Offres SQL prises en charge (SSMS 18.4)
 

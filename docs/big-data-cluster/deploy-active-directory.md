@@ -5,16 +5,16 @@ description: Apprenez à mettre à niveau des clusters Big Data SQL Server dans 
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544874"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200960"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory
 
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Le mode Active Directory sécurisé fonctionnera uniquement sur les environnements de déploiement `kubeadm` et non pas sur AKS pour le moment. Le profil de déploiement `kubeadm-prod` comprend les sections de sécurité par défaut.
 
-- Un seul cluster BDC par domaine est autorisé pour l’instant. L’activation de plusieurs clusters BDC par domaine est planifiée pour une version ultérieure.
+- Un seul cluster BDC par domaine (Active Directory) est autorisé pour l’instant. L’activation de plusieurs clusters BDC par domaine est planifiée pour une version ultérieure.
 
 - Aucun des groupes AD spécifiés dans les configurations de sécurité ne peut être d’une étendue DomainLocal. Vous pouvez vérifier l’étendue d’un groupe AD en suivant [ces instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

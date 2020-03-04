@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fd41b851ac7240ded3b0508f0bfd45fad0377c27
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75226743"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568072"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -50,7 +50,7 @@ ms.locfileid: "75226743"
 
 Cet article explique l’instruction SQL CREATE MATERIALIZED VIEW AS SELECT T dans Azure SQL Data Warehouse pour développer des solutions. L’article fournit également des exemples de code.
 
-Une vue matérialisée conserve les données renvoyées par la requête de définition de vue et est automatiquement mise à jour à mesure que les données changent dans les tables sous-jacentes.   Elle améliore les performances des requêtes complexes (généralement des requêtes contenant des jointures et agrégations) tout en offrant des opérations de maintenance simples.   Avec sa capacité d’automatching du plan d’exécution, un affichage matérialisé ne devra pas être référencés dans la requête pour que l’optimiseur prenne en compte l’affichage pour substitution.  Ainsi, les ingénieurs de données peuvent implémenter des affichages matérialisés comme un mécanisme pour améliorer les temps de réponse de requête, sans avoir à modifier les requêtes.  
+Une vue matérialisée conserve les données renvoyées par la requête de définition de vue et est automatiquement mise à jour à mesure que les données changent dans les tables sous-jacentes.   Elle améliore les performances des requêtes complexes (généralement des requêtes contenant des jointures et agrégations) tout en offrant des opérations de maintenance simples.   Avec sa capacité d’automatching du plan d’exécution, un affichage matérialisé ne devra pas être référencés dans la requête pour que l’optimiseur prenne en compte l’affichage pour substitution.  Cette fonctionnalité permet aux ingénieurs des données d’implémenter des vues matérialisées comme un mécanisme pour améliorer les temps de réponse des requêtes, sans devoir modifier les requêtes.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -104,31 +104,35 @@ Lorsque les agrégats MIN/MAX sont utilisés dans la liste SELECT de la définit
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- L’affichage matérialisé sera désactivé lorsque UPDATE ou DELETE se produit dans les tables de base référencées.  Cette restriction ne s’applique pas aux INSERT.  Pour réactiver l’affichage matérialisé, exécutez ALTER MATERIALIZED INDEX avec REBUILD.
+- L’affichage matérialisé sera désactivé lorsque UPDATE ou DELETE se produit dans les tables de base référencées.  Cette restriction ne s’applique pas aux instructions INSERT.  Pour réactiver l’affichage matérialisé, exécutez ALTER MATERIALIZED INDEX avec REBUILD.
   
 ## <a name="remarks"></a>Notes
 
-Un affichage matérialisé dans l’entrepôt de données Azure est très similaire à une vue indexée dans SQL Server.  Il partage presque les mêmes restrictions que la vue indexée (consultez [Créer des vues indexées](/sql/relational-databases/views/create-indexed-views) pour plus d’informations), à ceci près qu’un affichage matérialisé prend en charge des fonctions d’agrégation.   Voici certaines remarques supplémentaires concernant l’affichage matérialisé.  
- 
+Une vue matérialisée dans l’entrepôt de données Azure est similaire à une vue indexée dans SQL Server.  Il partage presque les mêmes restrictions que la vue indexée (consultez [Créer des vues indexées](/sql/relational-databases/views/create-indexed-views) pour plus d’informations), à ceci près qu’un affichage matérialisé prend en charge des fonctions d’agrégation.   
+
 Seul CLUSTERED COLUMNSTORE INDEX est pris en charge par l’affichage matérialisé. 
 
 Une vue matérialisée ne peut pas référencer d’autres vues.  
- 
-Les affichages matérialisés peuvent être créés sur les tables partitionnées.  Les opérations SPLIT/MERGE sont prises en charge sur les tables référencées dans les affichages matérialisés.  SWITCH n’est pas pris en charge sur les tables référencées dans les affichages matérialisés. Dans ce cas, l’utilisateur verra l’erreur,  `Msg 106104, Level 16, State 1, Line 9`
+
+Une vue matérialisée ne peut pas être créée sur une table avec un masquage dynamique des données, même si la colonne avec masquage dynamique des données ne fait pas partie de la vue matérialisée.  Si une colonne de table fait partie d’une vue matérialisée active ou d’une vue matérialisée désactivée, le masquage dynamique des données ne peut pas être ajouté à cette colonne.  
+
+Vous ne pouvez pas créer une vue matérialisée sur une table pour laquelle la sécurité au niveau des lignes est activée.
+
+Les affichages matérialisés peuvent être créés sur les tables partitionnées.  Les opérations SPLIT/MERGE sur les partitions sont prises en charge sur les tables de base des vues matérialisées ; l’opération SWITCH sur des partitions n’est pas prise en charge.  
  
 ALTER TABLE SWITCH n’est pas pris en charge sur les tables référencées dans les affichages matérialisés. Désactiver ou déposer les affichages matérialisés avant d’utiliser ALTER TABLE SWITCH. Dans les scénarios suivants, la création de l’affichage matérialisé nécessite l’ajout de nouvelles colonnes à l’affichage matérialisé :
 
 |Scénario|Nouvelles colonnes à ajouter à l’affichage matérialisé|Commentaire|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() est manquant dans la liste SELECT d’une définition de l’affichage matérialisé| COUNT_BIG (*) |Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
-|SUM(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de l’affichage matérialisé ET « a » est une expression Nullable |COUNT_BIG (a) |Les utilisateurs ont besoin d’ajouter l’expression « a » manuellement dans la définition de l’affichage matérialisé.|
-|AVG(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de l’affichage matérialisé où « a » est une expression.|SUM(a), COUNT_BIG(a)|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
-|STDEV(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de l’affichage matérialisé où « a » est une expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise. |
+|COUNT_BIG() est manquant dans la liste SELECT d’une définition de vue matérialisée| COUNT_BIG (*) |Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
+|SUM(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de vue matérialisée ET « a » est une expression nullable |COUNT_BIG (a) |Les utilisateurs ont besoin d’ajouter l’expression « a » manuellement dans la définition de l’affichage matérialisé.|
+|AVG(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de vue matérialisée ET « a » est une expression nullable.|SUM(a), COUNT_BIG(a)|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
+|STDEV(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de vue matérialisée ET « a » est une expression nullable.|SUM(a), COUNT_BIG(a), SUM(square(a))|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise. |
 | | | |
 
 Après la création, des affichages matérialisés sont visibles dans SQL Server Management Studio sous le dossier des affichages de l’instance Azure SQL Data Warehouse.
 
-Les utilisateurs peuvent exécuter [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) et [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) pour déterminer l’espace occupé par un affichage matérialisé.  
+Les utilisateurs peuvent exécuter [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) et [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) pour déterminer l’espace consommé par une vue matérialisée.  
 
 Un affichage matérialisé peut être déposé par le biais de DROP VIEW.  Vous pouvez utiliser ALTER MATERIALIZED VIEW pour désactiver ou régénérer un affichage matérialisé.   
 

@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 183edfbae4da98f12d9ed32b594e74b1932b6f1b
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982793"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705894"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ Valeur par défaut pour le paramètre. Si une valeur *default* est définie, la 
  Lorsque l'un des paramètres de la fonction possède une valeur par défaut, le mot clé DEFAULT doit être spécifié lors de l'appel de la fonction afin de récupérer la valeur par défaut. Ce comportement est différent de l'utilisation de paramètres avec des valeurs par défaut dans des procédures stockées pour lesquelles l'omission du paramètre implique également la prise en compte de la valeur par défaut. Toutefois, le mot clé DEFAULT n'est pas requis lors de l'appel d'une fonction scalaire à l'aide de l'instruction EXECUTE.  
   
  READONLY  
- Indique que le paramètre ne peut pas être mis à jour ni modifié dans la définition de la fonction. Si le type de paramètre est un type de table défini par l'utilisateur, READONLY doit être spécifié.  
+ Indique que le paramètre ne peut pas être mis à jour ni modifié dans la définition de la fonction. READONLY est obligatoire pour les paramètres de type table définis par l’utilisateur et il ne peut être utilisé pour aucun autre type de paramètre.
   
  *return_data_type*  
  Valeur de retour d'une fonction scalaire définie par l'utilisateur. Dans le cas des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], tous les types de données, notamment les types CLR définis par l’utilisateur, sont autorisés, à l’exception du type de données **timestamp**. Dans le cas des fonctions CLR, tous les types de données, notamment les types CLR définis par l’utilisateur, sont autorisés, à l’exception des types de données **text**, **ntext**, **image** et **timestamp**. Les types non scalaires **cursor** et **table** ne peuvent pas être spécifiés comme type de données de retour dans les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR.  
@@ -810,7 +810,7 @@ GO
   
  Pour obtenir un exemple de création d’une fonction table CLR, consultez [Fonctions table CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Affichage de la définition des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] définies par l’utilisateur  
+### <a name="e-displaying-the-definition-of-tsql-user-defined-functions"></a>E. Affichage de la définition des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] définies par l’utilisateur  
   
 ```sql  
 SELECT definition, type   

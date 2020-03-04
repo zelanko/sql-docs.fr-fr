@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466170"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903866"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,22 @@ Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 - Expressions arithmétiques telles que 1+1, 5/3*2, ne contenant que des constantes.
 - Expressions logiques telles que 1=1 et 1>2 AND 3>4, ne contenant que des constantes.
 - Fonctions intégrées considérées comme pouvant être assemblées par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], y compris `CAST` et `CONVERT`. En général, une fonction intrinsèque peut être assemblée si elle est fonction de ses données d'entrée uniquement, à l'exclusion de toute information contextuelle (options SET, paramètres de langue, options de base de données et clés de chiffrement). Les fonctions non déterministes ne peuvent pas être assemblées. Les fonctions intégrées déterministes peuvent être assemblées, à quelques exceptions près.
+- Méthodes déterministes de types CLR définis par l’utilisateur et fonctions CLR définies par l’utilisateur avec valeur scalaire déterministe (à partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Pour plus d’informations, consultez [Assemblage de constantes pour les fonctions et les méthodes CLR définies par l’utilisateur](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
-> Les objets volumineux constituent une exception. Si le type de résultat du processus d’assemblage est un type d’objet volumineux (text, image, nvarchar(max), varchar(max) ou varbinary(max)), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’assemble pas l’expression.
+> Les objets volumineux constituent une exception. Si le type de résultat du processus d’assemblage est un type d’objet volumineux (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) ou XML), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’assemble pas l’expression.
 
 #### <a name="nonfoldable-expressions"></a>Expressions ne pouvant pas être assemblées
 Aucun des autres types d'expressions ne peut être assemblé. C'est notamment le cas des types d'expressions suivants :
 - Expressions non constantes, par exemple une expression dont le résultat dépend de la valeur d'une colonne.
 - Expressions dont les résultats dépendent d'une variable locale ou d'un paramètre, par exemple @x.
 - Fonctions non déterministes.
-- Fonctions définies par l'utilisateur ([!INCLUDE[tsql](../includes/tsql-md.md)] et CLR).
+- Fonctions [!INCLUDE[tsql](../includes/tsql-md.md)] définies par l’utilisateur<sup>1</sup>
 - Expressions dont les résultats dépendent de paramètres de langue.
 - Expressions dont les résultats dépendent d'options SET.
 - Expressions dont les résultats dépendent d'options de configuration du serveur.
+
+<sup>1</sup> Avant [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les fonctions CLR définies par l’utilisateur avec valeur scalaire déterministes et les méthodes des types CLR définis par l’utilisateur ne pouvaient pas être assemblées. 
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Exemples d'expressions constantes pouvant ou ne pouvant pas être assemblées
 Considérez la requête suivante :
@@ -912,21 +915,27 @@ Durant l'optimisation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] re
 > Certaines constructions empêchent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de tirer parti du parallélisme sur tout ou partie du plan d’exécution.
 
 Les constructions qui empêchent le parallélisme sont les suivantes :
->
-> - **Fonctions UDF scalaires**    
->   Pour plus d’informations sur les fonctions scalaires définies par l’utilisateur, consultez [Créer des fonctions définies par l’utilisateur](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Depuis [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a la possibilité d’incorporer ces fonctions et de débloquer l’utilisation du parallélisme pendant le traitement des requêtes. Pour plus d’informations sur l’incorporation (inlining) de fonctions UDF scalaires, consultez [Traitement de requêtes intelligent dans les bases de données SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
-> - **Remote Query**    
->   Pour plus d’informations sur Remote Query, consultez [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md).
-> - **Curseurs dynamiques**    
->   Pour plus d’informations sur les curseurs, consultez [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
-> - **Requêtes récursives**    
->   Pour plus d’informations sur la récursivité, consultez [Principes de définition et d’utilisation des expressions de table communes récursives](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) et [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
-> - **Fonctions table**    
->   Pour plus d’informations sur les fonctions table, consultez [Créer des fonctions définies par l’utilisateur (moteur de base de données)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
-> - **Mot clé TOP**    
->   Pour plus d’informations, consultez [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+-   **Fonctions UDF scalaires**        
+    Pour plus d’informations sur les fonctions scalaires définies par l’utilisateur, consultez [Créer des fonctions définies par l’utilisateur](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Depuis [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a la possibilité d’incorporer ces fonctions et de débloquer l’utilisation du parallélisme pendant le traitement des requêtes. Pour plus d’informations sur l’incorporation (inlining) de fonctions UDF scalaires, consultez [Traitement de requêtes intelligent dans les bases de données SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+    
+-   **Remote Query**        
+    Pour plus d’informations sur Remote Query, consultez [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+    
+-   **Curseurs dynamiques**        
+    Pour plus d’informations sur les curseurs, consultez [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+    
+-   **Requêtes récursives**        
+    Pour plus d’informations sur la récursivité, consultez [Principes de définition et d’utilisation des expressions de table communes récursives](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) et [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
 
-Une fois les opérateurs d'échange insérés, vous obtenez un plan d'exécution de requêtes en parallèle. Un plan d’exécution de requêtes en parallèle peut utiliser plusieurs threads de travail. En revanche, un plan d’exécution en série, qui porte sur une requête non parallèle, n’utilise qu’un seul thread de travail pour son exécution. Le nombre réel de threads de travail utilisés par une requête parallèle est déterminé au moment de l’initialisation de l’exécution du plan de requête et dépend de la complexité et du degré de parallélisme du plan. Le degré de parallélisme détermine le nombre maximal d’unités centrales utilisées ; il n’indique pas le nombre de threads de travail employés. La valeur du degré de parallélisme est définie au niveau du serveur et peut être modifiée par le biais de la procédure stockée système sp_configure. Cette valeur peut être remplacée pour les instructions de requête ou d’index individuelles en spécifiant l’indicateur de requête `MAXDOP` ou l’option d’index `MAXDOP` . 
+-   **Fonctions table**        
+    Pour plus d’informations sur les fonctions table, consultez [Créer des fonctions définies par l’utilisateur (moteur de base de données)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+    
+-   **Mot clé TOP**        
+    Pour plus d’informations, consultez [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+
+Une fois les opérateurs d'échange insérés, vous obtenez un plan d'exécution de requêtes en parallèle. Un plan d’exécution de requêtes en parallèle peut utiliser plusieurs threads de travail. Un plan d’exécution en série utilisé par requête (série) non parallèle n’utilise qu’un seul thread de travail pour son exécution. Le nombre réel de threads de travail utilisés par une requête parallèle est déterminé au moment de l’initialisation de l’exécution du plan de requête et dépend de la complexité et du degré de parallélisme du plan. 
+
+Le degré de parallélisme détermine le nombre maximal de processeurs utilisés ; il n’indique pas le nombre de threads de travail utilisés. La limite de degré de parallélisme est définie par [tâche](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Il ne s’agit pas d’une limite par [requête](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Cela signifie que lors d’une exécution de requête parallèle, une requête unique peut générer plusieurs tâches qui sont affectées à un [planificateur](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Il est possible que plus de processeurs que le nombre spécifié par MAXDOP soient utilisés à un moment donné de l’exécution de la requête, quand différentes tâches sont exécutées simultanément. Pour plus d’informations, consultez le [Guide de l’architecture des threads et des tâches](../relational-databases/thread-and-task-architecture-guide.md).
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’utilise pas de plan d’exécution parallèle pour une requête si l’une des conditions suivantes est remplie :
 
@@ -937,21 +946,15 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 ### <a name="DOP"></a> Degré de parallélisme
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détecte automatiquement le meilleur degré de parallélisme pour chaque instance d'une exécution de requête en parallèle ou d'une opération DDL (Data Definition Language) d'index. Cette détection se fait sur la base des critères suivants : 
 
-1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne sur un ordinateur doté de plusieurs microprocesseurs ou UC, tel qu'un ordinateur à multitraitement symétrique (SMP, symmetric multiprocessing).  
-   Seuls les ordinateurs dotés de plusieurs UC peuvent utiliser des requêtes en parallèle. 
+1. Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **s’exécute sur un ordinateur ayant plusieurs processeurs**, comme un ordinateur SMP (Symmetric Multiprocessing Computer). Seuls les ordinateurs dotés de plusieurs UC peuvent utiliser des requêtes en parallèle. 
 
-2. Le nombre de threads de travail disponibles.  
-   Chaque requête ou opération d’index nécessite un certain nombre de threads de travail. Pour être exécuté, un plan parallèle nécessite plus de threads de travail qu’un plan série, le nombre de threads de travail nécessaires allant de pair avec le degré de parallélisme. Quand les threads de travail disponibles sont insuffisants pour un certain degré de parallélisme, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminue automatiquement le degré de parallélisme ou abandonne complètement le plan parallèle dans le contexte de charge de travail spécifié. Ensuite, il exécute le plan série (un thread de travail). 
+2. Si **le nombre de threads de travail disponibles est suffisant**. Chaque requête ou opération d’index nécessite un certain nombre de threads de travail. Pour être exécuté, un plan parallèle nécessite plus de threads de travail qu’un plan série, le nombre de threads de travail nécessaires allant de pair avec le degré de parallélisme. Quand les threads de travail disponibles sont insuffisants pour un certain degré de parallélisme, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminue automatiquement le degré de parallélisme ou abandonne complètement le plan parallèle dans le contexte de charge de travail spécifié. Ensuite, il exécute le plan série (un thread de travail). 
 
-3. Le type de requête ou d'opération d'index exécutée.  
-   Les requêtes qui utilisent fortement les cycles microprocesseur et les opérations d'index qui créent ou reconstruisent un index, ou qui suppriment un index cluster, sont les candidates idéales pour un plan parallèle. Par exemple, les jointures de grandes tables, les agrégations importantes et le tri d'ensembles de résultats volumineux s'y prêtent bien. Pour les requêtes simples, typiques des applications de traitement de transactions, il s'avère que la coordination supplémentaire nécessaire à l'exécution d'une requête en parallèle n'est pas rentabilisée par l'augmentation potentielle des performances. Pour faire la distinction entre les requêtes qui tirent profit du parallélisme et les autres, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compare le coût estimé de l’exécution de la requête ou de l’opération d’index à la valeur [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). L’utilisateur peut changer la valeur par défaut (5) à l’aide de [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) si un test approprié a révélé qu’une valeur différente est mieux adaptée pour la charge de travail en cours d’exécution. 
+3. Le **type de requête ou d’opération d’index exécuté**. Les requêtes qui utilisent fortement les cycles microprocesseur et les opérations d'index qui créent ou reconstruisent un index, ou qui suppriment un index cluster, sont les candidates idéales pour un plan parallèle. Par exemple, les jointures de grandes tables, les agrégations importantes et le tri d'ensembles de résultats volumineux s'y prêtent bien. Pour les requêtes simples, typiques des applications de traitement de transactions, il s'avère que la coordination supplémentaire nécessaire à l'exécution d'une requête en parallèle n'est pas rentabilisée par l'augmentation potentielle des performances. Pour faire la distinction entre les requêtes qui tirent profit du parallélisme et les autres, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compare le coût estimé de l’exécution de la requête ou de l’opération d’index à la valeur [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). L’utilisateur peut changer la valeur par défaut (5) à l’aide de [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) si un test approprié a révélé qu’une valeur différente est mieux adaptée pour la charge de travail en cours d’exécution. 
 
-4. Le nombre de lignes à traiter.  
-   Si l'optimiseur de requête détermine que le nombre de lignes est trop faible, il n'introduit pas les opérateurs d'échange qui servent à distribuer les lignes. Par conséquent, ces opérateurs sont exécutés en série. L'exécution des opérateurs dans un plan série permet d'éviter que les coûts de démarrage, de distribution et de coordination dépassent les bénéfices d'une exécution en parallèle.
+4. S’il y a un **nombre suffisant de lignes à traiter**. Si l'optimiseur de requête détermine que le nombre de lignes est trop faible, il n'introduit pas les opérateurs d'échange qui servent à distribuer les lignes. Par conséquent, ces opérateurs sont exécutés en série. L'exécution des opérateurs dans un plan série permet d'éviter que les coûts de démarrage, de distribution et de coordination dépassent les bénéfices d'une exécution en parallèle.
 
-5. Disponibilité des statistiques de distribution actuelles.  
-   Si ce niveau ne peut être atteint, le moteur de base de données envisage de passer à un degré inférieur avant d'abandonner totalement le plan parallèle.  
-  Par exemple, lorsque vous créez un index cluster sur une vue, les statistiques de distribution ne peuvent pas être prises en compte étant donné que l'index en question n'existe pas encore. Dans ce cas, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est incapable de garantir le degré de parallélisme le plus élevé pour l'opération d'index. Toutefois, certains opérateurs, tels que le tri et l'analyse, peuvent malgré tout bénéficier de l'exécution en parallèle.
+5. Si des **statistiques de distribution actuelles sont disponibles**. Si ce niveau ne peut être atteint, le moteur de base de données envisage de passer à un degré inférieur avant d'abandonner totalement le plan parallèle. Par exemple, lorsque vous créez un index cluster sur une vue, les statistiques de distribution ne peuvent pas être prises en compte étant donné que l'index en question n'existe pas encore. Dans ce cas, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est incapable de garantir le degré de parallélisme le plus élevé pour l'opération d'index. Toutefois, certains opérateurs, tels que le tri et l'analyse, peuvent malgré tout bénéficier de l'exécution en parallèle.
 
 > [!NOTE]
 > Les opérations d’index parallèles ne sont disponibles que dans les éditions Enterprise, Developer et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -963,11 +966,23 @@ Dans un plan d'exécution parallèle de requêtes, les opérateurs insert, updat
 Les curseurs statiques et les curseurs pilotés par jeux de clés peuvent être complétés par des plans d'exécution parallèle. Cependant, le comportement des curseurs dynamiques ne peut être fourni que par une exécution en série. L'optimiseur de requête génère toujours un plan d'exécution en série pour une requête qui fait partie d'un curseur dynamique.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Remplacement des degrés de parallélisme
-Vous pouvez utiliser l’option de configuration de serveur [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) sur [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) pour limiter le nombre de processeurs à utiliser dans une exécution de plan parallèle. L’option max degree of parallelism peut être remplacée par des instructions d’exécution de requêtes ou d’opérations d’index individuelles grâce à la spécification de l’indicateur MAXDOP ou de l’option d’index MAXDOP. MAXDOP offre un meilleur contrôle sur les requêtes et les opérations d'index individuelles. Par exemple, vous pouvez utiliser l’option MAXDOP pour contrôler (à savoir augmenter ou réduire) le nombre de processeurs alloués à une opération d’index en ligne. Ceci vous permet d'équilibrer les ressources utilisées par une opération d'index et celles des utilisateurs simultanés. 
+Le degré maximal de parallélisme définit le nombre de processeurs à utiliser lors l’exécution des plans parallèles. Cette configuration peut être définie à différents niveaux :
+
+1.  Au niveau du serveur, avec l’[option de configuration du serveur](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **Degré maximal de parallélisme (MAXDOP)** .</br> **S’applique à :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+    > [!NOTE]
+    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] offre désormais des recommandations automatiques pour la définition de l’option de configuration du serveur MAXDOP lors du processus d’installation. L’interface utilisateur du programme d’installation vous permet d’accepter les paramètres recommandés ou d’entrer vos propres valeurs. Pour plus d’informations, consultez la [page Configuration du moteur de base de données - MaxDOP](../sql-server/install/instance-configuration.md#maxdop).
+
+2.  Au niveau de la charge de travail, avec l’[option de configuration de groupe de charge de travail Resource Governor](../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.</br> **S’applique à :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+3.  Au niveau de la base de données, avec la [configuration limitée à la base de données](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.</br> **S’applique à :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+
+4.  Au niveau de l’instruction de requête ou d’index, avec l’[indicateur de requête](../t-sql/queries/hints-transact-sql-query.md) **MAXDOP** ou option d’index **MAXDOP**. Par exemple, vous pouvez utiliser l’option MAXDOP pour contrôler (à savoir augmenter ou réduire) le nombre de processeurs alloués à une opération d’index en ligne. Ceci vous permet d'équilibrer les ressources utilisées par une opération d'index et celles des utilisateurs simultanés.</br> **S’applique à :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 L’attribution de la valeur 0 (valeur par défaut) à l’option Degré maximal de parallélisme permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser tous les processeurs disponibles, jusqu’à 64, dans une exécution de plan parallèle. Bien que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] définisse une cible d’exécution de 64 processeurs logiques quand l’option MAXDOP a la valeur 0, une autre valeur peut être définie manuellement si nécessaire. Attribuer la valeur 0 à MAXDOP pour les requêtes et les index permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser tous les processeurs disponibles, 64 au maximum, pour les requêtes ou les index donnés dans une exécution de plan parallèle. MAXDOP n’est pas une valeur appliquée pour toutes les requêtes parallèles, mais plutôt une cible provisoire pour toutes les requêtes éligibles pour le parallélisme. Cela signifie que si le nombre de threads de travail disponibles n’est pas suffisant au moment de l’exécution, une requête peut s’exécuter avec un degré de parallélisme inférieur à l’option MAXDOP.
 
-Pour obtenir des recommandations sur la configuration de MAXDOP, consultez cet [Article du support technique Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
+> [!TIP]
+> Pour obtenir des instructions sur la configuration de MAXDOP, consultez cette [page de documentation](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
 
 ### <a name="parallel-query-example"></a>Exemple de requête en parallèle
 La requête suivante compte le nombre de commandes passées dans le courant du trimestre débutant le 1er avril 2000, dont au moins un poste a été livré au client à une date postérieure à la date prévue. Cette requête affiche le nombre de ce type de commandes groupées par priorité de commande et triées en ordre de priorité croissant. 

@@ -3,18 +3,18 @@ title: Surveiller les scripts avec des événements étendus
 description: Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes liés à SQL Server Machine Learning Services, à SQL Server Launchpad et aux scripts externes des travaux R ou Python.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73727735"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200980"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Surveiller les scripts Python et R avec des événements étendus dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ SQL Server Machine Learning Services démarre des services s’exécutant à l�
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    Pour capturer les événements liés à Launchpad, placez le fichier *.config* dans le répertoire Binn de l’instance SQL Server. Dans une installation par défaut, il s’agit de :
+    Pour capturer les événements liés à Launchpad, placez le fichier *.xml* dans le répertoire Binn de l’instance SQL Server. Dans une installation par défaut, il s’agit de :
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** est le processus satellite qui prend en charge l’extensibilité SQL avec des scripts de langage externes tels que R ou Python. Une instance distincte de BxlServer est lancée pour chaque instance de langage externe.
   
-    Pour capturer les événements liés à BXLServer, placez le fichier *.config* dans le répertoire d’installation R ou Python. Dans une installation par défaut, il s’agit de :
+    Pour capturer les événements liés à BXLServer, placez le fichier *.xml* dans le répertoire d’installation de R ou de Python. Dans une installation par défaut, il s’agit de :
      
     **R :** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
@@ -145,7 +145,7 @@ L’exemple suivant montre la définition d’une trace d’événements pour le
 </event_sessions>  
 ```
 
-+ Placez le fichier *.config* dans le répertoire Binn de l’instance SQL Server.
++ Placez le fichier *.xml* dans le répertoire Binn de l’instance SQL Server.
 + Ce fichier doit être nommé `Launchpad.xevents.xml`.
 
 ### <a name="example-capturing-bxlserver-events"></a>Exemple : Capture des événements de BXLServer  
@@ -175,7 +175,7 @@ L'exemple suivant montre la définition d'une trace d'événements pour le servi
 </event_sessions>  
 ```
 
-+ Placez le fichier *.config* dans le même répertoire que l’exécutable BXLServer.
++ Placez le fichier *.xml* dans le même répertoire que l’exécutable de BXLServer.
 + Ce fichier doit être nommé `bxlserver.xevents.xml`.
 
 ## <a name="next-steps"></a>Étapes suivantes

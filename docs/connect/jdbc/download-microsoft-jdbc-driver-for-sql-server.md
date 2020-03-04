@@ -1,7 +1,7 @@
 ---
 title: Télécharger Microsoft JDBC Driver pour SQL Server
 description: Télécharger le pilote Microsoft JDBC pour SQL Server pour développer des applications Java qui se connectent à SQL Server.
-ms.date: 01/29/2020
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fcf034b332494750885d4808b54c9cb62c37077c
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 6576ed155e57fbd69757065c440382efa4adba5e
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77013114"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903496"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Télécharger Microsoft JDBC Driver pour SQL Server
 
@@ -27,7 +27,7 @@ Utilisez les liens figurant dans le tableau suivant pour télécharger la derni�
 
 | Version | Date de publication | Versions Java |
 |---|---|---|
-| [Microsoft JDBC Driver 8.2](https://go.microsoft.com/fwlink/?linkid=2116870) | 31/1/2020 | JRE 8, 11, 13 |
+| [Microsoft JDBC Driver 8.2](https://go.microsoft.com/fwlink/?linkid=2116870) | 26/2/2020 | JRE 8, 11, 13 |
 | [Microsoft JDBC Driver 7.4](https://go.microsoft.com/fwlink/?linkid=2099962) | 1/8/2019 | JRE 8, 11, 12 |
 | [Microsoft JDBC Driver 7.2](https://go.microsoft.com/fwlink/?linkid=2063159) | 17/4/2019 | JRE 8, 11 |
 | [Microsoft JDBC Driver 7.0](https://go.microsoft.com/fwlink/?linkid=2005972) | 31/7/2018 | JRE 8, 10 |
@@ -46,7 +46,7 @@ Le pilote JDBC peut être ajouté à un projet Maven en tant que dépendance dan
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
 </dependency>
 ```  
 

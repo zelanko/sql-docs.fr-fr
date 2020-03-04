@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76536645"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903816"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
@@ -205,7 +205,7 @@ La commande COPY détecte automatiquement le type de compression en fonction de 
 
 - .gz  - **GZIP**
 - .snappy – **Snappy**
-- .deflate - **DefaultCodec**
+- .deflate - **DefaultCodec**  (Parquet et ORC uniquement)
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* s’applique au format CSV et spécifie un caractère unique qui sera utilisé comme guillemet (délimiteur de chaîne) dans le fichier CSV. Si vous ne spécifiez pas cet argument, le caractère guillemet (") servira de guillemet conformément à l’utilisation définie dans la norme RFC 4180. Les caractères ASCII étendus ne sont pas pris en charge avec UTF-8 pour FIELDQUOTE.

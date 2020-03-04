@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249713"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575334"
 ---
 # <a name="using-table-valued-parameters"></a>Utilisation des paramètres table
 
@@ -156,7 +156,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>Transmettre un paramètre table comme objet ResultSet  
 
-Cet exemple montre comment transmettre en continu des lignes de données d’un ResultSet à un paramètre table. Le code récupère d’abord des données d’une table source, crée un objet SQLServerDataTable, définit son schéma et remplit la table avec des données. Le code configure ensuite une SQLServerPreparedStatement qui transmet cette table de données sous forme de paramètre table à SQL Server.  
+Cet exemple montre comment transmettre en continu des lignes de données d’un ResultSet à un paramètre table. Le code récupère d’abord des données d’une table source dans un objet SQLServerDataTable, définit son schéma et remplit la table avec des données. Le code configure ensuite une SQLServerPreparedStatement qui transmet cette table de données sous forme de paramètre table à SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -237,7 +237,7 @@ pStmt.execute();
 
 Cette classe représente les métadonnées d’une colonne. Elle est utilisée dans l’interface ISQLServerDataRecord pour transmettre des métadonnées de colonne au paramètre table. Elle comporte les méthodes suivantes :  
 
-| Name                                                                                                                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Nom                                                                                                                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData(String columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | Initialise une nouvelle instance de SQLServerMetaData avec le nom de colonne, le type SQL, la précision, l’échelle et la valeur par défaut du serveur spécifiés. Cette forme du constructeur prend en charge les paramètres table en offrant la possibilité de spécifier si la colonne est unique dans le paramètre table, l’ordre de tri de la colonne et l’ordinal de la colonne de tri. <br/><br/>useServerDefault : spécifie si cette colonne doit utiliser la valeur de serveur par défaut (valeur par défaut : false).<br>isUniqueKey : indique si la colonne du paramètre table est unique (valeur par défaut : false).<br>sortOrder : indique l’ordre de tri d’une colonne (valeur par défaut : SQLServerSortOrder.Unspecified).<br>sortOrdinal : spécifie l’ordinal de la colonne de tri, en commençant à partir de 0 (valeur par défaut : -1). |
 | public SQLServerMetaData( String columnName, int sqlType)                                                                                                                        | Initialise une nouvelle instance de SQLServerMetaData avec le nom de colonne et le type SQL.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -261,7 +261,7 @@ Enum définissant l’ordre de tri. Les valeurs possibles sont les suivantes : A
 
 Cette classe représente une table de données en mémoire à utiliser avec des paramètres table. Elle comporte les méthodes suivantes :  
 
-| Name                                                          | Description                                          |
+| Nom                                                          | Description                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Public SQLServerDataTable()                                   | Initialise une nouvelle instance de SQLServerDataTable.    |
 | public Iterator<Entry\<Integer, Object[]>> getIterator()      | Récupère un itérateur sur les lignes de la table de données. |
@@ -275,7 +275,7 @@ Cette classe représente une table de données en mémoire à utiliser avec des 
 
 Cette classe représente une colonne de la table de données en mémoire représentée par SQLServerDataTable. Elle comporte les méthodes suivantes :  
 
-| Name                                                       | Description                                                                      |
+| Nom                                                       | Description                                                                      |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | public SQLServerDataColumn(String columnName, int sqlType) | Initialise une nouvelle instance de SQLServerDataColumn avec le nom de colonne et le type. |
 | public String getColumnName()                              | Récupère le nom de la colonne.                                                       |
@@ -285,7 +285,7 @@ Cette classe représente une colonne de la table de données en mémoire représ
 
 Cette classe représente une interface que les utilisateurs peuvent implémenter pour transmettre en continu des données à un paramètre table. Les méthodes de cette interface sont les suivantes :  
   
-| Name                                                    | Description                                                                                             |
+| Nom                                                    | Description                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData getColumnMetaData(int column); | Récupère les métadonnées de colonne de l’index de colonne donné.                                               |
 | public int getColumnCount();                            | Récupère le nombre total de colonnes.                                                                  |
@@ -296,7 +296,7 @@ Cette classe représente une interface que les utilisateurs peuvent implémenter
 
 Les méthodes suivantes ont été ajoutées à cette classe pour permettre de transmettre des paramètres table.  
 
-| Name                                                                                                    | Description                                                                                                                                                                                                                                                                                                |
+| Nom                                                                                                    | Description                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | Remplit un paramètre table avec une table de données. parameterIndex est l’index du paramètre, tvpName le nom du paramètre table et tvpDataTable l’objet table de données source.                                                                                                          |
 | public final void setStructured(int parameterIndex, String tvpName, ResultSet tvpResultSet)             | Remplit un paramètre table avec un ResultSet récupéré à partir d’une autre table. parameterIndex est l’index du paramètre, tvpName le nom du paramètre table et tvpResultSet l’objet jeu de résultats source.                                                                               |
@@ -306,7 +306,7 @@ Les méthodes suivantes ont été ajoutées à cette classe pour permettre de tr
 
 Les méthodes suivantes ont été ajoutées à cette classe pour permettre de transmettre des paramètres table.  
   
-| Name                                                                                                        | Description                                                                                                                                                                                                                                                                                                                      |
+| Nom                                                                                                        | Description                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured(String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | Remplit un paramètre table transmis à une procédure stockée avec une table de données. paratemeterName est le nom du paramètre, tvpName le nom du type de paramètre table et tvpDataTable l’objet table de données.                                                                                                                 |
 | public final void setStructured(String paratemeterName, String tvpName, ResultSet tvpResultSet)             | Remplit un paramètre table transmis à une procédure stockée avec un ResultSet récupéré à partir d’une autre table. paratemeterName est le nom du paramètre, tvpName le nom du type de paramètre table et tvpResultSet l’objet jeu de résultats source.                                                                              |

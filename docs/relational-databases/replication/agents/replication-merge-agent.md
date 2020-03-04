@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846738"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705864"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  Spécifie si l'Agent de fusion se synchronise avec un Abonné ou un autre serveur de publication. La valeur **1** indique qu'il s'agit d'un autre serveur de publication. La valeur par défaut est **0**.  
-  
+ 
+ **-T** [**101|102**]  
+ Indicateurs de trace qui activent des fonctionnalités supplémentaires pour l’agent de fusion. La valeur **101** permet d’obtenir des informations de journalisation détaillées supplémentaires pour vous aider à déterminer le temps pris par chaque étape du processus de synchronisation de la réplication de fusion. La valeur **102** écrit les mêmes statistiques que l’indicateur de trace **101**, mais dans la table <Distribution server>..msmerge_history. Activez la journalisation de l’agent de fusion quand vous utilisez l’indicateur de trace 101 avec les paramètres `-output` et `-outputverboselevel`.  Par exemple, ajoutez les paramètres suivants à l’agent de fusion, puis redémarrez l’agent : `-T 101, -output, -outputverboselevel`. 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Nombre de générations à traiter dans un lot unique lors du téléchargement des modifications de l'Abonné au serveur de publication. Une génération est définie comme un groupe logique de modifications par article. La valeur par défaut pour un lien de communication fiable est **100**. La valeur par défaut pour un lien de communication non fiable est **1**.  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  Pour démarrer l'Agent de fusion, exécutez **replmerg.exe** à l'invite de commandes. Pour plus d'informations, consultez [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>Résolution des problèmes de performances de l’agent de fusion 
  L'historique de l'agent de fusion pour la session active n'est pas supprimé lors de l'exécution en mode continu. Un agent dont l'exécution est longue peut générer un grand nombre d'entrées dans les tables de l'historique de fusion, ce qui peut impacter les performances. Pour résoudre ce problème, passez en mode planifié, ou continuez à utiliser le mode continu mais créez une tâche dédiée pour redémarrer régulièrement l'agent de fusion, ou baissez le niveau de détail de l'historique pour réduire le nombre de lignes et, par conséquent, l'impact sur les performances.  
+ 
+  Dans certains cas, l’agent de fusion de réplication peut prendre beaucoup de temps pour répliquer les modifications. Pour déterminer l’étape du processus de synchronisation de la réplication de fusion qui prend le plus de temps, utilisez l’indicateur de trace 101 avec la journalisation de l’agent de fusion. Pour cela, utilisez les paramètres suivants pour les paramètres de l’agent de fusion, puis redémarrez l’agent :   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+De plus, si vous devez écrire des statistiques dans la table <Distribution server>..msmerge_history, utilisez l’indicateur de trace -T 102.
   
 ## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  

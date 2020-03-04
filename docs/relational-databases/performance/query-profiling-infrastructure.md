@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257672"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705904"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] offre la possibilité d’accéder aux informations d’exécution sur les plans d’exécution de requête. L’une des actions les plus importantes en cas de problème de performances consiste à bien comprendre la nature de la charge de travail en cours d’exécution et la façon dont est pilotée l’utilisation des ressources. Pour cela, l’accès au [plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md) est important.
 
@@ -119,9 +119,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Infrastructure légère de profilage des statistiques sur l’exécution des requêtes v3
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] inclut une version nouvellement révisée du profilage léger qui collecte des informations sur le nombre de lignes pour toutes les exécutions. Le profilage léger est activé par défaut sur [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et l’indicateur de trace 7412 n’a aucun effet. Le profilage léger peut être désactivé au niveau de la base de données à l’aide de la [configuration étendue à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING : `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] incluent une version nouvellement révisée du profilage léger qui collecte des informations sur le nombre de lignes pour toutes les exécutions. Le profilage léger est maintenant activé par défaut sur [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], l’indicateur de trace 7412 n’a pas d’effet. Le profilage léger peut être désactivé au niveau de la base de données à l’aide de la [configuration étendue à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING : `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
 Une nouvelle DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) est introduite pour retourner l’équivalent du dernier plan d’exécution réel connu pour la plupart des requêtes. Elle s’appelle *Dernières statistiques de plan de requête*. Les dernières statistiques de plan de requête peuvent être activées au niveau de la base de données à l’aide de la [configuration étendue à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS : `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
