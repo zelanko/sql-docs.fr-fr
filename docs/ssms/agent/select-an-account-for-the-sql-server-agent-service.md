@@ -77,7 +77,7 @@ Le compte avec lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
 -   Le compte doit être membre du rôle serveur fixe **sysadmin** .  
   
--   Pour utiliser le traitement de travaux multiserveur, le compte doit être membre du rôle de base de données **msdb****TargetServersRole** sur le serveur maître.  
+-   Pour utiliser le traitement de travaux multiserveur, le compte doit être membre du rôle de base de données **msdb** **TargetServersRole** sur le serveur maître.  
   
 ## <a name="supported-service-account-types"></a>Types de comptes de service pris en charge  
 Le tableau ci-dessous répertorie les types de comptes Windows qui peuvent être utilisés pour le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -125,7 +125,7 @@ Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssN
 > [!NOTE]  
 > Utilisez le Gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit démarrer lorsque le système d'exploitation démarre.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Configuration des comptes de service Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 [Gestion des services à l’aide de SQL Computer Manager](https://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Implémenter la sécurité de l'Agent SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
