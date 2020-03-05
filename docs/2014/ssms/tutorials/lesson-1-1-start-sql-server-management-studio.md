@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632799"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288984"
 ---
 # <a name="start-sql-server-management-studio"></a>Démarrer SQL Server Management Studio
   Pour commencer ce didacticiel, commençons par regarder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "73632799"
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  Par défaut, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas installé. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n'est pas disponible, installez-le en exécutant le programme d'installation. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]n’est pas disponible [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]avec. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express est disponible en téléchargement gratuit à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=7593), mais il possède une interface utilisateur différente de celle décrite dans ce didacticiel.  
+    >  Par défaut, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas installé. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n'est pas disponible, installez-le en exécutant le programme d'installation. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]n’est pas disponible [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]avec. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express est disponible en téléchargement gratuit à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), mais il possède une interface utilisateur différente de celle décrite dans ce didacticiel.  
   
 2.  Dans la boîte de dialogue **Se connecter à un serveur** , vérifiez les paramètres par défaut, puis cliquez sur **Se connecter**. Pour vous connecter, la zone **nom du serveur** doit contenir le nom de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordinateur sur lequel est installé. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une instance nommée, la zone **nom du serveur** doit également contenir le nom de l’instance au format \< *computer_name*>\\<*instance_name*>.  
   

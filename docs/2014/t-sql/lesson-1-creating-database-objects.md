@@ -10,19 +10,19 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632719"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280915"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Leçon 1 : Création des objets de base de données
   Cette leçon vous montre comment créer une base de données, une table dans la base de données, puis accéder aux données et les modifier dans la table. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] les instructions peuvent être écrites et soumises au [!INCLUDE[ssDE](../includes/ssde-md.md)] comme suit :  
   
--   À l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Ce didacticiel suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mais vous pouvez aussi utiliser [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible gratuitement en téléchargement à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=7593).  
+-   À l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Ce didacticiel suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mais vous pouvez aussi utiliser [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible gratuitement en téléchargement à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   À l’aide de [l’utilitaire sqlcmd](../tools/sqlcmd-utility.md).  
   

@@ -16,12 +16,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 2353d2f623a5aa0e0f1f5c25710724f836093998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68890373"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280846"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installer Analysis Services en mode multidimensionnel et exploration de données
   
@@ -70,7 +70,7 @@ ms.locfileid: "68890373"
   
  [Déterminer le mode serveur d’une instance de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
- [Compléments d’exploration de données SQL Server](https://go.microsoft.com/fwlink/?LinkId=197091)  
+ [Compléments d’exploration de données SQL Server](https://www.microsoft.com/download/details.aspx?id=35578)  
   
  Par défaut, les exemples de bases de données, les exemples de code et les compléments des applications clientes ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer les exemples de bases de données et les exemples de code, consultez le [site web CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
