@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75325491"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338415"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
