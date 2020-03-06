@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798339"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339195"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Installer le mode SharePoint de Reporting Services pour SharePoint 2013
   Les procédures de cette rubrique constituent un guide d'installation sur un serveur unique de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint. La rubrique peut également être utilisée pour des procédures individuelles dans le cadre de la mise à jour d'une installation existante, par exemple, pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -122,7 +122,7 @@ ms.locfileid: "72798339"
   
     -   **Reporting Services complément pour les produits SharePoint**.  
   
-         ![Remarque](../../../2014/reporting-services/media/rs-fyinote.png "note") L’option de l’Assistant Installation pour installer le complément est une nouveauté de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] la version.  
+         ![Remarque](../../../2014/reporting-services/media/rs-fyinote.png "remarque") L’option de l’Assistant Installation pour installer le complément est une nouveauté de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] la version.  
   
     -   Si vous n'avez pas encore d'instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)]SQL Server, vous pouvez également sélectionner les **Services de moteur de base de données** et les **Outils de gestion - Complet** pour un environnement complet.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72798339"
   
 12. Si vous avez sélectionné les services de moteur de base de données, acceptez l'instance par défaut de **MSSQLSERVER** dans la page **Configuration de l'instance** et cliquez sur **Suivant**.  
   
-     ![Remarque](../../../2014/reporting-services/media/rs-fyinote.png "note") La Reporting Services Architecture de service SharePoint n’est pas basée sur une SQL Server « instance » comme l’architecture de Reporting Services précédente.  
+     ![Remarque](../../../2014/reporting-services/media/rs-fyinote.png "remarque") La Reporting Services Architecture de service SharePoint n’est pas basée sur une SQL Server « instance » comme l’architecture de Reporting Services précédente.  
   
 13. Examinez la page **Espace disque nécessaire** et cliquez sur **Suivant**.  
   

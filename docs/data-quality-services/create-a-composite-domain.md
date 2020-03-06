@@ -13,11 +13,11 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75255594"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339747"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
 
@@ -31,7 +31,7 @@ ms.locfileid: "75255594"
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Pour créer un domaine composite, vous devez avoir créé et ouvert une base de connaissances, et vous devez avoir créé au moins deux domaines uniques à ajouter au domaine composite.  
   
 ###  <a name="Security"></a> Sécurité  

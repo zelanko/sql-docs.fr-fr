@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74401463"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340465"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Listes de vérification de la configuration de l’appliance pour Analytics Platform System
 Fournit des listes de vérification pour les tâches requises pour configurer Analytics Platform System pour votre propre environnement. Ces tâches de configuration sont nécessaires pour que vous puissiez utiliser l’appliance.  
@@ -24,7 +24,7 @@ Fournit des listes de vérification pour les tâches requises pour configurer An
   
 ## <a name="BeforeTasks"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
   
 1.  L’appliance doit être installée dans le centre de données et sous tension.  
   

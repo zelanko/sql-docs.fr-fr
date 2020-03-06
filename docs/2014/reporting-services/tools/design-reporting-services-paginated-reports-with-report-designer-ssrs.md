@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66100347"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339190"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Concevoir des rapports à l'aide du Concepteur de rapports (SSRS)
   Utilisez le Concepteur de rapports pour créer des rapports et des solutions de création de rapports complets de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le Concepteur de rapports fournit une interface graphique dans laquelle vous pouvez définir les sources de données, les datasets et les requêtes, les positions de mise en page des rapports pour les régions de données et les champs, ainsi que des fonctionnalités interactives telles que les paramètres et les jeux de rapports qui fonctionnent ensemble.  
@@ -35,24 +35,22 @@ ms.locfileid: "66100347"
   
  Utilisez les informations de cette rubrique pour concevoir des rapports et des éléments associés pour un projet de rapport dans une solution de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Pour plus d’informations sur les solutions et les projets multiples dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consultez [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_SharedDataSources"></a>Sources de données partagées  
+##  <a name="bkmk_SharedDataSources"></a> Sources de données partagées  
  Utilisez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour définir et déployer des sources de données partagées pour une solution de création de rapports. Les sources de données partagées peuvent être déployées indépendamment des autres éléments dans un projet à l'aide de les propriétés de **OverwriteDataSources** et de **TargetDataSourceFolder** . Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
  Dans le Concepteur de rapports, vous travaillez dans le volet des données de rapport et dans l'explorateur de solutions pour définir les sources de données utilisées dans un rapport. Pour plus d'informations, consultez [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Vous ne pouvez pas utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour ouvrir les sources de données publiées sur un serveur de rapports ou un site SharePoint, mais non inclus dans la solution de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Pour cette fonctionnalité, utilisez [Générateur de rapports &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).  
   
- 
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est un outil client. Vous pouvez tester votre solution de création de rapports localement sur votre ordinateur, la déployer dans un environnement de test pour tester la solution de serveur, puis la déployer dans un environnement de production. Après le déploiement, vérifiez que les extensions de traitement des sources de données et les informations d'identification de la source de données sont configurées pour l'environnement de serveur de rapports. Vous pouvez utiliser le gestionnaire de configuration pour gérer les propriétés de différents déploiements. Pour plus d’informations, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est un outil client. Vous pouvez tester votre solution de création de rapports localement sur votre ordinateur, la déployer dans un environnement de test pour tester la solution de serveur, puis la déployer dans un environnement de production. Après le déploiement, vérifiez que les extensions de traitement des sources de données et les informations d'identification de la source de données sont configurées pour l'environnement de serveur de rapports. Vous pouvez utiliser le gestionnaire de configuration pour gérer les propriétés de différents déploiements. Pour plus d’informations, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
  Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
   
-##  <a name="bkmk_SharedDatasets"></a>Datasets partagés  
+##  <a name="bkmk_SharedDatasets"></a> Datasets partagés  
  Utilisez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour définir et déployer des datasets partagées pour une solution de création de rapports. Les datasets partagés peuvent être déployés indépendamment des autres éléments dans un projet à l'aide de les propriétés de **OverwriteDatasets** et de **TargetDatasetFolder** . Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
  Dans le Concepteur de rapports, vous travaillez dans le volet des données de rapport et dans l'explorateur de solutions pour définir les datasets partagés utilisés dans un rapport. Pour plus d'informations, consultez [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Vous ne pouvez pas utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour ouvrir des datasets publiés directement à partir d'un serveur de rapports ou d'un site SharePoint. Pour cette fonctionnalité, utilisez [Générateur de rapports &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md) en mode dataset partagé.  
   
- 
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est un outil client. Vous pouvez utiliser les concepteurs de requêtes pour créer et tester vos résultats de requête localement dans l'aperçu. Après le déploiement, vous pouvez gérer les datasets partagés indépendamment des sources de données partagées et des rapports dont ils dépendent. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;générateur de rapports et ssrs&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [outils de conception de requêtes dans Concepteur de rapports SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)et [gérer des datasets partagés](../report-data/manage-shared-datasets.md).  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est un outil client. Vous pouvez utiliser les concepteurs de requêtes pour créer et tester vos résultats de requête localement dans l'aperçu. Après le déploiement, vous pouvez gérer les datasets partagés indépendamment des sources de données partagées et des rapports dont ils dépendent. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;générateur de rapports et ssrs&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [outils de conception de requêtes dans Concepteur de rapports SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)et [gérer des datasets partagés](../report-data/manage-shared-datasets.md).  
   
   
 ##  <a name="bkmk_Reports"></a>État  
@@ -65,18 +63,18 @@ ms.locfileid: "66100347"
   
 -   **Ajoutez un nouveau projet de rapport.** Par défaut, un rapport vide s'ouvre dans le Concepteur de rapports. Pour plus d’informations, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md).  
   
--   **Ajoutez un projet de l’Assistant rapport.** Vous créez un rapport pas-à-pas et êtes guidé. L'Assistant Rapport résume la définition des données et la conception des rapports à une série d'étapes aboutissant à un rapport parachevé. Vous pouvez ajouter des styles pour personnaliser l'assistant pour votre propre organisation. Pour plus d’informations, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md).  
+-   **Ajoutez un nouveau projet d’Assistant de rapport.** Vous créez un rapport pas-à-pas et êtes guidé. L'Assistant Rapport résume la définition des données et la conception des rapports à une série d'étapes aboutissant à un rapport parachevé. Vous pouvez ajouter des styles pour personnaliser l'assistant pour votre propre organisation. Pour plus d’informations, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md).  
   
--   **Ajoutez un nouvel élément de type rapport.** Un rapport vide s'ouvre dans le Concepteur de rapports.  
+-   **Ajoutez un nouvel élément de type Rapport.** Un rapport vide s'ouvre dans le Concepteur de rapports.  
   
 -   **Ajoutez un élément existant.** Une définition de rapport existante (.rdl) s'ouvre dans le Concepteur de rapports. Ouvrir un rapport ou un projet d'une version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut automatiquement mettre à niveau le projet vers la version actuelle et le rapport vers le schéma actuel. Pour plus d'informations, consultez [Mettre à niveau des rapports](../install-windows/upgrade-reports.md).  
   
--   **Importez un [!INCLUDE[msCoName](../../includes/msconame-md.md)] rapport Access.** Importez tous les rapports à partir d’une base de données Access (.mdb, .accdb) ou du fichier de projet (.adp). Le Concepteur de rapports convertit chaque rapport dans un fichier de base de données ou de projet au format RDL, puis l'enregistre dans le projet de rapport. Les fonctionnalités d'un rapport Access ne sont pas toutes transférables dans un fichier de définition de rapport (.rdl). Pour plus d’informations, consultez [Importer des rapports à partir de Microsoft Access &#40;Reporting Services&#41;](../import-reports-from-microsoft-access-reporting-services.md) et [Fonctionnalités des états Access prises en charge &#40;SSRS&#41;](../supported-access-report-features-ssrs.md).  
+-   **Importez un rapport [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.** Importez tous les rapports à partir d’une base de données Access (.mdb, .accdb) ou du fichier de projet (.adp). Le Concepteur de rapports convertit chaque rapport dans un fichier de base de données ou de projet au format RDL, puis l'enregistre dans le projet de rapport. Les fonctionnalités d'un rapport Access ne sont pas toutes transférables dans un fichier de définition de rapport (.rdl). Pour plus d’informations, consultez [Importer des rapports à partir de Microsoft Access &#40;Reporting Services&#41;](../import-reports-from-microsoft-access-reporting-services.md) et [Fonctionnalités des états Access prises en charge &#40;SSRS&#41;](../supported-access-report-features-ssrs.md).  
   
     > [!NOTE]  
     >  Microsoft Access 2002 (ou version ultérieure) doit être installé sur le même ordinateur que le Concepteur de rapports pour pouvoir utiliser la fonctionnalité d'importation. La source de données des états Access doit être disponible lorsque les états sont importés.  
   
--   **Travaillez directement dans le langage RDL.** Quand vous créez un rapport dans le Concepteur de rapports, il est enregistré au format XML en tant que fichier RDL (Report Definition Language). Vous pouvez modifier ce fichier dans le Concepteur de rapports, un éditeur de texte ou tout outil dans lequel il est possible de modifier du code XML.  
+-   **Travaillez directement dans RDL.** Quand vous créez un rapport dans le Concepteur de rapports, il est enregistré au format XML en tant que fichier RDL (Report Definition Language). Vous pouvez modifier ce fichier dans le Concepteur de rapports, un éditeur de texte ou tout outil dans lequel il est possible de modifier du code XML.  
   
      Lorsque vous modifiez la source de définition de rapport dans le Concepteur de rapports, vous travaillez dans le schéma RDL actuel pour la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de laquelle vous avez installé les outils de développement. Lorsque vous générez un projet, la version du schéma peut changer selon les propriétés de votre déploiement. Pour plus d’informations, consultez [Déploiement et prise en charge des versions dans les outils de données SQL Server &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -87,13 +85,13 @@ ms.locfileid: "66100347"
      Pour plus d’informations, consultez [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../reports/report-definition-language-ssrs.md).  
   
   
-##  <a name="bkmk_ReportParts"></a>Parties de rapports  
+##  <a name="bkmk_ReportParts"></a> Parties de rapports  
  Dans le Concepteur de rapports, une fois que vous avez créé des tables, graphiques et autres éléments de rapport dans un projet, vous pouvez les publier comme des *parties de rapport* sur un serveur de rapports ou sur le site SharePoint intégré avec un serveur de rapports afin que vous et d'autres personnes puissiez les réutiliser dans d'autres rapports. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
  Les parties de rapports peuvent être déployées indépendamment des autres éléments dans un projet à l'aide de **TargetReportPartFolder** et d'autres propriétés. Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
   
-##  <a name="bkmk_Resources"></a>Situées  
+##  <a name="bkmk_Resources"></a> Ressources  
  Vous pouvez ajouter à votre projet des fichiers liés à votre rapport mais pas traités par le serveur de rapports. Par exemple, vous pouvez ajouter des images pour des illustrations ou des fichiers de formes ESRI pour des données spatiales. Pour plus d’informations, consultez [Ressources](../report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
   
   
@@ -105,11 +103,11 @@ ms.locfileid: "66100347"
  Pour vérifier les données du rapport et la conception de la mise en page, utilisez **Aperçu** . Quand vous affichez l'aperçu d'un rapport, le processeur de rapports valide la syntaxe de schéma et d'expression de définition de rapport et répertorie les problèmes dans la fenêtre [Output](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
->  Lorsque vous prévisualisez un rapport, les données de ce rapport sont mises en cache dans un fichier sur l'ordinateur local. Ainsi, lorsque vous prévisualisez une nouvelle fois ce rapport (au moyen des mêmes requête, paramètres et informations d'identification), le Concepteur de rapports récupère l'exemplaire mis en cache au lieu d'exécuter à nouveau la requête. Le fichier de données est enregistré * \< *sous le compte ReportName>. rdl. Data dans le même répertoire que le fichier de définition de rapport. Le fichier n'est pas supprimé lorsque vous fermez le Générateur de rapports.  
+>  Lorsque vous prévisualisez un rapport, les données de ce rapport sont mises en cache dans un fichier sur l'ordinateur local. Ainsi, lorsque vous prévisualisez une nouvelle fois ce rapport (au moyen des mêmes requête, paramètres et informations d'identification), le Concepteur de rapports récupère l'exemplaire mis en cache au lieu d'exécuter à nouveau la requête. Le fichier de données est enregistré sous *\<nom_rapport>* .rdl.data dans le même répertoire que le fichier de définition de rapport. Le fichier n'est pas supprimé lorsque vous fermez le Générateur de rapports.  
   
  Vous pouvez afficher un aperçu d'un rapport comme suit :  
   
--   **Vue aperçu.** Cliquez sur l’onglet **Aperçu** . Le rapport s’exécute localement, à l’aide des mêmes fonctionnalités de traitement et de rendu des rapports que celles fournies avec le serveur de rapports. Le rapport qui est affiché est une image interactive. Vous pouvez sélectionner des paramètres, cliquer sur des liens, afficher l'explorateur de documents, et développer ou réduire des zones masquées du rapport. Vous pouvez aussi exporter le rapport dans n'importe quel format de rendu installé.  
+-   **Vue aperçu.** Cliquez sur l'onglet **Aperçu** . Le rapport est exécuté localement à l'aide des mêmes fonctionnalités de traitement et de rendu de rapport que celles fournies par le serveur de rapports. Le rapport qui est affiché est une image interactive. Vous pouvez sélectionner des paramètres, cliquer sur des liens, afficher l'explorateur de documents, et développer ou réduire des zones masquées du rapport. Vous pouvez aussi exporter le rapport dans n'importe quel format de rendu installé.  
   
 -   **Aperçu autonome.** Exécutez le rapport local dans un navigateur. En utilisant une configuration de débogage, vous pouvez également utiliser ce mode pour déboguer les assemblys personnalisés que vous écrivez. Il existe trois manières de gérer un projet en mode débogage :  
   
@@ -151,14 +149,14 @@ ms.locfileid: "66100347"
  Dans le Concepteur de rapports, il est important de comprendre que vous concevez un rapport à l'aide du schéma de définition de rapport pris en charge par la version actuelle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsque vous définissez les propriétés de déploiement du projet pour un serveur de rapports ou un site SharePoint spécifique et enregistrez ensuite le rapport, le générateur de rapports enregistre la définition de rapport dans le répertoire de build se trouvant dans le schéma correspondant à la version sur le serveur de rapports cible. Pour créer des rapports qui peuvent être publiés sur un serveur de rapports de bas niveau, le Concepteur de rapports supprime les éléments de rapport qui n'existent pas dans le schéma cible. Cela se produit automatiquement et sans invite. Dans ce cas, la définition de rapport d'origine est conservée dans le dossier du projet. La définition de rapport modifiée qui est déployée est dans le dossier de génération.  
   
 > [!NOTE]  
->  Pour déboguer les expressions et les erreurs de déploiement, vous devez afficher la définition de rapport dans le dossier de génération. N'utilisez pas **Afficher la source**. **Afficher la source** affiche la source de la définition de rapport à partir du dossier du projet.  
+>  Pour déboguer les expressions et les erreurs de déploiement, vous devez afficher la définition de rapport dans le dossier de génération. N'utilisez pas **Afficher la source**. **Afficher la source** affiche la source de définition de rapport à partir de le dossier du projet.  
   
  Pour plus d’informations, consultez [Déploiement et prise en charge des versions dans les outils de données SQL Server &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ### <a name="save-a-report-locally"></a>Enregistrer un rapport localement  
  Lorsque vous travaillez sur un rapport ou sur d'autres éléments de projet dans le Concepteur de rapports, les fichiers sont enregistrés dans votre ordinateur local ou dans un partage sur un autre ordinateur auquel vous avez accès.  
   
- Si vous utilisez le logiciel de contrôle de code source, vous pouvez vérifier vos rapports dans le serveur de contrôle de code source lorsque vous enregistrez le rapport. Pour plus d’informations, consultez [contrôle de code source](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_SourceControl).  
+ Si vous utilisez le logiciel de contrôle de code source, vous pouvez vérifier vos rapports dans le serveur de contrôle de code source lorsque vous enregistrez le rapport. Pour plus d'informations, consultez [Source Control](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_SourceControl).  
   
 ### <a name="deploy-or-publish"></a>Déployer ou publier  
  A partir de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous pouvez déployer des rapports ou d'autres éléments de projet vers plusieurs versions de serveurs de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Utilisez les configurations de projet pour contrôler la mise à niveau des définitions de rapport aux versions de schéma compatibles avec les serveurs de rapports cibles. Les propriétés contrôlées par les configurations de projet incluent le serveur de rapports cible, le dossier où le processus de génération stocke temporairement les définitions de rapport pour l'aperçu et le déploiement, et les niveaux d'erreur. Pour plus d’informations, consultez [Propriétés de configuration et de déploiement](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties) et [Définir des propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
@@ -167,7 +165,7 @@ ms.locfileid: "66100347"
  Les rapports peuvent être exportés dans divers formats ; ceux-ci affectent le fonctionnement des fonctionnalités interactives et la mise en page des rapports. Pour plus d’informations sur les considérations relatives à la conception de différents formats de sortie, consultez [exportation de rapports &#40;générateur de rapports et&#41;SSRS ](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
-##  <a name="bkmk_ReportValidationandErrorLevels"></a>Niveaux de validation et d’erreur de rapport  
+##  <a name="bkmk_ReportValidationandErrorLevels"></a> Validation de rapport et niveaux d’erreurs  
  Les rapports sont validés avant l'aperçu et lors du déploiement. Plusieurs problèmes de génération peuvent se produire lorsque les rapports sont créés. Les rapports peuvent contenir des chaînes, telles que des expressions ou requêtes, qui sont incompatibles avec la version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] spécifiée par la configuration de projet, par exemple.  
   
  Utilisez la propriété ErrorLevel pour gérer les avertissements de génération et erreurs. La propriété ErrorLevel peut contenir une valeur comprise entre 0 et 4. La valeur détermine les problèmes de génération qui sont signalés comme erreurs et ceux qui sont signalés comme avertissements. La valeur par défaut est 2. Les avertissements et les erreurs sont écrits dans la fenêtre [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][Sortie](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  

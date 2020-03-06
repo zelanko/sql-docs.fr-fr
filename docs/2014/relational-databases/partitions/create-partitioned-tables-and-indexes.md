@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62519162"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339137"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Créer des tables et des index partitionnés
   Vous pouvez créer une table ou un index partitionné(e) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les données contenues dans des tables et des index partitionnés sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Le partitionnement permet de rendre des tables et des index volumineux plus gérables et plus évolutifs.  
@@ -109,7 +109,7 @@ ms.locfileid: "62519162"
   
 #### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   
-1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition...**.  
+1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition...** .  
   
 2.  Dans l' **Assistant Création de partition**, sur la page **Assistant Création de partition** , cliquez sur **Suivant**.  
   
@@ -119,10 +119,10 @@ ms.locfileid: "62519162"
   
      Les options supplémentaires suivantes sont disponibles sur cette page :  
   
-     **Colocaliser cette table à la table partitionnée sélectionnée**  
+     **Colocaliser cette table avec la table partitionnée sélectionnée**  
      Permet de sélectionner une table partitionnée qui contient les données connexes à joindre à cette table sur la colonne de partitionnement. Les requêtes portant sur des tables présentant des partitions jointes sur les colonnes de partitionnement sont généralement plus efficaces.  
   
-     **Aligner les index non uniques et uniques avec une colonne de partition indexée dans le stockage**  
+     **Aligner les index non uniques et uniques avec une colonne de partition indexée lors du stockage**  
      Aligne tous les index de la table qui sont partitionnés avec le même schéma de partition. Lorsqu'une table et ses index sont alignés, vous pouvez plus efficacement déplacer des partitions dans et hors de tables partitionnées, car vos données sont partitionnées avec le même algorithme.  
   
      Après avoir sélectionné la colonne de partitionnement et toute autre option, cliquez sur **Suivant**.  
@@ -141,7 +141,7 @@ ms.locfileid: "62519162"
   
      Les options supplémentaires suivantes sont disponibles sur cette page :  
   
-     **Définir des limites...**  
+     **Définir les limites...**  
      Ouvre la boîte de dialogue **Définir les valeurs limites** pour sélectionner les valeurs limites et les plages de dates voulues pour vos partitions. Cette option est disponible uniquement lorsque vous avez sélectionné une colonne de partitionnement qui contient l'un des types de données suivants : `date`, `datetime`, `smalldatetime`, `datetime2` ou `datetimeoffset`.  
   
      **Estimer le stockage**  
@@ -411,9 +411,9 @@ ms.locfileid: "62519162"
   
 -   [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
--   [CRÉER une fonction de PARTITION &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-function-transact-sql)  
+-   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
   
--   [CRÉER un schéma de PARTITION &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
+-   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
   
 -   [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   

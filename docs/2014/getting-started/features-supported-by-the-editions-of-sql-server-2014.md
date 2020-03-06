@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176126"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339290"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Fonctionnalités prises en charge par les éditions de SQL Server 2014
 
@@ -66,7 +66,7 @@ ms.locfileid: "70176126"
   
  [Exploration de données](#DataMining)  
   
- [Reporting Services](#Reporting)  
+ [Reporting Services](#Reporting)  
   
  [Clients Business Intelligence](#BIClients)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "70176126"
 |Distributed Replay - Client|Oui|Non|Oui|Oui||||  
 |Distributed Replay - Contrôleur|Oui (Enterprise prend en charge jusqu'à 16 clients, Developer prend en charge uniquement 1 client)|Non|Oui (prise en charge d'1 client uniquement)|Oui (prise en charge d'1 client uniquement)||||  
 |SQL Profiler|Oui|Oui|Oui|Non<sup>2</sup>|Non<sup>2</sup>|Non<sup>2</sup>|Non<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Agent|Oui|Oui|Oui|Oui||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Oui|Oui|Oui|Oui||||  
 |Pack d'administration Microsoft System Center Operations Manager|Oui|Oui|Oui|Oui||||  
 |Assistant Paramétrage de base de données (DTA)|Oui|Oui|Oui<sup>3</sup>|Oui<sup>3</sup>||||  
 |Assistant déployer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] une base de données sur une machine virtuelle Azure|Oui|Oui|Oui|Oui|Oui|Oui|Oui|  

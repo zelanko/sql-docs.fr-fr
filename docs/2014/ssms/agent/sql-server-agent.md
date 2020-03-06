@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68188829"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339092"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L’agent est un service Microsoft Windows qui exécute des tâches administratives planifiées, appelées *travaux* dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -84,10 +84,9 @@ ms.locfileid: "68188829"
   
  Une alerte peut être une réponse à :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]événements  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Des événements.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Des conditions de performance.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Des conditions de performance.  
   
 -   Des événements Windows Management Instrumentation sur l'ordinateur qui exécute SQL Server Agent.  
   
