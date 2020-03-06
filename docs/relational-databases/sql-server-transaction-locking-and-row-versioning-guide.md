@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095684"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339667"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge plusieurs niveaux de contrôle de concurrence. Les utilisateurs spécifient le type de contrôle de concurrence lorsqu'ils choisissent les niveaux d'isolement des transactions pour les connexions et les options de concurrence sur les curseurs. Ces attributs peuvent être définis à l'aide des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] ou des propriétés et attributs des API de base de données telles que ADO, ADO.NET, OLE DB et ODBC.  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>Niveaux d’isolation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>Niveaux d’isolation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  Les transactions spécifient un niveau d'isolement. Ce niveau définit le degré d'isolement d'une transaction par rapport aux modifications de ressource ou de données apportées par d'autres transactions. Les niveaux d'isolation déterminent les effets secondaires de la concurrence (lectures incorrectes, lectures fantômes) qui sont autorisés.  
   
  Le niveau d'isolation d'une transaction régit les éléments suivants :  
@@ -275,7 +275,7 @@ GO
   
  Plus le niveau d'isolation est faible, plus le nombre de personnes susceptibles d'accéder aux données en même temps est élevé, et plus les effets secondaires de la concurrence (lectures incorrectes, mises à jour perdues) sont nombreux. Inversement, plus le niveau d'isolation est élevé, plus le nombre de types d'effets secondaires de la concurrence qu'un utilisateur est susceptible de rencontrer est réduit. Cependant, la quantité de ressources système nécessaires et la probabilité d'un blocage mutuel de transactions sont plus élevées. Le choix du niveau d'isolation adéquat dépend d'une mise en équilibre de l'espace réservé et des exigences en matière d'intégrité des données de l'application. Le niveau le plus élevé, sérialisable, garantit qu'une transaction récupère exactement les mêmes données à chaque fois qu'elle répète une opération de lecture, mais en utilisant un niveau de verrouillage susceptible de gêner les autres utilisateurs dans les systèmes multi-utilisateurs. Le niveau le plus bas, lecture non validée, permet la récupération de données qui ont été modifiées mais non validées par d'autres transactions. Ce niveau permet l'apparition de tous les effets secondaires de la concurrence, mais la charge du système est réduite puisqu'il n'y a ni verrouillage de lecture, ni contrôle de version de ligne.  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>Niveaux d’isolation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+##### <a name="ssdenoversion-isolation-levels"></a>Niveaux d’isolation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  La norme ISO définit les niveaux d'isolation suivants, tous pris en charge par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] :  
   
 |Niveau d’isolation|Définition|  
