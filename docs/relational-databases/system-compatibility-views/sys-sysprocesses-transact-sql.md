@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947151"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866367"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "74947151"
 |cpu|**int**|Temps UC cumulé pour l'exécution du processus. L'entrée est mise à jour pour tous les processus, indépendamment de la valeur de l'option SET STATISTICS TIME (ON ou OFF).|  
 |physical_io|**bigint**|Nombre total d'opérations d'écriture et de lecture sur disque pour le processus.|  
 |memusage|**int**|Nombre de pages du cache de procédures actuellement allouées à ce processus. Un nombre négatif indique que le processus libère de la mémoire allouée par un autre processus.|  
-|login_time|**DATETIME**|Heure à laquelle le processus client s'est connecté au serveur.|  
-|last_batch|**DATETIME**|Dernière exécution par un processus client d'un appel de procédure stockée distante ou d'une instruction EXECUTE.|  
+|login_time|**datetime**|Heure à laquelle le processus client s'est connecté au serveur.|  
+|last_batch|**datetime**|Dernière exécution par un processus client d'un appel de procédure stockée distante ou d'une instruction EXECUTE.|  
 |ecid|**smallint**|ID du contexte d'exécution utilisé pour identifier de façon unique les sous-threads exécutés pour le compte d'un seul et même processus.|  
 |open_tran|**smallint**|Nombre de transactions en cours pour le processus.|  
 |status|**nchar (30)**|État de l'ID processus. Les valeurs possibles sont les suivantes :<br /><br /> **dormant** réinitialisation de la session. =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **Running** = la session exécute un ou plusieurs lots. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Background** = la session exécute une tâche en arrière-plan, telle qu’une détection de blocage.<br /><br /> **Rollback** = la session a une restauration de transaction en cours.<br /><br /> **Pending** = la session attend qu’un thread de travail soit disponible.<br /><br /> **Runnable** = la tâche de la session est dans la file d’attente exécutable d’un planificateur en attendant d’obtenir un quantum de temps.<br /><br /> **Spinloop** = la tâche de la session attend qu’un SpinLock soit libéré.<br /><br /> **Suspended** = la session attend la fin d’un événement, tel que des e/s.|  
@@ -58,7 +58,7 @@ ms.locfileid: "74947151"
 |hostname|**nchar (128)**|Nom de la station de travail.|  
 |program_name|**nchar (128)**|Nom du logiciel d'application.|  
 |hostprocess|**nchar (10)**|Numéro d'identification du processus de la station de travail.|  
-|cmd|**nchar (26)**|Commande en cours d’exécution.|  
+|cmd|**nchar (52)**|Commande en cours d’exécution.|  
 |nt_domain|**nchar (128)**|Domaine Windows du client (s'il utilise l'authentification Windows) ou d'une connexion approuvée.|  
 |nt_username|**nchar (128)**|Nom d'utilisateur Windows pour le processus (s'il utilise l'authentification Windows) ou une connexion approuvée.|  
 |net_address|**nchar (12)**|Identificateur unique affecté à la carte réseau de la station de travail de chaque utilisateur. Lorsqu'un utilisateur se connecte, cet identificateur est inséré dans la colonne net_address.|  

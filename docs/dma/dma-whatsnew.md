@@ -1,5 +1,6 @@
 ---
 title: Nouveautés de Assistant Migration de données (SQL Server) | Microsoft Docs
+description: Découvrez les nouvelles fonctionnalités de chaque version de Assistant Migration de données pour SQL Server et Azure SQL Database.
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632883"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896804"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de Data Migration Assistant
 
