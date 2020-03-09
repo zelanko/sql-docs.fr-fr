@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115270"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338416"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 
@@ -47,7 +47,7 @@ L'un des objectifs principaux de tous les logiciels de base de données est de r
 > [!NOTE]
 > Dans un système où une charge très lourde pèse sur les ressources mémoire, les requêtes comportant jointure de fusion, tri et bitmap dans le plan de requête peuvent éliminer le bitmap si elles n'obtiennent pas la mémoire minimale nécessaire pour ce bitmap. Ceci peut affecter les performances de la requête, et, si le processus de tri ne tient pas en mémoire, ceci peut accroître l'utilisation des tables de travail dans la base de données tempdb, ce qui augmente le volume de tempdb. Pour résoudre ce problème, ajoutez de la mémoire physique ou paramétrez les requêtes de façon qu'elles utilisent un autre plan de requête plus rapide.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Apport de la quantité maximale de mémoire à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>Apport de la quantité maximale de mémoire à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire vous permet de fournir les quantités de mémoire suivantes au moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 
 
@@ -72,7 +72,7 @@ L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire v
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Changements apportés à la gestion de la mémoire à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>Changements apportés à la gestion de la mémoire à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 Dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la mémoire était allouée selon cinq mécanismes différents :
 -  **Allocateur de page unique (SPA)** , comprenant uniquement les allocations de mémoire inférieures ou égales à 8 Ko dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les options de configuration *Mémoire maximum du serveur (Mo)* et *Mémoire minimum du serveur (Mo)* déterminaient les limites de la mémoire physique consommée par SPA. Le pool de tampons était aussi le mécanisme pour SPA et le plus grand consommateur d’allocations de pages uniques.
@@ -107,7 +107,7 @@ Ce comportement est généralement observé durant les opérations suivantes :
 -  Traçage d’opérations qui doivent stocker des paramètres d’entrée volumineux
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Changements apportés à « memory_to_reserve » à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>Changements apportés à « memory_to_reserve » à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Dans les versions antérieures de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), le Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réservait une partie de l’espace d’adressage virtuel (VAS) des processus à **l’allocateur multipage**, à **l’allocateur CLR**, aux allocations de mémoire pour les **piles de threads** dans le processus SQL Server et aux **allocations Windows directes (DWA)** . Cette partie de l’espace d’adressage virtuel est également appelée « Mem-To-Leave » ou « pool non-tampon ».
 
 L’espace d’adressage virtuel réservé pour ces allocations est déterminé par l’option de configuration _**memory\_to\_reserve**_ . La valeur par défaut utilisée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est de 256 Mo. Pour remplacer la valeur par défaut, utilisez le paramètre de démarrage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Pour plus d’informations sur le paramètre de démarrage *-g*, consultez la page [Options de démarrage du service moteur de base de données](../database-engine/configure-windows/database-engine-service-startup-options.md) dans la documentation.
