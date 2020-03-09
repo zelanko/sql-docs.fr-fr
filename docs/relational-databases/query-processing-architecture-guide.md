@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903866"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338413"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] traite les requêtes sur diverses architectures de stockage des données, telles que des tables locales, des tables partitionnées et des tables distribuées sur plusieurs serveurs. Les rubriques suivantes expliquent comment [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite les requêtes et optimise leur réutilisation grâce à la mise en cache du plan d’exécution.
 
@@ -86,7 +86,7 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>Optimisation des instructions SELECT
-Une instruction `SELECT` est non procédurale ; elle ne précise pas les étapes exactes à suivre par le serveur de base de données pour extraire les données demandées. Cela signifie que le serveur de base de données doit analyser l'instruction afin de déterminer la manière la plus efficace d'extraire les données demandées. Cette opération est nommée optimisation de l’instruction `SELECT` . Le composant qui s’en charge est l’optimiseur de requête. L’entrée de l’optimiseur de requête est composée de la requête, du schéma de base de données (définitions des tables et des index) et de ses statistiques de base de données. La sortie de l’optimiseur de requête est un plan d’exécution de la requête, parfois appelé plan de requête ou simplement plan. Le contenu d'un plan de requête est détaillé plus loin dans cette rubrique.
+Une instruction `SELECT` est non procédurale ; elle ne précise pas les étapes exactes à suivre par le serveur de base de données pour extraire les données demandées. Cela signifie que le serveur de base de données doit analyser l'instruction afin de déterminer la manière la plus efficace d'extraire les données demandées. Cette opération est nommée optimisation de l’instruction `SELECT` . Le composant qui s’en charge est l’optimiseur de requête. L’entrée de l’optimiseur de requête est composée de la requête, du schéma de base de données (définitions des tables et des index) et de ses statistiques de base de données. La sortie de l’optimiseur de requête est un plan d’exécution de requête, parfois appelé plan de requête ou plan d’exécution. Le contenu d'un plan d’exécution est détaillé plus loin dans cette rubrique.
 
 Les entrées et les sorties de l’optimiseur de requête pendant l’optimisation d’une instruction `SELECT` unique sont illustrées dans le diagramme suivant :
 
@@ -100,17 +100,19 @@ Une instruction `SELECT` ne définit que :
 
 Un plan d'exécution de requête permet de définir : 
 
-* l'ordre d'accès aux tables source.  
-  Pour créer le jeu de résultats, le serveur de bases de données peut accéder aux tables de base selon de nombreux ordres différents. Par exemple, si l’instruction `SELECT` fait référence à trois tables, le serveur de base de données accédera d’abord à `TableA`, utilisera les données de `TableA` pour extraire les lignes correspondantes de `TableB`, puis utilisera les données de `TableB` pour extraire les données de `TableC`. Les autres séquences dans lesquelles le serveur de bases de données peut accéder aux tables sont les suivantes :  
+- **l'ordre d'accès aux tables source.** Pour créer le jeu de résultats, le serveur de bases de données peut accéder aux tables de base selon de nombreux ordres différents. Par exemple, si l’instruction `SELECT` fait référence à trois tables, le serveur de base de données accédera d’abord à `TableA`, utilisera les données de `TableA` pour extraire les lignes correspondantes de `TableB`, puis utilisera les données de `TableB` pour extraire les données de `TableC`. Les autres séquences dans lesquelles le serveur de bases de données peut accéder aux tables sont les suivantes :  
   `TableC`, `TableB`, `TableA`ou  
   `TableB`, `TableA`, `TableC`ou  
   `TableB`, `TableC`, `TableA`ou  
   `TableC`, `TableA`, `TableB`  
 
-* les méthodes utilisées pour extraire les données de chaque table.  
+- **les méthodes utilisées pour extraire les données de chaque table.**  
   Il existe également différentes méthodes d'accès aux données dans chaque table. Si seules quelques lignes ayant des valeurs de clés spécifiques sont nécessaires, le serveur de base de données peut utiliser un index. Si toutes les lignes de la table sont nécessaires, le serveur de base de données peut ignorer les index et procéder à une analyse de la table. Si toutes les lignes de la table sont nécessaires mais qu’il existe un index dont les colonnes clés se trouvent dans une clause `ORDER BY`, l’analyse d’index plutôt que l’analyse de table peut éviter un tri séparé du jeu de résultats. Dans le cas d'une table très petite, les analyses de table peuvent s'avérer plus efficaces pour quasiment tous les accès à la table.
+  
+- **Les méthodes utilisées pour effectuer les calculs, et comment filtrer, agréger et trier les données de chaque table.**  
+  À mesure que les données sont consultées à partir des tables, différentes méthodes permettent d’effectuer des calculs sur les données, par exemple calculer des valeurs scalaires, et agréger et trier les données comme défini dans le texte de la requête, par exemple en utilisant une clause `GROUP BY` ou `ORDER BY`, et filtrer les données, par exemple en utilisant une clause `WHERE` ou `HAVING`.
 
-Le processus de sélection d'un plan d'exécution parmi plusieurs possibles est appelé optimisation. L'optimiseur de requêtes est un des composants les plus importants d'un système de base de données SQL. Bien que l'optimiseur de requête puisse créer une certaine surcharge pour analyser la requête et sélectionner un plan, celle-ci est en général largement compensée par l'adoption d'un plan d'exécution efficace. Prenons l'exemple de deux entrepreneurs en bâtiment à qui l'on commande la même maison. Si l'un d'eux commence par consacrer quelques jours à planifier la construction de cette maison alors que l'autre lance immédiatement la construction sans aucune planification, il est fort probable que celui qui a pris le temps de planifier son projet finira le premier.
+Le processus de sélection d'un plan d'exécution parmi plusieurs possibles est appelé optimisation. L'optimiseur de requête est un des composants les plus importants de [!INCLUDE[ssde_md](../includes/ssde_md.md)]. Bien que l'optimiseur de requête puisse créer une certaine surcharge pour analyser la requête et sélectionner un plan, celle-ci est en général largement compensée par l'adoption d'un plan d'exécution efficace. Prenons l'exemple de deux entrepreneurs en bâtiment à qui l'on commande la même maison. Si l'un d'eux commence par consacrer quelques jours à planifier la construction de cette maison alors que l'autre lance immédiatement la construction sans aucune planification, il est fort probable que celui qui a pris le temps de planifier son projet finira le premier.
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un optimiseur basé sur les coûts. À chaque plan d'exécution possible est associé un coût exprimé en termes de quantité de ressources informatiques utilisées. L'optimiseur de requêtes doit analyser les plans possibles et opter pour celui dont le coût estimé est le plus faible. Certaines instructions `SELECT` complexes disposent de milliers de plans d’exécution possibles. Dans ce cas, l'optimiseur de requêtes n'analyse pas toutes les combinaisons possibles. Il recourt alors à des algorithmes sophistiqués afin de trouver un plan d'exécution dont le coût se rapproche raisonnablement du minimum possible.
 
@@ -121,6 +123,12 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 <sup>1</sup> La densité définit la distribution des valeurs uniques qui existent dans les données ou le nombre moyen des valeurs en double pour une colonne donnée. Lorsque la densité diminue, la sélectivité d’une valeur augmente.
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est important, car il permet l’ajustement dynamique du serveur de base de données au fur et à mesure que la base de données évolue sans recourir à l’intervention d’un programmeur ou d’un administrateur de bases de données. Cela permet aux programmeurs de se concentrer sur la description du résultat final de la requête. Ils peuvent faire confiance à l’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans son choix d’un plan d’exécution efficace pour l’état de la base de données à chaque exécution de l’instruction.
+
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose trois options pour afficher les plans d’exécution :        
+> -  Le ***[Plan d’exécution estimé](../relational-databases/performance/display-the-estimated-execution-plan.md)***, qui est le plan compilé, tel que généré par l’optimiseur de requête.        
+> -  Le ***[Plan d’exécution réel](../relational-databases/performance/display-an-actual-execution-plan.md)***, qui est identique au plan compilé auquel s’ajoute son contexte d’exécution. Cela inclut les informations d’exécution disponibles à la fin de l’exécution, comme les avertissements d’exécution, ou dans les versions plus récentes du [!INCLUDE[ssde_md](../includes/ssde_md.md)], le temps écoulé et le temps processeur utilisés pendant l’exécution.        
+> -  Les ***[Statistiques des requêtes actives](../relational-databases/performance/live-query-statistics.md)***, qui sont identiques au plan compilé auquel s’ajoute son contexte d’exécution. Cela inclut les informations d’exécution pendant la progression de l’exécution, lesquelles sont mises à jour chaque seconde. Les informations d’exécution incluent, par exemple, le nombre réel de lignes qui transitent par les opérateurs.       
 
 ### <a name="processing-a-select-statement"></a>Traitement d'une instruction SELECT
 Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de traiter une instruction SELECT unique sont les suivantes : 
@@ -450,12 +458,6 @@ Les plans d'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   Chaque utilisateur exécutant actuellement la requête dispose d'une structure de données qui contient les données spécifiques à son exécution, telles que la valeur des paramètres. Cette structure de données constitue le contexte d'exécution. Les structures de données du contexte d’exécution sont réutilisées, mais pas leur contenu. Si un autre utilisateur exécute la même requête, les structures de données sont réinitialisées avec le contexte du nouvel utilisateur. 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
-
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose trois options pour afficher les plans d’exécution :        
-> -  Le ***[Plan d’exécution estimé](../relational-databases/performance/display-the-estimated-execution-plan.md)***, qui est le plan compilé.        
-> -  Le ***[Plan d’exécution réel](../relational-databases/performance/display-an-actual-execution-plan.md)***, qui est identique au plan compilé auquel s’ajoute son contexte d’exécution. Cela inclut les informations d’exécution disponibles à la fin de l’exécution, comme les avertissements d’exécution, ou dans les versions plus récentes du [!INCLUDE[ssde_md](../includes/ssde_md.md)], le temps écoulé et le temps processeur utilisés pendant l’exécution.        
-> -  Les ***[Statistiques des requêtes actives](../relational-databases/performance/live-query-statistics.md)***, qui sont identiques au plan compilé auquel s’ajoute son contexte d’exécution. Cela inclut les informations d’exécution pendant la progression de l’exécution, lesquelles sont mises à jour chaque seconde. Les informations d’exécution incluent, par exemple, le nombre réel de lignes qui transitent par les opérateurs.       
 
 Quand une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est exécutée dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le [!INCLUDE[ssde_md](../includes/ssde_md.md)] parcourt d’abord le cache du plan afin de vérifier qu’il existe un plan d’exécution pour la même instruction [!INCLUDE[tsql](../includes/tsql-md.md)]. L’instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est considérée comme existante si elle correspond littéralement à une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] exécutée précédemment avec un plan mis en cache, caractère par caractère. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réutilise le plan existant qu’il trouve, évitant ainsi la recompilation de l’instruction [!INCLUDE[tsql](../includes/tsql-md.md)]. S’il n’existe aucun plan d’exécution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en génère un nouveau pour la requête.
 

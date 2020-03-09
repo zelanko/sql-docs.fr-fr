@@ -1,19 +1,19 @@
 ---
 title: Bibliothèques de connexions pour les bases de données SQL Microsoft | Microsoft Docs
 description: Fournit des liens de téléchargement de modules qui permettent de se connecter à Microsoft SQL Server et Azure SQL Database à partir d’un large éventail de langages de programmation côté client.
-author: MightyPen
+author: RothJa
 ms.prod: sql
 ms.technology: ''
 ms.custom: ''
 ms.topic: article
-ms.date: 06/18/2018
-ms.author: genemi
-ms.openlocfilehash: 71254b937c4c0173af9e1549efb98a0b42f65e02
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.date: 03/05/2020
+ms.author: JRoth
+ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338610"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866403"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données SQL Microsoft
 
@@ -23,7 +23,7 @@ Cet article fournit des liens de téléchargement de modules de connexion ou de 
 - MacOS
 - Windows
 
-#### <a name="oop-to-relational-mismatch"></a>Incompatibilité POO-relationnel
+**Incompatibilité POO-relationnel :**
 
 *Relationnel* : les programmes clients écrits dans un langage de programmation orientée objet (POO) utilisent souvent des pilotes SQL qui retournent les données interrogées dans un format plus relationnel qu’orienté objet. C# avec ADO.NET en est un exemple. L’incompatibilité de format POO-relationnel rend parfois le code POO plus difficile à écrire et à comprendre.
 
@@ -34,7 +34,6 @@ Le présent article consacre des sections distinctes à ces deux types de pilote
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>Pilotes pour l’accès relationnel
-
 
 <!--
 Each given Microsoft Download Center page should be enhanced
@@ -49,22 +48,20 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 
 | Langage | Téléchargement du pilote SQL |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core, pour Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, pour MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core, pour Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core pour : Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Pilote Node.js, instructions d’installation](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, instructions d’installation](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Télécharger ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Pilote Ruby, instructions d’installation](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby, page d’installation](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br /> |
+| &nbsp; | <br/> |
 
 <a name="anchor-40-drivers-orm-access" />
 
 ## <a name="drivers-for-orm-access"></a>Pilotes pour l’accès ORM
 
-
 Le tableau suivant présente des exemples de frameworks de mapping objet-relationnel (ORM) utilisés par les applications clientes pour se connecter aux bases de données SQL Microsoft.
-
 
 | Langage | Téléchargement du pilote ORM |
 | :------- | :------------------ |
@@ -74,12 +71,12 @@ Le tableau suivant présente des exemples de frameworks de mapping objet-relatio
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on rails](https://rubyonrails.org/) |
-
+| &nbsp; | <br/> |
 
 <a name="anchor-60-build-an-app-webpages" />
 
-## <a name="build-an-app-webpages"></a>Pages Build-an-app
-[https://aka.ms/sqldev](https://aka.ms/sqldev) vous permet d’accéder à un ensemble de pages *Build-an-app*, qui donnent des informations sur les nombreuses combinaisons possibles de langage de programmation, système d’exploitation et pilote de connexion SQL :
+## <a name="build-an-app-webpages"></a>Pages web Créer une application
+**[https://aka.ms/sqldev](https://aka.ms/sqldev)** vous permet d’accéder à un ensemble de pages *Build-an-app*, qui donnent des informations sur les nombreuses combinaisons possibles de langage de programmation, système d’exploitation et pilote de connexion SQL :
 
 - Premiers pas, pour chaque combinaison de langue, système d’exploitation et pilote.
     - Instructions d’installation des derniers pilotes de connexion SQL.
@@ -88,18 +85,23 @@ Le tableau suivant présente des exemples de frameworks de mapping objet-relatio
     - Exemples de code ORM.
     - Démonstrations d’index columnstore pour des performances beaucoup plus rapides.
 
-#### <a name="first-page-of-build-an-app-webpages"></a>Pages Build-an-app – Première page
-![Pages Build-an-app, capture d’écran de la première page][image-ref-163-buildanapp-webpages-first-page]
+**Pages Build-an-app – Première page :**  
+![Pages Build-an-app, capture d’écran de la première page](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
 
-#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Pages Build-an-app – Menu pour Java-Ubuntu
-![Pages Build-an-app, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+**Pages Build-an-app – Menu pour Java-Ubuntu**  
+![Pages Build-an-app, menu Java Ubuntu](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png)
 
 &nbsp;
 
 ## <a name="related-links"></a>Liens connexes
 - [Exemples de code de connexion à Azure SQL Database dans le cloud, avec Java et d’autres langages](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
-<!-- Image references -->
+<!--
+Image references, **obsolete** markdown syntax alternative:
+
+![Build-an-app webpages, first page screenshot][image-ref-163-buildanapp-webpages-first-page]
+![Build-an-app webpages, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
 
 [image-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
+-->

@@ -186,7 +186,7 @@ Microsoft SQL Server Profiler et l’Assistant Paramétrage utilisent cette boî
 |---|---
 |**SQL Server**|Spécifie l’instance de SQL Server actuellement connectée. Ce champ est rempli automatiquement et ne peut pas être mis à jour.  
 |**Sauvegarde de la base de données**|Spécifie la base de données dans laquelle se trouve la table de trace.  
-|**Propriétaire**|Specifies the owner of the trace table. Ce champ est rempli automatiquement comme **dbo**.  
+|**Propriétaire**|Spécifie le propriétaire de la table de trace. Ce champ est rempli automatiquement comme **dbo**.  
 |**Table**|Spécifie le nom de la table de trace à partir de laquelle la trace doit être lue.  
 
 ## <a name="destination-table"></a>Table de destination
@@ -196,7 +196,7 @@ La boîte de dialogue **Table de destination** vous permet de spécifier la tabl
 |---|---
 |**SQL Server**|Spécifie l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actuellement connectée. Ce champ est rempli automatiquement et ne peut pas être mis à jour. Pour modifier le serveur, cliquez sur **Annuler** et connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous voulez stocker la table de trace.  
 |**Sauvegarde de la base de données**|Spécifiez la base de données dans laquelle vous voulez stocker la table de trace.  
-|**Propriétaire**|Specifies the owner of the trace table. Ce champ est rempli automatiquement comme **dbo**.  
+|**Propriétaire**|Spécifie le propriétaire de la table de trace. Ce champ est rempli automatiquement comme **dbo**.  
 |**Table**|Spécifiez le nom de la table dans laquelle vous voulez stocker la trace.  
 
 ## <a name="replay-configuration"></a>Configuration de la relecture
