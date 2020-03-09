@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel T-SQL : Créer et interroger des objets de base de données | Microsoft Docs'
+title: 'Tutoriel T-SQL : créer et interroger des objets de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257026"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280948"
 ---
-# <a name="lesson-1-create-and-query-database-objects"></a>Leçon 1 : Créer et interroger des objets de base de données
+# <a name="lesson-1-create-and-query-database-objects"></a>Leçon 1 : créer et interroger des objets de base de données
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Cette leçon vous montre comment créer une base de données, une table dans la base de données, puis accéder aux données et les modifier dans la table. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] les instructions peuvent être écrites et soumises au [!INCLUDE[ssDE](../includes/ssde-md.md)] comme suit :  
   
--   À l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Ce didacticiel suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mais vous pouvez aussi utiliser [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible gratuitement en téléchargement à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=7593).  
+-   À l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Ce didacticiel suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mais vous pouvez aussi utiliser [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible gratuitement en téléchargement à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   À l’aide de [l’utilitaire sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -34,14 +34,14 @@ Le code s’exécute sur le [!INCLUDE[ssDE](../includes/ssde-md.md)] de la même
   
 Pour exécuter des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], ouvrez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] et connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d’un accès à une instance SQL Server. 
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plateforme parmi les liens suivants. Si vous choisissez l’authentification SQL, utilisez vos informations d’identification de connexion SQL Server.
-- **Windows** : [Téléchargez SQL Server 2017 Édition Développeur](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS** : [Téléchargez SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **Windows** : [Télécharger SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS** : [Télécharger SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Création d'une base de données
 Comme de nombreuses instructions [!INCLUDE[tsql](../includes/tsql-md.md)], l'instruction CREATE DATABASE nécessite un paramètre obligatoire : le nom de la base de données. L'instruction CREATE DATABASE possède aussi de nombreux paramètres facultatifs, tels que l'emplacement du disque où vous souhaitez copier les fichiers de base de données. Lorsque vous exécutez l'instruction CREATE DATABASE sans les paramètres facultatifs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise les valeurs par défaut pour un grand nombre de ces paramètres. Ce didacticiel utilise très peu de paramètres de syntaxe facultatifs.   
@@ -105,7 +105,7 @@ Une fois que vous avez créé la table **Products** , vous pouvez insérer des d
 |75|Tire Bar||Outil pour changer des pneus.|  
 |3000|3mm Bracket|52||  
   
-La syntaxe de base est la suivante : INSERT, nom de table, liste de colonnes, VALUES, puis la liste des valeurs à insérer. Les deux tirets en début de ligne indiquent que celle-ci est un commentaire et que le texte sera ignoré par le compilateur. Dans ce cas, le commentaire décrit une variation autorisée de la syntaxe.  
+La syntaxe de base est la suivante : INSERT, nom de table, liste de colonne, VALUES, puis la liste des valeurs à insérer. Les deux tirets en début de ligne indiquent que celle-ci est un commentaire et que le texte sera ignoré par le compilateur. Dans ce cas, le commentaire décrit une variation autorisée de la syntaxe.  
   
 ### <a name="insert-data-into-a-table"></a>Insérer des données dans une table  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 03e19dd52f7ea996690eaf55bad9cdf9d5eccb6b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180089"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256932"
 ---
 # <a name="live-query-statistics"></a>Statistiques des requêtes dynamiques
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,8 @@ Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nécessite l’au
 Sur les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium, nécessite l’autorisation `VIEW DATABASE STATE` dans la base de données pour voir les statistiques dynamiques. Sur les niveaux Standard et De base de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], nécessite l’**administrateur du serveur** ou un compte **administrateur Azure Active Directory** pour voir les statistiques dynamiques.
   
 ## <a name="see-also"></a>Voir aussi  
+ [Plans d’exécution](../../relational-databases/performance/execution-plans.md)    
+ [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)    
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Ouvrir le Moniteur d’activité &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

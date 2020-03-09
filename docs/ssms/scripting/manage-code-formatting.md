@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741fce0949ce1a07f0f164c7f131579c220d4cfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253807"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261858"
 ---
 # <a name="manage-code-formatting"></a>Gérer la mise en forme du code
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "75253807"
 3.  Pour convertir du texte en minuscules, appuyez sur Ctrl+Maj+L ou cliquez sur **Mettre en minuscules** dans le sous-menu **Avancée** du menu **Edition** .  
   
 > [!NOTE]  
->  Pour obtenir la liste complète des touches de raccourci clavier, consultez [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  Pour obtenir la liste complète des touches de raccourci clavier, consultez [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="displaying-and-linking-to-urls"></a>Affichage et liaison à des URL  
  Vous pouvez créer et gérer des URL interactives dans votre code. Par défaut, les URL :  
