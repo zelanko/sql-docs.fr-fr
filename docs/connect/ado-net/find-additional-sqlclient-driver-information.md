@@ -13,16 +13,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 08ff52be06f976171623b4af91da3ebc1d26d53b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39723f61eaa5bf2fc18e950bbd3432837ee8620a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251032"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897107"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Recherche d’informations supplémentaires sur le pilote SqlClient
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Télécharger ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 Pour plus d’informations sur le Fournisseur de données Microsoft SqlClient et le développement de SQL Server en général, consultez les ressources en ligne suivantes :
 

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ccd2ce331f6e88933ff546c18446b5edbc956511
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f59b2d14ab34cee3e703eda9fb9db6750da96a2
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67935676"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866637"
 ---
 # <a name="python-sql-driver"></a>Pilote SQL Python
 
-![Télécharger-FlècheBas-Entourée](../../ssdt/media/download.png)[Installer le pilote SQL pour Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Télécharger-FlècheBas-Entourée](../../ssms/media/download-icon.png)[Installer le pilote SQL pour Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Vous pouvez vous connecter à une base de données SQL avec Python sur Windows, Linux ou Mac.   
   

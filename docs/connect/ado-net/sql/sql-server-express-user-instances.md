@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246967"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896241"
 ---
 # <a name="sql-server-express-user-instances"></a>Instances d’utilisateur SQL Server Express
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Télécharger ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition (SQL Server Express) prend en charge la fonctionnalité d'instance utilisateur, disponible uniquement avec le fournisseur de données Microsoft SqlClient Framework pour SQL Server. Une instance utilisateur est une instance distincte du moteur de base de données SQL Server Express générée par une instance parente. Les instances utilisateur permettent aux utilisateurs qui ne sont pas des administrateurs sur leurs ordinateurs locaux de joindre et de se connecter à des bases de données SQL Server Express. Chaque instance s’exécute dans le contexte de sécurité de l’utilisateur individuel, sur la base d’une instance par utilisateur.  
   

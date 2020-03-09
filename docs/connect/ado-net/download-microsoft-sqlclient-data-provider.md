@@ -13,16 +13,14 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5a590b6ad105837408db8454493a7a9d4e28862f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca06e65c1794416cbc6a33fee1b7508a44c289a9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251044"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897141"
 ---
 # <a name="download-microsoft-sqlclient-data-provider-for-sql-server"></a>Télécharger le fournisseur de données Microsoft SqlClient pour SQL Server
-
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Télécharger ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="downloading-the-driver"></a>Téléchargement du pilote
 Le package Microsoft.Data.SqlClient est disponible sur NuGet.org. Reportez-vous à la section Dépendances des liens ci-dessous pour télécharger les dépendances.

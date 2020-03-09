@@ -182,7 +182,7 @@ L’intégration AD nécessite les paramètres suivants. Ajoutez ces paramètre
 
 - `security.activeDirectory.appReaders`**Paramètre facultatif** : répertorie des groupes AD qui sont autorisés à exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
 
-**Comment vérifier l’étendue d’un groupe AD : **
+**Comment vérifier l’étendue d’un groupe AD :** 
 [Cliquez ici pour obtenir des instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) pour vérifier l’étendue d’un groupe AD, afin de déterminer s’il s’agit du DomainLocal.
 
 Si vous n’avez pas encore initialisé le fichier de configuration de déploiement, vous pouvez exécuter cette commande pour obtenir une copie de la configuration.

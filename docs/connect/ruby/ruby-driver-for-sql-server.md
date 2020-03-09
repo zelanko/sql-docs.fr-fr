@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e1dca1a7240f5e0612713ba7f87a47f938e7e9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d35336d1414df78e5d24c3133a176d3d232deadb
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67935656"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866542"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Pilote Ruby pour SQL Server
 
-![Télécharger-FlècheBas-Entourée](../../ssdt/media/download.png)[Télécharger le pilote Ruby pour SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Télécharger-FlècheBas-Entourée](../../ssms/media/download-icon.png)[Télécharger le pilote Ruby pour SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Vous pouvez vous connecter à une base de données SQL avec Ruby sur Windows, Linux ou Mac.   
   

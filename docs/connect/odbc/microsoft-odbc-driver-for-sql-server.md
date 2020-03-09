@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 442a6ad69681a257355d5743d10cb4f933008b8a
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.openlocfilehash: a0c194903b0f9b5f5e1c06baabc17d607c68cd61
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971334"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866351"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Pilote Microsoft ODBC pour SQL Server
 
@@ -35,7 +35,7 @@ L’exemple C++ suivant montre comment utiliser les API ODBC pour se connecter e
 
 ## <a name="download"></a>Téléchargement
 
-- ![Télécharger-FlècheBas dans un cercle](../../ssdt/media/download.png)[Pour télécharger le pilote ODBC](download-odbc-driver-for-sql-server.md)
+- ![Télécharger-FlècheBas dans un cercle](../../ssms/media/download-icon.png)[Pour télécharger le pilote ODBC](download-odbc-driver-for-sql-server.md)
 
 ## <a name="documentation"></a>Documentation
 

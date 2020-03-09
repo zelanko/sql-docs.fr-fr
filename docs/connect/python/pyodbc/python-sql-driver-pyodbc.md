@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ca5946eb5c6450d55168f64dddbd0ca82d986be9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e0deaed158a77126033b27c7a407cb25c6e9c6e
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67935746"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866627"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Pilote Python SQL (pyodbc)
 
-![Télécharger-FlècheBas-Entourée](../../../ssdt/media/download.png)[Installer le pilote SQL pour Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Télécharger-FlècheBas-Entourée](../../../ssms/media/download-icon.png)[Installer le pilote SQL pour Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="getting-started"></a>Mise en route
 

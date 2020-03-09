@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f7e0c8a7e6685f902fd383e8ae6421d43a529ae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 39e83bab2e5a159d97b3b5bdd0ef5feaa69f43c5
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251011"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897105"
 ---
 # <a name="getting-started-with-the-sqlclient-driver"></a>Bien démarrer avec le pilote SqlClient
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Télécharger ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 * [Étape 1 : Configurer l’environnement de développement pour le développement ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
 * [Étape 2 : Créer une base de données SQL pour le développement ADO.NET](step-2-create-sql-database-ado-net-development.md)  
