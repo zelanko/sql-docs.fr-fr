@@ -59,7 +59,7 @@ Vous pouvez également modifier le fichier `mssql.conf`, situé dans le dossier 
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Redémarrez [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-ssnoversion-md"></a>Redémarrez [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Après avoir activé les groupes de disponibilité, comme sur Windows, vous devez redémarrer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Cela peut être effectué de la façon suivante :
 
 ```bash
@@ -316,7 +316,7 @@ Cet exemple crée des certificats pour une configuration à trois nœuds. Les no
 
 Cette section explique comment utiliser [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) ou Transact-SQL pour créer le groupe de disponibilité pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Utilisez [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
+### <a name="use-ssmanstudiofull-md"></a>Utilisez [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
 
 Cette section montre comment créer un groupe de disponibilité avec un type de cluster externe à l’aide de SSMS avec l’Assistant Nouveau groupe de disponibilité.
 
@@ -533,7 +533,7 @@ Cet exemple illustre la création d’une configuration à deux réplicas à l�
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Créer la connexion [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] et les autorisations pour Pacemaker
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Créer la connexion [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] et les autorisations pour Pacemaker
 
 Un cluster de haute disponibilité Pacemaker sous-jacent à [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux doit avoir accès à l’instance [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ainsi qu’aux autorisations du groupe de disponibilité proprement dit. Ces étapes permettent de créer la connexion et les autorisations associées, ainsi qu’un fichier qui indique à Pacemaker comment se connecter à [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 

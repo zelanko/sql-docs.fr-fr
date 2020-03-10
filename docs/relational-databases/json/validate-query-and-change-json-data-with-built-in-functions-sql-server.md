@@ -14,11 +14,11 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74096064"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340243"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Valider, interroger et modifier les données JSON avec des fonctions intégrées (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 Les résultats de cette requête sont présentés dans le tableau suivant :
 
-| Name | City | County |
+| Nom | City | County |
 | --- | --- | --- |
 | AndersenFamily | NY | Manhattan |
 
@@ -143,7 +143,7 @@ FROM Families f
 
 Les résultats de cette requête sont présentés dans le tableau suivant :
 
-| Name | City | givenName | grade |
+| Nom | City | givenName | grade |
 | --- | --- | --- | --- |
 | AndersenFamily | NY | Jesse | 1 |
 | AndersenFamily | NY | Lisa | 8 |

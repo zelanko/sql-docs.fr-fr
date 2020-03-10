@@ -14,11 +14,11 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307633"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340354"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données
 
@@ -26,7 +26,7 @@ ms.locfileid: "75307633"
 
 L'Assistant Paramétrage du moteur de base de données permet de paramétrer les bases de données, de gérer les sessions de paramétrage et d'afficher les recommandations de paramétrage. Les utilisateurs possédant des connaissances avancées sur les structures de création physiques peuvent utiliser cet outil pour réaliser des analyses exploratoires de paramétrage des bases de données. Les utilisateurs novices dans le paramétrage des bases de données peuvent également l'utiliser pour rechercher les configurations les plus adaptées aux structures de création physiques des charges de travail qu'ils doivent paramétrer. Cette leçon propose des exercices pratiques de base aux administrateurs de base de données qui sont novices dans l'utilisation de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données et aux administrateurs système qui n'ont pas de connaissances étendues sur les structures de création physiques.  
 
-## <a name="prerequisites"></a>Conditions préalables requises 
+## <a name="prerequisites"></a>Prérequis 
 
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur qui exécute SQL Server et d’une base de données AdventureWorks.
 

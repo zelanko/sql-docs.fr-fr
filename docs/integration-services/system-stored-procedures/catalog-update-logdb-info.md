@@ -34,10 +34,10 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 
 ## <a name="arguments"></a>Arguments
 [ @server_name = ] *server_name*  
- Serveur SQL Server utilisé pour la journalisation Scale Out. *server_name* est de type **nvarchar**.  
+ Serveur SQL Server utilisé pour la journalisation Scale-out. *server_name* est de type **nvarchar**.  
 
  [ @connection_string = ] *connection_string*  
- Chaîne de connexion utilisée pour la journalisation Scale Out. *connection_string* est de type **nvarchar**.
+ Chaîne de connexion utilisée pour la journalisation Scale-out. *connection_string* est de type **nvarchar**.
 
  ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  

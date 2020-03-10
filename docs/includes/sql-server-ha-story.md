@@ -54,7 +54,7 @@ Dans SQL Server 2017, les groupes de disponibilité bénéficient de nouvelles 
 * Types de cluster
 * REQUIRED_SECONDARIES_TO_COMMIT
 * Amélioration de la prise en charge de Microsoft Distributor Transaction Coordinator (DTC) pour les configurations basées sur Windows Server
-* Ajout de scénarios de mise à plus haute échelle pour les bases de donnée en lecture seule (décrits plus loin dans cet article)
+* Ajout de scénarios de scale-out pour les bases de donnée en lecture seule (décrits plus loin dans cet article)
 
 ##### <a name="always-on-availability-group-cluster-types"></a>Types de cluster des groupes de disponibilité Always On
 
@@ -245,7 +245,7 @@ Notez que dans tous les scénarios de mise à échelle lecture avec les groupes 
 
 ## <a name="summary"></a>Résumé
 
-Les instances et les bases de données de SQL Server 2017 peuvent devenir hautement disponibles avec les mêmes fonctionnalités sur Windows Server et Linux. En plus des scénarios de disponibilité standard de haute disponibilité et de récupération d’urgence locales, le temps d’arrêt associé aux mises à niveau et aux migrations peut être réduit grâce aux fonctionnalités de disponibilité de SQL Server. Les groupes de disponibilité peuvent également fournir des copies supplémentaires d’une base de données dans le cadre de la même architecture pour mettre à plus haute échelle les copies accessibles en lecture. Qu’il s’agisse de déployer une nouvelle solution à l’aide de SQL Server 2017 ou d’effectuer une mise à niveau, SQL Server 2017 offre la disponibilité et la fiabilité dont vous avez besoin.
+Les instances et les bases de données de SQL Server 2017 peuvent devenir hautement disponibles avec les mêmes fonctionnalités sur Windows Server et Linux. En plus des scénarios de disponibilité standard de haute disponibilité et de récupération d’urgence locales, le temps d’arrêt associé aux mises à niveau et aux migrations peut être réduit grâce aux fonctionnalités de disponibilité de SQL Server. Les groupes de disponibilité peuvent également fournir des copies supplémentaires d’une base de données dans le cadre de la même architecture pour effectuer un scale-out des copies accessibles en lecture. Qu’il s’agisse de déployer une nouvelle solution à l’aide de SQL Server 2017 ou d’effectuer une mise à niveau, SQL Server 2017 offre la disponibilité et la fiabilité dont vous avez besoin.
  
 [SimpleAG]:media\sql-server-ha-story\image1.png
 [SSMSAGOptions]:media\sql-server-ha-story\image2.png

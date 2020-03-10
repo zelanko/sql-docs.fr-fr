@@ -64,7 +64,7 @@ ID d’agent de Worker d’un Scale Out Worker. *workeragent_id* est de type **u
 
 - L’ID d’agent de Worker n’est pas valide.
 
-- L’exécution n’a pas lieu dans Scale Out.
+- L’exécution n’a pas lieu dans Scale-out.
 
 ## <a name="see-also"></a>Voir aussi
 [Exécuter des packages dans Scale Out](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).

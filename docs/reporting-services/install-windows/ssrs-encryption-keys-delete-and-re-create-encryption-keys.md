@@ -114,7 +114,7 @@ ms.locfileid: "74866302"
   
 4.  Pour les abonnements utilisant des données chiffrées (ce qui comprend l'extension de remise dans le partage de fichiers et toute extension de remise créées par d'autres développeurs qui utilisent le chiffrement), ouvrez chaque abonnement et retapez les informations d'identification. Les abonnements utilisant la remise par messagerie électronique du serveur de rapports n'ont pas recours aux données chiffrées, ils ne sont donc pas concernés par les modifications apportées à la clé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   

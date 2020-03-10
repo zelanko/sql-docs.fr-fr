@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73532481"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339867"
 ---
-# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Sauvegarder et restaurer des bases de données avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-name-sos"></a>Sauvegarder et restaurer des bases de données avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Dans ce didacticiel, vous apprendrez à utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour :
 > [!div class="checklist"]
@@ -27,7 +27,7 @@ Dans ce didacticiel, vous apprendrez à utiliser [!INCLUDE[name-sos](../includes
 > * Restaurer une base de données
 > * Afficher l’état de la tâche de restauration
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server. Pour créer la base de données *TutorialDB*, suivez un des démarrages rapides suivants :
 

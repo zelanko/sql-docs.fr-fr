@@ -15,11 +15,11 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75493587"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338733"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Pour plus d’informations sur l’architecture du journal des transactions et l
 ### <a name="individual-transaction-recovery"></a>Récupération des transactions individuelles
 Si une application envoie une instruction `ROLLBACK`, ou si le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte une erreur telle que la perte de la communication avec un client, les enregistrements du journal permettent de restaurer les modifications effectuées par une transaction incomplète. 
 
-### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Récupération de toutes les transactions incomplètes au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="recovery-of-all-incomplete-transactions-when-ssnoversion-is-started"></a>Récupération de toutes les transactions incomplètes au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 En cas de défaillance d’un serveur, il peut arriver que certaines modifications effectuées dans les bases de données n’aient jamais pu être écrites de la mémoire tampon vers les fichiers de données ou proviennent de transactions incomplètes dans les fichiers de données. Lorsqu'elle démarre, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une récupération de chaque base de données. Chaque modification enregistrée dans le journal qui risque de ne pas avoir été répercutée dans les fichiers de données est récupérée. Chaque transaction incomplète trouvée dans le journal des transactions est ensuite restaurée afin de préserver l'intégrité de la base de données. Pour plus d’informations, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Restauration par progression d’une base de données, d’un fichier, d’un groupe de fichiers ou d’une page jusqu’au point de défaillance
@@ -133,7 +133,7 @@ La*journalisation minimale* implique de ne journaliser que les informations obli
   
  Les opérations suivantes, qui sont entièrement journalisées en mode de récupération complète, font l'objet d'une journalisation minimale en modes simple et de récupération utilisant les journaux de transactions :  
   
--   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quand la réplication transactionnelle est activée, les opérations `BULK INSERT` sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  
   

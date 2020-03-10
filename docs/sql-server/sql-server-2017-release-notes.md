@@ -43,7 +43,7 @@ Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour 
     3. Recochez **Activer FILESTREAM pour l’accès aux E/S de fichier** avec le nom du partage d’origine, puis cliquez sur **Appliquer**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problème et impact sur le client :**  dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante : `"The model permission cannot be saved. The object guid is not valid"`
+- **Problème et impact sur le client :**   dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante : `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Solution de contournement :** 
   - Accordez l’autorisation sur les sous-nœuds de l’arborescence au lieu de le faire au niveau racine.
