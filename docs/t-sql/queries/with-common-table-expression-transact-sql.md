@@ -28,18 +28,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564810"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338414"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Spécifie un jeu de résultats nommé temporaire, désigné par le terme d'expression de table commune (CTE, Common Table Expression). Cette clause est dérivée d’une requête simple et définie au sein de l’étendue d’exécution d’une seule instruction SELECT, INSERT, UPDATE, DELETE ou MERGE. Cette clause peut également être utilisée dans une instruction CREATE VIEW comme faisant partie de l'instruction SELECT qui la définit. Une expression de table commune peut inclure des références à elle-même. Dans ce cas, elle est désignée en tant qu'expression de table commune récursive.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ Identificateur valide pour l’expression de table commune. *expression_name* do
  *CTE_query_definition*  
  Spécifie une instruction SELECT dont le jeu de résultats remplit l'expression de table commune. L’instruction SELECT de *CTE_query_definition* doit remplir les mêmes conditions que celles requises pour la création d’une vue, mis à part qu’une expression de table commune ne peut pas en définir une autre. Pour plus d’informations, consultez la section Notes et [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Si plusieurs arguments *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un de ces opérateurs : UNION ALL, UNION, EXCEPT ou INTERSECT.  
+ Si plusieurs *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un des opérateurs de jeu ci-après : UNION ALL, UNION, EXCEPT ou INTERSECT.  
   
 ## <a name="remarks"></a>Notes  
   
@@ -100,7 +100,7 @@ Les principes suivants s'appliquent à des expressions de table communes non ré
   
 -   La définition de l'expression de table commune récursive doit contenir au moins deux définitions de requête d'expression de table commune, un membre d'ancrage et un membre récursif. Plusieurs membres d'ancrage et membres récursifs peuvent être définis ; toutefois, toutes les définitions de requêtes de membres d'ancrage doivent être placées avant la première définition de membre récursif. Toutes les définitions de requête d'expression de table commune sont des membres d'ancrage à moins qu'ils ne fassent référence à l'expression de table commune elle-même.  
   
--   Les membres d'ancrage doivent être associés par l'un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT ou EXCEPT. UNION ALL est le seul opérateur défini autorisé entre le dernier membre d'ancrage et le premier membre récursif, ainsi que lors de la combinaison de plusieurs membres récursifs.  
+-   Les membres d’ancrage doivent être associés par l’un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT ou EXCEPT. UNION ALL est le seul opérateur défini autorisé entre le dernier membre d'ancrage et le premier membre récursif, ainsi que lors de la combinaison de plusieurs membres récursifs.  
   
 -   Le nombre de colonnes des membres d'ancrage et récursifs doivent être identiques.  
   
@@ -142,7 +142,7 @@ Les principes suivants s'appliquent à des expressions de table communes non ré
   
 -   Les fonctions analytiques et d'agrégation dans la partie récursive de l'expression CTE sont appliquées à l'ensemble du niveau de récursivité actuel et non à l'ensemble de l'expression CTE. Les fonctions telles que `ROW_NUMBER` s’appliquent uniquement au sous-ensemble de données qui leur est transmis par le niveau de récursivité actuel, et non à l’ensemble entier de données transmis à la partie récursive de l’expression CTE. Pour plus d’informations, consultez « K. Utilisation de fonctions analytiques dans une expression de table commune récursive », plus loin dans cet article.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Fonctionnalités et limitations des expressions de table commune dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>Fonctionnalités et limitations des expressions de table commune dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’implémentation actuelle des expressions de table communes dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] présente les fonctionnalités et limitations suivantes :  
   
 -   Une expression de table commune peut être spécifiée dans une instruction `SELECT`.  
@@ -568,7 +568,7 @@ Lvl  N
   
  `N` retourne la valeur 1 à chaque passage de la partie récursive de l'expression CTE, car seul le sous-ensemble de données de ce niveau de récursivité est transmis à `ROWNUMBER`. Pour chacune des itérations de la partie récursive de la requête, une seule ligne est passée à `ROWNUMBER`.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. Utilisation d’une expression de table commune dans une instruction CTAS  
  L’exemple suivant crée une table qui contient le nombre total de commandes client réalisées par chaque représentant commercial chez [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
