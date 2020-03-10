@@ -10,11 +10,11 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73723798"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339877"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutoriel : Développement SQL pour les scientifiques des données R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Cet exemple peut être étendu à tous les types de problèmes réels, tels que 
 
 La procédure pas à pas étant conçue pour présenter [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] aux développeurs R, les tâches sont effectuées à l’aide de R, dans la mesure du possible. Toutefois, cela ne signifie pas que R est le meilleur outil pour toutes les tâches. Dans de nombreux cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut offrir de meilleures performances, en particulier pour des tâches telles que l’agrégation de données et l’ingénierie de caractéristiques.  Ces tâches peuvent notamment profiter de nouvelles fonctionnalités dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], telles que les index columnstore optimisés en mémoire. Nous essayons d’indiquer les optimisations possibles au cours de la procédure.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 + [SQL Server Machine Learning Services avec l’intégration R ](../install/sql-machine-learning-services-windows-install.md#verify-installation) ou [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 

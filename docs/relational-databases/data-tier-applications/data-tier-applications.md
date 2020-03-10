@@ -15,11 +15,11 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72278286"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340411"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "72278286"
   
 -   **IMPORT** : l’utilisateur peut importer le schéma et les données dans une nouvelle base de données du serveur hôte.  
   
- Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : SQL Server Management Studio, le portail Azure et l’API DACFx.  
+ Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : SQL Server Management Studio, le portail Azure et l’API DACFx.  
   
 ## <a name="permissions"></a>Autorisations  
  Vous devez être membre du rôle **dbmanager** ou disposer d'autorisations **CREATE DATABASE** pour pouvoir créer une base de données, notamment en déployant un package DAC. Vous devez être membre du rôle **dbmanager** ou disposer d'autorisations **DROP DATABASE** pour pouvoir supprimer une base de données.  

@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e60f8ce6bc8e7ef05a2de942d8bbc2885095d493
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4ed8ccbadb27008fb15d9d117d55b5a4d332a8f6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251125"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896626"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>Données binaires et à valeurs élevées SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Télécharger ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-SQL Server fournit le spécificateur `max`, qui étend la capacité de stockage des types de données `varchar`, `nvarchar` et `varbinary`. `varchar(max)`, `nvarchar(max)` et `varbinary(max)` sont désignés par le terme générique de types de données de valeur élevée. Les types de données de valeur élevée permettent de stocker jusqu’à 2^31-1 octets de données.  
+SQL Server fournit le spécificateur `max`, qui étend la capacité de stockage des types de données `varchar`, `nvarchar` et `varbinary`. `varchar(max)`, `nvarchar(max)` et `varbinary(max)` sont désignés par le terme générique de *types de données de valeur élevée*. Les types de données de valeur élevée permettent de stocker jusqu’à 2^31-1 octets de données.  
   
 SQL Server 2008 introduit l’attribut FILESTREAM, qui n’est pas un type de données, mais plutôt un attribut qui peut être défini sur une colonne, et permet de stocker des données de grande valeur sur le système de fichiers plutôt que dans la base de données.  
   
