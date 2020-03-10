@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776558"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340491"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2019 sur Linux
 
@@ -49,7 +49,7 @@ Pour obtenir la liste des fonctionnalités de SQL Server qui ne sont pas disponi
     
 [Télécharger SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Éditions de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
+## <a name="ssnoversion-editions"></a>Éditions de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  Le tableau ci-dessous décrit les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
 |Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Définition|  
@@ -60,11 +60,11 @@ Pour obtenir la liste des fonctionnalités de SQL Server qui ne sont pas disponi
 |Développeur|L'édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permet aux développeurs de créer des applications basées sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il inclut toutes les fonctionnalités de l'édition Enterprise, mais sa licence permet uniquement de l'utiliser comme un système de développement et de test, et non comme un serveur de production. L'édition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer est la solution idéale pour le développement et le test d'applications.|  
 |Express Edition|L’édition Express est une édition de base comprenant une base de données gratuite, idéale pour découvrir et créer des applications bureautiques et de petites applications serveur pilotées par les données. C'est la solution idéale pour les éditeurs de logiciels, les développeurs et les amateurs de création d'applications clientes. Si vous avez besoin de fonctionnalités de base de données plus évoluées, vous pouvez mettre à niveau de manière transparente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express vers des versions plus sophistiquées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec des applications client/serveur  
+## <a name="using-ssnoversion-with-clientserver-applications"></a>Utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec des applications client/serveur  
 
 Vous pouvez installer uniquement les composants clients de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur exécutant des applications client/serveur qui se connectent directement à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Une installation de composants clients est également un bon choix si vous administrez une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un serveur de base de données ou si vous prévoyez de développer des applications [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>Composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="ssnoversion-components"></a>Composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
 
 SQL Server 2019 sur Linux prend en charge le moteur de base de données SQL Server. Le tableau ci-dessous décrit les fonctionnalités du moteur de base de données.   
   
@@ -195,7 +195,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 |Graph|Oui|Oui|Oui|Oui|  
 
 
-<sup>1</sup> La montée en puissance parallèle avec plusieurs nœuds de calcul nécessite un nœud principal.
+<sup>1</sup> Le scale-out avec plusieurs nœuds de calcul nécessite un nœud principal.
 
 ## <a name="IS"></a> Integration Services
 

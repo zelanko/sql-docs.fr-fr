@@ -10,11 +10,11 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911185"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338842"
 ---
 # <a name="programming-guidelines"></a>Instructions de programmation
 
@@ -79,7 +79,7 @@ Pour ODBC Driver 17, les données SQLCHAR dans un des jeux de caractères/encod
 >
 > Pour plus d’informations, consultez [Différences fonctionnelles par rapport à glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
 
-|Name|Description|
+|Nom|Description|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS Latin US|

@@ -28,11 +28,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72916021"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339157"
 ---
 # <a name="database-checkpoints-sql-server"></a>Points de contrôle de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Pour des raisons de performances, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge plusieurs types de points de contrôle : automatique, indirect, manuel et interne. Le tableau suivant récapitule les types de **points de contrôle**.
   
-|Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] .|Description|  
+|Nom|[!INCLUDE[tsql](../../includes/tsql-md.md)] .|Description|  
 |----------|----------------------------------|-----------------|  
 |Automatique|EXEC sp_configure **'** recovery interval **','** _seconds_ **'**|Émis automatiquement en arrière-plan pour respecter la limite de durée supérieure suggérée par l'option de configuration de serveur **recovery interval** . Les points de contrôle automatiques s'exécutent jusqu'à la fin.  Les points de contrôle automatiques sont accélérés en fonction du nombre d’écritures en attente et si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détecte une augmentation de latence d’écriture supérieure à 50 millisecondes.<br /><br /> Pour plus d'informations, consultez [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indirect|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _temps\_récupération\_cible_ { SECONDES &#124; MINUTES }|Émis en arrière-plan pour obtenir un temps de récupération cible spécifié par l'utilisateur pour une base de données. À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], la valeur par défaut est de 1 minute. La valeur par défaut est 0 pour les anciennes versions, ce qui indique que la base de données utilisera les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur.<br /><br /> Pour plus d’informations, consultez [Modifier la durée de récupération cible d’une base de données &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  

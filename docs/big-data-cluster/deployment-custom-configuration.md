@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558314"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340481"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurer les paramètres de déploiement de services et ressources de cluster
 
@@ -169,7 +169,7 @@ Si vous souhaitez appliquer les mêmes configurations pour un service associé �
 
 Pour personnaliser les fichiers de configuration de vos déploiement de clusters, vous pouvez utiliser n’importe quel éditeur pour le format JSON, comme VSCode. Pour générer un script avec ces modifications à des fins d’automatisation, utilisez la commande `azdata bdc config`. Cet article explique comment configurer des déploiements de clusters Big Data en modifiant les fichiers de configuration du déploiement. Il fournit des exemples de modification de la configuration pour différents scénarios. Pour plus d’informations sur la façon dont les fichiers de configuration sont utilisés dans les déploiements, consultez le [guide de déploiement](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - [Installer azdata](deploy-install-azdata.md).
 

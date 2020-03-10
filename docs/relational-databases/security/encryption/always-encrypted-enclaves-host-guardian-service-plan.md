@@ -11,11 +11,11 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74317956"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339857"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planifier l’attestation du Service Guardian hôte
 
@@ -93,7 +93,7 @@ De même, l’attestation de clé d’hôte reste valable dans les situations o�
 Vous pouvez néanmoins toujours utiliser la plupart des fonctionnalités de sécurité mentionnées ci-dessus, notamment le démarrage sécurisé et un module TPM 1.2, pour mieux protéger VBS et le système d’exploitation comme un tout.
 Cependant, étant donné qu’il n’existe aucun moyen pour le Service Guardian hôte de vérifier que ces paramètres sont activés sur l’ordinateur avec l’attestation de clé hôte, le client n’est pas sûr que l’hôte utilise toutes les protections disponibles.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 ### <a name="hgs-server-prerequisites"></a>Prérequis pour le serveur SGH
 
@@ -112,7 +112,7 @@ Les exigences de stockage pour les données d’attestation sont peu importantes
 
 Ne joignez pas le ou les ordinateurs du Service Guardian hôte à un domaine avant de commencer.
 
-### <a name="include-ssnoversion-mdincludesssnoversion-mdmd-computer-prerequisites"></a>Prérequis pour l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
+### <a name="ssnoversion-md-computer-prerequisites"></a>Prérequis pour l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
 Le ou les ordinateurs exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doivent répondre à la [Configuration requise pour l’installation de SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) et à la [Configuration matérielle requise pour Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 

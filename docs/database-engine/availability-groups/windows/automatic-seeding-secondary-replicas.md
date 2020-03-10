@@ -13,11 +13,11 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75254102"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340514"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Utiliser l’amorçage automatique pour initialiser un réplica secondaire dans un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ Vous créez un groupe de disponibilité par amorçage automatique avec Transact-
 
 ![Sélectionner la synchronisation de données initiale][1]
 
-L’exemple suivant crée un groupe de disponibilité avec amorçage automatique à l’aide de Transact-SQL. Consultez aussi la rubrique [Créer un groupe de disponibilité (Transact-SQL)](create-an-availability-group-transact-sql.md). L’amorçage est activé sur un réplica secondaire en affectant la valeur `SEEDING_MODE` à l’option `AUTOMATIC`. Le comportement par défaut est `MANUAL`, qui est le comportement des versions antérieures à SQL Server 2016 nécessitant la réalisation d’une sauvegarde de la base de données sur le réplica principal, la copie du fichier de sauvegarde sur le réplica secondaire et la restauration de la sauvegarde `WITH NORECOVERY`.
+L’exemple suivant crée un groupe de disponibilité avec amorçage automatique à l’aide de Transact-SQL. Consultez aussi la rubrique [Créer un groupe de disponibilité (Transact-SQL)](create-an-availability-group-transact-sql.md). L’amorçage est activé sur un réplica secondaire en affectant la valeur `AUTOMATIC` à l’option `SEEDING_MODE`. Le comportement par défaut est `MANUAL`, qui est le comportement des versions antérieures à SQL Server 2016 nécessitant la réalisation d’une sauvegarde de la base de données sur le réplica principal, la copie du fichier de sauvegarde sur le réplica secondaire et la restauration de la sauvegarde `WITH NORECOVERY`.
 
 ```sql
 CREATE AVAILABILITY GROUP [<AGName>]
@@ -230,7 +230,7 @@ GO
 
 Le tableau suivant répertorie les événements étendus relatifs à l’amorçage automatique.
 
-|Name|Description|
+|Nom|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Message de demande d’amorçage.|
 |hadr_physical_seeding_backup_state_change|Modification d’état côté sauvegarde d’amorçage physique.|

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76909849"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338826"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "76909849"
 
 - [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Télécharger SQL Server 2016 à partir du **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Machine virtuelle Azure de petite taille](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Vous avez un compte Azure ?  Cliquez **[ici](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** pour lancer une machine virtuelle avec SQL Server 2016 SP1 déjà installé.
-- [![Télécharger SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Pour obtenir la dernière version de SQL Server Management Studio, consultez **[Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- [![Télécharger SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Pour obtenir la dernière version de SQL Server Management Studio, consultez **[Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)** .
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
@@ -45,7 +45,7 @@ Améliorations relatives aux performances et à la scalabilité incluses dans SQ
 |Nettoyage du suivi des modifications    |   Amélioration des performances et de l’efficacité du nettoyage du suivi des modifications pour les tables Change Tracking.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |Utiliser l’expiration du temps processeur pour annuler une requête Resource Governor   |   Améliore la gestion des demandes de requête en annulant réellement la requête, si les seuils du processeur pour une requête ont été atteints. Ce comportement est activé sous l’indicateur de trace 2422. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |SELECT INTO pour créer une table cible dans un groupe de fichiers    |   À partir de SQL Server 2016 SP2, la syntaxe T-SQL SELECT INTO prend en charge le chargement d’une table dans un groupe de fichiers autre qu’un groupe de fichiers par défaut de l’utilisateur, à l’aide du mot clé ON <Filegroup name> dans la syntaxe T-SQL. |       |
-|Point de contrôle indirect amélioré pour TempDB    |   Le point de contrôle indirect pour TempDB est amélioré pour minimiser la contention de verrouillage tournant sur DPLists. Cette amélioration permet à la charge de travail TempDB sur SQL Server 2016 de bénéficier immédiatement d’une croissance externe (scale out) si le point de contrôle indirect est défini sur ON pour TempDB.    |   [KB4040276](https://support.microsoft.com/help/4040276) |
+|Point de contrôle indirect amélioré pour TempDB    |   Le point de contrôle indirect pour TempDB est amélioré pour minimiser la contention de verrouillage tournant sur DPLists. Cette amélioration permet à la charge de travail TempDB sur SQL Server 2016 de bénéficier immédiatement d’un scale-out si le point de contrôle indirect est défini sur ON pour TempDB.    |   [KB4040276](https://support.microsoft.com/help/4040276) |
 |Performances de sauvegarde de base de données améliorées sur les machines à mémoire volumineuse  |   SQL Server 2016 SP2 optimise la façon dont nous drainons les E/S continues durant la sauvegarde, entraînant des gains significatifs en termes de performances de sauvegarde pour les bases de données petites à moyennes. Nous avons constaté une amélioration supérieure à 100 fois lors de sauvegardes de bases de données système sur une machine de 2 To. Le gain de performances diminue avec l’augmentation de la taille de la base de données, car les pages à sauvegarder et les E/S de la sauvegarde prennent plus de temps que les itérations du pool de mémoires tampons. Cette modification permet d’améliorer les performances de sauvegarde pour les clients hébergeant plusieurs bases de données de petite taille sur des serveurs haut de gamme volumineux dotés d’une grande capacité de mémoire.    |       |
 |Prise en charge de la compression de sauvegarde VDI pour les bases de données compatibles TDE   |   SQL Server 2016 SP2 ajoute la prise en charge de VDI pour permettre aux solutions de sauvegarde VDI de tirer parti de la compression pour les bases de données compatibles TDE. Avec cette amélioration, un nouveau format de sauvegarde a été introduit pour prendre en charge la compression de sauvegarde pour les bases de données compatibles TDE. Le moteur SQL Server gère en toute fluidité les formats de sauvegarde nouveaux et anciens pour restaurer les sauvegardes.   |       |
 |Chargement dynamique des paramètres de profil d’agent de réplication    |   Cette nouvelle amélioration permet le chargement dynamique des paramètres des agents de réplication sans avoir à redémarrer l’agent. Ce changement s’applique uniquement aux paramètres de profil d’agent les plus couramment utilisés. |       |

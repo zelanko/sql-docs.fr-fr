@@ -10,11 +10,11 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76891723"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338921"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installer Machine Learning Server (autonome) ou R Server (autonome) en utilisant le programme d’installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "76891723"
 Le programme d’installation de SQL Server comprend une option de **fonctionnalité partagée** permettant d’installer un serveur machine learning autonome qui s’exécute en dehors de SQL Server. Ce serveur appelé **Machine Learning Server (autonome)** inclut Python et R. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Le programme d’installation de SQL Server comprend une option de **fonctionnalité partagée** permettant d’installer un serveur machine learning autonome qui s’exécute en dehors de SQL Server. Dans SQL Server 2016, cette fonctionnalité est appelée **R Server (autonome)**.  
+Le programme d’installation de SQL Server comprend une option de **fonctionnalité partagée** permettant d’installer un serveur machine learning autonome qui s’exécute en dehors de SQL Server. Dans SQL Server 2016, cette fonctionnalité est appelée **R Server (autonome)** .  
 ::: moniker-end
 
 Un serveur autonome installé par le biais du programme d’installation de SQL Server est fonctionnellement équivalent aux versions non-SQL de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) et prend en charge les mêmes cas d’utilisation et scénarios, notamment :
@@ -66,7 +66,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 1. Démarrez l’Assistant Installation.
 
-2. Cliquez sur l’onglet **Installation**, puis sélectionnez **Nouvelle installation de Machine Learning Server (autonome)**.
+2. Cliquez sur l’onglet **Installation**, puis sélectionnez **Nouvelle installation de Machine Learning Server (autonome)** .
     
    ::: moniker-end
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -117,7 +117,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 1. Démarrez l’Assistant Installation.
 
-2. Dans l’onglet **Installation**, cliquez sur **Nouvelle installation de R Server (autonome)**.
+2. Dans l’onglet **Installation**, cliquez sur **Nouvelle installation de R Server (autonome)** .
     
    ![Commencer l’installation de R Server (autonome)](media/2016-setup-installation-rsvr.png "Commencer l’installation de R Server (autonome)")
 
@@ -210,7 +210,7 @@ Sur les serveurs non connectés, des étapes supplémentaires sont nécessaires.
 
    + Double-cliquez sur le fichier .exe pour exécuter le programme d’installation. Lors de l’installation d’une mise à jour cumulative sur un serveur sans connexion Internet, vous êtes invité à sélectionner l’emplacement des fichiers .cab pour R et Python.
 
-8. Après l’installation, sur un serveur pour lequel vous avez activé le déploiement avec des nœuds web et des nœuds de calcul, modifiez le fichier **AppSettings.json** en ajoutant une entrée « MMLResourcePath » directement sous « MMLNativePath ». Par exemple : 
+8. Après l’installation, sur un serveur pour lequel vous avez activé le déploiement avec des nœuds web et des nœuds de calcul, modifiez le fichier **AppSettings.json** en ajoutant une entrée « MMLResourcePath » directement sous « MMLNativePath ». Par exemple :
 
     ```json
     "ScorerParameters": {

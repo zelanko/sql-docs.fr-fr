@@ -11,11 +11,11 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257072"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338183"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Leçon 1 : Créer un projet et un package de base avec SSIS
 
@@ -27,7 +27,7 @@ Au cours de cette leçon, vous créez un package ETL simple qui extrait des donn
   
 Avant de créer un package, vous devez comprendre le formatage utilisé pour les données sources et la destination. Vous êtes ensuite prêt à définir les transformations nécessaires pour mapper les données source avec les données de destination.  
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Ce tutoriel s’appuie sur Microsoft SQL Server Data Tools, ensemble d’exemples de package, et sur un exemple de base de données.
 

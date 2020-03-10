@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903676"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338959"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -86,7 +86,7 @@ Appelez la procédure stockée `[catalog].[update_logdb_info]` avec les valeurs 
 
 ## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Configurer le rôle du service Scale Out Master du cluster de basculement Windows Server
 
-1.  Dans le Gestionnaire du cluster de basculement, connectez-vous au cluster pour Scale Out. Sélectionnez le cluster. Sélectionnez **Action** dans le menu, puis sélectionnez **Configurer un rôle**.
+1.  Dans le Gestionnaire du cluster de basculement, connectez-vous au cluster pour Scale-out. Sélectionnez le cluster. Sélectionnez **Action** dans le menu, puis sélectionnez **Configurer un rôle**.
 
 2.  Dans la boîte de dialogue **Assistant Haute disponibilité**, sélectionnez **Service générique** dans la page **Sélectionner un rôle**. Sélectionnez SQL Server Integration Services Scale Out Master 14.0 dans la page **Sélectionner un service**.
 

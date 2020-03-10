@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74866352"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339647"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint (SSRS)
 
@@ -103,7 +103,7 @@ Rssharepoint.msi /?
   
     1.  Naviguez vers le dossier qui contient le fichier **rsCustomAction.exe**. Ce fichier est copié sur votre ordinateur pendant l'installation des fichiers seuls du complément. **rsCustomAction.exe** se trouve dans le répertoire **%Temp%** . Pour naviguer jusqu'au fichier, entrez ce qui suit à partir de l'invite de commandes :  
   
-         **CD %temp%**.  
+         **CD %temp%** .  
   
          Le fichier doit se trouver à l’emplacement suivant : **\Users\\<votre_nom\>\AppData\Local\Temp**  
   
@@ -269,7 +269,7 @@ Rssharepoint.msi /?
 ## <a name="configuring-reporting-services"></a>configuration de Reporting Services  
  Après avoir installé le complément sur les ordinateurs appropriés, configurez le serveur de rapports à partir de l'Administration centrale de SharePoint. Les étapes nécessaires dépendent de l'ordre dans lequel les différentes technologies ont été installées. Pour plus d’informations, consultez [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md) and [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md)   
 [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  

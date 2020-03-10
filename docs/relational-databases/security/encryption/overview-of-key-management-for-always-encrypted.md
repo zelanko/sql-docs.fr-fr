@@ -12,11 +12,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73594109"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339601"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Vue d’ensemble de la gestion de clés pour Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Si l’on considère les rôles ci-dessus, il existe deux façons d’effectuer 
 ## <a name="managing-keys-with-role-separation"></a>Gestion des clés avec séparation des rôles
 Quand les clés Always Encrypted sont gérées avec séparation des rôles, différentes personnes au sein d’une organisation assument les rôles d’administrateur de sécurité et d’administrateur de base de données. Un processus de gestion des clés avec séparation des rôles garantit que les administrateurs de base de données n’ont pas accès aux clés ou aux magasins de clés contenant les clés, et que les administrateurs de sécurité n’ont pas accès à la base de données contenant des données sensibles. La gestion des clés avec séparation des rôles est recommandée si votre objectif est de garantir que les administrateurs de base de données de votre organisation ne peuvent pas accéder aux données sensibles. 
 
-**Remarque :** les administrateurs de sécurité génèrent et utilisent des clés en texte clair. Ils ne doivent donc jamais effectuer leurs tâches sur des ordinateurs hébergeant un système de base de données ou sur des ordinateurs qui sont accessibles par les administrateurs de base de données ou toute autre personne pouvant être un adversaire potentiel. 
+**Remarque :** Les administrateurs de sécurité génèrent et utilisent des clés en texte en clair. Ils ne doivent donc jamais effectuer leurs tâches sur les mêmes ordinateurs hébergeant un système de base de données ou sur des ordinateurs qui sont accessibles des par des DBA ou toute autre personne pouvant être un adversaire potentiel. 
 
 ## <a name="managing-keys-without-role-separation"></a>Gestion des clés sans séparation des rôles
 Quand les clés Always Encrypted sont gérées sans séparation des rôles, une seule personne peut assumer les rôles d’administrateur de base de données et d’administrateur de sécurité. Cette personne doit donc pouvoir accéder aux clés, aux magasins de clés et aux métadonnées de clés, et les gérer. La gestion des clés sans séparation des rôles est recommandée pour les organisations qui utilisent le modèle DevOps, ou si la base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs du cloud (mais pas des administrateurs de base de données) aux données sensibles.

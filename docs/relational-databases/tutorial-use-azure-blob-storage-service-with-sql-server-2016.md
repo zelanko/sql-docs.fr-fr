@@ -15,11 +15,11 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095691"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339467"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutoriel : Utiliser le service Stockage Blob Azure avec SQL Server 2016
 
@@ -30,7 +30,7 @@ La prise en charge de l’intégration SQL Server pour le service Stockage Blob 
 
 Ce didacticiel vous montre comment utiliser des fichiers de données SQL Server dans le service Stockage Blob Microsoft Azure en plusieurs parties. Chaque partie porte sur une tâche spécifique et les différentes parties doivent être traitées dans l’ordre. Tout d’abord, vous allez apprendre à créer un conteneur de stockage d’objets Blob avec une stratégie d’accès stockée et une signature d’accès partagé. Ensuite, vous découvrirez comment créer des informations d’identification SQL Server pour intégrer SQL Server au stockage Blob Azure. Ensuite, vous sauvegarderez une base de données dans l’espace de stockage d’objets Blob et la restaurerez dans une machine virtuelle Azure. Vous utiliserez ensuite la sauvegarde du journal des transactions d’instantanés de fichiers SQL Server 2016 pour effectuer une restauration à un point dans le temps et dans une base de données. Enfin, pour illustrer les sauvegardes d’instantanés de fichiers et leur utilisation, le didacticiel vous montrera comment utiliser des fonctions et procédures stockées système de métadonnées.
   
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour suivre ce didacticiel, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL. Pour utiliser ce tutoriel, vous avez besoin d'un compte de stockage Azure, de SQL Server Management Studio (SSMS), d'un accès à une instance de SQL Server sur site, d'un accès à une machine virtuelle Azure exécutant SQL Server 2016 et d’une base de données AdventureWorks2016. Par ailleurs, le compte utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backupoperator** avec les autorisations **modifier les informations d’identification**. 
 
