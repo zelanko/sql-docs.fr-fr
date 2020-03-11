@@ -12,20 +12,20 @@ ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
+ms.sourcegitcommit: 39d8d2d504d0ab70bac5ae3e981657e15dfb7bee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65483411"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78964369"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Créer un administrateur de modèle (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un administrateur de modèle lorsque vous souhaitez qu’un groupe ou un utilisateur dispose de l’autorisation **mettre à jour** sur tous les objets dans un ou plusieurs modèles.  
   
 > [!TIP]  
->  Pour simplifier l'administration, créez un groupe Windows ou local et configurez-le comme un administrateur de modèle. Vous pouvez ensuite ajouter et supprimer des utilisateurs dans le groupe sans accéder à l'interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+>  Pour simplifier l’administration, créez un groupe Windows ou local et configurez-le en tant qu’administrateur de modèle. Vous pouvez ensuite ajouter et supprimer des utilisateurs dans le groupe sans accéder à l'interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  
