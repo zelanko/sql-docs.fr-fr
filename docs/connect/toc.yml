@@ -2772,10 +2772,12 @@
       items:
         - name: Configuration requise
           href: ../connect/odbc/linux-mac/system-requirements.md
-        - name: Installation du Gestionnaire de pilotes
+        - name: Installer le Gestionnaire de pilotes
           href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-        - name: Installation de Microsoft ODBC Driver for SQL Server
+        - name: Installer le pilote ODBC (Linux)
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+        - name: Installer le pilote ODBC (macOS)
+          href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: Guides des fonctionnalités
           items:
             - name: Mots clés de chaîne de connexion et noms de source de données
