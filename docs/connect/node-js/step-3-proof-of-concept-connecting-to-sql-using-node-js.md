@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7925b376fa7ec751faf0b109b6598ab86a348b3f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68419259"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897151"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de Node.js
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Pour télécharger le pilote Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Pour télécharger le pilote Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Cet exemple doit être considéré uniquement comme une preuve de concept.  L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft. D’autres exemples utilisant les mêmes fonctions cruciales sont disponibles sur GitHub :
 
@@ -113,7 +113,7 @@ Toutes les instructions SQL sont exécutées à l'aide de la fonction **new Requ
   
 ## <a name="step-3-insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez découvrir comment exécuter une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) en toute sécurité, passer des paramètres pour protéger votre application de la valeur [Injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+Cet exemple montre comment exécuter une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) en toute sécurité et passer des paramètres qui protègent l’application contre les valeurs [d’injection de code SQL](../../relational-databases/security/sql-injection.md).    
   
   
 ```javascript  

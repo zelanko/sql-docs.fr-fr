@@ -13,16 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72289344"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866108"
 ---
 # <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique explique comment définir et modifier le classement de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si aucun classement n'est spécifié, celui du serveur est utilisé.  
+  
+> [!IMPORTANT]
+> La modification du classement d’une base de données n’est pas explicitement interdite dans Azure SQL Database. Cela implique toutefois un verrou exclusif sur la base de données, et d’autres processus utilisateur et traitements en arrière-plan (par exemple, l’arrière-plan qui prend les sauvegardes) risquent de maintenir les verrous de base de données et d’empêcher la modification. L’instruction `ALTER DATABASE COLLATE` sur Azure SQL Database échoue si elle est exécutée au moment où les traitements en arrière-plan accèdent à la base de données. Vous devez retenter l’instruction si vous obtenez une erreur de dépassement de délai d’attente de verrou. 
  
 > [!NOTE]
 > Le classement ne peut pas être modifié avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ne peut être modifié qu’à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].

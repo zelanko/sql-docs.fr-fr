@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809952"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288976"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
 
@@ -63,7 +63,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
  Les prédicats de filtre et BLOCK, ainsi que les stratégies de sécurité, se comportent comme suit :  
   
-- Vous pouvez définir une fonction de prédicat qui crée une jointure avec une autre table et/ou appelle une fonction. Si la stratégie de sécurité est créée avec `SCHEMABINDING = ON`, alors la jointure ou la fonction est accessible à partir de la requête et fonctionne comme prévu, sans aucun contrôle d’autorisation supplémentaire. Si la stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors les utilisateurs ont besoin d’autorisations **SELECT** ou **EXECUTE** sur ces tables et fonctions supplémentaires pour interroger la table cible.
+- Vous pouvez définir une fonction de prédicat qui crée une jointure avec une autre table et/ou appelle une fonction. Si la stratégie de sécurité est créée avec `SCHEMABINDING = ON` (valeur par défaut), alors la jointure ou la fonction est accessible à partir de la requête et fonctionne comme prévu, sans aucun contrôle d’autorisation supplémentaire. Si la stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors les utilisateurs ont besoin d’autorisations **SELECT** sur ces tables et fonctions supplémentaires pour interroger la table cible. Si la fonction de prédicat appelle une fonction scalaire CLR, l’autorisation **EXECUTE** est également nécessaire.
   
 - Vous pouvez émettre une requête sur une table pour laquelle un prédicat de sécurité est défini, mais désactivé. Les lignes qui sont filtrées ou bloquées ne sont pas affectées.  
   
@@ -85,7 +85,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
 - Les prédicats BLOCK pour l’opération UPDATE sont divisés en opérations distinctes pour BEFORE et AFTER. Vous ne pouvez donc pas, par exemple, bloquer des utilisateurs en les empêchant de mettre à jour une ligne pour obtenir une valeur supérieure à la valeur actuelle. Si ce type de logique est requis, vous devez utiliser des déclencheurs avec les tables intermédiaires [DELETED et INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) pour référencer ensemble les valeurs anciennes et nouvelles.  
   
-- L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si les colonnes utilisées par la fonction de prédicat n’ont pas été modifiées. Par exemple :  Alice ne doit pas être en mesure de modifier un salaire au-delà de 100 000. Alice peut modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 tant que les colonnes référencées dans le prédicat n’ont pas été modifiées.  
+- L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si les colonnes utilisées par la fonction de prédicat n’ont pas été modifiées. Par exemple : Alice ne doit pas être en mesure de modifier un salaire au-delà de 100 000. Alice peut modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 tant que les colonnes référencées dans le prédicat n’ont pas été modifiées.  
   
 - Aucune modification n’a été apportée aux API bulk, y compris à BULK INSERT. Cela signifie que les prédicats BLOCK AFTER INSERT s’appliquent aux opérations d’insertion en bloc comme s’il s’agissait d’opérations d’insertion standard.  
   
@@ -121,7 +121,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
 ## <a name="Best"></a> Bonnes pratiques  
   
-- Il est fortement recommandé de créer un schéma distinct pour les objets de la sécurité au niveau des lignes, de la fonction de prédicat et de la stratégie de sécurité.  
+- Il est fortement recommandé de créer un schéma distinct pour les objets SNL : les fonctions de prédicat et les stratégies de sécurité. Cela permet de séparer les autorisations requises sur ces objets spéciaux des tables cibles. Une séparation supplémentaire pour les différentes stratégies et fonctions de prédicat peut être nécessaire dans les bases de données multi-locataires, mais pas systématiquement.
   
 - L’autorisation **ALTER ANY SECURITY POLICY** est destinée aux utilisateurs disposant de privilèges élevés (par exemple, un gestionnaire de stratégie de sécurité). Le gestionnaire de stratégie de sécurité ne nécessite pas l'autorisation **SELECT** sur les tables qu'il protège.  
   

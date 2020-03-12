@@ -1,7 +1,7 @@
 ---
 title: Notes de publication des pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-dapugl, kenvh
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5e279ba446e790a2262e5f0effe160632065dcba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: edc5d8122f1cb2c0fad747e480843c559f650434
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76941218"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866509"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notes de publication de Microsoft Drivers for PHP for SQL Server
 
@@ -41,7 +41,17 @@ For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
-## <a name="whats-new-in-version-58"></a>Nouveautés de la version 5.8
+## <a name="58"></a>5.8
+
+![Téléchargement](../../ssms/media/download-icon.png) [Télécharger le package Windows](https://go.microsoft.com/fwlink/?linkid=2120362)  
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 5.8.0
+- Publication : 31 janvier 2020
+
+## <a name="whats-new-in-58"></a>Nouveautés de la version 5.8
 
 | Nouvel élément | Détails |
 | :------- | :------ |
@@ -61,7 +71,38 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 <sup>1</sup> La prise en charge d’Alpine Linux est expérimentale pour la version 5.8.
 
-## <a name="whats-new-in-version-56"></a>Nouveautés de la version 5.6
+## <a name="previous-releases"></a>Versions précédentes
+
+## <a name="561"></a>5.6.1
+
+![Téléchargement](../../ssms/media/download-icon.png) [Télécharger le package Windows](https://go.microsoft.com/fwlink/?linkid=2120446)  
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.1)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 5.6.1
+- Publication : 19 mars 2019
+
+## <a name="whats-new-in-561"></a>Nouveautés de la version 5.6.1
+
+| Nouvel élément | Détails |
+| :------- | :------ |
+| Correctif de bogue | Correction des hypothèses effectuées lors du calcul des métadonnées de champ ou de colonne susceptibles d’avoir provoqué l’arrêt de l’application. |
+| Correctif de bogue | Modification du fichier de configuration sqlsrv de sorte qu’il puisse être compilé indépendamment de pdo_sqlsrv. |
+| Correctif de bogue | Correction de PDOStatement::getColumnMeta() de sorte qu’il retourne la valeur false en cas de problème. |
+| &nbsp; | &nbsp; |
+
+## <a name="56"></a>5.6
+
+![Téléchargement](../../ssms/media/download-icon.png) [Télécharger le package Windows](https://go.microsoft.com/fwlink/?linkid=2120450)  
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 5.6.0
+- Publication : 21 février 2019
+
+## <a name="whats-new-in-56"></a>Nouveautés de la version 5.6
 
 | Nouvel élément | Détails |
 | :------- | :------ |
@@ -78,7 +119,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Amélioration des performances en mettant en cache les métadonnées lors des extractions et en accélérant les conversions de chaînes Unicode. | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="whats-new-in-version-53"></a>Nouveautés de la version 5.3
+## <a name="53"></a>5.3
+
+![Téléchargement](../../ssms/media/download-icon.png) [Télécharger le package Windows](https://go.microsoft.com/fwlink/?linkid=2120447)  
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 5.3.0
+- Publication : 20 juillet 2018
+
+## <a name="whats-new-in-53"></a>Nouveautés de la version 5.3
 
 - Prise en charge de Microsoft ODBC Driver 17.2 sur toutes les plateformes
 - Prise en charge de macOS High Sierra (requiert le pilote ODBC 17 ou une version ultérieure)
@@ -86,7 +137,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Prise en charge d’Ubuntu 18.04 LTS (requiert le pilote ODBC 17.2)
 - Prise en charge de la résilience des connexions dans Linux ou macOS (nécessite le pilote ODBC 17.2)
 
-## <a name="whats-new-in-version-52"></a>Nouveautés de la version 5.2
+## <a name="52"></a>5.2
+
+![Téléchargement](../../ssms/media/download-icon.png) [Télécharger le package Windows](https://go.microsoft.com/fwlink/?linkid=2120451)  
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 5.2.0
+- Publication : 23 mars 2018
+
+## <a name="whats-new-in-52"></a>Nouveautés de la version 5.2
 
 - Prise en charge de PHP 7.2.1 et versions ultérieures sur Windows, et de la version 7.2.0 sur les autres plateformes
 - Prise en charge de Microsoft ODBC Driver 17
@@ -101,7 +162,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Prise en charge d’Azure SQL Data Warehouse
 - Prise en charge d’Azure SQL Managed Instance
 
-## <a name="whats-new-in-version-43"></a>Nouveautés de la version 4.3
+## <a name="43"></a>4.3
+
+![Téléchargement](../../ssms/media/download-icon.png) [Télécharger le package Windows](https://go.microsoft.com/fwlink/?linkid=2120616)  
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 4.3.0
+- Publication : 6 juillet 2017
+
+## <a name="whats-new-in-43"></a>Nouveautés de la version 4.3
 
 - Prise en charge de PHP 7.1
 - Prise en charge de macOS Sierra et de macOS El Capitan
@@ -113,24 +184,53 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Prise en charge du regroupement de connexions pour Linux et macOS. Pour plus d’informations, consultez [Regroupement de connexions](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 - Prise en charge de l’authentification Azure Active Directory avec ActiveDirectoryPassword et SqlPassword. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md).
 
-## <a name="whats-new-in-version-40"></a>Nouveautés de la version 4.0
+## <a name="40"></a>4.0
+
+![Téléchargement](../../ssms/media/download-icon.png) [Télécharger le package Windows](https://go.microsoft.com/fwlink/?linkid=2120448)  
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 4.0
+- Publication : 1er juillet 2016
+
+## <a name="whats-new-in-40"></a>Nouveautés de la version 4.0
 
 - Prise en charge de PHP 7.0  
 - Prise en charge 64 bits complète
 - Prise en charge d’Ubuntu 15.04, Ubuntu 16.04 et RedHat 7
 
-## <a name="whats-new-in-version-32"></a>Nouveautés de la version 3.2
+## <a name="32"></a>3.2
 
-- Prise en charge de PHP 5.6   
-- Inclut les dernières mises à jour pour les versions antérieures PHP 5.5 et 5.4   
+![Téléchargement](../../ssms/media/download-icon.png) [Télécharger le package Windows](https://go.microsoft.com/fwlink/?linkid=2120449)  
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 3.2
+- Publication : 9 mars 2015
+
+## <a name="whats-new-in-32"></a>Nouveautés de la version 3.2
+
+- Prise en charge de PHP 5.6  
+- Inclut les dernières mises à jour pour les versions antérieures PHP 5.5 et 5.4  
 - Nécessite Microsoft ODBC Driver 11 for SQL Server  
 
-## <a name="whats-new-in-version-31"></a>Nouveautés de la version 3.1
+## <a name="31"></a>3.1
+
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 3.1
+- Publication : 12 décembre 2014
+
+## <a name="whats-new-in-31"></a>Nouveautés de la version 3.1
 
 - Prise en charge de PHP 5.5  
 - Nécessite Microsoft ODBC Driver 11 for SQL Server. Les versions précédentes nécessitaient SQL Native Client.  
 
-## <a name="whats-new-in-version-30"></a>Nouveautés de la version 3.0  
+## <a name="whats-new-in-30"></a>Nouveautés de la version 3.0  
 
 - Prise en charge de PHP 5.4.  PHP 5.2 n’est pas pris en charge dans la version 3 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - Ajout de l’option de connexion AttachDBFileName. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md).  
@@ -140,7 +240,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Prise en charge des curseurs côté client (mise en cache d’un jeu de résultats en mémoire). Pour plus d’informations, consultez [Types de curseur &#40;pilote SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) et [Types de curseur &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 - Ajout de l’attribut PDO::ATTR_EMULATE_PREPARES. Pour plus d’informations, consultez [PDO::prepare](../../connect/php/pdo-prepare.md).  
 
-## <a name="whats-new-in-version-20"></a>Nouveautés de la version 2.0
+## <a name="whats-new-in-20"></a>Nouveautés de la version 2.0
 
 Dans la version 2.0, la prise en charge du pilote PDO_SQLSRV a été ajoutée. Pour plus d’informations, consultez [Référence de pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md).  
 

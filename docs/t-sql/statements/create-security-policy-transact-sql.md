@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 45a1b461c5a56bfd894122eeb67e69672c36d093
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117293"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288955"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  *\<block_dml_operation>* Opération DML particulière pour laquelle le prédicat BLOCK est appliqué. AFTER spécifie que le prédicat est évalué sur les valeurs des lignes après l’exécution de l’opération DML (INSERT ou UPDATE). AFTER spécifie que le prédicat est évalué sur les valeurs des lignes avant l’exécution de l’opération DML (UPDATE ou DELETE). Si aucune opération n’est spécifiée, le prédicat s’applique à toutes les opérations.  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  Permet à la stratégie de sécurité d'appliquer ses prédicats de sécurité sur les tables cibles, ou l'empêche d'effectuer cette opération. Sauf indication contraire, la stratégie de sécurité en cours de création est activée.  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- Indique si toutes les fonctions de prédicat de la stratégie doivent être créées avec l’option SCHEMABINDING. Par défaut, toutes les fonctions doivent être créées avec SCHEMABINDING.  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ Indique si toutes les fonctions de prédicat de la stratégie doivent être créées avec l’option SCHEMABINDING. Par défaut, ce paramètre est défini sur **ON** et toutes les fonctions doivent être créées avec SCHEMABINDING.  
   
  NOT FOR REPLICATION  
  Indique que la stratégie de sécurité ne doit pas être exécutée quand un agent de réplication modifie l'objet cible. Pour plus d’informations, consultez [Contrôler le comportement de déclencheurs et de contraintes au cours de la synchronisation &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2394fc73483b78e5e90a4ccffa9ce45205dc237
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74542313"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866375"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,12 +160,12 @@ La connexion à SQL Server à l’aide de TCP/IP exige que Windows puisse établ
     - IPv4 : `ping 192.168.1.101`
     - IPv6 : `ping fe80::d51d:5ab5:6f09:8f48%11`
 
-1. Si votre réseau est correctement configuré, `ping` retourne `Reply from <IP address>` suivi de certaines informations supplémentaires. Si `ping` retourne `Destination host unreachable` ou `Request timed out`, TCP/IP n’est alors pas configuré correctement. Des erreurs à ce stade peuvent indiquer un problème avec l’ordinateur client, l’ordinateur serveur, ou relatif au réseau (par exemple, un routeur). Pour résoudre les problèmes de réseau, consultez[Résolution avancée des problèmes TCP/IP]a(/windows/client-management/troubleshoot-tcpip).
+1. Si votre réseau est correctement configuré, `ping` retourne `Reply from <IP address>` suivi de certaines informations supplémentaires. Si `ping` retourne `Destination host unreachable` ou `Request timed out`, TCP/IP n’est alors pas configuré correctement. Des erreurs à ce stade peuvent indiquer un problème avec l’ordinateur client, l’ordinateur serveur, ou relatif au réseau (par exemple, un routeur). Pour résoudre les problèmes de réseau, consultez[Résolution avancée des problèmes pour les problèmes TCP/IP](/windows/client-management/troubleshoot-tcpip).
 1. Ensuite, si le test ping a réussi à l’aide de l’adresse IP, vérifiez que le nom de l’ordinateur peut être résolu en adresse TCP/IP. Sur l’ordinateur client, dans la fenêtre d’invite de commandes, tapez `ping` , puis le nom de l’ordinateur qui exécute SQL Server. Par exemple : `ping newofficepc` 
 1. Si `ping` à l’adresse IP réussit, mais que `ping` à l’ordinateur retourne `Destination host unreachable` ou `Request timed out` vous avez peut-être des anciennes informations de résolution de nom (obsolètes) mises en cache sur l’ordinateur client. Tapez `ipconfig /flushdns` pour effacer le cache DNS (résolution de noms dynamique). Réexécutez ensuite une commande ping sur l’ordinateur selon le nom. Comme le cache DNS est vide, l’ordinateur client recherche les informations les plus récentes sur l’adresse IP pour l’ordinateur serveur. 
 1. Si votre réseau est correctement configuré, `ping` retourne `Reply from <IP address>` suivi de certaines informations supplémentaires. Si vous pouvez correctement effectuer un test ping de l’ordinateur du serveur par adresse IP, mais recevez une erreur telle que `Destination host unreachable.` ou `Request timed out.` quand vous effectuez un test Ping par nom de l’ordinateur, la résolution de noms n’est alors pas correctement configurée. (Pour plus d’informations, consultez l’article de 2006 précédemment mentionné, [Résolution des problèmes liés au TCP/IP](https://support.microsoft.com/kb/169790).) Une résolution correcte de noms n’est pas obligatoire pour se connecter à SQL Server mais, si le nom d’ordinateur ne peut pas résolu en adresse IP, les connexions doivent être établies en spécifiant l’adresse IP. La résolution de noms peut être corrigée plus tard.
 
-## <a name = "openport"></a>Ouverture d’un port dans le pare-feu
+## <a name="open-a-port-in-the-firewall"></a>Ouverture d’un port dans le pare-feu
 
 Par défaut, le pare-feu Windows est activé et bloquera toutes les connexions d’un autre ordinateur. Pour vous connecter à l’aide de TCP/IP à partir d’un autre ordinateur, vous devez configurer le pare-feu sur l’ordinateur SQL Server pour autoriser les connexions au port TCP utilisé par le moteur de base de données. L’instance par défaut est à l’écoute sur le port TCP 1433, par défaut. Si vous avez des instances nommées ou si vous avez modifié le port de l’instance par défaut, le port TCP [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] peut être à l’écoute sur un autre port. Consultez [Obtenir le port TCP de l’instance SQL Server](#getTCP).
 

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67916051"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896783"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Pilote Node.js pour SQL Server
 
-![Télécharger-FlècheBas-Entourée](../../ssdt/media/download.png)[Télécharger le pilote SQL Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Pour télécharger le pilote Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Le module tedious est une implémentation JavaScript du protocole TDS, qui est pris en charge par toutes les versions récentes de SQL Server. Le pilote est un projet open source, disponible sur GitHub.  
+Le module tedious est une implémentation JavaScript du protocole TDS, prise en charge par toutes les versions récentes de SQL Server. Le pilote est un projet open source, disponible sur GitHub.  
   
 Vous pouvez vous connecter à une base de données SQL avec Node.js sur Windows, Linux ou Mac.  
   
@@ -32,7 +32,7 @@ Vous pouvez vous connecter à une base de données SQL avec Node.js sur Windows,
   
 ## <a name="documentation"></a>Documentation  
   
-[Documentation du module Tedious sur GitHub](https://tediousjs.github.io/tedious/)  
+[Documentation du module tedious sur GitHub](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>Communauté  
 * [Centre de développement Azure Node.js](https://azure.microsoft.com/develop/nodejs/)  

@@ -11,12 +11,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 76ffaac48e8af454e887fd4fd30540eed4c4b453
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: 174ea00f9becf1445212c20137ea902f3892918e
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173519"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896751"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notes de publication d’ODBC pour SQL Server sur Windows
 
@@ -43,6 +43,15 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="1752-march-2020"></a>17.5.2, mars 2020
+
+| Fonctionnalité ajoutée | Détails |
+| :------------ | :------ |
+| Prise en charge de l’authentification avec Managed Identity pour Azure Key Vault | Voir [Utilisation d’Always Encrypted avec ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Prise en charge de points de terminaison Azure Key Vault supplémentaires | Voir [Utilisation d’Always Encrypted avec ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="175-january-2020"></a>17.5, janvier 2020
 

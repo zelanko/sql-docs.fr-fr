@@ -1,36 +1,35 @@
 ---
 title: 'Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pyodbc | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/09/2019
+ms.date: 03/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0e241d84ebc60acceafe09b1a9240711a72d2067
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+author: arob98
+ms.author: angrobe
+ms.openlocfilehash: c5d8adfa33541402fb50017c3790d38f0396d73d
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72798316"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256899"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pyodbc
 
-Cet exemple être considéré comme une preuve de concept uniquement.  L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
+Cet exemple est une preuve de concept. L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
 
-**Exécutez l’exemple de script ci-dessous** pour créer un fichier appelé test.py, puis ajoutez chaque extrait de code au fur et à mesure. 
+Pour commencer, exécutez l’exemple de script suivant. Créez un fichier nommé test.py, puis ajoutez les extraits de code au fur et à mesure. 
 
 ```
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>Étape 1 :  Se connecter  
+## <a name="connect"></a>Se connecter  
   
 ```python
-
 import pyodbc 
 # Some other example server values are
 # server = 'localhost\sqlexpress' # for a named instance
@@ -45,9 +44,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>Étape 2 :  Exécuter la requête  
+## <a name="run-query"></a>Exécuter une requête  
   
-La fonction cursor.execute peut être utilisée pour récupérer un jeu de résultats d'une requête à partir d'une base de données SQL. Cette fonction accepte n'importe quelle requête et renvoie un jeu de résultats qui peut être itéré à l'aide de cursor.fetchone()
+La fonction cursor.execute peut être utilisée pour récupérer un jeu de résultats d'une requête à partir d'une base de données SQL. Cette fonction accepte une requête et retourne un jeu de résultats, que l’on peut parcourir avec cursor.fetchone().
   
   
 ```python
@@ -60,39 +59,38 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>Étape 3 :  Insérer une ligne  
+## <a name="insert-a-row"></a>Insérer une ligne  
   
-Dans cet exemple, vous allez découvrir comment exécuter une instruction [INSERT](../../../t-sql/statements/insert-transact-sql.md) en toute sécurité, passer des paramètres pour protéger votre application de la valeur [Injection SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+Cet exemple montre comment exécuter une instruction [INSERT](../../../t-sql/statements/insert-transact-sql.md) en toute sécurité et passer des paramètres qui protègent l’application contre [l’injection de code SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```python
-
 #Sample insert query
-cursor.execute("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES ('SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP )") 
+cursor.execute("""
+INSERT INTO SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) 
+VALUES (?,?,?,?,?)""",
+'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP) 
 cnxn.commit()
 row = cursor.fetchone()
 
 while row: 
-    print 'Inserted Product key is ' + str(row[0]) 
+    print('Inserted Product key is ' + str(row[0]))
     row = cursor.fetchone()
 ```  
 
-## <a name="azure-active-directory-aad-and-the-connection-string"></a>Azure Active Directory (AAD) et la chaîne de connexion
+## <a name="azure-active-directory-and-the-connection-string"></a>Azure Active Directory et la chaîne de connexion
 
 pyODBC utilise le pilote Microsoft ODBC pour SQL Server.
-Si la version du pilote ODBC est 17.1 ou une version ultérieure, vous pouvez utiliser le mode interactif AAD du pilote ODBC via pyODBC.
-Cette option AAD interactive fonctionne si Python et pyODBC autorisent le pilote ODBC à afficher la boîte de dialogue.
-Cette option est disponible uniquement sur le système d'exploitation Windows.
+Si vous utilisez la version 17.1 ou une version ultérieure du pilote ODBC, vous pouvez vous servir de son mode interactif Azure Active Directory par le biais de pyODBC.
+Cette option interactive fonctionne si Python et pyODBC autorisent le pilote ODBC à afficher la boîte de dialogue. Elle n’est disponible que sur les systèmes d’exploitation Windows. 
 
-### <a name="example-connection-string-for-aad-interactive-authentication"></a>Exemple de chaîne de connexion pour l’authentification interactive AAD
+### <a name="example-connection-string-for-azure-active-directory-interactive-authentication"></a>Exemple de chaîne de connexion pour l’authentification interactive Azure Active Directory
 
-Voici un exemple de chaîne de connexion ODBC qui spécifie l’authentification interactive AAD :
+L’exemple suivant fournit une chaîne de connexion ODBC qui spécifie l’authentification interactive Azure Active Directory :
 
-- `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+`server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
-Pour plus d’informations sur les options d’authentification AAD du pilote ODBC, consultez l’article suivant :
-
-- [Utilisation d’Azure Active Directory avec ODBC Driver](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
+Pour plus d’informations sur les options d’authentification du pilote ODBC, consultez [Utilisation d’Azure Active Directory avec le pilote ODBC](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords).
 
 ## <a name="next-steps"></a>Étapes suivantes
   

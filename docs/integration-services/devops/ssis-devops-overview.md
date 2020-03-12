@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281867"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225922"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps Tools (préversion)
 
@@ -38,6 +38,8 @@ Si vous n’avez pas d’organisation **Azure DevOps**, vous devez tout d’abor
 
 Chemin du fichier ou dossier de projet à générer. Si un chemin de dossier est spécifié, la tâche de génération SSIS recherchera tous les fichiers dtproj de manière récursive dans ce dossier et les générera tous.
 
+Le chemin du projet ne peut pas être *vide*, défini comme **.** pour effectuer une génération à partir du dossier racine du référentiel.
+
 #### <a name="project-configuration"></a>Configuration du projet
 
 Nom de la configuration de projet à utiliser pour la génération. S’il n’est pas spécifié, il s’agit, par défaut, de la première configuration de projet définie dans chaque fichier dtproj.
@@ -50,9 +52,19 @@ Chemin d’un dossier distinct où seront enregistrés les résultats de la gén
 
 - La tâche de génération SSIS s’appuie sur Visual Studio et le concepteur SSIS (obligatoire avec les agents de build). Ainsi, pour exécuter la tâche de génération SSIS dans le pipeline, vous devez choisir **vs2017-win2016** pour les agents hébergés par Microsoft ou installer Visual Studio et le concepteur SSIS (VS2017 + SSDT2017 ou VS2019 + extension de projets SSIS) sur les agents autohébergés.
 
-- Pour générer des projets SSIS à l’aide de composants prêts à l’emploi (quels qu’ils soient, y compris le Feature Pack SSIS Azure ou d’autres composants tiers), veillez à ce que ces composants soient installés sur l’ordinateur sur lequel s’exécute l’agent de pipeline.  Pour l’agent hébergé par Microsoft, l’utilisateur peut ajouter une [tâche de script PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) ou une [tâche de script de ligne de commande](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) pour télécharger et installer les composants avant l’exécution de la tâche de génération SSIS.
+- Pour générer des projets SSIS à l’aide de composants prêts à l’emploi (quels qu’ils soient, y compris le Feature Pack SSIS Azure ou d’autres composants tiers), veillez à ce que ces composants soient installés sur l’ordinateur sur lequel s’exécute l’agent de pipeline.  Pour l’agent hébergé par Microsoft, l’utilisateur peut ajouter une [tâche de script PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) ou une [tâche de script de ligne de commande](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) pour télécharger et installer les composants avant l’exécution de la tâche de génération SSIS. Voici l’exemple de script PowerShell permettant d’installer Azure Feature Pack : 
 
-- Les niveaux de protection **EncryptSensitiveWithPassword** et **EncryptAllWithPassword** ne sont pas pris en charge par la tâche de génération SSIS. Assurez-vous qu’aucun projet SSIS du code base n’utilise ces deux niveaux de protection. Sinon, la tâche de génération SSIS se bloquera et dépassera le délai d’attente pendant l’exécution.
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
+
+- Les niveaux de protection **EncryptSensitiveWithPassword** et **EncryptAllWithPassword** ne sont pas pris en charge par la tâche de génération SSIS. Veillez à ce qu’aucun des projets SSIS du code base n’utilise ces deux niveaux de protection. Sinon, la tâche de génération SSIS se bloquera et dépassera le délai d’attente pendant l’exécution.
+
+- **ConnectByProxy** est une nouvelle propriété ajoutée récemment à SSDT. SSDT installé sur l’agent hébergé par Microsoft n’est pas mis à jour. Par conséquent, utilisez plutôt l’agent autohébergé.
 
 ## <a name="ssis-deploy-task"></a>Tâche de déploiement SSIS
 
@@ -128,7 +140,7 @@ Indique si le déploiement des projets ou fichiers restants doit continuer quand
 Actuellement, la tâche de déploiement SSIS ne prend pas en charge les scénarios suivants :
 
 - Configuration de l’environnement dans le catalogue SSIS
-- Déploiement de fichiers ISPAC sur une instance Azure SQL Server ou une instance managée Azure SQL, qui autorise uniquement l’authentification multifacteur
+- Déploiement de fichiers ISPAC sur Azure SQL Server ou Azure SQL Managed Instance, qui autorise uniquement l’authentification multifacteur (MFA)
 - Déploiement de packages dans MSDB ou le magasin de packages SSIS
 
 ## <a name="release-notes"></a>Notes de publication
