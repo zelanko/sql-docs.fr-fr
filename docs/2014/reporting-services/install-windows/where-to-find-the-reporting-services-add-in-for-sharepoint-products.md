@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637879"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112183"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Où trouver le complément Reporting Services pour les produits SharePoint
 
@@ -57,7 +57,7 @@ Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
 ##  <a name="bkmk_sql2008sp2"></a>SQL Server 2008 SP2 Reporting Services complément pour les produits et technologies SharePoint 2007  
  Le complément Microsoft SQL Server 2008 SP2 Reporting Services est une version mise à jour du complément 2008 qui prend en charge l'intégration des serveurs de rapports 2008 R2 avec les produits SharePoint 2007.  
   
- La version la plus récente de ce fichier est disponible en ligne sur le site Web du Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , à partir de la page [Complément Microsoft SQL Server 2008 SP2 Reporting Services pour les technologies Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=793).  
+ La version la plus récente de ce fichier est disponible en ligne sur le site Web du Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , à partir de la page [Complément Microsoft SQL Server 2008 SP2 Reporting Services pour les technologies Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=43344).  
   
 ##  <a name="bkmk_sql2008"></a>SQL Server 2008 Reporting Services complément pour les produits et technologies SharePoint 2007  
  Le complément Microsoft SQL Server 2008 Reporting Services pour les technologies Microsoft SharePoint est téléchargeable sur le Web et permet d'exécuter un serveur de rapports au sein d'un déploiement plus étendu de Microsoft Windows SharePoint Services 3.0 ou de Microsoft Office SharePoint Server 2007.  

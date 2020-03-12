@@ -10,22 +10,22 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200419"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112144"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
   Vous pouvez utiliser l'extension pour le traitement des données SQL Server Analysis Services pour récupérer des données d'un classeur PowerPivot qui est publié dans une Galerie SharePoint PowerPivot.  
   
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions pas à pas, consultez [Ajouter et vérifier une connexion de données ou une source de données &#40;générateur de rapports et des&#41;SSRS ](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  La source de données PowerPivot doit être publiée dans une Galerie PowerPivot sur un site SharePoint.  
   
- Pour prendre en charge les connexions du Générateur de rapports à un classeur PowerPivot, vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec PowerPivot pour Excel, mais si vous utilisez un ordinateur qui n'a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
+ Pour prendre en charge les connexions du Générateur de rapports à un classeur PowerPivot, vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec PowerPivot pour Excel, mais si vous utilisez un ordinateur qui n'a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## <a name="data-source-type"></a>Type de source de données  
  Utilisez le type de source de données de rapport **Microsoft SQL Server Analysis Services**.  
@@ -63,7 +63,7 @@ ms.locfileid: "74200419"
 -   Le rapport contient uniquement des données PowerPivot provenant d'une source de données PowerPivot.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analysis Services interface utilisateur du concepteur de requêtes MDX &#40;Générateur de rapports&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

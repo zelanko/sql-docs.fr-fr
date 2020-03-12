@@ -10,20 +10,20 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637775"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112224"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server supprimées dans SQL Server 2014
   Cette rubrique décrit des fonctionnalités qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Pas de fonctionnalités supprimées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>Service Active Directory Helper  
  Le service Active Directory Helper et les composants associés ont été supprimés. Le tableau suivant répertorie les composants associés qui se trouvent par conséquent supprimés :  
@@ -41,7 +41,7 @@ ms.locfileid: "73637775"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Fonctionnalités supprimées dans SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Suppression de l'installation de SQL-DMO à partir de SQL Server Express  
- SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été supprimé de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Nous vous recommandons de modifier le plus tôt possible les applications qui utilisent actuellement cette fonction. Si vous devez prendre en charge SQL- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DMO pour Express, installez les composants de compatibilité [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] descendante à partir du Feature Pack à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=24793). Utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) pour les nouveaux travaux de développement.  
+ SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été supprimé de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Nous vous recommandons de modifier le plus tôt possible les applications qui utilisent actuellement cette fonction. Si vous devez prendre en charge SQL- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DMO pour Express, installez les composants de compatibilité [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] descendante à partir du Feature Pack à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/). Utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) pour les nouveaux travaux de développement.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Suppression de l'option de l'Assistant Web  
  L'option `sp_configure` permettant d'activer l'Assistant Web est supprimée de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nous vous recommandons d'utiliser [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à la place.  

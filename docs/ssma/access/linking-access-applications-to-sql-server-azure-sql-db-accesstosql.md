@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245916"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112063"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Liaison d’applications Access à SQL Server-Azure SQL DB (AccessToSQL)
 Si vous souhaitez utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez lier vos tables Access d’origine aux tables migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La liaison modifie votre base de données Access afin que vos requêtes, formulaires, rapports et pages d’accès aux données utilisent les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données de la base de données ou SQL Azure au lieu des données de votre base de données Access.  
@@ -56,7 +56,7 @@ Lorsque vous ouvrez une table dans Access, les données sont récupérées à l�
   
 > [!IMPORTANT]  
 > Pour lier des tables d’accès à une base de données Azure, vous avez besoin de SQL Server Native Client (SNAC) version 10,5 ou supérieure.   
-> Vous pouvez obtenir la dernière version de SNAC à partir de [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
+> Vous pouvez obtenir la dernière version de SNAC à partir de [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## <a name="unlinking-access-tables"></a>Dissociation des tables d’accès  
 Lorsque vous dissociez une table Access d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une table ou SQL Azure, SSMA restaure la table Access d’origine et ses données.  

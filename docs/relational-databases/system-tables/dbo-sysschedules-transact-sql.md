@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096995"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090578"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "68096995"
 |**freq_interval**|**int**|Jours d'exécution du travail. Dépend de la valeur de **freq_type**. La valeur par défaut est **0**, ce qui indique que **freq_interval** n’est pas utilisé. Consultez le tableau ci-dessous pour connaître les valeurs possibles et leurs effets.|  
 |**freq_subday_type**|**int**|Unités pour le **freq_subday_interval**. Voici les valeurs possibles et leurs descriptions.<br /><br /> <br /><br /> **1** : à l’heure spécifiée<br /><br /> **2** : secondes<br /><br /> **4** : minutes<br /><br /> **8** : heures|  
 |**freq_subday_interval**|**int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail.|  
-|**freq_relative_interval**|**int**|Lorsque **freq_interval** se produit chaque mois, si **freq_interval** est **32** (mensuel relatif). Peut être l’une des valeurs suivantes :<br /><br /> **0** = **freq_relative_interval** n’est pas utilisé<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
+|**freq_relative_interval**|**int**|Lorsque **freq_interval** se produit chaque mois, si **freq_type** est **32** (mensuel relatif). Peut être l’une des valeurs suivantes :<br /><br /> **0** = **freq_relative_interval** n’est pas utilisé<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
 |**freq_recurrence_**<br /><br /> **factorisés**|**int**|Nombre de semaines ou de mois entre l’exécution planifiée d’un travail. **freq_recurrence_factor** est utilisé uniquement si **freq_type** est **8**, **16**ou **32**. Si cette colonne contient **0**, **freq_recurrence_factor** n’est pas utilisé.|  
 |**active_start_date**|**int**|Date de démarrage de l'exécution d'un travail. La date est au format AAAAMMJJ. NULL indique la date du jour.|  
 |**active_end_date**|**int**|Date d'arrêt de l'exécution d'un travail. La date se présente sous la forme AAAAMMJJ.|  
 |**active_start_time**|**int**|Heure à partir de n’importe quel jour entre **active_start_date** et **active_end_date** que l’exécution du travail commence. L'heure est au format HHMMSS, exprimée sur 24 h.|  
 |**active_end_time**|**int**|Heure à n’importe quel jour entre **active_start_date** et **active_end_date** que l’exécution du travail s’arrête. L'heure est au format HHMMSS, exprimée sur 24 h.|  
-|**date_created**|**DATETIME**|Date et heure de création de la planification.|  
-|**date_modified**|**DATETIME**|Date et heure de dernière modification de la planification.|  
+|**date_created**|**datetime**|Date et heure de création de la planification.|  
+|**date_modified**|**datetime**|Date et heure de dernière modification de la planification.|  
 |**version_number**|**int**|Numéro de version en cours de la planification. Par exemple, si une planification a été modifiée 10 fois, le **version_number** est 10.|  
   
 |Valeur de freq_type|Effet sur freq_interval|  

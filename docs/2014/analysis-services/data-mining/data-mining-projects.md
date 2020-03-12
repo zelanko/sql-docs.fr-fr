@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705297"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112152"
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
   Un projet d'exploration de données fait partie d'une solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pendant le processus de conception, les objets que vous créez dans ce projet sont disponibles à des fins de test et d'interrogation dans le cadre d'une base de données d'espace de travail. Lorsque vous souhaitez que les utilisateurs puissent interroger ou parcourir les objets dans le projet, vous devez déployer le projet sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel.  
@@ -161,7 +161,7 @@ ms.locfileid: "73705297"
   
  Ces visualisations sont temporaires et sont fermées sans enregistrement lorsque vous fermez la session avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par conséquent, si vous devez exporter les visualisations vers une autre application pour les présenter ou les analyser plus en détails, utilisez la commande **Copier** à disposition dans chaque onglet ou volet de l'interface de la visionneuse.  
   
- Les Compléments d'exploration de données pour Excel fournissent également un modèle Visio que vous pouvez utiliser pour représenter vos modèles dans un diagramme Visio et pour annoter et modifier le diagramme à l'aide des outils Visio. Pour plus d’informations, consultez [Compléments d’exploration de données Microsoft SQL Server 2008 SP2 pour Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
+ Les Compléments d'exploration de données pour Excel fournissent également un modèle Visio que vous pouvez utiliser pour représenter vos modèles dans un diagramme Visio et pour annoter et modifier le diagramme à l'aide des outils Visio. Pour plus d’informations, consultez [Compléments d’exploration de données Microsoft SQL Server 2008 SP2 pour Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=8569).
   
 ###  <a name="bkmk_Validate"></a>Tester et valider les modèles  
  Une fois un modèle créé, vous pouvez étudier les résultats et déterminer quels sont les modèles les plus efficaces.  

@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811072"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112245"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
   L'OLTP en mémoire introduit les tables mémoire optimisées et les procédures stockées compilées en mode natif dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cet article présente le traitement des requêtes pour les tables mémoire optimisées et les procédures stockées compilées en mode natif.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Pour créer les plans de requête illustrés dans cet article, les deux tables ont été remplies avec les exemples de données tirés de la base de données Northwind, que vous pouvez télécharger sur [Exemples de bases de données Northwind et pubs pour SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
+ Pour créer les plans de requête illustrés dans cet article, les deux tables ont été remplies avec les exemples de données tirés de la base de données Northwind, que vous pouvez télécharger sur [Exemples de bases de données Northwind et pubs pour SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  La requête suivante joint les tables Customer et Order, et retourne l'ID de la commande et les informations client associées :  
   
@@ -94,7 +94,7 @@ Plan de requête d'une jointure hachée des tables sur disque.
   
  Dans cette requête, les lignes de la table Order sont récupérées à partir de l'index cluster. L'opérateur physique `Hash Match` est maintenant utilisé pour `Inner Join`. L'index cluster sur Order n'étant pas trié sur CustomerID, `Merge Join` nécessite un opérateur de tri, ce qui affecte les performances. Notez le coût relatif de l'opérateur `Hash Match` (75 %) comparé au coût de l'opérateur `Merge Join` dans l'exemple précédent (46 %). L'optimiseur aurait pu utiliser l'opérateur `Hash Match` également dans l'exemple précédent, mais il a considéré que l'opérateur `Merge Join` fournirait de meilleures performances.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Traitement des requêtes pour les tables sur disque  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Traitement des requêtes pour les tables sur disque  
  Le diagramme suivant représente le flux de traitement des requêtes dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les requêtes ad hoc :  
   
  ![Pipeline de traitement des requêtes SQL Server](../../database-engine/media/hekaton-query-plan-3.gif "Pipeline de traitement des requêtes SQL Server")  
@@ -116,7 +116,7 @@ Pipeline de traitement des requêtes SQL Server
   
  Pour le premier exemple de requête, le moteur d’exécution demande des lignes à l’index cluster sur la table Customer, et à l’index non-cluster sur la table Order, à partir des méthodes d’accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables mémoire optimisées  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables mémoire optimisées  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
   
  Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété peut être utilisé pour accéder aux tables mémoire optimisées et sur disque. L'illustration suivante montre le traitement des requêtes pour l'accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété aux tables mémoire optimisées :  
@@ -201,7 +201,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Compilation et traitement des requêtes  
  Le diagramme ci-dessous illustre le processus de compilation des procédures stockées compilées en mode natif :  
   
- ![Compilation native des procédures stockées.](../../database-engine/media/hekaton-query-plan-6.gif "Procédures stockées compilées en mode natif.")  
+ ![Procédures stockées compilées en mode natif.](../../database-engine/media/hekaton-query-plan-6.gif "Procédures stockées compilées en mode natif.")  
 Procédures stockées compilées en mode natif.  
   
  Le processus se présente comme suit :  
@@ -233,7 +233,7 @@ Exécution de procédures stockées compilées en mode natif.
   
 4.  Le code machine dans la DLL est exécuté et les résultats sont retournés au client.  
   
- **Détection de paramètres**  
+ **Détection des paramètres**  
   
  Les procédures stockées en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété sont compilées à la première exécution, contrairement aux procédures stockées compilées en mode natif, qui sont compilées lors de la création. Lorsque des procédures stockées interprétées sont compilées au moment de l'appel, les valeurs des paramètres fournis pour cet appel sont utilisées par l'optimiseur lors de la génération du plan d'exécution. Cette utilisation des paramètres lors de la compilation est appelée « détection des paramètres ».  
   

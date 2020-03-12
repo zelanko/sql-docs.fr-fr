@@ -33,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b06e98d5ef3dfc4ad8ab99e374e2d7b5539c98be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637908"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112195"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertion de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
   Un mise à jour indique une opération d’insertion lorsqu’une instance d’enregistrement apparaît dans le ** \<bloc after>** , mais pas dans le bloc ** \<Before>** correspondant. Dans ce cas, le mise à jour insère l’enregistrement dans le ** \<bloc after>** dans la base de données.  
@@ -211,7 +211,7 @@ ms.locfileid: "73637908"
  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les noms de table peuvent inclure un espace, comme la table Order Details dans la base de données Northwind. Toutefois, cela n’est pas valide dans les caractères XML qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont des identificateurs valides, mais les identificateurs XML non valides peuvent\_\_être encodés à l’aide de' __xHHHH’comme valeur d’encodage, où HHHH représente le code UCS-2 hexadécimal à quatre chiffres du caractère dans l’ordre binaire le plus significatif.  
   
 > [!NOTE]  
->  Cet exemple utilise l'exemple de base de données Northwind. Vous pouvez installer la base de données Northwind à l’aide d’un script SQL disponible en téléchargement à partir de ce [site Web Microsoft](https://www.microsoft.com/download/details.aspx?id=23654).  
+>  Cet exemple utilise l'exemple de base de données Northwind. Vous pouvez installer la base de données Northwind à l’aide d’un script SQL disponible en téléchargement à partir de ce [site Web Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Par ailleurs, le nom d'élément doit être mis entre crochets ([ ]). Étant donné que les caractères [et] ne sont pas valides en XML, vous devez\_ les encoder en tant que _x005B et _x005D\_, respectivement. (Si vous utilisez un schéma de mappage, vous pouvez fournir des noms d'élément qui ne contiennent pas de caractères non valides, tels que des espaces blancs. Le schéma de mappage effectue le mappage nécessaire ; par conséquent, il est inutile d'encoder ces caractères).  
   

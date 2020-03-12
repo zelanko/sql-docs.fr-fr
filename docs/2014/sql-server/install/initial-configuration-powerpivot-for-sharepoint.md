@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200434"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112218"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configuration initiale (PowerPivot pour SharePoint)
   Utilisez les étapes de cette rubrique pour configurer une première installation de PowerPivot pour SharePoint. La façon la plus simple de configurer une installation initiale consiste à utiliser l'outil de configuration de PowerPivot. Il automatise toutes les étapes de configuration décrites ci-dessous.  
@@ -24,7 +24,7 @@ ms.locfileid: "74200434"
   
  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Le serveur SharePoint doit avoir été installé à l'aide de l'option d'installation Batterie de serveurs du programme d'installation de SharePoint. Un serveur SharePoint autonome qui utilise une base de données intégrée n'est pas pris en charge. Pour plus d’informations, consultez [conseils pour l’utilisation des fonctionnalités de SQL Server bi dans une batterie de serveurs SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -227,7 +227,7 @@ ms.locfileid: "74200434"
   
  L'installation du fournisseur permettra aux classeurs qui référencent MSOLAP.4 dans la chaîne de connexion de données de fonctionner correctement sur un serveur [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot. L'installation du fournisseur OLE DB SQL Server 2008 R2 est une approche alternative à la mise à niveau des classeurs créés dans une version antérieure de PowerPivot pour Excel.  
   
- Vous pouvez télécharger le fournisseur à partir de [SQL Server page 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978). Recherchez **microsoft® fournisseur Analysis Services OLE DB pour microsoft® SQL Server® 2008 R2**, puis téléchargez le package x64 du programme d' `SQLServer2008_ASOLEDB10.msi` installation.  
+ Vous pouvez télécharger le fournisseur à partir de [SQL Server page 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272). Recherchez **microsoft® fournisseur Analysis Services OLE DB pour microsoft® SQL Server® 2008 R2**, puis téléchargez le package x64 du programme d' `SQLServer2008_ASOLEDB10.msi` installation.  
   
  Pour plus d’informations sur l’installation du fournisseur, y compris les étapes de vérification, consultez [installer les fournisseur Analysis Services OLE DB sur des serveurs SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   

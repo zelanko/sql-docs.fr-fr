@@ -1,5 +1,6 @@
 ---
 title: Flux de travail WideWorldImportersDW-ETL | Microsoft Docs
+description: Utilisez le package ETL avec SQL Server Integration Services (SSIS) pour migrer périodiquement les données de la base de données WideWorldImporters vers WideWorldImportersDW.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 000d12b97eb2eefbfcd9a6a73e02c0098b2afdbb
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067620"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112397"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flux de travail ETL WideWorldImportersDW
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ Le traitement principal commence par le remplissage de la table de dimension Dat
 
 Ensuite, une série de tâches de workflow charge chaque dimension. Ils chargent ensuite chaque fait.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - SQL Server 2016 (ou version ultérieure), avec les bases de données WideWorldImporters et WideWorldImportersDW (dans le même ou dans des instances différentes de SQL Server)
 - SQL Server Management Studio
@@ -62,7 +63,7 @@ Pour obtenir le code source permettant de recréer l’exemple de base de donné
    2. Entrez un nom, par exemple, *WIDEWORLDIMPORTERS ETL*.
    3. Ajoutez une **étape de travail** du type **SQL Server Integration Services package**.
    4. Sélectionnez le serveur qui contient le catalogue Integration Services, puis sélectionnez le package *ETL quotidien* .
-   5. Sous **** > **gestionnaires de connexions**de configuration, assurez-vous que les connexions à la source et à la cible sont correctement configurées. La valeur par défaut consiste à se connecter à l’instance locale.
+   5. Sous **Configuration** > **gestionnaires de connexions**de configuration, assurez-vous que les connexions à la source et à la cible sont correctement configurées. La valeur par défaut consiste à se connecter à l’instance locale.
    6. Sélectionnez **OK** pour créer le travail.
 
 3. Exécutez ou planifiez le travail.
