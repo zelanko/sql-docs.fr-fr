@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: What's New
+    - name: Nouveautés
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: Utiliser le serveur d’historique Spark
               href: big-data-cluster/spark-history-server.md
+        - name: Dépanner
+          items:
+            - name: Déploiement Active Directory
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: Informations de référence
       items:
         - name: Informations de référence sur le déploiement
