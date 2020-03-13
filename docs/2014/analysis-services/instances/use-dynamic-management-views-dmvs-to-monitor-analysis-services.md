@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079581"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217120"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services
   Les vues de gestion dynamique (DMV) d'Analysis Services sont des structures de requête qui exposent des informations sur les opérations de serveur local et l'intégrité du serveur. La structure de requête est une interface vers des ensembles de lignes de schéma qui retournent des métadonnées et des informations d'analyse relatives à une instance Analysis Services.  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[Ensemble de lignes DBSCHEMA_TABLES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Retourne la liste de toutes les tables dans la base de données active. Vous pouvez utiliser cette liste pour construire une requête DMV.|  
 |[Ensemble de lignes DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Retourne la liste des colonnes et des tables utilisées dans un modèle qui ont des dépendances sur d'autres colonnes et tables.|  
 |[Ensemble de lignes DISCOVER_COMMAND_OBJECTS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Fournit des informations sur l'activité et l'utilisation des ressources par les objets actuellement utilisés par la commande référencée.|  
-|[Ensemble de lignes DISCOVER_COMMANDS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Fournit des informations sur l'activité et l'utilisation des ressources relatives à la commande en cours d'exécution.|  
+|[Ensemble de lignes DISCOVER_COMMANDS](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|Fournit des informations sur l'activité et l'utilisation des ressources relatives à la commande en cours d'exécution.|  
 |[Ensemble de lignes DISCOVER_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Fournit à Analysis Services des informations sur l'activité et l'utilisation des ressources relatives aux connexions ouvertes.|  
 |[Ensemble de lignes DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Retourne des informations sur un modèle tabulaire.<br /><br /> Nécessite l'ajout de SYSTEMRESTRICTSCHEMA et de paramètres supplémentaires.|  
 |[Ensemble de lignes DISCOVER_DB_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Échange des informations sur l'activité et l'utilisation des ressources relatives aux connexions ouvertes entre Analysis Services et les sources de données externes, par exemple au cours des opérations de traitement et d'importation.|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[Ensemble de lignes MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Retourne des informations sur les objets source de données définis dans la base de données active.|  
 |[Ensemble de lignes MDSCHEMA_KPIS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Retourne des informations sur les indicateurs de performance clés (KPI) définis dans la base de données active.|  
 |[Ensemble de lignes MDSCHEMA_LEVELS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Retourne des informations sur les niveaux au sein des hiérarchies définies dans la base de données active.|  
-|[Ensemble de lignes MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Répertorie la dimension des groupes de mesures.|  
+|[Ensemble de lignes MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|Répertorie la dimension des groupes de mesures.|  
 |[Ensemble de lignes MDSCHEMA_MEASUREGROUPS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Retourne la liste de groupes de mesures dans la connexion actuelle.|  
-|[Ensemble de lignes MDSCHEMA_MEASURES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Retourne la liste des mesures dans la connexion actuelle.|  
+|[Ensemble de lignes MDSCHEMA_MEASURES](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|Retourne la liste des mesures dans la connexion actuelle.|  
 |[Ensemble de lignes MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Retourne la liste de tous les membres de la connexion actuelle, répertoriés par base de données, cube et dimension.|  
 |[Ensemble de lignes MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Retourne le nom complet de chaque propriété, avec le type de propriété, le type de données et d'autres métadonnées.|  
 |[Ensemble de lignes MDSCHEMA_SETS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Retourne la liste des ensembles qui sont définis dans la connexion actuelle.|  

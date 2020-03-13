@@ -11,11 +11,11 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338083"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289777"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -34,8 +34,8 @@ Si vous souhaitez une vue d’ensemble de l’organisation des données dans [!I
  
 Pour obtenir des liens vers des vidéos et d’autres ressources de formation concernant [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consultez [En savoir plus sur Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
-> **Téléchargement**  
-> -   Pour télécharger [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> **Télécharger**  
+> -   Pour télécharger [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle avec SQL Server déjà installé.  
 > 
 > **Vous ne pouvez pas créer un site Web MDS ?**

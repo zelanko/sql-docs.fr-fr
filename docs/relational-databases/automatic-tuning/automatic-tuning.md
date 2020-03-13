@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934555"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289117"
 ---
 # <a name="automatic-tuning"></a>Réglage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Quand le réglage automatique n’est pas activé, les utilisateurs doivent rég
 Les plans forcés manuellement ne doivent pas être indéfiniment forcés, car l’application doit être en mesure d’appliquer des [!INCLUDE[ssde_md](../../includes/ssde_md.md)] plans optimaux. L’utilisateur ou l’administrateur de bases de droits doit finalement `sp_query_store_unforce_plan` annuler l’application du plan [!INCLUDE[ssde_md](../../includes/ssde_md.md)] à l’aide de la procédure et laisser le plan optimal. 
 
 > [!TIP]
-> Alternativelly, utilisez les **requêtes avec des plans forcés** magasin des requêtes vue pour rechercher et annuler les plans.
+> Vous pouvez également utiliser les **requêtes avec des plans forcés** magasin des requêtes vue pour rechercher et annuler les plans.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fournit toutes les vues et procédures nécessaires pour analyser les performances et résoudre les problèmes dans Magasin des requêtes.
 
@@ -188,5 +188,5 @@ Sans la gestion automatique des index, l’utilisateur doit interroger manuellem
  [Plans d’exécution](../../relational-databases/performance/execution-plans.md)    
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Analyse des performances à l’aide de l’Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Assistant Paramétrage de requêtes](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

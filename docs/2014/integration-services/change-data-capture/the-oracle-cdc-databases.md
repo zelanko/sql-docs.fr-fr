@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338992"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289267"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  
@@ -98,16 +98,16 @@ ms.locfileid: "78338992"
 |----------|-----------------|  
 |version|Effectue le suivi de la version de la configuration de l'instance CDC. Elle est mise à jour chaque fois que la table est mise à jour et chaque fois qu'une nouvelle instance de capture est ajoutée ou qu'une instance de capture existante est supprimée.|  
 |connect_string|Chaîne de connexion Oracle. Voici un exemple de base :<br /><br /> `<server>:<port>/<instance>` (par exemple, `erp.contoso.com:1521/orcl`).<br /><br /> La chaîne de connexion peut également spécifier un descripteur de connexion Oracle Net, par exemple, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Si vous utilisez un serveur d'annuaire ou des noms TNS, la chaîne de connexion peut être le nom de la connexion.<br /><br /> Pour plus d’informations sur les chaînes de connexion Oracle, consultez [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) pour obtenir des informations détaillées sur les chaînes de connexion de base de données Oracle pour le client Oracle Instant qui est utilisée par le service de capture des changements de données Oracle.|  
-|use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut) ;<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
+|use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut)<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
 |username|Nom de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
-|password|Mot de passe de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
+|mot de passe|Mot de passe de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Durée, en secondes, pendant laquelle une transaction Oracle non enregistrée est gardée en mémoire avant d’être écrite dans la table **cdc.xdbcdc_staged_transactions** . La valeur par défaut est 120 secondes.|  
 |memory_limit|Quantité de mémoire limite, en Mo, qui permet de mettre en cache des données en mémoire. Un paramètre inférieur provoque l’écriture de davantage de transactions dans la table **cdc.xdbcdc_staged_transactions** . La valeur par défaut est 50 Mo.|  
 |options|Liste des options au format name[=value][; ] - elle sert à spécifier des options secondaires (par exemple, traçage, paramétrage). Consultez le tableau ci-dessous pour obtenir une description des options disponibles.|  
   
  Le tableau suivant décrit les options disponibles.  
   
-|Name|Default|Min|Max|statique|Description|  
+|Nom|Default|Min|Max|statique|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |trace|False|-|-|False|Valeurs disponibles :<br /><br /> **True**<br /><br /> **False**<br /><br /> **sur**<br /><br /> **arrêt**|  
 |cdc_update_state_interval|10|1|120|False|Taille (en kilo-octets) des segments de mémoire alloués pour une transaction (une transaction peut allouer plusieurs segments). Consultez la colonne memory_limit dans la table [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) .|  

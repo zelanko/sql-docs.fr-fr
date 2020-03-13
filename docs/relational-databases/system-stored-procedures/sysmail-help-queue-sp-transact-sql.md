@@ -18,11 +18,11 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305220"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289947"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar (6)**|Type de file d'attente. Les valeurs possibles sont **mail** et **Status**.|  
-|**base**|**int**|Nombre d'éléments de messagerie dans la file d'attente spécifiée.|  
+|**length**|**int**|Nombre d'éléments de messagerie dans la file d'attente spécifiée.|  
 |**Département**|**nvarchar (64)**|État du moniteur. Les valeurs possibles sont **INactives** (la file d’attente est inactive), **notifiée** (la file d’attente a reçu l’accusé de réception d’une notification) et **RECEIVES_OCCURRING** (file d’attente reçoit).|  
 |**last_empty_rowset_time**|**Date/heure**|Date et heure à laquelle la file d'attente était vide pour la dernière fois. Format 24 heures et fuseau horaire GMT.|  
 |**last_activated_time**|**Date/heure**|Date et heure de la dernière activation de la file d'attente. Format 24 heures et fuseau horaire GMT.|  

@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6478be669b53cd4d1a919ff6142be834de187dcc
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339277"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289567"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
   
@@ -27,21 +27,20 @@ ms.locfileid: "78339277"
 |-|
 |**[!INCLUDE[applies](../includes/applies-md.md)]** Mode SharePoint|
 
-##  <a name="AlertingWF"></a>Architecture et flux de travail des alertes de données
+##  <a name="AlertingWF"></a> Architecture des alertes de données et flux de travail
  Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :
 
--   **Définir et enregistrer des définitions d’alerte de données**: vous exécutez un rapport, créez des règles qui identifient des valeurs de données intéressantes, définissez une périodicité pour l’envoi du message d’alerte de données et spécifiez les destinataires du message d’alerte.
+-   **Définition et enregistrement des alertes de données** : vous exécutez un rapport, créez des règles qui identifient les valeurs de données intéressantes, définissez les périodicités d’envoi de du message d’alerte de données et spécifiez les destinataires du message d’alerte.
 
--   **Exécuter les définitions d’alerte de données**-le service d’alerte traite les définitions d’alerte à une heure planifiée, récupère les données du rapport, crée des instances d’alerte de données en fonction des règles de la définition d’alerte.
+-   **Exécution des définitions d’alerte de données** : le service d’alerte traite les définitions d’alerte au moment prévu, récupère les données de rapport et crée des instances d’alerte de données en fonction des règles de la définition d’alerte.
 
--   **Remettre les messages d’alerte de données aux destinataires**: le service d’alerte crée une instance d’alerte et envoie un message d’alerte aux destinataires par courrier électronique.
+-   **Remise des messages d’alerte de données aux destinataires** : le service d’alerte créé une instance d’alerte et envoie un message d’alerte aux destinataires par courrier électronique.
 
  En outre, en tant que propriétaire de l'alerte de données, vous pouvez afficher les informations relatives aux alertes de données et supprimer et modifier vos définitions d'alerte. Une alerte a un seul propriétaire, la personne qui l'a créée.
 
  Les administrateurs d'alertes, c'est-à-dire les utilisateurs disposant d'autorisations d'alerte SharePoint, peuvent gérer les alertes de données au niveau du site. Ils peuvent consulter les listes d'alertes pour chaque utilisateur du site et supprimer des alertes.
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont différentes des alertes SharePoint. Vous pouvez définir des alertes SharePoint sur tout type de document, notamment les rapports. Les alertes SharePoint sont envoyées lorsque le document change. Par exemple, lorsque vous ajoutez une colonne à une table dans un rapport. En revanche, les alertes de données sont envoyées lorsque les données affichées dans un rapport répondent aux règles définies dans les définitions d'alerte. Les règles référencent en général les données qui s'affichent dans un rapport.
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont différentes des alertes SharePoint. Vous pouvez définir des alertes SharePoint sur tout type de document, notamment les rapports. Les alertes SharePoint sont envoyées lorsque le document change. Par exemple, lorsque vous ajoutez une colonne à une table dans un rapport. En revanche, les alertes de données sont envoyées lorsque les données affichées dans un rapport répondent aux règles définies dans les définitions d'alerte. Les règles référencent en général les données qui s'affichent dans un rapport.
 
  En créant des alertes de données sur des rapports, vous pouvez surveiller les modifications apportées aux données d'un rapport et envoyer des messages d'alerte de données par courrier électronique lorsque les données du rapport suivent les règles définissant celles qui présentent un intérêt pour vous et vos collègues, à des intervalles répondant à vos besoins. Vous pouvez également exécuter des alertes de données à la demande. Si vous avez l'autorisation de créer des alertes dans SharePoint Create, vous pouvez créer des alertes sur tout rapport que vous avez l'autorisation de consulter. Vous pouvez créer plusieurs alertes sur un rapport et plusieurs utilisateurs peuvent créer la même alerte ou des alertes différentes sur un rapport. Pour collaborer avec vos collègues, vous pouvez les spécifier comme destinataires des messages d'alerte dans les définitions d'alerte de données que vous créez.
 
@@ -56,8 +55,7 @@ ms.locfileid: "78339277"
 
  Lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif ou en mode SharePoint ou lorsque vous utilisez la version autonome du Générateur de rapports, vous pouvez enregistrer des rapports sur un serveur de rapports, votre ordinateur ou une bibliothèque SharePoint. Pour créer des alertes de données sur les rapports, les rapports doivent être enregistrés ou téléchargés sur une bibliothèque SharePoint. Cela signifie que vous ne pouvez pas créer d'alertes sur des rapports enregistrés sur un serveur de rapports en mode natif ou votre ordinateur. Par ailleurs, vous ne pouvez pas créer d'alertes incorporées dans des applications personnalisées.
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge divers types d'informations d'identification dans les rapports. Vous pouvez créer des alertes de données sur des rapports avec une source de données configurée pour utiliser des informations d'identification stockées ou bien aucune information d'identification. Vous ne pouvez pas créer d'alertes sur des rapports configurés pour utiliser des informations d'identification de sécurité intégrée ou une invite pour les informations d'identification. Le rapport est exécuté dans le cadre du traitement de la définition d'alerte et ce dernier échoue sans informations d'identification. Pour plus d’informations, consultez les rubriques suivantes :
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge divers types d'informations d'identification dans les rapports. Vous pouvez créer des alertes de données sur des rapports avec une source de données configurée pour utiliser des informations d'identification stockées ou bien aucune information d'identification. Vous ne pouvez pas créer d'alertes sur des rapports configurés pour utiliser des informations d'identification de sécurité intégrée ou une invite pour les informations d'identification. Le rapport est exécuté dans le cadre du traitement de la définition d'alerte et ce dernier échoue sans informations d'identification. Pour plus d’informations, consultez les rubriques suivantes :
 
 -   [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](report-data/specify-credential-and-connection-information-for-report-data-sources.md)
 
@@ -112,7 +110,7 @@ ms.locfileid: "78339277"
 
  Pour plus d’informations, consultez [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).
 
-##  <a name="InstallAlerting"></a>Installer des alertes de données
+##  <a name="InstallAlerting"></a> Installer des alertes de données
  La fonctionnalité d'alertes de données est disponible uniquement lorsque [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installé en mode SharePoint. Lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, le programme d'installation crée automatiquement la base de données des alertes qui stocke les définitions d'alerte de données et les métadonnées d'alerte, crée deux pages SharePoint pour la gestion des alertes et ajoute le Concepteur d'alertes de données au site SharePoint. Il n'y a pas d'étapes spéciales à effectuer ni d'options à définir pour créer des alertes pendant l'installation.
 
  Pour plus d’informations sur l’installation de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, dont le nouveau service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et l’application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qu’il faut créer et configurer pour pouvoir utiliser les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], voir [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) dans MSDN Library.
@@ -121,7 +119,7 @@ ms.locfileid: "78339277"
 
  Vous pouvez utiliser la page **Configurer les abonnements et les alertes** dans l'Administration centrale de SharePoint pour déterminer si SQL Server Agent s'exécute, et pour créer et télécharger les scripts personnalisés [!INCLUDE[tsql](../includes/tsql-md.md)] que vous exécuterez ensuite pour accorder des autorisations à SQL Server Agent. Vous pouvez également générer les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] à l'aide de PowerShell. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).
 
-##  <a name="ConfigAlert"></a>Configurer des alertes de données
+##  <a name="ConfigAlert"></a> Configurer des alertes de données
  À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , les paramètres des fonctionnalités d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , y compris les données d'alerte, sont répartis entre le fichier de configuration du serveur de rapports (rsreportserver.config) et une base de données de configuration SharePoint lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint. Lorsque vous créez l'application de service en tant qu'étape en installant et en configurant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la base de données de configuration SharePoint est automatiquement créée. Pour plus d’informations, consultez [fichier de configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md) et [Reporting Services fichiers de configuration](report-server/reporting-services-configuration-files.md).
 
  Les paramètres des alertes de données d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluent les intervalles de nettoyage des données et des métadonnées d'alerte et le nombre de tentatives d'envoi des messages d'alerte de données par courrier électronique. Vous pouvez modifier le fichier de configuration et la base de données afin d'utiliser des valeurs différentes pour les paramètres d'alerte de données.
@@ -130,7 +128,7 @@ ms.locfileid: "78339277"
 
  Le tableau suivant répertorie les éléments de configuration des alertes de données, leurs valeurs par défaut, les descriptions et les emplacements.
 
-|Paramètre|Valeur par défaut|Description|Location|
+|Paramètre|Valeur par défaut|Description|Emplacement|
 |-------------|-------------------|-----------------|--------------|
 |AlertingCleanupCycleMinutes|20|Nombre de minutes entre les démarrages du cycle de nettoyage.|Fichier de configuration du serveur de rapports|
 |AlertingExecutionLogCleanupMinutes|10080|Nombre de minutes pendant lesquelles les entrées du journal des exécutions sont conservées.|Fichier de configuration du serveur de rapports|
@@ -168,7 +166,7 @@ ms.locfileid: "78339277"
 |SocketException|||||||X|
 |SMTPException **(\*)**|||||||X|
 
- **(\*)** Erreurs SMTP qui déclencheront une nouvelle tentative :
+ **(\*)** Les erreurs SMTP entraînent une reprise :
 
 -   SmtpStatusCode.ServiceNotAvailable
 
@@ -176,7 +174,7 @@ ms.locfileid: "78339277"
 
 -   SmtpStatusCode.MailboxUnavailable
 
-###  <a name="bkmk_disablealerts"></a>Désactiver les alertes de données
+###  <a name="bkmk_disablealerts"></a> Désactiver les alertes de données
  Si vous souhaitez désactiver la fonctionnalité d'alerte de données, modifiez la section Service du fichier de configuration. Le code suivant affiche la section Service du fichier de configuration.
 
  `<Service>`
@@ -195,22 +193,21 @@ ms.locfileid: "78339277"
 
  Pour désactiver les alertes, modifiez True en False dans `<IsAlertingService>True</IsAlertingService>`.
 
-##  <a name="Permissions"></a>Autorisations pour les alertes de données
+##  <a name="Permissions"></a> Autorisations pour les alertes de données
  Pour pouvoir créer des alertes de données sur les rapports, vous devez avoir l'autorisation d'exécuter le rapport et créer des alertes sur le site SharePoint. Pour plus d'informations sur les autorisations de rapport, consultez les rubriques suivantes.
 
 -   [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)
 
 -   [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prennent en charge deux niveaux d'autorisation : travailleur de l'information et administrateur d'alertes. Le tableau suivant répertorie les autorisations et les tâches utilisateur SharePoint connexes.
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prennent en charge deux niveaux d'autorisation : travailleur de l'information et administrateur d'alertes. Le tableau suivant répertorie les autorisations et les tâches utilisateur SharePoint connexes.
 
 |Type d’utilisateur|Autorisation SharePoint|Description de la tâche|
 |---------------|---------------------------|----------------------|
 |Travailleur de l'information|Afficher les éléments<br /><br /> Créer des alertes|Consultez des éléments tels que des rapports et créez des alertes de données reposant sur des rapports. Modification et suppression d'alertes|
 |Administrateur d'alertes|Gérer les alertes|Consultez la liste de toutes les alertes de données enregistrée sur le site SharePoint et supprimez des alertes.|
 
-##  <a name="DiagnosticsLogging"></a>Diagnostics et journalisation
+##  <a name="DiagnosticsLogging"></a> Diagnostic et connexion
  Les alertes de données offrent plusieurs moyens pour aider les travailleurs de l'information et les administrateurs à suivre les alertes et comprendre pourquoi elles échouent, ou aider les administrateurs à utiliser les journaux d'exécution pour connaître les messages d'alerte envoyés, les destinataires, le nombre d'instances d'alerte envoyées, etc.
 
 ### <a name="data-alert-manager"></a>Gestionnaire des alertes de données
@@ -223,8 +220,7 @@ ms.locfileid: "78339277"
 -   Le type de données dans la source de données sous-jacente a changé et la définition d'alerte n'est plus valide.
 
 ### <a name="logs"></a>Journaux d’activité
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit un certain nombre de journaux qui peuvent vous aider à en savoir plus les rapports exécutés lors du traitement des définitions d'alerte de données, les instances d'alerte de données créées etc. Trois journaux sont particulièrement utiles : le journal d'exécution des alertes, le journal d'exécution du serveur de rapports et le journal des traces du serveur de rapports.
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit un certain nombre de journaux qui peuvent vous aider à en savoir plus les rapports exécutés lors du traitement des définitions d'alerte de données, les instances d'alerte de données créées etc. Trois journaux sont particulièrement utiles : le journal d'exécution des alertes, le journal d'exécution du serveur de rapports et le journal des traces du serveur de rapports.
 
  Pour plus d’informations sur les autres journaux [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consultez [Fichiers journaux et sources de Reporting Services](report-server/reporting-services-log-files-and-sources.md).
 
@@ -255,7 +251,7 @@ ms.locfileid: "78339277"
 #### <a name="report-server-trace-log"></a>Journal des traces du serveur de rapports
  Le journal des traces du serveur de rapports contient des informations très détaillées sur les opérations du service de serveur de rapports, y compris celles effectuées par le service Web du serveur de rapports et le traitement en arrière-plan. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l'origine d'un problème consigné dans le journal des événements ou le journal des exécutions. Pour plus d’informations, consultez [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).
 
-##  <a name="PerformanceCounters"></a>Compteurs de performances
+##  <a name="PerformanceCounters"></a> Compteurs de performances
  Les alertes de données fournissent leurs propres compteurs de performances. Tous les compteurs de performances sauf un sont liés à un événement qui fait partie du service d'exécution des alertes. Le compteur de performances relatif à la file d'attente des événements indique la longueur de la file d'attente de tous les événements actifs.
 
 |Événement ou file d'attente d'événements|Compteur de performances|
@@ -269,31 +265,29 @@ ms.locfileid: "78339277"
 |GenerateAlert|Alerte : événements traités - GenerateAlert|
 |DeliverAlert|Alerte : événements traités - DeliverAlert|
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des compteurs de performances pour d'autres fonctionnalités d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [compteurs de performances pour les objets ReportServer : service et ReportServerSharePoint : service performance](report-server/performance-counters-reportserver-service-performance-objects.md), [compteurs de performances pour le service Web MSRS 2014 et les objets de performance du service windows msrs 2014 &#40;&#41;en mode natif ](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), ainsi que [les compteurs de performances pour le service Web MSRS 2014 en mode SharePoint et les objets de performance du service Windows msrs 2014 ](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)en mode SharePoint &#40;&#41;.
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des compteurs de performances pour d'autres fonctionnalités d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [compteurs de performances pour les objets ReportServer : service et ReportServerSharePoint : service performance](report-server/performance-counters-reportserver-service-performance-objects.md), [compteurs de performances pour le service Web MSRS 2014 et les objets de performance du service windows msrs 2014 &#40;&#41;en mode natif ](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), ainsi que [les compteurs de performances pour le service Web MSRS 2014 en mode SharePoint et les objets de performance du service Windows msrs 2014 ](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)en mode SharePoint &#40;&#41;.
 
-##  <a name="SupportForSSL"></a>Prise en charge de SSL
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut utiliser le service HTTP SSL (Secure Sockets Layer) pour établir des connexions chiffrées à un serveur de rapports ou à un site SharePoint.
+##  <a name="SupportForSSL"></a> Prise en charge d'SSL
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut utiliser le service HTTP SSL (Secure Sockets Layer) pour établir des connexions chiffrées à un serveur de rapports ou à un site SharePoint.
 
  Le service de runtime des alertes et l'interface utilisateur des alertes de données prend en charge SSL et fonctionne de façon similaire à SSL ou HTTP ; toutefois, il existe de légères différences. Lorsque la définition de l'alerte de données est créée à l'aide d'une connexion SSL, l'URL qui revient à la bibliothèque SharePoint depuis le message d'alerte de données utilise également SSL. Vous pouvez identifier la connexion SSL car elle utilise HTTPS au lieu de HTTP dans son URL. De même, si la définition d'alerte de données a été créée à l'aide d'une connexion HTTP, le lien vers le site SharePoint utilise HTTP. Si la définition d'alerte a été créée avec SSL ou HTTP, l'expérience pour les utilisateurs et les administrateurs des alertes est identique lorsqu'on utilise le Concepteur d'alertes de données ou le Gestionnaire des alertes de données. Si le protocole (HTTP ou SSL) change entre le moment où la définition de l'alerte a été créée et le moment où elle a été mise à jour et resauvegardée, le protocole d'origine est conservé et utilisé dans les URL du lien.
 
  Si vous créez une alerte de données sur un site SharePoint configuré pour utiliser SSL, puis supprimez la spécification SSL, l'alerte continue de fonctionner sur le site. Si le site est supprimé, le site de zone par défaut est utilisé à la place.
 
-##  <a name="UserInterface"></a>Interface utilisateur des alertes de données
+##  <a name="UserInterface"></a> Interface utilisateur des alertes de données
  Les alertes de données fournissent des pages SharePoint pour gérer les alertes et un concepteur pour créer et modifier les définitions des alertes de données.
 
--   **Concepteur d’alertes de données** dans lequel vous créez ou modifiez des définitions d’alerte de données. Pour plus d’informations, consultez [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md), [Créer une alerte de données dans le Concepteur d’alertes](create-a-data-alert-in-data-alert-designer.md) et [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md).
+-   **Concepteur d'alertes de données** dans lequel vous créez ou modifiez des définitions d'alerte de données. Pour plus d’informations, consultez [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md), [Créer une alerte de données dans le Concepteur d’alertes](create-a-data-alert-in-data-alert-designer.md) et [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md).
 
--   **Gestionnaire** des alertes de données dans lequel vous pouvez afficher des listes d’alertes de données, supprimer des alertes et ouvrir des alertes pour les modifier. Le Gestionnaire des alertes de données est disponible en deux versions : l'une destinée aux utilisateurs pour gérer les alertes qu'ils ont créées, et l'autre pour les administrateurs, destinée à gérer les alertes qui appartiennent aux utilisateurs du site.
+-   **Gestionnaire des alertes de données** dans lequel vous consultez des listes d'alertes de données, vous supprimez des alertes et vous ouvrez des alertes pour les modifier. Le Gestionnaire des alertes de données est disponible en deux versions : l'une destinée aux utilisateurs pour gérer les alertes qu'ils ont créées, et l'autre pour les administrateurs, destinée à gérer les alertes qui appartiennent aux utilisateurs du site.
 
      Pour plus d’informations sur la gestion des alertes de données que vous avez créées, consultez [Gestionnaire des alertes de données pour les utilisateurs SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) et [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).
 
      Pour plus d’informations sur la gestion de toutes les alertes de données d’un site, consultez [Gestionnaire des alertes de données pour les administrateurs d’alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) et [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).
 
--   **Approvisionnez les abonnements et les alertes de données** dans lesquels vous déterminez si Reporting Services pouvez utiliser SQL Server Agent pour les alertes de données et télécharger des scripts qui autorisent l’accès à SQL Server Agent. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).
+-   Dans la section**Configurer les abonnements et les alertes** vous déterminez si Reporting Services peut utiliser SQL Server Agent pour les alertes de données et télécharger les scripts qui autorisent l'accès à SQL Server Agent. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).
 
-##  <a name="Globalization"></a>Globalisation des alertes de données
+##  <a name="Globalization"></a> Globalisation des alertes de données
  Certain script tel que l'arabe et hébreu sont écrits de droite à gauche. Les alertes de données prennent en charge les scripts de droite à gauche ainsi que les scripts de gauche à droite. Les alertes de données détectent la culture et modifient en conséquence l'apparence et le comportement de l'interface utilisateur, ainsi que la disposition des messages d'alerte de données. La culture est dérivée du paramètre régional du système d’exploitation de l’ordinateur de l’utilisateur. La culture est enregistrée chaque fois que vous mettez à jour puis resauvegardez la définition d'une alerte de données.
 
  La culture de la définition de l'alerte peut déterminer si oui ou non les données satisfont aux règles dans la définition de l'alerte. Les comparaisons de chaînes sont très fréquemment affectées par les règles spécifiques à la culture.
@@ -308,13 +302,13 @@ ms.locfileid: "78339277"
 
 -   [Enregistrer un rapport dans une bibliothèque SharePoint &#40;Générateur de rapports&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)
 
--   [Créer une alerte de données dans le Concepteur d’alertes](create-a-data-alert-in-data-alert-designer.md)
+-   [Créer une alerte de données dans le concepteur d’alertes de données](create-a-data-alert-in-data-alert-designer.md)
 
--   [Modifier une alerte de données dans le Concepteur d'alertes](edit-a-data-alert-in-alert-designer.md)
+-   [Modifier une alerte de données dans le concepteur d'alertes](edit-a-data-alert-in-alert-designer.md)
 
--   [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md)
+-   [Gérer mes alertes de données dans le gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md)
 
--   [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)
+-   [Gérer toutes les alertes de données sur un site SharePoint dans le gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)
 
 -   [Accorder des autorisations aux utilisateurs et alerter les administrateurs](grant-permissions-to-users-and-alerting-administrators.md)
 

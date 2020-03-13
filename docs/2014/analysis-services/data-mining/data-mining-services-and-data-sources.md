@@ -10,12 +10,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084915"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217129"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Services d'exploration de données et sources de données
   L'exploration de données requiert une connexion à une instance de SQL Server Analysis Services. Les données d’un cube ne sont pas nécessaires pour l’exploration de données et l’utilisation de sources relationnelles est recommandée. Toutefois, l’exploration de données utilise des composants fournis par le moteur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -117,7 +117,7 @@ ms.locfileid: "66084915"
   
  Si la procédure retourne un dataset, le client reçoit un dataset ou datatable avec une table imbriquée contenant les lignes. Par exemple, si vous créez une requête sur le contenu d'un modèle, la requête retourne tout le modèle. Pour éviter de récupérer trop de lignes, vous pouvez écrire des procédures stockées en utilisant le modèle objet ADOMD+.  
   
- Pour écrire une procédure stockée de serveur, vous devez référencer l'espace de noms Microsoft.AnalysisServices.AdomdServer. Pour plus d’informations sur la création et l’utilisation des procédures stockées, consultez [Fonctions définies par l’utilisateur et procédures stockées](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
+ Pour écrire une procédure stockée de serveur, vous devez référencer l'espace de noms Microsoft.AnalysisServices.AdomdServer. Pour plus d’informations sur la création et l’utilisation des procédures stockées, consultez [Fonctions définies par l’utilisateur et procédures stockées](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Les procédures stockées ne peuvent pas être utilisées pour modifier la sécurité sur des objets serveur de données. Lorsque vous exécutez une procédure stockée, le contexte actuel de l'utilisateur est utilisé pour déterminer l'accès à tous les objets de serveur. Par conséquent, les utilisateurs doivent disposer des autorisations appropriées sur tous les objets de base de données auxquels ils accèdent.  

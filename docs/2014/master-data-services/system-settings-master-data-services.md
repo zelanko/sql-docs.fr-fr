@@ -14,11 +14,11 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339147"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289247"
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
   Vous pouvez configurer les paramètres système de l'ensemble des applications Web et services Web associés à une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -109,7 +109,7 @@ ms.locfileid: "78339147"
 |**Format d’e-mail par défaut**|**EmailFormat**|Format de toutes les notifications par courrier électronique. La valeur par défaut est **HTML** ou **1**. Le paramètre de base de données **2** indique **Texte**.<br /><br /> Remarque : vous pouvez remplacer cette valeur pour un utilisateur spécifique dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]en changeant et en enregistrant le **Format de courrier électronique** dans l’onglet **Général** de l’utilisateur.|  
 |**Expression régulière pour l’adresse de messagerie**|**EmailRegExPattern**|Dans la [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zone fonctionnelle **autorisations d’accès** , l’expression régulière utilisée pour valider l’adresse de messagerie entrée sous l’onglet **général** d’un utilisateur. Pour plus d’informations sur les expressions régulières, consultez [éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
 |**Compte Database Mail**|**EmailProfilePrincipalAccount**|Affiche le compte de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. Le profil par défaut est **mds_email_user**.|  
-|**Profil Database Mail**|**DatabaseMailProfile**|Profil de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. La valeur par défaut est vide.|  
+|**Profil de Database Mail**|**DatabaseMailProfile**|Profil de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. La valeur par défaut est vide.|  
 ||**ValidationIssueHTML**|Au format HTML, texte du courrier électronique que les utilisateurs reçoivent lors de l'échec de la validation d'une règle d'entreprise.|  
 ||**ValidationIssueText**|Au format texte brut, texte du courrier électronique que les utilisateurs reçoivent lors de l'échec de la validation d'une règle d'entreprise.|  
 ||**VersionStatusChangeText**|Au format texte brut, texte du courrier électronique que les utilisateurs reçoivent lors du changement d'état d'une version. Seuls les utilisateurs disposant de l'autorisation **Mettre à jour** sur le modèle entier reçoivent ce courrier électronique.|  

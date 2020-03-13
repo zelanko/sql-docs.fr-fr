@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339190"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289557"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Concevoir des rapports à l'aide du Concepteur de rapports (SSRS)
   Utilisez le Concepteur de rapports pour créer des rapports et des solutions de création de rapports complets de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le Concepteur de rapports fournit une interface graphique dans laquelle vous pouvez définir les sources de données, les datasets et les requêtes, les positions de mise en page des rapports pour les régions de données et les champs, ainsi que des fonctionnalités interactives telles que les paramètres et les jeux de rapports qui fonctionnent ensemble.  
@@ -120,7 +120,7 @@ ms.locfileid: "78339190"
      Si vous utilisez une configuration de projet qui crée le rapport mais ne le déploie pas, le rapport spécifié dans la propriété `StartItem` de la configuration actuelle s'ouvre dans une fenêtre d'aperçu distincte.  
   
     > [!NOTE]  
-    >  Pour utiliser le mode débogage, vous devez définir un élément de départ. Dans Explorateur de solutions, cliquez avec le bouton droit sur le projet **** de rapport, cliquez `StartItem`sur Propriétés puis, dans, sélectionnez le nom du rapport à afficher.  
+    >  Pour utiliser le mode débogage, vous devez définir un élément de départ. Dans Explorateur de solutions, cliquez avec le bouton droit sur le projet **Properties**de rapport, cliquez `StartItem`sur Propriétés puis, dans, sélectionnez le nom du rapport à afficher.  
   
      Si vous souhaitez afficher l’aperçu d’un rapport particulier, sans qu’il soit l’élément de départ du projet, sélectionnez une configuration qui crée le rapport mais ne le déploie pas (par exemple, la configuration DebugLocal), cliquez avec le bouton droit sur le rapport, puis sélectionnez **Exécuter**. Vous devez choisir une configuration qui ne déploie pas le rapport, sinon il sera publié sur le serveur de rapports au lieu de s'afficher localement dans une fenêtre d'aperçu.  
   
