@@ -16,11 +16,11 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339177"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287403"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -34,11 +34,11 @@ Les fonctions définies par l’utilisateur (UDF) qui sont implémentées dans [
 ## <a name="performance-of-scalar-udfs"></a>Performances des fonctions UDF scalaires
 Les fonctions UDF scalaires présentent généralement des performances médiocres pour les raisons suivantes :
 
-- **Appel itératif :** Les fonctions UDF sont appelées de façon itérative, une fois par tuple éligible. Cela implique des coûts supplémentaires de changements de contexte répétés en raison de l’appel de fonction. Les fonctions UDF qui exécutent des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] dans leur définition sont gravement affectées.
+- **Appel itératif** : les fonctions UDF sont appelées de façon itérative, une fois par tuple éligible. Cela implique des coûts supplémentaires de changements de contexte répétés en raison de l’appel de fonction. Les fonctions UDF qui exécutent des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] dans leur définition sont gravement affectées.
 
-- **Absence d’évaluation des coûts :** Pendant l’optimisation, seuls les opérateurs relationnels sont estimés, tandis que les opérateurs scalaires ne le sont pas. Avant l’introduction des fonctions UDF scalaires, les autres opérateurs scalaires étaient généralement peu coûteux et n’exigeaient pas une évaluation des coûts. L’ajout d’un coût processeur réduit pour une opération scalaire suffisait. Il existe des scénarios où le coût réel est important et reste pourtant sous-représenté.
+- **Absence d’évaluation des coûts** : pendant l’optimisation, seuls les opérateurs relationnels sont estimés, tandis que les opérateurs scalaires ne le sont pas. Avant l’introduction des fonctions UDF scalaires, les autres opérateurs scalaires étaient généralement peu coûteux et n’exigeaient pas une évaluation des coûts. L’ajout d’un coût processeur réduit pour une opération scalaire suffisait. Il existe des scénarios où le coût réel est important et reste pourtant sous-représenté.
 
-- **Exécution interprétée :** Les fonctions UDF sont évaluées sous la forme d’un lot d’instructions, exécuté instruction par instruction. Chaque instruction proprement dite est compilée et le plan compilé est mis en cache. Cette stratégie de mise en cache permet d’économiser du temps, car elle évite les recompilations, mais chaque instruction s’exécute de manière isolée. Aucune optimisation entre les instructions n’est réalisée.
+- **Exécution interprétée** : les fonctions UDF sont évaluées sous la forme d’un lot d’instructions, exécuté instruction par instruction. Chaque instruction proprement dite est compilée et le plan compilé est mis en cache. Cette stratégie de mise en cache permet d’économiser du temps, car elle évite les recompilations, mais chaque instruction s’exécute de manière isolée. Aucune optimisation entre les instructions n’est réalisée.
 
 - **Exécution en série :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’autorise pas le parallélisme intra-requête dans des requêtes qui appellent des fonctions UDF. 
 
@@ -137,12 +137,12 @@ Selon la complexité de la logique dans la fonction UDF, le plan de requête obt
 <a name="requirements"></a> Une fonction UDF T-SQL scalaire peut être incorporée si toutes les conditions suivantes sont remplies :
 
 - La fonction UDF est écrite à l’aide des constructions suivantes :
-    - `DECLARE`, `SET` : Déclaration et affectations des variables.
-    - `SELECT` : Requête SQL avec une ou plusieurs affectations de variables<sup>1</sup>.
-    - `IF`/`ELSE` : Création de branches avec des niveaux d’imbrication arbitraires.
-    - `RETURN` : Une ou plusieurs instructions return.
-    - `UDF` : Appels de fonction imbriqués/récursifs<sup>2</sup>.
-    - Autres : Opérations relationnelles telles que `EXISTS`, `ISNULL`.
+    - `DECLARE`, `SET` : déclaration et affectations des variables.
+    - `SELECT`: requête SQL avec une ou plusieurs affectations de variables<sup>1</sup>.
+    - `IF`/`ELSE` : création de branches avec des niveaux d’imbrication arbitraires.
+    - `RETURN`: une ou plusieurs instructions return.
+    - `UDF`: appels de fonction imbriqués/récursifs<sup>2</sup>.
+    - Autres : opérations relationnelles telles que `EXISTS`, `ISNULL`.
 - La fonction UDF n’appelle pas de fonction intrinsèque dépendante du temps (telle que `GETDATE()`) ou ayant des effets secondaires<sup>3</sup> (telle que `NEWSEQUENTIALID()`).
 - La fonction UDF utilise la clause `EXECUTE AS CALLER` (comportement par défaut si la clause `EXECUTE AS` n’est pas spécifiée).
 - La fonction UDF ne référence pas de variables de table ni de paramètres table.

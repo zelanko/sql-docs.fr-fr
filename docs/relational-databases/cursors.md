@@ -1,7 +1,7 @@
 ---
 title: Curseurs | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2018
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: a053f49a6ab3b42e31c5b71c2d2d558ea3170440
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68140811"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112338"
 ---
 # <a name="cursors"></a>Curseurs
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Le curseur ne reflète pas les modifications de la base de données qui concerne
   
 > [!NOTE]
 > Étant donné que l’ensemble de résultats d’un curseur statique est stocké dans une table de travail de la base de données **tempdb**, la taille des lignes de l’ensemble de résultats ne peut pas dépasser la taille maximale des lignes d’une table [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> Pour plus d’informations, consultez [Tables de travail dans le Guide d’architecture de traitement des requêtes](../relational-databases/query-processing-architecture-guide.md#worktables). Pour plus d’informations sur la taille maximale des lignes, consultez [Spécifications des capacités maximales pour SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine).  
+> Pour plus d’informations, consultez [Tables de travail dans le Guide d’architecture de traitement des requêtes](../relational-databases/query-processing-architecture-guide.md#worktables). Pour plus d’informations sur la taille maximale des lignes, consultez [Spécifications des capacités maximales pour SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] utilise le terme INSENSITIVE pour désigner les curseurs statiques. Certaines API de bases de données les appellent curseurs d'instantané.  
   

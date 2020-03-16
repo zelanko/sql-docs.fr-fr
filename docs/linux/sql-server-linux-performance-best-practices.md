@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558343"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286843"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Meilleures pratiques en matière de performances et lignes directrices de configuration pour SQL Server sur Linux
 

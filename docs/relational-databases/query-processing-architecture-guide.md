@@ -16,11 +16,11 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338413"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288383"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,16 +100,16 @@ Une instruction `SELECT` ne définit que :
 
 Un plan d'exécution de requête permet de définir : 
 
-- **l'ordre d'accès aux tables source.** Pour créer le jeu de résultats, le serveur de bases de données peut accéder aux tables de base selon de nombreux ordres différents. Par exemple, si l’instruction `SELECT` fait référence à trois tables, le serveur de base de données accédera d’abord à `TableA`, utilisera les données de `TableA` pour extraire les lignes correspondantes de `TableB`, puis utilisera les données de `TableB` pour extraire les données de `TableC`. Les autres séquences dans lesquelles le serveur de bases de données peut accéder aux tables sont les suivantes :  
+- **L’ordre d’accès aux tables sources.** Pour créer le jeu de résultats, le serveur de bases de données peut accéder aux tables de base selon de nombreux ordres différents. Par exemple, si l’instruction `SELECT` fait référence à trois tables, le serveur de base de données accédera d’abord à `TableA`, utilisera les données de `TableA` pour extraire les lignes correspondantes de `TableB`, puis utilisera les données de `TableB` pour extraire les données de `TableC`. Les autres séquences dans lesquelles le serveur de bases de données peut accéder aux tables sont les suivantes :  
   `TableC`, `TableB`, `TableA`ou  
   `TableB`, `TableA`, `TableC`ou  
   `TableB`, `TableC`, `TableA`ou  
   `TableC`, `TableA`, `TableB`  
 
-- **les méthodes utilisées pour extraire les données de chaque table.**  
+- **Les méthodes utilisées pour extraire les données des différentes tables.**  
   Il existe également différentes méthodes d'accès aux données dans chaque table. Si seules quelques lignes ayant des valeurs de clés spécifiques sont nécessaires, le serveur de base de données peut utiliser un index. Si toutes les lignes de la table sont nécessaires, le serveur de base de données peut ignorer les index et procéder à une analyse de la table. Si toutes les lignes de la table sont nécessaires mais qu’il existe un index dont les colonnes clés se trouvent dans une clause `ORDER BY`, l’analyse d’index plutôt que l’analyse de table peut éviter un tri séparé du jeu de résultats. Dans le cas d'une table très petite, les analyses de table peuvent s'avérer plus efficaces pour quasiment tous les accès à la table.
   
-- **Les méthodes utilisées pour effectuer les calculs, et comment filtrer, agréger et trier les données de chaque table.**  
+- **Les méthodes utilisées pour effectuer les calculs, et filtrer, agréger et trier les données des différentes tables.**  
   À mesure que les données sont consultées à partir des tables, différentes méthodes permettent d’effectuer des calculs sur les données, par exemple calculer des valeurs scalaires, et agréger et trier les données comme défini dans le texte de la requête, par exemple en utilisant une clause `GROUP BY` ou `ORDER BY`, et filtrer les données, par exemple en utilisant une clause `WHERE` ou `HAVING`.
 
 Le processus de sélection d'un plan d'exécution parmi plusieurs possibles est appelé optimisation. L'optimiseur de requête est un des composants les plus importants de [!INCLUDE[ssde_md](../includes/ssde_md.md)]. Bien que l'optimiseur de requête puisse créer une certaine surcharge pour analyser la requête et sélectionner un plan, celle-ci est en général largement compensée par l'adoption d'un plan d'exécution efficace. Prenons l'exemple de deux entrepreneurs en bâtiment à qui l'on commande la même maison. Si l'un d'eux commence par consacrer quelques jours à planifier la construction de cette maison alors que l'autre lance immédiatement la construction sans aucune planification, il est fort probable que celui qui a pris le temps de planifier son projet finira le premier.

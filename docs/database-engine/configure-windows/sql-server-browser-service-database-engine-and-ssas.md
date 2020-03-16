@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68028632"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375556"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Service SQL Server Browser (moteur de base de données et SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68028632"
   
  Lors du démarrage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser réclame le port UDP 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser lit le Registre, identifie toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur, puis note les ports et autres canaux nommés qu’elles utilisent. Lorsqu'un serveur est équipé de deux cartes réseau ou plus, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser renvoie le premier port activé qu'il détecte pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser pend en charge les protocoles ipv6 et ipv4.  
   
- Lorsque les clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demandent des ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la bibliothèque réseau cliente envoie un message UDP au serveur à l'aide du port 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser répond avec le port TCP/IP ou canal nommé de l’instance demandée. La bibliothèque réseau de l'application cliente établit alors la connexion en envoyant une demande au serveur en utilisant le port ou le canal nommé de l'instance souhaitée. Le navigateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas d'informations sur le port de l'instance par défaut.  
+ Lorsque les clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demandent des ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la bibliothèque réseau cliente envoie un message UDP au serveur à l'aide du port 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser répond avec le port TCP/IP ou canal nommé de l’instance demandée. La bibliothèque réseau de l'application cliente établit alors la connexion en envoyant une demande au serveur en utilisant le port ou le canal nommé de l'instance souhaitée. 
   
  Pour plus d’informations sur le démarrage et l’arrêt du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, l’Agent SQL Server ou le Service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

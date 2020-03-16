@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893911"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198416"
 ---
 # <a name="sql-data-developer"></a>Développeur de données SQL
 Utilisez la plateforme de données SQL de Microsoft pour créer des solutions orientées données sur des appareils mobiles et des ordinateurs de bureau pour les serveurs web, les serveurs d’entreprise et le cloud.  
@@ -23,7 +23,7 @@ Utilisez la plateforme de données SQL de Microsoft pour créer des solutions or
 ## <a name="sql-data-storage"></a>Stockage de données SQL
 * [Moteur de base de données SQL Server](../database-engine/configure-windows/sql-server-database-engine.md) : utilisez-le pour créer des bases de données relationnelles pour le traitement de transactions en ligne ou les données de traitement analytique en ligne. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/) : utilisez SQL Azure pour déplacer votre base de données vers le cloud 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876) : SQL Server Compact sert à créer des applications autonomes et occasionnellement connectées pour les appareils mobiles, les ordinateurs de bureau et les clients web.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709) : SQL Server Compact sert à créer des applications autonomes et occasionnellement connectées pour les appareils mobiles, les ordinateurs de bureau et les clients web.
 * [Base de données locale](../database-engine/configure-windows/sql-server-2016-express-localdb.md) : utilisez la base de données locale pendant le développement pour écrire et tester du code Transact-SQL sans avoir à gérer une instance de serveur complète de SQL Server.
 
 ## <a name="sql-data-tools"></a>Outils SQL Data

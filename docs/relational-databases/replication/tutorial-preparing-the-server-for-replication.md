@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 14c350e4b55e3c03c0016fd6aa61b3eef7a7a9c3
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910022"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190597"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutoriel : Préparer SQL Server pour la réplication (serveur de publication, serveur de distribution, abonné)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Dans ce didacticiel, vous apprendrez à :
 > * Préparer le dossier d’instantanés.
 > * Configurer la distribution.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 Ce tutoriel est destiné aux utilisateurs qui sont familiers des opérations essentielles de base de données, mais dont l’expérience en matière de réplication est limitée. 
 
 Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management Studio (SSMS) et une base de données AdventureWorks :  
@@ -53,7 +53,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
 - Téléchargez l’[exemple de base de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Pour obtenir des instructions sur la restauration d’une base de données dans SSMS, consultez [Restauration d’une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
     
 >[!NOTE]
-> - La réplication n’est pas prise en charge sur les instances de SQL Server qui sont séparées de plus de deux versions. Pour plus d’informations, consultez [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versions de SQL prises en charge dans la topologie de réplication).
+> - La réplication n’est pas prise en charge sur les instances de SQL Server qui sont séparées de plus de deux versions. Pour plus d’informations, consultez [Supported SQL Server Versions in Replication Topology](replication-backward-compatibility.md) (Versions de SQL prises en charge dans la topologie de réplication).
 > - Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin**. Pour plus d’informations sur ce rôle, consultez [Rôles de niveau serveur](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
 
 
@@ -62,7 +62,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
 ## <a name="create-windows-accounts-for-replication"></a>Créer des comptes Windows pour la réplication
 Dans cette section, vous créez des comptes Windows pour exécuter les agents de réplication. Vous créez un compte Windows distinct sur le serveur local pour les agents suivants :  
   
-|Agent|Location|Nom du compte|  
+|Agent|Emplacement|Nom du compte|  
 |---------|------------|----------------|  
 |Agent d'instantané|Serveur de publication|<*nom_ordinateur*>\repl_snapshot|  
 |l'Agent de lecture du journal ;|Serveur de publication|<*nom_ordinateur*>\repl_logreader|  

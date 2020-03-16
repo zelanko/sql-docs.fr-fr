@@ -12,11 +12,11 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338263"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286303"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Sauvegarder des bases de données Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "78338263"
   
 Pour sauvegarder vos bases de données Stretch SQL Server, vous pouvez continuer à utiliser les méthodes de sauvegarde SQL Server que vous utilisez actuellement. Pour plus d’informations, consultez [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
   
- Les sauvegardes d’une base de données Stretch SQL Server contiennent uniquement des données locales et des données éligibles à la migration à la limite dans le temps quand la sauvegarde s’exécute. (Les données éligibles sont des données qui n’ont pas encore été migrées, mais qui seront migrées vers Azure d’après les paramètres de migration des tables.) Il s’agit d’une sauvegarde **partielle** . Elle ne comprend pas les données déjà migrées vers Azure.  
+ Les sauvegardes d’une base de données Stretch SQL Server contiennent uniquement des données locales et des données éligibles à la migration à la limite dans le temps quand la sauvegarde s’exécute. (Les données éligibles sont des données qui n’ont pas encore été migrées, mais qui seront migrées vers Azure d’après les paramètres de migration des tables.) Il s’agit d’une sauvegarde **partielle**. Elle ne comprend pas les données déjà migrées vers Azure.  
   
 ## <a name="back-up-your-remote-azure-data"></a>Sauvegarder vos données Azure distantes   
   

@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903656"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288743"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out
 
@@ -25,7 +25,7 @@ ms.locfileid: "77903656"
 Configurez [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out en effectuant les tâches suivantes. 
 
 > [!TIP]
-> Si vous installez Scale Out sur un seul ordinateur, installez les fonctionnalités Scale Out Master et Scale Out Worker en même temps. Quand vous installez les fonctionnalités en même temps, le point de terminaison est généré automatiquement pour la connexion à Scale Out Master. 
+> Si vous installez Scale-out sur un seul ordinateur, installez les fonctionnalités Scale Out Master et Scale Out Worker en même temps. Quand vous installez les fonctionnalités en même temps, le point de terminaison est généré automatiquement pour la connexion à Scale Out Master. 
 
 * [Installer Scale Out Master](#InstallMaster)
 
@@ -50,7 +50,7 @@ Pour configurer Scale Out Master, vous devez installer les services du moteur de
 Pour plus d’informations sur la configuration du moteur de base de données et d’[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)], consultez [Installer le moteur de base de données SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md) et [Installer Integration Services](../install-windows/install-integration-services.md).
 
 > [!NOTE]
-> Pour utiliser le compte d’authentification SQL Server par défaut pour la journalisation Scale Out, sélectionnez le mode mixte comme mode d’authentification dans la page **Configuration du moteur de base de données** pendant l’installation du moteur de base de données. Consultez [Changer le compte pour la journalisation Scale Out](change-logdb-account.md) pour plus d’informations.
+> Pour utiliser le compte d’authentification SQL Server par défaut pour la journalisation Scale-out, sélectionnez le mode mixte comme mode d’authentification dans la page **Configuration du moteur de base de données** pendant l’installation du moteur de base de données. Consultez [Changer le compte pour la journalisation Scale-out](change-logdb-account.md) pour plus d’informations.
 
 Pour installer la fonctionnalité Scale Out Master, utilisez l’Assistant Installation de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ou l’invite de commandes.
 

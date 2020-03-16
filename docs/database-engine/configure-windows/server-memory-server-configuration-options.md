@@ -22,11 +22,11 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028738"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288353"
 ---
 # <a name="server-memory-configuration-options"></a>Options de configuration de la mémoire du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
 
 <sup>2</sup> Pour plus d’informations sur les threads de worker par défaut calculés pour un nombre donné d’UC avec affinité dans l’hôte actif, consultez la page [Configurer l’option de configuration du serveur max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) dans la documentation.
 
-## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Comment configurer les options de mémoire à l’aide de[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>Comment configurer les options de mémoire à l’aide de[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Utilisez les deux options de mémoire du serveur, **min server memory** et **max server memory**, pour reconfigurer la quantité de mémoire (en mégaoctets) gérée par le Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut modifier dynamiquement sa configuration mémoire en fonction des ressources système disponibles.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>Procédure de configuration d’une quantité de mémoire fixe (non recommandé)  
@@ -105,7 +105,7 @@ Pour activer l’option Verrouiller les pages en mémoire :
   
 6.  Dans la boîte de dialogue **Paramètre de stratégie de sécurité locale**, ajoutez le compte avec les privilèges nécessaires pour exécuter sqlservr.exe (compte de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Exécution de plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="running-multiple-instances-of-ssnoversion"></a>Exécution de plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Lorsque vous exécutez plusieurs instances de [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous avez le choix entre trois approches pour gérer la mémoire :  
   
 -   Utiliser **max server memory** pour contrôler l’utilisation de la mémoire, comme [indiqué ci-dessus](#max_server_memory). Définir les valeurs maximales pour chaque instance, en veillant à ce que le total alloué ne soit pas supérieur à la mémoire physique totale de votre ordinateur. Il se peut que vous souhaitiez attribuer à chaque instance une mémoire proportionnelle à la charge ou à la taille de base de données prévue. Cette solution présente l'avantage qu'au démarrage des nouveaux processus ou des nouvelles instances, ils pourront accéder immédiatement à la mémoire libre. En revanche, cette solution présente l'inconvénient que, si toutes les instances ne sont pas en cours d'exécution, aucune d'entre elles ne pourra utiliser la mémoire libre restante.  
