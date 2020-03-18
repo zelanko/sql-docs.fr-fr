@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096084"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428150"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Traitement de graphiques avec SQL Server et Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096084"
 
 ## <a name="what-is-a-graph-database"></a>Qu’est-ce qu’une base de données Graph ?  
 Une base de données de graphes est une collection de nœuds (ou sommets) et d’arêtes (ou relations). Un nœud représente une entité (par exemple, une personne ou une organisation) et une arête représente une relation entre deux nœuds qu’elle connecte (par exemple, des mentions j’aime ou des amis). Les nœuds et les bords peuvent avoir des propriétés qui leur sont associées. Voici quelques fonctionnalités qui rendent une base de données de graphe unique :  
--   Les arêtes ou relations sont des entités de première classe dans une base de données de graphe, auxquelles des attributs ou des propriétés peuvent être associés. 
--   Un simple arête peut connecter de manière flexible plusieurs nœuds dans une base de données de graphe.
--   Vous pouvez facilement exprimer des critères spéciaux et des requêtes de navigation sur plusieurs tronçons.
--   Vous pouvez facilement exprimer une fermeture transitive et des requêtes polymorphes.
+-    Les arêtes ou relations sont des entités de première classe dans une base de données de graphe, auxquelles des attributs ou des propriétés peuvent être associés. 
+-    Un simple arête peut connecter de manière flexible plusieurs nœuds dans une base de données de graphe.
+-    Vous pouvez facilement exprimer des critères spéciaux et des requêtes de navigation sur plusieurs tronçons.
+-    Vous pouvez facilement exprimer une fermeture transitive et des requêtes polymorphes.
 
 ## <a name="when-to-use-a-graph-database"></a>Quand utiliser une base de données de graphiques
 
-Il n’est rien qu’une base de données de graphe puisse accomplir qui ne puisse être accompli à l’aide d’une base de données relationnelle. Toutefois, une base de données de graphiques peut faciliter l’expression de certains types de requêtes. En outre, avec des optimisations spécifiques, certaines requêtes peuvent être plus performantes. Votre décision de choisir l’une plutôt que l’autre peut dépendre des facteurs suivants :  
--   Votre application a des données hiérarchiques. Le type de données HierarchyID peut être utilisé pour implémenter des hiérarchies, mais il présente certaines limites. Par exemple, il ne vous permet pas de stocker plusieurs parents pour un nœud.
--   Votre application a des relations plusieurs-à-plusieurs complexes. à mesure que l’application évolue, de nouvelles relations sont ajoutées.
--   Vous devez analyser des données et relations interconnectées.
+Une base de données relationnelle peut obtenir n’importe quel résultat d’une base de données de graphiques. Toutefois, une base de données de graphiques permet d’exprimer plus facilement certains genres de requêtes. En outre, avec des optimisations spécifiques, certaines requêtes peuvent être plus performantes. Votre décision de choisir une base de données relationnelle ou graphique est basée sur les facteurs suivants :  
+-    Votre application a des données hiérarchiques. Le type de données HierarchyID peut être utilisé pour implémenter des hiérarchies, mais il présente certaines limites. Par exemple, il ne vous permet pas de stocker plusieurs parents pour un nœud.
+-    Votre application a des relations plusieurs-à-plusieurs complexes. à mesure que l’application évolue, de nouvelles relations sont ajoutées.
+-    Vous devez analyser des données et relations interconnectées.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Fonctionnalités graphiques introduites dans[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>Fonctionnalités graphiques introduites dans[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Nous commençons à ajouter des extensions graphiques à SQL Server, pour faciliter le stockage et l’interrogation des données graphiques. Les fonctionnalités suivantes sont introduites dans la première version. 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Entièrement intégré au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>Entièrement intégré au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur 
 Les extensions Graph sont entièrement intégrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le moteur. Utilisez le même moteur de stockage, les mêmes métadonnées, le même processeur de requêtes, etc. pour stocker et interroger les données de graphique. Interroger des données graphiques et relationnelles dans une seule requête. Combiner les fonctionnalités graphiques avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’autres technologies telles que COLUMNSTORE, ha, R services, etc. La base de données SQL Graph prend également en charge toutes les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de sécurité et de conformité disponibles avec.
  
 ### <a name="tooling-and-ecosystem"></a>Outils et écosystème
