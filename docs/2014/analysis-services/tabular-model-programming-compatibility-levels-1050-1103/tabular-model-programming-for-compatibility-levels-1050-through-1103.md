@@ -10,12 +10,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757642"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525430"
 ---
 # <a name="tabular-model-programming"></a>Programmation de modèle tabulaire
   Les modèles tabulaires utilisent des constructions relationnelles pour modéliser les données Analysis Services utilisées par les applications analytiques et de rapports. Ces modèles s'exécutent sur une instance Analysis Service qui est configurée pour le mode tabulaire, en utilisant un moteur d'analyse en mémoire pour le stockage et les analyses de table rapides qui agrègent et calculent des données à mesure qu'elles sont demandées.  
@@ -25,11 +25,11 @@ ms.locfileid: "62757642"
  Cette section fournit plus d'informations sur la façon dont vous pouvez programmer ces entités de modèle tabulaire et leurs propriétés.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Présentation du modèle d'objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Référence technique pour les annotations BI au langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [Référence technique pour les annotations BI au langage CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [Interface IMDEmbedded](imdembeddeddata-interface.md)  
   

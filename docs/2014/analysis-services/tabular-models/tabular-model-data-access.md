@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284864"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525470"
 ---
 # <a name="tabular-model-data-access"></a>Accès aux données de modèle tabulaire
   Les bases de données model tabulaires dans Analysis Services sont accessibles par la plupart des mêmes clients, interfaces et langues que vous utilisez pour récupérer les données ou les métadonnées d'un modèle multidimensionnel. Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "67284864"
   
  Le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] détermine la structure du modèle spécifié en envoyant une requête à la source de données spécifiée, qui retourne un schéma pouvant être utilisé par le client pour créer des requêtes sur le modèle en tant que source de données et pour effectuer des opérations sur les données. Les opérations qui suivent dans l'interface utilisateur de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] pour filtrer les données, effectuer des calculs ou des agrégations et afficher les données associées sont contrôlées par le client et ne peuvent pas être manipulées par programme.  
   
- Les requêtes qui sont envoyées par le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] au modèle sont émises en tant qu'instructions DAX, que vous pouvez surveiller en définissant une trace sur le modèle.  Le client envoie également une requête au serveur pour la définition de schéma initiale, qui est présentée en langage CSDL (Conceptual Schema Definition Language). Pour plus d’informations, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ Les requêtes qui sont envoyées par le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] au modèle sont émises en tant qu'instructions DAX, que vous pouvez surveiller en définissant une trace sur le modèle.  Le client envoie également une requête au serveur pour la définition de schéma initiale, qui est présentée en langage CSDL (Conceptual Schema Definition Language). Pour plus d’informations, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les instances qui hébergent des modèles tabulaires et pour interroger les métadonnées et les données qu'elles contiennent. Vous pouvez traiter des modèles ou les objets d'un modèle, créer et gérer des partitions et définir la sécurité qui peut être utilisée pour gérer l'accès aux données. Pour plus d'informations, voir les rubriques suivantes :  
@@ -75,7 +75,7 @@ ms.locfileid: "67284864"
 ### <a name="csdl"></a>CSDL  
  Le langage CSDL (Conceptual Schéma Definition Language) n'est pas un langage de requête en soi, mais il peut être utilisé pour récupérer des informations sur le modèle et les métadonnées du modèle, qui peuvent être utilisés plus tard pour créer des rapports ou pour créer des requêtes sur le modèle.  
   
- Pour plus d’informations sur la façon dont le langage CSDL est utilisé dans les modèles tabulaires, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
+ Pour plus d’informations sur la façon dont le langage CSDL est utilisé dans les modèles tabulaires, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## <a name="programmatic-interfaces"></a>Interfaces de programmation  
  Les interfaces principales utilisées pour interagir avec des modèles tabulaires d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont les ensembles de lignes de schéma, XMLA, ainsi que les clients de requête et les outils de requête fournis par [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -91,7 +91,7 @@ ms.locfileid: "67284864"
   
  Vous pouvez également récupérer les données directement à partir d'une instance d'Analysis Services en format XML. Vous pouvez récupérer le schéma du modèle tabulaire à l'aide de l'ensemble de lignes DISCOVER_CSDL_METADATA ou vous pouvez utiliser une commande EXECUTE ou DISCOVER avec des éléments ASSL, des objets ou des propriétés existants. Pour plus d’informations, consultez les ressources suivantes :  
   
--   [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Manipulation des objets Analysis Services  
  Vous pouvez créer, modifier, supprimer, et traiter des modèles tabulaires et les objets qu'ils contiennent, notamment des tables, des colonnes, des perspectives, des mesures et des partitions, à l'aide des commandes XMLA ou en utilisant AMO. AMO et XMLA ont été mis à jour pour prendre en charge les propriétés supplémentaires utilisées dans les modèles tabulaires pour une création de rapports et une modélisation améliorées.  

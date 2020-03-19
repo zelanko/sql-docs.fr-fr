@@ -10,12 +10,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75229403"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525460"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Présentation de Power View pour les modèles multidimensionnels
   Cet article décrit la fonctionnalité Power View pour les modèles multidimensionnels de Microsoft SQL Server 2014, et fournit des informations importantes pour les administrateurs et les professionnels dans le secteur du décisionnel qui envisagent d'implémenter Power View pour les modèles multidimensionnels dans leur organisation.  
@@ -28,7 +28,7 @@ ms.locfileid: "75229403"
   
  ![Power View pour l’architecture des modèles multidimensionnels](../media/daxmd-architecture.gif "Power View pour l’architecture des modèles multidimensionnels")  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  **Configuration requise du serveur**  
   
 -   SQL Server 2014 édition Enterprise ou Business Intelligence avec Analysis Services exécuté en mode multidimensionnel.  
@@ -217,7 +217,7 @@ ms.locfileid: "75229403"
   
  La requête DISCOVER_CSDL_METADATA présente les restrictions suivantes :  
   
-|Name|Obligatoire|Description|  
+|Nom|Obligatoire|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Oui|Nom du catalogue\base de données.|  
 |PERSPECTIVE_NAME|Oui, si le cube contient plusieurs perspectives. Facultatif en présence d'un seul cube ou s'il existe une perspective par défaut.|Nom du cube ou de la perspective dans la base de données multidimensionnelle.|  
@@ -225,7 +225,7 @@ ms.locfileid: "75229403"
   
  Le document CSDL en sortie retourné représente le modèle en tant qu'espace de noms qui contient des entités, des associations et des propriétés.  
   
- Pour plus d’informations sur les annotations CSDLBI pour les modèles tabulaires, consultez [Guide de référence technique pour les annotations BI du langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) sur MSDN et [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Pour plus d’informations sur les annotations CSDLBI pour les modèles tabulaires, consultez [Guide de référence technique pour les annotations BI du langage CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl) sur MSDN et [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Aide sur le client sur Office.com  
  Les articles suivants sont fournis sur Office.com pour aider les utilisateurs à en savoir plus sur la manière dont les objets de modèle multidimensionnel apparaissent dans Power View et sur la procédure de création d'un rapport d'exemple :  

@@ -10,12 +10,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757953"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525450"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotations CSDL pour Business Intelligence (CSDLBI)
   
@@ -36,7 +36,7 @@ ms.locfileid: "62757953"
   
  Le schéma CSDLBI est généré par le serveur Analysis Services en réponse à une demande d'une définition de modèle d'un client de création de rapports, tel que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. L'application cliente envoie une requête XML au serveur Analysis Services qui héberge les données du modèle. En réponse, le serveur envoie un message XML contenant une définition des entités du modèle, en utilisant les annotations CSDLBI. Le client du rapport utilise ensuite des informations pour présenter les champs, les agrégations et les mesures qui sont disponibles dans le modèle. Les annotations CSDLBI fournissent également des informations sur le regroupement, le tri et la mise en forme des données.  
   
- Pour obtenir des informations générales sur CSDLBI, consultez [concepts CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Pour obtenir des informations générales sur CSDLBI, consultez [concepts CSDLBI](/analysis-services/csdlbi/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Utilisation de CSDL  
  L'ensemble d'annotations CSDLBI qui représente n'importe quel modèle tabulaire est un document XML qui contient une collection d'entités, simples et complexes. Les entités définissent des tables (ou dimensions), des colonnes (attributs), des associations (relations) et des formules incluses dans des colonnes calculées, des mesures ou des indicateurs de performance clés.  
@@ -72,12 +72,12 @@ ms.locfileid: "62757953"
   
 -   Prise en charge des perspectives.  
   
- Pour plus d’informations sur les éléments individuels dans les annotations CSDLBI, consultez informations [techniques de référence sur les annotations bi dans le langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Pour plus d’informations sur la spécification CSDL principale, consultez la [spécification CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
+ Pour plus d’informations sur les éléments individuels dans les annotations CSDLBI, consultez informations [techniques de référence sur les annotations bi dans le langage CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl). Pour plus d’informations sur la spécification CSDL principale, consultez la [spécification CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation du modèle d’objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [Concepts CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [Concepts CSDLBI](/analysis-services/csdlbi/csdlbi-concepts)   
  [Présentation du modèle d'objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   
