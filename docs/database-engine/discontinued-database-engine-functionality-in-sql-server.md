@@ -1,5 +1,6 @@
 ---
-title: Fonctionnalités du moteur de base de données supprimées | Microsoft Docs
+title: Fonctionnalités du moteur de base de données supprimées
+description: Découvrez les fonctionnalités du moteur de base de données qui ont été supprimées dans SQL Server 2019 (15.x), SQL Server 2016 (13.x) et les versions précédentes.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258117"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190538"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Fonctionnalités du moteur de base de données supprimées dans SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique décrit les fonctionnalités du [!INCLUDE[ssDE](../includes/ssde-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## <a name="discontinued-features-in-sssqlv15"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
 
 - Les options de configuration étendue à la base de données suivantes sont supprimées :
 
@@ -60,7 +61,7 @@ Pour connaître les options de configuration actuelles, consultez [ALTER DATABAS
 >[!NOTE]
 >Aucune fonctionnalité n’a été supprimée dans [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+## <a name="discontinued-features-in-sssql15"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] est une application 64 bits. L’installation 32 bits n’est plus disponible, même si certains éléments s’exécutent en tant que composants 32 bits.  
 

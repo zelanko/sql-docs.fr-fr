@@ -1,6 +1,6 @@
 ---
 title: Collecte des données dans le contrôle ReportViewer
-description: Des données d’utilisation anonymes sont collectées par le contrôle pour mieux comprendre comment les clients utilisent le produit. Les données d’utilisation permettent de concentrer le développement futur sur les améliorations les plus pertinentes pour les clients.
+description: ReportViewer collecte des données d’utilisation anonymes afin de comprendre comment les clients utilisent le produit et d’axer le développement sur les améliorations les plus pertinentes pour les clients.
 author: maggiesMSFT
 ms.author: maggies
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 09/18/2018
-ms.openlocfilehash: d7b70445fc4d8a29d8ebcdf7ecbffe4b54133f0e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 078b36034d48dbb4389c69e64d8b8b18d240b24c
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796896"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198176"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>Intégrer Reporting Services à l’aide de contrôles ReportViewer - Collecte des données
 

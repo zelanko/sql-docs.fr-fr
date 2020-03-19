@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340691"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287683"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Les déclencheurs LOGON sont activés en réponse à l’événement LOGON qui e
   
 ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="sql-server-syntax"></a>Syntaxe SQL Server  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="azure-sql-database-syntax"></a>Syntaxe Azure SQL Database  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ Spécifie que le déclencheur DML est lancé *à la place de* l’instruction 
   
 Vous pouvez tout au plus définir un déclencheur INSTEAD OF par instruction INSERT, UPDATE ou DELETE sur une table ou une vue. Vous pouvez également définir des vues sur des vues où chaque vue a son propre déclencheur INSTEAD OF.  
   
-Vous ne pouvez pas définir de déclencheurs INSTEAD OF sur des vues pouvant être mises à jour qui utilisent l'option WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] signale une erreur lorsqu'un déclencheur INSTEAD OF est ajouté à une telle vue avec l'option WITH CHECK OPTION spécifiée. Vous supprimez cette option à l'aide de l'instruction ALTER VIEW avant de définir le déclencheur INSTEAD OF.  
+Vous ne pouvez pas définir de déclencheurs INSTEAD OF sur des vues pouvant être mises à jour qui utilisent l'option WITH CHECK OPTION. Cela a pour effet de provoquer une erreur quand un déclencheur INSTEAD OF est ajouté à une telle vue avec l’option WITH CHECK OPTION spécifiée. Vous supprimez cette option à l'aide de l'instruction ALTER VIEW avant de définir le déclencheur INSTEAD OF.  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Spécifie les instructions de modification des données qui activent le déclencheur DML lorsqu'une tentative a lieu pour l'appliquer à cette table ou à cette vue. Spécifier au moins une option. Utilisez une combinaison de ces options dans un ordre quelconque dans la définition du déclencheur.  

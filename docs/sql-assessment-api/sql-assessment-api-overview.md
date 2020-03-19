@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 0315f181aad5c61b7d9c5fe7d46f3d81b27c9758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76a6e99d06061ae581b753ce0edd96a5a82d0f95
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73589133"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946718"
 ---
 # <a name="sql-assessment-api"></a>API d’évaluation SQL
 
@@ -66,31 +66,31 @@ Passez en revue les exemples ci-dessous pour commencer.
     Get-SqlInstance -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-2. Obtenez la liste des vérifications disponibles pour toutes les bases de données de l’instance. Ici, nous utilisons l’applet de commande Get-Item et un chemin implémenté avec le fournisseur Windows PowerShell SQL Server pour obtenir la liste des bases de données, puis nous utilisons le pipe pour la transmettre à l’applet de commande SqlDatabase.
+2. Obtenez la liste des vérifications disponibles pour toutes les bases de données de l’instance. Ici, nous utilisons l’applet de commande Get-Item et un chemin implémenté avec le fournisseur Windows PowerShell SQL Server pour obtenir la liste des bases de données, que nous transmettons ensuite à l’applet de commande SqlDatabase.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Vous pouvez également utiliser l’applet de commande Get-SqlDatabase pour obtenir le même résultat.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-3. Obtenez la liste des vérifications disponibles pour toutes les bases de données de l’instance. Ici, nous utilisons l’applet de commande Get-Item et un chemin implémenté avec le fournisseur Windows PowerShell SQL Server pour obtenir la liste des bases de données, puis nous utilisons le pipe pour la transmettre à l’applet de commande SqlDatabase.
+3. Obtenez la liste des vérifications disponibles pour toutes les bases de données de l’instance. Ici, nous utilisons l’applet de commande Get-Item et un chemin implémenté avec le fournisseur Windows PowerShell SQL Server pour obtenir la liste des bases de données, que nous transmettons ensuite à l’applet de commande SqlDatabase.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Vous pouvez également utiliser l’applet de commande Get-SqlDatabase pour obtenir le même résultat.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. Appelez l’évaluation pour l’instance et enregistrez les résultats dans une table SQL. Dans cet exemple, nous utilisons le pipe pour transmettre la sortie de l’applet de commande Get-SqlInstance à l’applet de commande Invoke-SqlAssessment, dont les résultats sont transmis à l’aide du pipe à l’applet de commande Write-SqlTableData. Notez que l’applet de commande Invoke-Assessment est exécutée avec le paramètre `-FlattenOutput` dans cet exemple. Ce paramètre adapte la sortie à l’applet de commande Write-SqlTableData. Cette dernière génère une erreur si vous omettez le paramètre.
+4. Appelez l’évaluation pour l’instance et enregistrez les résultats dans une table SQL. Dans cet exemple, nous utilisons le pipe pour transmettre la sortie de l’applet de commande Get-SqlInstance à l’applet de commande Invoke-SqlAssessment, dont les résultats sont transmis à l’aide du pipe à l’applet de commande Write-SqlTableData. L’applet de commande Invoke-Assessment est exécutée avec le paramètre `-FlattenOutput` dans cet exemple. Ce paramètre adapte la sortie à l’applet de commande Write-SqlTableData. Cette dernière génère une erreur si vous omettez le paramètre.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -131,7 +131,7 @@ Des règles spécifiques ont des seuils qui sont comparés à la valeur actuelle
 Vous pouvez chaîner des ensembles de règles en ajoutant un ou plusieurs fichiers JSON comme paramètres à votre appel d’API SQL Assessment. Votre organisation peut écrire ces fichiers ou les obtenir auprès d’un tiers. Par exemple, vous pouvez avoir votre fichier JSON qui désactive des règles spécifiques de l’ensemble de règles Microsoft, un autre fichier JSON écrit par un expert du secteur qui inclut des règles que vous trouvez utiles pour votre environnement, puis un autre fichier JSON qui modifie certaines valeurs de seuil dans ce fichier JSON.
 
 > [!IMPORTANT]  
->  Nous vous recommandons vivement de passer attentivement en revue les ensembles de règles provenant de sources non approuvées avant de les utiliser afin de vérifier qu’ils ne présentent aucun risque.
+> Nous vous recommandons vivement de passer attentivement en revue les ensembles de règles provenant de sources non approuvées avant de les utiliser afin de vérifier qu’ils ne présentent aucun risque.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

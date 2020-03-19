@@ -1,19 +1,20 @@
 ---
 title: SqlPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: alayu; sstein
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.reviewer: alayu; sstein
+ms.date: 06/28/2018
+ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250594"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286483"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -228,7 +229,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Indique si les différences dans la durée pendant laquelle SQL Server conserve l’itinéraire dans la table de routage doivent être ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Spécifie si les différences dans les points-virgules des instructions T-SQL sont ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Spécifie si les différences dans les options de table sont ignorées ou mises à jour lors de la publication dans une base de données.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Spécifie si les différences dans les options de partition de table sont ignorées ou mises à jour lors de la publication dans une base de données.  Cette option s’applique uniquement aux bases de données de l’entrepôt de données Azure Synapse Analytics.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Spécifie si les différences dans les options de partition de table sont ignorées ou mises à jour lors de la publication dans une base de données.  Cette option s’applique uniquement aux bases de données du pool SQL Azure Synapse Analytics (entrepôt de données).|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Spécifie si les différences dans les objets de paramètres utilisateur sont ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Spécifie si les différences dans les espaces blancs sont ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Indique si les différences dans la valeur de la clause WITH NOCHECK pour les contraintes Check sont ignorées ou mises à jour lors de la publication.|

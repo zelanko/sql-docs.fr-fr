@@ -1,5 +1,6 @@
 ---
 title: Méthodes relatives aux rapports liés | Microsoft Docs
+description: Ces méthodes ajoutent des éléments liés à une base de données, obtiennent le nom d’un élément lié, obtiennent des éléments liés à un élément, et définissent un élément de catalogue pour un élément lié.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a474b4b3cb3a9973fc4fdaf14e7179cc73a2d2de
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284420"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198246"
 ---
 # <a name="linked-reports-methods"></a>Méthodes relatives aux rapports liés
   Vous pouvez utiliser ces méthodes pour créer et gérer des éléments liés.  

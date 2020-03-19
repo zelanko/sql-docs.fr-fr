@@ -1,6 +1,6 @@
 ---
 title: Choix entre l’accès par URL et SOAP
-description: "Il existe deux manières d'intégrer Reporting Services dans des applications personnalisées : l’accès par URL et l’API SOAP de Reporting Services. Celle à utiliser dépend de plusieurs facteurs."
+description: "Il existe deux manières d'intégrer Reporting Services dans des applications personnalisées : l’accès par URL et l’API SOAP de Reporting Services. Découvrez comment choisir."
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 115ff4521e347c1eb905f63c579df04f0a11adae
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796912"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198216"
 ---
 # <a name="choose-between-url-access-and-soap-in-reporting-services"></a>Choisir entre l’accès URL et SOAP dans Reporting Services
 
@@ -32,7 +32,7 @@ L'intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
   
 -   Dans quel type d'environnement vos utilisateurs travaillent-ils habituellement ? Votre application d'entreprise est-elle une application Web ou une application Windows ? Vos utilisateurs finaux peuvent-ils parvenir facilement à basculer d’un environnement Win32 vers un environnement web ? De quel type de contrôle avez-vous besoin sur l'environnement dans lequel les rapports sont exécutés et gérés ?  
   
- Une fois que vous avez répondu aux questions précédentes, vous pouvez déterminer comment intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans votre infrastructure informatique. En général, l'accès URL est préféré pour consulter et parcourir des rapports individuels. L'accès URL vous permet de parcourir librement et rapidement des rapports sans le traitement du service Web. De plus, l'accès URL est actuellement la seule technique de programmation qui utilise la Visionneuse HTML complète pour la navigation entre les rapports, laquelle inclut la barre d'outils Rapports. En outre, l'accès URL est plus performant que SOAP parce qu'il ignore le marshaling des demandes SOAP vers et depuis le serveur. Dans les scénarios d'intégration qui requièrent un accès rapide et facile aux rapports avec des outils intégrés pour la consultation et la navigation, l'accès URL constitue le meilleur choix.  
+ Une fois que vous avez répondu aux questions précédentes, vous pouvez déterminer comment intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans votre infrastructure informatique. En général, l'accès URL est préféré pour consulter et parcourir des rapports individuels. L'accès URL vous permet de parcourir librement et rapidement des rapports sans le traitement du service Web. De plus, l'accès URL est actuellement la seule technique de programmation qui utilise la Visionneuse HTML complète pour la navigation entre les rapports, laquelle inclut la barre d'outils Rapports. Par ailleurs, l’accès URL est plus performant que SOAP, car il contourne le marshaling des demandes SOAP vers et à partir du serveur. Dans les scénarios d'intégration qui requièrent un accès rapide et facile aux rapports avec des outils intégrés pour la consultation et la navigation, l'accès URL constitue le meilleur choix.  
   
 > [!NOTE]  
 > L'accès URL du serveur de rapports prend en charge la Visionneuse HTML et les fonctionnalités étendues de la barre d'outils Rapports. L'API SOAP ne prend pas en charge ce type de rapport rendu. Si vous effectuez le rendu des rapports à l’aide de l’API SOAP, vous devez concevoir et développer votre propre barre d’outils Rapports.

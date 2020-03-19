@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 49cb24120d6c476e5b03c4a0cad2ddda511a9360
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9bc5f0a66cc891c1efa4810253a02d98f384e081
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911193"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058743"
 ---
 # <a name="system-requirements"></a>Configuration requise
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,8 +47,8 @@ Les pilotes Linux et macOS sont disponibles uniquement pour les versions 64 bit
 |Red Hat Enterprise Linux 7|13, 13.1, 17+|
 |RedHat Enterprise Linux 8|17.4+|
 |SUSE Linux Enterprise Server 11|13, 13.1, 17+ <br /><br /> **REMARQUE :** ODBC Driver 17 prend uniquement en charge SUSE Linux Enterprise Server 11 SP4.|
-|SUSE Linux Enterprise Server 12|13, 13.1, 17+|
-|SUSE Linux Enterprise Server 15|17+|
+|SUSE Linux Enterprise Server 12|13, 13.1, 17+|
+|SUSE Linux Enterprise Server 15|17+|
 |Ubuntu Linux 14.04|13, 13.1, 17.4|
 |Ubuntu Linux 15.10|13, 13.1|
 |Ubuntu Linux 16.04|13, 13.1, 17+|

@@ -1,5 +1,6 @@
 ---
 title: Méthodes des services web Report Server | Microsoft Docs
+description: Le service Web Report Server inclut des méthodes basées sur les fonctionnalités de composants fournies par le biais de points de terminaison de service web qui sont exposés via des classes générées.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 88a79f66c6cb062dfe563883fbc5fef5eeebfe08
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284659"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198356"
 ---
 # <a name="report-server-web-service-methods"></a>Méthodes des services Web Report Server
   Les services Web Report Server comportent plusieurs catégories de méthodes basées sur les fonctionnalités des composants. Ces méthodes sont fournies à l'aide de plusieurs points de terminaison de service Web (trois permettant de gérer les rapports, un autre de les exécuter), lesquels sont exposés comme membres des classes <xref:ReportService2010.ReportingService2010> et <xref:ReportExecution2005.ReportExecutionService>. Ces classes peuvent être générées à l’aide d’un outil de classe proxy tel que wsdl.exe. Ce dernier est d’ailleurs inclus dans le SDK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Pour plus d’informations sur les services web Report Server et le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consultez [Génération d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  

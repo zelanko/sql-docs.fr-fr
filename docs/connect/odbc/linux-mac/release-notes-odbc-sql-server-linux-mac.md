@@ -1,7 +1,7 @@
 ---
-title: Notes de publication d’ODBC sur Linux et macOS | Microsoft Docs
+title: Notes de publication pour ODBC Driver for SQL Server sur Linux et macOS
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896760"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090503"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Notes de publication de Microsoft ODBC Driver for SQL Server sur Linux et macOS
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notes de publication pour Microsoft ODBC Driver for SQL Server sur Linux et macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -51,7 +51,7 @@ GeneMi.  2019/04/03.
 | :------------ | :------ |
 | Attribut de connexion SQL_COPT_SS_SPID pour récupérer le SPID sans aller-retour avec le serveur | Consultez [Attributs et mots clés de chaîne de connexion et DSN](../dsn-connection-string-attribute.md). |
 | Prise en charge de l’acceptation du CLUF par le biais de `debconf` sur Debian et Ubuntu | Consultez [Installation du pilote](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
-| Nouvelles distributions prises en charge. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| Nouvelles distributions prises en charge. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -66,7 +66,7 @@ GeneMi.  2019/04/03.
 
 **Problème connu :**
 
-Lors de l’utilisation d’Always Encrypted avec des enclaves sécurisées et Azure Key Vault, des longueurs de chemin de clé inhabituelles peuvent entraîner des erreurs de vérification de signature CMK. Si vous rencontrez ce problème, essayez de modifier la longueur du chemin d’accès de la clé d’un caractère en renommant la clé AKV.
+Lors de l’utilisation d’Always Encrypted avec des enclaves sécurisées et Azure Key Vault, des longueurs de chemin de clé inhabituelles peuvent entraîner des erreurs de vérification de signature CMK. Si vous rencontrez ce problème, essayez de changer la longueur du chemin de la clé d’un caractère en renommant la clé AKV.
 
 ## <a name="174-august-2019"></a>17.4, août 2019
 
@@ -82,7 +82,7 @@ Lors de l’utilisation d’Always Encrypted avec des enclaves sécurisées et A
 
 | Nouvel élément | Détails |
 | :------- | :------ |
-| Nouvelles distributions prises en charge. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| Nouvelles distributions prises en charge. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Mode d’authentification Azure Active Directory Managed Service Identity (avec attribution par le système et l’utilisateur) | Consultez [Utilisation d’Azure Active Directory avec ODBC Driver](../using-azure-active-directory.md). |
 | Possibilité d’envoyer des paramètres d’entrée sur les colonnes Always Encrypted. | Pour plus d’informations, consultez [Limitations du pilote ODBC lors de l’utilisation d’Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Transactions distribuées XA. | Consultez [Utilisation de transactions XA](../use-xa-with-dtc.md).<br/><br/>XA est le sigle d’_eXtended Architecture_, standard pour l’exécution d’une transaction globale qui accède à plusieurs systèmes de stockage de données côté serveur. |
@@ -122,7 +122,7 @@ Prise en charge d’Always Encrypted pour l’API BCP
 
 Le nouvel attribut de chaîne de connexion UseFMTOnly conduit le pilote à utiliser les métadonnées héritées dans les cas spéciaux nécessitant des tables temporaires.
 
-Prise en charge d’Azure SQL Managed Instance (préversion privée étendue). 
+Prise en charge d’Azure SQL Managed Instance. 
 > [!NOTE]
 > Il existe plusieurs différences lors de l’utilisation de Managed Instance :
 > -   FILESTREAM n’est pas pris en charge. 
@@ -140,7 +140,7 @@ Prise en charge d’Azure SQL Managed Instance (préversion privée étendue).
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ajoute la prise en charge d’Always Encrypted et d’Azure Active Directory quand il est utilisé conjointement avec Microsoft SQL Server 2016.
 
-**Nouvelles distributions prises en charge.**  : OS X 10.11 et macOS 10.12 sont pris en charge dans la première version du pilote ODBC sur macOS. Ubuntu 16.10 est maintenant également pris en charge ainsi que Red Hat 6, 7 et SUSE 12. Chaque plateforme dispose d’un package relatif à la plateforme (RPM ou DEB) pour faciliter l’installation et la configuration.  Consultez [Installation du pilote](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) pour obtenir des instructions d’installation.
+**Nouvelles distributions prises en charge.**  : OS X 10.11 et macOS 10.12 sont pris en charge dans la première version du pilote ODBC sur macOS. Ubuntu 16.10 est maintenant également pris en charge ainsi que Red Hat 6, 7 et SUSE 12. Chaque plateforme dispose d’un package relatif à la plateforme (RPM ou DEB) pour faciliter l’installation et la configuration. Pour plus d’informations, consultez les instructions d’installation du pilote ODBC pour [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) et [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 **Changements de prise en charge du Gestionnaire de pilotes unixODBC 2.3.1** : Le pilote ODBC ne dépend plus d’un empaquetage personnalisé pour le gestionnaire de pilotes unixODBC (sauf sur RedHat 6) et, à la place, s’appuie sur le gestionnaire de package de distribution pour résoudre la dépendance UnixODBC à partir des dépôts de la distribution.
 

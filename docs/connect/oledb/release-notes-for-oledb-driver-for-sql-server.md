@@ -1,5 +1,5 @@
 ---
-title: Notes de publication (OLE DB Driver pour SQL Server) | Microsoft Docs
+title: Notes de publication (OLE DB Driver for SQL Server)
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: c0a9e1726958a1eda7cf71817479f7c37dcfe854
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866226"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090531"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notes de publication de Microsoft OLE DB Driver pour SQL Server
 
@@ -45,7 +45,7 @@ Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?li
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
 | Prise en charge de l’authentification Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Utilisation d’Azure Active Directory](features/using-azure-active-directory.md). |
-| Inclure la bibliothèque d’authentification Azure Active Directory (adal.dll) dans le programme d’installation | Maintenant incluse dans l’installation du pilote de base, cette opération met à niveau les installations existantes de la Bibliothèque d’authentification Microsoft Active Directory pour SQL Server, en les supprimant de la liste des applications installées dans Windows. |
+| Inclure la bibliothèque d’authentification Azure Active Directory (adal.dll) dans le programme d’installation | Maintenant inclus dans l’installation du pilote de base, le programme d’installation OLE DB met à niveau les installations existantes de la Bibliothèque d’authentification Microsoft Active Directory pour SQL Server et les supprime de la liste des applications installées dans Windows. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Bogues corrigés
@@ -70,7 +70,7 @@ Si vous avez besoin de télécharger le programme d’installation dans une lang
 Pour le pilote x64 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
 Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
-### <a name="features-added"></a>Ajout de fonctionnalités
+### <a name="features-added-in-1823"></a>Fonctionnalités ajoutées dans la version 18.2.3
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
@@ -88,7 +88,7 @@ Si vous avez besoin de télécharger le programme d’installation dans une lang
 Pour le pilote x64 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
 Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
-### <a name="bugs-fixed"></a>Bogues corrigés
+### <a name="bugs-fixed-in-1822"></a>Bogues corrigés dans la version 18.2.2
 
 | Bogue corrigé | Détails |
 | :-------- | :------ |
@@ -106,7 +106,7 @@ Si vous avez besoin de télécharger le programme d’installation dans une lang
 Pour le pilote x64 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
 Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
-### <a name="features-added"></a>Ajout de fonctionnalités
+### <a name="features-added-in-1821"></a>Fonctionnalités ajoutées dans la version 18.2.1
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
@@ -125,14 +125,14 @@ Si vous avez besoin de télécharger le programme d’installation dans une lang
 Pour le pilote x64 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
 Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
-### <a name="features-added"></a>Ajout de fonctionnalités
+### <a name="features-added-in-1810"></a>Fonctionnalités ajoutées dans la version 18.1.0
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
 | Prise en charge du mot clé de chaîne de connexion `UseFMTONLY` et de la propriété d’initialisation `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` contrôle la façon dont les métadonnées sont récupérées pendant la connexion à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions ultérieures.<br/><br/>Pour plus d'informations, consultez les pages suivantes : [Utilisation de mots clés de chaîne de connexion avec OLE DB Driver pour SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="bugs-fixed"></a>Bogues corrigés
+### <a name="bugs-fixed-in-1810"></a>Bogues corrigés dans la version 18.1.0
 
 | Bogue corrigé | Détails |
 | :-------- | :------ |
@@ -150,7 +150,7 @@ Si vous avez besoin de télécharger le programme d’installation dans une lang
 Pour le pilote x64 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
 Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
-### <a name="features-added"></a>Ajout de fonctionnalités
+### <a name="features-added-in-1802"></a>Fonctionnalités ajoutées dans la version 18.0.2
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |

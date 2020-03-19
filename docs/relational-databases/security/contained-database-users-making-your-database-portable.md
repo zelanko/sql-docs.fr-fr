@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557884"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375506"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données autonome - Rendre votre base de données portable
 
@@ -54,7 +54,7 @@ ms.locfileid: "75557884"
 
  Les règles de pare-feu Windows s'appliquent à toutes les connexions et ont les mêmes effets sur les connexions (connexions de modèle traditionnel) et les utilisateurs de base de données autonome. Pour plus d'informations sur le pare-feu Windows, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Pare-feux
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Pare-feux
 
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permet des règles de pare-feu distinctes pour les connexions au niveau serveur (connexions) et pour les connexions au niveau base de données (utilisateurs de base de données autonome). Quand vous vous connectez à une base de données utilisateur, les règles de pare-feu au niveau de la base de données sont contrôlées en premier. Si aucune règle n'autorise l'accès à la base de données, les règles de pare-feu au niveau serveur sont contrôlées, ce qui nécessite un accès à la base de données MASTER du serveur SQL Database. L'association de règles de pare-feu au niveau de la base de données et d'utilisateurs de base de données autonome peut éliminer la nécessité d'accéder à la base de données MASTER du serveur pendant la connexion, d'où un avantage potentiel en matière d'extensibilité de la connexion.  
   
@@ -74,6 +74,31 @@ ms.locfileid: "75557884"
 |Modèle traditionnel|Modèle utilisateur de base de données autonome|  
 |-----------------------|-----------------------------------|  
 |Pour modifier un mot de passe dans le contexte d'une base de données MASTER :<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Pour modifier un mot de passe dans le contexte d'une base de données utilisateur :<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
+
+### <a name="managed-instance"></a>Instance gérée
+
+Une instance managée Azure SQL Database se comporte comme SQL Server localement dans le contexte des bases de données autonomes. Veillez à changer le contexte de votre base de données, de base de données Master en base de données utilisateur, lors de la création de l’utilisateur de base de données autonome. De plus, il ne doit y avoir aucune connexion active à la base de données utilisateur lors de la définition de l’option d’autonomie. 
+
+Par exemple : 
+
+```sql
+Use MASTER;
+GO 
+
+ALTER DATABASE Test
+SET containment=partial
+
+
+USE Test;  
+GO  
+CREATE USER Carlo  
+WITH PASSWORD='Enterpwdhere*'  
+
+
+SELECT containment_desc FROM sys.databases
+WHERE name='test'
+```
+
   
 ## <a name="remarks"></a>Notes  
   

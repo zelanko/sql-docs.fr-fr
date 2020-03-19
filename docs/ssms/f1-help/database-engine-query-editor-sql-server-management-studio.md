@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef5bdc57a5fb5f0a2cbeed6be3356aade1ba491
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335763"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198526"
 ---
 # <a name="ssms-query-editor"></a>Éditeur de requête SSMS
 
@@ -116,7 +116,7 @@ Vous pouvez également sélectionner **Options de requête** dans le [menu conte
 
 Indique si les fonctionnalités IntelliSense sont disponibles dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Cette option est définie par défaut.
 
-Vous pouvez également sélectionner **IntelliSense activé** en sélectionnant Ctrl+B, puis Ctrl+I ou dans le [menu contextuel](#intellisense-enabled-using-the-context-menu).
+Vous pouvez également sélectionner **IntelliSense activé** en sélectionnant Ctrl+B, puis Ctrl+I, ou dans le [menu contextuel](#intellisense-enabled-using-the-context-menu).
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>Ajout du plan d’exécution réel à l’aide de la barre d’outils Éditeur
 

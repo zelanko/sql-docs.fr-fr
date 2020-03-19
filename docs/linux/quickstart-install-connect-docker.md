@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558671"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198388"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Démarrage rapide : Exécuter des images de conteneur SQL Server avec Docker
 
@@ -36,13 +36,17 @@ Dans ce démarrage rapide, vous utilisez Docker pour extraire et exécuter l’i
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+> [!NOTE]
+> À compter de SQL Server 2019 CU3, Ubuntu 18.04 est pris en charge.
+
 Dans ce guide de démarrage rapide, vous utilisez Docker pour tirer (pull) et exécuter l’image conteneur SQL Server 2019, [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 > [!TIP]
 > Ce guide de démarrage rapide crée des conteneurs SQL Server 2019. Si vous préférez créer des conteneurs SQL Server 2017, consultez la [version SQL Server 2017 de cet article](quickstart-install-connect-docker.md?view=sql-server-linux-2017).
+
 ::: moniker-end
 
-Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubuntu 16.04. Elle peut être utilisée avec Docker Engine 1.8+ sur Linux ou sur Docker pour Mac/Windows. Ce guide de démarrage rapide se concentre spécifiquement sur l’utilisation de SQL Server sur l’image **linux**. L’image Windows n’est pas traitée, mais vous pouvez obtenir plus d’informations dans la [page du Hub Docker mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubuntu 18.04. Elle peut être utilisée avec Docker Engine 1.8+ sur Linux ou sur Docker pour Mac/Windows. Ce guide de démarrage rapide se concentre spécifiquement sur l’utilisation de SQL Server sur l’image **linux**. L’image Windows n’est pas traitée, mais vous pouvez obtenir plus d’informations dans la [page du Hub Docker mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Conditions préalables
 
@@ -183,19 +187,19 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -214,7 +218,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -222,7 +226,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -230,7 +234,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -248,7 +252,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Spécifiez votre propre mot de passe fort, qui doit avoir au moins 8 caractères et respecter les [exigences de mot de passe SQL Server](../relational-databases/security/password-policy.md). Paramètre obligatoire pour l’image de SQL Server. |
    | **-p 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur, mappé au port 1433 sur l’hôte. |
    | **--name sql1** | Spécifiez un nom personnalisé pour le conteneur plutôt qu’un nom généré de manière aléatoire. Si vous exécutez plusieurs conteneurs, vous ne pouvez pas réutiliser le même nom. |
-   | **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** | Image conteneur SQL Server 2019 Ubuntu Linux. |
+   | **mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04** | Image conteneur SQL Server 2019 Ubuntu Linux. |
 
 3. Pour afficher vos conteneurs Docker, utilisez la commande `docker ps`.
 

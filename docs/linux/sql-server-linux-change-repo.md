@@ -3,17 +3,17 @@ title: Configurer des référentiels Linux pour SQL Server 2017 et 2019
 description: Vérifiez et configurez les référentiels source pour SQL Server 2019 et SQL Server 2017 sur Linux. Le référentiel source affecte la version de SQL Server appliquée lors de l’installation et de la mise à niveau.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/07/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776385"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198426"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer les référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
@@ -38,7 +38,7 @@ Cet article explique comment configurer le référentiel approprié pour les ins
 
 Lorsque vous installez SQL Server sur Linux, vous devez configurer un référentiel Microsoft. Ce référentiel est utilisé pour acquérir le package du moteur de base de données, **mssql-server**, et les packages SQL Server associés. Il existe actuellement cinq référentiels principaux :
 
-| Référentiel | Name | Description |
+| Référentiel | Nom | Description |
 |---|---|---|
 | **2019** | **mssql-server-2019** | Référentiel contenant la mise à jour cumulative de SQL Server 2019. |
 | **2019 GDR** | **mssql-server-2019-gdr** | Référentiel SQL Server 2019 GDR pour les mises à jour critiques uniquement. |
@@ -157,11 +157,14 @@ Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes s
 ::: zone pivot="ld2-ubuntu"
 Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes suivantes en fonction du type de référentiel précédemment configuré.
 
+> [!NOTE]
+> À compter de SQL Server 2019 CU3, Ubuntu 18.04 est pris en charge. Si vous utilisez Ubuntu 16.04, remplacez le chemin ci-dessous par `/ubuntu/16.04` au lieu de `/ubuntu/18.04`.
+
 | Référentiel | Commande à supprimer |
 |---|---|
 | **Préversion (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
-| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -204,6 +207,11 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 ::: zone pivot="ld2-ubuntu"
 Configurez le nouveau référentiel à utiliser pour les installations et les mises à niveau de SQL Server.
 
+> [!NOTE]
+> À compter de SQL Server 2019 CU3, Ubuntu 18.04 est pris en charge. Les commandes suivantes pour SQL Server 2019 pointent vers le référentiel Ubuntu 18.04.
+>
+> Si vous utilisez Ubuntu 16.04, remplacez le chemin ci-dessous par `/ubuntu/16.04` au lieu de `/ubuntu/18.04`.
+
 1. Importez les clés GPG de référentiel public.
 
    ```bash
@@ -214,8 +222,8 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 
    | Référentiel | Version | Commande |
    |---|---|---|
-   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
-   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"` |
+   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019-gdr.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 

@@ -5,16 +5,16 @@ description: Découvrez comment déployer un cluster Big Data SQL Server avec un
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259209"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286043"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Déployer un cluster Big Data SQL Server avec une haute disponibilité
 
@@ -32,7 +32,7 @@ Voici quelques-unes des fonctionnalités favorisées par les groupes de disponib
 - Toutes les bases de données sont automatiquement ajoutées au groupe de disponibilité, y compris toutes les bases de données utilisateur et système telles que `master` et `msdb`. Cette fonctionnalité fournit une vue monosystème sur les réplicas des groupes de disponibilité. Les bases de données de modèle supplémentaires (`model_replicatedmaster` et `model_msdb`) sont utilisées pour alimenter la partie répliquée des bases de données système. En plus de ces bases de données, vous verrez les bases de données `containedag_master` et `containedag_msdb` si vous vous connectez directement à l’instance. Les bases de données `containedag` représentent `master` et `msdb` au sein du groupe de disponibilité.
 
   > [!IMPORTANT]
-  > Au moment de la publication de SQL Server 2019 CU1, seules les bases de données créées par une instruction CREATE DATABASE sont automatiquement ajoutées au groupe de disponibilité. Les bases de données créées sur l’instance par d’autres workflows comme la restauration ne sont pas encore ajoutées au groupe de disponibilité et l’administrateur de cluster Big Data doit le faire manuellement. Pour obtenir des instructions, consultez la section [Se connecter à l’instance SQL Server](#instance-connect).
+  > Au moment de la publication de SQL Server 2019 CU1, seules les bases de données créées par une instruction CREATE DATABASE sont automatiquement ajoutées au groupe de disponibilité. Les bases de données créées sur l’instance par d’autres workflows comme l’attachement de base de données ne sont pas encore ajoutées au groupe de disponibilité et l’administrateur de cluster Big Data doit le faire manuellement. Pour obtenir des instructions, consultez la section [Se connecter à l’instance SQL Server](#instance-connect). Avant SQL Server 2019 CU2, les bases de données créées à la suite d’une instruction RESTORE avaient le même comportement et elles devaient être ajoutées manuellement au groupe de disponibilité contenu.
   >
 - Les bases de données de configuration Polybase ne sont pas incluses dans le groupe de disponibilité, car elles incluent des métadonnées de niveau d’instance spécifiques à chaque réplica.
 - Un point de terminaison externe est automatiquement provisionné pour la connexion aux bases de données au sein du groupe de disponibilité. Ce point de terminaison `master-svc-external` joue le rôle de l’écouteur du groupe de disponibilité.
@@ -129,12 +129,15 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> Se connecter à une instance SQL Server
 
-Pour certaines opérations telles que la définition de configurations au niveau serveur ou l’ajout manuel d’une base de données dans le groupe de disponibilité, vous devez vous connecter à l’instance SQL Server. Les opérations telles que `sp_configure`, `RESTORE DATABASE` ou n’importe quelle DDL des groupes de disponibilité nécessitent ce type de connexion. Par défaut, le cluster Big Data n’inclut pas de point de terminaison permettant la connexion de l’instance et vous devez exposer manuellement ce point de terminaison. 
+Pour certaines opérations telles que la définition de configurations au niveau serveur ou l’ajout manuel d’une base de données dans le groupe de disponibilité, vous devez vous connecter à l’instance SQL Server. Avant SQL Server 2019 CU2, les opérations comme `sp_configure`, `RESTORE DATABASE` ou n’importe quelle DDL des groupes de disponibilité nécessitent ce type de connexion. Par défaut, le cluster Big Data n’inclut pas de point de terminaison permettant la connexion de l’instance et vous devez exposer manuellement ce point de terminaison. 
 
 > [!IMPORTANT]
 > Le point de terminaison exposé pour les connexions d’instance SQL Server prend uniquement en charge l’authentification SQL, même dans les clusters où Active Directory est activé. Par défaut, au cours d’un déploiement de cluster Big Data, la connexion `sa` est désactivée et une nouvelle connexion `sysadmin` est provisionnée en fonction des valeurs fournies au moment du déploiement pour les variables d’environnement `AZDATA_USERNAME` et `AZDATA_PASSWORD`.
 
 Voici un exemple illustrant comment exposer ce point de terminaison, puis ajouter la base de données créée avec un workflow de restauration dans le groupe de disponibilité. Des instructions similaires pour la configuration d’une connexion à l’instance principale SQL Server s’appliquent lorsque vous souhaitez modifier les configurations de serveur avec `sp_configure`.
+
+> [!NOTE]
+> À compter de SQL Server 2019 CU2, les bases de données créées par un workflow RESTORE sont ajoutées automatiquement au groupe de disponibilité contenu.
 
 - Déterminez le pod qui héberge le réplica principal en vous connectant au point de terminaison `sql-server-master` et exécutez :
 
@@ -197,10 +200,11 @@ Voici un exemple illustrant comment exposer ce point de terminaison, puis ajoute
 
 Limitations et problèmes connus avec les groupes de disponibilité pour l’instance principale SQL Server dans un cluster Big Data :
 
-- Les bases de données créées par le biais de workflows autres que `CREATE DATABASE`, comme `RESTORE DATABASE` et `CREATE DATABASE FROM SNAPSHOT`, ne sont pas automatiquement ajoutées dans le groupe de disponibilité. [Connectez-vous à l’instance](#instance-connect) et ajoutez manuellement la base de données au groupe de disponibilité.
+- Avant SQL Server 2019 CU2, les bases de données créées par des workflows autres que `CREATE DATABASE` et `RESTORE DATABASE`, comme `CREATE DATABASE FROM SNAPSHOT`, ne sont pas automatiquement ajoutées au groupe de disponibilité. [Connectez-vous à l’instance](#instance-connect) et ajoutez manuellement la base de données au groupe de disponibilité.
+- Pour restaurer correctement une base de données compatible TDE à partir d’une sauvegarde créée sur un autre serveur, vous devez vérifier que les [certificats nécessaires](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) sont restaurés sur l’instance maître SQL Server et le maître AG contenu. Vous trouverez [ici](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) un exemple de sauvegarde et de restauration de certificats.
 - Certaines opérations comme l’exécution de paramètres de configuration de serveur avec `sp_configure` nécessitent une connexion à la base de données `master` de l’instance SQL Server, et non pas au groupe de disponibilité `master`. Vous ne pouvez pas utiliser le point de terminaison principal correspondant. Suivez [ces instructions](#instance-connect) pour exposer un point de terminaison et vous connecter à l’instance SQL Server, et exécutez `sp_configure`. Vous pouvez uniquement utiliser l’authentification SQL lors de l’exposition manuelle du point de terminaison pour vous connecter à la base de données `master` de l’instance SQL Server.
 - La configuration de la haute disponibilité doit être créée lors du déploiement du cluster Big Data. Vous ne pouvez pas activer la configuration de la haute disponibilité avec les groupes de disponibilité après le déploiement.
-- Alors que la base de données msdb contenue est incluse dans le groupe de disponibilité et que les travaux de l’agent SQL sont répliqués à travers, les tâches ne sont pas déclenchées conformément à la planification. La solution de contournement consiste à [se connecter à chacune des instances SQL Server](#instance-connect) et à créer les travaux dans l’instance de msdb.
+- Alors que la base de données msdb contenue est incluse dans le groupe de disponibilité et que les travaux de l’agent SQL sont répliqués à travers, les tâches ne sont pas déclenchées conformément à la planification. La solution de contournement consiste à [se connecter à chacune des instances SQL Server](#instance-connect) et à créer les travaux dans l’instance de msdb. À compter de SQL Server 2019 CU2, seuls les travaux créés dans chacun des réplicas de l’instance maître sont pris en charge.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

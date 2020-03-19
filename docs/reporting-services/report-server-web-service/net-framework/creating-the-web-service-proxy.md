@@ -1,5 +1,6 @@
 ---
 title: Création du proxy de service web | Microsoft Docs
+description: Un service client et web peut communiquer en utilisant des messages SOAP. Ajoutez une classe proxy à votre projet pour mapper des paramètres à des éléments XML et envoyer des messages SOAP.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 116e4ca4ef2080c186a11b6816a08d4c3c5ba169
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284638"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198309"
 ---
 # <a name="creating-the-web-service-proxy"></a>Création du proxy de service Web
   Un client et un service Web peuvent communiquer à l'aide de messages SOAP qui encapsulent les paramètres d'entrée et de sortie au format XML. Une classe proxy mappe des paramètres aux éléments XML puis envoie les messages SOAP sur un réseau. De cette manière, la classe proxy vous évite de devoir communiquer avec le service Web au niveau SOAP et vous permet d'appeler des méthodes de service Web dans tout environnement de développement qui prend en charge les proxies de service Web et SOAP.  

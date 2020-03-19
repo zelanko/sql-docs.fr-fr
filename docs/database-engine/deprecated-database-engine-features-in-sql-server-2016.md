@@ -1,6 +1,7 @@
 ---
 title: Fonctionnalités dépréciées du moteur de base de données | Microsoft Docs
 titleSuffix: SQL Server 2016
+description: Découvrez les fonctionnalités du moteur de base de données dépréciées qui sont toujours disponibles dans SQL Server 2016 (13.x), mais qui ne doivent pas être utilisées dans les nouvelles applications.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4bfad58a8d1fbcfe6baad67ce38461a6d6bbcf72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75247530"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190555"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

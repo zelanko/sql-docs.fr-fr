@@ -1,28 +1,28 @@
 ---
-title: Problèmes connus dans cette version du pilote pour SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 02/15/2018
+title: Problèmes connus concernant le pilote ODBC sur Linux et macOS
+ms.date: 03/05/2020
 ms.prod: sql
-ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - known issues
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9abed0dcd77e0759e92dc0380a42acfe54852a7
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9746456a4a38f2a19e485d1e17786073b97b243e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971350"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286433"
 ---
-# <a name="known-issues-in-this-version-of-the-driver"></a>Problèmes connus dans cette version du pilote
+# <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problèmes connus concernant le pilote ODBC sur Linux et macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Cet article contient une liste de problèmes connus avec Microsoft ODBC Driver 13, 13.1 et 17 for SQL Server sur Linux et macOS.
+Cet article contient une liste de problèmes connus avec Microsoft ODBC Driver 13, 13.1 et 17 for SQL Server sur Linux et macOS. Il contient aussi les étapes permettant de résoudre les problèmes de connectivité.
+
+## <a name="known-issues"></a>Problèmes connus
 
 D’autres problèmes seront publiés sur le [blog de l’équipe du pilote Microsoft ODBC](https://blogs.msdn.com/b/sqlnativeclient/).  
 
@@ -36,7 +36,58 @@ D’autres problèmes seront publiés sur le [blog de l’équipe du pilote Micr
 
 Par exemple, si votre encodage est UTF-8 et que vous spécifiez 1 pour *BufferLength* et *ColumnSize* dans **SQLBindParameter** pour un paramètre de sortie, puis que vous essayez de récupérer le caractère précédent stocké dans une colonne `char(1)` sur le serveur (à l’aide de CP-1252), le pilote tente de le convertir dans l’encodage UTF-8 sur 3 octets, mais ne peut pas faire tenir le résultat dans une mémoire tampon d’un octet. Dans l’autre sens, il compare *ColumnSize* à *BufferLength* dans **SQLBindParameter** avant d’effectuer la conversion entre les différentes pages de codes sur le client et le serveur. Étant donné qu’une *ColumnSize* de 1 est inférieure à une *BufferLength* de 3 (par exemple), le pilote génère une erreur. Pour éviter cette erreur, vérifiez que la longueur des données après la conversion est adaptée à la colonne ou mémoire tampon spécifiée. Notez que *ColumnSize* ne peut pas être supérieure à 8000 pour le type `varchar(n)`.
 
-## <a name="see-also"></a>Voir aussi  
-[Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md)  
-[Notes de publication](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
+## <a id="connectivity"></a> Résolution des problèmes de connexion  
 
+Si vous ne parvenez pas à établir de connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du pilote ODBC, utilisez les informations suivantes pour identifier le problème.  
+  
+Le problème de connexion le plus courant est dû à l’installation de deux copies du Gestionnaire de pilotes UnixODBC. Recherchez /usr for libodbc\*.so\*. Si plusieurs versions du fichier apparaissent, vous avez (probablement) plusieurs gestionnaires de pilotes installés. Votre application risque alors d’utiliser la mauvaise version.
+  
+Activez le journal de connexion en modifiant votre fichier `/etc/odbcinst.ini` afin qu’il contienne la section suivante avec les éléments ci-après :
+
+```
+[ODBC]
+Trace = Yes
+TraceFile = (path to log file, or /dev/stdout to output directly to the terminal)
+```  
+  
+Si vous obtenez un autre échec de connexion et que vous ne voyez pas de fichier journal, il existe (peut-être) deux copies du Gestionnaire de pilotes sur votre ordinateur. Sinon, la sortie du journal doit ressembler à ce qui suit :  
+  
+```
+[ODBC][28783][1321576347.077780][SQLDriverConnectW.c][290]  
+        Entry:  
+            Connection = 0x17c858e0  
+            Window Hdl = (nil)  
+            Str In = [DRIVER={ODBC Driver 13 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
+            Str Out = (nil)  
+            Str Out Max = 0  
+            Str Out Ptr = (nil)  
+            Completion = 0  
+        UNICODE Using encoding ASCII 'UTF8' and UNICODE 'UTF16LE'  
+```  
+  
+Si l’encodage de caractères ASCII n’est pas UTF-8, par exemple : 
+  
+```
+UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'  
+```  
+  
+Il existe plusieurs gestionnaires de pilotes installés et votre application n’utilise pas le bon, ou le gestionnaire de pilotes n’a pas été créé correctement.  
+  
+Pour plus d’informations sur la résolution des échecs de connexion, consultez :  
+
+- [Procédure de résolution des problèmes de connectivité SQL](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+  
+- [Résolution des problèmes de connectivité SQL Server 2005 - 1re partie](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2005-connectivity-issue-troubleshoot-part-i/ba-p/383034)  
+  
+- [Résolution des problèmes de connectivité dans SQL Server 2008 avec le tampon en anneau de connectivité](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
+  
+- [Résolution des problèmes d’authentification SQL Server](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour obtenir des instructions d’installation du pilote ODBC, consultez les articles suivants :
+
+- [Installation de Microsoft ODBC Driver for SQL Server sur Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installation de Microsoft ODBC Driver for SQL Server sur macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+
+Pour plus d’informations, consultez les [instructions de programmation](programming-guidelines.md) et les [notes de publication](release-notes-odbc-sql-server-linux-mac.md).  

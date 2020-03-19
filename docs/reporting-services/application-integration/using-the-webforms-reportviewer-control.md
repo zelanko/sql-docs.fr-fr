@@ -1,6 +1,6 @@
 ---
 title: Utiliser le contrôle WebForms ReportViewer
-description: Pour consulter des rapports déployés sur un serveur de rapports ou situés sur le système de fichiers local, vous pouvez utiliser le contrôle WebForms ReportViewer afin de les afficher dans une application Windows.
+description: Pour consulter des rapports déployés sur un serveur de rapports ou sur un système de fichiers local, vous pouvez utiliser le contrôle WebForms ReportViewer pour les afficher dans une application web.
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4339aca9735937e8747968b0060ce8eb2a24f486
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796935"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198456"
 ---
 # <a name="use-the-webforms-reportviewer-control"></a>Utiliser le contrôle WebForms ReportViewer
   Pour consulter des rapports déployés sur un serveur de rapports ou situés sur le système de fichiers local, vous pouvez utiliser le contrôle WebForms ReportViewer afin de les afficher dans une application Windows.  

@@ -14,12 +14,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307657"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286643"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données (DTA)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75307657"
 
 L'Assistant Paramétrage du moteur de base de données fournit une interface graphique utilisateur qui permet d'afficher des sessions de paramétrage et des rapports de recommandations de paramétrage. Cette leçon explique comment démarrer cet outil et comment configurer l'affichage. À la fin de la leçon vous connaîtrez les différentes façons de démarrer cet outil et de configurer son affichage pour l'adapter aux tâches de paramétrage que vous effectuez régulièrement.  
 
-## <a name="prerequisites"></a>Conditions préalables requises 
+## <a name="prerequisites"></a>Prérequis 
 
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur qui exécute SQL Server et d’une base de données AdventureWorks.
 
@@ -57,7 +57,7 @@ Par défaut, l'Assistant Paramétrage du moteur de base de données s'ouvre avec
 ![Fenêtre par défaut de l'Assistant Paramétrage du moteur de base de données](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> L’onglet **Moniteur de session** affiche le nom de la session, qui est le nom de l’utilisateur connecté et des données actuelles. 
+> L’onglet **Moniteur de session** affiche le nom de la session, qui est le nom de l’utilisateur connecté et la date actuelle. 
   
 Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la première fois, deux volets principaux s'affichent.  
   

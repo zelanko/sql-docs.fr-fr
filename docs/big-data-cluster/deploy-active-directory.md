@@ -2,19 +2,19 @@
 title: Déployer en mode Active Directory
 titleSuffix: SQL Server Big Data Cluster
 description: Apprenez à mettre à niveau des clusters Big Data SQL Server dans un domaine Active Directory.
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200960"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190583"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory
 
@@ -174,16 +174,27 @@ L’intégration AD nécessite les paramètres suivants. Ajoutez ces paramètre
 
 - `security.activeDirectory.domainDnsName`: Nom de votre domaine (par exemple, `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: Ce paramètre prend **un groupe AD**. Les membres de ce groupe obtiennent des autorisations d’administrateur dans le cluster. Cela signifie qu’ils auront des autorisations sysadmin dans SQL Server, des autorisations de superutilisateur dans HDFS et d’administrateurs dans le Contrôleur. **Notez que ce groupe doit exister dans AD avant le début du déploiement. Notez également que ce groupe ne peut pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+- `security.activeDirectory.clusterAdmins`: Ce paramètre prend un groupe AD. L’étendue du groupe AD doit être universelle ou globale au niveau du domaine. Les membres de ce groupe obtiennent des autorisations d’administrateur dans le cluster. Cela signifie qu’ils ont des autorisations `sysadmin` dans SQL Server, des autorisations de superutilisateur dans HDFS et d’administrateurs dans le contrôleur. 
 
-- `security.activeDirectory.clusterUsers`: Liste des groupes Active Directory qui sont des utilisateurs standard (aucune autorisation d’administrateur) dans le cluster Big Data. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+  >[!IMPORTANT]
+  >Créez ce groupe dans AD avant le début du déploiement. Si l’étendue de ce groupe AD est locale au niveau du domaine, le déploiement échoue.
 
-- `security.activeDirectory.appOwners` **Paramètre facultatif** : Liste des groupes Active Directory qui sont autorisés à créer, supprimer et exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+- `security.activeDirectory.clusterUsers`: Liste des groupes Active Directory qui sont des utilisateurs standard (aucune autorisation d’administrateur) dans le cluster Big Data. La liste peut inclure des groupes AD dont l’étendue est universelle ou globale au niveau du domaine. Il ne peut pas s’agir de groupes locaux au niveau du domaine.
 
-- `security.activeDirectory.appReaders`**Paramètre facultatif** : répertorie des groupes AD qui sont autorisés à exécuter une application quelconque. **Notez que ces groupes doivent exister dans AD avant le début du déploiement. Notez également que ces groupes ne peuvent pas être d’une étendue DomainLocal dans Active Directory. Un groupe avec étendue de domaine local entraîne l’échec du déploiement.**
+  >[!IMPORTANT]
+  >Créez ces groupes dans AD avant le début du déploiement. Si l’étendue de l’un de ces groupes AD est locale au niveau du domaine, le déploiement échoue.
 
-**Comment vérifier l’étendue d’un groupe AD :** 
-[Cliquez ici pour obtenir des instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) pour vérifier l’étendue d’un groupe AD, afin de déterminer s’il s’agit du DomainLocal.
+- `security.activeDirectory.appOwners` **Paramètre facultatif** : Liste des groupes Active Directory qui sont autorisés à créer, supprimer et exécuter n’importe quelle application. La liste peut inclure des groupes AD dont l’étendue est universelle ou globale au niveau du domaine. Il ne peut pas s’agir de groupes locaux au niveau du domaine.
+
+  >[!IMPORTANT]
+  >Créez ces groupes dans AD avant le début du déploiement. Si l’étendue de l’un de ces groupes AD est locale au niveau du domaine, le déploiement échoue.
+
+- `security.activeDirectory.appReaders` **Paramètre facultatif** : liste des groupes AD qui sont autorisés à exécuter n’importe quelle application. La liste peut inclure des groupes AD dont l’étendue est universelle ou globale au niveau du domaine. Il ne peut pas s’agir de groupes locaux au niveau du domaine.
+
+  >[!IMPORTANT]
+  >Créez ces groupes dans AD avant le début du déploiement. Si l’étendue de l’un de ces groupes AD est locale au niveau du domaine, le déploiement échoue.
+
+[Vérifiez l’étendue du groupe AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) pour déterminer s’il s’agit d’un groupe local de domaine.
 
 Si vous n’avez pas encore initialisé le fichier de configuration de déploiement, vous pouvez exécuter cette commande pour obtenir une copie de la configuration.
 

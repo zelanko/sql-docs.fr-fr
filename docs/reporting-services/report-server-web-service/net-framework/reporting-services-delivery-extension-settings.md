@@ -1,5 +1,6 @@
 ---
 title: Paramètres des extensions de remise de Reporting Services | Microsoft Docs
+description: Reporting Services propose la remise par e-mail pour l’envoi de rapports aux utilisateurs et la remise par partage de fichiers pour l’envoi de rapports à un partage. Découvrez les paramètres d’extension de remise.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 518367b32d46f0aff4fd09714839afa76e7009c9
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128853"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198496"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Paramètres des extensions de remise de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] propose une extension de remise par e-mail et une extension de remise par partage de fichiers. La remise par messagerie permet d'envoyer un rapport à des utilisateurs individuels ou à des groupes par le biais de la messagerie électronique. La remise par partage de fichiers permet d'envoyer automatiquement des rapports rendus à un partage de votre réseau. Vous pouvez utiliser l'une ou l'autre de ces extensions de remise avec des abonnements standard ou des abonnements piloté par les données. Vous devez transmettre les paramètres de remise qui sont spécifiques au type d'extension de remise chaque fois que vous appelez les méthodes <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> et <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Pour extraire par programme la liste des paramètres de remise, utilisez la méthode <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  

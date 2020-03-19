@@ -1,5 +1,6 @@
 ---
 title: Méthodes des paramètres du rapport | Microsoft Docs
+description: Ces méthodes permettent d’obtenir et de définir les propriétés des paramètres d’un élément, de valider les valeurs des paramètres, d’obtenir les états des paramètres pris en charge et d’obtenir les types de paramètres.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08fd75eadd21dd074a751d39c6423fd47d8af81f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e510bb9509d8c643eab4240f66af44c457e19a7f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284460"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198346"
 ---
 # <a name="report-parameters-methods"></a>Méthodes des paramètres du rapport
   Ces méthodes permettent de définir et d'extraire les paramètres à utiliser pour les rapports.  

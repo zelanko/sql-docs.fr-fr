@@ -27,18 +27,18 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2d727044455bcee06155848aee2bd6749bd475ff
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68099995"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79315053"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 
-Contrôle le verrouillage et le comportement de contrôle de version de ligne des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] émises par une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Contrôle le comportement du verrouillage et de la gestion de versions de ligne des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] émises par une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -61,6 +61,8 @@ SET TRANSACTION ISOLATION LEVEL
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+>[!NOTE]
+> SQL Data Warehouse implémente les transactions ACID. Par défaut, le niveau d'isolation de la prise en charge transactionnelle est READ UNCOMMITTED.  Vous pouvez le remplacer par READ COMMITTED SNAPSHOT ISOLATION en activant l'option de base de données READ_COMMITTED_SNAPSHOT pour une base de données utilisateur lorsqu'elle est connectée à la base de données MASTER.  Une fois activée, toutes les transactions de cette base de données sont exécutées sous READ COMMITTED SNAPSHOT ISOLATION et la définition de READ UNCOMMITTED au niveau de la session n’est pas honorée. Pour plus d'informations, consultez [Options ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
 
 ## <a name="arguments"></a>Arguments  
  READ UNCOMMITTED  
