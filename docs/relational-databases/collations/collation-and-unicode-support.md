@@ -49,7 +49,7 @@ Quand vous sélectionnez un classement pour votre serveur, base de données, col
     
 Pour exploiter au mieux la prise en charge des classements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez comprendre les termes qui sont définis dans cette rubrique et la relation qu’ils entretiennent avec les caractéristiques de vos données.    
     
-##  <a name="Terms"></a> Termes de classement    
+##  <a name="collation-terms"></a><a name="Terms"></a> Termes de classement    
     
 -   [Classement](#Collation_Defn) 
     - [Ensembles de classements](#Collation_sets)
@@ -58,7 +58,7 @@ Pour exploiter au mieux la prise en charge des classements dans [!INCLUDE[ssNoVe
 -   [Page de codes](#Code_Page_Defn)    
 -   [Ordre de tri](#Sort_Order_Defn)    
     
-###  <a name="Collation_Defn"></a> Classement    
+###  <a name="collation"></a><a name="Collation_Defn"></a> Classement    
 Un classement désigne les modèles binaires qui représentent chaque caractère dans un jeu de données. Les classements déterminent également les règles de tri et de comparaison des données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le stockage d’objets ayant des classements différents dans une même base de données. Pour les colonnes non-Unicode, le paramètre de classement spécifie la page de codes pour les données et les caractères qui peuvent être représentés. Les données que vous déplacez entre des colonnes non-Unicode doivent être converties de la page de codes source vers la page de codes de destination.    
     
 Le résultat d'une instruction[!INCLUDE[tsql](../../includes/tsql-md.md)] peut varier lorsque cette dernière est exécutée dans un contexte réunissant plusieurs bases de données dont chacune a un paramètre de classement différent. Dans la mesure du possible, choisissez un classement normalisé pour votre organisation. De cette manière, vous n’avez pas à spécifier le classement dans chaque caractère ou expression Unicode. Si vous devez utiliser des objets qui ont des paramètres de classement et de page de codes différents, codez vos requêtes conformément aux règles de priorité des classements. Pour plus d’informations, consultez [Priorité de classement (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
@@ -110,7 +110,7 @@ Chaque classement se présente comme une série de suffixes permettant de défin
 
 <sup>2</sup> L’ajout de l’option UTF-8 (\_UTF8) vous permet d’encoder les données Unicode avec UTF-8. Pour plus d’informations, consultez la section [Prise en charge d’UTF-8](#utf8) de cet article. 
 
-### <a name="Collation_sets"></a> Ensembles de classements
+### <a name="collation-sets"></a><a name="Collation_sets"></a> Ensembles de classements
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les ensembles de classement suivants :    
 
@@ -118,10 +118,10 @@ Chaque classement se présente comme une série de suffixes permettant de défin
 -  [Classements binaires](#Binary-collations)
 -  [Classements SQL Server](#SQL-collations)
     
-#### <a name="Windows-collations"></a> Classements Windows    
+#### <a name="windows-collations"></a><a name="Windows-collations"></a> Classements Windows    
 Les classements Windows définissent les règles de stockage des données de type caractère selon les paramètres régionaux système Windows associés. Pour un classement Windows, vous pouvez implémenter une comparaison de données non-Unicode via le même algorithme que pour les données Unicode. Les règles de classement Windows de base spécifient l’alphabet ou la langue utilisée pour le tri du dictionnaire. Les règles spécifient également la page de codes utilisée pour stocker les données de type caractère non-Unicode. Les tris Unicode et non-Unicode sont compatibles avec les comparaisons de chaînes dans une version particulière de Windows. Les types de données sont ainsi cohérents dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce qui permet aux développeurs de trier les chaînes dans leurs applications en appliquant les mêmes règles que celles utilisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Nom de classement Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).    
     
-#### <a name="Binary-collations"></a> Classements binaires    
+#### <a name="binary-collations"></a><a name="Binary-collations"></a> Classements binaires    
 Les classements binaires trient les données en fonction de la séquence des valeurs codées qui sont définies par les paramètres régionaux et le type de données. Ils respectent la casse. Un classement binaire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit les paramètres régionaux et la page de codes ANSI à utiliser. Cela applique un ordre de tri binaire. Parce qu’ils sont relativement simples, les classements binaires aident à améliorer les performances de l’application. Pour les types de données non-Unicode, les comparaisons de données sont basées sur les points de code qui sont définis dans la page de codes ANSI. Pour les données de type Unicode, les comparaisons de données se basent sur les points de code Unicode. Pour le classement binaire des types de données Unicode, les paramètres régionaux (la langue) ne sont pas pris en compte dans les tris de données. Par exemple, **Latin_1_General_BIN** et **Japanese_BIN** produisent des résultats de tri identiques quand ils sont utilisés avec des données Unicode. Pour plus d’informations, consultez [Nom de classement Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).   
     
 Il existe deux types de classements binaires dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :
@@ -130,7 +130,7 @@ Il existe deux types de classements binaires dans [!INCLUDE[ssNoVersion](../../i
 
 -  Les classements **BIN2** plus récents, qui implémentent une comparaison de point de code pure. Dans un classement BIN2, tous les caractères sont triés en fonction de leurs points de code. En raison de l’architecture little endian de la plateforme Intel, les caractères de code Unicode sont toujours stockés avec les octets inversés.     
     
-#### <a name="SQL-collations"></a> Classements SQL Server    
+#### <a name="sql-server-collations"></a><a name="SQL-collations"></a> Classements SQL Server    
 Les classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) offrent la compatibilité des ordres de tri avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les règles de tri du dictionnaire pour les données non-Unicode ne sont pas compatibles avec les routines de tri fournies par les systèmes d’exploitation Windows. Toutefois, le tri de données Unicode est compatible avec une version particulière de règles de tri Windows. Comme les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des règles de comparaison différentes pour les données Unicode et non-Unicode, vous pouvez obtenir des résultats différents pour des comparaisons des mêmes données, selon le type de données sous-jacent. Pour plus d’informations, consultez [Nom du classement SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md). 
 
 Lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le classement par défaut est déterminé par les paramètres régionaux du système d’exploitation. Vous pouvez modifier le classement au niveau du serveur pendant l’installation ou en modifiant les paramètres régionaux du système d’exploitation avant l’installation. Pour garantir la compatibilité ascendante, le classement par défaut est défini d’après la version disponible la plus ancienne associée à chaque ensemble de paramètres régionaux spécifiques. Par conséquent, il ne s’agit pas toujours du classement recommandé. Pour tirer pleinement parti des fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], modifiez les paramètres d’installation par défaut de façon à utiliser les classements Windows. Par exemple, pour les paramètres régionaux du système d’exploitation « Anglais (États-Unis) » (page de codes 1252), le classement par défaut lors de l’installation est **SQL_Latin1_General_CP1_CI_AS** et il peut être remplacé par le classement Windows le plus proche **Latin1_General_100_CI_AS_SC** équivalent.
@@ -141,7 +141,7 @@ Lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 > -   Votre code d'application dépend du comportement des classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] précédents.    
 > -   Vous devez stocker des données de caractères de plusieurs langues.    
     
-### <a name="Collation_levels"></a> Niveaux de classement
+### <a name="collation-levels"></a><a name="Collation_levels"></a> Niveaux de classement
 Les paramétrages des classements sont pris en charge aux niveaux suivants d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
 
 -  [Classements au niveau du serveur](#Server-level-collations)
@@ -149,7 +149,7 @@ Les paramétrages des classements sont pris en charge aux niveaux suivants d'une
 -  [Classements au niveau de la colonne](#Column-level-collations)
 -  [Classements au niveau de l’expression](#Expression-level-collations)
 
-#### <a name="Server-level-collations"></a> Classements au niveau du serveur   
+#### <a name="server-level-collations"></a><a name="Server-level-collations"></a> Classements au niveau du serveur   
 Le classement par défaut du serveur est défini lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et il devient le classement par défaut des bases de données système et de toutes les bases de données utilisateur. 
 
 Le tableau suivant montre les désignations de classement par défaut, telles qu’elles sont déterminées par les paramètres régionaux du système d’exploitation, avec leurs identificateurs de code de langue (LCID) Windows et SQL :
@@ -275,7 +275,7 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Lituanien (Lituanie)|0x0427|0x0427|Lithuanian_CI_AS|
 |Bas-sorabe (Allemagne)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxembourgeois (Luxembourg)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macédonien (Ex-Rép. yougoslave de Macédoine)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macédoine du Nord|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malais (Brunéi Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malais (Malaisie)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (Inde)|0x044c|0x0439|Non disponible au niveau du serveur|
@@ -388,7 +388,7 @@ Pour demander au serveur tous les classements disponibles, utilisez la fonction 
 SELECT * FROM sys.fn_helpcollations();
 ```
     
-#### <a name="Database-level-collations"></a> Classements au niveau de la base de données    
+#### <a name="database-level-collations"></a><a name="Database-level-collations"></a> Classements au niveau de la base de données    
 Lorsque vous créez ou modifiez une base de données, vous pouvez utiliser la clause `COLLATE` de l’instruction `CREATE DATABASE` ou `ALTER DATABASE` pour spécifier le classement par défaut de la base de données. Si aucun classement n'est spécifié, le classement du serveur est affecté à la base de données.    
     
 Vous ne pouvez pas modifier le classement des bases de données système, à moins de modifier le classement du serveur.
@@ -413,7 +413,7 @@ Vous pouvez récupérer le classement actuel d’une base de données à l’aid
 SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ```
 
-#### <a name="Column-level-collations"></a> Classements au niveau des colonnes    
+#### <a name="column-level-collations"></a><a name="Column-level-collations"></a> Classements au niveau des colonnes    
 Lorsque vous créez ou modifiez une table, vous pouvez spécifier des classements pour chaque colonne de chaîne de caractères à l’aide de la clause `COLLATE`. Si vous ne spécifiez pas de classement, le classement par défaut de la base de données est appliqué à la colonne.    
 
 Vous pouvez modifier le classement d’une colonne avec une instruction `ALTER TABLE` similaire à celle-ci :
@@ -422,23 +422,23 @@ Vous pouvez modifier le classement d’une colonne avec une instruction `ALTER T
 ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
 ```
     
-#### <a name="Expression-level-collations"></a> Classements au niveau de l’expression    
+#### <a name="expression-level-collations"></a><a name="Expression-level-collations"></a> Classements au niveau de l’expression    
 Les classements au niveau de l'expression sont définis lors de l'exécution d'une instruction et ils affectent la façon dont l'ensemble de résultats est retourné. Cela permet aux résultats de tri `ORDER BY` d’être spécifiques aux paramètres régionaux. Pour implémenter les classements au niveau de l’expression, utilisez une clause `COLLATE` telle que la suivante :    
     
 ```sql    
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
 ```    
     
-###  <a name="Locale_Defn"></a> Paramètres régionaux    
+###  <a name="locale"></a><a name="Locale_Defn"></a> Paramètres régionaux    
 Les paramètres régionaux sont un ensemble d’informations associées à un emplacement ou à une culture. Il peut s’agir du nom et de l’identificateur de la langue parlée, du script utilisé pour écrire la langue et des conventions culturelles. Les classements peuvent être associés à un ou plusieurs ensembles de paramètres régionaux. Pour plus d'informations, consultez [Locale IDs Assigned by Microsoft (en anglais)](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
-###  <a name="Code_Page_Defn"></a> Page de codes    
+###  <a name="code-page"></a><a name="Code_Page_Defn"></a> Page de codes    
 Une page de codes est le jeu ordonné de caractères d'un script donné dans lequel un index numérique (ou une valeur de point de code) est associé à chaque caractère. Une page de codes Windows est généralement appelée *jeu de caractères* ou *charset*. Les pages de codes permettent d'assurer la prise en charge des jeux de caractères et des dispositions du clavier utilisés par différents paramètres régionaux système Windows.     
  
-###  <a name="Sort_Order_Defn"></a> Ordre de tri    
+###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a> Ordre de tri    
 L'ordre de tri spécifie comment sont triées les valeurs de données. Il affecte les résultats de comparaison de données. Les données sont triées en utilisant les classements et peuvent être optimisées à l'aide des index.    
     
-##  <a name="Unicode_Defn"></a> Prise en charge d’Unicode    
+##  <a name="unicode-support"></a><a name="Unicode_Defn"></a> Prise en charge d’Unicode    
 Unicode est un standard en matière de correspondance de points de code avec des caractères. Comme il est conçu pour couvrir tous les caractères de toutes les langues du monde, vous n’avez pas besoin de pages de codes différentes pour gérer des jeux de caractères différents.
 
 ### <a name="unicode-basics"></a>Concepts de base d’Unicode
@@ -505,7 +505,7 @@ Le tableau suivant présente des informations sur l’utilisation des données m
 |Non-Unicode|Unicode|Cette configuration n’est pas idéale pour l’utilisation de données multilingues. Vous ne pouvez pas écrire des données Unicode sur le serveur non-Unicode. Des problèmes peuvent survenir lorsque les données sont envoyées à des serveurs qui sont en dehors de la page de codes du serveur.|    
 |Non-Unicode|Non-Unicode|Cette configuration est la plus limitée pour des données multilingues. Vous pouvez utiliser uniquement une seule page de codes.|    
     
-##  <a name="Supplementary_Characters"></a> Caractères supplémentaires    
+##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> Caractères supplémentaires    
 Le Consortium Unicode alloue à chaque caractère un point de code unique, qui est une valeur comprise entre 000000 et 10FFFF. Les caractères les plus fréquemment utilisés ont des valeurs de point de code dans la plage de 000000 à 00FFFF (65 535 caractères) qui correspondent à un mot de 8 ou 16 bits en mémoire et sur le disque. Cette plage est généralement désignée en tant que Plan multilingue de base (BMP). 
 
 Mais le Consortium Unicode a établi des 16 « plans » de caractères supplémentaires, chacun ayant la même taille que le BMP. Cette définition accorde à Unicode le potentiel de représenter 1 114 112 caractères (autrement dit, 2<sup>16</sup> * 17 caractères) au sein de la plage de point de code de 000000 à 10FFFF. Les caractères dont les valeurs de code de caractère supérieures à 00FFFF requièrent entre deux et quatre mots de 8 bits consécutifs (UTF-8) ou deux mots de 16 bits consécutifs (UTF-16). Ces caractères situés au-delà du BMP sont appelés *caractères supplémentaires* et les deux mots de 8 ou 16 bits consécutifs supplémentaires sont appelés *paires de substitution*. Pour plus d’informations sur les caractères supplémentaires, les substitutions et les paires de substitution, reportez-vous à [la norme Unicode](http://www.unicode.org/standard/standard.html).    
@@ -544,7 +544,7 @@ Le tableau suivant compare le comportement de quelques fonctions de chaîne et o
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Retourne un point de code UTF-16 dans la plage de 0 à 0x10FFFF.|Retourne un point de code UCS-2 dans la plage de 0 à 0xFFFF.|    
 |[Recherche de correspondance d’un seul caractère générique](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Caractère générique - Caractères à ne pas faire correspondre](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Les caractères supplémentaires sont pris en charge pour toutes les opérations génériques.|Les caractères supplémentaires ne sont pas pris en charge pour ces opérations génériques. D'autres opérateurs génériques sont pris en charge.|    
     
-## <a name="GB18030"></a> Prise en charge de la norme GB18030    
+## <a name="gb18030-support"></a><a name="GB18030"></a> Prise en charge de la norme GB18030    
 GB18030 est une norme distincte utilisée en République populaire de Chine pour l’encodage des caractères chinois. Dans la norme GB18030, les caractères peuvent être encodés sur 1, 2 ou 4 octets de longueur. Pour prendre en charge les caractères encodés selon la norme GB18030,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les reconnaît lorsqu'ils entrent dans le serveur en provenance d'une application côté client, puis les convertit et les stocke en mode natif en tant que caractères Unicode. Une fois stockés dans le serveur, ils sont traités en tant que caractères Unicode dans toutes les opérations suivantes. 
 
 Vous pouvez utiliser n'importe quel classement chinois, de préférence la version 100 la plus récente. Tous les classements de niveau \_100 prennent en charge le tri linguistique avec les caractères GB18030. Si les données incluent des caractères supplémentaires (paires de substitution), vous pouvez utiliser les classements SC disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour améliorer la recherche et le tri.    
@@ -552,7 +552,7 @@ Vous pouvez utiliser n'importe quel classement chinois, de préférence la versi
 > [!NOTE]
 > Vérifiez que vos outils clients, comme [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], utilisent la police Dengxian pour afficher correctement les chaînes qui contiennent des caractères encodés en GB18030.
     
-## <a name="Complex_script"></a> Prise en charge des scripts complexes    
+## <a name="complex-script-support"></a><a name="Complex_script"></a> Prise en charge des scripts complexes    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut prendre en charge l'entrée, le stockage, la modification et l'affichage de scripts complexes. Les scripts complexes sont notamment les suivants :    
     
 -   Scripts qui associent l'utilisation de textes écrits de droite à gauche et de gauche à droite, par exemple les textes écrits en arabe et en anglais.    
@@ -561,7 +561,7 @@ Vous pouvez utiliser n'importe quel classement chinois, de préférence la versi
     
 Les applications de base de données qui interagissent avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent utiliser des contrôles qui prennent en charge les scripts complexes. Les contrôles Windows Form standard créés dans du code managé peuvent prendre en charge les scripts complexes.    
 
-## <a name="Japanese_Collations"></a> Classements japonais ajoutés dans  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a> Classements japonais ajoutés dans  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], de nouvelles familles de classement du japonais sont prises en charge, avec les permutations de différentes options (\_CS, \_AS, \_KS, \_WS et \_VSS). 
 
@@ -578,12 +578,12 @@ Ces classements sont pris en charge dans les index, les tables optimisées en m�
 
 <a name="ctp23"></a>
 
-## <a name="utf8"></a> Support UTF-8
+## <a name="utf-8-support"></a><a name="utf8"></a> Support UTF-8
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit le complet support du codage de caractères UTF-8 largement utilisé en tant qu’encodage d’importation ou d’exportation et en tant que classement au niveau des base de données et au niveau des colonnes pour les données de chaîne. UTF-8 est autorisé dans les types de données **char** et **varchar**, et il est activé quand vous créez ou modifiez le classement d’un objet en un classement avec un suffixe *UTF8*. La modification de **LATIN1_GENERAL_100_CI_AS_SC** en **LATIN1_GENERAL_100_CI_AS_SC_UTF8** en est un exemple. 
 
 UTF-8 est disponible uniquement pour les classements Windows qui prennent en charge les caractères supplémentaires, comme introduit dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Les types de données **nchar** et **nvarchar** autorisent l’encodage UCS-2 ou UTF-16 uniquement et restent inchangés.
 
-### <a name="storage_differences"></a> Différences de stockage entre UTF-8 et UTF-16
+### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> Différences de stockage entre UTF-8 et UTF-16
 Le Consortium Unicode alloue à chaque caractère un point de code unique, qui est une valeur comprise entre 000000 et 10FFFF. Avec [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], les encodages UTF-8 et UTF-16 sont disponibles pour représenter la plage complète :    
 -  Avec l’encodage UTF-8, les caractères figurant dans la plage ASCII (de 000000 à 00007F) utilisent 1 octet, les points de code de 000080 à 0007FF nécessitent 2 octets, les points de code de 000800 à 00FFFF nécessitent 3 octets et les points de code de 0010000 à 0010FFFF nécessitent 4 octets. 
 -  Avec l’encodage UTF-16, les points de code de 000000 à 00FFFF nécessitent 2 octets et les points de code de 0010000 à 0010FFFF nécessitent 4 octets. 
@@ -616,7 +616,7 @@ Avant de choisir s’il faut utiliser l’encodage UTF-8 ou UTF-16 pour une base
 
 Pour d’autres considérations, consultez [Écrire des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
-### <a name="converting"></a> Conversion au format UTF-8
+### <a name="converting-to-utf-8"></a><a name="converting"></a> Conversion au format UTF-8
 Dans la mesure où dans [CHAR(*n*) et VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou dans [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), le *n* définit la taille de stockage des octets, et non le nombre de caractères qui peuvent être stockés, il est important de déterminer la taille du type de données à convertir pour éviter la troncation des données. 
 
 Par exemple, considérons une colonne définie en tant que **NVARCHAR(100)** , qui stocke 180 octets de caractères japonais. Dans cet exemple, les données de colonne sont encodées à l’aide de UCS-2 ou UTF-16, qui utilise 2 octets par caractère. La conversion du type de colonne en **VARCHAR(200)** n’est pas suffisante pour empêcher la troncation des données, car le nouveau type de données peut stocker uniquement 200 octets, mais les caractères japonais nécessitent 3 octets quand ils sont encodés en UTF-8. La colonne doit donc être définie en tant que **VARCHAR(270)** pour éviter toute perte de données par troncation de données.
@@ -627,7 +627,7 @@ Pour changer le classement des colonnes et le type de données dans une table ex
 
 Pour changer le classement de la base de données, en permettant aux nouveaux objets d’hériter du classement de base de données par défaut, ou pour changer le classement du serveur, en permettant aux nouvelles bases de données d’hériter du classement système par défaut, consultez la section [Tâches associées](#Related_Tasks) de cet article. 
 
-##  <a name="Related_Tasks"></a> Related tasks    
+##  <a name="related-tasks"></a><a name="Related_Tasks"></a> Related tasks    
     
 |Tâche|Rubrique|    
 |----------|-----------|    
@@ -638,7 +638,7 @@ Pour changer le classement de la base de données, en permettant aux nouveaux ob
 |Explique comment écrire des instructions Transact-SQL qui sont plus portables d’une langue à une autre ou qui prennent en charge plusieurs langues plus facilement|[Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |Explique comment modifier la langue des messages d’erreur et des paramètres relatifs à l’utilisation et l’affichage de la date, de l’heure et des devises|[Définir une langue de session](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related content    
+##  <a name="related-content"></a><a name="Related_Content"></a> Related content    
 Pour plus d’informations, consultez le contenu connexe suivante :
 * [SQL Server Best Practices Collation Change (Bonnes pratiques relatives au changement de classement dans SQL Server)](https://go.microsoft.com/fwlink/?LinkId=113891)  
 * [Utiliser le format caractère Unicode pour importer ou exporter des données (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
