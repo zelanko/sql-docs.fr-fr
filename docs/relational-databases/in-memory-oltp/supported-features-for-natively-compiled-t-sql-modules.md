@@ -44,7 +44,7 @@ ms.locfileid: "79286663"
 
  Pour plus d’informations sur les constructions qui ne sont pas prises en charge et sur la manière de contourner certaines des fonctionnalités non prises en charge dans les modules compilés en mode natif, consultez [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Pour plus d’informations sur les fonctionnalités non prises en charge, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="qsancsp"></a> Surface d’exposition de requête dans les modules natifs  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Surface d’exposition de requête dans les modules natifs  
 
 Les constructions de requête suivantes sont prises en charge :  
 
@@ -142,7 +142,7 @@ Cependant, l'utilisation d'une constante dans la clause **TOP** donne de meilleu
 Ces limitations sur [!INCLUDE[tsql](../../includes/tsql-md.md)] compilé en mode natif ne s’appliquent pas à l’accès [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété sur les tables optimisées en mémoire.  
 
 
-##  <a name="dml"></a> Modification de données  
+##  <a name="data-modification"></a><a name="dml"></a> Modification de données  
 
 Les instructions DML suivantes sont prises en charge.  
 
@@ -154,7 +154,7 @@ Les instructions DML suivantes sont prises en charge.
 
 -   La clause WHERE est prise en charge avec les instructions UPDATE et DELETE.  
 
-##  <a name="cof"></a> Langage de contrôle de flux  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> Langage de contrôle de flux  
  Les constructions de langage de contrôle de flux suivantes sont prises en charge.  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ Les instructions DML suivantes sont prises en charge.
 
 -   BEGIN ATOMIC (à l’extérieur de la procédure stockée). Pour plus d’informations, consultez [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="so"></a> Opérateurs pris en charge  
+##  <a name="supported-operators"></a><a name="so"></a> Opérateurs pris en charge  
  Les opérateurs suivants sont pris en charge :  
 
 -   [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (par exemple >, \<, >= et <=)  
@@ -194,7 +194,7 @@ Les instructions DML suivantes sont prises en charge.
     - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.
 
-##  <a name="bfncsp"></a> Fonctions intégrées dans les modules compilés en mode natif  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Fonctions intégrées dans les modules compilés en mode natif  
  Les fonctions suivantes sont prises en charge dans les contraintes sur les tables optimisées en mémoire et dans les modules T-SQL compilés en mode natif.  
 
 -   Toutes les [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -223,12 +223,12 @@ Les instructions DML suivantes sont prises en charge.
 
 -   Les exécutions de modules natifs peuvent être imbriquées.
 
-##  <a name="auditing"></a> Audit  
+##  <a name="auditing"></a><a name="auditing"></a> Audit  
  L'audit au niveau de la procédure est pris en charge dans les procédures stockées compilées en mode natif.  
 
  Pour plus d'informations sur l'audit, consultez [Créer une spécification de l'audit du serveur et de la base de données](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
-##  <a name="tqh"></a> Indicateurs de requête et de table  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> Indicateurs de requête et de table  
  Les constructions suivantes sont admises :  
 
 -   Indicateurs INDEX, FORCESCAN et FORCESEEK, dans la syntaxe des indicateurs de table ou dans la [Clause OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) de la requête. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -241,7 +241,7 @@ Les instructions DML suivantes sont prises en charge.
 
  Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="los"></a> Limitations sur le tri  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> Limitations sur le tri  
  Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
 
  Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, le message d’erreur suivant s’affiche : **Message 41398, Niveau 16, État 1, Procédure *\<nom_procédure>* , Ligne *\<numéro_ligne>* L’opérateur TOP peut retourner au plus 8 192 lignes ; *\<nombre>* demandées.**  
