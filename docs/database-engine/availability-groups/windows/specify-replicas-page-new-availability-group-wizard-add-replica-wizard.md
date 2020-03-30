@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822564"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica)
@@ -32,7 +32,7 @@ ms.locfileid: "74822564"
 |[Préférences de sauvegarde](#BackupPreferencesTab)|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, ainsi que les priorités de sauvegarde pour les différents réplicas de disponibilité.|  
 |[Port d'écoute](#Listener)|Utilisez cet onglet, s'il est disponible, pour créer un écouteur de groupe de disponibilité. Par défaut, aucun écouteur n'est créé.<br /><br /> Cet onglet est disponible uniquement si vous exécutez l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP est désactivé quand le type de cluster est EXTERNAL ou NONE. |  
   
-##  <a name="ReplicasTab"></a> Onglet Réplicas  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> Onglet Réplicas  
  **Instance de serveur**  
  Affiche le nom de l'instance du serveur qui hébergera le réplica de disponibilité.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822564"
  **Supprimer le réplica**  
  Cliquez pour supprimer le réplica secondaire sélectionné du groupe de disponibilité.  
   
-##  <a name="EndpointsTab"></a> Onglet Points de terminaison  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> Onglet Points de terminaison  
  Pour chaque instance de serveur qui hébergera un réplica de disponibilité, l'onglet **Points de terminaison** affiche des valeurs réelles du point de terminaison de mise en miroir de bases de données existant, le cas échéant, ou des valeurs suggérées pour un nouveau point de terminaison potentiel qui utiliserait l'authentification Windows. Pour les points de terminaison existant et potentiel, la grille des valeurs de point de terminaison affiche les informations suivantes :  
   
  **Nom de serveur**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822564"
   
      Si vous laissez la page **Spécifier les réplicas de disponibilité** ouverte lorsque vous configurez des points de terminaison, retournez à l'onglet **Points de terminaison** et cliquez sur **Actualiser** pour mettre à jour la grille **Valeurs de point de terminaison** .  
   
-##  <a name="BackupPreferencesTab"></a> Onglet Préférences de sauvegarde  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> Onglet Préférences de sauvegarde  
  Pour spécifier l'emplacement des sauvegardes, choisissez l'une des options suivantes :  
   
  **Préférer secondaire**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822564"
  **Exclure le réplica**  
  Pour que ce réplica de disponibilité ne soit jamais choisi pour effectuer des sauvegardes. Cela est utile, par exemple, pour un réplica de disponibilité distant sur lequel vous ne souhaitez jamais basculer de sauvegardes.  
   
-##  <a name="Listener"></a> Onglet Écouteur  
+##  <a name="listener-tab"></a><a name="Listener"></a> Onglet Écouteur  
  Spécifiez votre préférence pour un[écouteur de groupe de disponibilité](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)qui fournira un point de connexion du client, à savoir :  
   
  **Ne créez pas d'écouteur de groupe de disponibilité maintenant.**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822564"
 >  -   Demandez à votre administrateur réseau de réserver l'adresse IP de l'écouteur pour son utilisation exclusive. Fournissez le nom d'hôte DNS de l'écouteur aux développeurs d'applications pour qu'ils l'utilisent dans les chaînes de connexion lorsqu'ils demandent des connexions clientes vers ce groupe de disponibilité.  
 > -   Fournissez le nom d'hôte DNS de l'écouteur aux développeurs d'applications pour qu'ils l'utilisent dans les chaînes de connexion lorsqu'ils demandent des connexions clientes vers ce groupe de disponibilité.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 956ce42f5fc4d9d367e496b4ff3f22f0c6ee24da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287577"
 ---
 # <a name="replicate-schema-changes"></a>Répliquer les modifications de schéma
@@ -49,13 +49,13 @@ ms.locfileid: "76287577"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   L’instruction ALTER TABLE ... DROP COLUMN est toujours répliquée vers tous les Abonnés dont l’abonnement contient les colonnes à supprimer, même si vous désactivez la réplication des modifications de schéma.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Si vous ne voulez pas répliquer des modifications de schéma pour une publication, désactivez la réplication des modifications de schéma dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>Pour désactiver la réplication des modifications de schéma  
@@ -66,7 +66,7 @@ ms.locfileid: "76287577"
 
      Pour propager seulement des modifications de schéma spécifiques, définissez la propriété à **True** avant une modification de schéma, puis définissez-la à **False** après avoir effectué la modification. Inversement, pour propager la plupart des modifications de schéma mais pas une modification spécifique, définissez la propriété à **False** avant la modification de schéma, puis définissez-la à **True** après avoir effectué la modification.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez utiliser les procédures stockées de réplication pour spécifier si ces modifications de schéma sont répliquées. La procédure stockée que vous utilisez dépend du type de publication.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>Pour créer une publication transactionnelle ou d'instantané qui ne réplique pas les modifications du schéma  

@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957013"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutoriel : Activer le widget d’exemple d’insight d’utilisation d’espace de table avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Tutoriel : Activer le widget d’exemple d’insight d’utilisation d’espace de table avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Ce didacticiel montre comment activer un widget d’insight sur le tableau de bord d’une base de données, en fournissant une vue d’ensemble de l’utilisation de l’espace pour toutes les tables d’une base de données. Dans ce didacticiel, vous apprendrez à :
 
@@ -26,14 +26,14 @@ Ce didacticiel montre comment activer un widget d’insight sur le tableau de bo
 > * Afficher les détails de l’utilisation de l’espace de table
 > * Filtrer les données et afficher les détails des étiquettes sur un graphique d’insight
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azure SQL Database. Pour créer la base de données *TutorialDB*, suivez un des démarrages rapides suivants :
 
 * [Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Se connecter à et interroger Azure SQL Database avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Activer un insight de gestion sur le tableau de bord d’une base de données [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Activer un insight de gestion sur le tableau de bord d’une base de données [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] dispose d’un exemple de widget intégré pour surveiller l’espace utilisé par les tables dans une base de données.
 

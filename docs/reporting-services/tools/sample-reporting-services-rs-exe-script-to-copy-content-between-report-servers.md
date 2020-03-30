@@ -9,10 +9,10 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70176286"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports
@@ -21,10 +21,10 @@ ms.locfileid: "70176286"
 
 Cet article inclut et décrit un exemple de script RSS [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui copie les éléments de contenu et les paramètres d’un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers un autre serveur de rapports au moyen de l’utilitaire **RS.exe**. RS.exe est installé avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], en mode natif et SharePoint. Le script copie les éléments de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , par exemple les rapports et les abonnements, de serveur à serveur. Il prend en charge le mode SharePoint et les serveurs de rapports en mode natif.  
 
-##  <a name="bkmk_download_script"></a> Pour télécharger le script ssrs_migration.rss  
+##  <a name="to-download-the-ssrs_migrationrss-script"></a><a name="bkmk_download_script"></a> Pour télécharger le script ssrs_migration.rss  
  Téléchargez le [script de migration Reporting Services RS.exe](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss) à partir du site GitHub dans un dossier local. Pour plus d’informations, consultez la section [Pour utiliser le script](#bkmk_how_to_use_the_script) dans cet article.  
   
-##  <a name="bkmk_supported_scenarios"></a> Scénarios pris en charge  
+##  <a name="supported-scenarios"></a><a name="bkmk_supported_scenarios"></a> Scénarios pris en charge  
  Il prend en charge le mode SharePoint et les serveurs de rapports en mode natif. Le script peut être exécuté sur des serveurs de rapports version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou ultérieure et Power BI Report Server.  
   
 Il peut être utilisé pour copier le contenu entre des serveurs de rapports ayant le même mode ou des modes différents. Par exemple, exécutez le script pour copier le contenu à partir d’un serveur de rapports en mode natif [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] vers un serveur de rapports en mode SharePoint [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] . Exécutez le script à partir de n'importe quel serveur sur lequel RS.exe est installé. Par exemple, dans le déploiement suivant, vous pouvez :  
@@ -43,7 +43,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
   
  Pour plus d’informations sur l’utilitaire RS.exe, consultez [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
-###  <a name="bkmk_what_is_migrated"></a> Éléments et ressources migrés par le script  
+###  <a name="items-and-resources-the-script-migrates"></a><a name="bkmk_what_is_migrated"></a> Éléments et ressources migrés par le script  
  Le script ne remplacera pas les éléments de contenu existants ayant le même nom.  Si le script détecte des éléments sur le serveur de destination qui ont le même nom sur le serveur source, chaque élément génère un message d’échec et le script se poursuit. Le tableau suivant répertorie les types de contenu et les ressources que le script peut migrer vers les modes de serveur de rapports cibles.  
   
 |Élément|Migré|SharePoint|Description|  
@@ -67,7 +67,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
 |Images|Oui|Oui||  
 |Parties de rapports|Oui|Oui||  
   
-##  <a name="bkmk_required_permissions"></a> Autorisations requises  
+##  <a name="required-permissions"></a><a name="bkmk_required_permissions"></a> Autorisations requises  
  Les autorisations requises pour lire ou écrire des éléments et ressources ne sont pas les mêmes pour toutes les méthodes utilisées dans le script. Le tableau suivant résume les méthodes utilisées pour chaque élément ou ressource et renvoie à une rubrique spécifique. Naviguez vers l’article individuel pour afficher les autorisations requises. Par exemple, la rubrique qui traite de la méthode ListChildren indique les autorisations requises pour :  
   
 -   **Autorisations requises en mode natif :** ReadProperties on Item  
@@ -80,7 +80,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
 |Role|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
 |Stratégie système|<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|  
 |Planifier|<xref:ReportService2010.ReportingService2010.ListSchedules%2A>|<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|  
-|Subscription|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  
+|Abonnement|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  
 |Plan d'actualisation du cache|<xref:ReportService2010.ReportingService2010.ListCacheRefreshPlans%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetCacheRefreshPlanProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateCacheRefreshPlan%2A>|  
 |Paramètres|<xref:ReportService2010.ReportingService2010.GetItemParameters%2A>|<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|  
 |Options d'exécution|<xref:ReportService2010.ReportingService2010.GetExecutionOptions%2A>|<xref:ReportService2010.ReportingService2010.SetExecutionOptions%2A>|  
@@ -90,7 +90,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
   
  Pour plus d'informations, consultez [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
-##  <a name="bkmk_how_to_use_the_script"></a> Pour utiliser le script  
+##  <a name="how-to-use-the-script"></a><a name="bkmk_how_to_use_the_script"></a> Pour utiliser le script  
   
 1.  Téléchargez le fichier de script dans un dossier local, par exemple **c:\rss\ssrs_migration.rss**.  
   
@@ -197,7 +197,7 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
   
 -   Les mots de passe ne sont pas migrés et doivent être retapés. C’est le cas, par exemple, des sources de données avec des informations d’identification stockées.  
   
-##  <a name="bkmk_parameter_description"></a> Description des paramètres  
+##  <a name="parameter-description"></a><a name="bkmk_parameter_description"></a> Description des paramètres  
   
 |Paramètre|Description|Obligatoire|  
 |---------------|-----------------|--------------|  
@@ -211,9 +211,9 @@ Il peut être utilisé pour copier le contenu entre des serveurs de rapports aya
 |**-v tf** ="TARGETFOLDER"|Défini sur « / » pour migrer vers le niveau racine. Défini sur « /dossier/sous-dossier » pour copier le contenu dans un dossier existant. Tout le contenu de « SOURCEFOLDER » sera copié dans « TARGETFOLDER.|FACULTATIF, la valeur par défaut est « / ».|  
 |**-v security**= "True/False"|Si la valeur est « False », les éléments du catalogue de destination héritent du paramètre de sécurité en fonction des paramètres du système cible. Ce paramètre est recommandé pour les migrations entre des serveurs de rapports de type différent, par exemple du mode natif vers le mode SharePoint. Si la valeur est « True », le script tente de migrer les paramètres de sécurité.|FACULTATIF, la valeur par défaut est « False ».|  
   
-##  <a name="bkmk_more_examples"></a> Exemples supplémentaires  
+##  <a name="more-examples"></a><a name="bkmk_more_examples"></a> Exemples supplémentaires  
   
-###  <a name="bkmk_native_2_native"></a> Serveur de rapports en mode natif vers serveur de rapports en mode natif  
+###  <a name="native-mode-report-server-to-native-mode-report-server"></a><a name="bkmk_native_2_native"></a> Serveur de rapports en mode natif vers serveur de rapports en mode natif  
  L’exemple suivant migre le contenu du mode natif **Sourceserver** au mode natif **Targetserver**.  
   
 ```  
@@ -226,7 +226,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_root"></a> Mode natif vers mode SharePoint - site racine  
+###  <a name="native-mode-to-sharepoint-mode---root-site"></a><a name="bkmk_native_2_sharepoint_root"></a> Mode natif vers mode SharePoint - site racine  
  L’exemple suivant migre le contenu d’un **Sourceserver** en mode natif vers le « site racine » sur un serveur **Targetserver** en mode SharePoint. Les dossiers « Rapports » et « Sources de données » sur le serveur en mode natif sont migrés comme nouvelles bibliothèques sur le déploiement SharePoint.  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
@@ -235,14 +235,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_with_site"></a> Mode natif vers mode SharePoint - collection de sites « bi »  
+###  <a name="native-mode-to-sharepoint-mode--bi-site-collection"></a><a name="bkmk_native_2_sharepoint_with_site"></a> Mode natif vers mode SharePoint - collection de sites « bi »  
  L'exemple suivant migre le contenu d'un serveur en mode natif vers un serveur SharePoint qui contient une collection de sites « sites/bi » et une bibliothèque de documents partagés. Le script crée des dossiers dans la bibliothèque de destination. Par exemple, le script crée les dossiers « Rapports » et « Sources de données » dans la bibliothèque de documents cible.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_sharepoint_2_sharepoint"></a> Mode SharePoint vers mode SharePoint - collection de sites « bi »  
+###  <a name="sharepoint-mode-to-sharepoint-mode--bi-site-collection"></a><a name="bkmk_sharepoint_2_sharepoint"></a> Mode SharePoint vers mode SharePoint - collection de sites « bi »  
  L'exemple suivant migre le contenu :  
   
 -   À partir d’un serveur SharePoint **SourceServer** qui contient une collection de sites « sites/bi » et une bibliothèque de documents partagés.  
@@ -253,7 +253,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Mode natif vers mode natif - Machine virtuelle Azure  
+###  <a name="native-mode-to-native-mode---azure-virtual-machine"></a><a name="bkmk_native_to_native_Azure_vm"></a> Mode natif vers mode natif - Machine virtuelle Azure  
  L'exemple suivant migre le contenu :  
   
 -   À partir d’un serveur de rapports en mode natif **SourceServer**.  
@@ -267,7 +267,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 > [!TIP]  
 > Pour plus d’informations sur l’utilisation de Windows PowerShell pour créer des serveurs de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur des machines virtuelles Azure, consultez [Utiliser PowerShell pour créer une machine virtuelle Azure avec un serveur de rapports en mode natif](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Mode SharePoint - Collection de sites « bi » vers un serveur en mode natif sur une machine virtuelle Azure. 
+##  <a name="sharepoint-mode--bi-site-collection-to-a-native-mode-server-on-an-azure-virtual-machine"></a><a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Mode SharePoint - Collection de sites « bi » vers un serveur en mode natif sur une machine virtuelle Azure. 
  L'exemple suivant migre le contenu :  
   
 -   À partir d’un serveur de rapports en mode SharePoint **SourceServer** qui contient une collection de sites « sites/bi » et une bibliothèque de documents partagés.  
@@ -278,7 +278,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
 ```  
   
-##  <a name="bkmk_verification"></a> Vérification  
+##  <a name="verification"></a><a name="bkmk_verification"></a> Vérification  
  La section résume les étapes à effectuer sur le serveur de destination pour vérifier si le contenu et les stratégies ont été correctement migrés.  
   
 ### <a name="schedules"></a>Planifications  
@@ -307,7 +307,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 3.  Cliquez sur **Rôles**.  
   
-##  <a name="bkmk_troubleshoot"></a> Dépannage  
+##  <a name="troubleshooting"></a><a name="bkmk_troubleshoot"></a> Dépannage  
  Utilisez l’indicateur de trace **-t** pour recevoir plus d’informations. Par exemple, si vous exécutez le script et voyez un message similaire au suivant  
   
 -   Impossible de se connecter au serveur : https://\<nom_serveur>/ReportServer/ReportService2010.asmx  

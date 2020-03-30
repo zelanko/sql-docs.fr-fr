@@ -23,10 +23,10 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253475"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -45,7 +45,7 @@ Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 -   [Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
-##  <a name="BKMK_basic"></a> Informations de base sur le pare-feu  
+##  <a name="basic-firewall-information"></a><a name="BKMK_basic"></a> Informations de base sur le pare-feu  
  Les pare-feu fonctionnent en examinant les paquets entrants, et en les comparant à un jeu de règles. Si le paquet respecte les normes dictées par les règles, le pare-feu passe le paquet au protocole TCP/IP pour traitement supplémentaire. Si le paquet ne respecte pas les normes spécifiées par les règles, le pare-feu ignore le paquet et, si la journalisation est activée, crée une entrée dans le fichier journal du pare-feu.  
   
  La liste du trafic autorisé est remplie de l'une des façons suivantes :  
@@ -60,13 +60,13 @@ Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversi
  [Guide de conception du Pare-feu Windows](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [Introduction à l'isolation de serveur et de domaine](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   
-##  <a name="BKMK_default"></a> Paramètres du pare-feu par défaut  
+##  <a name="default-firewall-settings"></a><a name="BKMK_default"></a> Paramètres du pare-feu par défaut  
  Pour planifier votre configuration de pare-feu, la première étape est de déterminer l'état en cours du pare-feu de votre système d'exploitation. Si le système d'exploitation a été mis à niveau à partir d'une version précédente, les anciens paramètres du pare-feu ont pu être conservés. De même, les paramètres du pare-feu ont peut-être été modifiés par un autre administrateur ou par une Stratégie de groupe dans votre domaine.  
   
 > [!NOTE]  
 >  L'activation du pare-feu affectera d'autres programmes qui accèdent à cet ordinateur, comme le partage de fichiers et d'imprimantes, ainsi que les connexions Bureau à distance. Les administrateurs doivent tenir compte de toutes les applications qui s'exécutent sur l'ordinateur avant de définir les paramètres du pare-feu.  
   
-##  <a name="BKMK_programs"></a> Programmes pour configurer le pare-feu  
+##  <a name="programs-to-configure-the-firewall"></a><a name="BKMK_programs"></a> Programmes pour configurer le pare-feu  
 Configurez les paramètres du Pare-feu Windows avec **Microsoft Management Console** ou **netsh**.  
 
 -  **Microsoft Management Console (MMC)**  
@@ -95,10 +95,10 @@ Configurez les paramètres du Pare-feu Windows avec **Microsoft Management Conso
     
 - **Pour Linux** : Sur Linux, vous devez également ouvrir les ports associés aux services auxquels vous devez accéder. Différentes distributions de Linux et différents pare-feux ont leurs propres procédures. Pour avoir deux exemples, consultez [SQL Server on Red Hat](../../linux/quickstart-install-connect-red-hat.md) et [SQL Server on SUSE](../../linux/quickstart-install-connect-suse.md). 
   
-## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="ports-used-by-ssnoversion"></a>Ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Les tableaux suivants peuvent vous aider à identifier les ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
+###  <a name="ports-used-by-the-database-engine"></a><a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  
 
 Par défaut, les ports standard utilisés par SQL Server et les services de moteur de base de données associés sont : TCP **1433**, **4022**, **135**, **1434**, UDP **1434**. Le tableau ci-dessous explique ces ports de manière plus détaillée. Une instance nommée utilise des [ports dynamiques](#BKMK_dynamic_ports).
@@ -121,7 +121,7 @@ Par défaut, les ports standard utilisés par SQL Server et les services de mote
   
  Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-####  <a name="BKMK_dynamic_ports"></a> Ports dynamiques  
+####  <a name="dynamic-ports"></a><a name="BKMK_dynamic_ports"></a> Ports dynamiques  
  Par défaut, les instances nommées (y compris [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) utilisent des ports dynamiques. Cela signifie que chaque fois que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre, il identifie un port disponible et utilise ce numéro de port. Si l'instance nommée est la seule instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] installée, elle utilisera probablement le port TCP 1433. Si d'autres instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont installées, le port utilisé sera probablement un port TCP différent. Dans la mesure où le port sélectionné peut changer chaque fois que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est démarré, il est difficile de configurer le pare-feu pour qu'il active l'accès au numéro de port correct. Par conséquent, si un pare-feu est utilisé, nous vous recommandons de reconfigurer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour qu'il utilise le même numéro de port à chaque fois. Cela s'appelle port fixe ou port statique. Pour plus d’informations, consultez [Configurer un serveur pour écouter un port TCP spécifique &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
  L’alternative à la configuration d’une instance nommée pour l’écoute sur un port fixe est de créer une exception dans le pare-feu pour un programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tel que **sqlservr.exe** (pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Cette approche peut être pratique, mais le numéro de port n’apparaît pas dans la colonne **Port local** de la page **Règles de trafic entrant** quand vous utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité. Cela peut rendre plus difficile le fait d'auditer quels ports sont ouverts. Un autre élément à prendre en compte est qu’un Service Pack ou une mise à jour cumulative peut modifier le chemin vers le fichier exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui risque d’invalider la règle de pare-feu.  
@@ -144,7 +144,7 @@ Par défaut, les ports standard utilisés par SQL Server et les services de mote
 
 Pour plus d’informations sur les points de terminaison, consultez [Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) et [Affichages catalogue de points de terminaison &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
-###  <a name="BKMK_ssas"></a> Ports utilisés par Analysis Services  
+###  <a name="ports-used-by-analysis-services"></a><a name="BKMK_ssas"></a> Ports utilisés par Analysis Services  
  
 Par défaut, les ports standard utilisés par SQL Server Analysis Services et les services associés sont : TCP **2382**, **2383**, **80**, **443**. Le tableau ci-dessous explique ces ports de manière plus détaillée.  
  
@@ -161,7 +161,7 @@ Par défaut, les ports standard utilisés par SQL Server Analysis Services et le
   
  Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access).  
   
-###  <a name="BKMK_ssrs"></a> Ports utilisés par Reporting Services  
+###  <a name="ports-used-by-reporting-services"></a><a name="BKMK_ssrs"></a> Ports utilisés par Reporting Services  
 
 Par défaut, les ports standard utilisés par SQL Server Reporting Services et les services associés sont : TCP **80**, **443**. Le tableau ci-dessous explique ces ports de manière plus détaillée. 
 
@@ -175,7 +175,7 @@ Le tableau suivant répertorie les ports qui sont fréquemment utilisés par [!I
   
 Lorsque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez également ouvrir les ports appropriés pour ces services. Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-###  <a name="BKMK_ssis"></a> Ports utilisés par Integration Services  
+###  <a name="ports-used-by-integration-services"></a><a name="BKMK_ssis"></a> Ports utilisés par Integration Services  
  Le tableau suivant répertorie les ports qui sont utilisés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 |Fonctionnalité|Port|Commentaires|  
@@ -184,7 +184,7 @@ Lorsque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se connect
   
 Pour obtenir des instructions pas à pas pour configurer le Pare-feu Windows pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Service Integration Services &#40;service SSIS&#41;](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014).  
   
-###  <a name="BKMK_additional_ports"></a> Ports et services supplémentaires  
+###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> Ports et services supplémentaires  
 Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut dépendre.  
   
 |Scénario|Port|Commentaires|  
@@ -197,7 +197,7 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le clustering Windows|Le clustering requiert des ports supplémentaires qui ne sont pas directement en rapport avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Pour plus d'informations, consultez [Activer un réseau pour une utilisation du cluster](https://go.microsoft.com/fwlink/?LinkId=118372).|  
 |Des espaces de noms réservés de l'URL dans l'API HTTP Server (HTTP.SYS)|Probablement le port TCP 80, mais la configuration d'autres ports est possible. Pour les informations générales, consultez [Configuration de HTTP et HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373).|Pour des informations spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ce qui concerne la réservation d’un point de terminaison HTTP.SYS à l’aide de HttpCfg.exe, consultez [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
   
-##  <a name="BKMK_port_135"></a> Considérations spéciales relatives au port 135  
+##  <a name="special-considerations-for-port-135"></a><a name="BKMK_port_135"></a> Considérations spéciales relatives au port 135  
  Lorsque vous utilisez RPC avec TCP/IP ou avec UDP/IP comme transport, les ports entrants sont fréquemment attribués de manière dynamique aux services système en fonction des besoins ; les ports TCP/IP et UDP/IP qui sont supérieurs au port 1024 sont utilisés. Ces ports sont souvent appelés de façon informelle « ports RPC aléatoires ». Dans ces cas, les clients RPC comptent sur le mappeur de points de terminaison RPC pour leur indiquer quels ports dynamiques ont été attribués au serveur. Pour certains services basés sur RPC, vous pouvez configurer un port spécifique au lieu de laisser RPC en attribuer un dynamiquement. Vous pouvez également limiter la plage de ports que RPC attribue dynamiquement, indépendamment du service. Étant donné que le port 135 est utilisé pour de nombreux services, il est fréquemment attaqué par des utilisateurs malveillants. Lorsque vous ouvrez le port 135, pensez à restreindre l'étendue de la règle de pare-feu.  
   
  Pour plus d'informations sur le port 135, consultez les rubriques de référence suivantes :  
@@ -207,12 +207,12 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
 -   [Appel de procédure distante (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)    
 -   [Comment faire pour configurer l'allocation de port dynamique RPC avec un pare-feu](https://support.microsoft.com/kb/154596/)  
   
-##  <a name="BKMK_other_rules"></a> Interaction avec d'autres règles de pare-feu  
+##  <a name="interaction-with-other-firewall-rules"></a><a name="BKMK_other_rules"></a> Interaction avec d'autres règles de pare-feu  
  Le Pare-feu Windows utilise des règles et des groupes de règles pour établir sa configuration. Chaque règle ou groupe de règles est généralement associé à un programme ou service particulier, et ce programme ou service peut modifier ou supprimer qui règle à votre insu. Par exemple, les groupes de règles **Services World Wide Web (HTTP)** et **Services World Wide Web (HTTPS)** sont associés à IIS. L'activation de ces règles ouvrira les ports 80 et 443, et les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui dépendent des ports 80 et 443 fonctionneront si ces règles sont activées. Toutefois, les administrateurs qui configurent IIS peuvent modifier ou désactiver ces règles. Par conséquent, si vous utilisez le port 80 ou le port 443 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer votre propre règle ou groupe de règles qui conserve votre configuration de port souhaitée indépendamment des autres règles IIS.  
   
  Le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité autorise tout trafic qui correspond aux règles d'autorisation applicables. S'il existe deux règles qui s'appliquent toutes deux au port 80 (avec des paramètres différents), le trafic qui correspond à l'une ou l'autre règle sera autorisé. Si une règle autorise le trafic sur le port 80 du sous-réseau local et l'autre règle autorise le trafic à partir de n'importe quelle adresse, le résultat fait que tout le trafic vers le port 80 est autorisé indépendamment de la source. Pour gérer efficacement l'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les administrateurs doivent périodiquement examiner toutes les règles de pare-feu activées sur le serveur.  
   
-##  <a name="BKMK_profiles"></a> Vue d'ensemble des profils de pare-feu  
+##  <a name="overview-of-firewall-profiles"></a><a name="BKMK_profiles"></a> Vue d'ensemble des profils de pare-feu  
  Les profils de pare-feu sont utilisés par les systèmes d’exploitation pour identifier et garder en mémoire chacun des réseaux auxquels ils se connectent (connectivité, connexions et catégorie).  
   
  Il existe trois types d'emplacements réseau dans le Pare-feu Windows avec fonctions avancées de sécurité :  
@@ -229,7 +229,7 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
   
  Utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité pour afficher et configurer tous les profils de pare-feu. L'élément du **Pare-feu Windows** dans le Panneau de configuration configure seulement le profil actuel.  
   
-##  <a name="BKMK_additional_settings"></a> Paramètres de pare-feu supplémentaires utilisant l'élément Pare-feu Windows dans le Panneau de configuration  
+##  <a name="additional-firewall-settings-using-the-windows-firewall-item-in-control-panel"></a><a name="BKMK_additional_settings"></a> Paramètres de pare-feu supplémentaires utilisant l'élément Pare-feu Windows dans le Panneau de configuration  
  Les exceptions que vous ajoutez au pare-feu peuvent restreindre l'ouverture du port aux connexions entrantes à partir d'ordinateurs spécifiques ou du sous-réseau local. Cette restriction de la portée d'ouverture de port peut réduire la surface d'exposition de votre ordinateur aux utilisateurs malveillants, et elle est recommandée.  
   
 > [!NOTE]  
@@ -249,7 +249,7 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
   
     -   **Liste personnalisée** : Seuls les ordinateurs qui correspondent aux adresses IP listées peuvent se connecter. Ce paramètre peut être plus sécurisé que l’option **Uniquement mon réseau (ou sous-réseau)** ; toutefois, les ordinateurs clients utilisant DHCP peuvent parfois modifier leur adresse IP. L'ordinateur prévu ne sera alors pas en mesure de se connecter. Un autre ordinateur, que vous n'aviez pas projeté d'autoriser, peut accepter l'adresse IP répertoriée puis être en mesure de se connecter. L’option **Liste personnalisée** peut être appropriée pour lister d’autres serveurs qui sont configurés pour utiliser une adresse IP fixe ; toutefois, les adresses IP peuvent être usurpées par un intrus. Les règles de pare-feu restrictives ne sont fortes que si votre infrastructure réseau l'est aussi.  
   
-##  <a name="BKMK_WF_msc"></a> Utilisation du composant logiciel enfichable Pare-feu Windows avec fonctions avancées de sécurité  
+##  <a name="using-the-windows-firewall-with-advanced-security-snap-in"></a><a name="BKMK_WF_msc"></a> Utilisation du composant logiciel enfichable Pare-feu Windows avec fonctions avancées de sécurité  
  Des paramètres de pare-feu avancés supplémentaires peuvent être configurés en utilisant le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité. Le composant logiciel enfichable inclut un Assistant Règle et expose des paramètres supplémentaires qui ne sont pas disponibles dans l’élément **Pare-feu Windows** du Panneau de configuration. Les paramètres suivants sont inclus :  
   
 -   Paramètres de chiffrement  
@@ -267,7 +267,7 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
 2.  Dans le **Pare-feu Windows avec fonctions avancées de sécurité**, dans le volet gauche, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle**.   
 3.  Exécutez l' **Assistant Nouvelle règle de trafic entrant** à l'aide des paramètres que vous souhaitez.  
   
-##  <a name="BKMK_troubleshooting"></a> Résolution des problèmes liés aux paramètres du pare-feu  
+##  <a name="troubleshooting-firewall-settings"></a><a name="BKMK_troubleshooting"></a> Résolution des problèmes liés aux paramètres du pare-feu  
  Les outils et techniques suivants peuvent être utiles pour résoudre les problèmes liés au pare-feu :  
   
 -   L'état effectif du port repose sur l'union de toutes les règles en rapport avec le port. Lors de la tentative de blocage de l’accès via un port, il peut être utile d’examiner toutes les règles qui citent le numéro de port. Pour cela, utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité et triez les règles du trafic entrant et sortant par numéro de port.  

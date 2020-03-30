@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70176263"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -96,10 +96,10 @@ ms.locfileid: "70176263"
  **[jeu de supports en miroir](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  Plusieurs copies (miroirs) d'un jeu de supports.  
   
-##  <a name="BackupCompression"></a> Compression de sauvegarde  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a> Compression de sauvegarde  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et les versions ultérieures prennent en charge la compression des sauvegardes. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures peuvent restaurer une sauvegarde compressée. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a>  Restrictions des opérations de sauvegarde 
+##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Restrictions des opérations de sauvegarde 
  La sauvegarde peut être effectuée si la base de données est en ligne et en cours d'utilisation. Cependant, les restrictions suivantes existent.  
   
 ### <a name="cannot-back-up-offline-data"></a>Impossible de sauvegarder des données hors connexion  
@@ -128,7 +128,7 @@ ms.locfileid: "70176263"
   
  Si une opération de sauvegarde chevauche une opération de compactage ou de gestion des fichiers, un conflit se produit. Quelle que soit l'opération effectuée la première, la seconde opération attend que le verrou défini par la première opération expire. (Le délai d'expiration est contrôlé par un paramètre d'expiration de la session). Si le verrou est libéré au cours du délai d'expiration, la seconde opération se poursuit. Si le verrou expire, la seconde opération échoue.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **Unités et supports de sauvegarde**  
   
 -   [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

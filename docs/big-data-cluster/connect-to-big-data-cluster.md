@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285983"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Se connecter à un cluster Big Data SQL Server avec Azure Data Studio
@@ -30,7 +30,7 @@ Cet article explique comment se connecter à un [!INCLUDE[big-data-clusters-2019
    - **kubectl**
    - **azdata**
 
-## <a id="master"></a> Se connecter au cluster
+## <a name="connect-to-the-cluster"></a><a id="master"></a> Se connecter au cluster
 
 Pour vous connecter à un cluster Big Data avec Azure Data Studio, établissez une nouvelle connexion à l’instance principale SQL Server dans le cluster. Voici comment faire.
 

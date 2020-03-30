@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081388"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
@@ -23,14 +23,14 @@ Pour inclure des données d'une liste Microsoft SharePoint dans votre rapport, v
 
 Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
-##  <a name="Connection"></a> Chaîne de connexion  
+##  <a name="connection-string"></a><a name="Connection"></a> Chaîne de connexion  
  La chaîne de connexion à une liste SharePoint est l'URL pointant vers le site ou sous-site SharePoint, par exemple `https://MySharePointWeb/MySharePointSite` ou `https://MySharePointWeb/MySharePointSite/Subsite`.  
   
  Le concepteur de requêtes affiche automatiquement les listes SharePoint pour lesquelles vous disposez d'autorisations d'accès suffisantes.  
   
  Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Informations d'identification  
+##  <a name="credentials"></a><a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports. Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports. Les types d'informations d'identification qui peuvent être utilisés avec cette extension de données dépendent de la configuration de la technologie SharePoint pour la liste SharePoint que vous utilisez comme source de données.  
   
  Les tableaux suivants décrivent le comportement de récupération des informations d'identification pour l'extension de liste SharePoint lors de la connexion à une liste SharePoint locale de batteries de serveurs et à une liste SharePoint distante.  
@@ -73,7 +73,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="Query"></a> Requêtes  
+##  <a name="queries"></a><a name="Query"></a> Requêtes  
  Pour concevoir une requête, créez un dataset selon la source de données, puis ouvrez le concepteur de requêtes associé. Pour plus d’informations, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Le concepteur de requêtes graphique de liste SharePoint affiche quatre volets :  
@@ -151,10 +151,10 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  Tous les champs de la liste Tasks sont retournés dans les résultats de la requête.  
   
-##  <a name="Parameters"></a> Paramètres  
+##  <a name="parameters"></a><a name="Parameters"></a> Paramètres  
  Les paramètres ne sont pas pris en charge par cette extension de données.  
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
  [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -163,7 +163,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> Sections connexes  
+##  <a name="related-sections"></a><a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

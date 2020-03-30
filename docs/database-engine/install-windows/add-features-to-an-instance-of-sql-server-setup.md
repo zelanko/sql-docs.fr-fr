@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68051207"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Ajouter des fonctionnalités à une instance de SQL Server (programme d’installation)
@@ -29,7 +29,7 @@ ms.locfileid: "68051207"
   
  Pour ajouter des fonctionnalités à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’une invite de commandes, consultez [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Avant de continuer, consultez les articles dans [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "68051207"
   
 ## <a name="procedures"></a>Procédures  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>Pour ajouter des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>Pour ajouter des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur setup.exe. Si la boîte de dialogue Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] s’affiche, [!INCLUDE[clickOK](../../includes/clickok-md.md)] pour installer les composants requis, puis sur **Annuler** pour quitter l’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   

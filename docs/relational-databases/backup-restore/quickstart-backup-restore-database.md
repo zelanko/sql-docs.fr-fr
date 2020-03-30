@@ -12,10 +12,10 @@ ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
 ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258644"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Démarrage rapide : Sauvegarder et restaurer une base de données SQL Server localement
@@ -25,7 +25,7 @@ Dans ce guide démarrage rapide, vous allez créer une base de données, en effe
 
 Pour obtenir une procédure plus détaillée, consultez [Créer une sauvegarde de base de données complète](create-a-full-database-backup-sql-server.md) et [Restaurer une sauvegarde à l’aide de SSMS](restore-a-database-backup-using-ssms.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 Pour suivre ce guide de démarrage rapide, vous avez besoin des éléments suivants : 
 
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)

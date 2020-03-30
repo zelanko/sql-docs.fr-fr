@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258797"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation (Installation)
@@ -41,7 +41,7 @@ L’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 > * [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Mettez à niveau PowerPivot pour SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine doté des autorisations de lecture et d'exécution sur le partage distant, et qui représente un administrateur local.  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
 ## <a name="procedure"></a>Procédure  
   
-### <a name="to-upgrade-includessnoversionincludesssnoversion-mdmd"></a>Mise à niveau vers [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-ssnoversion"></a>Mise à niveau vers [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   

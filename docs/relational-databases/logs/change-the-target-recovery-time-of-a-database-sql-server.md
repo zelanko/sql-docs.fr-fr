@@ -11,10 +11,10 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056256"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Modifier la durée de récupération cible d'une base de données (SQL Server)
@@ -28,19 +28,19 @@ ms.locfileid: "74056256"
   
 -   **Pour changer le temps de récupération cible à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure) ou de [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions 
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions 
   
 > [!CAUTION]  
 >  Une charge de travail transactionnelle en ligne sur une base de données configurée pour les points de contrôle indirects peut rencontrer une dégradation des performances. Les points de contrôle indirects permettent de s’assurer que le nombre de pages de modifications est inférieur à un certain seuil afin que la récupération de la base de données se termine dans le temps de récupération cible. L’option de configuration d’intervalle de récupération utilise le nombre de transactions pour déterminer le temps de récupération, contrairement aux points de contrôle indirects, qui utilisent le nombre de pages de modifications. Quand des points de contrôle indirects sont activés sur une base de données recevant un grand nombre d’opérations DML, l’enregistreur en arrière-plan peut commencer à vider de manière intense les mémoires tampons modifiées sur le disque afin de s’assurer que le délai nécessaire à la récupération se situe dans le temps de récupération cible défini sur la base de données. Cela peut entraîner une activité supplémentaire en termes d’E/S sur certains systèmes, ce qui peut contribuer à un goulot d’étranglement des performances si le sous-système du disque fonctionne au-delà du seuil d’E/S ou s’en rapproche.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour modifier le temps de récupération cible**  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
@@ -51,7 +51,7 @@ ms.locfileid: "74056256"
   
 4.  Dans le volet **Récupération**, dans le champ **Temps de récupération cible (secondes)** , spécifiez le nombre de secondes de votre choix pour définir la limite supérieure du temps de récupération de cette base de données.  
 
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier le temps de récupération cible**  
   
 1.  Connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où réside la base de données.  

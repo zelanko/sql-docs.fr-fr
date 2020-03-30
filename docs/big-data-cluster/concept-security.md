@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77074422"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Concepts de sécurité pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -29,7 +29,7 @@ Dans cette vidéo de 14 minutes, vous obtiendrez une vue d’ensemble de la séc
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
 
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Authentification
 
 Les points de terminaison de cluster externes prennent en charge l’authentification AD. Utilisez votre identité AD pour vous authentifier auprès du cluster Big Data.
 

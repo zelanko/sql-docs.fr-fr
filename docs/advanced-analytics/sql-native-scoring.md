@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727285"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Scoring natif à l’aide de la fonction T-SQL PREDICT
@@ -34,7 +34,7 @@ Pour utiliser le scoring natif, appelez la fonction T-SQL PREDICT et passez les 
 
 La fonction retourne des prédictions pour les données d’entrée ainsi que toutes les colonnes de données sources que vous souhaitez passer.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 PREDICT est disponible et activé par défaut dans toutes les éditions du moteur de base de données SQL Server 2017, y compris dans SQL Server Machine Learning Services sur Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) et Azure SQL Database. Vous n’avez pas besoin d’installer R ou Python ni d’activer des fonctionnalités supplémentaires.
 

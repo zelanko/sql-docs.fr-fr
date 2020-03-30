@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 5faa8688f3036f80b947ccc5d99c09c4612f26fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73724443"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Utiliser Python avec revoscalepy pour créer un modèle qui s’exécute à distance sur SQL Server
@@ -35,7 +35,7 @@ En suivant ce didacticiel, vous allez apprendre à :
 > * Utiliser **revoscalepy** pour créer un modèle linéaire
 > * Basculer des opérations d’un contexte de calcul local à un contexte de calcul distant
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 L’échantillon de données utilisé dans cet exercice est la base de données [**flightdata**](demo-data-airlinedemo-in-sql.md).
 

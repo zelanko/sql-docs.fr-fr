@@ -11,10 +11,10 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75608028"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données ODBC (Assistant Importation et Exportation SQL Server)
@@ -65,7 +65,7 @@ L’étape suivante consiste à fournir les informations de connexion pour votre
 
 Si vous fournissez une chaîne de connexion, la page **Choisir une source de données** ou **Choisir une destination** affiche toutes les informations de connexion que l’Assistant va utiliser pour se connecter à votre source de données, par exemple, le nom du serveur et de la base de données, ainsi que la méthode d’authentification. Si vous fournissez un nom de source de données, ces informations ne sont pas visibles.
 
-## <a name="odbc_dsn"></a> Option 1 : fournir un nom de source de données
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> Option 1 : fournir un nom de source de données
 Si vous souhaitez fournir les informations de connexion à l’aide d’un nom de source de données (DSN, data source name), utilisez l’applet **Administrateur de source de données ODBC** pour rechercher le nom de source de données existant ou pour créer un nouveau nom de source de données.
 1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le menu Démarrer ou le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
 2.  Lancez l’applet. La fenêtre **Administrateur de source de données ODBC** s’ouvre. L’applet se présente comme ceci.
@@ -88,7 +88,7 @@ Si vous souhaitez fournir les informations de connexion à l’aide d’un nom d
     
 8.  Revenez dans l’Assistant et entrez le nom de la source de données dans le champ **Dsn** de la page **Choisir une source de données** ou **Choisir une destination**. Passez à l’étape suivante de l’Assistant.
 
-## <a name="odbc_connstring"></a> Option 2 : fournir une chaîne de connexion
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> Option 2 : fournir une chaîne de connexion
 Si vous souhaitez fournir vos informations de connexion à l’aide d’une chaîne de connexion, le reste de cette rubrique vous aide à obtenir la chaîne de connexion dont vous avez besoin.
 
 Cet exemple utilise la chaîne de connexion suivante qui permet de se connecter à Microsoft SQL Server. L’exemple de base de données utilisé est **WideWorldImporters**, et nous nous connectons au serveur SQL Server sur l’ordinateur local.

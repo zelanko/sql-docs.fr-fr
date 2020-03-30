@@ -11,10 +11,10 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014803"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de PHP
@@ -77,7 +77,7 @@ La fonction [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>Étape 3 :  insérer une ligne  
+## <a name="step-3--insert-a-row"></a>Étape 3 :  Insérer une ligne  
   
 Dans cet exemple, vous allez découvrir comment exécuter une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) en toute sécurité, passer des paramètres pour protéger votre application de la valeur [Injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
@@ -109,7 +109,7 @@ Dans cet exemple, vous allez découvrir comment exécuter une instruction [INSER
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Étape 4 :  restaurer une transaction  
+## <a name="step-4--rollback-a-transaction"></a>Étape 4 :  Restaurer une transaction  
   
   
 Cet exemple de code illustre l'utilisation de transactions dans lesquelles vous :  

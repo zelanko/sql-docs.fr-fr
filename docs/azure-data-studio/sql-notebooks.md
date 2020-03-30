@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Découvrez comment utiliser les notebooks SQL dans Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575400"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448441"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Comment utiliser les notebooks dans Azure Data Studio
 
@@ -32,14 +32,14 @@ Dans Azure Data Studio, vous pouvez également appuyer sur F1, puis cliquer sur 
 
 Il existe plusieurs façons de lancer un nouveau notebook.
 
-1. Accédez au **menu Fichier** dans Azure Data Studio, puis cliquez sur **Nouveau notebook**.
+* Accédez au **menu Fichier** dans Azure Data Studio, puis cliquez sur **Nouveau notebook**.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. Cliquez avec le bouton droit sur la connexion **SQL Server**, puis lancez **Nouveau notebook**. 
+* Cliquez avec le bouton droit sur la connexion **SQL Server**, puis lancez **Nouveau notebook**.
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. Ouvrez la palette de commandes (**Ctrl+Maj+P**), puis saisissez **Nouveau notebook**. Un nouveau fichier nommé `Notebook-1.ipynb` s’ouvre.
+* Ouvrez la palette de commandes (**Ctrl+Maj+P**), puis saisissez **Nouveau notebook**. Un nouveau fichier nommé `Notebook-1.ipynb` s’ouvre.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Noyaux pris en charge et attachement au contexte
 

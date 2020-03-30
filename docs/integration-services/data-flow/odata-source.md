@@ -16,10 +16,10 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75546535"
 ---
 # <a name="odata-source"></a>Source OData
@@ -107,7 +107,7 @@ Pour le type de données **Decimal**, la précision et l’échelle sont déterm
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
  **Resource path**  
- Type de chemin d'accès de ressource. Par exemple :  Employees  
+ Type de chemin d'accès de ressource. Par exemple : Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Éditeur de source OData (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source OData** pour sélectionner des colonnes externes (source) à inclure dans la sortie et pour les mapper aux colonnes de la sortie.  
