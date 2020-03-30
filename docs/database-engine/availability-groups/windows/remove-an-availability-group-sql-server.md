@@ -16,10 +16,10 @@ ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4d5d50306c8f9a072b9dfc28f7e3519b026cce71
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822623"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Supprimer un groupe de disponibilité (SQL Server)
@@ -32,17 +32,17 @@ ms.locfileid: "74822623"
 >  si cela est possible, supprimez le groupe de disponibilité uniquement lorsque vous êtes connecté à l'instance de serveur qui héberge le réplica principal. Si le groupe de disponibilité est supprimé du réplica principal, les modifications sont autorisées dans les bases de données primaires précédentes (sans protection haute disponibilité). Le fait de supprimer un groupe de disponibilité d'un réplica secondaire conserve le réplica principal dans l'état RESTORING, et les modifications ne sont pas autorisées sur les bases de données.  
 
   
-## <a name="Restrictions"></a> Recommandations et limitations  
+## <a name="limitations-and-recommendations"></a><a name="Restrictions"></a> Recommandations et limitations  
   
 -   Si le groupe de disponibilité est en ligne, sa suppression d'un réplica secondaire entraîne le passage du réplica principal à l'état RESTORING. Par conséquent, et si cela est possible, ne supprimez le groupe de disponibilité que de l'instance de serveur qui héberge le réplica principal.    
 -   Si vous supprimez un groupe de disponibilité d'un ordinateur qui a été supprimé ou évincé du cluster de basculement WSFC, le groupe de disponibilité est supprimé uniquement localement. 
 -   Évitez de supprimer un groupe de disponibilité lorsque le cluster de clustering de basculement Windows Server (WSFC) n'a aucun quorum. Si vous devez supprimer un groupe de disponibilité lorsque le cluster ne dispose pas de quorum, les métadonnées du groupe de disponibilité stockées dans le cluster nesont pas supprimées. Après que le cluster a regagné le quorum, vous devez supprimer à nouveau le groupe de disponibilité pour le supprimer du cluster WSFC.    
 -   Sur un réplica secondaire, DROP AVAILABILITY GROUP ne doit être utilisé qu'en cas d'urgence. Cela est dû au fait que la suppression d'un groupe de disponibilité met le groupe de disponibilité hors connexion. Si vous supprimez le groupe de disponibilité d'un réplica secondaire, le réplica principal ne peut pas déterminer si l'état OFFLINE se produit en raison de la perte de quorum, d'un basculement forcé ou d'une commande DROP AVAILABILITY GROUP. Le réplica principal passe à l'état RESTORING pour éviter un fractionnement possible des partitions. Pour plus d’informations, consultez [Fonctionnement : comportements de DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server).  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER. Pour supprimer un groupe de disponibilité qui n'est pas hébergé par l'instance de serveur local, vous avez besoin de l'autorisation CONTROL SERVER ou CONTROL sur ce groupe de disponibilité.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour supprimer un groupe de disponibilité**  
   
 1.  Dans l’Explorateur d’objets, connectez-vous à l’instance de serveur qui héberge le réplica principal, si possible, ou connectez-vous à une autre instance de serveur qui est activée pour les groupes de disponibilité Always On sur un nœud WSFC comportant les informations d’identification de sécurité appropriées pour le groupe de disponibilité. Développez l'arborescence du serveur.  
@@ -59,7 +59,7 @@ ms.locfileid: "74822623"
   
 5.  Dans la boîte de dialogue **Supprimer le groupe de disponibilité** , pour supprimer tous les groupes de disponibilité répertoriés, cliquez sur **OK**. Si vous ne souhaitez pas supprimer tous les groupes de disponibilité répertoriés, cliquez sur **Annuler**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour supprimer un groupe de disponibilité**  
   
 1.  Connectez-vous à l’instance de serveur qui héberge le réplica principal, si possible, ou connectez-vous à une autre instance de serveur qui est activée pour les groupes de disponibilité Always On sur un nœud WSFC comportant les informations d’identification de sécurité appropriées pour le groupe de disponibilité.  
@@ -76,7 +76,7 @@ ms.locfileid: "74822623"
     DROP AVAILABILITY GROUP MyAG;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour supprimer un groupe de disponibilité**  
   
  Dans le fournisseur PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -99,7 +99,7 @@ ms.locfileid: "74822623"
   
 -   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Fonctionnement : comportements de DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server)  
   

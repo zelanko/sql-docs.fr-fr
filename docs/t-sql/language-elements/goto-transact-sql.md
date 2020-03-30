@@ -22,10 +22,10 @@ ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68075204"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075204"
 
   Modifie le flux d'exécution vers une étiquette. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] faisant suite à une instruction GOTO sont ignorées et le traitement reprend à l'étiquette. Les instructions GOTO et les étiquettes peuvent être utilisées à n'importe quel endroit d'une procédure, d'un traitement d'instructions ou d'un bloc d'instructions. Les instructions GOTO peuvent être imbriquées.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

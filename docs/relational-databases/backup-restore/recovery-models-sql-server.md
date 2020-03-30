@@ -29,10 +29,10 @@ ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aa1521e40df7483c7a4dc336484d6ecf28e909cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325449"
 ---
 # <a name="recovery-models-sql-server"></a>Modes de récupération (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "75325449"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="RMov"></a> Vue d'ensemble du mode de récupération  
+##  <a name="recovery-model-overview"></a><a name="RMov"></a> Vue d'ensemble du mode de récupération  
  Le tableau suivant récapitule les trois modes de récupération.  
   
 |mode de récupération|Description|Risque de perte de travail|Récupération à un point précis dans le temps ?|  
@@ -54,7 +54,7 @@ ms.locfileid: "75325449"
 |**Complète**|Exige des sauvegardes de journal.<br /><br /> Aucun travail n'est perdu suite à la perte ou à l'endommagement d'un fichier de données.<br /><br /> La récupération est possible jusqu'à un point arbitraire dans le temps (par exemple, avant l'erreur de l'application ou de l'utilisateur). Pour plus d’informations sur les sauvegardes de bases de données en mode de récupération complète, consultez [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) et [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Normalement aucun.<br /><br /> Si la fin du journal est endommagée, les modifications postérieures à la sauvegarde la plus récente du journal doivent être effectuées de nouveau.|La récupération est possible jusqu'à un point spécifique dans le temps, en supposant que vos sauvegardes ont été effectuées jusqu'à ce point. Pour plus d’informations sur l’utilisation de sauvegardes de journaux pour restaurer jusqu’à un point de défaillance, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br /> Remarque : si vous disposez d’au moins deux bases de données en mode de restauration complète qui doivent être logiquement cohérentes, vous devez implémenter des procédures spéciales pour assurer la récupérabilité de ces bases de données. Pour plus d’informations, consultez [Récupération de bases de données associées contenant une transaction marquée](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).|  
 |**Utilisant les journaux de transactions**|Exige des sauvegardes de journal.<br /><br /> Complément au mode de restauration complète qui permet des opérations de copie en bloc avec des performances élevées.<br /><br /> Réduit l'espace du journal utilisé en utilisant un enregistrement minimal pour la plupart des opérations en bloc. Pour plus d’informations sur les opérations pouvant faire l’objet d’une journalisation minimale, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).<br /><br /> Les sauvegardes de journaux peuvent avoir une taille importante, car les opérations avec une journalisation minime sont capturées dans la sauvegarde du journal. Pour plus d’informations sur les sauvegardes de bases de données en mode de récupération utilisant les journaux de transactions, consultez [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) et [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Si le journal est endommagé ou si des opérations utilisant les journaux de transactions ont été effectuées depuis la sauvegarde de journal la plus récente, les modifications postérieures à la sauvegarde la plus récente du journal doivent être effectuées de nouveau.<br /><br /> À part cela, aucun travail n'est perdu.|La récupération est possible jusqu'à la fin de n'importe quelle sauvegarde. La récupération jusqu'à une date et heure n'est pas prise en charge.|  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

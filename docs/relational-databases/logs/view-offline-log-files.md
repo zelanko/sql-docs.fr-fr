@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908558"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
@@ -46,7 +46,7 @@ ms.locfileid: "72908558"
   
 -   [Classe SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (cette rubrique indique comment récupérer des informations concernant tous les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-##  <a name="BeforeYouBegin"></a> Autorisations  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorisations  
  Pour vous connecter à un fichier journal hors connexion, vous devez disposer des autorisations suivantes sur les ordinateurs local et distant :  
   
 -   Accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Par défaut, tout le monde dispose de l'accès en lecture via l'autorisation Activer le compte. Pour plus d'informations, consultez la procédure « Pour vérifier les autorisations WMI », plus loin dans cette section.  

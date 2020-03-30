@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412689"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
@@ -52,7 +52,7 @@ Quand il existe une charge de travail active, il faut plus de mémoire pour pren
   
 - [Mémoire pour la croissance](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> Exemple de table optimisée en mémoire  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> Exemple de table optimisée en mémoire  
 
 Prenons le schéma de table mémoire optimisée suivant :
   
@@ -83,7 +83,7 @@ GO
 
 Ce schéma va permettre de déterminer la mémoire minimale requise pour cette table mémoire optimisée.  
   
-###  <a name="bkmk_MemoryForTable"></a> Mémoire pour la table  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> Mémoire pour la table  
 
 Une ligne de table mémoire optimisée est composée de trois parties :
   
@@ -102,7 +102,7 @@ Voici un calcul de taille de 5 millions de lignes dans une table mémoire optimi
   
 Selon les calculs ci-dessus, la taille de chaque ligne de la table mémoire optimisée est de 24 + 32 + 200, ou 256 octets.  Étant donné qu’il y a 5 millions de lignes, la table consommera 5 000 000 * 256 octets, ou 1 280 000 000 octets (soit environ 1,28 Go).  
   
-###  <a name="bkmk_IndexMeemory"></a> Mémoire pour les index  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> Mémoire pour les index  
 
 #### <a name="memory-for-each-hash-index"></a>Mémoire pour chaque index de hachage  
   
@@ -165,7 +165,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> Mémoire pour le contrôle de version de ligne
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Mémoire pour le contrôle de version de ligne
 
 Pour éviter les verrous, OLTP en mémoire utilise l'accès concurrentiel optimiste lors de la mise à jour ou de la suppression des lignes. Cela signifie que lorsqu'une ligne est mise à jour, une version supplémentaire de la ligne est créée. Par ailleurs, les suppressions sont logiques : la ligne existante est marquée comme supprimée, mais n’est pas supprimée immédiatement. Le système conserve les versions précédentes des lignes (lignes supprimées incluses) tant que toutes les transactions susceptibles d’utiliser la version ne sont pas exécutées. 
   
@@ -181,13 +181,13 @@ La mémoire nécessaire pour les lignes obsolètes est ensuite estimée en multi
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> Mémoire pour les variables de table
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> Mémoire pour les variables de table
   
 La mémoire utilisée pour une variable de table est libérée uniquement lorsque la variable de table sort de l'étendue. Les lignes supprimées d'une variable de table, y compris les lignes supprimées dans le cadre d'une mise à jour, ne sont pas concernées par l'opération de garbage collection. Aucun volume de mémoire n'est libéré avant que la variable de table sorte de l'étendue.  
   
 Les variables de table définies dans un grand lot SQL, par opposition à une étendue de procédure, et qui sont utilisées par plusieurs transactions, peuvent consommer beaucoup de mémoire. Étant donné qu'elles ne sont pas nettoyées, les lignes supprimées d'une variable de table peuvent utiliser beaucoup de mémoire et réduire les performances, car les opérations de lecture doivent analyser au-delà des lignes supprimées.  
   
-###  <a name="bkmk_MemoryForGrowth"></a> Mémoire pour la croissance
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> Mémoire pour la croissance
 
 Les calculs ci-dessus estiment les besoins en mémoire de la table, telle qu'elle existe actuellement. Outre cette mémoire, vous devez évaluer la croissance de la table et fournir suffisamment de mémoire pour gérer cette croissance.  Par exemple, si vous anticipez une croissance de 10 %, vous devez multiplier le résultat ci-dessus par 1,1 pour obtenir la mémoire totale nécessaire pour votre table.  
   

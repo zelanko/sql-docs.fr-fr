@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907956"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Dépannage des serveurs de publication Oracle
@@ -206,7 +206,7 @@ ms.locfileid: "72907956"
 ## <a name="oracle-error-ora-01555"></a>Erreur Oracle ORA-01555  
  L'erreur de base de données Oracle suivante n'est pas liée à la réplication d'instantané ; elle est liée à la façon dont Oracle construit des vues de données cohérentes en lecture :  
   
- « ORA-01555 : capture instantanée trop ancienne »  
+ « ORA-01555 : Instantané trop ancien »  
   
  À l'aide d'objets appelés segments d'annulation, Oracle construit des vues de données cohérentes en lecture à partir du moment où une instruction SQL est émise. Une erreur « instantané trop ancien » peut se produire quand des informations de restauration sont écrasées par d'autres sessions concurrentes. Avant Oracle 9i, la méthode recommandée pour réduire la fréquence de cette erreur était d'augmenter la taille et/ou le nombre de segments d'annulation, et d'attribuer les grosses transactions à un segment d'annulation spécifique.  
   

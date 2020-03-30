@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056181"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gérer et surveiller la recherche en texte intégral pour une instance de serveur
@@ -31,7 +31,7 @@ ms.locfileid: "74056181"
   
 -   Configuration d'une base de données utilisateur pour la recherche en texte intégral. Cela implique de créer un ou plusieurs catalogues de texte intégral pour la base de données et de définir un index de recherche en texte intégral sur chaque table ou vue indexée sur laquelle vous souhaitez exécuter des requêtes de texte intégral.  
   
-##  <a name="props"></a> Affichage ou modification des propriétés de serveur pour la recherche en texte intégral  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Affichage ou modification des propriétés de serveur pour la recherche en texte intégral  
  Vous pouvez afficher les propriétés de recherche en texte intégral d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Pour afficher et modifier les propriétés de serveur pour la recherche en texte intégral  
@@ -69,7 +69,7 @@ ms.locfileid: "74056181"
         > [!NOTE]  
         >  Vous pouvez aussi définir l’option de mise à niveau du catalogue de texte intégral à l’aide de l’action [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** .  
   
-##  <a name="metadata"></a> Affichage des propriétés de serveur de texte intégral supplémentaires  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Affichage des propriétés de serveur de texte intégral supplémentaires  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Les fonctions peuvent être utilisées pour obtenir la valeur de différentes propriétés au niveau du serveur pour la recherche en texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  
   
  Le tableau ci-après recense les propriétés en texte intégral d'une instance de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que leurs fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] connexes.  
@@ -81,7 +81,7 @@ ms.locfileid: "74056181"
 |**LoadOSResources**|Indique si les analyseurs lexicaux et les filtres du système d'exploitation sont inscrits et utilisés avec cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|Indique si seuls les fichiers binaires signés sont chargés par le Moteur d’indexation et de recherche en texte intégral.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Surveillance de l'activité de recherche en texte intégral  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Surveillance de l'activité de recherche en texte intégral  
  Plusieurs vues et fonctions de gestion dynamique sont utiles pour la surveillance de l'activité de recherche en texte intégral sur une instance de serveur.  
   
  **Pour consulter des informations sur les catalogues de texte intégral avec une activité d'alimentation en cours**  

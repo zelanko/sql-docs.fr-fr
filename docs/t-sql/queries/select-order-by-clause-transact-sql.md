@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981710"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - Clause ORDER BY (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "73981710"
   
 -   Déterminer l’ordre dans lequel les valeurs de [fonction de classement](../../t-sql/functions/ranking-functions-transact-sql.md) sont appliquées au jeu de résultats.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY n’est pas pris en charge dans les instructions SELECT/INTO ou CREATE TABLE AS SELECT (CTAS) dans [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[Limitation du nombre de lignes retournées](#Offset)|OFFSET • FETCH|  
 |[Utilisation de la clause ORDER BY avec UNION, EXCEPT et INTERSECT](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a> Syntaxe de base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de la clause ORDER BY en utilisant la syntaxe minimale requise.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>R. Spécification d'une colonne unique définie dans la liste de sélection  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> Spécification de l’ordre de tri croissant et décroissant  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> Spécification de l’ordre de tri croissant et décroissant  
   
 #### <a name="a-specifying-a-descending-order"></a>R. Spécification d'un ordre de tri décroissant  
  L'exemple suivant classe le jeu de résultats selon la colonne `ProductID` numérique par ordre décroissant.  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> Spécification d’un classement  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> Spécification d’un classement  
  L'exemple suivant indique comment la spécification d'un classement dans la clause ORDER BY peut modifier l'ordre dans lequel les résultats de la requête sont retournés. Une table contenant une colonne définie à l'aide d'un classement non sensible à la casse et ne tenant pas compte des accents est créée. Les valeurs sont insérées selon différentes variantes d'accent et de casse. Étant donné qu'aucun classement n'est spécifié dans la clause ORDER BY, la première requête utilise le classement de la colonne lors du tri des valeurs. Dans la deuxième requête, un classement sensible à la casse et tenant compte des accents est spécifié dans la clause ORDER BY, ce qui modifie l'ordre dans lequel les lignes sont retournées.  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> Spécification d’un ordre conditionnel  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> Spécification d’un ordre conditionnel  
  Les exemples suivants utilisent l’expression CASE dans une clause ORDER BY pour déterminer de façon conditionnelle l’ordre de tri des lignes d’après la valeur d’une colonne donnée. Dans le premier exemple, la valeur de la colonne `SalariedFlag` de la table `HumanResources.Employee` est évaluée. Les employés pour lesquels `SalariedFlag` a la valeur 1 sont retournés par ordre décroissant d'`BusinessEntityID`. Les employés pour lesquels `SalariedFlag` a la valeur 0 sont retournés par ordre croissant d'`BusinessEntityID`. Dans le deuxième exemple, le jeu de résultats est classé par la colonne `TerritoryName` lorsque la colonne `CountryRegionName` est égale à « United States » et par `CountryRegionName` pour toutes les autres lignes.  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> Utilisation de la clause ORDER BY dans une fonction de classement  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> Utilisation de la clause ORDER BY dans une fonction de classement  
  L'exemple suivant utilise la clause ORDER BY dans les fonctions de classement ROW_NUMBER, RANK, DENSE_RANK et NTILE.  
   
 ```sql
@@ -361,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> Limitation du nombre de lignes retournées  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> Limitation du nombre de lignes retournées  
  Les exemples suivants utilisent OFFSET et FETCH pour limiter le nombre de lignes retournées par une requête.  
   
 **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -489,7 +489,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> Utilisation de la clause ORDER BY avec UNION, EXCEPT et INTERSECT  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> Utilisation de la clause ORDER BY avec UNION, EXCEPT et INTERSECT  
  Lorsqu'une requête utilise les opérateurs UNION, EXCEPT ou INTERSECT, la clause ORDER BY doit être spécifiée à la fin de l'instruction et les résultats des requêtes combinées sont triés. L'exemple suivant retourne tous les produits qui sont rouges ou jaunes et effectue le tri de cette liste combinée selon la colonne `ListPrice`.  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant illustre le tri d’un jeu de résultats par ordre croissant selon la colonne `EmployeeKey` numérique.  
   
 ```sql

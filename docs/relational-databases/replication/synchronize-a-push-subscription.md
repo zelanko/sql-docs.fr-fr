@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907866"
 ---
 # <a name="synchronize-a-push-subscription"></a>Synchroniser un abonnement par émission (push)
@@ -28,7 +28,7 @@ ms.locfileid: "72907866"
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Les abonnements sont synchronisés par l'Agent de distribution (pour la réplication transactionnelle et d'instantané) ou l'Agent de fusion (pour la réplication de fusion). Les agents peuvent s'exécuter en continu, à la demande ou selon une planification. Pour plus d’informations sur la spécification de planifications de synchronisation, consultez [Spécifier des planifications de synchronisation](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Synchronisez un abonnement à la demande à partir des dossiers **Publications locales** et **Abonnements locaux** dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], et sous l’onglet **Tous les abonnements** du moniteur de réplication. Les abonnements aux publications Oracle ne peuvent pas être synchronisés à la demande à partir de l'Abonné. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "72907866"
   
 4.  Pour afficher l'avancement de la synchronisation, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Afficher les détails**.  
   
-##  <a name="ReplProg"></a> Utilisation des Agents de réplication  
+##  <a name="using-replication-agents"></a><a name="ReplProg"></a> Utilisation des Agents de réplication  
  Les abonnements par envoi de données (push) peuvent être synchronisés par le biais de la programmation et à la demande en appelant le fichier exécutable de l'Agent de réplication approprié à partir de l'invite de commandes. Le fichier exécutable de l'Agent de réplication qui est appelé dépend du type de publication à laquelle l'abonnement par envoi de données (push) appartient.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Pour démarrer l'Agent de distribution et synchroniser un abonnement par envoi de données (push) vers une publication transactionnelle  
@@ -154,7 +154,7 @@ ms.locfileid: "72907866"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> Exemples (Agents de réplication)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Exemples (Agents de réplication)  
  L'exemple suivant démarre l'Agent de distribution pour synchroniser un abonnement par envoi de données (push).  
   
 ```  
@@ -196,7 +196,7 @@ REM -- The following command must be supplied without line breaks.
   
 ```  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez synchroniser des abonnements par envoi de données par programme à l'aide des objets RMO (Replication Management Objects) et gérer l'accès au code pour les fonctionnalités de l'Agent de réplication. Les classes que vous utilisez pour créer un abonnement par envoi de données dépendent du type de publication à laquelle l'abonnement appartient.  
   
 > [!NOTE]
@@ -250,7 +250,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   Obtenez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> à partir de la propriété <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> et appelez la méthode <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> . Cette méthode démarre l'Agent de fusion en mode synchrone, et le travail d'agent en cours d'exécution conserve le contrôle. Au cours de l'exécution synchrone, vous pouvez gérer l'événement <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> pendant que l'agent est en cours d'exécution.  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple synchronise un abonnement par envoi de données vers une publication transactionnelle, dans laquelle l'Agent est démarré en mode asynchrone à l'aide du travail de l'Agent.  
   
  [!code-cs[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  

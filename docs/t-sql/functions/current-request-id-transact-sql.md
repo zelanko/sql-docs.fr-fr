@@ -18,10 +18,10 @@ ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1880ef3ea67ddac948653054a8d5678787c17dcd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68026428"
 ---
 # <a name="current_request_id-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68026428"
 
 Cette fonction retourne l'ID de la demande actuelle dans la session en cours.
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983227"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY – refus d'autorisations de base de données (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983227"
 
 Permet de refuser des autorisations sur une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,7 +58,7 @@ DENY <permission> [ ,...n ]
 
 *permission* spécifie une autorisation qui peut être refusée sur une base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.
 
-L’option ALL n’interdit pas toutes les autorisations possibles. Cette option revient à interdire les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.
+L’option ALL n’interdit pas toutes les autorisations possibles. L'utilisation de l'option ALL équivaut à refuser les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.
 
 PRIVILEGES Inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.
 
@@ -215,5 +215,5 @@ GO
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [autorisations](../../relational-databases/security/permissions-database-engine.md)
+- [Autorisations](../../relational-databases/security/permissions-database-engine.md)
 - [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)

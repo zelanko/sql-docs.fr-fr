@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981935"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
@@ -38,7 +38,7 @@ ms.locfileid: "73981935"
   
  Vous pouvez créer un utilisateur de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Présentation des types d'utilisateurs  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Présentation des types d'utilisateurs  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] présente 6 options de création d'un utilisateur de base de données. L’image suivante montre les 6 options dans la zone verte et indique ce qu'elles représentent.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981935"
   
 > **ASTUCE** Pour les personnes internes à votre organisation, l'authentification Windows est un meilleur choix, parce qu’elles n'auront pas à mémoriser un mot de passe supplémentaire et que l'authentification Windows offre des fonctionnalités de sécurité supplémentaires, notamment Kerberos.  
   
-##  <a name="Restrictions"></a> Arrière-plan  
+##  <a name="background"></a><a name="Restrictions"></a> Arrière-plan  
  Un utilisateur est un principal de sécurité au niveau de la base de données. Les comptes de connexion doivent être mappés à un utilisateur de base de données pour permettre la connexion à une base de données. Un compte de connexion peut être mappé à différentes bases de données en tant qu'utilisateurs différents, mais il ne peut être mappé que comme utilisateur unique dans chaque base de données. Dans une base de données partiellement autonome, il est possible de créer un utilisateur qui ne dispose pas de compte de connexion. Pour plus d’informations sur les utilisateurs de base de données autonome, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Lorsque l'utilisateur invité d'une base de données est activé, un compte de connexion non mappé à un utilisateur de base de données peut accéder à la base de données en tant qu'utilisateur invité.  
   
 > **IMPORTANT !** L'utilisateur invité est habituellement désactivé. Ne l'activez que lorsque cela est nécessaire.  
   
  En tant que principal de sécurité, il est possible d'accorder des autorisations à des utilisateurs. L'étendue d'un utilisateur est la base de données. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion.  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation **ALTER ANY USER** sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Créer un utilisateur avec SSMS  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> Créer un utilisateur avec SSMS  
   
  
 1.  Dans l'Explorateur d'objets, développez le dossier **Bases de données** .  
@@ -140,7 +140,7 @@ ms.locfileid: "73981935"
      **Supprimer**  
      Supprime la propriété étendue sélectionnée.  
   
-##  <a name="TsqlProcedure"></a> Créer un utilisateur à l’aide de T-SQL  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> Créer un utilisateur à l’aide de T-SQL  
     
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

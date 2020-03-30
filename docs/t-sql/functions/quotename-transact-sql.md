@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 761e6f43f1199d4eb16060cd769a30ebba220ef8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914256"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67914256"
 
   Retourne une chaîne Unicode avec les délimiteurs ajoutés afin que la chaîne d'entrée soit un identificateur délimité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,7 +69,7 @@ SELECT QUOTENAME('abc[]def');
   
  Vous remarquerez que dans la chaîne `abc[]def`, le crochet de droite est doublé pour indiquer un caractère d'échappement.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant prend la chaîne de caractères `abc def` et utilise les caractères `[``]` pour créer un identificateur délimité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide.  
   
 ```  

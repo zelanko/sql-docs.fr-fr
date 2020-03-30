@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048150"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68048150"
 >[!NOTE]
 >Dans Azure SQL Database, seuls les groupes de fichiers primaires sont pris en charge.  
 
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -157,7 +157,7 @@ Le schéma de partition 'myRangePS4' a été créé avec succès. 'test5fg' est 
   
  Si la fonction de partition `myRangePF4` est modifiée afin d'ajouter une partition, le groupe de fichiers `test5fg` reçoit la nouvelle partition.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. Création d’un schéma de partition uniquement sur PRIMARY - Seul PRIMARY est pris en charge pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. Création d’un schéma de partition uniquement sur PRIMARY - Seul PRIMARY est pris en charge pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
  L'exemple suivant crée une fonction de partition pour partitionner une table ou un index en quatre partitions. Un schéma de partition qui spécifie que toutes les partitions sont créées dans le groupe de fichiers PRIMARY est ensuite créé.  
   

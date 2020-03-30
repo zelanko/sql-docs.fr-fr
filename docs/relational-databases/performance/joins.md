@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287473"
 ---
 # <a name="joins-sql-server"></a>Jointures (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "79287473"
 -   Jointures de hachage   
 -   Jointures adaptatives (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
-## <a name="fundamentals"></a> Principes de base des jointures
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> Principes de base des jointures
 Les jointures permettent d'extraire des données de deux ou de plusieurs tables en fonction des relations logiques existant entre ces tables. Les jointures indiquent comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit utiliser les données d’une table pour sélectionner les lignes d’une autre table.    
 
 Une condition de jointure définit la manière dont deux tables sont liées dans une requête :    
@@ -108,7 +108,7 @@ La plupart des requêtes utilisant une jointure peuvent être réécrites à l'a
 > Par exemple, `SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)` exécute une jointure interne sur deux tables en prenant en compte les 20 premiers caractères de chaque colonne de type text dans les tables t1 et t2.   
 > En outre, il existe une autre possibilité de comparaison des colonnes ntext ou text de deux tables ; elle consiste à comparer les longueurs des colonnes à l’aide d’une clause `WHERE`, par exemple `WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`
 
-## <a name="nested_loops"></a> Présentation des jointures de boucles imbriquées
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> Présentation des jointures de boucles imbriquées
 Si une entrée de jointure est petite (moins de 10 lignes) et que l'autre entrée de jointure est assez importante et indexée sur ses colonnes de jointure, une jointure de type boucles imbriquées d'index représente l'opération de jointure la plus rapide, car elle nécessite le moins d'E/S et de comparaisons. 
 
 La jointure de boucles imbriquées, également nommée *itération imbriquée*, utilise une entrée de jointure comme table d’entrée externe (représentée comme entrée la plus haute dans le plan d’exécution graphique) et une autre comme table d’entrée interne (la plus basse). La boucle externe mobilise la table d'entrée externe ligne par ligne. La boucle interne, exécutée pour chaque ligne externe, recherche les lignes en correspondance dans la table d'entrée interne.   
@@ -119,7 +119,7 @@ Une jointure de boucles imbriquées est particulièrement efficace si l'entrée 
 
 Lorsque l’attribut OPTIMIZED d’un opérateur de jointure de boucles imbriquées est défini sur **True**, une boucle imbriquée optimisée (ou tri par lot) est utilisée pour réduire les E/S lorsque la table interne est volumineuse, indépendamment de sa parallélisation. La présence de cette optimisation peut ne pas être très évidente lorsque vous analysez un plan d’exécution, étant donné que le tri est une opération cachée. Toutefois, en recherchant l’attribut OPTIMIZED dans le plan XML, vous pouvez voir que la jointure de boucles imbriquées tente de réorganiser les lignes d’entrée pour améliorer les performances d’E/S.
 
-## <a name="merge"></a> Présentation des jointures de fusion
+## <a name="understanding-merge-joins"></a><a name="merge"></a> Présentation des jointures de fusion
 Si les deux entrées de jointure ne sont pas réduites, mais triées sur leur colonne de jointure (si elles ont été obtenues par analyse des index triés, par exemple), une jointure de fusion constitue l'opération de jointure la plus rapide. Si les deux entrées de jointure sont étendues et de taille similaire, une jointure de fusion avec tri préalable et une jointure de hachage offrent des performances équivalentes. Cependant, les opérations de jointure de hachage sont souvent beaucoup plus rapides si la taille des deux entrées diffère de façon significative.       
 
 La jointure de fusion impose le tri des deux entrées sur les colonnes de fusion, qui sont définies par les clauses d'égalité (ON) du prédicat de jointure. L'optimiseur de requête analyse généralement un index, s'il en existe un sur l'ensemble approprié de colonnes, ou place un opérateur de tri sous la jointure de fusion. Dans de rares cas, il peut y avoir plusieurs clauses d'égalité, mais les colonnes de fusion ne sont prises en compte que par certaines des clauses d'égalité disponibles.    
@@ -132,7 +132,7 @@ Si un prédicat résiduel existe, toutes les lignes répondant au prédicat de f
 
 La jointure de fusion est très rapide en elle-même mais elle peut constituer un choix onéreux si des opérations de tri sont nécessaires. Toutefois, si le volume de données est important et si les données souhaitées peuvent être obtenues prétriées à partir d'index d'arbre B (B-tree) existants, la jointure de fusion constitue souvent l'algorithme de jointure le plus rapide.    
 
-## <a name="hash"></a> Présentation des jointures de hachage
+## <a name="understanding-hash-joins"></a><a name="hash"></a> Présentation des jointures de hachage
 Les jointures de hachage peuvent traiter efficacement des entrées importantes, non indexées et non triées. Elles sont utiles pour obtenir des résultats intermédiaires dans des requêtes complexes, car :
 -   Les résultats intermédiaires ne sont pas indexés (sauf s'ils sont volontairement enregistrés sur disque puis indexés) et souvent ne sont pas triés de façon adéquate pour l'opération suivante du plan de requête.
 -   Les optimiseurs de requêtes n'évaluent que les tailles de résultats intermédiaires. Comme ces estimations risquent d'être imprécises pour les requêtes complexes, les algorithmes qui traitent les résultats intermédiaires doivent bien évidemment être efficaces, mais ils doivent également offrir un traitement réduit si un résultat intermédiaire s'avère bien plus volumineux que prévu.   
@@ -145,13 +145,13 @@ Les jointures de hachage sont utilisées pour de nombreux types d'opérations de
 
 Les sections suivantes décrivent différents types de jointures de hachage : jointure de hachage en mémoire, jointure de hachage progressive et jointure de hachage récursive.    
 
-### <a name="inmem_hash"></a> Jointure de hachage en mémoire
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> Jointure de hachage en mémoire
 La jointure de hachage analyse ou calcule l'intégralité de l'entrée de construction puis génère une table de hachage en mémoire. Chaque ligne est insérée dans un compartiment de hachage en fonction de la valeur de hachage calculée pour la clé de hachage. Si la totalité de l'entrée de construction est inférieure à la mémoire disponible, toutes les lignes peuvent être insérées dans la table de hachage. La phase de construction est suivie de la phase d'exploration. La totalité de l'entrée d'exploration est analysée ou calculée ligne par ligne puis, pour chaque ligne d'exploration, la valeur de clé de hachage est calculée, le compartiment de hachage correspondant analysé et les correspondances établies.    
 
-### <a name="grace_hash"></a> Jointure de hachage progressive
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> Jointure de hachage progressive
 Si l'entrée de construction ne tient pas en mémoire, une jointure de hachage intervient en plusieurs étapes. Cette opération est qualifiée de jointure de hachage progressive. Chaque étape comprend une phase de construction et une phase d'exploration. Initialement, l'intégralité des entrées de construction et d'exploration est mobilisée et partitionnée (à l'aide d'une fonction de hachage appliquée aux clés de hachage) en plusieurs fichiers. L'utilisation de la fonction de hachage sur les clés de hachage garantit la présence des deux enregistrements de jointure dans la même paire de fichiers. Ainsi, la tâche consistant à joindre deux entrées volumineuses a été réduite à plusieurs instances moins importantes des mêmes tâches. La jointure de hachage est ensuite appliquée à chaque paire de fichiers partitionnés.    
 
-### <a name="recursive_hash"></a> Jointure de hachage récursive
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> Jointure de hachage récursive
 Si l'entrée de construction est volumineuse au point que les entrées pour une fusion externe standard nécessitent plusieurs niveaux de fusion, plusieurs étapes et plusieurs niveaux de partitionnement sont nécessaires. Si seules certaines partitions sont volumineuses, des étapes de partitionnement supplémentaires ne sont utilisées que pour celles-ci. Des opérations d'E/S asynchrones sont utilisées de sorte qu'un thread unique puisse occuper plusieurs unités de disque, dans le but d'accélérer au maximum les étapes du partitionnement.    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ Si l’optimiseur de requête anticipe mal laquelle des deux entrées est moins 
 > [!NOTE]
 > L'inversion des rôles se produit indépendamment de tous les indicateurs ou de toute structure de requête. L'inversion des rôles ne s'affiche pas dans votre plan de requête ; quand elle se produit, elle est transparente pour l'utilisateur.
 
-### <a name="hash_bailout"></a> Interruption de hachage
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> Interruption de hachage
 Le terme interruption de hachage est parfois utilisé pour décrire des jointures de hachage progressives ou des jointures de hachage récursives.    
 
 > [!NOTE]
@@ -172,7 +172,7 @@ Le terme interruption de hachage est parfois utilisé pour décrire des jointure
 
 Pour plus d’informations sur l’interruption de hachage, consultez [Hash Warning (classe d’événements)](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
-## <a name="adaptive"></a> Comprendre les jointures adaptatives
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> Comprendre les jointures adaptatives
 En [mode batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution), les jointures adaptatives permettent de choisir entre la méthode de jointure [Jointure hachée](#hash) et la méthode [Boucles imbriquées](#nested_loops). En outre, vous pouvez **attendre** que la première entrée ait été analysée avant de procéder à la jointure. L’opérateur de jointure adaptative définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Un plan de requête peut donc passer dynamiquement à une meilleure stratégie de jointure pendant l’exécution, sans que cela nécessite une recompilation. 
 
 > [!TIP]
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > Un indicateur de requête USE HINT est prioritaire par rapport à une configuration incluse dans l’étendue d’une base de données ou à un paramètre d’indicateur de trace. 
 
-## <a name="nulls_joins"></a> Valeurs Null et jointures
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> Valeurs Null et jointures
 Si certaines colonnes de tables jointes contiennent des valeurs NULL, ces valeurs NULL ne correspondent pas les unes aux autres. La présence de valeurs Null dans une colonne d’une des tables jointes ne peut être retournée que si vous utilisez une jointure externe (sauf si la clause `WHERE` exclut les valeurs Null).     
 
 Les deux tables suivantes contiennent chacune des valeurs NULL dans les colonnes participant à la jointure :     

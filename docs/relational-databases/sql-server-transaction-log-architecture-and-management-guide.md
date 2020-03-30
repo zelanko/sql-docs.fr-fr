@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287083"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "79287083"
   Chaque base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d'entre elles. Le journal des transactions est un composant essentiel de la base de données et, en cas de défaillance du système, vous pouvez en avoir besoin pour rétablir la cohérence de la base de données. Ce guide contient des informations sur l'architecture physique et logique du journal des transactions. Ces informations pourront vous aider à gérer plus efficacement les journaux des transactions.  
 
   
-##  <a name="Logical_Arch"></a> Architecture logique du journal des transactions  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a> Architecture logique du journal des transactions  
  Le journal des transactions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne de façon logique comme s'il s'agissait d'une chaîne d'enregistrements de journal. Chacun de ces enregistrements est identifié par un numéro séquentiel dans le journal (LSN). Chaque nouvel enregistrement est écrit à la fin logique du journal avec un LSN supérieur à celui de l'enregistrement qui le précède. Les enregistrements de journal sont stockés dans une séquence en série à mesure qu’ils sont créés de sorte que si LSN2 est supérieur à LSN1, la modification décrite par l'enregistrement de journal référencé par LSN2 se produit après la modification décrite par le numéro LSN1 d'enregistrement de journal. Chacun d'eux contient l'ID de la transaction à laquelle il appartient. Pour chaque transaction, tous les enregistrements de journal associés sont reliés de façon individuelle dans une chaîne grâce aux pointeurs arrière qui accélèrent la restauration de la transaction.  
   
  Les enregistrements de journal relatifs aux modifications de données consignent soit l'opération logique effectuée, soit les images avant/après des données modifiées. L'image avant est une copie des données avant que l'opération n'ait été effectuée, tandis que l'image après est une copie des données après que l'opération a été effectuée.  
@@ -69,7 +69,7 @@ De nombreux types d'opérations sont enregistrés dans le journal des transactio
 
 Les sauvegardes différentielles et de journaux font passer la base de données restaurée à une date ultérieure qui correspond à un numéro LSN supérieur. 
   
-##  <a name="physical_arch"></a> Architecture physique du journal des transactions  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a> Architecture physique du journal des transactions  
 Le journal des transactions d'une base de données s'étend sur un ou plusieurs fichiers physiques. D'un point de vue conceptuel, le fichier journal est une chaîne d'enregistrements. D'un point de vue physique, la séquence des enregistrements du journal est stockée de façon efficace dans l'ensemble de fichiers physiques qui implémente le journal des transactions. Chaque base de données doit posséder au moins un fichier journal.  
   
 Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divise chaque fichier journal physique en un certain nombre de fichiers journaux virtuels. La taille et le nombre de ces fichiers journaux virtuels sont variables. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] choisit dynamiquement la taille des fichiers journaux virtuels en créant ou en étendant des fichiers journaux. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] essaie de ne conserver qu’un petit nombre de fichiers virtuels. Après une extension du fichier journal, la taille des fichiers virtuels est la somme de la taille du journal existant et de la taille du nouvel incrément de fichier. La taille et le nombre des fichiers journaux virtuels ne peuvent être ni configurés, ni définis par les administrateurs.  
@@ -130,14 +130,14 @@ Pour plus d’informations sur les arguments `FILEGROWTH` et `SIZE` de `ALTER DA
   
  La troncation du journal peut être retardée pour différents motifs. En cas de retard prolongé de la troncation du journal, le journal des transactions peut se remplir complètement. Pour plus d’informations, consultez [Facteurs pouvant retarder la troncation du journal](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) et [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
-##  <a name="WAL"></a> Journal des transactions à écriture anticipée  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a> Journal des transactions à écriture anticipée  
  Cette section décrit le rôle que joue le journal des transactions à écriture anticipée (journal WAL) au niveau de l'enregistrement sur disque des modifications apportées aux données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un algorithme WAL (write-ahead logging) qui garantit qu’aucune modification de données n’est écrite sur le disque avant l’écriture du journal associé sur celui-ci. Ainsi, les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) d'une transaction sont conservées.  
   
  Pour comprendre le fonctionnement du journal à écriture anticipée, il est important que vous sachiez comment les données modifiées sont écrites sur le disque. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gère un cache des tampons dans lequel il lit les pages de données lorsque celles-ci doivent être extraites. Lorsqu’une page est modifiée dans le cache des tampons, elle n’est pas réécrite immédiatement sur le disque, mais elle est marquée comme *erronée*. Une page peut avoir plusieurs écritures logiques avant son écriture physique sur le disque. Pour chaque écriture logique, un enregistrement du journal des transactions est inséré dans le cache du journal qui enregistre la modification. L'enregistrement doit être écrit sur le disque avant que la page de modifications associée n'ait été supprimée du cache et écrite sur le disque. Le processus de point de contrôle analyse régulièrement le cache à la recherche de tampons contenant des pages issues d'une base de données spécifiée et écrit toutes les pages de modifications sur le disque. Les points de contrôle permettent une récupération ultérieure du système en créant un point où toutes les pages de modifications sont effectivement écrites sur le disque.  
   
  Le processus d'écriture d'une page de données modifiée, du cache des tampons vers le disque, porte le nom de vidage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une logique qui empêche la suppression d’une page de modifications avant que l’enregistrement du journal associé n’ait été écrit. Les enregistrements de journal sont écrits sur le disque quand les tampons de journaux sont vidés.  Cela se produit chaque fois qu’une transaction est validée ou que les tampons de journaux sont saturés.  
   
-##  <a name="Backups"></a> Sauvegardes du journal de transactions  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a> Sauvegardes du journal de transactions  
  Cette section présente les concepts sur la sauvegarde et la restauration (application) des journaux de transactions. En mode de récupération complète et en mode de récupération utilisant les journaux de transactions, la sauvegarde régulière des journaux de transactions (*sauvegardes des journaux*) est indispensable pour pouvoir récupérer les données. Sauvegardez le journal pendant l'exécution d'une sauvegarde complète. Pour plus d’informations sur les modes de récupération, consultez [Sauvegarde et restauration des bases de données SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  Avant de pouvoir créer la première sauvegarde du journal, vous devez créer une sauvegarde complète, telle qu'une sauvegarde de base de données ou la première d'une série de sauvegardes de fichiers. La restauration d'une base de données à l'aide seulement de sauvegardes de fichiers peut être complexe. Par conséquent, nous vous recommandons de commencer par une sauvegarde de base de données complète dès que possible. Puis, sauvegardez le journal des transactions régulièrement. Vous pouvez ainsi réduire les risques de perte de travail mais aussi permettre la troncation du journal des transactions. En général, le journal des transactions est tronqué après chaque sauvegarde de journal conventionnelle.  

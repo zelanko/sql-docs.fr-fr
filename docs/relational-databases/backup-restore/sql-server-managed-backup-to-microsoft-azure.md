@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245430"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Gestion de sauvegarde de SQL Server sur Microsoft Azure
@@ -34,7 +34,7 @@ ms.locfileid: "75245430"
   
  Vous pouvez également chiffrer les sauvegardes pour renforcer la sécurité, et vous pouvez configurer une planification personnalisée pour contrôler le moment où les sauvegardes sont effectuées. Pour plus d’informations sur les avantages de Microsoft Azure Blob Storage pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="Prereqs"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> Conditions préalables  
  Le stockage Microsoft Azure est utilisé par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour stocker les fichiers de sauvegarde. Les prérequis suivants sont obligatoires :  
   
 |Configuration requise|Description|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245430"
 > La gestion de sauvegarde de SQL Server n’est pas prise en charge avec les serveurs proxy.
 >
   
-##  <a name="support_limits"></a> Prise en charge  
+##  <a name="supportability"></a><a name="support_limits"></a> Prise en charge  
  Les considérations et les limitations suivantes relatives à la prise en charge sont spécifiques à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 -   La sauvegarde de bases de données système **master**, **modèle**et **msdb** est prise en charge. La sauvegarde de **tempdb** n’est pas prise en charge. 

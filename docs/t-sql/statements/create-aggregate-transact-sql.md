@@ -22,10 +22,10 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064633"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73064633"
 
   Crée une fonction d'agrégation définie par l'utilisateur dont l'implémentation est définie dans une classe d'un assembly dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Pour que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lie la fonction d’agrégation à son implémentation, vous devez d’abord charger l’assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui contient cette implémentation dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’une instruction CREATE ASSEMBLY.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

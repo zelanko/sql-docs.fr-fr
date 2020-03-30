@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67912616"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67912616"
 
   Crée une fonction, dans la base de données active, qui mappe les lignes d'une table ou d'un index avec des partitions à partir des valeurs d'une colonne spécifiée. L'utilisation de CREATE PARTITION FUNCTION est la première étape de la création d'une table ou d'un index partitionné. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], une table ou un index peut comprendre au maximum 15 000 partitions.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -89,7 +89,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 -   Autorisation CONTROL SERVER ou ALTER ANY DATABASE sur le serveur de la base de données dans laquelle la fonction de partition est créée.  
   
-##  <a name="BKMK_examples"></a> Exemples  
+##  <a name="examples"></a><a name="BKMK_examples"></a> Exemples  
   
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>R. Création d'une fonction de partition RANGE LEFT sur une colonne de type int  
  La fonction de partition suivante partitionne une table ou un index en quatre partitions.  

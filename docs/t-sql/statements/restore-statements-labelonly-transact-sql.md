@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742948"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instructions RESTORE - LABELONLY (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68742948"
 > [!NOTE]  
 >  Pour une description des arguments, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|Nom du logiciel de sauvegarde qui a permis l'écriture de l'étiquette du support de sauvegarde.|  
 |**SoftwareVendorId**|**int**|Numéro d'identification du fournisseur du logiciel qui a permis l'écriture de la sauvegarde.|  
 |**MediaDate**|**datetime**|Date et heure d’écriture de l’étiquette.|  
-|**Mirror_Count**|**int**|Nombre de miroirs dans le jeu (1-4).<br /><br /> Remarque : Les étiquettes créées pour différents miroirs d’un jeu sont identiques.|  
+|**Mirror_Count**|**int**|Nombre de miroirs dans le jeu (1-4).<br /><br /> Remarque : les étiquettes écrites pour différents miroirs d’un jeu sont identiques.|  
 |**IsCompressed**|**bit**|Indique si la sauvegarde est compressée :<br /><br /> 0 = non compressée<br /><br /> 1 =compressée|  
   
 > [!NOTE]  

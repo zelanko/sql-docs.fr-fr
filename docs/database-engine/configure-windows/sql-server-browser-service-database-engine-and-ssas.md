@@ -16,10 +16,10 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79375556"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Service SQL Server Browser (moteur de base de données et SSAS)
@@ -126,7 +126,7 @@ ms.locfileid: "79375556"
  Les instances masquées sont des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne prennent en charge que les connexions de mémoire partagée. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définissez l'indicateur `HideInstance` pour indiquer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ne doit pas répondre par des informations sur cette instance de serveur.  
   
 ### <a name="using-a-firewall"></a>Utilisation d'un pare-feu  
- Pour communiquer avec le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sur un serveur situé derrière un pare-feu, ouvrez le port UDP 1434 en plus du port TCP utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par ex., le port 1433). Pour plus d’informations sur l’utilisation d’un pare-feu, consultez « Guide pratique pour configurer un pare-feu pour accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour communiquer avec le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sur un serveur situé derrière un pare-feu, ouvrez le port UDP 1434 en plus du port TCP utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par ex., le port 1433). Pour plus d'informations sur l'utilisation d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Protocoles réseau et bibliothèques réseau](../../sql-server/install/network-protocols-and-network-libraries.md)  

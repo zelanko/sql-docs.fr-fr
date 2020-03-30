@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ce725d492c0f777f27198a3c686de7a80307e2ee
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67904365"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216210"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Cette fonction retourne le numéro de ligne de l’occurrence d’une erreur qui a provoqué l’exécution du bloc CATCH d’une construction TRY...CATCH.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,20 +74,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
-Result 
------------
-
-(0 row(s) affected)
-
-ErrorLine
------------
-4
-
-(1 row(s) affected)
-```  
   
 ### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. Utilisation de ERROR_LINE dans un bloc CATCH avec une procédure stockée  
 L’exemple suivant illustre une procédure stockée qui génère une erreur de division par zéro. `ERROR_LINE` retourne le numéro de la ligne où l’erreur s’est produite.  
@@ -114,20 +100,7 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ``` 
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
------------
 
-(0 row(s) affected)
-
-ErrorLine
------------
-7
-
-(1 row(s) affected)  
-   
-```
 
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilisation de ERROR_LINE dans un bloc CATCH avec d'autres outils de traitement des erreurs  
 L’exemple de code suivant présente une instruction `SELECT` qui génère une erreur de division par zéro. `ERROR_LINE` retourne le numéro de la ligne où l’erreur s’est produite et les informations relatives à l’erreur elle-même.  
@@ -148,20 +121,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ``` 
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
------------
-
-(0 row(s) affected)
-
-ErrorNumber ErrorSeverity ErrorState ErrorProcedure ErrorLine ErrorMessage
------------ ------------- ---------- -------------- --------- ---------------------------------
-8134        16            1          NULL           3         Divide by zero error encountered.
-
-(1 row(s) affected)
-  
-```
   
 ## <a name="see-also"></a>Voir aussi  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   

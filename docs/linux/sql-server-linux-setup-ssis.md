@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76162640"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installer SQL Server Integration Services (SSIS) sur Linux
@@ -26,7 +26,7 @@ Vous pouvez installer SQL Server Integration Services sur ces plateformes :
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> Installer SSIS sur Ubuntu
+## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a> Installer SSIS sur Ubuntu
 
 Pour installer le package **mssql-server-is** sur Ubuntu, procédez comme suit :
 
@@ -118,7 +118,7 @@ Pour supprimer **mssql-server-is**, exécutez la commande suivante :
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a> Installer SSIS sur RHEL
+## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a> Installer SSIS sur RHEL
 Pour installer le package **mssql-server-is** sur RHEL, procédez comme suit :
 
 <!--SQL Server 2017 on Linux-->
@@ -217,7 +217,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | Variable d’environnement | Description |
 |---|---|
 | ACCEPT_EULA | Accepte les termes du contrat de licence SQL Server lorsqu’il est défini sur n’importe quelle valeur comme « Y ».|
-| SSIS_PID | Définit l’édition SQL Server ou la clé de produit (Product key). Les valeurs possibles sont les suivantes :<ul><li>Évaluation</li><li>Développeur</li><li>Express</li><li>Web</li><li>Standard</li><li>Entreprise</li><li>Une clé de produit (Product Key)</li></ul>Si vous spécifiez une clé de produit, celle-ci doit se présenter sous la forme *#####* - *#####* - *#####* - *#####* - *#####* , où *#* est une lettre ou un nombre.  |
+| SSIS_PID | Définit l’édition SQL Server ou la clé de produit (Product key). Les valeurs possibles sont les suivantes :<ul><li>Évaluation</li><li>Développeur</li><li>Express</li><li>Web</li><li>standard</li><li>Entreprise</li><li>Une clé de produit (Product Key)</li></ul>Si vous spécifiez une clé de produit, celle-ci doit se présenter sous la forme *#####* - *#####* - *#####* - *#####* - *#####* , où *#* est une lettre ou un nombre.  |
 | | |
 
 ## <a name="next-steps"></a>Étapes suivantes

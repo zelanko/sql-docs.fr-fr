@@ -13,10 +13,10 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941139"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "76941139"
   
  **Dans cette rubrique :**  
   
--   [Composants requis](#Prerequisites)  
+-   [Prérequis](#Prerequisites)  
   
 -   [Protéger vos données avant la mise à niveau](#ProtectData)  
   
@@ -38,18 +38,18 @@ ms.locfileid: "76941139"
   
 -   [Mise à niveau de l'instance principale](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Avant de commencer, passez en revue les informations importantes suivantes :  
   
--   [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md) : vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   [Choisir une méthode de mise à niveau du moteur de base de données](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) : sélectionnez la méthode et les étapes de mise à niveau appropriées en fonction des versions et mises à niveau prises en charge ainsi que des autres composants installés dans votre environnement pour mettre à niveau les composants dans le bon ordre.  
+-   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): sélectionnez la méthode et les étapes de mise à niveau appropriées en fonction des versions et mises à niveau prises en charge ainsi que des autres composants installés dans votre environnement pour mettre à niveau les composants dans le bon ordre.  
   
--   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) : consultez les notes de publication et les problèmes de mise à niveau connus ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
+-   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): consultez les notes de version et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
   
--   [Configurations matérielle et logicielle requises pour l’installation de SQL Server  2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) :  passez en revue les configurations matérielle et logicielle requises pour l’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
+-   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
   
-##  <a name="ProtectData"></a> Protéger vos données avant la mise à niveau  
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> Protéger vos données avant la mise à niveau  
  Comme méthode conseillée, nous vous recommandons de protéger vos données avant une mise à niveau de la copie des journaux de transaction.  
   
  **Pour protéger vos données**  
@@ -63,12 +63,12 @@ ms.locfileid: "76941139"
 > [!IMPORTANT]  
 >  Veillez à disposer de suffisamment d’espace sur votre serveur principal pour conserver les copies de sauvegarde du fichier journal pour la durée prévue de la durée de mise à niveau des serveurs secondaires.  Si vous basculez sur un serveur secondaire, ce même problème s'applique à ce serveur (le nouveau serveur principal).  
   
-##  <a name="UpgradeMonitor"></a> Mise à niveau (facultative) d'une instance du serveur moniteur  
+##  <a name="upgrading-the-optional-monitor-server-instance"></a><a name="UpgradeMonitor"></a> Mise à niveau (facultative) d'une instance du serveur moniteur  
  L'instance du serveur moniteur, si elle existe, peut être mise à niveau à tout moment. Cependant, il n’est pas nécessaire de mettre à niveau le serveur moniteur facultatif lorsque vous mettez à niveau le serveur principal et les serveurs secondaires.  
   
  Pendant que le serveur moniteur est mis à niveau, la configuration de la copie des journaux de transaction continue à fonctionner, mais son état n'est pas enregistré dans les tables sur le moniteur. Les alertes qui ont été configurées ne sont pas déclenchées tant que le serveur moniteur est en cours de mise à niveau. Après la mise à niveau, vous pouvez mettre à jour les informations dans les tables du moniteur en exécutant la procédure stockée système [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md).   Pour plus d’informations sur les serveurs moniteurs, consultez [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-##  <a name="UpgradeSecondaries"></a> Mise à niveau des instances de serveur secondaires  
+##  <a name="upgrading-the-secondary-server-instances"></a><a name="UpgradeSecondaries"></a> Mise à niveau des instances de serveur secondaires  
  Le processus de mise à niveau implique la mise à niveau des instances de serveur secondaire d'une configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avant la mise à niveau de l'instance du serveur principal. Mettez toujours à niveau les instances secondaires de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en premier. La copie des journaux de transaction se poursuit durant le processus de mise à niveau parce que les instances de serveur secondaires mises à niveau continuent à restaurer les sauvegardes des journaux à partir de l’instance du serveur principal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si l’instance du serveur principal a été mise à niveau avant une instance de serveur secondaire, la copie des journaux de transaction échoue parce qu'une sauvegarde créée sur une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être restaurée sur une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez mettre à niveau les instances secondaires simultanément ou en série, mais toutes les instances secondaires doivent être mises à niveau avant l’instance principale, pour éviter un échec de copie des journaux de transaction.  
   
  Pendant qu’une instance de serveur secondaire est mise à niveau, les travaux de copie et de restauration de la copie des journaux de transaction ne s'exécutent pas. Cela signifie que les sauvegardes de journal des transactions s’accumulent sur le serveur principal et que vous devez disposer de suffisamment d’espace pour conserver ces sauvegardes non restaurées. Le niveau d’accumulation dépend de la fréquence des sauvegardes planifiées sur l’instance du serveur principal et de la séquence de mise à niveau des instances secondaires. De même, si un serveur moniteur séparé a été configuré, il se peut que des alertes soient déclenchées et indiquent que les restaurations n'ont pas été effectuées sur une durée supérieure à l'intervalle configuré.  
@@ -81,7 +81,7 @@ ms.locfileid: "76941139"
 > [!IMPORTANT]  
 >  L'option RESTORE WITH STANDBY n'est pas prise en charge pour une base de données qui requiert une mise à niveau. Si une base de données secondaire mise à niveau a été configurée à l'aide de RESTORE WITH STANDBY, les journaux des transactions ne peuvent plus être restaurés après la mise à niveau. Pour reprendre la copie des journaux de transaction sur cette base de données secondaire, vous devrez reconfigurer la copie des journaux de transaction sur ce serveur de secours. Pour plus d’informations sur l’option STANDBY, consultez [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-##  <a name="UpgradePrimary"></a> Mise à niveau de l'instance du serveur principal  
+##  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> Mise à niveau de l'instance du serveur principal  
  Étant donné que la copie des journaux de transaction est essentiellement une solution de récupération d’urgence, le scénario le plus simple et le plus courant est de mettre à niveau l’instance principale à la place, et de simplement laisser la base de données indisponible pendant cette mise à niveau. Une fois que le serveur est mis à niveau, la base de données est automatiquement remise en ligne, ce qui entraîne sa mise à niveau. Après que la base de données a été mise à niveau, les travaux de la copie des journaux de transaction reprennent.  
   
 > [!NOTE]  

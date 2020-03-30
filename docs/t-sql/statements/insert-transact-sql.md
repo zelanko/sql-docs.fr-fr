@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982226"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73982226"
 
 Ajoute une ou plusieurs lignes à une table ou une vue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir des exemples, consultez [Exemples](#InsertExamples).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -411,7 +411,7 @@ Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CR
   
  Pour exécuter INSERT avec l’option BULK de la fonction OPENROWSET, vous devez être membre du rôle serveur fixe **sysadmin** ou **bulkadmin**.  
   
-##  <a name="InsertExamples"></a> Exemples  
+##  <a name="examples"></a><a name="InsertExamples"></a> Exemples  
   
 |Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CR
 |[Remplacement du comportement par défaut de l’optimiseur de requête à l’aide d’indicateurs](#TableHints)|Indicateurs de table|  
 |[Capture des résultats de l’instruction INSERT](#CaptureResults)|Clause OUTPUT|  
   
-###  <a name="BasicSyntax"></a> Syntaxe de base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de l'instruction INSERT en utilisant la syntaxe minimale requise.  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>R. Insertion d'une seule ligne de données  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> Gestion de valeurs de colonnes  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> Gestion de valeurs de colonnes  
  Les exemples fournis dans cette section présentent des méthodes d’insertion de valeurs dans des colonnes qui sont définies avec une propriété IDENTITY ou avec une valeur DEFAULT, ou qui sont définies avec des types de données tels que **uniqueidentifer** ou des colonnes d’un type défini par l’utilisateur.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Insertion de données dans une table dont les colonnes ont des valeurs par défaut  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> Insertion de données à partir d’autres tables  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> Insertion de données à partir d’autres tables  
  Les exemples fournis dans cette section présentent des méthodes d'insertion de lignes d'une table dans une autre table.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. Utilisation des options SELECT et EXECUTE pour insérer des données provenant d'autres tables  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> Spécification d’objets cibles autres que les tables standard  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Spécification d’objets cibles autres que les tables standard  
  Les exemples présentés dans cette section montrent comment insérer des lignes en spécifiant une variable de table ou de vue.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Insertion de données en spécifiant une vue  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Insertion de lignes dans une table distante  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> Insertion de lignes dans une table distante  
  Les exemples présentés dans cette section montrent comment insérer des lignes dans une table cible distante en utilisant un [serveur lié](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou une [fonction d’ensemble de lignes](../../t-sql/functions/rowset-functions-transact-sql.md) pour référencer la table distante.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Insertion de données dans une table distante en utilisant un serveur lié  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> Chargement en masse de données à partir de tables ou de fichiers de données  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> Chargement en masse de données à partir de tables ou de fichiers de données  
  Les exemples fournis dans cette section présentent deux méthodes permettant de charger en masse des données dans une table en utilisant l'instruction INSERT.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Insertion de données dans un segment de mémoire avec une journalisation minimale  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> Remplacement du comportement par défaut de l’optimiseur de requête à l’aide d’indicateurs  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Remplacement du comportement par défaut de l’optimiseur de requête à l’aide d’indicateurs  
  Les exemples présentés dans cette section montrent comment utiliser des [indicateurs de table](../../t-sql/queries/hints-transact-sql-table.md) pour remplacer temporairement le comportement par défaut de l’optimiseur de requête lors du traitement de l’instruction INSERT.  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> Capture des résultats de l’instruction INSERT  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> Capture des résultats de l’instruction INSERT  
  Les exemples présentés dans cette section montrent comment utiliser la [clause OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) pour retourner des informations à partir de chaque ligne affectée par une instruction INSERT, ou des expressions basées sur ces lignes. Ces résultats peuvent être retournés à l'application en cours de traitement afin d'être utilisés notamment avec des messages de confirmation, des opérations d'archivage et d'autres spécifications d'application similaires.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Utilisation de OUTPUT avec une instruction INSERT  

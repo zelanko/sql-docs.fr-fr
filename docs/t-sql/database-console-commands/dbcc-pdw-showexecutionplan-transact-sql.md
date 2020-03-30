@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68809839"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -26,7 +26,7 @@ Affiche le plan d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 Une fois les problèmes de performances des requêtes compris pour les requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP exécutées sur les nœuds de calcul, il existe plusieurs façons d’améliorer les performances. Les méthodes possibles pour améliorer les performances des requêtes sur les nœuds de calcul incluent la création de statistiques multicolonnes, la création d’index non-cluster et l’utilisation d’indicateurs de requête.
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
 Syntaxe pour Azure SQL Data Warehouse :
@@ -57,7 +57,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 Nécessite l’autorisation VIEW-SERVER-STATE sur l’appliance.
   
-## <a name="examples-includesssdwincludessssdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+## <a name="examples-sssdw"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
 ### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>R. Syntaxe de base DBCC PDW_SHOWEXECUTIONPLAN  
  Lors de l’exécution sur une instance de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], modifiez la requête ci-dessus pour sélectionner aussi l’argument distribution_id.  
@@ -75,7 +75,7 @@ Vous retournez ainsi l’identificateur spid pour chaque distribution activement
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. Syntaxe de base DBCC PDW_SHOWEXECUTIONPLAN  
  La requête dont l’exécution est trop longue exécute une opération de plan de requête DMS ou SQL.  
   

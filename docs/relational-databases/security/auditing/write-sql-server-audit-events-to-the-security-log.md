@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095100"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Écrire des événements d'audit SQL Server dans le journal de sécurité  
@@ -41,17 +41,17 @@ La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../..
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sera pas en mesure de détecter que le système n'est pas capable d'enregistrer les événements dans le journal de sécurité, provoquant ainsi la perte potentielle d'événements d'audit  
 -   Une fois le journal de sécurité reconfiguré par l'administrateur, le comportement de consignation retourne à la normale.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Les administrateurs de l'ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent savoir que les paramètres locaux du journal de sécurité peuvent être remplacés par une stratégie de domaine. Dans ce cas, la stratégie de domaine peut remplacer le paramètre de sous-catégorie (**auditpol /get /subcategory:"généré par application"** ). Cela peut affecter la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à consigner des événements sans avoir aucun moyen de détecter que les événements que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] essaie d'auditer ne vont pas être consignés.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez être un administrateur Windows pour configurer ces paramètres.  
   
-##  <a name="auditpolAccess"></a> Pour configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil auditpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a> Pour configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil auditpol  
   
 1.  Ouvrez une invite de commandes avec des autorisations d'administrateur.  
   
@@ -67,7 +67,7 @@ La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../..
   
 3.  Fermez la fenêtre d'invite de commandes.  
   
-##  <a name="secpolAccess"></a> Pour octroyer l'autorisation Générer des audits de sécurité à un compte à l'aide de l'outil secpol  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> Pour octroyer l'autorisation Générer des audits de sécurité à un compte à l'aide de l'outil secpol  
   
 1.  Sur un système d'exploitation Windows, dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
@@ -87,7 +87,7 @@ La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../..
   
 9. Redémarrez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour activer ce paramètre.  
   
-##  <a name="secpolPermission"></a> Pour configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil secpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> Pour configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil secpol  
   
 1.  Si la version du système d'exploitation est antérieure à [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   

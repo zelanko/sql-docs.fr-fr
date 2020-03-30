@@ -21,17 +21,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68702833"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Recherche de mots dans le voisinage d'autres mots avec NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Vous pouvez utiliser le *terme de proximité* **NEAR** dans un prédicat [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou une fonction [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions à proximité les uns des autres. 
   
-##  <a name="Custom_NEAR"></a> Vue d’ensemble de NEAR  
+##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> Vue d’ensemble de NEAR  
 **NEAR** offre les fonctionnalités suivantes :  
 -   Vous pouvez spécifier le nombre maximal de termes de non-recherche qui séparent le premier et le dernier terme de recherche.
 
@@ -129,7 +129,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
  Vous ne pouvez pas combiner NEAR avec un terme de génération (ISABOUT ...) ni un terme pondéré (FORMSOF ...).  
   
-##  <a name="Additional_Considerations"></a> Plus d’informations sur les recherches de proximité  
+##  <a name="more-info-about-proximity-searches"></a><a name="Additional_Considerations"></a> Plus d’informations sur les recherches de proximité  
    
 -   Chevauchement des occurrences des termes de recherche  
   

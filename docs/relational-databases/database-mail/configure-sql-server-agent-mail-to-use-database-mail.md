@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095780"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurer la messagerie de l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données
@@ -34,12 +34,12 @@ ms.locfileid: "74095780"
   
 -   [Tâches de suivi](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
   > [!NOTE]
   > L’agent SQL sur Managed Instance est toujours configuré pour utiliser Database Mail. Ce contenu ne s’applique donc pas à Managed Instance. Dans Managed Instance, vous devez avoir un profil appelé **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** pour lier l’agent SQL à Database Mail. 
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   [Activer la messagerie de base de données](../../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74095780"
   
 -   Définir le profil comme profil par défaut pour la base de données **msdb** .  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L'utilisateur qui crée les comptes de profils et exécute des procédures stockées doit être membre du rôle serveur fixe sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour configurer l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données**  
   
 -   Dans l'Explorateur d'objets, développez une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -71,7 +71,7 @@ ms.locfileid: "74095780"
   
 -   Redémarrez SQL Server Agent.  
   
-##  <a name="Follow_Up"></a> Tâches de suivi  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> Tâches de suivi  
  Les tâches suivantes sont nécessaires pour terminer la configuration de l'Agent pour envoyer des alertes et des notifications.  
   
 -   [Alertes](../../ssms/agent/alerts.md)  

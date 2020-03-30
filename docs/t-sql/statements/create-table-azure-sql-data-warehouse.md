@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729865"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -106,7 +106,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *column_name*  
  Nom d’une colonne de table.
 
-### <a name="ColumnOptions"></a> Options de colonne
+### <a name="column-options"></a><a name="ColumnOptions"></a> Options de colonne
 
  `COLLATE` *Windows_collation_name*  
  Spécifie le classement de l’expression. Le classement doit correspondre à l’un des classements Windows pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des classements Windows pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Nom de classement Windows (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
@@ -122,7 +122,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  | *constraint_name* | Nom facultatif de la contrainte. Le nom de contrainte est unique dans la base de données. Le nom peut être réutilisé dans d’autres bases de données. |
  | *constant_expression* | Valeur par défaut de la colonne. L’expression doit être une valeur littérale ou une constante. Par exemple, ces expressions constantes sont autorisées : `'CA'`, `4`. Ces expressions constantes sont autorisées : `2+3`, `CURRENT_TIMESTAMP`. |
   
-### <a name="TableOptions"></a> Options de structure de table
+### <a name="table-structure-options"></a><a name="TableOptions"></a> Options de structure de table
 
 Pour obtenir des conseils sur le choix du type de table, consultez [Indexation de tables dans Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
@@ -137,7 +137,7 @@ Stocke la table sous forme d’index cluster columnstore. L’index cluster colu
  
  `LOCATION = USER_DB` Cette fonction est déconseillée. Bien qu’elle soit acceptée du point de vue de la syntaxe, elle n’est plus nécessaire et n’a plus d’effet sur le comportement.   
   
-### <a name="TableDistributionOptions"></a> Options de distribution de table
+### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> Options de distribution de table
 
 Pour savoir comment choisir la meilleure méthode de distribution et comment utiliser les tables distribuées, consultez [Distribution des tables dans Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
@@ -147,7 +147,7 @@ Pour savoir comment choisir la meilleure méthode de distribution et comment uti
 
 `DISTRIBUTION = REPLICATE` Stocke une copie de la table sur chaque nœud de calcul. Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], la table est stockée dans une base de données de distribution sur chaque nœud de calcul. Pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], la table est stockée dans un groupe de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui englobe le nœud de calcul. Il s'agit du comportement par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-### <a name="TablePartitionOptions"></a> Options de partitions de table
+### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Options de partitions de table
 Pour obtenir des conseils sur l’utilisation de partitions de table, consultez [Partitionnement des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
@@ -172,7 +172,7 @@ Les utilisateurs peuvent interroger la colonne **column_store_order_ordinal** da
 
 Pour plus d’informations, consultez [Optimisation des performances avec un index columnstore cluster trié](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci).   
 
-### <a name="DataTypes"></a> Type de données
+### <a name="data-type"></a><a name="DataTypes"></a> Type de données
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] prend en charge les types de données les plus couramment utilisés. Vous trouverez ci-dessous la liste des types de données pris en charge, les détails les concernant, ainsi que leur taille de stockage (en octets). Pour mieux comprendre les types de données et comment les utiliser, consultez [Types de données pour les tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
@@ -356,7 +356,7 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
 <a name="ExamplesColumn"></a>   
 ## <a name="examples-for-columns"></a>Exemples de colonnes
 
-### <a name="ColumnCollation"></a> A. Spécifier un classement de colonne 
+### <a name="a-specify-a-column-collation"></a><a name="ColumnCollation"></a> A. Spécifier un classement de colonne 
  Dans l’exemple suivant, la table `MyTable` est créée avec deux classements de colonne différents. Par défaut, la colonne `mycolumn1` possède le classement par défaut Latin1_General_100_CI_AS_KS_WS. La colonne `mycolumn2` possède le classement Frisian_100_CS_AS.  
   
 ```sql
@@ -368,7 +368,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```  
   
-### <a name="DefaultConstraint"></a> B. Spécifier une contrainte DEFAULT pour une colonne
+### <a name="b-specify-a-default-constraint-for-a-column"></a><a name="DefaultConstraint"></a> B. Spécifier une contrainte DEFAULT pour une colonne
 
  L’exemple suivant illustre la syntaxe à utiliser pour spécifier la valeur par défaut d’une colonne. La colonne colA est assortie d’une contrainte par défaut nommée constraint_colA et d’une valeur par défaut de 0.  
   
@@ -385,7 +385,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Exemples de tables temporaires
 
-### <a name="TemporaryTable"></a> C. Créer une table temporaire locale  
+### <a name="c-create-a-local-temporary-table"></a><a name="TemporaryTable"></a> C. Créer une table temporaire locale  
  Dans l’exemple ci-dessous, une table temporaire locale est créée sous le nom #myTable. La table est spécifiée avec un nom en trois parties, qui commence par #.
   
 ```sql
@@ -406,7 +406,7 @@ WITH
 <a name="ExTableStructure"></a>  
 ## <a name="examples-for-table-structure"></a>Exemples de structure de table
 
-### <a name="ClusteredColumnstoreIndex"></a> D. Créer une table avec un index cluster columnstore  
+### <a name="d-create-a-table-with-a-clustered-columnstore-index"></a><a name="ClusteredColumnstoreIndex"></a> D. Créer une table avec un index cluster columnstore  
  L’exemple suivant crée une table distribuée avec un index cluster columnstore. Chaque distribution est stockée sous forme de columnstore.  
   
  L’index cluster columnstore n’affecte pas la façon dont les données sont distribuées ; les données sont toujours distribuées par ligne. L’index cluster columnstore affecte la façon dont les données sont stockées dans chaque distribution.  
@@ -425,7 +425,7 @@ WITH
 ;  
 ```  
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> E. Créer un index columnstore en cluster ordonné
+### <a name="e-create-an-ordered-clustered-columnstore-index"></a><a name="OrderedClusteredColumnstoreIndex"></a> E. Créer un index columnstore en cluster ordonné
 
 L’exemple suivant montre comment créer un index columnstore en cluster ordonné. L’index est ordonné sur SHIPDATE.
 
@@ -439,7 +439,7 @@ SELECT * FROM ext_Lineitem
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>Exemples de distribution de table
 
-### <a name="RoundRobin"></a> F. Créer une table ROUND_ROBIN  
+### <a name="f-create-a-round_robin-table"></a><a name="RoundRobin"></a> F. Créer une table ROUND_ROBIN  
  L’exemple suivant crée une table ROUND_ROBIN à trois colonnes et aucune partition. Les données sont réparties entre toutes les distributions. La table est créée avec un index cluster columnstore (CLUSTERED COLUMNSTORE INDEX), qui offre de meilleures performances et une meilleure compression de données qu’un segment de mémoire ou un index cluster rowstore.  
   
 ```sql
@@ -452,7 +452,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Créer une table distribuée avec hachage
+### <a name="g-create-a-hash-distributed-table"></a><a name="HashDistributed"></a> G. Créer une table distribuée avec hachage
 
  L’exemple ci-dessous crée la même table que l’exemple précédent. Cependant, pour cette table, les lignes sont distribuées (dans la colonne `id`) et non réparties de façon aléatoire comme une table ROUND_ROBIN. La table est créée avec un index cluster columnstore (CLUSTERED COLUMNSTORE INDEX), qui offre de meilleures performances et une meilleure compression de données qu’un segment de mémoire ou un index cluster rowstore.  
   
@@ -470,7 +470,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> H. Créer une table répliquée  
+### <a name="h-create-a-replicated-table"></a><a name="Replicated"></a> H. Créer une table répliquée  
  L’exemple suivant crée une table répliquée semblable à celles des exemples précédents. Les tables répliquées sont copiées en totalité dans chaque nœud de calcul. De ce fait, le déplacement de données est réduit pour les requêtes. Cet exemple est créé avec un CLUSTERED INDEX, qui offre une meilleure compression des données qu’un segment de mémoire. Un segment de mémoire peut ne pas contenir suffisamment de lignes pour obtenir une bonne compression CLUSTERED COLUMNSTORE INDEX.  
   
 ```sql
@@ -490,7 +490,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Exemples de partitions de table
 
-###  <a name="PartitionedTable"></a> I. Créer une table partitionnée
+###  <a name="i-create-a-partitioned-table"></a><a name="PartitionedTable"></a> I. Créer une table partitionnée
 
  L’exemple suivant crée la même table que dans l’exemple A, mais avec en plus un partitionnement RANGE LEFT dans la colonne `id`. Quatre valeurs limites de partition y sont spécifiées, ce qui donne au total cinq partitions.  
   
@@ -512,20 +512,20 @@ WITH
  Dans cet exemple, les données seront triées dans les partitions suivantes :  
   
 - Partition 1 : col <= 10
-- Partition 2 : 10 < col <= 20
-- Partition 3 : 20 < col <= 30
-- Partition 4 : 30 < col <= 40
-- Partition 5 : 40 < col  
+- Partition 2 : 10 < col <= 20
+- Partition 3 : 20 < col <= 30
+- Partition 4 : 30 < col <= 40
+- Partition 5 : 40 < col  
   
  Si cette même table était partitionnée avec RANGE RIGHT au lieu de RANGE LEFT (par défaut), les données seraient triées dans les partitions suivantes :  
   
 - Partition 1 : col < 10  
-- Partition 2 : 10 <= col < 20
-- Partition 3 : 20 <= col < 30
-- Partition 4 : 30 <= col < 40
-- Partition 5 : 40 <= col  
+- Partition 2 : 10 <= col < 20
+- Partition 3 : 20 <= col < 30
+- Partition 4 : 30 <= col < 40
+- Partition 5 : 40 <= col  
   
-### <a name="OnePartition"></a> J. Créer une table partitionnée à une partition
+### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. Créer une table partitionnée à une partition
 
  L’exemple suivant crée une table partitionnée à une partition. Aucune valeur limite n’y étant spécifiée, elle contient une seule partition.  
   
@@ -542,7 +542,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> K. Créer une table avec un partitionnement par date
+### <a name="k-create-a-table-with-date-partitioning"></a><a name="DatePartition"></a> K. Créer une table avec un partitionnement par date
 
  L’exemple suivant crée une table sous le nom `myTable`, avec un partitionnement dans une colonne `date`. Comme RANGE RIGHT est utilisé et que les valeurs limites sont des dates, il place un mois de données dans chaque partition.  
   

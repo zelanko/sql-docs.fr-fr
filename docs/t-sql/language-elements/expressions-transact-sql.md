@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70978598"
 ---
 # <a name="expressions-transact-sql"></a>Expressions (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70978598"
 
   Combinaison de symboles et d'opérateurs que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] évalue pour obtenir une seule valeur. Les expressions simples peuvent être une seule constante, variable, colonne ou fonction scalaire. Les opérateurs peuvent être utilisés pour associer plusieurs expressions simples en une expression complexe.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -98,7 +98,7 @@ ms.locfileid: "70978598"
 ## <a name="expression-results"></a>Résultats des expressions  
  Pour une expression simple composée d'une seule constante ou variable ou d'une seule fonction scalaire ou nom de colonne : les type de données, classement, précision, échelle et valeur de l'expression sont ceux de l'élément référencé.  
   
- Quand deux expressions sont combinées avec des opérateurs logiques ou de comparaison, il en résulte un type de données booléen ayant l’une des trois valeurs suivantes : TRUE, FALSE ou UNKNOWN. Pour plus d’informations sur les types de données booléens, consultez [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
+ Lorsque deux expressions sont combinées avec des opérateurs logiques ou de comparaison, il en résulte un type de données booléen ayant l'une des trois valeurs suivantes : TRUE, FALSE ou UNKNOWN. Pour plus d’informations sur les types de données booléens, consultez [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
   
  Lorsque deux expressions sont combinées avec des opérateurs arithmétiques, de niveau bit ou de chaîne de caractères, l'opérateur détermine le type de donnée du résultat.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70978598"
   
  Le classement de toute expression qui s'évalue à une chaîne de caractères est défini d'après les règles de priorité des classements. Pour plus d’informations, consultez [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- Dans un langage de programmation tel que C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], une expression s’évalue toujours à un résultat unique. Cette règle varie pour les expressions dans une liste de sélection [!INCLUDE[tsql](../../includes/tsql-md.md)] : l’expression est évaluée individuellement pour chaque ligne dans l’ensemble de résultats. Une même expression peut avoir une valeur différente dans chaque ligne du jeu de résultats, mais chaque ligne n'a qu'une seule valeur pour l'expression. Par exemple, dans l'instruction `SELECT` suivante, `ProductID` et `1+2` dans la liste de sélection sont tous deux des expressions :  
+ Dans un langage de programmation tel que C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], une expression s’évalue toujours à un résultat unique. Cette règle varie pour les expressions dans une liste de sélection [!INCLUDE[tsql](../../includes/tsql-md.md)] : l'expression est évaluée individuellement pour chaque ligne dans le jeu de résultats. Une même expression peut avoir une valeur différente dans chaque ligne du jeu de résultats, mais chaque ligne n'a qu'une seule valeur pour l'expression. Par exemple, dans l'instruction `SELECT` suivante, `ProductID` et `1+2` dans la liste de sélection sont tous deux des expressions :  
   
 ```  
 USE AdventureWorks2012;  

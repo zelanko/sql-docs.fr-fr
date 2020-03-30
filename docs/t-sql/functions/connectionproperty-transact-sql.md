@@ -18,10 +18,10 @@ ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 53b447b2a13c68c2c87536bc3c1f14f9efd74cfd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132088"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68132088"
 
 Pour une demande arrivant sur le serveur, cette fonction retourne des informations sur les propriétés de la connexion unique qui prend en charge cette demande.
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

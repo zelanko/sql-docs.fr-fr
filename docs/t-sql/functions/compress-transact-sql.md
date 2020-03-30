@@ -16,10 +16,10 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67943120"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "67943120"
 
 Cette fonction compresse l’expression d’entrée à l’aide de l’algorithme GZIP. La fonction retourne un tableau d’octets de type **varbinary(max)** .
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

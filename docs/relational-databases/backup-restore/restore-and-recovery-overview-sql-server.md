@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288573"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288573"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La sauvegarde et la restauration fonctionnent sur tous les systèmes d’exploitation pris en charge. Pour plus d’informations sur les systèmes d’exploitation pris en charge, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-##  <a name="RestoreScenariosOv"></a> Présentation des scénarios de restauration  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> Présentation des scénarios de restauration  
  Un *scénario de restauration* dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est le processus de restauration des données à partir d'une ou de plusieurs sauvegardes, puis de récupération de la base de données. Les scénarios de restauration pris en charge dépendent du mode de récupération de la base de données et de l'édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le tableau suivant présente les scénarios de restauration possibles pris en charge pour différents modes de récupération.  
@@ -85,7 +85,7 @@ Pour effectuer une restauration de base de données, [!INCLUDE[ssde_md](../../in
   
 -   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la restauration des pages ou des fichiers peut permettre à d'autres données de la base de données de rester en ligne pendant l'opération de restauration.  
 
-## <a name="TlogAndRecovery"></a> Récupération et journal des transactions
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Récupération et journal des transactions
 Pour la plupart des scénarios de restauration, il est nécessaire d’appliquer une sauvegarde du journal des transactions et de permettre à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’exécuter le **processus de récupération** pour que la base de données soit mise en ligne. La récupération est le processus que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise pour chaque base de données pour démarrer dans un état cohérent (ou propre) en termes de transaction.
 
 En cas de défaillance ou autre arrêt non sain, il peut arriver que certaines modifications effectuées dans les bases de données n’aient jamais pu être écrites de la mémoire tampon vers les fichiers de données ou proviennent de transactions incomplètes dans les fichiers de données. Lorsqu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarrée, elle exécute une récupération de chaque base de données, ce qui comporte trois phases, en fonction du dernier [point de contrôle de base de données](../../relational-databases/logs/database-checkpoints-sql-server.md) :
@@ -105,7 +105,7 @@ Les informations sur la progression de chaque phase de la récupération de la b
 > [!NOTE]
 > Pour optimiser la disponibilité des bases de données dans un environnement d’entreprise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Édition Entreprise peut mettre une base de données en ligne après la phase de restauration, tandis que la phase d’annulation est toujours en cours d’exécution. Cela s’appelle la récupération rapide.
 
-##  <a name="RMsAndSupportedRestoreOps"></a> Modes de récupération et opérations de restauration prises en charge  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> Modes de récupération et opérations de restauration prises en charge  
  Les opérations de restauration disponibles pour une base de données dépendent de son mode de récupération. Le tableau suivant présente le niveau de prise en charge des modes de récupération dans un scénario de restauration donné.  
   
 |Opération de restauration|Mode de restauration complète|Mode de récupération utilisant les journaux de transactions|Mode de récupération simple|  
@@ -123,7 +123,7 @@ Les informations sur la progression de chaque phase de la récupération de la b
 > [!IMPORTANT]  
 > Quel que soit le mode de récupération d'une base de données, une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être restaurée vers une version de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] antérieure à la version qui a créé la sauvegarde.  
   
-## <a name="RMsimpleScenarios"></a> Restrictions de restauration en mode de récupération simple  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> Restrictions de restauration en mode de récupération simple  
  Le mode de récupération simple impose les restrictions suivantes aux opérations de restauration :  
   
 -   La restauration de fichiers et la restauration fragmentaire ne s'adressent qu'aux groupes de fichiers secondaires en lecture seule. Pour plus d’informations sur ces scénarios de restauration, consultez [Restaurations de fichiers &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md) et [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
@@ -137,7 +137,7 @@ Les informations sur la progression de chaque phase de la récupération de la b
 > [!IMPORTANT]  
 > Quel que soit le mode de récupération d'une base de données, une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être restaurée par une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à la version qui a créé la sauvegarde.  
   
-##  <a name="RMblogRestore"></a> Restauration en mode de récupération utilisant les journaux de transactions  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> Restauration en mode de récupération utilisant les journaux de transactions  
  Cette section traite de considérations relatives à la restauration qui sont propres au mode de récupération utilisant les journaux de transactions et qui vient en complément d'une utilisation exclusive du mode de restauration complète.  
   
 > [!NOTE]  
@@ -164,20 +164,20 @@ Les informations sur la progression de chaque phase de la récupération de la b
   
  Pour plus d’informations sur l’exécution d’une restauration en ligne, consultez [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
-##  <a name="DRA"></a> Assistant de récupération de base de données (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Assistant de récupération de base de données (SQL Server Management Studio)  
 L'Assistant Récupération de base de données permet de créer des plans de restauration qui implémentent des séquences de restauration correctes et optimales. De nombreux problèmes connus, liés à la restauration de la base de données, et améliorations demandées par les clients ont été pris en considération. Les améliorations importantes introduites par l'Assistant Récupération de base de données sont les suivantes :  
   
--   **Algorithme de plan de restauration :**  l’algorithme utilisé pour créer des plans de restauration a été amélioré considérablement, en particulier pour les scénarios de restauration complexes. Nombre de cas limites, notamment la réplication de scénarios dans les restaurations ponctuelles, sont gérés plus efficacement que dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algorithme de plan de restauration :**  l’algorithme utilisé pour créer des plans de restauration a été amélioré considérablement, en particulier pour les scénarios de restauration complexes. Nombre de cas limites, notamment la réplication de scénarios dans les restaurations ponctuelles, sont gérés plus efficacement que dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Restaurations dans le temps :**  l’Assistant Récupération de base de données simplifie considérablement la restauration d’une base de données à un moment donné. Une chronologie visuelle de sauvegarde améliore considérablement la prise en charge des restaurations dans le temps. La chronologie visuelle vous permet d'identifier un point possible comme point de récupération cible pour restaurer une base de données. La chronologie permet de parcourir un chemin de récupération ramifié (un chemin d'accès qui couvre les branchements de récupération). Un plan spécifique de restauration dans le temps inclut automatiquement les sauvegardes pertinentes pour la restauration à un point cible (date et heure). Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Restaurations dans le temps :**  l’Assistant Récupération de base de données simplifie considérablement la restauration d’une base de données à un moment donné. Une chronologie visuelle de sauvegarde améliore considérablement la prise en charge des restaurations dans le temps. La chronologie visuelle vous permet d'identifier un point possible comme point de récupération cible pour restaurer une base de données. La chronologie permet de parcourir un chemin de récupération ramifié (un chemin d'accès qui couvre les branchements de récupération). Un plan spécifique de restauration dans le temps inclut automatiquement les sauvegardes pertinentes pour la restauration à un point cible (date et heure). Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 Pour plus d'informations sur l'Assistant Récupération de base de données, consultez les blogs de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants :  
   
--   [Assistant Récupération : introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Assistant Récupération : introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> Récupération de base de données accélérée
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> Récupération de base de données accélérée
 [La récupération de base de données accélérée](/azure/sql-database/sql-database-accelerated-database-recovery/) est disponible dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La récupération de base de données accélérée améliore considérablement la disponibilité des bases de données, notamment en présence de transactions durables, en redéfinissant le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [processus de récupération](#TlogAndRecovery). Une base de données pour laquelle la récupération de base de données accélérée a été activée termine le processus de récupération beaucoup plus rapidement après un basculement ou tout autre arrêt qui n’est pas propre. Lorsqu’elle est activée, la récupération de base de données accélérée effectue également la restauration des transactions longues annulées beaucoup plus rapidement.
 
 La récupération de base de données accélérée peut être activée par base de données sur [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] à l’aide de la syntaxe suivante :
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > La récupération de base de données accélérée est activée par défaut sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-## <a name="RelatedContent"></a> Voir aussi  
+## <a name="see-also"></a><a name="RelatedContent"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

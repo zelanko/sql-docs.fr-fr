@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74564791"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
@@ -38,9 +38,9 @@ ms.locfileid: "74564791"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Quand une procédure est compilée pour la première fois ou recompilée, son plan de requête est optimisé pour l’état actuel de la base de données et de ses objets. Si une base de données subit des modifications significatives au niveau de ses données ou de sa structure, la recompilation de la procédure a pour effet de mettre à jour et d’optimiser son plan de requête en fonction de ces modifications. Les performances de traitement de la procédure peuvent s’en trouver améliorées.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "74564791"
   
 -   Si certaines requêtes d'une procédure utilisent régulièrement des valeurs atypiques ou temporaires, les performances des procédures peuvent être améliorées en utilisant l'indicateur de requête RECOMPILE à l'intérieur de ces requêtes. Étant donné que seules les requêtes utilisant l'indicateur de requête seront recompilées au lieu de la procédure complète, le comportement de recompilation de l'instruction de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est reproduit. Cependant, en plus d'utiliser les valeurs des paramètres actuels de la procédure, l'indicateur de requête RECOMPILE utilise également les valeurs des variables locales à l'intérieur de la procédure stockée lorsque vous compilez l'instruction. Pour plus d’informations, consultez [Indicateur de requête (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  **WITH RECOMPILE**  
  Si cette option est utilisée lorsque la définition de la procédure est créée, elle nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74564791"
  Procédure stockée système**sp_recompile**  
  Nécessite l'autorisation ALTER pour la procédure spécifiée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
 
 1. Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

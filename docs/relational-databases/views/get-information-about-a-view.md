@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909890"
 ---
 # <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
@@ -48,14 +48,14 @@ ms.locfileid: "72909890"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L'utilisation de `sp_helptext` pour retourner la définition d'une vue nécessite l'appartenance au rôle **public** . L'utilisation de `sys.sql_expression_dependencies` pour rechercher toutes les dépendances d'une vue nécessite l'autorisation VIEW DEFINITION sur la base de données et l'autorisation SELECT sur `sys.sql_expression_dependencies` pour la base de données. Les définitions d'objets système, telles que celles retournées dans SELECT OBJECT_DEFINITION, sont visibles publiquement.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obtenir les propriétés de vue à l'aide de l'Explorateur d'objets  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72909890"
   
 4.  Sélectionnez **Objets dont dépend [nom de la vue]** pour afficher les objets référencés par la vue.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Pour obtenir la définition et les propriétés d'une vue  
   

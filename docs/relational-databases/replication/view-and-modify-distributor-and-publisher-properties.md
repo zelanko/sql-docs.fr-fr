@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286936"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Afficher et modifier les propriétés d'un serveur de distribution ou d'un serveur de publication
@@ -44,16 +44,16 @@ ms.locfileid: "76286936"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Pour les serveurs de publication exécutant des versions antérieures à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], un utilisateur avec le rôle serveur fixe **sysadmin** peut enregistrer des Abonnés dans la page **Abonnés**. À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], il n'est plus nécessaire d'inscrire de manière explicite les abonnés pour la réplication.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Pour afficher et modifier les propriétés du serveur de distribution  
   
@@ -85,7 +85,7 @@ ms.locfileid: "76286936"
   
 4.  Modifiez les propriétés si nécessaire, puis cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les propriétés du serveur de publication et du serveur de distribution peuvent être affichées par programme en utilisant des procédures stockées de réplication.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>Pour afficher les propriétés du serveur de distribution et de la base de données de distribution  
@@ -107,7 +107,7 @@ ms.locfileid: "76286936"
   
 4.  Sur le serveur de distribution, exécutez [sp_changedistpublisher](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) pour modifier les propriétés d'un serveur de publication à l'aide du serveur de distribution.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  L'exemple de script [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant retourne des informations sur le serveur de distribution et sur la base de données de distribution.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_1.sql)]  
@@ -125,7 +125,7 @@ ms.locfileid: "76286936"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_5.sql)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Pour afficher et modifier les propriétés du serveur de distribution  
   
@@ -190,7 +190,7 @@ ms.locfileid: "76286936"
   
     5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passez la nouvelle valeur de mot de passe spécifiée à l'étape 5 pour le paramètre *password* .  
   
-###  <a name="PShellExample"></a> Exemple (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemple (RMO)  
  Cet exemple montre comment modifier les propriétés du serveur de distribution et de la base de données de distribution.  
   
 > [!IMPORTANT]  

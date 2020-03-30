@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056263"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche (SQL Server)
@@ -53,7 +53,7 @@ Pour afficher la liste des langues prises en charge par la recherche en texte in
 SELECT * FROM sys.fulltext_languages
 ```
 
-##  <a name="register"></a> Obtenir la liste des analyseurs lexicaux inscrits
+##  <a name="get-the-list-of-registered-word-breakers"></a><a name="register"></a> Obtenir la liste des analyseurs lexicaux inscrits
 
 Pour que la recherche en texte intégral utilise les analyseurs lexicaux pour une langue, ceux-ci doivent être inscrits. Pour les analyseurs lexicaux inscrits, les ressources linguistiques associées (générateurs de formes dérivées, mots parasites [mots vides] et fichiers de dictionnaire des synonymes) deviennent également disponibles pour des opérations d’indexation et d’interrogation de texte intégral.
 
@@ -69,7 +69,7 @@ Pour plus d’informations et pour obtenir des options supplémentaires, consult
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>Si vous ajoutez ou supprimez un analyseur lexical  
 Si vous ajoutez, supprimez ou modifiez un analyseur lexical, vous devez actualiser la liste des identificateurs de paramètres régionaux Microsoft Windows pris en charge pour l'indexation et les requêtes de texte intégral. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="default"></a> Définir l’option de langue de texte intégral par défaut  
+##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> Définir l’option de langue de texte intégral par défaut  
  Dans le cas d’une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit l’option **default full-text** en fonction de la langue du serveur s’il existe une correspondance appropriée. Pour une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’anglais est la **langue de texte intégral par défaut** .  
   
  Quand vous créez ou modifiez un index de recherche en texte intégral, vous pouvez spécifier une langue différente pour chaque colonne indexée de texte intégral. Si aucune langue n’est spécifiée pour une colonne, la valeur par défaut est déterminée par l’option de configuration **Langue de texte intégral par défaut**.  
@@ -77,7 +77,7 @@ Si vous ajoutez, supprimez ou modifiez un analyseur lexical, vous devez actualis
 > [!NOTE]  
 >  Toutes les colonnes répertoriées dans une clause de fonction de requête de texte intégral doivent utiliser la même langue, sauf si l'option LANGUAGE est spécifiée dans la requête. La langue utilisée pour la colonne d’index de recherche en texte intégral faisant l’objet d’une requête détermine l’analyse linguistique menée sur les arguments des prédicats de requête de texte intégral ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) et [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) et des fonctions de requête de texte intégral ([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) et [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)).  
   
-##  <a name="lang"></a> Choisir la langue pour une colonne indexée  
+##  <a name="choose-the-language-for-an-indexed-column"></a><a name="lang"></a> Choisir la langue pour une colonne indexée  
  Lors de la création d'un index de recherche en texte intégral, nous vous recommandons de spécifier une langue pour chaque colonne indexée. Si tel n'est pas le cas, la langue par défaut du système est utilisée. La langue d'une colonne détermine l'analyseur lexical et le générateur de formes dérivées utilisés pour indexer cette colonne. En outre, le fichier de dictionnaire des synonymes de cette langue est utilisé par les requêtes de texte intégral sur la colonne.  
   
  Plusieurs aspects doivent être pris en considération pour le choix de la langue d'une colonne lors de la création d'un index de recherche en texte intégral. Ces aspects sont liés à la façon dont les unités lexicales de votre texte sont créées et à la façon dont ce texte est ensuite indexé par le Moteur d'indexation et de recherche en texte intégral. Pour plus d’informations, consultez [Choisir une langue lors de la création d’un index de recherche en texte intégral](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
@@ -90,7 +90,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 Pour plus d’informations et pour obtenir des options supplémentaires, consultez [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
-##  <a name="tshoot"></a> Dépanner les erreurs de délai d’attente de l’analyse lexicale  
+##  <a name="troubleshoot-word-breaking-time-out-errors"></a><a name="tshoot"></a> Dépanner les erreurs de délai d’attente de l’analyse lexicale  
  Une erreur de délai d’attente lors de l’analyse lexicale peut se produire dans un grand nombre de situations. Pour plus d’informations sur ces situations et sur la façon de résoudre le problème correspondant, consultez [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>Informations sur l’erreur MSSQLSERVER_30053
@@ -130,7 +130,7 @@ Pour plus d’informations et pour obtenir des options supplémentaires, consult
 |La configuration du processus de démon de filtre est incorrecte.|Assurez-vous que vous utilisez le mot de passe actuel et qu'une stratégie de domaine n'empêche pas le compte du démon du filtre de se connecter.|  
 |Une charge de traitement de requêtes très importante s'exécute sur l'instance de serveur.|Essayez de réexécuter la requête en condition de charge moins élevée.|  
 
-##  <a name="impact"></a> Comprendre l’impact des analyseurs lexicaux mis à jour  
+##  <a name="understand-the-impact-of-updated-word-breakers"></a><a name="impact"></a> Comprendre l’impact des analyseurs lexicaux mis à jour  
  Chaque version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut généralement de nouveaux analyseurs lexicaux qui possèdent de meilleures règles linguistiques et sont plus précis que les anciens analyseurs lexicaux. Les nouveaux analyseurs lexicaux peuvent se comporter légèrement différemment des analyseurs lexicaux dans les index de recherche en texte intégral qui ont été importés à partir de versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 Cela est significatif si un catalogue de texte intégral a été importé lorsqu'une base de données a été mise à niveau vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une ou plusieurs langues utilisées par les index de recherche en texte intégral dans le catalogue de texte intégral peuvent maintenant être associées aux nouveaux analyseurs lexicaux. Pour plus d’informations, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  

@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981785"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73981785"
 
   Retourne le nom de connexion associé à un numéro d'identification de sécurité (SID).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
  Lorsqu'il est appelé sans argument, SUSER_SNAME retourne le nom du contexte de sécurité actuel. Lorsqu'il est appelé sans argument à l'intérieur d'un traitement qui a changé de contexte en utilisant EXECUTE AS, SUSER_SNAME retourne le nom du contexte qui a fait l'objet d'un emprunt d'identité. Lorsqu'il est appelé à partir d'un contexte faisant l'objet d'un emprunt d'identité, ORIGINAL_LOGIN retourne le nom du contexte d'origine.  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-remarks"></a>Notes concernant [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+## <a name="sssdsfull-remarks"></a>Notes concernant [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
  SUSER_NAME retourne toujours le nom de connexion pour le contexte de sécurité actuel.  
   
  L'instruction SUSER_SNAME ne prend pas en charge l'exécution en utilisant un contexte de sécurité représenté par la clause EXECUTE AS.  
@@ -127,7 +127,7 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-suser_sname"></a>E. Utilisation de SUSER_SNAME  
  Cet exemple retourne le nom de connexion correspondant au numéro d'identification de sécurité portant la valeur `0x01`.  

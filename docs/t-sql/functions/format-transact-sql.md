@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70155797"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70155797"
 
 Retourne une valeur mise en forme avec la culture facultative et le format spécifiés. Utilisez la fonction FORMAT pour la mise en forme comme chaînes de valeurs de date/heure et de valeurs numériques compatibles avec les paramètres régionaux. Pour les conversions de type de données général, continuez à utiliser CAST ou CONVERT.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -199,7 +199,7 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
  (5 row(s) affected)  
 ```  
   
-### <a name="ExampleD"></a> D. FORMAT avec types de données time
+### <a name="d-format-with-time-data-types"></a><a name="ExampleD"></a> D. FORMAT avec types de données time
 
  FORMAT retourne la valeur NULL dans ces cas, car `.` et `:` ne sont pas échappés.  
   

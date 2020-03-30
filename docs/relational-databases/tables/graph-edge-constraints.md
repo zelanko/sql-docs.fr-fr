@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873883"
 ---
 # <a name="edge-constraints"></a>Contraintes d’arête
@@ -29,7 +29,7 @@ ms.locfileid: "70873883"
 
 Les contraintes Edge peuvent être utilisées pour appliquer l’intégrité des données et une sémantique spécifique sur les tables Edge dans une base de données de graphe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Connection"></a> Contraintes d’arête
+## <a name="edge-constraints"></a><a name="Connection"></a> Contraintes d’arête
 
 Dans la première version des fonctionnalités de graphe, les tables d’arêtes n’appliquaient rien pour les points de terminaison de l’arête. Autrement dit, une arête dans une base de données de graphe pouvait connecter n’importe quel nœud à n’importe quel autre nœud, quel que soit leur type.
 

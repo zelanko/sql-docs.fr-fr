@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982017"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982017"
 
   Spécifie un ensemble d’options applicables à un index qui fait partie d’une définition de contrainte créée à l’aide d’[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -219,9 +219,9 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n*
   
 \<partition_number_expression> peut être spécifié des manières suivantes :  
   
--   Spécifiez le numéro d'une partition, par exemple : ON PARTITIONS (2).  
--   Spécifiez des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : ON PARTITIONS (1, 5).  
--   Spécifiez à la fois des plages et des partitions individuelles, par exemple : ON PARTITIONS (2, 4, 6 TO 8).  
+-   Spécifiez le numéro d’une partition, par exemple : ON PARTITIONS (2).  
+-   Spécifiez des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : ON PARTITIONS (1, 5).  
+-   Spécifiez à la fois des plages et des partitions individuelles, par exemple ON PARTITIONS (2, 4, 6 TO 8).  
   
 \<range> peut être spécifié sous la forme de numéros de partitions séparés par le mot TO, par exemple : ON PARTITIONS (6 TO 8).  
   

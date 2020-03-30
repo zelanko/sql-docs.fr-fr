@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76315619"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "76315619"
 
   Permet, lorsqu'aucune valeur par défaut n'est spécifiée, d'insérer dans la table une valeur système à la place de la connexion actuelle.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ SYSTEM_USER
   
  Si le nom d'utilisateur et le nom de connexion sont différents, SYSTEM_USER retourne le nom de connexion.  
   
- Si l’utilisateur actuel s’est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’authentification Windows, SYSTEM_USER retourne le nom d’identification de la connexion Windows, sous la forme suivante : *DOMAIN*\\*nom_connexion_utilisateur*. Toutefois, s'il s'est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'authentification SQL Server, SYSTEM_USER retourne le nom d'identification de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple `WillisJo` si l'utilisateur s'est connecté en tant que `WillisJo`.  
+ Si l’utilisateur actuel s’est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’authentification Windows, SYSTEM_USER renvoie le nom d’identification de la connexion Windows sous la forme : *DOMAINE*\\*nom_connexion_utilisateur*. Toutefois, s'il s'est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'authentification SQL Server, SYSTEM_USER retourne le nom d'identification de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple `WillisJo` si l'utilisateur s'est connecté en tant que `WillisJo`.  
   
  SYSTEM_USER retourne le nom du contexte qui s'exécute actuellement. Si l'instruction EXECUTE AS a été utilisée pour changer de contexte, SYSTEM_USER retourne le nom du contexte emprunté.  
 
@@ -129,9 +129,9 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C : Utilisation de SYSTEM_USER pour retourner le nom d'utilisateur système actuel  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C. Utilisation de SYSTEM_USER pour renvoyer le nom d’utilisateur système actuel  
  L’exemple suivant renvoie la valeur actuelle de `SYSTEM_USER`.  
   
 ```  

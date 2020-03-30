@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048750"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Créer, construire et interroger des instances geography
@@ -27,9 +27,9 @@ ms.locfileid: "68048750"
   
  Le type **geography** est prédéfini et disponible dans chaque base de données. Vous pouvez créer des colonnes de table de type **geography** et opérer sur les données **geography** comme vous le feriez avec d’autres types fournis par le système.  
   
-##  <a name="creating"></a> Création ou construction d'une nouvelle instance geography  
+##  <a name="creating-or-constructing-a-new-geography-instance"></a><a name="creating"></a> Création ou construction d'une nouvelle instance geography  
   
-###  <a name="existing"></a> Création d'une nouvelle instance geography à partir d'une instance existante  
+###  <a name="creating-a-new-geography-instance-from-an-existing-instance"></a><a name="existing"></a> Création d'une nouvelle instance geography à partir d'une instance existante  
  Le type de données **geography** fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour créer des instances **geography** basées sur des instances existantes.  
   
  **Pour créer une mémoire tampon autour d'une géographie**  
@@ -47,7 +47,7 @@ ms.locfileid: "68048750"
  **Pour créer une géographie à partir des points où une géographie n'en chevauche pas une autre**  
  [STDifference &#40;type de données geography&#41;](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
-###  <a name="wkt"></a> Construction d'une instance geography à partir d'une entrée WKT (Well-Known Text)  
+###  <a name="constructing-a-geography-instance-from-well-known-text-input"></a><a name="wkt"></a> Construction d'une instance geography à partir d'une entrée WKT (Well-Known Text)  
  Le type de données **geography** fournit plusieurs méthodes intégrées qui génèrent une géographie à partir de la représentation WKT OGC (Open Geospatial Consortium). La norme WKT est une chaîne de texte qui autorise l'échange de données geography sous forme textuelle.  
   
  **Pour construire tout type d'instance geography à partir d'une entrée WKT**  
@@ -76,7 +76,7 @@ ms.locfileid: "68048750"
  **Pour construire une instance GeometryCollection geography à partir d'une entrée WKT**  
  [STGeomCollFromText &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeomcollfromtext-geography-data-type.md)  
   
-###  <a name="wkb"></a> Construction d'une instance geography à partir d'une entrée WKB (Well-Known Binary)  
+###  <a name="constructing-a-geography-instance-from-well-known-binary-input"></a><a name="wkb"></a> Construction d'une instance geography à partir d'une entrée WKB (Well-Known Binary)  
  WKB est un format binaire spécifié par l’OGC qui autorise l’échange de données **Geography** entre une application cliente et une base de données SQL. Les fonctions suivantes acceptent l'entrée WKB pour construire des instances geography :  
   
  **Pour construire tout type d'instance geography à partir d'une entrée WKB**  
@@ -103,15 +103,15 @@ ms.locfileid: "68048750"
  **Pour construire une instance GeometryCollection geography à partir d'une entrée WKB**  
  [STGeomCollFromWKB &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type.md)STGeomCollFromWKB (type de données geography)  
   
-###  <a name="gml"></a> Construction d'une instance geography à partir d'une entrée texte GML  
+###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Construction d'une instance geography à partir d'une entrée texte GML  
  Le type de données **geography** fournit une méthode qui génère une instance **geography** à partir de GML, représentation XML d’une instance **geography** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
   
- Pour plus d’informations sur le langage GML, consultez la spécification OGC : [Spécifications OGC, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ Pour plus d’informations sur le langage GML (Geography Markup Language), consultez la spécification OGC : [OGC Specifications, Geography Markup Language (en anglais)](https://go.microsoft.com/fwlink/?LinkId=93629).  
   
  **Pour construire tout type d'instance geography à partir d'une entrée GML**  
  [GeomFromGML &#40;type de données geography&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
   
-##  <a name="returning"></a> Renvoi de données WKT et WKB à partir d'une instance geography  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geography-instance"></a><a name="returning"></a> Renvoi de données WKT et WKB à partir d'une instance geography  
  Vous pouvez utiliser les méthodes suivantes pour retourner le format WKT ou WKB d’une instance **geography** :  
   
  **Pour retourner la représentation WKT d'une instance geography**  
@@ -128,10 +128,10 @@ ms.locfileid: "68048750"
  **Pour retourner une représentation GML d'une instance geography**  
  [AsGml &#40;type de données geography&#41;](../../t-sql/spatial-geography/asgml-geography-data-type.md)  
   
-##  <a name="query"></a> Interrogation des propriétés et des comportements des instances geography  
+##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Interrogation des propriétés et des comportements des instances geography  
  Toutes les instances **geography** ont plusieurs propriétés qui peuvent être extraites par le biais des méthodes fournies par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les rubriques suivantes définissent les propriétés et comportements de types géographiques et les méthodes permettant de les interroger.  
   
-###  <a name="valid"></a> Informations sur la validité, le type d'instance et GeometryCollection  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Informations sur la validité, le type d'instance et GeometryCollection  
  Après avoir construit une instance **geography** , vous pouvez utiliser les méthodes suivantes pour retourner le type d’instance ou, dans le cas d’une instance **GeometryCollection** , pour retourner une instance **geography** spécifique.  
   
  **Pour retourner le type d'instance d'une géographie**  
@@ -146,7 +146,7 @@ ms.locfileid: "68048750"
  **Pour retourner une géographie spécifique dans une instance GeometryCollection**  
  [STGeometryN &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (type de données geography)  
   
-###  <a name="number"></a> Nombre de points  
+###  <a name="number-of-points"></a><a name="number"></a> Nombre de points  
  Toutes les instances **geography** non vides sont constituées de *points*. Ces points représentent les coordonnées de latitude et de longitude du monde sur lequel les instances **geography** sont dessinées. Le type de données **geography** fournit de nombreuses méthodes intégrées pour interroger les points d’une instance.  
   
  **Pour retourner le nombre de points qui composent une instance**  
@@ -161,7 +161,7 @@ ms.locfileid: "68048750"
  **Pour retourner le point de terminaison d'une instance**  
  [STEndpoint &#40;type de données geography&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
-###  <a name="dimension"></a> Dimension  
+###  <a name="dimension"></a><a name="dimension"></a> Dimension  
  Une instance **geography** non vide peut avoir 0, 1 ou 2 dimensions. Les instances **geography** à zéro dimension, telles que **Point** et **MultiPoint**, n’ont aucune longueur ou surface. Les objets unidimensionnels, tels que **LineString, CircularString**, **CompoundCurve**et **MultiLineString**ont une longueur. Les instances à deux dimensions, telles que **Polygon, CurvePolygon**et **MultiPolygon**, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une instance **GeometryCollection** indique la dimension maximale de son contenu.  
   
  **Pour retourner la dimension d'une instance**  
@@ -173,14 +173,14 @@ ms.locfileid: "68048750"
  **Pour retourner la surface d'une instance**  
  [STArea &#40;type de données geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
-###  <a name="empty"></a> Vide  
- Une instance **geography**_vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
+###  <a name="empty"></a><a name="empty"></a> Vide  
+ Une instance _geography_**vide** n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
-###  <a name="closure"></a> Fermeture  
- Une instance **geography**_fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
+###  <a name="closure"></a><a name="closure"></a> Fermeture  
+ Une instance _geography_**fermée** est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "68048750"
  **Pour retourner un anneau spécifié d'une instance géographique**  
  [RingN &#40;type de données geography&#41;](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
-###  <a name="srid"></a> ID de référence spatial (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> ID de référence spatial (SRID)  
  L’ID de référence spatial (SRID) est un identificateur spécifiant dans quel système de coordonnées ellipsoïde l’instance **geography** est représentée. Deux instances **geography** avec différents SRID ne peuvent pas être comparées.  
   
  **Pour définir ou retourner le SRID d'une instance**  
@@ -201,7 +201,7 @@ ms.locfileid: "68048750"
   
  Cette propriété peut être modifiée.  
   
-##  <a name="rel"></a> Détermination de relations entre des instances geography  
+##  <a name="determining-relationships-between-geography-instances"></a><a name="rel"></a> Détermination de relations entre des instances geography  
  Le type de données **geography** fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour déterminer les relations entre deux instances **geography** .  
   
  **Pour déterminer si deux instances comprennent le même ensemble de points**  
@@ -225,12 +225,12 @@ ms.locfileid: "68048750"
  **Pour dériver la différence symétrique, ou points uniques, d'une instance geography comparée à une autre instance**  
  [STSymDifference &#40;type de données geography&#41;](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
-##  <a name="supportedsrid"></a> Les instances geography doivent utiliser un SRID pris en charge  
+##  <a name="geography-instances-must-use-supported-srid"></a><a name="supportedsrid"></a> Les instances geography doivent utiliser un SRID pris en charge  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les SRID basés sur les normes EPSG. Un SRID pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour les instances **geography** doit être utilisé pour l’exécution de calculs ou l’utilisation de méthodes avec des données spatiales géographiques. Le SRID doit correspondre à l’un des SRID présents dans l’affichage catalogue **sys.spatial_reference_systems** . Comme mentionné précédemment, quand vous effectuez des calculs sur vos données spatiales à l’aide du type de données **geography** , vos résultats dépendent de l’ellipsoïde qui a été utilisée pour créer vos données, car un identificateur de référence spatiale (SRID) spécifique est assigné à chaque ellipsoïde.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le SRID par défaut de 4326, qui se mappe au système de référence spatiale WGS 84, quand des méthodes sont utilisées dans des instances **geography** . Si vous utilisez des données d'un système de référence spatiale autre que WGS 84 (ou SRID 4326), vous devrez déterminer le SRID spécifique pour vos données spatiales geography.  
   
-##  <a name="examples"></a> Exemples  
+##  <a name="examples"></a><a name="examples"></a> Exemples  
 Les exemples suivants montrent comment ajouter et interroger des données géographiques.  
   
 ### <a name="example-a"></a>Exemple A. 

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76259387"
 ---
 # <a name="create-primary-keys"></a>Créer des clés primaires
@@ -26,23 +26,23 @@ ms.locfileid: "76259387"
 
 Vous pouvez définir une clé primaire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La création d’une clé primaire crée automatiquement un index cluster unique correspondant ou, si vous avez spécifié cette option, un index non-cluster.
 
-## <a name="BeforeYouBegin"></a> Avant de commencer
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer
 
-### <a name="Restrictions"></a> Limitations et restrictions
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions
 
 - Une table ne peut contenir qu'une seule contrainte PRIMARY KEY.
 
 - Toutes les colonnes définies dans une contrainte PRIMARY KEY doivent avoir la valeur NOT NULL. Si vous ne spécifiez pas la possibilité ou non de valeurs NULL, toutes les colonnes participant à une contrainte PRIMARY KEY sont définies à NOT NULL.
 
-### <a name="Security"></a> Sécurité
+### <a name="security"></a><a name="Security"></a> Sécurité
 
-#### <a name="Permissions"></a> Autorisations
+#### <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
 La création d'une nouvelle table avec une clé primaire nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table a été créée.
 
 La création d'une clé primaire dans une table existante nécessite l'autorisation ALTER sur la table.
 
-## <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
 
 ### <a name="to-create-a-primary-key"></a>Pour créer une clé primaire
 
@@ -59,7 +59,7 @@ Si une clé primaire comporte plusieurs colonnes, les doublons sont autorisés d
 
 Si vous définissez une clé composée, l'ordre des colonnes dans la clé primaire correspond à l'ordre des colonnes de la table. Vous pouvez cependant modifier l'ordre des colonnes après la création de la clé primaire. Pour plus d’informations, consultez [Modifier des clés primaires](../../relational-databases/tables/modify-primary-keys.md).
 
-## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>Pour créer une clé primaire dans une table existante
 

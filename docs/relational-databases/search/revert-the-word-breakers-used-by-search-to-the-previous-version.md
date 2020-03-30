@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055186"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche (Recherche SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "74055186"
   
  Pour obtenir des informations générales sur les analyseurs lexicaux et générateurs de formes dérivées, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="overview"></a> Vue d'ensemble du rétablissement et de la restauration des analyseurs lexicaux et des générateurs de formes dérivées  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> Vue d'ensemble du rétablissement et de la restauration des analyseurs lexicaux et des générateurs de formes dérivées  
  Les instructions relatives au rétablissement et à la restauration des analyseurs lexicaux et des générateurs de formes dérivées dépendent de la langue. Le tableau suivant résume les trois ensembles d’actions qui peuvent être obligatoires pour rétablir la version antérieure des composants.  
   
 |Fichier actuel|Fichier précédent|Nombre de langues affectées|Action pour les fichiers|Action pour les entrées de Registre|  
@@ -50,7 +50,7 @@ ms.locfileid: "74055186"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> Langues pour lesquelles le nom de fichier de l'analyseur lexical actuel et celui de l'analyseur lexical précédent est NaturalLanguage6.dll  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> Langues pour lesquelles le nom de fichier de l'analyseur lexical actuel et celui de l'analyseur lexical précédent est NaturalLanguage6.dll  
  Pour les langues répertoriées dans le tableau suivant, le nom de fichier de l'analyseur lexical actuel et celui de l'analyseur lexical précédent est NaturalLanguage6.dll. Pour rétablir ou restaurer ces composants, vous devez remplacer NaturalLanguage6.dll par une version différente du même fichier. Vous n'êtes pas obligé de modifier les entrées de Registre, car celles-ci n'ont pas changé pour cette version.  
   
 > [!WARNING]  
@@ -97,7 +97,7 @@ ms.locfileid: "74055186"
   
  Le tableau précédent est trié par ordre alphabétique selon la colonne Abréviation.  
   
-###  <a name="nl6nl6revert"></a> Pour rétablir les composants précédents  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> Pour rétablir les composants précédents  
   
 1.  Accédez au dossier Binn décrit ci-dessus.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "74055186"
   
 4.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-###  <a name="nl6nl6restore"></a> Pour restaurer les composants actuels  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> Pour restaurer les composants actuels  
   
 1.  Accédez à l'emplacement où vous avez sauvegardé la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de NaturalLanguage6.dll.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "74055186"
   
 3.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="newnl6"></a> Langues pour lesquelles le nom de fichier de l'analyseur lexical précédent est NaturalLanguage6.dll  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> Langues pour lesquelles le nom de fichier de l'analyseur lexical précédent est NaturalLanguage6.dll  
  Pour les langues répertoriées dans le tableau suivant, le nom de fichier de l'analyseur lexical précédent est différent de celui de la nouvelle version. Le nom de fichier précédent est NaturalLanguage6.dll. Pour rétablir la version précédente, vous devez remplacer la version actuelle de NaturalLanguage6.dll par une version précédente du même fichier. Vous devez également modifier un ensemble d'entrées de Registre pour spécifier la version précédente ou la version actuelle des composants.  
   
 > [!WARNING]  
@@ -141,7 +141,7 @@ ms.locfileid: "74055186"
   
  Utilisez les instructions suivantes avec la liste de valeurs dans la section [Noms de fichiers et valeurs de Registre pour rétablir et restaurer les analyseurs lexicaux et les générateurs de formes dérivées](#newnl6values).  
   
-###  <a name="newnl6revert"></a> Pour rétablir les composants précédents  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> Pour rétablir les composants précédents  
   
 1.  Accédez au dossier Binn décrit ci-dessus.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "74055186"
   
 10. Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnl6restore"></a> Pour restaurer les composants actuels  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> Pour restaurer les composants actuels  
   
 1.  Accédez à l'emplacement où vous avez sauvegardé la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de NaturalLanguage6.dll.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "74055186"
   
 8.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnl6values"></a> Noms de fichiers et valeurs de Registre pour rétablir et restaurer les analyseurs lexicaux et les générateurs de formes dérivées  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> Noms de fichiers et valeurs de Registre pour rétablir et restaurer les analyseurs lexicaux et les générateurs de formes dérivées  
  Utilisez la liste suivante de noms de fichiers et d'entrées de Registre avec les instructions dans la section précédente. Utilisez les valeurs précédentes pour rétablir la version précédente ou utilisez les valeurs actuelles pour restaurer la version actuelle des composants.  
   
  La liste suivante est triée par ordre alphabétique selon l'abréviation utilisée pour chaque langue.  
@@ -253,7 +253,7 @@ ms.locfileid: "74055186"
 |CLSID actuel|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> Langues pour lesquelles ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> Langues pour lesquelles ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll  
  Pour les langues dans le tableau suivant, les noms de fichier des analyseurs lexicaux et des générateurs de formes dérivées précédents sont différents des noms de fichier des nouvelles versions. Ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll. Vous n'êtes pas obligé de remplacer des fichiers, et ce car le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copie la version actuelle et la version précédente des composants dans le dossier Binn. Toutefois, vous devez modifier un ensemble d'entrées de Registre pour spécifier la version précédente ou la version actuelle des composants.  
   
  **Liste des langues affectées**  
@@ -271,7 +271,7 @@ ms.locfileid: "74055186"
   
  Utilisez les instructions suivantes avec la liste de valeurs dans la section [Noms de fichiers et valeurs de Registre pour rétablir et restaurer les analyseurs lexicaux et les générateurs de formes dérivées](#newnewvalues).  
   
-###  <a name="newnewrevert"></a> Pour rétablir les composants précédents  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> Pour rétablir les composants précédents  
   
 1.  Ne supprimez pas les fichiers pour la version actuelle des composants du dossier Binn.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "74055186"
   
 7.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnewrestore"></a> Pour restaurer les composants précédents  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> Pour restaurer les composants précédents  
   
 1.  Ne supprimez pas les fichiers pour la version précédente des composants du dossier Binn.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "74055186"
   
 7.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnewvalues"></a> Noms de fichiers et valeurs de Registre pour rétablir et restaurer les analyseurs lexicaux et les générateurs de formes dérivées  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> Noms de fichiers et valeurs de Registre pour rétablir et restaurer les analyseurs lexicaux et les générateurs de formes dérivées  
  Utilisez la liste suivante de noms de fichiers et d'entrées de Registre avec les instructions dans la section précédente. Utilisez les valeurs précédentes pour rétablir la version précédente ou utilisez les valeurs actuelles pour restaurer la version actuelle des composants.  
   
  La liste suivante est triée par ordre alphabétique selon l'abréviation utilisée pour chaque langue.  

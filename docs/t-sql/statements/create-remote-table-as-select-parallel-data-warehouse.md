@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401707"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
@@ -24,7 +24,7 @@ ms.locfileid: "74401707"
   
  Pour configurer le serveur distant, consultez « Copie de table distante » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  Les paramètres de connexion vous permettent de vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP avec SSL, protégeant ainsi les données de nom d’utilisateur et mot de passe, mais avec les données proprement dites envoyées en texte clair. Quand cela se produit, un utilisateur malveillant pourrait intercepter le texte de l’instruction CREATE REMOTE TABLE, qui contient le nom d’utilisateur et le mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP. Pour éviter ce risque, utilisez le chiffrement des données sur la connexion à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP.  
   
-##  <a name="Examples"></a> Exemples  
+##  <a name="examples"></a><a name="Examples"></a> Exemples  
   
 ### <a name="a-creating-a-remote-table"></a>R. Création d’une table distante  
  Cet exemple crée une table distante SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée `MyOrdersTable` sur la base de données `OrderReporting` et le schéma `Orders`. La base de données `OrderReporting` se trouve sur un serveur nommé `SQLA` à l’écoute sur le port par défaut 1433. La connexion au serveur utilise les informations d’identification de l’utilisateur `David`, dont le mot de passe est `e4n8@3`.  

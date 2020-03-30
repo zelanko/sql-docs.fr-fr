@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284772"
 ---
 # <a name="create-a-pull-subscription"></a>Créer un abonnement par extraction de données (pull)
@@ -38,7 +38,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
  La définition d'un abonnement par extraction de données (pull) pour la réplication P2P est possible au moyen d'un script, mais n'est pas disponible via l'assistant.  
  
-  ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+  ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Créer un abonnement par extraction de données sur le serveur de publication ou sur l'Abonné à l'aide de l'Assistant Nouvel abonnement. Exécutez les étapes de l'Assistant pour :  
   
 -   Spécifier le serveur de publication et la publication.  
@@ -89,7 +89,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 7.  Exécutez les étapes de l'Assistant Nouvel abonnement.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les abonnements par extraction de données peuvent être créés par programme en utilisant des procédures stockées de réplication. Les procédures stockées utilisées dépendent du type de publication auquel l'abonnement appartient.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Pour créer un abonnement par extraction vers une publication d'instantané ou transactionnelle  
@@ -150,7 +150,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 4.  Sur le serveur de publication, exécutez [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Spécifiez **\@publication**, **\@subscriber**, **\@subscriber_db** et la valeur **pull** pour **\@subscription_type**. L'abonnement par extraction est inscrit.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  L'exemple suivant crée un abonnement par extraction de données vers une publication transactionnelle. Le premier traitement est exécuté sur l'abonné, et le second sur le serveur de publication. Les valeurs de connexion et le mot de passe sont fournis lors de l'exécution à l'aide des variables de script sqlcmd.  
   
 ```  
@@ -270,7 +270,7 @@ EXEC sp_addmergesubscription @publication = @myMergePub,
 GO  
 ```  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Les classes RMO utilisées pour créer un abonnement par extraction de données (pull) sont fonction du type de publication à laquelle l'abonnement appartient.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Pour créer un abonnement par extraction vers une publication d'instantané ou transactionnelle  
@@ -356,7 +356,7 @@ GO
   
 9. Au moyen de l'instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> de l'étape 2, appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> pour inscrire l'abonnement par extraction de données (pull) sur le serveur de publication. Si l'abonnement est déjà inscrit dans le Registre, une erreur se produit.  
   
-###  <a name="PShellExample"></a> Exemple (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemple (RMO)  
  Cet exemple crée un abonnement par extraction de données (pull) vers une publication transactionnelle. Les informations d'identification de compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilisées pour créer le travail d'agent de distribution sont transmises au moment de l'exécution.  
   
 ```csharp  

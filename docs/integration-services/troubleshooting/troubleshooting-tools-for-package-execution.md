@@ -17,10 +17,10 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73637940"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
@@ -42,7 +42,7 @@ ms.locfileid: "73637940"
   
 -   **Renforcez l'intégrité des données à l'aide de transactions**. Pour plus d’informations, consultez [Transactions Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Utilisez des points de contrôle pour redémarrer les packages à compter du point de défaillance**. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Utilisez des points de contrôle pour redémarrer les packages à compter du point de défaillance**. Pour plus d’informations, consultez [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Détecter et traiter les erreurs liées aux packages par le biais de gestionnaires d'événements  
  Vous pouvez répondre aux nombreux événements engagés par le package et les objets de ce dernier par le biais de gestionnaires d'événements.  

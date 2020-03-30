@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093380"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
@@ -35,7 +35,7 @@ ms.locfileid: "68093380"
 > [!NOTE]  
 >  Pour spécifier une langue au niveau de la colonne pour une colonne d’index de recherche en texte intégral, utilisez la clause LANGUAGE *language_term* lors de la spécification de la colonne. Pour plus d’informations, consultez [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md) et [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
-##  <a name="langsupp"></a> Prise en charge linguistique dans la recherche en texte intégral  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> Prise en charge linguistique dans la recherche en texte intégral  
  Cette section fournit une introduction aux analyseurs lexicaux et aux générateur de formes dérivées et indique comment la recherche en texte intégral utilise le LCID de la langue de la colonne.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Introduction aux analyseurs lexicaux et aux générateurs de formes dérivées  
@@ -74,7 +74,7 @@ ms.locfileid: "68093380"
 >  Le LCID est appliqué à tous les types de données pouvant faire l’objet d’une indexation de texte intégral (par exemple **char** ou **nchar**). Si l’ordre de tri d’une colonne de type **char**, **varchar**ou **text** est défini à l’aide d’une langue différente de la langue identifiée par le LCID, ce dernier est néanmoins utilisé durant l’indexation de recherche en texte intégral et l’interrogation de ces colonnes.  
   
   
-##  <a name="breaking"></a> Analyse lexicale  
+##  <a name="word-breaking"></a><a name="breaking"></a> Analyse lexicale  
  Un analyseur lexical crée des jetons dans le texte indexé à partir des limites des mots, qui sont spécifiques aux langues. Par conséquent, le comportement d'analyse lexicale diffère d'une langue à l'autre. Si vous utilisez une langue x pour indexer plusieurs langues {x, y et z}, une partie du comportement peut donner lieu à des résultats inattendus. Par exemple, un tiret (-) ou une virgule (,) peut être un élément d'analyseur lexical pouvant être rejeté dans une langue mais pas dans un autre. Un comportement de génération de formes dérivées rarement inattendu peut également se produire parce qu'un mot donné peut être dérivé différemment dans une autre langue. Par exemple, en anglais, les limites des mots sont généralement fixées par des espaces blancs ou un signe de ponctuation. Dans d'autres langues, par exemple l'allemand, les mots ou les caractères peuvent être accolés. Par conséquent, le choix de la langue d'une colonne doit être représentatif de la langue destinée à être stockée dans les lignes de cette colonne.  
   
 ### <a name="western-languages"></a>Langues occidentales  
@@ -99,11 +99,11 @@ ms.locfileid: "68093380"
      Lorsque votre contenu est du texte brut, vous pouvez le convertir en type de données **xml** et ajouter les balises de langue qui indiquent la langue qui correspond à chaque document ou section de document spécifique. Pour que cette option fonctionne toutefois, vous devez connaître la langue avant l'indexation de recherche en texte intégral.  
   
   
-##  <a name="stemming"></a> Recherche de radical  
+##  <a name="stemming"></a><a name="stemming"></a> Recherche de radical  
  La recherche de radical est un autre point à prendre en considération lors du choix de la langue de votre colonne. La*recherche de radical* dans les requêtes de texte intégral se définit comme la recherche de toutes les formes fléchies d’un mot dans une langue particulière. Lorsque vous utilisez un analyseur lexical générique pour traiter plusieurs langues, le processus de recherche de radical fonctionne uniquement pour la langue spécifiée pour la colonne, et non pour d'autres langues dans la colonne. Par exemple, les générateur de formes dérivées allemands ne fonctionnent pas pour l'anglais et l'espagnol (etc.). Cela peut affecter votre rappel, selon la langue que vous choisissez au moment de la requête.  
   
   
-##  <a name="type"></a> Effet du type de colonne sur la recherche en texte intégral  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Effet du type de colonne sur la recherche en texte intégral  
  Un autre point à prendre en considération dans le choix de la langue est lié au mode de représentation des données. Pour les données non stockées dans une colonne **varbinary(max)** , aucun filtrage particulier n’est effectué. À la place, le texte est généralement traité tel quel par le composant de séparation des mots.  
   
  Les analyseurs lexicaux sont, aussi, principalement conçus pour traiter le texte écrit. Par conséquent, si votre texte contient un balisage quelconque (par exemple du code HTML), vous risquez de ne pas obtenir une précision linguistique importante durant l'indexation et la recherche. Dans ce cas, vous avez deux possibilités : la méthode recommandée consiste simplement à stocker les données de texte dans la colonne **varbinary(max)** et à indiquer le type de document correspondant pour permettre un filtrage. Si ce choix ne vous convient pas, utilisez un analyseur lexical neutre et, si possible, ajoutez des données de balisage (par exemple « br » en langage HTML) à vos listes de mots parasites.  
@@ -112,7 +112,7 @@ ms.locfileid: "68093380"
 >  L'identification de la racine linguistique n'intervient pas lorsque vous spécifiez la langue neutre.  
   
   
-##  <a name="nondef"></a> Spécification d'une langue de colonne autre que la langue par défaut dans un requête de texte intégral  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> Spécification d'une langue de colonne autre que la langue par défaut dans un requête de texte intégral  
  Par défaut, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la recherche en texte intégral analyse les termes de la requête en utilisant la langue spécifiée pour chaque colonne incluse dans la clause de texte intégral. Pour remplacer ce comportement, spécifiez une langue autre que par défaut au moment de la requête. Pour les langues prises en charge dont les ressources sont installées, la clause LANGUAGE *language_term* d’une requête [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) est utilisée pour spécifier la langue utilisée pour l’analyse lexicale, la recherche de radical, le dictionnaire des synonymes et le traitement des mots vides des termes de la requête.  
   
   

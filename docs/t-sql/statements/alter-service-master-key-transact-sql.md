@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112858"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68112858"
 
   Permet de modifier la clé principale de service d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,7 +90,7 @@ ALTER SERVICE MASTER KEY
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
-##  <a name="_changing"></a> Modification du compte de service SQL Server  
+##  <a name="changing-the-sql-server-service-account"></a><a name="_changing"></a> Modification du compte de service SQL Server  
  Pour modifier le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour gérer une modification du compte de service, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke une copie redondante de la clé principale de service protégée par le compte d’ordinateur qui dispose des autorisations nécessaires accordées au groupe de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l'ordinateur fait l'objet d'une reconstruction, le même utilisateur de domaine utilisé précédemment par le compte de service peut récupérer la clé principale de service. Cela ne fonctionne pas avec les comptes locaux, ni avec le compte système local, le compte de service local ou le compte de service réseau. Quand vous déplacez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un autre ordinateur, migrez la clé principale de service à l’aide des fonctionnalités de sauvegarde et de restauration.  
   
  L'expression REGENERATE permet de régénérer la clé principale de service. Lorsque la clé principale de service est régénérée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déchiffre toutes les clés qu'elle a permis de chiffrer, puis les chiffre au moyen de la nouvelle clé principale de service. Cette opération consomme beaucoup de ressources. Par conséquent, vous devez planifier cette opération au cours d'une période de faible demande, à moins que la clé ait été compromise. Si l'un des déchiffrements échoue, l'instruction entière échoue.  

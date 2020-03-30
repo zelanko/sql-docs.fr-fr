@@ -11,10 +11,10 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76918351"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
@@ -26,7 +26,7 @@ ms.locfileid: "76918351"
   
  Les pages de données et d'index sont lues sur le disque dans le pool de mémoires tampons et les pages modifiées (également appelées « pages de modifications ») sont écrites sur le disque. Lorsque la mémoire sur les points de contrôle du serveur et de la base de données est sollicitée, les pages de modifications actives dans le cache des tampons sont supprimées du cache et écrites sur des disques mécaniques, puis relues dans le cache. Ces opérations d'E/S sont généralement des lectures et des écritures aléatoires de petite taille, de l'ordre de 4 à 16 Ko de données. Les E/S de ce type entraînent des appels fréquents qui entrent en concurrence pour les contentions de disque mécanique, augmentent la latence des E/S et réduisent le débit global des E/S du système.  
   
- L'approche habituelle pour résoudre ces goulots d'étranglement des E/S est d'ajouter plus de DRAM, ou bien, des axes SAS hautes performances. Si ces options sont utiles, elles présentent des inconvénients importants : la DRAM est plus coûteuse que les disques de stockage de données, et l’ajout d’axes augmente les dépenses d’investissement en matériel et les coûts d’exploitation en raison d’une consommation d’énergie accrue et de la plus forte probabilité de défaillance d’un composant.  
+ L'approche habituelle pour résoudre ces goulots d'étranglement des E/S est d'ajouter plus de DRAM, ou bien, des axes SAS hautes performances. Si ces options sont utiles, elles ont des inconvénients importants : la DRAM est plus coûteuse que les disques de stockage de données, et l'ajout d'axes augmente les dépenses d'investissement en matériel et les coûts d'exploitation en raison d'une consommation d'énergie accrue et de la plus forte probabilité de défaillance d'un composant.  
   
  La fonctionnalité d'extension du pool de mémoires tampons étend le cache du pool avec le stockage non volatile (généralement, les disques SSD). Grâce à cette extension, le pool de mémoires tampons peut gérer une plus vaste plage de travail de la base de données, ce qui force la pagination des E/S entre la mémoire RAM et les disques SSD. Cela décharge efficacement les E/S aléatoires de petite taille des disques mécaniques vers les disques SSD. En raison de la plus faible latence et des meilleures performances des E/S aléatoires fournies par les disques SSD, l'extension du pool de mémoires tampons améliore considérablement le débit des E/S.  
   

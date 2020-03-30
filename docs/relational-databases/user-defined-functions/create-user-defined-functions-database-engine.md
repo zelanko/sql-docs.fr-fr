@@ -20,19 +20,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287993"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Créer des fonctions définies par l'utilisateur (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Cette rubrique décrit comment créer une fonction définie par l’utilisateur (UDF) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Les fonctions définies par l'utilisateur ne permettent pas d'exécuter des actions qui modifient l'état des bases de données.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "79287993"
   
     -   `SEND`  
   
-###  <a name="Security"></a> Autorisations 
+###  <a name="permissions"></a><a name="Security"></a> Autorisations 
 
 Nécessite l’autorisation `CREATE FUNCTION` dans la base de données et l’autorisation `ALTER` sur le schéma dans lequel la fonction est créée. Si la fonction spécifie un type défini par l’utilisateur, elle nécessite l’autorisation `EXECUTE` sur le type.  
   
-##  <a name="Scalar"></a> Fonctions scalaires  
+##  <a name="scalar-functions"></a><a name="Scalar"></a> Fonctions scalaires  
  L’exemple suivant illustre la création d’une **fonction scalaire (fonction UDF scalaire)** à instructions multiples dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. À partir d'une valeur d'entrée unique ( `ProductID`), la fonction retourne une valeur de donnée unique, en l'occurrence, la quantité totale du produit spécifié en stock.  
   
 ```sql  
@@ -104,7 +104,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > [!NOTE]  
 > Pour obtenir des informations complémentaires et des exemples de fonctions scalaires, consultez [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
 
-##  <a name="TVF"></a> Fonctions table  
+##  <a name="table-valued-functions"></a><a name="TVF"></a> Fonctions table  
 L’exemple suivant crée une **fonction table incluse** dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. À partir d'un paramètre d'entrée unique (storeID), la fonction retourne les colonnes `ProductID`, `Name`, ainsi que le total cumulé des ventes ( `YTD Total` ) pour chaque produit vendu au magasin du client.  
   
 ```sql  

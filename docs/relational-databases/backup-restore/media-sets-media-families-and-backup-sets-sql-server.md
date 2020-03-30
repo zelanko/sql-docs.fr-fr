@@ -23,10 +23,10 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258680"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258680"
   
 >**REMARQUE !** Pour plus d’informations sur la sauvegarde SQL Server dans le service de stockage d’objets blob Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
-##  <a name="TermsAndDefinitions"></a> Termes  
+##  <a name="terms"></a><a name="TermsAndDefinitions"></a> Termes  
  **jeu de supports**  
  Ensemble ordonné de supports de sauvegarde (bandes ou fichiers disque) sur lequel une ou plusieurs opérations de sauvegarde ont été écrites en utilisant un type et un nombre fixes d'unités de sauvegarde.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75258680"
  Contenu de sauvegarde ajouté à un jeu de supports par une opération de sauvegarde réussie.  
   
 
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> Vue d’ensemble des jeux de supports, familles de supports et jeux de sauvegarde  
+##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a> Vue d’ensemble des jeux de supports, familles de supports et jeux de sauvegarde  
  Les sauvegardes d'un ou de plusieurs supports de sauvegarde constituent un seul jeu de supports. Un *jeu de supports* est un ensemble ordonné de *supports de sauvegarde*, de bandes, de fichiers disque ou d’objets blob Azure auxquels une ou plusieurs opérations de sauvegarde ont été appliquées en utilisant un type et un nombre fixes d’unités de sauvegarde. Un jeu de supports donné utilise des lecteurs de bandes, lecteurs de disque ou objets blob Azure, mais pas une combinaison de deux ou plus. 
  
 **Exemple :** Les unités de sauvegarde associées à un jeu de supports peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
@@ -166,7 +166,7 @@ GO
 -   Nombre de jeux de sauvegarde  
 
   
-##  <a name="CreatingMediaSet"></a> Creating a new media set  
+##  <a name="creating-a-new-media-set"></a><a name="CreatingMediaSet"></a> Creating a new media set  
  Pour créer un jeu de supports, vous devez formater le support destinataire (une ou plusieurs bandes ou un ou plusieurs fichiers disque). Le processus de formatage modifie le support destinataire de la sauvegarde comme suit :  
   
 1.  Suppression de l'ancien en-tête (s'il en existait un), du contenu antérieur du support destinataire de la sauvegarde.  
@@ -176,7 +176,7 @@ GO
 2.  Écriture d'un nouvel en-tête de support sur le support de sauvegarde (bande ou fichier disque) de chaque unité de sauvegarde.  
 
   
-##  <a name="UseExistingMediaSet"></a> Sauvegarde sur un jeu de supports existant  
+##  <a name="backing-up-to-an-existing-media-set"></a><a name="UseExistingMediaSet"></a> Sauvegarde sur un jeu de supports existant  
  Pour effectuer une sauvegarde sur un jeu de supports existant, vous disposez des deux options suivantes :  
   
 -   Ajouter au jeu de sauvegarde existant.  
@@ -193,7 +193,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
 
     >  Le remplacement des jeux de sauvegarde existants est spécifié à l'aide de l'option INIT de l'instruction BACKUP.  
   
-##  <a name="Appending"></a> Appending to existing backup sets  
+##  <a name="appending-to-existing-backup-sets"></a><a name="Appending"></a> Appending to existing backup sets  
  Les sauvegardes effectuées à des moments différents, à partir de bases de données identiques ou différentes, peuvent être stockées sur le même support. En ajoutant un autre jeu de sauvegarde au support existant, le contenu précédent du support reste intact, et la nouvelle sauvegarde est écrite à la fin de la dernière sauvegarde du support.  
   
  Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute toujours les nouvelles sauvegardes en fin de support. L'ajout ne peut avoir lieu qu'à la fin du support. Par exemple, lorsqu'un support contient cinq jeux de sauvegardes, il n'est pas possible d'ignorer les trois premiers jeux de sauvegardes pour écraser le quatrième avec un nouveau jeu de sauvegarde.  
@@ -205,7 +205,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
 > **IMPORTANT !** Les sauvegardes compressées et non compressées ne peuvent pas se produire simultanément dans un jeu de supports. Toutes les éditions de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou versions ultérieures peuvent lire des sauvegardes compressées. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  
-##  <a name="Overwriting"></a> Overwriting backup sets  
+##  <a name="overwriting-backup-sets"></a><a name="Overwriting"></a> Overwriting backup sets  
  Le remplacement des jeux de sauvegarde existants est spécifié à l'aide de l'option INIT de l'instruction BACKUP. Cette option remplace tous les jeux de sauvegarde sur le support et conserve l'en-tête de support, s'il existe. S'il n'existe aucun en-tête de support, elle en crée un.  
   
  Pour les en-têtes de bande, il peut être judicieux de les laisser en place. Pour les supports de sauvegarde sur disque, seuls les fichiers utilisés par les unités de sauvegarde spécifiées dans l'opération de sauvegarde sont remplacés. Les autres fichiers du disque ne sont pas concernés. Lors du remplacement des sauvegardes, l'en-tête de support existant est conservé et la nouvelle sauvegarde est créée comme étant la première sauvegarde sur l'unité de sauvegarde. S'il n'existe pas d'en-tête, un en-tête de support valide avec un nom et une description de support est automatiquement écrit. Si l'en-tête de support existant n'est pas valide, l'opération de sauvegarde s'arrête. Si le support est vide, le nouvel en-tête de support est généré avec les options éventuelles MEDIANAME, MEDIAPASSWORD et MEDIADESCRIPTION.  
@@ -227,7 +227,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
   
 
   
-##  <a name="SequenceNumbers"></a> Numéros de séquence  
+##  <a name="sequence-numbers"></a><a name="SequenceNumbers"></a> Numéros de séquence  
  L'ordre est important pour l'utilisation de plusieurs familles de supports dans un jeu de supports ou de plusieurs supports de sauvegarde dans une même famille. Par conséquent, la sauvegarde attribue des numéros de séquence comme suit :  
   
 -   Familles de supports séquentielles dans un support de sauvegarde  
@@ -238,7 +238,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
   
      Un numéro de séquence de support indique l'ordre du support physique dans une famille de supports. Le premier numéro est 1 pour le premier support de sauvegarde. Ce support de sauvegarde est référencé par le chiffre 1, le deuxième support (première bande de sauvegarde consécutive) par le chiffre 2 et ainsi de suite. Lorsque la sauvegarde est restaurée, les numéros de séquence des supports garantissent que l'opérateur qui effectue la restauration de la sauvegarde monte le support approprié dans l'ordre approprié.  
   
-###  <a name="MultipleDevices"></a> Plusieurs unités  
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> Plusieurs unités  
  Lorsque vous utilisez plusieurs lecteurs de bandes ou fichiers disque, vous devez tenir compte des considérations suivantes :  
   
 -   Pour la sauvegarde :  
@@ -249,7 +249,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
   
      Pour une restauration à partir d'une sauvegarde de disque et pour une restauration en ligne, vous devez monter simultanément toutes les familles de supports. Pour une restauration hors connexion à partir d'une sauvegarde sur bande, vous pouvez traiter les familles de supports avec moins d'unités de sauvegarde. Chaque famille de supports doit être complètement traitée avant de démarrer le traitement d'une autre famille de supports. Les familles de supports sont toujours traitées en parallèle, sauf si la restauration a lieu sur une seule unité.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Créer un jeu de supports**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) (option **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants**)  

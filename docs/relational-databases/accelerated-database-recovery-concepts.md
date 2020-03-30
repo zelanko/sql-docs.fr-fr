@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 58c31d9b5e0e8858cc1953a2961107caea08d381
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544945"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342524"
 ---
 # <a name="accelerated-database-recovery"></a>Récupération de base de données accélérée
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 La récupération de base de données accélérée améliore la disponibilité des bases de données, notamment en présence de transactions longues, grâce à une reconception du processus de récupération du moteur de base de données SQL. La récupération de base de données accélérée est une nouveauté de SQL Server 2019, et elle est également disponible pour les bases de données uniques et les bases de données en pool dans Azure SQL Database, et pour les bases de données dans Azure SQL Data Warehouse (actuellement en préversion publique). Les principaux avantages de la récupération de base de données accélérée sont les suivants :
 

@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287643"
 ---
 # <a name="security-overview-integration-services"></a>Vue d'ensemble de la sécurité (Integration Services)
@@ -106,7 +106,7 @@ ms.locfileid: "79287643"
   
  Pour plus d’informations, consultez [Accéder au service Integration Services](#service).  
 
-## <a name="files"></a> Accéder aux fichiers utilisés par des packages
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> Accéder aux fichiers utilisés par des packages
   Le niveau de protection de package ne protège pas les fichiers stockés en dehors du package. Il s'agit des fichiers suivants :  
   
 -   Fichiers de configuration  
@@ -123,12 +123,12 @@ ms.locfileid: "79287643"
  Pour plus d’informations, consultez [Configurations de package](../../integration-services/packages/package-configurations.md), [Créer des configurations de package](../../integration-services/packages/create-package-configurations.md)et [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>fichiers de point de contrôle  
- De même, si le fichier de point de contrôle utilisé par le package contient des informations sensibles, vous devez utiliser une liste de contrôle d'accès pour sécuriser l'emplacement ou le dossier de stockage du fichier. Les fichiers de points de contrôle contiennent des informations d'état relatives à la progression du package, ainsi que les valeurs actuelles de certaines variables. Par exemple, le package peut inclure une variable personnalisée qui contient un numéro de téléphone. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+ De même, si le fichier de point de contrôle utilisé par le package contient des informations sensibles, vous devez utiliser une liste de contrôle d'accès pour sécuriser l'emplacement ou le dossier de stockage du fichier. Les fichiers de points de contrôle contiennent des informations d'état relatives à la progression du package, ainsi que les valeurs actuelles de certaines variables. Par exemple, le package peut inclure une variable personnalisée qui contient un numéro de téléphone. Pour plus d’informations, consultez [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="log-files"></a>Fichiers journaux  
  Les entrées de journaux qui sont écrites dans le système de fichiers doivent également être sécurisées au moyen d'une liste de contrôle d'accès. Elles peuvent aussi être stockées dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et protégées par la sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les entrées de journaux peuvent inclure des informations sensibles. Par exemple, si le package contient une tâche d'exécution SQL qui construit une instruction SQL faisant référence à un numéro de téléphone, l'entrée de journal de l'instruction SQL inclut le numéro de téléphone. L'instruction SQL peut également révéler des informations confidentielles relatives à des noms de tables et de colonnes dans des bases de données. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
 
-## <a name="service"></a> Accéder au service Integration Services
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> Accéder au service Integration Services
   Les niveaux de protection des packages peuvent définir des restrictions quant aux utilisateurs autorisés à modifier et exécuter un package. Une protection supplémentaire est nécessaire pour limiter les utilisateurs autorisés à afficher la liste des packages actuellement en cours d’exécution sur un serveur et ceux qui peuvent arrêter les packages en cours d’exécution dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la liste des packages en cours d’exécution. Les membres du groupe Administrateurs de Windows peuvent afficher et arrêter tous les packages en cours d'exécution. Les utilisateurs n'appartenant pas au groupe Administrateurs de Windows ne peuvent afficher et arrêter que les packages qu'ils ont démarrés.  

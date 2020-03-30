@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412729"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : optimisation des performances de l'OLTP en mémoire
@@ -32,7 +32,7 @@ Pour voir une démonstration plus complète des améliorations des performances 
 ## <a name="code-example"></a>Exemple de code  
  Les sous-sections suivantes décrivent chaque étape.  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Étape 1a : Condition préalable requise si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-ssnoversion"></a>Étape 1a : Condition préalable requise si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Les étapes de cette première sous-section s’appliquent uniquement si vous exécutez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; elles ne s’appliquent pas si vous exécutez [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Effectuez les actions suivantes :  
   
 1.  Utilisez SQL Server Management Studio (SSMS.exe) pour vous connecter à votre serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sinon, tout autre outil similaire à SSMS.exe convient.  
@@ -58,7 +58,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Étape 1b : Condition préalable requise si vous utilisez [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-sssdsfull"></a>Étape 1b : Condition préalable requise si vous utilisez [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  Cette sous-section s’applique uniquement si vous utilisez [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Effectuez les actions suivantes :  
   
 1.  Décidez quelle base de données test existante vous allez utiliser pour l’exemple de code.  

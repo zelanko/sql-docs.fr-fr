@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056681"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurer une stratégie de basculement automatique flexible pour un groupe de disponibilité Always On
@@ -34,7 +34,7 @@ ms.locfileid: "74056681"
   > La stratégie de basculement flexible d'un groupe de disponibilité ne peut pas être configurée à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  
-## <a name="Limitations"></a> Limitations relatives aux basculements automatiques  
+## <a name="limitations-on-automatic-failovers"></a><a name="Limitations"></a> Limitations relatives aux basculements automatiques  
   
 -   Pour qu'un basculement automatique se produise, le réplica principal et un réplica secondaire doivent être configurés pour le mode de disponibilité avec validation synchrone et basculement automatique et le réplica secondaire doit être synchronisé avec le réplica principal.  
   
@@ -42,24 +42,24 @@ ms.locfileid: "74056681"
   
 -   Si un groupe de disponibilité dépasse le seuil d'échec WSFC, le cluster WSFC ne tente pas un basculement automatique du groupe de disponibilité. En outre, le groupe de ressources WSFC du groupe de disponibilité reste à l'état d'échec jusqu'à ce que l'administrateur de cluster mette manuellement le groupe de ressources en ligne ou jusqu'à ce que l'administrateur de base de données exécute un basculement manuel du groupe de disponibilité. Le *seuil d'échec WSFC* est le nombre maximal d'échecs autorisés pour le groupe de disponibilité au cours d'une période donnée. La période par défaut est de six heures, et la valeur par défaut du nombre maximal d’échecs au cours de cette période est *n*-1, où *n* est le nombre de nœuds de WSFC. Pour modifier les valeurs de seuil/d'échec pour un groupe de disponibilité donné, utilisez la console du gestionnaire de basculement WSFC.  
   
-##  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
    
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
 |Tâche|Autorisations|  
 |----------|-----------------|  
 |Pour configurer la stratégie de basculement flexible pour un nouveau groupe de disponibilité|Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier la stratégie d'un groupe de disponibilité existant|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  
 
-##  <a name="HCtimeout"></a> Seuil du délai d'attente de contrôle d'intégrité  
+##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> Seuil du délai d'attente de contrôle d'intégrité  
  La DLL de ressource WSFC du groupe de disponibilité exécute un *contrôle d’intégrité* du réplica principal en appelant la procédure stockée [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) sur l’instance de SQL Server qui héberge le réplica principal. **sp_server_diagnostics** retourne les résultats à un intervalle égal à 1/3 du seuil du délai d’attente de vérification d’intégrité pour le groupe de disponibilité. Le seuil par défaut du délai d’attente de vérification d’intégrité est de 30 secondes, ce qui signifie que **sp_server_diagnostics** répond à un intervalle de 10 secondes. Si la procédure **sp_server_diagnostics** est lente ou ne renvoie aucune information, la DLL de ressource attend la fin de l’intervalle du seuil du délai d’attente de vérification d’intégrité avant de déterminer que le réplica principal ne répond pas. Si le réplica principal ne répond pas, un basculement automatique est initialisé, si actuellement pris en charge.  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** n’exécute pas de vérifications d’intégrité au niveau de la base de données.  
   
-##  <a name="FClevel"></a> Niveau de condition d'échec  
+##  <a name="failure-condition-level"></a><a name="FClevel"></a> Niveau de condition d'échec  
  Le fait que les données de diagnostic et les informations d’intégrité renvoyées par **sp_server_diagnostics** justifient ou non un basculement automatique dépend du niveau de condition d’échec du groupe de disponibilité. Le *niveau de condition d’échec* spécifie les conditions d’échec qui déclenchent un basculement automatique. Il existe cinq niveaux de condition d'échec, allant du moins restrictif (niveau 1) au plus restrictif (le niveau 5). Chaque niveau comprend les niveaux moins restrictifs. Par conséquent, le niveau de condition le plus strict, le niveau 5, inclut les quatre conditions moins restrictives (1 à 4), et ainsi de suite.  
   
 > [!IMPORTANT]  
@@ -78,7 +78,7 @@ ms.locfileid: "74056681"
 > [!NOTE]  
 >  L'absence de réponse par une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aux demandes des clients n'est pas pertinente pour les groupes de disponibilité.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour configurer la stratégie de basculement flexible**  
   
 1.  Connectez-vous à l'instance de serveur qui héberge le réplica principal.  
@@ -115,7 +115,7 @@ ms.locfileid: "74056681"
         ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);  
         ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour configurer la stratégie de basculement flexible**  
   
 1.  Définissez la valeur par défaut (**cd**) sur l’instance de serveur qui héberge le réplica principal.  
@@ -161,7 +161,7 @@ ms.locfileid: "74056681"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
 
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un basculement automatique**  
   
 -   [Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md) (le basculement automatique nécessite le mode de disponibilité avec validation synchrone)  
@@ -170,7 +170,7 @@ ms.locfileid: "74056681"
   
 -   [Configurer la stratégie de basculement flexible pour contrôler les conditions du basculement automatique &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Fonctionnement : délai d’expiration de bail Always On SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905521"
 ---
 # <a name="view-user-defined-functions"></a>Afficher les fonctions définies par l'utilisateur
@@ -45,14 +45,14 @@ ms.locfileid: "72905521"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L’utilisation de **sys.sql_expression_dependencies** pour rechercher toutes les dépendances sur une fonction nécessite l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Les définitions d'objets système, telles que celles retournées dans OBJECT_DEFINITION, sont visibles publiquement.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Pour afficher les propriétés d’une fonction définie par l’utilisateur  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72905521"
      **Lié(e) au schéma**  
      Indique si la fonction est liée au schéma. Les valeurs sont True et False. Pour plus d’informations sur les fonctions liées à un schéma, consultez la section SCHEMABINDING de [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Pour obtenir la définition et les propriétés d'une fonction  
   

@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072378"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68072378"
 
   Met à jour la valeur actuellement configurée (la colonne **config_value** de l’ensemble de résultats de **sp_configure**) d’une option de configuration modifiée par la procédure stockée système **sp_configure**. Dans la mesure où certaines options de configuration exigent l’arrêt puis le redémarrage du serveur pour que la valeur en cours d’exécution soit mise à jour, RECONFIGURE n’actualise pas toujours cette dernière (colonne **run_value** de l’ensemble de résultats de **sp_configure**) lorsqu’une valeur de configuration est modifiée.    
     
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntaxe    
     

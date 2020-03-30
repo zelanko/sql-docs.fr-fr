@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 829c8e5e6f4207e721c4fa57b7cb012146e2762d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288258"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Utiliser les alertes pour les événements des agents de réplication
@@ -41,9 +41,9 @@ ms.locfileid: "76288258"
 |14151|**Réplication : échec de l'agent**|Arrêt de l'Agent en raison d'une erreur.|Oui|  
 |14152|**Réplication : nouvelle tentative de l'agent**|L'agent s'arrête après l'échec du renouvellement d'une opération (l'Agent a rencontré une erreur de type serveur non disponible, interblocage, échec de la connexion, ou dépassement du délai d'attente).|Oui|  
 |14157|**Réplication : suppression de l'abonnement expiré**|Suppression de l'abonnement expiré|Non|  
-|20572|**Réplication : abonnement réinitialisé après l’échec de validation**|Le travail de réponse « Réinitialiser les abonnements après échec de la validation des données » a réussi à réinitialiser un abonnement.|Non|  
-|20574|**Réplication : l’Abonné n’a pas réussi la validation des données**|L'Agent de distribution ou de fusion n'a pas réussi la validation des données.|Oui|  
-|20575|**Réplication : l’Abonné a passé la validation des données**|L'Agent de distribution ou de fusion a réussi la validation des données.|Oui|  
+|20572|**Réplication : abonnement réinitialisé après l'échec de validation**|Le travail de réponse « Réinitialiser les abonnements après échec de la validation des données » a réussi à réinitialiser un abonnement.|Non|  
+|20574|**Réplication : l'Abonné n'a pas réussi la validation des données**|L'Agent de distribution ou de fusion n'a pas réussi la validation des données.|Oui|  
+|20575|**Réplication : l'Abonné a passé la validation des données**|L'Agent de distribution ou de fusion a réussi la validation des données.|Oui|  
 |20578|**Réplication : arrêt personnalisé de l'Agent**|||  
 |22815|**Alerte de détection de conflit d'égal à égal**|L'Agent de distribution a détecté un conflit lorsqu'il essaie d'appliquer une modification à un nœud d'égal à égal.|Oui|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "76288258"
   
  **Pour configurer des alertes de réplication prédéfinies**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>Affichage direct du journal des applications  
  Pour consulter le journal des applications Windows, utilisez l'Observateur d'événements [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Le journal des applications comporte les messages d'erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ainsi que des messages se rapportant à toutes les activités de l'ordinateur. À la différence du journal des erreurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , chaque démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne crée pas un nouveau journal des applications (chaque session [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] écrit des nouveaux événements dans un journal des applications existant) ; en revanche, vous pouvez spécifier la durée de rétention des événements enregistrés. Lorsque vous affichez le journal des applications Windows, vous pouvez filtrer le journal en fonction d'événements spécifiques. Pour plus d'informations, consultez la documentation Windows.  
@@ -62,7 +62,7 @@ ms.locfileid: "76288258"
 ### <a name="framework-for-automating-responses"></a>Infrastructure d'automatisation des réponses  
  Généralement, lorsqu'une alerte survient, la seule information dont vous disposez pour vous aider à comprendre la raison de l'alerte et l'action appropriée à entreprendre, se trouve dans le message d'alerte lui-même. L'analyse de ces informations peut être fastidieuse et sujette à erreurs. La réplication facilite l'automatisation des réponses en fournissant des informations supplémentaires sur l'alerte dans la table système **sysreplicationalerts** ; les données fournies sont déjà analysées dans une forme facilement utilisable pour les programmes personnalisés.  
   
- Si, par exemple, les données de la table **Sales.SalesOrderHeader** de l'Abonné A ne peuvent pas être validées, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut déclencher le message 20574, qui vous avertit de l'échec. Le message que vous recevez peut se présenter comme suit : « L’Abonné 'A' avec un abonnement à l’article 'SalesOrderHeader' de la publication 'MyPublication' n’a pas réussi la validation de données. »  
+ Si, par exemple, les données de la table **Sales.SalesOrderHeader** de l'Abonné A ne peuvent pas être validées, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut déclencher le message 20574, qui vous avertit de l'échec. Le message que vous recevez peut se présenter comme suit : « L'Abonné 'A' avec un abonnement à l'article 'SalesOrderHeader' de la publication 'MyPublication' n'a pas réussi la validation de données ».  
   
  Si vous créez une réponse basée sur le message, vous devez extraire manuellement du message, le nom de l'Abonné, le nom de l'article, le nom de la publication et l'erreur. Cependant, puisque l'Agent de distribution et l'Agent de fusion écrivent ces mêmes informations dans la table **sysreplicationalerts** , ainsi que les détails comme le type d'Agent, l'heure de l'alerte, la base de données de publication, la base de données Abonné et le type de publication, le travail de réponse peut obtenir directement ces informations à partir de la table. Il n'est pas possible d'associer la ligne exacte correspondant à une instance précise de l'alerte, mais la table possède une colonne **status** qui peut être utilisée pour assurer le suivi des entrées. Les entrées de cette table sont conservées pendant la période de rétention de l'historique.  
   
