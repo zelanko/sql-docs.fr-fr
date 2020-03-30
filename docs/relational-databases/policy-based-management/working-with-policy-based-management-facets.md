@@ -16,10 +16,10 @@ ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 179b5431f0531b29b4867f405ee88e4567ddb5d8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054400"
 ---
 # <a name="working-with-policy-based-management-facets"></a>Utiliser les facettes de la gestion basée sur des stratégies
@@ -30,7 +30,7 @@ ms.locfileid: "68054400"
   
  Cette rubrique décrit comment copier l'état d'une facette dans un fichier XML.  
   
-##  <a name="BeforeYouBegin"></a> Autorisations  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorisations  
  Les procédures de cette rubrique nécessite l’appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ## <a name="viewing-and-copying-facet-states"></a>Affichage et copie d'états de facette  

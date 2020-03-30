@@ -13,10 +13,10 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299013"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Parcourir tous les principaux, boîte de dialogue
@@ -32,7 +32,7 @@ ms.locfileid: "71299013"
   
 -   [Configurer les options](#options)  
   
-##  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Parcourir tous les principaux  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> Ouvrir la boîte de dialogue Parcourir tous les principaux  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71299013"
   
 5.  Sélectionnez la page **Autorisations** , puis cliquez sur **Parcourir**.  
   
-##  <a name="options"></a> Configurer les options  
+##  <a name="configure-the-options"></a><a name="options"></a> Configurer les options  
  Cette page affiche les principaux de la vue catalogue, sys.database_principals, de la base de données SSISDB.  
   
  La sélection de principaux les ajoute à la liste **Connexions ou rôles** dans la page **Autorisations** de la boîte de dialogue parent lorsque vous cliquez sur **OK** et fermez la boîte de dialogue **Parcourir tous les principaux** . Après avoir ajouté des principaux à la liste **Connexions ou rôles** , vous pouvez modifier leurs autorisations sur le projet sélectionné.  

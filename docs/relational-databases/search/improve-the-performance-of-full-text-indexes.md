@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021222"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Cette rubrique décrit certaines causes courantes à l’origine de performances médiocres des requêtes et des index de recherche en texte intégral. Elle fournit également quelques suggestions pour éviter ces problèmes et améliorer les performances.
   
-##  <a name="causes"></a> Causes courantes des problèmes de performances
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Causes courantes des problèmes de performances
 ### <a name="hardware-resource-issues"></a>Problèmes liés aux ressources matérielles
 Les performances de l’indexation de texte intégral et des requêtes de texte intégral sont influencées par les ressources matérielles, telles que la mémoire, la vitesse du disque et de l’UC, ainsi que l’architecture de la machine.  
 
@@ -57,7 +57,7 @@ La cause principale d’une baisse des performances de l’indexation de texte i
   
     La fusion principale d'une grande quantité de données peut créer une transaction dont l'exécution est longue, ce qui retarde la troncation du journal des transactions pendant le point de contrôle. Dans ce cas, en mode de récupération complète, la taille du journal des transactions peut s'accroître considérablement. Avant de réorganiser un index de recherche en texte intégral de grande taille dans une base de données qui utilise le mode de récupération complète, il est fortement recommandé de vous assurer que votre journal des transactions contient un espace suffisant pour une transaction dont l'exécution est longue. Pour plus d’informations, consultez [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="tuning"></a> Améliorer les performances des index de recherche en texte intégral  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> Améliorer les performances des index de recherche en texte intégral  
 Pour optimiser les performances de vos index de recherche en texte intégral, appliquez les bonnes pratiques suivantes :  
   
 -   Pour utiliser tous les processeurs ou cœurs d’UC au maximum, définissez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' en lui affectant le nombre d’UC présentes dans le système. Pour plus d’informations sur cette option de configuration, consultez [Maximum de la plage de l’analyse de texte intégral (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -70,7 +70,7 @@ Pour optimiser les performances de vos index de recherche en texte intégral, ap
 
 -   Si vous utilisez une alimentation incrémentielle basée sur une colonne timestamp, créez un index secondaire sur la colonne **timestamp** afin d’améliorer les performances de l’alimentation incrémentielle.  
   
-##  <a name="full"></a> Résoudre les problèmes de performances des alimentations complètes  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> Résoudre les problèmes de performances des alimentations complètes  
 ### <a name="review-the-full-text-crawl-logs"></a>Passer en revue les journaux d’analyse de texte intégral
  Pour mieux diagnostiquer les problèmes de performances, examinez les journaux d’analyse de texte intégral.
  
@@ -140,7 +140,7 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
 2.  500 Mo est une estimation de la mémoire requise par les autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
 3.  .*ism_size* est censé être de 8 Mo pour les plateformes x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemple : estimation des besoins en mémoire de fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemple : estimation des besoins en mémoire de fdhost.exe  
   
  Cet exemple se rapporte à un ordinateur 64 bits avec 8 Go de mémoire vive (RAM) et 4 processeurs double cœur. Les premières estimations de calcul de la mémoire requise par fdhost.exe : *F*. Le nombre de plages d'analyse est `8`.  
   
@@ -195,7 +195,7 @@ Les performances des alimentations complètes ne sont pas optimales lorsque la c
   
          Pour réduire la fragmentation, vous pouvez réorganiser ou reconstruire l'index cluster. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
-##  <a name="filters"></a> Résoudre les problèmes de ralentissement de l’indexation des documents
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> Résoudre les problèmes de ralentissement de l’indexation des documents
 
 > [!NOTE]
 > Cette section décrit un problème qui affecte uniquement les clients qui indexent des documents (tels que les documents Microsoft Word) qui incorporent d’autres types de documents.

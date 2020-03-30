@@ -13,10 +13,10 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903117"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurer la topologie (réplication d'égal à égal)
@@ -63,7 +63,7 @@ ms.locfileid: "67903117"
   
 ### <a name="options-for-each-node"></a>Options pour chaque nœud  
  **Ajouter une nouvelle connexion homologue**  
- Cette option vous permet d'ajouter une connexion entre deux nœuds. Par exemple, si vous ajoutez une connexion entre le nœud A et le nœud B, la réplication ajoute deux abonnements : le premier autorise le nœud A à recevoir des modifications de la publication au niveau du nœud B, et le second autorise le nœud B à recevoir des modifications de la publication au niveau du nœud A.  
+ Cette option vous permet d'ajouter une connexion entre deux nœuds. Par exemple, si vous ajoutez une connexion entre un nœud A et un nœud B, la réplication ajoute deux abonnements : le premier autorise le nœud A à recevoir des modifications de la publication au niveau du nœud B, et le second autorise le nœud B à recevoir des modifications de la publication au niveau du nœud A.  
   
  **Supprimer le nœud homologue**  
  Cette option vous permet de supprimer un nœud de la topologie. Par exemple, si vous supprimez le nœud C, la publication au niveau de ce nœud est supprimée. Les abonnements entre le nœud A et le nœud C sont aussi supprimés, de même qu'entre le nœud B et le nœud C. La base de données au niveau du nœud C n'est pas supprimée, et la publication et la distribution ne sont pas désactivées.  

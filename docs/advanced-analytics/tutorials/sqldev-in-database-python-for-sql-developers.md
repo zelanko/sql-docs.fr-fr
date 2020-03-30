@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74901891"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Tutoriel : Analytique des données Python pour développeurs SQL
@@ -51,7 +51,7 @@ Que vous soyez un programmeur SQL ne connaissant pas Python ou un développeur P
 
 Une fois que le modèle a été enregistré dans la base de données, vous pouvez l’appeler pour vos prédictions dans [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de procédures stockées.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 + [SQL Server Machine Learning Services avec Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 

@@ -13,17 +13,17 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132254"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gérer et surveiller la recherche sémantique
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Décrit le processus d'indexation sémantique et les tâches associées à la gestion et au contrôle des index.  
   
-##  <a name="HowToMonitorStatus"></a> Vérifier l’état de l’indexation sémantique  
+##  <a name="check-the-status-of-semantic-indexing"></a><a name="HowToMonitorStatus"></a> Vérifier l’état de l’indexation sémantique  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>La première phase de l'indexation sémantique est-elle achevée ?
  Interrogez la vue de gestion dynamique, [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md), et vérifiez les colonnes **status** et **status_description**.  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Vérifier la taille des index sémantiques  
+##  <a name="check-the-size-of-the-semantic-indexes"></a><a name="HowToCheckSize"></a> Vérifier la taille des index sémantiques  
 ### <a name="what-is-the-logical-size-of-a-semantic-key-phrase-index-or-a-semantic-document-similarity-index"></a>Quelle est la taille logique d'un index d'expressions clés sémantiques ou d'un index de ressemblance de document sémantique ?
  Interrogez la vue de gestion dynamique, [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md).  
   
@@ -80,7 +80,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Imposer l’alimentation des index sémantiques  
+##  <a name="force-the-population-of-the-semantic-indexes"></a><a name="HowToForcePopulation"></a> Imposer l’alimentation des index sémantiques  
  Vous pouvez forcer le remplissage des index sémantiques et de recherche en texte intégral à l'aide de la clause START/STOP/PAUSE ou RESUME POPULATION avec la même syntaxe et le même comportement que ceux décrits pour les index de recherche en texte intégral. Pour plus d’informations, consultez [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md) et [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).  
   
  Étant donné que l'indexation sémantique dépend de l'indexation de texte intégral, les index sémantiques ne sont remplis que lorsque les index de recherche en texte intégral associés le sont également.  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Désactiver ou réactiver l’indexation sémantique  
+##  <a name="disable-or-re-enable-semantic-indexing"></a><a name="HowToDisableIndexing"></a> Désactiver ou réactiver l’indexation sémantique  
  Vous pouvez activer ou désactiver l'indexation sémantique ou de texte intégral à l'aide de la clause ENABLE/DISABLE avec la même syntaxe et le même comportement que ceux décrits pour les index de recherche en texte intégral. Pour plus d’informations, consultez [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
  Lorsque l'indexation sémantique est désactivée et suspendue, les requêtes sur les données sémantiques continuent de s'exécuter avec succès et retournent des données indexées précédemment. Ce comportement n'est pas cohérent avec le comportement de la recherche en texte intégral.  
@@ -119,7 +119,7 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> À propos des phases d’indexation sémantique  
+##  <a name="about-the-phases-of-semantic-indexing"></a><a name="SemanticIndexing"></a> À propos des phases d’indexation sémantique  
  Une recherche sémantique indexe deux types de données pour chaque colonne sur laquelle elle est activée :  
   
 1.  **Phrases clés**  
@@ -133,7 +133,7 @@ GO
 2.  **Phase 2**. L'index de ressemblance de document sémantique est rempli à son tour. Cet index dépend des deux index remplis à la phase précédente.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problème : les index sémantiques ne sont pas alimentés  
+##  <a name="issue-semantic-indexes-are-not-populated"></a><a name="ProblemNotPopulated"></a> Problème : les index sémantiques ne sont pas alimentés  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>Les index de recherche en texte intégral associés sont-ils remplis ?  
  Étant donné que l'indexation sémantique dépend de l'indexation de texte intégral, les index sémantiques ne sont remplis que lorsque les index de recherche en texte intégral associés le sont également.  
   

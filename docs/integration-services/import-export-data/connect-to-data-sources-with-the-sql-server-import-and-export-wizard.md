@@ -10,10 +10,10 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903936"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Se connecter à des sources de données à l’aide de l’Assistant Importation et Exportation SQL Server
@@ -40,7 +40,7 @@ Cliquez sur un lien pour en savoir plus sur la connexion à l’une des sources 
 ## <a name="connect-to-other-data-providers"></a>Se connecter à d’autres fournisseurs de données
 Pour plus d’informations sur la connexion à une source de données qui n’est pas répertoriée ici, consultez [The Connection Strings Reference](https://www.connectionstrings.com/). Ce site tiers contient des exemples de chaînes de connexion et des renseignements complémentaires sur les fournisseurs de données et les informations de connexion dont ils ont besoin.
 
-## <a name="related"></a> Tâches et contenus connexes  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Tâches et contenus connexes  
 Voici d’autres tâches élémentaires.
 -   **Consulter un exemple rapide sur le fonctionnement de l’Assistant.**
 

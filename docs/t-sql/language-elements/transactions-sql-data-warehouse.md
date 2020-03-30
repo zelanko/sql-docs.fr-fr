@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121588"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transactions (SQL Data Warehouse)
@@ -30,7 +30,7 @@ ms.locfileid: "68121588"
   
 -   Les *transactions de validation automatique* se lancent automatiquement au sein d’une session et ne commencent pas par l’instruction BEGIN TRANSACTION. Quand le paramètre AUTOCOMMIT a la valeur ON, chaque instruction s’exécute dans une transaction et aucune instruction COMMIT ou ROLLBACK explicite n’est nécessaire. Lorsque le paramètre AUTOCOMMIT a la valeur OFF, une instruction COMMIT ou ROLLBACK est nécessaire pour déterminer le résultat de la transaction. Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], les transactions validées automatiquement commencent immédiatement après une instruction COMMIT ou ROLLBACK, ou bien après une instruction SET AUTOCOMMIT OFF.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] utilise le verrouillage pour garantir l’intégrité des transactions et gérer la cohérence des bases de données quand plusieurs utilisateurs accèdent simultanément aux données. Le verrouillage est utilisé à la fois par les transactions implicites et explicites. Chaque transaction demande des verrous de différents types sur les ressources, comme les tables ou les bases de données dont elle dépend. Tous les verrous [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se trouvent au niveau de la table ou au-dessus. Les verrous demandés empêchent les autres transactions d'apporter aux ressources des modifications susceptibles de nuire à la transaction. Chaque transaction libère ses verrous quand elle ne dépend plus des ressources verrouillées ; les transactions explicites conservent les verrous jusqu’à la fin de la transaction, une fois que celle-ci est validée ou restaurée.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>R. Utilisation d’une transaction explicite  
   

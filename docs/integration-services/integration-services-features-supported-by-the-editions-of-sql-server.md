@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284358"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Fonctionnalités Integration Services prises en charge par les éditions de SQL Server
@@ -37,7 +37,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
     
 > [![Télécharger à partir du Centre d’évaluation](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Télécharger SQL Server 2016 à partir du Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> Nouvelles fonctionnalités Integration Services dans SQL Server 2017
+## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> Nouvelles fonctionnalités Integration Services dans SQL Server 2017
   
 |Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -49,13 +49,13 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 
 <sup>2</sup> Cette fonctionnalité est également prise en charge dans SQL Server 2016 avec Service Pack 1.
 
-## <a name="IEWiz"></a> Assistant Importation et Exportation SQL Server
+## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> Assistant Importation et Exportation SQL Server
 
 |Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Assistant Importation et Exportation SQL Server|Oui|Oui|Oui|Oui|Oui|  
 
-## <a name="IS"></a> Integration Services  
+## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   
 |Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -66,7 +66,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 |Connecteurs et tâches Hadoop/HDFS|Oui|Oui||||  
 |Outils de profilage de données de base|Oui|Oui|||| 
 
-## <a name="ISAA"></a> Integration Services - sources et destinations avancées  
+## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a> Integration Services - sources et destinations avancées  
   
 |Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -77,7 +77,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 |Destination de traitement de dimension|Oui|||||  
 |Destination de traitement de partition|Oui|||||  
   
-## <a name="ISAT"></a> Integration Services - Tâches et transformations avancées  
+## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Integration Services - Tâches et transformations avancées  
   
 |Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

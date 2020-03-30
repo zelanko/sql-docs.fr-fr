@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel T-SQL : créer et interroger des objets de base de données | Microsoft Docs'
+title: 'Tutoriel T-SQL : Créer et interroger des objets de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198406"
 ---
-# <a name="lesson-1-create-and-query-database-objects"></a>Leçon 1 : créer et interroger des objets de base de données
+# <a name="lesson-1-create-and-query-database-objects"></a>Leçon 1 : Créer et interroger des objets de base de données
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Cette leçon vous montre comment créer une base de données, une table dans la base de données, puis accéder aux données et les modifier dans la table. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  
@@ -34,14 +34,14 @@ Le code s’exécute sur le [!INCLUDE[ssDE](../includes/ssde-md.md)] de la même
   
 Pour exécuter des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], ouvrez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] et connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d’un accès à une instance SQL Server. 
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Si vous n’avez pas d’instance SQL Server, créez-en une. Pour cela, sélectionnez votre plateforme parmi les liens suivants. Si vous choisissez l’authentification SQL, utilisez vos informations d’identification de connexion SQL Server.
-- **Windows** : [Télécharger SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS** : [Télécharger SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **Windows** : [Téléchargez SQL Server 2017 Édition Développeur](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS** : [Téléchargez SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Création d'une base de données
 Comme de nombreuses instructions [!INCLUDE[tsql](../includes/tsql-md.md)], l’instruction [`CREATE DATABASE`](statements/create-database-transact-sql.md) a un paramètre obligatoire : le nom de la base de données.` CREATE DATABASE` a aussi de nombreux paramètres facultatifs, notamment l’emplacement du disque où vous souhaitez placer les fichiers de base de données. Quand vous exécutez `CREATE DATABASE` sans les paramètres facultatifs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise les valeurs par défaut pour un grand nombre de ces paramètres.
@@ -108,7 +108,7 @@ Une fois que vous avez créé la table **Products** , vous pouvez insérer des d
 |75|Tire Bar||Outil pour changer des pneus.|  
 |3000|3 mm Bracket|0.52||  
   
-La syntaxe de base est la suivante : INSERT, nom de table, liste de colonne, VALUES, puis la liste des valeurs à insérer. Les deux tirets en début de ligne indiquent que celle-ci est un commentaire et que le texte sera ignoré par le compilateur. Dans ce cas, le commentaire décrit une variation autorisée de la syntaxe.  
+La syntaxe de base est la suivante : INSERT, nom de table, liste de colonnes, VALUES, puis la liste des valeurs à insérer. Les deux tirets en début de ligne indiquent que celle-ci est un commentaire et que le texte sera ignoré par le compilateur. Dans ce cas, le commentaire décrit une variation autorisée de la syntaxe.  
   
 ### <a name="insert-data-into-a-table"></a>Insérer des données dans une table  
   

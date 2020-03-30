@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727456"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Comment créer des requêtes MDX dans R à l’aide d’olapR
@@ -32,7 +32,7 @@ Les opérations suivantes ne sont pas prises en charge :
 + Création d’objets OLAP
 + Écriture différée sur des partitions, y compris des mesures ou des sommes
 
-## <a name="buildMDX"></a> Créer une requête MDX à partir de R
+## <a name="build-an-mdx-query-from-r"></a><a name="buildMDX"></a> Créer une requête MDX à partir de R
 
 1. Définissez une chaîne de connexion qui spécifie la source de données OLAP (instance SSAS) et le fournisseur MSOLAP.
 
@@ -58,7 +58,7 @@ Les opérations suivantes ne sont pas prises en charge :
   + `executeMD` Retourne un tableau multidimensionnel
   + `execute2D` Retourne une trame de données à deux dimensions (tabulaire)
 
-## <a name="executeMDX"></a> Exécuter une requête MDX valide à partir de R
+## <a name="execute-a-valid-mdx-query-from-r"></a><a name="executeMDX"></a> Exécuter une requête MDX valide à partir de R
 
 1. Définissez une chaîne de connexion qui spécifie la source de données OLAP (instance SSAS) et le fournisseur MSOLAP.
 

@@ -935,7 +935,7 @@
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
     - name: 'Procédure pas à pas : Configurer Integration Services Scale Out'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
-    - name: Exécuter des packages dans Scale Out
+    - name: Exécuter des packages dans Scale-out
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
     - name: Ajouter un Scale Out Worker avec Scale Out Manager
       href: ../integration-services/scale-out/add-scale-out-worker.md
@@ -953,7 +953,7 @@
       href: ../integration-services/scale-out/scale-out-support-for-high-availability.md
     - name: Haute disponibilité au moyen d’une instance de cluster de basculement SQL Server
       href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
-    - name: Résoudre les problèmes de Scale Out
+    - name: Résoudre les problèmes de Scale-out
       href: ../integration-services/scale-out/troubleshooting-scale-out.md
 - name: Catalogue et serveur
   href: ../integration-services/catalog/integration-services-ssis-server-and-catalog.md

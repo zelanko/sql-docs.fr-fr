@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68088474"
 ---
 # <a name="delete-columns-from-a-table"></a>Supprimer des colonnes d'une table
@@ -46,21 +46,21 @@ Cette rubrique explique comment supprimer des colonnes de table dans [!INCLUDE[s
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Avant de commencer
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer
 
-### <a name="Restrictions"></a> Limitations et restrictions
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions
 
 Vous ne pouvez pas supprimer une colonne qui a une contrainte CHECK. Vous devez d'abord supprimer la contrainte.
 
 Vous ne pouvez pas supprimer une colonne qui a des contraintes PRIMARY KEY ou FOREIGN KEY ou d'autres dépendances, sauf en utilisant le Concepteur de tables. Si vous utilisez l'Explorateur d'objets ou [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez d'abord supprimer toutes les dépendances à la colonne.
 
-### <a name="Security"></a> Sécurité
+### <a name="security"></a><a name="Security"></a> Sécurité
 
-#### <a name="Permissions"></a> Autorisations
+#### <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
 Requiert une autorisation ALTER sur la table.
 
-## <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>Pour supprimer des colonnes à l'aide de l'Explorateur d'objets
 
@@ -77,7 +77,7 @@ Si la colonne contient des contraintes ou d'autres dépendances, un message d'er
 2. Cliquez avec le bouton droit sur la colonne à supprimer et, dans le menu contextuel, cliquez sur **Supprimer une colonne** .
 3. Si les colonnes à supprimer participent à une relation (FOREIGN KEY ou PRIMARY KEY), un message vous demande confirmation avant la suppression des colonnes sélectionnées et de leurs relations. Choisissez **Oui**.
 
-## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL
 
 ### <a name="to-delete-columns"></a>Pour supprimer des colonnes
 

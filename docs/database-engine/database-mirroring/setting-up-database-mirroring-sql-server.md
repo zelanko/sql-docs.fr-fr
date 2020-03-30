@@ -13,10 +13,10 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048090"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configuration de la mise en miroir de bases de données (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "68048090"
 >  Nous vous recommandons de configurer la mise en miroir de bases de données durant les heures creuses, car cela peut affecter les performances.  
   
   
-##  <a name="PrepareInstances"></a> Préparation d'une instance de serveur pour héberger un serveur miroir  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Préparation d'une instance de serveur pour héberger un serveur miroir  
  Pour chaque session de mise en miroir de bases de données :  
   
 1.  Le serveur principal, le serveur miroir et le serveur témoin, le cas échéant, doivent être hébergés par des instances de serveur distinctes, chacune devant se trouver sur des systèmes hôtes distincts. Chacune des instances de serveur nécessite un point de terminaison de mise en miroir de bases de données. Si vous devez créer un point de terminaison de mise en miroir de bases de données, vérifiez qu'il est accessible aux autres instances de serveur.  
@@ -48,7 +48,7 @@ ms.locfileid: "68048090"
   
 3.  Sur l'instance de serveur qui hébergera la base de données miroir, configurez le reste de l'environnement requis pour la base de données mise en miroir. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Vue d'ensemble : établissement d'une session de mise en miroir de bases de données  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Vue d'ensemble : établissement d'une session de mise en miroir de bases de données  
  Les étapes de base pour établir une session de mise en miroir sont les suivantes :  
   
 1.  Créez la base de données miroir en restaurant les sauvegardes suivantes, à l'aide de RESTORE WITH NORECOVERY sur chaque opération de restauration :  
@@ -98,7 +98,7 @@ ms.locfileid: "68048090"
 >  Pour obtenir un exemple de l’utilisation de [!INCLUDE[tsql](../../includes/tsql-md.md)] pour configurer la mise en miroir de bases de données à l’aide de l’authentification Microsoft Windows, consultez [Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
-##  <a name="InThisSection"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Dans cette section  
  [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Résume les étapes de la création d'une base de données miroir ou de la préparation d'une base de données miroir avant la reprise d'une session suspendue. Fournit également des liens vers des articles de procédure.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68048090"
  [Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Décrit la création d'une connexion pour une instance de serveur distant qui n'utilise pas le même compte que l'instance de serveur local.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **SQL Server Management Studio**  
   
 -   [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

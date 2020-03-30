@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117678"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117678"
 
 Retourne une partie d'une expression de type caractère, binaire, texte ou image dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Est une [expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **character**, **binary**, **text**, **ntext** ou **image**.  
+ Est une **expression** de type **character**, **binary**, **text**, **ntext** ou [image](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
  Expression entière ou **bigint** qui spécifie où les caractères retournés commencent. (La numérotation est basée sur 1, ce qui signifie que le premier caractère de l’expression est 1). Si *start* est inférieur à 1, l’expression retournée commence au premier caractère spécifié dans *expression*. Dans ce cas, le nombre de caractères retournés correspond à la valeur la plus grande entre la somme de *start* + *length*- 1 et 0. Si *start* est supérieur au nombre de caractères dans l’expression de valeur, une expression de longueur nulle est retournée.  
@@ -177,7 +177,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. Utilisation de SUBSTRING avec une chaîne de caractères  
  L'exemple suivant illustre la manière de retourner uniquement une partie d'une chaîne de caractères. À partir de la table `dbo.DimEmployee`, cette requête retourne les noms de famille dans une colonne avec seulement la première initiale des prénoms dans la seconde colonne.  
