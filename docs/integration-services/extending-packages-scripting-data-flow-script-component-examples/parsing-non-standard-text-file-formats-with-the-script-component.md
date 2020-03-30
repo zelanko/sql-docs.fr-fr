@@ -16,10 +16,10 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297063"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analyse de formats de fichiers texte non standard à l'aide du composant Script
@@ -36,7 +36,7 @@ ms.locfileid: "71297063"
 > [!NOTE]  
 >  Si vous souhaitez créer un composant que vous pouvez réutiliser plus facilement dans plusieurs tâches de flux de données et plusieurs packages, utilisez le code présenté dans cet exemple de composant Script comme point de départ pour un composant de flux de données personnalisé. Pour plus d’informations, consultez [Développement d’un composant de flux de données personnalisé](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Exemple 1 : analyse d’enregistrements délimités par des lignes  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> Exemple 1 : analyse d’enregistrements délimités par des lignes  
  Cet exemple montre comment analyser un fichier texte, dans lequel chaque colonne de données figure sur une ligne séparée, dans une table de destination, à l'aide du composant Script.  
   
  Pour plus d’informations sur la configuration du composant Script en vue de son utilisation comme transformation dans le flux de données, consultez [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) et [Création d’une transformation asynchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -191,7 +191,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Exemple 2 : fractionnement d’enregistrements parents et enfants  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Exemple 2 : fractionnement d’enregistrements parents et enfants  
  Cet exemple montre comment analyser un fichier texte, dans lequel une ligne de séparateur précède une ligne d'enregistrement parente suivie d'un nombre indéfini de lignes d'enregistrement enfants, dans des tables de destination parentes et enfants correctement normalisées, à l'aide du composant Script. Cet exemple simple pourrait être facilement adapté aux fichiers sources qui utilisent plusieurs lignes ou colonnes pour chaque enregistrement parent et enfant, tant qu'il est possible d'identifier le début et la fin de chaque enregistrement.  
   
 > [!CAUTION]  

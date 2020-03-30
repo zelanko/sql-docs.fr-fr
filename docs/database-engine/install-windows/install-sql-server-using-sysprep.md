@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990950"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installer SQL Server à l’aide de SysPrep
@@ -34,10 +34,10 @@ Avant d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], c
   
 Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur les configurations matérielle et logicielle requises, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
-##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prise en charge des clusters par SysPrep  
+##  <a name="ssnoversion-sysprep-cluster-support"></a><a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prise en charge des clusters par SysPrep  
  À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep prend en charge les instances cluster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les installations via la ligne de commande. Pour plus d'informations, consultez [Qu'est-ce que Sysprep ?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx). 
   
-### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Pour préparer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sans assistance)  
+### <a name="to-prepare-a-ssnoversion-failover-cluster-unattended"></a>Pour préparer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sans assistance)  
   
 1. Préparez l’image (comme décrit dans [Considérations relatives à l’installation de SQL Server à l’aide de SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)) et capturez l’image Windows au moyen de SysPrep Generalization. L'exemple suivant prépare l'image :  
   
@@ -57,7 +57,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Création d’un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sans assistance)  
+### <a name="complete-a-ssnoversion-failover-cluster-unattended"></a>Création d’un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sans assistance)  
   
 1. Exécutez setup.exe avec **/ACTION=CompleteFailoverCluster** sur le nœud propriétaire du groupe de stockage disponible :  
   
@@ -65,7 +65,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
     ```  
   
-### <a name="adding-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Ajout d’un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant (sans assistance)  
+### <a name="adding-a-node-to-an-existing-ssnoversion-failover-cluster-unattended"></a>Ajout d’un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant (sans assistance)  
   
 1. Déployez l'image en exécutant Windows SysPrep Specialize. 
   
@@ -77,9 +77,9 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-##  <a name="prepare"></a> Préparer l'image  
+##  <a name="prepare-image"></a><a name="prepare"></a> Préparer l'image  
   
-### <a name="prepare-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Préparez une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+### <a name="prepare-a-stand-alone-instance-of-ssnoversion"></a>Préparez une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 1. Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe. 
   
@@ -135,9 +135,9 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 18. L'étape de préparation est maintenant terminée. Vous pouvez finaliser l'image ou déployer l'image préparée comme décrit dans [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
-##  <a name="complete"></a> Finaliser l'image  
+##  <a name="complete-image"></a><a name="complete"></a> Finaliser l'image  
   
-### <a name="complete-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Finaliser une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="complete-a-prepared-instance-of-ssnoversion"></a>Finaliser une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Si vous avez une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluse dans l'image de votre ordinateur, un raccourci est affiché dans le menu Démarrer. Vous pouvez également lancer le Centre d’installation et cliquer sur **Finalisation d’image d’une instance autonome préparée** dans la page **Avancé** . 
   
@@ -153,7 +153,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 7. Dans la page **Sélectionner une instance préparée** , sélectionnez l'instance préparée que vous souhaitez finaliser dans la zone de liste déroulante. Sélectionnez l’instance non configurée dans la liste **ID de l’instance** . 
   
-     **Instances installées :** cette grille affiche toutes les instances, y compris toute instance préparée sur cet ordinateur. 
+     **Instances installées :** Cette grille affiche toutes les instances, y compris toute instance préparée sur cet ordinateur. 
   
 8. Dans la page **Vérification des fonctionnalités** sont répertoriés les fonctionnalités et composants sélectionnés inclus dans l'installation pendant l'étape de préparation. Si vous souhaitez ajouter davantage de fonctionnalités à votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non incluses dans l'instance préparée, vous devez d'abord effectuer cette étape pour finaliser l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis ajouter les fonctionnalités à partir de **Ajouter des fonctionnalités** dans le **Centre d'installation**. 
   
@@ -219,9 +219,9 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 23. Cette étape achève la configuration de l'instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et termine l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-##  <a name="AddFeatures"></a> Add Features to a Prepared Instance  
+##  <a name="add-features-to-a-prepared-instance"></a><a name="AddFeatures"></a> Add Features to a Prepared Instance  
   
-### <a name="add-features-to-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Ajouter des fonctionnalités à une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="add-features-to-a-prepared-instance-of-ssnoversion"></a>Ajouter des fonctionnalités à une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe. 
   
@@ -251,9 +251,9 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 13. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
   
-##  <a name="RemoveFeatures"></a> Supprimer des fonctionnalités d'une instance préparée  
+##  <a name="remove-features-from-a-prepare-instance"></a><a name="RemoveFeatures"></a> Supprimer des fonctionnalités d'une instance préparée  
   
-### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Suppression de fonctionnalités d'une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>Suppression de fonctionnalités d'une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Pour commencer le processus de désinstallation, dans le menu **Démarrer** , cliquez sur **Panneau de configuration** , puis double-cliquez sur **Programmes et fonctionnalités**. 
   
@@ -273,9 +273,9 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 9. Dans la page **Finaliser** , vous pouvez examiner l'état d'achèvement de l'opération. Cliquez sur **Fermer** pour quitter l'Assistant Installation. 
   
-##  <a name="Uninstall"></a> Désinstallation d'une instance préparée  
+##  <a name="uninstalling-a-prepared-instance"></a><a name="Uninstall"></a> Désinstallation d'une instance préparée  
   
-### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Désinstaller une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>Désinstaller une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. Pour commencer le processus de désinstallation, dans le menu **Démarrer** , cliquez sur **Panneau de configuration** , puis double-cliquez sur **Programmes et fonctionnalités**. 
   
@@ -297,7 +297,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 10. Répétez les étapes 1 à 9 jusqu'à ce que tous les composants de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aient été supprimés. 
   
-##  <a name="bk_Modifying_Uninstalling"></a> Modification ou désinstallation d'une instance finalisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a> Modification ou désinstallation d'une instance finalisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
  Le processus d'ajout ou de suppression de fonctionnalités ou de désinstallation d'une instance finalisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est semblable au processus applicable à une instance installée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez les articles suivants :  
   
 - [Ajouter des fonctionnalités à une instance de SQL Server &#40;programme d’installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  

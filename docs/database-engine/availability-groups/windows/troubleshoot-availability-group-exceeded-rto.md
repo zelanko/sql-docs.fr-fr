@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013750"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Dépanner : dépassement de RTO du groupe de disponibilité
@@ -28,7 +28,7 @@ ms.locfileid: "68013750"
   
 2.  [Le thread de restauration par progression prend du retard en raison d’une contention de ressources](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a>Une charge de travail de création de rapports empêche l’exécution du thread de restauration par progression  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a>Une charge de travail de création de rapports empêche l’exécution du thread de restauration par progression  
  Le thread de restauration par progression sur le réplica secondaire est bloqué et ne peut pas apporter de changements au DDL (langage de définition de données) au moyen d’une requête en lecture seule de longue durée.  
   
 ### <a name="explanation"></a>Explication  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Vous pouvez soit laisser la charge de travail de création de rapports se terminer, ce qui déclenche le déblocage du thread de restauration par progression, soit débloquer immédiatement le thread de restauration par progression en exécutant la commande [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) sur l’ID de session à l’origine du blocage.  
   
-##  <a name="BKMK_CONTENTION"></a> Le thread de restauration par progression prend du retard en raison d’une contention de ressources  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> Le thread de restauration par progression prend du retard en raison d’une contention de ressources  
  Une importante charge de travail de création de rapports sur le réplica secondaire ralentit les performances du réplica secondaire, et le thread de restauration par progression prend du retard.  
   
 ### <a name="explanation"></a>Explication  

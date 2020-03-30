@@ -11,10 +11,10 @@ ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 40014049e46f10778ede60e9f1597d740bde882f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68102503"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, nœud de mémoire
@@ -22,7 +22,7 @@ ms.locfileid: "68102503"
   L'objet **Nœud de mémoire** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs permettant de surveiller l'utilisation globale de la mémoire sur des nœuds NUMA.  
   
 ## <a name="memory-node-counters"></a>Compteurs de nœuds de mémoire  
- Ce tableau décrit les compteurs **Nœud de mémoire** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Nœud de mémoire**de**.  
   
 |Compteurs du Gestionnaire de mémoire de SQL Server|Description|  
 |----------------------------------------|-----------------|  

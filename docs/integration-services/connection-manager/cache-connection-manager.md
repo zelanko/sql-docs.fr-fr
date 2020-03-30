@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294445"
 ---
 # <a name="cache-connection-manager"></a>Gestionnaire de connexions du cache
@@ -67,7 +67,7 @@ ms.locfileid: "71294445"
   
  La boîte de dialogue **Éditeur du gestionnaire de connexions du cache** inclut les onglets suivants :  
   
-###  <a name="generaltab"></a> Onglet Général  
+###  <a name="general-tab"></a><a name="generaltab"></a> Onglet Général  
  Utilisez l’onglet **Général** de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** pour indiquer s’il faut lire le cache depuis un fichier ou l’enregistrer dans un fichier.  
   
 #### <a name="options"></a>Options  
@@ -98,7 +98,7 @@ ms.locfileid: "71294445"
  **Actualiser les métadonnées**  
  Supprimez les métadonnées de colonne dans le gestionnaire de connexions du cache et remplissez à nouveau celui-ci avec les métadonnées de colonne d'un fichier cache sélectionné.  
   
-###  <a name="columnstab"></a> Onglet Colonnes  
+###  <a name="columns-tab"></a><a name="columnstab"></a> Onglet Colonnes  
  Utilisez l'onglet **Colonnes** de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** pour configurer les propriétés de chaque colonne dans le cache.  
   
 #### <a name="options"></a>Options  

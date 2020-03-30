@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056318"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utiliser un fichier de format pour ignorer un champ de données (SQL Server)
@@ -30,12 +30,12 @@ Le nombre de champs contenus dans un fichier de données peut être supérieur a
 |[Exemples de conditions de test](#etc)<br />&emsp;&#9679;&emsp;[Exemple de table](#sample_table)<br />&emsp;&#9679;&emsp;[Exemple de fichier de données](#sample_data_file)<br />[Création des fichiers de format](#create_format_file)<br />&emsp;&#9679;&emsp;[Création d’un fichier de format non-XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Modification d’un fichier de format non-XML](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Création d’un fichier de format XML](#xml_format_file)<br />&emsp;&#9679;&emsp;[Modification d’un fichier de format XML](#modify_xml_format_file)<br />[Importation de données avec un fichier de format pour ignorer un champ de données](#import_data)<br />&#9679;&emsp;&emsp;[Utilisation d’un fichier de format bcp et non-XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Utilisation de bcp et d’un fichier de format XML](#bcp_xml)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et d’un fichier de format non-XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et d’un fichier de format XML](#bulk_xml)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET(BULK...) et d’un fichier de format non-XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET(BULK...) et d’un fichier de format XML](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
 > [!NOTE]
->  Vous pouvez utiliser un fichier de format non-XML ou XML pour importer en bloc un fichier de données dans la table à l’aide d’une commande [bcp utility](../../tools/bcp-utility.md), d’une instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou d’une instruction INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md). Pour plus d’informations, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
+>  Vous pouvez utiliser un fichier de format non-XML ou XML pour importer en bloc un fichier de données dans la table à l’aide d’une commande [bcp utility](../../tools/bcp-utility.md) , d’une instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou d’une instruction INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) . Pour plus d’informations, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-## Exemples de conditions de test<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Exemples de conditions de test<a name="etc"></a>  
 Les fichiers de format modifiés pris en exemple dans cette rubrique sont fondés sur la table et le fichier de données définis ci-dessous.
   
-### Exemple de table<a name="sample_table"></a>
+### <a name="sample-table"></a>Exemple de table<a name="sample_table"></a>
 Le script ci-dessous crée une base de données de test et une table nommée `myTestSkipField`.  Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
  
 ```sql
@@ -51,7 +51,7 @@ CREATE TABLE myTestSkipField
    );
 ```
   
-### Fichier de données d’exemple<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>Fichier de données d’exemple<a name="sample_data_file"></a>
 Créez un fichier vide `D:\BCP\myTestSkipField.bcp` et insérez les données suivantes : 
 ```
 1,SkipMe,Anthony,Grosse
@@ -59,7 +59,7 @@ Créez un fichier vide `D:\BCP\myTestSkipField.bcp` et insérez les données sui
 3,SkipMe,Stella,Rosenhain
 ```
   
-## Création des fichiers de format<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>Création des fichiers de format<a name="create_format_file"></a>
 Pour effectuer l’importation en bloc de données de `myTestSkipField.bcp` dans la table `myTestSkipField` , le fichier de format doit effectuer les tâches suivantes :
 * mapper le premier champ des données à la première colonne, `PersonID`;
 * ignorer le deuxième champ des données ;
@@ -68,14 +68,14 @@ Pour effectuer l’importation en bloc de données de `myTestSkipField.bcp` dans
 
 La méthode la plus simple pour créer le fichier de format consiste à utiliser [bcp utility](../../tools/bcp-utility.md).  Tout d’abord, créez un fichier de format de base à partir de la table existante.  Ensuite, modifiez le fichier de format de base afin qu’il reflète le fichier de données réel.
   
-### <a name="nonxml_format_file"></a>Création d’un fichier de format non-XML 
+### <a name="creating-a-non-xml-format-file"></a><a name="nonxml_format_file"></a>Création d’un fichier de format non-XML 
 Veuillez consulter [Fichiers de format non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) pour obtenir des informations détaillées. La commande suivante utilise [l’utilitaire bcp](../../tools/bcp-utility.md) pour générer un fichier de format non xml `myTestSkipField.fmt`basé sur le schéma de `myTestSkipField`.  En outre, le qualificateur `c` est utilisé pour sépcifier les données de caractère, `t,` est utilisé pour spécifier une virgule comme délimiteur de champ, et `T` est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d'une invite de commandes, entrez la commande suivante :
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt -t, -T
 ```
 
-### Modification du fichier de format non-XML <a name="modify_nonxml_format_file"></a>
+### <a name="modifying-the-non-xml-format-file"></a>Modification du fichier de format non-XML <a name="modify_nonxml_format_file"></a>
 Consultez [Structure des fichiers de format non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) pour la terminologie. Ouvrez `D:\BCP\myTestSkipField.fmt` dans Bloc-notes et effectuez les modifications suivantes :
 1) Copiez l’intégralité de la ligne format-file pour `FirstName` et collez-la directement après `FirstName` sur la ligne suivante.
 2) Incrémentez de 1 la valeur d’ordre des champs du fichier hôte pour la nouvelle ligne et toutes les lignes suivantes.
@@ -109,14 +109,14 @@ Le fichier de format modifié reflète à présent les éléments suivants :
 * Le troisième champ de données figurant dans `myTestSkipField.bcp` est mappé à la deuxième colonne ; `myTestSkipField.. FirstName`
 * Le quatrième champ de données figurant dans `myTestSkipField.bcp` est mappé à la troisième colonne ; `myTestSkipField.. LastName`
 
-### Création d’un fichier de format XML <a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>Création d’un fichier de format XML <a name="xml_format_file"></a>  
 Veuillez consulter [Fichiers de format XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) pour obtenir des informations détaillées.  La commande suivante utilise l’ [utilitaire bcp](../../tools/bcp-utility.md) pour créer un fichier de format xml `myTestSkipField.xml`basé sur le schéma de `myTestSkipField`.  En outre, le qualificateur `c` est utilisé pour sépcifier les données de caractère, `t,` est utilisé pour spécifier une virgule comme délimiteur de champ, et `T` est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  Le qualificateur `x` doit être utilisé pour générer un fichier de format XML.  À partir d'une invite de commandes, entrez la commande suivante :
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.xml -t, -T
 ```
 
-### Modification du fichier de format XML <a name="modify_xml_format_file"></a>
+### <a name="modifying-the-xml-format-file"></a>Modification du fichier de format XML <a name="modify_xml_format_file"></a>
 Consultez [Syntaxe de schéma pour les fichiers de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) pour la terminologie.  Ouvrez `D:\BCP\myTestSkipField.xml` dans Bloc-notes et effectuez les modifications suivantes :
 1) Copiez la totalité du deuxième champ et collez-la directement après le deuxième champ sur la ligne suivante.
 2) Incrémentez la valeur « FIELD ID » de 1 pour le nouveau champ et pour chaque champ suivant.
@@ -165,22 +165,22 @@ Le fichier de format modifié reflète à présent les éléments suivants :
 * FIELD 3 qui correspond à COLUMN 3 est mappé à la seconde colonne de la table. `myTestSkipField.. FirstName`
 * FIELD 4 qui correspond à COLUMN 4 est mappé à la troisième colonne de la table. `myTestSkipField.. LastName`
 
-## Importation de données avec un fichier de format pour ignorer un champ de données<a name="import_data"></a>
+## <a name="importing-data-with-a-format-file-to-skip-a-data-field"></a>Importation de données avec un fichier de format pour ignorer un champ de données<a name="import_data"></a>
 Les exemples ci-dessous utilisent la base de données, le fichier de données et les fichiers de format créés ci-dessus.
 
-### Utilisation de [bcp](../../tools/bcp-utility.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>Utilisation de [bcp](../../tools/bcp-utility.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 À partir d'une invite de commandes, entrez la commande suivante :
 ```
 bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myTestSkipField.fmt -T
 ```
 
-### Utilisation de [bcp](../../tools/bcp-utility.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>Utilisation de [bcp](../../tools/bcp-utility.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a>
 À partir d'une invite de commandes, entrez la commande suivante :
 ```
 bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myTestSkipField.xml -T
 ```
 
-### Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
 ```sql
 USE TestDatabase;  
@@ -196,7 +196,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
 ```sql
 USE TestDatabase;  
@@ -212,7 +212,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### Utilisation d’ [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>Utilisation d’ [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
 ```sql
 USE TestDatabase;
@@ -231,7 +231,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### [Utilisation d’OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>[Utilisation d’OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
 ```sql
 USE TestDatabase;  

@@ -21,10 +21,10 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295675"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Rôles Integration Services (Service SSIS)
@@ -93,7 +93,7 @@ ms.locfileid: "71295675"
   
      Vous pouvez affecter un rôle de lecture et d'écriture à chaque package.  
 
-## <a name="assign"></a> Affecter un rôle de lecture et d'écriture à un package
+## <a name="assign-a-reader-and-writer-role-to-a-package"></a><a name="assign"></a> Affecter un rôle de lecture et d'écriture à un package
   Vous pouvez affecter un rôle de lecture et d'écriture à chaque package.  
   
 ### <a name="assign-a-reader-and-writer-role-to-a-package"></a>Affecter un rôle de lecture et d'écriture à un package  
@@ -108,7 +108,7 @@ ms.locfileid: "71295675"
   
 5.  Cliquez sur **OK**.
 
-## <a name="create"></a> Créer un rôle défini par l'utilisateur
+## <a name="create-a-user-defined-role"></a><a name="create"></a> Créer un rôle défini par l'utilisateur
     
 ### <a name="to-create-a-user-defined-role"></a>Pour créer un rôle défini par l'utilisateur  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71295675"
   
 11. Cliquez sur **OK**.
 
-## <a name="roles_dialog"></a> Référence de l’IU de la boîte de dialogue Rôles de package
+## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> Référence de l’IU de la boîte de dialogue Rôles de package
   Utilisez la boîte de dialogue **Rôles de package** , disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pour spécifier les rôles au niveau de la base de données qui possèdent un accès en lecture au package et les rôles au niveau de la base de données qui possèdent un accès en écriture au package. Les rôles au niveau de la base de données s’appliquent uniquement aux packages stockés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**.  
   
  Les rôles répertoriés dans la boîte de dialogue sont les rôles actuels de la base de données système **msdb** . Si aucun rôle n'est sélectionné, les rôles [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] par défaut s'appliquent. Par défaut, le rôle de lecteur inclut **db_ssisadmin**, **db_ssisoperator**et l’utilisateur qui a créé le package. Un utilisateur membre de l'un de ces rôles ou qui a créé les packages peut énumérer, consulter, exporter et exécuter des packages. Par défaut, le rôle de rédacteur inclut **db_ssisadmin** et l’utilisateur qui a créé le package. Un utilisateur membre de ce rôle et l'utilisateur qui a créé les packages peuvent importer, supprimer et modifier des packages.  

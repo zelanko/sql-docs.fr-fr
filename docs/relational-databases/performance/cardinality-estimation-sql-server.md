@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946995"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
@@ -59,19 +59,19 @@ Vous disposez de techniques pour identifier une requête qui s’exécute plus l
 
 En 1998, une mise à jour majeure de l’estimation de cardinalité a été intégrée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, pour lequel le niveau de compatibilité était de 70. Cette version du modèle CE est fondée sur quatre hypothèses de base :
 
--  **Indépendance :** les distributions de données sur différentes colonnes sont supposées être indépendantes les unes des autres, à moins que des informations de corrélation soient disponibles et utilisables.
--  **Homogénéité :** les valeurs distinctes sont espacées de manière égale et ont toutes la même fréquence. Plus précisément, dans chaque étape d’[histogramme](../../relational-databases/statistics/statistics.md#histogram), les valeurs distinctes sont réparties uniformément et chaque valeur a la même fréquence. 
--  **Autonomie (simple) :** les utilisateurs interrogent des données qui existent. Par exemple, pour une jointure d’égalité entre deux tables, prendre en compte la sélectivité des prédicats <sup>1</sup> dans chaque histogramme d’entrée, avant de joindre les histogrammes pour estimer la sélectivité de jointure. 
--  **Inclusion :** pour les prédicats de filtres où `Column = Constant`, la constante est en fait supposée exister pour la colonne associée. Si une étape d’histogramme correspondante n’est pas vide, l’une des valeurs distinctes de l’étape est supposée correspondre à la valeur du prédicat.
+-  **Indépendance :** Les distributions de données sur différentes colonnes sont supposées être indépendantes les unes des autres, à moins que des informations de corrélation soient disponibles et utilisables.
+-  **Homogénéité :** Les valeurs distinctes sont espacées de manière égale et ont toutes la même fréquence. Plus précisément, dans chaque étape d’[histogramme](../../relational-databases/statistics/statistics.md#histogram), les valeurs distinctes sont réparties uniformément et chaque valeur a la même fréquence. 
+-  **Autonomie (simple) :** Les utilisateurs interrogent des données qui existent. Par exemple, pour une jointure d’égalité entre deux tables, prendre en compte la sélectivité des prédicats <sup>1</sup> dans chaque histogramme d’entrée, avant de joindre les histogrammes pour estimer la sélectivité de jointure. 
+-  **Inclusion :** Pour les prédicats de filtres où `Column = Constant`, la constante est en fait supposée exister pour la colonne associée. Si une étape d’histogramme correspondante n’est pas vide, l’une des valeurs distinctes de l’étape est supposée correspondre à la valeur du prédicat.
 
   <sup>1</sup> Nombre de lignes satisfaisant au prédicat.
 
 Les mises à jour suivantes ont commencé avec [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], ce qui signifie que les niveaux de compatibilité sont de 120 et au-delà. Les mises à jour de l’estimation de cardinalité pour les niveaux 120 et au-delà comprennent des hypothèses et des algorithmes mis à jour qui fonctionnent bien sur l’entreposage moderne de données et sur les charges de travail OLTP. À partir des hypothèses CE 70, les hypothèses de modèle suivantes ont été changées à compter de CE 120 :
 
--  **Indépendance** devient **Corrélation :** la combinaison des valeurs de différentes colonnes n’est pas nécessairement indépendante. Cela peut ressembler davantage à une interrogation de données réelles.
--  **Relation contenant-contenu simple** devient **Relation contenant-contenu de base :** Les utilisateurs peuvent interroger des données qui n’existent pas. Par exemple, pour une jointure d’égalité entre deux tables, nous utilisons les histogrammes des tables de base pour estimer la sélectivité de jointure, puis nous prenons en compte la sélectivité des prédicats.
+-  **Indépendance** devient **Corrélation :** La combinaison des valeurs de différentes colonnes n’est pas nécessairement indépendante. Cela peut ressembler davantage à une interrogation de données réelles.
+-  **Autonomie simple** devient **Autonomie de base :** Les utilisateurs peuvent interroger des données qui n’existent pas. Par exemple, pour une jointure d’égalité entre deux tables, nous utilisons les histogrammes des tables de base pour estimer la sélectivité de jointure, puis nous prenons en compte la sélectivité des prédicats.
   
-**Niveau de compatibilité :** vous pouvez garantir le niveau de votre base de données en utilisant le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant pour [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Niveau de compatibilité** : Vous pouvez garantir le niveau de votre base de données en utilisant le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant pour [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -89,7 +89,7 @@ GO
   
 Pour une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie au niveau de compatibilité 120 ou plus, l’activation de l’[indicateur de trace 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) force le système à utiliser la version 70 de l’estimation de la cardinalité.  
   
-**Estimation de cardinalité héritée :** Pour une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie au niveau de compatibilité 120 et plus, la version 70 de l’estimation de la cardinalité peut être activée à l’aide de l’instruction [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**Estimation de cardinalité héritée** : Pour une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie au niveau de compatibilité 120 et plus, la version 70 de l’estimation de la cardinalité peut être activée à l’aide de l’instruction [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -111,7 +111,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**Magasin des requêtes** : si vous utilisez [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le magasin des requêtes est un outil pratique pour examiner les performances de vos requêtes. Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], dans l’**Explorateur d’objets** situé sous le nœud de votre base de données, le nœud **Magasin des requêtes** s’affiche quand le Magasin des requêtes est activé.  
+**Magasin des requêtes** : Si vous utilisez [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le Magasin des requêtes est un outil pratique pour examiner les performances de vos requêtes. Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], dans l’**Explorateur d’objets** situé sous le nœud de votre base de données, le nœud **Magasin des requêtes** s’affiche quand le Magasin des requêtes est activé.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  

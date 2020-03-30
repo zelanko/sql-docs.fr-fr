@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822234"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Gérer les connexions pour les travaux qui utilisent des bases de données dans un groupe de disponibilité Always On
@@ -46,7 +46,7 @@ ms.locfileid: "74822234"
   
      Les connexions et les travaux ne sont pas les seules informations qui doivent être recréées sur chaque instance de serveur qui héberge un réplica secondaire d'un groupe de disponibilité donné. Par exemple, vous devrez peut-être recréer les paramètres de configuration du serveur, les informations d'identification, les données chiffrées, les autorisations, les paramètres de réplication, les applications de Service Broker, les déclencheurs (au niveau du serveur), etc. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="SSauthentication"></a> Connexions des applications qui utilisent l’authentification SQL Server ou une connexion locale Windows  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Connexions des applications qui utilisent l’authentification SQL Server ou une connexion locale Windows  
  Si une application utilise l'authentification SQL Server ou une connexion locale Windows, des SID incompatibles peuvent empêcher la résolution de la connexion de l'application sur une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cas de SID incompatibles, la connexion peut se solder par un utilisateur orphelin sur l'instance de serveur distante. Ce problème peut se produire lorsqu'une application se connecte à une base de données de copie des journaux de transaction ou une base de données mise en miroir suite à un basculement ou à une base de données d'abonné de réplication qui a été initialisée à partir d'une sauvegarde.  
   
  Pour éviter ce problème, nous vous recommandons de prendre des mesures préventives lorsque vous configurez une telle application de manière à utiliser une base de données hébergée par une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La prévention implique de transférer des connexions et des mots de passe de l'instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour savoir comment éviter ce problème, consultez l’article 918992 de la Base de connaissances Microsoft : [Comment transférer les connexions et les mots de passe entre des instances de SQL Server](https://support.microsoft.com/kb/918992/)).  
@@ -56,7 +56,7 @@ ms.locfileid: "74822234"
   
  Pour plus d’informations, consultez [Orphaned Users with Database Mirroring and Log Shipping (Utilisateurs orphelins avec mise en miroir de bases de données et copie des journaux de transaction)](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog du moteur de base de données).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer un compte de connexion](../../../relational-databases/security/authentication-access/create-a-login.md)  
   

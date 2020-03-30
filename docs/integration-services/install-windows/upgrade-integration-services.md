@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262792"
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
@@ -69,7 +69,7 @@ ms.locfileid: "68262792"
   
  Lors d’une mise à niveau, vous pouvez mettre à niveau à la fois [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssDE](../../includes/ssde-md.md)], mais vous pouvez également choisir de mettre à niveau uniquement [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou uniquement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si vous mettez à niveau uniquement [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] (ou une version ultérieure) reste fonctionnel, mais sans les fonctionnalités de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Si vous mettez uniquement à niveau [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] sera totalement fonctionnel, mais uniquement en mesure de stocker des packages dans le système de fichiers, à moins qu'une instance du [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] ne soit disponible sur un autre ordinateur.  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Mise à niveau d'Integration Services et du moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Mise à niveau d'Integration Services et du moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Cette section décrit les conséquences liées à l'exécution d'une mise à niveau qui obéit aux critères suivants :  
   
 -   Mise à niveau de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et d’une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -129,7 +129,7 @@ ms.locfileid: "68262792"
   
 -   Par défaut, dans le cadre d'une installation mise à niveau, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré de façon à journaliser les événements en rapport avec l'exécution de packages dans le journal d'événements de l'application. Ce paramètre peut générer trop d'entrées de journal d'événements lorsque vous utilisez la fonctionnalité collecteur de données de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les événements enregistrés incluent l'ID d'événement 12288, « le Package a démarré », et l'ID d'événement 12289, « le Package a fini avec succès ». Pour arrêter l'enregistrement de ces deux événements dans le journal d'événements de l'application, ouvrez le Registre pour y apporter des modifications. Dans le Registre, recherchez le nœud HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS et modifiez la valeur DWORD du paramètre LogPackageExecutionToEventLog en remplaçant 1 par 0.  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Mise à niveau du seul moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>Mise à niveau du seul moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Cette section décrit les conséquences liées à l'exécution d'une mise à niveau qui obéit aux critères suivants :  
   
 -   Mise à niveau d’une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)]uniquement. Autrement dit, l’instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] est maintenant une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], mais l’instance de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les outils clients proviennent de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

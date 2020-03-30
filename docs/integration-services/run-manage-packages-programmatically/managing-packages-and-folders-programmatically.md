@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295729"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Gestion des packages et des dossiers par programme
@@ -28,7 +28,7 @@ ms.locfileid: "71295729"
 
 <a name="top"></a> Quand vous travaillez par programmation avec des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez avoir besoin de déterminer si un package ou un dossier individuel existe, ou de gérer les dossiers dans lesquels les packages sont stockés. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit différentes méthodes pour répondre à ces impératifs.    
     
-##  <a name="exists"></a> Détermination de l’existence d’un package ou dossier    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Détermination de l’existence d’un package ou dossier    
  Pour déterminer par programmation si un package enregistré existe, appelez l’une des méthodes suivantes avant de tenter de le charger et l’exécuter :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -45,10 +45,10 @@ ms.locfileid: "71295729"
     
  [Retour au début](#top)    
     
-##  <a name="managing"></a> Gestion des packages et des dossiers    
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Gestion des packages et des dossiers    
  La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit des méthodes supplémentaires pour gérer les packages et les dossiers dans lesquels ils sont stockés.    
     
-###  <a name="managing_rempkg"></a> Suppression d’un package    
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> Suppression d’un package    
  Pour supprimer un package enregistré par programme, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -58,7 +58,7 @@ ms.locfileid: "71295729"
     
  [Retour au début](#top)    
     
-###  <a name="managing_create"></a> Création d’un dossier    
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> Création d’un dossier    
  Pour créer un dossier de stockage par programme, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -68,7 +68,7 @@ ms.locfileid: "71295729"
     
  [Retour au début](#top)    
     
-###  <a name="managing_remfldr"></a> Suppression d’un dossier    
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Suppression d’un dossier    
  Pour supprimer un dossier de stockage par programme, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -78,7 +78,7 @@ ms.locfileid: "71295729"
     
  [Retour au début](#top)    
     
-###  <a name="managing_rename"></a> Renommage d’un dossier    
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Renommage d’un dossier    
  Pour renommer un dossier de stockage par programme, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    

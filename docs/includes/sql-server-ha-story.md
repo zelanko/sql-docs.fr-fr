@@ -157,7 +157,7 @@ Les instances FCI peuvent être utilisées pour la récupération d’urgence. T
 ### <a name="log-shipping"></a>Copie des journaux de transaction
 La copie des journaux de transaction est l’une des méthodes les plus anciennes pour la récupération d’urgence des bases de données SQL Server. La copie des journaux de transaction est souvent utilisée conjointement avec les groupes de disponibilité et les instances FCI pour assurer une récupération d’urgence économique et plus simple par rapport à d’autres options plus complexes en raison de l’environnement, des compétences administratives ou du budget. De la même façon que la haute disponibilité pour la copie des journaux de transaction, de nombreux environnements diffèrent le chargement d’un journal de transactions pour prendre en compte l’erreur humaine.
 
-## <a name = "Migrations"></a> Migrations et mises à niveau
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a> Migrations et mises à niveau
 
 Qu’il s’agisse de déployer de nouvelles instances ou d’en mettre à niveau des anciennes, une entreprise ne peut pas tolérer d’interruption de longue durée. Cette section décrit comment les fonctionnalités de disponibilité de SQL Server peuvent servir à réduire le temps d’arrêt quand un changement d’architecture, un basculement de serveur, un changement de plateforme (par exemple, de Windows Server à Linux, ou inversement) ou une mise à jour corrective est planifié.
 
@@ -224,7 +224,7 @@ Si un groupe de disponibilité est configuré avec un type de cluster Aucun, il 
 
 La copie des journaux de transaction est uniquement basée sur la sauvegarde et la restauration, et il n’existe aucune différence entre les bases de données, les structures de fichiers, etc., entre SQL Server sur Windows Server et SQL Server sur Linux. Par conséquent, la copie des journaux de transaction peut être configurée entre des installations SQL Server Windows Server et Linux ainsi qu’entre des distributions de Linux. Rien d’autre ne change. Le seul inconvénient est que la copie des journaux de transaction, comme les groupes de disponibilité, ne peut pas fonctionner quand la source utilise une version majeure de SQL Server supérieure à celle de la cible. 
 
-## <a name = "ReadScaleOut"></a> Échelle lecture
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a> Échelle lecture
 
 Depuis leur introduction dans SQL Server 2012, les réplicas secondaires peuvent être utilisés pour les requêtes en lecture seule. Il existe deux manières de le faire avec un groupe de disponibilité : en autorisant un accès direct au réplica secondaire et en [configurant un routage en lecture seule](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) qui nécessite l’utilisation de l’écouteur.  SQL Server 2016 a introduit la possibilité d’équilibrer la charge des connexions en lecture seule via l’écouteur à l’aide d’un algorithme de type tourniquet (Round Robin), ce qui permet aux demandes en lecture seule d’être réparties sur tous les réplicas accessibles en lecture. 
 

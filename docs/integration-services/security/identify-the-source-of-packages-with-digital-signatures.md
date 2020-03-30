@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295692"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifier la source de packages à l'aide de signatures numériques
@@ -47,7 +47,7 @@ ms.locfileid: "71295692"
   
 > **REMARQUE :** la valeur de Registre **BlockedSignatureStates** facultative peut spécifier un paramètre qui est plus restrictif que l’option de signature numérique définie dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou à la ligne de commande **dtexec** . Dans cette situation, le paramètre du Registre plus restrictif a priorité sur les autres paramètres.  
 
-## <a name="registry"></a> Implémenter une stratégie de signature en définissant une valeur du Registre
+## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> Implémenter une stratégie de signature en définissant une valeur du Registre
   Vous pouvez utiliser une valeur du Registre facultative pour gérer la stratégie d'une organisation pour charger des packages signés ou non signés. Si vous utilisez cette valeur du Registre, vous devez créer cette valeur du Registre sur tous les ordinateurs sur lesquels les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s'exécuteront et sur lesquels vous souhaitez appliquer la stratégie. Une fois la valeur du Registre définie, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vérifiera les signatures avant de charger les packages.  
   
  La procédure présentée dans cette rubrique explique comment ajouter la valeur DWORD facultative **BlockedSignatureStates** à la clé de Registre HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS. La valeur de données dans **BlockedSignatureStates** détermine si un package doit être bloqué s’il possède une signature non approuvée ou non valide, ou s’il n’est pas signé. En ce qui concerne l’état des signatures utilisées pour signer les packages, la valeur du Registre **BlockedSignatureStates** emploie les définitions suivantes :  
@@ -92,7 +92,7 @@ ms.locfileid: "71295692"
   
 9. Dans le menu **Fichier** , cliquez sur **Quitter**.    
 
-## <a name="cert"></a> Signer un package à l’aide d’un certificat numérique
+## <a name="sign-a-package-by-using-a-digital-certificate"></a><a name="cert"></a> Signer un package à l’aide d’un certificat numérique
   Cette rubrique décrit comment signer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l'aide d'un certificat numérique. Vous pouvez utiliser une signature numérique avec d'autres paramètres pour empêcher le chargement et l'exécution d'un package non valide.  
   
  Avant de pouvoir signer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez effectuer les tâches suivantes :  
@@ -137,7 +137,7 @@ ms.locfileid: "71295692"
   
      Bien que le package ait été signé, vous devez maintenant configurer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour vérifier la signature numérique avant de charger le package.  
 
-## <a name="signing_dialog"></a> Référence de l’IU de la boîte de dialogue Signature numérique
+## <a name="digital-signing-dialog-box-ui-reference"></a><a name="signing_dialog"></a> Référence de l’IU de la boîte de dialogue Signature numérique
   Utilisez la boîte de dialogue **Signature numérique** pour signer un package par une signature numérique ou pour la supprimer. La boîte de dialogue **Signature numérique** est disponible via l'option **Signature numérique** dans le menu **SSIS** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Pour plus d’informations, voir [Signer un package à l’aide d’un certificat numérique](#cert).  

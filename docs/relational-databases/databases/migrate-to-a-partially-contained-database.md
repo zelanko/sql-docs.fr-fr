@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908091"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrer vers une base de données partiellement autonome
@@ -33,7 +33,7 @@ ms.locfileid: "72908091"
   
 -   [Migration des utilisateurs vers des utilisateurs de base de données autonome](#users)  
   
-##  <a name="prepare"></a> Préparation de la migration d'une base de données  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> Préparation de la migration d'une base de données  
  Passez en revue les éléments suivants lorsque vous envisagez de migrer une base de données vers le modèle de base de données partiellement autonome.  
   
 -   Vous devez comprendre le modèle de base de données partiellement autonome. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "72908091"
   
 -   Surveillez le XEvent **database_uncontained_usage** pour voir quand des fonctionnalités sans relation contenant-contenu sont utilisées.  
   
-##  <a name="enable"></a> Activer les bases de données autonomes  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> Activer les bases de données autonomes  
  Les bases de données autonomes doivent être activées sur l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], avant que les bases de données autonomes puissent être créées.  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Activation de bases de données autonomes à l'aide de Transact-SQL  
@@ -70,7 +70,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="convert"></a> Conversion d'une base de données au modèle partiellement à relation contenant-contenu  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> Conversion d'une base de données au modèle partiellement à relation contenant-contenu  
  Une base de données est convertie en base de données autonome en modifiant l’option **CONTAINMENT**.  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Conversion d'une base de données au modèle partiellement à relation contenant-contenu à l'aide de Transact-SQL  
@@ -92,7 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> Migration des utilisateurs vers des utilisateurs de base de données autonome  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> Migration des utilisateurs vers des utilisateurs de base de données autonome  
  L'exemple suivant migre tous les utilisateurs basés sur des comptes de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers des utilisateurs de base de données autonome avec mots de passe. L'exemple exclut les comptes de connexion qui ne sont pas activés. L'exemple doit être exécuté dans la base de données autonome.  
   
 ```sql  

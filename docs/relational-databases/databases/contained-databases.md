@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137330"
 ---
 # <a name="contained-databases"></a>Bases de données autonomes
@@ -38,7 +38,7 @@ ms.locfileid: "68137330"
   
  Certaines fonctionnalités de bases de données partiellement autonomes, telles que le stockage des métadonnées dans la base de données, s'appliquent à toutes les bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Certains avantages des bases de données partiellement autonomes, tels que l'authentification de niveau base de données et le classement de catalogue, doivent être activés pour pouvoir être disponibles. La relation contenant-contenu partielle est activée à l’aide des instructions **CREATE DATABASE** et **ALTER DATABASE** ou de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations sur l'activation de l’autonomie de base de données partielle, consultez [Migrer vers une base de données partiellement autonome](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
-##  <a name="Concepts"></a> Concepts relatifs aux bases de données partiellement autonomes  
+##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> Concepts relatifs aux bases de données partiellement autonomes  
  Une base de données autonome complète inclut tous les paramètres et métadonnées requis pour définir la base de données ; sa configuration ne dépend pas de l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] où la base de données est installée. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la séparation d'une base de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pouvait être fastidieuse et nécessiter une connaissance détaillée de la relation entre la base de données et l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les bases de données partiellement autonomes simplifient la séparation d'une base de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des autres bases de données.  
   
  La base de données autonome considère les fonctionnalités en termes d’autonomie. Toute entité définie par l'utilisateur qui ne s'appuie que sur des fonctions résidant dans la base de données est considérée comme entièrement à relation contenant-contenu. Toute entité définie par l'utilisateur qui s'appuie sur des fonctions résidant hors de la base de données est considérée sans relation contenant-contenu. (Pour plus d’informations, consultez la section [Relation contenant-contenu](#containment) , plus loin dans cette rubrique.)  
@@ -83,7 +83,7 @@ ms.locfileid: "68137330"
   
  En dehors de la limite de base de données se trouve le *modèle de gestion*, qui se rapporte aux fonctions et à la gestion au niveau de l’instance. Les entités situées en dehors de la limite de base de données sont, par exemple, des tables système telles que **sys.endpoints**, des utilisateurs mappés aux connexions et des tables utilisateur dans une autre base de données référencées par un nom en trois parties.  
   
-##  <a name="containment"></a> Relation contenant-contenu  
+##  <a name="containment"></a><a name="containment"></a> Relation contenant-contenu  
  Les entités d'utilisateur qui résident entièrement dans la base de données sont considérées *avec relation contenant-contenu*. Toutes les entités qui résident en dehors de la base de données, ou qui s'appuient sur une interaction avec des fonctions situées en dehors de la base de données, sont considérées *sans relation contenant-contenu*.  
   
  En général, les entités d'utilisateur sont classées dans les catégories de relation contenant-contenu suivantes :  
@@ -92,7 +92,7 @@ ms.locfileid: "68137330"
   
 -   Entités d’utilisateur sans relation contenant-contenu (celles qui dépassent la limite de base de données), par exemple sys.server_principals ou un principal de serveur (connexion) lui-même. Tout code qui utilise ces entités ou toute fonction qui les référence est sans relation contenant-contenu.  
   
-###  <a name="partial"></a> Base de données partiellement autonome  
+###  <a name="partially-contained-database"></a><a name="partial"></a> Base de données partiellement autonome  
  La fonctionnalité de base de données autonome est actuellement disponible uniquement dans un état partiel. Une base de données partiellement autonome est une base de données autonome qui autorise l'utilisation de fonctionnalités sans autonomie.  
   
  Utilisez les vues [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) et [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) pour retourner des informations sur des objets ou des fonctionnalités sans relation contenant-contenu. En déterminant l'état de la relation contenant-contenu des éléments de votre base de données, vous pouvez découvrir les objets ou les fonctionnalités qui doivent être remplacés ou modifiés pour promouvoir la relation contenant-contenu.  
@@ -102,7 +102,7 @@ ms.locfileid: "68137330"
   
  Le comportement des bases de données partiellement autonomes est très différent de celui des bases de données non autonomes en termes de classement. Pour plus d'informations sur les problèmes de classement, consultez [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md).  
   
-##  <a name="benefits"></a> Avantages de l'utilisation de bases de données partiellement autonomes  
+##  <a name="benefits-of-using-partially-contained-databases"></a><a name="benefits"></a> Avantages de l'utilisation de bases de données partiellement autonomes  
  Les problèmes et les complications associés aux bases de données non autonomes peuvent être résolus à l'aide d'une base de données partiellement autonome.  
   
 ### <a name="database-movement"></a>Déplacement de base de données  
@@ -124,7 +124,7 @@ ms.locfileid: "68137330"
 ### <a name="database-administration"></a>Administration de bases de données  
  La gestion des paramètres de base de données dans la base de données, plutôt que dans la base de données master, permet à chaque propriétaire de la base de données d'avoir plus de contrôle sur sa base de données, sans donner au propriétaire de la base de données l'autorisation **sysadmin** .  
   
-##  <a name="Limitations"></a> Limitations  
+##  <a name="limitations"></a><a name="Limitations"></a> Limitations  
  Les bases de données partiellement autonomes n'autorisent pas les fonctionnalités suivantes.  
   
 -   Les bases de données partiellement autonomes ne peuvent pas utiliser de réplication, de capture des données modifiées ou de suivi des modifications.  
@@ -140,7 +140,7 @@ ms.locfileid: "68137330"
 > [!WARNING]  
 >  Les procédures stockées temporaires sont actuellement autorisées. Étant donné que les procédures stockées temporaires violent l’autonomie, il ne faut pas s'attendre à leur prise en charge dans les futures versions d'une base de données autonome.  
   
-##  <a name="Identifying"></a> Identification de base de données à relation contenant-contenu  
+##  <a name="identifying-database-containment"></a><a name="Identifying"></a> Identification de base de données à relation contenant-contenu  
  Il existe deux outils qui permettent d'identifier l'état de la relation contenant-contenu de la base de données. [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) est une vue qui montre toutes les entités potentiellement sans relation contenant-contenu dans la base de données. L'événement database_uncontained_usage se produit lorsqu'une entité sans relation contenant-contenu réelle est identifiée au moment de l'exécution.  
   
 ### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  

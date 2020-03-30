@@ -15,10 +15,10 @@ ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 220080e231c63f0224af9054039298fddd83ad96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134453"
 ---
 # <a name="database-mail-external-program"></a>Programme externe de la messagerie de base de données
@@ -31,14 +31,14 @@ ms.locfileid: "68134453"
   
 -   [Tâches liées à la configuration du programme externe de messagerie de base de données](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> Concepts du programme externe de la messagerie de base de données  
+##  <a name="database-mail-external-program-concepts"></a><a name="ComponentsAndConcepts"></a> Concepts du programme externe de la messagerie de base de données  
  Lorsque le programme externe démarre, il se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'authentification Windows et débute le traitement des messages électroniques. S'il n'y a eu aucun message à envoyer pendant le délai d'attente spécifié, le programme est fermé. Vous pouvez configurer la durée du délai d'attente du programme avant qu'il ne soit fermé en utilisant soit l'Assistant Configuration de la messagerie de base de données, soit les procédures stockées de la messagerie de base de données. Pour plus d’informations, consultez [sysmail_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md).  
   
  Le programme externe stocke les informations dans les tables système de la base de données **msdb** . Si le programme externe ne peut pas communiquer avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il consigne des erreurs dans le journal des événements des applications Microsoft Windows. Une journalisation supplémentaire des messages est assurée si vous définissez le niveau de journalisation à **Commentaires** dans la boîte de dialogue **Configurer les paramètres du système** de l' **Assistant Configuration de la messagerie de base de données**.  
   
  Notez que, pour des raisons d'efficacité, le programme externe met en cache les informations de compte et de profil. Les changements de configuration des comptes et profils peuvent donc ne pas être pris en compte dans le programme externe avant quelques minutes.  
   
-##  <a name="RelatedTasks"></a> Tâches liées à la configuration du programme externe de messagerie de base de données  
+##  <a name="tasks-related-to-configuring-database-mail-external-program"></a><a name="RelatedTasks"></a> Tâches liées à la configuration du programme externe de messagerie de base de données  
   
 |Tâche de configuration|Lien de rubrique|  
 |------------------------|----------------|  

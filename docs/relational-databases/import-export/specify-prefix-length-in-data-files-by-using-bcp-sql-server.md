@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056370"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "74056370"
 > [!IMPORTANT]  
 >  Lorsque vous utilisez le format natif, préférez les préfixes de longueur aux indicateurs de fin de champ. Les données au format natif peuvent entrer en conflit avec les indicateurs de fin, car ces fichiers sont au format de données binaire interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="PrefixLengthsExport"></a> Longueurs de préfixe pour l'exportation en bloc  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Longueurs de préfixe pour l'exportation en bloc  
   
 > [!NOTE]  
 >  La valeur par défaut fournie lors de la demande de longueur de préfixe lorsque vous exportez un champ indique la longueur de champ la plus efficace pour le champ.  
@@ -86,7 +86,7 @@ ms.locfileid: "74056370"
   
  \*Les types de données **ntext**, **text**et **image** seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez plutôt les types de données **nvarchar(max)** , **varchar(max)** et **varbinary(max)** .  
   
-##  <a name="PrefixLengthsImport"></a> Longueurs de préfixe pour l'importation en bloc  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Longueurs de préfixe pour l'importation en bloc  
  Lorsque vous importez des données en bloc, la longueur de préfixe correspond à la valeur spécifiée lors de la création du fichier de données. Si le fichier de données n’a pas été créé à l’aide d’une commande **bcp** , il n’existe probablement pas de caractères de longueur de préfixe. Dans ce cas, vous devez préciser la valeur 0 comme longueur de préfixe.  
   
 > [!NOTE]  

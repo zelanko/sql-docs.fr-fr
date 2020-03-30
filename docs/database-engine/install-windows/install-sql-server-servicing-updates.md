@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d88350f00b90156cd1e33a4d816ae649cc6910f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990944"
 ---
 # <a name="install-sql-server-servicing-updates"></a>Installer des mises à jour de maintenance de SQL Server
@@ -29,7 +29,7 @@ Cet article fournit des informations sur l’installation des mises à jour de [
   
 Installez les dernières mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en temps voulu pour vous assurer que les systèmes sont à jour avec les mises à jour de sécurité les plus récentes.  
   
-## <a name="installing-updates-for-includenoversionincludesssnoversion-mdmd-during-a-new-installation"></a>Installation des mises à jour de [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] pendant une nouvelle installation  
+## <a name="installing-updates-for-noversion-during-a-new-installation"></a>Installation des mises à jour de [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] pendant une nouvelle installation  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre les dernières mises à jour du produit avec l'installation principale, de sorte que le produit principal et les mises à jour applicables sont installés en même temps. La mise à jour du produit peut rechercher les mises à jour applicables à partir de :  
   
 - [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update  
@@ -42,7 +42,7 @@ Installez les dernières mises à jour de [!INCLUDE[ssNoVersion](../../includes/
   
 Une fois que le programme d'installation a détecté les versions les plus récentes des mises à jour applicables, il les télécharge et les intègre dans le processus d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours. La fonctionnalité de mise à jour du produit peut inclure une mise à jour, un Service Pack, ou un Service Pack et la mise à jour cumulative.  
   
-## <a name="installing-updates-for-includessnoversionincludesssnoversion-mdmd-after-it-has-already-been-installed"></a>Installation des mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] après qu'il a déjà été installé  
+## <a name="installing-updates-for-ssnoversion-after-it-has-already-been-installed"></a>Installation des mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] après qu'il a déjà été installé  
 Sur une instance installée de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], nous vous recommandons d’appliquer les dernières mises à jour de sécurité et mises à jour critique comprenant les versions générales de distribution (GDRs), les Services Pack (SP) et les mises à jour cumulatives. Pour plus d’informations, consultez [l’annonce de mars 2016 concernant le modèle de maintenance incrémentiel SQL Server (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/).
 
 > [!NOTE]

@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68100463"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
@@ -56,7 +56,7 @@ ms.locfileid: "68100463"
 >  Après le déplacement de fichiers, le compte de service [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] doit être autorisé à accéder aux fichiers dans le nouvel emplacement de dossier du fichier.
     
   
-##  <a name="Planned"></a> Procédure de réadressage planifié et de maintenance de disque planifiée  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Procédure de réadressage planifié et de maintenance de disque planifiée  
  Pour déplacer des données ou un fichier journal d'une base de données système dans le cadre d'un réadressage planifié ou d'une opération de maintenance planifiée, suivez la procédure ci-dessous. Cette procédure s'applique à toutes les bases de données système à l'exception des bases de données master et Resource.  
   
 1.  Pour chaque fichier à déplacer, exécutez la commande suivante.  
@@ -93,7 +93,7 @@ ms.locfileid: "68100463"
   
 2.  Vérifiez le bon fonctionnement de la messagerie de base de données en envoyant un message électronique de test.  
   
-##  <a name="Failure"></a> Procédure de récupération après défaillance  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> Procédure de récupération après défaillance  
  Si un fichier doit être déplacé dans un nouvel emplacement en raison d'une défaillance matérielle, suivez la procédure décrite ci-dessous. Cette procédure s'applique à toutes les bases de données système à l'exception des bases de données master et Resource.  
   
 > [!IMPORTANT]  
@@ -141,7 +141,7 @@ ms.locfileid: "68100463"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> Déplacement de la base de données master  
+##  <a name="moving-the-master-database"></a><a name="master"></a> Déplacement de la base de données master  
  Pour déplacer la base de données master, procédez comme suit.  
   
 1.  Dans le menu **Démarrer** , pointez successivement sur **Tous les programmes**, sur **Microsoft SQL Server**et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
@@ -188,10 +188,10 @@ ms.locfileid: "68100463"
 10. À ce stade, SQL Server doit fonctionner normalement. Toutefois Microsoft recommande d’ajuster également l’entrée de registre sur `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, où *instance_ID* est similaire à `MSSQL13.MSSQLSERVER`. Dans cette ruche, modifiez la valeur `SQLDataRoot` en indiquant le nouveau chemin d’accès. L’échec de la mise à jour du registre peut entraîner l’échec de la mise à jour corrective et de la mise à niveau.
 
   
-##  <a name="Resource"></a> Déplacement de la base de données Resources  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Déplacement de la base de données Resources  
  L’emplacement de la base de données Resource est \<*lecteur*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*nom_instance*>\MSSQL\Binn\\. La base de données ne peut pas être déplacée.  
   
-##  <a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
  Si vous avez déplacé toutes les bases de données système vers un même lecteur ou volume ou vers un autre serveur utilisant une lettre de lecteur différente, effectuez les mises à jour suivantes.  
   
 -   Modifiez le chemin d'accès du journal de l'Agent SQL Server. Si vous ne mettez pas à jour ce chemin d'accès, l'Agent SQL Server ne démarre pas.  
@@ -216,7 +216,7 @@ ms.locfileid: "68100463"
   
 4.  Arrêtez et démarrez le service SQL Server pour terminer la modification.  
   
-##  <a name="Examples"></a> Exemples  
+##  <a name="examples"></a><a name="Examples"></a> Exemples  
   
 ### <a name="a-moving-the-tempdb-database"></a>R. Déplacement de la base de données tempdb  
  Dans l'exemple suivant, les fichiers de données et les fichiers journaux de la base de données `tempdb` sont déplacés vers un nouvel emplacement dans le cadre d'une opération planifiée.  

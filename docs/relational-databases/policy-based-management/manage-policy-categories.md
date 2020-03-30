@@ -13,10 +13,10 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6f0600f663e00e0318a933e7824f3e0b78166f55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68087201"
 ---
 # <a name="manage-policy-categories"></a>Gérer les catégories de stratégie
@@ -37,20 +37,20 @@ ms.locfileid: "68087201"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Lorsque vous utilisez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], si la case **Abonnements à la base de données autorisée** n'est pas sélectionnée, la catégorie de stratégie doit être appliquée individuellement à chaque partie pertinente du serveur, telle qu'une ou plusieurs bases de données ou tables.  
   
 -   Si vous spécifiez une catégorie de stratégie qui n'existe pas, une nouvelle catégorie de stratégie est créée et l'abonnement est autorisé pour toutes les bases de données lorsque vous exécutez la procédure stockée. Si vous supprimez l’abonnement autorisé pour la nouvelle catégorie, il ne s’appliquera qu’à la base de données que vous avez spécifiée en tant que *target_object*. Pour plus d’informations sur la modification d’un paramètre d’abonnement autorisé, consultez [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Cette procédure stockée est exécutée dans le contexte du propriétaire actuel de la procédure stockée.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Pour appliquer des stratégies de catégorie à une instance SQL Server  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68087201"
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Pour appliquer des stratégies de catégorie à une instance SQL Server  
   

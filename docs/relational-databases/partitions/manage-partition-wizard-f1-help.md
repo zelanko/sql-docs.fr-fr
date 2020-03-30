@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892410"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Aide sur l'Assistant Gestion de partition via la touche F1
@@ -44,7 +44,7 @@ ms.locfileid: "68892410"
   
  Cette section fournit les informations requises pour gérer, modifier et implémenter des partitions à l’aide de l’ **Assistant Gestion de partition**.  
   
-##  <a name="Top"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="Top"></a> Dans cette section  
  Les sections ci-dessous fournissent de l’aide sur les pages de l’ **Assistant Gestion de partition**.  
   
  [Assistant Gestion de partition (page Sélectionnez une action de partition)](#SelectPartitionAction)  
@@ -63,7 +63,7 @@ ms.locfileid: "68892410"
   
  [Assistant Gestion de partition (page Progression)](#Progress)  
   
-##  <a name="SelectPartitionAction"></a> Page Sélectionnez une action de partition  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> Page Sélectionnez une action de partition  
  Utilisez la page **Sélectionnez une action de partition** pour choisir l’action à effectuer sur votre partition.  
   
 ### <a name="create-a-staging-table"></a>Créer une table intermédiaire  
@@ -91,7 +91,7 @@ ms.locfileid: "68892410"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
-##  <a name="SwitchIn"></a> Page Sélectionner les options d'insertion de partition  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Page Sélectionner les options d'insertion de partition  
  Utilisez la page **Sélectionner les options d’insertion de partition** pour sélectionner la table de mise en lots que vous insérez dans la table partitionnée.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
@@ -106,7 +106,7 @@ ms.locfileid: "68892410"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
-##  <a name="SwitchOut"></a> Page Sélectionner les options d'extraction de partition  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Page Sélectionner les options d'extraction de partition  
  Utilisez la page **Sélectionner les options d’extraction de partition** pour sélectionner la partition et la table de mise en lots destinées à maintenir les données partitionnées que vous extrayez de la table partitionnée.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
@@ -124,7 +124,7 @@ ms.locfileid: "68892410"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
-##  <a name="StagingTableOptions"></a> Page Sélectionner les options de table de mise en lots  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Page Sélectionner les options de table de mise en lots  
  Utilisez la page **Sélectionner les options de table de mise en lots** pour créer la table de mise en lots à utiliser pour basculer vos données partitionnées.  
   
  Les tables intermédiaires doivent résider dans le même groupe de fichiers que la partition sélectionnée où se trouve la table source. La table intermédiaire doit refléter la conception des tables source et de destination.  
@@ -146,7 +146,7 @@ ms.locfileid: "68892410"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
-##  <a name="OutputOption"></a> Page Sélectionner une option de sortie  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Page Sélectionner une option de sortie  
  Utilisez la page **Sélectionner une option de sortie** pour spécifier de quelle manière vous souhaitez apporter les modifications à vos partitions.  
   
 ### <a name="create-script"></a>Créer un script  
@@ -173,7 +173,7 @@ ms.locfileid: "68892410"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
-##  <a name="NewJob"></a> Page Nouvelle planification du travail  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Page Nouvelle planification du travail  
  Utilisez la page **Nouvelle planification du travail** pour afficher et modifier les propriétés de la planification.  
   
 ### <a name="options"></a>Options  
@@ -256,7 +256,7 @@ ms.locfileid: "68892410"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
-##  <a name="Summary"></a> Page Résumé  
+##  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez la page **Résumé** pour examiner les options que vous avez sélectionnées sur les pages précédentes.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
@@ -265,7 +265,7 @@ ms.locfileid: "68892410"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
-##  <a name="Progress"></a> Page Progression  
+##  <a name="progress-page"></a><a name="Progress"></a> Page Progression  
  Utilisez la page **Progression** pour surveiller les informations d’état sur les actions de l’ **Assistant Gestion de partition**. Selon les options sélectionnées dans l’Assistant, la page **Progression** peut contenir une ou plusieurs actions. La zone supérieure affiche l'état global de l'Assistant et le nombre des messages d'état, d'erreur et d'avertissement qu'il a reçus.  
   
 ### <a name="options"></a>Options  

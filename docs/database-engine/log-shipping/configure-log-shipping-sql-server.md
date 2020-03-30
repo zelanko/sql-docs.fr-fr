@@ -13,10 +13,10 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057890"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurer la copie des journaux de transaction (SQL Server)
@@ -42,20 +42,20 @@ ms.locfileid: "68057890"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   La base de données primaire doit utiliser le mode de récupération complète ou de récupération utilisant les journaux de transactions ; le basculement de la base de données vers une récupération simple empêcherait toute copie des journaux de transaction.  
   
 -   Avant de configurer la copie des journaux de transaction, vous devez créer un partage afin de rendre les sauvegardes de journaux de transactions disponibles pour le serveur secondaire. Il s'agit d'un partage du répertoire vers lequel les sauvegardes des journaux de transactions seront générées. Par exemple, si vous sauvegardez vos journaux de transactions dans le répertoire c:\data\tlogs\\, vous pouvez créer le partage \\\\*primaryserver*\tlogs de ce répertoire.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>Pour configurer la copie des journaux de transaction  
   
@@ -126,7 +126,7 @@ ms.locfileid: "68057890"
   
 28. Dans la boîte de dialogue **Propriétés de la base de données** , cliquez sur **OK** pour démarrer le processus de configuration.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>Pour configurer la copie des journaux de transaction  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68057890"
   
 10. Sur le serveur secondaire, activez les travaux de copie et de restauration. Pour plus d’informations, consultez [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

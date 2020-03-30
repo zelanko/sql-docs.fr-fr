@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68070332"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070332"
   
  Une séquence est un objet lié au schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après une spécification. De nouvelles valeurs sont générées à partir d'une séquence par appel de la fonction NEXT VALUE FOR. Utilisez **sp_sequence_get_range** pour obtenir plusieurs numéros séquentiels à la fois. Pour obtenir des informations et des scénarios qui utilisent à la fois CREATE SEQUENCE, **sp_sequence_get_range** et la fonction NEXT VALUE FOR, consultez [Numéros séquentiels](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

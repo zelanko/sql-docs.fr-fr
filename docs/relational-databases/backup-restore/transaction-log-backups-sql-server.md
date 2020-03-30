@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041355"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Sauvegardes du journal des transactions (SQL Server)
@@ -32,7 +32,7 @@ Nous vous recommandons d’effectuer des sauvegardes de journaux fréquemment, �
  
 En règle générale, un administrateur de base de données crée une sauvegarde complète de base de données de temps en temps, par exemple chaque semaine et, éventuellement, crée une série de sauvegardes de base de données différentielles à un intervalle plus court, par exemple tous les jours. Indépendamment des sauvegardes de base de données, l’administrateur de base de données sauvegarde le journal des transactions à intervalles fréquents. Pour un type donné de sauvegarde, l'intervalle optimal varie en fonction de divers facteurs tels que l'importance des données, la taille de la base de données et la charge de travail du serveur. Pour plus d’informations sur l’implémentation d’une bonne stratégie, consultez [Recommandations](#Recommendations) dans cette rubrique. 
    
-##  <a name="LogBackupSequence"></a> Fonctionnement des sauvegardes de journal  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a> Fonctionnement des sauvegardes de journal  
  La séquence de sauvegarde des journaux des transactions ( *séquence de journaux* ) ne dépend pas des sauvegardes de données. Supposons, par exemple, que la séquence des événements est la suivante.  
   
 |Temps|Événement|  
@@ -45,7 +45,7 @@ En règle générale, un administrateur de base de données crée une sauvegarde
   
  La sauvegarde du journal des transactions lancée à 20h00 contient les enregistrements du journal des transactions effectués entre 16h00 et 20h00, ce qui couvre le moment de la création de la sauvegarde complète de la base de données intervenant à 18h00. La séquence de sauvegardes du journal des transactions est continue depuis la sauvegarde complète de la base de données initiale créée à 8h00 jusqu’à la dernière sauvegarde du journal des transactions effectuée à 20h00. Pour plus d’informations sur l’application de ces sauvegardes du journal, reportez-vous à l’exemple cité dans [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Si un journal des transactions est endommagé, vous perdez alors les travaux réalisés depuis la sauvegarde valide la plus récente. Par conséquent, nous vous recommandons vivement de placer vos fichiers journaux sur une unité de stockage à tolérance de pannes.  
   
@@ -61,7 +61,7 @@ En règle générale, un administrateur de base de données crée une sauvegarde
 > Pour limiter le nombre des sauvegardes de fichiers journaux à restaurer, il est essentiel de sauvegarder vos données régulièrement. Vous pouvez, par exemple, planifier une sauvegarde complète hebdomadaire et des sauvegardes différentielles quotidiennes de la base de données.  
 > Là encore, pensez à [l’objectif de délai de récupération](https://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](https://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes différentielles et complètes de base de données.
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour créer une sauvegarde du journal des transactions**  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

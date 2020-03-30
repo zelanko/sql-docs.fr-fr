@@ -18,10 +18,10 @@ ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914576"
 ---
 # <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67914576"
   
  Cette base de données est différente de la base de données utilisateur par défaut.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -17,10 +17,10 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eae33bebd834a79a62bd94c5dbe75f4c431b0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014818"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Groupes de disponibilité Always On : solution de haute disponibilité et de reprise d’activité
@@ -33,7 +33,7 @@ ms.locfileid: "68014818"
  >[!NOTE]
  >« Groupe de disponibilité Always On » est le nom complet et formel de cette fonctionnalité de disponibilité. L’abréviation est AG, et non AOAG ni AAG. 
   
-##  <a name="Benefits"></a> Avantages  
+##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournissent un riche ensemble d'options qui améliorent la disponibilité des bases de données et l'utilisation des ressources. Les composants clés sont les suivants :  
   
 -   Prend en charge jusqu'à neuf réplicas de disponibilité. Un *réplica de disponibilité* est une instanciation d'un groupe de disponibilité hébergé par une instance spécifique de SQL Server qui conserve une copie locale de chaque base de données de disponibilité appartenant au groupe de disponibilité. Chaque groupe de disponibilité prend en charge un réplica principal et jusqu'à huit réplicas secondaires. Pour plus d’informations, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "68014818"
   
     -   Applets de commande PowerShell. Pour plus d’informations, consultez [Vue d’ensemble des applets de commande PowerShell pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
-##  <a name="TermsAndDefinitions"></a> Termes et définitions  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termes et définitions  
  **groupe de disponibilité**  
  Conteneur d’un ensemble de bases de données ( *bases de données de disponibilité*) qui basculent ensemble.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68014818"
 > [!NOTE]  
 >  Pour plus d’informations, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Interoperability"></a> Interopérabilité et coexistence avec d'autres fonctionnalités de moteur de base de données  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="Interoperability"></a> Interopérabilité et coexistence avec d'autres fonctionnalités de moteur de base de données  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] peuvent être utilisés avec les fonctionnalités ou les composants [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]suivants :  
   
 -   [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
@@ -149,11 +149,11 @@ ms.locfileid: "68014818"
 > [!WARNING]  
 >  Pour plus d’informations sur les restrictions et les limitations d’utilisation d’autres fonctionnalités avec les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Groupes de disponibilité Always On : interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Commencer à utiliser les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   

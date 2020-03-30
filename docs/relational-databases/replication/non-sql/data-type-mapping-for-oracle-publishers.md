@@ -15,10 +15,10 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67901121"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mappage de type de données pour les serveurs de publication Oracle
@@ -82,7 +82,7 @@ ms.locfileid: "67901121"
 ### <a name="float-and-number-types"></a>Types FLOAT et NUMBER  
  L'échelle et la précision spécifiées lors du mappage des types de données FLOAT et NUMBER dépendent de l'échelle et de la précision spécifiées pour la colonne utilisant le type de données dans la base de données Oracle. La précision est le nombre de chiffres qui composent un nombre. L'échelle est le nombre de chiffres à droite du séparateur décimal dans un nombre. Par exemple, le nombre 123,45 a une précision de 5 et une échelle de 2.  
   
- Oracle permet de définir des nombres dont l'échelle est supérieure à la précision, par exemple NUMBER(4,5), mais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite une précision supérieure ou égale à l'échelle. Pour éviter les troncations de données, si l’échelle est supérieure à la précision sur le serveur de publication Oracle, la précision est définie comme étant égale à l’échelle quand le type de données est mappé : NUMBER(4,5) sera mappé NUMERIC(5,5).  
+ Oracle permet de définir des nombres dont l'échelle est supérieure à la précision, par exemple NUMBER(4,5), mais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite une précision supérieure ou égale à l'échelle. Afin d'éviter les troncations de données, si l'échelle est supérieure à la précision sur le serveur de publication Oracle, la précision est définie comme étant égale à l'échelle lorsque le type de données est mappé : NUMBER(4,5) sera mappé comme NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Si vous n'indiquez pas d'échelle ni de précision pour NUMBER, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise par défaut les valeurs maximales d'échelle (8) et de précision (38). Nous vous recommandons de définir une échelle et une précision spécifiques dans Oracle, afin d'optimiser le stockage et les performances lorsque les données sont répliquées.  

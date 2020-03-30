@@ -11,10 +11,10 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 334a8388b7abc217123071fdc37c9e1091f6a3fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987134"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server, objet columnstore
@@ -22,7 +22,7 @@ ms.locfileid: "67987134"
 
   L’objet **SQLServer:Columnstore** fournit des compteurs permettant de surveiller l’exécution des index columnstore dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Le tableau suivant décrit les compteurs **Columnstore** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le tableau suivant décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Columnstore**de**.  
   
 |Compteurs ColumnStore|Description|  
 |--------------------------|-----------------|  

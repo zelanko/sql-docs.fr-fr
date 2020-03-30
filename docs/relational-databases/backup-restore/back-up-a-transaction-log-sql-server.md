@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708735"
 ---
 # <a name="back-up-a-transaction-log"></a>Sauvegarder un journal des transactions
@@ -26,17 +26,17 @@ ms.locfileid: "71708735"
   Cette rubrique explique comment sauvegarder un journal des transactions dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
 
 ## <a name="before-you-begin"></a>Avant de commencer
-### <a name="Restrictions"></a> Limitations et restrictions  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 L’instruction `BACKUP` n’est pas autorisée dans une transaction explicite ou [implicite](../../t-sql/statements/set-implicit-transactions-transact-sql.md). Une transaction est explicite si vous définissez le début et la fin de la transaction de manière explicite.
 
-### <a name="Recommendations"></a> Recommandations  
+### <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 - Si une base de données est configurée pour le [mode de récupération](recovery-models-sql-server.md) complète ou le mode de récupération utilisant les journaux de transactions, vous devez sauvegarder le journal des transactions assez régulièrement pour protéger vos données et éviter une [saturation](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) de ce dernier. Cela tronque le journal et prend en charge la restauration de la base de données à un point précis dans le temps. 
   
 - Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez fréquemment le journal, ces messages de réussite peuvent rapidement s’accumuler, créer des journaux d’erreurs très volumineux et compliquer la recherche d’autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l’indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées (voir [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)).  
   
-### <a name="Permissions"></a> Autorisations
+### <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
 Les autorisations `BACKUP DATABASE` et `BACKUP LOG` requises sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator**. Veillez à avoir les autorisations appropriées avant de commencer.
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell
 
 Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Log** comme valeur du paramètre **-BackupAction**.  
   
@@ -160,7 +160,7 @@ L'exemple suivant crée une sauvegarde de fichier journal de la base de données
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

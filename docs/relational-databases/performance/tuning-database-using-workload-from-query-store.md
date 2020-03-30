@@ -12,10 +12,10 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113175"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes
@@ -35,9 +35,9 @@ Dans l’interface graphique utilisateur de l’Assistant Paramétrage du moteur
 À partir de la ligne de commande (dta.exe), choisissez l’option  **-iq** pour sélectionner la charge de travail dans le magasin de requêtes. 
 
 Deux options supplémentaires, disponibles par l’intermédiaire de la ligne de commande, vous permettent de paramétrer le comportement de l’Assistant Paramétrage du moteur de base de données lors de la sélection de la charge de travail à partir du magasin de requêtes. Ces options ne sont pas disponibles par l’intermédiaire de l’interface graphique utilisateur :
-  1. **Nombre d’événements de charge de travail à paramétrer** : cette option, spécifiée à l’aide de l’argument de ligne de commande  **-n**, permet à l’utilisateur de contrôler le nombre d’événements du magasin des requêtes qui sont paramétrés. Par défaut, l’Assistant Paramétrage du moteur de base de données utilise la valeur 1000 pour cette option. L’Assistant Paramétrage du moteur de base de données choisit toujours les événements les plus coûteux par durée totale. 
+  1. **Nombre d’événements de charge de travail à paramétrer** : cette option, spécifiée à l’aide de l’argument de ligne de commande  **-n**, permet à l’utilisateur de contrôler le nombre d’événements du Magasin des requêtes qui sont paramétrés. Par défaut, l’Assistant Paramétrage du moteur de base de données utilise la valeur 1000 pour cette option. L’Assistant Paramétrage du moteur de base de données choisit toujours les événements les plus coûteux par durée totale. 
   
-  2. **Fenêtres temps des événements à paramétrer** : le magasin des requêtes pouvant contenir des requêtes qui ont été exécutées il y a longtemps, cette option permet à l’utilisateur de spécifier une fenêtre de temps écoulé (en heures) avant laquelle une requête doit avoir été exécutée pour être prise en compte par l’Assistant Paramétrage du moteur de base de données pour le paramétrage. Cette option est spécifiée à l’aide de l’argument de ligne de commande  **-je**. 
+  2. **Fenêtres temps des événements à paramétrer** : le Magasin des requêtes pouvant contenir des requêtes qui ont été exécutées il y a longtemps, cette option permet à l’utilisateur de spécifier une fenêtre de temps écoulé (en heures) avant laquelle une requête doit avoir été exécutée pour être prise en compte par l’Assistant Paramétrage du moteur de base de données pour le paramétrage. Cette option est spécifiée à l’aide de l’argument de ligne de commande  **-je**. 
 
 Pour plus d’informations, consultez [Utilitaire dta](../../tools/dta/dta-utility.md).
 
@@ -46,6 +46,6 @@ La différence entre les options Magasin de requêtes et Cache du plan est que l
 
 ## <a name="see-also"></a>Voir aussi  
 [Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Tutoriel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
+[Didacticiel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [Comment le Magasin des requêtes collecte les données](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Bonnes pratiques en matière de magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)

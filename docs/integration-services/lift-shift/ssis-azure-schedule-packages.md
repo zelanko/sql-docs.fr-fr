@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054563"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Planifier l’exécution de packages SSIS (SQL Server Integration Services) déployés dans Azure
@@ -36,13 +36,13 @@ Choisissez une des méthodes décrites dans cet article pour planifier l’exéc
 - [Planifier un package indirectement dans le cadre d’un pipeline Azure Data Factory](#activity)
 
 
-## <a name="ssms"></a> Planifier un package avec SSMS
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> Planifier un package avec SSMS
 
 Dans SQL Server Management Studio (SSMS), vous pouvez cliquer avec le bouton droit sur un package déployé sur la base de données du catalogue SSIS, SSISDB, puis sélectionner **Planifier** pour ouvrir la boîte de dialogue **Nouvelle planification**. Pour plus d’informations, consultez [Planifier des packages SSIS dans Azure avec SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Cette fonctionnalité nécessite SQL Server Management Studio version 17.7 ou ultérieure. Pour obtenir la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-## <a name="elastic"></a> Planifier un package avec des travaux élastiques SQL Database
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Planifier un package avec des travaux élastiques SQL Database
 
 Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> Planifier un package avec SQL Server Agent en local
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> Planifier un package avec SQL Server Agent en local
 
 Pour plus d’informations sur SQL Server Agent, consultez [Travaux de SQL Server Agent pour les packages](../packages/sql-server-agent-jobs-for-packages.md).
 
@@ -160,7 +160,7 @@ Pour planifier un package avec SQL Server Agent localement, créez un travail av
 
 6.  Finissez de configurer et de planifier le travail.
 
-## <a name="activity"></a> Planifier un package dans le cadre d’un pipeline Azure Data Factory
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> Planifier un package dans le cadre d’un pipeline Azure Data Factory
 
 Vous pouvez planifier un package indirectement à l’aide d’un déclencheur pour exécuter un pipeline Azure Data Factory qui exécute un package SSIS.
 

@@ -14,10 +14,10 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67986930"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, objet Buffer Manager
@@ -39,7 +39,7 @@ ms.locfileid: "67986930"
 -   La fréquence de lecture de données à partir du disque par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Comparées aux autres opérations, comme les accès mémoire, les E/S physiques consomment beaucoup de temps. La diminution des E/S physiques permet d'améliorer les performances des requêtes.  
   
 ## <a name="buffer-manager-performance-objects"></a>Objets de performance du gestionnaire de tampons  
- Ce tableau décrit les objets de performance **Gestionnaire de tampons** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Ce tableau décrit les objets de performance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de tampons**de**.  
   
 |Compteurs du gestionnaire de tampons de SQL Server|Description|  
 |----------------------------------------|-----------------|  

@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212743"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Gestion des certificats (Gestionnaire de configuration SQL Server)
@@ -41,7 +41,7 @@ Les certificats SSL/TLS sont largement utilisés pour sécuriser l’accès à S
 > [!NOTE]
 > Vous pouvez utiliser la gestion des certificats dans le Gestionnaire de configuration SQL Server avec des versions inférieures de SQL Server, à partir de SQL Server 2008.
 
-##  <a name="provision-single-server-cert"></a> Pour installer un certificat pour une seule instance SQL Server  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> Pour installer un certificat pour une seule instance SQL Server  
   
 1. Dans le Gestionnaire de configuration SQL Server, dans le volet de la console, développez **Configuration du réseau SQL Server**.  
   
@@ -54,7 +54,7 @@ Les certificats SSL/TLS sont largement utilisés pour sécuriser l’accès à S
 5. Sélectionnez **Suivant** pour valider le certificat. Si aucune erreur ne se produit, sélectionnez **Suivant** pour importer le certificat dans l’instance locale.  
   
  
-##  <a name="provision-failover-cluster-cert"></a> Pour installer un certificat dans une configuration de cluster de basculement  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> Pour installer un certificat dans une configuration de cluster de basculement  
   
 1. Dans le Gestionnaire de configuration SQL Server, dans le volet de la console, développez **Configuration du réseau SQL Server**.
   
@@ -77,7 +77,7 @@ Les certificats SSL/TLS sont largement utilisés pour sécuriser l’accès à S
 > [!NOTE]
 > Effectuez ces étapes dans le nœud actif de l’instance de cluster de basculement SQL Server. L’utilisateur doit disposer des autorisations d’administrateur sur tous les nœuds de cluster.
 
-##  <a name="provision-availability-group-cert"></a>Pour installer un certificat dans une configuration de groupe de disponibilité  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Pour installer un certificat dans une configuration de groupe de disponibilité  
   
 1. Dans le Gestionnaire de configuration SQL Server, dans le volet de la console, développez **Configuration du réseau SQL Server**.
   

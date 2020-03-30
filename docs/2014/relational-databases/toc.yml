@@ -192,7 +192,7 @@
               href: tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
     - name: 'Didacticiel : signature de procédures stockées à l''aide d''un certificat'
       href: tutorial-signing-stored-procedures-with-a-certificate.md
-    - name: "Tutoriel\_: Chaînes de propriétés et changement de contexte"
+    - name: 'Tutorial: Ownership Chains and Context Switching'
       href: tutorial-ownership-chains-and-context-switching.md
     - name: 'Didacticiel : Administration de serveurs à l''aide de la Gestion basée sur des stratégies'
       href: policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md

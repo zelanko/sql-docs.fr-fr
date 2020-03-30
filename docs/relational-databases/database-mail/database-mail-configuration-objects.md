@@ -33,37 +33,37 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134430"
 ---
 # <a name="database-mail-configuration-objects"></a>Objets de configuration de la messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Database Mail comprend deux objets de configuration : les objets de configuration de base de données vous permettent de configurer les paramètres que Database Mail doit utiliser lors de l’envoi d’un e-mail à partir de votre application de base de données ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  La messagerie de base de données fournit deux objets de configuration : les objets de configuration de base de données vous permettent de configurer les paramètres que la messagerie de base de données doit utiliser lors de l'envoi d'un message électronique à partir de votre application de base de données ou Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Comptes de messagerie de base de données  
   
 -   Profils de messagerie de base de données  
   
   
-##  <a name="VisualElement"></a> Relation entre les objets configuration de la messagerie de base de données  
+##  <a name="database-mail-configuration-object-relationship"></a><a name="VisualElement"></a> Relation entre les objets configuration de la messagerie de base de données  
  La figure montre deux profils, trois comptes et trois utilisateurs. L'Utilisateur 1 a accès au Profil 1, lequel utilise le Compte 1 et le Compte 2. L'Utilisateur 3 a accès au Profil 2, lequel utilise le Compte 2 et le Compte 3. L'Utilisateur 2 a accès au Profil 1 et au Profil 2.  
   
  ![Relations des utilisateurs, profils et comptes](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relations des utilisateurs, profils et comptes")  
   
   
-##  <a name="DBAccount"></a> Compte de messagerie de base de données  
+##  <a name="database-mail-account"></a><a name="DBAccount"></a> Compte de messagerie de base de données  
  Un compte de messagerie de base de données contient les informations qui permettent à Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'envoyer des messages électroniques à un serveur SMTP. Chacun contient des informations propres à un serveur de messagerie particulier.  
   
  Une messagerie de base de données accepte trois méthodes d'authentification pour communiquer avec un serveur SMTP :  
   
--   Authentification Windows : Database Mail utilise les informations d’identification du compte de service Windows du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour l’authentification sur le serveur SMTP.  
+-   Authentification Windows : la messagerie de base de données utilise les informations d’identification du compte de service Windows du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour l’authentification sur le serveur SMTP.  
   
--   Authentification de base :  Database Mail utilise le nom d’utilisateur et le mot de passe spécifiés pour s’authentifier sur le serveur SMTP.  
+-   Authentification de base : la messagerie de base de données utilise le nom d'utilisateur et le mot de passe spécifiés pour s'authentifier sur le serveur SMTP.  
   
--   Authentification anonyme :  Le serveur SMTP ne demande aucune authentification.  La messagerie de base de données n'utilise pas d'informations d'identification pour s'authentifier sur le serveur SMTP.  
+-   Authentification anonyme : utilisez cette option lorsque le serveur SMTP ne nécessite pas d'authentification.  La messagerie de base de données n'utilise pas d'informations d'identification pour s'authentifier sur le serveur SMTP.  
   
  Les informations de compte sont stockées dans la base de données **msdb** . Chaque compte comprend les informations suivantes :  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68134430"
  L'Assistant Configuration de la messagerie de base de données permet de créer et de gérer des comptes facilement. Vous pouvez également utiliser les procédures stockées de configuration de **msdb** pour créer et gérer des comptes.  
   
   
-##  <a name="DBProfile"></a> Profil de messagerie de base de données  
+##  <a name="database-mail-profile"></a><a name="DBProfile"></a> Profil de messagerie de base de données  
  Un profil de messagerie de base de données est une collection triée de comptes de messagerie de base de données apparentés. Les applications qui envoient du courrier à l'aide de la messagerie de base de données spécifient des profils au lieu d'utiliser directement des comptes. Séparer les informations sur les serveurs de messagerie des objets utilisés par l'application permet d'améliorer la flexibilité et la fiabilité : les profils assurent le basculement automatique ; ainsi, si un serveur de messagerie ne répond pas, la messagerie de base de données peut envoyer directement le courrier à un autre serveur de messagerie. Les administrateurs de base de données peuvent ajouter, supprimer ou reconfigurer des comptes sans avoir à modifier le code de l'application, ni les étapes de travail.  
   
  En outre, les profils permettent aux administrateurs de base de données de contrôler l'accès à la messagerie électronique. L’adhésion à **DatabaseMailUserRole** est obligatoire pour envoyer des messages à l’aide de la messagerie de base de données. Les profils offrent une souplesse supplémentaire aux administrateurs en leur permettant de contrôler les expéditeurs de messages et les comptes utilisés.  
@@ -110,7 +110,7 @@ ms.locfileid: "68134430"
  Si plusieurs comptes possèdent le même numéro de séquence, la messagerie de base de données utilise uniquement l'un d'eux pour un message électronique donné. Dans ce cas, la messagerie de base de données exclut toute garantie en ce qui concerne le compte utilisé pour ce numéro de séquence ou l'utilisation du même compte d'un message à un autre.  
   
   
-##  <a name="RelatedTasks"></a> Tâches de configuration de la messagerie de base de données  
+##  <a name="database-mail-configuration-tasks"></a><a name="RelatedTasks"></a> Tâches de configuration de la messagerie de base de données  
  Le tableau suivant décrit les tâches de configuration de la messagerie de base de données.  
   
 |Tâche de configuration|Lien de rubrique|  
@@ -121,7 +121,7 @@ ms.locfileid: "68134430"
 |Décrit comment créer un script de configuration de messagerie de base de données à l'aide de modèles||  
   
   
-##  <a name="Add_Tasks"></a> Tâches de configuration de base de données supplémentaires (procédures stockées système)  
+##  <a name="additional-database-configuration-tasks-system-stored-procedures"></a><a name="Add_Tasks"></a> Tâches de configuration de base de données supplémentaires (procédures stockées système)  
  Les procédures stockées pour la configuration de la messagerie de base de données se situent dans la base de données **msdb** .  
   
  Les tableaux suivants répertorient les procédures stockées utilisées pour la configuration et la gestion de la messagerie de base de données.  
@@ -165,7 +165,7 @@ ms.locfileid: "68134430"
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Arrête le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  
 |[sysmail_help_status_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql.md)|Indique si la messagerie de base de données est démarrée.|  
   
-##  <a name="RelatedContent"></a> Références supplémentaires  
+##  <a name="additional-references"></a><a name="RelatedContent"></a> Références supplémentaires  
   
 -   [Journal et audits de la messagerie de base de données](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   

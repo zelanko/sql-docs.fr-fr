@@ -15,10 +15,10 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68043882"
 ---
 # <a name="database-mirroring-witness"></a>Témoin de mise en miroir de base de données
@@ -42,19 +42,19 @@ ms.locfileid: "68043882"
   
 -   [Pour ajouter ou supprimer un témoin](#AddRemoveWitness)  
   
-##  <a name="InMultipleSessions"></a> Utilisation d'un témoin dans plusieurs sessions  
+##  <a name="using-a-witness-in-multiple-sessions"></a><a name="InMultipleSessions"></a> Utilisation d'un témoin dans plusieurs sessions  
  Une instance du serveur spécifique peut servir de témoin dans des sessions de mise en miroir de base de données simultanées, à raison d'une session par base de données différente. Différentes sessions ont lieu avec différents partenaires. L'illustration suivante montre une instance de serveur témoin qui participe à deux sessions de mise en miroir de base de données avec différents partenaires.  
   
  ![Instance de serveur témoin pour 2 bases de données](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Instance de serveur témoin pour 2 bases de données")  
   
  Une même instance de serveur peut également fonctionner simultanément en tant que témoin au sein de certaines sessions et en tant que partenaire au sein d'autres sessions. En pratique, cependant, une instance de serveur fonctionne typiquement soit en tant que témoin, soit en tant que partenaire. La raison en est que les serveurs partenaires nécessitent des ordinateurs sophistiqués disposant d'un niveau de matériel suffisant pour prendre en charge une base de données de production, alors que le serveur témoin peut s'exécuter sur tout système Windows disponible prenant en charge [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-##  <a name="SwHwRecommendations"></a> Recommandations logicielles et matérielles  
+##  <a name="software-and-hardware-recommendations"></a><a name="SwHwRecommendations"></a> Recommandations logicielles et matérielles  
  Nous vous recommandons vivement de placer le témoin sur un ordinateur distinct de celui des partenaires. Les serveurs partenaires de mise en miroir de bases de données sont pris en charge uniquement par l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard et l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Les témoins, en revanche, sont également pris en charge dans l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup et l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. À l'exception d'une mise à niveau depuis une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les instances de serveur dans une session de mise en miroir doivent toutes exécuter la même version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, un témoin [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] est pris en charge lorsque vous effectuez une mise à niveau depuis une configuration de mise en miroir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , mais ne peut pas être ajouté à une configuration de mise en miroir [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou ultérieure.  
   
  Un témoin peut s'exécuter sur tout système informatique fiable prenant en charge ces éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cependant, nous recommandons que chaque instance de serveur utilisée en tant que témoin soit conforme à la configuration minimale requise pour la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard que vous exécutez. Pour plus d’informations sur ces configurations requises, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
-##  <a name="InAutoFo"></a> Rôle du témoin en basculement automatique  
+##  <a name="role-of-the-witness-in-automatic-failover"></a><a name="InAutoFo"></a> Rôle du témoin en basculement automatique  
  Pendant tout le déroulement d'une session de mise en miroir d'une base de données, toutes les instances de serveur surveillent l'état de leur connexion. Si les partenaires se déconnectent, ils s'en remettent au témoin pour vérifier qu'un seul d'entre eux sert actuellement la base de données. Si un serveur miroir synchronisé perd sa connexion au serveur principal, mais reste connecté au témoin, le serveur miroir contacte le témoin pour déterminer si le témoin a perdu sa connexion au serveur principal :  
   
 -   Si le serveur principal est toujours connecté au témoin, le basculement automatique n'a pas lieu. Le serveur principal continue en fait à servir la base de données tout en accumulant les enregistrements du journal à envoyer au serveur miroir lorsque les partenaires se reconnectent.  
@@ -63,9 +63,9 @@ ms.locfileid: "68043882"
   
 -   Si le serveur miroir est déconnecté du témoin ainsi que du serveur principal, le basculement automatique n'est pas possible, indépendamment de l'état du serveur principal.  
   
- La condition selon laquelle au moins deux instances de serveur doivent être connectées s’appelle *quorum*. Le quorum garantit que la base de données ne peut être servie que par un seul partenaire à la fois. Pour plus d’informations sur le fonctionnement du quorum et son impact sur une session, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ La condition selon laquelle au moins deux instances de serveur doivent être connectées s’appelle *quorum*. Le quorum garantit que la base de données ne peut être servie que par un seul partenaire à la fois. Pour plus d’informations sur le fonctionnement du quorum et son impact sur une session, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-##  <a name="AddRemoveWitness"></a> Pour ajouter ou supprimer un témoin  
+##  <a name="to-add-or-remove-a-witness"></a><a name="AddRemoveWitness"></a> Pour ajouter ou supprimer un témoin  
  **Pour ajouter un témoin**  
   
 -   [Ajouter ou remplacer un témoin de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
@@ -79,7 +79,7 @@ ms.locfileid: "68043882"
 ## <a name="see-also"></a>Voir aussi  
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
  [Défaillances possibles pendant la mise en miroir de bases de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

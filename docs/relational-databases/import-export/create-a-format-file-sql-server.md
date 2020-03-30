@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68035818"
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68035818"
  En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML.  
   
 > [!NOTE]  
->  La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] peut lire un fichier de format version 10.0 généré par **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], mais **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ne peut pas lire un fichier de format version 11.0 généré par **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+>  La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**de** peut lire un fichier de format version 10.0 généré par [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**de**, mais [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**de** ne peut pas lire un fichier de format version 11.0 généré par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**de**.  
   
  Cette rubrique décrit l'utilisation de l' [utilitaire bcp](../../tools/bcp-utility.md) pour créer un fichier de format pour une table donnée. Le fichier de format est basé sur l’option de type de données spécifiée ( **-n**, **-c**, **-w**ou **-N**) et les délimiteurs de la table ou de la vue.  
   
@@ -195,7 +195,7 @@ Voici un exemple de fichier de format sans les informations de classement.
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Fichier de format XML.|  
 |**-c**|Données de type caractère.|  
-|**-t** `,`|Virgule ( **,** ) servant d’indicateur de fin de champ.<br /><br /> Remarque : Si le fichier de données utilise l’indicateur de fin de champ défini par défaut (à savoir`\t`), le commutateur **-t** n’est pas nécessaire.|  
+|**-t** `,`|Virgule ( **,** ) servant d’indicateur de fin de champ.<br /><br /> Remarque : Si le fichier de données utilise l’indicateur de fin de champ défini par défaut (à savoir`\t`), le commutateur **-t** n’est pas nécessaire.|  
 |**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour pouvoir vous connecter.|  
   
  Dans la fenêtre d'invite de commandes Windows, tapez la commande `bcp` suivante :  

@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024902"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Créer des tables et des index partitionnés
@@ -64,17 +64,17 @@ ms.locfileid: "68024902"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   L'étendue d'une fonction de partition et d'un schéma est limitée à la base de données dans laquelle ils ont été créés. Dans la base de données, les fonctions de partition résident dans un espace de noms indépendant des autres fonctions.  
   
 -   Si des lignes dans une fonction de partition ont des colonnes de partitionnement avec des valeurs Null, ces lignes sont allouées à la partition la plus à gauche. Toutefois, si NULL est spécifié comme valeur limite et que RIGHT est indiqué, la partition la plus à gauche reste vide et les valeurs NULL sont placées dans la deuxième partition.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La création d'une table partitionnée nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table est créée. La création d'un index partitionné nécessite l'autorisation ALTER sur la table ou la vue dans laquelle l'index est créé. La création d'une table ou d'un index partitionné(e) nécessite l'une des autorisations supplémentaires suivantes :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -83,7 +83,7 @@ ms.locfileid: "68024902"
   
 -   Autorisation CONTROL SERVER ou ALTER ANY DATABASE sur le serveur de la base de données dans laquelle la fonction de partition et le schéma de partition sont créés.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Suivez les étapes de cette procédure pour créer un ou plusieurs groupes de fichiers, les fichiers correspondants et une table. Vous référencerez ces objets dans la procédure suivante lorsque vous créerez la table partitionnée.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Pour créer de nouveaux groupes de fichiers pour une table partitionnée  
@@ -260,7 +260,7 @@ ms.locfileid: "68024902"
   
  L'Assistant Création de partition crée la fonction de partition et le schéma, puis applique le partitionnement à la table spécifiée. Pour vérifier le partitionnement de table, dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table et sélectionnez **Propriétés**. Cliquez sur la page **Stockage** . La page affiche des informations telles que le nom de la fonction de partition et du schéma, ainsi que le nombre de partitions.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   

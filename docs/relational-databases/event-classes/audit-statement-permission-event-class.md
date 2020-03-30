@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95b4c8c58591ac0846b9774a97bbcc1f389d31c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67913324"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission (classe d'événements)
@@ -42,7 +42,7 @@ ms.locfileid: "67913324"
 |**LoginSid**|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l’affichage catalogue **sys.server_principals** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
-|**autorisations**|**bigint**|Valeur entière représentant le type d'autorisations vérifiées.<br /><br /> 1 = CREATE DATABASE (base de données master uniquement)<br /><br /> 2 = CREATE TABLE<br /><br /> 4 = CREATE PROCEDURE<br /><br /> 8 = CREATE VIEW<br /><br /> 16 = CREATE RULE<br /><br /> 32 = CREATE DEFAULT<br /><br /> 64 = BACKUP DATABASE<br /><br /> 128 = BACKUP LOG<br /><br /> 256 = BACKUP TABLE<br /><br /> 512 = CREATE FUNCTION|19|Oui|  
+|**Autorisations**|**bigint**|Valeur entière représentant le type d'autorisations vérifiées.<br /><br /> 1 = CREATE DATABASE (base de données master uniquement)<br /><br /> 2 = CREATE TABLE<br /><br /> 4 = CREATE PROCEDURE<br /><br /> 8 = CREATE VIEW<br /><br /> 16 = CREATE RULE<br /><br /> 32 = CREATE DEFAULT<br /><br /> 64 = BACKUP DATABASE<br /><br /> 128 = BACKUP LOG<br /><br /> 256 = BACKUP TABLE<br /><br /> 512 = CREATE FUNCTION|19|Oui|  
 |**RequestID**|**int**|ID de la demande contenant l'instruction.|49|Oui|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  

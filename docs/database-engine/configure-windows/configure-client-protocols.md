@@ -22,10 +22,10 @@ ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fa898451638503b2f91c97026158e7331a25e90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012813"
 ---
 # <a name="configure-client-protocols"></a>configurer des protocoles clients
@@ -38,9 +38,9 @@ ms.locfileid: "68012813"
   
 -   Certaines applications clientes, telles que sqlcmd.exe, peuvent spécifier le protocole dans la chaîne de connexion. Pour plus d’informations, consultez [Se connecter au moteur de base de données avec sqlcmd](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
   
-###  <a name="EnableDisable"></a> Pour activer ou désactiver un protocole client  
+###  <a name="to-enable-or-disable-a-client-protocol"></a><a name="EnableDisable"></a> Pour activer ou désactiver un protocole client  
   
 1.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], développez **Configuration de SQL Server Native Client**, cliquez avec le bouton droit sur **Protocoles clients**, puis sélectionnez **Propriétés**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68012813"
   
 3.  Dans la zone **Protocoles activés**, cliquez sur un protocole, puis sélectionnez **Désactiver** pour le désactiver.  
   
-###  <a name="ChangeDefault"></a> Pour modifier le protocole par défaut ou l’ordre des protocoles pour les ordinateurs clients  
+###  <a name="to-change-the-default-protocol-or-the-protocol-order-for-client-computers"></a><a name="ChangeDefault"></a> Pour modifier le protocole par défaut ou l’ordre des protocoles pour les ordinateurs clients  
   
 1.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], développez **Configuration de SQL Server Native Client**, cliquez avec le bouton droit sur **Protocoles clients**, puis sélectionnez **Propriétés**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68012813"
     > [!IMPORTANT]  
     >  Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des entrées de Registre pour les configurations d'alias de serveur et la bibliothèque réseau cliente par défaut. Toutefois, l'application n'installe pas les bibliothèques réseau clientes, ni les protocoles réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les bibliothèques réseau clientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées au cours de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les protocoles réseau sont installés lors de l’installation de Microsoft Windows (ou via **Réseaux** dans le **Panneau de configuration**). Un protocole réseau spécifique peut ne pas être disponible lors de l’installation de Windows. Pour plus d'informations concernant l’installation de ces protocoles réseau, consultez la documentation de l'éditeur.  
   
-###  <a name="Configure"></a> Pour configurer un client pour l’utilisation de TCP/IP  
+###  <a name="to-configure-a-client-to-use-tcpip"></a><a name="Configure"></a> Pour configurer un client pour l’utilisation de TCP/IP  
   
 1.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], développez **Configuration de SQL Server Native Client**, cliquez avec le bouton droit sur **Protocoles clients**, puis sélectionnez **Propriétés**.  
   

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874763"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
@@ -30,7 +30,7 @@ Installer la recherche en texte intégral SQL Server pour votre plateforme :
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Installer sur RHEL</a>
+## <a name=""></a><a name="RHEL">Installer sur RHEL</a>
 
 Utilisez les commandes suivantes pour installer **mssql-server-fts** sur Red Hat Enterprise Linux. 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [Notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [Installer SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Installer sur Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Installer sur Ubuntu</a>
 
 Utilisez les commandes suivantes pour installer **mssql-server-fts** sur Ubuntu. 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [Notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [Installer SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Installer sur SLES</a>
+## <a name=""></a><a name="SLES">Installer sur SLES</a>
 
 Utilisez les commandes suivantes pour installer **mssql-server-fts** sur SUSE Linux Enterprise Server. 
 
@@ -142,7 +142,7 @@ La recherche en texte intégral utilise des [séparateurs de mots](../relational
 | Ourdou | 1056 |
 | Vietnamien | 1066 |
 
-## <a id="filters"></a> Filtres
+## <a name="filters"></a><a id="filters"></a> Filtres
 
 La recherche en texte intégral fonctionne également avec du texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est requis pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [Configurer et gérer les filtres pour la recherche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

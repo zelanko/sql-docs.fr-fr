@@ -19,10 +19,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680981"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Projets et solutions Integration Services (SSIS)
@@ -115,7 +115,7 @@ Les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] résiden
   
 7.  Si le logiciel de contrôle de code source est [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, la boîte de dialogue **Connexion à Visual SourceSafe** s’ouvre. Dans **Connexion à Visual SourceSafe**, indiquez un nom d’utilisateur, un mot de passe et le nom de la base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe. Cliquez sur **Parcourir** pour localiser la base de données.  
   
-    > **REMARQUE :** Pour afficher et modifier le plug-in du contrôle de code source sélectionné et configurer l’environnement du contrôle de code source, cliquez sur **Options** dans le menu **Outils**, puis développez le nœud **Contrôle de code source**.  
+    > **REMARQUE :** Pour afficher et modifier le plug-in du contrôle de code source sélectionné et configurer l’environnement du contrôle de code source, cliquez sur **Options** dans le menu **Outils**, puis développez le nœud **Contrôle de code source**.  
   
 8.  Cliquez sur **OK** pour ajouter la solution à **Explorateur de solutions** et ajouter le projet à la solution.  
 

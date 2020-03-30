@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296295"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Access (Assistant Importation et Exportation SQL Server)
@@ -71,7 +71,7 @@ Si vous ne voyez pas Access dans la liste des sources de données, utilisez-vous
 > [!NOTE]
 > Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
 
-## <a name="officeDownloads"></a>Se procurer les fichiers nécessaires pour se connecter à Access  
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a>Se procurer les fichiers nécessaires pour se connecter à Access  
 Vous devrez peut-être télécharger les composants de connectivité pour les sources de données Microsoft Office, notamment Access et Excel, s’ils ne sont pas déjà installés. Téléchargez la dernière version des composants de connectivité pour les fichiers Excel et Access ici : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
 La dernière version des composants peut ouvrir des fichiers créés dans des versions antérieures d’Access.
@@ -82,7 +82,7 @@ Si vous avez un abonnement Office 365, veillez à télécharger Access Database
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> Le fichier de base de données est-il protégé par un mot de passe ?
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> Le fichier de base de données est-il protégé par un mot de passe ?
 Dans certains cas, une base de données Access est protégée par un mot de passe mais n’utilise pas de fichier de groupe de travail. Tous les utilisateurs doivent fournir le même mot de passe mais n’ont pas besoin d’entrer un nom d’utilisateur. Pour fournir un mot de passe de base de données, effectuez les étapes suivantes :
 
 1.  Dans la page **Choisir une source de données** ou **Choisir une destination**, cliquez sur le bouton **Avancé** pour ouvrir la boîte de dialogue **Propriétés des liaisons de données**.  

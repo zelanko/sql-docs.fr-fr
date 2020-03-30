@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084104"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
@@ -90,7 +90,7 @@ ms.locfileid: "68084104"
     
 ## <a name="how-to-control-transaction-durability"></a>Procédure pour contrôler la durabilité d'une transaction    
     
-###  <a name="bkmk_DbControl"></a> Contrôle au niveau de la base de données    
+###  <a name="database-level-control"></a><a name="bkmk_DbControl"></a> Contrôle au niveau de la base de données    
  En tant qu'administrateur de base de données, vous pouvez contrôler si les utilisateurs peuvent utiliser la durabilité retardée des transactions sur une base de données avec l'instruction suivante. Vous devez définir le paramètre de durabilité retardée avec ALTER DATABASE.    
     
 ```sql    
@@ -106,7 +106,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  Avec ce paramètre, chaque transaction qui est validée sur la base de données a une durabilité retardée, même si la transaction spécifie une durabilité complète (DELAYED_DURABILITY = OFF) ou omette toute indication de durabilité. Ce paramètre est utile lorsque la durabilité retardée des transactions a un intérêt pour une base de données, mais que vous ne souhaitez pas modifier le code de l'application.    
     
-###  <a name="CompiledProcControl"></a> Contrôle au niveau du bloc atomique - Procédures stockées compilées en mode natif    
+###  <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a><a name="CompiledProcControl"></a> Contrôle au niveau du bloc atomique - Procédures stockées compilées en mode natif    
  Le code suivant s'insère à l'intérieur du bloc atomique.    
     
 ```sql    
@@ -141,7 +141,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Le bloc atomique démarre une nouvelle transaction à durabilité complète.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|    
 |**DELAYED_DURABILITY = ON**|Le bloc atomique démarre une nouvelle transaction à durabilité retardée.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|    
     
-###  <a name="bkmk_T-SQLControl"></a> Contrôle au niveau de la validation -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="commit-level-control--tsql"></a><a name="bkmk_T-SQLControl"></a> Contrôle au niveau de la validation -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  La syntaxe de l'option COMMIT est étendue pour vous permettre de forcer la durabilité retardée des transactions. Si DELAYED_DURABILITY a la valeur DISABLED ou FORCED au niveau de la base de données (voir ci-dessus), cette option COMMIT est ignorée.    
     
 ```sql    
@@ -172,7 +172,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   Exécutez la procédure stockée système `sp_flush_log`. Cette procédure force le vidage sur le disque des enregistrements de journal de toutes les transactions à durabilité retardée déjà validées. Pour plus d’informations, consultez [sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md).    
     
-##  <a name="bkmk_OtherSQLFeatures"></a> Durabilité différée et autres fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
+##  <a name="delayed-durability-and-other-ssnoversion-features"></a><a name="bkmk_OtherSQLFeatures"></a> Durabilité différée et autres fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
  **Suivi des modifications et capture de données modifiées**    
  Toutes les transactions avec suivi des modifications ont une durabilité complète. Une transaction présente la propriété de suivi des modifications si elle effectue des opérations d’écriture dans des tables qui sont activées pour le suivi des modifications. L’utilisation de la durabilité différée n’est pas prise en charge pour les bases de données qui utilisent la capture de données modifiées (CDC).    
     
@@ -197,13 +197,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Sauvegarde de journal**    
  Seules les transactions rendues durables sont incluses dans la sauvegarde.    
     
-##  <a name="bkmk_DataLoss"></a> Quand puis-je perdre des données ?    
+##  <a name="when-can-i-lose-data"></a><a name="bkmk_DataLoss"></a> Quand puis-je perdre des données ?    
  Si vous implémentez la durabilité retardée sur l'une de vos tables, certaines circonstances peuvent entraîner une perte de données. Si vous ne pouvez pas vous permettre de perdre des données, n'utilisez pas la durabilité retardée sur les tables.    
     
 ### <a name="catastrophic-events"></a>Événements graves    
  Dans le cas d'événements graves, par exemple une défaillance du serveur, vous pouvez perdre les données de toutes les transactions validées qui n'ont pas été enregistrées sur le disque. Les transactions durables retardées sont enregistrées sur le disque quand une transaction à durabilité complète est exécutée sur une table (durable optimisé en mémoire ou sur disque) dans la base de données, ou quand `sp_flush_log` est appelé. Si vous utilisez des transactions durables retardées, vous pouvez créer une petite table dans la base de données afin de mettre à jour ou d'appeler périodiquement `sp_flush_log` pour enregistrer toutes les transactions validées en attente. Le journal des transactions est également vidé quand il est plein, mais cela est difficile à prévoir et impossible à contrôler.    
     
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Arrêt et redémarrage de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
+### <a name="ssnoversion-shutdown-and-restart"></a>Arrêt et redémarrage de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
  Pour une durabilité retardée, il n'y a pas de différence entre un arrêt inattendu et un arrêt/redémarrage attendu de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comme pour les événements graves, vous devez prévoir une perte de données. Dans un arrêt/redémarrage planifié, certaines transactions qui n'ont pas été écrites sur disque peuvent tout d'abord l'être, mais vous ne pouvez pas planifier cela. La planification comme pour un arrêt/redémarrage, planifiée ou non, entraîne la perte de données comme pour un événement grave.    
     
 ## <a name="see-also"></a>Voir aussi    

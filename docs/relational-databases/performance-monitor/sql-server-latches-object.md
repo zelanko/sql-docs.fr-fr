@@ -14,17 +14,17 @@ ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36cc64688cb78febb3e023e2b11e6e3da204ad1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939528"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server - Objet Latches
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'objet **SQLServer:Latches** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs qui permettent de surveiller les verrous des ressources internes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La surveillance des verrous internes, afin de déterminer l'activité de l'utilisateur et son exploitation des ressources, peut permettre d'identifier les goulots d'étranglement des performances.  
   
- Ce tableau décrit les compteurs **Verrous internes** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verrous internes**de**.  
   
 |Compteurs des verrous internes de SQL Server|Description|  
 |---------------------------------|-----------------|  

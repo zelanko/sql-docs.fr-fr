@@ -14,10 +14,10 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014513"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>Prérequis pour convertir une copie des journaux de transaction en groupes de disponibilité Always On
@@ -29,7 +29,7 @@ ms.locfileid: "68014513"
 >  Vous pouvez configurer une base de données principale ou secondaire (éventuellement accessible en lecture) dans un groupe de disponibilité en tant que base de données principale de copie des journaux de transaction.  
   
   
-##  <a name="AGPrereqsRealAddress"></a> Conditions préalables requises pour les groupes de disponibilité  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a> Conditions préalables requises pour les groupes de disponibilité  
  Pour permettre aux travaux de sauvegarde de s’exécuter sur le réplica principal du groupe de disponibilité, utilisez les paramètres de sauvegarde de groupes de disponibilité Always On suivants :  
   
 |Propriété|Paramètre|  
@@ -43,7 +43,7 @@ ms.locfileid: "68014513"
   
  [Configurer la sauvegarde sur des réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> Conditions préalables requises pour la copie des journaux de transaction  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a> Conditions préalables requises pour la copie des journaux de transaction  
   
 -   La base de données principale pour la copie des journaux de transaction doit résider sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica principal initial/actuel du groupe de disponibilité.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68014513"
   
  [Converting a log shipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (Conversion d’une configuration de copie de journaux de transaction en groupe de disponibilité - blog SQL Server)  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Copie des journaux de transaction**  
   
 -   [Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 &#40;Transact-SQL&#41;](../../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014513"
   
 -   [Configurer la sauvegarde sur des réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   
