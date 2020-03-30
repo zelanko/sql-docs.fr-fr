@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 :  configurer l’environnement de développement pour le développement Node.js | Microsoft Docs'
+title: 'Étape 1 : Configurer l’environnement de développement pour le développement Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68003758"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Étape 1 :  Configurer l’environnement de développement pour le développement Node.js
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Node.js
 Vous devrez configurer votre environnement de développement avec les conditions préalables pour développer une application à l’aide du pilote Node.js pour SQL Server.  La méthode la plus courante consiste à utiliser le gestionnaire de package Node (npm) pour installer le module fastidieux, mais vous pouvez télécharger le module fastidieux directement sur [GitHub](https://github.com/pekim/tedious) si vous préférez.  
   
 Notez que le pilote Node.js utilise le protocole TDS, qui est activé par défaut dans SQL Server et Azure SQL Database.  Aucune configuration supplémentaire n’est nécessaire.  
@@ -58,13 +58,13 @@ c. Une fois le téléchargement effectué, exécutez le fichier msi pour install
 ```  
 > sudo apt-get install npm  
 ```  
-4. **Créer un répertoire de projet** et y accéder.    
+4. **Créez un répertoire de projet** et accédez-y.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
   
-5. **Créer un projet Node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier package.json dans le répertoire de votre projet.  
+5. **Créez un projet Node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier package.json dans le répertoire de votre projet.  
 ```  
 > sudo npm init  
 ```  
@@ -83,13 +83,13 @@ c. Une fois le téléchargement effectué, exécutez le fichier dmg pour install
   
 2. **Ouvrir le terminal**  
   
-3. **Créer un répertoire de projet** et y accéder.    
+3. **Créez un répertoire de projet** et accédez-y.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
   
-4. **Créer un projet Node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier package.json dans le répertoire de votre projet.  
+4. **Créez un projet Node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu’à ce que le projet soit créé. À la fin de cette étape, vous devriez voir un fichier package.json dans le répertoire de votre projet.  
 ```  
 > npm init  
 ```  

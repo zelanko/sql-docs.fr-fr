@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: ed7fa07959715ac6c08b8799c5579e90939f87c2
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896268"
 ---
 # <a name="sql-server-features-and-adonet"></a>Fonctionnalités de SQL Server et ADO.NET
@@ -33,7 +33,7 @@ Décrit comment énumérer des instances actives de SQL Server.
 Décrit le support pour l’obtention de statistiques d’exécution SQL Server.  
   
 [Instances d’utilisateur SQL Server Express](sql-server-express-user-instances.md)  
-Décrit le support pour les instances utilisateur SQL Server Express.  
+Décrit la prise en charge des instances utilisateur SQL Server Express.  
   
 [Mise en miroir de bases de données dans SQL Server](database-mirroring-sql-server.md)  
 Décrit la fonctionnalité de mise en miroir de bases de données.  
@@ -51,7 +51,7 @@ Décrit le support pour l’isolation d’instantanés, un mécanisme de contrô
 Décrit le support SqlClient pour des groupes de disponibilité de haute disponibilité et récupération d’urgence (AlwaysOn).  
   
 [Prise en charge par SqlClient de LocalDB](sqlclient-support-localdb.md)  
-Décrit le support SqlClient pour les bases de données LocalDB.
+Décrit la prise en charge par SqlClient des bases de données LocalDB.
 
 [Support SqlClient pour Always Encrypted](sqlclient-support-always-encrypted.md)  
 Décrit le support SqlClient pour la fonctionnalité Always Encrypted.

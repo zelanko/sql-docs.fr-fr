@@ -16,10 +16,10 @@ ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9cd1d57581a92df0423de09dfe672f29c2cabf81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953570"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean, méthode (int) (SQLServerResultSet)
@@ -48,7 +48,7 @@ public boolean getBoolean(int columnIndex)
 ## <a name="remarks"></a>Notes  
  Cette méthode getBoolean est spécifiée par la méthode getBoolean de l’interface java.sql.ResultSet.  
   
- Cette méthode est prise en charge uniquement sur les types de données de nombres et de caractères. Elle convertit les valeurs "1", 1 et "**true**" en **true**, et les valeurs "0", 0 et "**false**" en **false**. Pour toutes les autres valeurs, le comportement n'est pas défini.  
+ Cette méthode est prise en charge uniquement sur les types de données de nombres et de caractères. Elle convertit les valeurs « 1 «, 1 et « **true** » en **true**, et les valeurs « 0 », 0 et « **false** » en **false**. Pour toutes les autres valeurs, le comportement n'est pas défini.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthode getBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

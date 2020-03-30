@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895883"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Écriture d’une instruction SQL dynamique sécurisée dans SQL Server
@@ -46,7 +46,7 @@ Voici quelques conseils utiles :
   
 - Dans des environnements à plusieurs niveaux, toutes les données doivent être validées avant leur acceptation dans la zone de confiance.  
   
-- N’acceptez pas les chaînes suivantes dans les champs à partir desquels les noms de fichiers peuvent être construits : AUX, CLOCK$, COM1 à COM8, CON, CONFIG$, LPT1 à LPT8, NUL et PRN.  
+- N'acceptez pas les chaînes suivantes dans les champs à partir desquels les noms de fichiers peuvent être construits : AUX, CLOCK$, de COM1 à COM8, CON, CONFIG$, de LPT1 à LPT8, NUL et PRN.  
   
 - Utilisez des objets <xref:Microsoft.Data.SqlClient.SqlParameter> avec des procédures stockées et des commandes pour fournir la vérification de type et la validation de la longueur.  
   

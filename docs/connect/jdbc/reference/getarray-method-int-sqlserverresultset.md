@@ -16,10 +16,10 @@ ms.assetid: 377746c7-8c9c-41f5-8490-ca0dd56fd57a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff7355a5d63d5f6335612d2bf5de5131f23cab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954386"
 ---
 # <a name="getarray-method-int-sqlserverresultset"></a>getArray, méthode (int) (SQLServerResultSet)
@@ -45,10 +45,10 @@ public java.sql.Array getArray(int i)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getArray est spécifiée par la méthode getArray de l’interfacejava.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthode getArray &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

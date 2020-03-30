@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843793"
 ---
 # <a name="limitations-for-stretch-database"></a>Limitations concernant Stretch Database
@@ -26,7 +26,7 @@ ms.locfileid: "73843793"
 
   En savoir plus sur les limitations concernant les tables compatibles Stretch et sur les limitations qui vous empêchent d’activer Stretch pour une table.  
   
-##  <a name="Caveats"></a> Limites des tables Stretch  
+##  <a name="limitations-for-stretch-enabled-tables"></a><a name="Caveats"></a> Limites des tables Stretch  
   
 Les tables compatibles Stretch présentent les limitations suivantes.  
   
@@ -43,7 +43,7 @@ Les tables compatibles Stretch présentent les limitations suivantes.
   
 -   Les filtres sur les index [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont pas propagés à la table distante.  
   
-##  <a name="Limitations"></a> Limites empêchant l’activation de Stretch pour une table  
+##  <a name="limitations-that-currently-prevent-you-from-enabling-stretch-for-a-table"></a><a name="Limitations"></a> Limites empêchant l’activation de Stretch pour une table  
    
  Les éléments suivants vous empêchent d’activer Stretch pour une table.  
   

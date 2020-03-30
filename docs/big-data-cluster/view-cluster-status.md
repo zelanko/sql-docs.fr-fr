@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531586"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Guide pratique pour afficher l’état d’un cluster Big Data 
@@ -22,7 +22,7 @@ ms.locfileid: "73531586"
 
 Cet article explique comment accéder aux points de terminaison de service et afficher l’état des composants d’un cluster Big Data SQL Server. Il présente les deux techniques disponibles : Azure Data Studio et **azdata**.
 
-## <a id="datastudio"></a> Utiliser Azure Data Studio
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Utiliser Azure Data Studio
 
 Après avoir téléchargé la dernière **build Insiders** d’[Azure Data Studio](https://aka.ms/getazuredatastudio), vous pouvez accéder au tableau de bord Cluster Big Data SQL Server pour afficher les points de terminaison de service et l’état d’un cluster Big Data. Certaines des fonctionnalités présentées ci-dessous ne sont disponibles que dans la build Insiders d’Azure Data Studio.
 
@@ -55,7 +55,7 @@ La table des points de terminaison de service expose également plusieurs tablea
 
 Vous pouvez cliquer directement sur ces liens. Vous serez invité à vous authentifier lors de l’accès à ces tableaux de bord. Pour les tableaux de bord des métriques et des journaux, fournissez les informations d’identification d’administrateur du contrôleur que vous avez définies au moment du déploiement à l’aide des variables d’environnement **AZDATA_USERNAME** et **AZDATA_PASSWORD**. Les tableaux de bord Spark utilisent des informations d’identification de passerelle (Knox) : l’identité Active Directory dans un cluster intégré à AD ou l’utilisateur **racine** et **AZDATA_PASSWORD** si l’authentification de base est utilisée dans votre cluster. 
 
-### <a id="notebook"></a> Notebook Cluster Status
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook Cluster Status
 
 1. Vous pouvez également voir l’état du cluster Big Data en lançant le notebook Cluster Status (État du cluster). Pour lancer le notebook, cliquez sur la tâche **Cluster Status**.
 

@@ -9,10 +9,10 @@ ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081089"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Conseils de création de rapport (Générateur de rapports et SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081089"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningReports"></a> Conception de rapports  
+##  <a name="designing-reports"></a><a name="DesigningReports"></a> Conception de rapports  
   
 -   Un rapport bien conçu véhicule des informations qui aboutissent à une action. Identifiez les questions auxquelles le rapport permet de répondre. Gardez ces questions à l'esprit pendant que vous concevez le rapport.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77081089"
   
  Pour plus d’informations sur les éléments à prendre en compte au fil de la création de votre rapport, consultez [Planification d’un rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
-##  <a name="NamingConventions"></a> Conventions d'affectation des noms pour les rapports, les sources de données et les datasets  
+##  <a name="naming-conventions-for-reports-data-sources-and-datasets"></a><a name="NamingConventions"></a> Conventions d'affectation des noms pour les rapports, les sources de données et les datasets  
   
 -   Utilisez les conventions d'affectation des noms pour les sources de données et datasets qui documentent la source de données.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081089"
   
 -   Utilisez des traits de soulignement à la place des espaces dans les noms de rapports. Si vous téléchargez un rapport à partir d’un portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les espaces sont remplacés par les traits de soulignement. Si vous utilisez la fonctionnalité de téléchargement pour enregistrer des rapports en local, puis les incluez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'utilisation de traits de soulignement permet d'assurer l'exactitude des dépendances de rapports pour les sous-rapports et liens d'extraction.  
   
-##  <a name="Data"></a> Utilisation des données  
+##  <a name="working-with-data"></a><a name="Data"></a> Utilisation des données  
   
 -   La première étape consiste à faire en sorte que toutes les données que vous souhaitez utiliser s'affichent dans le volet des données de rapport. Lorsque vous affinez les questions auxquelles la conception du rapport permet d'apporter des réponses, pensez à la façon de limiter les données dans les datasets du rapport au strict nécessaire.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "77081089"
   
 -   Selon vos besoins, vous pouvez afficher des noms et des emplacements de sources de données de rapport, le texte de la commande de requête de dataset et des valeurs de paramètres dans le rapport. La première question que les nouveaux utilisateurs se posent généralement concerne l'origine des données. Pour clarifier le rapport, vous pouvez masquer de façon conditionnelle des zones de texte avec ce type d'informations et laisser les utilisateurs choisir ou non de les visualiser. Essayez d'ajouter ces informations dans la dernière page du rapport. Définissez la visibilité de la zone de texte selon un paramètre que l'utilisateur peut modifier.  
   
-##  <a name="DesignSurface"></a> Interaction avec l'aire de conception du rapport  
+##  <a name="interacting-with-the-report-design-surface"></a><a name="DesignSurface"></a> Interaction avec l'aire de conception du rapport  
  L'aire de conception du rapport n'offre pas le mode d'affichage WYSIWYG (« tel écrit, tel écran »). Lorsque vous placez des éléments de rapport sur l'aire de conception, leur emplacement relatif affecte la façon dont les éléments s'affichent dans la page de rapport rendue. Les espaces blancs sont conservés.  
   
 -   Utilisez des lignes d'alignement et des boutons de disposition pour aligner et organiser des éléments sur l'aire de conception du rapport. Par exemple, vous pouvez aligner les parties supérieures ou les bords d'éléments sélectionnés, étendre un élément pour que sa taille corresponde à la taille d'un autre élément ou ajuster l'espacement entre des éléments.  
@@ -88,7 +88,7 @@ ms.locfileid: "77081089"
   
 -   Pour faire glisser des champs du volet des données de rapport vers le volet de regroupement, évitez de faire glisser le champ à travers d'autres éléments de rapport sur l'aire de conception, car cela sélectionne les autres éléments et désélectionne la région de données de tableau matriciel. Faites glisser le champ en bas du volet des données de rapport, puis horizontalement jusqu'au volet de regroupement.  
   
-###  <a name="Selecting"></a> Sélection d'éléments  
+###  <a name="selecting-items"></a><a name="Selecting"></a> Sélection d'éléments  
  Pour sélectionner l'objet que vous souhaitez sur l'aire de conception du rapport, utilisez la touche Échap, le menu contextuel accessible par un clic droit, le volet Propriétés et le volet de regroupement.  
   
 -   -   Appuyez sur Échap pour parcourir la pile d'éléments de rapport qui occupent le même espace sur l'aire de conception.  
@@ -101,31 +101,31 @@ ms.locfileid: "77081089"
   
  Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous pouvez sélectionner dans la liste déroulante des objets de la barre d'outils du volet Propriétés ou de la vue hiérarchique des éléments de rapport dans la fenêtre Structure du document. Vous pouvez sélectionner des éléments dans ce volet et voir quel élément est sélectionné sur l'aire de conception. Pour ouvrir le volet Structure du document, dans le menu **Affichage** , pointez sur **Autres fenêtres**, puis cliquez sur **Structure du document**.  
   
-##  <a name="ReportItems"></a> Utilisation des types spécifiques d'éléments de rapport  
+##  <a name="working-with-specific-types-of-report-items"></a><a name="ReportItems"></a> Utilisation des types spécifiques d'éléments de rapport  
   
-###  <a name="Parameters"></a> Utilisation des paramètres  
+###  <a name="working-with-parameters"></a><a name="Parameters"></a> Utilisation des paramètres  
   
 -   L'objectif principal des paramètres de rapport est de filtrer les données au niveau de la source de données, et de récupérer uniquement les données nécessaires pour l'objectif du rapport.  
   
 -   Pour les paramètres de rapport, recherchez un équilibre entre l'activation de l'interactivité et l'aide à un utilisateur pour qu'il obtienne les résultats souhaités. Par exemple, vous pouvez définir des valeurs par défaut pour un paramètre selon des valeurs que vous considérez comme étant populaires.  
   
-###  <a name="Text"></a> Utilisation du texte  
+###  <a name="working-with-text"></a><a name="Text"></a> Utilisation du texte  
   
 -   Lorsque vous collez plusieurs lignes dans une zone de texte, le texte est ajouté sous la forme d'une séquence de texte unique. Chaque séquence de texte peut être mise en forme uniquement comme une unité. Pour mettre en forme chaque ligne indépendamment, insérez une nouvelle ligne en appuyant sur la touche Retour dans la séquence de texte, si nécessaire. Vous pouvez ensuite appliquer une mise en forme et des styles à chaque ligne de texte indépendante dans la zone de texte.  
   
 -   Vous pouvez définir des propriétés de format et des actions sur une zone de texte ou sur le texte de l'espace réservé dans la zone de texte. S'il y a une seule ligne de texte, il est plus efficace de définir les propriétés sur la zone de texte plutôt que sur le texte.  
   
-###  <a name="Expressions"></a> Utilisation des expressions  
+###  <a name="working-with-expressions"></a><a name="Expressions"></a> Utilisation des expressions  
   
 -   Vous devez comprendre les formats des expressions simples et complexes. Vous pouvez taper un format d'expression simple directement dans des zones de texte, dans des propriétés dans le volet Propriétés ou dans des emplacements de boîtes de dialogue qui acceptent une expression. Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 -   Lorsque vous créez une expression, il est recommandé de créer chaque partie indépendamment et de vérifier sa valeur. Vous pouvez ensuite combiner toutes les parties dans une expression finale. Une technique utile consiste à ajouter une zone de texte dans une cellule de matrice, afficher chaque partie de l'expression et définir une visibilité conditionnelle sur la zone de texte. Pour contrôler le style de bordure et la couleur lorsque la zone de texte est masquée, placez d'abord la zone de texte dans un rectangle, puis définissez le style de bordure et la couleur du rectangle pour qu'ils correspondent à la matrice.  
   
-###  <a name="Indicators"></a> Utilisation des indicateurs  
+###  <a name="working-with-indicators"></a><a name="Indicators"></a> Utilisation des indicateurs  
   
 -   Par défaut, un indicateur affiche au moins trois états. Après avoir ajouté un indicateur à un rapport, vous pouvez le configurer en ajoutant ou en supprimant des états. Pour un affichage plus aisé par vos utilisateurs, choisissez un indicateur qui varie en termes de couleur et de forme.  
   
-##  <a name="Rendering"></a> Contrôle du rendu des éléments de rapport sur la page du rapport  
+##  <a name="controlling-the-rendering-of-report-items-on-the-report-page"></a><a name="Rendering"></a> Contrôle du rendu des éléments de rapport sur la page du rapport  
   
 -   Sur l'aire de conception du rapport, les éléments de rapport s'agrandissent de façon à héberger le contenu à partir du dataset, de l'expression, du sous-rapport ou du texte associé.  
   

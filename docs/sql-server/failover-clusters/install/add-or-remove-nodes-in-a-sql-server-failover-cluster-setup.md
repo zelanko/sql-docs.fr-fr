@@ -18,10 +18,10 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230889"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server (programme d'installation)
@@ -43,7 +43,7 @@ ms.locfileid: "75230889"
 > [!IMPORTANT]  
 >  La lettre de lecteur du système d'exploitation pour les emplacements d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre sur tous les nœuds ajoutés au cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Add"></a> Ajouter un nœud  
+##  <a name="add-node"></a><a name="Add"></a> Ajouter un nœud  
   
 #### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant  
   
@@ -83,7 +83,7 @@ ms.locfileid: "75230889"
   
 15. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d’informations sur les fichiers journaux d’installation, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="Remove"></a> Supprimer un nœud  
+##  <a name="remove-node"></a><a name="Remove"></a> Supprimer un nœud  
   
 #### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Pour supprimer un nœud d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant  
   

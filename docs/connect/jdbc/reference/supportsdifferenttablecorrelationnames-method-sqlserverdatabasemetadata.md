@@ -16,10 +16,10 @@ ms.assetid: b4f8db0c-2eaf-476b-b916-3e83355778f7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c938fc0da6ed235f080492e573ad558d75751c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969423"
 ---
 # <a name="supportsdifferenttablecorrelationnames-method-sqlserverdatabasemetadata"></a>Méthode supportsDifferentTableCorrelationNames (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsDifferentTableCorrelationNames()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041799"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
@@ -32,7 +32,7 @@ Durée estimée pour effectuer ce didacticiel : 15 minutes.
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Table"></a>1. Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice  
 Dans cette section, vous choisissez une source de données partagée, créez un dataset incorporé et affichez les données dans un tableau.  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>Pour créer un tableau avec un dataset incorporé  
@@ -99,7 +99,7 @@ Dans cette section, vous choisissez une source de données partagée, créez un 
 
 11. Cliquez sur **Suivant**.  
   
-## <a name="CompleteWizard"></a>2. Organiser les données et choisir la disposition dans l’Assistant  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Organiser les données et choisir la disposition dans l’Assistant  
 L’Assistant Tableau ou matrice propose une conception initiale pour l’affichage les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la table ou de la matrice.  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Pour organiser les données en groupes et choisir une disposition 
@@ -173,7 +173,7 @@ Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du 
  
 ![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3. Utiliser les couleurs d'arrière-plan pour afficher un indicateur de performance clé  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Utiliser les couleurs d'arrière-plan pour afficher un indicateur de performance clé  
 Les couleurs d'arrière-plan peuvent avoir la valeur d'une expression qui est évaluée lorsque vous exécutez le rapport.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Pour afficher l'état actuel d'un KPI en utilisant des couleurs d'arrière-plan  
@@ -198,7 +198,7 @@ Dans la ligne de sous-total qui affiche les ventes d'une sous-catégorie, la cou
 
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4. Afficher un indicateur de performance clé à l'aide d'une jauge  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Afficher un indicateur de performance clé à l'aide d'une jauge  
 Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise une jauge linéaire horizontale, car sa forme et sa simplicité la rendent facile à lire, même quand elle est petite et qu’elle se trouve utilisée dans une cellule de tableau. Pour plus d’informations, consultez [Jauges &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Pour afficher l'état présent d'un KPI à l'aide d'une jauge  
@@ -253,7 +253,7 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
   
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5. Afficher un indicateur de performance clé à l'aide d'un indicateur  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Afficher un indicateur de performance clé à l'aide d'un indicateur  
 Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un coup d'œil des valeurs de données. En raison de leur taille et de leur simplicité, les indicateurs sont souvent utilisés dans les tableaux et les matrices. Pour plus d’informations, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Pour afficher l'état présent d'un KPI à l'aide d'un indicateur  
@@ -288,7 +288,7 @@ Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un co
 
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6. Ajouter un titre de rapport  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Ajouter un titre de rapport  
 Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans cette section, vous utilisez la zone de texte placée automatiquement en haut du corps du rapport.  
   
 Vous pouvez améliorer le texte en appliquant différents types de styles de police, de tailles et de couleurs à des expressions et des caractères spécifiques. Pour plus d’informations, consultez [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -303,7 +303,7 @@ Vous pouvez améliorer le texte en appliquant différents types de styles de pol
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="Save"></a>7. Enregistrer le rapport  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Enregistrer le rapport  
 Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vous n'enregistrez pas le rapport sur le serveur de rapports, plusieurs fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] telles que les parties de rapports et les sous-rapports ne sont pas disponibles.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  

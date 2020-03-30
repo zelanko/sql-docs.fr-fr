@@ -17,10 +17,10 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935806"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
@@ -36,9 +36,9 @@ sqlsrv_configure( string $setting, mixed $value )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$setting* : nom du paramètre à configurer. Pour obtenir une liste des paramètres, consultez le tableau ci-dessous.  
+*$setting*: nom du paramètre à configurer. Pour obtenir une liste des paramètres, consultez le tableau ci-dessous.  
   
-*$value* : valeur à appliquer au paramètre spécifié dans le paramètre *$setting*. Les valeurs possibles pour ce paramètre dépendent du paramètre spécifié. Le tableau suivant répertorie les combinaisons possibles :  
+*$value*: valeur à appliquer au paramètre spécifié dans le paramètre *$setting* . Les valeurs possibles pour ce paramètre dépendent du paramètre spécifié. Le tableau suivant répertorie les combinaisons possibles :  
   
 |Paramètre|Valeurs possibles pour le paramètre $value (entier équivalent entre parenthèses)|Valeur par défaut|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
@@ -50,14 +50,14 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>Valeur de retour  
 Si **sqlsrv_configure** est appelé avec un paramètre ou une valeur non pris en charge, la fonction retourne **false**. Sinon, elle retourne **true**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 (1) Pour plus d’informations sur les requêtes côté client, voir [Types de curseurs &#40;pilote SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 (2) Pour plus d’informations sur la journalisation de l’activité, voir [Journalisation de l’activité](../../connect/php/logging-activity.md).  
   
-(3) Pour plus d’informations sur la configuration de la gestion des erreurs et des avertissements, consultez [Procédure : configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
+(3) Pour plus d’informations sur la configuration de la gestion des erreurs et des avertissements, voir [Guide pratique pour configurer la gestion des erreurs et des avertissements avec le pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md) 

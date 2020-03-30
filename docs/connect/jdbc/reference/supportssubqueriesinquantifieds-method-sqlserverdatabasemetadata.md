@@ -16,10 +16,10 @@ ms.assetid: 6749e14c-0f8a-4f1f-8583-dd5cc79b24fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c57ff4c4f293112cb84706b559f8c1ec2a18cf69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968725"
 ---
 # <a name="supportssubqueriesinquantifieds-method-sqlserverdatabasemetadata"></a>Méthode supportsSubqueriesInQuantifieds (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsSubqueriesInQuantifieds()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

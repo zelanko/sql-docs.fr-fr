@@ -14,10 +14,10 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580344"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
@@ -26,7 +26,7 @@ ms.locfileid: "65580344"
   
  Les versions précédentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisaient un contrôle ActiveX qui nécessitait un téléchargement sur l'ordinateur client à partir du serveur de rapports. Si vous mettez à niveau votre serveur de rapports vers SQL Server 2016 ou une version ultérieure, le contrôle d’impression n’est pas supprimé du serveur de rapports ou des ordinateurs clients.  
 
-##  <a name="bkmk_clientside_printexpereince"></a> L'expérience d'impression  
+##  <a name="the-print-experience"></a><a name="bkmk_clientside_printexpereince"></a> L'expérience d'impression  
  Lorsque vous cliquez sur le bouton ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") d’impression dans la barre d’outils de la visionneuse de rapports, l’expérience varie en fonction des applications d’affichage .PDF installées sur l’ordinateur client et du navigateur que vous utilisez.   Vous pouvez télécharger le fichier PDF ou configurer les options d'impression à partir d'une boîte de dialogue, ou les deux, en fonction de l'ordinateur client.  
   
  ![Barre d'outils Rapports](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barre d'outils Rapports")  
@@ -36,9 +36,9 @@ ms.locfileid: "65580344"
 |La première boîte de dialogue, identique pour tous les navigateurs, vous permet de modifier les propriétés de disposition de base, par exemple l'orientation. Lorsque vous cliquez sur **Imprimer**, l'expérience sera légèrement différente selon le navigateur que vous utilisez.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Dans Chrome, une boîte de dialogue d’impression détaillée s'ouvre dans le navigateur.   Vous pouvez modifier la configuration d'impression, imprimer et ouvrir la boîte de dialogue d'impression du système d'exploitation.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |Si vous disposez d’une application de lecture de PDF, le bouton d'impression ouvrira une fenêtre d'aperçu du fichier PDF et vous pourrez enregistrer ou imprimer.||  
-|Si vous ne disposez pas d’une application de lecture de PDF, deux expériences utilisateur coexistent :<br /><br /> Le rapport sera affiché automatiquement et utilisera le processus de téléchargement de votre navigateur pour télécharger le fichier PDF.   **Remarque :** Plus le rapport est compliqué, plus le délai est long entre le moment où vous cliquez sur **Imprimer** et celui où s’affiche la notification de téléchargement de votre navigateur. Vous pouvez également forcer à nouveau le téléchargement en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport**.<br /><br /> Forcez le téléchargement PDF en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|Si vous ne disposez pas d’une application de lecture de PDF, deux expériences utilisateur coexistent :<br /><br /> Le rapport sera affiché automatiquement et utilisera le processus de téléchargement de votre navigateur pour télécharger le fichier PDF.   **Remarque :** plus le rapport est compliqué, plus le délai est long entre le moment où vous cliquez sur **Imprimer** et celui où s’affiche la notification de téléchargement de votre navigateur. Vous pouvez également forcer à nouveau le téléchargement en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport**.<br /><br /> Forcez le téléchargement PDF en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
-##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Résolution des problèmes d'impression côté client  
+##  <a name="troubleshoot-client-side-printing"></a><a name="bkmk_troubleshoot_clientsideprinting"></a> Résolution des problèmes d'impression côté client  
  Si le bouton d'impression de la barre d'outils de la visionneuse de rapports est désactivé, vérifiez les éléments suivants :  
   
 -   L’impression côté client est désactivée pour le serveur de rapports dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour en savoir plus, consultez la section  [Activer et désactiver l’impression côté client](#bkmk_enable) dans cette rubrique.  
@@ -49,7 +49,7 @@ ms.locfileid: "65580344"
   
      ![ssrs_html5_switch2html5](../../reporting-services/report-server/media/ssrs-html5-switch2html5.png "ssrs_html5_switch2html5")  
   
-##  <a name="bkmk_enable"></a> Activer et désactiver l'impression côté client  
+##  <a name="enable-and-disable-client-side-printing"></a><a name="bkmk_enable"></a> Activer et désactiver l'impression côté client  
  Les administrateurs du serveur de rapports ont la possibilité de désactiver la fonctionnalité d'impression à distance en affectant la valeur **false** à la propriété système **EnableClientPrinting**du serveur de rapports. Cela entraîne la désactivation de l'impression côté client pour tous les rapports gérés par ce serveur. Par défaut, **EnableClientPrinting** a la valeur **true**. Vous pouvez désactiver l'impression côté client de différentes façons :  
   
 -   Pour un **serveur de rapports en mode natif**:  

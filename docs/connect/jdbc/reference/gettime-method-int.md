@@ -16,10 +16,10 @@ ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0426a89de1e3cf78f1f41e45fc35ba81816362
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979096"
 ---
 # <a name="gettime-method-int"></a>Méthode getTime (int)
@@ -40,17 +40,17 @@ public java.sql.Time getTime(int index)
  **int** indiquant l’index du paramètre.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Objet Time.  
+ Un objet Time.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
- Pour savoir quels sont les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] récupérables avec cette méthode, consultez le graphe intitulé « Conversions de méthodes getter » de la rubrique [Comprendre les conversions de types de données](../../../connect/jdbc/understanding-data-type-conversions.md).  
+ Pour savoir quels sont les types de données [ récupérables avec cette méthode, consultez le graphe intitulé « Conversions de méthodes getter » de la rubrique ](../../../connect/jdbc/understanding-data-type-conversions.md)Comprendre les conversions de types de données[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

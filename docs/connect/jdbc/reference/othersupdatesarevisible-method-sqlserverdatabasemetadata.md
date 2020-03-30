@@ -16,10 +16,10 @@ ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 56380d1b81f5b5e4968217ce0bf4bbe5207eca01
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976576"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>Méthode othersUpdatesAreVisible (SQLServerDatabaseMetaData)
@@ -63,10 +63,10 @@ public boolean othersUpdatesAreVisible(int type)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode othersUpdatesAreVisible est spécifiée par la méthode othersUpdatesAreVisible de l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

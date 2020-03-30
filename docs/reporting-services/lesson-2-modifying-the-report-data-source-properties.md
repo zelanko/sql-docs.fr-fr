@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Modification des propriétés d’une source de données de rapport | Microsoft Docs'
+title: 'Leçon 2 : modification des propriétés d’une source de données de rapport | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,25 +9,25 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651724"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Leçon 2 : Modification des propriétés d’une source de données de rapport
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 Dans cette leçon du didacticiel sur [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez le portail web pour sélectionner un rapport qui doit être remis à des destinataires. L’abonnement piloté par les données que vous allez définir distribue le rapport **Sales Order** créé dans le didacticiel [Créer un rapport de tableau de base &#40;Didacticiel SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Au cours des étapes qui suivent, vous allez modifier les informations de connexion à la source de données utilisée par le rapport pour extraire les données. Seuls les rapports qui utilisent des **informations d’identification stockées** pour accéder à une source de données de rapport peuvent être distribués par le biais d’un abonnement piloté par les données. Les informations d'identification stockées sont nécessaires pour traiter les rapports de façon autonome.  
   
 Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un paramètre permettant de filtrer le rapport sur `[Order]` de sorte que l'abonnement puisse générer plusieurs instances différentes du rapport pour des commandes et des formats de rendu spécifiques.  
   
-## <a name="bkmk_modify_datasource"></a>Pour modifier une source de données pour qu’elle utilise les informations d’identification stockées  
+## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>Pour modifier une source de données pour qu’elle utilise les informations d’identification stockées  
   
 1.  Accédez au portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec des privilèges d’administrateur : par exemple, cliquez avec le bouton droit sur l’icône d’Internet Explorer et cliquez sur **Exécuter en tant qu’administrateur**.  
  
 2.    Accédez à l’URL du portail web.  Par exemple :   
     `https://<server name>/reports`.  
     `https://localhost/reports`
- **Remarque :** L’URL du *portail* web est « Reports », et non « Reportserver », l’URL du *serveur* de rapports.  
+ **Remarque :** L’URL du *portail* est « Reports », et non « Reportserver », l’URL du *serveur* de rapports.  
 3.  Accédez au dossier contenant le rapport **Sales Orders** et, dans le menu contextuel du rapport, cliquez sur **Gérer**.  
  
  ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
@@ -54,7 +54,7 @@ Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un
   
 11. Affichez le rapport pour vérifier qu'il s'exécute avec les informations d'identification que vous avez spécifiées. .  
   
-## <a name="bkmk_modify_dataset"></a>Pour modifier AdventureWorksDataset  
+## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>Pour modifier AdventureWorksDataset  
  Dans les étapes suivantes, vous modifiez le dataset pour utiliser un paramètre permettant de filtrer le jeu de données en fonction d’un numéro de commande.
 1.  Ouvrez le rapport **Sales Orders** dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -81,7 +81,7 @@ Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un
   
 4.  Cliquez sur **OK**  
  Dans les étapes suivantes, vous ajoutez un paramètre au rapport.  Le paramètre de rapport alimente le paramètre de dataset. 
-## <a name="bkmk_add_reportparameter"></a>Pour ajouter un paramètre de rapport et republier le rapport  
+## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>Pour ajouter un paramètre de rapport et republier le rapport  
   
 1.  Dans le volet **Données du rapport** , développez le dossier de paramètres et double-cliquez sur le paramètre **Ordernumber** .  Il a été créé automatiquement dans les étapes précédentes quand vous avez ajouté le paramètre au dataset. Cliquez sur **Nouveau** , puis sur **Paramètre...**  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
@@ -103,15 +103,15 @@ Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
-## <a name="bkmk_redeploy"></a>Redéployer le rapport  
+## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>Redéployer le rapport  
   
-1.  Redéployez le rapport afin que la configuration de l'abonnement dans la leçon suivante puisse utiliser les modifications que vous avez apportées dans cette leçon. Pour plus d'informations sur les propriétés de projet utilisées dans le tutoriel de création d'une table, consultez la section « Pour publier le rapport sur le serveur de rapports (facultatif) » sous [Leçon 6 : Ajouter un regroupement et des totaux &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Redéployez le rapport afin que la configuration de l'abonnement dans la leçon suivante puisse utiliser les modifications que vous avez apportées dans cette leçon. Pour plus d’informations sur les propriétés de projet utilisées dans le tutoriel de table, consultez la section « Pour publier le rapport sur le serveur de rapports (facultatif) » de la [Leçon 6 : ajout d’un regroupement et de totaux &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Dans la barre d'outils, cliquez sur **Générer** , puis sur **Déployer le didacticiel**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
 + Vous avez correctement configuré le rapport pour extraire les données au moyen des informations d’identification stockées et les données peuvent être filtrées avec un paramètre. 
-+ Dans la leçon suivante, vous configurez l’abonnement à l’aide des pages Abonnement piloté par les données du portail web. Voir [Leçon 3 : Définition d’un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
++ Dans la leçon suivante, vous configurez l’abonnement à l’aide des pages Abonnement piloté par les données du portail web. Consultez la [Leçon 3 : Définition d’un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Gérer des sources de données de rapports](../reporting-services/report-data/manage-report-data-sources.md)  

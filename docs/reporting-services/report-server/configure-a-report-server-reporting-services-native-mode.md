@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67313980"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurer un serveur de rapports (mode natif de Reporting Services)
@@ -27,7 +27,7 @@ ms.locfileid: "67313980"
   
 -   Une base de données du serveur de rapports qui stocke des données d'application, des rapports et d'autres éléments.  
   
- Le programme d'installation configure les paramètres minimum si vous sélectionnez l’une des options d'installation suivantes : Configuration par défaut du mode natif ou configuration par défaut du mode intégré SharePoint. Si vous avez installé le serveur de rapports en mode de fichiers uniquement (option **Installer mais ne pas configurer** dans l’Assistant Installation), seul le compte de service est configuré. L'URL du service Web et la base de données du serveur de rapports doivent être configurés à l'issue de l'installation.  
+ Le programme d'installation fournit la configuration minimale si vous sélectionnez les options d'installation suivantes : configuration par défaut en mode natif ou configuration par défaut en mode intégré SharePoint. Si vous avez installé le serveur de rapports en mode de fichiers uniquement (option **Installer mais ne pas configurer** dans l’Assistant Installation), seul le compte de service est configuré. L'URL du service Web et la base de données du serveur de rapports doivent être configurés à l'issue de l'installation.  
   
 Il est recommandé de configurer le portail web de sorte que vous puissiez accorder à l’utilisateur l’accès au serveur de rapports et gérer le contenu du serveur de rapports. Si vous déployez un serveur de rapports en mode intégré SharePoint, utilisez le frontal Web d'un serveur SharePoint pour accorder l'accès.  
   

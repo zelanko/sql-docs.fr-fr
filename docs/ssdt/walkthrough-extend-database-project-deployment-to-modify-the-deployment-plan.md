@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242672"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement
@@ -41,7 +41,7 @@ Vous devez disposer des éléments suivants pour exécuter cette procédure pas 
 > [!NOTE]  
 > Cette procédure pas à pas est destinée aux utilisateurs qui sont déjà familiarisés avec les fonctionnalités SQL de SQL Server Data Tools. Vous devez également être familiarisé avec les concepts de base de Visual Studio, comme la création d'une bibliothèque de classes et l'utilisation de l'éditeur de code pour ajouter du code à une classe.  
   
-## <a name="CreateDeploymentContributor"></a>Créer un contributeur de déploiement  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>Créer un contributeur de déploiement  
 Pour créer un contributeur de déploiement, vous devez effectuer les tâches suivantes :  
   
 -   Créez un projet Bibliothèque de classes et ajoutez les références requises.  
@@ -639,7 +639,7 @@ Générez ensuite la bibliothèque de classes.
   
     Ensuite, vous devez installer l'assembly afin qu'il soit chargé lorsque vous déployez des projets SQL.  
   
-## <a name="InstallDeploymentContributor"></a>Installer un contributeur de déploiement  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>Installer un contributeur de déploiement  
 Pour installer un contributeur de déploiement, vous devez copier l'assembly et le fichier .pdb associé dans le dossier Extensions.  
   
 #### <a name="to-install-the-myotherdeploymentcontributor-assembly"></a>Pour installer l'assembly MyOtherDeploymentContributor  
@@ -648,7 +648,7 @@ Pour installer un contributeur de déploiement, vous devez copier l'assembly et 
   
 2.  Copiez le fichier d'assembly de **MyOtherDeploymentContributor.dll** du répertoire de sortie dans le répertoire %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions. Par défaut, le chemin d'accès du fichier .dll compilé est le suivant : Chemin de votre solution\Chemin de votre projet\bin\Debug ou Chemin de votre solution\Chemin de votre projet\bin\Release.  
   
-## <a name="TestDeploymentContributor"></a>Exécuter ou tester votre contributeur de déploiement  
+## <a name="run-or-test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>Exécuter ou tester votre contributeur de déploiement  
 Pour exécuter ou tester un contributeur de déploiement, vous devez effectuer les tâches suivantes :  
   
 -   Ajouter des propriétés au fichier .sqlproj que vous envisagez de générer.  

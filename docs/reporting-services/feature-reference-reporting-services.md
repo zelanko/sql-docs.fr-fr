@@ -14,16 +14,16 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503086"
 ---
 # <a name="feature-reference-reporting-services"></a>Références relatives aux fonctionnalités (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contient plusieurs outils et applications qui permettent de créer, gérer et afficher des rapports. Cette section répertorie les rubriques spécifiques qui décrivent les boîtes de dialogue, les pages Web et les Assistants de ces outils et applications.  
   
- Pour accéder à une rubrique de l’interface utilisateur pendant l’exécution de l’outil ou de l’application, appuyez sur F1 ou cliquez sur **Aide** lorsque la boîte de dialogue, la page web ou l’Assistant est ouvert. Pour plus d'informations sur le démarrage des outils [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Tutoriel : Comment localiser et démarrer les outils Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Pour accéder à une rubrique de l’interface utilisateur pendant l’exécution de l’outil ou de l’application, appuyez sur F1 ou cliquez sur **Aide** lorsque la boîte de dialogue, la page web ou l’Assistant est ouvert. Pour plus d’informations sur le démarrage des outils [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Didacticiel : comment localiser et démarrer les outils Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Aide sur le concepteur de rapports via la touche F1](../reporting-services/tools/report-designer-f1-help.md)  

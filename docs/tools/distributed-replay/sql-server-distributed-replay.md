@@ -10,10 +10,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74993420"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
@@ -46,13 +46,13 @@ La fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE
 ## <a name="distributed-replay-concepts"></a>Concepts de Distributed Replay  
  Les composants suivants constituent l'environnement de Distributed Replay :  
   
--   **Outil d'administration Distributed Replay** : une application console, **DReplay.exe**, utilisée pour communiquer avec le contrôleur de relecture distribuée. Utilisez l'outil d'administration pour contrôler la relecture distribuée.  
+-   **Outil d’administration Distributed Replay**: une application console, **DReplay.exe**, utilisée pour communiquer avec le contrôleur de relecture distribuée. Utilisez l'outil d'administration pour contrôler la relecture distribuée.  
   
--   **Contrôleur Distributed Replay** : un ordinateur exécutant le service Windows nommé contrôleur Distributed Replay [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le contrôleur Distributed Replay orchestre les actions des clients de relecture distribuée. Chaque environnement Distributed Replay ne doit contenir qu'une seule instance de contrôleur.  
+-   **Contrôleur Distributed Replay**: un ordinateur exécutant le service Windows nommé contrôleur Distributed Replay de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le contrôleur Distributed Replay orchestre les actions des clients de relecture distribuée. Chaque environnement Distributed Replay ne doit contenir qu'une seule instance de contrôleur.  
   
--   **Clients Distributed Replay** : un ou plusieurs ordinateurs (physiques ou virtuels) qui exécutent le service Windows nommé client Distributed Replay [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les clients Distributed Replay fonctionnent ensemble pour simuler des charges de travail sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque environnement Distributed Replay peut contenir un ou plusieurs clients.  
+-   **Clients Distributed Replay**: un ou plusieurs ordinateurs (physiques ou virtuels) qui exécutent le service Windows nommé client Distributed Replay de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les clients Distributed Replay fonctionnent ensemble pour simuler des charges de travail sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque environnement Distributed Replay peut contenir un ou plusieurs clients.  
   
--   **Serveur cible** : une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que les clients Distributed Replay peuvent utiliser pour relire les données de trace. Nous conseillons de placer le serveur cible dans un environnement de test.  
+-   **Serveur cible**: une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que les clients Distributed Replay peuvent utiliser pour relire les données de trace. Nous conseillons de placer le serveur cible dans un environnement de test.  
   
  L'outil d'administration Distributed Replay, le contrôleur et le client peuvent être installés sur différents ordinateurs ou sur le même ordinateur. Il ne peut exister qu'une instance du contrôleur Distributed Replay ou du service client en cours d'exécution sur le même ordinateur.  
   

@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251072"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procédure : Mettre à niveau une condition de test personnalisée Visual Studio 2010 d’une version antérieure vers SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procédure : mettre à niveau une condition de test personnalisée Visual Studio 2010 d'une version antérieure vers SQL Server Data Tools
 
 Pour utiliser une condition de test créée dans une version antérieure à SQL Server Data Tools, vous devez la mettre à niveau :  
   
@@ -27,7 +27,7 @@ Pour utiliser une condition de test créée dans une version antérieure à SQL 
   
 -   [Installer la condition de test mise à niveau](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>Mettre à jour les références  
+## <a name="update-references"></a><a name="UpdateReferences"></a>Mettre à jour les références  
 Pour mettre à jour les références de projet :  
   
 1.  Visual Basic uniquement, dans l'**Explorateur de solutions**, cliquez sur **Afficher tous les fichiers**.  
@@ -81,7 +81,7 @@ Pour mettre à jour les références de projet :
   
 La condition de test utilise à présent les références SQL Server d'assembly de test unitaire.  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>Mettre à jour les attributs de classe et les références de type  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>Mettre à jour les attributs de classe et les références de type  
 Remplacez les anciens attributs de classe de test unitaire par un nouvel attribut. L'extensibilité des tests unitaires SQL Server est maintenant basée sur le Managed Extensibility Framework (MEF). Vous devez également mettre à jour certaines références de type.  
   
 ### <a name="update-class-attributes"></a>Mettre à jour les attributs de classe  
@@ -128,7 +128,7 @@ Certains noms de types ont été modifiés dans l'infrastructure de test unitair
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>Installer la condition de test mise à niveau  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>Installer la condition de test mise à niveau  
 Dans les versions antérieures de test unitaire de base de données, il se peut que vous ayez installé la condition de test dans le Global Assembly Cache ou créé un fichier XML contenant les informations d'assembly. Avec le test unitaire SQL Server, cette procédure supplémentaire n'est plus nécessaire. (Pour plus d’informations, consultez [Compilation du projet et installation de votre condition de test](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx).  
   
 Après avoir mis à jour les références, vérifiez que l'assembly est signé et compilé.  

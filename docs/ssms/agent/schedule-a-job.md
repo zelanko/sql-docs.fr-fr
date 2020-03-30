@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2368c8c4d68e0a7da701526e3ec2012ec7342dbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245858"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
@@ -43,12 +43,12 @@ Cette rubrique décrit la méthode à suivre pour planifier un travail de l'Agen
   
     [SQL Server Management Objects](#SMO)  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
 Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-and-attach-a-schedule-to-a-job"></a>Pour créer une planification et l'attacher à un travail  
   
@@ -88,7 +88,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 7.  Dans la boîte de dialogue **Propriétés du travail** , cliquez sur **OK**.  
   
-## <a name="TSQL"></a>Utilisation de Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-schedule-a-job"></a>Pour planifier un travail  
   
@@ -118,6 +118,6 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 Pour plus d’informations, consultez [sp_add_schedule (Transact-SQL)](https://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7) et [sp_attach_schedule (Transact-SQL)](https://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1).  
   
-## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 Utilisez la classe **JobSchedule** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

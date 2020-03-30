@@ -13,10 +13,10 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993701"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Microsoft Drivers for PHP for SQL Server)
@@ -71,7 +71,7 @@ Vous pouvez modifier le comportement de mise en forme décimale par défaut avec
 
 ### <a name="handling-date-and-time-fetches"></a>Récupération (fetch) de la date et de l’heure de gestion
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE spécifie s’il faut récupérer les types de date et d’heure sous forme d’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Si vous conservez la valeur false, le comportement par défaut consiste à les retourner sous forme de chaînes. Cet attribut peut être défini au niveau de la connexion ou de l’instruction avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) ou [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), mais l’attribut d’instruction remplacera l’attribut de connexion correspondant. Pour plus d’informations, consultez [Procédure : Récupérer les types de date et d’heure sous forme d’objets DateTime PHP avec le pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE spécifie s’il faut récupérer les types de date et d’heure sous forme d’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Si vous conservez la valeur false, le comportement par défaut consiste à les retourner sous forme de chaînes. Cet attribut peut être défini au niveau de la connexion ou de l’instruction avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) ou [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), mais l’attribut d’instruction remplacera l’attribut de connexion correspondant. Pour plus d’informations, consultez [Guide pratique pour récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Les sections qui suivent répertorient les constantes utilisées par le pilote SQLSRV.  
@@ -152,12 +152,12 @@ Le tableau suivant répertorie les constantes utilisées pour décrire des types
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Les données sont retournées à partir du serveur sous la forme d’un flux d’octets bruts sans encodage ni traduction.|  
 |SQLSRV_ENC_CHAR|Les données sont retournées sous forme de caractères huit bits comme spécifié dans la page de codes des paramètres régionaux Windows définis sur le système. Les caractères multioctets ou les caractères non mappés dans cette page de codes sont remplacés par un point d’interrogation (?) à un octet.<br /><br />Il s’agit de l’encodage par défaut.|  
-|“UTF-8”|Les données sont retournées au format d’encodage UTF-8. Cette constante a été ajoutée dans la version 1.1 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations sur la prise en charge d’UTF-8, consultez [Guide pratique : Envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
+|“UTF-8”|Les données sont retournées au format d’encodage UTF-8. Cette constante a été ajoutée dans la version 1.1 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations sur la prise en charge du format UTF-8, consultez [Procédure : envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
   
 > [!NOTE]  
 > Quand vous utilisez **SQLSRV_PHPTYPE_STREAM** ou **SQLSRV_PHPTYPE_STRING**, vous devez spécifier l’encodage. Si vous ne fournissez aucun paramètre, une erreur est retournée.  
   
-Pour plus d’informations sur ces constantes, consultez [Guide pratique pour spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md) et [Guide pratique pour récupérer des données caractères sous la forme d’un flux avec le pilote SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
+Pour plus d’informations sur ces constantes, consultez [Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md), [Procédure : récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### <a name="sqltype-constants"></a>Constantes SQLTYPE  
 Le tableau suivant répertorie les constantes utilisées pour décrire des types de données SQL Server. Certaines constantes se comportent comme des fonctions et prennent des paramètres correspondant à la précision, à l’échelle ou à la longueur.  Si vous liez des paramètres, utilisez les constantes de type fonction. Pour les comparaisons de type, les constantes standard (qui ne sont pas de type fonction) sont requises. Pour plus d’informations sur les types de données SQL Server, consultez [Types de données (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Pour plus d’informations sur la précision, l’échelle et la longueur, consultez [Précision, échelle et longueur (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  

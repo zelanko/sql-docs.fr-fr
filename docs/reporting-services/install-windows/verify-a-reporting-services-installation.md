@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593926"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -29,7 +29,7 @@ ms.locfileid: "73593926"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-##  <a name="bkmk_sharepointmode"></a> Vérifiez l'installation en mode SharePoint  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Vérifiez l'installation en mode SharePoint  
   
 ### <a name="to-verify-the-reporting-services-service"></a>Pour vérifier le service Reporting Services  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73593926"
 
 ::: moniker-end
   
-##  <a name="bkmk_nativemode"></a> Vérifier une installation en mode natif  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> Vérifier une installation en mode natif  
  Lorsque vous installez un serveur de rapports en mode natif en utilisant la configuration par défaut, le programme d'installation installe et déploie le serveur. Vous pouvez vérifier que le programme d'installation a déployé le serveur de rapports en réalisant quelques tests simples. Pour effectuer ces interventions, vous devez être un administrateur local. Pour permettre à d'autres utilisateurs de réaliser des tests, vous devez configurer leur accès au serveur de rapports.  
   
 ### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>Pour vérifier que le serveur de rapports est installé et s'exécute correctement  
@@ -92,7 +92,7 @@ ms.locfileid: "73593926"
   
 4.  Exécutez les rapports pour tester le fonctionnement du serveur de rapports. Pour cette étape, vous pouvez créer un rapport d'exemple à partir d'un didacticiel. Pour plus d’informations, consultez [Créer un rapport de tableau de base &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
-### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>Pour vérifier que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] est installé et s’exécute correctement  
+### <a name="to-verify-that-the-ssrswebportal-is-installed-and-running"></a>Pour vérifier que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] est installé et s’exécute correctement  
   
 1.  Ouvrez un navigateur et tapez l’URL du portail web dans la barre d’adresses. L’adresse se compose du nom du serveur et de celui du répertoire virtuel spécifiés pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] lors de l’installation ou dans la page URL du portail web de l’outil de configuration de Reporting Services. Par défaut, le répertoire virtuel du [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] est **Reports**. Vous pouvez utiliser l’URL suivante pour vérifier l’installation du [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] :  
   
