@@ -19,17 +19,17 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983269"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique décrit comment démarrer et utiliser l'Assistant Paramétrage du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur l’affichage et l’utilisation des résultats après avoir paramétré une base de données, consultez [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
-##  <a name="Initialize"></a> Initialiser l'Assistant Paramétrage du moteur de base de données  
+##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> Initialiser l'Assistant Paramétrage du moteur de base de données  
  Pour la première utilisation, un utilisateur membre du rôle serveur fixe **sysadmin** doit initialiser l'Assistant Paramétrage du moteur de base de données. Cela est dû au fait que plusieurs tables système doivent être créées dans la base de données **msdb** pour prendre en charge les opérations de paramétrage. L’initialisation permet aussi aux utilisateurs membres du rôle de base de données fixe **db_owner** de paramétrer des charges de travail sur les tables des bases de données dont ils sont propriétaires.  
   
  Un utilisateur disposant d'autorisations d'administrateur système doit exécuter l'une des actions suivantes :  
@@ -38,7 +38,7 @@ ms.locfileid: "73983269"
   
 -   Recourir à l’utilitaire **dta** pour paramétrer la première charge de travail. Pour plus d'informations, consultez [Utilisation de l'utilitaire dta](#dta) , plus loin dans cette rubrique.  
   
-##  <a name="Start"></a> Démarrer l'Assistant Paramétrage du moteur de base de données  
+##  <a name="start-the-database-engine-tuning-advisor"></a><a name="Start"></a> Démarrer l'Assistant Paramétrage du moteur de base de données  
  Vous pouvez démarrer l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données de plusieurs façons différentes pour prendre en charge le paramétrage des bases de données dans de nombreux scénarios. L'Assistant Paramétrage du moteur de base de données peut être démarré : à partir du menu **Démarrer** , du menu **Outils** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de l'éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], et du menu **Outils** dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Lorsque vous démarrez l'Assistant Paramétrage du moteur de base de données pour la première fois, l'application affiche une boîte de dialogue **Se connecter au serveur** dans laquelle vous pouvez spécifier l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous souhaitez vous connecter.  
   
 > [!WARNING]  
@@ -62,7 +62,7 @@ ms.locfileid: "73983269"
   
 1.  Dans le menu **Outils** du Générateur de profils SQL Server Profiler, cliquez sur **Assistant Paramétrage du moteur de base de données**.  
   
-##  <a name="Create"></a> Créer une charge de travail  
+##  <a name="create-a-workload"></a><a name="Create"></a> Créer une charge de travail  
  Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une ou plusieurs bases de données que vous souhaitez paramétrer. L'Assistant Paramétrage du moteur de base de données analyse ces charges de travail pour recommander des index ou des stratégies de partitionnement qui amélioreront les performances des requêtes de votre serveur.  
   
  Vous pouvez créer une charge de travail à l'aide de l'une des méthodes suivantes.  
@@ -85,7 +85,7 @@ ms.locfileid: "73983269"
   
 -   Les charges de travail peuvent également être intégrées à un fichier d'entrée XML, où vous pouvez également spécifier un poids pour chaque événement. Pour plus d'informations sur la spécification des charges de travail incorporées, consultez [Créer un fichier d'entrée XML](#XMLInput) plus loin dans cette rubrique.  
   
-###  <a name="SSMS"></a> Pour créer des charges de travail par script Transact-SQL  
+###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Pour créer des charges de travail par script Transact-SQL  
   
 1.  Lancez l'éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73983269"
   
 3.  Enregistrez le fichier avec une extension **.sql** . L’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données et l’utilitaire en ligne de commande **dta** peuvent utiliser ce script [!INCLUDE[tsql](../../includes/tsql-md.md)] comme charge de travail.  
   
-###  <a name="Profiler"></a> Pour créer des charges de travail par fichier de trace et par table de trace  
+###  <a name="to-create-trace-file-and-trace-table-workloads"></a><a name="Profiler"></a> Pour créer des charges de travail par fichier de trace et par table de trace  
   
 1.  Lancez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] au moyen de l'une des méthodes suivantes :  
   
@@ -140,7 +140,7 @@ ms.locfileid: "73983269"
   
  L'Assistant Paramétrage du moteur de base de données va procéder au paramétrage de cette nouvelle charge de travail, parce qu'aucune information de connexion n'est spécifiée dans la trace. S’il n’existe pas de **LoginName** pour une instruction, l’Assistant Paramétrage du moteur de base de données paramètre cette instruction en empruntant l’identité de l’utilisateur qui a démarré la session de paramétrage (membre du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** ).  
   
-##  <a name="Tune"></a> Paramétrer une base de données  
+##  <a name="tune-a-database"></a><a name="Tune"></a> Paramétrer une base de données  
  Pour paramétrer une base de données, vous pouvez travailler dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données ou dans l'utilitaire **dta** .  
   
 > [!NOTE]  
@@ -149,10 +149,10 @@ ms.locfileid: "73983269"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>Travailler dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données  
  Dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données, vous pouvez paramétrer une base de données au moyen du cache du plan, de fichiers de charge de travail ou de tables de charge de travail. Vous pouvez utiliser l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour visualiser de façon simple les résultats de votre session de paramétrage en cours et des sessions précédentes. Pour plus d'informations sur les options de l'interface utilisateur, consultez [Descriptions de l'interface utilisateur](#UI) plus loin dans cette rubrique. Pour plus d’informations sur l’utilisation des résultats après avoir paramétré une base de données, consultez [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
 
-####  <a name="PlanCache"></a> Pour paramétrer une base de données à l’aide du Magasin de requêtes
+####  <a name="to-tune-a-database-by-using-the-query-store"></a><a name="PlanCache"></a> Pour paramétrer une base de données à l’aide du Magasin de requêtes
 Pour plus d’informations, consultez [Paramétrage de base de données à l’aide des charges de travail du Magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
   
-####  <a name="PlanCache"></a> Pour paramétrer une base de données à l'aide du cache du plan  
+####  <a name="to-tune-a-database-by-using-the-plan-cache"></a><a name="PlanCache"></a> Pour paramétrer une base de données à l'aide du cache du plan  
   
 1.  Lancez l'Assistant Paramétrage du moteur de base de données, puis connectez-vous à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Démarrer l'Assistant Paramétrage du moteur de base de données](#Start) plus haut dans cette rubrique.  
   
@@ -221,7 +221,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
 > [!NOTE]  
 >  La suspension de l'Assistant Paramétrage du moteur de base de données n'est pas acceptée. Si vous cliquez sur le bouton de barre d’outils **Démarrer l’analyse** après avoir cliqué soit sur **Arrêter l’analyse** soit sur **Arrêter l’analyse (avec recommandations)** , l’Assistant Paramétrage du moteur de base de données démarre une nouvelle session de paramétrage.  
   
-###  <a name="dta"></a> Utilisation de l'utilitaire dta  
+###  <a name="use-the-dta-utility"></a><a name="dta"></a> Utilisation de l'utilitaire dta  
  L' [utilitaire dta](../../tools/dta/dta-utility.md) fournit un fichier exécutable d'invite de commandes qui vous permet de paramétrer des bases de données. Il vous permet d'utiliser l'Assistant Paramétrage du moteur de base de données dans les scripts et les fichiers de commandes. L’utilitaire **dta** accepte les entrées de cache du plan, les fichiers de trace, les tables de trace et les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] en tant que charges de travail. Il accepte également les entrées XML qui sont conformes aux schéma XML de l'Assistant Paramétrage du moteur de base de données, qui est disponible sur ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Prenez en considération les points suivants avant de paramétrer une charge de travail à l’aide de l’utilitaire **dta** :  
@@ -305,7 +305,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
   
 5.  Une fois que l'utilitaire a terminé de paramétrer la charge de travail, vous pouvez visualiser les résultats des sessions de paramétrage à l'aide de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Par ailleurs, à l’aide de l’option **-ox** , vous pouvez aussi demander à ce que les recommandations de paramétrage soient écrites dans un fichier XML. Pour plus d’informations, consultez [dta Utility](../../tools/dta/dta-utility.md).  
   
-##  <a name="XMLInput"></a> Créer un fichier d'entrée XML  
+##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a> Créer un fichier d'entrée XML  
  Si vous êtes développeur XML expérimenté, vous pouvez créer des fichiers formatés en XML que l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut utiliser pour paramétrer les charges de travail. Pour créer ces fichiers XML, utilisez vos outils XML préférés pour modifier un exemple de fichier ou pour générer une instance à partir du schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  Le schéma XML de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est disponible dans votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’emplacement suivant :  
@@ -331,7 +331,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
 > [!NOTE]  
 >  Si vous voulez utiliser une charge de travail inline, qui est une charge de travail spécifiée directement dans le fichier d’entrée XML, utilisez l’[exemple de fichier d’entrée XML avec une charge de travail Inline &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-##  <a name="UI"></a> Descriptions de l'interface utilisateur  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descriptions de l'interface utilisateur  
   
 ### <a name="tools-menuoptions-page"></a>Menu Outils/page Options  
  Utilisez cette boîte de dialogue pour spécifier les paramètres de configuration généraux de l'Assistant Paramétrage du moteur de base de données.  

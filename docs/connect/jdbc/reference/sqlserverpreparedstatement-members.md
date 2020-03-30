@@ -11,10 +11,10 @@ ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d99bf6118af71981ad2f45b5c7b722b458cc158c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970751"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>Membres de SQLServerPreparedStatement
@@ -36,7 +36,7 @@ ms.locfileid: "67970751"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|Ajoute un ensemble de paramètres au lot de commandes de cet objet Statement.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Annule l’instruction SQL actuellement exécutée par cet objet Statement.|  
@@ -80,7 +80,7 @@ ms.locfileid: "67970751"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|Définit le paramètre désigné selon l’objet Clob donné.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Affecte la chaîne spécifiée en tant que nom de curseur SQL en vue de son utilisation par les méthodes d'exécution suivantes.|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|Définit le paramètre désigné selon la valeur de date spécifiée.|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|Définit la valeur de la colonne spécifiée avec la valeur [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|Définit la valeur de la colonne spécifiée sur la valeur [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|Définit le paramètre désigné selon la valeur **double** spécifiée.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le mode de traitement d'échappement.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Fournit un conseil au pilote JDBC concernant la direction de traitement des lignes du jeu de résultats.|  

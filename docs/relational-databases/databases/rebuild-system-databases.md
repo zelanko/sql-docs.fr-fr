@@ -16,10 +16,10 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76516550"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
@@ -46,12 +46,12 @@ ms.locfileid: "76516550"
   
      [Corriger les erreurs liées à la reconstruction](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Lorsque les bases de données système master, model, msdb et tempdb sont reconstruites, les bases de données sont supprimées et recréées à leur emplacement d'origine. Si un nouveau classement est spécifié dans l'instruction de reconstruction, les bases de données système sont créées à l'aide de ce paramètre de classement. Les modifications apportées par les utilisateurs à ces bases de données sont perdues. Par exemple, les utilisateurs peuvent avoir défini des objets dans la base de données master et planifié des travaux dans msdb ou avoir modifié le paramétrage par défaut dans la base de données model.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Avant de reconstruire les bases de données système, effectuez les tâches suivantes pour être certain de pouvoir restaurer les bases de données système avec leurs paramètres actuels.  
   
 1.  Enregistrez toutes les valeurs de configuration à l'échelle du serveur.  
@@ -87,7 +87,7 @@ ms.locfileid: "76516550"
   
 7.  Vérifiez que des copies des fichiers modèles de données et de journaux de master, model et msdb existent sur le serveur local. L’emplacement par défaut des fichiers modèles est C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates. Ces fichiers sont utilisés pendant le processus de reconstruction et doivent être présents pour que l'installation réussisse. S'il en manque, exécutez la fonctionnalité Réparer du programme d'installation ou copiez manuellement les fichiers à partir du média d'installation. Pour trouver les fichiers sur le média d'installation, accédez au répertoire correspondant à la plateforme appropriée (x86 ou x64), puis accédez à setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates.  
   
-##  <a name="RebuildProcedure"></a> Reconstruire des bases de données système  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> Reconstruire des bases de données système  
  La procédure suivante reconstruit les bases de données système master, model, msdb et tempdb. Vous ne pouvez pas spécifier les bases de données système à reconstruire. Pour les instances cluster, cette procédure doit être effectuée sur le nœud actif et la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le groupe d'applications cluster correspondant doit être en mode hors connexion avant d'effectuer la procédure.  
   
  Cette procédure ne reconstruit pas la base de données resource. Consultez la section « Procédure de reconstruction de la base de données resource », plus loin dans cette rubrique.  
@@ -139,7 +139,7 @@ ms.locfileid: "76516550"
   
 -   Vérifier que les valeurs de configuration à l'échelle du serveur correspondent à celles que vous avez enregistrées précédemment.  
   
-##  <a name="Resource"></a> Reconstruire la base de données resource  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> Reconstruire la base de données resource  
  La procédure suivante reconstruit la base de données système resource. La reconstruction de la base de données resource entraîne la perte de tous les correctifs logiciels, qui doivent donc être réappliqués.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Pour reconstruire la base de données système resource :  
@@ -156,7 +156,7 @@ ms.locfileid: "76516550"
   
 6.  Dans la page **Prêt à réparer** , cliquez sur **Réparer**. La page Terminé indique que l'opération est terminée.  
   
-##  <a name="CreateMSDB"></a> Créer une nouvelle base de données msdb  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Créer une nouvelle base de données msdb  
  Si la base de données **msdb** est endommagée et que vous ne possédez pas de sauvegarde de la base de données **msdb** , vous pouvez créer une nouvelle base de données **msdb** à l'aide du script **instmsdb** .  
   
 > [!WARNING]  
@@ -186,7 +186,7 @@ ms.locfileid: "76516550"
   
 10. Sauvegardez la base de données **msdb** .  
   
-##  <a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
  Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
   
 -   Barre oblique (/) manquante devant chaque nom de paramètre.  

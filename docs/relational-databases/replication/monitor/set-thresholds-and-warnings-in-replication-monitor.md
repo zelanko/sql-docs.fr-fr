@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287819"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Définir des seuils et des avertissements dans le Moniteur de réplication
@@ -58,7 +58,7 @@ ms.locfileid: "76287819"
   
 -   [Définir des seuils et des avertissements pour une publication d'instantané](#Snapshot)  
   
-##  <a name="Transactional"></a> Pour définir des seuils et des avertissements pour une publication transactionnelle  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> Pour définir des seuils et des avertissements pour une publication transactionnelle  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76287819"
   
 5.  Cliquez sur **Fermer**.  
   
-##  <a name="Merge"></a> Définir des seuils et des avertissements pour une publication de fusion  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a> Définir des seuils et des avertissements pour une publication de fusion  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76287819"
   
 5.  Cliquez sur **Fermer**.  
   
-##  <a name="Snapshot"></a> Définir des seuils et des avertissements pour une publication d'instantané  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> Définir des seuils et des avertissements pour une publication d'instantané  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.  
   

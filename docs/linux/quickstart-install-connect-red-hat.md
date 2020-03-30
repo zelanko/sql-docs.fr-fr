@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77507535"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Red Hat
@@ -62,7 +62,7 @@ Pour les autres configurations système requises, voir [Configuration système r
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Installer SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Installer SQL Server
 
 Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un terminal afin d’installer le package **mssql-server** :
 
@@ -116,7 +116,7 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Installer SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Installer SQL Server
 
 > [!NOTE]
 > Les commandes suivantes pour SQL Server 2019 pointent vers le référentiel RHEL 8. RHEL 8 n’est pas préinstallé avec python2, ce qui est requis par SQL Server. Pour plus d’informations, consultez le blog suivant sur l’installation de python2 et sa configuration en tant qu’interpréteur par défaut : https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
@@ -166,7 +166,7 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="tools"></a>Installer les outils en ligne de commande SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Installer les outils en ligne de commande SQL Server
 
 Pour créer une base de données, vous devez vous connecter à un outil capable d’exécuter des instructions Transact-SQL sur SQL Server. Les étapes suivantes installent les outils en ligne de commande SQL Server : [sqlcmd](../tools/sqlcmd-utility.md) et [bcp](../tools/bcp-utility.md).
 
@@ -201,7 +201,7 @@ Pour créer une base de données, vous devez vous connecter à un outil capable 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="tools"></a>Installer les outils en ligne de commande SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Installer les outils en ligne de commande SQL Server
 
 Pour créer une base de données, vous devez vous connecter à un outil capable d’exécuter des instructions Transact-SQL sur SQL Server. Les étapes suivantes installent les outils en ligne de commande SQL Server : [sqlcmd](../tools/sqlcmd-utility.md) et [bcp](../tools/bcp-utility.md).
 

@@ -11,17 +11,17 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
 ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75884050"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-name-sos"></a>Démarrage rapide : Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Ce guide de démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour se connecter à SQL Server, puis utiliser des instructions Transact-SQL (T-SQL) pour créer la base de données *TutorialDB* utilisée dans les didacticiels [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour suivre ce guide de démarrage rapide, vous aurez besoin de [!INCLUDE[name-sos](../includes/name-sos-short.md)], ainsi que d’un accès à SQL Server.
 

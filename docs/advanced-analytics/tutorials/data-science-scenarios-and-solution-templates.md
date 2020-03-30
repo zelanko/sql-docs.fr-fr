@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947277"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scénarios de science des données et modèles de solutions
@@ -96,7 +96,7 @@ Chaque solution comprend des exemples de données, du code R ou Python et des pr
 **Comment :** Ce modèle utilise SQL Server R Services pour prédire la demande en électricité. Le modèle utilisé pour la prédiction est un modèle de régression de forêt aléatoire basé sur **rxDForest**, un algorithme de Machine Learning hautes performances inclus dans Microsoft R Server. La solution comprend un simulateur de demande, tout le code R et T-SQL nécessaire pour former un modèle, ainsi que les procédures stockées que vous pouvez utiliser pour générer des prédictions et créer des rapports. 
 
 
-## <a name="bkmk_HowTo"></a>Comment utiliser les modèles
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>Comment utiliser les modèles
 
 Pour télécharger les fichiers fournis avec chaque modèle, vous pouvez utiliser des commandes GitHub ou ouvrir le lien et cliquer sur **Download Zip** pour enregistrer tous les fichiers sur votre ordinateur.  Une fois téléchargée, la solution contient généralement ces dossiers :
   

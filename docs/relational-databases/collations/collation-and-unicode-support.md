@@ -33,10 +33,10 @@ author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75831813"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et des classements
@@ -512,7 +512,7 @@ Mais le Consortium Unicode a établi des 16 « plans » de caractères supplé
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des types de données tels que **nchar** et **nvarchar** pour stocker les données Unicode dans la plage BMP (de 000000 à 00FFFF), ce que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] encode à l’aide d’UCS-2. 
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a introduit une nouvelle famille de classements de caractères supplémentaires (\_SC) pouvant être utilisée avec les types de données **nchar**, **nvarchar** et **sql_variant** pour représenter la plage de caractères Unicode complète (de 000000 à 10FFFF). Par exemple :  **Latin1_General_100_CI_AS_SC** ou, si vous utilisez un classement japonais, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a introduit une nouvelle famille de classements de caractères supplémentaires (\_SC) pouvant être utilisée avec les types de données **nchar**, **nvarchar** et **sql_variant** pour représenter la plage de caractères Unicode complète (de 000000 à 10FFFF). Par exemple : **Latin1_General_100_CI_AS_SC** ou, si vous utilisez un classement japonais, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] étend la prise en charge des caractères supplémentaires aux types de données **char** et **varchar** avec les nouveaux classements prenant en charge UTF-8 ([\_UTF8](#utf8)). Ces types de données sont également capables de représenter la plage de caractères Unicode complète.   
 

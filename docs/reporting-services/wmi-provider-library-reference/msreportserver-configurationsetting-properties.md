@@ -17,10 +17,10 @@ ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 634c5065730ea58905f89ac0454cdda53552a126
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65569101"
 ---
 # <a name="msreportserver_configurationsetting-properties"></a>Propriétés MSReportServer_ConfigurationSetting
@@ -56,7 +56,7 @@ ms.locfileid: "65569101"
 |[WindowsServiceIdentityActual](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-windowsserviceidentityactual.md)|Retourne l'identité sous laquelle le service Windows Report Server s'exécute en réalité. Lecture seule.|  
 |[WindowsServiceIdentityConfigured](../../reporting-services/wmi-provider-library-reference/windowsserviceidentityconfigured-property.md)|Retourne l'identité sous laquelle le service Windows Report Server a été configuré la dernière fois pour son exécution. Lecture seule.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
 
   

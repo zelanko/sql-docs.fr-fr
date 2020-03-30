@@ -13,10 +13,10 @@ ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936505"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procédure : Se connecter avec l’authentification Windows
@@ -41,7 +41,7 @@ Préférez l’authentification Windows pour la connexion à SQL Server dès lor
   
 Si l’authentification Windows n’est pas envisageable en pratique, consultez [Guide pratique pour se connecter avec l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 En utilisant le pilote SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], l’exemple suivant a recours à l’authentification Windows pour établir une connexion à une instance locale de SQL Server. Une fois la connexion établie, le serveur est interrogé pour déterminer la connexion de l’utilisateur qui accède à la base de données.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
@@ -80,7 +80,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant utilise le pilote PDO_SQLSRV pour accomplir la même tâche que l’exemple précédent.  
   
 ```  
@@ -104,7 +104,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : Se connecter avec l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67896178"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud
@@ -28,14 +28,14 @@ Vous pouvez maintenant déplacer vos projets, packages et charges de travail SQL
 Le déplacement de vos charges de travail SSIS locales vers Azure présente les avantages potentiels suivants :
 -   **Réduisez les coûts opérationnels** et la charge de gestion de l’infrastructure quand vous exécutez SSIS localement ou sur des machines virtuelles Azure.
 -   **Augmentez la haute disponibilité** pour pouvoir spécifier plusieurs nœuds par cluster, et étendez les fonctionnalités de haute disponibilité d’Azure et d’Azure SQL Database.
--   **Augmentez la scalabilité** pour pouvoir spécifier plusieurs cœurs par nœud (montée en puissance) et plusieurs nœuds par cluster (augmentation de la taille des instances).
+-   **Augmentez la scalabilité** pour pouvoir spécifier plusieurs cœurs par nœud (scale-up) et plusieurs nœuds par cluster (scale-out).
 
 ## <a name="architecture-of-ssis-on-azure"></a>Architecture de SSIS sur Azure
 Le tableau suivant met en évidence les différences entre une instance SSIS locale et une instance SSIS sur Azure.
 
 La différence la plus importante est la séparation du stockage et de l’exécution. Azure Data Factory héberge le moteur de runtime des packages SSIS sur Azure. Le moteur d’exécution est appelé Azure-SSIS Integration Runtime (Azure-SSIS IR). Pour plus d’informations, consultez [Azure-SSIS Runtime Integration](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
 
-| Location | Stockage | Runtime | Extensibilité |
+| Emplacement | Stockage | Runtime | Extensibilité |
 |---|---|---|---|
 | Localement | SQL Server | Runtime SSIS hébergé par SQL Server | SSIS Scale Out (dans SQL Server 2017 et versions ultérieures)<br/><br/>Solutions personnalisées (dans les versions antérieures de SQL Server) |
 | Sur Azure | SQL Database ou SQL Database Managed Instance | Azure-SSIS Integration Runtime, composant d’Azure Data Factory | Options de mise à l’échelle pour Azure-SSIS Integration Runtime |
@@ -54,7 +54,7 @@ Il vous suffit de provisionner Azure-SSIS IR une seule fois. Vous pouvez ensuite
 > [!NOTE]
 > Azure-SSIS Integration Runtime n’est pas encore disponible dans toutes les régions Azure. Pour plus d’informations sur les régions prises en charge, consultez [Produits disponibles par région - Microsoft Azure](https://azure.microsoft.com/regions/services/).
 
-**Effectuez une augmentation de la taille des instances et une montée en puissance parallèle**. Quand vous provisionnez Azure-SSIS IR, vous pouvez effectuer un scale up et un scale out en spécifiant des valeurs pour les options suivantes :
+**Effectuez une augmentation de la taille des instances et une montée en puissance parallèle**. Quand vous provisionnez Azure-SSIS IR, vous pouvez effectuer un scale-up et un scale-out en spécifiant des valeurs pour les options suivantes :
 -   la taille du nœud (notamment le nombre de cœurs) et le nombre de nœuds du cluster ;
 -   l’instance existante d’Azure SQL Database pour héberger la base de données de catalogues SSIS (SSISDB), et le niveau de service de la base de données ;
 -   le nombre maximal d’exécutions parallèles par nœud.
@@ -93,7 +93,7 @@ Avec Azure SQL Database, vous pouvez utiliser uniquement des transactions élast
 
 Pour commencer, consultez [Tutoriel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Prérequis
 
 Pour déployer des packages SSIS sur Azure, vous devez avoir l’une des versions suivantes de SQL Server Data Tools (SSDT) :
 -   Pour Visual Studio 2017, version 15.3 ou ultérieure.

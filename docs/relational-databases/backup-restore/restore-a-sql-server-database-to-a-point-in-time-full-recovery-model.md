@@ -15,10 +15,10 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908892"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
@@ -41,22 +41,22 @@ ms.locfileid: "72908892"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Utilisation de STANDBY pour retrouver un moment inconnu dans le temps.  
   
 -   Spécification du point d'arrêt suffisamment tôt dans la séquence de restauration  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
  Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour restaurer une base de données à un point dans le temps**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez l'arborescence du serveur.  
@@ -80,7 +80,7 @@ ms.locfileid: "72908892"
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
-         Dans la zone de liste **Source : Appareil : Base de données**, sélectionnez le nom de la base de données à restaurer.  
+         Dans la zone de liste **Source : Unité : Base de données** , sélectionnez le nom de la base de données à restaurer.  
   
          **Remarque** Cette liste n'est disponible que lorsque **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72908892"
   
 14. Sélectionnez **Demander confirmation avant chaque restauration de sauvegarde** si vous souhaitez être invité entre chaque opération de restauration. Cela n'est généralement pas nécessaire à moins que la base de données ne soit volumineuse et que vous ne souhaitiez surveiller l'état de l'opération de restauration.  
 
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Avant de commencer**  
   
  La restauration d'une heure spécifiée est toujours effectuée à partir d'une sauvegarde de fichier journal. Dans chaque instruction RESTORE LOG de la séquence de restauration, vous devez spécifier votre heure cible ou votre transaction dans une clause STOPAT identique. Comme condition préalable dans une restauration limitée dans le temps, vous devez restaurer une sauvegarde complète de base de données dont le point d'arrêt est antérieur à votre heure de restauration cible. Cette sauvegarde complète de base de données peut être plus ancienne que la sauvegarde complète de base de données la plus récente dans la mesure où vous restaurez ensuite chaque sauvegarde de fichier journal suivante jusqu'à la sauvegarde de fichier journal (comprise) contenant votre limite dans le temps cible.  
@@ -159,7 +159,7 @@ ms.locfileid: "72908892"
     > [!NOTE]  
     >  Options RECOVERY et STOPAT. Si la sauvegarde du journal des transactions ne contient pas l'heure demandée (par exemple, si l'heure spécifiée dépasse la dernière heure figurant dans le journal des transactions), un avertissement est émis et la base de données n'est pas récupérée.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  L'exemple suivant restaure une base de données dans l'état où elle se trouvait le `12:00 AM` à `April 15, 2020` et décrit une opération de restauration impliquant plusieurs sauvegardes de fichiers journaux. Sur l'unité de sauvegarde `AdventureWorksBackups`, la sauvegarde de base de données complète à restaurer correspond au troisième jeu de sauvegarde (`FILE = 3`), la première sauvegarde de fichier journal correspond au quatrième jeu de sauvegarde (`FILE = 4`) et la seconde sauvegarde de fichier journal correspond au cinquième jeu de sauvegarde (`FILE = 5`).  
   
 > [!IMPORTANT]  
@@ -182,7 +182,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   

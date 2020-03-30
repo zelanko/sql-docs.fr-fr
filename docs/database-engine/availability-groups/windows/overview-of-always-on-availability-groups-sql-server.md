@@ -17,10 +17,10 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77478453"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Vue d’ensemble des groupes de disponibilité Always On (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "77478453"
   
  ![Groupe de disponibilité avec cinq réplicas](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Groupe de disponibilité avec cinq réplicas")  
   
-##  <a name="AvDbs"></a> Availability Databases  
+##  <a name="availability-databases"></a><a name="AvDbs"></a> Availability Databases  
  Pour ajouter une base de données à un groupe de disponibilité, la base de données doit être une base de données en ligne en lecture-écriture qui existe sur l'instance de serveur qui héberge le réplica principal. Lorsque vous ajoutez une base de données, elle joint le groupe de disponibilité comme base de données primaire, tout en restant disponible aux clients. Il n'existe aucune base de données secondaire correspondante jusqu'à ce que les sauvegardes de la nouvelle base de données primaire soient restaurées dans l'instance de serveur qui héberge le réplica secondaire (avec RESTORE WITH NORECOVERY). La nouvelle base de données secondaire se trouve dans l'état RESTORING jusqu'à ce qu'elle soit jointe au groupe de disponibilité. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
  Une jointure place la base de données secondaire dans l'état ONLINE et démarre la synchronisation des données avec la base de données primaire correspondante. La*synchronisation des données* correspond au processus selon lequel les modifications apportées à une base de données primaire sont reproduites sur une base de données secondaire. La synchronisation des données implique l'envoi par la base de données primaire d'enregistrements de journal des transactions à la base de données secondaire.  
@@ -63,7 +63,7 @@ ms.locfileid: "77478453"
 > [!IMPORTANT]  
 >  Une base de données de disponibilité est parfois désignée sous le terme de *réplica de base de données* dans [!INCLUDE[tsql](../../../includes/tsql-md.md)], PowerShell et les noms SMO (SQL Server Management Objects). Par exemple, le terme « réplica de base de données » est utilisé dans les noms des vues de gestion dynamique Always On qui retournent des informations sur les bases de données de disponibilité :  **sys.dm_hadr_database_replica_states** et **sys.dm_hadr_database_replica_cluster_states**. Toutefois, dans la documentation en ligne de SQL Server, le terme « réplica » fait généralement référence aux réplicas de disponibilité. Par exemple, les termes « réplica principal » et « réplica secondaire » font toujours référence aux réplicas de disponibilité.  
   
-##  <a name="AGsARsADBs"></a> Réplicas de disponibilité  
+##  <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Réplicas de disponibilité  
  Chaque groupe de disponibilité définit un ensemble de deux partenaires de basculement ou plus, appelés réplicas de disponibilité. Les*réplicas de disponibilité* sont des composants du groupe de disponibilité. Chaque réplica de disponibilité héberge une copie des bases de données de disponibilité dans le groupe de disponibilité. Pour un groupe de disponibilité donné, les réplicas de disponibilité doivent être hébergés par des instances distinctes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui résident sur différents nœuds d'un cluster WSFC. Chacune de ces instances de serveur doit être activée pour Always On.  
   
  Un instance donnée ne peut héberger qu'un seul réplica de disponibilité par groupe de disponibilité. Toutefois, chaque instance peut être utilisée pour de nombreux groupes de disponibilité. Une instance donnée peut être une instance autonome ou une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI). Si vous avez besoin d'une redondance au niveau serveur, utilisez des instances de cluster de basculement.  
@@ -73,7 +73,7 @@ ms.locfileid: "77478453"
 > [!NOTE]  
 >  Lorsque le rôle d'un réplica de disponibilité est indéterminé, comme lors d'un basculement, ses bases de données sont temporairement dans un état NOT SYNCHRONIZING. Leur rôle est défini sur RESOLVING jusqu'à ce que le rôle du réplica de disponibilité soit résolu. Si un réplica de disponibilité est résolu en rôle principal, ses bases de données deviennent les bases de données primaires. Si un réplica de disponibilité est résolu en rôle secondaire, ses bases de données deviennent les bases de données secondaires.  
   
-##  <a name="AvailabilityModes"></a> Modes de disponibilité  
+##  <a name="availability-modes"></a><a name="AvailabilityModes"></a> Modes de disponibilité  
  Le mode de disponibilité est une propriété de chaque réplica de disponibilité. Le mode de disponibilité détermine si le réplica principal attend, pour valider des transactions sur une base de données, qu'un réplica secondaire donné ait écrit les enregistrements du journal des transactions sur le disque (journal renforcé). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge deux modes de disponibilité : le*mode avec validation asynchrone* et le *mode avec validation synchrone*.  
   
 -   **Asynchronous-commit mode**  
@@ -86,7 +86,7 @@ ms.locfileid: "77478453"
   
  Pour plus d’informations, consultez [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
-##  <a name="FormsOfFailover"></a> Types de basculement  
+##  <a name="types-of-failover"></a><a name="FormsOfFailover"></a> Types de basculement  
  Dans le contexte d'une session entre le réplica principal et un réplica secondaire, les rôles principal et secondaire sont potentiellement interchangeables dans un processus appelé *basculement*. Lors d'un basculement, le réplica secondaire cible joue le rôle principal, en devenant le nouveau réplica principal. Le nouveau réplica principal met ses bases de données en ligne comme bases de données primaires, et les applications clientes peuvent se connecter à ces dernières. Lorsque le réplica principal précédent est disponible, il prend le rôle secondaire, en devenant un réplica secondaire. Les bases de données primaires précédentes deviennent les bases de données secondaires et la synchronisation des données reprend.  
   
  Il existe trois types de basculement : automatique, manuel et forcé (avec perte de données possible). La ou les formes de basculement prises en charge par un réplica secondaire dépendent de son mode de disponibilité, et en mode de validation synchrone, du mode de basculement sur le réplica principal et le réplica secondaire cible, comme suit.  
@@ -111,7 +111,7 @@ ms.locfileid: "77478453"
   
  Pour plus d’informations, consultez [Basculement et modes de basculement &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-##  <a name="ClientConnections"></a> Connexions clientes  
+##  <a name="client-connections"></a><a name="ClientConnections"></a> Connexions clientes  
  Vous pouvez fournir la connectivité client au réplica principal d'un groupe de disponibilité donné en créant un écouteur de groupe de disponibilité. Un *écouteur de groupe de disponibilité* fournit un ensemble de ressources joint à un groupe de disponibilité donné pour diriger les connexions clientes vers le réplica de disponibilité approprié.  
   
  Un écouteur de groupe de disponibilité est associé à un nom DNS unique qui sert de nom de réseau virtuel (VNN), une ou plusieurs adresses IP virtuelles (VIP) et un numéro de port TCP. Pour plus d’informations, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "77478453"
 > [!TIP]  
 >  Si un groupe de disponibilité a uniquement deux réplicas de disponibilité et n’est pas configuré pour autoriser l’accès en lecture au réplica secondaire, les clients peuvent se connecter au réplica principal à l’aide d’une [chaîne de connexion de mise en miroir de bases de données](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md). Cette approche peut être utile temporairement après avoir migré une base de données de la mise en miroir de bases de données vers [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Avant d'ajouter des réplicas secondaires supplémentaires, vous devrez créer un écouteur de groupe de disponibilité pour le groupe de disponibilité, puis mettre à jour vos applications afin d'utiliser le nom réseau de l'écouteur.  
   
-##  <a name="ActiveSecondaries"></a> Réplicas secondaires actifs  
+##  <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> Réplicas secondaires actifs  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge les réplicas secondaires actifs. Les fonctions secondaires actives prennent en charge les opérations suivantes :  
   
 -   **Exécution d'opérations de sauvegarde sur des réplicas secondaires**  
@@ -132,7 +132,7 @@ ms.locfileid: "77478453"
   
      Si un groupe de disponibilité a un écouteur de groupe de disponibilité et un ou plusieurs réplicas secondaires lisibles, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut acheminer les demandes de connexion d’intention de lecture vers l’un d’entre eux (*routage en lecture seule*). Pour plus d’informations, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="SessionTimeoutPerios"></a> Période d'expiration de session  
+##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> Période d'expiration de session  
  La période d'expiration de session est une propriété du réplica de disponibilité qui détermine le temps pendant lequel une connexion avec un autre réplica de disponibilité peut rester inactive avant qu'elle soit fermée. Les réplicas primaire et secondaire exécutent réciproquement une commande ping pour signaler qu'ils sont toujours actifs. La réception d'une commande ping de l'autre réplica au cours de la période de délai d'attente indique que la connexion est toujours ouverte et que les instances de serveur communiquent. À la réception d'un ping, un réplica de disponibilité réinitialise son compteur de période d'expiration de session sur cette connexion.  
   
  La période d'expiration de session évite que l'un ou l'autre réplica attendent indéfiniment de recevoir un ping de l'autre réplica. Si aucun ping n'est reçu de l'autre réplica au cours de la période d'expiration de session, le réplica expire. Sa connexion est fermée, et le réplica expiré passe à l'état DISCONNECTED. Même si un réplica déconnecté est configuré pour le mode de validation synchrone, les transactions n'attendront pas que ce réplica se reconnecte et se resynchronise.  
@@ -142,16 +142,16 @@ ms.locfileid: "77478453"
 > [!NOTE]  
 >  Pour le rôle de résolution, la période d'expiration de session ne s'applique pas parce que la requête ping ne se produit pas.  
   
-##  <a name="APR"></a> Réparation de page automatique  
+##  <a name="automatic-page-repair"></a><a name="APR"></a> Réparation de page automatique  
  Chaque réplica de disponibilité essaie d'effectuer une récupération automatiquement à partir de pages endommagées sur une base de données locale en résolvant certains types d'erreurs qui empêchent la lecture d'une page de données. Si un réplica secondaire ne peut pas lire une page, le réplica demande une nouvelle copie de la page du réplica principal. Si le réplica principal ne peut pas lire une page, le réplica diffuse une demande de nouvelle copie à tous les réplicas secondaires et obtient la page du premier qui y répond. Si cette demande aboutit, la page illisible est remplacée par la copie, ce qui permet généralement de résoudre l'erreur.  
   
  Pour plus d’informations, consultez [Réparation de page automatique &#40;groupes de disponibilité : mise en miroir de bases de données&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Commencer à utiliser les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   

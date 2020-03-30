@@ -15,10 +15,10 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252897"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Créer un point de terminaison de mise en miroir de bases de données pour un groupe de disponibilité à l’aide de PowerShell
@@ -28,20 +28,20 @@ ms.locfileid: "75252897"
   
 
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
 
 > [!IMPORTANT]  
 >  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour créer un point de terminaison pour la mise en miroir de bases de données**  
   
 1.  Remplacez le répertoire (**cd**) par l’instance de serveur pour laquelle vous voulez créer le point de terminaison de mise en miroir de bases de données.  
   
 2.  Utilisez l’applet de commande **New-SqlHadrEndpoint** pour créer le point de terminaison, puis **Set-SqlHadrEndpoint** pour démarrer le point de terminaison.  
   
-###  <a name="PShellExample"></a> Exemple (PowerShell)  
+###  <a name="example-powershell"></a><a name="PShellExample"></a> Exemple (PowerShell)  
  Les commandes PowerShell suivantes créent un point de terminaison de mise en miroir de bases de données sur une instance de SQL Server (*Machine*\\*Instance*). Le point de terminaison utilise le port 5022.  
   
 > [!IMPORTANT]  
@@ -56,7 +56,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un point de terminaison de mise en miroir de bases de données**  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

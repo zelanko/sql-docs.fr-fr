@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242695"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d’un test unitaire SQL Server
@@ -39,10 +39,10 @@ Au cours de cette procédure pas à pas, vous effectuez les tâches suivantes :
   
 Lorsqu'un des tests unitaires détecte une erreur dans une procédure stockée, vous corrigez cette erreur et réexécutez le test.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous connecter à un serveur de base de données (ou à une base de données LocalDB) sur lequel vous êtes autorisé à créer et déployer une base de données. Pour plus d'informations, consultez [Autorisations requises pour les fonctionnalités de base de données de Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
-## <a name="CreateScript"></a>Créer un script qui contient un schéma de base de données  
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Créer un script qui contient un schéma de base de données  
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>Pour créer un script à partir duquel vous pouvez importer un schéma  
   
@@ -222,7 +222,7 @@ Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous c
   
     Ensuite, vous créez un projet de base de données et importez le schéma du script créé.  
   
-## <a name="CreateProjectAndImport"></a>Créer un projet de base de données et importer un schéma  
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProjectAndImport"></a>Créer un projet de base de données et importer un schéma  
   
 #### <a name="to-create-a-database-project"></a>Pour créer un projet de base de données  
   
@@ -263,10 +263,10 @@ Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous c
   
 2.  Dans l'**Explorateur d'objets SQL Server**, examinez la base de données dans le nœud Projets.  
   
-## <a name="DeployDBProj"></a>Déploiement dans LocalDB  
+## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>Déploiement dans LocalDB  
 Par défaut, lorsque vous appuyez sur F5, vous déployez (ou publiez) la base de données dans une base de données LocalDB. Modifiez l'emplacement de la base de données en accédant à l'onglet Débogage de la page de propriétés du projet et en modifiant la chaîne de connexion.  
   
-## <a name="CreateDBUnitTests"></a>Créer des tests unitaires SQL Server  
+## <a name="create-sql-server-unit-tests"></a><a name="CreateDBUnitTests"></a>Créer des tests unitaires SQL Server  
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>Pour créer un test unitaire SQL Server pour les procédures stockées  
   
@@ -297,7 +297,7 @@ Par défaut, lorsque vous appuyez sur F5, vous déployez (ou publiez) la base de
   
     Le projet de test est créé et le Concepteur de test unitaire SQL Server apparaît. Ensuite, vous allez mettre à jour la logique de test dans le script Transact\-SQL des tests unitaires.  
   
-## <a name="DefineTestLogic"></a>Définir la logique de test  
+## <a name="define-test-logic"></a><a name="DefineTestLogic"></a>Définir la logique de test  
 Cette base de données très simple possède deux tables, Customer et Order. Vous mettez à jour la base de données à l'aide de procédures stockées suivantes :  
   
 -   uspNewCustomer - Cette procédure stockée ajoute un enregistrement à la table Customer, qui définit les colonnes YTDOrders et YTDSales du client à zéro.  
@@ -699,7 +699,7 @@ Les tests supposent que la base de données démarre dans un état propre. Vous 
   
     À ce stade, vous êtes prêt à exécuter vos tests.  
   
-## <a name="RunTests"></a>Exécuter des tests unitaires SQL Server  
+## <a name="run-sql-server-unit-tests"></a><a name="RunTests"></a>Exécuter des tests unitaires SQL Server  
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>Pour exécuter des tests unitaires SQL Server  
   
@@ -755,7 +755,7 @@ Les tests supposent que la base de données démarre dans un état propre. Vous 
   
     Le test réussit.  
   
-## <a name="NegativeTest"></a>Ajouter un test unitaire négatif  
+## <a name="add-a-negative-unit-test"></a><a name="NegativeTest"></a>Ajouter un test unitaire négatif  
 Créez un test négatif pour vérifier qu'un test échoue comme prévu. Par exemple, si vous essayez d'annuler une commande qui a déjà été passée, ce test doit échouer. Dans cette partie de la procédure pas à pas, vous créez un test unitaire négatif pour la procédure stockée Sales.uspCancelOrder.  
   
 Pour créer et vérifier un test négatif, vous devez effectuer les tâches suivantes :  

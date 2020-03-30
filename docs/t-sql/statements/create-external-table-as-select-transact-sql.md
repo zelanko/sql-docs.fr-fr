@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68073142"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  La base de données signale les erreurs Java qui peuvent se produire dans la source de données externe lors de l’exportation des données.  
   
-##  <a name="GeneralRemarks"></a> Remarques d’ordre général  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> Remarques d’ordre général  
  Une fois l’instruction CETAS terminée, vous pouvez exécuter des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] sur la table externe. Ces opérations vont importer des données dans la base de données pendant la durée de la requête, sauf si vous importez les données à l’aide de l’instruction CREATE TABLE AS SELECT.  
   
  Le nom et la définition de la table externe sont stockés dans les métadonnées de la base de données. Les données sont stockées dans la source de données externe.  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>Verrouillage  
  Applique un verrou partagé sur l’objet SCHEMARESOLUTION.  
   
-##  <a name="Examples"></a> Exemples  
+##  <a name="examples"></a><a name="Examples"></a> Exemples  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>R. Créer une table Hadoop à l’aide de CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  L’exemple suivant crée une nouvelle table externe nommée `hdfsCustomer`, à l’aide des définitions de colonne et des données de la table source `dimCustomer`.  

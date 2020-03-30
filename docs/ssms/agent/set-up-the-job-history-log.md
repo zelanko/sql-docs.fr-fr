@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7d8ff3c1350bac2331ab6e895804e735318ba049
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245805"
 ---
 # <a name="set-up-the-job-history-log"></a>Configurer le journal d'historique des travaux
@@ -36,12 +36,12 @@ Cette rubrique décrit la façon de définir le journal de l’historique des tr
   
 -   **Pour configurer le journal d’historique des travaux, avec :** [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
 Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
 **Pour définir le journal d'historique des travaux**  
   
 1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]et développez-la.  
@@ -56,7 +56,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
     2.  Activez la case à cocher **Supprimer automatiquement l'historique de l'agent**, puis spécifiez une période de temps, de telle façon que l'historique antérieur à cette période soit purgé du journal.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
 [Surveiller l'activité des travaux](../../ssms/agent/monitor-job-activity.md)  
 [Créer des travaux](../../ssms/agent/create-jobs.md)  

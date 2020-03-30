@@ -14,10 +14,10 @@ author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287573"
 ---
 # <a name="best-practices-with-query-store"></a>Bonnes pratiques relatives au Magasin des requêtes
@@ -26,13 +26,13 @@ ms.locfileid: "79287573"
 
 Cet article décrit les bonnes pratiques concernant l’utilisation du Magasin des requêtes SQL Server avec votre charge de travail.
 
-## <a name="SSMS"></a>Utiliser la dernière version de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a>Utiliser la dernière version de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un ensemble d’interfaces utilisateur conçu pour configurer le Magasin des requêtes et consommer les données collectées relatives à votre charge de travail. Téléchargez la dernière version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [ici](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Pour obtenir une description rapide de la manière d’utiliser le Magasin des requêtes dans des scénarios de résolution de problèmes, consultez les blogs relatifs au [\@Azure Magasin des requêtes](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
-## <a name="Insight"></a> Utiliser Query Performance Insight dans Azure SQL Database
+## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Utiliser Query Performance Insight dans Azure SQL Database
 
 Si vous exécutez le Magasin des requêtes dans Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous pouvez utiliser [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) pour analyser la consommation de ressources dans le temps. Même si vous pouvez utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) pour obtenir des détails sur la consommation en ressources de toutes vos requêtes (par exemple, processeur, mémoire et E/S), Query Performance Insight vous offre un moyen rapide et efficace de déterminer leur impact sur la consommation DTU globale de votre base de données. Pour plus d’informations, consultez [Query Performance Insight pour base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
@@ -57,7 +57,7 @@ Si vous souhaitez conserver vos paramètres personnalisés, utilisez [ALTER DATA
 
 Vous pouvez utiliser le magasin de requêtes dans toutes les bases de données sans le moindre problème, même dans les pools très denses. Tous les problèmes liés à l’utilisation excessive de ressources qui peuvent s’être produits lors de l’activation du Magasin des requêtes pour le grand nombre de bases de données des pools élastiques ont été résolus.
 
-## <a name="Configure"></a> Veiller à l’adéquation entre le magasin de requêtes et votre charge de travail
+## <a name="keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> Veiller à l’adéquation entre le magasin de requêtes et votre charge de travail
 
 Configurez le magasin de requêtes en fonction de votre charge de travail et selon vos besoins en matière de résolution des problèmes de performances.
 Les paramètres par défaut sont assez bons pour démarrer, mais vous devez surveiller le comportement du Magasin des requêtes au fil du temps et ajuster sa configuration en conséquence.
@@ -270,7 +270,7 @@ Si vous exécutez votre charge de travail sur [!INCLUDE[ssSDS](../../includes/ss
 - Dans certains cas, vous pouvez imposer une recompilation des statistiques si vous constatez une grande différence entre le nombre estimé et le nombre réel de lignes dans le plan d’exécution.
 - Réécrivez les requêtes problématiques, par exemple, pour profiter du paramétrage des requêtes ou pour implémenter une logique plus optimale.
 
-## <a name="Verify"></a> Vérifier que le Magasin des requêtes collecte les données des requêtes en continu
+## <a name="verify-that-query-store-collects-query-data-continuously"></a><a name="Verify"></a> Vérifier que le Magasin des requêtes collecte les données des requêtes en continu
 
 Le Magasin des requêtes peut modifier discrètement le mode d’opération. Surveillez régulièrement l’état du Magasin des requêtes pour vérifier qu’il fonctionne et pour prendre des mesures afin d’éviter des défaillances dont les causes étaient évitables. Exécutez la requête suivante pour déterminer le mode d’opération et afficher les paramètres les plus pertinents :
 
@@ -374,7 +374,7 @@ Le tableau suivant décrit les bonnes pratiques :
 |Filtrer les requêtes non pertinentes.|Configurez l’option **Mode de capture du Magasin des requêtes** sur **Auto**.|
 |Supprimer les requêtes les moins pertinentes quand la taille maximale est atteinte.|Activez la stratégie de nettoyage basée sur la taille.|
 
-## <a name="Parameterize"></a> Éviter l’utilisation de requêtes non paramétrées
+## <a name="avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> Éviter l’utilisation de requêtes non paramétrées
 
 Il n’est pas recommandé d’utiliser des requêtes non paramétrées quand cela n’est pas nécessaire. Le cas d’une analyse ad hoc en est un exemple. Les plans mis en cache ne peuvent pas être réutilisés, ce qui force l’optimiseur de requête à compiler les requêtes pour chaque texte de requête unique. Pour plus d’informations, consultez [Principes d’utilisation du paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
 
@@ -390,11 +390,11 @@ Considérez les options suivantes :
   - Configurez le paramétrage forcé en utilisant la commande [parameterization database option](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) si votre charge de travail ne contient qu’un petit nombre de plans de requête différents. C’est le cas, par exemple, lorsque le rapport entre le nombre de valeurs query_hash distinctes et le nombre total d’entrées dans sys.query_store_query est nettement inférieur à 1.
 - Définissez QUERY_CAPTURE_MODE sur AUTO pour éliminer automatiquement les requêtes ad hoc qui consomment peu de ressources.
 
-## <a name="Drop"></a> Éviter un modèle DROP et CREATE pour les objets conteneurs
+## <a name="avoid-a-drop-and-create-pattern-for-containing-objects"></a><a name="Drop"></a> Éviter un modèle DROP et CREATE pour les objets conteneurs
 
 Le Magasin des requêtes associe une entrée de requête à un objet conteneur, tel qu’une procédure stockée, une fonction ou un déclencheur. Quand vous recréez un objet conteneur, une nouvelle entrée de requête est générée pour le même texte de requête. Cela vous empêche de suivre les statistiques de performances de cette requête dans le temps et d’utiliser un mécanisme permettant de forcer le plan. Pour éviter une telle situation, utilisez le processus `ALTER <object>` pour modifier la définition d’un objet conteneur chaque fois que cela est possible.
 
-## <a name="CheckForced"></a> Vérifier régulièrement l’état des plans forcés
+## <a name="check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> Vérifier régulièrement l’état des plans forcés
 
 Le forçage de plan est un mécanisme pratique qui permet de corriger les problèmes de performances des requêtes importantes et de les rendre plus prévisibles. Comme pour les indicateurs de plan et les repères de plan, forcer un plan n’est pas la garantie qu’il sera utilisé dans les exécutions futures. En règle générale, quand le schéma de base de données change de manière à ce que les objets référencés par le plan d’exécution sont modifiés ou supprimés, le forçage de plan échoue. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a recours à la recompilation des requêtes et la raison réelle de l’échec du forçage apparaît dans [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La requête suivante retourne des informations sur les plans forcés :
 
@@ -411,13 +411,13 @@ WHERE is_forced_plan = 1;
 
 Pour obtenir la liste complète des raisons, consultez [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Vous pouvez aussi utiliser le XEvent **query_store_plan_forcing_failed** pour suivre les échecs de l’utilisation forcée d’un plan et y remédier.
 
-## <a name="Renaming"></a> Éviter de renommer les bases de données pour des requêtes associées à des plans forcés
+## <a name="avoid-renaming-databases-for-queries-with-forced-plans"></a><a name="Renaming"></a> Éviter de renommer les bases de données pour des requêtes associées à des plans forcés
 
 Les plans d’exécution référencent les objets avec des noms en trois parties, tels que `database.schema.object`.
 
 Si vous renommez une base de données, le forçage de plan échoue, ce qui entraîne une recompilation dans toutes les exécutions de requête suivantes.
 
-## <a name="Recovery"></a> Utiliser des indicateurs de trace sur des serveurs stratégiques
+## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> Utiliser des indicateurs de trace sur des serveurs stratégiques
 
 Les indicateurs de trace globaux 7745 et 7752 peuvent être utilisés pour améliorer la disponibilité des bases de données à l’aide du Magasin des requêtes. Pour plus d’informations, consultez [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 

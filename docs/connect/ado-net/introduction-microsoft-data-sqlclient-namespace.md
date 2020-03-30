@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: dbc76f1a2ee93faf642d923d3a543eee40d5348b
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897120"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Présentation de l’espace de noms Microsoft.Data.SqlClient
@@ -113,7 +113,7 @@ En général, la documentation existante qui utilise System.Data.SqlClient sur .
 
  [Always Encrypted : Protéger les données sensibles et stocker les clés de chiffrement dans le magasin de certificats Windows](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Authentification
 
 Vous pouvez spécifier différents modes d’authentification à l’aide de l’option de chaîne de connexion _Authentification_. Pour plus d’informations, consultez la [documentation de SqlAuthenticationMethod](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
 

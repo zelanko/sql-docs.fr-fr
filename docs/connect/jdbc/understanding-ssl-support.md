@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713300"
 ---
 # <a name="understanding-encryption-support"></a>Présentation de la prise en charge du chiffrement
@@ -30,7 +30,7 @@ Si l’application ne nécessite pas de chiffrement, le [!INCLUDE[jdbcNoVersion]
 >
 > Pour plus d’informations sur la configuration du protocole TLS pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Activer les connexions chiffrées au moteur de base de données](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour permettre aux applications d’utiliser le chiffrement TLS, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] comprend les propriétés de connexion suivantes, à partir de la version 1.2 : **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** et **hostNameInCertificate**. Pour plus d’informations, consultez [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   

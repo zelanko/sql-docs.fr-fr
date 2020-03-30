@@ -15,10 +15,10 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012166"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurer l'option de configuration de serveur user options
@@ -44,9 +44,9 @@ ms.locfileid: "68012166"
   
 -   **Suivi :**  [Après avoir configuré l’option de configuration user options](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Le tableau suivant répertorie et décrit les valeurs de configuration pour **user options**. Toutes les valeurs de configuration ne sont pas compatibles les unes avec les autres. Par exemple, il n'est pas possible de définir simultanément les valeurs ANSI_NULL_DFLT_ON et ANSI_NULL_DFLT_OFF.  
   
@@ -70,12 +70,12 @@ ms.locfileid: "68012166"
   
 -   Dans l’option **user options**, les positions binaires sont identiques à celles figurant dans @@OPTIONS. Chaque connexion a sa propre fonction @@OPTIONS, qui représente l’environnement de configuration. Quand un utilisateur se connecte à une instance de \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il reçoit un environnement par défaut qui attribue la valeur actuelle de l’option **user options** à la fonction @@OPTIONS. L’exécution d’instructions SET pour l’option **user options** affecte la valeur correspondante dans la fonction @@OPTIONS de la session. Toutes les connexions créées après la modification de ce paramètre reçoivent la nouvelle valeur.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>Pour configurer l'option de configuration user options  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68012166"
   
      Par défaut, aucune option utilisateur n'est configurée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>Pour configurer l'option de configuration user options  
   
@@ -107,7 +107,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option de configuration user options  
+##  <a name="follow-up-after-you-configure-the-user-options-configuration-option"></a><a name="FollowUp"></a> Suivi : Après avoir configuré l’option de configuration user options  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

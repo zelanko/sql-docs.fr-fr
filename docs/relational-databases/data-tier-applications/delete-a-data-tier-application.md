@@ -19,10 +19,10 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71823563"
 ---
 # <a name="delete-a-data-tier-application"></a>Supprimer une application de la couche Données
@@ -42,7 +42,7 @@ ms.locfileid: "71823563"
 |Détacher la base de données|La base de données associée est détachée. L'instance du moteur de base de données ne peut pas référencer la base de données, mais les données et les fichiers journaux sont intacts.|  
 |Supprimer la base de données|La base de données associée est supprimée. Les données et fichiers journaux sont supprimés.|  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Il n'existe aucun mécanisme automatique pour restaurer les métadonnées de définition de la DAC ou la base de données après avoir supprimé une DAC. La possibilité de reconstruire l'instance de la DAC manuellement dépend de l'option de suppression.  
   
 |Option|Comment reconstruire l'instance de la DAC|  
@@ -54,10 +54,10 @@ ms.locfileid: "71823563"
 > [!WARNING]  
 >  La reconstruction d'une instance de la DAC en inscrivant une DAC à partir d'une base de données rattachée ou restaurée ne recréera pas certaines parties de la DAC d'origine, telles que la stratégie de sélection du serveur.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Une DAC peut uniquement être supprimée par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par le propriétaire de la base de données. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut également lancer l’Assistant.  
   
-##  <a name="UsingDeleteDACWizard"></a> Utilisation de l'Assistant Supprimer l'application de la couche Données  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> Utilisation de l'Assistant Supprimer l'application de la couche Données  
  **Pour supprimer une DAC à l'aide d'un Assistant**  
   
 1.  Dans l' **Explorateur d'objets**, développez le nœud pour l'instance qui contient la DAC à supprimer.  
@@ -78,7 +78,7 @@ ms.locfileid: "71823563"
   
     4.  [Supprimer une application de couche Données](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> Page Introduction  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de la suppression d'une application de couche Données.  
   
  **Ne plus afficher cette page.** - Cochez la case pour ne plus afficher la page à l'avenir.  
@@ -89,7 +89,7 @@ ms.locfileid: "71823563"
   
  [Utilisation de l'Assistant Supprimer l'application de la couche Données](#UsingDeleteDACWizard)  
   
-##  <a name="Choose_method"></a> Page Choisir une méthode  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a> Page Choisir une méthode  
  Utilisez cette page pour spécifier l'option pour gérer la base de données associée à la DAC à supprimer.  
   
  **Supprimer l’inscription** : supprime les métadonnées qui définissent l’application de couche Données, mais laisse la base de données associée intacte.  
@@ -110,7 +110,7 @@ ms.locfileid: "71823563"
   
  [Utilisation de l'Assistant Supprimer l'application de la couche Données](#UsingDeleteDACWizard)  
   
-##  <a name="Summary"></a> Page Résumé  
+##  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez cette page pour examiner les mesures prises par l'Assistant lors de la suppression de l'instance de la DAC.  
   
  **Examinez le résumé de vos sélections** : examinez la DAC, la base de données et la méthode de suppression affichées dans la fenêtre. Si les informations sont correctes, sélectionnez **Suivant** ou **Terminer** pour supprimer la DAC. Si la DAC et les informations sur la base de données ne sont pas correctes, sélectionnez **Annuler** , puis la DAC appropriée. Si la méthode de suppression n'est pas correcte, sélectionnez **Précédent** pour retourner à la page **Choisir une méthode** et sélectionner une méthode différente.  
@@ -123,7 +123,7 @@ ms.locfileid: "71823563"
   
  [Utilisation de l'Assistant Supprimer l'application de la couche Données](#UsingDeleteDACWizard)  
   
-##  <a name="Delete_datatier_application"></a> Page Supprimer une application de couche Données  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a> Page Supprimer une application de couche Données  
  Cette page signale la réussite ou l'échec de l'opération de suppression.  
   
  **Suppression de la DAC** : signale la réussite ou l’échec de chaque mesure prise pour supprimer l’instance de la DAC. Examinez les informations pour déterminer la réussite ou l'échec de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Sélectionnez le lien pour consulter le rapport de d'erreur de cette action.  
@@ -134,7 +134,7 @@ ms.locfileid: "71823563"
   
  [Utilisation de l'Assistant Supprimer l'application de la couche Données](#UsingDeleteDACWizard)  
   
-##  <a name="DeleteDACPowerShell"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="DeleteDACPowerShell"></a> Utilisation de PowerShell  
 
 1. Créez un objet serveur SMO et définissez-le sur l'instance qui contient la DAC à supprimer.  
   

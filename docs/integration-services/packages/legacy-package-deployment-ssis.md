@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287393"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Déploiement de packages hérités (SSIS)
@@ -427,7 +427,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Terminer**  
  Crée la configuration et quitte **l’Assistant Configuration de package**.  
 
-## <a name="child"></a> Utiliser les valeurs des variables et des paramètres dans un package enfant
+## <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a><a name="child"></a> Utiliser les valeurs des variables et des paramètres dans un package enfant
   Cette procédure explique comment créer une configuration de package qui utilise le type de configuration de variable parent. Ce type de configuration active un package enfant exécuté à partir d'un package parent pour accéder à une variable dans le parent.  
   
 > [!NOTE]  

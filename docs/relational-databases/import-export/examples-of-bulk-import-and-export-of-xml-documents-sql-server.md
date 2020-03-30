@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401587"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d’importation et d’exportation en bloc de documents XML (SQL Server)
@@ -61,7 +61,7 @@ Pour plus d'informations, consultez les rubriques ci-dessous.
   
 -  [E. Exportation en bloc de données XML](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>Importation en bloc de données XML sous forme de flux d'octets binaires  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>Importation en bloc de données XML sous forme de flux d'octets binaires  
  Si vous importez en bloc des données XML à partir d’un fichier contenant la déclaration d’encodage à appliquer, spécifiez l’option SINGLE_BLOB dans la clause OPENROWSET(BULK...). Cette option permet à l’analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’importer les données conformément au schéma d’encodage spécifié dans la déclaration XML.  
   
 #### <a name="sample-table"></a>Exemple de table  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;Haut&#93;](#top)  
   
-##  <a name="existing_row"></a> Importation en bloc de données XML dans une ligne existante  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> Importation en bloc de données XML dans une ligne existante  
  Cet exemple utilise le fournisseur d'ensemble de lignes en bloc `OPENROWSET` pour ajouter une instance XML à une ligne ou des lignes existantes dans la table d'exemple `T`.  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [&#91;Haut&#93;](#top)  
   
-## <a name="file_contains_dtd"></a> Importation en bloc de données XML à partir d'un fichier contenant une DTD  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> Importation en bloc de données XML à partir d'un fichier contenant une DTD  
   
 > [!IMPORTANT]  
 >  Il est recommandé de ne pas activer la prise en charge des définitions de type de document (DTD) si celle-ci n'est pas nécessaire à votre environnement XML. En effet, son activation augmente la zone de surface attaquable de votre serveur qui peut se retrouver exposé à une attaque de déni de service. Si vous devez activer la prise en charge DTD, vous pouvez réduire ce risque lié à la sécurité en traitant uniquement des documents XML approuvés.  
@@ -189,7 +189,7 @@ INSERT T1
   
  [&#91;Haut&#93;](#top)  
   
-## <a name="field_terminator_in_format_file"></a> Spécification explicite de la marque de fin de champ à l'aide d'un fichier de format  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> Spécification explicite de la marque de fin de champ à l'aide d'un fichier de format  
  L'exemple suivant montre l'importation en bloc du document XML suivant, `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>Fichier de données d'exemple  
@@ -252,7 +252,7 @@ GO
   
  [&#91;Haut&#93;](#top)  
   
-## <a name="bulk_export_xml_data"></a> Exportation en bloc de données XML  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> Exportation en bloc de données XML  
  L’exemple suivant utilise [bcp](../../tools/bcp-utility.md) pour exporter en bloc des données XML à partir de la table créée dans l’exemple précédent, à l’aide du même fichier de format XML. Dans la commande `bcp` suivante, `<server_name>` et `<instance_name>` représentent des espaces réservés qui doivent être remplacés par les valeurs appropriées :  
   
 ```cmd

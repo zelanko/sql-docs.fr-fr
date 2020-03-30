@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776390"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
@@ -35,7 +35,7 @@ ms.locfileid: "75776390"
 
   Cette rubrique explique comment créer un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un compte de connexion est l'identité de la personne ou du processus qui se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-##  <a name="Background"></a> Arrière-plan  
+##  <a name="background"></a><a name="Background"></a> Arrière-plan  
  Un compte de connexion est un principal de sécurité, ou une entité qui peut être authentifiée par un système sécurisé. Pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les utilisateurs doivent disposer d'un compte de connexion. Vous pouvez créer un compte de connexion basé sur un principal Windows (tel qu'un utilisateur de domaine ou un groupe de domaines Windows) ou créer un compte de connexion qui n'est pas basé sur un principal Windows (tel qu'un compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 > **REMARQUE :** Pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] doit utiliser une authentification en mode mixte. Pour plus d’informations, consultez [Choisir un mode d’authentification](../../../relational-databases/security/choose-an-authentication-mode.md).  
@@ -44,13 +44,13 @@ ms.locfileid: "75776390"
   
 > **REMARQUE :** Lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données autonome. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données autonome pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données autonome à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-##  <a name="Security"></a> Sécurité  
+##  <a name="security"></a><a name="Security"></a> Sécurité  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiert l’autorisation **ALTER ANY LOGIN** ou **ALTER LOGIN** sur le serveur.  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] nécessite l’appartenance au rôle **loginmanager** .  
   
-##  <a name="SSMSProcedure"></a> Créer une connexion à l’aide de SSMS  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> Créer une connexion à l’aide de SSMS  
   
   
 1.  Dans l'Explorateur d'objets, développez le dossier de l'instance du serveur où vous souhaitez créer le compte de connexion.  
@@ -226,7 +226,7 @@ ms.locfileid: "75776390"
  **Authentification SQL Server**  
  La case à cocher **La connexion est verrouillée** est disponible uniquement si la connexion sélectionnée se connecte à l’aide de l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elle a été verrouillée. Ce paramètre est en lecture seule. Pour déverrouiller une connexion verrouillée, exécutez ALTER LOGIN avec l'option UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Créer une connexion à l’aide de l’authentification Windows à l’aide de T-SQL  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> Créer une connexion à l’aide de l’authentification Windows à l’aide de T-SQL  
   
  
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -263,7 +263,7 @@ ms.locfileid: "75776390"
   
  Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé un compte de connexion  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé un compte de connexion  
  Une fois le compte de connexion créé, celui-ci peut se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il ne dispose pas nécessairement des autorisations suffisantes pour effectuer des tâches utiles. La liste suivante fournit des liens vers des actions de compte de connexion courantes.  
   
 -   Pour effectuer une jointure entre le compte de connexion et un rôle de base de données, consultez [Attacher un rôle](../../../relational-databases/security/authentication-access/join-a-role.md).  

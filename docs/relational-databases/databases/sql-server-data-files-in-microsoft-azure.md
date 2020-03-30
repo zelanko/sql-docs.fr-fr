@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833579"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
@@ -109,7 +109,7 @@ Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storag
 - SQL Server s’exécutant sur une machine virtuelle Azure : Si vous installez [SQL Server sur Windows Azure Virtual Machine](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), installez SQL Server 2016 ou mettez à jour votre instance. De la même manière, vous pouvez aussi créer une nouvelle machine virtuelle dans Azure à l’aide de l’image de la plateforme SQL Server 2016.
 
   
-###  <a name="bkmk_Limitations"></a> Limitations  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Limitations  
   
 - Dans la version actuelle de cette fonctionnalité, l’enregistrement de données **FileStream** dans le stockage Azure n’est pas pris en charge. Vous pouvez stocker des données **FileStream** dans une base de données qui contient également des fichiers stockés dans le stockage Azure, mais tous les fichiers de données FileStream doivent se trouver sur le stockage local.  Comme les données FileStream doivent résider sur un stockage local, il est impossible de les déplacer entre des ordinateurs à l’aide du stockage Azure. Nous vous recommandons donc d’utiliser les [techniques traditionnelles](../../relational-databases/blob/move-a-filestream-enabled-database.md) pour déplacer les données associées à FileStream entre différents ordinateurs.  
   
@@ -154,7 +154,7 @@ Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storag
 
 - Une nouvelle colonne **int** , **credential_id**, dans la vue système **sys.master_files** . La colonne **credential_id** permet aux fichiers de données du stockage Azure d’être référencés dans `sys.credentials` en ce qui concerne les informations d’identification créées à leur intention. Vous pouvez vous en servir pour résoudre des problèmes, par exemple quand des informations d’identification ne peuvent pas être supprimées, car elles sont utilisées par un fichier de base de données.  
   
-##  <a name="bkmk_Troubleshooting"></a> Dépannage pour les fichiers de données SQL Server dans Microsoft Azure  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Dépannage pour les fichiers de données SQL Server dans Microsoft Azure  
  Pour éviter des erreurs attribuables à des limitations ou à des fonctionnalités non prises en charge, passez d'abord en revue [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations).  
   
  Voici la liste des erreurs possibles lorsque vous utilisez la fonctionnalité Fichiers de données SQL Server dans le stockage Azure.  

@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027106"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Utilisation de l'API de copie en bloc pour l'opération d'insertion par lot
@@ -25,7 +25,7 @@ Le pilote Microsoft JDBC 7.0 pour SQL Server prend en charge l’utilisation de 
 
 Cette fonctionnalité s’applique uniquement aux API `executeBatch()` & `executeLargeBatch()` de PreparedStatement et de CallableStatement.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Il existe deux conditions préalables à l’activation de l’API de copie en bloc pour l’insertion de lot.
 

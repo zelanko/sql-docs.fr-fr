@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557752"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutoriel : Créer et utiliser des index sur des colonnes prenant en charge les enclaves à l’aide d’un chiffrement aléatoire
@@ -28,7 +28,7 @@ Ce didacticiel vous apprend à créer et utiliser des index sur des colonnes pre
 - Comment créer un index lorsque vous avez accès aux clés (la clé principale de colonne et la clé de chiffrement de colonne) protection de la colonne.
 - Comment créer un index lorsque vous n’avez pas accès aux clés de protection de la colonne.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Ce didacticiel est la continuation du [Didacticiel : Prise en main d’Always Encrypted avec enclaves sécurisées en utilisant SSMS](./tutorial-getting-started-with-always-encrypted-enclaves.md). Assurez-vous que vous avez terminé, avant de suivre les étapes ci-dessous.
 

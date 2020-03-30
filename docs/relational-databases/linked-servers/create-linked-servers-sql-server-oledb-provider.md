@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095993"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Requêtes distribuées Microsoft SQL Server : connectivité OLE DB
@@ -610,7 +610,7 @@ Pour obtenir la liste de toutes les interfaces OLE DB que SQL Server utilise, co
 
 Microsoft SQL Server offre l’ensemble d’outils le plus robuste pour accéder aux données à partir de sources de données hétérogènes. En maîtrisant les interfaces OLE DB exposées par SQL Server, les développeurs peuvent exercer un degré élevé de contrôle et de sophistication dans les requêtes distribuées.
 
-## <a name="appendixa"></a> Interfaces OLE DB consommées par SQL Server
+## <a name="ole-db-interfaces-consumed-by-sql-server"></a><a name="appendixa"></a> Interfaces OLE DB consommées par SQL Server
 
 Le tableau suivant répertorie toutes les interfaces OLE DB utilisées par SQL Server. La colonne Obligatoire indique si l’interface fait partie du strict minimum des fonctionnalités OLE DB dont SQL Server a besoin ou si elle est facultative. Si une interface donnée n’est pas marquée comme étant obligatoire, SQL Server peut toujours accéder au fournisseur, mais certaines fonctionnalités SQL Server spécifiques ou l’optimisation ne sont pas possibles avec le fournisseur.
 
@@ -654,7 +654,7 @@ Dans le cas des interfaces facultatives, la colonne Scénarios indique un ou plu
 >[!NOTE]
 >L’objet `Index`, l’objet `Command` et l’objet `Error` ne sont pas obligatoires. Toutefois, s’ils sont pris en charge, les interfaces répertoriées sont obligatoires comme indiqué dans la colonne Obligatoire.
 
-## <a name="appendixb"></a>Sous-ensemble SQL utilisé pour la génération de requêtes distantes
+## <a name="sql-subset-used-for-generating-remote-queries"></a><a name="appendixb"></a>Sous-ensemble SQL utilisé pour la génération de requêtes distantes
 
 Le sous-ensemble SQL que le processeur de requêtes SQL Server génère sur un fournisseur de commandes SQL dépend du niveau de syntaxe que le fournisseur prend en charge, comme indiqué par la propriété `DBPROP_SQLSUPPORT`.
 
@@ -794,7 +794,7 @@ digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
 
-## <a name="appendixc"></a>Propriétés spécifiques à SQL Server
+## <a name="sql-server-specific-properties"></a><a name="appendixc"></a>Propriétés spécifiques à SQL Server
 
 ```
 enum SQLPROPERTIES

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091463"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif Unicode pour importer ou exporter des données (SQL Server)
@@ -36,7 +36,7 @@ Le format natif Unicode est utile quand vous devez copier des informations d’u
 |[Exemples](#examples)<br />&emsp;&#9679;&emsp;[Utilisation de bcp et du format natif Unicode pour exporter des données](#bcp_widenative_export)<br />&emsp;&#9679;&emsp;[Utilisation de bcp et du format natif Unicode pour importer des données sans un fichier de format](#bcp_widenative_import)<br />&emsp;&#9679;&emsp;[Utilisation de bcp et du format natif Unicode pour importer des données avec un fichier de format non XML](#bcp_widenative_import_fmt)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et du format natif Unicode sans un fichier de format](#bulk_widenative)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et du format natif Unicode avec un fichier de format non XML](#bulk_widenative_fmt)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET et du format natif Unicode avec un fichier de format non XML](#openrowset_widenative_fmt)|
 |[Tâches associées](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
   
-## Options de commande pour le format natif Unicode<a name="command_options"></a>  
+## <a name="command-options-for-unicode-native-format"></a>Options de commande pour le format natif Unicode<a name="command_options"></a>  
 Vous pouvez importer des données au format natif Unicode dans une table à l’aide de [bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Si vous utilisez une commande [bcp](../../tools/bcp-utility.md) ou une instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), vous pouvez spécifier le format de données dans l’instruction.  Pour une instruction [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md), vous devez spécifier le format de données dans un fichier de format.  
   
 Le format natif Unicode est pris en charge par les options de commande suivantes :  
@@ -50,10 +50,10 @@ Le format natif Unicode est pris en charge par les options de commande suivantes
 > [!NOTE]
 >  Vous pouvez également spécifier le formatage par champ dans un fichier de format. Pour plus d’informations, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
   
-## Exemples de conditions de test<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Exemples de conditions de test<a name="etc"></a>  
 Les exemples de cette rubrique sont fondés sur la table et le fichier de format définis ci-dessous.
 
-### **Exemple de table**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Exemple de table**<a name="sample_table"></a>
 Le script ci-dessous crée une base de données test, une table nommée `myWidenative` et remplit la table avec des valeurs initiales.  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
 ```sql
 CREATE DATABASE TestDatabase;
@@ -79,7 +79,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Exemple de fichier de format non XML**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Exemple de fichier de format non XML**<a name="nonxml_format_file"></a>
 SQL Server prend en charge deux types de fichier de format : format XML et format non XML.  Le format non XML est le format d’origine pris en charge dans les versions précédentes de SQL Server.  Veuillez consulter [Fichiers de format non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) pour obtenir des informations détaillées.  La commande suivante utilise [l’utilitaire bcp](../../tools/bcp-utility.md) pour générer un fichier de format non xml `myWidenative.fmt`basé sur le schéma de `myWidenative`.  Pour utiliser une commande [bcp](../../tools/bcp-utility.md) pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin de fichier de données.  L’option format nécessite également l’option **-f** .  De plus, pour cet exemple, le qualificateur **c** est utilisé pour spécifier les données de type caractère et **T** est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d’une invite de commandes, entrez les commandes suivantes :
 
 ```
@@ -95,10 +95,10 @@ Notepad D:\BCP\myWidenative.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## Exemples<a name="examples"></a>
+## <a name="examples"></a>Exemples<a name="examples"></a>
 Les exemples ci-dessous utilisent la base de données et les fichiers de format créés ci-dessus.
 
-### **Utilisation de bcp et du format natif Unicode pour exporter des données**<a name="bcp_widenative_export"></a>
+### <a name="using-bcp-and-unicode-native-format-to-export-data"></a>**Utilisation de bcp et du format natif Unicode pour exporter des données**<a name="bcp_widenative_export"></a>
 Commutateur **-N** et commande **OUT** .  Remarque : Le fichier de données créé dans cet exemple est utilisé dans tous les exemples suivants.  À partir d’une invite de commandes, entrez les commandes suivantes :
 ```
 bcp TestDatabase.dbo.myWidenative OUT D:\BCP\myWidenative.bcp -T -N
@@ -107,7 +107,7 @@ REM Review results
 NOTEPAD D:\BCP\myWidenative.bcp
 ```
 
-### **Utilisation de bcp et du format natif Unicode pour importer des données sans un fichier de format**<a name="bcp_widenative_import"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-without-a-format-file"></a>**Utilisation de bcp et du format natif Unicode pour importer des données sans un fichier de format**<a name="bcp_widenative_import"></a>
 Commutateur **-N** et commande **IN** .  À partir d’une invite de commandes, entrez les commandes suivantes :
 ```
 REM Truncate table (for testing)
@@ -119,7 +119,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -T -N
 REM Review results is SSMS
 ```
 
-### **Utilisation de bcp et du format natif Unicode pour importer des données avec un fichier de format non XML**<a name="bcp_widenative_import_fmt"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-with-a-non-xml-format-file"></a>**Utilisation de bcp et du format natif Unicode pour importer des données avec un fichier de format non XML**<a name="bcp_widenative_import_fmt"></a>
 Commutateurs **-N** et **-f** switches et **IN** commet.  À partir d’une invite de commandes, entrez les commandes suivantes :
 ```
 REM Truncate table (for testing)
@@ -131,7 +131,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -f D:\BCP\myWidenat
 REM Review results is SSMS
 ```
 
-### **Utilisation de BULK INSERT et du format natif Unicode sans un fichier de format**<a name="bulk_widenative"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-without-a-format-file"></a>**Utilisation de BULK INSERT et du format natif Unicode sans un fichier de format**<a name="bulk_widenative"></a>
 Argument**DATAFILETYPE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -145,7 +145,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Utilisation de BULK INSERT et du format natif Unicode avec un fichier de format non XML**<a name="bulk_widenative_fmt"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-with-a-non-xml-format-file"></a>**Utilisation de BULK INSERT et du format natif Unicode avec un fichier de format non XML**<a name="bulk_widenative_fmt"></a>
 Argument**FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -159,7 +159,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Utilisation d’OPENROWSET et du format natif Unicode avec un fichier de format non XML**<a name="openrowset_widenative_fmt"></a>
+### <a name="using-openrowset-and-unicode-native-format-with-a-non-xml-format-file"></a>**Utilisation d’OPENROWSET et du format natif Unicode avec un fichier de format non XML**<a name="openrowset_widenative_fmt"></a>
 Argument**FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
@@ -174,7 +174,7 @@ INSERT INTO TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-## Tâches associées<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>Tâches associées<a name="RelatedTasks"></a>
 Pour utiliser des formats de données pour l'importation ou l'exportation en bloc  
 -   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   

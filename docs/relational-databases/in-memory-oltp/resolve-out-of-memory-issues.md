@@ -11,10 +11,10 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908448"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
@@ -31,7 +31,7 @@ ms.locfileid: "72908448"
 |[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». ... » lorsque la mémoire disponible est suffisante pour l’opération.|
 |[Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs)|Ce qu’il faut savoir avant d’utiliser l’OLTP en mémoire dans un environnement virtualisé.|
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
+##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
  Quand vous tentez de restaurer une base de données, le message d'erreur suivant peut s'afficher : « Échec de l'opération de restauration pour la base de données « *\<databaseName>*  » en raison d'une insuffisance de mémoire dans le pool de ressources *\<resourcePoolName>*  ». » Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données. 
    
 Le serveur sur lequel vous restaurez une base de données doit disposer de suffisamment de mémoire pour les tables à mémoire optimisée dans la sauvegarde de base de données. Dans le cas contraire, la base de données n’est pas mise en ligne et est marquée comme suspecte.  
@@ -70,19 +70,19 @@ Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur p
 -   Augmentez **max server memory**.  
     Pour plus d’informations sur la configuration de **max server memory**, consultez la rubrique [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
-##  <a name="bkmk_recoverFromOOM"></a> Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail  
+##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail  
  Évidemment, il est préférable de ne pas se trouver dans une situation d'insuffisance de mémoire. Une planification et une surveillance appropriées permettent souvent d'éviter ce type de problème. Néanmoins, même la meilleure des planifications ne suffit pas toujours pour anticiper ce qui va réellement se produire. Vous risquez donc d'être confronté à un problème d'insuffisance de mémoire à un moment ou un autre. Vous pouvez mettre fin à une situation d'insuffisance de mémoire en procédant aux deux étapes ci-dessous :  
   
 1.  [Ouvrir une connexion administrateur dédiée (DAC).](#bkmk_openDAC)  
   
 2.  [Prendre une mesure corrective](#bkmk_takeCorrectiveAction)  
 
-###  <a name="bkmk_openDAC"></a> Ouvrir une connexion administrateur dédiée (DAC).  
+###  <a name="open-a-dac-dedicated-administrator-connection"></a><a name="bkmk_openDAC"></a> Ouvrir une connexion administrateur dédiée (DAC).  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une connexion administrateur dédiée. Cette connexion DAC permet à un administrateur d’accéder à une instance active du moteur de base de données SQL Server afin de résoudre les problèmes sur le serveur, même si ce serveur ne répond pas aux autres connexions clientes. La connexion administrateur dédiée est disponible via l'utilitaire `sqlcmd` et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Pour obtenir des conseils sur l’utilisation de DAC par le biais de SSMS ou de `sqlcmd`, consultez [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> Prendre une mesure corrective  
+###  <a name="take-corrective-action"></a><a name="bkmk_takeCorrectiveAction"></a> Prendre une mesure corrective  
  Pour résoudre une situation d'insuffisance de mémoire, vous devez libérer de la mémoire existante en réduisant son utilisation ou mettre plus de mémoire à la disposition de vos tables en mémoire.  
   
 #### <a name="free-up-existing-memory"></a>Libérer de la mémoire existante  
@@ -135,14 +135,14 @@ GO
 >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
 > Pour plus d’informations, consultez la rubrique [Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs).  
   
-##  <a name="bkmk_PageAllocFailure"></a> Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition  
+##  <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a><a name="bkmk_PageAllocFailure"></a> Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition  
  Si vous obtenez le message d’erreur `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` dans le journal des erreurs quand la mémoire physique disponible est suffisante pour allouer la page, il peut être dû à la désactivation de Resource Governor. Lorsque Resource Governor est désactivé, MEMORYBROKER_FOR_RESERVE induit une sollicitation de la mémoire artificielle.  
   
  Pour corriger le problème, vous devez activer Resource Governor.  
   
  Consultez [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md) pour obtenir des informations sur les limites et les restrictions, ainsi que sur l’activation de Resource Governor à l’aide de l’Explorateur d’objets, sur les propriétés de Resource Governor et sur Transact-SQL.  
  
-## <a name="bkmk_VMs"></a>Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle
+## <a name="best-practices-using-in-memory-oltp-in-a-vm-environment"></a><a name="bkmk_VMs"></a>Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle
 La virtualisation de serveur vous permet de réduire les coûts d’exploitation et de capital informatique et d’optimiser l’efficacité informatique, grâce à des processus de configuration, de maintenance, de disponibilité, de sauvegarde et de récupération d’applications optimisés. Avec les progrès technologiques récents, les charges de travail de base de données complexes peuvent être consolidées plus aisément à l'aide de la virtualisation. Cette rubrique porte sur les bonnes pratiques relatives à l’utilisation d’OLTP en mémoire SQL Server dans un environnement virtualisé.
 
 ### <a name="memory-pre-allocation"></a>Préallocation de mémoire

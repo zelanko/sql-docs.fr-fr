@@ -36,10 +36,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286943"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
@@ -338,7 +338,7 @@ Quand le [niveau de compatibilité](../../t-sql/statements/alter-database-transa
 
 La mise à niveau de la base de données vers le niveau de compatibilité 110 et supérieur ne modifie pas les données utilisateur stockées sur le disque. Vous devez corriger manuellement ces données comme il convient. Par exemple, si vous avez utilisé SELECT INTO pour créer une table à partir d’une source contenant une expression de colonne calculée décrite ci-dessus, les données (utilisant le style 0) sont stockées à la place de la définition de colonne calculée. Vous devez mettre à jour manuellement ces données pour qu’elles correspondent au style 121.
   
-## <a name="BKMK_examples"></a> Exemples  
+## <a name="examples"></a><a name="BKMK_examples"></a> Exemples  
   
 ### <a name="a-using-both-cast-and-convert"></a>R. Utilisation simultanée de CAST et CONVERT  
 Ces exemples récupèrent le nom de chaque produit possédant un `3` comme premier chiffre de son prix et convertit sa valeur `ListPrice` en type `int`.
@@ -714,7 +714,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 |130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
 |131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
 
-### <a name="precedence-example"></a> K. Effets de la priorité des types de données dans les conversions autorisées  
+### <a name="k-effects-of-data-type-precedence-in-allowed-conversions"></a><a name="precedence-example"></a> K. Effets de la priorité des types de données dans les conversions autorisées  
 L’exemple suivant définit une variable de type VARCHAR, assigne une valeur de type entier à la variable, puis sélectionne une concaténation de la variable avec une chaîne.
 
 ```sql

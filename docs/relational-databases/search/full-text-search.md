@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72930274"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
@@ -40,7 +40,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  Les requêtes de texte intégral effectuent des recherches linguistiques sur des données texte dans des index de recherche en texte intégral ; pour cela, elles traitent les mots et les expressions à partir des règles d’une langue spécifique, telle que l’anglais ou le japonais. Les requêtes de texte intégral peuvent inclure des mots et des expressions simples ou plusieurs formes d'un mot ou d'une expression. Une requête de texte intégral retourne tous les documents qui contiennent au moins une correspondance (ce que l’on appelle aussi *résultat*). Une correspondance se produit lorsqu'un document cible contient tous les termes spécifiés dans la requête de texte intégral et satisfait toutes les autres conditions de recherche, telles que la distance entre les correspondances.    
   
-##  <a name="queries"></a> Requêtes de recherche en texte intégral  
+##  <a name="full-text-search-queries"></a><a name="queries"></a> Requêtes de recherche en texte intégral  
  Une fois que des colonnes ont été ajoutées à un index de recherche en texte intégral, les utilisateurs et les applications peuvent exécuter des requêtes de texte intégral sur le texte contenu dans ces colonnes. Ces requêtes peuvent être utilisées pour rechercher les éléments suivants :  
   
 -   Un ou plusieurs mots ou expressions spécifiques (*terme simple*)  
@@ -78,10 +78,10 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  Pour plus d’informations, consultez [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md).  
   
-##  <a name="like"></a> Comparaison des requêtes de recherche en texte intégral avec le prédicat LIKE
+##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> Comparaison des requêtes de recherche en texte intégral avec le prédicat LIKE
  Contrairement à la recherche en texte intégral, le prédicat [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionne uniquement sur les modèles de caractères. En outre, vous ne pouvez pas utiliser le prédicat LIKE pour interroger des données binaires mises en forme. De plus, une requête LIKE portant sur un important volume de données de texte non structurées est beaucoup plus lente qu'une requête de texte intégral équivalente exécutée sur les mêmes données. Une requête LIKE portant sur des millions de lignes de données de texte peut prendre plusieurs minutes pour retourner un résultat alors qu'une requête de texte intégral retourne en quelques secondes à peine le même résultat, en fonction du nombre de lignes retournées.  
   
-##  <a name="architecture"></a> Architecture de la recherche en texte intégral
+##  <a name="full-text-search-architecture"></a><a name="architecture"></a> Architecture de la recherche en texte intégral
  L'architecture de la recherche en texte intégral est constituée des processus suivants :  
   
 -   Processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe).  
@@ -94,7 +94,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  ![Architecture de la recherche en texte intégral](../../relational-databases/search/media/ifts-arch.gif "Architecture de la recherche en texte intégral")  
 
-###  <a name="sqlprocess"></a> Processus SQL Server  
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a> Processus SQL Server  
  Le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les composants suivants pour la recherche en texte intégral :  
   
 -   **Tables utilisateur.** Ces tables contiennent les données à indexer en texte intégral.  
@@ -116,7 +116,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
 -   **Gestionnaire du démon de filtre.** Le gestionnaire du démon de filtre est responsable de la surveillance de l'état du processus du démon du filtre du Moteur d'indexation et de recherche en texte intégral.  
   
-###  <a name="fdhostprocess"></a> Filter Daemon Host process  
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a> Filter Daemon Host process  
  L'hôte de démon de filtre est un processus démarré par le Moteur d'indexation et de recherche en texte intégral. Il exécute les composants de recherche en texte intégral ci-dessous, chargés d'accéder aux données des tables, de les filtrer et d'en effectuer l'analyse lexicale, ainsi que d'effectuer l'analyse lexicale et d'identifier la racine des mots de l'entrée de requête.  
   
  Les composants de l'hôte de démon de filtre sont les suivants :  
@@ -127,10 +127,10 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
 -   **Analyseurs lexicaux et générateurs de formes dérivées.** Un analyseur lexical est un composant spécifique d’une langue qui recherche des limites de mots en utilisant les règles lexicales de cette langue (*analyse lexicale*). Chaque analyseur lexical est associé à un composant de générateur de formes dérivées spécifique d'une langue qui conjugue des verbes et effectue des expansions fléchies. Au moment de l'indexation, l'hôte de démon de filtre utilise un analyseur lexical et un générateur de formes dérivées pour effectuer l'analyse linguistique sur les données textuelles d'une colonne de table donnée. La langue associée à une colonne de table dans l'index de recherche en texte intégral détermine l'analyseur lexical et le générateur de formes dérivées à utiliser pour indexer la colonne. Pour plus d’informations, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="processing"></a> Traitement de la recherche en texte intégral  
+##  <a name="full-text-search-processing"></a><a name="processing"></a> Traitement de la recherche en texte intégral  
  La recherche en texte intégral est rendue possible par le Moteur d'indexation et de recherche en texte intégral. Le Moteur d'indexation et de recherche en texte intégral assure deux rôles : prise en charge de l'indexation et prise en charge des requêtes.  
   
-###  <a name="indexing"></a> Processus d’indexation de texte intégral  
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a> Processus d’indexation de texte intégral  
  Au début d'une alimentation de texte intégral (également appelé analyse), le Moteur d'indexation et de recherche en texte intégral effectue l'envoi (push) de grands lots de données en mémoire et informe l'hôte de démon de filtre. L'hôte filtre et effectue une analyse lexicale des données et il convertit les données converties en listes de mots inversées. La recherche en texte intégral extrait ensuite les données converties des listes de mots, traite les données pour supprimer les mots vides et conserve les listes de mots pour un lot dans un ou plusieurs index inversés.  
   
  Pendant l’indexation des données stockées dans une colonne **varbinary(max)** ou **image** , le filtre qui implémente l’interface **IFilter** extrait le texte en fonction du format de fichier spécifié pour ces données (par exemple, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Dans certains cas, les composants de filtrage imposent que les données **varbinary(max)** ou **image** soient écrites dans le dossier de filtrage de données, au lieu d’être envoyées (push) en mémoire.  
@@ -141,7 +141,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  À la fin d'une alimentation, une fusion finale est déclenchée ; les fragments d'index sont fusionnés entre eux dans un index de recherche en texte intégral. Il en résulte une amélioration des performances des requêtes dans la mesure où seul l'index principal doit être interrogé au lieu des fragments d'index ; par ailleurs, les statistiques de score sont plus appropriées pour un classement en fonction de la pertinence.  
   
-###  <a name="querying"></a> Processus d’interrogation de texte intégral  
+###  <a name="full-text-querying-process"></a><a name="querying"></a> Processus d’interrogation de texte intégral  
  Le processeur de requêtes passe les parties de texte intégral d'une requête au Moteur d'indexation et de recherche en texte intégral à des fins de traitement. Le Moteur d'indexation et de recherche en texte intégral effectue l'analyse lexicale et procède éventuellement à des expansions du dictionnaire des synonymes, à la recherche de radical et au traitement des mots vides (mots parasites). Ensuite, les parties de texte intégral de la requête sont représentées sous forme d'opérateurs SQL, essentiellement comme des fonctions table multi-diffusion. Au cours de l'exécution de la requête, ces fonctions table multi-diffusion accèdent à l'index inversé pour extraire les résultats corrects. Les résultats sont alors retournés au client ou bien ils font l'objet d'un traitement supplémentaire avant d'être retournés au client.  
 
 ## <a name="full-text-index-architecture"></a>Architecture des index de recherche en texte intégral
@@ -151,7 +151,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
 Un seul index de recherche en texte intégral est autorisé par table. Pour qu'un index de recherche en texte intégral puisse être créé sur une table, cette dernière doit posséder une colonne d'index unique, qui n'accepte pas les valeurs Null. Vous pouvez créer un index de recherche en texte intégral sur les colonnes de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**et **varbinary(max)** peut être indexé pour la recherche en texte intégral. Lorsque vous créez un index de recherche en texte intégral sur une colonne de type de données  **varbinary**, **varbinary(max)** , **image**ou **xml** , vous devez spécifier une colonne de type. Une *colonne de type* est une colonne de table dans laquelle vous stockez l’extension de fichier (.doc, .pdf, .xls, etc.) du document dans chaque ligne.  
 
-###  <a name="structure"></a> Structure d’index de recherche en texte intégral  
+###  <a name="full-text-index-structure"></a><a name="structure"></a> Structure d’index de recherche en texte intégral  
  La compréhension de la structure d'un index de recherche en texte intégral vous permet de comprendre également le fonctionnement du Moteur d'indexation et de recherche en texte intégral. Cette rubrique utilise l'extrait suivant de la table **Document** dans [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] comme exemple de table. L'extrait suivant montre deux colonnes, la colonne **DocumentID** et la colonne **Title** , ainsi que trois lignes provenant de cette table.  
   
  Pour cet exemple, il faut partir de l’hypothèse qu’un index de recherche en texte intégral a été créé sur la colonne **Title** .  
@@ -195,7 +195,7 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
  La colonne **Occurrence** contient une valeur entière. Pour chaque valeur DocId, il existe une liste de valeurs d'occurrences qui correspondent aux décalages de mots relatifs du mot clé spécifique contenu dans DocId. Les valeurs d'occurrences servent à déterminer les correspondances d'expressions ou de proximité, par exemple lorsque des expressions ont des valeurs d'occurrences adjacentes numériquement. Elles servent également à calculer les scores de pertinence ; par exemple, le nombre d'occurrences d'un mot clé dans DocId peut être utilisé pour l'établissement d'un score.   
   
-###  <a name="fragments"></a> Fragments d’index de recherche en texte intégral  
+###  <a name="full-text-index-fragments"></a><a name="fragments"></a> Fragments d’index de recherche en texte intégral  
  L'index de recherche en texte intégral logique est habituellement fractionné entre plusieurs tables internes. Chaque table interne est appelé fragment d'index de recherche en texte intégral. Quelques-uns de ces fragments peuvent contenir des données plus récentes que d'autres. Par exemple, si un utilisateur met à jour la ligne suivante dont DocId est 3 et que la table effectue un suivi automatique des modifications, un nouveau fragment est créé.  
   
 |DocumentID|Intitulé|  
@@ -238,7 +238,7 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
 |L’ajout de données aux index de recherche en texte intégral, opération que l’on appelle *remplissage*, doit être demandé soit dans le cadre de la planification, soit par le biais d’une requête spécifique, ou peut intervenir automatiquement lors de l’ajout de nouvelles données.|Sont mis à jour automatiquement lorsque les données sur lesquelles ils sont fondés sont modifiées, mises à jour ou supprimées.|  
 |Sont groupés à l'intérieur d'une même base de données dans un ou plusieurs catalogues de texte intégral.|Ne sont pas groupés.|  
 
-##  <a name="components"></a> Prise en charge des langues et composants linguistiques de la recherche en texte intégral
+##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> Prise en charge des langues et composants linguistiques de la recherche en texte intégral
  La recherche en texte intégral prend en charge environ 50 langues, dont l'anglais, l'espagnol, le chinois, le japonais, l'arabe, le bengali et l'hindi. Pour obtenir une liste complète des langues de texte intégral prises en charge, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Chacune des colonnes contenues dans l'index de recherche en texte intégral est associée à un identificateur de paramètres régionaux (LCID) Microsoft Windows qui représente une langue prise en charge par la recherche en texte intégral. Par exemple, le LCID 1033 correspond à l'anglais américain et le LCID 2057 à l'anglais britannique. Pour chaque langue de texte intégral prise en charge, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des composants linguistiques qui acceptent l'indexation et l'interrogation des données de texte intégral qui sont stockées dans cette langue.  
   
  Les composants spécifiques à une langue sont les suivants :  

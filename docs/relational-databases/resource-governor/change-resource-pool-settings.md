@@ -13,10 +13,10 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8549b5a3a1675353ad0adce42fc63a460f893cae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905015"
 ---
 # <a name="change-resource-pool-settings"></a>Modifier les paramètres de pool de ressources
@@ -28,17 +28,17 @@ ms.locfileid: "72905015"
   
 -   **Pour modifier les paramètres d’un pool de ressources avec :**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Le pourcentage maximal de l'UC doit être supérieur ou égal au pourcentage minimal de l'UC. Le pourcentage maximal de mémoire doit être supérieur ou égal au pourcentage minimal de mémoire.  
   
  La somme des pourcentages d'UC minimal et de mémoire minimal pour tous les pools de ressources ne doit pas dépasser 100.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La modification des paramètres du pool de ressources requiert l'autorisation CONTROL SERVER.  
   
-##  <a name="ChgRPProp"></a> Modifier les paramètres du pool de ressources à l'aide de SQL Server Management Studio  
+##  <a name="change-resource-pool-settings-using-sql-server-management-studio"></a><a name="ChgRPProp"></a> Modifier les paramètres du pool de ressources à l'aide de SQL Server Management Studio  
  **Pour modifier les paramètres du pool de ressources à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l’Explorateur d’objets et développez de manière récursive le nœud **Gestion** jusqu’à **Pools de ressources**.  
@@ -51,7 +51,7 @@ ms.locfileid: "72905015"
   
 5.  Cliquez sur **OK**pour enregistrer les modifications.  
 
-##  <a name="ChgRPTSQL"></a> Modifier les paramètres du pool de ressources à l'aide de Transact-SQL  
+##  <a name="change-resource-pool-settings-using-transact-sql"></a><a name="ChgRPTSQL"></a> Modifier les paramètres du pool de ressources à l'aide de Transact-SQL  
  **Pour modifier les paramètres du pool de ressources à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Exécutez l’instruction **ALTER RESOURCE POOL** ou **ALTER EXTERNAL RESOURCE POOL** en spécifiant les valeurs de propriétés à modifier.  

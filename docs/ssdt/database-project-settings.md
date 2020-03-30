@@ -41,10 +41,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241681"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
@@ -81,7 +81,7 @@ Vous utilisez des paramètres de projet de base de données pour contrôler des 
   
 3.  Cliquez sur l'onglet **Paramètres du projet** . Vous pouvez à présent configurer les propriétés générales de votre projet de base de données. Notez la disponibilité des différents onglets (représentant différentes catégories) dans le volet gauche.  
   
-## <a name="bkmk_proj_settings"></a>Paramètres du projet  
+## <a name="project-settings"></a><a name="bkmk_proj_settings"></a>Paramètres du projet  
 Les paramètres du tableau suivant s'appliquent à toutes les configurations de ce projet de base de données.  
   
 |Champ|Valeur par défaut|Description|  
@@ -97,7 +97,7 @@ Les paramètres du tableau suivant s'appliquent à toutes les configurations de 
 |Valider la casse des identificateurs|Oui|Spécifie si la casse des identificateurs dans les objets SQL du projet est validée lors de la génération du projet. Cette option s'applique aux projets de base de données qui spécifient un classement respectant la casse pour la base de données.|  
 |Paramètres de base de données|Paramètres par défaut basés sur les paramètres de configuration standard d'une base de données.|Le mode de classement et les paramètres au niveau de la base de données pour une base de données SQL Server sont des exemples de paramètres que vous pouvez spécifier.|  
   
-## <a name="bkmk_evf"></a>Vérification Transact-SQL étendue  
+## <a name="extended-transact-sql-verification"></a><a name="bkmk_evf"></a>Vérification Transact-SQL étendue  
   
 > [!IMPORTANT]  
 > La fonctionnalité Vérification Transact-SQL étendue sera supprimée de la prochaine version de fonctionnalité de SQL Server Data Tools et de la prochaine version majeure de Visual Studio.  
@@ -156,12 +156,12 @@ La fonctionnalité de vérification étendue peut également être utilisée lor
 ### <a name="special-considerations-for-collations"></a>Considérations spéciales relatives aux classements  
 Pour plus d'informations concernant les classements dans les bases de données partiellement autonomes, consultez [Classements de base de données autonome](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
   
-## <a name="bkmk_sqlclr"></a>SQLCLR  
+## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
 Pour plus d'informations sur les options d'assembly, consultez [Boîte de dialogue Informations de l'assembly](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
   
 Pour plus d'informations sur la signature, consultez la section **Signature de l'assembly** de la rubrique [Page Signature, Concepteur de projets](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
-## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR et Build SQLCLR  
+## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR et Build SQLCLR  
 Les pages de propriétés **SQLCLR** et **Build SQLCLR** contiennent de nombreux paramètres d'utilisation des objets CLR SQL dans votre projet. Plus particulièrement, la page de propriétés **SQLCLR** dispose d'un paramètre de niveau d'autorisation pour définir les autorisations sur l'assembly SQLCLR. Elle comprend aussi le paramètre Générer le DDL pour contrôler si le DDL des objets SQLCLR ajoutés au projet doit être généré. La page de propriétés **Build** SQLCLR contient toutes les options du compilateur que vous pouvez définir pour configurer la compilation du code SQLCLR dans le projet.  
   
 La page de propriétés **Build SQLCLR** contient des paramètres de build avancés pour la génération de vos objets CLR SQL. Différentes options sont fournies en fonction du langage (VB ou C#)) utilisé pour coder les objets SQL CLR.  
@@ -171,7 +171,7 @@ La page de propriétés **Build SQLCLR** contient des paramètres de build avanc
 2.  Si l'objet est écrit en VB, sélectionnez d'abord VB dans la liste déroulante **Langage** , puis cliquez sur le bouton **Avancé** . La description des options VB est disponible dans l'article [Boîte de dialogue Paramètres avancés du compilateur (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
 
-## <a name="bkmk_build"></a>Build  
+## <a name="build"></a><a name="bkmk_build"></a>Build  
 Vous pouvez choisir une configuration de build pour chaque projet de base de données dans votre solution. Par défaut il n'existe qu'une seule configuration, mais vous pouvez ajouter des configurations personnalisées. Vous pouvez décider de procéder ainsi, par exemple, si vous voulez une configuration personnalisée dans laquelle vous supprimez toujours la base de données, puis la recréez. Dans les solutions qui contiennent différents types de projets, vous pouvez créer une configuration de solution personnalisée contenant une configuration de build spécifique pour chaque projet.  
   
 #### <a name="to-specify-a-build-configuration-for-a-solution"></a>Pour spécifier une configuration de build pour une solution  
@@ -197,14 +197,14 @@ Les paramètres du tableau suivant s'appliquent aux configurations de build de c
 |Traiter les avertissements Transact\-SQL comme des erreurs|Non|Spécifie si un avertissement Transact\-SQL doit provoquer l'annulation du processus de génération et de déploiement. Si cette case est décochée, des avertissements apparaissent mais le processus de génération et de déploiement continue. Ce paramètre est spécifique au projet, et non à l'utilisateur, et il est stocké dans le fichier .sqlproj.|  
 |Supprimer les avertissements Transact\-SQL|Vide|Spécifie une liste de numéros d'avertissement, délimitée par des virgules ou des points-virgules, qui identifient des avertissements supprimés.<br /><br />Les avertissements supprimés n'apparaissent pas dans la fenêtre **Liste d'erreurs** et n'affectent pas le succès de la génération, même si vous activez la case à cocher **Traiter les avertissements Transact\-SQL comme des erreurs**.|  
   
-## <a name="bkmk_sqlcmd_variables"></a>Variables SQLCMD  
+## <a name="sqlcmd-variables"></a><a name="bkmk_sqlcmd_variables"></a>Variables SQLCMD  
 Dans les projets de base de données SQL Server, utilisez les variables SQLCMD pour fournir une substitution dynamique à utiliser en vue du débogage ou de la publication. Entrez le nom de la variable et les valeurs, et pendant la génération les valeurs seront remplacées. S'il n'y a aucune valeur locale, la valeur par défaut est utilisée. En entrant ces variables dans les propriétés du projet, elles seront automatiquement proposées dans la publication et sont stockées dans les profils de publication. Vous pouvez extraire les valeurs des variables du projet dans la publication à l'aide du bouton Charger des valeurs.  
   
 Assurez-vous que les variables appropriées sont entrées dans les propriétés du projet, car ces variables ne sont pas validées par rapport à un script dans le projet et ne sont pas utilisées dans un script renseigné automatiquement.  
   
 En outre, la publication des lignes de commande vous permet de remplacer ces valeurs de la ligne de commande ou d'utiliser un profil.  
   
-## <a name="bkmk_build_events"></a>Événements de build  
+## <a name="build-events"></a><a name="bkmk_build_events"></a>Événements de build  
 Vous pouvez utiliser ces paramètres pour spécifier une ligne de commande à exécuter avant le démarrage de l'opération de génération et une ligne de commande à exécuter au terme de l'opération de génération.  
   
 |Champ|Valeur par défaut|Description|  
@@ -213,7 +213,7 @@ Vous pouvez utiliser ces paramètres pour spécifier une ligne de commande à ex
 |Ligne de commande d'événement après génération|None|Spécifie la ligne de commande à exécuter après la génération du projet. Cliquez sur **Modifier post-build** pour modifier la ligne de commande.|  
 |Exécuter l'événement post-build|En cas de build réussie|Spécifie si la ligne de commande post-build doit être exécutée toujours, uniquement en cas de génération réussie ou uniquement lorsque la génération a mis à jour la sortie de projet (le script de compilation).|  
   
-## <a name="bkmk_debug"></a>Déboguer  
+## <a name="debug"></a><a name="bkmk_debug"></a>Déboguer  
 Vous pouvez utiliser ces paramètres pour contrôler le débogage de votre projet de base de données.  
   
 |Champ|Valeur par défaut|Description|  
@@ -227,10 +227,10 @@ Vous pouvez utiliser ces paramètres pour contrôler le débogage de votre proje
 |Ne pas utiliser d'instructions ALTER ASSEMBLY pour mettre à jour les types CLR|Non|Spécifie si les instructions ALTER ASSEMBLY permettent de mettre à jour des types CLR (Common Language Run-time) ou si l'objet qui instancie le type CLR doit plutôt être supprimé et recréé lors du déploiement de modifications.|  
 |Avancé...|Non|Bouton de commande qui vous permet de spécifier les options qui contrôlent les événements et le comportement du déploiement.|  
   
-## <a name="bkmk_ref_paths"></a>Chemins d'accès des références  
+## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>Chemins d'accès des références  
 Vous pouvez utiliser cette page pour définir les variables de serveur et de base de données associées à une référence entre bases de données. En outre, vous pouvez spécifier les valeurs de ces variables. Pour plus d'informations, consultez [Utilisation de références dans les projets de base de données](https://msdn.microsoft.com/library/bb386242.aspx).  
   
-## <a name="bkmk_code_analysis"></a>Analyse du code  
+## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>Analyse du code  
 Vous pouvez utiliser l'analyse du code pour découvrir d'éventuels problèmes dans vos scripts, tels que les problèmes de conception, d'attribution de nom et de performances. Les règles pour les projets de base de données sont organisées en ensembles de règles prédéfinis qui ciblent des zones spécifiques, et vous pouvez activer ou désactiver une règle dans l'onglet **Analyse du code** de la page de propriétés **Propriétés du projet** . Dans le même onglet, vous pouvez spécifier que l'analyse du code soit exécutée automatiquement chaque fois qu'un projet est généré, ou si les avertissements doivent être traités comme des erreurs.  
   
 Pour utiliser l’analyse du code manuellement, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **Exécuter l’analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source comportant le problème. Pour afficher des informations supplémentaires et les corrections possibles d’un avertissement, utilisez le menu contextuel **Afficher de l’aide sur l’erreur**. Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](https://msdn.microsoft.com/library/dd172133.aspx).  

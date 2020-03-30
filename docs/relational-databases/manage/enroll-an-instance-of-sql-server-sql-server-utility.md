@@ -21,10 +21,10 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115422"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrire une instance de SQL Server (utilitaire SQL Server)
@@ -87,17 +87,17 @@ ms.locfileid: "68115422"
   
 -   [Inscription de l'instance de SQL Server](#Enrolling)  
   
-##  <a name="Welcome"></a> Introduction à l'Assistant d'inscription d'instance  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> Introduction à l'Assistant d'inscription d'instance  
  Pour lancer l’Assistant, développez l’arborescence de l’Explorateur de l’utilitaire sur un point de contrôle d’utilitaire, cliquez avec le bouton droit sur **Instances gérées** et sélectionnez **Ajouter une instance gérée…** .  
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Instance_name"></a> Spécifiez l'instance de SQL Server.  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Spécifiez l'instance de SQL Server.  
  Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…** . Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance. Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Connection_dialog"></a> Boîte de dialogue Connexion  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Boîte de dialogue Connexion  
  Dans la boîte de dialogue Se connecter au serveur, vérifiez les informations type de serveur, nom de l'ordinateur et nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ ms.locfileid: "68115422"
   
  Pour continuer, cliquez sur **Se connecter…** .  
   
-##  <a name="Proxy_configuration"></a> Compte du jeu d'éléments de collecte de l'utilitaire  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> Compte du jeu d'éléments de collecte de l'utilitaire  
  Spécifiez un compte de domaine Windows pour exécuter le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce compte est utilisé comme compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également utiliser le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existant. Pour satisfaire aux exigences de validation, suivez les indications suivantes pour spécifier le compte.  
   
  Si vous indiquez l'option de compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent :  
@@ -114,7 +114,7 @@ ms.locfileid: "68115422"
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Validation_rules"></a> Validation d'instance de SQL Server  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> Validation d'instance de SQL Server  
  Dans cette version finale, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à inscrire dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit remplir les conditions suivantes :  
   
 |Condition|Action corrective|  
@@ -141,7 +141,7 @@ ms.locfileid: "68115422"
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Summary"></a> Résumé de l'inscription d'instance  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> Résumé de l'inscription d'instance  
  La page Résumé répertorie les informations concernant l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à ajouter à l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Paramètres de l'instance gérée :  
@@ -152,7 +152,7 @@ ms.locfileid: "68115422"
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Enrolling"></a> Inscription de l'instance de SQL Server  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> Inscription de l'instance de SQL Server  
  La page Inscription fournit l'état de l'opération :  
   
 -   Préparation de l'instance pour l'inscription.  
@@ -183,7 +183,7 @@ ms.locfileid: "68115422"
   
  Pour supprimer des instances gérées de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sélectionnez **Instances gérées** dans le volet **Navigation de l’Explorateur de l’utilitaire** pour remplir le mode Liste d’instances gérées, cliquez avec le bouton droit sur le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans **Contenu de l’Explorateur de l’utilitaire** en mode Liste, puis sélectionnez **Rendre une instance non managée**.  
   
-##  <a name="PowerShell_enroll"></a> Inscription d'une Instance de SQL Server à l'aide de PowerShell  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> Inscription d'une Instance de SQL Server à l'aide de PowerShell  
  Utilisez l'exemple suivant pour inscrire une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant :  
   
 ```  

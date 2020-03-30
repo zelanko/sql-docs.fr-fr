@@ -20,10 +20,10 @@ ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d07892e1a47025107205f590d6a41aebebbb571a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071566"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68071566"
 
 Cette fonction retourne l’état de la dernière instruction FETCH effectuée sur l’un des curseurs actuellement ouverts par la connexion.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

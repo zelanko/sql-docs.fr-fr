@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892583"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Mettre à niveau Power Pivot pour SharePoint
@@ -58,7 +58,7 @@ ms.locfileid: "68892583"
   
 -   Le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) s’installe côte à côte avec les versions antérieures. Par exemple le complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé dans le dossier `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`.  
   
-##  <a name="bkmk_prereq"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Conditions préalables  
  **autorisations**  
   
 -   Vous devez être administrateur de la batterie de serveurs pour mettre à niveau une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Vous devez être administrateur local pour exécuter le programme d'installation de SQL Server.  
@@ -75,7 +75,7 @@ ms.locfileid: "68892583"
   
 -   Si l'installation existante exécute SharePoint 2010, installez SharePoint 2010 Service Pack 2 avant la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Pour plus d'informations, consultez [Service Pack 2 pour Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Utilisez la commande PowerShell `(Get-SPfarm).BuildVersion.ToString()` pour vérifier la version. Pour référencer la version de la build à la date de version finale, consultez [Numéros de build SharePoint 2010](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
-##  <a name="bkmk_uprgade_sharepoint2013"></a> Mettre à niveau une batterie de serveurs SharePoint 2013 existante  
+##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a> Mettre à niveau une batterie de serveurs SharePoint 2013 existante  
  Pour mettre à niveau [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déployé dans SharePoint 2013, procédez comme suit :  
   
  ![Mettre à niveau PowerPivot pour SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "Mettre à niveau PowerPivot pour SharePoint 2013")  
@@ -139,7 +139,7 @@ ms.locfileid: "68892583"
   
 5.  Vérifiez que la mise à niveau a réussi en effectuant les étapes postérieures à la mise à niveau et en vérifiant la version des serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie. Pour plus d’informations, consultez [Tâches de vérification consécutives à la mise à niveau](#verify) dans cet article et la section suivante.  
   
-##  <a name="bkmk_uprgade_sharepoint2010"></a> Mettre à niveau une batterie de serveurs SharePoint 2010 existante  
+##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a> Mettre à niveau une batterie de serveurs SharePoint 2010 existante  
  Pour mettre à niveau [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déployé dans SharePoint 2010, procédez comme suit :  
   
  ![Mettre à niveau PowerPivot pour SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "Mettre à niveau PowerPivot pour SharePoint 2010")  
@@ -231,13 +231,13 @@ ms.locfileid: "68892583"
   
      Pour toutes les autres erreurs, vérifiez les journaux ULS. Pour plus d’informations, consultez [Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;Power Pivot pour SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
-##  <a name="bkmk_workbooks"></a> Classeurs  
+##  <a name="workbooks"></a><a name="bkmk_workbooks"></a> Classeurs  
  La mise à niveau d’un serveur ne met pas nécessairement à niveau les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui s’y exécutent, mais les classeurs plus anciens créés dans la version précédente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel continuent de fonctionner comme avant, avec les fonctionnalités disponibles dans cette version. Les classeurs restent fonctionnels, car un serveur mis à niveau dispose de la version du fournisseur OLE DB Analysis Services qui faisait partie de l'installation antérieure.  
   
-##  <a name="bkmk_datarefresh"></a> Actualisation des données  
+##  <a name="data-refresh"></a><a name="bkmk_datarefresh"></a> Actualisation des données  
  La mise à niveau a un impact sur les opérations d'actualisation des données. L'actualisation des données planifiée sur le serveur est disponible uniquement pour les classeurs qui correspondent à la version du serveur. Si vous hébergez des classeurs de la version antérieure, il est possible que l'actualisation des données ne fonctionne plus pour ces classeurs. Pour réactiver l'actualisation des données, vous devez mettre à niveau les classeurs. Vous pouvez mettre à niveau chaque classeur manuellement dans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel ou activer la mise à niveau automatique pour la fonctionnalité d’actualisation des données dans SharePoint 2010. La mise à niveau automatique effectue la mise à niveau d'un classeur vers la version actuelle avant l'actualisation des données, ce qui permet aux opérations d'actualisation des données de respecter la planification établie.  
   
-##  <a name="bkmk_verify_versions"></a> Vérifier les versions des composants et services Power Pivot  
+##  <a name="verify-the-versions-of-power-pivot-components-and-services"></a><a name="bkmk_verify_versions"></a> Vérifier les versions des composants et services Power Pivot  
  Toutes les instances du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et d'Analysis Services doivent avoir la même version. Pour vérifier que tous les composants serveur utilisent la même version, contrôlez les informations de version des éléments suivants :  
   
 ### <a name="verify-the-version-of-power-pivot-solutions-and-the-power-pivot-system-service"></a>Vérifier la version des solutions Power Pivot et du service système Power Pivot  
@@ -312,14 +312,14 @@ Get-PowerPivotSystemService
   
 3.  Vérifiez que vous avez la version 13.0.\<numéro de build>.  
   
-##  <a name="geminifarm"></a> Mise à niveau de plusieurs serveurs Power Pivot pour SharePoint dans une batterie de serveurs SharePoint  
+##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> Mise à niveau de plusieurs serveurs Power Pivot pour SharePoint dans une batterie de serveurs SharePoint  
  Dans une topologie à plusieurs serveurs qui inclut plusieurs serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , toutes les instances de serveur et tous les composants doivent avoir la même version. Le serveur qui exécute la version la plus récente du logiciel définit le niveau pour tous les serveurs de la batterie. Si vous ne mettez à niveau que quelques serveurs, ceux qui exécutent des versions antérieures du logiciel deviendront indisponibles jusqu'à ce qu'ils soient également mis à niveau.  
   
  Une fois le premier serveur à niveau, les serveurs supplémentaires qui n'ont pas encore été mis à niveau **deviennent indisponibles**. Leur disponibilité est restaurée une fois que tous les serveurs sont au même niveau.  
   
  L’installation de SQL Server met à niveau les fichiers de solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en place sur l’ordinateur physique, mais la mise à niveau des solutions utilisées par la batterie exige d’utiliser l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] décrit dans une section précédente de cet article.  
   
-##  <a name="qfe"></a> Application d’un correctif QFE à une instance Power Pivot de la batterie de serveurs  
+##  <a name="applying-a-qfe-to-a-power-pivot-instance-in-the-farm"></a><a name="qfe"></a> Application d’un correctif QFE à une instance Power Pivot de la batterie de serveurs  
  L’application d’un correctif à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint met à jour les fichiers programme existants vers une version plus récente qui inclut le correctif d’un problème spécifique. Lors de l'application d'un correctif QFE à une topologie à plusieurs serveurs, il n'y a aucun serveur principal par lequel commencer obligatoirement. Vous pouvez commencer par n’importe quel serveur tant que vous appliquez le même correctif QFE aux autres serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie.  
   
  Lorsque vous appliquez le correctif QFE, vous devez également effectuer une étape de configuration qui met à jour les informations de version du serveur dans la base de données de configuration de la batterie de serveurs. La version du serveur corrigé devient la nouvelle version attendue pour la batterie. Tant que le correctif QFE n’est pas appliqué et configuré sur tous les ordinateurs, les instances de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint pour lesquelles le correctif QFE n’est pas disponible ne peuvent pas traiter les demandes de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -343,7 +343,7 @@ Get-PowerPivotSystemService
   
  Pour vérifier les informations de version des services de la batterie de serveurs, utilisez la page **Vérifier l'état d’installation du correctif et du produit** dans la section Gestion des mises à niveau et des correctifs de l'Administration centrale.  
   
-##  <a name="verify"></a> Tâches de vérification consécutives à la mise à niveau  
+##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a> Tâches de vérification consécutives à la mise à niveau  
  Une fois la mise à niveau terminée, utilisez les étapes suivantes pour vérifier que le serveur est opérationnel.  
   
 |Tâche|Lien|  

@@ -11,10 +11,10 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822181"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Résoudre les problèmes : Dépassement de RPO du groupe de disponibilité
@@ -29,7 +29,7 @@ ms.locfileid: "74822181"
   
 2.  [Un goulot d’étranglement des E/S disque ralentit le renforcement du journal sur le réplica secondaire](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a> Une latence réseau élevée ou un débit réseau faible provoque l’accumulation des journaux sur le réplica principal  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> Une latence réseau élevée ou un débit réseau faible provoque l’accumulation des journaux sur le réplica principal  
  Le plus souvent, les bases de données dépassent le RPO car elles ne peuvent pas être envoyées au réplica secondaire suffisamment vite.  
   
 ### <a name="explanation"></a>Explication  
@@ -63,7 +63,7 @@ ms.locfileid: "74822181"
 Pour remédier à ce problème, essayez d’augmenter votre bande passante réseau ou de supprimer/réduire le trafic réseau inutile.  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a> Un goulot d’étranglement des E/S disque ralentit le renforcement du journal sur le réplica secondaire  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a> Un goulot d’étranglement des E/S disque ralentit le renforcement du journal sur le réplica secondaire  
  Selon le déploiement du fichier de base de données, le renforcement du journal peut ralentir en raison d’une contention au niveau des E/S avec la charge de travail de création de rapports.  
   
 ### <a name="explanation"></a>Explication  

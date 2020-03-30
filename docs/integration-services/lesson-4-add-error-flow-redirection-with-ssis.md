@@ -11,10 +11,10 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0117f867363a9536887ff1b67e1960170317d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295934"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Leçon 4 : Ajouter une redirection de flux d’erreurs avec SSIS
@@ -33,7 +33,7 @@ Pour gérer les données d’erreur, vous ajoutez et configurez une destination 
   
 Avant que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n’écrive les données d’erreur dans le fichier, vous incluez un composant Script qui obtient les descriptions d’erreur. Vous reconfigurez ensuite la transformation Lookup Currency Key pour rediriger vers la transformation Script toutes les données qui n’ont pas pu être traitées.  
   
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 > [!NOTE]
 > Si ce n’est déjà fait, consultez les [prérequis de la leçon 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).

@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244089"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Comment gérer des notebooks dans Azure Data Studio
@@ -23,7 +23,7 @@ ms.locfileid: "75244089"
 
 Cet article vous explique comment ouvrir et enregistrer des fichiers de notebooks dans Azure Data Studio avec SQL Server. Il montre également comment modifier la connexion à votre cluster Big Data SQL Server.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Cet article part du principe que vous disposez déjà d’un notebook à utiliser dans Azure Data Studio. Si vous voulez créer un notebook, consultez [Guide pratique pour utiliser des notebooks dans SQL Server](notebooks-guidance.md). Pour utiliser des notebooks dans Azure Data Studio, vous devez respecter les prérequis suivants :
 

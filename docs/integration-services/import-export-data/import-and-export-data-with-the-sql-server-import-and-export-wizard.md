@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287433"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server
@@ -45,7 +45,7 @@ Si vous souhaitez exécuter l’Assistant, mais que [!INCLUDE[msCoName](../../in
     \- ou \-
 -   **Voir un exemple.** Pour avoir un rapide aperçu des différents écrans qui s’affichent dans une session normale, étudiez cet exemple facile tenant sur une seule page : [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
-##  <a name="wizardSources"></a> Quelles sources et quelles destinations puis-je utiliser ?  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> Quelles sources et quelles destinations puis-je utiliser ?  
  L’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut copier des données à destination et en provenance des sources de données répertoriées dans le tableau suivant. Pour vous connecter à certaines de ces sources de données, vous pouvez être amené à télécharger et installer des fichiers supplémentaires.
  
 | Source de données | Dois-je télécharger des fichiers supplémentaires ? |
@@ -87,7 +87,7 @@ Pour plus d’informations sur la connexion à une source de données qui n’es
 > [!TIP]
 > Pour afficher la documentation sur une page ou une boîte de dialogue déterminée de l’Assistant, appuyez sur la touche F1 à partir de cette page.   
   
-##  <a name="wizardSSIS"></a> L’Assistant utilise SQL Server Integration Services (SSIS)  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> L’Assistant utilise SQL Server Integration Services (SSIS)  
  L’Assistant utilise SQL Server Integration Services (SSIS) pour copier les données. SSIS est un outil d’extraction, de transformation et de chargement (ETL) des données. Les pages de l’Assistant utilisent en partie le langage de SSIS.
   
  Dans SSIS, l’unité de base est le **package**. L’Assistant crée un package SSIS en mémoire à mesure que vous parcourez les pages de l’Assistant et spécifiez les options.    

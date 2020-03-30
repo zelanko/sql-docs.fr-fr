@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041199"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutoriel : Création d'un rapport de tableau de base (Générateur de rapports)
@@ -26,7 +26,7 @@ Durée estimée pour effectuer ce tutoriel : 20 minutes.
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Créer un rapport à l’aide d’un Assistant  
+## <a name="1-create-a-report-using-a-wizard"></a><a name="CreateTable"></a>1. Créer un rapport à l’aide d’un Assistant  
 Créez un rapport de tableau avec l’Assistant Tableau ou matrice. Il existe deux modes : création de rapport et création de dataset partagé. En mode création de rapport, vous pouvez spécifier les données dans le volet des données de rapport et la disposition du rapport dans l'aire de conception. En mode création de dataset partagé, vous créez des requêtes de dataset à partager avec d'autres utilisateurs. Dans ce didacticiel, vous allez utiliser le mode création de rapport.  
   
 ### <a name="to-create-a-report"></a>Pour créer un rapport  
@@ -41,7 +41,7 @@ Créez un rapport de tableau avec l’Assistant Tableau ou matrice. Il existe de
   
 3.  Dans le volet droit, cliquez sur **Assistant Tableau ou matrice**.  
   
-## <a name="DataConnection"></a>1a. Spécifier une connexion de données dans l'Assistant Tableau  
+## <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. Spécifier une connexion de données dans l'Assistant Tableau  
 Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En règle générale, vous obtenez les informations de connexion et le type d'informations d'identification à utiliser auprès du propriétaire de la source de données. Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport.  
   
 Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation des sources de données partagées, consultez [Autres procédures pour l’obtention d’une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -76,7 +76,7 @@ Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pou
   
 9. Cliquez sur **Suivant**.  
   
-## <a name="Query"></a>1b. Créer une requête dans l'Assistant Tableau  
+## <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. Créer une requête dans l'Assistant Tableau  
 Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 4.  Cliquez sur **Suivant**.  
   
-## <a name="Groups"></a>1c. Organiser les données en groupes dans l'Assistant Tableau  
+## <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. Organiser les données en groupes dans l'Assistant Tableau  
 Lorsque vous sélectionnez des champs à regrouper, vous concevez un tableau dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
   
 ### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -159,7 +159,7 @@ Lorsque vous sélectionnez des champs à regrouper, vous concevez un tableau don
   
 6.  Cliquez sur **Suivant**.  
   
-## <a name="Subtotals"></a>1d. Ajouter des lignes de sous-total et de total dans l'Assistant Tableau  
+## <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. Ajouter des lignes de sous-total et de total dans l'Assistant Tableau  
 Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lignes dans lesquelles afficher les valeurs agrégées des champs. Vous pouvez afficher toutes les données ou laisser l'utilisateur développer/réduire les données regroupées de manière interactive.  
   
 ### <a name="to-add-subtotals-and-totals"></a>Pour ajouter des sous-totaux et des totaux  
@@ -186,7 +186,7 @@ Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lign
   
 Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet Groupes de lignes affiche trois groupes de lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
-## <a name="FormatCurrency"></a>2. Mettre en forme les données en tant que devises  
+## <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2. Mettre en forme les données en tant que devises  
 Par défaut, les données de synthèse du champ Sales affichent un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire.   
   
 ### <a name="to-format-a-currency-field"></a>Pour mettre en forme un champ monétaire  
@@ -203,7 +203,7 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 Les valeurs de synthèse de Sales s'affichent sous forme de devises.  
   
-## <a name="FormatDate"></a>3. Mettre en forme les données de date  
+## <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3. Mettre en forme les données de date  
 Par défaut, le champ SalesDate affiche les informations de date et d’heure. Vous pouvez le mettre en forme de sorte qu'il n'affiche que la date.  
   
 ### <a name="to-format-a-date-field-as-the-default-format"></a>Pour appliquer à un champ de date le format par défaut  
@@ -242,7 +242,7 @@ Les valeurs de SalesDate s'affichent dans le format de date par défaut.
   
 La valeur de SalesDate affiche le nom du mois et non son chiffre.  
   
-## <a name="Width"></a>4. Modifier la largeur des colonnes  
+## <a name="4-change-column-widths"></a><a name="Width"></a>4. Modifier la largeur des colonnes  
 Par défaut, chaque cellule d'un tableau contient une zone de texte. Une zone de texte s'étend verticalement pour accueillir le texte lors du rendu de la page. Dans le rapport rendu, chaque ligne s'étend en fonction de la hauteur de la plus grande zone de texte rendue dans la ligne. La hauteur de la ligne dans l'aire de conception n'a aucun impact sur la hauteur de la ligne dans le rapport rendu.  
   
 Pour réduire l'espace vertical occupé par chaque ligne, augmentez la largeur de colonne afin d'accueillir le contenu attendu des zones de texte dans la colonne sur une seule ligne.  
@@ -259,7 +259,7 @@ Pour réduire l'espace vertical occupé par chaque ligne, augmentez la largeur d
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="Title"></a>5. Ajouter un titre de rapport  
+## <a name="5-add-a-report-title"></a><a name="Title"></a>5. Ajouter un titre de rapport  
 Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez utiliser la zone de texte placée automatiquement en haut du corps du rapport.  
   
 Vous pouvez améliorer le texte en appliquant différents types de styles de police, de tailles et de couleurs à des expressions et des caractères spécifiques. Pour plus d’informations, consultez [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -282,7 +282,7 @@ Vous pouvez améliorer le texte en appliquant différents types de styles de pol
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>6. Enregistrer le rapport  
+## <a name="6-save-the-report"></a><a name="Save"></a>6. Enregistrer le rapport  
 Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vous n'enregistrez pas le rapport sur le serveur de rapports, plusieurs fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] telles que les parties de rapports et les sous-rapports ne sont pas disponibles.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  
@@ -311,7 +311,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 4.  Cliquez sur **Enregistrer**.  
   
-## <a name="Export"></a>7. Exporter le rapport  
+## <a name="7-export-the-report"></a><a name="Export"></a>7. Exporter le rapport  
 Les rapports peuvent être exportés dans différents formats, par exemple, Microsoft Excel et les fichiers de valeurs séparées par des virgules (CSV). Pour plus d’informations, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 Dans ce didacticiel, vous allez exporter le rapport vers Excel et définir une propriété du rapport afin de fournir un nom personnalisé pour l'onglet de classeur.  

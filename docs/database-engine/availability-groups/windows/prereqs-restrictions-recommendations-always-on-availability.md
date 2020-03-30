@@ -20,10 +20,10 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831934"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
@@ -34,7 +34,7 @@ ms.locfileid: "76831934"
 > [!IMPORTANT]  
 >  Avant de déployer [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], nous vous recommandons de lire les sections de cette rubrique.  
     
-##  <a name="DotNetHotfixes"></a> Correctifs logiciels .Net prenant en charge les groupes de disponibilité  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Correctifs logiciels .Net prenant en charge les groupes de disponibilité  
  Selon les composants et les fonctionnalités [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que vous allez utiliser avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vous pourrez éventuellement avoir besoin d'installer des correctifs logiciels .Net supplémentaires identifiés dans le tableau suivant. Ces derniers peuvent être installés dans n'importe quel ordre.  
   
 ||Fonctionnalité dépendante|Correctif logiciel|Lien|  
@@ -42,7 +42,7 @@ ms.locfileid: "76831934"
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Le correctif pour .Net 3.5 SP1 ajoute une prise en charge au client SQL concernant les fonctionnalités Always On d’intention de lecture (read-intent), de lecture seule (readonly) et de basculement à plusieurs sous-réseaux (multisubnetfailover). Le correctif doit être installé sur chaque serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|ARTICLE 2654347 DE LA BASE DE CONNAISSANCES : [Correctif pour .Net 3.5 SP1 pour l’ajout d’une prise en charge des fonctionnalités Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
-###  <a name="SystemRequirements"></a> Liste de vérification : Configuration requise (système Windows)  
+###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> Liste de vérification : Configuration requise (système Windows)  
  Pour prendre en charge la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vérifiez que chaque ordinateur devant participer à un ou plusieurs groupes de disponibilité respecte les conditions requises fondamentales suivantes :  
   
 ||Condition requise|Lien|  
@@ -56,7 +56,7 @@ ms.locfileid: "76831934"
 > [!IMPORTANT]  
 >  Vérifiez que votre environnement est correctement configuré pour se connecter à un groupe de disponibilité. Pour plus d’informations, consultez [Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-##  <a name="ComputerRecommendations"></a> Recommandations pour les ordinateurs qui hébergent des réplicas de disponibilité (système Windows)  
+##  <a name="recommendations-for-computers-that-host-availability-replicas-windows-system"></a><a name="ComputerRecommendations"></a> Recommandations pour les ordinateurs qui hébergent des réplicas de disponibilité (système Windows)  
   
 -   **Systèmes comparables :**  Pour un groupe de disponibilité donné, tous les réplicas de disponibilité doivent s’exécuter sur des systèmes comparables qui peuvent gérer des charges de travail identiques.  
   
@@ -64,18 +64,18 @@ ms.locfileid: "76831934"
   
 -   **Espace disque suffisant :**  Chaque ordinateur sur lequel une instance de serveur héberge un réplica de disponibilité doit avoir suffisamment d’espace disque pour stocker toutes les bases de données dans le groupe de disponibilité. Gardez à l'esprit qu'à mesure que le volume des bases de données primaires croît, le volume des bases de données secondaires correspondantes augmente aussi.  
   
-###  <a name="PermissionsWindows"></a> Autorisations (système Windows)  
+###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> Autorisations (système Windows)  
  Pour administrer un cluster WSFC, l'utilisateur doit être administrateur système sur chaque nœud de cluster.  
   
  Pour plus d’informations sur le compte d’administration du cluster, consultez [Annexe A : Configuration requise pour le cluster de basculement](https://technet.microsoft.com/library/dd197454.aspx).  
   
-###  <a name="RelatedTasksWindows"></a> Tâches associées (système Windows)  
+###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> Tâches associées (système Windows)  
   
 |Tâche|Lien|  
 |----------|----------|  
 |Définissez la valeur de HostRecordTTL.|[Modifiez HostRecordTTL (à l'aide de Windows PowerShell)](#ChangeHostRecordTTLps)|  
   
-####  <a name="ChangeHostRecordTTLps"></a> Modifiez HostRecordTTL (à l'aide de Windows PowerShell)  
+####  <a name="change-the-hostrecordttl-using-windows-powershell"></a><a name="ChangeHostRecordTTLps"></a> Modifiez HostRecordTTL (à l'aide de Windows PowerShell)  
   
 1.  Ouvrez la fenêtre PowerShell via **Exécuter en tant qu’administrateur**.  
   
@@ -105,14 +105,14 @@ ms.locfileid: "76831934"
   
 -   [Commandes de ressource de cluster et applets de commande Windows PowerShell équivalentes](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-###  <a name="RelatedContentWS"></a> Contenu connexe (système Windows)  
+###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> Contenu connexe (système Windows)  
   
 -   [Configurer les paramètres DNS dans un cluster de basculement multisite](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
 -   [Enregistrement DNS avec ressource de nom réseau](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
-##  <a name="ServerInstance"></a> Conditions préalables requises et restrictions pour une instance de SQL Server  
+##  <a name="sql-server-instance-prerequisites-and-restrictions"></a><a name="ServerInstance"></a> Conditions préalables requises et restrictions pour une instance de SQL Server  
  Chaque groupe de disponibilité requiert un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui sont hébergés par les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Une instance de serveur donnée peut être une *instance autonome* ou une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*instance de cluster de basculement* (FCI).  
   
  **Dans cette section :**  
@@ -127,7 +127,7 @@ ms.locfileid: "76831934"
   
 -   [Contenu connexe](#RelatedContentSI)  
   
-###  <a name="PrerequisitesSI"></a> Liste de vérification : Prérequis (instance serveur)  
+###  <a name="checklist-prerequisites-server-instance"></a><a name="PrerequisitesSI"></a> Liste de vérification : Prérequis (instance serveur)  
   
 ||Configuration requise|Liens|  
 |-|------------------|-----------|  
@@ -141,7 +141,7 @@ ms.locfileid: "76831934"
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si des bases de données utilisant FILESTREAM doivent être ajoutées à un groupe de disponibilité, vérifiez que FILESTREAM est activé sur chaque instance de serveur qui hébergera un réplica de disponibilité pour le groupe de disponibilité.|[Activer et configurer FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si des bases de données autonomes doivent être ajoutées à un groupe de disponibilité, vérifiez que l’option de serveur **contained database authentication** a la valeur **1** sur chaque instance de serveur qui hébergera un réplica de disponibilité pour le groupe de disponibilité.|[Authentification de la base de données autonome (option de configuration de serveur)](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Options de configuration de serveur &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
-###  <a name="ThreadUsage"></a> Utilisation de threads par les groupes de disponibilité  
+###  <a name="thread-usage-by-availability-groups"></a><a name="ThreadUsage"></a> Utilisation de threads par les groupes de disponibilité  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pose les conditions suivantes pour les threads de travail :  
   
 -   Sur une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]inactive, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] n'utilise aucun thread.  
@@ -166,14 +166,14 @@ ms.locfileid: "76831934"
   
  Pour plus d’informations, consultez [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (blog des ingénieurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CSS).  
   
-###  <a name="PermissionsSI"></a> Autorisations (instance de serveur)  
+###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> Autorisations (instance de serveur)  
   
 |Tâche|Autorisations requises|  
 |----------|--------------------------|  
 |Création du point de terminaison de mise en miroir de bases de données|Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe **sysadmin** .  Requiert également l'autorisation CONTROL ON ENDPOINT. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
 |Activation de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|Nécessite l'appartenance au groupe **Administrateur** sur l'ordinateur local et le contrôle total sur le cluster WSFC.|  
   
-###  <a name="RelatedTasksSI"></a> Tâches associées (instance de serveur)  
+###  <a name="related-tasks-server-instance"></a><a name="RelatedTasksSI"></a> Tâches associées (instance de serveur)  
   
 |Tâche|Article|  
 |----------|-----------|  
@@ -181,19 +181,19 @@ ms.locfileid: "76831934"
 |Création du point de terminaison de mise en miroir de bases de données (s'il n'existe pas encore)|[Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité Always On &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
 |Activation des groupes de disponibilité|[Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
-###  <a name="RelatedContentSI"></a> Contenu connexe (instance serveur)  
+###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> Contenu connexe (instance serveur)  
   
 -   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
-##  <a name="NetworkConnect"></a> Recommandations relatives à la connectivité réseau  
+##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> Recommandations relatives à la connectivité réseau  
  Nous vous recommandons vivement d'utiliser les mêmes liaisons réseau pour les communications entre les nœuds de cluster WSFC et les communications entre les réplicas de disponibilité.  L'utilisation de liaisons réseau distinctes peut provoquer des comportements inattendus en cas d'échec de certaines liaisons (et ce, même de façon intermittente).  
   
  Par exemple, pour qu'un groupe de disponibilité prenne en charge le basculement automatique, le réplica secondaire qui est le partenaire de basculement automatique doit être dans un état SYNCHRONIZED. Si la liaison réseau à ce réplica secondaire échoue (et ce, même de faon intermittente), le réplica passe à l'état UNSYNCHRONIZED et ne peut pas se resynchroniser tant que la liaison n'est pas restaurée. Si le cluster WSFC demande un basculement automatique alors que le réplica secondaire n'est pas synchronisé, le basculement automatique n'a pas lieu.  
   
-##  <a name="ClientConnSupport"></a> Prise en charge de la connectivité client  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> Prise en charge de la connectivité client  
  Pour plus d’informations sur la prise en charge des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour la connectivité client, consultez [Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-##  <a name="FciArLimitations"></a> Conditions préalables requises et restrictions pour l'utilisation d'une instance de cluster de basculement SQL Server afin d'héberger un réplica de disponibilité  
+##  <a name="prerequisites-and-restrictions-for-using-a-sql-server-failover-cluster-instance-fci-to-host-an-availability-replica"></a><a name="FciArLimitations"></a> Conditions préalables requises et restrictions pour l'utilisation d'une instance de cluster de basculement SQL Server afin d'héberger un réplica de disponibilité  
  **Dans cette section :**  
   
 -   [Restrictions](#RestrictionsFCI)  
@@ -204,7 +204,7 @@ ms.locfileid: "76831934"
   
 -   [Contenu connexe](#RelatedContentFCIs)  
   
-###  <a name="RestrictionsFCI"></a> Restrictions (instances de cluster de basculement)  
+###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> Restrictions (instances de cluster de basculement)  
   
 > [!NOTE]  
 > Les instances de cluster de basculement prennent en charge les volumes partagés de cluster. Pour plus d'informations sur les volumes partagés de cluster, consultez [Présentation des volumes partagés de cluster dans un cluster de basculement](https://technet.microsoft.com/library/dd759255.aspx).  
@@ -221,13 +221,13 @@ ms.locfileid: "76831934"
   
 -   **Modification du nom réseau d’une instance de cluster de basculement :**  si vous devez modifier le nom réseau d’une instance de cluster de basculement qui héberge un réplica de disponibilité, vous devez supprimer le réplica de son groupe de disponibilité, puis l’ajouter de nouveau au groupe de disponibilité. Étant donné que vous ne pouvez pas supprimer le réplica principal, si vous renommez une instance de cluster de basculement qui héberge le réplica principal, vous devez basculer vers un réplica secondaire, puis supprimer le réplica principal précédent avant de l'ajouter à nouveau. Notez que l'attribution d'un nouveau nom à une instance de cluster de basculement modifie l'URL de son point de terminaison de mise en miroir de bases de données. Lorsque vous ajoutez le réplica, veillez à spécifier l'URL du point de terminaison actuel.  
   
-###  <a name="PrerequisitesFCI"></a> Liste de vérification : Prérequis (ICF)  
+###  <a name="checklist-prerequisites-fcis"></a><a name="PrerequisitesFCI"></a> Liste de vérification : Prérequis (ICF)  
   
 ||Configuration requise|Lien|  
 |-|------------------|----------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que chaque instance de cluster de basculement SQL Server dispose du stockage partagé requis, conformément à l'installation standard de l'instance de cluster de basculement SQL Server.||  
   
-###  <a name="RelatedTasksFCIs"></a> Tâches associées (instances de cluster de basculement)  
+###  <a name="related-tasks-fcis"></a><a name="RelatedTasksFCIs"></a> Tâches associées (instances de cluster de basculement)  
   
 |Tâche|Article|  
 |----------|-----------|  
@@ -235,13 +235,13 @@ ms.locfileid: "76831934"
 |Mise à niveau sur place de votre cluster de basculement SQL Server existant|[Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Maintenance de votre cluster de basculement SQL Server existant|[Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
-###  <a name="RelatedContentFCIs"></a> Contenu connexe (instances de cluster de basculement)  
+###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> Contenu connexe (instances de cluster de basculement)  
   
 -   [Clustering de basculement et groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
 -   [Guide de l’architecture Always On : Création d’une solution haute disponibilité et de récupération d’urgence en utilisant des instances de cluster de basculement et des groupes de disponibilité](https://technet.microsoft.com/library/jj215886.aspx)  
   
-##  <a name="PrerequisitesForAGs"></a> Conditions préalables requises et restrictions pour les groupes de disponibilité  
+##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> Conditions préalables requises et restrictions pour les groupes de disponibilité  
  **Dans cette section :**  
   
 -   [Restrictions](#RestrictionsAG)  
@@ -252,7 +252,7 @@ ms.locfileid: "76831934"
   
 -   [Tâches associées](#RelatedTasksAGs)  
   
-###  <a name="RestrictionsAG"></a> Restrictions (groupes de disponibilité)  
+###  <a name="restrictions-availability-groups"></a><a name="RestrictionsAG"></a> Restrictions (groupes de disponibilité)  
   
 -   **Les réplicas de disponibilité doivent être hébergés par différents nœuds d’un WSFC :**  pour un groupe de disponibilité donné, les réplicas de disponibilité doivent être hébergés par des instances de serveur qui s’exécutent sur différents nœuds du même WSFC. La seule exception survient lors de la migration vers un autre cluster : un groupe de disponibilité peut temporairement chevaucher deux clusters.  
   
@@ -273,14 +273,14 @@ ms.locfileid: "76831934"
   
     -   N'utilisez pas le gestionnaire du cluster de basculement pour basculer des groupes de disponibilité. Vous devez utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="RequirementsAG"></a> Conditions préalables requises (groupes de disponibilité)  
+###  <a name="prerequisites-availability-groups"></a><a name="RequirementsAG"></a> Conditions préalables requises (groupes de disponibilité)  
  Lors de la création ou de la reconfiguration d'un groupe de disponibilité, veillez à respecter les conditions préalables requises suivantes.  
   
 ||Configuration requise|Description|  
 |-|------------------|-----------------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si vous envisagez d'utiliser une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour héberger un réplica de disponibilité, assurez-vous de comprendre les restrictions relatives à l'instance de cluster de basculement et de respecter les conditions préalables requises pour cette dernière.|[Prérequis et restrictions concernant l’utilisation d’une instance de cluster de basculement SQL Server afin d’héberger un réplica de disponibilité](#FciArLimitations) (plus haut dans cet article)|  
   
-###  <a name="SecurityAG"></a> Sécurité (groupes de disponibilité)  
+###  <a name="security-availability-groups"></a><a name="SecurityAG"></a> Sécurité (groupes de disponibilité)  
   
 -   La sécurité est héritée du cluster WSFC. Le clustering de basculement Windows Server fournit deux niveaux de sécurité utilisateur avec la granularité de l’ensemble du cluster :  
   
@@ -304,7 +304,7 @@ ms.locfileid: "76831934"
 |Modification d'un groupe de disponibilité|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.<br /><br /> En outre, la jointure d’une base de données à un groupe de disponibilité nécessite l’appartenance au rôle de base de données fixe **db_owner** .|  
 |Suppression d'un groupe de disponibilité|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER. Pour supprimer un groupe de disponibilité qui n'est pas hébergé à l'emplacement du réplica local, vous avez besoin de l'autorisation CONTROL SERVER ou CONTROL sur ce groupe de disponibilité.|  
   
-###  <a name="RelatedTasksAGs"></a> Tâches associées (groupes de disponibilité)  
+###  <a name="related-tasks-availability-groups"></a><a name="RelatedTasksAGs"></a> Tâches associées (groupes de disponibilité)  
   
 |Tâche|Article|  
 |----------|-----------|  
@@ -313,7 +313,7 @@ ms.locfileid: "76831934"
 |Création d'un écouteur de groupe de disponibilité|[Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |Suppression d'un groupe de disponibilité|[Supprimer un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)|  
   
-##  <a name="PrerequisitesForDbs"></a> Conditions préalables requises et restrictions pour les bases de données de disponibilité  
+##  <a name="availability-database-prerequisites-and-restrictions"></a><a name="PrerequisitesForDbs"></a> Conditions préalables requises et restrictions pour les bases de données de disponibilité  
  Pour pouvoir être ajoutée à un groupe de disponibilité, une base de données doit respecter les Conditions préalables requises et restrictions suivantes.  
   
  **Dans cette section :**  
@@ -328,7 +328,7 @@ ms.locfileid: "76831934"
   
 -   [Tâches associées](#RelatedTasksADb)  
   
-###  <a name="RequirementsDb"></a> Liste de vérification : Configuration requise (bases de données de disponibilité)  
+###  <a name="checklist-requirements-availability-databases"></a><a name="RequirementsDb"></a> Liste de vérification : Configuration requise (bases de données de disponibilité)  
  Pour pouvoir être ajoutée à un groupe de disponibilité, une base de données :  
   
 ||Spécifications|Lien|  
@@ -348,7 +348,7 @@ ms.locfileid: "76831934"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fonctionne avec tous les niveaux de compatibilité de base de données pris en charge.  
   
-###  <a name="RestrictionsDb"></a> Restrictions (bases de données de disponibilité)  
+###  <a name="restrictions-availability-databases"></a><a name="RestrictionsDb"></a> Restrictions (bases de données de disponibilité)  
   
 -   Si le chemin d'accès du fichier (notamment la lettre de lecteur) d'une base de données secondaire diffère du chemin d'accès de la base de données primaire correspondante, les restrictions suivantes s'appliquent :  
   
@@ -363,13 +363,13 @@ ms.locfileid: "76831934"
   
 -   Vous ne pouvez pas supprimer une base de données qui appartient à un groupe de service.  
   
-###  <a name="TDEdbs"></a> Suivi des bases de données protégées par le chiffrement transparent des données  
+###  <a name="follow-up-for-tde-protected-databases"></a><a name="TDEdbs"></a> Suivi des bases de données protégées par le chiffrement transparent des données  
  Si vous utilisez le chiffrement transparent des données (TDE), le certificat ou la clé asymétrique pour la création et le déchiffrement d'autres clés doit être identique sur chaque instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité. Pour plus d’informations, consultez [Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
-###  <a name="PermissionsDbs"></a> Autorisations (bases de données de disponibilité)  
+###  <a name="permissions-availability-databases"></a><a name="PermissionsDbs"></a> Autorisations (bases de données de disponibilité)  
  Nécessite l'autorisation ALTER sur la base de données.  
   
-###  <a name="RelatedTasksADb"></a> Tâches associées (bases de données de disponibilité)  
+###  <a name="related-tasks-availability-databases"></a><a name="RelatedTasksADb"></a> Tâches associées (bases de données de disponibilité)  
   
 |Tâche|Article|  
 |----------|-----------|  
@@ -377,7 +377,7 @@ ms.locfileid: "76831934"
 |Jointure d'une base de données secondaire à un groupe de disponibilité (manuellement)|[Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  
 |Modification du nombre de bases de données de disponibilité|[Ajouter une base de données à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)<br /><br /> [Supprimer une base de données secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [Supprimer une base de données primaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)|  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

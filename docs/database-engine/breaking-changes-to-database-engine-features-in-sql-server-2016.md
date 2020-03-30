@@ -16,10 +16,10 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b2003a0adfd2883b83623f5b367e775cc526e052
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79190575"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Changements cassants dans les fonctionnalités du moteur de base de données de SQL Server 2016
@@ -28,7 +28,7 @@ ms.locfileid: "79190575"
 
   Cette rubrique décrit les changements cassants dans le [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] et les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes lors d'une mise à niveau.  
   
-##  <a name="SQL15"></a> Modifications avec rupture dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
+##  <a name="breaking-changes-in-sssql15"></a><a name="SQL15"></a> Modifications avec rupture dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
 -   La colonne *sample_ms* de `sys.dm_io_virtual_file_stats` est passée du type de données **int** à **bigint**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "79190575"
 
 -   En dessous du niveau de compatibilité 130 de la base de données, les opérations qui effectuent des conversions implicites entre certains types de données numériques et date/heure offrent une meilleure précision et peuvent entraîner des valeurs converties différentes. Cela inclut l’utilisation de fonctions qui requièrent des calculs comme, par exemple, `DATEDIFF` et `ROUND`. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/help/4010261).
 
-## <a name="previous-versions"></a> Versions précédentes  
+## <a name="previous-versions"></a><a name="previous-versions"></a> Versions précédentes  
 
 Pour plus d’informations sur les modifications avec rupture dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], et dans certaines versions antérieures, consultez [Modifications avec rupture dans SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
 

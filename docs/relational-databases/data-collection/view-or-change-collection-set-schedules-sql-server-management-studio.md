@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055328"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "74055328"
   
 6.  Cliquez sur **OK** pour enregistrer les modifications et fermer la boîte de dialogue **Propriétés du jeu d'éléments de collecte de données** .  
   
-####  <a name="CollectionSet"></a> Boîte de dialogue Propriétés du jeu d'éléments de collecte de données  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> Boîte de dialogue Propriétés du jeu d'éléments de collecte de données  
  **Page Général**  
   
  Utilisez cette page pour configurer le mode de collecte et de téléchargement des données, des planifications, ainsi que des périodes de rétention des données dans l'entrepôt de données de gestion. Cette page fournit également des informations sur les jeux d'éléments de collecte, tels que les types de collecteurs et les fréquences de collecte, et les paramètres d'entrée utilisés pour un jeu d'éléments de collecte.  

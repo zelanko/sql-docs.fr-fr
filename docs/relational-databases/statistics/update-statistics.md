@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59efa5a8143d448ca322ab1b6efa86cbfa9f66d1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934082"
 ---
 # <a name="update-statistics"></a>Mettre à jour les statistiques
@@ -38,14 +38,14 @@ ms.locfileid: "67934082"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L'utilisation d'UPDATE STATISTICS ou l'apport de modifications par le biais de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]exige l'autorisation ALTER sur la table ou la vue. En cas d’utilisation de `sp_updatestats`, nécessite l’appartenance au rôle serveur fixe **sysadmin** ou la propriété de la base de données (**dbo**).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-update-a-statistics-object"></a>Pour mettre à jour un objet de statistiques  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67934082"
   
 6.  Dans la boîte de dialogue **Propriétés des statistiques -** _nom\_statistiques_, cochez la case **Mettre à jour les statistiques pour ces colonnes**, puis cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 ### <a name="to-update-a-specific-statistics-object"></a>Pour mettre à jour un objet de statistiques spécifique  
   

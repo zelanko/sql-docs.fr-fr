@@ -11,10 +11,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75776529"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutoriel : Ingérer des données dans un pool de données SQL Server avec des travaux Spark
@@ -33,7 +33,7 @@ Dans ce tutoriel, vous allez apprendre à :
 > [!TIP]
 > Si vous préférez, vous pouvez télécharger et exécuter un script pour les commandes de ce tutoriel. Pour obtenir des instructions, consultez les [exemples de pools de données](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) sur GitHub.
 
-## <a id="prereqs"></a> Conditions préalables
+## <a name="prerequisites"></a><a id="prereqs"></a> Conditions préalables
 
 - [Outils Big Data](deploy-big-data-tools.md)
    - **kubectl**

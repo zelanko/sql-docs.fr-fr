@@ -13,10 +13,10 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903939"
 ---
 # <a name="delete-a-resource-pool"></a>Supprimer un pool de ressources
@@ -28,16 +28,16 @@ ms.locfileid: "72903939"
   
 -   **Pour supprimer un pool de ressources avec :** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Vous ne pouvez pas supprimer un pool de ressources s'il contient des groupes de charge de travail.  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Vous ne pouvez pas supprimer les pools de ressources par défaut ou internes de Resource Governor. Vous ne pouvez pas supprimer un pool de ressources s'il contient des groupes de charge de travail. Pour plus d’informations, consultez [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md).  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La suppression d'un pool de ressources requiert l'autorisation CONTROL SERVER.  
   
-##  <a name="DelRPSSMS"></a> Supprimer un pool de ressources à l'aide de l'Explorateur d'objets  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> Supprimer un pool de ressources à l'aide de l'Explorateur d'objets  
  **Pour supprimer un pool de ressources à l'aide de SQL Server Management Studio**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'à **Resource Governor**inclus.  
@@ -49,7 +49,7 @@ ms.locfileid: "72903939"
     > [!NOTE]  
     >  Si le pool de ressources que vous cherchez à supprimer contient un groupe de charge de travail, l'action échoue.  
   
-##  <a name="DelRPTSQL"></a> Supprimer un pool de ressources à l'aide de Transact-SQL  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> Supprimer un pool de ressources à l'aide de Transact-SQL  
  **Pour supprimer un pool de ressources à l'aide de Transact-SQL**  
   
 1.  Exécutez l’instruction **DROP RESOURCE POOL** ou **DROP EXTERNAL RESOURCE POOL** en spécifiant le nom du pool de ressources à supprimer.  

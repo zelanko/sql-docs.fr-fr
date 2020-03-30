@@ -16,10 +16,10 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 972a1e200a2025261c6a9fb6e0ffd80f0dc4f219
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321485"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimiser les performances de la réplication de fusion avec le suivi conditionnel des suppressions

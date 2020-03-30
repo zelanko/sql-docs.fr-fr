@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67896978"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Changer le compte pour la journalisation Scale Out
@@ -22,9 +22,9 @@ ms.locfileid: "67896978"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-Quand vous exécutez des packages SSIS dans Scale Out, les messages d’événement sont journalisés dans la base de données SSISDB avec un compte d’utilisateur créé automatiquement et nommé **##MS_SSISLogDBWorkerAgentLogin##** . La connexion pour cet utilisateur utilise l’authentification SQL Server.
+Quand vous exécutez des packages SSIS dans Scale-out, les messages d’événement sont journalisés dans la base de données SSISDB avec un compte d’utilisateur créé automatiquement et nommé **##MS_SSISLogDBWorkerAgentLogin##** . La connexion pour cet utilisateur utilise l’authentification SQL Server.
 
-Si vous souhaitez changer le compte utilisé pour la journalisation Scale Out, effectuez les opérations suivantes :
+Si vous souhaitez changer le compte utilisé pour la journalisation Scale-out, effectuez les opérations suivantes :
 
 > [!NOTE]
 > Si vous utilisez un compte d’utilisateur Windows pour la journalisation, utilisez le même compte que celui qui exécute le service Scale Out Worker. Sinon, la connexion à SQL Server échoue.

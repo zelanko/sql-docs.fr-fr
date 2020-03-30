@@ -9,10 +9,10 @@ ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500408"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
@@ -23,7 +23,7 @@ En mode SharePoint, le fichier de configuration contient les paramètres qui s'a
  Les paramètres sont présentés ci-dessous dans l'ordre dans lequel ils apparaissent dans le fichier de configuration qui est installé par défaut. Pour obtenir des instructions sur la modification de ce fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
  
-##  <a name="bkmk_file_location"></a> Emplacement du fichier  
+##  <a name="file-location"></a><a name="bkmk_file_location"></a> Emplacement du fichier  
 
 RSReportServer.config se trouve dans les dossiers suivants, selon le mode du serveur de rapports :  
 
@@ -55,7 +55,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  
 Pour plus d’informations sur la modification du fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-##  <a name="bkmk_generalconfiguration"></a> Paramètres de configuration généraux (rsreportserver.config)  
+##  <a name="general-configuration-settings-rsreportserverconfig"></a><a name="bkmk_generalconfiguration"></a> Paramètres de configuration généraux (rsreportserver.config)  
  Le tableau suivant fournit des informations sur les paramètres de configuration généraux qui apparaissent dans la première partie du fichier. Les paramètres sont présentés dans l'ordre dans lequel ils apparaissent dans le fichier de configuration. La dernière colonne du tableau indique si le paramètre s’applique à un serveur de rapports en mode natif **(N)** , à un serveur de rapports en mode SharePoint **(S)** ou aux deux.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**Dsn**|Spécifie la chaîne de connexion au serveur de base de données qui héberge la base de données du serveur de rapports. Cette valeur est chiffrée et ajoutée au fichier de configuration lorsque vous créez la base de données du serveur de rapports. Pour SharePoint, les informations de connexion de la base de données sont issues de la base de données de configuration SharePoint.|N,S|  
 |**ConnectionType**|Détermine le type d'informations d'identification utilisé par le serveur de rapports pour se connecter à la base de données de serveur de rapports. Les valeurs possibles sont **Default** et **Impersonate**. **Default** est spécifiée si le serveur de rapports est configuré pour utiliser un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le compte de service pour se connecter à la base de données du serveur de rapports. **Impersonate** est spécifiée si le serveur de rapports utilise un compte Windows pour se connecter à la base de données du serveur de rapports.|N|  
 |**LogonUser, LogonDomain, LogonCred**|Stocke le domaine, le nom d'utilisateur et le mot de passe d'un compte de domaine utilisé par un serveur de rapports pour se connecter à une base de données du serveur de rapports. Des valeurs sont créées pour **LogonUser**, **LogonDomain**et **LogonCred** quand la configuration de la connexion du serveur de rapports prévoit l’utilisation d’un compte de domaine. Pour plus d’informations sur la connexion d’une base de données à un serveur de rapports, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|Identificateur de l'instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette valeur indique un nom d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, cette valeur est **MSRS12**_\<nom_instance>_. Ne modifiez pas ce paramètre. Voici un exemple de la valeur complète : `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> Voici un exemple en mode SharePoint :<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|Identificateur de l'instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette valeur indique un nom d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, cette valeur est **MSRS12** _\<nom_instance>_ . Ne modifiez pas ce paramètre. Voici un exemple de la valeur complète : `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> Voici un exemple en mode SharePoint :<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|Identificateur de l'installation du serveur de rapports que crée le programme d'installation. Cette valeur est définie sur un GUID. Ne modifiez pas ce paramètre.|N|  
 |**SecureConnectionLevel**|Spécifie le degré auquel les appels de service Web doivent utiliser le protocole SSL (Secure Sockets Layer). Ce paramètre est utilisé à la fois pour le service Web Report Server et le portail web. Cette valeur est définie lorsque vous configurez une URL pour utiliser le protocole HTTP ou HTTPS dans l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Dans SQL Server 2008 R2, SecureConnectionLevel est un commutateur d’activation ou de désactivation. Pour les versions antérieures à SQL Server 2008 R2 la plage de valeurs valides va de 0 à 3, où 0 est le moins sécurisé. Pour plus d’informations, consultez [Méthode ConfigurationSetting - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Utilisation des méthodes de service Web sécurisées](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) et [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
 |**DisableSecureFormsAuthenticationCookie**|La valeur par défaut est False.<br /><br /> Spécifie s'il faut désactiver l'utilisation forcée du cookie employé pour que l'authentification par formulaire et personnalisée soit considérée comme sécurisée. Depuis SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] marque automatiquement les cookies d'authentification par formulaire utilisés avec les extensions d'authentification personnalisée comme cookies sécurisés lors de l'envoi au client. En modifiant cette propriété, les administrateurs de serveurs de rapports et les auteurs d'extensions de sécurité personnalisées peuvent revenir au comportement précédent, lequel autorise l'auteur d'une extension de sécurité personnalisée à déterminer s'il faut marquer le cookie en tant que cookie sécurisé. Il est recommandé d'utiliser des cookies sécurisés pour l'authentification par formulaire afin d'éviter les attaques par relecture et les renifleurs réseau.|N|  
@@ -88,7 +88,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**WatsonDumpOnExceptions**|Spécifie une liste des exceptions que vous souhaitez signaler dans un journal des erreurs. Cela est utile lorsque vous avez un problème récurrent et que vous souhaitez créer un vidage avec des informations à envoyer à [!INCLUDE[msCoName](../../includes/msconame-md.md)] à des fins d'analyse. La création de vidages affecte les performances ; vous devez donc modifier ce paramètre uniquement lorsque vous diagnostiquez un problème.|N,S|  
 |**WatsonDumpExcludeIfContainsExceptions**|Spécifie une liste des exceptions que vous ne souhaitez pas signaler dans un journal des erreurs. Cela est utile lorsque vous diagnostiquez un problème et que vous ne souhaitez pas que le serveur crée des vidages pour une exception spécifique.|N,S|  
   
-##  <a name="bkmk_URLReservations"></a> URLReservations (fichier RSReportServer.config)  
+##  <a name="urlreservations-rsreportserverconfig-file"></a><a name="bkmk_URLReservations"></a> URLReservations (fichier RSReportServer.config)  
  **URLReservations** définit l’accès HTTP au service Web Report Server et au portail web pour l’instance actuelle. Les URL sont réservées et stockées dans HTTP.SYS lorsque vous configurez le serveur de rapports.  
   
 > [!WARNING]  
@@ -110,7 +110,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**AccountSid**|Spécifie l'identificateur de sécurité (SID) du compte pour lequel la réservation d'URL a été créée. Il doit s'agir du compte sous lequel le service Report Server s'exécute. Si le SID ne correspond pas au compte de service, le serveur de rapports peut ne pas être en mesure d'écouter les demandes sur cette URL.|N|  
 |**AccountName**|Spécifie un nom de compte lisible qui correspond à **AccountSid**. Il n'est pas utilisé, mais il apparaît dans le fichier afin que vous puissiez facilement identifier le compte de service pour le compte utilisé pour la réservation d'URL.|N|  
   
-##  <a name="bkmk_Authentication"></a> Authentication (fichier RSReportServer.config)  
+##  <a name="authentication-rsreportserverconfig-file"></a><a name="bkmk_Authentication"></a> Authentication (fichier RSReportServer.config)  
  **Authentication** spécifie un ou plusieurs types d’authentification acceptés par le serveur de rapports. Les paramètres et valeurs par défaut sont un sous-ensemble des paramètres et valeurs possibles pour cette section. Seuls les paramètres par défaut sont ajoutés automatiquement. Si vous souhaitez ajouter d'autres paramètres, vous devez utiliser un éditeur de texte pour ajouter la structure de l'élément au fichier RSReportServer.config et définir les valeurs.  
   
  Les valeurs par défaut sont **RSWindowsNegotiate** et **RSWindowsNTLM** avec **EnableAuthPersistance** défini sur la valeur **True**:  
@@ -144,7 +144,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**RSWindowsExtendedProtectionScenario**|La valeur par défaut est **Proxy**.|N|  
 |**EnableAuthPersistence**|Détermine si l'authentification est effectuée sur la connexion ou pour chaque requête.<br /><br /> Les valeurs possibles sont **True** (par défaut) ou **False**. Si la valeur est **True**, les requêtes suivantes qui proviennent de la même connexion prennent en compte par défaut le contexte d’emprunt d’identité de la première requête.<br /><br /> Cette valeur doit être **False** si vous utilisez un logiciel de serveur proxy (par exemple ISA Server) pour accéder au serveur de rapports. Un serveur proxy permet l'utilisation d'une connexion unique par plusieurs utilisateurs. Pour ce scénario, vous devez désactiver la persistance de l'authentification afin que chaque requête d'utilisateur puisse être authentifiée séparément. Si vous n’affectez pas la valeur **False** à **EnableAuthPersistence**, tous les utilisateurs se connecteront à l’aide du contexte d’emprunt d’identité de la première requête.|N,S|  
   
-##  <a name="bkmk_service"></a> Service (fichier RSReportServer.config)  
+##  <a name="service-rsreportserverconfig-file"></a><a name="bkmk_service"></a> Service (fichier RSReportServer.config)  
  **Service** spécifie les paramètres de l’application qui s’appliquent à l’ensemble du service.  
   
  La dernière colonne du tableau suivant indique si le paramètre s'applique à un serveur de rapports en mode natif (N), à un serveur de rapports en mode SharePoint (S) ou aux deux cas de figure.  
@@ -170,7 +170,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**FileShareStorageLocation**|Indique un dossier de stockage unique pour les instantanés temporaires dans le système de fichiers. Même s'il est possible de spécifier un chemin d'accès UNC pour ce dossier, il est déconseillé de faire ce choix. La valeur par défaut est vide.<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
 |**IsRdceEnabled**|Spécifie si l'extension RDCE (Report Definition Customization Extension) est activée. Les valeurs valides sont **True** et **False**.|N,S|  
   
-##  <a name="bkmk_UI"></a> UI (fichier RSReportServer.config)  
+##  <a name="ui-rsreportserverconfig-file"></a><a name="bkmk_UI"></a> UI (fichier RSReportServer.config)  
  **UI** spécifie des paramètres de configuration qui s’appliquent à l’application du portail web.  
   
  La dernière colonne du tableau suivant indique si le paramètre s'applique à un serveur de rapports en mode natif (N), à un serveur de rapports en mode SharePoint (S) ou aux deux cas de figure.  
@@ -181,7 +181,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**ReportBuilderTrustLevel**|Ne modifiez pas cette valeur ; elle n'est pas configurable. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et versions ultérieures, le Générateur de rapports s’exécute uniquement en **FullTrust**. Pour plus d’informations sur la suppression du mode de confiance partielle, consultez [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
 |**PageCountMode**|Pour le portail web uniquement, ce paramètre spécifie si le serveur de rapports calcule le nombre de pages avant le rendu du rapport ou pendant l’affichage de ce dernier. Les valeurs possibles sont **Estimate** (par défaut) et **Actual**. Utilisez **Estimate** pour calculer le nombre de pages du rapport pendant que l’utilisateur le consulte. Initialement, le nombre de pages est défini à 2 (pour la page actuelle plus une page supplémentaire), mais cette valeur s'ajuste au fur et à mesure que l'utilisateur navigue parmi les pages du rapport. Utilisez **Actual** si vous souhaitez calculer le nombre de pages à l’avance avant que le rapport ne s’affiche. **Actual** est fourni pour la compatibilité descendante. Notez que, si vous affectez **Actual** à **PageCountMode**, le rapport entier doit être traité pour permettre l’obtention d’un nombre de pages valide, ce qui accroît le temps d’attente avant que le rapport ne soit affiché.|N,S|  
   
-##  <a name="bkmk_extensions"></a> Extensions (fichier RSReportServer.config) en mode natif  
+##  <a name="extensions-rsreportserverconfig-file-native-mode"></a><a name="bkmk_extensions"></a> Extensions (fichier RSReportServer.config) en mode natif  
  La section Extensions apparaît dans le fichier rsreportserver.config **uniquement pour les serveurs de rapports en mode natif** . Les informations relatives aux extensions des serveurs de rapports en mode SharePoint sont stockées dans la base de données de configuration SharePoint et sont configurées en fonction de chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  **Extensions** spécifie les paramètres de configuration des modules extensibles suivants pour une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -208,7 +208,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
   
  Quelques-unes de ces extensions sont à usage strictement interne par le serveur de rapports. Les paramètres de configuration pour les extensions à usage interne uniquement ne sont pas documentés. Les sections suivantes décrivent les paramètres de configuration des extensions par défaut. Si vous utilisez un serveur de rapports qui a des extensions personnalisées, vos fichiers de configuration peuvent contenir des paramètres qui ne sont pas décrits ici. Cette section liste les extensions dans l'ordre dans lequel elles apparaissent. Les paramètres qui se répètent pour plusieurs instances du même type d'extension ne sont décrits qu'une seule fois.  
   
-###  <a name="bkmk_extensionsgeneral"></a> Configuration générale des extensions de remise  
+###  <a name="delivery-extensions-general-configuration"></a><a name="bkmk_extensionsgeneral"></a> Configuration générale des extensions de remise  
  Spécifie les extensions de remise par défaut (et éventuellement personnalisée) qui sont utilisées pour remettre les rapports par le biais des abonnements. Le fichier RSReportServer.config inclut des paramètres d'application pour quatre extensions de remise :  
   
 1.  messagerie électronique du serveur de rapports ;  
@@ -230,14 +230,14 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**SecondsBeforeRetry**|Précise la durée (en secondes) qui s'écoule entre deux tentatives. La valeur par défaut est 900.|  
 |**Configuration**|Contient les paramètres de configuration spécifiques à chaque extension de remise.|  
   
-####  <a name="bkmk_fileshare_extension"></a> Paramètres de configuration spécifiques à l'extension de remise par partage de fichiers  
+####  <a name="file-share-delivery-extension-configuration-settings"></a><a name="bkmk_fileshare_extension"></a> Paramètres de configuration spécifiques à l'extension de remise par partage de fichiers  
  La remise par partage de fichiers envoie un rapport exporté dans un format de fichier d'application vers un dossier partagé sur le réseau. Pour plus d'informations, consultez [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**, **RenderingExtension**|Ces paramètres sont utilisés pour exclure volontairement les formats d'exportation qui ne fonctionnent pas correctement avec la remise par partage de fichiers. Ces formats sont utilisés en général pour la création de rapports interactifs, l'aperçu ou le préchargement du cache de rapports. Ils ne produisent pas de fichiers d'application qui peuvent être affichés facilement à partir d'une application bureautique.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
-####  <a name="bkmk_email_extension"></a> Paramètres de configuration de l'extension de messagerie électronique du serveur de rapports  
+####  <a name="report-server-e-mail-extension-configuration-settings"></a><a name="bkmk_email_extension"></a> Paramètres de configuration de l'extension de messagerie électronique du serveur de rapports  
  La messagerie électronique Report Server utilise un périphérique réseau SMTP pour envoyer des rapports à des adresses de messagerie. Cette extension de remise doit être configurée avant de pouvoir être utilisée. Pour plus d’informations, consultez [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Paramètre|Description|  
@@ -250,7 +250,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**SMTPUseSSL**|Spécifie une valeur booléenne pouvant être définie pour utiliser SSL (Secure Sockets Layer) en cas d'envoi de message SMTP via le réseau. La valeur par défaut est 0 (ou False). Ce paramètre peut être utilisé lorsque l'élément **SendUsing** est défini sur 2.|  
 |**SendUsing**|Spécifie quelle méthode utiliser pour envoyer des messages. Les valeurs autorisées sont :<br /><br /> 1= Envoie un message à partir du répertoire de collecte du service SMTP local.<br /><br /> 2= Envoie le message à partir du service SMTP du réseau.|  
 |**SMTPAuthenticate**|Spécifie une valeur d'entier qui indique quel type d'authentification utiliser lorsque vous envoyez des messages à un service SMTP via une connexion TCP/IP. Les valeurs autorisées sont :<br /><br /> 0= Pas d'authentification.<br /><br /> 1= (Non pris en charge.)<br /><br /> 2= Authentification NTLM (NT LanMan). Le contexte de sécurité du service Windows Report Server est utilisé pour la connexion au serveur SMTP du réseau.|  
-|**From**|Spécifie l’adresse de messagerie électronique d’où sont envoyés les rapports au format *abc@host.xyz*. L’adresse apparaît dans la ligne **De** d’un message électronique sortant. Cette valeur est obligatoire si vous utilisez un serveur SMTP distant. Elle doit correspondre à un compte de messagerie valide ayant l'autorisation d'envoyer des messages.|  
+|**From**|Spécifie l’adresse de messagerie électronique d’où sont envoyés les rapports au format *abc@host.xyz* . L’adresse apparaît dans la ligne **De** d’un message électronique sortant. Cette valeur est obligatoire si vous utilisez un serveur SMTP distant. Elle doit correspondre à un compte de messagerie valide ayant l'autorisation d'envoyer des messages.|  
 |**EmbeddedRenderFormats, RenderingExtension**|Spécifie le format de rendu utilisé pour encapsuler un rapport dans le corps d'un message électronique. Les images du rapport sont ensuite incorporées dans le rapport. Les valeurs valides sont MHTML et HTML4.0.|  
 |**PrivilegedUserRenderFormats**|Spécifie les formats de rendu que l'utilisateur peut sélectionner pour un abonnement de rapport lorsque l'option d'abonnement est activée au moyen de la tâche « Gérer tous les abonnements ». Si cette valeur n'est pas définie, tous les formats de rendu qui ne sont pas spécifiquement exclus peuvent être sélectionnés.|  
 |**ExcludedRenderFormats, RenderingExtension**|Exclut spécifiquement les formats qui ne fonctionnent pas bien avec une extension de remise donnée. Vous ne pouvez pas exclure plusieurs instances de la même extension de rendu. L'exclusion de plusieurs instances entraîne une erreur lorsque le serveur de rapports lit le fichier de configuration. Par défaut, les extensions suivantes sont exclues de la remise par messagerie électronique :<br /><br /> HTMLOWC<br /><br /> Null<br /><br /> RGDI|  
@@ -258,17 +258,17 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**DefaultHostName**|Cette valeur fonctionne avec **SendEmailToUserAlias**.<br /><br /> Spécifie une valeur de chaîne indiquant le nom d'hôte à ajouter à l'alias d'utilisateur lorsque l'option **SendEmailToUserAlias** est définie sur true (vrai). Cette valeur peut être un nom DNS (Domain Name System) ou une adresse IP.|  
 |**PermittedHosts**|Limite la distribution des rapports en spécifiant quels hôtes peuvent recevoir la livraison de courriers électroniques. Dans l'option **PermittedHosts**, chaque hôte est spécifié en tant qu'élément **HostName** , sachant que la valeur est soit une adresse IP, soit un nom DNS.<br /><br /> Seuls les comptes de messagerie définis pour l'hôte sont des destinataires valides. Si vous avez spécifié l'option **DefaultHostName**, assurez-vous d'inclure cet hôte en tant qu'élément **HostName** de l'option **PermittedHosts**. Cette valeur doit correspondre à un ou plusieurs noms DNS ou adresses IP. Par défaut, cette valeur n'est pas définie. Si la valeur n'est pas définie, il n'y a aucune restriction en matière de réception des rapports envoyés par messagerie.|  
   
-####  <a name="bkmk_documentlibrary_extension"></a> Configuration de l'extension de bibliothèque de documents SharePoint du serveur de rapports  
+####  <a name="report-server-sharepoint-document-library-extension-configuration"></a><a name="bkmk_documentlibrary_extension"></a> Configuration de l'extension de bibliothèque de documents SharePoint du serveur de rapports  
  L'extension de remise par bibliothèque de documents Report Server envoie un rapport exporté dans un format de fichier d'application vers une bibliothèque de documents. Cette extension de remise ne peut être utilisée que par un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint. Pour plus d'informations, consultez [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md).  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats, RenderingExtension**|Ces paramètres sont utilisés pour exclure volontairement les formats d'exportation qui ne fonctionnent pas correctement avec la remise à une bibliothèque de documents. Les extensions de remise HTMLOWC, RGDI et Null sont exclues. Ces formats sont utilisés en général pour la création de rapports interactifs, l'aperçu ou le préchargement du cache de rapports. Ils ne produisent pas de fichiers d'application qui peuvent être affichés facilement à partir d'une application bureautique.|  
   
-####  <a name="bkmk_null_extension"></a> Configuration de l'extension de remise Null  
+####  <a name="null-delivery-extension-configuration"></a><a name="bkmk_null_extension"></a> Configuration de l'extension de remise Null  
  Le fournisseur de remise NULL sert à précharger le cache avec les rapports générés au préalable pour des utilisateurs spécifiques. Il n'y a pas de paramètres de configuration pour cette extension de remise. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
-###  <a name="bkmk_ui"></a> Configuration générale des extensions de l'interface utilisateur de remise  
+###  <a name="delivery-ui-extensions-general-configuration"></a><a name="bkmk_ui"></a> Configuration générale des extensions de l'interface utilisateur de remise  
  Spécifie les extensions de remise qui contiennent un composant d’interface utilisateur apparaissant dans les pages de définition d’abonnement ; ces dernières permettent de définir des abonnements individuels dans le portail web. Si vous créez et déployez une extension de remise personnalisée qui dispose d’options définies par l’utilisateur et que vous souhaitez utiliser le portail web, vous devez inscrire l’extension de remise dans cette section. Par défaut, il existe des paramètres de configuration pour la messagerie électronique Report Server et le partage de fichiers Report Server. Les extensions de remise utilisées uniquement dans les abonnements pilotés par les données ou les pages d'application SharePoint n'ont pas de paramètres dans cette section.  
   
 |Paramètre|Description|  
@@ -277,7 +277,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**Configuration**|Spécifie les options de configuration d'une extension de remise. Vous pouvez définir un format de rendu par défaut pour chaque extension de remise. Les valeurs valides sont les noms d'extensions de rendu de la section de rendu du fichier rsreportserver.config.|  
 |**DefaultRenderingExtension**|Spécifie si une extension de remise est celle par défaut. La messagerie électronique Report Server est l'extension de remise par défaut. Les valeurs valides sont **True** ou **False**. Si plusieurs extensions contiennent la valeur **True**, la première extension est considérée comme l’extension par défaut.|  
   
-###  <a name="bkmk_rendering"></a> Configuration générale des extensions de rendu  
+###  <a name="rendering-extensions-general-configuration"></a><a name="bkmk_rendering"></a> Configuration générale des extensions de rendu  
  Spécifie les extensions de rendu par défaut (et éventuellement personnalisé) utilisées pour la présentation des rapports.  
   
  Ne modifiez pas cette section sauf si vous déployez une extension de rendu personnalisée. Pour plus d’informations, consultez [Implémentation d’une extension de rendu](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md).  
@@ -318,7 +318,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
   
 -   [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- Pour plus d’informations sur les attributs de l’élément **\<Extension>** enfant sous **\<Render>**, consultez les rubriques suivantes :  
+ Pour plus d’informations sur les attributs de l’élément **\<Extension>** enfant sous **\<Render>** , consultez les rubriques suivantes :  
   
 -   [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -326,7 +326,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
   
  Ne modifiez pas cette section sauf si vous déployez une extension de rendu personnalisée. Pour plus d’informations, consultez [Implémentation d’une extension de rendu](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md).  
   
-###  <a name="bkmk_data"></a> Configuration générale des extensions de données  
+###  <a name="data-extensions-general-configuration"></a><a name="bkmk_data"></a> Configuration générale des extensions de données  
  Spécifie les extensions pour le traitement des données par défaut (et éventuellement personnalisé) utilisées pour traiter les requêtes. Les extensions de traitement de données par défaut sont les suivantes :  
   
 -   SQL  
@@ -355,28 +355,28 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
   
  Ne modifiez pas cette section sauf si vous ajoutez des extensions pour le traitement des données personnalisées. Pour plus d’informations, consultez [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
-###  <a name="bkmk_semantic"></a> Configuration générale des extensions de requêtes sémantiques  
+###  <a name="semantic-query-extensions-general-configuration"></a><a name="bkmk_semantic"></a> Configuration générale des extensions de requêtes sémantiques  
  Indique l'extension pour le traitement des requêtes sémantiques utilisée pour traiter les modèles de rapport. Les extensions pour le traitement des requêtes sémantiques incluses dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permettent la prise en charge des données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , des données Oracle et des données multidimensionnelles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ne modifiez pas cette section. Le traitement des requêtes n'est pas extensible.  
   
-###  <a name="bkmk_model"></a> Configuration de la génération de modèle  
+###  <a name="model-generation-configuration"></a><a name="bkmk_model"></a> Configuration de la génération de modèle  
  Spécifie une extension de génération de modèle servant à créer des modèles de rapports à partir d'une source de données partagée déjà publiée sur un serveur de rapports. Vous pouvez générer des modèles pour des données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , des données Oracle et des sources de données multidimensionnelles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ne modifiez pas cette section. La génération de modèle n'est pas extensible.  
   
-###  <a name="bkmk_security"></a> Configuration de l'extension de sécurité  
+###  <a name="security-extension-configuration"></a><a name="bkmk_security"></a> Configuration de l'extension de sécurité  
  Spécifie le composant d'autorisation utilisé par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Ce composant est utilisé par l’extension d’authentification inscrite dans l’élément **Authentication** du fichier RSReportServer.config. Ne modifiez pas cette section sauf si vous implémentez une extension d'authentification personnalisée. Pour plus d'informations sur l'ajout de fonctionnalités de sécurité personnalisées, consultez [Implémentation d’une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md). Pour plus d'informations sur les autorisations, consultez [Autorisation dans Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md).  
   
-###  <a name="bkmk_authentication"></a> Configuration de l'extension d'authentification  
+###  <a name="authentication-extension-configuration"></a><a name="bkmk_authentication"></a> Configuration de l'extension d'authentification  
  Spécifie les extensions d'authentification personnalisée et par défaut qui sont utilisées par le serveur de rapports. L'extension par défaut repose sur l'authentification Windows. Ne modifiez pas cette section sauf si vous implémentez une extension d'authentification personnalisée. Pour plus d’informations sur l’authentification dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Authentification dans Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md) et [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md). Pour plus d'informations sur l'ajout de fonctionnalités de sécurité personnalisées, consultez [Implémentation d’une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).  
   
-###  <a name="bkmk_eventprocessing"></a> Traitement des événements  
+###  <a name="event-processing"></a><a name="bkmk_eventprocessing"></a> Traitement des événements  
  Spécifie les gestionnaires d'événements par défaut. Ne modifiez pas cette section. Cette section n'est pas extensible.  
   
-###  <a name="bkmk_reportdefinition"></a> Personnalisation de la définition de rapport  
+###  <a name="report-definition-customization"></a><a name="bkmk_reportdefinition"></a> Personnalisation de la définition de rapport  
  Spécifie le nom et le type d'une extension personnalisée qui modifie une définition de rapport.  
   
-###  <a name="bkmk_rdlsandboxing"></a> RDLSandboxing  
+###  <a name="rdlsandboxing"></a><a name="bkmk_rdlsandboxing"></a> RDLSandboxing  
  Spécifie un mode RDL (Report Definition Language) qui vous permet de détecter et restreindre l'utilisation de types spécifiques de ressources de rapport par les locataires individuels dans un scénario où plusieurs locataires partagent une batterie Web unique de serveurs de rapports. Pour plus d’informations, consultez [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
   
-##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (fichier RSReportServer.config)  
+##  <a name="maptileserverconfiguration-rsreportserverconfig-file"></a><a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (fichier RSReportServer.config)  
  **MapTileServerConfiguration** définit des paramètres de configuration pour les Services Web Bing Maps de [!INCLUDE[msCoName](../../includes/msconame-md.md)] qui fournissent un arrière-plan de mosaïques pour un élément de rapport cartographique dans un rapport publié sur un serveur de rapports. Tous les éléments enfants sont obligatoires.  
   
 |Paramètre|Description|  
@@ -386,7 +386,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**AppID**|Spécifie l'identificateur d'application (AppID) à utiliser pour les services Web Bing Maps. **(Default)** spécifie l’AppID par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Ne modifiez pas cette valeur sauf si vous devez spécifier un AppID personnalisé pour votre propre contrat de licence Bing Maps. Lorsque vous modifiez l'AppID, vous n'avez pas à redémarrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour que la modification prenne effet.|  
 |**CacheLevel**|Spécifie une valeur de l'énumération HttpRequestCacheLevel de System.Net.Cache. La valeur par défaut est **Default**. Pour plus d'informations, consultez [HttpRequestCacheLevel, énumération](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
-##  <a name="bkmk_nativedefaultfile"></a> Fichier de configuration par défaut d'un serveur de rapports en mode natif  
+##  <a name="default-configuration-file-for-a-native-mode-report-server"></a><a name="bkmk_nativedefaultfile"></a> Fichier de configuration par défaut d'un serveur de rapports en mode natif  
  Le fichier rsreportserver.config est installé à l'emplacement par défaut suivant :  
   
  **C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer**  
@@ -720,7 +720,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration> 
 ```  
   
-##  <a name="bkmk_sharepointdefaultfile"></a> Fichier de configuration par défaut d'un serveur de rapports en mode SharePoint  
+##  <a name="default-configuration-file-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepointdefaultfile"></a> Fichier de configuration par défaut d'un serveur de rapports en mode SharePoint  
  Le fichier rsreportserver.config est installé à l'emplacement par défaut suivant :  
   
  **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting**  
@@ -835,7 +835,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   

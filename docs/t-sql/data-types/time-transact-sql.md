@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000454"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -88,7 +88,7 @@ ms.locfileid: "68000454"
   
  Le format de littéral de chaîne par défaut (utilisé pour le client de bas niveau) s'alignera avec le format standard SQL qui est défini comme hh:mm:ss[.nnnnnnn]. Ce format ressemble à la définition ISO 8601 pour TIME à l'exclusion des fractions de seconde.  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> Compatibilité descendante pour les clients de bas niveau  
+##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> Compatibilité descendante pour les clients de bas niveau  
  Certains clients de bas niveau ne prennent pas en charge les types de données **time**, **date**, **datetime2** et **datetimeoffset**. Le tableau suivant présente le type de mappage entre une instance de haut niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des clients de bas niveau.  
   
 |Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Format de littéral de chaîne par défaut passé au client de bas niveau|ODBC de bas niveau|OLEDB de bas niveau|JDBC de bas niveau|SQLCLIENT de bas niveau|  
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> B. Insertion de littéraux de chaîne d'heure valides dans une colonne time(7)  
+###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> B. Insertion de littéraux de chaîne d'heure valides dans une colonne time(7)  
  Le tableau suivant répertorie différents littéraux de chaîne qui peuvent être insérés dans une colonne de type de données **time(7)** avec les valeurs qui sont ensuite stockées dans cette colonne.  
   
 |Type de format du littéral de chaîne|Littéral de chaîne inséré|Valeur time(7) qui est stockée|Description|  

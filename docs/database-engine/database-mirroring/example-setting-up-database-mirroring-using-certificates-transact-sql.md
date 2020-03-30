@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253592"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253592"
   
  Lors de la copie d'un certificat sur un autre système, utilisez une méthode de copie sécurisée. Veillez particulièrement à sécuriser tous vos certificats.  
   
-##  <a name="ExampleH2"></a> Exemple  
+##  <a name="example"></a><a name="ExampleH2"></a> Exemple  
  L'exemple suivant illustre ce qui doit être fait sur un serveur partenaire qui réside sur HOST_A. Dans cet exemple, les deux serveurs partenaires sont les instances de serveur par défaut réparties sur trois systèmes informatiques. Les deux instances de serveur sont exécutées dans des domaines Windows non approuvés, par conséquent l'authentification basée sur les certificats est nécessaire.  
   
  Le rôle principal initial est occupé par HOST_A, et le rôle miroir par HOST_B.  
@@ -62,7 +62,7 @@ ms.locfileid: "75253592"
   
 4.  [Configuration des serveurs partenaires de mise en miroir](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> Configuration des connexions sortantes  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> Configuration des connexions sortantes  
  **Pour configurer Host_A pour les connexions sortantes**  
   
 1.  Dans la base de données master, créez la clé principale de base de données, si nécessaire.  
@@ -156,7 +156,7 @@ ms.locfileid: "75253592"
   
  [&#91;Début de l’exemple&#93;](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> Configuration des connexions entrantes  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> Configuration des connexions entrantes  
  **Pour configurer Host_A pour les connexions entrantes**  
   
 1.  Créez une connexion sur HOST_A pour HOST_B.  
@@ -233,7 +233,7 @@ ms.locfileid: "75253592"
 ### <a name="creating-the-mirror-database"></a>Création de la base de données miroir  
  Pour plus d’informations sur la création d’une base de données miroir, consultez [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-###  <a name="ConfigureMirroringPartners"></a> Configuration des serveurs partenaires de mise en miroir  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> Configuration des serveurs partenaires de mise en miroir  
   
 1.  Sur l'instance de serveur miroir de HOST_B, définissez l'instance de serveur de HOST_A en tant que serveur partenaire (en faisant d'elle l'instance initiale de serveur principal). Remplacez une adresse réseau valide par `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253592"
   
  [&#91;Début de l’exemple&#93;](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

@@ -13,10 +13,10 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d3b98adece53952f72afc999f950c0388b65c96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67904922"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Afficher les paramètres NodeWeight pour le quorum de cluster
@@ -27,9 +27,9 @@ ms.locfileid: "67904922"
   
 -   **Pour afficher les paramètres NodeWeight du quorum avec :** [Utilisation de Transact-SQL](#TsqlProcedure), [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Cluster.exe](#CommandPromptProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Cette fonctionnalité est prise en charge uniquement dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ou versions ultérieures.  
   
 > [!IMPORTANT]  
@@ -40,10 +40,10 @@ ms.locfileid: "67904922"
 > [!TIP]  
 >  Si ce correctif logiciel n'est pas installé, les exemples de cette rubrique retournent des valeurs vides ou NULL pour NodeWeight.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  L'utilisateur doit être un compte de domaine qui est membre du groupe Administrateurs local sur chaque nœud du cluster WSFC.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 ##### <a name="to-view-nodeweight-settings"></a>Pour consulter les paramètres NodeWeight  
   
@@ -59,7 +59,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
  FROM   sys.dm_hadr_cluster_members;  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
 ##### <a name="to-view-nodeweight-settings"></a>Pour consulter les paramètres NodeWeight  
   
@@ -83,7 +83,7 @@ $nodes = Get-ClusterNode -Cluster $cluster
 $nodes | Format-Table -property NodeName, State, NodeWeight  
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Utilisation de Cluster.exe  
+##  <a name="using-clusterexe"></a><a name="CommandPromptProcedure"></a> Utilisation de Cluster.exe  
   
 > [!NOTE]  
 >  L'utilitaire cluster.exe est déconseillé dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Utilisez PowerShell avec le clustering de basculement pour le développement futur.  L'utilitaire cluster.exe sera supprimé dans la prochaine version de Windows Server. Pour plus d'informations, consultez [Mappage des commandes Cluster.exe aux applets de commande Windows PowerShell pour les clusters de basculement](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  

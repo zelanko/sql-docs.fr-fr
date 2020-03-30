@@ -12,10 +12,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952513"
 ---
 # <a name="configure-replication-with-t-sql"></a>Configurer la réplication avec T-SQL
@@ -36,7 +36,7 @@ Dans ce tutoriel, vous allez configurer la réplication de capture instantanée 
 
 Toutes les configurations de réplication peuvent être configurées avec des [procédures stockées de réplication](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 Pour exécuter ce didacticiel, les éléments suivants sont nécessaires :
 
 - Deux instances de SQL Server avec la dernière version de SQL Server sur Linux

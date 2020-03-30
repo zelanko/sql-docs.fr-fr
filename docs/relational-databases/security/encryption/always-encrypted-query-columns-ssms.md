@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287133"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio
@@ -77,7 +77,7 @@ Outre les autorisations ci-dessus, pour déchiffrer des résultats de requête o
 
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="en-dis"></a> Activation et désactivation d’Always Encrypted pour une connexion de base de données   
+## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> Activation et désactivation d’Always Encrypted pour une connexion de base de données   
 Quand vous vous connectez à une base de données dans SSMS, vous pouvez activer ou désactiver les Always Encrypted pour la connexion de base de données. Par défaut, Always Encrypted est désactivé. 
 
 L’activation d’Always Encrypted pour une connexion de base de données indique au fournisseur de données .NET Framework pour SQL Server, utilisé par SQL Server Management Studio, de tenter d’effectuer ces actions de manière transparente :   
@@ -106,7 +106,7 @@ Pour activer (désactiver) Always Encrypted :
 > 2.    Sélectionnez **Connexion** > **Changer la connexion...** . Ceci va ouvrir la boîte de dialogue **Se connecter au serveur** pour la connexion actuelle de la fenêtre de l’éditeur de requête. 
 > 2.    Activez ou désactivez Always Encrypted en suivant les étapes ci-dessus, puis cliquez sur **Se connecter**.  
    
-## <a name="param"></a>Paramétrage pour Always Encrypted   
+## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Paramétrage pour Always Encrypted   
  
 Le paramétrage d’Always Encrypted est une fonctionnalité de SQL Server Management Studio qui convertit automatiquement les variables Transact-SQL en paramètres de requête (instances de [SqlParameter Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Nécessite au moins SSMS version 17.0.) Cela permet au fournisseur de données .NET Framework pour SQL Server sous-jacent de détecter les données ciblant les colonnes chiffrées et de chiffrer ces données avant de les envoyer à la base de données. 
   

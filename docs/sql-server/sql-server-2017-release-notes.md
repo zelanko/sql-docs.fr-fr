@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68136480"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de publication de SQL Server 2017
@@ -71,9 +71,9 @@ Il n’y a aucune note de publication sur cette version de SQL Server sur Window
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 Release Candidate (RC1, juillet 2017)
 ### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS) (RC1, juillet 2017)
 - **Problème et impact sur le client :** Le paramètre *runincluster* de la procédure stockée **[catalog].[create_execution]** est renommé en *runinscaleout* pour des raisons de cohérence et de lisibilité.
-- **Solution de contournement :** Si vous avez des scripts existants pour exécuter des packages dans Scale Out, vous devez remplacer le nom du paramètre *runincluster* par *runinscaleout* pour que les scripts fonctionnent dans la version RC1.
+- **Solution de contournement :** Si vous avez des scripts existants pour exécuter des packages dans Scale-out, vous devez remplacer le nom du paramètre *runincluster* par *runinscaleout* pour que les scripts fonctionnent dans la version RC1.
 
-- **Problème et impact sur le client :** SQL Server Management Studio (SSMS) 17.1 et versions antérieures ne peuvent pas déclencher l’exécution du package dans Scale Out dans la version RC1. Le message d’erreur est : « *@runincluster* n’est pas un paramètre valide pour la procédure **create_execution** ». Ce problème est résolu dans la prochaine version de SSMS, la version 17.2. Les versions 17.2 et ultérieures de SSMS prennent en charge le nouveau nom de paramètre et l’exécution de package dans Scale Out. 
+- **Problème et impact sur le client :** SQL Server Management Studio (SSMS) 17.1 et versions antérieures ne peuvent pas déclencher l’exécution du package dans Scale Out dans la version RC1. Le message d’erreur est : « *@runincluster* n’est pas un paramètre valide pour la procédure **create_execution** ». Ce problème est résolu dans la prochaine version de SSMS, la version 17.2. Les versions 17.2 et ultérieures de SSMS prennent en charge le nouveau nom de paramètre et l’exécution de package dans Scale-out. 
 - **Solution de contournement :** jusqu’à ce que SSMS version 17.2 soit disponible :
   1. Utilisez votre version existante de SSMS pour générer le script d’exécution du package.
   2. Modifiez le nom du paramètre *runincluster* sur *runinscaleout* dans le script.

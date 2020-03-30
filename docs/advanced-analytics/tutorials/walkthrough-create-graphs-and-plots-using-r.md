@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73724017"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Créer des graphiques et des tracés à l’aide de SQL et R (procédure pas à pas)
@@ -21,7 +21,7 @@ ms.locfileid: "73724017"
 
 Dans cette partie de la procédure pas à pas, vous allez apprendre des techniques de génération de tracés et de cartes en utilisant R avec des données SQL Server. Vous allez d’abord créer un histogramme simple, puis développer un tracé de carte plus complexe.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Cette étape suppose que vous utilisez une session R ouverte basée sur les étapes précédentes de cette procédure pas à pas. Elle utilise les chaînes de connexion et les objets de source de données créés dans ces étapes. Les outils et les packages suivants sont utilisés pour exécuter le script.
 

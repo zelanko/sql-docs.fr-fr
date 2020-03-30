@@ -25,17 +25,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903881"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
   
-##  <a name="types"></a> Types d’alimentation  
+##  <a name="types-of-population"></a><a name="types"></a> Types d’alimentation  
 Un index de recherche en texte intégral prend en charge les types d’alimentation suivants :
 -   Alimentation **complète**
 -   Alimentation automatique ou manuelle basée sur le **suivi des modifications**
@@ -171,7 +171,7 @@ Dans certains cas, la demande d’une alimentation incrémentielle entraîne une
   
  Pour exécuter une alimentation incrémentielle, exécutez une instruction `ALTER FULLTEXT INDEX` à l’aide de la clause `START INCREMENTAL POPULATION`.  
   
-###  <a name="create"></a> Créer ou modifier une planification pour l’alimentation incrémentielle   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> Créer ou modifier une planification pour l’alimentation incrémentielle   
   
 1.  Dans Management Studio, dans l’Explorateur d’objets, développez le serveur.  
   
@@ -208,7 +208,7 @@ Dans certains cas, la demande d’une alimentation incrémentielle entraîne une
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a> Résoudre les erreurs dans une alimentation de texte intégral (analyse)  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> Résoudre les erreurs dans une alimentation de texte intégral (analyse)  
 Lorsqu'une erreur se produit durant une analyse, la fonction d'analyse de la recherche en texte intégral crée et conserve un journal de l'analyse sous forme de fichier texte. Chaque journal de l'analyse correspond à un catalogue de texte intégral particulier. Par défaut, les journaux d’analyse pour une instance donnée (dans cet exemple, l’instance par défaut) figurent dans le dossier `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
  
 Le fichier journal de l'analyse respecte le modèle de dénomination suivant :  

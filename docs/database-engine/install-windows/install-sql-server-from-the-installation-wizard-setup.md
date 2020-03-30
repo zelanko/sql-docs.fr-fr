@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934190"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
@@ -41,7 +41,7 @@ Pour les autres façons d’installer [!INCLUDE[ssNoVersion](../../includes/ssno
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Avant d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
@@ -50,7 +50,7 @@ Avant d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], c
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> Installer le correctif obligatoire
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> Installer le correctif obligatoire
 
 Microsoft a identifié un problème qui affecte les fichiers binaires du runtime Microsoft Visual C++ 2013 installés en tant que composants requis par SQL Server 2016 et 2017. Une mise à jour est disponible pour résoudre ce problème. Si cette mise à jour des fichiers binaires du runtime Visual C++ n’est pas installée, SQL Server risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server, suivez les instructions données dans les [notes de publication SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) pour voir si votre ordinateur nécessite un correctif pour les fichiers binaires du runtime Visual C++. 
 

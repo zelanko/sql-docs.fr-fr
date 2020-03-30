@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634549"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Mettre à niveau les composants Machine Learning (R et Python) dans les instances SQL Server
@@ -106,7 +106,7 @@ En résumé, les étapes de liaison sont les suivantes :
 
 En termes d’expérience utilisateur, la technologie et la façon dont vous l’utilisez restent inchangées. La seule différence réside dans la présence de packages d’une version plus récente et éventuellement de packages supplémentaires qui n’étaient pas disponibles à l’origine par le biais de SQL Server.
 
-## <a name="bkmk_BindWizard"></a>Lier à MLS à l’aide du programme d’installation
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>Lier à MLS à l’aide du programme d’installation
 
 Le programme d’installation de Microsoft Machine Learning détecte les fonctionnalités existantes et la version de SQL Server, avant d’appeler un utilitaire nommé SqlBindR.exe pour modifier la liaison. En interne, SqlBindR est chaîné au programme d’installation et utilisé indirectement. Vous avez la possibilité d’appeler SqlBindR ultérieurement, directement à partir de la ligne de commande, pour exercer des options spécifiques.
 
@@ -210,7 +210,7 @@ Les instructions suivantes expliquent comment placer les fichiers pour une insta
 
 1. Exécutez le fichier ServerSetup.exe et suivez les invites à l’écran pour terminer l’installation.
 
-## <a name="bkmk_BindCmd"></a>Opérations de ligne de commande
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>Opérations de ligne de commande
 
 Après avoir exécuté Microsoft Machine Learning Server, un utilitaire de ligne de commande appelé SqlBindR.exe devient disponible. Vous pouvez l’utiliser pour d’autres opérations de liaison. Par exemple, si vous décidez d’inverser une liaison, vous pouvez soit réexécuter le programme d’installation, soit utiliser l’utilitaire de ligne de commande. Vous pouvez également utiliser cet outil pour vérifier la compatibilité et la disponibilité des instances.
 
@@ -229,7 +229,7 @@ Après avoir exécuté Microsoft Machine Learning Server, un utilitaire de ligne
 
 4. Une fois la mise à niveau terminée, redémarrez le service Launchpad associé à l’instance qui a été modifiée.
 
-## <a name="bkmk_Unbind"></a>Rétablir ou annuler la liaison d’une instance
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>Rétablir ou annuler la liaison d’une instance
 
 Vous pouvez restaurer une instance liée vers une installation initiale des composants R et Python, établie par le programme d’installation de SQL Server. Pour revenir à la maintenance SQL Server, vous devez suivre trois étapes.
 
@@ -243,7 +243,7 @@ Vous pouvez restaurer une instance liée vers une installation initiale des comp
 
 Vous avez deux options pour restaurer la liaison : réexécuter la configuration ou utiliser l’utilitaire de ligne de commande SqlBindR.
 
-#### <a name="bkmk_wizunbind"></a> Annulation de la liaison à l’aide du programme d’installation
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> Annulation de la liaison à l’aide du programme d’installation
 
 1. Localisez le programme d’installation de Machine Learning Server. Si vous avez supprimé le programme d’installation, vous devrez peut-être le télécharger de nouveau ou le copier à partir d’un autre ordinateur.
 2. Assurez-vous d’exécuter le programme d’installation sur l’ordinateur hébergeant l’instance que vous souhaitez séparer.
@@ -252,7 +252,7 @@ Vous avez deux options pour restaurer la liaison : réexécuter la configuration
 4. Acceptez le contrat de licence. Vous devez confirmer que vous acceptez les termes du contrat de licence, y compris lors de l’installation.
 5. Cliquez sur **Terminer**. Le processus prend un certain temps.
 
-#### <a name="bkmk_cmdunbind"></a> Annulation de la liaison à l’aide de la ligne de commande
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> Annulation de la liaison à l’aide de la ligne de commande
 
 1. Ouvrez une invite de commandes et accédez au dossier qui contient **sqlbindr.exe**, comme décrit dans la section précédente.
 
@@ -284,7 +284,7 @@ Vous aviez peut-être ajouté d’autres packages tiers ou open source à votre 
 
 ### <a name="parameters"></a>Paramètres
 
-|Name|Description|
+|Nom|Description|
 |------|------|
 |*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|

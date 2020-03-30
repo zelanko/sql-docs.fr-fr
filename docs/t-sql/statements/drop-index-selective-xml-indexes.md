@@ -15,10 +15,10 @@ ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc1a9b8b91d37359ce7dc2a4845d0d83e81f996a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68044156"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (Selective XML Indexes)
@@ -26,7 +26,7 @@ ms.locfileid: "68044156"
 
   Supprime un index XML sélectif existant ou l'index XML secondaire sélectif dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ DROP INDEX index_name ON <object>
 }  
 ```  
   
-##  <a name="Arguments"></a> Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a> Arguments  
  *index_name*  
  Nom de l'index existant à supprimer.  
   

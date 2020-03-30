@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198426"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer les référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
@@ -34,7 +34,7 @@ Cet article explique comment configurer le référentiel approprié pour les ins
 > [!TIP]
 > SQL Server 2019 est maintenant disponible ! Si vous souhaitez l’essayer, lisez cet article pour configurer le nouveau référentiel **mssql-server-2019**. Ensuite, installez à l’aide des instructions du [guide d’installation](sql-server-linux-setup.md).
 
-## Référentiels <a id="repositories"></a>
+## <a name="repositories"></a>Référentiels <a id="repositories"></a>
 
 Lorsque vous installez SQL Server sur Linux, vous devez configurer un référentiel Microsoft. Ce référentiel est utilisé pour acquérir le package du moteur de base de données, **mssql-server**, et les packages SQL Server associés. Il existe actuellement cinq référentiels principaux :
 
@@ -46,7 +46,7 @@ Lorsque vous installez SQL Server sur Linux, vous devez configurer un référent
 | **2017** | **mssql-server-2017** | Référentiel SQL Server 2017 mise à jour cumulative (CU). |
 | **2017 GDR** | **mssql-server-2017-gdr** | Référentiel SQL Server 2017 GDR pour les mises à jour critiques uniquement. |
 
-## <a id="cuversusgdr"></a> Mise à jour cumulative et GDR
+## <a name="cumulative-update-versus-gdr"></a><a id="cuversusgdr"></a> Mise à jour cumulative et GDR
 
 Il est important de noter qu’il existe deux principaux types de référentiels pour chaque distribution :
 

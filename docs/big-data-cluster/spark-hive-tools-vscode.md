@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255917"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Envoyer des travaux Spark sur un cluster Big Data SQL Server dans Visual Studio Code
@@ -24,7 +24,7 @@ Découvrez comment utiliser l’extension Spark & Hive Tools for Visual Studio C
 L’extension Spark & Hive Tools peut être installée sur les plateformes prises en charge par Visual Studio Code, notamment Windows, Linux et macOS. Vous trouverez ci-dessous les prérequis pour les différentes plateformes.
 
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Les éléments suivants sont requis pour effectuer les étapes décrites dans cet article :
 
@@ -176,7 +176,7 @@ Suivez les étapes ci-dessous pour envoyer des requêtes PySpark interactives :
 
 La configuration d’[Apache Livy](https://livy.incubator.apache.org/) est prise en charge. Elle peut être définie dans le fichier **.VSCode\settings.json** dans le dossier de l’espace de travail. Actuellement, la configuration Livy prend uniquement en charge le script Python. Pour plus d’informations, consultez le fichier [Lisez-moi de Livy](https://github.com/cloudera/livy/blob/master/README.rst ).
 
-### <a id="triggerlivyconf"></a>**Comment déclencher une configuration Livy**
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>**Comment déclencher une configuration Livy**
 
 #### <a name="method-1"></a>Méthode 1
 

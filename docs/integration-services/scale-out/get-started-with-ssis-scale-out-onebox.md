@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: a2d6929277b7d024e45daaefd5cb41dccd495c63
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082165"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Bien démarrer avec Integration Services (SSIS) Scale Out sur un seul ordinateur
@@ -56,15 +56,15 @@ Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **Catalogues I
 Dans la boîte de dialogue **Créer un catalogue**, l’option **Activer ce serveur comme SSIS Scale Out Master** est sélectionnée par défaut.
 
 ## <a name="4-enable-a-scale-out-worker"></a>4. Activer un Scale Out Worker
-Dans SSMS, cliquez avec le bouton droit sur **SSISDB**, puis sélectionnez **Gérer Scale Out**. 
+Dans SSMS, cliquez avec le bouton droit sur **SSISDB**, puis sélectionnez **Gérer Scale-out**. 
 
-![Gérer Scale Out](media/manage-scale-out.PNG)
+![Gérer Scale-out](media/manage-scale-out.PNG)
 
 L’application Integration Services Scale Out Manager s’ouvre. Pour plus d’informations, consultez [Scale Out Manager](integration-services-ssis-scale-out-manager.md).
 
 Pour activer un Scale Out Worker, passez au **Gestionnaire de workers**, puis sélectionnez le Worker à activer. Les Workers sont désactivés par défaut. Cliquez sur **Activer le Worker** pour activer le Worker sélectionné.
 
-## <a name="5-run-packages-in-scale-out"></a>5. Exécuter des packages dans Scale Out
+## <a name="5-run-packages-in-scale-out"></a>5. Exécuter des packages dans Scale-out
 Maintenant, vous êtes prêt à exécuter des packages SSIS dans Scale Out. Pour plus d’informations, consultez [Exécuter des packages dans SSIS (SQL Server Integration Services) Scale Out](run-packages-in-integration-services-ssis-scale-out.md).
 
 ## <a name="next-steps"></a>Étapes suivantes

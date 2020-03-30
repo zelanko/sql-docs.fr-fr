@@ -17,10 +17,10 @@ ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1d9cab0c7e6d44eb94ff6f64b2825a316ab3006
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173653"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurer l'option de configuration de serveur user connections
@@ -46,9 +46,9 @@ ms.locfileid: "77173653"
   
 -   **Suivi :**  [Après avoir configuré l’option user connections](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Seul un administrateur de base de données qualifié ou un spécialiste agréé doit changer cette option avancée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -57,12 +57,12 @@ ms.locfileid: "77173653"
     > [!IMPORTANT]  
     >  Si vous devez utiliser cette option, n'attribuez pas une valeur trop élevée, car chaque connexion possède un espace réservé, qu'elle soit utilisée ou non. Si vous dépassez le nombre maximal de connexions utilisateur, un message d'erreur s'affiche et vous devez attendre qu'une autre connexion soit disponible pour pouvoir vous connecter.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-connections-option"></a>Pour configurer l'option user connections  
   
@@ -74,7 +74,7 @@ ms.locfileid: "77173653"
   
 4.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-configure-the-user-connections-option"></a>Pour configurer l'option user connections  
   
@@ -100,7 +100,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option user connections  
+##  <a name="follow-up-after-you-configure-the-user-connections-option"></a><a name="FollowUp"></a> Suivi : Après avoir configuré l’option user connections  
  L’instance SQL doit être redémarrée pour que le paramètre puisse prendre effet.  
   
 ## <a name="see-also"></a>Voir aussi  

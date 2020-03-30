@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4d3fc240c155632a764025dbd8519385a9d4c6c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095726"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Vérifier l'état des messages électroniques envoyés avec la messagerie de base de données
@@ -30,10 +30,10 @@ ms.locfileid: "74095726"
   
 -   **Pour afficher l’état de l’e-mail envoyé avec Database Mail, à l’aide de :**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  La messagerie de base de données conserve un exemplaire des messages électroniques sortants qu’elle affiche dans les vues **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**et **sysmail_faileditems** de la base de données **msdb** . Le programme externe de la messagerie de base de données consigne les activités de l’application dans un journal qu’elle affiche par le biais du journal d’événements des applications Windows et la vue **sysmail_event_log** dans la base de données **msdb** . Pour vérifier l'état d'un message électronique, exécutez une requête sur cette vue. Les messages peuvent présenter quatre états distincts : **sent**(envoyé), **unsent**(non envoyé), **retrying**(nouvel essai) et **failed**(échec).  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour afficher l'état du message électronique envoyé à l'aide de la messagerie de base de données**  
   
 1.  Sélectionnez des éléments dans la table **sysmail_allitems** , en spécifiant le ou les messages qui vous intéressent par le biais de l’option **mailitem_id** ou **sent_status**.  
@@ -42,7 +42,7 @@ ms.locfileid: "74095726"
   
      Par défaut, le programme externe n'enregistre pas d'informations sur les messages correctement envoyés. Si vous voulez activer le journal pour tous les messages, définissez le niveau de journalisation sur le mode commenté par le biais de la page **Configurer les paramètres du système** de l' **Assistant Configuration de la messagerie de base de données**.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  L'exemple suivant regroupe des informations sur tous les messages électroniques envoyés à `danw` que le programme externe n'a pas pu envoyer correctement. L'instruction renseigne sur l'objet ainsi que sur la date et l'heure auxquelles la tentative d'envoi du message par le programme externe a échoué, elle indique également le message d'erreur provenant du journal de la messagerie de base de données.  
   
 ```  

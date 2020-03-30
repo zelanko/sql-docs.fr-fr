@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1b831047e4c2b8bad166e5ddf5ce3bdc7f8b6165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73532859"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
@@ -100,7 +100,7 @@ Cet argument permet de donner un ensemble de paramètres au runtime de langage e
 
 **external_lang_env_variables**
 
-Cet argument permet de donner un ensemble de variables d’environnement au runtime de langage externe avant le démarrage du processus externe. Un exemple de variable d’environnement est le répertoire de base du runtime lui-même. Par exemple :  JRE_HOME.
+Cet argument permet de donner un ensemble de variables d’environnement au runtime de langage externe avant le démarrage du processus externe. Un exemple de variable d’environnement est le répertoire de base du runtime lui-même. Par exemple : JRE_HOME.
 
 **platform**
 

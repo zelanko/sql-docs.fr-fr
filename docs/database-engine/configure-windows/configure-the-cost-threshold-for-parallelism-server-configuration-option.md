@@ -13,10 +13,10 @@ ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 783740852d4e979bcaff79dc3aa24068247b5e32
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012748"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Configurer l'option de configuration de serveur cost threshold for parallelism
@@ -42,9 +42,9 @@ ms.locfileid: "68012748"
   
 -   **Suivi :**  [Après avoir configuré l’option cost threshold for parallelism](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Ce coût est une unité de coût abstraite et non une unité de temps estimé. Spécifiez **cost threshold for parallelism** uniquement sur des multiprocesseurs symétriques.  
   
@@ -64,7 +64,7 @@ cpu_count AS logicalCPUs
 FROM sys.dm_os_sys_info  
 ```  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Seul un administrateur de base de données qualifié ou un spécialiste agréé doit changer cette option avancée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -72,12 +72,12 @@ FROM sys.dm_os_sys_info
 
 -   Même si la valeur par défaut (5) convient pour la plupart des systèmes, il est possible que vous ayez besoin de définir une valeur différente. Effectuez des tests d’application avec des valeurs supérieures et inférieures si nécessaire, afin d’optimiser les performances de l’application.
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>Pour configurer l'option cost threshold for parallelism  
   
@@ -87,7 +87,7 @@ FROM sys.dm_os_sys_info
   
 3.  Sous **Parallélisme**, remplacez l’option **Seuil de coût pour le parallélisme** par la valeur souhaitée. Tapez ou sélectionnez une valeur comprise entre 0 et 32 767.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>Pour configurer l'option cost threshold for parallelism  
   
@@ -112,7 +112,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option cost threshold for parallelism  
+##  <a name="follow-up-after-you-configure-the-cost-threshold-for-parallelism-option"></a><a name="FollowUp"></a> Suivi : Après avoir configuré l’option cost threshold for parallelism  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

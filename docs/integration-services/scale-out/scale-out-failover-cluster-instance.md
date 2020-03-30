@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903796"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Prise en charge de Scale Out pour la haute disponibilité au moyen d’une instance de cluster de basculement SQL Server
@@ -50,7 +50,7 @@ Suivez les étapes décrites dans [3. Installer Scale Out Master sur le nœud se
 Mettez à jour le fichier de configuration du service Scale Out Master (\<lecteur\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config) sur les nœuds principal et secondaire. Changez la valeur **SqlServerName** par [nom réseau SQL Server]//[nom de l’instance] ou [nom réseau SQL Server] pour l’instance par défaut.
 
 ## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6. Ajouter le service Scale Out Master au rôle SQL Server dans le cluster de basculement Windows
-Dans le Gestionnaire du cluster de basculement, connectez-vous au cluster pour Scale Out. Sélectionnez Rôles dans l’Explorateur, cliquez avec le bouton droit sur le rôle SQL Server et sélectionnez Ajouter une ressource, Service générique. 
+Dans le Gestionnaire du cluster de basculement, connectez-vous au cluster pour Scale-out. Sélectionnez Rôles dans l’Explorateur, cliquez avec le bouton droit sur le rôle SQL Server et sélectionnez Ajouter une ressource, Service générique. 
 
 ![Service générique](media/generic-service.PNG)
 
@@ -63,7 +63,7 @@ Mettez le service Scale Out Master en ligne.
 > [!NOTE]
 > Si vous souhaitez effectuer le basculement de SSISDB et du service Scale Out Master séparément, suivez les étapes décrites dans [7. Configurer le rôle du service Scale Out Master du cluster de basculement Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
-## <a name="7-install-scale-out-workers"></a>7. Installer chaque Scale Out Worker
+## <a name="7-install-scale-out-workers"></a>7. Installer Scale Out Workers
 Installez Scale Out Worker sur les nœuds Worker. Durant le processus d’installation, spécifiez https://[nom réseau SQL Server]:[port master] pour le point de terminaison master. 
 
 > [!NOTE]

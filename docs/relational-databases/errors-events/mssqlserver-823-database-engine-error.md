@@ -13,10 +13,10 @@ ms.assetid: 0d9fce3c-3772-46ce-a7a3-4f4988dc6cae
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f79710c168f87f1156f6bbce780f8fd154ea1dd0
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77013104"
 ---
 # <a name="mssqlserver-error-823"></a>Erreur 823 de MSSQLSERVER
@@ -56,7 +56,7 @@ Quand vous utilisez l’indicateur de trace 818, des informations de diagnostic 
 Pour plus d’informations, consultez [KB 826433 : Diagnostics SQL Server supplémentaires ajoutés pour détecter les problèmes d’E/S non signalés](https://support.microsoft.com/help/826433/sql-server-diagnostics-added-to-detect-unreported-i-o-problems-due-to)
 
 
-## <a name="cause"></a>Cause :
+## <a name="cause"></a>Cause
 Le message d’erreur 823 indique généralement l’existence d’un problème au niveau du système de stockage sous-jacent, du matériel ou d’un pilote qui se trouve dans le chemin de la demande d’E/S. Vous pouvez rencontrer cette erreur en cas d’incohérences dans le système de fichiers ou si le fichier de base de données est endommagé. Dans le cas d’une lecture de fichier, SQL Server aura déjà retenté la demande de lecture quatre fois avant de retourner l’erreur 823. Si la nouvelle tentative réussit, la requête n’échoue pas, mais le message [825](mssqlserver-825-database-engine-error.md) est écrit dans le journal des erreurs (ERRORLOG) et le journal des événements.
 
 ## <a name="user-action"></a>Action de l'utilisateur  

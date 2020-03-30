@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914866"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "67914866"
 > [!IMPORTANT]  
 >  Il n'est pas possible d'exécuter des requêtes sur des objets qui ne sont pas définis avec l'étendue d'un schéma, tels que des déclencheurs DDL, en utilisant OBJECT_ID. Pour les objets qui ne figurent pas dans la vue de catalogue [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md), vous pouvez obtenir leurs numéros d’identification en interrogeant la vue de catalogue appropriée. Par exemple, pour renvoyer le numéro d’identification d’un déclencheur DDL, utilisez `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -123,9 +123,9 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D : Renvoi de l'identificateur d'un objet spécifié  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D. Renvoi de l’identificateur d’un objet spécifié  
  L'exemple suivant renvoie l'ID d'objet de la table `FactFinance` de la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  

@@ -11,10 +11,10 @@ ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc923e3f6e24290f7f2c869fa15dfa4305776452
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014872"
 ---
 # <a name="step-1-configure-environment-for-php-development"></a>Étape 1 : Configurer un environnement de développement PHP
@@ -28,7 +28,7 @@ ms.locfileid: "68014872"
 * Téléchargez ici et installez le pilote ODBC applicable :  [Télécharger un pilote ODBC pour SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)  
 * Configurez le pilote PHP et le serveur web en fonction de votre système d’exploitation :
 
-### <a name="windows"></a> Windows  
+### <a name="windows"></a>Windows  
   
 
 * Configurez le chargement du pilote PHP : [Chargement de Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 

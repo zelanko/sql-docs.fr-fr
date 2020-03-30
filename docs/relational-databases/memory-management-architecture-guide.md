@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287943"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
@@ -124,7 +124,7 @@ Le tableau suivant indique si un type spécifique d’allocation de mémoire app
 |Mémoire de piles de threads|Oui|Oui|
 |Allocations directes de Windows|Oui|Oui|
 
-## <a name="dynamic-memory-management"></a> Gestion dynamique de la mémoire
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> Gestion dynamique de la mémoire
 Le comportement par défaut de la gestion de la mémoire du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est d’acquérir autant de mémoire que nécessaire sans provoquer une insuffisance de mémoire sur le système. Pour cela, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les API de notification de mémoire de Microsoft Windows.
 
 Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise dynamiquement la mémoire, il interroge régulièrement le système afin de déterminer la mémoire physique disponible. La conservation de cette mémoire libre empêche le système d'exploitation de paginer. S'il y a moins de mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en libère pour le système d'exploitation. S’il y a plus de mémoire disponible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer davantage de mémoire. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’ajoute de la mémoire que lorsque sa charge de travail en requiert davantage. Un serveur au repos n’augmente pas la taille de son espace d’adressage virtuel.  
@@ -203,7 +203,7 @@ L’option de configuration *min memory per query* spécifie la quantité minima
 >    
 > Pour obtenir des recommandations sur l’utilisation de cette configuration, consultez [Configurer l’option de configuration de serveur min memory per query](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
-### <a name="memory-grant-considerations"></a>Considérations sur l’allocation de mémoire
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>Considérations sur l’allocation de mémoire
 Pour **l’exécution en mode ligne**, l’allocation de mémoire initiale ne peut être dépassée en aucune circonstance. Si plus de mémoire que l’allocation initiale est nécessaire pour exécuter des opérations de **hachage** ou de **tri**, leur dépassement est transféré sur le disque. Une opération de hachage qui connaît un dépassement est prise en charge par un fichier de travail dans TempDB, tandis qu’une opération de tri avec dépassement est prise en charge par une [table de travail](../relational-databases/query-processing-architecture-guide.md#worktables).   
 
 Un dépassement qui se produit pendant une opération de tri est appelé [avertissement de tri](../relational-databases/event-classes/sort-warnings-event-class.md). Les avertissements de tri indiquent que les opérations de tri ne peuvent pas être effectuées en mémoire. Ceci n’inclut pas les opérations de tri impliquant la création d’index, mais seulement les opérations de tri effectuées dans une requête (comme une clause `ORDER BY` utilisée dans une instruction `SELECT`).

@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048523"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
@@ -28,7 +28,7 @@ ms.locfileid: "68048523"
 Il existe deux types de données spatiales. Le type de données **geometry** prend en charge les données planaires, ou euclidiennes (monde en deux dimensions). Le type de données **geometry** se conforme à la fois à la spécification Open Geospatial Consortium (OGC) Simple Features for SQL version 1.1.0. et à la norme SQL MM (norme ISO).
 De plus, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le type de données **geography** , qui stocke des données ellipsoïdes (monde sphérique), telles que des coordonnées GPS de latitude et de longitude.
 
-##  <a name="objects"></a> Objets de données spatiales  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Objets de données spatiales  
 Les types de données **geometry** et **geography** prennent en charge seize objets de données spatiales, ou types d’instances. Toutefois, seuls onze de ces types d’instances sont *instanciables*; vous pouvez créer et utiliser ces instances (ou les instancier) dans une base de données. Ces instances dérivent certaines propriétés de leurs types de données parents qui les distinguent comme **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** , ou comme instances multiples de **geometry** ou **geography** dans un **GeometryCollection**. Le type**Geography** a un type d’instance supplémentaire, **FullGlobe**.  
 
 La figure ci-dessous représente la hiérarchie **geometry** sur laquelle les types de données **geometry** et **geography** sont basés. Les types instanciables de **geometry** et **geography** sont indiqués en bleu.  
@@ -53,7 +53,7 @@ Exemples de types de collection :
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> Différences entre les types de données geometry et geography  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Différences entre les types de données geometry et geography  
 Les deux types de données spatiales se comportent souvent à peu près de la même façon, mais il existe des différences clés dans la façon dont les données sont stockées et manipulées.  
 
 ### <a name="how-connecting-edges-are-defined"></a>Mode de définition des arêtes de connexion  
@@ -86,7 +86,7 @@ Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites We
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> Segments d'arc de cercle  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Segments d'arc de cercle  
 Trois types instanciables acceptent des segments d’arc de cercle : **CircularString**, **CompoundCurve** et **CurvePolygon**.  Un segment d'arc de cercle est défini par trois points dans un plan à deux dimensions ; le troisième point doit être différent du premier point.  
 
 Les figures A et B affichent des segments d'arc de cercle types. Remarquez comment chacun des trois points se situe sur le périmètre d'un cercle.  

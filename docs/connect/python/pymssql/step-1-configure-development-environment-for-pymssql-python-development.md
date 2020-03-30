@@ -11,10 +11,10 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bf2942b79cf7e72efbb36a53019de8208cd3b8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935828"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Python pymssql
@@ -22,7 +22,7 @@ Vous devrez configurer votre environnement de développement avec les conditions
   
 Notez que les pilotes Python SQL utilisent le protocole TDS, qui est activé par défaut dans SQL Server et Azure SQL Database.  Aucune configuration supplémentaire n’est nécessaire.  
   
-## <a name="windows"></a> Windows  
+## <a name="windows"></a>Windows  
   
 1. **Installez le runtime Python et le gestionnaire de package pip**  
 a. Accédez à [python.org](https://www.python.org/downloads/)  

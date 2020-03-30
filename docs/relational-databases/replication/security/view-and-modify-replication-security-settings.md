@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287228"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Afficher et modifier les paramètres de sécurité de la réplication
@@ -46,20 +46,20 @@ ms.locfileid: "76287228"
   
 -   **Suivi :**  [après avoir modifié les paramètres de sécurité de la réplication](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Les procédures stockées à utiliser dépendent du type d'agent et du type de connexion serveur.  
   
 -   Les classes et les propriétés RMO que vous utilisez dépendent du type d'agent et du type de connexion au serveur.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour des raisons de sécurité, les valeurs réelles des mots de passe sont masquées dans les jeux de résultats retournés par les procédures stockées de réplication.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Affichez et modifiez les paramètres de sécurité dans les boîtes de dialogue suivantes :  
   
 1.  La boîte de dialogue **Mettre à jour les mots de passe de réplication** , disponible à partir du dossier **Réplication** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si vous modifiez le mot de passe d'un compte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'un compte Windows sur un serveur de la topologie de réplication, utilisez cette boîte de dialogue plutôt que de mettre à jour le mot de passe pour chaque agent utilisant le compte. Si des agents utilisent le même compte sur plus d'un serveur, vous devez vous connecter à chaque serveur et modifier le mot de passe. Les mots de passe sont mis à jour partout où la réplication utilise le mot de passe. Le mot de passe n'est pas mis à jour ailleurs, comme sur les serveurs liés.  
@@ -243,7 +243,7 @@ ms.locfileid: "76287228"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 > [!IMPORTANT]  
 >  Dans toutes les procédures répertoriées ci-dessous, lorsque cela est possible, demandez aux utilisateurs de fournir les informations d'identification de sécurité au moment de l'exécution. Si vous stockez des informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher tout accès non autorisé.  
@@ -414,7 +414,7 @@ ms.locfileid: "76287228"
   
 2.  Sur chaque serveur de publication qui utilise ce serveur de distribution distant, exécutez [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), en spécifiant le mot de passe défini à l’étape 1 pour `@password`.  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -561,14 +561,14 @@ ms.locfileid: "76287228"
   
     -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> qui spécifie le type de mode de sécurité utilisé par l'Abonné de mise à jour immédiate lorsqu'il se connecte au serveur de publication, et les informations d'identification de connexion pour cette connexion.  
   
-###  <a name="PShellExample"></a> Exemple (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemple (RMO)  
  Cet exemple vérifie le nom d'accès fourni et modifie tous les mots de passe relatifs à la connexion Windows fournie ou au compte de connexion SQL Server fourni, stockés par la réplication sur le serveur.  
   
  [!code-cs[HowTo#rmo_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> Suivi : après avoir modifié les paramètres de sécurité de la réplication  
+##  <a name="follow-up-after-you-modify-replication-security-settings"></a><a name="FollowUp"></a> Suivi : après avoir modifié les paramètres de sécurité de la réplication  
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
 ## <a name="see-also"></a>Voir aussi  

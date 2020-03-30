@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73aee045b57ca7fde08c24adca4a3d4267d06c61
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934071"
 ---
 # <a name="create-a-stored-procedure"></a>Créer une procédure stockée
@@ -32,17 +32,17 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
   
 -   **Pour créer une procédure avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
-##  <a name="Procedures"></a> Comment créer une procédure stockée  
+##  <a name="how-to-create-a-stored-procedure"></a><a name="Procedures"></a> Comment créer une procédure stockée  
  Vous pouvez utiliser l'un des éléments suivants :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour créer une procédure dans l'Explorateur d'objets**  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
@@ -92,7 +92,7 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
 > [!WARNING]  
 >  Validez toutes les entrées utilisateur. Ne concaténez pas les entrées utilisateur avant de les avoir validées. N'exécutez jamais une commande élaborée à partir d'une entrée utilisateur non validée.  
   
-###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour créer une procédure dans l'Éditeur de requête**  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

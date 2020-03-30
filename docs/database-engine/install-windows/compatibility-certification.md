@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632935"
 ---
 # <a name="compatibility-certification"></a>Certification de compatibilité
@@ -57,7 +57,7 @@ Tant que l’application n’a pas besoin de tirer parti des améliorations qui 
 
 Pour un nouveau travail de développement ou quand une application existante exige l’utilisation de nouvelles fonctionnalités comme le [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) ou un nouveau [!INCLUDE[tsql](../../includes/tsql-md.md)], envisagez de mettre à niveau le niveau de compatibilité de base de données vers la dernière version disponible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis certifiez votre application pour qu’elle fonctionne avec ce niveau de compatibilité. Pour plus d’informations sur la mise à niveau du niveau de compatibilité de base de données, consultez [Bonnes pratiques pour la mise à niveau du niveau de compatibilité de base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
    
-### <a name="queryplan_shape"></a> Qu’est-ce qu’une forme de plan de requête ?      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> Qu’est-ce qu’une forme de plan de requête ?      
 La forme d’un plan de requête correspond à la représentation visuelle des différents opérateurs qui composent un plan de requête. Cela inclut les opérateurs tels que les recherches, les analyses, les jointures et les tris, ainsi que les liens entre ces opérateurs qui indiquent le flux des données et l’ordre des opérations qui doivent être exécutées pour produire le jeu de résultats prévu. La forme du plan de requête est déterminée par l’optimiseur de requête.
 
 Pour que les performances des requêtes soient prévisibles pendant une mise à niveau, l’un des objectifs fondamentaux est de veiller à utiliser la même forme de plan de requête. Vous pouvez ainsi ne pas modifier le niveau de compatibilité de la base de données immédiatement après une mise à niveau, même si le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] sous-jacent a une version différente. Si aucune autre modification n’a été apportée à l’écosystème d’exécution de la requête (modifications importantes au niveau des ressources disponibles, distribution des données sous-jacentes), les performances d’une requête ne devraient pas changer. 

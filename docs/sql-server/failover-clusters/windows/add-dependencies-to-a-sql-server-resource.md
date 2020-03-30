@@ -16,10 +16,10 @@ ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822063"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Ajouter des dépendances à une ressource SQL Server
@@ -30,9 +30,9 @@ ms.locfileid: "74822063"
   
 -   **Pour ajouter une dépendance à une ressource SQL Server, à l’aide de :** [Gestionnaire du cluster de basculement Windows](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Il est important de noter que si vous ajoutez d'autres ressources au groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , celles-ci doivent avoir obligatoirement un nom de réseau SQL unique et une adresse IP SQL propre.  
   
  N'utilisez pas de ressources SQL existantes de noms sur le réseau et d'adresses IP pour autre chose que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si les ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont partagées avec d'autres ressources, les problèmes suivants peuvent se poser :  
@@ -55,10 +55,10 @@ ms.locfileid: "74822063"
   
      Si vous installez MS DTC dans votre groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et si d'autres ressources dépendent de MS DTC, MS DTC ne sera pas disponible si ce groupe est hors connexion ou lors d'un basculement. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommande de placer MS DTC dans un groupe distinct avec sa propre ressource de disque physique, si possible.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Si vous installez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans un groupe de ressources WSFC qui comporte plusieurs lecteurs de disques et si vous choisissez de placer vos données sur un des lecteurs, la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sera configurée comme étant dépendante uniquement sur ce lecteur. Pour placer les données ou les journaux sur un autre disque, vous devez d'abord ajouter une dépendance à la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le disque supplémentaire.  
   
-##  <a name="WinClusManager"></a> Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WinClusManager"></a> Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  
  **Pour ajouter une dépendance à une ressource SQL Server**  
   
 -   Ouvrez le composant logiciel enfichable Gestionnaire du cluster de basculement.  

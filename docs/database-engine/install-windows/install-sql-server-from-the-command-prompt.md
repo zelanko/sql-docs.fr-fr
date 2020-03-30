@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288613"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
@@ -145,7 +145,7 @@ Le reste de l’article fournit une description détaillée des paramètres disp
 > [!NOTE]
 > Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant. Pour les installations de cluster de basculement, vous devez être un administrateur local autorisé à vous connecter en tant que service et à agir dans le cadre du système d'exploitation sur tous les nœuds du cluster de basculement.  
   
-##  <a name="ProperUse"></a> Utilisation appropriée des paramètres d’installation  
+##  <a name="proper-use-of-setup-parameters"></a><a name="ProperUse"></a> Utilisation appropriée des paramètres d’installation  
 Utilisez les instructions suivantes pour développer des commandes d'installation ayant la syntaxe adéquate :  
   
 -   /PARAMETER (Exemple : `/INDICATEPROGRESS`)
@@ -168,7 +168,7 @@ Les sections suivantes fournissent des paramètres qui permettent de développer
 Les paramètres répertoriés pour un composant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sont spécifiques à ce composant. Les paramètres de SQL Server Agent et SQL Server Browser sont applicables quand vous installez le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
 
 
-##  <a name="Install"></a> Paramètres d’installation  
+##  <a name="installation-parameters"></a><a name="Install"></a> Paramètres d’installation  
  Utilisez les paramètres listés dans le tableau ci-dessous pour développer des scripts d’installation en ligne de commande.  
   
 |Composant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Paramètre|Description|  
@@ -271,7 +271,7 @@ Les paramètres répertoriés pour un composant [!INCLUDE[ssDEnoversion](../../i
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="SysPrep"></a> Paramètres SysPrep  
+##  <a name="sysprep-parameters"></a><a name="SysPrep"></a> Paramètres SysPrep  
  Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, consultez  
   
  [Installer [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à l’aide de SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md). 
@@ -374,7 +374,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Upgrade"></a> Paramètres de mise à niveau  
+##  <a name="upgrade-parameters"></a><a name="Upgrade"></a> Paramètres de mise à niveau  
  Utilisez les paramètres répertoriés dans le tableau ci-dessous pour développer des scripts de mise à niveau en ligne de commande. 
   
 |Composant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Paramètre|Description|  
@@ -412,7 +412,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Repair"></a> Paramètres de réparation  
+##  <a name="repair-parameters"></a><a name="Repair"></a> Paramètres de réparation  
  Utilisez les paramètres répertoriés dans le tableau ci-dessous pour développer des scripts de réparation en ligne de commande. 
   
 |Composant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Paramètre|Description|  
@@ -436,7 +436,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
-##  <a name="Rebuild"></a> Paramètres de reconstruction des bases de données système  
+##  <a name="rebuild-system-database-parameters"></a><a name="Rebuild"></a> Paramètres de reconstruction des bases de données système  
  Utilisez les paramètres répertoriés dans le tableau suivant pour développer des scripts en ligne de commande qui permettent de reconstruire les bases de données système MASTER, model, msdb et tempdb. Pour plus d’informations, consultez [Reconstruire des bases de données système](../../relational-databases/databases/rebuild-system-databases.md). 
   
 |Composant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Paramètre|Description|  
@@ -455,7 +455,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Facultatif**|Spécifie la taille initiale en Mo du fichier journal tempdb. La taille maximale autorisée par le programme d’installation s’élève à 1 024. Valeur par défaut :<br /><br /> 4 pour [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 pour toutes les autres éditions<br /><br /> Plage autorisée : Min = valeur par défaut (4 ou 8), Max = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Facultatif**|Introduit dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Spécifie la taille initiale de chaque fichier journal tempdb.<br/><br/>Par défaut = 4 Mo pour [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 Mo pour toutes les autres éditions.<br/><br/>Min = (4 Mo ou 8 Mo).<br/><br/>Max = 1024 Mo (262 144 Mo pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
-##  <a name="Uninstall"></a> Paramètres de désinstallation  
+##  <a name="uninstall-parameters"></a><a name="Uninstall"></a> Paramètres de désinstallation  
  Utilisez les paramètres répertoriés dans le tableau ci-dessous pour développer des scripts de désinstallation en ligne de commande. 
   
 |Composant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Paramètre|Description|  
@@ -478,7 +478,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
  Pour supprimer une instance nommée, spécifiez le nom de l’instance au lieu de « MSSQLSERVER » dans l’exemple mentionné plus haut dans cet article. 
   
-##  <a name="ClusterInstall"></a> Paramètres de cluster de basculement  
+##  <a name="failover-cluster-parameters"></a><a name="ClusterInstall"></a> Paramètres de cluster de basculement  
  Avant d’installer une instance de cluster de basculement [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consultez les articles suivants :  
   
 -   [Configurations matérielle et logicielle requises pour l’installation de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
@@ -743,7 +743,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **Facultatif**|La propriété est utilisée uniquement lors de la mise à niveau d'un serveur de rapports en mode SharePoint avec la version 2008 R2 ou antérieure. Des opérations de mise à niveau supplémentaires sont effectuées pour les serveurs de rapports qui utilisent l’ancienne architecture du mode SharePoint, modifiée dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si cette option n’est pas incluse dans l’installation en ligne de commande, le compte de service par défaut de l’ancienne instance du serveur de rapports est utilisé. Si cette propriété est utilisée, fournissez le mot de passe du compte à l'aide de la propriété **/RSUPGRADEPASSWORD** .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **Facultatif**|Mot de passe du compte de service Report Server existant.|  
   
-####  <a name="AddNode"></a> Paramètres d’ajout de nœud  
+####  <a name="add-node-parameters"></a><a name="AddNode"></a> Paramètres d’ajout de nœud  
  Utilisez les paramètres répertoriés dans le tableau ci-dessous pour développer des scripts d'ajout de nœud en ligne de commande. 
   
 |Composant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Paramètre|Description|  
@@ -810,7 +810,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
-##  <a name="Accounts"></a> Paramètres des comptes de service  
+##  <a name="service-account-parameters"></a><a name="Accounts"></a> Paramètres des comptes de service  
  Vous pouvez configurer les services SQL Server à l’aide d’un compte intégré, d’un compte local ou d’un compte de domaine. 
   
 > [!NOTE] 
@@ -830,7 +830,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   > Les fonctionnalités Reporting Services ont été supprimées de SQL Server 2017. Les paramètres de compte pour SQL Server Reporting Services s’appliquent seulement aux versions antérieures à SQL Server 2017. 
 
 
-##  <a name="Feature"></a> Paramètres de fonctionnalités  
+##  <a name="feature-parameters"></a><a name="Feature"></a> Paramètres de fonctionnalités  
  Pour installer des fonctionnalités spécifiques, utilisez le paramètre /FEATURES et spécifiez la fonctionnalité parent ou les valeurs de fonctionnalités répertoriées dans le tableau suivant. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de SQL Server, consultez [Éditions et fonctionnalités prises en charge pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
 |Paramètre de fonctionnalité parent|Paramètre de fonctionnalité|Description|  
@@ -881,7 +881,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|Installe les composants de la documentation en ligne de SQL Server pour afficher et gérer le contenu d’aide.|  
 |/FEATURES=SQLEngine,PolyBase|Installe le moteur PolyBase.|  
   
-##  <a name="RoleParameters"></a> Paramètres de rôle  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> Paramètres de rôle  
  Le paramètre de rôle d'installation ou /Role est utilisé pour installer une sélection de fonctionnalités préconfigurées. Les rôles SSAS installent une instance SSAS dans une batterie de serveurs SharePoint existante ou dans une nouvelle batterie non configurée. Deux rôles d'installation sont fournis pour prendre en charge chaque scénario. Vous ne pouvez choisir d'utiliser qu'un seul rôle d'installation à la fois. Selon le rôle d'installation que vous choisissez, le programme d'installation installe les fonctionnalités et composants qui appartiennent à ce rôle. Vous ne pouvez pas modifier les fonctionnalités et composants désignés pour ce rôle. Pour plus d’informations sur l’utilisation du paramètre de rôle de fonctionnalité, consultez [Installer Power Pivot à partir de l’invite de commandes](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
   
  Le rôle AllFeatures_WithDefaults correspond au comportement par défaut des éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] et réduit le nombre de boîtes de dialogue présentées à l'utilisateur. Il peut être spécifié à partir de la ligne de commande pendant l’installation d’une édition de SQL Server qui n’est pas [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
@@ -892,7 +892,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SPI_AS_NewFarm|Installe [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en tant qu’instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur une batterie de serveurs Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] nouvelle ou non configurée, ou sur un serveur autonome. Le programme d’installation de SQL Server configure la batterie de serveurs pendant l’installation du rôle de fonctionnalité.|Moteur de calcul[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , préconfiguré pour le stockage des données en mémoire et le traitement.<br /><br /> Packages de solution[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> documentation en ligne de SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Outils de configuration<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|Installe toutes les fonctionnalités disponibles dans l'édition actuelle.<br /><br /> Ajoute l’utilisateur actuel au rôle serveur fixe **sysadmin** de SQL Server.<br /><br /> Sur [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou version ultérieure, lorsque le système d'exploitation n'est pas un contrôleur de domaine, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisent par défaut le compte NTAUTHORITY\NETWORK SERVICE, et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise par défaut le compte NTAUTHORITY\NETWORK SERVICE.<br /><br /> Ce rôle est activé par défaut dans les éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Pour toutes les autres éditions, ce rôle n’est pas activé, mais il peut être spécifié via l’interface utilisateur ou à l’aide de paramètres de ligne de commande.|Pour les éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], installe uniquement les fonctionnalités disponibles dans l'édition. Pour les autres éditions, installe toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Le paramètre **AllFeatures_WithDefaults** peut être combiné avec d’autres paramètres qui remplacent les valeurs du paramètre **AllFeatures_WithDefaults**. Par exemple, si les paramètres **AllFeatures_WithDefaults** et **/Features=RS** sont utilisés, la commande d'installation de l'ensemble des fonctionnalités est remplacée par l'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]uniquement ; toutefois, le paramètre **AllFeatures_WithDefaults** est respecté pour l'utilisation du compte de service par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Quand vous utilisez le paramètre **AllFeatures_WithDefaults** avec **/ADDCURRENTUSERASSQLADMIN=FALSE** , la boîte de dialogue d’approvisionnement n’est pas remplie automatiquement pour l’utilisateur actuel. Ajoutez **/AGTSVCACCOUNT** et **/AGTSVCPASSWORD** pour spécifier un compte de service et un mot de passe pour SQL Server Agent.|  
   
-##  <a name="RollOwnership"></a> Contrôle du comportement du basculement à l’aide du paramètre /FAILOVERCLUSTERROLLOWNERSHIP  
+##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> Contrôle du comportement du basculement à l’aide du paramètre /FAILOVERCLUSTERROLLOWNERSHIP  
 Pour mettre à niveau un cluster de basculement [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez exécuter le programme d’installation sur un nœud de cluster de basculement à la fois, en commençant par les nœuds passifs. Le programme d'installation détermine le moment du basculement vers le nœud mis à niveau, selon le nombre total de nœuds dans l'instance de cluster de basculement, et le nombre de nœuds déjà mis à niveau. Lorsqu'au moins la moitié des nœuds a déjà été mise à niveau, le programme d'installation provoque par défaut un basculement vers un nœud mis à niveau. 
  
 Pour contrôler le comportement du basculement des nœuds de cluster pendant le processus de mise à niveau, exécutez l'opération de mise à niveau à partir de l'invite de commandes et utilisez le paramètre /FAILOVERCLUSTERROLLOWNERSHIP pour contrôler le comportement du basculement avant que l'opération de mise à niveau ne place le nœud hors connexion. L'utilisation de ce paramètre est la suivante :  
@@ -903,7 +903,7 @@ Pour contrôler le comportement du basculement des nœuds de cluster pendant le 
   
 -   /FAILOVERCLUSTERROLLOWNERSHIP=2 est le paramètre par défaut. Il sera utilisé si ce paramètre n'est pas spécifié. Ce paramètre indique que le programme d’installation de SQL Server gère la propriété du cluster (déplacer le groupe) si nécessaire. 
   
-##  <a name="InstanceID"></a> Configuration de l’ID d’instance ou d’InstanceID  
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Configuration de l’ID d’instance ou d’InstanceID  
  L'ID d'instance ou le paramètre /InstanceID est utilisé pour spécifier où vous pouvez installer les composants d'instance et le chemin d'accès du Registre de l'instance. La valeur de INSTANCEID est une chaîne qui doit être unique. 
   
 -   ID d’instance SQL : `MSSQLxx.<INSTANCEID>`  

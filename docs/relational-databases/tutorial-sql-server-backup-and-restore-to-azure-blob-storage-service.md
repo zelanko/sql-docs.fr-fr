@@ -11,17 +11,17 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165525"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Démarrage rapide : Sauvegarde et restauration de SQL Server avec le service de stockage Blob Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Ce guide de démarrage rapide vous aide à comprendre comment écrire des sauvegardes et les restaurer à partir du service Stockage Blob Azure.  L’article explique comment créer un conteneur d’objets blob Azure, écrire une sauvegarde dans le service blob, puis effectuer une restauration.
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Pour suivre ce guide de démarrage rapide, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL.  Vous avez besoin d’un compte de stockage Azure, de SQL Server Management Studio (SSMS) et d’un accès à un serveur qui exécute SQL Server ou à une instance gérée Azure SQL Database. Par ailleurs, le compte utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backupoperator** avec les autorisations **modifier les informations d’identification**. 
 
 - Obtenir gratuitement un [compte Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
@@ -122,7 +122,7 @@ Utilisez l’interface graphique utilisateur de SQL Server Management Studio pou
 ## <a name="back-up-database"></a>Sauvegarder la base de données
 Dans cette étape, sauvegardez la base de données `SQLTestDB` dans votre compte de stockage d’objets Blob Azure à l’aide de l’interface graphique utilisateur dans SQL Server Management Studio ou de Transact-SQL (T-SQL). 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Si l’Assistant **Sauvegarder la base de données** n’est pas encore ouvert, développez le nœud **Bases de données** dans l’**Explorateur d'objets** de [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Cliquez avec le bouton droit sur votre nouvelle base de données `SQLTestDB`, pointez sur **Tâches**, puis sélectionnez **Sauvegarder...** pour lancer l’Assistant **Sauvegarder la base de données**. 
@@ -141,7 +141,7 @@ Dans cette étape, sauvegardez la base de données `SQLTestDB` dans votre compte
    > Vous pouvez générer un script Transact-SQL qui se trouve derrière cette commande en sélectionnant **Script** en haut de l’Assistant **Sauvegarder la base de données** : ![Commande de script](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Sauvegardez votre base de données à l’aide de Transact-SQL en exécutant la commande suivante : 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>Supprimer la base de données
 Dans cette étape, supprimez la base de données avant d’effectuer la restauration. Cette étape est uniquement nécessaire dans le cadre de ce tutoriel, mais est peu susceptible d’être utilisée dans les procédures normales de gestion de base de données. Vous pouvez ignorer cette étape, mais vous devrez alors modifier le nom de la base de données pendant la restauration sur une instance gérée, ou exécuter la commande de restauration `WITH REPLACE` pour restaurer la base de données localement. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Développez le nœud **Bases de données** dans l’**Explorateur d’objets**, cliquez avec le bouton droit sur la base de données `SQLTestDB` et sélectionnez Supprimer pour lancer l’Assistant **Supprimer l’objet** . 
 1. Sur une instance gérée, sélectionnez **OK** pour supprimer la base de données. Localement, activez la case à cocher **Fermer les connexions existantes**, puis sélectionnez **OK** pour supprimer la base de données. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Supprimez la base de données en exécutant la commande Transact-SQL suivante :
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>Restaurer la base de données 
 Dans cette étape, restaurez la base de données à l’aide de l’interface graphique utilisateur de SQL Server Management Studio ou de Transact-SQL. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Cliquez avec le bouton droit sur le nœud **Bases de données** dans l’**Explorateur d’objets** dans SQL Server Management Studio et sélectionnez **Restaurer la base de données**. 
 1. Sélectionnez **Appareil**, puis sélectionnez les points de suspension (...) pour choisir l’appareil. 
@@ -216,7 +216,7 @@ Dans cette étape, restaurez la base de données à l’aide de l’interface gr
 1. Sélectionnez **OK** pour fermer la boîte de dialogue **Sélectionner les unités de sauvegarde**. 
 1. Sélectionnez **OK** pour restaurer votre base de données. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Pour restaurer votre base de données locale à partir du stockage d’objets Blob Azure, modifiez la commande Transact-SQL suivante afin d’utiliser votre propre compte de stockage, puis exécutez-la dans une nouvelle fenêtre de requête. 
 

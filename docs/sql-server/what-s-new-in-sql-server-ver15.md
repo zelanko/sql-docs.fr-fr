@@ -10,10 +10,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79218054"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
@@ -194,7 +194,7 @@ Quand vous déployez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vou
 ## <a name="platform-choice"></a>Choix de la plateforme
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] s’appuie sur les innovations introduites dans [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] pour vous permettre d’exécuter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur la plateforme de votre choix avec plus de fonctionnalités et de mesures de sécurité que jamais.
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:-----|:-----|
@@ -227,7 +227,7 @@ Pour commencer à travailler avec [!INCLUDE[ssNoVersion](../includes/ssnoversion
 |Avertissement d’installation sur la clé de produit de licence serveur/CAL|Si une clé de produit de licence Enterprise Server/CAL est entrée et que l’ordinateur a plus de 20 cœurs physiques, ou 40 cœurs logiques lorsque l’hyper-threading est activé, un avertissement s’affiche lors de l’installation. Les utilisateurs peuvent toujours prendre note de la limitation et continuer l’installation, ou entrer une clé de licence qui prend en charge le nombre maximal de processeurs du système d’exploitation.|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a> SQL Server Machine Learning Services
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a> SQL Server Machine Learning Services
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|

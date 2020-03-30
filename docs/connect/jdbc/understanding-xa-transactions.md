@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286513"
 ---
 # <a name="understanding-xa-transactions"></a>Présentation des transactions XA
@@ -116,7 +116,7 @@ Il existe trois façons de vérifier la version actuellement installée de sqljd
   
 3. Définissez la fonctionnalité de journalisation comme indiqué dans l'exemple de code de la prochaine section. Recherchez l'expression « Server XA DLL version:... » dans le fichier journal de sortie.  
 
-### <a name="BKMK_ServerSide"></a> Configuration des paramètres du délai d’attente côté serveur pour la restauration automatique des transactions non préparées  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a> Configuration des paramètres du délai d’attente côté serveur pour la restauration automatique des transactions non préparées  
 
 > [!WARNING]  
 > Il s’agit d’une nouvelle option côté serveur proposée par Microsoft JDBC Driver 4.2 (et versions ultérieures) pour SQL Server. Pour obtenir le comportement mis à jour, assurez-vous que le fichier sqljdbc_xa.dll est mis à jour sur le serveur. Pour plus d’informations sur la définition des délais d’expiration côté client, voir [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  

@@ -11,16 +11,14 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 95d3002ff9dd32bc4070cfb541ebd54edbc70b7c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.openlocfilehash: e9210592e4c4e347662dc0ec534d511be4fa2e95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090509"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345430"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notes de publication pour Microsoft ODBC Driver for SQL Server sur Windows
-
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Cet article de notes de publication décrit les nouveautés du pilote Microsoft ODBC pour SQL Server sur Windows.
 
@@ -222,7 +220,7 @@ Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?li
 | Suppression de l’Assistant de connexion aux services en ligne Microsoft | La dépendance a été supprimée. |
 | &nbsp; | &nbsp; |
 
-### <a name="diffs-managed-instance-17"></a> Différences lors de l’utilisation de Managed Instance (ODBC version 17)
+### <a name="differences-when-using-managed-instance-odbc-version-17"></a><a name="diffs-managed-instance-17"></a> Différences lors de l’utilisation de Managed Instance (ODBC version 17)
 
 Cette version d’ODBC prend en charge Azure SQL Managed Instance. Consultez la liste suivante de différences lors de l’utilisation de Managed Instance.
 

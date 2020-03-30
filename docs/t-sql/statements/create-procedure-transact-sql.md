@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287923"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  Pour plus d’informations, consultez [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).  
 
-## <a name="Simple"></a> Exemples simples
+## <a name="simple-examples"></a><a name="Simple"></a> Exemples simples
 
 Pour vous aider à démarrer, voici deux exemples rapides :  
 `SELECT DB_NAME() AS ThisDB;` retourne le nom de la base de données active.  
@@ -464,7 +464,7 @@ GO
   
  Dans le cas de procédures stockées CLR, vous devez être propriétaire de l’assembly référencé dans la clause EXTERNAL NAME ou disposer de l’autorisation **REFERENCES** sur cet assembly.  
   
-##  <a name="mot"></a> CREATE PROCEDURE et tables optimisées en mémoire  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE et tables optimisées en mémoire  
  Les tables optimisées en mémoire sont accessibles à l’aide de procédures stockées traditionnelles et compilées en mode natif. Les procédures natives sont, dans la plupart des cas, la manière la plus efficace de procéder.
 Pour plus d’informations, consultez [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
@@ -487,7 +487,7 @@ GO
   
  Pour obtenir des informations complémentaires sur la programmabilité dans les procédures stockées compilées en mode natif, la surface d’exposition de requête prise en charge et les opérateurs, consultez [Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-## <a name="Examples"></a> Exemples  
+## <a name="examples"></a><a name="Examples"></a> Exemples  
   
 |Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[Recompilation forcée de la procédure](#Recompile)|WITH RECOMPILE|  
 |[Définition du contexte de sécurité](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> Syntaxe de base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de l'instruction CREATE PROCEDURE en utilisant la syntaxe minimale requise.  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>R. Création d'une procédure Transact-SQL simple  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> Passage de paramètres  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> Passage de paramètres  
  Les exemples présentés dans cette section montrent comment utiliser des paramètres d'entrée et de sortie pour transmettre des valeurs vers et à partir d'une procédure stockée.  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. Création d'une procédure avec des paramètres d'entrée  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> Modification de données à l’aide d’une procédure stockée  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> Modification de données à l’aide d’une procédure stockée  
  Les exemples présentés dans cette section montrent comment insérer ou modifier des données dans des tables ou des vues en incluant une instruction DML (Data Manipulation Language) dans la définition de la procédure.  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. Utilisation de l'instruction UPDATE dans une procédure stockée  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> Gestion des erreurs  
+###  <a name="error-handling"></a><a name="Error"></a> Gestion des erreurs  
  Les exemples de cette section présentent des méthodes pour gérer les erreurs qui peuvent se produire lorsque la procédure stockée est exécutée.  
   
 #### <a name="j-using-trycatch"></a>J. Utilisation de TRY...CATCH  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> Obscurcissement de la définition de procédure  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> Obscurcissement de la définition de procédure  
  Les exemples de cette section illustrent comment obscurcir la définition de la procédure stockée.  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. Utilisation de l'option WITH ENCRYPTION  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a> Recompilation forcée de la procédure  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a> Recompilation forcée de la procédure  
  Les exemples de cette section utilisent la clause WITH RECOMPILE pour forcer la recompilation de la procédure chaque fois qu'elle est exécutée.  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. Utilisation de l'option WITH RECOMPILE  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> Définition du contexte de sécurité  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> Définition du contexte de sécurité  
  Les exemples de cette section utilisent la clause EXECUTE AS pour définir le contexte de sécurité dans lequel la procédure stockée est exécutée.  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. Utilisation de la clause EXECUTE AS  

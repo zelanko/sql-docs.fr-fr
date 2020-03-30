@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288303"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -1054,7 +1054,7 @@ Si vous avez défini des colonnes dans l'instruction ALTER TABLE avec un type CL
 
 L’ajout d’une colonne qui met à jour les lignes de la table nécessite l’autorisation **UPDATE** sur la table. Par exemple, l’ajout d’une colonne **NOT NULL** avec une valeur par défaut ou l’ajout d’une colonne d’identité quand la table n’est pas vide.
 
-## <a name="Example_Top"></a> Exemples
+## <a name="examples"></a><a name="Example_Top"></a> Exemples
 
 |Category|Éléments syntaxiques proposés|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ L’ajout d’une colonne qui met à jour les lignes de la table nécessite l’
 |[Désactivation et activation des contraintes et des déclencheurs](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>Ajout de colonnes et de contraintes
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>Ajout de colonnes et de contraintes
 
 Les exemples fournis dans cette section expliquent comment ajouter des colonnes et des contraintes à une table.
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>Suppression de colonnes et de contraintes
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>Suppression de colonnes et de contraintes
 
 Les exemples fournis dans cette section expliquent comme supprimer des colonnes et des contraintes.
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Exemples](#Example_Top)
 
-### <a name="alter_column"></a> Modification d’une définition de colonne
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a> Modification d’une définition de colonne
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>R. Modification du type de données d'une colonne
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a> Modification d’une définition de table
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a> Modification d’une définition de table
 
 Les exemples présentés dans cette section montrent comment modifier la définition d'une table.
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a>Désactivation et activation des contraintes et des déclencheurs
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a>Désactivation et activation des contraintes et des déclencheurs
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>R. Désactivation et réactivation d'une contrainte
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>Opérations en ligne
+### <a name="online-operations"></a><a name="online"></a>Opérations en ligne
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>R. Reconstruction d'index en ligne à l'aide d'options d'attente à basse priorité
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> Gestion système des versions
+### <a name="system-versioning"></a><a name="system_versioning"></a> Gestion système des versions
 
 Les quatre exemples ci-dessous vous aideront à vous familiariser avec la syntaxe d’utilisation de la gestion système des versions. Pour obtenir une assistance supplémentaire, consultez [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 
