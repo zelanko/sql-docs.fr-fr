@@ -9,10 +9,10 @@ ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67fb8bd61f337c4de0476c8a3fdb8265202b0161
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081660"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Ajouter un filtre à un dataset (Générateur de rapports et SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "77081660"
   
 3.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-4.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
+4.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
   
 5.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081660"
   
 3.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-4.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
+4.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
   
 5.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   

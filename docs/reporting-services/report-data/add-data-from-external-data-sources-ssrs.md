@@ -10,10 +10,10 @@ reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
 ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081837"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Ajouter des données à partir de sources de données externes (SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081837"
   
  Pour plus d’informations sur les types de sources de données, consultez [Dans cette section](#InThisSection).  
   
-##  <a name="DataAccess"></a> Fonctionnement de la technologie d'accès aux données  
+##  <a name="understanding-data-access-technology"></a><a name="DataAccess"></a> Fonctionnement de la technologie d'accès aux données  
  La récupération des données pour un dataset de rapport requiert plusieurs couches de logiciels d'accès aux données. La liste suivante fournit une description simple de l'utilisation des technologies d'accès aux données par les rapports :  
   
 -   **Application et interface utilisateur** Application Générateur de rapports que vous utilisez pour créer une source de données, ajouter une référence à une source de données partagée, ajouter un dataset partagé, ou ajouter une partie de rapport qui inclut les sources de données et datasets dont elle dépend.  
@@ -41,7 +41,7 @@ ms.locfileid: "77081837"
 > [!NOTE]  
 >  Lorsque vous n'êtes pas connecté à un serveur de rapports, vous pouvez choisir l'une des extensions de données installées avec le Générateur de rapports. Vous accédez aux données en tant qu'utilisateur unique à l'aide des informations d'identification spécifiques à votre ordinateur. Lorsque vous êtes connecté à un serveur de rapports, vous pouvez choisir l'une des extensions de données installées sur le serveur de rapports. Vous accédez aux données en tant qu'utilisateur faisant partie des multiples utilisateurs qui exécutent le rapport, et vous utilisez les informations d'identification du serveur de rapports. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-##  <a name="ReportData"></a> Fonctionnement des données de rapport  
+##  <a name="understanding-report-data"></a><a name="ReportData"></a> Fonctionnement des données de rapport  
  Dans sa forme la plus simple, un rapport affiche les données d'un dataset de rapport dans une région de données de la page de rapport, autrement dit, dans un tableau, un graphique ou une matrice unique, ou tout autre type de région de données du rapport. Les données d'un dataset de rapport proviennent du premier jeu de résultats retourné par une commande de requête unique qui s'exécute à partir d'un accès en lecture seule à une source de données externe. Chaque région de données s'étend en fonction de toutes les données du dataset à afficher.  
   
  Les données d'un dataset sont essentiellement tabulaires. Les colonnes sont les champs de la requête de dataset. Les lignes proviennent des lignes du jeu de résultats. Vous pouvez utiliser les types de données généralisés suivants dans un rapport :  
@@ -59,11 +59,11 @@ ms.locfileid: "77081837"
 -   Les données récursives sont prises en charge. Un jeu de résultats qui contient une hiérarchie de données récursives inclut toutes les informations relatives à la structure de la hiérarchie dans un jeu de résultats rectangulaire. Par exemple, la structure de rapport dans une société peut être représentée par un tableau qui comprend deux colonnes : une pour les employés et une autre pour les responsables. Chaque responsable est également un employé ayant un responsable. Le plus haut responsable contient habituellement une valeur Null ou tout autre identificateur qui indique que cet employé n'a aucun responsable.  
   
   
-##  <a name="DataTypes"></a> Utilisation des types de données  
+##  <a name="working-with-data-types"></a><a name="DataTypes"></a> Utilisation des types de données  
  Lorsque vous créez un dataset, les types de données des champs sont mappés à un sous-ensemble de types de données CLR (Common Language Runtime) du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Les types de données qui ne peuvent pas être clairement mappés sont retournés comme chaînes. Pour plus d’informations sur l’utilisation des types de données de champ, consultez [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md). Lorsque vous créez un paramètre, le type de données doit être un type de données de définition de rapport pris en charge. Pour plus d’informations sur le mappage des types de données du fournisseur de données à un paramètre de rapport, consultez [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
  [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "77081837"
  [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="InThisSection"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Dans cette section  
  Les rubriques suivantes fournissent des informations sur chaque extension de données intégrée.  
   
 |Rubrique|Type de source de données|  
@@ -90,7 +90,7 @@ ms.locfileid: "77081837"
 |[Type de connexion ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[Type de connexion XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
   
-##  <a name="Related"></a> Sections connexes
+##  <a name="related-sections"></a><a name="Related"></a> Sections connexes
 
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   

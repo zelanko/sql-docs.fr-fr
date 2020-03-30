@@ -16,10 +16,10 @@ ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b11b2d25abec8717604948101ca81d651fe822
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972449"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>setTime, méthode (SQLServerPreparedStatement)
@@ -27,9 +27,9 @@ ms.locfileid: "67972449"
 
   Définit le paramètre désigné sur la valeur d’heure donnée.  
   
- Depuis la version 3.0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du pilote JDBC, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** ([Paramétrage des propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et par [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ À partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** ([Définir les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et par [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Pour plus d’informations, consultez [Configuration du mode d'envoi des valeurs java.sql.Time au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Pour plus d’informations, consultez [Configurer le mode d’envoi des valeurs java.sql.Time au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="overload-list"></a>Liste de surcharge  
   

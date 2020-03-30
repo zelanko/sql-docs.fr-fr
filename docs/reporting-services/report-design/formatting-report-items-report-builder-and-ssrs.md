@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079638"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "77079638"
   
  Vous pouvez modifier les options de mise en forme en sélectionnant l'élément à mettre en forme, puis en ouvrant la boîte de dialogue Propriétés de l'élément. Par exemple, si vous souhaitez mettre en forme le contenu de l’intégralité d’une zone de texte ou un mot sélectionné dans la zone de texte, cliquez avec le bouton droit sur l’élément et sélectionnez **Propriétés de la zone de texte**. Vous pouvez ensuite appliquer les styles de mise en forme souhaités.  
   
- Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

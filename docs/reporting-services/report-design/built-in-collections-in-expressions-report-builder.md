@@ -9,21 +9,21 @@ ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082198"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Collections intégrées dans les expressions (Générateur de rapports)
-  Dans une expression d’un rapport, vous pouvez inclure des références aux collections intégrées suivantes : ReportItems, Parameters, Fields, DataSets, DataSources, Variables et des champs prédéfinis pour des informations globales comme le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l'ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  
+  Dans une expression d'un rapport, vous avez la possibilité d'inclure des références aux collections intégrées suivantes : ReportItems, Parameters, Fields, DataSets, DataSources, Variables, ainsi que des champs prédéfinis pour les informations globales telles que le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l'ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  
   
  Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a> Fonctionnement des collections intégrées  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> Fonctionnement des collections intégrées  
  Le tableau suivant répertorie les collections intégrées disponibles lorsque vous écrivez une expression. Chaque ligne inclut le nom de programmation, sensible à la casse, de la collection, indique si vous pouvez utiliser la boîte de dialogue Expression pour ajouter une référence à la collection de manière interactive, propose un exemple et précise quand les valeurs de la collection sont initialisées et peuvent être utilisées.  
   
 |Collection intégrée|Catégorie dans la boîte de dialogue Expression|Exemple|Description|  
@@ -37,7 +37,7 @@ ms.locfileid: "77082198"
 |**Variables**|`Variables`|`=Variables!CustomTimeStamp.Value`|Représente la collection des variables de rapport et de groupe. Pour plus d’informations, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).|  
 |**ReportItems**|Non affichée|`=ReportItems("Textbox1").Value`|Représente la collection des zones de texte d'un élément de rapport. Cette collection peut être utilisée pour proposer un résumé des éléments présents dans la page en vue de leur inclusion dans un en-tête ou un pied de page. Pour plus d’informations, consultez [Références à la collection ReportItems &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).|  
   
-##  <a name="Syntax"></a> Utilisation de la syntaxe de collection dans une expression  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> Utilisation de la syntaxe de collection dans une expression  
  Pour faire référence à une collection à partir d’une expression, utilisez la syntaxe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] standard pour un élément au sein d’une collection. Le tableau ci-après propose des exemples de syntaxe de collection.  
   
 |Syntaxe|Exemple|  

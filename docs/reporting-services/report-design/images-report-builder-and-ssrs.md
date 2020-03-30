@@ -9,10 +9,10 @@ ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1336910c5538ff9d15ff7f2d651aa23e220ca87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082081"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Images [Générateur de rapports et SSRS]
@@ -23,7 +23,7 @@ ms.locfileid: "77082081"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ComparingImages"></a> Comparaison entre les images externes, les images incorporées et les images liées aux données  
+##  <a name="comparing-external-embedded-and-data-bound-images"></a><a name="ComparingImages"></a> Comparaison entre les images externes, les images incorporées et les images liées aux données  
  Si vous utilisez une image stockée sur le serveur ou une autre image externe dans un rapport, l'élément image contient un chemin d'accès pointant vers une image située sur le serveur de rapports ou à un emplacement sur le Web. Si vous utilisez une image incorporée, les données de l'image sont stockées dans la définition de rapport et elles n'existent pas sous la forme d'un fichier distinct.  
   
  Il convient d'utiliser des images stockées sur le serveur pour insérer des logos et des images statiques partagées par plusieurs rapports ou pages Web. En revanche, il est préférable de recourir à des images incorporées pour vous assurer qu'elles sont disponibles en permanence pour le rapport. Cependant, elles ne peuvent pas être partagées. Les définitions de rapports comportant des images externes sont plus petites que les définitions avec des images incorporées.  
@@ -33,17 +33,17 @@ ms.locfileid: "77082081"
  ![rs_DataboundBikes](../../reporting-services/report-design/media/rs-databoundbikes.gif "rs_DataboundBikes")  
   
   
-##  <a name="ImagesReportParts"></a> Images en tant que parties de rapport  
+##  <a name="images-as-report-parts"></a><a name="ImagesReportParts"></a> Images en tant que parties de rapport  
  Vous pouvez enregistrer des images hors d'un rapport en tant que parties de rapport. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
   
-##  <a name="EmbedImages"></a> Incorporation d'images  
+##  <a name="embedding-images"></a><a name="EmbedImages"></a> Incorporation d'images  
  Vous pouvez incorporer des images dans un rapport de sorte que toutes les données de l'image soient stockées dans la définition de rapport. Lorsque vous incorporez une image, un encodage MIME lui est appliqué et elle est stockée sous la forme de texte dans la définition de rapport. L'incorporation garantit que l'image est toujours disponible pour le rapport, mais elle accroît la taille de la définition de rapport.  
   
  Pour plus d’informations sur l’incorporation d’une image, consultez [Incorporer une image dans un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
   
-##  <a name="ExternalImages"></a> Images externes  
+##  <a name="external-images"></a><a name="ExternalImages"></a> Images externes  
  Dans un rapport, vous pouvez inclure une image stockée, en spécifiant une URL pointant vers celle-ci. Lorsque vous utilisez une image externe dans un rapport, la source de l'image est définie à **External** et la valeur de l'image correspond à l'adresse URL ou au chemin d'accès de l'image.  
   
  Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "77082081"
  Pour plus d’informations sur l’ajout d’une image externe à un rapport, consultez [Ajouter une image externe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md).  
   
   
-##  <a name="BackgroundImages"></a> Images d'arrière-plan  
+##  <a name="background-images"></a><a name="BackgroundImages"></a> Images d'arrière-plan  
  Vous pouvez utiliser une image comme arrière-plan dans le corps du rapport ou dans un rectangle, une zone de texte, une liste, une matrice ou une table. Une image d'arrière-plan et une image possèdent des propriétés semblables. Vous pouvez également indiquer la manière dont l'image est reproduite pour occuper tout l'arrière-plan de l'élément.  
   
 > [!NOTE]  
@@ -62,11 +62,11 @@ ms.locfileid: "77082081"
  Pour plus d’informations sur l’ajout d’une image d’arrière-plan, consultez [Ajouter une image d’arrière-plan &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
   
   
-##  <a name="DataboundImages"></a> Images liées aux données  
+##  <a name="data-bound-images"></a><a name="DataboundImages"></a> Images liées aux données  
  Vous pouvez ajouter à votre rapport des images stockées dans une base de données. Pour cela, vous utilisez le même élément de rapport de type image que celui des images statiques, mais avec un ensemble de propriétés indiquant que l'image se trouve dans une base de données. Pour obtenir des instructions sur l’utilisation d’images liées à des données, consultez [Ajouter une image liée à des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
  [Ajouter une image externe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)  
   
  [Incorporer une image dans un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)  

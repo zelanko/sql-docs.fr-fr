@@ -16,10 +16,10 @@ ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f340a182da1cd232aab70e61c268ba6ec58633db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977532"
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>Méthode isNullable (SQLServerParameterMetaData)
@@ -51,10 +51,10 @@ public int isNullable(int param)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode isNullable est spécifiée par la méthode isNullable de l’interface java.sql.ParameterMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerParameterMetaData, méthodes](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [SQLServerParameterMetaData, membres](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData, classe](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  

@@ -9,10 +9,10 @@ ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 986871918463e09fe0aec138c75487694faee258
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080799"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Ajouter un graphique à un rapport (Générateur de rapports et SSRS)
@@ -68,9 +68,9 @@ ms.locfileid: "77080799"
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutoriel : Ajouter un graphique à barres à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutoriel : Ajouter un graphique à secteurs à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutoriel : Ajouter un graphique à secteurs à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Didacticiel : ajout d’un graphique à secteurs à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Didacticiel : ajout d’un graphique à secteurs à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

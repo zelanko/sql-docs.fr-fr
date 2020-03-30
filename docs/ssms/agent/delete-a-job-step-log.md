@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77ba028a1ee140985a35b513c5c338981f2837e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246328"
 ---
 # <a name="delete-a-job-step-log"></a>Supprimer un journal d’étapes de travail
@@ -46,17 +46,17 @@ Cette rubrique explique comment supprimer un journal d'étapes de travail de l'A
   
     [SQL Server Management Objects](#SMO)  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Restrictions"></a>Limitations et restrictions  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitations et restrictions  
 Lorsque des étapes de travail sont supprimées, leur journal de sortie est automatiquement supprimé.  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Autorisations  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorisations  
 Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à moins d'être membre du rôle de serveur fixe **sysadmin** .  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Pour supprimer un journal d'étapes de travail de SQL Server Agent  
   
@@ -66,7 +66,7 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 3.  Dans la boîte de dialogue **Propriétés du travail** , supprimez l'étape de travail sélectionnée.  
   
-## <a name="TSQL"></a>Utilisation de Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Pour supprimer un journal d'étapes de travail de SQL Server Agent  
   
@@ -89,7 +89,7 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 Pour plus d’informations, consultez [sp_delete_jobsteplog (Transact-SQL)](https://msdn.microsoft.com/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
   
-## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 Utilisez les méthodes **DeleteJobStepLogs** de la classe **Job** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
 ```  

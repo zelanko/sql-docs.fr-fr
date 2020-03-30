@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 353f9924a93e14d0617deb143ec2cbe080a465ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241896"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -42,17 +42,17 @@ Cette rubrique décrit comment afficher les détails d'une étape de travail dan
   
     [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Restrictions"></a>Limitations et restrictions  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitations et restrictions  
 Si l'étape du travail a été configurée pour écrire sa sortie dans une table ou un fichier et si le travail a été exécuté au moins une fois, vous pouvez afficher sa sortie dans la page **Avancé** de la boîte de dialogue **Propriétés de l'étape du travail** . Lorsqu'un travail ou une étape de travail est supprimé, le journal de sortie est automatiquement supprimé.  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Autorisations  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorisations  
 Affichez uniquement les travaux dont vous êtes propriétaire, à moins que vous ne soyez membre du rôle de serveur fixe **sysadmin** . Les membres de ce rôle peuvent afficher tous les travaux et tous les détails d'une étape de travail.  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-job-step-information"></a>Pour afficher des informations sur une étape de travail  
   

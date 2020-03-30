@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027621"
 ---
 # <a name="troubleshooting-connectivity"></a>Résoudre les problèmes de connectivité
@@ -24,7 +24,7 @@ ms.locfileid: "69027621"
   
  Une tentative de connexion à la base de données peut échouer pour plusieurs raisons. Parmi ces raisons :  
   
--   TCP/IP n’est pas activé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou le serveur ou le numéro de port spécifié est incorrect. Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute avec TCP/IP sur le serveur et le port spécifiés. Cela peut être signalé avec une exception du type : « Échec de la connexion. La connexion TCP/IP à l'hôte a échoué. » Cela indique l'une des raisons suivantes :  
+-   TCP/IP n’est pas activé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou le serveur ou le numéro de port spécifié est incorrect. Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute avec TCP/IP sur le serveur et le port spécifiés. Cela peut être rapporté avec une exception telle que : « Échec de la connexion. La connexion TCP/IP à l'hôte a échoué. » Cela indique l'une des raisons suivantes :  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, mais TCP/IP n’a pas été installé en tant que protocole réseau pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’utilitaire réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et ultérieur.  
   

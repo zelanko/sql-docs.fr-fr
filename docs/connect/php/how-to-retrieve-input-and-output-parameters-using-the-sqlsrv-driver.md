@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Récupérer des paramètres d’E/S avec le pilote SQLSRV | Microsoft Docs'
+title: Guide pratique pour récupérer des paramètres d’e/s avec le pilote SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993460"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procédure : Récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique montre comment utiliser le pilote SQLSRV pour appeler une procédure stockée dans laquelle un paramètre a été défini comme paramètre d’entrée/sortie, et comment récupérer les résultats. Quand vous récupérez un paramètre de sortie ou d’entrée/sortie, tous les résultats retournés par la procédure stockée doivent être consommés pour que la valeur de paramètre retournée soit accessible.  
@@ -30,7 +30,7 @@ Cette rubrique montre comment utiliser le pilote SQLSRV pour appeler une procéd
 L’exemple suivant appelle une procédure stockée qui soustrait des heures de congé utilisées des heures de congé disponibles d’un employé spécifié. La variable qui représente les heures de congé utilisées, *$vacationHrs*, est passée à la procédure stockée comme paramètre d’entrée. Après la mise à jour des heures de congé disponibles, la procédure stockée utilise le même paramètre pour retourner le nombre d’heures de congé restantes.  
   
 > [!NOTE]  
-> L’initialisation de *$vacationHrs* avec la valeur 4 définit le PHPTYPE retourné sur “entier”. Pour garantir l’intégrité du type de données, les paramètres d’entrée/sortie doivent être initialisés avant d’appeler la procédure stockée, ou bien le PHPTYPE souhaité doit être spécifié. Pour plus d’informations sur la spécification du PHPTYPE, consultez [Guide pratique pour spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md).  
+> L’initialisation de *$vacationHrs* avec la valeur 4 définit le PHPTYPE retourné sur “entier”. Pour garantir l’intégrité du type de données, les paramètres d’entrée/sortie doivent être initialisés avant d’appeler la procédure stockée, ou bien le PHPTYPE souhaité doit être spécifié. Pour plus d’informations sur la spécification du PHPTYPE, consultez [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 Étant donné que la procédure stockée retourne deux résultats, [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) doit être appelée après l’exécution de la procédure stockée pour rendre la valeur du paramètre de sortie accessible. Après l’appel à **sqlsrv_next_result**, *$vacationHrs* contient la valeur du paramètre de sortie retourné par la procédure stockée.  
   
@@ -152,9 +152,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : Spécifier le sens du paramètre avec le pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Guide pratique pour spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Procédure : Récupérer des paramètres de sortie avec le pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Guide pratique pour récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [Récupération de données](../../connect/php/retrieving-data.md)  
   

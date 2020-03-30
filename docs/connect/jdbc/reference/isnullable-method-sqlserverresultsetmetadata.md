@@ -16,10 +16,10 @@ ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3918215f40a77fa5288dd345715856829b607dae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977525"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>Méthode isNullable (SQLServerResultSetMetaData)
@@ -37,7 +37,7 @@ public int isNullable(int column)
 #### <a name="parameters"></a>Paramètres  
  *column*  
   
- **int** indiquant l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
 ## <a name="return-value"></a>Valeur de retour  
  **true** si la colonne peut avoir la valeur Null. Dans le cas contraire, la valeur est **false**.  

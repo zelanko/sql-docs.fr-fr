@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572746"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes graphique
@@ -30,7 +30,7 @@ ms.locfileid: "65572746"
  .  
   
 ## <a name="graphical-query-designer"></a>Concepteur de requêtes graphique  
- Ce concepteur de requêtes graphique prend en charge trois types de commandes de requête : **Text**, **StoredProcedure** ou **TableDirect**. Avant de créer une requête pour votre dataset, vous devez sélectionner une option de type de commande dans la page Requête de la boîte de dialogue [Propriétés du dataset](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
+ Ce concepteur de requêtes graphique prend en charge trois types de commandes de requête : **Text**, **StoredProcedure**ou **TableDirect**. Avant de créer une requête pour votre dataset, vous devez sélectionner une option de type de commande dans la page Requête de la boîte de dialogue [Propriétés du dataset](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
   
  Les options suivantes sont disponibles pour le type de requête :  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65572746"
 |![Utiliser Regrouper par pour le champ sélectionné](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "Utiliser Regrouper par pour le champ sélectionné")|Affiche ou masque la colonne **Regrouper par** dans le volet Grille. Quand le bouton bascule **Regrouper par** est activé, une colonne supplémentaire intitulée **Regrouper par** s’affiche dans le volet Grille et chaque valeur pour les colonnes sélectionnées dans la requête prend par défaut la valeur **Regrouper par**, ce qui a pour effet d’inclure la colonne sélectionnée dans une clause GROUP BY dans le texte SQL. Utilisez le bouton Regrouper par pour ajouter automatiquement une clause GROUP BY qui inclut toutes les colonnes dans la clause SELECT. Si votre clause SELECT inclut des appels de fonction d'agrégation (par exemple, SUM(ColumnName)), vous devez inclure chaque colonne de non agrégation dans la clause GROUP BY si vous souhaitez qu'elle s'affiche dans le jeu de résultats.<br /><br /> Pour qu'elle s'affiche dans le volet Résultat, chaque colonne de la requête doit avoir une fonction d'agrégation définie pour être utilisée dans le calcul de la valeur à afficher dans le volet Résultat, ou alors la colonne de la requête doit être spécifiée dans la clause GROUP BY de la requête SQL.|  
 |![Ajouter une table au volet Diagramme](../../reporting-services/report-data/media/rsqdicon-addtable.gif "Ajouter une table au volet Diagramme")|Ajoute une nouvelle table à partir de la source de données dans le volet Diagramme.<br /><br /> **Remarque** Quand vous ajoutez une nouvelle table, le concepteur de requêtes tente de faire correspondre des relations de clé étrangère depuis la source de données. Après avoir ajouté la table, confirmez que les relations de clé étrangère représentées par des liaisons entre les tables sont correctes.|  
   
-#### <a name="example"></a> Exemple  
+#### <a name="example"></a>Exemple  
  La requête suivante retourne la liste des noms depuis la table [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Person **de la base de données** :  
   
 ```  
@@ -136,12 +136,12 @@ EXEC uspGetEmployeeManagers '1';
 |![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la procédure stockée sélectionnée.|  
 |Liste déroulante Procédure stockée|Cliquez sur la flèche vers le bas pour afficher une liste des procédures stockées disponibles dans la source de données. Cliquez sur une procédure stockée de la liste pour la sélectionner.|  
   
-#### <a name="example"></a> Exemple  
+#### <a name="example"></a>Exemple  
  La procédure stockée suivante appelle une liste de ligne hiérarchique de responsables à partir de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Cette procédure stockée accepte *BusinessEntityID* en tant que paramètre. Vous pouvez spécifier un entier plus petit.  
   
  `uspGetEmployeeManagers '1';`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Type de connexion SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   

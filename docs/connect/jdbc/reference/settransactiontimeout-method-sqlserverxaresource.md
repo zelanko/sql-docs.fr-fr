@@ -16,10 +16,10 @@ ms.assetid: 38bf4a1a-6ad3-437c-b9ed-8792ab6dde7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 481843393f15998df059bb7a732c64010b2c8bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972279"
 ---
 # <a name="settransactiontimeout-method-sqlserverxaresource"></a>Méthode setTransactionTimeout (SQLServerXAResource)
@@ -45,10 +45,10 @@ public boolean setTransactionTimeout(int seconds)
 ## <a name="exceptions"></a>Exceptions  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setTransactionTimeout est spécifiée par la méthode setTransactionTimeout de l’interface javax.transaction.xa.XAResource.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerXAResource, méthodes](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource, membres](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource, classe](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

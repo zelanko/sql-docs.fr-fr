@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571492"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Prise en charge des déploiements et des versions dans SQL Server Data Tools (SSDT)
@@ -26,7 +26,7 @@ ms.locfileid: "65571492"
   
 -   Déployez les rapports sur le serveur de rapports.  
   
-##  <a name="bkmk_ConfigurationandDeploymentProperties"></a> Propriétés de configuration et de déploiement  
+##  <a name="configuration-and-deployment-properties"></a><a name="bkmk_ConfigurationandDeploymentProperties"></a> Propriétés de configuration et de déploiement  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] prend en charge les configurations de projet. Une configuration de projet consiste en un ensemble de propriétés qui spécifient des emplacements et des comportements lorsqu'un projet est généré dans le cadre de l'aperçu ou du déploiement de rapports. Pour en savoir plus sur les configurations de projet, consultez la documentation Visual Studio.  
   
  Utilisez les configurations de projet pour contrôler la mise à niveau des définitions de rapport aux versions de schéma compatibles avec les serveurs de rapports cibles. Les propriétés contrôlées par les configurations de projet incluent le serveur de rapports cible, le dossier où le processus de génération stocke temporairement les définitions de rapport pour l'aperçu et le déploiement, et les niveaux d'erreur.  
@@ -47,7 +47,7 @@ ms.locfileid: "65571492"
   
  Vous pouvez ajouter plusieurs configurations de projet à un projet ; chacune est utilisée pour un scénario différent, tel que le déploiement vers différentes versions de serveurs de rapports. Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) et [Pages de propriétés du projet, boîte de dialogue ](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
-##  <a name="bkmk_SupportedVersions"></a> Versions prises en charge  
+##  <a name="supported-versions"></a><a name="bkmk_SupportedVersions"></a> Versions prises en charge  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l’environnement de développement 32 bits pour les projets de serveur de rapports, n’est pas conçu pour fonctionner sur des ordinateurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] et n’est pas installé sur les serveurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Une prise en charge de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est en revanche possible sur des ordinateurs x64.  

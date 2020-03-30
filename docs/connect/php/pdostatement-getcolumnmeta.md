@@ -11,10 +11,10 @@ ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76918798"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
@@ -30,7 +30,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$conn* : (entier) numéro en base zéro de la colonne dont il s’agit de récupérer les métadonnées.  
+*$conn* : (entier) numéro en base zéro de la colonne dont vous voulez récupérer les métadonnées.  
   
 ## <a name="return-value"></a>Valeur de retour  
 Tableau associatif (clé et valeur) contenant les métadonnées pour la colonne. Consultez la section Notes pour obtenir une description des champs du tableau.  

@@ -13,13 +13,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75755817"
 ---
-# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procédure : se connecter à une base de données et parcourir les objets existants
+# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procédure : se connecter à une base de données et parcourir les objets existants
 
 La connexion à une base de données active, la conception ou la navigation dans son schéma et l'exécution de requêtes relatives à ses objets sont des tâches très courantes pour les administrateurs et les développeurs de base de données. L'Explorateur d'objets SQL Server de Visual Studio contient à présent un nœud **SQL Server** dédié, sous lequel toutes les instances SQL Server connectées et leurs bases de données sont regroupées dans une hiérarchie de type SSMS. Les instances SQL Server connectées peuvent être une instance sur site, telle que le serveur SQL Server 2008 en cours d'exécution, ou une instance SQL Azure hors site.  
   

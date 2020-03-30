@@ -16,10 +16,10 @@ ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6388ea031c6cbd5c492b5af03bd37a091592868
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972557"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>Méthode setTime (int, java.sql.Time, java.util.Calendar)
@@ -39,15 +39,15 @@ public final void setTime(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- Valeur **int** qui indique le numéro du paramètre.  
+ **int** indiquant le numéro du paramètre.  
   
  *x*  
   
- Objet Time.  
+ Un objet Time.  
   
  *cal*  
   
- Objet Calendar.  
+ Objet de calendrier.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -57,7 +57,7 @@ public final void setTime(int n,
   
  À partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** ([Définir les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et par [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Pour plus d’informations, consultez [Configurer le mode d'envoi des valeurs java.sql.Time au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Pour plus d’informations, consultez [Configurer le mode d’envoi des valeurs java.sql.Time au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [setTime, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)   

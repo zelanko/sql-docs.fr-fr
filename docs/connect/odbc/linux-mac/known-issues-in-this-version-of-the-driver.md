@@ -10,10 +10,10 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9746456a4a38f2a19e485d1e17786073b97b243e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286433"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problèmes connus concernant le pilote ODBC sur Linux et macOS
@@ -36,7 +36,7 @@ D’autres problèmes seront publiés sur le [blog de l’équipe du pilote Micr
 
 Par exemple, si votre encodage est UTF-8 et que vous spécifiez 1 pour *BufferLength* et *ColumnSize* dans **SQLBindParameter** pour un paramètre de sortie, puis que vous essayez de récupérer le caractère précédent stocké dans une colonne `char(1)` sur le serveur (à l’aide de CP-1252), le pilote tente de le convertir dans l’encodage UTF-8 sur 3 octets, mais ne peut pas faire tenir le résultat dans une mémoire tampon d’un octet. Dans l’autre sens, il compare *ColumnSize* à *BufferLength* dans **SQLBindParameter** avant d’effectuer la conversion entre les différentes pages de codes sur le client et le serveur. Étant donné qu’une *ColumnSize* de 1 est inférieure à une *BufferLength* de 3 (par exemple), le pilote génère une erreur. Pour éviter cette erreur, vérifiez que la longueur des données après la conversion est adaptée à la colonne ou mémoire tampon spécifiée. Notez que *ColumnSize* ne peut pas être supérieure à 8000 pour le type `varchar(n)`.
 
-## <a id="connectivity"></a> Résolution des problèmes de connexion  
+## <a name="troubleshooting-connection-problems"></a><a id="connectivity"></a> Résolution des problèmes de connexion  
 
 Si vous ne parvenez pas à établir de connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du pilote ODBC, utilisez les informations suivantes pour identifier le problème.  
   

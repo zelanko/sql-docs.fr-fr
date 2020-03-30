@@ -20,10 +20,10 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247297"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Générer des scripts d’objet dans SQL Server Management Studio
@@ -47,7 +47,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 * Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Téléchargez les [exemples de bases de données AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-Les instructions de restauration de bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## <a name="script-queries-from-the-gui"></a>Générer des scripts pour des requêtes à partir de l’interface graphique utilisateur
 

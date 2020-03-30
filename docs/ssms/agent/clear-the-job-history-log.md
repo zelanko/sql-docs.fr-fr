@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d08432e11bacb94106bf55e91337714e6e0bf8ac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256031"
 ---
 # <a name="clear-the-job-history-log"></a>Effacer le journal d'historique des travaux
@@ -33,12 +33,12 @@ ms.locfileid: "75256031"
 
 Cette rubrique explique comment supprimer le contenu du journal d’historique des travaux de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
 Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-clear-the-job-history-log"></a>Pour effacer le journal d'historique des travaux  
   
@@ -56,7 +56,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 5.  Cliquez sur **Supprimer**.  
   
-## <a name="TSQL"></a>Utilisation de Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-clear-the-job-history-log"></a>Pour effacer le journal d'historique des travaux  
   
@@ -76,7 +76,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
     GO  
     ```  
   
-## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 **Pour effacer le journal d'historique des travaux**  
   
 Utilisez la méthode **PurgeJobHistory** de la classe **JobServer** à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

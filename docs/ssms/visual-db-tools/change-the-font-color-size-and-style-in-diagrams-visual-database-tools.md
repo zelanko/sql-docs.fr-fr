@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 7130c831ddcfb60fb5760ff1596989186251f4a4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75238930"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Modifier la couleur de police, la taille et le style dans les schémas (Visual Database Tools)
@@ -38,6 +38,6 @@ Vous pouvez personnaliser le mode d’affichage du texte dans les diagrammes de 
   
 4. Modifiez la police, la taille, les éléments affichés ainsi que les couleurs de premier plan et d'arrière-plan.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)

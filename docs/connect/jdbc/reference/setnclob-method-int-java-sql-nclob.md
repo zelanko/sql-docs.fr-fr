@@ -11,10 +11,10 @@ ms.assetid: 48c8aa2a-4185-4837-b592-830e60f8ca0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cfb93f1ee08a7b5791679d189a73f75c5506fda7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973756"
 ---
 # <a name="setnclob-method-int-javasqlnclob"></a>Méthode setNClob (int, java.sql.NClob)
@@ -42,10 +42,10 @@ public final void setNClob(int parameterIndex,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setNClob est spécifiée par la méthode setNClob de l’interface java.sql.PreparedStatement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [setNClob, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

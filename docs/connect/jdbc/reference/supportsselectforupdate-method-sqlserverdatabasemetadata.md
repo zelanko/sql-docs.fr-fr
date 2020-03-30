@@ -16,10 +16,10 @@ ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5b70b18a7b331ac448d5135d57e95741f76b85b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968864"
 ---
 # <a name="supportsselectforupdate-method-sqlserverdatabasemetadata"></a>Méthode supportsSelectForUpdate (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsSelectForUpdate()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

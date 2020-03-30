@@ -11,10 +11,10 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866519"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Pilotes Microsoft SQL Server pour PHP
@@ -24,9 +24,9 @@ ms.locfileid: "78866519"
 Les pilotes Microsoft pour PHP pour SQL Server permettent l’intégration avec SQL Server pour les applications PHP. Les pilotes sont des extensions PHP qui permettent de lire et d’écrire des données SQL Server à partir de scripts PHP. Ils fournissent des interfaces pour accéder aux données dans les bases de données SQL Azure et dans toutes les éditions de SQL Server 2005 et versions ultérieures (dont Express Edition). Ils utilisent des fonctionnalités PHP, et notamment les flux PHP, pour lire et écrire des objets volumineux.  
   
 ## <a name="getting-started"></a>Mise en route  
-* [Étape 1 : Configurer un environnement de développement PHP](step-1-configure-development-environment-for-php-development.md)  
-* [Étape 2 : Créer une base de données pour le développement PHP](step-2-create-a-sql-database-for-php-development.md)  
-* [Étape 3 : Preuve de concept sur la connexion à SQL avec PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [Étape 1 : Configurer l’environnement de développement pour le développement PHP](step-1-configure-development-environment-for-php-development.md)  
+* [Étape 2 : Créer une base de données pour le développement PHP](step-2-create-a-sql-database-for-php-development.md)  
+* [Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [Étape 4 : Connexion résiliente à SQL avec PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Documentation  

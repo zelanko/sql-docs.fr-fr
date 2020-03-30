@@ -16,10 +16,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257931"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
@@ -31,7 +31,7 @@ ms.locfileid: "75257931"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est un service Microsoft Windows qui exécute des tâches administratives planifiées appelées *travaux* dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
 
-## <a name="Benefits"></a>Avantages de SQL Server Agent 
+## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>Avantages de SQL Server Agent 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les informations sur les travaux. Les travaux contiennent une ou plusieurs étapes de travail. Chaque étape contient sa propre tâche, par exemple, la sauvegarde d'une base de données.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75257931"
 > [!NOTE]  
 > Par défaut, le service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est désactivé lorsque [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé, sauf si l'utilisateur choisit explicitement de démarrer automatiquement le service.  
   
-## <a name="Components"></a>Composants de SQL Server Agent  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>Composants de SQL Server Agent  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise les composants ci-après pour définir les tâches à exécuter et quand les exécuter, et pour signaler si elles ont réussi ou échoué.  
   
 ### <a name="jobs"></a>travaux  
@@ -114,7 +114,7 @@ Pour envoyer des notifications aux opérateurs par e-mail ou radiomessagerie, vo
   
 Un opérateur peut être l'alias d'un groupe d'individus. De cette façon, tous les membres de cet alias sont avertis en une seule fois. Pour plus d’informations, consultez [Opérateurs](../../ssms/agent/operators.md).  
   
-## <a name="Security"></a>Sécurité pour l'administration de SQL Server Agent  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Sécurité pour l'administration de SQL Server Agent  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise les rôles de base de données fixes **SQLAgentUserRole**, **SQLAgentReaderRole**et **SQLAgentOperatorRole** de la base de données **msdb** pour contrôler l'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent par les utilisateurs qui ne sont pas membres du rôle serveur fixe **sysadmin** . Outre ces rôles de base de données fixes, les sous-systèmes et les proxys aident les administrateurs de base de données à garantir que chaque étape de travail est exécutée avec les autorisations minimales nécessaires à la réalisation de cette tâche.  
   
 ### <a name="roles"></a>Rôles  

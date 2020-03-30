@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d92555fba1d9e0a380ffdc9051817ddfae9ca4b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381761"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configuration UDL (Universal Data Link)
@@ -37,7 +37,7 @@ L’onglet Connexion est propre à chaque fournisseur et affiche uniquement les 
 |Nom d'utilisateur|Saisissez l’ID d’utilisateur à utiliser pour l’authentification lorsque vous vous connectez à la source de données.|
 |Mot de passe|Saisissez le mot de passe à utiliser pour l’authentification lorsque vous vous connectez à la source de données.|
 |Mot de passe vide|Lorsque cette option est activée, permet au fournisseur spécifié d’utiliser un mot de passe vide dans la chaîne de connexion.|
-|Autoriser l'enregistrement du mot de passe|Lorsque cette option est activée, le mot de passe peut être enregistré avec la chaîne de connexion. Le fait que le mot de passe soit inclus ou non dans la chaîne de connexion dépend de la fonctionnalité de l'application appelante. <br/><br/>**REMARQUE :** S’il est enregistré, le mot de passe est retourné puis enregistré comme non masqué et non chiffré.|
+|Autoriser l'enregistrement du mot de passe|Lorsque cette option est activée, le mot de passe peut être enregistré avec la chaîne de connexion. Le fait que le mot de passe soit inclus ou non dans la chaîne de connexion dépend de la fonctionnalité de l'application appelante. <br/><br/>**REMARQUE :** s’il est enregistré, le mot de passe est retourné puis enregistré comme non masqué et non chiffré.|
 |Utiliser le chiffrement renforcé pour les données|Lorsque cette option est activée, les données transmises via la connexion sont chiffrées.|
 |Faire confiance au certificat de serveur|Lorsque cette option est activée, le certificat du serveur est validé. Le certificat du serveur doit avoir le nom d’hôte de serveur correct et être émis par une autorité de certification approuvée.|
 |Sélectionnez la base de données|Sélectionnez ou saisissez le nom de la base de données à laquelle vous souhaitez accéder.|

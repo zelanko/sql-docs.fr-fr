@@ -9,10 +9,10 @@ ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080907"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Spécification de chemins d'accès à des éléments externes (Générateur de rapports et SSRS)
@@ -37,9 +37,9 @@ ms.locfileid: "77080907"
   
 -   **Un chemin d'accès complet à l'élément.**  
   
-    -   **Sur un serveur de rapports :** Le chemin d'accès démarre à partir de **/** , le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
+    -   **Sur un serveur de rapports :** le chemin d’accès commence par **/** , le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
   
-    -   **Sur un site SharePoint :** Vous devez spécifier le nom de rapport dans une expression en incluant l'URL complète de l'élément et l'extension de fichier .rdl. Par exemple : `="https://server/site/library/folder/Report1.rdl"`.  
+    -   **Sur un site SharePoint :** vous devez spécifier le nom de rapport dans une expression en incluant l'URL complète de l'élément et l'extension de fichier .rdl. Par exemple : `="https://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter une image externe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

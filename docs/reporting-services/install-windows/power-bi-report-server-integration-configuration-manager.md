@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265642"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
@@ -19,13 +19,13 @@ ms.locfileid: "68265642"
 
 La page  **Intégration de Power BI** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sert à inscrire le serveur de rapports auprès du client géré Azure Active Directory (AD) souhaité pour permettre aux utilisateurs du serveur de rapports d’épingler les éléments de rapports pris en charge à des tableaux de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Pour obtenir la liste des éléments pris en charge que vous pouvez épingler, consultez [Épingler des éléments Reporting Services aux tableaux de bord Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-## <a name="bkmk_requirements"></a> Configuration requise pour l’intégration de Power BI
+## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Configuration requise pour l’intégration de Power BI
 
 Outre une connexion Internet active pour pouvoir accéder au service [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , voici la configuration requise pour effectuer l’intégration [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
-- **Azure Active Directory :** Votre organisation doit utiliser Azure Active Directory, qui fournit la gestion des annuaires et des identités pour les services et applications web Azure. Pour plus d’informations, consultez [Qu’est-ce qu’Azure Active Directory ?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory :** votre organisation doit utiliser Azure Active Directory, qui fournit la gestion des annuaires et des identités pour les services et applications web Azure. Pour plus d’informations, consultez [Qu’est-ce qu’Azure Active Directory ?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **Locataire managé :** Le tableau de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] auquel vous voulez épingler des éléments de rapport doit faire partie d’un locataire managé Azure AD.  Un client géré est créé automatiquement la première fois que votre organisation souscrit à des services Azure tels qu’Office 365 et Microsoft Intune.   Les clients viraux ne sont pas pris en charge pour le moment.  Pour plus d’informations, consultez les sections « Qu’est-ce qu’un client Azure AD ?» et « Obtention d’un annuaire Azure AD » de la rubrique [Qu’est-ce qu’un annuaire Azure AD ?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Client géré :** le tableau de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] auquel vous voulez épingler des éléments de rapport doit faire partie d’un client géré Azure AD.  Un client géré est créé automatiquement la première fois que votre organisation souscrit à des services Azure tels qu’Office 365 et Microsoft Intune.   Les clients viraux ne sont pas pris en charge pour le moment.  Pour plus d’informations, consultez les sections « Qu’est-ce qu’un client Azure AD ?» et « Obtention d’un annuaire Azure AD » de la rubrique [Qu’est-ce qu’un annuaire Azure AD ?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - L’intégration de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] doit être effectuée par un utilisateur membre du client Azure AD, un administrateur système [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et un administrateur système pour la base de données de catalogues ReportServer.
 
@@ -33,17 +33,17 @@ Outre une connexion Internet active pour pouvoir accéder au service [!INCLUDE[s
 
 - Les rapports dont vous voulez épingler des éléments doivent utiliser des informations d’identification stockées. Ce n’est pas une exigence pour l’intégration de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] en soi, mais pour le processus d’actualisation des éléments épinglés.  L’action d’épingler un élément de rapport crée un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer la planification de l’actualisation des vignettes dans [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nécessitent des informations d’identification stockées. Si un rapport n’utilise pas des informations d’identification stockées, un utilisateur peut toujours épingler des éléments de rapport, mais un message d’erreur similaire à celui ci-dessous apparaît dans la page [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]Mes abonnements **lorsque l’abonnement associé tente d’actualiser les données dans** .
 
-    Erreur de livraison Power BI : tableau de bord : Exemple Analyse des dépenses informatiques, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Les informations d’identification de la source de données de l’utilisateur.
+    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Les informations d’identification de la source de données de l’utilisateur.
 
 Pour en savoir plus sur le stockage d’informations d’identification, consultez la section « Configurer des informations d’identification stockées pour une source de données propre à un rapport » dans [Stocker les informations d’identification dans une source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Un administrateur peut consulter les fichiers de journaux  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour plus d’informations.  Il y trouvera des messages semblables au suivant : Pour consulter et surveiller les fichiers journaux [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query sur les fichiers.  Pour en savoir plus et visionner une courte vidéo, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Erreur de livraison Power BI : tableau de bord : Exemple Analyse des dépenses informatiques, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Elles ne sont pas stockées dans la base de données du serveur de rapports ou la source de données de l’utilisateur est configurée pour ne pas exiger d’informations d’identification, mais le compte d’exécution sans assistance n’est pas spécifié.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Erreur de remise Power BI : tableau de bord : IT Spend Analysis Sample, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Elles ne sont pas stockées dans la base de données du serveur de rapports ou la source de données de l’utilisateur est configurée pour ne pas exiger d’informations d’identification, mais le compte d’exécution sans assistance n’est pas spécifié.
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Une erreur s’est produite lors du traitement de l’abonnement fcdb8581-d763-4b3b-ba3e-8572360df4f9 : Erreur de livraison Power BI : tableau de bord : Exemple Analyse des dépenses informatiques, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou dataset partagé. Elles ne sont pas stockées dans la base de données du serveur de rapports ou la source de données de l’utilisateur est configurée pour ne pas exiger d’informations d’identification, mais le compte d’exécution sans assistance n’est pas spécifié.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Une erreur s’est produite lors du traitement de l’abonnement fcdb8581-d763-4b3b-ba3e-8572360df4f9 : Erreur de remise Power BI : tableau de bord : IT Spend Analysis Sample, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou dataset partagé. Elles ne sont pas stockées dans la base de données du serveur de rapports ou la source de données de l’utilisateur est configurée pour ne pas exiger d’informations d’identification, mais le compte d’exécution sans assistance n’est pas spécifié.
 
-## <a name="bkmk_steps2integrate"></a> Pour intégrer et inscrire le serveur de rapports
+## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> Pour intégrer et inscrire le serveur de rapports
 
 Exécutez la procédure suivante dans le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
@@ -60,9 +60,9 @@ Exécutez la procédure suivante dans le Gestionnaire de configuration [!INCLUDE
 
 5. Cliquez sur le bouton **Copier** dans la fenêtre **Résultats** pour copier les détails de l’inscription dans le Presse-papiers Windows afin de les conserver pour référence ultérieure.
 
-## <a name="bkmk_unregister"></a> Se désinscrire de Power BI
+## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> Se désinscrire de Power BI
 
-**Désinscrire :** La désinscription du serveur de rapports d’Azure Active Directory a les conséquences suivantes :
+**Se désinscrire :** la désinscription du serveur de rapports d’Azure Active Directory a les conséquences suivantes :
 
 - Le lien **Mes paramètres** n’est plus visible dans la barre de menus du portail web.
 
@@ -74,7 +74,7 @@ Exécutez la procédure suivante dans le Gestionnaire de configuration [!INCLUDE
 
 Dans la page **Power BI** du Gestionnaire de configuration, cliquez sur le bouton **Se désinscrire de Power BI** .
 
-##  <a name="bkmk_updateregistration"></a> Mettre à jour l’inscription
+##  <a name="update-registration"></a><a name="bkmk_updateregistration"></a> Mettre à jour l’inscription
 
 Utilisez l’option **Mettre à jour l’inscription** si la configuration de votre serveur de rapports est modifiée. Par exemple, si vous voulez ajouter ou supprimer les URL que vos utilisateurs emploient pour accéder au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
@@ -90,7 +90,7 @@ Utilisez l’option **Mettre à jour l’inscription** si la configuration de vo
 
      Vous êtes invité à vous connecter à Azure AD. La page est actualisée et la nouvelle URL apparaît dans la liste **URL de redirection**.
 
-##  <a name="bkmk_integration_process"></a> Résumé de l’intégration de Power BI et du processus d’épinglage
+##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Résumé de l’intégration de Power BI et du processus d’épinglage
 
 Cette section présente les étapes de base et les technologies impliquées dans l’intégration de votre serveur de rapports à [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] et l’épinglage d’un élément de rapport à un tableau de bord.
 

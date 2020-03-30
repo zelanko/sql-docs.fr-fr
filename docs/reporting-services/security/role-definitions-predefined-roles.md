@@ -13,10 +13,10 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67500195"
 ---
 # <a name="role-definitions---predefined-roles"></a>Définitions de rôles - Rôles prédéfinis
@@ -30,7 +30,7 @@ ms.locfileid: "67500195"
 
 3. Lorsque vous êtes prêt à attribuer des comptes d'utilisateurs et de groupes à des rôles spécifiques, utilisez le portail web. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
-##  <a name="bkmk_rolelist"></a> Définitions de rôles prédéfinis  
+##  <a name="predefined-role-definitions"></a><a name="bkmk_rolelist"></a> Définitions de rôles prédéfinis  
  Les rôles prédéfinis sont définis par les tâches qu'ils prennent en charge. Vous pouvez modifier ces rôles ou les remplacer par des rôles personnalisés.  
   
  La*portée* définit les limites dans lesquelles les rôles sont utilisés. Les rôles au niveau élément fournissent des niveaux d'accès variés aux éléments du serveur de rapports et aux opérations qui affectent ces éléments. Les rôles au niveau élément sont définis sur le nœud racine (de base) et sur tous les éléments de l'arborescence des dossiers du serveur de rapports. Les rôles au niveau système autorisent l'accès au niveau du site. Les rôles au niveau élément et au niveau système sont mutuellement exclusifs mais sont utilisés ensemble pour fournir des autorisations complètes au contenu et aux opérations du serveur de rapports.  
@@ -47,7 +47,7 @@ ms.locfileid: "67500195"
 |[Rôle Administrateur système](#bkmk_systemadministrator)|Système|Afficher et modifier des attributions de rôles système, définitions de rôles système, propriétés système et planifications partagées, en plus de créer des définitions de rôle et gérer des tâches dans Management Studio.|  
 |[Rôle Utilisateur système](#bkmk_systemuser)|Système|Afficher les propriétés système, planifications partagées et autoriser l’utilisation du Générateur de rapports ou d’autres clients qui exécutent les définitions de rapport.|  
   
-##  <a name="bkmk_content"></a> Rôle Gestionnaire de contenu  
+##  <a name="content-manager-role"></a><a name="bkmk_content"></a> Rôle Gestionnaire de contenu  
  Le rôle **Gestionnaire de contenu** est prédéfini et comprend des tâches qui permettent à un utilisateur de gérer des rapports et du contenu Web, sans nécessairement créer des rapports ni gérer un serveur Web ou une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un gestionnaire de contenu déploie des rapports, gère des connexions aux modèles de rapport et aux sources de données, et prend des décisions sur le mode d'utilisation des rapports. Toutes les tâches au niveau élément sont sélectionnées par défaut pour la définition de rôle **Gestionnaire de contenu** .  
   
  Le rôle **Gestionnaire de contenu** est souvent utilisé avec le rôle **Administrateur système** . Ces deux définitions de rôles fournissent un ensemble complet de tâches aux utilisateurs qui ont besoin d'un accès complet à tous les éléments se trouvant sur un serveur de rapports. Bien que le rôle **Gestionnaire de contenu** offre un accès complet aux rapports, modèles de rapports, dossiers et autres éléments au sein de la hiérarchie des dossiers, il ne permet pas d’accéder aux éléments de niveau site ni aux opérations. Des tâches telles que la création et la gestion des planifications partagées, la définition des propriétés de serveur et la gestion des définitions de rôles sont des tâches de niveau système qui sont incluses dans le rôle **Administrateur système** . Pour cette raison, nous vous recommandons de créer une deuxième attribution de rôle au niveau site, permettant d'accéder aux planifications partagées.  
@@ -79,7 +79,7 @@ ms.locfileid: "67500195"
   
  Le rôle **Gestionnaire de contenu** est utilisé dans la sécurité par défaut.  
   
-##  <a name="bkmk_publisher"></a> Rôle Serveur de publication  
+##  <a name="publisher-role"></a><a name="bkmk_publisher"></a> Rôle Serveur de publication  
  Le rôle **Serveur de publication** est une définition de rôle intégrée qui inclut des tâches permettant aux utilisateurs d’ajouter du contenu à un serveur de rapports. Ce rôle est prédéfini pour plus de commodité. Il n'est pas utilisé tant que vous n'avez pas créé des attributions de rôles qui l'incluent. Ce rôle est destiné aux utilisateurs qui créent des rapports ou des modèles dans le Concepteur de rapports ou le Générateur de modèles avant de les publier sur un serveur de rapports.  
   
 > [!CAUTION]  
@@ -106,7 +106,7 @@ ms.locfileid: "67500195"
   
  Les utilisateurs qui publient des rapports à partir du Concepteur de rapports requièrent au minimum la tâche « Gérer les rapports » pour pouvoir ajouter un rapport sur le serveur de rapports. Si l'utilisateur doit publier des rapports qui utilisent des sources de données partagées ou des fichiers externes, vous devez également inclure les tâches « Gérer les sources de données » et « Gérer les ressources ». Si l'utilisateur doit également disposer de la capacité de créer un dossier au cours du processus de publication, vous devez également inclure la tâche « Gérer les dossiers ».  
   
-##  <a name="bkmk_browser"></a> Rôle Navigateur  
+##  <a name="browser-role"></a><a name="bkmk_browser"></a> Rôle Navigateur  
  Le rôle **Lecteur** est un rôle prédéfini qui comprend des tâches utiles pour les utilisateurs qui affichent des rapports sans nécessairement les créer ou les gérer. Ce rôle fournit des capacités de base pour un usage conventionnel d'un serveur de rapports. Sans ces tâches, il peut être difficile pour les utilisateurs d'utiliser un serveur de rapports.  
   
  Le rôle **Lecteur** doit être utilisé avec le rôle **Utilisateur système** . Ces deux définitions de rôles fournissent un ensemble complet de tâches aux utilisateurs qui interagissent avec des éléments sur un serveur de rapports. Bien que le rôle **Lecteur** permette d’afficher les rapports, les modèles de rapports, les dossiers et d’autres éléments au sein de la hiérarchie des dossiers, il ne permet pas d’accéder aux éléments de niveau site, tels que les planifications partagées, utiles lors de la création d’abonnements. Pour cette raison, nous vous recommandons de créer une deuxième attribution de rôle au niveau site, permettant d'accéder aux planifications partagées.  
@@ -127,7 +127,7 @@ ms.locfileid: "67500195"
   
  Ce rôle doit comprendre au minimum les tâches « Afficher les rapports » et « Afficher les dossiers » pour permettre l'affichage et la navigation dans les dossiers. Vous ne devez pas supprimer la tâche « Afficher les dossiers » à moins de vouloir interdire la navigation dans les dossiers. De même, vous ne devez pas supprimer la tâche « Afficher les rapports », à moins de vouloir empêcher les utilisateurs d'afficher les rapports. Ces types de modifications suggèrent la nécessité d'une définition de rôle personnalisée appliquée sélectivement à un groupe spécifique d'utilisateurs.  
   
-##  <a name="bkmk_reportbuilder"></a> Rôle Générateur de rapports  
+##  <a name="report-builder-role"></a><a name="bkmk_reportbuilder"></a> Rôle Générateur de rapports  
  Le rôle **Générateur de rapports** est un rôle prédéfini qui comprend des tâches pour le chargement des rapports dans le Générateur de rapports ainsi que pour l'affichage et l'exploration de la hiérarchie des dossiers. Pour créer et modifier des rapports dans le Générateur de rapports, vous devez par ailleurs posséder une attribution de rôle système qui comprend la tâche « Exécuter les définitions de rapport », nécessaire au traitement local des rapports dans le Générateur de rapports.  
   
 ### <a name="report-builder-tasks"></a>Tâches du Générateur de rapports  
@@ -147,7 +147,7 @@ ms.locfileid: "67500195"
   
  La tâche la plus importante de cette définition de rôle est « Lire les rapports », car elle permet à un utilisateur de charger une définition de rapport à partir du serveur de rapports dans une instance locale du Générateur de rapports. Si vous ne souhaitez pas prendre en charge cette tâche, supprimez cette définition de rôle et utilisez le rôle **Lecteur** pour prendre en charge l'accès général à un serveur de rapports.  
   
-##  <a name="bkmk_myreports"></a> Rôle Mes Rapports  
+##  <a name="my-reports-role"></a><a name="bkmk_myreports"></a> Rôle Mes Rapports  
  Le rôle **Mes Rapports** est un rôle prédéfini qui inclut un ensemble de tâches qui sont utiles pour les utilisateurs de la fonctionnalité Mes Rapports. Cette définition de rôle inclut des tâches qui accordent aux utilisateurs des autorisations administratives sur le dossier Mes Rapports qui leur appartient.  
   
  Bien que vous puissiez choisir un autre rôle à utiliser avec la fonctionnalité Mes Rapports, il est recommandé d'en choisir un qui serve exclusivement à la sécurité de Mes Rapports. Pour plus d’informations, consultez [Sécuriser Mes Rapports](../../reporting-services/security/secure-my-reports.md).  
@@ -173,7 +173,7 @@ ms.locfileid: "67500195"
   
  Bien que la tâche « Définir des stratégies de sécurité pour les éléments » ne fasse pas partie de la définition de rôle par défaut, vous pouvez ajouter cette tâche au rôle **Mes Rapports** pour que les utilisateurs puissent personnaliser les paramètres de sécurité pour les sous-dossiers et les rapports.  
   
-##  <a name="bkmk_systemadministrator"></a> Rôle Administrateur système  
+##  <a name="system-administrator-role"></a><a name="bkmk_systemadministrator"></a> Rôle Administrateur système  
  Le rôle **Administrateur système** est un rôle prédéfini qui comprend des tâches utiles pour un administrateur qui a la responsabilité générale du serveur de rapports, mais pas nécessairement de son contenu.  
   
  Pour créer une attribution de rôle qui inclut ce rôle, utilisez la page Paramètres du site dans le portail web ou utilisez les commandes accessibles par clic droit sur le nœud du serveur de rapports dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -194,7 +194,7 @@ ms.locfileid: "67500195"
   
  Le rôle **Administrateur système** est utilisé dans la sécurité par défaut.  
   
-##  <a name="bkmk_systemuser"></a> Rôle Utilisateur système  
+##  <a name="system-user-role"></a><a name="bkmk_systemuser"></a> Rôle Utilisateur système  
 Le rôle **Utilisateur système** est un rôle prédéfini qui comprend des tâches permettant aux utilisateurs d'afficher des informations de base sur le serveur de rapports. Il prend également en charge le chargement d'un rapport dans le Générateur de rapports. Le Générateur de rapports est une application cliente qui peut traiter un rapport indépendamment d'un serveur de rapports. La tâche « Exécuter les définitions de rapport » est destinée à être utilisée avec le Générateur de rapports. Si vous n'utilisez pas le Générateur de rapports, vous pouvez supprimer cette tâche du rôle **Utilisateur système** .  
 
 Le tableau ci-dessous répertorie les tâches qui sont comprises dans la définition du rôle **Utilisateur système** :  

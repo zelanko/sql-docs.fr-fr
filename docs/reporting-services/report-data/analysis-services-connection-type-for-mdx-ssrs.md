@@ -9,10 +9,10 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eff17f770599ae953afeaae81779f0326ad89e4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081827"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Type de connexion Analysis Services pour MDX (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081827"
   
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Chaîne de connexion  
+##  <a name="connection-string"></a><a name="Connection"></a> Chaîne de connexion  
  Quand vous vous connectez à un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous vous connectez à l’objet de base de données d’une instance d’Analysis Services sur un serveur. La base de données peut avoir plusieurs cubes. Vous spécifiez le cube dans le concepteur de requêtes lorsque vous générez la requête. L’exemple suivant affiche une chaîne de connexion :  
   
 ```  
@@ -32,7 +32,7 @@ data source=<server name>;initial catalog=<database name>
  Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Informations d'identification  
+##  <a name="credentials"></a><a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports.  
   
  Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports.  
@@ -50,7 +50,7 @@ data source=<server name>;initial catalog=<database name>
  Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Requêtes  
+##  <a name="queries"></a><a name="Query"></a> Requêtes  
  Après avoir établi une connexion de données à une source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous créez un dataset et définissez une requête MDX (Multidimensional Expression) qui spécifie les données à récupérer à partir du cube. Utilisez le concepteur de requêtes graphique MDX pour parcourir les différentes structures de données sous-jacentes de la source de données et effectuer une sélection.  
   
  Vous pouvez spécifier une requête de plusieurs façons :  
@@ -70,13 +70,13 @@ data source=<server name>;initial catalog=<database name>
  L’extension pour le traitement des données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ de dataset étendues. Il s'agit des valeurs disponibles dans la source de données externe mais qui ne s'affichent pas dans le volet des données de rapport. Vous pouvez utiliser les propriétés de champ étendues prises en charge par l’extension pour le traitement des données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport par le biais de la collection **Fields** intégrée. Pour les propriétés qui comprennent des valeurs dans la source de données, vous pouvez accéder à des valeurs de propriété prédéfinies telles que **FormattedValue**, **Color**ou **UniqueName**. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
-##  <a name="Parameters"></a> Paramètres  
+##  <a name="parameters"></a><a name="Parameters"></a> Paramètres  
  Pour inclure les paramètres de requête, créez un filtre dans la zone de filtre du concepteur de requêtes et marquez le filtre en tant que paramètre. Pour chaque filtre, un dataset est créé automatiquement afin de fournir les valeurs disponibles. Par défaut, ces datasets n'apparaissent pas dans le volet Données du rapport. Pour plus d’informations, consultez [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md) et [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
  Par défaut, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Remarks"></a> Notes  
+##  <a name="remarks"></a><a name="Remarks"></a> Notes  
  L'extension de données Analysis Services est basée sur le protocole XMLA (XML for Analysis). Les jeux de résultats de cubes sont récupérés via le protocole XMLA sous la forme d'un ensemble de lignes aplati. Les hiérarchies déséquilibrées ne sont pas prises en charge. Pour plus d’informations sur les hiérarchies, consultez [Hiérarchies déséquilibrées](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  Vous pouvez également récupérer les données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir du type de source de données OLE DB. Pour plus d’informations, consultez [Type de connexion OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
@@ -84,7 +84,7 @@ data source=<server name>;initial catalog=<database name>
  Pour plus d’informations sur la prise en charge des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="Related"></a> Sections connexes  
+##  <a name="related-sections"></a><a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

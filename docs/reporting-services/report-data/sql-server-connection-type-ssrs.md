@@ -9,10 +9,10 @@ ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 916bf1dc2bf861b46b01a069b6fbe15768e4bc1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081365"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Type de connexion SQL Server (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081365"
   
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Chaîne de connexion  
+##  <a name="connection-string"></a><a name="Connection"></a> Chaîne de connexion  
  Lorsque vous vous connectez à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous vous connectez à l'objet de base de données d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur. La base de données peut comporter plusieurs schémas qui ont plusieurs tables, vues et procédures stockées. Vous spécifiez l'objet de base de données à utiliser dans le concepteur de requêtes. Si vous ne spécifiez pas de base de données dans la chaîne de connexion, vous vous connectez à la base de données par défaut que l'administrateur de base de données vous a affectée.  
   
  Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L'exemple de chaîne de connexion suivant spécifie un exemple de base de données sur le client local :  
@@ -33,7 +33,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
  Pour obtenir plus d’informations sur les exemples de chaînes de connexion, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Informations d'identification  
+##  <a name="credentials"></a><a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports.  
   
  Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports.  
@@ -51,7 +51,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
  Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Requêtes  
+##  <a name="queries"></a><a name="Query"></a> Requêtes  
  Une requête spécifie les données à récupérer pour un dataset de rapport. Les colonnes dans le jeu de résultats d'une requête remplissent la collection de champs pour un dataset. Un rapport traite uniquement le premier jeu de résultats récupéré par une requête.  
   
  Par défaut, si vous créez une requête ou si vous ouvrez une requête existante qui peut être représentée dans le concepteur de requêtes graphique, le concepteur de requêtes relationnelles est disponible. Vous pouvez spécifier une requête de plusieurs façons :  
@@ -70,7 +70,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   [Procédure stockée](#QueryStoredProcedure) Faites votre choix parmi une liste de procédures stockées.  
   
-###  <a name="QueryText"></a> Utilisation du type de requête Texte  
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Utilisation du type de requête Texte  
  Dans le concepteur de requêtes textuel, vous pouvez taper des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir les données d’un dataset. Par exemple, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sélectionne les noms de tous les employés qui occupent la fonction d'assistants marketing :  
   
 ```  
@@ -95,7 +95,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  Lorsque vous exécutez la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont créés automatiquement. Pour plus d'informations, consultez [Paramètres de requête](#Parameters) plus loin dans cette rubrique.  
   
   
-###  <a name="QueryStoredProcedure"></a> Utilisation du type de requête StoredProcedure  
+###  <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> Utilisation du type de requête StoredProcedure  
  Vous pouvez spécifier une procédure stockée pour une requête de dataset en procédant de l'une des manières suivantes :  
   
 -   Dans la boîte de dialogue **Propriétés du dataset** , définissez l'option **Procédure stockée** . Effectuez un choix dans la zone de liste déroulante de procédures stockées et de fonctions table.  
@@ -113,7 +113,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  Pour plus d'informations, consultez [Procédures stockées (Moteur de base de données)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
   
-##  <a name="Parameters"></a> Paramètres  
+##  <a name="parameters"></a><a name="Parameters"></a> Paramètres  
  Lorsque le texte de requête contient des variables de requête ou des procédures stockées dotées de paramètres d'entrée, les paramètres de requête correspondants pour le dataset et les paramètres de rapport pour le rapport sont automatiquement générés. Le texte de requête ne doit pas inclure l'instruction DECLARE pour chaque variable de requête.  
   
  Par exemple, la requête SQL suivante crée un paramètre de rapport nommé **EmpID**:  
@@ -133,14 +133,14 @@ WHERE EmployeeID = (@EmpID)
  Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Remarks"></a> Notes  
+##  <a name="remarks"></a><a name="Remarks"></a> Notes  
  Vous pouvez également récupérer des données à partir d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un type de source de données OLE DB ou ODBC. Pour plus d’informations, consultez [Type de connexion OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md) ou [&#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
 ###### <a name="platform-and-version-information"></a>Informations sur les plateformes et les versions  
  Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
  [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,7 +150,7 @@ WHERE EmployeeID = (@EmpID)
  [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Sections connexes  
+##  <a name="related-sections"></a><a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

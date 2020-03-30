@@ -28,10 +28,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256321"
 ---
 # <a name="transact-sql-editor-options"></a>Options de l'Éditeur Transact-SQL
@@ -42,7 +42,7 @@ Cette rubrique contient des informations sur certaines options de l'Éditeur Tra
   
 [Résultats de la requête](#QueryResults)  
   
-## <a name="QueryExecution"></a>Exécution de la requête  
+## <a name="query-execution"></a><a name="QueryExecution"></a>Exécution de la requête  
   
 |Propriété|Description|  
 |------------|---------------|  
@@ -70,7 +70,7 @@ Cette rubrique contient des informations sur certaines options de l'Éditeur Tra
 |**SET ANSI_WARNINGS**|Spécifie le comportement de la norme SQL-92 pour plusieurs conditions d'erreur. Pour plus d'informations, consultez [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
 |**SET ANSI_NULLS**|Spécifie le comportement conforme à SQL-92 des opérateurs de comparaison Égal à ( **=** ) et Différent de ( **<>** ) lorsque vous les utilisez avec les valeurs Null. Pour plus d'informations, consultez [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
-## <a name="QueryResults"></a>Résultats de la requête  
+## <a name="query-results"></a><a name="QueryResults"></a>Résultats de la requête  
   
 |Propriété|Description|  
 |------------|---------------|  
@@ -79,7 +79,7 @@ Cette rubrique contient des informations sur certaines options de l'Éditeur Tra
 |**Ignorer les résultats après l'exécution**|Permet de libérer de la mémoire en ignorant les résultats de la requête une fois qu'ils ont été affichés à l'écran.|  
 |**Afficher les résultats dans un onglet séparé**|Permet d'afficher l'ensemble de résultats dans une nouvelle fenêtre de document et non pas en bas de la fenêtre de requête de document.|  
 |**Basculer vers l'onglet des résultats après l'exécution de la requête**|Affiche automatiquement l'ensemble de résultats à l'écran.|  
-|**Nombre maximal de caractères récupérés**|Données non-XML :<br /><br />Entrez un nombre compris entre 1 et 65 535 pour indiquer le nombre maximal de caractères affichés dans chaque cellule. **Remarque :** Si vous précisez un nombre trop élevé, les données de l'ensemble de résultats risquent d'être tronquées à l'affichage. Le nombre maximal de caractères affichés dans chaque cellule dépend de la taille de police. Si les ensembles de résultats retournés sont volumineux, il est préférable de ne pas spécifier une valeur trop élevée sans quoi vous risquez d'être confronté à une mémoire insuffisante pour l'exécution de SQL Server Management Studio ou à une dégradation des performances système.<br /><br />Données XML :<br /><br />Sélectionnez 1 Mo, 2 Mo ou 5 Mo. Sélectionnez Illimité pour récupérer tous les caractères.|  
+|**Nombre maximal de caractères récupérés**|Données non-XML :<br /><br />Entrez un nombre compris entre 1 et 65 535 pour indiquer le nombre maximal de caractères affichés dans chaque cellule. **Remarque :** si vous précisez un nombre trop élevé, les données de l’ensemble de résultats risquent d’être tronquées à l’affichage. Le nombre maximal de caractères affichés dans chaque cellule dépend de la taille de police. Si les ensembles de résultats retournés sont volumineux, il est préférable de ne pas spécifier une valeur trop élevée sans quoi vous risquez d'être confronté à une mémoire insuffisante pour l'exécution de SQL Server Management Studio ou à une dégradation des performances système.<br /><br />Données XML :<br /><br />Sélectionnez 1 Mo, 2 Mo ou 5 Mo. Sélectionnez Illimité pour récupérer tous les caractères.|  
 |**Format de sortie**|Par défaut, la sortie est affichée sous la forme de colonnes créées par le remplissage des résultats à l'aide d'espaces. Il est également possible de séparer les colonnes à l'aide de virgules, de tabulations ou d'espaces. Activez la case à cocher **Séparateur personnalisé** pour définir un autre **caractère de délimitation** dans la zone de même nom.|  
 |**Séparateur personnalisé**|Indiquez le caractère à utiliser pour séparer les colonnes. Cette option n'est disponible que lorsque la case à cocher **Séparateur personnalisé** est activée dans la zone **Format de sortie** .|  
 |**Inclure des en-têtes de colonne dans l'ensemble de résultats**|Désactivez cette case à cocher si vous ne voulez pas que chaque colonne soit étiquetée au moyen d'un titre de colonne.|  

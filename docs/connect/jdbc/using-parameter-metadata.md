@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026073"
 ---
 # <a name="using-parameter-metadata"></a>Utilisation des métadonnées de paramètre
@@ -32,8 +32,8 @@ Dans l’exemple suivant, une connexion ouverte à l’exemple de base de donné
 > [!NOTE]  
 > Certaines contraintes s'appliquent lors de l'utilisation de la classe SQLServerParameterMetaData avec des instructions préparées.
 >
-> **Avec le pilote Microsoft JDBC 6.0 (ou version ultérieure) pour SQL Server** : Quand vous utilisez SQL Server 2008 ou 2008 R2, le pilote JDBC prend en charge les instructions SELECT, DELETE, INSERT et UPDATE tant que ces instructions ne contiennent pas de sous-requêtes et/ou de jointures.
+> **Avec Microsoft JDBC Driver 6.0 (ou version ultérieure) pour SQL Server** : Quand vous utilisez SQL Server 2008 ou 2008 R2, le pilote JDBC prend en charge les instructions SELECT, DELETE, INSERT et UPDATE tant que ces instructions ne contiennent pas de sous-requêtes et/ou de jointures.
 
 Les requêtes MERGE ne sont pas non plus prises en charge pour la classe SQLServerParameterMetaData lors de l’utilisation de SQL Server 2008 ou 2008 R2. Pour SQL Server 2012 et versions ultérieures, les métadonnées de paramètres avec des requêtes complexes sont prises en charge.
 
-La récupération de métadonnées de paramètres pour les colonnes chiffrées n’est pas prise en charge. **Avec le pilote Microsoft JDBC 4.1 ou 4.2 pour SQL Server** : Le pilote JDBC prend en charge les instructions SELECT, DELETE, INSERT et UPDATE tant que ces instructions ne contiennent pas de sous-requêtes et/ou de jointures. Les requêtes MERGE ne sont pas non plus prises en charge pour la classe SQLServerParameterMetaData.
+La récupération de métadonnées de paramètres pour les colonnes chiffrées n’est pas prise en charge. **Avec Microsoft JDBC Driver 4.1 ou 4.2 pour SQL Server** : Le pilote JDBC prend en charge les instructions SELECT, DELETE, INSERT et UPDATE tant que ces instructions ne contiennent pas de sous-requêtes et/ou de jointures. Les requêtes MERGE ne sont pas non plus prises en charge pour la classe SQLServerParameterMetaData.

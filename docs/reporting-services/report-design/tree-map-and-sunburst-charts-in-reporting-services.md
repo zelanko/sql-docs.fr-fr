@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259362"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services 
 
 Les visualisations sous la forme de graphiques de compartimentage et en rayons de soleil de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont parfaites pour représenter visuellement des données hiérarchiques. Cet article présente une vue d’ensemble de l’ajout d’un graphique de compartimentage ou d’un graphique en rayons de soleil à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il inclut également un exemple de requête AdventureWorks pour vous aider à démarrer.  
   
-##  <a name="bkmk_treemap_chart"></a> Graphique de compartimentage  
+##  <a name="treemap-chart"></a><a name="bkmk_treemap_chart"></a> Graphique de compartimentage  
 
 Un graphique de compartimentage divise la zone de graphique en rectangles représentant les différents niveaux et tailles relatives de la hiérarchie de données. Le mappage ressemble à arbre, avec un tronc, des branches et des ramifications de plus en plus petites. Chaque rectangle est subdivisé en rectangles plus petits représentant un niveau inférieur dans la hiérarchie. Les rectangles de niveau supérieur du graphique de compartimentage sont disposés avec le plus grand rectangle en haut à gauche du graphique et le plus petit en bas à droite.  À l’intérieur d’un rectangle, le niveau suivant dans la hiérarchie est également organisé en rectangles allant de l’angle supérieur gauche à l’angle inférieur droit.  
 
@@ -41,11 +41,11 @@ Par exemple, dans l’exemple de graphique de compartimentage suivant, le territ
   
 3. Ajoutez les champs suivants à partir de l’échantillon de données :  
   
-    * **Valeurs** : LineTotal
+    * **Values** (Valeurs) : LineTotal (Total de la ligne)
     * **Category Groups** (Groupes de catégories) (dans l’ordre suivant) :
         1. CategoryName (Nom de catégorie)
         2. SubcategoryName (Nom de sous-catégorie)
-    * **Groupes de séries** : TerritoryName  
+    * **Series Groups** (Groupes de séries) : TerritoryName (Nom de territoire)  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -67,7 +67,7 @@ Par exemple, dans l’exemple de graphique de compartimentage suivant, le territ
   
 7. Le nombre de valeurs d’étiquette qui s’affichent est affecté par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles. Pour afficher d’autres étiquettes, définissez la propriété **Label Font** (Police de l’étiquette) de **LineTotal** (Total de la ligne) sur **10 pt**, à la place de la valeur par défaut **8 pt**.  
 
-##  <a name="bkmk_sunburst_chart"></a> Graphique en rayons de soleil  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> Graphique en rayons de soleil  
 
 Dans un graphique en rayons de soleil, la hiérarchie est représentée par une série de cercles. Le plus haut niveau de la hiérarchie se trouve au centre et les niveaux inférieurs de la hiérarchie sont des anneaux affichés à l’extérieur du centre.  Le niveau le plus bas de la hiérarchie est l’anneau extérieur.  
   
@@ -86,12 +86,12 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
 3. Ajoutez les champs suivants à partir de l’échantillon de données :  
 
-    * **Valeurs** : LineTotal
+    * **Values** (Valeurs) : LineTotal (Total de la ligne)
     * **Category Groups** (Groupes de catégories) (dans l’ordre suivant) :
         1. CategoryName (Nom de catégorie)
         2. SubcategoryName (Nom de sous-catégorie)
         3. SalesReasonName (Nom du motif de vente)
-    * **Groupes de séries** : TerritoryName  
+    * **Series Groups** (Groupes de séries) : TerritoryName (Nom de territoire)  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -107,7 +107,7 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> Échantillon de données Adventureworks
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> Échantillon de données Adventureworks
 
 Cette section présente un exemple de requête et les étapes de base pour la création d’une source de données et d’un jeu de données dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Si votre rapport contient déjà une source de données et le jeu de données, vous pouvez ignorer cette section.  
   
@@ -115,7 +115,7 @@ La requête retourne des données de détail des ventes d’AdventureWorks par s
   
 1. **Obtenez les données**.  
   
-     La requête de cette section porte sur la base de données AdventureWorks disponible au téléchargement sur GitHub : [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
+     La requête de cette section porte sur la base de données AdventureWorks disponible en téléchargement sur GitHub :[Adventure Works 2016 Full Database Backup](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Créez une source de données**.  
   
@@ -178,6 +178,6 @@ La requête retourne des données de détail des ventes d’AdventureWorks par s
 
 * [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [Tutoriel : Graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Didacticiel : graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Graphique de compartimentage : Applications de visualisation des données de Microsoft Research pour Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Graphique de compartimentage : applications de visualisation de données de Microsoft Research pour Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

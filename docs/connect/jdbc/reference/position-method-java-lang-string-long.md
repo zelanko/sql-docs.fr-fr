@@ -16,10 +16,10 @@ ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed0a62940fc29e2d909678dabec784a906c02515
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976443"
 ---
 # <a name="position-method-javalangstring-long"></a>Méthode position (java.lang.String, long)
@@ -50,10 +50,10 @@ public long position(java.lang.String searchstr,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode position est spécifiée par la méthode position de l’interface java.sql.Clob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthode position &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   

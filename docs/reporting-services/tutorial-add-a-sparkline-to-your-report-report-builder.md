@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043104"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)
 
 Dans ce didacticiel du [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], vous créez une table de base avec un graphique sparkline dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
@@ -23,12 +23,12 @@ Les graphiques sparkline et les barres de données sont des graphiques simples d
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Durée estimée pour effectuer ce tutoriel : 30 minutes.  
+Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Créer un rapport avec un tableau  
+## <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. Créer un rapport avec un tableau  
   
 1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
@@ -71,7 +71,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 13. Cliquez sur **Suivant**.  
   
-## <a name="Query"></a>2. Créer une requête et une disposition de tableau dans l’Assistant Tableau  
+## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2. Créer une requête et une disposition de tableau dans l’Assistant Tableau  
 Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie, ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
   
 > [!NOTE]  
@@ -154,13 +154,13 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 14. Le tableau est ajouté à l'aire de conception. Il comporte trois colonnes et trois lignes.  
   
-    Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+    Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
 
-### <a name="FormatCurrency"></a>2a. Mettre en forme les données en tant que devises  
+### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. Mettre en forme les données en tant que devises  
 Par défaut, les données de synthèse du champ **Sales** affichent un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé en tant qu’exemples de valeurs.  
   
 1.  Cliquez sur **Conception** pour basculer en mode Conception.  
@@ -177,7 +177,7 @@ Par défaut, les données de synthèse du champ **Sales** affichent un nombre g�
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
-### <a name="FormatDates"></a>2b. (Facultatif) Mettre en forme les données en tant que dates  
+### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (Facultatif) Mettre en forme les données en tant que dates  
 Par défaut, le champ **SalesDate** affiche les informations de date et d’heure. Vous pouvez le mettre en forme de sorte qu'il n'affiche que la date.  
   
 1.  Cliquez sur la cellule qui contient `[SalesDate]`.  
@@ -190,7 +190,7 @@ Par défaut, le champ **SalesDate** affiche les informations de date et d’heur
   
 Les valeurs **SalesDate** s’affichent dans le format de date par défaut, tandis que les valeurs de synthèse pour **Sales** s’affichent en tant que devises.   
   
-## <a name="Sparkline"></a>3. Ajouter un graphique sparkline    
+## <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. Ajouter un graphique sparkline    
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -224,7 +224,7 @@ Les valeurs **SalesDate** s’affichent dans le format de date par défaut, tand
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
-## <a name="AlignSparklines"></a>4. Aligner les graphiques sparkline verticalement et horizontalement  
+## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Aligner les graphiques sparkline verticalement et horizontalement  
 Les graphiques sparkline sont difficiles à lire quand ils n’utilisent pas tous les mêmes mesures. Les axes horizontal et vertical doivent chacun correspondre au reste.  
    
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
@@ -251,7 +251,7 @@ Les graphiques sparkline sont difficiles à lire quand ils n’utilisent pas tou
   
 ![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
   
-## <a name="Width"></a>7. (Facultatif) Modifier la largeur des colonnes  
+## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (Facultatif) Modifier la largeur des colonnes  
 Par défaut, chaque cellule d'un tableau contient une zone de texte. Une zone de texte s'étend verticalement pour accueillir le texte lors du rendu de la page. Dans le rapport rendu, chaque ligne s'étend en fonction de la hauteur de la plus grande zone de texte rendue dans la ligne. La hauteur de la ligne dans l'aire de conception n'a aucun impact sur la hauteur de la ligne dans le rapport rendu.  
   
 Pour réduire l'espace vertical occupé par chaque ligne, augmentez la largeur de colonne afin d'accueillir le contenu attendu des zones de texte dans la colonne sur une seule ligne.  
@@ -266,7 +266,7 @@ Pour réduire l'espace vertical occupé par chaque ligne, augmentez la largeur d
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu de votre rapport et voir s’il est maintenant assez large.  
   
-## <a name="Title"></a>8. (Facultatif) Ajouter un titre au rapport  
+## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (Facultatif) Ajouter un titre au rapport  
 Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez utiliser la zone de texte placée automatiquement en haut du corps du rapport.  
   
 Vous pouvez améliorer le texte en appliquant différents types de styles de police, de tailles et de couleurs à des expressions et des caractères spécifiques. Pour plus d’informations, consultez [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -285,7 +285,7 @@ Vous pouvez améliorer le texte en appliquant différents types de styles de pol
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>9. Enregistrer le rapport  
+## <a name="9-save-the-report"></a><a name="Save"></a>9. Enregistrer le rapport  
 Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vous n'enregistrez pas le rapport sur le serveur de rapports, plusieurs fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] telles que les parties de rapports et les sous-rapports ne sont pas disponibles.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  

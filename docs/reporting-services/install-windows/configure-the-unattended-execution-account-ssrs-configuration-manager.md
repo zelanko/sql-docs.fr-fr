@@ -18,10 +18,10 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866316"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "74866316"
  Le traitement sans surveillance des rapports désigne tout processus d'exécution de rapport déclenché par un événement, d'actualisation de données ou piloté par planification, plutôt que par une demande d'utilisateur. Le serveur de rapports utilise le compte de traitement sans surveillance des rapports pour se connecter à l'ordinateur qui héberge la source de données externe. Ce compte est nécessaire car les informations d'identification du compte de service Report Server ne sont jamais utilisées pour la connexion à d'autres ordinateurs.  
   
 > [!IMPORTANT]  
->  La configuration de ce compte est facultative. Cependant, si vous ne le configurez pas, vous limitez vos options pour la connexion à certaines sources de données et vous risquez de ne pas pouvoir récupérer de fichiers image à partir d'ordinateurs distants. Si vous configurez le compte, vous devez le maintenir à jour. Plus spécifiquement, si vous laissez un mot de passe expirer ou si les informations de compte sont modifiées dans Active Directory, vous rencontrerez l'erreur suivante lors du prochain traitement de rapport : « Échec d'ouverture de session (rsLogonFailed) Échec d'ouverture de session : nom d'utilisateur inconnu ou mot de passe incorrect. » Une maintenance correcte du compte de traitement de rapport sans surveillance est essentielle, même si vous ne récupérez jamais de fichiers image ou si vous n'envoyez jamais de demandes de connexion à des ordinateurs externes. Si vous configurez le compte et constatez ultérieurement que vous ne l'utilisez pas, vous pouvez le supprimer afin d'éliminer des tâches de maintenance de compte routinières.  
+>  La configuration de ce compte est facultative. Cependant, si vous ne le configurez pas, vous limitez vos options pour la connexion à certaines sources de données et vous risquez de ne pas pouvoir récupérer de fichiers image à partir d'ordinateurs distants. Si vous configurez le compte, vous devez le maintenir à jour. Plus spécifiquement, si vous laissez un mot de passe expirer ou si les informations de compte sont modifiées dans Active Directory, vous rencontrerez l'erreur suivante lors du prochain traitement de rapport : « Échec de l'ouverture de session (rsLogonFailed) Échec d'ouverture de session : nom d'utilisateur inconnu ou mot de passe incorrect ». Une maintenance correcte du compte de traitement de rapport sans surveillance est essentielle, même si vous ne récupérez jamais de fichiers image ou si vous n'envoyez jamais de demandes de connexion à des ordinateurs externes. Si vous configurez le compte et constatez ultérieurement que vous ne l'utilisez pas, vous pouvez le supprimer afin d'éliminer des tâches de maintenance de compte routinières.  
   
 ## <a name="how-to-configure-the-account"></a>Comment configurer le compte  
  Vous devez utiliser un compte utilisateur de domaine. Pour assumer son rôle prévu, ce compte doit être différent de celui utilisé pour exécuter le service Report Server. Veillez à utiliser un compte ayant les autorisations minimales (l'accès en lecture seule avec les autorisations de connexion réseau est suffisant) et un accès limité aux seuls ordinateurs qui fournissent des sources de données et des ressources au serveur de rapports.  
@@ -48,11 +48,11 @@ ms.locfileid: "74866316"
 3.  Tapez le compte et le mot de passe, tapez de nouveau le mot de passe, puis cliquez sur **Appliquer**.  
   
 ### <a name="using-rsconfig-utility"></a>Utilisation de l'utilitaire RSCONFIG.exe  
- Une autre méthode pour définir le compte consiste à recourir à l’utilitaire **rsconfig** . Pour spécifier le compte, utilisez l’argument **-e** de **rsconfig**. La spécification de l’argument **-e** pour **rsconfig** force l’utilitaire à écrire les informations de compte dans le fichier de configuration. Vous n'avez pas besoin de spécifier un chemin d'accès à RSreportserver.config. Procédez comme suit pour configurer le compte.  
+ Une autre méthode pour définir le compte consiste à recourir à l’utilitaire **rsconfig** . Pour spécifier le compte, utilisez l’argument **-e** de **rsconfig**. La spécification de l’argument **-e** pour **rsconfig** force l’utilitaire à écrire les informations de compte dans le fichier de configuration. Il n'est pas nécessaire de spécifier un chemin d'accès au fichier RSreportserver.config. Suivez ces étapes pour configurer le compte.  
   
 1.  Créez ou sélectionnez un compte de domaine qui ne peut accéder qu'aux ordinateurs et aux serveurs qui fournissent des données ou des services à un serveur de rapports. Vous devez utiliser un compte bénéficiant d'autorisations réduites (telles que des autorisations de lecture seule).  
   
-2.  Ouvrez une invite de commandes : Dans le menu **Démarrer**, cliquez sur **Exécuter**, tapez **cmd** puis cliquez sur **OK**.  
+2.  Ouvrez une invite de commandes : dans le menu **Démarrer** , cliquez sur **Exécuter**, tapez **cmd**, puis cliquez sur **OK**.  
   
 3.  Tapez la commande suivante pour configurer le compte sur une instance de serveur de rapports locale :  
   
@@ -105,7 +105,7 @@ ms.locfileid: "74866316"
   
  Les informations de compte sont supprimées du fichier RSReportServer.config.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de configurations de Reporting Services (SSRS en mode natif)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821994"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Récupérer à partir d’une défaillance de cluster de basculement
@@ -30,7 +30,7 @@ ms.locfileid: "74821994"
   
 -   [Récupérer en cas d'erreur logicielle](#Scenario2)  
   
-##  <a name="Scenario1"></a> Récupérer en cas d'erreur irréparable  
+##  <a name="recover-from-an-irreparable-failure"></a><a name="Scenario1"></a> Récupérer en cas d'erreur irréparable  
  Utilisez les étapes suivantes pour récupérer une erreur irréparable. L'erreur peut être provoquée, par exemple, par la défaillance d'un contrôleur de disque ou du système d'exploitation. Dans ce cas, l'erreur est due à une défaillance matérielle dans le nœud 1 d'un cluster à deux nœuds.  
   
 1.  Après la défaillance du nœud 1, la FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bascule sur le nœud 2.  
@@ -47,7 +47,7 @@ ms.locfileid: "74821994"
   
 7.  Exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] afin d'ajouter le nœud 1 à la FCI. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-##  <a name="Scenario2"></a> Récupérer d'une erreur réparable  
+##  <a name="recover-from-a-reparable-failure"></a><a name="Scenario2"></a> Récupérer d'une erreur réparable  
  Utilisez les étapes suivantes pour récupérer suite à une erreur réparable. Dans ce cas, la défaillance est causée par le nœud 1, défectueux ou hors connexion, mais il n'est pas rompu de manière irrémédiable. Cette erreur peut être due à une défaillance du système d'exploitation, à une défaillance matérielle ou à une défaillance dans l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] elle-même.  
   
 1.  Après la défaillance du nœud 1, la FCI bascule sur le nœud 2.  

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
 ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76516600"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Fonctionnalités SQL Server Reporting Services prises en charge par les éditions
@@ -27,7 +27,7 @@ Cette rubrique explique les fonctionnalités SQL Server Reporting Services (SSRS
  - [Nouveautés de SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
  - [Fonctionnalités prises en charge par les éditions de SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="SSRS"></a> SQL Server Reporting Services  
 
 Pour connaître les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez la colonne SQL Server Enterprise dans le tableau suivant.
 
@@ -83,7 +83,7 @@ Pour connaître les fonctionnalités prises en charge par les éditions Evaluati
 |Express with Advanced Services|Express with Advanced Services (local uniquement)|  
 |Évaluation|Évaluation|  
   
-##  <a name="BIC"></a> Clients Business Intelligence  
+##  <a name="business-intelligence-clients"></a><a name="BIC"></a> Clients Business Intelligence  
 Les applications logicielles clientes suivantes sont disponibles dans le Centre de téléchargement Microsoft. Elles vous aident à créer des documents Business Intelligence qui s’exécutent sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous hébergez ces documents dans un environnement serveur, utilisez une édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui prend en charge ce type de document. Le tableau suivant identifie quelle édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient les fonctionnalités de serveur obligatoires pour héberger les documents créés dans ces applications clientes.  
   
 |Nom de l’outil|Entreprise|standard|Web|Express with Advanced Services|Développeur|  

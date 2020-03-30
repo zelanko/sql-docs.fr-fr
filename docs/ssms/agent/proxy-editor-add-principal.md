@@ -15,10 +15,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 17811051ed091d3c091a9e6c354afdb38759ebb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247370"
 ---
 # <a name="proxy-editor---add-principal"></a>Éditeur de compte proxy - Ajouter un principal
@@ -40,6 +40,6 @@ Répertorie les principaux du type choisi.
 **Nom**  
 Sélectionnez le nom du principal pour accorder l’accès à ce principal ou sélectionnez **Nom** pour accorder l’accès à tous les principaux de la liste.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer un proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   

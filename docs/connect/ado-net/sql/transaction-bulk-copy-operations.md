@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 82f3f7fd1b796d8854363afd84768cd4ee4d3358
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896002"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transaction et opérations de copie en bloc
@@ -47,7 +47,7 @@ Vous pouvez spécifier explicitement l’option <xref:Microsoft.Data.SqlClient.S
 > [!NOTE]
 >  Puisque des lots différents sont exécutés dans différentes transactions, si une erreur se produit pendant l'opération de copie en bloc, toutes les lignes du lot actuel sont restaurées, mais les lignes des lots précédents restent dans la base de données.  
   
-L'application console suivante est similaire à l'exemple précédent, à une exception près : dans cet exemple, l'opération de copie en bloc gère ses propres transactions. Tous les lots copiés avant l'erreur sont validés. Le lot contenant la clé dupliquée est restauré et l'opération de copie en bloc est interrompue avant le traitement des autres lots.  
+L’application console suivante est similaire à l’exemple précédent, à une exception près : dans cet exemple, l’opération de copie en bloc gère ses propres transactions. Tous les lots copiés avant l'erreur sont validés. Le lot contenant la clé dupliquée est restauré et l'opération de copie en bloc est interrompue avant le traitement des autres lots.  
   
 > [!IMPORTANT]
 >  Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration de l’exemple de copie en bloc](bulk-copy-example-setup.md). Ce code est fourni uniquement pour illustrer la syntaxe de l’utilisation de **SqlBulkCopy**. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d’utiliser une instruction Transact-SQL `INSERT … SELECT` pour copier les données.  

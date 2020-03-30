@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: aada983ac80116cce2001b5027b89b8824bd151f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307013"
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
@@ -33,7 +33,7 @@ Avant d’installer et d’utiliser la fonctionnalité [!INCLUDE[msCoName](../..
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|Peut être un compte d'utilisateur de domaine ou un compte d'utilisateur local. Si vous utilisez un compte d'utilisateur local, le contrôleur, le clien, et la cible SQL Server doivent tous exécuter sur le même ordinateur.<br /><br /> **\*\* Remarque relative à la sécurité \*\*** Il est préférable que le compte ne soit pas membre du groupe Administrateurs local dans Windows.|  
 |Compte d'utilisateur interactif qui est utilisé pour exécuter l'outil d'administration de Distributed Replay|Peut être un utilisateur local ou un compte d'utilisateur de domaine. Pour utiliser un compte d'utilisateur local, l'outil d'administration et le contrôleur doivent s'exécuter sur le même ordinateur.|  
   
- **Important !** lorsque vous configurez le contrôleur Distributed Replay, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services client Distributed Replay. Vous trouverez ci-dessous la liste des comptes pris en charge :  
+ **Important**: lorsque vous configurez Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
   
 -   Compte d’utilisateur de domaine  
   
@@ -74,7 +74,7 @@ Avant d’installer et d’utiliser la fonctionnalité [!INCLUDE[msCoName](../..
   
  Procédez comme suit pour configurer les autorisations DCOM du contrôleur :  
   
-1.  **Ouvrez dcomcnfg.exe, le composant logiciel enfichable des services de composants** : C’est l’outil utilisé pour configurer les autorisations DCOM.  
+1.  **Ouvrez dcomcnfg.exe, le composant logiciel enfichable Services**: Il s’agit de l’outil utilisé pour configurer les autorisations DCOM.  
   
     1.  Sur l'ordinateur du contrôleur, cliquez sur **Démarrer**.  
   
@@ -82,9 +82,9 @@ Avant d’installer et d’utiliser la fonctionnalité [!INCLUDE[msCoName](../..
   
     3.  Appuyez sur Entrée.  
   
-2.  **Configurez les autorisations DCOM au niveau de l’ordinateur** : accordez les autorisations DCOM au niveau de l’ordinateur pour chaque compte répertorié dans le tableau suivant. Pour plus d’informations sur la définition des autorisations au niveau de l’ordinateur, consultez [Liste de vérification : gérer des applications DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurez les autorisations DCOM au niveau de l’ordinateur**: Accordez les autorisations DCOM au niveau de l’ordinateur pour chaque compte répertorié dans le tableau suivant. Pour plus d’informations sur la définition des autorisations au niveau de l’ordinateur, consultez [Liste de vérification : gérer les applications DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configurer les autorisations DCOM spécifiques à l’application** : accordez les autorisations DCOM au spécifiques à l’application pour chaque compte répertorié dans le tableau suivant. Le nom d'application DCOM pour le service du contrôleur est **DReplayController**. Pour plus d’informations sur la définition des autorisations spécifiques à l’application, consultez [Liste de vérification : gérer des applications DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurez les autorisations DCOM spécifiques à l’application**: Accordez les autorisations DCOM spécifiques à l’application correspondantes pour chaque compte répertorié dans le tableau suivant. Le nom d'application DCOM pour le service du contrôleur est **DReplayController**. Pour plus d’informations sur la définition des autorisations spécifiques à l’application, consultez [Liste de vérification : gérer les applications DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  Le tableau suivant décrit les autorisations DCOM requises pour le compte d'utilisateur interactif de l'outil d'administration et les comptes de service du client :  
   

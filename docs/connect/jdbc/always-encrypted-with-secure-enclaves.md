@@ -11,10 +11,10 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
 ms.openlocfilehash: 441adf8e3623f06bfa98718ebc6c01c314c94828
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004708"
 ---
 # <a name="using-always-encrypted-with-the-secure-enclaves"></a>Utilisation d’Always Encrypted avec enclaves sécurisées
@@ -24,7 +24,7 @@ Cette page fournit des informations sur la façon de développer des application
 
 Les enclaves sécurisées sont un ajout à la fonctionnalité [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) existante. Les enclaves sécurisées visent à résoudre les problèmes de limitations rencontrées lors de l’utilisation de données Always Encrypted. Avant, les utilisateurs pouvaient uniquement effectuer des comparaisons d’égalité sur des données Always Encrypted ; ils devaient récupérer et déchiffrer les données pour faire d’autres opérations. Les enclaves sécurisées suppriment ces limitations en autorisant les calculs sur les données de texte en clair à l’intérieur d’une enclave sécurisée côté serveur. Une enclave sécurisée est une région de mémoire protégée dans le processus SQL Server qui agit comme un environnement d’exécution approuvé pour le traitement des données sensibles dans le moteur SQL Server. Une enclave sécurisée apparaît sous la forme d’une boîte noire pour le reste de SQL Server et des autres processus sur l’ordinateur d’hébergement. Il n’existe aucun moyen d’afficher les données ou le code à l’intérieur de l’enclave depuis l’extérieur, même avec un débogueur.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 - Assurez-vous que Microsoft JDBC Driver 8.2 (ou version ultérieure) pour SQL Server est installé sur votre machine de développement. 
 
 > [!Note]

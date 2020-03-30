@@ -16,10 +16,10 @@ ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c305ccf63e1bb8b1253eb8fb0219278d8720cb5b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954960"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>execute, méthode (java.lang.String) (SQLServerStatement)
@@ -45,10 +45,10 @@ public boolean execute(java.lang.String sql)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode execute est spécifiée par la méthode execute de l’interface java.sql.Statement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthode execute &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

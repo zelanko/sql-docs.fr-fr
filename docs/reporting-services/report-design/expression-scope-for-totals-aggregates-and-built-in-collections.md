@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579812"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Étendue des expressions pour les totaux, les agrégats et les collections intégrées
@@ -41,7 +41,7 @@ ms.locfileid: "65579812"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DataScope"></a> Présentation de l'étendue de données et de la hiérarchie de données  
+##  <a name="understanding-data-scope-and-data-hierarchy"></a><a name="DataScope"></a> Présentation de l'étendue de données et de la hiérarchie de données  
  L'étendue de données spécifie un jeu de données de rapport. L'étendue de données a une hiérarchie naturelle avec une relation contenant-contenu inhérente. Des étendues supérieures dans la hiérarchie contiennent des étendues qui sont inférieures dans la hiérarchie. La liste suivante d'étendues de données décrit la hiérarchie dans l'ordre du plus grand nombre au plus petit nombre de données :  
   
 -   **Datasets, une fois les filtres de dataset appliqués** Spécifie le dataset de rapport lié à la région de données ou à un élément de rapport dans le corps du rapport. Les données utilisées pour l'agrégation proviennent du dataset du rapport après l'application des expressions de filtre du dataset. Pour les datasets partagés, cela représente à la fois les filtres dans la définition de dataset partagé et les filtres dans l'instance de dataset partagé dans le rapport.  
@@ -56,7 +56,7 @@ ms.locfileid: "65579812"
   
  La compréhension des étendues contenantes et contenues est importante lorsque vous écrivez des expressions qui incluent des fonctions d'agrégation.  
   
-##  <a name="Aggregates"></a> Étendue de cellule et expressions  
+##  <a name="cell-scope-and-expressions"></a><a name="Aggregates"></a> Étendue de cellule et expressions  
  Lorsque vous spécifiez une étendue, vous indiquez au processeur de rapports les données à utiliser pour un calcul d'agrégats. Selon l'expression et l'emplacement de l'expression, les étendues valides peuvent être des *étendues contenantes*, également appelées étendues parents, ou des *étendues contenues*, également appelées étendues enfants ou imbriquées. En général, vous ne pouvez pas spécifier d'instance de groupe individuelle dans un calcul d'agrégats. Vous pouvez spécifier un agrégat entre toutes les instances de groupe.  
   
  Lorsque le processeur de rapports combine les données d'un dataset de rapport avec la région de données de tableau matriciel, il évalue les expressions de groupe et crée les lignes et colonnes nécessaires pour représenter les instances de groupe. La valeur des expressions dans une zone de texte dans chaque cellule de tableau matriciel est évaluée dans le contexte de l'étendue de cellule. Selon la structure de tableau matriciel, une cellule peut appartenir à plusieurs groupes de lignes et groupes de colonnes. Pour les fonctions d'agrégation, vous pouvez spécifier l'étendue à utiliser à l'aide de l'une des étendues suivantes :  
@@ -77,7 +77,7 @@ ms.locfileid: "65579812"
   
  Chaque rubrique de fonction d'agrégation répertorie les étendues qui sont valides pour son utilisation. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-##  <a name="Examples"></a> Exemple d'expressions d'agrégation pour une région de données de table  
+##  <a name="example-aggregate-expressions-for-a-table-data-region"></a><a name="Examples"></a> Exemple d'expressions d'agrégation pour une région de données de table  
  L'écriture d'expressions qui spécifient des étendues non définies par défaut demande un peu de pratique. Pour vous aider à comprendre les différentes étendues, utilisez l'illustration et la table suivantes. L'illustration étiquette chaque cellule dans une table des informations des ventes qui affiche la quantité d'articles vendus par an et trimestre ainsi que par secteur de vente. Notez les signaux visuels sur les handles de ligne et de colonne qui affichent la structure des groupes de lignes et de colonnes, en indiquant les groupes imbriqués. La table a la structure suivante :  
   
 -   Un en-tête de table qui contient la cellule d'angle et trois lignes qui incluent les en-têtes de groupe de colonnes.  
@@ -117,7 +117,7 @@ ms.locfileid: "65579812"
  Pour plus d’informations sur l’interprétation des signaux visuels des régions de données de tableau matriciel, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Pour plus d’informations sur la région de données de tableau matriciel, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Pour plus d’informations sur les expressions et les agrégats, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) et [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
-##  <a name="Sparklines"></a> Synchronisation des échelles pour les graphiques sparkline  
+##  <a name="synchronizing-scales-for-sparklines"></a><a name="Sparklines"></a> Synchronisation des échelles pour les graphiques sparkline  
  Pour comparer des valeurs en fonction du temps sur l'axe horizontal pour un graphique sparkline imbriqué dans une table ou matrice, vous pouvez synchroniser les valeurs de groupe de la catégorie. Cette opération se nomme alignement des axes. En sélectionnant l'option pour aligner des axes, le rapport définit automatiquement les valeurs minimale et maximale pour un axe, et fournit des espaces réservés pour les valeurs d'agrégation qui n'existent pas dans chaque catégorie. Les valeurs dans le graphique sparkline sont ainsi alignées sur chaque catégorie et vous pouvez comparer les valeurs pour chaque ligne de données agrégées. En sélectionnant cette option, vous changez l'étendue de l'évaluation d'expression en *étendue de domaine*. La définition de l'étendue de domaine pour un graphique imbriqué contrôle également indirectement l'affectation de couleur pour chaque catégorie dans la légende.  
   
  Par exemple, dans un graphique sparkline qui affiche des tendances hebdomadaires, supposez qu'une ville avait les chiffres des ventes pour 3 mois et une autre ville avait les chiffres des ventes pour 12 mois. Sans des échelles synchronisées, le graphique sparkline pour la première ville n'aurait que 3 barres qui seraient beaucoup plus larges et occuperaient le même espace que le jeu de barres sur 12 mois pour la deuxième ville.  
@@ -125,13 +125,13 @@ ms.locfileid: "65579812"
  Pour plus d’informations, consultez [Aligner les données d’un graphique dans une table ou une matrice &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
   
-##  <a name="Indicators"></a> Synchronisation des plages pour les indicateurs  
+##  <a name="synchronizing-ranges-for-indicators"></a><a name="Indicators"></a> Synchronisation des plages pour les indicateurs  
  Pour spécifier les valeurs de données à utiliser pour un jeu d'indicateurs, vous devez spécifier une étendue. Selon la disposition de la région de données qui contient l'indicateur, vous spécifiez une étendue ou une étendue contenante. Par exemple, un ensemble de flèches (vers le haut, vers le bas, oblique) peut indiquer des valeurs de ventes relatives à un seuil dans une ligne d'en-tête de groupe associée aux ventes de catégorie. L'étendue contenante est le nom de la table ou matrice qui contient les indicateurs.  
   
  Pour plus d’informations, consultez [Définir l’étendue de synchronisation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
   
-##  <a name="Page"></a> Spécification d'étendues à partir de l'en-tête ou du pied de page  
+##  <a name="specifying-scopes-from-the-page-header-or-page-footer"></a><a name="Page"></a> Spécification d'étendues à partir de l'en-tête ou du pied de page  
  Pour afficher des données qui sont différentes sur chaque page d'un rapport, vous ajoutez des expressions à un élément de rapport qui doit être sur la page rendue. Étant donné qu'un rapport est fractionné en pages lors de son rendu, les éléments qui figurent sur une page peuvent uniquement être identifiés à ce moment-là. Par exemple, une cellule dans une ligne de détails a une zone de texte avec de nombreuses instances sur une page.  
   
  Dans cette optique, il existe une collection globale appelée ReportItems. Il s'agit de l'ensemble de zones de texte sur la page actuelle.  
@@ -139,7 +139,7 @@ ms.locfileid: "65579812"
  Pour plus d’informations, consultez [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) et [Références à la collection ReportItems &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).  
   
   
-##  <a name="Toggles"></a> Spécification d'un élément de bascule pour l'exploration vers le bas et la visibilité conditionnelle  
+##  <a name="specifying-a-toggle-item-for-drilldown-and-conditional-visibility"></a><a name="Toggles"></a> Spécification d'un élément de bascule pour l'exploration vers le bas et la visibilité conditionnelle  
  Les bascules sont des images de signes plus ou moins ajoutées à une zone de texte et sur lesquelles un utilisateur peut cliquer pour afficher ou masquer d'autres éléments de rapport. Dans la page **Visibilité** pour la plupart des propriétés d'élément de rapport, vous pouvez spécifier l'élément de rapport auquel ajouter la bascule. L'élément de bascule doit être dans une étendue contenant-contenu supérieure à l'élément à afficher ou masquer.  
   
  Dans une région de données de tableau matriciel, pour créer un effet d'exploration vers le bas où vous cliquez sur une zone de texte pour développer la table afin d'afficher plus de données, vous devez définir la propriété **Visibilité** sur le groupe et sélectionner comme bascule une zone de texte dans un en-tête de groupe associé à un groupe contenant.  
@@ -147,17 +147,17 @@ ms.locfileid: "65579812"
  Pour plus d’informations, consultez [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
   
-##  <a name="Sort"></a> Spécification d'une expression de tri pour synchroniser l'ordre de tri  
+##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> Spécification d'une expression de tri pour synchroniser l'ordre de tri  
  Lorsque vous ajoutez un bouton de tri interactif à une colonne de table, vous pouvez synchroniser le tri pour plusieurs éléments qui ont une étendue contenante commune. Par exemple, vous pouvez ajouter un bouton de tri à un en-tête de colonne dans une matrice et spécifier l'étendue contenante comme nom du dataset lié à la matrice. Lorsqu'un utilisateur clique sur le bouton de tri, non seulement les lignes de la matrice sont triées, mais les groupes de séries des graphiques liés au même dataset le sont également. De cette façon, toutes les régions de données qui dépendent de ce dataset peuvent être synchronisées pour afficher le même ordre de tri.  
   
  Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
-##  <a name="Nulls"></a> Suppression de valeurs Null ou zéro dans une cellule  
+##  <a name="suppressing-null-or-zero-values-in-a-cell"></a><a name="Nulls"></a> Suppression de valeurs Null ou zéro dans une cellule  
  Pour de nombreux rapports, les calculs qui sont limités à des groupes peuvent créer plusieurs cellules ayant pour valeur zéro (0) ou Null. Pour clarifier votre rapport, ajoutez une expression visant à retourner des espaces vides lorsque la valeur d'agrégation est 0. Pour plus d’informations, consultez « Exemples de suppression de valeurs Null ou zéro » dans [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   

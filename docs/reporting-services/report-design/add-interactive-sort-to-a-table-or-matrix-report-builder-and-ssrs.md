@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081618"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Ajouter un tri interactif à un tableau ou une matrice (Générateur de rapports et SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "77081618"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="BackToTop"></a> Dans cet article  
+##  <a name="in-this-article"></a><a name="BackToTop"></a> Dans cet article  
  [Tri de lignes de détails dans une table sans groupe](#SortingDetailRows)  
   
  [Tri d'un groupe de lignes parent de niveau supérieur dans une table ou une matrice](#SortingTopLevelParent)  
@@ -39,7 +39,7 @@ ms.locfileid: "77081618"
   
  [Synchronisation de l'ordre de tri pour plusieurs régions de données](#SynchronizingSortOrder)  
   
-##  <a name="SortingDetailRows"></a> Tri de lignes de détails dans une table sans groupe  
+##  <a name="sorting-detail-rows-for-a-table-with-no-groups"></a><a name="SortingDetailRows"></a> Tri de lignes de détails dans une table sans groupe  
  Ajoutez un bouton de tri interactif à un en-tête de colonne pour permettre aux utilisateurs de cliquer sur ce dernier afin de trier les lignes de détails d'une table selon la valeur affichée dans cette colonne.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>Pour ajouter un bouton de tri interactif à un en-tête de colonne afin de trier la table par valeur  
@@ -62,7 +62,7 @@ ms.locfileid: "77081618"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
-##  <a name="SortingTopLevelParent"></a> Tri d’un groupe de lignes parent de niveau supérieur dans une table ou une matrice  
+##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> Tri d’un groupe de lignes parent de niveau supérieur dans une table ou une matrice  
  Ajoutez un bouton de tri interactif à un en-tête de colonne pour permettre aux utilisateurs de cliquer sur ce dernier afin de trier les lignes de groupes parents d'une table ou d'une matrice selon la valeur affichée dans cette colonne. L'ordre des groupes enfants n'est pas modifié.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>Pour ajouter un bouton de tri interactif à un en-tête de colonne afin de trier les groupes  
@@ -86,7 +86,7 @@ ms.locfileid: "77081618"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
-##  <a name="SortingChildGroups"></a> Tri de groupes enfants ou de lignes de détails dans un groupe  
+##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> Tri de groupes enfants ou de lignes de détails dans un groupe  
  Ajoutez un bouton de tri interactif à une ligne d'en-tête de groupe pour permettre aux utilisateurs de trier les valeurs d'un groupe enfant à partir d'un groupe parent ou de trier les lignes de détails du groupe enfant le plus profond.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>Pour ajouter un bouton de tri interactif à une zone de texte dans un en-tête de ligne de groupe pour trier des groupes enfants ou des lignes de détails  
@@ -109,7 +109,7 @@ ms.locfileid: "77081618"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
-##  <a name="SortingMultipleRowGroups"></a> Tri de lignes en fonction d'une expression de groupe complexe  
+##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> Tri de lignes en fonction d'une expression de groupe complexe  
  Ajoutez un bouton de tri interactif à un en-tête de colonne pour permettre aux utilisateurs de cliquer sur l'en-tête de colonne afin de trier les groupes parents et enfants combinés. Pour ce faire, vous devez modifier l'expression de groupe afin qu'elle corresponde à un composite des deux groupes. Par exemple, supposons qu'une matrice affiche des totaux de stock d'un magasin pour des articles regroupés par couleur et par taille. Pour trier les lignes selon la combinaison de couleur et de taille, au lieu d'avoir un groupe séparé pour la couleur et un autre pour la taille, vous pouvez définir un groupe qui combine les deux critères. Pour plus d’informations sur la définition d’expressions de groupe, consultez [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
  Dans la procédure suivante, les termes spécifient des zones de région de données de tableau matriciel. Pour plus d’informations, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
@@ -166,7 +166,7 @@ ms.locfileid: "77081618"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
-##  <a name="SynchronizingSortOrder"></a> Synchronisation de l'ordre de tri pour plusieurs régions de données  
+##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> Synchronisation de l'ordre de tri pour plusieurs régions de données  
  Ajoutez un bouton de tri interactif qui permettra aux utilisateurs de trier plusieurs régions de données d'un simple clic. Lorsque vous créez un bouton de tri interactif, vous pouvez spécifier une synchronisation du tri pour plusieurs régions de données, selon le même dataset de rapport. Par exemple, un rapport peut inclure une matrice et un graphique qui présente les données sous forme graphique. Lorsqu'un utilisateur modifie l'ordre de tri des lignes dans la matrice, le graphique affiche automatiquement le même ordre de tri.  
   
  Pour synchroniser l'ordre de tri, vous devez utiliser des expressions de tri identiques pour les régions de données ou les groupes à trier, ainsi que définir une étendue de sorte que le tri soit un ancêtre mutuel des deux régions de données. L'ancêtre mutuel peut être le dataset auquel les deux régions de données sont liées ou une région de données conteneur dans laquelle les deux régions de données apparaissent. Par exemple, supposons qu'un rapport contienne à la fois une matrice et un graphique affichant des données du même dataset et contenues dans une liste. Pour synchroniser l'action de tri, vous devez spécifier le tri interactif sur une colonne de la matrice et définir l'étendue à la liste. Lorsque l'utilisateur trie la matrice, le graphique est également trié.  
@@ -191,7 +191,7 @@ ms.locfileid: "77081618"
   
 8.  Cliquez sur **Tri**.  
   
-9. Cliquez sur **Add**. Une nouvelle ligne de tri est ajoutée à la grille d'options de tri.  
+9. Cliquez sur **Ajouter**. Une nouvelle ligne de tri est ajoutée à la grille d'options de tri.  
   
 10. Dans Trier par, dans la liste déroulante, sélectionnez le même champ que celui choisi à l'étape 6 pour effectuer le regroupement.  
   

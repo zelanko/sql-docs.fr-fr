@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895958"
 ---
 # <a name="table-valued-parameters"></a>Paramètres table
@@ -118,7 +118,7 @@ SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories
 tvpParam.SqlDbType = SqlDbType.Structured;  
 ```  
   
-## <a name="passing"></a> Passage d’un paramètre table à une procédure stockée  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Passage d’un paramètre table à une procédure stockée  
 Cet exemple montre comment passer des données de paramètre table à une procédure stockée. Le code extrait des lignes ajoutées dans une nouvelle <xref:System.Data.DataTable> à l’aide de la méthode <xref:System.Data.DataTable.GetChanges%2A>. Le code définit ensuite une <xref:Microsoft.Data.SqlClient.SqlCommand>, en définissant la propriété <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> sur la valeur <xref:System.Data.CommandType.StoredProcedure>. <xref:Microsoft.Data.SqlClient.SqlParameter> est rempli à l’aide de la méthode <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> et le <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> est défini sur `Structured`. La <xref:Microsoft.Data.SqlClient.SqlCommand> est ensuite exécutée à l’aide de la méthode <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  

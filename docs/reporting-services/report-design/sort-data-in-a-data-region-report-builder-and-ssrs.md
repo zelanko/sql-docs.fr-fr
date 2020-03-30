@@ -9,10 +9,10 @@ ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 17c93f66924d6b948264efd9747f72b47bf765a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080969"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Trier des données dans une région de données (Générateur de rapports et SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "77080969"
   
 3.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Add**.  
+    1.  Cliquez sur **Ajouter**.  
   
     2.  Tapez ou sélectionnez une expression selon laquelle trier les données.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "77080969"
   
 4.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Add**.  
+    1.  Cliquez sur **Ajouter**.  
   
     2.  Tapez ou sélectionnez une expression selon laquelle trier les données.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "77080969"
   
 3.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Add**.  
+    1.  Cliquez sur **Ajouter**.  
   
     2.  Sélectionnez l'expression qui correspond à votre champ de regroupement. Vous pouvez vérifier l’expression du champ de regroupement en cliquant sur **Regroupement**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "77080969"
   
 3.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Add**.  
+    1.  Cliquez sur **Ajouter**.  
   
     2.  Sélectionnez l'expression qui correspond à votre champ de données. Dans la plupart des cas, il s’agit d’une valeur agrégée, telle que `=Sum(Fields!Quantity.Value)`.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "77080969"
   
 7.  Pour chaque expression de tri, procédez comme suit :  
   
-    1.  Cliquez sur **Add**.  
+    1.  Cliquez sur **Ajouter**.  
   
     2.  Sélectionnez l'expression qui correspond à votre champ de regroupement. Vous pouvez vérifier l’expression du champ de regroupement en cliquant sur **Regroupement**.  
   

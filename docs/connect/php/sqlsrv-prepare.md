@@ -18,10 +18,10 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286543"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
@@ -37,7 +37,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$conn* : ressource de connexion associée à l’instruction créée.  
+*$conn*: ressource de connexion associée à l’instruction créée.  
   
 *$tsql* : expression Transact-SQL qui correspond à l’instruction créée.  
   
@@ -73,7 +73,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 |DecimalPlaces|Entier compris entre 0 et 4 (inclus)|Spécifie le nombre de décimales pour le formatage des valeurs monétaires extraites.<br /><br />Les entiers négatifs et les valeurs supérieures à 4 sont ignorés.<br /><br />Cette option fonctionne seulement si FormatDecimals est **true**.|
 |FormatDecimals|**true** ou **false**<br /><br />La valeur par défaut est **false**.|Spécifie s’il faut ajouter des zéros au début des chaînes décimales si nécessaire et active l’option `DecimalPlaces` pour mettre en forme les types monétaires.<br /><br />Pour plus d’informations, voir [Mettre en forme des chaînes décimales et des valeurs monétaires (pilote SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Entier positif|Définit le délai d’expiration de la requête, en secondes. Par défaut, le pilote attend les résultats indéfiniment.|  
-|ReturnDatesAsStrings|**true** ou **false**<br /><br />La valeur par défaut est **false**.|Configure l’instruction de façon à récupérer les types date et heure sous forme de chaînes (**true**). Pour plus d’informations, consultez [Guide pratique pour récupérer des types date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|ReturnDatesAsStrings|**true** ou **false**<br /><br />La valeur par défaut est **false**.|Configure l’instruction de façon à récupérer les types date et heure sous forme de chaînes (**true**). Pour plus d’informations, lisez [Procédure : récupérer des types de date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Défilement|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Pour plus d’informations sur ces valeurs, consultez [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**true** ou **false**<br /><br />La valeur par défaut est **true**.|Configure le pilote pour envoyer toutes les données de flux au moment de l’exécution (**true**), ou pour les envoyer par blocs (**false**). La valeur par défaut est **true**. Pour plus d’informations, consultez [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
@@ -87,7 +87,7 @@ La combinaison de **sqlsrv_prepare** et **sqlsrv_execute** sépare la préparati
   
 Pour découvrir d’autres stratégies d’écriture et de lecture de grandes quantités d’informations, consultez [Batches of SQL Statements](../../odbc/reference/develop-app/batches-of-sql-statements.md) et [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Pour plus d’informations, consultez [Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Pour plus d’informations, consultez [Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant prépare et exécute une instruction. L’instruction, quand elle est exécutée (voir [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), met à jour un champ dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
@@ -252,11 +252,11 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Procédure : Exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)
+[Guide pratique pour exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Procédure : Envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)
+[Guide pratique pour envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)
 
 [Utilisation de paramètres directionnels](../../connect/php/using-directional-parameters.md)
 

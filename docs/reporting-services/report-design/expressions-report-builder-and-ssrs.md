@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080361"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressions (Générateur de rapports et SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "77080361"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Types"></a> Présentation des expressions simples et complexes  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> Présentation des expressions simples et complexes  
  Les expressions commencent par un signe égal (=) et sont écrites en langage [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Les expressions peuvent se composer d'une combinaison de constantes, d'opérateurs et de références à des valeurs prédéfinies (champs, collections et fonctions) ainsi qu'à du code externe ou personnalisé.  
   
  Vous pouvez utiliser des expressions pour spécifier la valeur de nombreuses propriétés d'élément de rapport. Les propriétés les plus usuelles sont les valeurs des zones de texte et du texte de l'espace réservé. En règle générale, si une zone de texte contient une seule expression, celle-ci représente la valeur de la propriété de la zone de texte. Si une zone de texte contient plusieurs expressions, chaque expression représente la valeur du texte de l'espace réservé dans la zone de texte.  
@@ -56,7 +56,7 @@ ms.locfileid: "77080361"
   
  Pour plus d’informations, consultez [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-## <a name="DisplayText"></a> Présentation des symboles de préfixe dans les expressions simples  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a> Présentation des symboles de préfixe dans les expressions simples  
 
 Les expressions simples utilisent des symboles pour indiquer si la référence est une référence à un champ, un paramètre, une collection intégrée ou la collection ReportItems. Le tableau suivant présente des exemples de texte affiché et de texte d'expression :  
   
@@ -67,7 +67,7 @@ Les expressions simples utilisent des symboles pour indiquer si la référence e
 |Champs prédéfinis|`[&ReportName]`|`=Globals!ReportName.Value`|  
 |Caractères littéraux utilisés pour le texte affiché|`\[Sales\]`|`[Sales]`|  
   
-##  <a name="References"></a> Écriture d'expressions complexes  
+##  <a name="writing-complex-expressions"></a><a name="References"></a> Écriture d'expressions complexes  
  Les expressions peuvent inclure des références à des fonctions, des opérateurs, des constantes, des champs, des paramètres, des éléments provenant de collections intégrées, ainsi que des références à du code personnalisé incorporé ou à des assemblys personnalisés.  
   
 > [!NOTE]
@@ -83,7 +83,7 @@ Les expressions simples utilisent des symboles pour indiquer si la référence e
 |[Fonctions de rapport et d'agrégation intégrées](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|Décrit les fonctions intégrées, telles que `Sum` ou `Previous`, auxquelles vous pouvez accéder à partir d’une expression.|`=Previous(Sum(Fields!Sales.Value))`|  
 |[Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Explique comment vous pouvez accéder aux classes CLR intégrées <xref:System.Math> et <xref:System.Convert>et à d’autres classes CLR, à des fonctions de la bibliothèque runtime [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ou à des méthodes à partir d’un assembly externe.<br /><br /> Explique comment vous pouvez accéder à du code personnalisé qui est incorporé dans votre rapport ou que vous compilez et installez en tant qu'assembly personnalisé à la fois sur le client de rapports et sur le serveur de rapports.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
-##  <a name="Valid"></a> Validation d'expressions  
+##  <a name="validating-expressions"></a><a name="Valid"></a> Validation d'expressions  
  Lorsque vous créez une expression pour une propriété d'élément de rapport spécifique, les références que vous pouvez inclure dans l'expression dépendent des valeurs que la propriété d'élément de rapport peut accepter et de l'étendue dans laquelle la propriété est évaluée. Par exemple :  
   
 -   Par défaut, l'expression [Sum] calcule la somme des données qui se trouvent dans l'étendue au moment où l'expression est évaluée. Pour une cellule de tableau, l'étendue dépend des membres du groupe de lignes et de colonnes. Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
@@ -94,7 +94,7 @@ Les expressions simples utilisent des symboles pour indiquer si la référence e
   
  Pour plus d’informations, consultez [Référence d’expression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md).  
   
-##  <a name="Section"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="Section"></a> Dans cette section  
  [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
@@ -110,6 +110,6 @@ Les expressions simples utilisent des symboles pour indiquer si la référence e
 -   [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [Tutoriel : Introduction aux expressions](Tutorial:%20Introducing%20Expressions.md)
+-   [Didacticiel : introduction aux expressions](Tutorial:%20Introducing%20Expressions.md)
 -   [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

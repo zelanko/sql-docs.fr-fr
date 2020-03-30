@@ -11,10 +11,10 @@ ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43de9c84bcb1356961d2e5fa0b0c48d05a72de3d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935799"
 ---
 # <a name="using-directional-parameters"></a>Utilisation de paramètres directionnels
@@ -28,9 +28,9 @@ Les rubriques de cette section décrivent comment utiliser des paramètres direc
   
 |Rubrique|Description|  
 |---------|---------------|  
-|[Procédure : Spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|Montre comment spécifier la direction du paramètre lors de l’appel d’une procédure stockée.|  
-|[Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Montre comment appeler une procédure stockée avec un paramètre de sortie et comment récupérer sa valeur.|  
-|[Procédure : Récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Montre comment appeler une procédure stockée avec un paramètre d’entrée/de sortie et comment récupérer sa valeur.|  
+|[Guide pratique pour spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|Montre comment spécifier la direction du paramètre lors de l’appel d’une procédure stockée.|  
+|[Guide pratique pour récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Montre comment appeler une procédure stockée avec un paramètre de sortie et comment récupérer sa valeur.|  
+|[Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Montre comment appeler une procédure stockée avec un paramètre d’entrée/de sortie et comment récupérer sa valeur.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  

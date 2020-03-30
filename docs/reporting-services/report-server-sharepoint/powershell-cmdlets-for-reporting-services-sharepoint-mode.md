@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892402"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
@@ -34,11 +34,11 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
 
 ## <a name="cmdlet-summary"></a>Résumé des applets de commande
 
- Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Dans les résumés suivants d’applets de commande, les références à l’application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service Reporting Services. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
+ Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)** . Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Dans les résumés suivants d’applets de commande, les références à l’application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service Reporting Services. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
   
  Si vous voyez un message d'erreur semblable au suivant lorsque vous tapez les exemples PowerShell :  
   
--   Install-SPRSService : Le terme 'Install-SPRSService' n'est pas reconnu comme le  
+-   Install-SPRSService : Le terme 'Install-SPRSService' n'est pas reconnu comme  
     nom d'applet de commande, fonction, fichier de script ou programme exécutable. Vérifiez l’orthographe du nom ou, si un chemin d’accès a été inclus, vérifiez que le chemin d’accès est correct et réessayez.  
   
  Un des problèmes suivants se produit :  
@@ -61,7 +61,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
   
 3.  Cliquez sur **SharePoint Management Shell**.  
   
- Pour consulter l’aide sur la ligne de commande pour une applet de commande, utilisez la commande « Get-Help » de PowerShell à l’invite de commandes PowerShell. Par exemple :   
+ Pour consulter l’aide sur la ligne de commande pour une applet de commande, utilisez la commande « Get-Help » de PowerShell à l’invite de commandes PowerShell. Par exemple :  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -71,7 +71,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
   
 |Applet de commande|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Installe et enregistre, ou désinstalle, le service partagé Reporting Services. Cela peut être effectué uniquement sur l’ordinateur où SQL Server Reporting Services en mode SharePoint est installé. Pour l'installation, deux opérations ont lieu :<br /><br /> - Le service Reporting Services est installé dans la batterie de serveurs.<br /><br /> - L’instance du service Reporting Services est installée sur l’ordinateur actuel.<br /><br /> Pour la désinstallation, deux opérations ont lieu :<br /><br /> - Le service Reporting Services est désinstallé de l’ordinateur actuel.<br /><br /> - Le service Reporting Services est désinstallé de la batterie de serveurs.<br /><br /> <br /><br /> Si le service Reporting Services est installé sur d’autres ordinateurs de la batterie de serveurs ou si des applications de service Reporting Services sont encore en cours d’exécution dans la batterie, un message d’avertissement s’affiche.|  
+|Install-SPRSService|Installe et enregistre, ou désinstalle, le service partagé Reporting Services. Cela peut être effectué uniquement sur l’ordinateur où SQL Server Reporting Services en mode SharePoint est installé. Pour l'installation, deux opérations ont lieu :<br /><br /> \- Le service Reporting Services est installé dans la batterie de serveurs.<br /><br /> \- L’instance du service Reporting Services est installée sur l’ordinateur actuel.<br /><br /> Pour la désinstallation, deux opérations ont lieu :<br /><br /> \- Le service Reporting Services est désinstallé de l’ordinateur actuel.<br /><br /> \- Le service Reporting Services est désinstallé de la batterie de serveurs.<br /><br /> <br /><br /> Si le service Reporting Services est installé sur d’autres ordinateurs de la batterie de serveurs ou si des applications de service Reporting Services sont encore en cours d’exécution dans la batterie, un message d’avertissement s’affiche.|  
 |Install-SPRSServiceProxy|Installe et enregistre, ou désinstalle, le proxy du service Reporting Services dans la batterie de serveurs SharePoint.|  
 |Get-SPRSProxyUrl|Obtient la ou les URL d'accès au service Reporting Services.|  
 |Get-SPRSServiceApplicationServers|Obtient tous les serveurs dans la batterie SharePoint locale qui contiennent une installation du service partagé Reporting Services. Cette applet de commande est utile pour les mises à niveau de Reporting Services car elle permet de déterminer quels serveurs exécutent le service partagé et doivent, par conséquent, être mis à niveau.|  
@@ -83,7 +83,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
 |Applet de commande|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Obtient un ou plusieurs objets d’application de service Reporting Services.|  
-|New-SPRSServiceApplication|Crée une application de service Reporting Services et des bases de données associées.<br /><br /> Paramètre LogonType : Spécifie si le serveur de rapports utilise le compte de pool d'applications SSRS ou une connexion SQL Server pour accéder à la base de données du serveur de rapports. Les valeurs autorisées sont :<br /><br /> 0 Authentification Windows<br /><br /> 1 SQL Server<br /><br /> 2. Compte du pool d'applications (valeur par défaut)|  
+|New-SPRSServiceApplication|Crée une application de service Reporting Services et des bases de données associées.<br /><br /> Paramètre LogonType : spécifie si le serveur de rapports utilise le compte de pool d'applications SSRS ou un compte de connexion SQL Server pour accéder à la base de données du serveur de rapports. Les valeurs autorisées sont :<br /><br /> 0 Authentification Windows<br /><br /> 1 SQL Server<br /><br /> 2\. Compte du pool d'applications (valeur par défaut)|  
 |Remove-SPRSServiceApplication|Supprime l'application de service Reporting Services spécifiée. Cela supprimera également les bases de données associées.|  
 |Set-SPRSServiceApplication|Modifie les propriétés d'une base de données d'application de service Reporting Services existante.|  
 |New-SPRSServiceApplicationProxy|Crée un nouveau proxy d'application de service Reporting Services.|  
@@ -193,7 +193,7 @@ $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- Dans l'exemple ci-dessus, si vous ne connaissiez pas le nom exact de l'application de service, vous pouvez réécrire la première instruction pour obtenir l'application de service en fonction d'une recherche portant sur son nom partiel. Par exemple :   
+ Dans l'exemple ci-dessus, si vous ne connaissiez pas le nom exact de l'application de service, vous pouvez réécrire la première instruction pour obtenir l'application de service en fonction d'une recherche portant sur son nom partiel. Par exemple :  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
@@ -290,7 +290,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Liste de vérification : Utiliser PowerShell pour vérifier PowerPivot pour SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Liste de vérification : utiliser PowerShell pour vérifier Power Pivot pour SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [Obtenir de l’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

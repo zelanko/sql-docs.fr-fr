@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995118"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
@@ -39,7 +39,7 @@ ms.locfileid: "67995118"
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Formats de données : Chaînes et littéraux  
+## <a name="data-formats-strings-and-literals"></a>Formats de données : chaînes et littéraux  
   
 |Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Type de données OLE DB|Format de chaîne pour les conversions clientes|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "67995118"
   
  Une chaîne vide n'est pas un littéral de date et d'heure valide et ne représente pas une valeur NULL. Une tentative de convertir une chaîne vide en valeur de date ou d'heure provoque des erreurs avec SQLState 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».  
   
-## <a name="data-formats-data-structures"></a>Formats de données : Structures de données  
+## <a name="data-formats-data-structures"></a>Formats de données : structures de données  
  Dans les structures spécifiques à OLE DB décrites ci-dessous, OLE DB se conforme aux contraintes suivantes. Celles-ci sont tirées du calendrier grégorien :  
   
 -   La plage des mois s'étend de 1 à 12.  

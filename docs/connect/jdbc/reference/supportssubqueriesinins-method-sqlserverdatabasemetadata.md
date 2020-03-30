@@ -16,10 +16,10 @@ ms.assetid: 77a0b5c0-0d8e-4e08-975f-4eeabb108ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 111f4ae8d6f98b27084d11be0815d3432e532ae5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968728"
 ---
 # <a name="supportssubqueriesinins-method-sqlserverdatabasemetadata"></a>Méthode supportsSubqueriesInIns (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsSubqueriesInIns()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

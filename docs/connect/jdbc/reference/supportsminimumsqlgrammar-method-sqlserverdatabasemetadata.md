@@ -16,10 +16,10 @@ ms.assetid: 40f5d727-1ce7-414d-867d-589ead7b2a29
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 970f2989b771fc319b77081693bd1dd7809b203d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969296"
 ---
 # <a name="supportsminimumsqlgrammar-method-sqlserverdatabasemetadata"></a>Méthode supportsMinimumSQLGrammar (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsMinimumSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

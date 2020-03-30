@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65582053"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes
@@ -25,12 +25,12 @@ ms.locfileid: "65582053"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> Choix de la planification d'un filtre  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> Choix de la planification d'un filtre  
  Spécifiez des filtres pour les éléments de rapport lorsque vous ne pouvez pas filtrer les données à la source. Par exemple, utilisez des filtres de rapport lorsque la source de données ne prend pas en charge les paramètres de requête, lorsque que vous devez exécuter des procédures stockées et ne pouvez pas modifier la requête ou encore lorsqu'un instantané de rapport paramétrable affiche des données personnalisées pour les différents utilisateurs.  
   
  Vous pouvez filtrer les données de rapport avant ou après leur récupération pour un dataset de rapport. Pour filtrer les données avant qu'elles ne soient récupérées, modifiez la requête pour chaque dataset. Lorsque vous filtrez des données dans la requête, vous les filtrez au niveau de la source de données, ce qui réduit le volume de données à récupérer et à traiter dans un rapport. Pour filtrer les données après leur récupération, créez des expressions de filtre dans le rapport. Vous pouvez définir des expressions de filtre pour un dataset, une région de données ou un groupe, y compris les groupes de détail. Vous pouvez également inclure des paramètres dans les expressions de filtre, ce qui permet de filtrer des données pour des valeurs ou des utilisateurs spécifiques, par exemple en filtrant sur une valeur qui identifie l'utilisateur qui consulte le rapport.  
   
-##  <a name="Where"></a> Choix de l'emplacement de définition d'un filtre  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> Choix de l'emplacement de définition d'un filtre  
  Déterminez l'emplacement où vous souhaitez définir un filtre en fonction de l'effet que vous souhaitez obtenir dans votre rapport. Au moment de l'exécution, le processeur de rapports applique les filtres dans l'ordre suivant : sur le dataset, puis sur la région de données, puis sur les groupes dans l'ordre de haut de bas de chaque hiérarchie de groupe. Dans une table, une matrice ou une liste, les filtres des groupes de lignes, des groupes de colonnes et des groupes adjacents sont appliqués indépendamment. Dans un graphique, les filtres des groupes de catégories et des groupes de séries sont appliqués indépendamment. Quand le processeur de rapports applique le filtre, toutes les équations de filtre sont appliquées dans l’ordre où elles sont définies sur la page **Filtre** de la boîte de dialogue **Propriétés** pour chaque élément de rapport, ce qui revient à les combiner avec des opérations booléennes AND.  
   
  La liste suivante compare l'effet de la définition de filtres sur les différents éléments de rapport :  
@@ -47,7 +47,7 @@ ms.locfileid: "65582053"
   
  Retour au début  
   
-##  <a name="FilterEquations"></a> Fonctionnement d'une équation de filtre  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a> Fonctionnement d'une équation de filtre  
  Au moment de l'exécution, le processeur de rapports convertit la valeur dans le type de données spécifié, puis utilise l'opérateur spécifié pour comparer l'expression et la valeur. La liste suivante décrit chaque élément de l'équation de filtre :  
   
 -   **Expression** : définit ce sur quoi vous filtrez. En général, il s'agit d'un champ de dataset.  

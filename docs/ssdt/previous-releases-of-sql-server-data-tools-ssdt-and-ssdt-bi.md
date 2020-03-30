@@ -12,12 +12,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/05/2018
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07504e19591b1f64aac77ebbc825bea58931b536
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7b22b71f3e5b9428e15a529917056565b874d55d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688574"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271415"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versions antérieures de SQL Server Data Tools (SSDT et SSDT-BI)
 
@@ -35,14 +35,7 @@ Voici les derniers téléchargements au cas où vous rencontreriez des problème
 
 |Version de SSDT| Visual Studio 2017|
 |:---|:---|
-|15.9.2|[SSDT pour VS2017 15.9.2](https://go.microsoft.com/fwlink/?linkid=2095463)|
-|15.9.1|[SSDT pour VS2017 15.9.1](https://go.microsoft.com/fwlink/?linkid=2086373)|
-|15.9.0|[SSDT pour VS2017 15.9.0](https://go.microsoft.com/fwlink/?linkid=2052454)|
-|15.8.2|[SSDT pour VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
-|15.8.0|[SSDT pour VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
-|15.7.1|[SSDT pour VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
-|15.7.0|[SSDT pour VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
-|15.6.0|[SSDT pour VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
+|15.8.0|[SSDT pour VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2124319)
 
 <br>
 
@@ -79,7 +72,7 @@ Fournit des modèles pour la création de bases de données relationnelles pour 
   
 Les clients Visual Studio 2013 peuvent télécharger une version préliminaire de SSDT pour essayer de nouvelles fonctionnalités qui ne figurent pas encore dans la version finale du produit.  
   
-**SQL BI : Analysis Services, Reporting Services, Integration services**  
+**SQL BI : Analysis Services, Reporting Services, Integration services**  
   
 Les modèles BI sont utilisés pour créer des modèles SSAS, des rapports SSRS et des packages SSIS. Les concepteurs BI sont liés à des versions spécifiques de SQL Server. Pour utiliser les nouvelles fonctionnalités BI, installez un concepteur BI d’une version plus récente.  
   
@@ -93,7 +86,7 @@ BIDS (Business Intelligence Development Studio) est installé via le programme d
   
 Pour SQL Server 2012 ou 2014, vous pouvez utiliser **SSDT-BI pour Visual Studio 2012** ou **SSDT-BI fou Visual Studio 2013**. La seule différence entre les deux est la version de Visual Studio.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Télécharger SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
 [Outils et utilitaires SQL](../tools/overview-sql-tools.md)

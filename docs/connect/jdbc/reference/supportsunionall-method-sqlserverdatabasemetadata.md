@@ -16,10 +16,10 @@ ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b232fa2d89844d94b04878e9db99fdd04e819646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968522"
 ---
 # <a name="supportsunionall-method-sqlserverdatabasemetadata"></a>Méthode supportsUnionAll (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsUnionAll()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

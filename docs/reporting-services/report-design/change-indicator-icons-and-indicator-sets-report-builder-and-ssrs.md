@@ -9,10 +9,10 @@ ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b93ba65ddda79ef44585c748ee2c465c1b9a25f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081860"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Modifier les icônes d'indicateur et jeux d'indicateurs (Générateur de rapports et SSRS)
@@ -72,7 +72,7 @@ ms.locfileid: "77081860"
   
 2.  Cliquez sur **Valeur et états** dans le volet gauche.  
   
-3.  Cliquez sur **Add**. Un indicateur est ajouté, à l’aide de l’icône par défaut et de l’option **Aucune couleur** .  
+3.  Cliquez sur **Ajouter**. Un indicateur est ajouté, à l’aide de l’icône par défaut et de l’option **Aucune couleur** .  
   
      Configurez l'indicateur pour utiliser l'icône et la couleur souhaitées. Les procédures plus haut dans cette rubrique décrivent les étapes de cette opération.  
   

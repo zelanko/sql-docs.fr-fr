@@ -9,10 +9,10 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79112355"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "79112355"
   
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  La source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être publiée dans une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint.  
   
  Pour prendre en charge les connexions du Générateur de rapports à un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, mais si vous utilisez un ordinateur qui n’a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  

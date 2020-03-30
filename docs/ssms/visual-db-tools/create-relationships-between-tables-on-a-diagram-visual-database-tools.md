@@ -14,10 +14,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: eb0d82c1693c452462b8bef2e55cd4e41b13689b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198384"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Créer des relations entre des tables sur un diagramme (Visual Database Tools)
@@ -30,7 +30,7 @@ Vous pouvez créer des relations entre des colonnes dans différentes tables dan
   
 2.  Faites glisser la ou les colonne(s) sélectionnée(s) vers la table associée.  
   
-3.  Deux boîtes de dialogue apparaissent : **Relation de clé étrangère** et **Tables et colonnes**, cette dernière apparaissant au premier plan.  
+3.  Deux boîtes de dialogue s’ouvre : **Relation de clé étrangère** et **Tables et colonnes**, cette dernière apparaissant au premier plan.  
   
 4.  Le**nom de relation** est fourni par le système au format FK_*localtable*\_*foreigntable*. Vous pouvez modifier cette valeur.  
   

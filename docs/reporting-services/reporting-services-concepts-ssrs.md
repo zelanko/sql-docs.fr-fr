@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078183"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
@@ -20,8 +20,8 @@ ms.locfileid: "77078183"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint   
   
-##  <a name="bkmk_ReportServerConcepts"></a> Concepts du serveur de rapports  
- Un serveur de rapports est un ordinateur sur lequel une instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installée. Un serveur de rapports stocke en interne des éléments tels que des rapports paginés et mobiles, des éléments liés aux rapports et des ressources, des planifications et des abonnements. Un serveur de rapports peut être configuré en tant qu'unique serveur autonome ou comme batterie évolutive, ou il peut être intégré au serveur SharePoint. Vous interagissez avec des éléments de serveur de rapports par le service Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le fournisseur WMI, l'accès URL ou par programmation via des scripts. La façon dont vous interagissez avec un serveur de rapports dépend de la topologie de déploiement et de la configuration.  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> Concepts du serveur de rapports  
+ Un serveur de rapports est un ordinateur sur lequel une instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installée. Un serveur de rapports stocke en interne des éléments tels que des rapports paginés et mobiles, des éléments liés aux rapports et des ressources, des planifications et des abonnements. Un serveur de rapports peut être configuré en tant qu'unique serveur autonome ou comme batterie scale-out, ou il peut être intégré au serveur SharePoint. Vous interagissez avec des éléments de serveur de rapports par le service Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le fournisseur WMI, l'accès URL ou par programmation via des scripts. La façon dont vous interagissez avec un serveur de rapports dépend de la topologie de déploiement et de la configuration.  
   
 ### <a name="native-mode-report-servers"></a>Serveurs de rapports en mode natif
  Un serveur de rapports configuré en mode natif est un ordinateur qui a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installé et configuré comme serveur autonome. Vous interagissez avec le serveur de rapports, les rapports et les éléments liés aux rapports à l’aide d’un navigateur avec le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ou les commandes d’accès URL, SQL Server Management Studio ou par programmation via des scripts. Pour plus d’informations, consultez [Serveur de rapports Reporting Services &#40;mode natif&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "77078183"
  Pour connaître la liste des outils à utiliser pour interagir avec le serveur de rapports, consultez [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md).  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> Rapports et concepts des éléments associés  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> Rapports et concepts des éléments associés  
 ### <a name="reports-and-report-definitions"></a>Rapports et définitions de rapport
 
 
@@ -145,7 +145,7 @@ Vous créez des rapports Reporting Services mobiles (fichiers .rsmobile) dans l�
  Une alerte de données est un élément stocké en interne dans une base de données d'alerte. Une définition d'alerte de données inclut les données à utiliser à partir des flux de données de rapport existantes, les conditions à rencontrer, une planification, ainsi que les destinataires de l'alerte. Les alertes de données sont disponibles uniquement sur des rapports publiés sur un serveur de rapports intégré à SharePoint Server. Les alertes de données sont disponibles sur une installation de serveur de rapports natif. Pour plus d’informations, consultez [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
   
-##  <a name="bkmk_TypesofReports"></a> Types de rapports Reporting Services paginés  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Types de rapports Reporting Services paginés  
  Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], *le rapport* de terme peut s'appliquer à un type spécifique d'élément de serveur de rapports, à une conception de mise en page, ou à une conception de solution. Un seul et même rapport Reporting Services paginé peut avoir des caractéristiques de plusieurs types ; par exemple, un rapport peut être, simultanément, un rapport autonome, un sous-rapport référencé par un rapport principal, la cible d'un rapport d'extraction dans un rapport principal différent, et un rapport lié.  
   
 ### <a name="drilldown-reports"></a>Rapports d'analyse 
@@ -183,7 +183,7 @@ Vous créez des rapports Reporting Services mobiles (fichiers .rsmobile) dans l�
  Un rapport mis à jour est une définition de rapport publiée qui est convertie en un nouveau schéma lorsqu'un serveur de rapports est mis à niveau d'une version de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vers une version ultérieure. La définition de rapport d'origine est conservée. Le rapport est mis à niveau en mémoire, compilé, et la version compilée est enregistrée en interne. Pour plus d'informations, consultez [Mettre à niveau des rapports Reporting Services](../reporting-services/install-windows/upgrade-reports.md).  
   
   
-##  <a name="bkmk_StagesofReports"></a> Étapes des rapports Reporting Services paginés  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Étapes des rapports Reporting Services paginés  
  Une définition de rapport peut être créée, publiée ou enregistrée, compilée, traitée, mise en cache, rendue, affiche, exportée, et enregistrée comme historique. Lorsque vous exécutez un rapport, le serveur de rapports procède en trois étapes : le traitement du rapport, le traitement des données et le rendu. Le traitement des données et du rapport sont réalisés sur une définition de rapport ; les résultats sont dans un format interne intermédiaire. Les rapports au format intermédiaire sont ensuite rendus dans un format d'affichage spécifique. Le diagramme suivant représente les étapes et les éléments de traitement des rapports.  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "illustration du traitement d’un rapport")  

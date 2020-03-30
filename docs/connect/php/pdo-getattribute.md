@@ -11,10 +11,10 @@ ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916378"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
@@ -30,18 +30,18 @@ mixed PDO::getAttribute ( $attribute )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$attribute* : un des attributs pris en charge. Consultez la section Notes pour obtenir la liste des attributs pris en charge.  
+*$attribute*: un des attributs pris en charge. Consultez la section Notes pour obtenir la liste des attributs pris en charge.  
   
 ## <a name="return-value"></a>Valeur de retour  
 En cas de réussite, retourne la valeur d’une option de connexion, un attribut PDO prédéfini ou un attribut de pilote personnalisé. En cas d’échec, retourne la valeur Null.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Le tableau suivant contient la liste des attributs pris en charge.  
   
 |Attribut|Traité par|Valeurs prises en charge|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Spécifie si les noms de colonne doivent respecter une casse spécifique. PDO::CASE_LOWER impose des noms de colonne en minuscules, PDO::CASE_NATURAL laisse le nom de colonne tel qu’il est retourné par la base de données et PDO::CASE_UPPER impose des noms de colonne en majuscules.<br /><br />La valeur par défaut est PDO::CASE_NATURAL.<br /><br />Cet attribut peut également être défini à l’aide de PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Tableau de chaînes|Décrit les versions du pilote et des bibliothèques associées. Retourne un tableau avec les éléments suivants : la version ODBC (*VerMaj*.*VerMin*), le nom et la version de la DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et la version des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*VerMaj*.*VerMin*.*NuméroBuild*.*Révision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Tableau de chaînes|Décrit les versions du pilote et des bibliothèques associées. Retourne un tableau avec les éléments suivants : la version ODBC (*VerMaj*.*VerMin*), le nom et la version de la DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et la version des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*VerMaj*.*VerMin*.*NuméroBuild*.*Révision*)|  
 |PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|Si non défini sur PDO::PARAM_STR_CHAR, PDO::PARAM_STR_NATL est retourné.|
 |PDO::ATTR_DRIVER_NAME|PDO|String|Retourne toujours « sqlsrv ».|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|Indique la version des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*VerMaj*.*VerMin*.*NuméroBuild*.*Révision*)|  
@@ -61,7 +61,7 @@ PDO traite certains des attributs prédéfinis tandis qu’il a besoin que le pi
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple montre la valeur de l’attribut PDO::ATTR_ERRMODE, avant et après la modification de sa valeur.  
   
 ```  
@@ -88,7 +88,7 @@ print_r($conn->getAttribute( PDO::ATTR_CLIENT_VERSION ));
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

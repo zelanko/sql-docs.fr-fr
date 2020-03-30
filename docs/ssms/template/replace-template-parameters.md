@@ -18,10 +18,10 @@ ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b0c4cc26fddff13e388b74593aa9d8f9331359f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245680"
 ---
 # <a name="replace-template-parameters"></a>Remplacer les paramètres de modèle
@@ -42,7 +42,7 @@ Après avoir ouvert le modèle dans une fenêtre d'éditeur de code :
   
 3.  Cliquez sur **OK** pour fermer la boîte de dialogue **Remplacer les paramètres de modèle** et modifier le script dans l’éditeur de requête.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [l’Explorateur de modèles](../../ssms/template/template-explorer.md)  
 [Ouvrir un modèle](../../ssms/template/open-a-template.md)  
   

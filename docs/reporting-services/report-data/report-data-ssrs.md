@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190723"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Présentation des données des rapports dans SQL Server Reporting Services (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "74190723"
 6.  **Sources de données externes** Récupérez des données à partir de bases de données relationnelles, bases de données multidimensionnelles, listes SharePoint ou services web.  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> Définition des conditions  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> Définition des conditions  
   
 - **Connexion de données** Également appelée *Source de données*. Une connexion de données inclut un nom et des propriétés de connexion qui dépendent du type de connexion. Par défaut, une connexion de données n'inclut pas d'informations d'identification. Une connexion de données ne spécifie pas les données à récupérer à partir de la source de données externe. Pour ce faire, vous devez spécifier une requête lorsque vous créez un dataset.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190723"
   
 - **Informations d'identification.** Les informations d'identification sont des informations d'authentification qui doivent être fournies pour vous permettre d'accéder à des données externes.  
   
-##  <a name="BkMk_ReportDataTips"></a> Conseils pour spécifier les données de rapport
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> Conseils pour spécifier les données de rapport
 
  Utilisez les informations suivantes pour concevoir votre stratégie de données de rapport.  
   

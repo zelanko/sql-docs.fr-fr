@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080270"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilisation d'expressions dans les rapports (Générateur de rapport et SSRS)
@@ -27,7 +27,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> Utilisation d'expressions simples  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> Utilisation d'expressions simples  
  Les expressions simples apparaissent entre crochets sur l'aire de conception et dans les boîtes de dialogue ; par exemple, un champ de dataset apparaît comme `[ProductID]`. Elles sont créées automatiquement lorsque vous faites glisser un champ d'un dataset vers une zone de texte. Un espace réservé est créé et l'expression définit la valeur sous-jacente. Vous pouvez également taper les expressions directement dans une cellule de région de données ou zone de texte sur l'aire de conception ou dans une boîte de dialogue (par exemple, `[ProductID]`).  
   
  Le tableau suivant répertorie des exemples d'utilisations des expressions simples. Le tableau décrit la fonctionnalité, la propriété à définir, la boîte de dialogue utilisée en général pour la définir et la valeur de la propriété. Vous pouvez taper l'expression simple directement sur l'aire de conception, dans une boîte de dialogue ou dans le volet Propriétés, ou vous pouvez la modifier dans la boîte de dialogue Expression, comme vous le feriez avec toute expression.  
@@ -46,7 +46,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 |Lier un paramètre de requête à un paramètre de rapport.|Collection de paramètres sur le dataset. Utilisez la **boîte de dialogue Propriétés du dataset, Paramètres**.|`[@Category]`<br /><br /> `[@Category]`|  
 |Transmettre un paramètre d'un rapport principal à un sous-rapport.|Collection de paramètres sur le sous-rapport. Utilisez la **boîte de dialogue Propriétés du sous-rapport, Paramètres**.|`[@Category]`<br /><br /> `[@Category]`|  
   
-##  <a name="Complex"></a> Utilisation d'expressions complexes  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> Utilisation d'expressions complexes  
  Les expressions complexes peuvent contenir plusieurs références intégrées, opérateurs et appels de fonction, et apparaissent dans l’aire de conception sous la forme `<<Expr>>`. Pour voir ou modifier le texte de l'expression, vous devez ouvrir la boîte de dialogue **Expression** ou taper directement dans le volet Propriétés. Le tableau suivant répertorie les utilisations classiques d'une expression complexe pour afficher ou organiser des données, ou modifier l'apparence du rapport, y compris la propriété à définir, la boîte de dialogue utilisée en général pour la définir et la valeur de la propriété. Vous pouvez taper une expression directement dans une boîte de dialogue, sur l'aire de conception ou dans le volet Propriétés.  
   
 |Fonctionnalités|Propriété, contexte et boîte de dialogue|Valeur de propriété|  

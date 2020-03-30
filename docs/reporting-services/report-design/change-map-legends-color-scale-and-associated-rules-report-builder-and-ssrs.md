@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581739"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modifier les légendes de carte, l'échelle de couleurs et les règles associées (Générateur de rapports et SSRS)
@@ -51,11 +51,11 @@ ms.locfileid: "65581739"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
-##  <a name="Viewport"></a> Pour modifier la position d'une légende par rapport à la fenêtre d'affichage  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> Pour modifier la position d'une légende par rapport à la fenêtre d'affichage  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Pour modifier la position d'une légende par rapport à la fenêtre d'affichage  
   
-1.  En mode Conception, cliquez avec le bouton droit sur la légende et ouvrez la page _Propriétés de_ **\<élément de rapport>** .  
+1.  En mode Conception, cliquez avec le bouton droit sur la légende et ouvrez la page _Propriétés de \<_ **élément de rapport>** .  
   
 2.  Dans **Position**, cliquez sur l'emplacement qui spécifie où afficher la légende par rapport à la fenêtre d'affichage.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65581739"
     > [!NOTE]  
     >  Dans l'aperçu, les légendes de carte et l'échelle de couleurs s'affichent uniquement lorsqu'il existe des résultats des règles connexes à cette légende. S'il n'y a pas d'éléments à afficher, la légende ne s'affiche pas dans le rapport rendu.  
   
-##  <a name="MapLegend"></a> Pour modifier la disposition d'une légende de carte  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> Pour modifier la disposition d'une légende de carte  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>Pour modifier la disposition d'une légende de carte  
   
@@ -76,19 +76,19 @@ ms.locfileid: "65581739"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="MapLegendTitle"></a> Pour afficher ou masquer un titre de légende de carte  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> Pour afficher ou masquer un titre de légende de carte  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>Pour afficher ou masquer un titre de légende de carte  
   
 -   Cliquez avec le bouton droit sur la légende de carte sur l’aire de conception, puis cliquez sur **Afficher le titre de la légende**.  
   
-##  <a name="ColorScaleTitle"></a> Pour afficher ou masquer un titre d'échelle de couleurs  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> Pour afficher ou masquer un titre d'échelle de couleurs  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>Pour afficher ou masquer un titre d'échelle de couleurs  
   
 -   Cliquez avec le bouton droit sur l’échelle de couleurs sur l’aire de conception, puis cliquez sur **Afficher le titre de l’échelle de couleurs**.  
   
-##  <a name="MoveItems"></a> Pour déplacer des éléments hors de la première légende  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> Pour déplacer des éléments hors de la première légende  
  Créez autant de légendes supplémentaires que nécessaire, puis mettez à jour les règles de chaque couche en spécifiant la légende dans laquelle afficher les résultats des règles.  
   
 #### <a name="to-create-a-new-legend"></a>Pour créer une légende  
@@ -101,7 +101,7 @@ ms.locfileid: "65581739"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de \<_ **type d’élément cartographique>** .  
   
 3.  Cliquez sur **Légende**.  
   
@@ -109,13 +109,13 @@ ms.locfileid: "65581739"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TemplateStyle"></a> Pour faire varier les couleurs d'éléments cartographiques en fonction d'un style de modèle  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> Pour faire varier les couleurs d'éléments cartographiques en fonction d'un style de modèle  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>Pour faire varier les couleurs d'éléments cartographiques en fonction d'un style de modèle  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de \<_ **type d’élément cartographique>** .  
   
 3.  Cliquez sur **Appliquer le style du modèle**.  
   
@@ -123,13 +123,13 @@ ms.locfileid: "65581739"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorPalette"></a> Pour faire varier les couleurs d'éléments cartographiques en fonction de la palette de couleurs  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> Pour faire varier les couleurs d'éléments cartographiques en fonction de la palette de couleurs  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>Pour faire varier les couleurs d'éléments cartographiques en fonction de la palette de couleurs  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de \<_ **type d’élément cartographique>** .  
   
 3.  Cliquez sur **Visualiser les données à l'aide de la palette de couleurs**.  
   
@@ -141,13 +141,13 @@ ms.locfileid: "65581739"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorRanges"></a> Pour faire varier les couleurs d'éléments cartographiques en fonction des plages de couleurs  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> Pour faire varier les couleurs d'éléments cartographiques en fonction des plages de couleurs  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>Pour faire varier les couleurs d'éléments cartographiques en fonction des plages de couleurs  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de \<_ **type d’élément cartographique>** .  
   
 3.  Cliquez sur **Visualiser les données à l'aide de plages de couleurs**.  
   
@@ -163,13 +163,13 @@ ms.locfileid: "65581739"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="CustomColors"></a> Pour faire varier les couleurs d'éléments cartographiques en fonction de couleurs personnalisées  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> Pour faire varier les couleurs d'éléments cartographiques en fonction de couleurs personnalisées  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>Pour faire varier les couleurs d'éléments cartographiques en fonction de couleurs personnalisées  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de \<_ **type d’élément cartographique>** .  
   
 3.  Cliquez sur **Visualiser les données à l'aide de couleurs personnalisées**.  
   
@@ -181,13 +181,13 @@ ms.locfileid: "65581739"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DistributionOptions"></a> Pour définir des options de distribution pour une légende  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> Pour définir des options de distribution pour une légende  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>Pour définir des options de distribution pour une légende  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de \<_ **type d’élément cartographique>** .  
   
 3.  Sélectionnez l’option **Visualiser les données à l’aide de** \<type de règle>. Pour utiliser des options de distribution, vous devez créer des plages dans la page **Distribution** en fonction des données analytiques associées à la couche.  
   
@@ -213,13 +213,13 @@ ms.locfileid: "65581739"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="RuleLegend"></a> Pour modifier le contenu d'une légende de règle  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> Pour modifier le contenu d'une légende de règle  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>Pour modifier le contenu d'une légende de couleur, de taille, de largeur ou de type de marqueur  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de \<_ **type d’élément cartographique>** .  
   
 3.  Vérifiez que l'option **Visualiser les données à l'aide de** \<*type de règle*> est sélectionnée.  
   
@@ -234,13 +234,13 @@ ms.locfileid: "65581739"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorScale"></a> Pour modifier le contenu de l'échelle de couleurs  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> Pour modifier le contenu de l'échelle de couleurs  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>Pour modifier le contenu de l'échelle de couleurs ou d'une légende de couleur  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de couleur de \<_ **type d’élément cartographique>** .  
   
 3.  Sélectionnez l'option de règle de couleur à utiliser. Pour afficher des éléments dans une légende de carte ou une échelle de couleurs, vous devez sélectionner l’une des options **Visualiser les données à l’aide de** \<type de règle>.  
   
@@ -255,26 +255,26 @@ ms.locfileid: "65581739"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="HideItems"></a> Pour supprimer tous les éléments d'une légende  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> Pour supprimer tous les éléments d'une légende  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>Pour masquer des éléments en fonction d'une règle  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de \<_ **type d’élément cartographique>** .  
   
 3.  Cliquez sur **Légende**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ChangeFormatItems"></a> Pour modifier le format de contenu d'une légende  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> Pour modifier le format de contenu d'une légende  
  Définissez les options de légende pour la règle associée à la légende de la carte.  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>Pour modifier le format de contenu d'une légende  
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de_ **\<type d’élément cartographique>** .  
+2.  Cliquez avec le bouton droit sur la couche contenant les données souhaitées, puis cliquez sur _Règle de \<_ **type d’élément cartographique>** .  
   
 3.  Cliquez sur **Légende**.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "65581739"
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Ajouter, changer ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

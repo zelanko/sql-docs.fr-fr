@@ -1,5 +1,6 @@
 ---
 title: Méthodes de gestion des espaces de noms du serveur de rapports | Microsoft Docs
+description: Le service web de gestion des serveurs de rapports contient des méthodes que vous pouvez utiliser pour gérer des rapports, des dossiers et des ressources dans la base de données du serveur de rapports.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1ed5267303ad37d76b571c676b2010e8f04c8a09
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72278298"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509804"
 ---
 # <a name="report-server-namespace-management-methods"></a>Méthodes de gestion des espaces de noms du serveur de rapports
   Le service web de gestion des serveurs de rapports contient des méthodes que vous pouvez utiliser pour gérer des rapports, des dossiers et des ressources dans la base de données du serveur de rapports.  
@@ -60,7 +61,7 @@ ms.locfileid: "72278298"
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Définit une ou plusieurs propriétés système dans le serveur de rapports ou la batterie de serveurs SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Valide les paramètres d'extension des [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Méthodes du service web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

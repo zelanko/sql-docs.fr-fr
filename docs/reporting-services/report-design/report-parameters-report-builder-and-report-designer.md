@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68941139"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
@@ -33,9 +33,9 @@ ms.locfileid: "68941139"
 
 Cette rubrique décrit les utilisations courantes des paramètres de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les propriétés que vous pouvez définir, et bien d’autres aspects. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports. Vous pouvez utiliser les paramètres de rapport dans les rapports paginés que vous créez dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et dans le Concepteur de rapports, ainsi que dans les rapports mobiles que vous créez dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. En savoir plus sur les [Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
 
-Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
 
-## <a name="bkmk_Common_Uses_for_Parameters"></a> Utilisations courantes des paramètres
+## <a name="common-uses-for-parameters"></a><a name="bkmk_Common_Uses_for_Parameters"></a> Utilisations courantes des paramètres
 
  Voici quelques-unes des utilisations les plus courantes des paramètres.  
   
@@ -67,7 +67,7 @@ Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Tuto
   
     Pour plus d’informations, consultez [Informations de référence sur la collection de paramètres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
-## <a name="UserInterface"></a> Affichage d’un rapport doté de paramètres
+## <a name="viewing-a-report-with-parameters"></a><a name="UserInterface"></a> Affichage d’un rapport doté de paramètres
 
 Quand vous visualisez un rapport qui comporte des paramètres, la barre d’outils de la visionneuse de rapports affiche chaque paramètre pour vous permettre de spécifier des valeurs de manière interactive. L’illustration suivante montre la zone de paramètres d’un rapport avec les paramètres @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota et @SalesDate.  
 
@@ -85,7 +85,7 @@ Quand vous visualisez un rapport qui comporte des paramètres, la barre d’outi
   
 6. **Afficher le rapport**  : après avoir entré les valeurs des paramètres, cliquez sur **Afficher le rapport** pour exécuter le rapport. Si tous les paramètres possèdent des valeurs par défaut, le rapport s'exécute automatiquement au premier affichage.  
   
-## <a name="bkmk_Create_Parameters"></a> Création de paramètres
+## <a name="creating-parameters"></a><a name="bkmk_Create_Parameters"></a> Création de paramètres
 
 Vous pouvez créer des paramètres de rapport de différentes façons :
   
@@ -142,7 +142,7 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
   
 - Exécutez le rapport sans sélectionner une valeur de paramètre, car une valeur par défaut est créée pour le paramètre.  
   
-## <a name="bkmk_Report_Parameters"></a> Propriétés de paramètres de rapport
+## <a name="report-parameter-properties"></a><a name="bkmk_Report_Parameters"></a> Propriétés de paramètres de rapport
 
  Vous pouvez modifier les propriétés de paramètre de rapport en utilisant la boîte de dialogue Propriétés du rapport. Le tableau suivant récapitule les propriétés que vous pouvez définir pour chaque paramètre :  
   
@@ -161,7 +161,7 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
 |Valeurs par défaut|Définissez les valeurs par défaut à partir d'une requête ou d'une liste statique.<br /><br /> Lorsque chaque paramètre a une valeur par défaut, le rapport s'exécute automatiquement au premier affichage.|  
 |Avancé|Définissez l'attribut de définition de rapport **UsedInQuery**, valeur qui indique si ce paramètre affecte directement ou indirectement les données d'un rapport.<br /><br /> **Déterminer automatiquement le moment de l'actualisation**<br /> Choisissez cette option lorsque vous souhaitez que le processeur de rapports détermine un paramètre pour cette valeur. La valeur est **True** si le processeur de rapports détecte une requête de dataset avec une référence directe ou indirecte à ce paramètre ou si le rapport possède des sous-rapports.<br /><br /> **Toujours actualiser**<br /> Choisissez cette option lorsque le paramètre de rapport est utilisé directement ou indirectement dans une requête de dataset ou une expression de paramètre. Cette option affecte la valeur True à **UsedInQuery** .<br /><br /> **Ne jamais actualiser**<br /> Choisissez cette option quand le paramètre de rapport n'est pas utilisé directement ou indirectement dans une requête de dataset ou une expression de paramètre. Cette option affecte la valeur False à **UsedInQuery** .<br /><br /> **Attention** Utilisez l’option **Ne jamais actualiser** avec précaution. Sur le serveur de rapports, **UsedInQuery** permet de contrôler les options de cache pour les données de rapports et les rapports rendus, ainsi que les options de paramètres des rapports d'instantané. Si vous définissez l'option **Ne jamais actualiser** de manière incorrecte, vous risquez de provoquer la mise en cache incorrecte de rapports ou de données de rapports ou de provoquer la présence de données incohérentes dans un rapport d'instantané. Pour plus d’informations, consultez [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).|  
   
-##  <a name="bkmk_Dataset_Parameters"></a> Requête de dataset  
+##  <a name="dataset-query"></a><a name="bkmk_Dataset_Parameters"></a> Requête de dataset  
  Pour filtrer les données dans la requête de dataset, vous pouvez inclure une clause de restriction qui limite les données récupérées en spécifiant les valeurs à inclure ou exclure dans le jeu de résultats.  
   
  Utilisez le concepteur de requêtes pour la source de données pour générer plus facilement une requête paramétrable.  
@@ -170,7 +170,7 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
   
 -   Pour les requêtes basées sur une source de données multidimensionnelle telle que Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, vous pouvez définir s'il faut créer un paramètre en fonction d'un filtre que vous spécifiez dans le concepteur de requêtes. Pour plus d’informations, consultez la rubrique relative au concepteur de requêtes dans [Outils de création de requêtes &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md) qui correspond à l’extension de données.  
   
-##  <a name="bkmk_Manage_Parameters"></a> Gestion des paramètres pour un rapport publié  
+##  <a name="parameter-management-for-a-published-report"></a><a name="bkmk_Manage_Parameters"></a> Gestion des paramètres pour un rapport publié  
  Lorsque vous concevez un rapport, les paramètres de rapport sont enregistrés dans la définition de rapport. Lorsque vous publiez un rapport, les paramètres de rapport sont enregistrés et gérés indépendamment de la définition de rapport.  
   
  Pour un rapport publié, vous pouvez utiliser les éléments suivants :  
@@ -193,7 +193,7 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
   
  Les options d'exécution de rapport peuvent affecter le mode de traitement des paramètres. Un rapport qui s'exécute en tant qu'instantané ne peut pas utiliser les paramètres dérivés d'une requête sauf si cette requête inclut des valeurs par défaut pour les paramètres.  
   
-##  <a name="bkmk_Parameters_Subscription"></a> Paramètres d'un abonnement  
+##  <a name="parameters-for-a-subscription"></a><a name="bkmk_Parameters_Subscription"></a> Paramètres d'un abonnement  
  Vous pouvez définir un abonnement pour un rapport à la demande ou un rapport d'instantané et spécifier les valeurs de paramètres à utiliser lors du traitement de l'abonnement.  
   
 -   **Rapports à la demande.**  Pour un rapport à la demande, vous pouvez spécifier une valeur de paramètre différente de la valeur publiée pour chaque paramètre listé pour le rapport. Prenons l'exemple d'un rapport Service d'appel qui utilise un paramètre *Période* pour retourner les demandes du service client de la journée, de la semaine ou du mois en cours. Si la valeur par défaut du paramètre du rapport est égale à **aujourd’hui**, votre abonnement peut utiliser une valeur de paramètre différente (par exemple, **semaine** ou **mois**) pour produire un rapport contenant des chiffres hebdomadaires ou mensuels.  
@@ -209,7 +209,7 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
   
  Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-##  <a name="bkmk_Parameters_Security"></a> Paramètres et sécurisation des données  
+##  <a name="parameters-and-securing-data"></a><a name="bkmk_Parameters_Security"></a> Paramètres et sécurisation des données  
  Soyez attentif lorsque vous distribuez des rapports paramétrables qui contiennent des informations confidentielles ou sensibles. Un utilisateur peut facilement remplacer un paramètre de rapport par une autre valeur, avec pour résultat une divulgation d'informations.  
   
  Pour sécuriser l'utilisation des paramètres des données personnelles ou des employés, vous pouvez sélectionner les données en fonction d'expressions qui comprennent le champ **UserID** de la collection Users. La collection Users permet d'obtenir l'identité de l'utilisateur qui exécute le rapport et d'utiliser cette identité pour extraire les données spécifiques à l'utilisateur.  
@@ -221,9 +221,9 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
 >   
 >  Pour réduire le risque d'exécution accidentelle de scripts malveillants, ouvrez les rapports rendus uniquement à partir de sources approuvées. Pour plus d’informations sur la sécurisation des rapports, consultez [Sécurisation des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  
 
-##  <a name="bkmk_Related_Topics"></a> Sections connexes  
+##  <a name="related-sections"></a><a name="bkmk_Related_Topics"></a> Sections connexes  
 
- [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Concepts de paramètres d’un rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   

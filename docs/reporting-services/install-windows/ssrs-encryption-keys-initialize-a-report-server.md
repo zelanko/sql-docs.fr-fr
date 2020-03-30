@@ -15,10 +15,10 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080829"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Clés de chiffrement SSRS - Initialiser un serveur de rapports
@@ -26,7 +26,7 @@ ms.locfileid: "77080829"
   
  Les clés de chiffrement sont en partie basées sur les informations de profil du service Report Server. Si vous modifiez l'identité de l'utilisateur servant à exécuter le service Report Server, vous devez mettre à jour les clés en conséquence. Si vous utilisez l'outil de configuration de Reporting Services pour changer l'identité, cette opération s'effectue automatiquement.  
   
- Si l’initialisation échoue pour une raison quelconque, le serveur de rapports retourne une erreur **RSReportServerNotActivated** en réponse à l’utilisateur et aux demandes de service. Dans ce cas, le problème se situe peut-être au niveau de la configuration du serveur ou du système. Pour plus d’informations, consultez [SSRS: Troubleshoot Issues and Errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) dans la rubrique Wiki Technet).  
+ Si l’initialisation échoue pour une raison quelconque, le serveur de rapports retourne une erreur **RSReportServerNotActivated** en réponse à l’utilisateur et aux demandes de service. Dans ce cas, le problème se situe peut-être au niveau de la configuration du serveur ou du système. Pour plus d’informations, consultez [SSRS: Troubleshoot Issues and Errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (Résoudre les problèmes et erreurs avec Reporting Services) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) dans la rubrique Wiki Technet.  
   
 ## <a name="overview-of-the-initialization-process"></a>Vue d'ensemble du processus d'initialisation  
  Le processus d'initialisation crée et stocke une clé symétrique destinée au chiffrement. Cette clé symétrique est créée par les services de chiffrement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, puis utilisée par le service Report Server pour chiffrer et déchiffrer des données. La clé symétrique est elle-même chiffrée avec une clé asymétrique.  
@@ -48,7 +48,7 @@ ms.locfileid: "77080829"
   
  Les premières étapes assurant l'initialisation d'un serveur de rapports en vue d'un déploiement évolutif sont identiques aux trois premières étapes de l'initialisation d'une combinaison base de données et serveur unique.  
   
- La seule différence réside dans la façon dont le serveur de rapports obtient la clé symétrique au cours du processus d'initialisation pour le déploiement évolutif. Lorsque le premier serveur est initialisé, il obtient la clé symétrique de Windows et Lorsque le deuxième serveur est initialisé durant la configuration du déploiement avec montée en puissance parallèle, il obtient sa clé symétrique du service Report Server déjà initialisé. L'instance du premier serveur de rapports utilise la clé publique de la deuxième instance pour créer un exemplaire chiffré de la clé symétrique pour l'instance du deuxième serveur de rapports. La clé symétrique n'est jamais exposée sous forme de texte brut à un seul stade de ce processus.  
+ La seule différence réside dans la façon dont le serveur de rapports obtient la clé symétrique au cours du processus d'initialisation pour le déploiement scale-out. Lorsque le premier serveur est initialisé, il obtient la clé symétrique de Windows et Lorsque le deuxième serveur est initialisé durant la configuration du déploiement avec montée en puissance parallèle, il obtient sa clé symétrique du service Report Server déjà initialisé. L'instance du premier serveur de rapports utilise la clé publique de la deuxième instance pour créer un exemplaire chiffré de la clé symétrique pour l'instance du deuxième serveur de rapports. La clé symétrique n'est jamais exposée sous forme de texte brut à un seul stade de ce processus.  
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisation d'un serveur de rapports  
   

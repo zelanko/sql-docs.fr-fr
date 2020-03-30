@@ -16,10 +16,10 @@ ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973108"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>Méthode setResponseBuffering (SQLServerStatement)
@@ -42,7 +42,7 @@ public final void setResponseBuffering(java.lang.String value)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  **adaptive** consiste à mettre en mémoire tampon le moins de données possible lorsque cela s’impose.  
   
  **full** consiste à lire l’intégralité du résultat du serveur à l’exécution.  
@@ -53,7 +53,7 @@ public final void setResponseBuffering(java.lang.String value)
   
  Si l’application fournit une valeur de paramètre non valide à la méthode [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md), une exception [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) est levée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)   
  [Utilisation de la mise en mémoire tampon adaptative](../../../connect/jdbc/using-adaptive-buffering.md)  

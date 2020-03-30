@@ -11,10 +11,10 @@ ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f59c7010875824b65d6b7d12129056f02537e908
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028421"
 ---
 # <a name="caching-result-set-data-sample"></a>Exemple de mise en cache des données d'un jeu de résultats
@@ -29,7 +29,7 @@ Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnover
 Pour définir une limite du nombre de lignes mises en cache sur le client, vous devez d’abord utiliser un curseur côté serveur quand vous créez un des objets Statement en indiquant spécifiquement le type de curseur à utiliser lors de la création de l’objet Statement. Par exemple, le pilote JDBC fournit le type de curseur TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, qui est un curseur côté serveur d’avance rapide uniquement et en lecture seule, à utiliser avec les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]  
-> Une alternative à l'utilisation d'un type de curseur spécifique à SQL Server est l'utilisation de la propriété de chaîne de connexion selectMethod, en définissant sa valeur sur « curseur ». Pour plus d’informations sur les types de curseurs pris en charge par le pilote JDBC, consultez [Présentation des types de curseurs](../../connect/jdbc/understanding-cursor-types.md).
+> Une alternative à l'utilisation d'un type de curseur spécifique à SQL Server est l'utilisation de la propriété de chaîne de connexion selectMethod, en définissant sa valeur sur « curseur ». Pour plus d’informations sur les types de curseurs pris en charge par le pilote JDBC, consultez [Comprendre les types de curseurs](../../connect/jdbc/understanding-cursor-types.md).
 
 Après avoir exécuté la requête contenue dans l’objet Statement et après que les données ont été retournées au client sous forme de jeu de résultats, vous pouvez appeler la méthode setFetchSize pour contrôler la quantité de données extraite de la base de données en une fois. Par exemple, si une table contient 100 lignes de données et si vous définissez la taille d'extraction à 10, seules 10 lignes de données seront mises en cache sur le client à tout moment. Même si ceci ralentit la vitesse de traitement des données, cela présente l'avantage d'utiliser moins de mémoire sur le client, ce qui peut être particulièrement utile lorsque vous devez traiter de grandes quantités de données.
 

@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970565"
 ---
 # <a name="sqlserverresultset-members"></a>Membres de SQLServerResultSet
@@ -71,7 +71,7 @@ ms.locfileid: "67970565"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|Récupère le mode de concurrence de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|Récupère le nom du curseur SQL utilisé par cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|Récupère la valeur de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant qu’objet java.sql.Date dans le langage de programmation Java.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Récupère la valeur de la colonne spécifiée en tant qu'objet [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Récupère la valeur de la colonne spécifiée sous la forme d’un objet [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Récupère la valeur de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant que **double** dans le langage de programmation Java.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|Récupère la direction d’extraction pour cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|Récupère la taille d’extraction pour cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
@@ -151,7 +151,7 @@ ms.locfileid: "67970565"
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

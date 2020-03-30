@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65619688"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
@@ -23,7 +23,7 @@ ms.locfileid: "65619688"
   
  Les serveurs de rapports configurés pour le mode SharePoint peuvent également utiliser les journaux ULS de SharePoint. Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> Affichage des informations des journaux  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> Affichage des informations des journaux  
  Le serveur de rapports consigne les données sur l'exécution des rapports dans une table de base de données interne. Les informations de la table sont fournies par les vues de SQL Server.  
   
  Le journal d'exécution des rapports est stocké dans la base de données du serveur de rapports nommée par défaut **ReportServer**. Les vues SQL fournissent les informations associées au journal d'exécution. Les vues « 2 » et « 3 » ont été ajoutées dans les dernières versions et contiennent de nouveaux champs ou des champs avec des noms plus conviviaux que dans les versions précédentes. Les anciennes vues sont toujours présentes dans le produit de sorte que les applications personnalisées qui dépendent d'elles ne sont pas impactées. Si vous n'avez pas de dépendance sur une vue plus ancienne, par exemple ExecutionLog, il est recommandé d'utiliser la vue la plus récente, soit ExecutionLog**3**.  
@@ -42,7 +42,7 @@ ms.locfileid: "65619688"
   
 -   [Champs de journalisation (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> Paramètres de configuration d'un serveur de rapports en mode SharePoint  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> Paramètres de configuration d'un serveur de rapports en mode SharePoint  
  Vous pouvez activer ou désactiver la journalisation de l'exécution des rapports dans les paramètres système d'une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Par défaut, les entrées de journal sont conservées pendant 60 jours. Au-delà de cette date, les entrées sont supprimées à 02:00 tous les jours. Dans une installation déjà rodée, seuls 60 jours d'informations sont disponibles à tout moment.  
@@ -69,7 +69,7 @@ ms.locfileid: "65619688"
   
 2.  Modifiez **ExecutionLogLevel** en **verbose**. Ce champ est un champ d'entrée de texte et les deux valeurs possibles sont **verbose** et **normal**.  
   
-##  <a name="bkmk_native"></a> Paramètres de configuration d'un serveur de rapports en mode natif  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> Paramètres de configuration d'un serveur de rapports en mode natif  
  Vous pouvez activer ou désactiver la journalisation de l'exécution de rapports dans la page Propriétés du serveur de SQL Server Management Studio. **EnableExecutionLogging** est une propriété avancée.  
   
  Par défaut, les entrées de journal sont conservées pendant 60 jours. Au-delà de cette date, les entrées sont supprimées à 02:00 tous les jours. Dans une installation déjà rodée, seuls 60 jours d'informations sont disponibles à tout moment.  
@@ -96,7 +96,7 @@ ms.locfileid: "65619688"
   
 2.  Dans la section **Défini par l’utilisateur** , modifiez **ExecutionLogLevel** sur **verbose**. Ce champ est un champ d'entrée de texte et les deux valeurs possibles sont **verbose** et **normal**.  
   
-##  <a name="bkmk_executionlog3"></a> Champs de journalisation (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> Champs de journalisation (ExecutionLog3)  
  Dans cette vue, un nœud de diagnostic de performances supplémentaire est ajouté dans la colonne **AdditionalInfo** basée sur XML. La colonne AdditionalInfo contient une structure XML comportant de 1 à plusieurs champs d'informations supplémentaires. Voici un exemple d'instruction Transact SQL pour extraire des lignes de la vue ExecutionLog3. L'exemple suppose que la base de données du serveur de rapports est nommée **ReportServer**:  
   
 ```  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RowCount|Nombre de lignes retournées par les requêtes.|  
 |AdditionalInfo|Conteneur de propriétés XML contenant des informations supplémentaires sur l'exécution. Le contenu peut être différent pour chaque ligne.|  
   
-##  <a name="bkmk_additionalinfo"></a> Champ AdditionalInfo  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> Champ AdditionalInfo  
  Le champ AdditionalInfo est un conteneur de propriétés ou une structure XML contenant des informations supplémentaires sur l'exécution. Le contenu peut être différent pour chaque ligne dans le journal.  
   
  Voici plusieurs exemples de contenu du champ AddtionalInfo pour la journalisation standard et commentée :  
@@ -307,7 +307,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> Champs de journalisation (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> Champs de journalisation (ExecutionLog2)  
  Cette vue ajoute de nouveaux champs et contient des champs renommés. Voici un exemple d'instruction Transact SQL pour extraire des lignes de la vue ExecutionLog2. L'exemple suppose que la base de données du serveur de rapports est nommée **ReportServer**:  
   
 ```  
@@ -338,7 +338,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|Nombre de lignes retournées par les requêtes.|  
 |AdditionalInfo|Conteneur de propriétés XML contenant des informations supplémentaires sur l'exécution.|  
   
-##  <a name="bkmk_executionlog"></a> Champs de journalisation (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> Champs de journalisation (ExecutionLog)  
  Voici un exemple d'instruction Transact SQL pour extraire des lignes de la vue ExecutionLog. L'exemple suppose que la base de données du serveur de rapports est nommée **ReportServer**:  
   
 ```  

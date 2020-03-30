@@ -1,6 +1,6 @@
 ---
 title: Statistiques du fournisseur pour SQL Server
-description: Décrit la prise en charge de l’obtention de statistiques d’exécution SQL Server.
+description: Décrit le support pour l’obtention de statistiques d’exécution SQL Server.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896605"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statistiques du fournisseur pour SQL Server
@@ -58,7 +58,7 @@ Le tableau suivant décrit les valeurs statistiques actuelles disponibles. Notez
 L’application console suivante montre comment activer les statistiques sur une connexion, récupérer quatre valeurs de statistiques individuelles et les écrire dans la fenêtre de la console.  
   
 > [!NOTE]
->  L’exemple suivant utilise l’exemple de base de données **AdventureWorks** inclus dans SQL Server. La chaîne de connexion fournie dans l’exemple de code suppose que la base de données est installée et disponible sur l’ordinateur local. Modifiez la chaîne de connexion en fonction des besoins de votre environnement.  
+>  L’exemple suivant utilise l’exemple de base de données **AdventureWorks** inclus dans SQL Server. La chaîne de connexion fournie dans l’exemple de code suppose que la base de données est installée et disponible sur l’ordinateur local. Modifiez la chaîne de connexion en fonction de votre environnement.  
   
 ```csharp  
 using System;  
@@ -143,7 +143,7 @@ namespace CS_Stats_Console_GetValue
 L’application console suivante montre comment activer les statistiques sur une connexion, récupérer toutes les valeurs statistiques disponibles à l’aide de l’énumérateur et les écrire dans la fenêtre de la console.  
   
 > [!NOTE]
->  L’exemple suivant utilise l’exemple de base de données **AdventureWorks** inclus dans SQL Server. La chaîne de connexion fournie dans l’exemple de code suppose que la base de données est installée et disponible sur l’ordinateur local. Modifiez la chaîne de connexion en fonction des besoins de votre environnement.  
+>  L’exemple suivant utilise l’exemple de base de données **AdventureWorks** inclus dans SQL Server. La chaîne de connexion fournie dans l’exemple de code suppose que la base de données est installée et disponible sur l’ordinateur local. Modifiez la chaîne de connexion en fonction de votre environnement.  
   
 ```csharp  
 using System;  

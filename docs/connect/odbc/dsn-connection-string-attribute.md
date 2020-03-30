@@ -10,10 +10,10 @@ ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76911243"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Attributs et mots clés de chaîne de connexion et DSN
@@ -22,7 +22,7 @@ Cette page liste les mots clés des chaînes de connexion et des noms de source 
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Attributs de connexion et mots clés de chaîne de connexion et de nom de source de données pris en charge
 
-Le tableau suivant liste les mots clés disponibles et les attributs pour chaque plateforme (L : Linux ; M : Mac ; W : Windows). Pour plus d’informations, cliquez sur le mot clé ou l’attribut.
+Le tableau suivant liste les mots clés disponibles et les attributs pour chaque plateforme (L : Linux ; M : Mac ; W : Windows). Pour plus d’informations, cliquez sur le mot clé ou l’attribut.
 
 | Mot clé de chaîne de connexion / DSN | Attribut de connexion | Plateforme |
 |-|-|-|
@@ -191,7 +191,7 @@ Contrôle l’utilisation de SET FMTONLY pour les métadonnées lors de la conne
 
 | Valeur de mot clé | Description |
 |-|-|
-|Non |(Valeur par défaut) Utiliser sp_describe_first_result_set pour les métadonnées si elles sont disponibles. |
+|Non|(Valeur par défaut) Utiliser sp_describe_first_result_set pour les métadonnées si elles sont disponibles. |
 |Oui| Utiliser SET FMTONLY pour les métadonnées. |
 
 
@@ -258,8 +258,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 |Valeur|Description|Plateformes|  
 |-----------|-----------------|-----------------|  
 |Objet XACALLPARAM*|Pointeur vers un objet `XACALLPARAM`.|Windows, Linux et Mac|
-|TRUE|Associe la transaction XA à la connexion ODBC. Toutes les activités de base de données connexes seront effectuées sous la protection de la transaction XA.| Windows|  
-|FALSE|Dissocie la transaction de la connexion ODBC.| Windows|
+|TRUE|Associe la transaction XA à la connexion ODBC. Toutes les activités de base de données connexes seront effectuées sous la protection de la transaction XA.|Windows|  
+|FALSE|Dissocie la transaction de la connexion ODBC.|Windows|
 
  Pour plus d’informations sur les transactions XA, consultez [Utilisation de transactions XA](../../connect/odbc/use-xa-with-dtc.md).
 

@@ -11,10 +11,10 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941208"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
@@ -29,9 +29,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Paramètres
-$*instruction* : chaîne contenant l’instruction SQL.
+$*statement*: chaîne qui contient l’instruction SQL.
 
-*key_pair* : tableau contenant un nom et une valeur d’attribut. Pour plus d'informations, consultez la section Remarques.
+*key_pair* : tableau contenant un nom et une valeur d’attribut. Pour plus d'informations, consultez la section Remarques.
 
 ## <a name="return-value"></a>Valeur de retour
 En cas de réussite, retourne un objet PDOStatement. En cas d’échec, retourne un objet PDOException, ou false en fonction de la valeur de `PDO::ATTR_ERRMODE`.
@@ -49,7 +49,7 @@ Le tableau suivant répertorie les valeurs possibles de *key_pair*.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Spécifie le nombre de décimales pour la mise en forme des valeurs monétaires extraites. Cette option fonctionne uniquement quand `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` a la valeur true. Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Si la valeur est True, spécifie l’exécution de requête directe. False est synonyme d’exécution d’instruction préparée. Pour plus d’informations sur `PDO::SQLSRV_ATTR_DIRECT_QUERY`, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (par défaut)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Spécifie s’il faut récupérer les types de date et d’heure en tant qu’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Pour plus d’informations, consultez [Procédure : Récupérer des types date et heure sous forme d’objets datetime PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Spécifie s’il faut récupérer les types de date et d’heure en tant qu’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Pour plus d’informations, consultez [Guide pratique pour récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Gère les extractions numériques à partir de colonnes avec des types numériques SQL. Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Spécifie s’il faut ajouter des zéros au début des chaînes décimales si nécessaire. Si elle est définie, cette option active l’option `PDO::SQLSRV_ATTR_DECIMAL_PLACES` pour mettre en forme les types monétaires. Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|

@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ec984cbb220bffecfae5a929ddad103780450285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081058"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parties de rapport dans le Concepteur de rapports (SSRS)
@@ -23,9 +23,9 @@ ms.locfileid: "77081058"
   
  En général, les parties de rapport fonctionnent de la même façon dans le Concepteur de rapports et dans le Générateur de rapports. Pour en savoir plus sur les fonctionnalités de base, consultez [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- Il existe des différences fondamentales dans la façon dont les parties de rapport fonctionnent dans le Concepteur de rapports. Le flux de travail représente une différence notable. Le Générateur de rapports permet la création collaborative : je crée une partie de rapport et la publie. Vous pouvez la réutiliser, la modifier et la republier. Dans le Concepteur de rapports, la publication est unidirectionnelle : je peux publier une partie de rapport dans le Concepteur de rapports et vous pouvez la réutiliser. Mais je ne peux pas réutiliser une partie de rapport existante dans un rapport dans le Concepteur de rapports. Cette rubrique présente ces différences, après une vue d'ensemble rapide des parties de rapports.  
+ Il existe des différences fondamentales dans la façon dont les parties de rapport fonctionnent dans le Concepteur de rapports. Le flux de travail représente une différence notable. Le Générateur de rapports permet la création combinée : je crée une partie de rapport et le publie. Vous pouvez la réutiliser, la modifier et la republier. Dans le Concepteur de rapports, la publication est unidirectionnelle : je peux publier une partie de rapport à partir du Concepteur de rapports et vous pouvez la réutiliser. Mais je ne peux pas réutiliser une partie de rapport existante dans un rapport dans le Concepteur de rapports. Cette rubrique présente ces différences, après une vue d'ensemble rapide des parties de rapports.  
   
-##  <a name="ComponentWorkflow"></a> Publication du cycle de vie d'une partie de rapport  
+##  <a name="life-cycle-of-report-part-publishing"></a><a name="ComponentWorkflow"></a> Publication du cycle de vie d'une partie de rapport  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  Dans le Concepteur de rapports, une personne A crée un projet qui contient un rapport avec un graphique dépendant d'un dataset incorporé.  
@@ -42,7 +42,7 @@ ms.locfileid: "77081058"
   
 6.  Dans le Générateur de rapports, la personne que B accepte le graphique mis à jour provenant du serveur. Les modifications que la personne B avait apportées au graphique dans son rapport sont ainsi remplacées.  
   
-##  <a name="PublishingComponents"></a> Publication de parties de rapport  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> Publication de parties de rapport  
  Lorsque vous publiez une partie de rapport, le Générateur de rapports lui affecte un ID unique. À compter de ce moment, il maintient cet ID, peu importe les modifications que vous lui apportez. L'ID lie l'élément de rapport d'origine dans votre rapport à la partie de rapport. Lorsque d'autres auteurs de rapports réutilisent la partie de rapport dans le Générateur de rapports, l'ID lie également la partie de rapport dans leur rapport à celle sur le serveur de rapports.  
   
  Voici les éléments de rapport que vous pouvez publier comme parties de rapport :  
@@ -76,12 +76,12 @@ ms.locfileid: "77081058"
  Lorsque vous déployez le rapport, la partie de rapport est publiée sur un site SharePoint ou un serveur de rapports, et d'autres personnes peuvent la réutiliser. Pour publier une partie de rapport, vous devez disposer d’une connexion et d’autorisations suffisantes pour accéder à un serveur de rapports lorsque vous déployez le rapport.  
   
   
-##  <a name="SearchReuseComponents"></a> Réutilisation de parties de rapport  
+##  <a name="reusing-report-parts"></a><a name="SearchReuseComponents"></a> Réutilisation de parties de rapport  
  Contrairement à ce qui se produit dans le Générateur de rapports, vous ne pouvez pas rechercher et réutiliser une partie de rapport dans un projet autre que celui dans lequel il a été créé.  
   
  Les auteurs de rapport qui travaillent dans le Générateur de rapports peuvent rechercher et réutiliser des parties de rapport que vous publiez dans les rapports qu'ils créent.  
   
-##  <a name="RepublishingComponents"></a> Republication de parties de rapport  
+##  <a name="republishing-report-parts"></a><a name="RepublishingComponents"></a> Republication de parties de rapport  
  Dans le Concepteur de rapports, vous devez mettre à jour une partie de rapport existante dans le rapport dans lequel vous l'avez créée. Dans le Générateur de rapports, les auteurs de rapport peuvent réutiliser la partie de rapport et la publier comme une nouvelle partie de rapport sans remplacer la partie de rapport que vous avez publiée. S'ils disposent d'autorisations suffisantes, ils peuvent également mettre à jour la partie de rapport que vous avez publiée. Toute personne disposant d'autorisations suffisantes à un dossier sur un site ou un serveur peut mettre à jour les parties de rapport qui y sont stockées. La dernière mise à jour remplace les mises à jour précédentes.  
   
  Vous pouvez modifier puis republier la partie de rapport sur le site ou le serveur. Les auteurs de rapports du Générateur de rapports qui ont ajouté cette partie de rapport à un rapport sont informés de la modification la prochaine fois qu'ils ouvrent ce rapport. Ils peuvent choisir d'accepter ou non vos modifications.  

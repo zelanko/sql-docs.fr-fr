@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Définition d’un abonnement piloté par les données | Microsoft Docs'
+title: 'Leçon 3 : définition d’un abonnement piloté par les données | Microsoft Docs'
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826858"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d’un abonnement piloté par les données
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
 Au cours de cette leçon du didacticiel [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez les pages d’abonnement pilotées par les données des portails web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour vous connecter à une source de données d’abonnement, créer une requête qui extrait des données d’abonnement et mapper le jeu de résultats aux options de remise et de rapport.  
   
 > [!NOTE]  
 > Avant de commencer, vérifiez que le service **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** est en cours d’exécution. Sans ce service, vous ne pouvez pas enregistrer l'abonnement.  Une méthode de vérification consiste à ouvrir le [Gestionnaire de configuration SQL Server](../relational-databases/sql-server-configuration-manager.md).
-Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source de données du rapport utilise des informations d'identification stockées.  Pour plus d’informations, consultez la [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
+Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source de données du rapport utilise des informations d'identification stockées.  Pour plus d’informations, consultez [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
-## <a name="bkmk_startwizard"></a>Démarrer l'Assistant Abonnement piloté par les données  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Démarrer l'Assistant Abonnement piloté par les données  
   
 1.  Dans le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] cliquez sur **Accueil**, puis accédez au dossier contenant le rapport **Sales Orders** .  
   

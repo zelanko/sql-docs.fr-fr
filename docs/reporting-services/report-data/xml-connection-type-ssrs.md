@@ -9,10 +9,10 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081681"
 ---
 # <a name="xml-connection-type-ssrs"></a>Type de connexion XML (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081681"
   
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Chaîne de connexion  
+##  <a name="connection-string"></a><a name="Connection"></a> Chaîne de connexion  
  La chaîne de connexion doit être une URL qui pointe vers le service Web, l'application Web ou le document XML disponible via HTTP. Les documents XML doivent disposer de l'extension XML. Vous pouvez également utiliser une chaîne de connexion vide pour les données XML incorporées dans la requête du dataset.  
   
  Les exemples suivants illustrent la syntaxe d'une chaîne de connexion pour un service Web ou pour un document XML. Le protocole `file://` n'est pas pris en charge.  
@@ -35,7 +35,7 @@ ms.locfileid: "77081681"
   
  Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Informations d'identification  
+##  <a name="credentials"></a><a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports.  
   
  Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports.  
@@ -50,7 +50,7 @@ ms.locfileid: "77081681"
   
  Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-##  <a name="Query"></a> Requêtes  
+##  <a name="queries"></a><a name="Query"></a> Requêtes  
  Une requête spécifie les données à récupérer pour un dataset de rapport. Les colonnes dans le jeu de résultats d'une requête remplissent la collection de champs pour un dataset. Un rapport traite uniquement le premier jeu de résultats récupéré par une requête.  
   
  Vous devez utiliser le concepteur de requêtes textuel pour créer la requête. La requête doit retourner des données XML.  
@@ -93,7 +93,7 @@ ms.locfileid: "77081681"
   
     -   **La source de données XML est un document XML**  
   
-         Éléments XML obligatoires : None  
+         Éléments XML obligatoires : aucun  
   
          Éléments XML facultatifs :  
   
@@ -115,7 +115,7 @@ ms.locfileid: "77081681"
   
  Pour plus d’informations sur la syntaxe de requête, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Pour obtenir des exemples, consultez [Reporting Services : Utilisation de sources de données de services web et XML](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Pour obtenir des exemples, consultez [Reporting Services : utilisation de sources de données XML et de service web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Configuration requise pour la récupération de données d'un service Web XML  
  L'extension pour le traitement des données XML ne détecte pas le schéma automatiquement. Vous devez donc disposer d'un moyen d'identifier quelles méthodes SOAP permettent d'extraire les données de votre choix. Vous devez également comprendre le schéma d'adressage ou l'espace de noms que le service Web utilise pour ses données.  
@@ -131,17 +131,17 @@ ms.locfileid: "77081681"
   
  Pour plus d’informations, consultez [Syntaxe du chemin d’accès à l’élément pour des données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
-##  <a name="Parameters"></a> Paramètres  
+##  <a name="parameters"></a><a name="Parameters"></a> Paramètres  
  La requête n'est pas analysée pour l'identification des paramètres.  
   
  Pour ajouter des paramètres, vous devez les créer manuellement via la page **Paramètre** dans la boîte de dialogue [Propriétés du dataset](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
   
-##  <a name="Remarks"></a> Notes  
+##  <a name="remarks"></a><a name="Remarks"></a> Notes  
  L'extension de données XML prend en charge la création de rapports à partir de données XML tabulaires et non hiérarchiques. Pour plus d’informations, consultez [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
  Il n'existe pas de prise en charge intégrée pour la récupération de documents XML à partir d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
  [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,7 +150,7 @@ ms.locfileid: "77081681"
   
  [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> Sections connexes  
+##  <a name="related-sections"></a><a name="Related"></a> Sections connexes  
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

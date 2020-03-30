@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73637986"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
@@ -35,7 +35,7 @@ Vous devez accéder à une instance de [!INCLUDE[ssASnoversion](../includes/ssas
     
 Pour plus d’informations sur les spécifications générales, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="DMatrixAndDataset"></a>1. Créer un rapport d'extraction à partir de l'Assistant Tableau ou matrice  
+## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. Créer un rapport d'extraction à partir de l'Assistant Tableau ou matrice  
 Dans la boîte de dialogue Prise en main, créez un rapport de matrice à l’aide de **l’Assistant Tableau ou matrice**. Deux modes sont disponibles dans l'assistant : création de rapport et création de dataset partagé. Dans ce didacticiel, vous allez utiliser le mode création de rapport.  
   
 #### <a name="to-create-a-new-report"></a>Pour créer un rapport  
@@ -50,7 +50,7 @@ Dans la boîte de dialogue Prise en main, créez un rapport de matrice à l’ai
   
 3.  Dans le volet droit, vérifiez que **Assistant Tableau ou matrice** est sélectionné.  
   
-## <a name="DConnection"></a>1a. Spécifier une connexion de données  
+## <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. Spécifier une connexion de données  
 Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'un cube Analysis Services ou une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport. Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation d’une source de données partagée, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
@@ -96,7 +96,7 @@ Une connexion de données contient les informations nécessaires pour se connect
   
 14. Cliquez sur **Suivant**.  
   
-## <a name="DMDXQuery"></a>1b. Créer une requête MDX  
+## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. Créer une requête MDX  
 Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie, ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
@@ -149,7 +149,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
     > [!NOTE]  
     > Le paramètre contient les noms des catégories de produits. Lorsque vous cliquez sur le nom d'une catégorie de produit dans le rapport principal, celui-ci est passé au rapport d'extraction à l'aide de ce paramètre.  
   
-### <a name="DSkip"></a>Pour créer le dataset  
+### <a name="to-create-the-dataset"></a><a name="DSkip"></a>Pour créer le dataset  
   
 1.  À partir de la dimension Channel, faites glisser Channel Name vers le volet de données.  
   
@@ -165,7 +165,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 7.  Cliquez sur **Suivant**.  
   
-## <a name="DLayout"></a>1c. Organiser les données dans des groupes  
+## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Organiser les données dans des groupes  
 Lorsque vous sélectionnez les champs dans lesquels regrouper les données, vous concevez une matrice dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
   
 #### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -191,7 +191,7 @@ Lorsque vous sélectionnez les champs dans lesquels regrouper les données, vous
   
 6.  Cliquez sur **Suivant**.  
   
-## <a name="DTotals"></a>1d. Ajouter des sous-totaux et des totaux  
+## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Ajouter des sous-totaux et des totaux  
 Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lignes dans lesquelles afficher les valeurs d'agrégat des champs. Vous pouvez également afficher toutes les données ou laisser l'utilisateur développer/réduire les données regroupées de manière interactive.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Pour ajouter des sous-totaux et des totaux  
@@ -208,7 +208,7 @@ Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lign
   
 3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
-## <a name="DFormat"></a>2. Mettre en forme les données de devise  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. Mettre en forme les données de devise  
 Appliquez une mise en forme de devise aux champs de montant des ventes dans le rapport d'extraction.  
   
 #### <a name="to-format-data-as-currency"></a>Pour mettre en forme les données en tant que devise  
@@ -219,7 +219,7 @@ Appliquez une mise en forme de devise aux champs de montant des ventes dans le r
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur **Devise**.  
   
-## <a name="DSparkline"></a>3. Ajouter des colonnes pour afficher des valeurs de vente dans des graphiques sparkline  
+## <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. Ajouter des colonnes pour afficher des valeurs de vente dans des graphiques sparkline  
 Au lieu d'afficher les ventes et les retours de ventes sous forme de valeurs monétaires, le rapport affiche les valeurs dans un graphique sparkline.  
   
 #### <a name="to-add-sparklines-to-columns"></a>Pour ajouter des graphiques sparkline à des colonnes  
@@ -252,7 +252,7 @@ Au lieu d'afficher les ventes et les retours de ventes sous forme de valeurs mon
   
 13. Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
-## <a name="DReportTitle"></a>4. Ajouter un titre de rapport avec le nom d'une catégorie de produit  
+## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. Ajouter un titre de rapport avec le nom d'une catégorie de produit  
 Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez utiliser la zone de texte placée automatiquement en haut du corps du rapport.  
   
 #### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
@@ -279,7 +279,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 Le titre du rapport inclut le nom de la première catégorie de produit. Par la suite, après avoir exécuté ce rapport en tant que rapport d'extraction, le nom de la catégorie de produit changera de manière dynamique afin de refléter le nom de la catégorie de produit sur lequel l'utilisateur a cliqué dans le rapport principal.  
   
-## <a name="DParameter"></a>5. Mettre à jour des propriétés de paramètre  
+## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Mettre à jour des propriétés de paramètre  
 Par défaut, les paramètres sont visibles, ce qui n'est pas approprié pour ce rapport. Vous allez mettre à jour les propriétés de paramètre pour le rapport d'extraction.  
   
 #### <a name="to-hide-a-parameter"></a>Pour masquer un paramètre  
@@ -302,7 +302,7 @@ Par défaut, les paramètres sont visibles, ce qui n'est pas approprié pour ce 
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="DSave"></a>6. Enregistrer le rapport dans une bibliothèque SharePoint  
+## <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6. Enregistrer le rapport dans une bibliothèque SharePoint  
 Vous pouvez enregistrer le rapport dans une bibliothèque SharePoint, sur un serveur de rapports ou sur votre ordinateur. Si vous enregistrez le rapport sur votre ordinateur, plusieurs fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] telles que les parties de rapports et les sous-rapports ne sont pas disponibles. Dans ce didacticiel, vous allez enregistrer le rapport dans une bibliothèque SharePoint.  
   
 #### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
@@ -335,7 +335,7 @@ Vous pouvez enregistrer le rapport dans une bibliothèque SharePoint, sur un ser
   
 7.  Cliquez sur **Enregistrer**.  
   
-## <a name="MMatrixAndDataset"></a>1. Créer le rapport principal à partir de l’Assistant Tableau ou matrice  
+## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. Créer le rapport principal à partir de l’Assistant Tableau ou matrice  
 Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l’aide de **l’Assistant Tableau ou matrice**.  
   
 #### <a name="to-create-the-main-report"></a>Pour créer le rapport principal  
@@ -348,7 +348,7 @@ Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l
  
 2.  Dans la boîte de dialogue **Prise en main** , vérifiez que **Nouveau rapport** est sélectionné, puis cliquez sur **Assistant Tableau ou matrice**.  
   
-## <a name="MConnection"></a>1a. Spécifier une connexion de données  
+## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. Spécifier une connexion de données  
 Vous allez ajouter une source de données incorporée au rapport principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
@@ -387,7 +387,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 14. Cliquez sur **Suivant**.  
   
-## <a name="MMDXQuery"></a>1b. Créer une requête MDX  
+## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Créer une requête MDX  
 À présent, créez un dataset incorporé. Pour ce faire, vous allez utiliser le concepteur de requêtes afin de créer des filtres, des paramètres et des membres calculés, ainsi que le dataset lui-même.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
@@ -469,7 +469,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 8.  Dans la zone **Nom** , tapez  **Net Sales**, puis cliquez sur **OK**. Le volet Membres calculés contient le membre calculé **Net Sales** .  
   
-### <a name="MSkip"></a>Pour créer le dataset  
+### <a name="to-create-the-dataset"></a><a name="MSkip"></a>Pour créer le dataset  
   
 1.  À partir de la dimension Channel, faites glisser Channel Name vers le volet de données.  
   
@@ -485,7 +485,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 6.  Cliquez sur **Suivant**.  
   
-## <a name="MLayout"></a>1c. Organiser les données dans des groupes  
+## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Organiser les données dans des groupes  
 Lorsque vous sélectionnez les champs dans lesquels regrouper des données, vous concevez une matrice dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
   
 #### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -504,7 +504,7 @@ Lorsque vous sélectionnez les champs dans lesquels regrouper des données, vous
   
     Les étapes 3 et 4 spécifient les données à afficher dans la matrice.  
   
-## <a name="MTotals"></a>1d. Ajouter des sous-totaux et des totaux  
+## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Ajouter des sous-totaux et des totaux  
 Vous pouvez afficher des sous-totaux et des totaux généraux dans les rapports. Les données dans le rapport principal s'affichent sous la forme d'un indicateur ; vous allez supprimer le total général après avoir exécuté l'assistant.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Pour ajouter des sous-totaux et des totaux généraux  
@@ -519,7 +519,7 @@ Vous pouvez afficher des sous-totaux et des totaux généraux dans les rapports.
   
 3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
-## <a name="MGrandTotal"></a>2. Supprimer la ligne de total général  
+## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. Supprimer la ligne de total général  
 Les valeurs de données sont affichées sous forme d'états d'indicateur, avec les totaux des groupes de colonnes. Supprimez la ligne qui affiche le total général.  
   
 #### <a name="to-remove-the-grand-total-row"></a>Pour supprimer la ligne de total général  
@@ -530,7 +530,7 @@ Les valeurs de données sont affichées sous forme d'états d'indicateur, avec l
   
 3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
-## <a name="MDrillthrough"></a>3. Configurer une action de zone de texte pour l'extraction  
+## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. Configurer une action de zone de texte pour l'extraction  
 Pour activer l'extraction, spécifiez une action sur une zone de texte dans le rapport principal.  
   
 #### <a name="to-enable-an-action"></a>Pour activer une action  
@@ -574,7 +574,7 @@ Pour activer l'extraction, spécifiez une action sur une zone de texte dans le r
   
 Les noms des catégories de produits présentent le format de lien courant (bleu et souligné).  
   
-## <a name="MIndicators"></a>4. Remplacer des valeurs numériques par des indicateurs  
+## <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. Remplacer des valeurs numériques par des indicateurs  
 Utilisez des indicateurs pour afficher l'état de quantités et de ventes pour les canaux en ligne et les revendeurs.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Pour ajouter un indicateur pour les valeurs de quantité nette  
@@ -605,7 +605,7 @@ Utilisez des indicateurs pour afficher l'état de quantités et de ventes pour l
   
 6.  Cliquez sur **Exécuter**pour afficher un aperçu du rapport.  
   
-## <a name="MParameter"></a>5. Mettre à jour des propriétés de paramètre  
+## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Mettre à jour des propriétés de paramètre  
 Par défaut, les paramètres sont visibles, ce qui n'est pas approprié pour ce rapport. Vous allez mettre à jour les propriétés de paramètre afin de rendre ce dernier interne au rapport.  
   
 #### <a name="to-make-the-parameter-internal"></a>Pour rendre le paramètre interne  
@@ -620,7 +620,7 @@ Par défaut, les paramètres sont visibles, ce qui n'est pas approprié pour ce 
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="MTitle"></a>6. Ajouter un titre de rapport  
+## <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. Ajouter un titre de rapport  
 Ajoutez un titre au rapport principal.  
   
 #### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
@@ -635,7 +635,7 @@ Ajoutez un titre au rapport principal.
   
 5.  Cliquez sur **Exécuter**pour afficher un aperçu du rapport.  
   
-## <a name="MSave"></a>7. Enregistrer le rapport principal dans une bibliothèque SharePoint  
+## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. Enregistrer le rapport principal dans une bibliothèque SharePoint  
 Enregistrez le rapport principal dans une bibliothèque SharePoint.  
   
 #### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
@@ -661,7 +661,7 @@ Enregistrez le rapport principal dans une bibliothèque SharePoint.
   
 7.  Cliquez sur **Enregistrer**.  
   
-## <a name="MRunReports"></a>8. Exécuter les rapports principal et d'extraction  
+## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. Exécuter les rapports principal et d'extraction  
 Exécutez le rapport principal, puis cliquez sur des valeurs dans la colonne de catégorie de produit afin d'exécuter le rapport d'extraction.  
   
 #### <a name="to-run-the-reports"></a>Pour exécuter les rapports  

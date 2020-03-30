@@ -16,10 +16,10 @@ ms.assetid: b7eed108-64cc-4be6-b297-8af6c1e3dc72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 264f61c744be0ffc614ca3f45e5268715c680ed8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969108"
 ---
 # <a name="supportsopencursorsacrosscommit-method-sqlserverdatabasemetadata"></a>Méthode supportsOpenCursorsAcrossCommit (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsOpenCursorsAcrossCommit()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

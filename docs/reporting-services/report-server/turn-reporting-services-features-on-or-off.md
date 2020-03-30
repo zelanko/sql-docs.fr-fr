@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140381"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activer ou désactiver les fonctionnalités Reporting Services
@@ -31,7 +31,7 @@ ms.locfileid: "67140381"
   
 -   [Sécurité intégrée de Windows pour les sources de données de rapports](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> Service web Report Server +  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a> Service web Report Server +  
   
 ### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Pour activer le service Web Report Server en modifiant la configuration  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67140381"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> Événements planifiés et remise  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> Événements planifiés et remise  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Pour activer ou désactiver les événements planifiés et la remise en modifiant la configuration  
   
@@ -94,11 +94,11 @@ ms.locfileid: "67140381"
 > [!NOTE]  
 >  Vous ne pouvez pas désactiver complètement le traitement en arrière-plan car il fournit des fonctionnalités de maintenance de base de données requises pour les opérations de serveur.  
   
-##  <a name="WebPortal"></a>Portail web
+##  <a name="web-portal"></a><a name="WebPortal"></a>Portail web
   
 À partir de SQL Server 2016 Reporting Services Cumulative Update 2, le portail web est toujours activé.
   
-##  <a name="WinIntSec"></a> Sécurité intégrée de Windows  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Sécurité intégrée de Windows  
   
 ### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Pour activer ou désactiver la sécurité intégrée de Windows en utilisant SQL Server Management Studio  
   

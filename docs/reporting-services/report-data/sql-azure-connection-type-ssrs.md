@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081760"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Type de connexion SQL Azure (SSRS)
@@ -31,7 +31,7 @@ Pour plus d’informations, consultez [Microsoft Azure SQL Database sur docs.mic
   
 Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="Connection"></a> Chaîne de connexion
+## <a name="connection-string"></a><a name="Connection"></a> Chaîne de connexion
 
 Lorsque vous vous connectez à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous vous connectez à un objet de base de données dans le cloud. Comme pour les bases de données sur site, la base de données hébergée peut comporter plusieurs schémas qui ont plusieurs tables, vues et procédures stockées. Vous spécifiez l'objet de base de données à utiliser dans le concepteur de requêtes. Si vous ne spécifiez pas de base de données dans la chaîne de connexion, vous vous connectez à la base de données par défaut que l'administrateur vous a affectée.  
   
@@ -45,7 +45,7 @@ Par ailleurs, vous utilisez la boîte de dialogue **Propriétés des sources de 
   
 Pour obtenir plus d’informations et d’autres exemples sur les chaînes de connexion, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-## <a name="Credentials"></a> Informations d'identification
+## <a name="credentials"></a><a name="Credentials"></a> Informations d'identification
 
 L'authentification Windows (Sécurité intégrée) n'est pas prise en charge. Si vous essayez de vous connecter à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à l'aide de l'authentification Windows, une erreur se produit. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] prend en charge uniquement l’authentification SQL Server (nom d’utilisateur et mot de passe) ; en outre, les utilisateurs doivent fournir des informations d’identification (nom de connexion et mot de passe) chaque fois qu’ils se connectent à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -59,7 +59,7 @@ Sur un client de création de rapports, les options suivantes sont disponibles p
   
 Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-## <a name="Query"></a> Requêtes
+## <a name="queries"></a><a name="Query"></a> Requêtes
 
 Une requête spécifie les données à récupérer pour un dataset de rapport. Les colonnes dans le jeu de résultats d'une requête remplissent la collection de champs pour un dataset. Si la requête retourne plusieurs jeux de résultats, le rapport traite uniquement le premier jeu de résultats que la requête récupère. Bien qu'il y ait des différences entre les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], notamment les tailles des bases de données prises en charge, l'écriture de requêtes pour des bases de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)]est semblable à l'écriture de requêtes pour des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] comme BACKUP ne sont pas prises en charge dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; cependant, il ne s'agit pas de celles qui sont utilisées dans les requêtes de rapport. Pour plus d’informations, consultez [Type de connexion SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).  
   
@@ -81,7 +81,7 @@ Pour plus d’informations, consultez [Interface utilisateur du Concepteur de re
   
 Le concepteur de requêtes graphique utilisé par [!INCLUDE[ssSDS](../../includes/sssds-md.md)] fournit une prise en charge intégrée du regroupement et des agrégats pour vous aider à écrire des requêtes qui récupèrent uniquement les données de synthèse. Les fonctionnalités du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] sont les suivantes : clause GROUP BY, mot clé DISTINCT et agrégats tels que SUM et COUNT. Le concepteur de requêtes textuel fournit une prise en charge complète du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] , notamment en matière de regroupement et d’agrégats. Pour plus d’informations sur [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
-### <a name="QueryText"></a> Utilisation du type de requête Texte
+### <a name="using-query-type-text"></a><a name="QueryText"></a> Utilisation du type de requête Texte
 
 Dans le concepteur de requêtes textuel, vous tapez des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir les données d’un dataset. Par exemple, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sélectionne les noms de tous les employés qui occupent la fonction d'assistants marketing :
 
@@ -108,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 Lorsque vous exécutez la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont créés automatiquement. Pour plus d'informations, consultez [Paramètres de requête](#Parameters) plus loin dans cette rubrique.  
   
-### <a name="QueryStoredProcedure"></a> Utilisation du type de requête StoredProcedure
+### <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> Utilisation du type de requête StoredProcedure
 
 Vous pouvez spécifier une procédure stockée pour une requête de dataset en procédant de l'une des manières suivantes :  
   
@@ -126,7 +126,7 @@ Si une procédure stockée possède un paramètre doté d'une valeur par défaut
   
 Pour plus d’informations sur les procédures stockées, consultez [Procédures stockées (moteur de base de données)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
-## <a name="Parameters"></a> Paramètres
+## <a name="parameters"></a><a name="Parameters"></a> Paramètres
 
 Lorsque le texte de requête contient des variables de requête ou des procédures stockées dotées de paramètres d'entrée, les paramètres de requête correspondants pour le dataset et les paramètres de rapport pour le rapport sont automatiquement générés. Le texte de requête ne doit pas inclure l'instruction DECLARE pour chaque variable de requête.  
   
@@ -140,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
 
 Par défaut, chaque paramètre de rapport a le type de données Texte ; en outre, un dataset est créé automatiquement pour fournir une liste déroulante de valeurs disponibles. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
 
-## <a name="Remarks"></a> Notes
+## <a name="remarks"></a><a name="Remarks"></a> Notes
   
 ###### <a name="alternate-data-extensions"></a>Autres extensions de données
 
@@ -167,7 +167,7 @@ Ce scénario est pris en charge à condition que les éléments suivants soient 
 
 ::: moniker-end
 
-## <a name="HowTo"></a> Rubriques de procédures
+## <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures
 
 Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.  
   
@@ -177,7 +177,7 @@ Cette section contient des instructions pas à pas sur l'utilisation des connexi
   
 [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-## <a name="Related"></a> Sections connexes
+## <a name="related-sections"></a><a name="Related"></a> Sections connexes
 
 Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.  
   

@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082448"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
@@ -24,7 +24,7 @@ Découvrez les extensions de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsn
   
  Pour obtenir les meilleurs résultats pour un rapport exporté, vous devez fréquemment employer un processus itératif dans lequel vous créez et affichez un aperçu du rapport dans le Générateur de rapports ou le Concepteur de rapports, puis exportez le rapport vers le format par défaut, examinez le rapport exporté, et enfin vous lui apportez les modifications souhaitées.  
     
-##  <a name="PageLayout"></a> Éléments de rapport  
+##  <a name="report-items"></a><a name="PageLayout"></a> Éléments de rapport  
  Les éléments de rapport sont des éléments de disposition associés à différents types de données de rapport. 
  
 * Les éléments Table, Matrice, Liste, Graphique et Jauge sont des éléments de rapport de région de données, chacun d'eux établissant un lien vers un dataset de rapport. Lorsque le rapport est traité, la région de données s'étend sur la page du rapport (transversalement et vers le bas) pour afficher des données. 
@@ -44,14 +44,14 @@ Un rapport peut également contenir des sous-rapports.
   
  Un rapport peut s'étendre sur plusieurs pages et comporter un en-tête et un pied de page répétés sur chaque page. Il peut contenir des éléments graphiques comme des images et des lignes et avoir plusieurs polices, couleurs et styles, qui peuvent se baser sur des expressions.  
   
-##  <a name="ReportSections"></a> Sections de rapport  
+##  <a name="report-sections"></a><a name="ReportSections"></a> Sections de rapport  
  Un rapport se compose de trois principales sections : un en-tête de *page* facultatif, un pied de *page* facultatif et un corps de rapport. L’en-tête et le pied de page du *rapport* ne sont pas vraiment des sections à part du rapport ; ils comprennent les éléments de rapport placés en haut et en bas du corps du rapport. L'en-tête et le pied de page répètent le même contenu en haut et en bas de chaque page du rapport. Vous pouvez placer des images, des zones de texte et des lignes dans les en-têtes et les pieds de page. Vous pouvez placer tous les types d'élément de rapport dans le corps du rapport.  
   
  Vous pouvez définir des propriétés sur les éléments de rapport pour les masquer ou les afficher initialement sur la page. Vous pouvez définir des propriétés de visibilité sur les lignes, colonnes ou groupes pour les régions de données et fournir des boutons bascule pour permettre à l'utilisateur d'afficher ou de masquer de façon interactive les données de rapport. Vous pouvez définir la visibilité ou la visibilité initiale à l'aide d'expressions, notamment des expressions basées sur les paramètres de rapport.  
   
  Lorsqu'un rapport est traité, ses données sont associées aux éléments de disposition du rapport et les données combinées sont envoyées à un convertisseur de rapport. Le convertisseur respecte des règles prédéfinies pour l'expansion des éléments de rapport et détermine la quantité de données tenant sur chaque page. Pour concevoir un rapport facile à lire et optimisé pour le convertisseur que vous prévoyez d'utiliser, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d’informations, voir [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingExtensions"></a> Convertisseurs  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a> Convertisseurs  
  Reporting Services inclut un jeu de convertisseurs, également connu sous le nom d'extensions de rendu, que vous pouvez utiliser pour exporter des rapports vers des formats différents. Il existe trois types de convertisseurs :  
   
 -   **Convertisseurs de données** Les convertisseurs de données suppriment du rapport toute la mise en forme et les informations relatives à la disposition et affichent uniquement les données. Le fichier résultant peut être utilisé pour importer les données de rapport brutes dans un autre type de fichier, tel qu'Excel, une autre base de données, un message de données XML ou une application personnalisée. Les convertisseurs de données disponibles sont CSV et XML.  
@@ -65,7 +65,7 @@ Un rapport peut également contenir des sous-rapports.
   
  Quand vous affichez un aperçu de rapport dans le Générateur de rapports ou le Concepteur de rapports ou que vous exécutez un rapport sur le serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , le rapport est toujours rendu en premier au format HTML. Après avoir exécuté le rapport, vous pouvez l'exporter vers différents formats de fichiers. Pour plus d’informations, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingBehaviors"></a> Comportements de rendu  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a> Comportements de rendu  
  Selon le convertisseur sélectionné, certaines règles sont appliquées lors du rendu du rapport. La combinaison de ces facteurs détermine la façon dont les éléments du rapport s'ajustent sur la page :  
   
 -   les règles de rendu ;  
@@ -78,7 +78,7 @@ Un rapport peut également contenir des sous-rapports.
   
  Pour plus d’informations, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
    
-##  <a name="Pagination"></a> Pagination  
+##  <a name="pagination"></a><a name="Pagination"></a> Pagination  
  La pagination fait référence au nombre de pages au sein d'un rapport et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport et des options de saut de page et d'ajustement configurées pour le rapport.  
   
  Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d’utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les rapports exportés à l’aide des extensions de rendu des **données** et de **saut de page conditionnelle** ne sont en général pas affectés par la pagination. Lorsque vous utilisez une extension de rendu des données, le rapport est restitué comme ensemble de lignes disposé en table au format XML ou CSV. Pour assurer que les données du rapport exporté sont utilisables, vous devez comprendre les règles appliquées pour effectuer le rendu d'un ensemble de lignes aplati disposé en table dans un rapport.  
@@ -87,7 +87,7 @@ Un rapport peut également contenir des sous-rapports.
   
  Les convertisseurs de**saut de page manuel** ont le plus d’impact sur la mise en page du rapport et la taille de la page physique. Pour en savoir plus, consultez [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous indiquent pas à pas comment utiliser la pagination dans les rapports.  
   
 -   [Ajouter un saut de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ Un rapport peut également contenir des sous-rapports.
   
 -   [Masquer un en-tête ou un pied de page sur la première ou la dernière page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur la mise en page et le rendu des rapports.  
   
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843771"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurer des bases de données Stretch (Stretch Database)
@@ -58,7 +58,7 @@ Pour restaurer une base de données Azure supprimée au point où elle a été s
 5. Spécifiez un nouveau **Nom de base de données** , puis cliquez sur **Créer**.
 6. Le processus de restauration de la base de données commence et peut être surveillé à l’aide de **NOTIFICATIONS**.
 
-## <a name="reconnect"></a>Restaurer la connexion entre la base de données SQL Server et la base de données Azure distante
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>Restaurer la connexion entre la base de données SQL Server et la base de données Azure distante
 
 1.  Si vous souhaitez vous connecter à une base de données Azure restaurée avec un nom différent ou dans une autre région, exécutez la procédure stockée [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) pour vous déconnecter de la base de données Azure précédente.  
   

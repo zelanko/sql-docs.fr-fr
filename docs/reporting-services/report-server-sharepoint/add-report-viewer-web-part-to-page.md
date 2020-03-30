@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256727"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Ajouter le composant WebPart Visionneuse de rapports de SQL Server Reporting Services à un site SharePoint
@@ -22,7 +22,7 @@ Affichez un rapport, à partir de SQL Server Reporting Services ou de Power BI R
 
 ![Composant WebPart Visionneuse de rapports sur une page SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 * Pour pouvoir charger correctement des rapports, le Service d’émission de jetons Revendications vers Windows (C2WTS) doit être configuré pour la délégation Kerberos contrainte. Pour plus d’informations sur la configuration du Service d’émission de jetons Revendications vers Windows (C2WTS), consultez [Service d’émission de jetons Revendications vers Windows (C2WTS) et Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 

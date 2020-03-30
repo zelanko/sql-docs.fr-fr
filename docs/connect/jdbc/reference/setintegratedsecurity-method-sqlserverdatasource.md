@@ -16,10 +16,10 @@ ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79d9090df19851af3a778e23b7919f28081f32ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974146"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>Méthode setIntegratedSecurity (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setIntegratedSecurity(boolean enable)
   
  **true** si integratedSecurity est activé. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Définissez sa valeur sur **true** pour indiquer que les informations d’identification Windows seront utilisées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour authentifier l’utilisateur de l’application. Si la valeur est **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] recherche les informations d’identification déjà fournies lors de la connexion à l’ordinateur ou au réseau dans le cache des informations d’identification de l’ordinateur local. Si la valeur est **false**, le nom d’utilisateur et le mot de passe doivent être fournis.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ public void setIntegratedSecurity(boolean enable)
   
  Pour plus d’informations sur l’authentification intégrée, consultez [Générer l’URL de connexion](../../../connect/jdbc/building-the-connection-url.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
