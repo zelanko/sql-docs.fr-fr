@@ -13,10 +13,10 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293102"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
@@ -62,7 +62,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 |Champ|Description|  
 |-----------|-----------------|  
-|Name|Nom du composant Data Streaming Destination dans le package.|  
+|Nom|Nom du composant Data Streaming Destination dans le package.|  
 |ValidateExternalMetadata|Indique si le composant est validé à l’aide de sources de données externes au moment de la conception. Si la propriété est définie sur false, la validation avec des sources de données externes est différée jusqu’au moment de l’exécution.|  
 |IDColumnName|La vue générée par l’Assistant Publication des flux de données contient cette colonne d’ID supplémentaire. La colonne d’ID est utilisée comme valeur EntityKey pour les données de sortie du flux de données lorsque les données sont consommées comme flux OData par d’autres applications.<br /><br /> Le nom par défaut de cette colonne est _ID. Vous pouvez spécifier un autre nom pour la colonne d’ID.|  
   

@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288976"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
@@ -43,7 +43,7 @@ Implémentez une sécurité au niveau des lignes à l’aide de l’instruction 
 > [!NOTE]
 > Azure SQL Data Warehouse prend en charge uniquement des prédicats de filtre. Les prédicats BLOCK ne sont actuellement pas pris en charge dans Azure SQL Data Warehouse.
 
-## <a name="Description"></a> Description
+## <a name="description"></a><a name="Description"></a> Description
 
 La sécurité au niveau des lignes prend en charge deux types de prédicats de sécurité.  
   
@@ -89,7 +89,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
 - Aucune modification n’a été apportée aux API bulk, y compris à BULK INSERT. Cela signifie que les prédicats BLOCK AFTER INSERT s’appliquent aux opérations d’insertion en bloc comme s’il s’agissait d’opérations d’insertion standard.  
   
-## <a name="UseCases"></a> Cas d'usage
+## <a name="use-cases"></a><a name="UseCases"></a> Cas d'usage
 
  Voici des exemples d'utilisation de la sécurité au niveau des lignes :  
   
@@ -103,7 +103,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
  En termes plus formels, la sécurité au niveau des lignes introduit le contrôle d'accès basé sur le prédicat. Il comprend une évaluation flexible, centralisée et basée sur un prédicat. Le prédicat peut reposer sur des métadonnées ou sur tout autre critère que l’administrateur définit comme il convient. Le prédicat est utilisé comme critère pour déterminer si l'utilisateur a l'accès approprié aux données en fonction de ses propres attributs. Un contrôle d’accès en fonction d’une étiquette peut être implémenté en utilisant un contrôle d’accès en fonction d’un prédicat.  
   
-## <a name="Permissions"></a> Autorisations
+## <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
  La création, modification ou suppression des stratégies de sécurité nécessite l'autorisation **ALTER ANY SECURITY POLICY** . La création ou suppression d'une stratégie de sécurité nécessite l'autorisation **ALTER** sur le schéma.  
   
@@ -119,7 +119,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
  Si une stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors pour interroger la table cible, les utilisateurs doivent avoir des autorisations  **SELECT** ou **EXECUTE** sur la fonction de prédicat et toutes les autres tables, vues ou fonctions utilisées au sein de la fonction de prédicat. Si une stratégie de sécurité est créée avec `SCHEMABINDING = ON` (valeur par défaut), alors ces contrôles d’autorisations sont ignorés quand les utilisateurs interrogent la table cible.  
   
-## <a name="Best"></a> Bonnes pratiques  
+## <a name="best-practices"></a><a name="Best"></a> Bonnes pratiques  
   
 - Il est fortement recommandé de créer un schéma distinct pour les objets SNL : les fonctions de prédicat et les stratégies de sécurité. Cela permet de séparer les autorisations requises sur ces objets spéciaux des tables cibles. Une séparation supplémentaire pour les différentes stratégies et fonctions de prédicat peut être nécessaire dans les bases de données multi-locataires, mais pas systématiquement.
   
@@ -141,7 +141,7 @@ La sécurité au niveau des lignes prend en charge deux types de prédicats de s
   
 - Les fonctions de prédicat ne doivent pas comparer des chaînes concaténées à **NULL**, car ce comportement est affecté par l’option [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
 
-## <a name="SecNote"></a> Remarque relative à la sécurité : Attaques par canal auxiliaire
+## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a> Remarque relative à la sécurité : Attaques par canal auxiliaire
 
 ### <a name="malicious-security-policy-manager"></a>Gestionnaire de stratégie de sécurité malveillant
 
@@ -151,7 +151,7 @@ il est important d’observer qu’un gestionnaire de stratégie de sécurité m
 
 Il est possible de provoquer des fuites d'informations via l'utilisation de requêtes élaborées avec soin. Par exemple, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permettrait à un utilisateur malveillant de savoir que le salaire de John Doe est 100 000 $. Même s'il existe un prédicat de sécurité en vigueur pour empêcher un utilisateur malveillant d'interroger directement le salaire d'autres personnes, l'utilisateur peut déterminer si la requête retourne une exception de division par zéro.  
 
-## <a name="Limitations"></a> Compatibilité entre fonctionnalités
+## <a name="cross-feature-compatibility"></a><a name="Limitations"></a> Compatibilité entre fonctionnalités
 
  En général, la sécurité au niveau des lignes fonctionne comme prévu pour les fonctionnalités. Il existe cependant quelques exceptions. Cette section contient plusieurs remarques et avertissements concernant l’utilisation de la sécurité au niveau des lignes avec certaines autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -177,9 +177,9 @@ Il est possible de provoquer des fuites d'informations via l'utilisation de requ
   
 - **Tables temporelles :** les tables temporelles sont compatibles avec la fonction de sécurité au niveau des lignes. Toutefois, les prédicats de sécurité sur la table actuelle ne sont pas automatiquement répliqués dans la table de l’historique. Pour appliquer une stratégie de sécurité aux tables actuelle et de l’historique, vous devez ajouter un prédicat de sécurité à chaque table.  
   
-## <a name="CodeExamples"></a> Exemples  
+## <a name="examples"></a><a name="CodeExamples"></a> Exemples  
   
-### <a name="Typical"></a> A. Scénario pour les utilisateurs qui s’authentifient auprès de la base de données
+### <a name="a-scenario-for-users-who-authenticate-to-the-database"></a><a name="Typical"></a> A. Scénario pour les utilisateurs qui s’authentifient auprès de la base de données
 
  Cet exemple crée trois utilisateurs et crée et remplit une table de six lignes. Il crée ensuite une fonction table incluse et une stratégie de sécurité pour la table. L'exemple montre ensuite comment les instructions select sont filtrées pour les différents utilisateurs.  
   
@@ -301,7 +301,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. Scénarios pour l’utilisation de la sécurité au niveau des lignes sur une table externe Azure SQL Data Warehouse
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Scénarios pour l’utilisation de la sécurité au niveau des lignes sur une table externe Azure SQL Data Warehouse
 
 Ce petit exemple crée trois utilisateurs et une table externe de six lignes. Il crée ensuite une fonction table incluse et une stratégie de sécurité pour la table externe. L'exemple montre comment les instructions select sont filtrées pour les différents utilisateurs.
 
@@ -418,7 +418,7 @@ DROP LOGIN Sales2;
 DROP LOGIN Manager;
 ```
 
-### <a name="MidTier"></a> C. Scénario pour les utilisateurs qui se connectent à la base de données via une application intermédiaire
+### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Scénario pour les utilisateurs qui se connectent à la base de données via une application intermédiaire
 
 > [!NOTE]
 > Dans cet exemple la fonctionnalité Prédicats BLOCK n’est pas actuellement prise en charge pour Azure SQL Data Warehouse, par conséquent, l’insertion de lignes pour le mauvais identificateur d'utilisateur n’est pas bloquée avec Azure SQL Data Warehouse.

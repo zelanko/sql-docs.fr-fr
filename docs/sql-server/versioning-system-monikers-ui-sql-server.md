@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049911"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Système de gestion de versions dans la documentation SQL
@@ -130,13 +130,13 @@ L’article suivant a été ajouté pour SQL Server 2017. Il décrit les foncti
 | `sql-server-2019` | Identique au cas de la valeur `sql-server-2017`, sauf que le paramètre et le contrôle sont définis sur 2019. |
 | &nbsp; | &nbsp; |
 
-### <a name="anchor-allsql-hidenothing"></a> Moniker spécial All SQL - Hide nothing (Tout SQL - Ne rien masquer)
+### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> Moniker spécial All SQL - Hide nothing (Tout SQL - Ne rien masquer)
 
 Il existe un nom de produit de moniker spécial, **All SQL** (Tout SQL), dont l’unique version est **Hide nothing** (Ne rien masquer). Ce moniker est utilisé à des fins de test interne de certaines modifications. S’il est utilisé par un client, ce moniker est plus susceptible d’induire en erreur que d’informer.
 
 Certains articles contiennent des informations relatives à plusieurs versions de SQL Server. Chaque moniker normal masque les sections avec version qui pourraient afficher des informations inexactes, confuses ou contradictoires pour la version du moniker. Le moniker **All SQL** (Tout SQL) spécial affichant toutes les sections avec version, l’affichage d’informations inexactes pourrait passer inaperçu.
 
-## <a name="anchor-message-unavailable-for-moniker"></a> Message : La page demandée n’est pas disponible pour \<moniker\>
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Message : La page demandée n’est pas disponible pour \<moniker\>
 
 Le scénario suivant entraîne l’affichage d’un message d’information en haut de la page web :::no-loc text="Docs"::: :
 

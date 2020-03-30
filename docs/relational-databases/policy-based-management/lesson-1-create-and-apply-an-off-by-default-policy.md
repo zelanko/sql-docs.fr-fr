@@ -12,17 +12,17 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558000"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Leçon 1 : Créer et appliquer une stratégie Désactivé par défaut
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 À l'aide des stratégies de la Gestion basée sur des stratégies, vous pouvez administrer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un ou plusieurs objets d'instance, une ou plusieurs instances de serveur, une ou plusieurs bases de données, de même qu'un ou plusieurs objets de base de données. En tant qu'administrateur de base de données, vous souhaitez vous assurer que la Messagerie de base de données n'est pas activée sur certains serveurs. Dans cette leçon, vous allez créer une condition et une stratégie qui définissent cette option de serveur. Vous allez tester le serveur pour vérifier s'il est conforme à la stratégie. Ensuite, vous utiliserez la stratégie pour reconfigurer le serveur afin de le rendre conforme.  
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d’un accès à un serveur qui exécute SQL Server. 
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

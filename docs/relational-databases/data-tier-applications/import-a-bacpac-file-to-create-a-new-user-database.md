@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094562"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
@@ -54,7 +54,7 @@ ms.locfileid: "74094562"
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Une DAC peut être importée vers [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou une version ultérieure. Si vous exportez une DAC d'une version ultérieure, elle peut contenir des objets non pris en charge par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Vous ne pouvez pas déployer ces DAC vers les instances de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Nous vous recommandons de ne pas importer de fichier d'exportation DAC provenant de sources inconnues ou non approuvées. De tels fichiers peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un fichier d'exportation provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou un autre code défini par l'utilisateur. Pour plus d'informations sur la façon de procéder à ces vérifications, consultez [Validate a DAC Package](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Sécurité  
@@ -84,7 +84,7 @@ ms.locfileid: "74094562"
   
     -   [Page Résultats](#Results)  
   
-###  <a name="Introduction"></a> Page Introduction  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de l'Assistant Importer l'application de la couche Données.  
   
  **Options**  
@@ -95,7 +95,7 @@ ms.locfileid: "74094562"
   
 -   **Annuler** : annule l’opération et ferme l’Assistant.  
   
-###  <a name="Import_settings"></a> Page Paramètres d'importation  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> Page Paramètres d'importation  
  Utilisez cette page pour spécifier l'emplacement du fichier .bacpac à importer.  
   
 -   **Importer à partir du disque local** : cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou entrez le chemin d’accès dans la zone réservée à cet effet. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
@@ -106,7 +106,7 @@ ms.locfileid: "74094562"
   
      Pour continuer, spécifiez le fichier .bacpac à importer, puis cliquez sur **Ouvrir**.  
   
-###  <a name="Database_settings"></a> Page Paramètres de base de données  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> Page Paramètres de base de données  
  Utilisez cette page pour spécifier les détails de la base de données à créer.  
   
  **Pour une instance SQL Server locale :**  
@@ -129,15 +129,15 @@ ms.locfileid: "74094562"
   
  Pour continuer, cliquez sur **Suivant**.  
   
-###  <a name="Summary"></a> Page Résumé  
+###  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer l'opération d'importation en utilisant les paramètres spécifiés, cliquez sur **Terminer**. Pour annuler l'opération d'importation et quitter l'Assistant, cliquez sur **Annuler**.  
   
-###  <a name="Progress"></a> Page Progression  
+###  <a name="progress-page"></a><a name="Progress"></a> Page Progression  
  Cette page affiche une barre de progression indiquant l'état de l'opération. Pour afficher l'état détaillé, cliquez sur l'option **Afficher les détails** .  
   
  Pour continuer, cliquez sur **Suivant**.  
   
-###  <a name="Results"></a> Page Résultats  
+###  <a name="results-page"></a><a name="Results"></a> Page Résultats  
  Cette page signale la réussite ou l'échec de l'importation et crée des opérations de base de données, affichant le succès ou l'échec de chacune. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Cliquez sur le lien pour consulter le rapport d'erreur de cette action.  
   
  Cliquez sur **Fermer** pour fermer l’assistant.  

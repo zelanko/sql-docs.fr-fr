@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903768"
 ---
-# <a name="troubleshoot-scale-out"></a>Résoudre les problèmes de Scale Out
+# <a name="troubleshoot-scale-out"></a>Résoudre les problèmes de Scale-out
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 
-SSIS Scale Out implique la communication entre la base de données de catalogues SSIS `SSISDB`, le service Scale Out Master et le service Scale Out Worker. Parfois, cette communication est interrompue en raison par exemple d’erreurs de configuration ou d’un défaut d’autorisations d’accès. Cet article vous aide à résoudre les problèmes liés à la configuration de Scale Out.
+SSIS Scale Out implique la communication entre la base de données de catalogues SSIS `SSISDB`, le service Scale Out Master et le service Scale Out Worker. Parfois, cette communication est interrompue en raison par exemple d’erreurs de configuration ou d’un défaut d’autorisations d’accès. Cet article vous aide à résoudre les problèmes liés à la configuration de Scale-out.
 
 Pour étudier les problèmes que vous rencontrez, suivez les étapes ci-après une par une jusqu’à ce que votre problème soit résolu.
 
@@ -37,13 +37,13 @@ Pour étudier les problèmes que vous rencontrez, suivez les étapes ci-après u
 -   Les propriétés Master ne sont pas renseignées dans la vue `[catalog].[master_properties]`.
 
 ### <a name="solution"></a>Solution
-1.  Vérifiez si Scale Out est activé.
+1.  Vérifiez si Scale-out est activé.
 
     Dans l’Explorateur d’objets de SSMS, cliquez avec le bouton droit sur **SSISDB**, puis vérifiez que **la fonctionnalité Scale Out est activée**.
 
-    ![Vérifier si Scale Out est activé](media/isenabled.PNG)
+    ![Vérifier si Scale-out est activé](media/isenabled.PNG)
 
-    Si la valeur de propriété est False, activez Scale Out en appelant la procédure stockée `[catalog].[enable_scaleout]`.
+    Si la valeur de propriété est False, activez Scale-out en appelant la procédure stockée `[catalog].[enable_scaleout]`.
 
 2.  Vérifiez si le nom SQL Server spécifié dans le fichier de configuration de Scale Out Master est correct et redémarrez le service Scale Out Master.
 
@@ -187,7 +187,7 @@ La validation échoue au moment de la connexion de Scale Out Worker à Scale Out
 ## <a name="execution-doesnt-start"></a>L’exécution ne démarre pas
 
 ### <a name="symptoms"></a>Symptômes
-L’exécution dans Scale Out ne démarre pas.
+L’exécution dans Scale-out ne démarre pas.
 
 ### <a name="solution"></a>Solution
 
@@ -203,7 +203,7 @@ Les packages s’exécutent correctement, mais aucun message n’est journalisé
 Vérifiez si l’authentification SQL Server est autorisée par l’instance de SQL Server qui héberge SSISDB.
 
 > [!NOTE]  
-> Si vous avez changé le compte pour la journalisation Scale Out, consultez [Changer le compte pour la journalisation Scale Out](change-logdb-account.md) et vérifiez la chaîne de connexion utilisée pour la journalisation.
+> Si vous avez changé le compte pour la journalisation Scale-out, consultez [Changer le compte pour la journalisation Scale-out](change-logdb-account.md) et vérifiez la chaîne de connexion utilisée pour la journalisation.
 
 ## <a name="error-messages-arent-helpful"></a>Les messages d’erreur ne sont pas utiles
 

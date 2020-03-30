@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286823"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
@@ -131,7 +131,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 4.  (Facultatif) Créez un environnement pour le projet déployé. 
   
-###  <a name="convert"></a> Pour convertir un projet en modèle de déploiement de projet  
+###  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a> Pour convertir un projet en modèle de déploiement de projet  
   
 1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], puis dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Convertir en modèle de déploiement de projet**.  
   
@@ -141,7 +141,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 2.  Terminez l'Assistant.
   
-###  <a name="deploy"></a> Pour déployer un projet sur le serveur Integration Services  
+###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> Pour déployer un projet sur le serveur Integration Services  
   
 1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]puis, dans le menu **Projet** , sélectionnez **Déployer** pour lancer **l’Assistant Déploiement d’Integration Services**.  
   
@@ -164,7 +164,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
 ## <a name="deploy-packages-to-integration-services-server"></a>Déployer des packages sur le serveur Integration Services
   La fonctionnalité Déploiement incrémentiel de packages introduite dans  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] vous permet de déployer un ou plusieurs packages dans un projet existant ou nouveau sans déployer la totalité du projet.  
   
-###  <a name="DeployWizard"></a> Déployer des packages à l’aide de l’Assistant Déploiement d’Integration Services  
+###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> Déployer des packages à l’aide de l’Assistant Déploiement d’Integration Services  
   
 1.  À l’invite de commandes, exécutez **isdeploymentwizard.exe** à partir de **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Sur les ordinateurs 64 bits, il existe également une version 32 bits de l’outil dans **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
@@ -172,7 +172,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 3.  Terminez l'Assistant. Suivez le reste de la procédure décrite dans [Package Deployment Model](#PackageModel).  
   
-###  <a name="SSMS"></a> Déployer des packages à l’aide de SQL Server Management Studio  
+###  <a name="deploy-packages-by-using-sql-server-management-studio"></a><a name="SSMS"></a> Déployer des packages à l’aide de SQL Server Management Studio  
   
 1.  Dans SQL Server Management Studio, développez le nœud **Catalogues Integration Services** > **SSISDB** dans l’Explorateur d’objets.  
   
@@ -184,7 +184,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 5.  Terminez l'Assistant. Suivez le reste de la procédure décrite dans [Package Deployment Model](#PackageModel).  
   
-###  <a name="SSDT"></a> Déployer des packages à l’aide de SQL Server Data Tools (Visual Studio)  
+###  <a name="deploy-packages-by-using-sql-server-data-tools-visual-studio"></a><a name="SSDT"></a> Déployer des packages à l’aide de SQL Server Data Tools (Visual Studio)  
   
 1.  Dans Visual Studio, ouvrez un projet Integration Services si ce n’est déjà fait, et sélectionnez le ou les packages que vous souhaitez déployer.  
   
@@ -192,7 +192,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 3.  Terminez l'Assistant. Suivez le reste de la procédure décrite dans [Package Deployment Model](#PackageModel).  
   
-###  <a name="StoredProcedure"></a> Déployer des packages à l’aide de la procédure stockée deploy_packages  
+###  <a name="deploy-packages-by-using-the-deploy_packages-stored-procedure"></a><a name="StoredProcedure"></a> Déployer des packages à l’aide de la procédure stockée deploy_packages  
  Vous pouvez utiliser la procédure stockée **[catalog].[deploy_packages]** pour déployer un ou plusieurs packages SSIS dans le catalogue SSIS. l’exemple de code suivant montre comment utiliser cette procédure stockée pour déployer des packages sur un serveur SSIS. Pour plus d’informations, consultez [catalog.deploy_packages](../../integration-services/system-stored-procedures/catalog-deploy-packages.md).  
   
 ```cs
@@ -235,7 +235,7 @@ private static void Main(string[] args)
   
 ```  
   
-###  <a name="MOMApi"></a> Déployer des packages à l’aide de l’API Modèle d’objet de gestion  
+###  <a name="deploy-packages-using-the-management-object-model-api"></a><a name="MOMApi"></a> Déployer des packages à l’aide de l’API Modèle d’objet de gestion  
  l’exemple de code suivant montre comment utiliser l’API Modèle d’objet de gestion pour déployer des packages sur un serveur.  
   
 ```cs 
@@ -304,7 +304,7 @@ Lancer l’Assistant en :
  
  Les paramètres de cette page sont différents pour chaque modèle de déploiement. Suivez les étapes de la section [Project Deployment Model](#ProjectModel) ou de la section [Package Deployment Model](#PackageModel) en fonction du modèle que vous avez sélectionné sur cette page.  
   
-###  <a name="ProjectModel"></a> Project Deployment Model  
+###  <a name="project-deployment-model"></a><a name="ProjectModel"></a> Project Deployment Model  
   
 #### <a name="select-source"></a>Sélectionner la source
 
@@ -322,7 +322,7 @@ Lancer l’Assistant en :
 
  Une fois le processus de déploiement terminé, la page **Résultats** doit s’afficher. Cette page indique la réussite ou l’échec de chaque action. Si l'action échoue, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l'erreur. Cliquez sur **Enregistrer le rapport** pour enregistrer les résultats dans un fichier XML, ou cliquez sur **Fermer** pour quitter l’Assistant.
   
-###  <a name="PackageModel"></a> Package Deployment Model  
+###  <a name="package-deployment-model"></a><a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>Sélectionner la source
 
@@ -555,7 +555,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [Définir les options de la page Effectuer la conversion](#conversion)  
   
-###  <a name="open_dialog"></a> Ouvrir l'Assistant Conversion de projet Integration Services  
+###  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a> Ouvrir l'Assistant Conversion de projet Integration Services  
  Pour ouvrir l’Assistant **Conversion de projet Integration Services** , effectuez l’une des opérations suivantes.  
   
 -   Ouvrez le projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], puis dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Convertir en modèle de déploiement de projet**.  
@@ -564,7 +564,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  Selon que vous exécutez **l’Assistant Conversion de projet Integration Services** à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l’Assistant effectue différentes tâches de conversion.   
   
-###  <a name="locate"></a> Définir les options sur la page Localiser les packages  
+###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> Définir les options sur la page Localiser les packages  
   
 > [!NOTE]  
 >  La page **Localiser les packages** est disponible uniquement quand vous exécutez l’Assistant à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Folder**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
-###  <a name="selectPackages"></a> Définir les options sur la page Sélectionner les package  
+###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> Définir les options sur la page Sélectionner les package  
  **Nom du package**  
  Indique le fichier de package.  
   
@@ -621,7 +621,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Actualiser**  
  Actualise la liste des packages.  
   
-###  <a name="destination"></a> Définir les options sur la page Sélectionner la destination  
+###  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a> Définir les options sur la page Sélectionner la destination  
  Dans cette page, spécifiez le nom et le chemin d'accès d'un nouveau fichier de déploiement de projet (.ispac) ou sélectionnez un fichier existant.  
   
 > [!NOTE]  
@@ -639,7 +639,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Description du projet**  
  Tapez une description facultative du projet.  
   
-###  <a name="projectProperties"></a> Définir les options sur la page Spécifier les propriétés du projet  
+###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> Définir les options sur la page Spécifier les propriétés du projet  
   
 > [!NOTE]  
 >  La page **Spécifier les propriétés du projet** est disponible uniquement quand vous exécutez l’Assistant à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
@@ -653,7 +653,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Description du projet**  
  Si vous le souhaitez, tapez une description du projet.  
   
-###  <a name="executePackage"></a> Définir les options sur la page Mettre à jour la tâche d'exécution de package  
+###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> Définir les options sur la page Mettre à jour la tâche d'exécution de package  
  Mettez à jour les tâches d'exécution de package contenues dans les packages pour utiliser une référence basée sur un projet. Pour plus d'informations, consultez [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
   
  **Package parent**  
@@ -668,7 +668,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Affecter une référence**  
  Sélectionnez un package enfant stocké dans le projet.  
   
-###  <a name="configurations"></a> Définir les options sur la page Sélectionner les configurations  
+###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> Définir les options sur la page Sélectionner les configurations  
  Sélectionnez les configurations de package que vous souhaitez remplacer par des paramètres.  
   
  **Package**  
@@ -694,7 +694,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  Si vous ne sélectionnez pas cette option, seules les configurations que vous avez sélectionnées pour remplacement à l’aide de paramètres sont supprimées.  
   
-###  <a name="createParameters"></a> Définir les options sur la page Créer des paramètres  
+###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> Définir les options sur la page Créer des paramètres  
  Sélectionnez le nom et l'étendue du paramètre pour chaque propriété de configuration.  
   
  **Package**  
@@ -706,7 +706,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Portée**  
  Sélectionnez l'étendue du paramètre, package ou projet.  
   
-###  <a name="configureParameters"></a> Définir les options sur la page Configurer les paramètres  
+###  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a> Définir les options sur la page Configurer les paramètres  
  **Nom**  
  Indique le nom du paramètre.  
   
@@ -724,7 +724,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  La boîte de dialogue **Définir les détails du paramètre** indique également le type de données de la valeur de paramètre et l’origine du paramètre.  
   
-###  <a name="review"></a> Définir les options de la page Vérifier  
+###  <a name="set-the-options-on-the-review-page"></a><a name="review"></a> Définir les options de la page Vérifier  
  Utilisez la page **Vérifier** pour confirmer l’exactitude des options sélectionnées pour la conversion du projet.  
   
  **Précédent**  
@@ -733,7 +733,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Convert**  
  Cliquez pour convertir le projet en modèle de déploiement de projet.  
   
-###  <a name="conversion"></a> Définir les options de la page Effectuer la conversion  
+###  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a> Définir les options de la page Effectuer la conversion  
  La page Effectuer la conversion indique l'état de la conversion du projet.  
   
  **Action**  

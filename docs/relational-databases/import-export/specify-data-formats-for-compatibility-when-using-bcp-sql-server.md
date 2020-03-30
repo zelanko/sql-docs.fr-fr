@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055924"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74055924"
 >  Si vous ne maîtrisez pas les formats de données pour l’importation ou l’exportation de données, consultez [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
   
   
-##  <a name="bcpDataFormatAttr"></a> Attributs de format de données bcp  
+##  <a name="bcp-data-format-attributes"></a><a name="bcpDataFormatAttr"></a> Attributs de format de données bcp  
  La commande **bcp** vous permet de spécifier la structure de chaque champ dans un fichier de données, selon les attributs de format de données suivants :  
   
 -   type de stockage de fichier  
@@ -52,7 +52,7 @@ ms.locfileid: "74055924"
      Pour les champs de données caractères, des caractères de fin facultatifs vous permettent de marquer la fin de chaque champ dans un fichier de données (à l’aide d’une *marque de fin de champ*), ainsi que la fin de chaque ligne (avec une *marque de fin de ligne*). Les caractères de fin constituent un moyen d'indiquer aux programmes lisant le fichier de données la fin d'un champ ou d'une ligne et le début du suivant. Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
   
-##  <a name="FieldSpecificPrompts"></a> Vue d'ensemble des invites spécifiques aux champs  
+##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> Vue d'ensemble des invites spécifiques aux champs  
  Si une commande **bcp** interactive contient l’option **in** ou **out** , mais non le commutateur de fichier de format ( **-f**) ni le commutateur de format de données ( **-n**, **-c**, **-w**ou **-N**), pour chaque colonne de la table source ou cible, la commande vous invite à fournir chacun des attributs précédents. À chaque invite, la commande **bcp** fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif ( **-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
   
 ### <a name="example"></a>Exemple  
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  Des messages équivalents (si nécessaire) s'affichent pour chacune des colonnes de table dans l'ordre.  
   
   
-##  <a name="FieldByFieldNonXmlFF"></a> Stockage de données champ par champ dans un fichier de format non-XML  
+##  <a name="storing-field-by-field-data-in-a-non-xml-format-file"></a><a name="FieldByFieldNonXmlFF"></a> Stockage de données champ par champ dans un fichier de format non-XML  
  Une fois toutes les colonnes de table spécifiées, la commande **bcp** vous invite à générer facultativement un fichier de format non-XML qui stocke les informations champ par champ venant d’être fournies (voir l’exemple précédent). Si vous choisissez de générer un fichier de format, vous pouvez effectuer cette opération dès que vous exportez des données vers cette table ou que vous importez des données structurées de la sorte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  

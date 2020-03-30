@@ -13,10 +13,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147384"
 ---
 # <a name="url-access-parameter-reference"></a>Référence sur les paramètres d’accès URL
@@ -29,7 +29,7 @@ ms.locfileid: "77147384"
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
   
 
-##  <a name="bkmk_htmlviewer"></a> Commandes de visionneuse HTML (rc:)
+##  <a name="html-viewer-commands-rc"></a><a name="bkmk_htmlviewer"></a> Commandes de visionneuse HTML (rc:)
  - Les commandes de visionneuse HTML sont utilisées pour cibler la visionneuse HTML et sont précédées de *rc:*  :
   
 -   **Barre d’outils** : Affiche ou masque la barre d'outils. Si la valeur de ce paramètre est **false**, toutes les options restantes sont ignorées. Si vous omettez ce paramètre, la barre d'outils s'affiche automatiquement pour les formats de rendu assurant sa prise en charge. La valeur par défaut de ce paramètre est **true**.
@@ -113,7 +113,7 @@ ms.locfileid: "77147384"
   
 -   **Paramètres d’informations sur l’appareil** : Spécifie un paramètre d’informations sur l’appareil sous forme de `rc:tag=value`, où *tag* est le nom d’un ensemble de paramètres d’informations sur l’appareil spécifique à l’extension de rendu actuellement utilisée (consultez la description du paramètre *Format*). Par exemple, vous pouvez utiliser le paramètre d’informations d’appareil *OutputFormat* pour que l’extension de rendu IMAGE restitue le rapport sous la forme d’une image JPEG à l’aide des paramètres suivants dans la chaîne d’accès URL : `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Pour plus d’informations sur tous les paramètres d’informations d’appareil spécifiques aux extensions, consultez [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   
-##  <a name="bkmk_reportserver"></a> Commandes du serveur de rapports (rs:)
+##  <a name="report-server-commands-rs"></a><a name="bkmk_reportserver"></a> Commandes du serveur de rapports (rs:)
  Les commandes de serveur de rapports sont précédées de *rs:* et sont utilisées pour cibler le serveur de rapports :
   
 -   **Commande** : Exécute une action sur un élément de catalogue, selon son type d'élément. La valeur par défaut est déterminée par le type de l'élément de catalogue référencé dans la chaîne d'accès URL. Les valeurs autorisées sont :
@@ -264,7 +264,7 @@ ms.locfileid: "77147384"
   
 -   **ShowHideToggle**: Bascule de l'état afficher à masquer d'une section du rapport. Spécifiez un entier positif pour représenter la section à basculer.
   
-##  <a name="bkmk_webpart"></a> Commandes de composant WebPart Visionneuse de rapports (rv:)
+##  <a name="report-viewer-web-part-commands-rv"></a><a name="bkmk_webpart"></a> Commandes de composant WebPart Visionneuse de rapports (rv:)
  Les noms des paramètres de rapport réservés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont utilisés pour cibler le composant WebPart Visionneuse de rapports qui est intégré à SharePoint. Ces noms de paramètre sont préfixés par *rv:* . Le composant WebPart Visionneuse de rapports prend également en charge le paramètre *rs:ParameterLanguage*.
   
 -   **Barre d’outils** : Contrôle l’affichage de la barre d’outils pour le composant WebPart Visionneuse de rapports. La valeur par défaut est **Full**. Les valeurs peuvent être les suivantes :

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.openlocfilehash: a4103e22facbb717b6797b91d8b218cc6ce4b0b7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288113"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Détecter un problème sur SQL Server sur Linux
@@ -24,7 +24,7 @@ Ce document décrit comment détecter un problème sur Microsoft SQL Server s’
 > [!TIP]
 > Pour obtenir des réponses aux questions fréquemment posées, consultez la [FAQ de SQL Server sur Linux](sql-server-linux-faq.md).
 
-## <a id="connection"></a> Détecter un problème relatif aux échecs de connexion
+## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> Détecter un problème relatif aux échecs de connexion
 Si vous avez des difficultés à vous connecter à votre SQL Server Linux, vous devez vérifier quelques points.
 
 - Si vous ne parvenez pas à vous connecter localement à l’aide de **localhost**, essayez d’utiliser l’adresse IP 127.0.0.1 à la place. Il est possible que **localhost** ne soit pas correctement mappé à cette adresse.

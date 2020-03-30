@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713272"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurer les transactions distribuées pour un groupe de disponibilité Always On
@@ -41,7 +41,7 @@ Dans une transaction distribuée, les applications clientes utilisent Microsoft 
 
 DTC n’est pas impliqué dans le traitement d’un groupe de disponibilité sauf si une base de données est également membre d’un cluster de basculement. Dans un groupe de disponibilité, la cohérence entre les réplicas est gérée par la logique du groupe de disponibilité : Le réplica principal n’effectue pas la validation et n’envoie pas d’accusé de réception de la validation à l’appelant tant que le réplica secondaire n’a pas confirmé qu’il a rendu les enregistrements de journal persistants dans un stockage durable. C’est alors seulement que le réplica principal déclare la transaction terminée. En mode asynchrone, nous n’attendons pas que le réplica secondaire envoie un accusé de réception, et il existe explicitement un risque de perte d’une petite quantité de données.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Avant de configurer un groupe de disponibilité pour prendre en charge les transactions distribuées, vous devez respecter les prérequis suivants :
 
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transactions distribuées - concepts techniques
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>Transactions distribuées - concepts techniques
 
 Une transaction distribuée s’étend sur deux bases de données ou plus. En tant que gestionnaire des transactions, DTC coordonne la transaction entre les instances de SQL Server et d’autres sources de données. Chaque instance du moteur de base de données [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] peut fonctionner comme gestionnaire de ressources. Quand un groupe de disponibilité est configuré avec `DTC_SUPPORT = PER_DB`, les bases de données peuvent fonctionner comme gestionnaires de ressources. Pour plus d'informations, consultez la documentation MS DTC.
 
