@@ -11,10 +11,10 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822114"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Utiliser des mémoires tampons en anneau pour obtenir des informations sur l’intégrité des groupes de disponibilité Always On
@@ -62,7 +62,7 @@ ORDER BY record.value('(./Record/@time)[1]','bigint') DESC
 GO  
 ```  
   
-##  <a name="BKMK_RingBufferTypes"></a> Types de mémoires tampons en anneau des groupes de disponibilité  
+##  <a name="availability-groups-ring-buffer-types"></a><a name="BKMK_RingBufferTypes"></a> Types de mémoires tampons en anneau des groupes de disponibilité  
  Il existe quatre mémoires tampons de groupes de disponibilité dans sys.dm_os_ring_buffers. Le tableau ci-dessous décrit les types de mémoires tampons en anneau et fournit un exemple du contenu de la colonne Record pour chaque type de mémoire tampon en anneau.  
   
  **RING_BUFFER_HADRDBMGR_API**  

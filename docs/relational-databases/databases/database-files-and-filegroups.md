@@ -33,10 +33,10 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287983"
 ---
 # <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données
@@ -59,9 +59,9 @@ ms.locfileid: "79287983"
 ### <a name="logical-and-physical-file-names"></a>Noms de fichiers logiques et physiques
 Les fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont deux types de nom de fichier : 
 
-**logical_file_name :**  nom utilisé pour faire référence au fichier physique dans toutes les instructions Transact-SQL. Le nom de fichier logique doit respecter les règles régissant les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et doit être unique parmi les noms de fichier logique dans la base de données. Cela est défini par l’argument `NAME` dans `ALTER DATABASE`. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**logical_file_name**  : nom utilisé pour faire référence au fichier physique dans toutes les instructions Transact-SQL. Le nom de fichier logique doit respecter les règles régissant les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et doit être unique parmi les noms de fichier logique dans la base de données. Cela est défini par l’argument `NAME` dans `ALTER DATABASE`. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**os_file_name :** nom du fichier physique, comprenant le chemin du répertoire. Il doit respecter les règles en vigueur pour les noms de fichiers du système d'exploitation. Cela est défini par l’argument `FILENAME` dans `ALTER DATABASE`. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**os_file_name** : nom du fichier physique, comprenant le chemin du répertoire. Il doit respecter les règles en vigueur pour les noms de fichiers du système d'exploitation. Cela est défini par l’argument `FILENAME` dans `ALTER DATABASE`. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!IMPORTANT]
 > Les données et les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être implantés dans les systèmes de fichiers FAT ou NTFS. Sur les systèmes Windows, nous vous recommandons d’utiliser le système de fichiers NTFS pour des raisons de sécurité. 
@@ -199,7 +199,7 @@ Les règles suivantes s'appliquent aux fichiers et aux groupes de fichiers :
 - Un fichier ne peut appartenir qu'à un seul groupe.
 - Les fichiers journaux des transactions ne peuvent jamais faire partie d'un groupe de fichiers.
 
-## <a name="Recommendations"></a> Recommandations
+## <a name="recommendations"></a><a name="Recommendations"></a> Recommandations
 Voici une série de recommandations générales à suivre lors de l'utilisation de fichiers et de groupes de fichiers : 
 - La plupart des bases de données fonctionnent très bien avec un seul fichier de données et un seul fichier journal des transactions.
 - Si vous utilisez plusieurs fichiers de données, créez un second groupe de fichiers pour les fichiers supplémentaires et utilisez-le comme groupe de fichiers par défaut. Ainsi, le fichier primaire ne contiendra que les objets et les tables système.

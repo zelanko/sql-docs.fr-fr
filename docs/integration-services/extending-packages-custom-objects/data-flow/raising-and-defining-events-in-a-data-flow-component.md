@@ -21,10 +21,10 @@ ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 588883a254b465cfe1fa9b9b1ea9567e421fb8d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287565"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Déclenchement et définition d'événements dans un composant de flux de données
@@ -35,7 +35,7 @@ ms.locfileid: "71287565"
   Les développeurs de composants peuvent déclencher un sous-ensemble des événements définis dans l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> en appelant les méthodes exposées sur la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Vous pouvez également définir des événements personnalisés à l'aide de la collection <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A>, puis les déclencher pendant l'exécution en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. Cette section décrit comment créer et déclencher un événement. Elle fournit également des conseils sur l'opportunité de déclencher des événements au moment de la conception.  
   
 ## <a name="raising-events"></a>Déclenchement d’événements  
- Les composants déclenchent des événements à l’aide des méthodes **Fire\<X>** de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Vous pouvez déclencher des événements pendant la conception et l'exécution de composants. En général, les méthodes <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> sont appelées pendant la validation, lors de la conception de composants. Ces événements affichent des messages dans le volet **Liste d’erreurs[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] de**  et fournissent des commentaires aux utilisateurs du composant lorsque ce dernier n’est pas correctement configuré.  
+ Les composants déclenchent des événements à l’aide des méthodes **Fire\<X>** de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Vous pouvez déclencher des événements pendant la conception et l'exécution de composants. En général, les méthodes <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> sont appelées pendant la validation, lors de la conception de composants. Ces événements affichent des messages dans le volet **Liste d’erreurs** de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et fournissent des commentaires aux utilisateurs du composant lorsque ce dernier n’est pas correctement configuré.  
   
  Les composants peuvent également déclencher des événements à tout moment pendant l'exécution. Les événements permettent aux développeurs de composants de fournir des commentaires aux utilisateurs du composant pendant son exécution. L'appel de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> pendant l'exécution risque de provoquer l'échec du package.  
   

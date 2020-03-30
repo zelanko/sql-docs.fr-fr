@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024909"
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
@@ -41,15 +41,15 @@ ms.locfileid: "68024909"
 > [!NOTE]  
 > Quand un index contient toutes les colonnes auxquelles une requête fait référence, on dit qu’il *couvre la requête*.  
    
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="DesignRecs"></a> Recommandations relatives à la conception  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a> Recommandations relatives à la conception  
   
 -   La conception d'index non-cluster doit être réalisée avec une clé d'index de grande taille, de sorte que seules les colonnes utilisées pour la recherche sont les colonnes clés. Toutes les autres colonnes qui couvrent la requête doivent être des colonnes non-clés. De cette manière, vous disposez de toutes les colonnes nécessaires pour couvrir la requête, mais la clé d'index elle-même est petite et efficace.  
   
 -   Incluez les colonnes non clés dans un index non cluster pour éviter de dépasser les limitations actuelles de taille d’index, établies à 32 colonnes clés au maximum et à une taille de clé d’index maximale de 1 700 octets (16 colonnes clés et 900 octets avant [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]). Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne tient pas compte des colonnes non-clés lors du calcul du nombre de colonnes clés d'index ou de la taille de la clé d'index.  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Les colonnes non-clés peuvent uniquement être définies sur des index non cluster.  
   
@@ -67,12 +67,12 @@ ms.locfileid: "68024909"
   
     -   augmenter la longueur des colonnes **varchar**, **nvarchar**ou **varbinary** .  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Pour créer un index avec des colonnes non-clés  
   
@@ -100,7 +100,7 @@ ms.locfileid: "68024909"
   
 12. Dans la boîte de dialogue **Nouvel index** , cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Pour créer un index avec des colonnes non-clés  
   

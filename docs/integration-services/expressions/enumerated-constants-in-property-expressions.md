@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297635"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
@@ -47,7 +47,7 @@ ms.locfileid: "71297635"
   
  [Propriétés communes](#CommonProperties)  
   
-##  <a name="Package"></a> Package  
+##  <a name="package"></a><a name="Package"></a> Package  
  Les tableaux suivants répertorient les noms conviviaux et les équivalents en valeur numérique pour des propriétés de packages que vous définissez à l'aide de valeurs provenant d'un énumérateur.  
   
  Propriété **PackageType** : définie à l’aide de valeurs provenant de l’énumération **DTSPackageType**.  
@@ -90,7 +90,7 @@ ms.locfileid: "71297635"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> Contraintes de précédence  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> Contraintes de précédence  
  Propriété **EvalOp** : définie à l’aide de valeurs provenant de l’énumération **DTSPrecedenceEvalOp**.  
   
 |Nom convivial dans DTSPrecedenceEvalOp|Valeur numérique|  
@@ -109,7 +109,7 @@ ms.locfileid: "71297635"
 |Completion|2|  
 |Opération annulée|3|  
   
-##  <a name="Foreach"></a> Énumérateurs de boucles Foreach  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Énumérateurs de boucles Foreach  
  La boucle Foreach inclut un jeu d'énumérateurs comportant des propriétés pouvant être définies par des expressions de la propriété.  
   
 ### <a name="foreach-ado-enumerator"></a>Énumérateur Foreach ADO  
@@ -147,7 +147,7 @@ ms.locfileid: "71297635"
 |Nœud|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> Tâches  
+##  <a name="tasks"></a><a name="Tasks"></a> Tâches  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut de nombreuses tâches avec des propriétés pouvant être définies par des expressions de la propriété.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services  
@@ -479,7 +479,7 @@ ms.locfileid: "71297635"
 |Rapide|1|  
 |Précise|2|  
   
-##  <a name="MaintenancePlanTasks"></a> Tâches du plan de maintenance  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Tâches du plan de maintenance  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut un ensemble de tâches qui effectuent des tâches SQL Server à utiliser dans des plans de maintenance et dans des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge la gestion de ces tâches par programmation et la documentation de référence de programmation n’inclut pas la documentation API de ces tâches et de leurs énumérateurs.  
@@ -572,7 +572,7 @@ ms.locfileid: "71297635"
 |Index|2|  
 |Tous|3|  
   
-##  <a name="CommonProperties"></a> Propriétés communes  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> Propriétés communes  
  Les packages, les tâches et les conteneurs de boucles Foreach, de boucles For et de séquences peuvent utiliser les énumérations suivantes pour définir les propriétés spécifiées.  
   
  Propriété **ForceExecutionResult** : définie à l’aide de valeurs provenant de l’énumération **DTSForcedExecResult**.  

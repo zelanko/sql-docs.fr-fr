@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708686"
 ---
 # <a name="back-up-files-and-filegroups"></a>Sauvegarder des fichiers et des groupes de fichiers
@@ -29,9 +29,9 @@ ms.locfileid: "71708686"
   
 Pour plus d’informations sur les sauvegardes de fichiers, consultez [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 - L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou implicite.  
   
@@ -39,11 +39,11 @@ Pour plus d’informations sur les sauvegardes de fichiers, consultez [Sauvegard
   
 Pour plus d'informations sur les limitations et les restrictions, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recommandations
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations
   
 Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez très fréquemment le journal, ces messages de réussite peuvent rapidement s'accumuler, créer des journaux d'erreurs très volumineux et compliquer la recherche d'autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l’indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées (voir [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)).  
 
-###  <a name="Permissions"></a> Autorisations
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
 Les autorisations `BACKUP DATABASE` et `BACKUP LOG` reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator**.  
   
@@ -59,9 +59,9 @@ Les autorisations `BACKUP DATABASE` et `BACKUP LOG` reviennent par défaut aux m
   
 1. Dans la liste **Base de données** , vérifiez le nom de la base de données. Vous pouvez éventuellement sélectionner une autre base de données dans la liste.  
   
-1. Dans la liste **Type de sauvegarde**, sélectionnez **Complète** ou **Différentielle**.  
+1. Dans la liste **Type de sauvegarde** , sélectionnez **Complète** ou **Différentielle**.  
   
-1. Pour l'option **Composant de sauvegarde**, cliquez sur **Fichier et groupes de fichiers**.  
+1. Pour l'option **Composant de sauvegarde** , cliquez sur **Fichier et groupes de fichiers**.  
   
 1. Dans la boîte de dialogue **Sélection de fichiers et de groupes de fichiers** , sélectionnez les fichiers et les groupes de fichiers que vous voulez sauvegarder. Vous pouvez sélectionner un ou plusieurs fichiers individuellement, ou vous pouvez activer la case qui permet de sélectionner automatiquement tous les fichiers d'un groupe de fichiers.  
   
@@ -154,7 +154,7 @@ En mode de restauration complète, vous devez aussi sauvegarder le journal des t
 
 Pour plus d’informations, consultez [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-###  <a name="TsqlExample"></a> Exemples
+###  <a name="examples"></a><a name="TsqlExample"></a> Exemples
 Dans les exemples suivants, vous procédez à une sauvegarde d'un ou plusieurs fichiers des groupes de fichiers secondaires de la base de données `Sales` . Cette base de données fait appel au mode de restauration complète et contient les groupes de fichiers secondaires suivants :  
   
 - Un groupe de fichiers nommé `SalesGroup1` avec les fichiers `SGrp1Fi1` et `SGrp1Fi2`.  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> Utilisation de PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell
 
 Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   

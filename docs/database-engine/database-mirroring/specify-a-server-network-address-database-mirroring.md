@@ -17,10 +17,10 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252760"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
@@ -30,7 +30,7 @@ ms.locfileid: "75252760"
  Avant de pouvoir spécifier un port dans une adresse réseau de serveur, le point de terminaison de mise en miroir de bases de données doit exister sur l'instance de serveur. Pour plus d’informations, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
   
-##  <a name="Syntax"></a> Syntaxe d'une adresse réseau de serveur  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Syntaxe d'une adresse réseau de serveur  
  La syntaxe d'une adresse réseau de serveur est de la forme :  
   
  TCP<strong>://</strong> *\<adresse-système>* <strong>:</strong> *\<port>*  
@@ -121,7 +121,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> Exemples  
+##  <a name="examples"></a><a name="Examples"></a> Exemples  
  L'exemple suivant montre l'adresse réseau de serveur d'une instance de serveur sur un système informatique nommé `REMOTESYSTEM3` dans un autre domaine. Les informations du domaine sont `NORTHWEST.ADVENTURE-WORKS.COM`et le port du point de terminaison de mise en miroir de bases de données est `7025`. Étant donné ces exemples de composants, l'adresse réseau du serveur est la suivante :  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -130,7 +130,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   

@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296879"
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
@@ -58,7 +58,7 @@ ms.locfileid: "71296879"
   
  Le dossier **Exécution des packages** ne contient aucun sous-dossier et n'est pas extensible.  
   
- Par défaut, le dossier **Packages stockés** contient deux dossiers : **Système de fichiers** et **MSDB**. Le dossier **File System** répertorie les packages enregistrés dans le système de fichiers. Le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] indique l'emplacement de ces fichiers. Le dossier par défaut est le dossier Packages, situé dans %Program Files%\Microsoft SQL Server\100\DTS. Le dossier **MSDB** répertorie les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enregistrés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb sur le serveur. La table sysssispackages contient les packages enregistrés dans la base de données msdb.  
+ Par défaut, le dossier **Packages stockés** contient deux dossiers : **File System** et **MSDB**. Le dossier **File System** répertorie les packages enregistrés dans le système de fichiers. Le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] indique l'emplacement de ces fichiers. Le dossier par défaut est le dossier Packages, situé dans %Program Files%\Microsoft SQL Server\100\DTS. Le dossier **MSDB** répertorie les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enregistrés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb sur le serveur. La table sysssispackages contient les packages enregistrés dans la base de données msdb.  
   
  Pour visualiser la liste des packages stockés dans le magasin de packages, vous devez ouvrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et vous connecter à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

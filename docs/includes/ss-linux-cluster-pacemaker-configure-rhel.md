@@ -7,8 +7,8 @@
 
    > Si le pare-feu n’a pas de configuration de haute disponibilité intégrée, ouvrez les ports suivants pour Pacemaker.
    >
-   > * TCP : Ports 2224, 3121, 21064
-   > * UDP : Port 5405
+   > * TCP : ports 2224, 3121, 21064
+   > * UDP : port 5405
 
 1. Installez les packages Pacemaker sur tous les nœuds.
 

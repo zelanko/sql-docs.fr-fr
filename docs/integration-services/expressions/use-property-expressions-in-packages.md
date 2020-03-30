@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287874"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
@@ -129,7 +129,7 @@ ms.locfileid: "71287874"
   
  Si le nom du package est EmailRowCountPP, s'il a été exécuté le 03/04/2005 et que la durée de l'exécution était de 9 secondes, l'expression s'évalue à la chaîne.  
   
- PExpression-->Package : (EmailRowCountPP) Début : 3/4/2005 11:06:18 Durée : 9 secondes.  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expression de propriété pour le message d'un message électronique  
  L’expression de propriété suivante peut être utilisée pour définir la propriété MessageSource d’une tâche d’envoi de message. L'expression utilise une combinaison de littéraux de chaîne, de variables définies par l'utilisateur et l'opérateur de concaténation (+). Les variables définies par l’utilisateur sont appelées `nasdaqrawrows`, `nyserawrows`et `amexrawrows`. La chaîne "\n" indique un retour chariot.  
@@ -140,11 +140,11 @@ ms.locfileid: "71287874"
   
  Lignes traitées :  
   
- NASDAQ : 7058  
+ NASDAQ: 7058  
   
- NYSE : 3528  
+ NYSE: 3528  
   
- AMEX : 1102  
+ AMEX: 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Expression de propriété pour la propriété exécutable d'une tâche d'exécution de processus  
  L’expression de propriété suivante peut être utilisée pour définir la propriété Executable d’une tâche d’exécution de processus. L'expression utilise une combinaison de littéraux de chaîne, d'opérateurs et de fonctions. L'expression utilise les fonctions DATEPART et GETDATE et l'opérateur conditionnel.  

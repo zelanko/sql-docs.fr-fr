@@ -15,10 +15,10 @@ ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212322"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>Services SCM - Changer le compte de démarrage du service
@@ -28,9 +28,9 @@ ms.locfileid: "70212322"
 > [!IMPORTANT]  
 >  Lorsque vous modifiez le compte de démarrage du service pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] et l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssDE](../../includes/ssde-md.md)]) doit être redémarré pour que la modification soit prise en compte. Lorsque le service redémarre, toutes les bases de données associées à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne seront pas disponibles tant que le service n'a pas redémarré correctement. Si vous devez modifier le compte de démarrage du service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veillez à effectuer cette opération au cours des opérations de maintenance planifiées régulièrement ou lorsqu'il est possible de mettre les bases de données hors ligne sans interrompre les opérations quotidiennes.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Serveurs en cluster  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70212322"
   
      Au cours de l'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est configuré pour utiliser le compte de service réseau, mais est désactivé. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut modifier le compte assigné pour le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, mais le service ne peut pas être activé ou démarré. Après la mise à niveau d'une référence SKU de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] vers non-Express, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n'est pas automatiquement activé, mais il peut l'être lorsque cela est nécessaire en utilisant le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et en modifiant le mode de démarrage du service par Manuel ou Automatique.  
   
-##  <a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>Pour modifier le compte de démarrage du service SQL Server  
   

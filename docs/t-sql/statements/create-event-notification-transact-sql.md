@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902809"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67902809"
 
   Crée un objet qui envoie des informations sur un événement de base de données ou de serveur à un service Service Broker. Les notifications d'événements sont créées uniquement au moyen d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Arguments  
  *event_notification_name*  
- Nom de la notification d’événement. Un nom de notification d’événement doit être conforme aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md) et être unique dans l’étendue où il est créé : SERVER, DATABASE ou *object_name*.  
+ Nom de la notification d’événement. Un nom de notification d’événements doit être conforme aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et être unique dans l’étendue où il est créé : SERVER, DATABASE ou *object_name*.  
   
  SERVER  
  Applique l'étendue de la notification d'événement à l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si SERVER est spécifié, la notification se déclenche lorsque l'événement spécifié dans la clause FOR se produit n'importe où dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

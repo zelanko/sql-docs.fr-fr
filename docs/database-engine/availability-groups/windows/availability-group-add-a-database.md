@@ -15,10 +15,10 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991504"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Ajouter une base de données à un groupe de disponibilité Always On
@@ -34,10 +34,10 @@ ms.locfileid: "67991504"
 -   La base de données doit résider sur l'instance de serveur qui héberge le réplica principal et se conformer aux conditions préalables requises et aux restrictions applicables aux bases de données de disponibilité. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utiliser SQL Server Management Studio  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utiliser SQL Server Management Studio  
 
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
@@ -58,7 +58,7 @@ ms.locfileid: "67991504"
   
          Après avoir utilisé la boîte de dialogue **Propriétés du groupe de disponibilité** pour ajouter une base de données à un groupe de disponibilité, vous devez configurer la base de données secondaire correspondante sur chaque instance de serveur qui héberge un réplica secondaire. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Utiliser Transact-SQL  
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> Utiliser Transact-SQL  
 
   
 1.  Connectez-vous à l'instance de serveur qui héberge l'instance de serveur qui héberge le réplica principal.    
@@ -79,7 +79,7 @@ ms.locfileid: "67991504"
   
 3.  Après avoir ajouté une base de données à un groupe de disponibilité, vous devez configurer la base de données secondaire correspondante sur chaque instance de serveur qui héberge un réplica secondaire. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Utiliser PowerShell  
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> Utiliser PowerShell  
 
   
 1.  Remplacez le répertoire (**cd**) par l’instance de serveur qui héberge le réplica principal.  
@@ -106,7 +106,7 @@ ms.locfileid: "67991504"
   
  Pour obtenir un exemple complet, consultez [Exemple (PowerShell)](#PSExample)ci-dessous.  
   
-###  <a name="PSExample"></a> Exemple (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> Exemple (PowerShell)  
  L'exemple suivant illustre le processus complet de préparation d'une base de données secondaire à partir d'une base de données présente sur l'instance de serveur qui héberge le réplica principal d'un groupe de disponibilité, qui consiste à ajouter la base de données à un groupe de disponibilité (en tant que base de données primaire) puis à joindre la base de données secondaire au groupe de disponibilité. Dans cet exemple, la base de données et son journal de transactions sont d'abord sauvegardés. Les sauvegardes de la base de données et du journal sont ensuite restaurées sur les instances de serveur qui hébergent un réplica secondaire.  
   
  Dans cet exemple, l’applet de commande **Add-SqlAvailabilityDatabase** est appelée deux fois : d’abord sur le réplica principal pour ajouter la base de données au groupe de disponibilité, puis sur le réplica secondaire pour joindre la base de données secondaire présente sur ce réplica au groupe de disponibilité. Si vous avez plusieurs réplicas secondaires, restaurez et joignez la base de données secondaire sur chacun d'eux.  

@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054784"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installer SQL Server à l’aide d’un fichier de configuration
@@ -67,18 +67,18 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  L'infrastructure d'installation écrit tous les paramètres appropriés pour les actions exécutées, à l'exception des informations sensibles comme les mots de passe. Le paramètre /IAcceptSQLServerLicenseTerms n'est pas écrit dans le fichier de configuration et requiert soit une modification du fichier de configuration, soit une valeur à fournir à l'invite de commandes. Pour plus d’informations, consultez [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). De plus, une valeur est incluse pour les paramètres booléens pour lesquels une valeur n'est généralement pas fournie via l'invite de commandes. 
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Utilisation du fichier de configuration pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Utilisation du fichier de configuration pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 Vous ne pouvez utiliser le fichier de configuration que pour les installations en ligne de commande. 
   
 > [!NOTE]  
 > Si vous devez apporter des modifications au fichier de configuration, nous vous recommandons de faire une copie de ce dernier et de l''utiliser. 
   
-### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Comment utiliser un fichier de configuration pour installer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome  
+### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Comment utiliser un fichier de configuration pour installer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome  
   
 -   Exécutez l'installation à partir de l'invite de commandes et spécifiez le fichier ConfigurationFile.ini à l'aide du paramètre *ConfigurationFile* . 
   
-### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Procédure d'utilisation d'un fichier de configuration afin de préparer et finaliser une image d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome (SysPrep)  
+### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Procédure d'utilisation d'un fichier de configuration afin de préparer et finaliser une image d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome (SysPrep)  
   
 1. Pour préparer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les configurer sur le même ordinateur. 
   
@@ -96,7 +96,7 @@ Vous ne pouvez utiliser le fichier de configuration que pour les installations e
   
     -   Le fichier de configuration de finalisation d'image peut être stocké avec l'image Windows pour l'automatisation de la configuration des instances préparées. 
   
-### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Procédure d'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Procédure d'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
 1. Option d'installation intégrée (créez un cluster de basculement à nœud unique sur un nœud et exécutez AddNode sur les nœuds supplémentaires) :  
   
@@ -118,11 +118,11 @@ Vous ne pouvez utiliser le fichier de configuration que pour les installations e
   
     -   Vous pouvez ensuite spécifier ce fichier ConfigurationFile.ini pour créer le cluster de basculement. 
   
-### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Comment ajouter ou supprimer un nœud dans un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Comment ajouter ou supprimer un nœud dans un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
 -   Si vous disposez d'un fichier de configuration qui a été précédemment utilisé pour ajouter ou supprimer un nœud dans un cluster de basculement, vous pouvez réutiliser ce même fichier pour ajouter ou supprimer des nœuds supplémentaires. 
   
-### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Comment mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Comment mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
 1. Exécutez la mise à niveau sur le nœud passif et capturez le fichier ConfigurationFile.ini. Pour ce faire, vous pouvez effectuer la mise à niveau réelle ou sortir à la fin du processus sans effectuer la mise à niveau réelle. 
   

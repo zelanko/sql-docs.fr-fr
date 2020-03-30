@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61d240262d491976eaa9e591fa15e4ffd1f1258e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72904181"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
@@ -44,18 +44,18 @@ ms.locfileid: "72904181"
  Le processus d'exportation définit la version de la DAC sur 1.0.0.0 et la description de la DAC dans le fichier d'exportation sur une chaîne vide. Si la base de données a été déployée à partir de la DAC, la définition de la DAC dans le fichier d'exportation contient le nom donné à la DAC d'origine, sinon le nom de la DAC est défini sur le nom de la base de données.  
   
 
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Une DAC ou une base de données peut uniquement être exportée à partir d'une base de données dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure.  
   
  Vous ne pouvez pas exporter une base de données contenant des objets qui ne sont pas pris en charge dans une DAC ou contenant des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L’exportation d’une DAC requiert au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.
  
 Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autorisation VIEW DEFINITION et SELECT sur toutes les tables ou sur des tables spécifiques
 
   
-##  <a name="UsingDeployDACWizard"></a> Utilisation de l'Assistant Exporter l'application de la couche Données  
+##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> Utilisation de l'Assistant Exporter l'application de la couche Données  
  **Pour exporter une DAC à l'aide d'un Assistant**  
   
 1.  Connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sur site ou dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -80,7 +80,7 @@ Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autor
   
     -   [Page Résultats](#Results)  
   
-##  <a name="Introduction"></a> Page Introduction  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de l'Assistant Exporter l'application de la couche Données.  
   
  **Options**  
@@ -91,7 +91,7 @@ Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autor
   
  **Annuler** - Annule l’opération et ferme l’Assistant.  
   
-##  <a name="Export_settings"></a> Page Paramètres d'exportation  
+##  <a name="export-settings-page"></a><a name="Export_settings"></a> Page Paramètres d'exportation  
  Utilisez cette page pour indiquer l'emplacement où vous souhaitez créer le fichier BACPAC.  
   
 -   **Enregistrer sur le disque local** - Crée un fichier de BACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
@@ -100,23 +100,23 @@ Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autor
   
  Pour spécifier un sous-ensemble de tables à exporter, utilisez l'option **Avancé** .  
   
-##  <a name="Validation"></a> Page Validation  
+##  <a name="validation-page"></a><a name="Validation"></a> Page Validation  
  Utilisez la page de validation pour passer en revue tous les problèmes qui empêchent l'opération. Pour continuer, résolvez les problèmes bloquants, puis cliquez sur **Réexécuter la validation** pour vous assurer que la validation est réussie.  
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Summary"></a> Page Résumé  
+##  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer l'exportation à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler l'exportation et quitter l'Assistant, cliquez sur **Annuler**.  
   
-##  <a name="Progress"></a> Page Progression  
+##  <a name="progress-page"></a><a name="Progress"></a> Page Progression  
  Cette page affiche une barre de progression indiquant l'état de l'opération. Pour afficher l'état détaillé, cliquez sur l'option **Afficher les détails** .  
   
-##  <a name="Results"></a> Page Résultats  
+##  <a name="results-page"></a><a name="Results"></a> Page Résultats  
  Cette page signale la réussite ou l'échec de l'exportation et affiche les résultats de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Cliquez sur le lien pour consulter le rapport d'erreur de cette action.  
   
  Cliquez sur **Terminer** pour fermer l'Assistant.  
   
-##  <a name="NetApp"></a> Utilisation d'une application .Net Framework  
+##  <a name="using-a-net-framework-application"></a><a name="NetApp"></a> Utilisation d'une application .Net Framework  
  **Pour exporter une DAC à l’aide de la méthode Export() dans une application .Net Framework.**  
   
  Pour afficher un exemple de code, téléchargez l'exemple d'application DAC sur [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  

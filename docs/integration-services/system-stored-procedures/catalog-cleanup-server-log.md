@@ -11,10 +11,10 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288073"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      Vous pouvez spécifier l’étendue ou le niveau (exécution ou projet) et le nombre de clés à supprimer. La taille de lot par défaut pour la suppression est 1000. Quand vous définissez le niveau sur 2, les clés et les certificats ne sont supprimés que si les projets associés ont été supprimés.  
   
- Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance lorsque SSISDB sert de magasin de déploiement dans SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance quand vous utilisez SSISDB comme magasin de déploiement dans SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant appelle la procédure stockée cleanup_server_log.  

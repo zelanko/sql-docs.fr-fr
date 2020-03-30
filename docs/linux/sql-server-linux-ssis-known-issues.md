@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288063"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitations et problèmes connus pour SSIS sur Linux
@@ -36,7 +36,7 @@ Les fonctions suivantes ne sont pas prises en charge dans cette mise en producti
 
 Pour d’autres limitations et problèmes connus liés à SSIS sur Linux, consultez les [Notes de publication](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a> Composants pris en charge et non pris en charge
+## <a name="supported-and-unsupported-components"></a><a name="components"></a> Composants pris en charge et non pris en charge
 
 Les composants Integration Services intégrés suivants sont pris en charge sur Linux. Certains ont des limitations sur la plateforme Linux. Les composants intégrés qui ne sont pas répertoriés ici ne sont pas pris en charge sur Linux.
 

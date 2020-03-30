@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212289"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "70212289"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> Surveillance de l'état de la mise en miroir  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> Surveillance de l'état de la mise en miroir  
  Pour configurer et gérer le contrôle d'une ou de plusieurs bases de données mises en miroir sur une instance de serveur, vous pouvez utiliser le moniteur de mise en miroir de bases de données ou les procédures stockées système **dbmmonitor** . Vous pouvez surveiller une base de données mise en miroir durant une session de mise en miroir pour vérifier si le flux des données est correct.  
   
  Plus précisément, la surveillance d'une base de données mise en miroir vous permet d'effectuer les opérations suivantes :  
@@ -63,7 +63,7 @@ ms.locfileid: "70212289"
   
      Si une nouvelle ligne d'état contient une valeur qui dépasse un seuil, un événement d'informations est envoyé au journal des événements Windows. Un administrateur système peut alors configurer manuellement des alertes reposant sur ces événements. Pour plus d’informations, consultez [Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> Outils pour la surveillance de l'état de la mise en miroir de base de données  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> Outils pour la surveillance de l'état de la mise en miroir de base de données  
  L’état de la mise en miroir peut être surveillé à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée système **sp_dbmmonitorresults** . Ces outils permettent de surveiller la mise en miroir sur toute base de données mise en miroir sur l’instance de serveur locale par les administrateurs système (c’est-à-dire, les membres du rôle serveur fixe **sysadmin** ) et par l’utilisateur qui a été ajouté au rôle de base de données fixe **dbm_monitor** dans la base de données **msdb** par un administrateur système. Lorsqu'un administrateur système utilise ces outils, il peut également actualiser manuellement l'état de la mise en miroir.  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ ms.locfileid: "70212289"
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>Suppression du travail de surveillance de la mise en miroir de bases de données  
  Le **Travail de surveillance de la mise en miroir de bases de données**est conservé tant qu'il n'a pas été supprimé. Le travail de surveillance doit être géré par l'administrateur système. Pour supprimer le **travail du moniteur de mise en miroir de bases de données**, utilisez **sp_dbmmonitordropmonitoring**. Pour plus d’informations, consultez [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md).  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> Mesures de performances affichées par le moniteur de mise en miroir de bases de données  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> Mesures de performances affichées par le moniteur de mise en miroir de bases de données  
  La page **État** du moniteur de mise en miroir de bases de données décrit les partenaires ainsi que l'état de la session de mise en miroir. L'état inclut les mesures de performance telles que l'état du journal des transactions et d'autres informations destinées à estimer le temps nécessaire à l'exécution d'un basculement automatique et le risque de perte de données, si la session n'est pas synchronisée. De plus, la page **État** affiche l'état ainsi que des informations concernant la session de mise en miroir en général.  
   
 > [!NOTE]  
@@ -248,7 +248,7 @@ ms.locfileid: "70212289"
   
     -   Haute sécurité avec basculement automatique (synchrone)  
   
-##  <a name="AdditionalSources"></a> Sources d'informations supplémentaires concernant une base de données mise en miroir  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> Sources d'informations supplémentaires concernant une base de données mise en miroir  
  En plus d'utiliser le moniteur de mise en miroir de bases de données et les procédures stockées dbmmonitor pour surveiller une base de données mise en miroir et pour configurer des alertes sur des variables de performances analysées, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] met à disposition des affichages catalogue, des compteurs de performance et des notifications d'événements de mise en miroir de bases de données.  
   
  **Dans cette section :**  
@@ -259,7 +259,7 @@ ms.locfileid: "70212289"
   
 -   [Notifications d'événements de mise en miroir de bases de données](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> Métadonnées de la mise en miroir de bases de données  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> Métadonnées de la mise en miroir de bases de données  
  Chaque session de mise en miroir de bases de données est décrite dans des métadonnées qui sont exposées par le biais des affichages catalogue ou gestion dynamique suivants :  
   
 -   **sys.database_mirroring**  
@@ -280,7 +280,7 @@ ms.locfileid: "70212289"
   
      Pour plus d’informations, consultez [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md).  
   
-###  <a name="DbmPerfCounters"></a> Compteurs de performances de la mise en miroir de bases de données  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> Compteurs de performances de la mise en miroir de bases de données  
  Les compteurs de performances vous permettent d'analyser les performances de la mise en miroir de bases de données. Par exemple, vous pouvez examiner le compteur **Délai de transaction** pour savoir si la mise en miroir de bases de données a une incidence sur les performances du serveur principal, et vous pouvez examiner les compteurs **File d'attente de restauration par progression** et **File d'attente d'envoi du journal** pour savoir si la mise en miroir de la base de données est synchronisée avec la base de données principale. Vous pouvez examiner le compteur **Octets du journal envoyés/s** pour analyser la quantité de journal envoyée par seconde.  
   
  Dans l’Analyseur de performances sur les partenaires, les compteurs de performances sont disponibles dans l’objet de performance de la mise en miroir de bases de données (**SQLServer:Database Mirroring**). Pour plus d’informations, consultez [SQL Server, objet Database Mirroring](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
@@ -289,7 +289,7 @@ ms.locfileid: "70212289"
   
 -   [Démarrer le Moniteur système &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> Notifications d'événements de mise en miroir de bases de données  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> Notifications d'événements de mise en miroir de bases de données  
  Les notifications d'événements sont un type spécial d'objet de base de données. Elles sont exécutées en réponse à une variété d'instructions en langage de définition de données (DDL) Transact-SQL et d'événements Trace SQL, et envoient des informations relatives aux événements de serveur et de base de données à un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Les éléments suivants sont disponibles pour la mise en miroir de bases de données :  
@@ -302,7 +302,7 @@ ms.locfileid: "70212289"
   
      Retourne les messages d'audit relatifs à la sécurité du transport de la mise en miroir de bases de données. Pour plus d’informations, consultez [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

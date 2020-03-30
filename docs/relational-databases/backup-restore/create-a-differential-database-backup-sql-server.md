@@ -16,10 +16,10 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bf48a304517eee91ff16c02dab72abb4790e6b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254074"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Créer une sauvegarde différentielle de base de données (SQL Server)
@@ -44,28 +44,28 @@ ms.locfileid: "75254074"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou implicite.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   La création d’une sauvegarde différentielle de base de données suppose l’existence d’une sauvegarde complète de base de données préalable. Si la base de données sélectionnée n’a jamais été sauvegardée, exécutez une sauvegarde complète de base de données avant de créer des sauvegardes différentielles. Pour plus d’informations, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   À mesure que la taille des sauvegardes différentielles augmente, leur restauration peut accroître considérablement le temps nécessaire à la restauration d'une base de données. Nous vous recommandons donc d’effectuer une nouvelle sauvegarde complète selon une périodicité fixe, afin d’établir une nouvelle base différentielle pour les données. Par exemple, vous pouvez effectuer une sauvegarde complète hebdomadaire de la base de données dans son entier (soit une sauvegarde complète de la base de données), puis des séries régulières de sauvegardes de bases de données différentielles au cours de la semaine.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Vérifiez d’abord les autorisations dont vous bénéficiez.  
+####  <a name="check-your-permissions-first"></a><a name="Permissions"></a> Vérifiez d’abord les autorisations dont vous bénéficiez.  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
  Des problèmes de propriété et d’autorisations portant sur le fichier physique de l’unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d’écrire des données sur l’unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute doit disposer d’autorisations d’écriture. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie **pas** les autorisations d’accès au fichier. Les problèmes relatifs aux autorisations portant sur le fichier physique de l’unité de sauvegarde n’apparaissent clairement qu’un fois la ressource physique sollicitée lorsque vous tentez une sauvegarde ou une restauration.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
+##  <a name="sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>Créer une sauvegarde différentielle de base de données  
 
@@ -136,7 +136,7 @@ ms.locfileid: "75254074"
     > [!NOTE]  
     >  Vous pouvez également utiliser l'Assistant Plan de maintenance pour créer des sauvegardes différentielles de base de données.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL  
   
 #### <a name="create-a-differential-database-backup"></a>Créer une sauvegarde différentielle de base de données  
   
@@ -152,7 +152,7 @@ ms.locfileid: "75254074"
   
      BACKUP DATABASE *nom_base_de_données* TO <appareil_sauvegarde> WITH DIFFERENTIAL  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple crée une sauvegarde complète et différentielle de la base de données `MyAdvWorks` .  
   
 ```sql  

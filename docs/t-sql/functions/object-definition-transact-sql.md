@@ -21,10 +21,10 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0ec1dc88832c4a44b3f019bb0e63369ab2d3587a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914894"
 ---
 # <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67914894"
 
   Renvoie le texte source [!INCLUDE[tsql](../../includes/tsql-md.md)] de la définition de l'objet spécifié.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

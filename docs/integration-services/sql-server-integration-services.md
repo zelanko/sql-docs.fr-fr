@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296864"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
@@ -39,13 +39,13 @@ ms.locfileid: "71296864"
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre un large éventail de tâches et de transformations prédéfinies, des outils graphiques pour créer des packages et la base de données du catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permettant de stocker, d’exécuter et de gérer les packages.
 
-Vous pouvez utiliser les outils [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] graphiques pour créer des solutions sans écrire une seule ligne de code. Vous avez également la possibilité de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] complet afin de créer des packages par programmation et de coder des tâches personnalisées et d’autres objets de package.
+Vous pouvez utiliser les outils [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] graphiques pour créer des solutions sans écrire une seule ligne de code. Vous avez également la possibilité de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] complet afin de créer des packages par programme et de coder des tâches personnalisées et d’autres objets de package.
 
 ## <a name="get-sql-server-integration-services"></a>Obtenir SQL Server Integration Services
 
 Pour plus d’informations sur l’installation de SQL Server Integration Services avec SQL Server et sur les autres téléchargements possibles, voir [Installer Integration Services](install-windows/install-integration-services.md).
 
-##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Ressources
+##  <a name="info_tip-resources"></a>![info_tip](../sql-server/media/info-tip.png) Ressources
 -   [Obtenir de l’aide sur le forum SSIS](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
 -   [Obtenir de l’aide sur Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Suivre le blog de l’équipe SSIS](https://blogs.msdn.microsoft.com/ssis/)

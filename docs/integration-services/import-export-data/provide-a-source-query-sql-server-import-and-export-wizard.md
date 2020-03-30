@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285124"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Fournir une requête source (Assistant Importation et Exportation SQL Server)
@@ -59,7 +59,7 @@ Si votre source de données est Excel, consultez [Fournir une requête source po
  **Parcourir**  
  Sélectionnez un fichier enregistré qui contient le texte d’une requête SQL par l’intermédiaire de la boîte de dialogue **Ouvrir**. La sélection d’un fichier copie le texte du fichier dans la zone de texte **Instruction SQL** .  
  
-## <a name="excelQueries"></a> Fournir une requête source pour Excel
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> Fournir une requête source pour Excel
 
 > [!IMPORTANT]
 > Pour obtenir des informations détaillées sur la connexion à des fichiers Excel, et sur les limitations et les problèmes connus liés au chargement de données depuis ou vers des fichiers Excel, consultez [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

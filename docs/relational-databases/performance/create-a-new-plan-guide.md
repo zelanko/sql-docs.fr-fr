@@ -15,10 +15,10 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946968"
 ---
 # <a name="create-a-new-plan-guide"></a>Créer un repère de plan
@@ -27,7 +27,7 @@ Les repères de plan influencent l'optimisation des requêtes en attachant des i
 
 Un repère de plan applique un plan de requête fixe et/ou des indicateurs de requête à une requête.
   
-##  <a name="Restrictions"></a> Limitations et restrictions  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
 -   Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Quand vous fournissez des valeurs pour les paramètres de **sp_create_plan_guide**, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si **@name =** est spécifié, alors **@stmt =** , **@type =** , etc.) doit l’être aussi. De même, si **@name =** est omis et que seule la valeur du paramètre est indiquée, les noms de paramètres restants doivent également être omis, et seules leurs valeurs doivent être indiquées. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
   
 -   Vous pouvez créer plusieurs repères de plan OBJECT ou SQL pour la même requête et le même lot ou module. Toutefois, un seul repère de plan peut être activé à un moment donné.  
@@ -36,10 +36,10 @@ Un repère de plan applique un plan de requête fixe et/ou des indicateurs de re
   
 -   Si vous tentez de supprimer ou de modifier une fonction, une procédure stockée ou un déclencheur DML référencé par un repère de plan, qu'il soit activé ou désactivé, une erreur se produit. Une erreur se produit également si vous tentez de supprimer une table dont un des déclencheurs est référencé par un repère de plan.  
 
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour créer un repère de plan de type OBJECT, il vous faut une autorisation ALTER sur l’objet référencé. Pour créer un repère de plan de type SQL ou TEMPLATE, il vous faut une autorisation ALTER pour la base de données active.  
   
-##  <a name="SSMSProcedure"></a> Créer un repère de plan à l’aide de SSM  
+##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> Créer un repère de plan à l’aide de SSM  
 1.  Cliquez sur le signe plus (+) pour développer la base de données dans laquelle vous souhaitez créer un repère de plan, puis cliquez sur le signe plus (+) pour développer le dossier **Programmabilité** .  
   
 2.  Cliquez avec le bouton droit sur le dossier **Repères de plan** et sélectionnez **Nouveau repère de plan**. ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
@@ -70,7 +70,7 @@ Un repère de plan applique un plan de requête fixe et/ou des indicateurs de re
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-##  <a name="TsqlProcedure"></a> Créer un repère de plan à l’aide de T-SQL  
+##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> Créer un repère de plan à l’aide de T-SQL  
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  

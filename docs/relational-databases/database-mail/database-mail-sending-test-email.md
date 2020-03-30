@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906070"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Envoyer un e-mail de test avec Database Mail  
@@ -55,7 +55,7 @@ Vous devez être membre du rôle serveur fixe sysadmin pour pouvoir utiliser la 
     ```
 
 
-##  <a name="RelatedContent"></a> Voir aussi 
+##  <a name="see-also"></a><a name="RelatedContent"></a> Voir aussi 
   
 -   [Objets de configuration de la messagerie de base de données](../../relational-databases/database-mail/database-mail-configuration-objects.md)
 -   [Objets de messagerie de base de données](../../relational-databases/database-mail/database-mail-messaging-objects.md)

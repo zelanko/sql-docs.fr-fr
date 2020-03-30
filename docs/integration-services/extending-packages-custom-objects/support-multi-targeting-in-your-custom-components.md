@@ -11,10 +11,10 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287225"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Prendre en charge le multi-ciblage dans les composants personnalisés
@@ -97,7 +97,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 
-**Message d’erreur.** Impossible d’effectuer un cast d’un objet COM de type ’System.__ComObject’ en type d’interface ’Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100’. Cette opération a échoué, car l’appel QueryInterface sur le composant COM de l’interface portant l’IID « {BE8C48A3-155B-4810-BA5C-BDF68A659E9E} » a échoué en raison de l’erreur suivante : Interface non prise en charge (Exception de HRESULT : 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
+**Message d’erreur.** Impossible d’effectuer un cast d’un objet COM de type ’System.__ComObject’ en type d’interface ’Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100’. Cette opération a échoué car l’appel QueryInterface sur le composant COM pour l’interface avec l’IID ’{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}’ a échoué en raison de l’erreur suivante : interface non prise en charge (Exception de HRESULT : 0 x 80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
 **Solution.** Si votre extension personnalisée fait référence à des assemblys d’interopérabilité SSIS comme Microsoft.SqlServer.DTSPipelineWrap ou Microsoft.SqlServer.DTSRuntimeWrap, définissez la valeur de la propriété **Incorporer les types d’interopérabilité** sur **False**.
 

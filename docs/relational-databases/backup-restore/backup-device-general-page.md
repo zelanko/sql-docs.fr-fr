@@ -13,10 +13,10 @@ ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940825"
 ---
 # <a name="backup-device-general-page"></a>Unité de sauvegarde (page Général)
@@ -58,7 +58,7 @@ ms.locfileid: "67940825"
   
  L'unité physique de sauvegarde correspondant à une unité logique de sauvegarde est initialisée lorsque la première sauvegarde sur support de sauvegarde est écrite sur l'unité logique de sauvegarde. Si l'unité physique de sauvegarde est un fichier qui n'existe pas déjà, il est créé à ce moment-là.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Index columnstore : vue d’ensemble | Microsoft Docs'
+title: 'Index columnstore : vue d’ensemble | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009403"
 ---
-# <a name="columnstore-indexes-overview"></a>Index columnstore : Vue d’ensemble
+# <a name="columnstore-indexes-overview"></a>Index columnstore : vue d’ensemble
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Les index columnstore sont la norme pour le stockage et l’interrogation des tables de faits d’entreposage de données de grande taille. Ils utilisent un stockage de données en colonnes et un traitement des requêtes allant jusqu’à **multiplier par 10 les performances des requêtes** dans l’entrepôt de données par rapport au stockage orienté lignes classique. Vous pouvez également atteindre une **compression de données jusqu’à 10 fois plus importante** que la taille des données non compressées. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], les index columnstore sont compatibles avec l’analytique opérationnelle, qui permet d’exécuter des analyses en temps réel performantes sur une charge de travail transactionnelle.  
@@ -90,7 +90,7 @@ Un index columnstore non cluster est compatible avec l’analytique opérationne
 #### <a name="batch-mode-execution"></a>Exécution en mode batch
 L’exécution en mode batch est une méthode de traitement des requêtes utilisée pour traiter plusieurs lignes ensemble. L’exécution en mode batch est étroitement intégrée au format de stockage columnstore et optimisée pour celui-ci. L’exécution en mode batch est parfois appelée *exécution vectorielle* ou *vectorisée*. Les requêtes sur les index columnstore utilisent l’exécution en mode batch, qui permet généralement de multiplier les performances des requêtes par deux ou quatre. Pour plus d’informations, voir [Guide d’architecture de traitement des requêtes](../query-processing-architecture-guide.md#execution-modes). 
   
-##  <a name="benefits"></a> Pourquoi utiliser un index columnstore ?  
+##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> Pourquoi utiliser un index columnstore ?  
 Un index columnstore peut offrir un niveau très élevé de compression de données (généralement multiplié par 10) afin de réduire de manière significative le coût de stockage de l’entrepôt de données. Pour l’analytique, il présente des performances réellement meilleures que celles d’un index btree. Il s’agit du format de stockage de données de prédilection pour les charges de travail d’entreposage des données et d’analytique. Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez utiliser des index columnstore pour l’analyse en temps réel sur votre charge de travail opérationnelle.  
   
 Voici les raisons pour lesquelles les index columnstore sont si rapides :  

@@ -14,10 +14,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298979"
 ---
 # <a name="package-properties-dialog-box"></a>Propriétés du package, boîte de dialogue
@@ -35,7 +35,7 @@ ms.locfileid: "71298979"
   
 -   [Configurer les options](#options)  
   
-##  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Propriétés du package  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> Ouvrir la boîte de dialogue Propriétés du package  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71298979"
   
 5.  Cliquez avec le bouton droit sur le package, puis sélectionnez **Propriétés**.  
   
-##  <a name="options"></a> Configurer les options  
+##  <a name="configure-the-options"></a><a name="options"></a> Configurer les options  
  Utilisez la page **Général** pour afficher les propriétés du package sélectionné.  
   
  Toutes les propriétés affichées dans la page **Général** sont en lecture seule.  

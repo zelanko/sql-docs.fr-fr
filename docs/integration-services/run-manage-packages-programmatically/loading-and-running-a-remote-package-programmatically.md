@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282167"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Chargement et exécution d'un package distant par programme
@@ -33,7 +33,7 @@ ms.locfileid: "71282167"
   
  Alternativement, vous pouvez exécuter un package distant à partir d'un ordinateur local sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est installé. Pour plus d’informations, consultez [Chargement et exécution d’un package local par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
   
-##  <a name="top"></a> Exécution d’un package distant sur l’ordinateur distant  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> Exécution d’un package distant sur l’ordinateur distant  
  Comme mentionné précédemment, il existe plusieurs manières d'exécuter un package distant sur un serveur distant :  
   
 -   [Utiliser SQL Server Agent pour exécuter le package distant par programmation](#agent)  
@@ -42,7 +42,7 @@ ms.locfileid: "71282167"
   
  Presque toutes les méthodes utilisées dans cette rubrique pour charger et enregistrer des packages nécessitent une référence à l’assembly **Microsoft.SqlServer.ManagedDTS**. L’approche ADO.NET décrite dans cette rubrique pour exécuter la procédure stockée **sp_start_job**, laquelle nécessite uniquement une référence à **System.Data**, constitue la seule exception. Après avoir ajouté la référence à l’assembly **Microsoft.SqlServer.ManagedDTS** dans un nouveau projet, importez l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> avec une instruction **using** ou **Imports**.  
   
-###  <a name="agent"></a> Utilisation de SQL Server Agent pour exécuter par programmation un package distant sur le serveur  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> Utilisation de SQL Server Agent pour exécuter par programmation un package distant sur le serveur  
  L'exemple de code suivant montre comment utiliser par programme l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter un package distant sur le serveur. L’exemple de code appelle la procédure stockée système, **sp_start_job**, qui lance un travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le travail que la procédure lance est nommé `RunSSISPackage`, et ce travail se trouve sur l'ordinateur distant. Le travail `RunSSISPackage` exécute alors le package sur l'ordinateur distant.  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ namespace LaunchSSISPackageAgent_CS
 }  
 ```  
   
-###  <a name="service"></a> Utilisation d’un service web ou d’un composant distant pour exécuter un package distant par programmation  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> Utilisation d’un service web ou d’un composant distant pour exécuter un package distant par programmation  
  La solution précédente pour l'exécution de packages par programme sur le serveur ne requiert pas de code personnalisé sur le serveur. Toutefois, vous pouvez préférer une solution qui ne compte pas sur l'Agent SQL Server pour exécuter des packages. L'exemple suivant présente un service Web qui peut être créé sur le serveur pour démarrer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] localement, ainsi qu'une application de test qui peut être utilisée pour appeler le service Web à partir d'un ordinateur client. Si vous préférez créer un composant distant au lieu d’un service web, vous pouvez utiliser la même logique de code avec très peu de changements dans un composant distant. Toutefois, un composant distant risque de requérir une configuration plus approfondie qu'un service Web.  
   
 > [!IMPORTANT]  

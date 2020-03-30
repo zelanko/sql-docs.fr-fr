@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822255"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de basculement et groupes de disponibilité Always On (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74822255"
 >  Pour plus d’informations sur les concepts [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
   
-##  <a name="WSFC"></a> Clustering de basculement de serveur Windows et groupes de disponibilité  
+##  <a name="windows-server-failover-clustering-and-availability-groups"></a><a name="WSFC"></a> Clustering de basculement de serveur Windows et groupes de disponibilité  
  Le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] exige un cluster de basculement Windows Server (cluster WSFC). Pour que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] soit activé, une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit résider sur un nœud WSFC, et le cluster et le nœud WSFC doivent être en ligne. De plus, chaque réplica de disponibilité d’un groupe de disponibilité donné doit résider sur un nœud différent du même cluster WSFC. La seule exception survient lors de la migration vers un autre cluster WSFC : un groupe de disponibilité peut temporairement chevaucher deux clusters.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] s’appuie sur le cluster WSFC pour superviser et gérer les rôles actuels des réplicas de disponibilité qui appartiennent à un groupe de disponibilité donné et pour déterminer de quelle manière un événement de basculement affecte les réplicas de disponibilité. Un groupe de ressources WSFC est créé pour chaque groupe de disponibilité que vous créez. Le cluster WSFC supervise ce groupe de ressources pour évaluer l’intégrité du réplica principal.  
@@ -49,7 +49,7 @@ ms.locfileid: "74822255"
   
  Pour plus d’informations sur l’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des nœuds WSFC et sur le quorum WSFC, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instances de cluster de basculement et groupes de disponibilité  
+##  <a name="ssnoversion-failover-cluster-instances-fcis-and-availability-groups"></a><a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instances de cluster de basculement et groupes de disponibilité  
  Vous pouvez configurer une deuxième couche de basculement au niveau de l’instance serveur en implémentant une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le cluster WSFC. Un réplica de disponibilité peut être hébergé par une instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou par une instance de cluster de basculement. Un seul partenaire FCI peut héberger un réplica pour un groupe de disponibilité donné. Lorsqu'un réplica de disponibilité s'exécute sur une FCI, la liste des propriétaires possibles pour le groupe de disponibilité contiendra uniquement le nœud FCI actif.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ne dépend d'aucune forme de stockage partagé. Toutefois, si vous utilisez une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour héberger un ou plusieurs réplicas de disponibilité, chacune de ces instances de cluster de basculement requiert un stockage partagé conformément à l'installation standard de l'instance de cluster de basculement SQL Server.  
@@ -97,7 +97,7 @@ ms.locfileid: "74822255"
   
  Pour plus d’informations sur les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-##  <a name="FCMrestrictions"></a> Restrictions d'utilisation du Gestionnaire du cluster de basculement WSFC avec des groupes de disponibilité  
+##  <a name="restrictions-on-using-the-wsfc-failover-cluster-manager-with-availability-groups"></a><a name="FCMrestrictions"></a> Restrictions d'utilisation du Gestionnaire du cluster de basculement WSFC avec des groupes de disponibilité  
  N'utilisez pas le Gestionnaire du cluster de basculement pour manipuler des groupes de disponibilité, par exemple :  
   
 -   N'ajoutez pas ou ne supprimez pas de ressources dans le service cluster (groupe de ressources) du groupe de disponibilité.  
@@ -109,7 +109,7 @@ ms.locfileid: "74822255"
   >[!WARNING]
   > Le fait d’utiliser le Gestionnaire du cluster de basculement pour déplacer une *instance de cluster de basculement* hébergeant un groupe de disponibilité vers un nœud qui héberge *déjà* un réplica du même groupe de disponibilité, peut entraîner la perte du réplica du groupe de disponibilité, l’empêchant ainsi d’être en ligne sur le nœud cible. Un même nœud d’un cluster de basculement ne peut pas héberger plusieurs réplicas du même groupe de disponibilité. Pour plus d’informations à ce sujet et sur la récupération, consultez le blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/). 
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   

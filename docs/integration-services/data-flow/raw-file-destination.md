@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292179"
 ---
 # <a name="raw-file-destination"></a>Destination de fichier brut
@@ -149,13 +149,13 @@ ms.locfileid: "71292179"
   
 -   [Définir les options de l'onglet Colonnes](#mapping)  
   
-###  <a name="open"></a> Ouvrir l'Éditeur de destination de fichier brut  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Ouvrir l'Éditeur de destination de fichier brut  
   
 1.  Ajoutez la destination de fichier brut à un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Cliquez avec le bouton droit sur le composant, puis cliquez sur **Modifier**.  
   
-###  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
  **Mode d’accès**  
  Sélectionnez la façon dont le nom de fichier est spécifié. Sélectionnez **Nom de fichier** pour entrer directement le nom de fichier et le chemin d'accès, ou bien **Nom de fichier à partir d'une variable** pour spécifier une variable qui contient le nom de fichier.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292179"
   
  Lorsque vous cliquez sur **Générer le fichier brut initial**, un message s'affiche. Cliquez sur **OK** pour commencer la création du fichier. Cliquez sur **Annuler** pour sélectionner une autre liste de colonnes sur la page **Colonnes** .  
   
-###  <a name="mapping"></a> Définir les options de l'onglet Colonnes  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Définir les options de l'onglet Colonnes  
  **Colonnes d'entrée disponibles**  
  Sélectionnez une ou plusieurs colonnes d'entrée pour écrire dans le fichier brut.  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292179"
   
 -   [Définir les options de l'onglet Colonnes](#mapping)  
   
-###  <a name="open"></a> Ouvrir l'Éditeur de destination de fichier brut  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Ouvrir l'Éditeur de destination de fichier brut  
   
 1.  Ajoutez la destination de fichier brut à un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Cliquez avec le bouton droit sur le composant, puis cliquez sur **Modifier**.  
   
-###  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
  **Mode d’accès**  
  Sélectionnez la façon dont le nom de fichier est spécifié. Sélectionnez **Nom de fichier** pour entrer directement le nom de fichier et le chemin d'accès, ou bien **Nom de fichier à partir d'une variable** pour spécifier une variable qui contient le nom de fichier.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292179"
   
  Lorsque vous cliquez sur le bouton, la liste des colonnes s'affiche. Vous pouvez cliquer sur Annuler et modifier les colonnes, ou vous pouvez cliquer sur OK pour continuer à créer le fichier.  
   
-###  <a name="mapping"></a> Définir les options de l'onglet Colonnes  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Définir les options de l'onglet Colonnes  
  **Colonnes d'entrée disponibles**  
  Sélectionnez une ou plusieurs colonnes d'entrée pour écrire dans le fichier brut.  
   

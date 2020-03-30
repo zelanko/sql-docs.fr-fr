@@ -11,17 +11,17 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71688289"
 ---
 # <a name="backup-encryption"></a>Chiffrement de sauvegarde
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique fournit une présentation des options de chiffrement pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle contient des informations détaillées sur l'utilisation, les avantages et les méthodes recommandées de chiffrement pendant la sauvegarde.  
 
-## <a name="Overview"></a> Vue d'ensemble  
+## <a name="overview"></a><a name="Overview"></a> Vue d'ensemble  
  À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SQL Server a la possibilité de chiffrer les données lors de la création d'une sauvegarde. En spécifiant l'algorithme de chiffrement et le chiffreur (un certificat ou une clé asymétrique) lors de la création d'une sauvegarde, vous créez un fichier de sauvegarde chiffré. Toutes les destinations de stockage : le stockage local et Windows Azure sont pris en charge. Par ailleurs, les options de chiffrement peuvent être configurées pour les opérations de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , une nouvelle fonctionnalité introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Pour chiffrer pendant la sauvegarde, vous devez spécifier un algorithme de chiffrement, et un chiffreur pour sécuriser la clé de chiffrement. Les options de chiffrement suivantes sont prises en charge :  
@@ -37,7 +37,7 @@ ms.locfileid: "71688289"
   
  Si vous restaurez une sauvegarde d'une base de données chiffrée par chiffrement transparent des données (TDE), le certificat de chiffrement transparent des données doit être disponible sur l'instance sur laquelle vous effectuez la restauration.  
   
-##  <a name="Benefits"></a> Avantages  
+##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
   
 1. Le chiffrement des sauvegardes de base de données vous aide à protéger les données : SQL Server fournit l'option permettant de chiffrer les données de sauvegarde lors de la création d'une sauvegarde.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71688289"
   
 1. Vous pouvez intégrer des clés de chiffrement avec les fournisseurs EKM (Gestion de clés extensible).  
  
-##  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Voici les conditions requises pour chiffrer une sauvegarde :  
   
 1. **Créez une clé principale de base de données pour la base de données master :** la clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Pour plus d’informations, consultez [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "71688289"
     > [!IMPORTANT]  
     >  Seules les clés asymétriques résidant dans la gestion de clés extensible (EKM) sont prises en charge.  
   
-##  <a name="Restrictions"></a> Restrictions  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Restrictions  
  Les restrictions suivantes s'appliquent aux options de chiffrement :  
   
 - Si vous utilisez une clé asymétrique pour chiffrer les données de sauvegarde, seules les clés asymétriques résidant dans le fournisseur EKM sont prises en charge.  
@@ -70,14 +70,14 @@ ms.locfileid: "71688289"
   
 - L'option Ajouter au jeu de sauvegarde existant n'est pas prise en charge pour les sauvegardes chiffrées.  
 
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
 
 Pour chiffrer une sauvegarde ou restaurer à partir d’une sauvegarde chiffrée, utilisez l’autorisation **VIEW DEFINITION** sur le certificat ou la clé asymétrique utilisée pour chiffrer la sauvegarde de la base de données.  
   
 > [!NOTE]  
 > L'accès au certificat de chiffrement transparent des données n'est pas nécessaire pour la sauvegarde ou la restauration d'une base de données protégée par chiffrement transparent des données.  
   
-## <a name="Methods"></a> Méthodes de chiffrement des sauvegardes  
+## <a name="backup-encryption-methods"></a><a name="Methods"></a> Méthodes de chiffrement des sauvegardes  
  Les sections ci-dessous fournissent une brève introduction aux étapes de chiffrement des données pendant la sauvegarde. Pour une procédure pas à pas complète des différentes étapes de chiffrement de votre sauvegarde à l’aide de Transact-SQL, consultez [Créer une sauvegarde chiffrée](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
 ### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
@@ -115,7 +115,7 @@ $encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorTy
 Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDatabase>.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
-##  <a name="RecommendedPractices"></a> Méthodes recommandées  
+##  <a name="recommended-practices"></a><a name="RecommendedPractices"></a> Méthodes recommandées  
  Créez une sauvegarde du certificat de chiffrement et des clés dans un emplacement autre que votre ordinateur local sur lequel est installée l'instance. Pour prendre en compte les scénarios de récupération d'urgence, envisagez de stocker une sauvegarde du certificat ou de la clé dans un emplacement hors site. Vous ne pouvez pas restaurer une sauvegarde chiffrée sans le certificat utilisé pour chiffrer la sauvegarde.  
   
  Pour restaurer une sauvegarde chiffrée, le certificat d'origine utilisé lorsque la sauvegarde a été effectuée avec l'empreinte numérique correspondante doit être disponible sur l'instance sur laquelle vous restaurez. Par conséquent, le certificat ne doit pas être renouvelé à expiration ou être modifié de quelque manière que ce soit. Le renouvellement peut entraîner la mise à jour du certificat et déclencher la modification de l'empreinte numérique, ce qui rend donc le certificat non valide pour le fichier de sauvegarde. Le compte qui effectue la restauration doit disposer des autorisations VIEW DEFINITION sur le certificat ou la clé asymétrique utilisée pour chiffrer pendant la sauvegarde.  
@@ -124,7 +124,7 @@ Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDa
   
  Si la base de données est activée pour le chiffrement transparent des données, sélectionnez différents certificats ou clés asymétriques pour chiffrer la base de données et la sauvegarde afin de renforcer la sécurité.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 |Rubrique/tâche|Description|  
 |-----------------|-----------------|  

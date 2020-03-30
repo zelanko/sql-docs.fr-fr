@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056471"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "74056471"
 > [!NOTE]  
 >  Si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour s'exécuter à l'aide de l'un des comptes de service système (système local, service réseau ou service local) et que l'entrepôt de données de gestion est créé sur une instance différente du collecteur de données, vous devez configurer les jeux d'éléments de collecte de sorte qu'ils utilisent un proxy pour télécharger les données vers l'entrepôt de données de gestion.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurer l'entrepôt de données de gestion sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Configurer l'entrepôt de données de gestion sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Vérifiez que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74056471"
   
 6.  Répétez l'étape 5 jusqu'à ce que toutes les instances de base de données qui utilisent le collecteur de données soient configurées pour télécharger les données vers l'entrepôt de données de gestion partagé.  
 
-####  <a name="Wizard"></a> Assistant Configuration de l'entrepôt de données de gestion  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Assistant Configuration de l'entrepôt de données de gestion  
  **Page d'accueil**  
   
  La page d'accueil est la page de démarrage de l'Assistant Configuration de la collecte de données. L'affichage de cette page est facultatif.  

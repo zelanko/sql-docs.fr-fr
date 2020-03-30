@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295858"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS)
@@ -43,7 +43,7 @@ Les sections suivantes donnent les informations nécessaires pour utiliser effic
     -   Problèmes avec [l’importation](#issues-importing).
     -   Problèmes avec [l’exportation](#issues-exporting).
 
-## <a name="tools"></a> Outils disponibles
+## <a name="tools-you-can-use"></a><a name="tools"></a> Outils disponibles
 
 Vous pouvez utiliser les outils suivants pour importer des données à partir d’Excel ou exporter des données vers Excel avec SSIS :
 
@@ -51,7 +51,7 @@ Vous pouvez utiliser les outils suivants pour importer des données à partir d�
 
 -   **L’Assistant Importation/exportation SQL Server**, basé sur SSIS. Pour plus d’informations, voir [Importer et exporter des données avec l’Assistant Importation/exportation SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) et [Se connecter à une source de données Excel (Assistant Importation/exportation SQL Server)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
-## <a name="files-you-need"></a> Obtenir les fichiers nécessaires pour vous connecter à Excel
+## <a name="get-the-files-you-need-to-connect-to-excel"></a><a name="files-you-need"></a> Obtenir les fichiers nécessaires pour vous connecter à Excel
 
 Avant de pouvoir importer des données à partir d’Excel ou exporter des données vers Excel avec SSIS, vous devrez peut-être télécharger les composants de connectivité pour Excel s’ils n’ont pas été installés. Les composants de connectivité pour Excel ne sont pas installés par défaut.
 
@@ -69,7 +69,7 @@ Téléchargez la dernière version des composants de connectivité pour Excel ic
 
     Si vous ne parvenez pas à installer 2016 Redistribuable, installez 2010 Redistribuable à la place à partir de [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (Il n’y a pas de version Redistribuable pour Excel 2013.)
 
-## <a name="specify-excel"></a> Spécifier Excel comme source de données
+## <a name="specify-excel-as-your-data-source"></a><a name="specify-excel"></a> Spécifier Excel comme source de données
 
 La première étape consiste à indiquer que vous voulez vous connecter à Excel.
 
@@ -87,7 +87,7 @@ Dans l’Assistant Importation et Exportation, dans la page **Choisir une source
 
 Si vous ne voyez pas Excel dans la liste des sources de données, assurez-vous d’utiliser l’Assistant 32 bits. Les composants de connectivité Excel sont généralement des fichiers 32 bits et ne sont pas affichés dans l’Assistant 64 bits.
 
-## <a name="excel-file"></a> Nom et chemin du fichier Excel
+## <a name="excel-file-and-file-path"></a><a name="excel-file"></a> Nom et chemin du fichier Excel
 
 Les premières informations à fournir sont le nom et le chemin du fichier Excel. Entrez cette information dans **l’Éditeur du gestionnaire de connexions Excel** dans un package SSIS, ou dans la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation.
 
@@ -102,7 +102,7 @@ Vous pouvez aussi cliquer sur **Parcourir** pour rechercher la feuille de calcul
 > [!IMPORTANT]
 > Vous ne pouvez pas vous connecter à un fichier Excel protégé par mot de passe.
 
-## <a name="excel-version"></a> Version d’Excel
+## <a name="excel-version"></a><a name="excel-version"></a> Version d’Excel
 
 La deuxième information à fournir est la version du fichier Excel. Entrez cette information dans **l’Éditeur du gestionnaire de connexions Excel** dans un package SSIS, ou dans la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation.
 
@@ -110,7 +110,7 @@ Sélectionnez la version de Microsoft Excel ayant été utilisée pour créer le
 
 Si vous avez uniquement d’anciennes versions des composants de connectivité, vous ne pourrez peut-être pas sélectionner des versions plus récentes d’Excel dans la liste. La liste des **versions Excel** inclut toutes les versions d’Excel prises en charge par SSIS. La présence d’éléments dans cette liste n’implique pas que les composants de connectivité nécessaires sont installés. Par exemple, **Microsoft Excel 2016** apparaît dans la liste même si vous n’avez pas installé les composants de connectivité 2016.
 
-## <a name="first-row"></a> La première ligne contient des noms de colonnes
+## <a name="first-row-has-column-names"></a><a name="first-row"></a> La première ligne contient des noms de colonnes
 
 Si vous importez des données d’Excel, l’étape suivante consiste à indiquer si la première ligne de données contient des noms de colonnes. Spécifiez cette information dans **l’Éditeur du gestionnaire de connexions Excel** dans un package SSIS, ou dans la page **Choisir une source de données** de l’Assistant Importation et Exportation.
 
@@ -120,7 +120,7 @@ Si vous importez des données d’Excel, l’étape suivante consiste à indique
 
 Si vous exportez des données à partir d’Excel et que vous activez cette option, la première ligne de données exportées contient les noms de colonnes.
 
-## <a name="sheets-ranges"></a> Feuilles de calcul et plages
+## <a name="worksheets-and-ranges"></a><a name="sheets-ranges"></a> Feuilles de calcul et plages
 
 Vous pouvez utiliser trois types d’objets Excel comme source ou destination de vos données : une feuille de calcul, une plage nommée ou une plage de cellules sans nom que vous spécifiez par son adresse.
 
@@ -169,7 +169,7 @@ Une fois que vous avez sélectionné ou entré les objets Excel à importer ou e
 
 -   Affichez un aperçu des exemples de données pour vous assurer que le résultat est conforme à vos attentes, en sélectionnant **Aperçu**.
 
-## <a name="issues-types"></a>Problèmes avec les types de données
+## <a name="issues-with-data-types"></a><a name="issues-types"></a>Problèmes avec les types de données
 
 ### <a name="data-types"></a>Types de données
 
@@ -202,7 +202,7 @@ Voici des exemples de conversions susceptibles d’être nécessaires :
 > [!TIP]
 > Si vous utilisez l’Assistant Importation et Exportation et que vos données nécessitent certaines de ces conversions, l’Assistant configure automatiquement les conversions nécessaires. Aussi, même si vous souhaitez utiliser un package SSIS, il peut être utile de créer le package initial à l’aide de l’Assistant Importation et Exportation. Laissez l’Assistant créer et configurer automatiquement les gestionnaires de connexions, les sources, les transformations et les destinations.
 
-## <a name="issues-importing"></a> Problèmes avec l’importation
+## <a name="issues-with-importing"></a><a name="issues-importing"></a> Problèmes avec l’importation
 
 ### <a name="empty-rows"></a>Lignes vides
 
@@ -232,7 +232,7 @@ Pour importer des données d’une colonne de type mémo sans troncation, vous a
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-exporting"></a> Problèmes avec l’exportation
+## <a name="issues-with-exporting"></a><a name="issues-exporting"></a> Problèmes avec l’exportation
 
 ### <a name="create-a-new-destination-file"></a>Créer un fichier de destination
 

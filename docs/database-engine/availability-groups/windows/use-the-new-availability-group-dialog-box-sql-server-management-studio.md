@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821954"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "74821954"
 >  Pour plus d’informations sur les autres manières de créer un groupe de disponibilité, consultez [Tâches associées](#RelatedTasks)plus loin dans cette rubrique.  
   
   
-##  <a name="PrerequisitesRestrictions"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> Conditions préalables  
   
 -   Avant de créer un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité résident sur des nœuds WSFC (Windows Server Failover Clustering) différents au sein du même clustering de basculement WSFC. Vérifiez également que chaque instance du serveur est activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et répond à toutes les autres conditions requises relatives à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74821954"
   
 -   Pour utiliser la boîte de dialogue **Nouveau groupe de disponibilité** , vous devez connaître les noms des instances de serveur qui hébergeront les réplicas de disponibilité. De plus, vous devez connaître les noms de toutes les bases de données que vous envisagez d’ajouter à votre nouveau groupe de disponibilité, et vous devez vérifier que ces bases de données respectent les conditions préalables requises et les restrictions de base de données de disponibilité décrites dans [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Si vous entrez des valeurs non valides, le nouveau groupe de disponibilité ne fonctionnera pas.  
   
-## <a name="Limitations"></a> Limitations  
+## <a name="limitations"></a><a name="Limitations"></a> Limitations  
  La boîte de dialogue **Nouveau groupe de disponibilité** ne permet pas d'effectuer les opérations suivantes :  
   
 -   Créez un écouteur de groupe de disponibilité.    
@@ -47,10 +47,10 @@ ms.locfileid: "74821954"
   
  Pour plus d'informations sur ces tâches de configuration, consultez [Suivi : Après la création d'un groupe de disponibilité](#FollowUp), plus loin dans cette rubrique.  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)  
+##  <a name="using-the-new-availability-group-dialog-box-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)  
  **Pour créer un groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et cliquez sur le nom du serveur.  
@@ -76,7 +76,7 @@ ms.locfileid: "74821954"
   
      Pour quitter la boîte de dialogue sans créer le groupe de disponibilité, cliquez sur **Annuler**.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> Suivi : Après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité  
   
 -   Vous devez vous connecter en retour à chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité et procéder comme suit :  
   
@@ -88,7 +88,7 @@ ms.locfileid: "74821954"
   
 -   Il est recommandé de créer un écouteur de groupe de disponibilité pour le nouveau groupe de disponibilité. Pour celà, vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel. Pour plus d'informations, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer les propriétés du groupe de disponibilité et du réplica**  
   
 -   [Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -147,7 +147,7 @@ ms.locfileid: "74821954"
   
 -   [Résoudre une opération d’ajout de fichier ayant échoué &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

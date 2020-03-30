@@ -18,10 +18,10 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991730"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Types de connexions clientes aux réplicas dans un groupe de disponibilité Always On
@@ -35,7 +35,7 @@ ms.locfileid: "67991730"
 > [!NOTE]  
 >  Pour plus d’informations sur l’écouteur de groupe de disponibilité, qui traite les demandes de connexion des clients, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="ConnectAccessForSecondary"></a> Types d'accès à la connexion pris en charge par le rôle secondaire  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> Types d'accès à la connexion pris en charge par le rôle secondaire  
  Le rôle secondaire prend en charge trois méthodes pour les connexions clientes, comme suit :  
   
  Aucune connexion  
@@ -51,7 +51,7 @@ ms.locfileid: "67991730"
   
  Pour plus d’informations, consultez [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="ConnectAccessForPrimary"></a> Types d'accès à la connexion pris en charge par le rôle principal  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> Types d'accès à la connexion pris en charge par le rôle principal  
  Le rôle principal prend en charge deux méthodes pour les connexions clientes, comme suit :  
   
  Toutes les connexions sont autorisées  
@@ -64,7 +64,7 @@ ms.locfileid: "67991730"
   
  Pour plus d’informations, consultez [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> Comment la configuration d'accès à la connexion affecte la connectivité client  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> Comment la configuration d'accès à la connexion affecte la connectivité client  
  Les paramètres d'accès à la connexion d'un réplica déterminent si une tentative de connexion échoue ou réussit. Le tableau suivant récapitule si une tentative de connexion donnée réussit ou échoue pour chaque paramètre d'accès à la connexion.  
   
 |Rôle du réplica|Accès à la connexion pris en charge sur le réplica|Intention de connexion|Résultat de la tentative de connexion|  
@@ -93,7 +93,7 @@ ms.locfileid: "67991730"
   
  En général, dans ce scénario d'exemple, les basculements se produisent uniquement entre les réplicas avec validation synchrone, et immédiatement après le basculement, les applications avec intention de lecture peuvent se reconnecter à l'un des réplicas secondaires avec validation asynchrone. Toutefois, lorsqu'un incident se produit au centre de calcul principal, les deux réplicas avec validation synchrone sont perdus. L'administrateur de base de données sur le site satellite répond en effectuant un basculement manuel forcé vers un réplica secondaire avec validation asynchrone. Les bases de données secondaires sur le réplica secondaire restant sont interrompues par le basculement forcé, ce qui les rend indisponibles pour les charges de travail en lecture seule. Le nouveau réplica principal, qui est configuré pour les connexions en lecture-écriture, empêche la charge de travail avec intention de lecture de concurrencer la charge de travail en lecture-écriture. Cela signifie que tant que l'administrateur de base de données n'a pas repris les bases de données secondaires sur le réplica secondaire restant avec validation asynchrone, les clients avec intention de lecture ne peuvent se connecter à aucun réplica de disponibilité.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67991730"
   
 -   [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

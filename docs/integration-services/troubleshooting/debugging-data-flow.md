@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295117"
 ---
 # <a name="debugging-data-flow"></a>Débogage d'un flux de données
@@ -183,7 +183,7 @@ order by source_component_name desc
   
 8.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
 
-## <a name="add_viewer"></a> Ajouter une visionneuse de données à un flux de données
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> Ajouter une visionneuse de données à un flux de données
   Cette rubrique explique comment ajouter et configurer une visionneuse de données dans un flux de données. Une visionneuse de données affiche des données déplacées entre deux composants de flux de données Par exemple, une visionneuse de données peut afficher les données extraites d'une source de données avant qu'une transformation dans le flux de données modifie les données.  
   
  Un chemin d'accès connecte des composants d'un flux de données en reliant la sortie d'un composant à l'entrée d'un autre composant.  

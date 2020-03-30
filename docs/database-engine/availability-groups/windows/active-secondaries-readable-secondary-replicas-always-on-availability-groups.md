@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822403"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Décharger une charge de travail en lecture seule vers un réplica secondaire d’un groupe de disponibilité Always On
@@ -36,7 +36,7 @@ ms.locfileid: "74822403"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend également en charge le reroutage des demandes de connexion de tentative de lecture sur un réplica secondaire accessible en lecture (*routage en lecture seule*). Pour plus d’informations sur le routage en lecture seule, consultez [Utilisation d’un écouteur pour se connecter à un réplica secondaire en lecture seule (routage en lecture seule)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
   
-##  <a name="bkmk_Benefits"></a> Avantages  
+##  <a name="benefits"></a><a name="bkmk_Benefits"></a> Avantages  
  La direction des connexions en lecture seule vers les réplicas secondaires accessibles en lecture offre les avantages suivants :  
   
 -   Décharge vos charges de travail en lecture seule secondaires de votre réplica principal, qui conserve ses ressources pour vos charges de travail critiques. Si vous avez une charge de travail en lecture critique ou si la charge de travail ne tolère aucune latence, vous pouvez l'exécuter sur le réplica principal.  
@@ -53,7 +53,7 @@ ms.locfileid: "74822403"
   
 -   Les opérations DML sont autorisées sur les variables de table pour les types de tables sur disque et optimisées en mémoire sur le réplica secondaire.  
   
-##  <a name="bkmk_Prerequisites"></a> Conditions préalables requises pour le groupe de disponibilité  
+##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a> Conditions préalables requises pour le groupe de disponibilité  
   
 -   **Accès en lecture aux réplicas secondaires (requis)**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "74822403"
 > [!NOTE]  
 >  Pour plus d’informations sur les écouteurs de groupe de disponibilité et sur le routage en lecture seule, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="bkmk_LimitationsRestrictions"></a> Limitations et restrictions  
+##  <a name="limitations-and-restrictions"></a><a name="bkmk_LimitationsRestrictions"></a> Limitations et restrictions  
  Certaines opérations ne sont pas entièrement prises en charge, comme expliqué ci-après :  
   
 -   Dès qu'un réplica accessible en lecture est activé en lecture, il peut commencer à accepter des connexions à ses bases de données secondaires. Toutefois, si des transactions sont actives sur une base de données primaire, les versions de ligne ne sont pas entièrement disponibles sur la base de données secondaire correspondante. Toutes les transactions actives qui existaient sur le réplica principal lorsque le réplica secondaire a été configuré doivent être validées ou restaurées. Tant que ce processus n'est pas terminé, le mappage du niveau d'isolement de la transaction sur la base de données secondaire est incomplet et les requêtes sont temporairement bloquées.  
@@ -109,7 +109,7 @@ ms.locfileid: "74822403"
 > [!NOTE]  
 >  Si vous interrogez la vue de gestion dynamique [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) sur une instance de serveur qui héberge un réplica secondaire accessible en lecture, vous pouvez rencontrer un problème de blocage REDO. Ce problème est dû au fait que la vue de gestion dynamique acquiert un verrou IS sur la table ou la vue utilisateur spécifiée qui peut bloquer les demandes d'un thread de phase de restauration par progression concernant un verrou X sur la table ou vue utilisateur en question.  
   
-##  <a name="bkmk_Performance"></a> Considérations relatives aux performances  
+##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a> Considérations relatives aux performances  
  Cette section présente plusieurs considérations relatives aux performances des bases de données secondaires accessibles en lecture  
   
  **Dans cette section :**  
@@ -122,17 +122,17 @@ ms.locfileid: "74822403"
   
 -   [Statistiques des bases de données d’accès en lecture seule](#Read-OnlyStats)  
   
-###  <a name="DataLatency"></a> Latence des données  
+###  <a name="data-latency"></a><a name="DataLatency"></a> Latence des données  
  L'implémentation de l'accès en lecture seule aux réplicas secondaires est utile si vos charges de travail en lecture seule peuvent tolérer une certaine latence des données. Dans les situations où la latence des données est inacceptable, envisagez d'exécuter les charges de travail en lecture seule sur le réplica principal.  
   
  Le réplica principal envoie les enregistrements du journal des modifications sur la base de données primaire aux réplicas secondaires. Sur chaque base de données secondaire, un thread de phase de restauration par progression (REDO) dédié applique les enregistrements de journal. Sur une base de données secondaire accessible en lecture, une modification de données n'apparaît pas dans les résultats de la requête tant que l'enregistrement du journal qui contient la modification n'a pas été appliqué à la base de données secondaire et que la transaction n'a pas été validée sur la base de données primaire.  
   
  Cela signifie qu'il y a une certaine latence, en général de quelques secondes, entre les réplicas principal et secondaire. Dans des cas exceptionnels, toutefois, par exemple si des problèmes réseau réduisent le débit, la latence peut devenir importante. La latence augmente en cas de survenue de goulots d'étranglement d'E/S et lorsque le déplacement des données est suspendu. Pour surveiller le déplacement des données suspendu, utilisez le [Tableau de bord Always On](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou la vue de gestion dynamique [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
-####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latence des données sur des bases de données avec des tables optimisées en mémoire  
+####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Latence des données sur des bases de données avec des tables optimisées en mémoire  
  Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], la latence des données sur les secondaires actifs faisait l’objet de considérations spéciales. consultez [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secondaires actifs : réplicas secondaires accessibles en lecture](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , la latence des données ne fait plus l’objet de considérations spéciales pour les tables optimisées en mémoire. La latence des données attendue pour les tables optimisées en mémoire est comparable à celle des tables sur disque.  
   
-###  <a name="ReadOnlyWorkloadImpact"></a> Impact d'une charge de travail en lecture seule  
+###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Impact d'une charge de travail en lecture seule  
  Lorsque vous configurez un réplica secondaire pour l'accès en lecture seule, vos charges de travail en lecture seule sur les bases de données secondaires consomment des ressources système, telles que le processeur et les E/S (pour les tables sur disque) des threads de phase de restauration par progression, surtout si les charges de travail en lecture seule sur les tables sur disque nécessitent de nombreuses E/S. Aucun impact n'est à constater sur les E/S lors de l'accès aux tables optimisées en mémoire, car toutes les lignes résident en mémoire.  
   
  En outre, les charges de travail en lecture seule sur les réplicas secondaires peuvent bloquer les modifications du langage de définition de données (DDL) qui sont appliquées par les enregistrements du journal.  
@@ -146,12 +146,12 @@ ms.locfileid: "74822403"
 > [!NOTE]  
 >  Si un thread de restauration par progression est bloqué par des requêtes sur un réplica secondaire, le XEvent **sqlserver.lock_redo_blocked** est déclenché.  
   
-###  <a name="bkmk_Indexing"></a> Indexation  
+###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indexation  
  Pour optimiser les charges de travail en lecture seule sur les réplicas secondaires accessibles en lecture, vous pouvez créer des index sur les tables des bases de données secondaires. Étant donné que vous ne pouvez pas modifier le schéma ou les données des bases de données secondaires, créez des index dans les bases de données primaires et autorisez le transfert des modifications sur la base de données secondaire par le biais du processus de restauration par progression.  
   
  Pour surveiller l’utilisation des index sur un réplica secondaire, interrogez les colonnes **user_seeks**, **user_scans**et **user_lookups** de la vue de gestion dynamique [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
   
-###  <a name="Read-OnlyStats"></a> Statistiques des bases de données d’accès en lecture seule  
+###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> Statistiques des bases de données d’accès en lecture seule  
  Les statistiques sur les colonnes des tables et des vues indexées permettent d'optimiser les plans de requête. Pour les groupes de disponibilité, des statistiques créées et conservées sur les bases de données primaires sont automatiquement rendues persistantes sur les bases de données secondaires dans le cadre de l'application des enregistrements du journal des transactions. Toutefois, la charge de travail en lecture seule sur les bases de données secondaires peut avoir besoin de statistiques différentes de celles créées sur les bases de données primaires. En outre, étant donné que les bases de données secondaires sont limitées à l'accès en lecture seule, les statistiques ne peuvent pas être créées sur les bases de données secondaires.  
   
  Pour résoudre ce problème, le réplica secondaire crée et conserve les statistiques temporaires pour les bases de données secondaires dans **tempdb**. Le suffixe _readonly_database_statistic est ajouté au nom des statistiques temporaires pour les différencier des statistiques permanentes qui sont conservées à partir de la base de données primaire.  
@@ -172,20 +172,20 @@ ms.locfileid: "74822403"
   
 -   [Limitations et restrictions](#StatsLimitationsRestrictions)  
   
-####  <a name="StalePermStats"></a> Statistiques permanentes obsolètes sur les bases de données secondaires  
+####  <a name="stale-permanent-statistics-on-secondary-databases"></a><a name="StalePermStats"></a> Statistiques permanentes obsolètes sur les bases de données secondaires  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] détecte si les statistiques permanentes sur une base de données secondaire sont obsolètes. Or, il n'est pas possible d'apporter des modifications aux statistiques permanentes, sauf en modifiant la base de données primaire. Pour l'optimisation des requêtes, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée des statistiques temporaires pour les tables sur disque sur la base de données secondaire et les utilise en remplacement des statistiques permanentes obsolètes.  
   
  Lorsque les statistiques permanentes sont mises à jour sur la base de données primaire, elles sont automatiquement conservées dans la base de données secondaire. Ensuite, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise les statistiques permanentes mises à jour, qui sont plus récentes que les statistiques temporaires.  
   
  Si le groupe de disponibilité bascule, les statistiques temporaires sont supprimées sur tous les réplicas secondaires.  
   
-####  <a name="StatsLimitationsRestrictions"></a> Limitations et restrictions  
+####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> Limitations et restrictions  
   
 -   Étant donné que les statistiques temporaires sont stockées dans **tempdb**, un redémarrage du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoque la disparition de toutes les statistiques temporaires.  
   
 -   Le suffixe _readonly_database_statistic est réservé aux statistiques générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous ne pouvez pas utiliser ce suffixe lorsque vous créez des statistiques sur une base de données primaire. Pour plus d’informations, consultez [Statistiques](../../../relational-databases/statistics/statistics.md).  
   
-##  <a name="bkmk_AccessInMemTables"></a> Accès aux tables optimisées en mémoire sur un réplica secondaire  
+##  <a name="accessing-memory-optimized-tables-on-a-secondary-replica"></a><a name="bkmk_AccessInMemTables"></a> Accès aux tables optimisées en mémoire sur un réplica secondaire  
  Les niveaux d’isolation de la transaction qui peuvent être utilisés avec des tables optimisées en mémoire sur un réplica secondaire sont les mêmes que sur le réplica principal. Il est recommandé de définir le niveau d’isolation au niveau de la session sur READ COMMITTED et de définir l’option au niveau de la base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT sur ON. Par exemple :  
   
 ```sql  
@@ -199,7 +199,7 @@ GO
   
 ```  
   
-##  <a name="bkmk_CapacityPlanning"></a> Considérations relatives à la planification des capacités  
+##  <a name="capacity-planning-considerations"></a><a name="bkmk_CapacityPlanning"></a> Considérations relatives à la planification des capacités  
   
 -   Dans le cas de tables sur disque, les réplicas secondaires accessibles en lecture peuvent nécessiter de l’espace dans **tempdb** pour deux raisons :  
   
@@ -220,7 +220,7 @@ GO
     |Oui|Non|Aucune version de ligne, mais surcharge de 14 octets|Versions de ligne et surcharge de 14 octets|  
     |Oui|Oui|Versions de ligne et surcharge de 14 octets|Versions de ligne et surcharge de 14 octets|  
   
-##  <a name="bkmk_RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_RelatedTasks"></a> Tâches associées  
   
 -   [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -234,7 +234,7 @@ GO
   
 -   [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

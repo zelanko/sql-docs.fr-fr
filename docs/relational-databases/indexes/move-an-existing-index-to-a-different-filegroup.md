@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906379"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Déplacer un index existant dans un autre groupe de fichiers
@@ -42,20 +42,20 @@ ms.locfileid: "72906379"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Si une table possède un index cluster, le déplacement de celui-ci vers un nouveau groupe de fichiers entraîne le déplacement de la table vers ce groupe de fichiers.  
   
 -   Vous ne pouvez pas déplacer des index créés à l'aide de la contrainte UNIQUE ou PRIMARY KEY en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour déplacer ces index, utilisez l’instruction [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) avec l’option (DROP_EXISTING=ON) dans [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Pour placer un index existant dans un autre groupe de fichiers à l'aide du Concepteur de tables  
   
@@ -143,7 +143,7 @@ ms.locfileid: "72906379"
 > [!NOTE]  
 >  Si une valeur supérieure au nombre d'UC disponibles est spécifiée, le nombre réel d'UC est utilisé.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Pour placer un index existant dans un autre groupe de fichiers  
   

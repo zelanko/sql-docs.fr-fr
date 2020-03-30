@@ -17,10 +17,10 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165529"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Ouvrir le moniteur d’activité dans SSMS (SQL Server Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "74165529"
  Le Moniteur d'activité exécute des requêtes sur l'instance analysée afin d'obtenir des informations pour ses volets d'informations. Si l'intervalle d'actualisation est défini sur une valeur inférieure à 10 secondes, le temps nécessaire à l'exécution de ces requêtes peut affecter les performances du serveur.  
   
   
-##  <a name="Permissions"></a> Vérifier les autorisations dont vous bénéficiez  
+##  <a name="check-your-permissions"></a><a name="Permissions"></a> Vérifier les autorisations dont vous bénéficiez  
  Pour afficher l’activité courante, vous devez avoir l’autorisation VIEW SERVER STATE. Pour afficher la section E/S du fichier de données du Moniteur d'activité, vous devez disposer de l'autorisation CREATE DATABASE, ALTER ANY DATABASE ou VIEW ANY DEFINITION en plus de VIEW SERVER STATE.  
   
  Pour pouvoir mettre fin (KILL) à un processus, un utilisateur doit être membre des rôles serveur fixe sysadmin ou processadmin.  

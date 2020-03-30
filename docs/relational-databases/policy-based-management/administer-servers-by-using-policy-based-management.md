@@ -22,10 +22,10 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831804"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
@@ -48,7 +48,7 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
   
  Pour les stratégies qui échouent, l'Explorateur d'objets indique un état critique sous forme d'icône rouge à côté de la cible et des nœuds situés plus hauts dans l'arborescence de l'Explorateur d'objets.  
   
-> **REMARQUE :** Lorsque le système calcule le jeu d'objets pour une stratégie, les objets système sont exclus par défaut.  Par exemple, si le jeu d'objets de la stratégie fait référence à toutes les tables, la stratégie ne s'applique pas aux tables système. Si les utilisateurs souhaitent évaluer une stratégie sur les objets système, ils peuvent les ajouter explicitement au jeu d'objets. Toutefois, bien que toutes les stratégies soient prises en charge pour le mode d'évaluation **vérifier la planification** , pour des raisons de performances, toutes les stratégies comportant des jeux d'objets arbitraires ne sont pas prises en charge pour le mode d'évaluation **vérifier la planification** . Pour plus d’informations, consultez [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **REMARQUE :** lorsque le système calcule le jeu d’objets pour une stratégie, les objets système sont exclus par défaut.  Par exemple, si le jeu d'objets de la stratégie fait référence à toutes les tables, la stratégie ne s'applique pas aux tables système. Si les utilisateurs souhaitent évaluer une stratégie sur les objets système, ils peuvent les ajouter explicitement au jeu d'objets. Toutefois, bien que toutes les stratégies soient prises en charge pour le mode d'évaluation **vérifier la planification** , pour des raisons de performances, toutes les stratégies comportant des jeux d'objets arbitraires ne sont pas prises en charge pour le mode d'évaluation **vérifier la planification** . Pour plus d’informations, consultez [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="three-policy-based-management-components"></a>Trois composants de la Gestion basée sur des stratégies  
  La Gestion basée sur des stratégies a trois composants :  
@@ -117,6 +117,6 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
 
 ## <a name="see-also"></a>Voir aussi  
  
- - [Tutoriel : Créer et appliquer une stratégie Désactivé par défaut](lesson-1-create-and-apply-an-off-by-default-policy.md)
- - [Tutoriel : Créer et appliquer une stratégie de standards de nommage](lesson-2-create-and-apply-a-naming-standards-policy.md)
+ - [Tutoriel : Créer et appliquer une stratégie désactivée par défaut](lesson-1-create-and-apply-an-off-by-default-policy.md)
+ - [Tutoriel : Créer et appliquer une stratégie de standards de nommage](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  

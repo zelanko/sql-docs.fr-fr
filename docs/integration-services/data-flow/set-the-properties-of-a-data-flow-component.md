@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291834"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Définir les propriétés d’un composant de flux de données
@@ -122,7 +122,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
 -   [Colonnes de sortie](#outputcolumns)  
   
  
-###  <a name="components"></a> Component properties  
+###  <a name="component-properties"></a><a name="components"></a> Component properties  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
  Le tableau suivant décrit les propriétés des composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -142,7 +142,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
 |ValidateExternalMetadata|Boolean|Indique si les métadonnées des colonnes externes sont validées. La valeur par défaut de cette propriété est **True**.|  
 |Version|Integer|Version d'un composant.|  
   
-###  <a name="inputs"></a> Propriétés des entrées  
+###  <a name="input-properties"></a><a name="inputs"></a> Propriétés des entrées  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les transformations et destinations ont des sorties. Une entrée d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  Le tableau suivant décrit les propriétés des entrées de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -162,7 +162,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
   
  Les destinations et certaines transformations ne prennent pas en charge les sorties d’erreur, et les propriétés ErrorRowDisposition et TruncationRowDisposition de ces composants sont en lecture seule.  
   
-###  <a name="inputcolumns"></a> Propriétés des colonnes d’entrée  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a> Propriétés des colonnes d’entrée  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une entrée contient une collection de colonnes d'entrée. Une colonne d'entrée d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  Le tableau suivant décrit les propriétés des colonnes d'entrée de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -186,7 +186,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
   
  Les propriétés de type de données des colonnes d'entrée sont également décrites sous « Propriétés du type de données ».  
   
-###  <a name="outputs"></a> Propriétés des sorties  
+###  <a name="output-properties"></a><a name="outputs"></a> Propriétés des sorties  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les sources et les transformations ont des sorties. Une sortie d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  Le tableau suivant décrit les propriétés des sorties de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -207,7 +207,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
 |SynchronousInputID|Integer|ID d'une entrée synchrone avec la sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont **Fail component**, **Ignore failure**et **Redirect row**.|  
   
-###  <a name="outputcolumns"></a> Propriétés des colonnes de sortie  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a> Propriétés des colonnes de sortie  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une sortie contient une collection de colonnes de sortie. Une colonne de sortie d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Le tableau suivant décrit les propriétés des colonnes de sortie de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  

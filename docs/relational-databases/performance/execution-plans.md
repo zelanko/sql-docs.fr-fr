@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256926"
 ---
 # <a name="execution-plans"></a>Plans d’exécution
@@ -41,7 +41,7 @@ Un plan d'exécution de requête permet de définir :
   Il existe également différentes méthodes d'accès aux données dans chaque table. Si seules quelques lignes ayant des valeurs de clés spécifiques sont nécessaires, le serveur de base de données peut utiliser un index. Si toutes les lignes de la table sont nécessaires, le serveur de base de données peut ignorer les index et procéder à une analyse de la table. Si toutes les lignes de la table sont nécessaires mais qu’il existe un index dont les colonnes clés se trouvent dans une clause `ORDER BY`, l’analyse d’index plutôt que l’analyse de table peut éviter un tri séparé du jeu de résultats. Dans le cas d'une table très petite, les analyses de table peuvent s'avérer plus efficaces pour quasiment tous les accès à la table.
   
 - **Les méthodes utilisées pour effectuer les calculs, et filtrer, agréger et trier les données des différentes tables.**  
-  Il existe différentes méthodes permettant d’effectuer des calculs sur les données des tables (par exemple, calculer les valeurs scalaires), d’agréger et de trier les données comme le définit le texte de la requête (par exemple, en utilisant une clause `GROUP BY` ou `ORDER BY`) et de filtrer les données (par exemple, en utilisant une clause `WHERE` ou `HAVING`).
+  À mesure que les données sont consultées à partir des tables, différentes méthodes permettent d’effectuer des calculs sur les données, par exemple calculer des valeurs scalaires, et agréger et trier les données comme défini dans le texte de la requête, par exemple en utilisant une clause `GROUP BY` ou `ORDER BY`, et filtrer les données, par exemple en utilisant une clause `WHERE` ou `HAVING`.
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose trois options pour afficher les plans d’exécution :        

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908106"
 ---
 # <a name="create-filtered-indexes"></a>Créer des index filtrés
@@ -59,15 +59,15 @@ ms.locfileid: "72908106"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Design"></a> Remarques sur la conception  
+###  <a name="design-considerations"></a><a name="Design"></a> Remarques sur la conception  
   
 -   Lorsqu'une colonne contient seulement un petit nombre de valeurs pertinentes pour les requêtes, vous pouvez créer un index filtré sur ce sous-ensemble de valeurs. Ainsi, lorsque les valeurs d'une colonne sont principalement NULL et que la requête effectue uniquement des sélections dans les valeurs non NULL, vous pouvez créer un index filtré pour les lignes de données non NULL. L'index ainsi créé sera plus petit et coûtera moins cher en maintenance qu'un index non cluster de table entière défini sur les mêmes colonnes clés.  
   
 -   Lorsqu'une table contient des lignes des données hétérogènes, vous pouvez créer un index filtré pour une ou plusieurs catégories de données. Ceci peut améliorer les performances des requêtes sur ces lignes de données en limitant la portée d'une requête à une région spécifique de la table. En outre, l'index ainsi créé sera plus petit et coûtera moins cher en maintenance qu'un index non cluster de table entière.  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous ne pouvez pas créer un index filtré sur une vue. Toutefois, l'optimiseur de requête peut tirer parti d'un index filtré défini sur une table référencée dans une vue. L'optimiseur de requête prend en considération un index filtré pour une requête qui effectue des sélections dans une vue si les résultats de la requête sont corrects.
 
@@ -97,12 +97,12 @@ ms.locfileid: "72908106"
 
 - Passez en revue les options SET nécessaires pour la création d’index filtré dans la syntaxe de [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** . Pour modifier l'expression d'index filtré, utilisez CREATE INDEX WITH DROP_EXISTING.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>Pour créer un index filtré  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72908106"
   
 10. Cliquez sur **OK**.  
 
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Pour créer un index filtré  
   

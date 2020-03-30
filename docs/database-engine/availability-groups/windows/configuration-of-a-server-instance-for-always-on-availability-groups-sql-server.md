@@ -14,10 +14,10 @@ ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 94f3a9b92e05983ff9e2a10473a171069acf9a77
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67988551"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>Activer la fonctionnalité de groupe de disponibilité Always On pour une instance de SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "67988551"
 > [!IMPORTANT]  
 >  Pour obtenir des informations de base sur la configuration requise pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les restrictions pour les nœuds de clustering de basculement Windows Server (WSFC) et pour les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
    
-##  <a name="TermsAndDefinitions"></a> Termes et définitions  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termes et définitions  
  [Groupes de disponibilité AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  Solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données. Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent de concert.  
   
@@ -38,14 +38,14 @@ ms.locfileid: "67988551"
  [point de terminaison de mise en miroir de bases de données](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  Un point de terminaison est un objet SQL Server qui permet à SQL Server de communiquer sur le réseau. Pour participer à la mise en miroir de bases de données et/ou à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , une instance de serveur requiert un point de terminaison spécial et dédié. Toutes les connexions de groupe de disponibilité et de mise en miroir sur une instance de serveur utilisent le même point de terminaison de mise en miroir de bases de données. Ce point de terminaison a un objectif spécifique et permet exclusivement de recevoir ces connexions provenant d'autres instances de serveur.  
   
-##  <a name="ConfigSI"></a> Pour configurer une instance de serveur pour la prise en charge des groupes de disponibilité Always On  
+##  <a name="to-configure-a-server-instance-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Pour configurer une instance de serveur pour la prise en charge des groupes de disponibilité Always On  
  Pour prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], une instance de serveur doit résider sur un nœud dans le cluster de basculement WSFC qui héberge le groupe de disponibilité, être compatible avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et posséder un point de terminaison pour la mise en miroir de bases de données.  
   
 1.  Activez la fonctionnalité Groupes de disponibilité Always On sur chaque instance de serveur devant participer à un ou plusieurs groupes de disponibilité. Une instance de serveur donnée peut héberger un seul réplica de disponibilité pour un groupe de disponibilité donné.  
   
 2.  Veillez à ce que l'instance de serveur possède un point de terminaison de mise en miroir de bases de données.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour activer les groupes de disponibilité Always On**  
   
 -   [Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "67988551"
   
 -   [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   
