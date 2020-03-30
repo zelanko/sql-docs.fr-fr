@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123748"
 ---
 # <a name="create-foreign-key-relationships"></a>Créer des relations de clé étrangère
@@ -26,7 +26,7 @@ ms.locfileid: "68123748"
 
 Cet article explique comment créer des relations de clé étrangère dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous créez une relation entre deux tables lorsque vous voulez associer des lignes d'une table à des lignes appartenant à une autre table.
 
-## <a name="BeforeYouBegin"></a> Avant de commencer ! Limites et restrictions
+## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> Avant de commencer ! Limites et restrictions
 
 - Une contrainte de clé étrangère ne doit pas forcément être liée seulement à une contrainte de clé primaire d'une autre table. Elle peut également être définie pour référencer les colonnes d'une contrainte UNIQUE d'une autre table.
 - Lorsqu'une valeur différente de NULL est entrée dans la colonne d'une contrainte FOREIGN KEY, la valeur doit exister dans la colonne référencée. Dans le cas contraire, le système retourne un message d'erreur signalant une violation de clé étrangère. Pour vous assurer que toutes les valeurs d'une contrainte de clé étrangère composite sont vérifiées, spécifiez NOT NULL pour toutes les colonnes participant à la contrainte.

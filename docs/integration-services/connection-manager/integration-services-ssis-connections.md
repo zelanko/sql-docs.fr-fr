@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112271"
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
@@ -144,13 +144,13 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   Les deux versions du fournisseur ont le même ID. Pour spécifier si l’exécution de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise une version 64 bits disponible du fournisseur, vous devez définir la propriété Run64BitRuntime du projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si la propriété Run64BitRuntime a la valeur **true**, l’exécution trouve le fournisseur 64 bits et l’utilise ; si Run64BitRuntime a la valeur **false**, l’exécution trouve et utilise le fournisseur 32 bits. Pour plus d’informations sur les propriétés que vous pouvez définir sur les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Integration Services (SSIS) et environnements de Studio](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Ajouter un gestionnaire de connexions
-###  <a name="wizard"></a> Ajouter un gestionnaire de connexions lors de la création d’un package  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Ajouter un gestionnaire de connexions lors de la création d’un package  
   
 -   Utiliser l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      En plus de créer et configurer un gestionnaire de connexions, cet Assistant vous aide également à créer et configurer les sources et destinations qui utilisent le gestionnaire de connexions. Pour plus d'informations, consultez [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a> Ajouter un gestionnaire de connexions à un package existant  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> Ajouter un gestionnaire de connexions à un package existant  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -194,7 +194,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer l’élément sélectionné** dans le menu **Fichier** .  
   
-###  <a name="project"></a> Ajouter un gestionnaire de connexions au niveau du projet  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> Ajouter un gestionnaire de connexions au niveau du projet  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -243,14 +243,14 @@ La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet
  **Ajouter**  
  Spécifiez les propriétés de connexion à l'aide de l'éditeur pour chaque type de connexion.  
    
-##  <a name="parameter"></a> Créer un paramètre pour une propriété du gestionnaire de connexions  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> Créer un paramètre pour une propriété du gestionnaire de connexions  
   
 1.  Dans la zone **Gestionnaires de connexions** , cliquez avec le bouton droit sur le gestionnaire de connexions pour lequel vous souhaitez créer un paramètre, puis cliquez sur **Paramétrer**.  
   
 2.  Configurez les paramètres dans la boîte de dialogue **Paramétrer** . Pour plus d’informations, consultez [Paramétrer (boîte de dialogue)](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Supprimer un gestionnaire de connexions 
-###  <a name="DeletePackageLevel"></a> Supprimer un gestionnaire de connexions d’un package  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> Supprimer un gestionnaire de connexions d’un package  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -270,7 +270,7 @@ La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet
   
 5.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-###  <a name="DeleteProjectLevel"></a> Supprimer un gestionnaire de connexions partagé (gestionnaire de connexions au niveau du projet)  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Supprimer un gestionnaire de connexions partagé (gestionnaire de connexions au niveau du projet)  
   
 1.  Pour supprimer un gestionnaire de connexions de niveau projet, cliquez avec le bouton droit sur le gestionnaire de connexions sous le nœud **Gestionnaires de connexions** dans la fenêtre **Explorateur de solutions** , puis cliquez **Supprimer**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] affiche le message d’avertissement suivant :  
   

@@ -10,10 +10,10 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296338"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mappage de type de données dans l’Assistant Importation et Exportation SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "71296338"
 
  Dans l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez définir le nom, le type de données et les propriétés de type de données des colonnes des nouveaux fichiers et tables de destination, mais vous ne pouvez pas spécifier de conversions personnalisées pour les valeurs de colonnes. Le mappage intégré des types de données à partir de la source à la destination est donc important.  
   
-##  <a name="wizardMapping"></a> Comment l’Assistant mappe-t-il les types de données entre la source et de destination ?
+##  <a name="how-does-the-wizard-map-data-types-between-source-and-destination"></a><a name="wizardMapping"></a> Comment l’Assistant mappe-t-il les types de données entre la source et de destination ?
 L’Assistant utilise les fichiers de mappage installés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour mapper les types de données à partir d’une système ou d’une version de base de données à un autre. Par exemple, il peut mapper les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux types de données Oracle. Par défaut, les fichiers de mappage au format XML sont installés dans les dossiers suivants.
 -   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\** (64 bits)
 -   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (32 bits).  

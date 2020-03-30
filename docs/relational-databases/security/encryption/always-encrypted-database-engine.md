@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254832"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
@@ -93,7 +93,7 @@ Pour mettre à jour correctement la colonne, effectuez les étapes suivantes :
  >[!IMPORTANT]
  > Dans ce scénario, les données sont non chiffrées quand elles sont renvoyées au serveur, car la colonne de destination est un type varchar standard qui n’accepte pas les données chiffrées. 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a> Sélection d’un chiffrement déterministe ou aléatoire  
+## <a name="selecting-deterministic-or-randomized-encryption"></a><a name="selecting--deterministic-or-randomized-encryption"></a> Sélection d’un chiffrement déterministe ou aléatoire  
  Le moteur de base de données n’opère jamais sur des données en texte clair stockées dans des colonnes chiffrées, mais il prend quand même en charge les requêtes sur des données chiffrées, en fonction du type de chiffrement de la colonne. Always Encrypted prend en charge deux types de chiffrement : le chiffrement aléatoire et le chiffrement déterministe.  
   
 - Le chiffrement déterministe génère toujours la même valeur chiffrée pour une valeur en texte clair donnée. Le chiffrement déterministe permet d’effectuer des recherches de point, des jointures d’égalité, ainsi que des regroupements et une indexation sur les colonnes chiffrées. Toutefois, il peut également permettre aux utilisateurs non autorisés de deviner des informations sur des valeurs chiffrées en examinant les modèles dans la colonne chiffrée, en particulier en cas de petit ensemble de valeurs chiffrées possibles, par exemple, Vrai/Faux ou la région Nord/Sud/Est/Ouest. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173560"
 ---
 # <a name="install-polybase-on-linux"></a>Installer PolyBase sur Linux
@@ -36,7 +36,7 @@ Installation de PolyBase pour votre système d’exploitation :
 
 
 
-## <a name="RHEL">Installer sur RHEL</a>
+## <a name=""></a><a name="RHEL">Installer sur RHEL</a>
 
 Utilisez la commande suivante pour installer **mssql-server-polybase** sur Red Hat Enterprise Linux. 
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 
 Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package PolyBase dans les [Notes de publication](../../linux/sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [Installer SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Installer sur Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Installer sur Ubuntu</a>
 
 Utilisez la commande suivante pour installer **mssql-server-polybase** sur Ubuntu. 
 
@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 
 Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package PolyBase dans les [Notes de publication](../../linux/sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [Installer SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Installer sur SLES</a>
+## <a name=""></a><a name="SLES">Installer sur SLES</a>
 
 Utilisez la commande suivante pour installer **mssql-server-polybase** sur SLES. 
 
@@ -95,7 +95,7 @@ sudo systemctl restart mssql-server
 Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package PolyBase dans les [Notes de publication](../../linux/sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [Installer SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 
-## <a name="enable">Activer PolyBase</a> 
+## <a name=""></a><a name="enable">Activer PolyBase</a> 
 
 Après l’installation, vous devez activer PolyBase pour accéder à ses fonctionnalités. Connectez-vous à l’instance de SQL Server installée et utilisez la commande Transact-SQL suivante pour l’activation.
 

@@ -1,5 +1,5 @@
 ---
-title: Enregistrement d’un package programmatiquement | Microsoft Docs
+title: Enregistrement d’un package par programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a65b7559770b6de0d1ebd928815458c02acfd41
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299051"
 ---
-# <a name="saving-a-package-programmatically"></a>Enregistrement d'un package programmatiquement
+# <a name="saving-a-package-programmatically"></a>Enregistrement d'un package par programme
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Après avoir généré un package programmatiquement ou modifié un package existant, vous souhaitez généralement enregistrer vos modifications.  
+  Après avoir généré un package par programme, ou modifié un package existant, vous souhaitez généralement enregistrer vos modifications.  
   
  Toutes les méthodes de cette rubrique qui permettent d'enregistrer des packages requièrent une référence à l'assembly **Microsoft.SqlServer.ManagedDTS** . Après avoir ajouté la référence dans un nouveau projet, importez l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> à l’aide d’une instruction **using** ou **Imports**.  
   
-## <a name="saving-a-package-programmatically"></a>Enregistrement d'un package programmatiquement  
+## <a name="saving-a-package-programmatically"></a>Enregistrement d'un package par programme  
  Pour enregistrer un package programmatiquement, appelez l’une des méthodes suivantes de la classe [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  <xref:Microsoft.SqlServer.Dts.Runtime.Application> :  
   
 |Emplacement de stockage|Méthode à appeler|  

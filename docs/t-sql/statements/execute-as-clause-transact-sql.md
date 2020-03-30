@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70155060"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clause EXECUTE AS (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "70155060"
   
  En spécifiant le contexte dans lequel le module s'exécute, vous contrôlez le compte d'utilisateur que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise pour valider les autorisations sur des objets référencés par le module. Cela améliore la souplesse et offre une meilleure gestion des autorisations sur la chaîne d'objets qui existe entre les modules définis par l'utilisateur et les objets qu'ils référencent. Les autorisations doivent être accordées aux utilisateurs uniquement sur le module lui-même, sans qu'il soit nécessaire de leur accorder des autorisations explicites sur les objets référencés. Seul l'utilisateur du module en cours d'exécution doit avoir les autorisations sur les objets auxquels le module accède.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
