@@ -14,10 +14,10 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258183"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Magasin d'objets blob distants (RBS) (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "75258183"
  Lorsque vous utilisez RBS, la clé symétrique du magasin d'informations d'identification doit régulièrement faire l’objet d’une rotation. Il s'agit d’une meilleure pratique de sécurité courante permettant de suivre les stratégies de sécurité de l'organisation.  Pour effectuer la rotation de la clé symétrique du magasin d’informations d'identification RBS, il est possible d’utiliser le [script ci-dessous](#Key_rotation) dans la base de données RBS.  Vous pouvez également utiliser ce script pour migrer vers des propriétés de chiffrement plus fortes, notamment la longueur de l'algorithme ou de la clé. Sauvegardez votre base de données avant d’effectuer la rotation de la clé.  Le script comprend à la fin quelques étapes de vérification.  
 Si vos stratégies de sécurité nécessitent d’autres propriétés de clé (par exemple, la longueur de l’algorithme ou de la clé) que celles qui sont fournies, le script peut être utilisé comme modèle. Modifiez les propriétés de la clé à deux endroits : 1) la création de la clé temporaire 2) la création de la clé permanente.  
   
-##  <a name="rbsresources"></a> Ressources RBS  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a> Ressources RBS  
   
  **Exemples RBS**  
  Les exemples de magasins d'objets blob distants (RBS) disponibles sur le site [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190) montrent comment développer une application RBS et comment développer et installer un fournisseur RBS personnalisé.  
@@ -90,7 +90,7 @@ Si vos stratégies de sécurité nécessitent d’autres propriétés de clé (p
  **Blog RBS**  
  Le [blog du magasin d'objets blob distants (RBS)](https://go.microsoft.com/fwlink/?LinkId=210315) fournit des informations supplémentaires qui vous aideront à mieux comprendre, déployer et gérer les magasins d'objets blob distants.  
   
-##  <a name="Key_rotation"></a> Script de permutation des clés  
+##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> Script de permutation des clés  
  Cet exemple crée une procédure stockée nommée `sp_rotate_rbs_symmetric_credential_key` pour remplacer la clé symétrique du magasin d’informations d’identification RBS actuellement utilisée  
 par celle de votre choix.  Ce remplacement est préférable s’il existe une stratégie de sécurité qui exige   
 une permutation des clés régulière ou si des algorithmes spécifiques le précisent.  

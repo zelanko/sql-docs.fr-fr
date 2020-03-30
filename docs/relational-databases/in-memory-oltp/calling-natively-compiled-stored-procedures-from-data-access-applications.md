@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412766"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
@@ -39,7 +39,7 @@ Cette rubrique fournit des instructions pour appeler des procédures stockées c
 - SqlClient ne prend pas en charge la récupération des informations de schéma uniquement (découverte des métadonnées) sur les jeux de résultats retournés par une procédure stockée compilée en mode natif (CommandType.SchemaOnly).
   - Utilisez plutôt [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### <a name="includessnoversionincludesssnoversion-mdmd-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+### <a name="ssnoversion-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
 - Les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieures à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ne prennent pas en charge la récupération des informations de schéma uniquement (découverte des métadonnées) sur les jeux de résultats retournés par une procédure stockée compilée en mode natif.
   - Utilisez plutôt [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).

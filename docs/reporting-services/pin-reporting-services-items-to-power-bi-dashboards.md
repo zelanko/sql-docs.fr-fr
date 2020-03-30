@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952478"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Épingler des éléments de rapport paginé Reporting Services à des tableaux de bord dans Power BI
@@ -28,7 +28,7 @@ ms.locfileid: "75952478"
 
 Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] local à un tableau de bord dans le service [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], sous la forme d’une nouvelle vignette.   Pour que vous puissiez épingler des éléments, il faut que votre administrateur intègre au préalable votre serveur de rapports à Azure Active Directory et [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
-##  <a name="bkmk_requirements_to_pin"></a> Conditions requises pour pouvoir épingler  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> Conditions requises pour pouvoir épingler  
   
 -   Le serveur de rapports est configuré pour l’intégration de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Pour plus d’informations, consultez [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Si le serveur de rapports n’a pas été configuré, vous ne voyez pas le bouton **Épingler au tableau de bord Power BI** dans la barre d’outils de la visionneuse de rapports.  
   
@@ -44,7 +44,7 @@ Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion
  
     Consultez la section « Configurer des informations d’identification stockées pour une source de données propre à un rapport (mode natif) » dans [Stocker les informations d’identification dans une source de données Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
-##  <a name="bkmk_supported_items"></a> Éléments que vous pouvez épingler  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> Éléments que vous pouvez épingler  
  Vous pouvez épingler les éléments de rapport suivants à un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Vous ne pouvez pas épingler des éléments imbriqués à l’intérieur d’une région de données. Par exemple, vous ne pouvez pas épingler un élément imbriqué à l’intérieur d’une table ou d’une liste [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Graphiques  
@@ -54,7 +54,7 @@ Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion
 -   Les éléments doivent se trouver dans le corps du rapport.  Vous ne pouvez pas épingler des éléments figurant dans l’en-tête ou le pied de page.  
 -   Vous pouvez épingler des éléments figurant à l’intérieur d’un rectangle de plus haut niveau, mais vous ne pouvez pas les épingler tous comme un seul groupe.  
   
-##  <a name="bkmk_to_pin"></a> Pour épingler un élément de rapport  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> Pour épingler un élément de rapport  
   
 1. Vérifiez que vous êtes connecté à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], sélectionnez l’élément de menu **Mes paramètres** et connectez-vous. Pour plus d'informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
@@ -78,7 +78,7 @@ Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion
   
 6. Sélectionnez **Fermer** pour revenir à l’affichage normal du rapport.  
   
-##  <a name="bkmk_in_the_dashboard"></a> Dans le tableau de bord
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> Dans le tableau de bord
 
 Une fois votre élément de rapport épinglé sur le tableau de bord, la vignette ressemble aux autres, rien n’indiquant qu’elle provient de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. La liste suivante récapitule la manière dont les propriétés de vignette sont définies à partir de l’élément de rapport.  
   
@@ -94,7 +94,7 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> Résoudre les problèmes  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> Résoudre les problèmes  
   
 -   **Pas de bouton [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dans la barre d’outils de la visionneuse de rapports :**  Ce message indique que le serveur de rapports n’a pas été intégré à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Pour plus d’informations, consultez [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
@@ -118,7 +118,7 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
 
 -   **Les vignettes dans les applications Power BI affichent des données obsolètes :** Si vous épinglez un élément de rapport Reporting Services à un tableau de bord, puis que vous distribuez celui-ci dans une application, l’élément de rapport épinglé dans ce tableau de bord ne sera pas mis à jour. 
 
-##  <a name="bkmk_subscription_management"></a> Gestion des abonnements  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> Gestion des abonnements  
  En plus des problèmes d’abonnement décrits dans la section de dépannage, les informations suivantes vous aideront à gérer les abonnements liés à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
 -   **Nom de l’élément modifié :** Si un élément de rapport épinglé est renommé ou supprimé, la vignette [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] n’est plus mise à jour et vous voyez un message d’erreur similaire au suivant.  Si vous rétablissez le nom d’origine de l’élément, l’abonnement opère à nouveau et la vignette s’actualise conformément à la planification de celui-ci.  
@@ -135,7 +135,7 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
  [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](my-settings-for-power-bi-integration-web-portal.md)  
  [Tableaux de bord dans Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  

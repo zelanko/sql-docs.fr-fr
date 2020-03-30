@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287333"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
@@ -96,7 +96,7 @@ Ces rôles de base de données existent uniquement dans la base de données MAST
 |**loginmanager** | Peut créer et supprimer des connexions dans la base de données MASTER virtuelle.|
 
 > [!NOTE]
-> Le principal de niveau du serveur et l’administrateur Azure Active Directory (s’il est configuré) détiennent toutes les autorisations dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sans avoir besoin d’être membres de tous les rôles. Pour plus d’informations, voir [Authentification et autorisation SQL Database : Octroi de l’accès](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> Le principal de niveau du serveur et l’administrateur Azure Active Directory (s’il est configuré) détiennent toutes les autorisations dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sans avoir besoin d’être membres de tous les rôles. Pour plus d’informations, voir [Authentification et autorisation de base de données SQL : octroi de l’accès](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Rôles de msdb  
  La base de données msdb contient les rôles à usages spéciaux présentés dans le tableau ci-dessous.  
@@ -114,7 +114,7 @@ Ces rôles de base de données existent uniquement dans la base de données MAST
 
 ## <a name="working-with-r-services"></a>Utilisation de R Services  
 
-**S’applique à :** SQL Server à compter de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**S’applique à :** SQL Server à partir de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 Quand vous installez R Services, vous disposez de rôles de base de données supplémentaires pour la gestion des packages. Pour plus d’informations, consultez [Gestion des packages R pour SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 

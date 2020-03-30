@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294192"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
@@ -137,13 +137,13 @@ ms.locfileid: "71294192"
   
 -   [Définir les options sur la page Liaisons de paramètre](#parameter)  
   
-###  <a name="open"></a> Ouvrir l'Éditeur de tâche d'exécution de package  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> Ouvrir l'Éditeur de tâche d'exécution de package  
   
 1.  Ouvrez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] qui contient une tâche d'exécution de package.  
   
 2.  Cliquez avec le bouton droit sur la tâche dans le Concepteur SSIS, puis cliquez sur **Modifier**.  
   
-###  <a name="general"></a> Définir les options sur la page Général  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Définir les options sur la page Général  
  **Nom**  
  Fournissez un nom unique pour la tâche d'exécution de package. Ce nom sert d'étiquette à l'icône de la tâche.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294192"
  **Description**  
  Entrez une description de la tâche d'exécution de package.  
   
-###  <a name="package"></a> Définir les options sur la page Package  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> Définir les options sur la page Package  
  **ReferenceType**  
  Sélectionnez **Référence du projet** pour les packages enfants qui sont dans le projet. Sélectionnez **Référence externe** pour les packages enfants situés en dehors du package.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "71294192"
  **PackageNameReadOnly**  
  Permet d'afficher le nom du package.  
   
-###  <a name="parameter"></a> Définir les options sur la page Liaisons de paramètre  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> Définir les options sur la page Liaisons de paramètre  
  Vous pouvez passer des valeurs du package parent ou du projet au package enfant. Le projet doit utiliser le modèle de déploiement de projet et le package enfant doit être contenu dans le même projet qui contient le package parent.  
   
  Pour plus d’informations sur la conversion de projets en modèle de déploiement de projet, consultez [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  

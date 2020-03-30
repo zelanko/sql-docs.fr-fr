@@ -11,10 +11,10 @@ ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982961"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Méthode getFunctionColumns (SQLServerDatabaseMetaData)
@@ -62,7 +62,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  Chaque ligne du jeu de résultats inclut les colonnes suivantes pour une description de paramètre, une description de colonne ou un type de retour :  
   
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**Chaîne**|Nom de la base de données qui contient la fonction.|  
 |FUNCTION_SCHEM|**Chaîne**|Schéma pour la fonction.|  

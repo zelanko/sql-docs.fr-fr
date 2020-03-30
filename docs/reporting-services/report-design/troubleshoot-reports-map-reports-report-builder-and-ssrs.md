@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080839"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Dépanner les rapports : Rapports cartographiques (Générateur de rapports et SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "77080839"
  * Signalez un problème ou faites une suggestion sur [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
 
   
-##  <a name="Embedded"></a> Problèmes liés à la taille de la définition de rapport  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> Problèmes liés à la taille de la définition de rapport  
  Utilisez cette section pour résoudre des problèmes liés à la taille de la définition de rapport.  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>Comment puis-je réduire la taille de la définition de rapport ?  
@@ -49,7 +49,7 @@ ms.locfileid: "77080839"
   
  Les éléments cartographiques provenant d'un rapport de la bibliothèque de cartes seront toujours incorporés dans une couche.  
   
-##  <a name="Spatial"></a> Problèmes liés aux données spatiales  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> Problèmes liés aux données spatiales  
  Utilisez cette section pour résoudre des problèmes liés aux données spatiales.  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>Des exemples de données spatiales sont affichés sur l'aire de conception.  
@@ -100,7 +100,7 @@ ms.locfileid: "77080839"
   
 -   Si les données spatiales proviennent d'une base de données SQL Server, modifiez la requête pour utiliser des fonctions spatiales de manière à limiter les données à une zone moins étendue.  
   
-##  <a name="Viewport"></a> Problèmes liés au centre d'affichage et à la vue  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> Problèmes liés au centre d'affichage et à la vue  
  Utilisez cette section pour résoudre des problèmes liés aux options de la fenêtre d'affichage.  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>Je ne peux pas définir le centre et la vue sur un élément cartographique incorporé.  
@@ -122,7 +122,7 @@ ms.locfileid: "77080839"
   
 -   Incorporez les données spatiales dans le rapport et supprimez les emplacements que vous ne souhaitez pas inclure.  
   
-##  <a name="Layers"></a> Problèmes liés aux couches  
+##  <a name="layer-issues"></a><a name="Layers"></a> Problèmes liés aux couches  
  Utilisez cette section pour résoudre des problèmes liés aux options de couches.  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>Je ne vois pas une ou plusieurs couches dans ma carte.  
@@ -144,7 +144,7 @@ ms.locfileid: "77080839"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>J'ai défini un filtre sur la couche et il n'a aucun effet.  
  Pour filtrer des données d'une couche, le type de données de l'expression de filtre doit être spécifié. Vérifiez que vous avez spécifié le type de données sous-jacent correct afin que l'équation de filtre évalue correctement la condition spécifiée. Pour plus d’informations, consultez [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Problèmes liés à la légende, à l'échelle de couleurs et aux règles  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> Problèmes liés à la légende, à l'échelle de couleurs et aux règles  
  Utilisez cette section pour résoudre des problèmes liés aux règles et aux options de légende et d'échelle de couleurs.  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>Comment puis-je contrôler les valeurs de la légende de carte ?  
@@ -175,7 +175,7 @@ ms.locfileid: "77080839"
   
  Pour afficher l'échelle de couleurs, spécifiez des règles de couleur pour une couche ou un élément cartographique incorporé. Pour plus d’informations, consultez [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Tile"></a> Problèmes liés aux mosaïques  
+##  <a name="tile-issues"></a><a name="Tile"></a> Problèmes liés aux mosaïques  
  Utilisez cette section pour résoudre des problèmes liés aux options d'arrière-plan de mosaïques.  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>Je ne peux pas voir l'arrière-plan de mosaïques Bing.  
@@ -196,7 +196,7 @@ ms.locfileid: "77080839"
   
  Pour inclure une couche de mosaïques sans texte, sélectionnez la vue **Aérien** .  
   
-##  <a name="Tooltip"></a> Problèmes liés aux info-bulles et aux étiquettes  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> Problèmes liés aux info-bulles et aux étiquettes  
  Utilisez cette section pour résoudre des problèmes liés aux options d'étiquettes ou d'info-bulles.  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>J'obtiens une erreur d'expression concernant l'étendue du dataset lorsque je définis une étiquette ou une info-bulle sur une expression.  

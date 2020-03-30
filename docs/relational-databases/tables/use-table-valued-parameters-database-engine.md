@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72796639"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utiliser les paramètres table (Moteur de base de données)
@@ -43,7 +43,7 @@ Les paramètres table sont comme les tableaux de paramètres dans OLE DB et ODBC
 
 [Exemple](#Example)
 
-## <a name="Benefits"></a> Avantages
+## <a name="benefits"></a><a name="Benefits"></a> Avantages
 
 Un paramètre table a comme portée la procédure stockée, la fonction ou le texte [!INCLUDE[tsql](../../includes/tsql-md.md)] dynamique, exactement comme d'autres paramètres. De même, une variable de type de table a une portée semblable à toute autre variable locale créée à l'aide d'une instruction DECLARE. Vous pouvez déclarer des variables table dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dynamiques et passer ces variables comme paramètres table à des procédures stockées et des fonctions.
 
@@ -58,10 +58,10 @@ Les paramètres table offrent davantage de souplesse et dans certains cas de mei
 - Permettent au client de spécifier un ordre de tri et des clés uniques.
 - Sont mis en cache comme une table temporaire en cas de utilisation dans une procédure stockée. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les paramètres table sont également mis en cache pour les requêtes paramétrables.
 
-## <a name="Permissions"></a> Autorisations
+## <a name="permissions"></a><a name="Permissions"></a> Autorisations
 Pour créer une instance d’un type de table défini par l’utilisateur ou appeler une procédure stockée avec un paramètre Table, l’utilisateur doit disposer de l’autorisation EXECUTE sur le type, ou sur le schéma ou la base de données contenant le type.
 
-## <a name="Restrictions"></a> Restrictions
+## <a name="restrictions"></a><a name="Restrictions"></a> Restrictions
 
 Les paramètres table ont les restrictions suivantes :
 
@@ -69,7 +69,7 @@ Les paramètres table ont les restrictions suivantes :
 - Les paramètres table doivent être passés comme paramètres READONLY d'entrée aux routines [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous ne pouvez pas effectuer d'opérations DML telles que UPDATE, DELETE ou INSERT sur un paramètre table dans le corps d'une routine.
 - Vous ne pouvez pas utiliser de paramètre table comme cible d'une instruction SELECT INTO ou INSERT EXEC. Un paramètre table peut être dans la clause FROM de SELECT INTO ou dans la chaîne ou procédure stockée INSERT EXEC.
 
-## <a name="BulkInsert"></a> Paramètres table et opérations BULK INSERT
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> Paramètres table et opérations BULK INSERT
 
 L'utilisation de paramètres table est comparable à d'autres méthodes d'utilisation de variables basées sur des ensembles ; toutefois, l'utilisation de paramètres table peut souvent s'avérer plus rapide pour les grands ensembles de données. Comparé aux opérations en bloc, qui ont un coût de démarrage supérieur, les paramètres table sont particulièrement adaptés à l'insertion de moins de 1000 lignes.
 
@@ -77,7 +77,7 @@ Les paramètres table réutilisés tirent parti de la mise en cache de table tem
 
 Les paramètres table procurent des performances supérieures ou égales à une implémentation de tableau de paramètres équivalente.
 
-## <a name="Example"></a> Exemple
+## <a name="example"></a><a name="Example"></a> Exemple
 
 L'exemple suivant utilise [!INCLUDE[tsql](../../includes/tsql-md.md)] et montre comment créer un type de paramètre table, déclarer une variable pour y faire référence, remplir la liste de paramètres, puis passer les valeurs à une procédure stockée dans la base de données AdventureWorks.
 

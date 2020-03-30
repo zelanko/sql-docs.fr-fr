@@ -21,35 +21,35 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821946"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment effectuer un basculement manuel planifié ou forcé (basculement forcé) sur un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Si vous basculez vers un réplica secondaire à l'état SYNCHRONIZED, l'Assistant exécute un basculement manuel planifié (sans perte de données). Si vous basculez vers un réplica secondaire à l’état UNSYNCHRONIZED ou NOT SYNCHRONIZING, l’Assistant effectue un basculement manuel forcé, également appelé *basculement forcé* (avec perte de données possible). Les deux formes de basculement manuel transfèrent le réplica secondaire auquel vous êtes connecté au rôle principal. Un basculement manuel planifié transfère actuellement l'ancien réplica principal sur le rôle secondaire. Après un basculement forcé, lorsque l'ancien réplica principal passe en ligne, il est transféré au rôle secondaire.  
 
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Avant votre premier basculement manuel planifié, consultez la section « Avant de commencer » dans [Effectuer un basculement manuel planifié d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
  Avant votre premier basculement forcé, consultez les sections « Avant de commencer » et « Suivi : tâches essentielles après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Une commande de basculement retourne dès que le réplica secondaire cible a accepté la commande. Toutefois, la récupération de la base de données est asynchrone après que le basculement du groupe de disponibilité est terminé.  
     
-###  <a name="Prerequisites"></a> Conditions préalables requises pour utiliser l'Assistant Basculer le groupe de disponibilité  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a> Conditions préalables requises pour utiliser l'Assistant Basculer le groupe de disponibilité  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge un réplica de disponibilité actuellement disponible.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour utiliser l'Assistant Basculer le groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge un réplica secondaire du groupe de disponibilité devant être basculé et développez l'arborescence du serveur.  
@@ -93,7 +93,7 @@ ms.locfileid: "74821946"
   
  Les autres pages de cet Assistant partagent l’aide avec un ou plusieurs des autres Assistants de groupes de disponibilité Always On et sont documentées dans des rubriques d’aide (F1) distinctes.  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
  Cette section décrit les options de la page **Sélectionner le nouveau réplica principal** . Utilisez cette page pour sélectionner le réplica secondaire (cible de basculement) vers lequel le groupe de disponibilité va basculer. Ce réplica devient le nouveau réplica principal.  
   
 #### <a name="page-options"></a>Options des pages  
@@ -159,7 +159,7 @@ ms.locfileid: "74821946"
  **Annuler**  
  Cliquez pour annuler l'Assistant. Sur la page **Sélectionner le nouveau réplica principal** , l'annulation de l'Assistant entraîne sa fermeture sans qu'aucune action ne soit effectuée.  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  Cette section décrit les options de la page **Confirmer la perte de données potentielle** , qui s'affiche uniquement si vous effectuez un basculement forcé. Cette rubrique est utilisée uniquement par l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Utilisez cette page pour indiquer si vous voulez prendre le risque de perdre des données pour forcer le basculement du groupe de disponibilité.  
   
 #### <a name="confirm-potential-data-loss-options"></a>Options de confirmation de la perte potentielle de données  
@@ -171,7 +171,7 @@ ms.locfileid: "74821946"
  **Annuler**  
  Cliquez pour annuler l'Assistant. Sur la page **Confirmer la perte de données potentielle** , l'annulation de l'Assistant provoque sa fermeture sans effectuer aucune action.  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a> Connect to Replica Page  
  Cette section décrit les options de la page **Se connecter au réplica** de l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Cette page s'affiche uniquement si vous n'êtes pas connecté au réplica secondaire cible. Utilisez cette page pour vous connecter au réplica secondaire que vous avez sélectionné comme nouveau réplica principal.  
   
 #### <a name="page-options"></a>Options des pages  

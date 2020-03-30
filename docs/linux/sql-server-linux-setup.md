@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79319839"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Conseils d’installation pour SQL Server sur Linux
@@ -38,7 +38,7 @@ Pour d’autres scénarios de déploiement, consultez :
 
 Pour obtenir des réponses aux questions fréquemment posées, consultez la [FAQ de SQL Server sur Linux](../linux/sql-server-linux-faq.md).
 
-## <a id="supportedplatforms"></a> Plateformes prises en charge
+## <a name="supported-platforms"></a><a id="supportedplatforms"></a> Plateformes prises en charge
 
 SQL Server est actuellement pris en charge sur Red Hat Enterprise Server (RHEL), SUSE Linux Enterprise Server (SLES) et Ubuntu. Il est également pris en charge en tant qu’image Docker, qui peut s’exécuter sur un moteur Docker sur Linux ou Docker pour Windows/Mac.
 
@@ -71,7 +71,7 @@ Microsoft prend également en charge le déploiement et la gestion des conteneur
 > [!NOTE]
 > SQL Server est testé et pris en charge sur Linux pour les distributions précédemment répertoriées. Toutefois, si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, consultez la section **Stratégie de support** de la [Stratégie de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre les implications du support.
 
-## <a id="system"></a>Configuration requise
+## <a name="system-requirements"></a><a id="system"></a>Configuration requise
 
 SQL Server présente la configuration requise suivante pour Linux :
 
@@ -90,11 +90,11 @@ Si vous utilisez des partages distants **NFS (Network File System)** en producti
 - Localisez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. D’autres fichiers, tels que les binaires du système SQL Server, ne sont pas pris en charge.
 - Vérifiez que les clients NFS utilisent l’option « nolock » lors du montage du partage distant.
 
-## <a id="repositories"></a> Configurer les référentiels sources
+## <a name="configure-source-repositories"></a><a id="repositories"></a> Configurer les référentiels sources
 
 Lorsque vous installez ou mettez à niveau SQL Server, vous recevez la dernière version de SQL Server à partir de votre référentiel Microsoft configuré. Les guides de démarrage rapide utilisent le référentiel **CU** de mise à jour cumulative pour SQL Server. Toutefois, vous pouvez configurer un référentiel **GDR**. Pour plus d’informations sur les référentiels ou sur leur configuration, consultez [Configurer les référentiels pour SQL Server sur Linux](sql-server-linux-change-repo.md).
 
-## <a id="platforms"></a> Installer SQL Server
+## <a name="install-sql-server"></a><a id="platforms"></a> Installer SQL Server
 
 Vous pouvez installer SQL Server 2017 ou SQL Server 2019 sur Linux à partir de la ligne de commande. Pour obtenir des instructions pas à pas, consultez une des rubriques de démarrage rapide suivantes :
 
@@ -109,7 +109,7 @@ Vous pouvez également exécuter SQL Server sur Linux dans une machine virtuelle
 
 Après l’installation, envisagez d’apporter des modifications de configuration supplémentaires pour des performances optimales. Pour plus d'informations, consultez [Meilleures pratiques relatives aux performances et lignes directrices de configuration pour SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
 
-## <a id="upgrade"></a> Mettre à jour ou mettre à niveau SQL Server
+## <a name="update-or-upgrade-sql-server"></a><a id="upgrade"></a> Mettre à jour ou mettre à niveau SQL Server
 
 Pour mettre à jour le package **mssql-server** vers la version la plus récente, utilisez l’une des commandes suivantes en fonction de votre plateforme :
 
@@ -123,7 +123,7 @@ Ces commandes téléchargent le package le plus récent et remplacent les fichie
 
 Pour mettre à niveau SQL Server, commencez par [passer au référentiel configuré](sql-server-linux-change-repo.md) correspondant à la version souhaitée de SQL Server. Utilisez ensuite la même commande **update** pour mettre à niveau votre version de SQL Server. Cela n’est possible que si le chemin de mise à niveau est pris en charge entre les deux référentiels.
 
-## <a id="rollback"></a> Restauration de SQL Server
+## <a name="rollback-sql-server"></a><a id="rollback"></a> Restauration de SQL Server
 
 Pour restaurer ou passer SQL Server à une version antérieure, procédez comme suit :
 
@@ -140,7 +140,7 @@ Pour restaurer ou passer SQL Server à une version antérieure, procédez comme 
 > [!NOTE]
 > Le passage à une version antérieure est uniquement pris en charge au sein de la même version principale, par exemple SQL Server 2019.
 
-## <a id="versioncheck"></a> Vérifier la version installée SQL Server
+## <a name="check-installed-sql-server-version"></a><a id="versioncheck"></a> Vérifier la version installée SQL Server
 
 Pour vérifier la version et l’édition actuelles de votre SQL Server sur Linux, procédez comme suit :
 
@@ -152,7 +152,7 @@ Pour vérifier la version et l’édition actuelles de votre SQL Server sur Linu
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a> Désinstaller SQL Server
+## <a name="uninstall-sql-server"></a><a id="uninstall"></a> Désinstaller SQL Server
 
 Pour supprimer le package **mssql-server** sur Linux, utilisez une des commandes suivantes en fonction de votre plateforme :
 
@@ -168,7 +168,7 @@ La suppression du package ne supprime pas les fichiers de base de données gén�
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a> Installation sans assistance
+## <a name="unattended-install"></a><a id="unattended"></a> Installation sans assistance
 
 Vous pouvez effectuer une installation sans assistance de la façon suivante :
 
@@ -189,7 +189,7 @@ Pour obtenir un exemple de script plus détaillé, consultez les exemples suivan
 - [Script d’installation sans assistance de SUSE](sample-unattended-install-suse.md)
 - [Script d’installation sans assistance de Ubuntu](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a> Installation hors connexion
+## <a name="offline-install"></a><a id="offline"></a> Installation hors connexion
 
 Si votre machine Linux n’a pas d’accès aux référentiels en ligne utilisés dans les [démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers du package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
 

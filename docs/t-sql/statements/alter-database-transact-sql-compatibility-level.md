@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288663"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
@@ -121,7 +121,7 @@ Pour connaître le workflow recommandé pour la mise à niveau du niveau de comp
 ## <a name="compatibility-levels-and-stored-procedures"></a>Niveaux de compatibilité et procédures stockées
 Lors de l'exécution d'une procédure stockée, elle utilise le niveau de compatibilité en cours de la base de données dans laquelle elle est définie. Lors de la modification du paramètre de compatibilité d'une base de données, l'ensemble de ses procédures stockées sont automatiquement recompilées en conséquence.
 
-## <a name="backwardCompat"></a> Utilisation du niveau de compatibilité pour la compatibilité descendante
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> Utilisation du niveau de compatibilité pour la compatibilité descendante
 Le paramètre [Niveau de compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) fournit une compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ce qui concerne [!INCLUDE[tsql](../../includes/tsql-md.md)] et les comportements d’optimisation des requêtes, uniquement pour la base de données spécifiée, et non pour l’ensemble du serveur.  
 
 À partir du mode de compatibilité 130, les nouveaux plans de requête affectant les correctifs et les fonctionnalités ne sont ajoutés intentionnellement qu’au nouveau niveau de compatibilité. Lors des mises à niveau, cela permet de réduire les risques liés à la dégradation des performances en raison des modifications du plan de requête potentiellement introduites par de nouveaux comportements d’optimisation des requêtes.      

@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ee462efca08173d6571fe5a3b3971b8f0460988a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258374"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Créer, modifier ou supprimer des index XML secondaires sélectifs
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Décrit la procédure de création d'un index XML secondaire sélectif, ou de modification ou de suppression d'un index XML secondaire sélectif existant.  
   
-##  <a name="create"></a> Création d'un index XML secondaire sélectif  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> Création d'un index XML secondaire sélectif  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>Procédure : créer un index XML secondaire sélectif  
  **Créer un index XML secondaire sélectif à l'aide de Transact-SQL**  
@@ -42,7 +42,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> Modification d'un index XML secondaire sélectif  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> Modification d'un index XML secondaire sélectif  
  L'instruction ALTER n'est pas prise en charge pour les index XML secondaires sélectifs. Pour modifier un index XML secondaire sélectif, supprimez l'index existant et recréez-le.  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Procédure : modifier un index XML secondaire sélectif  
@@ -68,7 +68,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> Suppression d'un index XML secondaire sélectif  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> Suppression d'un index XML secondaire sélectif  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Procédure : supprimer un index XML secondaire sélectif  
  **Supprimer un index XML secondaire sélectif à l'aide de Transact-SQL**  

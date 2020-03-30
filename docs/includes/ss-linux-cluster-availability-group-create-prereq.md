@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Avant de créer le groupe de disponibilité, vous devez :
 

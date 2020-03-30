@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095313"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74095313"
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
   
-## <a name="Capture"></a> Travail de capture
+## <a name="capture-job"></a><a name="Capture"></a> Travail de capture
 
 Le travail de capture est démarré par l'exécution de la procédure stockée sans paramètre `sp_MScdc_capture_job`. Cette procédure stockée démarre par l'extraction des valeurs configurées pour `maxtrans`, `maxscans`, `continuous` et `pollinginterval` pour le travail de capture de msdb.dbo.cdc_jobs. Ces valeurs configurées sont ensuite transférées en tant que paramètres à la procédure stockée `sp_cdc_scan`. Cela permet d'invoquer `sp_replcmds` pour effectuer l'analyse du journal.  
   
@@ -71,7 +71,7 @@ En mode continu, le travail de capture demande que `sp_cdc_scan` soit exécuté 
 
 Pour le travail de capture, vous pouvez appliquer une logique supplémentaire afin de déterminer si une nouvelle analyse commence immédiatement ou à l'issue d'une période de veille, au lieu de s'en remettre à une fréquence d'interrogation fixe. Le choix pourrait reposer uniquement sur l'heure du jour, par exemple en mettant en place de très longues veilles pendant les périodes de pic d'activité, ou même passer à une fréquence d'interrogation de 0 à la fin de la journée, moment où il est important de mettre fin aux traitements de jour et de préparer les opérations de nuit. La progression du processus de capture peut également être surveillée afin de déterminer à quel moment toutes les transactions validées en milieu de la nuit ont été analysées et déposées dans les tables de modifications. Cela permet au travail de capture de s'achever, pour être redémarré par un redémarrage quotidien planifié. En remplaçant l'étape de remise de travail qui appelle `sp_cdc_scan` par un appel à un wrapper écrit par un utilisateur pour `sp_cdc_scan`, vous pouvez disposer d'un comportement hautement personnalisé, pour un minimum d'effort supplémentaire.  
 
-## <a name="Cleanup"></a> Travail de nettoyage
+## <a name="cleanup-job"></a><a name="Cleanup"></a> Travail de nettoyage
 
 Cette section fournit des informations sur le fonctionnement du travail de nettoyage de la capture de données modifiées.  
   
@@ -90,7 +90,7 @@ Lorsqu'un nettoyage est effectué, la limite inférieure de toutes les instances
 
  Pour le travail de nettoyage, la possibilité de personnalisation réside dans la stratégie utilisée pour déterminer quelles entrées de table de modifications doivent être ignorées. La seule stratégie prise en charge dans le travail de nettoyage réalisé est une stratégie basée sur le temps. Dans cette situation, la nouvelle limite inférieure est calculée en soustrayant la période de rétention autorisée de l'heure de validation de la dernière transaction traitée. Comme les procédures de nettoyage sous-jacentes sont basées sur `lsn` et non pas sur le temps, vous pouvez utiliser autant de stratégies que vous le souhaitez pour déterminer le plus petit `lsn` à conserver dans les tables de modifications. Seules certaines sont strictement basées sur le temps. Par exemple, la connaissance des clients pourrait être utilisée comme mécanisme de prévention de défaillance si en aval, les processus qui requièrent l'accès aux tables de modifications ne peuvent pas s'exécuter. Par ailleurs, bien que la stratégie par défaut applique le même `lsn` pour nettoyer les tables de modifications de toutes les bases de données, la procédure de nettoyage sous-jacente peut également être appelée pour effectuer le nettoyage au niveau de l’instance de capture.  
 
-## <a name="Monitor"></a> Surveiller le processus de capture de données modifiées
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Surveiller le processus de capture de données modifiées
 
 La surveillance du processus de capture de données modifiées vous permet de déterminer si les modifications sont écrites correctement et avec une latence raisonnable aux tables de modifications. La surveillance peut également vous aider à identifier les erreurs qui peuvent se produire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut deux vues de gestion dynamique pour vous aider à surveiller la capture de données modifiées : [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) et [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
@@ -176,7 +176,7 @@ Le collecteur de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 4. Dans l'entrepôt de données que vous avez configuré à l'étape 1, recherchez la table custom_snapshots.cdc_log_scan_data. Cette table fournit un instantané historique de données de sessions d'analyse du journal. Ces données peuvent être utilisées pour analyser la latence, le débit et d'autres mesures de la performance sur la durée.  
 
-## <a name="ScriptUpgrade"></a> Mode de mise à niveau du script
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a> Mode de mise à niveau du script
 
 Lorsque vous appliquez des mises à jour cumulatives ou des Service Pack à une instance, au redémarrage, l’instance peut entrer en mode de mise à niveau du script. Dans ce mode, SQL Server peut procéder à une analyse et mise à niveau des tables internes de capture des changements de données, ce qui pourrait entraîner la recréation d’objets tels que les index sur les tables de capture. Selon la quantité de données impliquées, cette étape peut prendre un certain temps ou provoquer une forte utilisation du journal des transactions pour les bases de données où la capture des changements de données est activée.
 

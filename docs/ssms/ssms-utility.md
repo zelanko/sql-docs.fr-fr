@@ -17,10 +17,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/07/2019
 ms.openlocfilehash: 5a31fb94fad2e063fe9846bd820957abb4ce9b32
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243896"
 ---
 # <a name="ssms-utility"></a>Utilitaire SSMS
@@ -50,26 +50,26 @@ Vous pouvez spécifier des fichiers contenant des requêtes, des projets ou des 
  
  *solutionfile* Spécifie une solution à ouvrir. Le paramètre doit contenir le chemin d'accès complet au fichier de solution. 
  
-[**-S** _servername_] Nom du serveur
+[ **-S** _servername_] Nom du serveur
  
-[**-d** _databasename_] Nom de la base de données
+[ **-d** _databasename_] Nom de la base de données
 
-[**-G**] Se connecter avec l’authentification Azure Active Directory. Le type de connexion est déterminé par la présence ou l’absence de **-U**.
+[ **-G**] Se connecter avec l’authentification Azure Active Directory. Le type de connexion est déterminé par la présence ou l’absence de **-U**.
 
 > [!Note]
 > **Active Directory - Universel avec prise en charge de l’authentification MFA** n’est pas pris en charge.
  
-[**-U** _username_] Nom d’utilisateur lors d’une connexion avec l’authentification SQL
+[ **-U** _username_] Nom d’utilisateur lors d’une connexion avec l’authentification SQL
  
-[**-E**] Connexion à l’aide de l’authentification Windows
+[ **-E**] Connexion à l’aide de l’authentification Windows
  
-[**-nosplash**] Empêche [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] d’afficher l’écran de démarrage lors de l’ouverture. Utilisez cette option lors d'une connexion à l'ordinateur exécutant [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] au moyen des services Terminal Server sur une connexion dotée d'une bande passante limitée. Cet argument ne respecte pas la casse et peut apparaître avant ou après d'autres arguments
+[ **-nosplash**] Empêche [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] d’afficher l’écran de démarrage lors de l’ouverture. Utilisez cette option lors d'une connexion à l'ordinateur exécutant [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] au moyen des services Terminal Server sur une connexion dotée d'une bande passante limitée. Cet argument ne respecte pas la casse et peut apparaître avant ou après d'autres arguments
  
-[**-log**_[filename]?_] Consigne l’activité de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans le fichier spécifié à des fins de dépannage
+[ **-log** _[filename]?_ ] Consigne l’activité de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans le fichier spécifié à des fins de dépannage
  
-[**-?**] Affiche l’aide de la ligne de commande
+[ **-?** ] Affiche l’aide de la ligne de commande
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Tous les commutateurs sont facultatifs et séparés par un espace, à l’exception des fichiers qui sont séparés par des virgules. Si vous ne spécifiez pas de commutateur, **Ssms** ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tel que spécifié dans les paramètres **Options** du menu **Outils** . Par exemple, si l’option **Au démarrage** de la page **Environnement/Général** spécifie **Ouvrir la fenêtre de nouvelle requête**, **Ssms** s’ouvre avec un éditeur de requête vide.
  
@@ -122,6 +122,6 @@ Le script suivant ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-m
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
  ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utiliser SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)

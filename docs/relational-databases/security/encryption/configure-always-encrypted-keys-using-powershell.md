@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594461"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>Provisionner des clés Always Encrypted à l’aide de PowerShell
@@ -27,7 +27,7 @@ Pour obtenir une vue d’ensemble de la gestion des clés Always Encrypted, nota
 Pour plus d’informations sur l’utilisation du module SqlServer PowerShell pour Always Encrypted, consultez [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 
-## <a name="KeyProvisionWithoutRoles"></a> Mise en service des clés sans séparation des rôles
+## <a name="key-provisioning-without-role-separation"></a><a name="KeyProvisionWithoutRoles"></a> Mise en service des clés sans séparation des rôles
 
 La méthode de provisionnement des clés décrite dans cette section ne prend pas en charge la séparation des rôles entre les administrateurs de la sécurité et les administrateurs de bases de données. Certaines des étapes ci-dessous associent des opérations sur les clés physiques à des opérations sur les métadonnées de clé. Par conséquent, cette méthode de provisionnement des clés est recommandée pour les organisations qui utilisent le modèle DevOps, ou si la base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs de cloud (mais pas des administrateurs de bases de données) aux données sensibles. Elle n’est pas recommandée si les rivaux potentiels incluent des administrateurs de bases de données ou si ceux-ci ne doivent pas avoir accès aux données sensibles.
 
@@ -164,7 +164,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> Mise en service des clés avec séparation des rôles
+## <a name="key-provisioning-with-role-separation"></a><a name="KeyProvisionWithRoles"></a> Mise en service des clés avec séparation des rôles
 
 Cette section présente les étapes de la configuration du chiffrement où les administrateurs de la sécurité n’ont pas accès à la base de données et les administrateurs de bases de données n’ont pas accès au magasin de clés ni aux clés en texte clair.
 

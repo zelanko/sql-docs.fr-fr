@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68037168"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Se connecter au catalogue SSIS (SSISDB) dans Azure
@@ -31,7 +31,7 @@ Découvrez les informations de connexion nécessaires pour se connecter au catal
 > [!IMPORTANT]
 > À l’heure actuelle, il n’est pas possible de créer la base de données du catalogue SSISDB dans Azure SQL Database indépendamment de la création d’Azure-SSIS Integration Runtime dans Azure Data Factory. Le runtime d’intégration Azure-SSIS est l’environnement d’exécution qui exécute les packages SSIS sur Azure. Pour une procédure pas à pas du processus, consultez [Déployer et exécuter un package SSIS dans Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 Avant de commencer, veillez à disposer de la version 17.2 ou ultérieure de SQL Server Management Studio (SSMS). Si la base de données du catalogue SSISDB est hébergée sur SQL Database Managed Instance, vérifiez que vous avez la version 17.6 ou ultérieure de SSMS. Pour télécharger la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Obtenir les informations de connexion à partir du portail Azure

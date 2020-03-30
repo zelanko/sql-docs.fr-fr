@@ -4,18 +4,18 @@ ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
-description: L’extension de rendu Word effectue le rendu des rapports paginés au format  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Il s'agit du format Office Open XML.
+description: L’extension de rendu Word effectue le rendu des rapports paginés au format Microsoft Word (.docx). Il s'agit du format Office Open XML.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75df880cf51df8670671331ddd6de2738b0bba54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079413"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342876"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
 
@@ -30,14 +30,14 @@ ms.locfileid: "77079413"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItemsWord"></a> Éléments de rapport dans Word  
+##  <a name="report-items-in-word"></a><a name="ReportItemsWord"></a> Éléments de rapport dans Word  
  Les rapports exportés vers Word apparaissent sous la forme d'une table imbriquée qui représente le corps du rapport. Une région de données de tableau matriciel est rendue sous la forme d'une table imbriquée qui reflète la structure de la région de données dans le rapport. Les zones de texte et les rectangles sont rendus sous la forme d'une cellule dans la table. La valeur de zone de texte est affichée à l'intérieur de la cellule.  
   
  Les images, graphiques, barres de données, graphiques sparkline, cartes, indicateurs et jauges sont rendus sous la forme d'une image statique dans une cellule de table. Les liens hypertexte et liens d'extraction de ces éléments de rapport sont rendus. Les plans et zones sur lesquels il est possible de cliquer dans un graphique ne sont pas pris en charge.  
   
  Les rapports en colonnes de style bulletin d'informations ne sont pas rendus dans Word. Les images et couleurs d'arrière-plan du corps du rapport ainsi que de la page ne sont pas rendus.  
   
-##  <a name="Pagination"></a> Pagination  
+##  <a name="pagination"></a><a name="Pagination"></a> Pagination  
  Une fois que le rapport est ouvert dans Word, Word le repagine entièrement en fonction de la taille de la page. La repagination peut provoquer l'insertion de sauts de page à des endroits où vous n'aviez pas l'intention d'en ajouter, et, dans certains cas, peut engendrer la présence dans le rapport exporté de deux sauts de page consécutifs dans une ligne ou l'ajout de pages vides. Vous pouvez essayer de modifier la pagination de Word en ajustant les marges de page.  
   
  Ce convertisseur ne prend en charge que les sauts de page logiques.  
@@ -50,7 +50,7 @@ ms.locfileid: "77079413"
   
  Au moment du rendu, le rapport s'élargit autant que nécessaire, jusqu'à la limite de 22 pouces, pour afficher le contenu. La largeur minimale du rapport se base sur la propriété RDL Width dans le volet Propriétés.  
   
-##  <a name="DocumentProperties"></a> Propriétés du document  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Propriétés du document  
  Le convertisseur Word écrit les métadonnées suivantes dans le fichier DOCX.  
   
 |Propriétés des éléments de rapport|Description|  
@@ -59,7 +59,7 @@ ms.locfileid: "77079413"
 |Report.Author|Auteur|  
 |Report.Description|Commentaires|  
   
-##  <a name="ReportHeadersFooters"></a> En-têtes et pieds de page  
+##  <a name="page-headers-and-footers"></a><a name="ReportHeadersFooters"></a> En-têtes et pieds de page  
  Les en-têtes et pieds de page sont rendus sous la forme de régions d'en-tête et de pied de page dans Word. Si un numéro de page de rapport ou une expression qui indique le nombre total de pages du rapport apparaît dans l'en-tête ou le pied de page du rapport, ils sont convertis en champ Word afin que le numéro de page exact soit affiché dans le rapport rendu. Si la hauteur d'en-tête ou de pied de page est définie dans le rapport, Word ne peut pas prendre en charge ce paramètre. La propriété PrintOnFirstPage peut, dans certaines circonstances, spécifier si le texte d’un en-tête et d’un pied de page est imprimé sur la première page d’un rapport. Si le rapport rendu contient plusieurs pages et si chaque page contient seulement une section, vous pouvez alors attribuer à PrintOnFirstPage la valeur False et le texte est supprimé sur la première page. Sinon, le texte est imprimé indépendamment de la valeur de la propriété PrintOnFirstPage.  
   
  Le convertisseur Word essaie d'analyser toutes les expressions dans les en-têtes et les pieds de page de rapport lorsque des rapports sont exportés vers Word. De nombreux formulaires d'expressions procèdent à une analyse et les valeurs attendues s'affichent dans les pieds de page et les en-têtes de toutes les pages du rapport.  
@@ -78,7 +78,7 @@ ms.locfileid: "77079413"
   
  Pour éviter ce problème, utilisez plusieurs séquences de texte plutôt qu'une expression complexe lorsque vous utilisez des expressions dans les pieds de page et les en-têtes. Les deux expressions suivantes sont équivalentes. La première est une expression complexe, la seconde utilise des séquences de texte. Le convertisseur Word analyse uniquement la seconde expression avec succès.  
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactivité  
  Certains éléments interactifs sont pris en charge dans Word. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
@@ -96,7 +96,7 @@ ms.locfileid: "77079413"
 ### <a name="bookmarks"></a>Signets  
  Les signets du rapport sont rendus sous la forme de signets Word. Les liens de signet sont rendus sous la forme de liens hypertexte qui se connectent aux étiquettes de signet dans le document. Les étiquettes de signet ne doivent pas comporter plus de 40 caractères. Le seul caractère spécial pouvant être utilisé dans une étiquette de signet est le trait de soulignement (_). Les caractères spéciaux non pris en charge sont supprimés du nom d'étiquette de signet. Par ailleurs, si le nom dépasse 40 caractères, il est tronqué. Si des noms de signet sont en double dans le rapport, les signets ne sont pas rendus dans Word.  
   
-##  <a name="WordStyleRendering"></a> Rendu des styles Word  
+##  <a name="word-style-rendering"></a><a name="WordStyleRendering"></a> Rendu des styles Word  
  Voici une description succincte du rendu des styles dans Word.  
   
 ### <a name="color-palette"></a>Palette de couleurs  
@@ -105,7 +105,7 @@ ms.locfileid: "77079413"
 ### <a name="border"></a>Bordure  
  Les bordures des éléments de rapport autres que les bordures de page sont rendues sous la forme de bordures de cellule de tableau Word.  
   
-##  <a name="SquigglyLines"></a> Traits ondulés dans les rapports exportés  
+##  <a name="squiggly-lines-in-exported-reports"></a><a name="SquigglyLines"></a> Traits ondulés dans les rapports exportés  
  Lorsqu'elles sont exportées et affichées dans Word, les données ou les constantes de rapport peuvent être soulignées par des traits ondulés rouges ou verts. Les traits rouges ondulés identifient les erreurs d'orthographe. Les traits verts ondulés identifient les erreurs de grammaire. Cela se produit lorsque le rapport comprend des mots non conformes à la vérification linguistique (orthographe et grammaire) de la langue d'édition spécifiée dans Word. Par exemple, les titres des colonnes de rapport en anglais seront probablement soulignés par des traits rouges ondulés si le rapport est rendu dans une version espagnole de Word. Les erreurs d'orthographe sont plus courantes dans les rapports que les erreurs de grammaire car les rapports comprennent généralement uniquement du texte court, des phrases ou des paragraphes incomplets.  
   
  La présence de traits ondulés dans les rapports implique que le rapport comporte des erreurs, ce qui n'est probablement pas le cas. Vous pouvez supprimer les lignes ondulées en modifiant la langue de vérification du rapport. Pour modifier la langue de vérification, sélectionnez le contenu du rapport et spécifiez la langue appropriée. Vous pouvez sélectionner tout ou seulement une partie du contenu. Dans Word, l’option de langue **Définir la langue de la vérification** se trouve dans la zone **Langue** de l’onglet **Révision** . Après avoir mis à jour le contenu, vous devez réenregistrer le document.  
@@ -121,7 +121,7 @@ ms.locfileid: "77079413"
 > [!NOTE]  
 >  Lorsque vous modifiez la langue d’édition dans les **Préférences linguistiques de Microsoft Office** ou dans la boîte de dialogue **Options de Word** dans Word, la modification s’applique à tous les programmes Office.  
   
-##  <a name="WordLimitations"></a> Limitations Word  
+##  <a name="word-limitations"></a><a name="WordLimitations"></a> Limitations Word  
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)]applique les limitations suivantes :  
   
 -   Les tableaux Word prennent en charge au maximum 63 colonnes. Si le rapport en contient plus et que vous essayez de le rendre, Word fractionne le tableau. Les colonnes supplémentaires sont placées en position adjacente aux 63 colonnes affichées dans le corps du rapport. Les colonnes du rapport risquent par conséquent de ne pas être alignées comme prévu.  
@@ -138,7 +138,7 @@ ms.locfileid: "77079413"
   
 -   Lorsque du texte est exporté vers Word, le texte avec les ornements de police dans certaines polices peut générer des glyphes inattendus ou manquants dans le rapport rendu.  
   
-##  <a name="WordBenefits"></a> Avantages de l'utilisation du convertisseur Word  
+##  <a name="benefits-of-using-the-word-renderer"></a><a name="WordBenefits"></a> Avantages de l'utilisation du convertisseur Word  
  En plus de rendre les nouvelles fonctions des fichiers .docx [!INCLUDE[ofprword](../../includes/ofprword-md.md)] disponibles dans les rapports exportés, les fichiers *.docx des rapports exportés ont tendance à être plus petits. Les rapports exportés à l'aide du convertisseur Word sont généralement beaucoup plus petits que les mêmes rapports exportés à l'aide du convertisseur Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilité descendante des rapports exportés  
@@ -146,7 +146,7 @@ ms.locfileid: "77079413"
   
  Si vous désactivez le mode de compatibilité, puis enregistrez de nouveau un rapport, la mise en page du rapport peut être modifiée de façon inattendue.  
   
-##  <a name="AvailabilityWord"></a> Le convertisseur Word 2003  
+##  <a name="the-word-2003-renderer"></a><a name="AvailabilityWord"></a> Le convertisseur Word 2003  
   
 > [!IMPORTANT]  
 >  L’extension de rendu [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) est déconseillée. Pour plus d’informations, consultez [Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
@@ -186,7 +186,7 @@ ms.locfileid: "77079413"
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Différences entre les convertisseurs Word et Word 2003  
  Les rapports rendus avec les convertisseurs Word ou Word 2003 peuvent être très facilement confondus. Toutefois, vous pouvez remarquer des différences mineures entre les deux formats Word ou Word 2003.  
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, par exemple omettre les liens hypertexte et d'extraction ou développer tous les éléments pouvant être activés/désactivés quel que soit l'état d'origine de l'élément au moment du rendu, ce en modifiant les paramètres d'informations de périphérique. Pour plus d’informations, consultez [Word Device Information Settings](../../reporting-services/word-device-information-settings.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes

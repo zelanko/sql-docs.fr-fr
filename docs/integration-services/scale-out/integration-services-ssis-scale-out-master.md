@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903806"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
@@ -25,7 +25,7 @@ ms.locfileid: "77903806"
 
 Scale Out Master gère le système Scale Out par le biais du catalogue SSISDB et du service Scale Out Master. 
 
-Le catalogue SSISDB stocke toutes les informations sur les Scale Out Workers, les packages et les exécutions. Il fournit l’interface pour activer un Scale Out Worker et exécuter des packages dans Scale Out. Pour plus d’informations, consultez [Procédure pas à pas : Configurer Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) et [Exécuter des packages dans Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
+Le catalogue SSISDB stocke toutes les informations sur les Scale Out Workers, les packages et les exécutions. Il fournit l’interface pour activer un Scale Out Worker et exécuter des packages dans Scale-out. Pour plus d’informations, consultez [Procédure pas à pas : Configurer Scale-out Integration Services](walkthrough-set-up-integration-services-scale-out.md) et [Exécuter des packages dans Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
 
 Le service Scale Out Master est un service Windows responsable de la communication avec les Scale Out Workers. Il retourne l’état des exécutions des packages sur les Scale Out Workers via le protocole HTTPS et opère sur les données dans SSISDB. 
 
@@ -42,7 +42,7 @@ Le service Scale Out Master est un service Windows responsable de la communicati
     - [[catalog].[disable_worker_agent]](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)
     - [[catalog].[enable_worker_agent]](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)
 
-- Pour l’exécution des packages dans Scale Out :
+- Pour l’exécution des packages dans Scale-out :
     - [[catalog].[create_execution]](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)
     - [[catalog].[add_execution_worker]](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)
     - [[catalog].[start_execution]](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)

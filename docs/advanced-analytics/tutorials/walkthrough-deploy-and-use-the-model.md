@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479389"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Déployer le modèle R et l’utiliser dans SQL Server (procédure pas à pas)
@@ -72,7 +72,7 @@ Créez une procédure stockée, *PredictTipBatchMode*, qui génère plusieurs pr
     END
     ```
 
-    + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que donnée **varbinary(max)**, stocké dans la variable SQL _\@lmodel2_, puis transmis comme paramètre *mod* à la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que donnée **varbinary(max)** , stocké dans la variable SQL _\@lmodel2_, puis transmis comme paramètre *mod* à la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
     + Les données utilisées comme entrées pour le scoring sont définies en tant que requête SQL et stockées sous forme de chaîne dans _\@l’entrée_ de la variable SQL. À mesure que les données sont récupérées de la base de données, elles sont stockées dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut des données d’entrée pour la procédure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Vous pouvez définir un autre nom de variable si nécessaire à l’aide du paramètre _\@input_data_1_name_.
 

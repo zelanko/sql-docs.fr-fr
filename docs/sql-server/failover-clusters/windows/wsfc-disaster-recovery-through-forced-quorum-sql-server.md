@@ -15,10 +15,10 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821984"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Récupération d'urgence WSFC par le quorum forcé (SQL Server)
@@ -33,9 +33,9 @@ ms.locfileid: "74821984"
   
 -   [Contenu connexe](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  La procédure de quorum forcé suppose qu'un quorum sain existait avant l'échec de quorum.  
   
 > [!WARNING]  
@@ -43,10 +43,10 @@ ms.locfileid: "74821984"
 >   
 >  Pour plus d'informations, consultez les pages suivantes :  [Clustering de basculement Windows Server (WSFC) avec SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de quorum WSFC et configuration de vote (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  L'utilisateur doit être un compte de domaine qui est membre du groupe Administrateurs local sur chaque nœud du cluster WSFC.  
   
-##  <a name="Main"></a> Récupération d'urgence WSFC par le quorum forcé  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> Récupération d'urgence WSFC par le quorum forcé  
  N'oubliez pas qu'un échec de quorum met hors ligne tous les services cluster, toutes les instances SQL Server et [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]dans le cluster WSFC, car le cluster, tel que configuré, ne peut pas garantir la tolérance de panne au niveau du nœud.  Un échec de quorum signifie que les nœuds votants sains dans le cluster WSFC ne satisfont plus le modèle de quorum. Certains nœuds ont peut-être échoué complètement, et d'autres ont peut-être simplement arrêté le service WSFC et sont sains par ailleurs, sauf en ce qui concerne la perte de la capacité de communiquer avec un quorum.  
   
  Pour remettre le cluster WSFC en ligne, vous devez corriger la cause première de l'échec de quorum dans la configuration existante, récupérer les bases de données concernées si nécessaire et, éventuellement, reconfigurer les nœuds restants dans le cluster WSFC pour refléter la topologie de cluster survivante.  
@@ -104,7 +104,7 @@ ms.locfileid: "74821984"
   
 8.  **Effectuez une analyse RPO/RTO.** Vous devez analyser les journaux système SQL Server, les horodateurs de base de données et les journaux des événements Windows pour déterminer la cause première de l'échec et pour documenter les expériences de point et de temps de récupération actuelles.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Forcer un cluster WSFC à démarrer sans quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74821984"
   
 -   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
