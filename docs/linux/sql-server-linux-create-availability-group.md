@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077445"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
@@ -324,7 +324,7 @@ Cette section montre comment créer un groupe de disponibilité avec un type de 
 
 2.  Dans la boîte de dialogue Introduction, cliquez sur **Suivant**.
 
-3.  Dans la boîte de dialogue Spécifier les options du groupe de disponibilité, entrez un nom pour le groupe de disponibilité et sélectionnez un type de cluster EXTERNAL (externe) ou NONE (aucun) dans la liste déroulante. Externe doit être utilisé lorsque Pacemaker est déployé. Aucun est destiné à des scénarios spécialisés, tels que l’échelle lecture. La sélection de l’option de détection d’intégrité au niveau de la base de données est facultative. Pour plus d’informations sur cette option, consultez [Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Cliquez sur **Suivant**.
+3.  Dans la boîte de dialogue Spécifier les options du groupe de disponibilité, entrez un nom pour le groupe de disponibilité et sélectionnez un type de cluster EXTERNAL (externe) ou NONE (aucun) dans la liste déroulante. Externe doit être utilisé lorsque Pacemaker est déployé. Aucun est destiné à des scénarios spécialisés, tels que le scale-out de lecture. La sélection de l’option de détection d’intégrité au niveau de la base de données est facultative. Pour plus d’informations sur cette option, consultez [Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Cliquez sur **Suivant**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 

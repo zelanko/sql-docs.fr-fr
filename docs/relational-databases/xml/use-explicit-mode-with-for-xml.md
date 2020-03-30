@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68001789"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utiliser le mode EXPLICIT avec FOR XML
@@ -148,25 +148,25 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>Dans cette section  
  Les exemples suivants illustrent l'utilisation du mode EXPLICIT.  
   
--   [Exemple : Récupération d’informations sur les employés](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [Exemple : extraction d’informations sur les employés](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [Exemple : Spécification de la directive ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [Exemple : spécification de la directive ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [Exemple : Spécification de la directive ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Exemple : spécification de la directive ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Exemple : Construction de frères à l’aide du mode EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Exemple : construction de frères à l'aide du mode EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Exemple : Spécification des directives ID et IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Exemple : spécification des directives ID et IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Exemple : Spécification des directives ID et IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Exemple : spécification des directives ID et IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Exemple : Spécification de la directive HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Exemple : spécification de la directive HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Exemple : spécification de la directive ELEMENT et de l'encodage d'entité](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Exemple : Spécification de la directive CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [Exemple : spécification de la directive CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [Exemple : Spécification de la directive XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [Exemple : spécification de la directive XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   

@@ -14,17 +14,17 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995269"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Récupérer et interroger des données XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cette rubrique décrit les options de requête que vous devez spécifier pour interroger les données XML. Elle décrit aussi les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.  
   
-##  <a name="features"></a> Fonctionnalités d'une instance XML qui ne sont pas conservées  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Fonctionnalités d'une instance XML qui ne sont pas conservées  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve le contenu de l’instance XML, mais ne conserve pas les aspects de l’instance XML qui ne sont pas considérés significatifs dans le modèle de données XML. Cela signifie qu'une instance XML extraite peut ne pas être identique à l'instance stockée sur le serveur, mais contiendra les mêmes informations.  
   
 ### <a name="xml-declaration"></a>Déclaration XML  
@@ -87,7 +87,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Définition des options requises de requête  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Définition des options requises de requête  
  Quand vous interrogez des variables ou colonnes de type **xml** à l’aide de méthodes de type de données **xml** , vous devez définir les options suivantes, comme indiqué.  
   
 |Options SET|Valeurs requises|  

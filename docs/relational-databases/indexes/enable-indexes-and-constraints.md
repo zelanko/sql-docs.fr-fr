@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c1f860f69ef95af42627d0d2bad869afbb366fc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107108"
 ---
 # <a name="enable-indexes-and-constraints"></a>Activer les index et contraintes
@@ -44,9 +44,9 @@ ms.locfileid: "68107108"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Après la reconstruction de l'index, toutes les contraintes qui étaient désactivées du fait de la désactivation de l'index doivent être réactivées manuellement. Les contraintes PRIMARY KEY et UNIQUE sont activées par la reconstruction de l'index associé. Cet index doit être reconstruit (activé) avant que les contraintes FOREIGN KEY qui font référence à la contrainte PRIMARY KEY ou UNIQUE puissent être activées. Les contraintes FOREIGN KEY sont activées à l'aide de l'instruction ALTER TABLE CHECK CONSTRAINT.  
   
@@ -73,12 +73,12 @@ ms.locfileid: "68107108"
 
 -   Lors de la regénération d’index non-cluster compressés désactivés, data_compression est défini sur 'none' par défaut, ce qui signifie que les index seront décompressés. Cela est dû à la perte des métadonnées des paramètres de compression quand les index non-cluster sont désactivés. Pour contourner ce problème, spécifiez la compression de données explicite dans une instruction rebuild.
 
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. S’il utilise DBCC DBREINDEX, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>Pour activer un index désactivé  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68107108"
   
  Les informations suivantes sont disponibles dans la boîte de dialogue **Reconstruire les index** :  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Pour activer un index désactivé à l'aide de ALTER INDEX  
   

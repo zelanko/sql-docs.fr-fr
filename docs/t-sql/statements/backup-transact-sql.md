@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249729"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -556,7 +556,7 @@ Cette section présente les concepts de sauvegarde essentiels suivants :
 > [!NOTE]
 > Pour découvrir une présentation de la sauvegarde dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez l’article [Vue d’ensemble de la sauvegarde](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-### <a name="Backup_Types"></a> Types de sauvegarde
+### <a name="backup-types"></a><a name="Backup_Types"></a> Types de sauvegarde
 
 Les types de sauvegarde pris en charge dépendent du mode de récupération de la base de données conformément à ce qui suit :
 
@@ -579,14 +579,14 @@ Les types de sauvegarde pris en charge dépendent du mode de récupération de l
 
 - Une *sauvegarde en copie seule* est une sauvegarde complète ou une sauvegarde de fichier journal qui est réalisée dans un but précis, et qui est indépendante de la séquence normale des sauvegardes standard. Pour créer une sauvegarde en copie seule, spécifiez l'option COPY_ONLY dans votre instruction BACKUP. Pour plus d’informations, consultez l’article [Sauvegardes de type copie seule](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
-### <a name="Tlog_Truncation"></a> Troncation du journal des transactions
+### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> Troncation du journal des transactions
 
 Pour éviter de remplir le journal des transactions d'une base de données, les sauvegardes régulières sont essentielles. En mode de récupération simple, la troncation du journal se produit automatiquement après la sauvegarde de la base de données ; en mode de récupération complète, elle se produit automatiquement après la sauvegarde du journal des transactions. Toutefois, le processus de troncation peut parfois être différé. Pour plus d’informations sur les facteurs susceptibles de retarder la troncation du journal, consultez l’article [Journal des transactions](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
 > [!NOTE]
 > Les options `BACKUP LOG WITH NO_LOG` et `WITH TRUNCATE_ONLY` ne sont plus disponibles. Si vous utilisez le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions et si vous devez supprimer la chaîne de sauvegarde de fichier journal d'une base de données, passez au mode de récupération simple. Pour plus d’informations, consultez l’article [Afficher ou modifier le mode de récupération d’une base de données](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).
 
-### <a name="Formatting_Media"></a> Formatage du support de sauvegarde
+### <a name="formatting-backup-media"></a><a name="Formatting_Media"></a> Formatage du support de sauvegarde
 
 Le support de sauvegarde est formaté par une instruction BACKUP si, et uniquement si, l'une des conditions suivantes est vraie :
 
@@ -594,7 +594,7 @@ Le support de sauvegarde est formaté par une instruction BACKUP si, et uniqueme
 - Le support est vide.
 - L'opération écrit sur une bande magnétique de sauvegarde consécutive.
 
-### <a name="Backup_Devices_and_Media_Sets"></a> Utilisation des unités de sauvegarde et des supports de sauvegarde
+### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a> Utilisation des unités de sauvegarde et des supports de sauvegarde
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Unités de sauvegarde d’un jeu de sauvegarde distribuée (jeu de bandes)
 Un *jeu de bandes* est un ensemble de fichiers disque sur lesquels les données sont divisées en blocs et distribuées dans un ordre fixe. Le nombre d’unités de sauvegarde utilisées dans un jeu de bandes doit rester le même (sauf si le support est réinitialisé avec`FORMAT`).
@@ -653,13 +653,13 @@ Si plusieurs unités sont spécifiées pour chaque miroir, leur ordre détermine
 
 Pour plus d’informations sur les supports de sauvegarde miroir, consultez l’article [Jeux de supports de sauvegarde en miroir](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). Pour plus d’informations sur les supports de sauvegarde et les familles de supports en général, consultez l’article [Jeux de supports, familles de supports et jeux de sauvegarde](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
 
-### <a name="Restoring_Backups"></a> Restauration de sauvegardes SQL Server
+### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> Restauration de sauvegardes SQL Server
 
 Pour restaurer une base de données et, éventuellement, la récupérer pour la mettre en ligne, ou pour restaurer un fichier ou un groupe de fichiers, utilisez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ou les tâches [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de **restauration**. Pour plus d’informations, consultez l’article [Vue d’ensemble de la restauration et de la récupération](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-## <a name="Additional_Considerations"></a> Considérations supplémentaires à propos des options BACKUP
+## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> Considérations supplémentaires à propos des options BACKUP
 
-### <a name="Interactions_SKIP_etc"></a> Interactions de SKIP, NOSKIP, INIT et NOINIT
+### <a name="interaction-of-skip-noskip-init-and-noinit"></a><a name="Interactions_SKIP_etc"></a> Interactions de SKIP, NOSKIP, INIT et NOINIT
 
 Ce tableau décrit les interactions entre les options { **NOINIT** | INIT } et { **NOSKIP** | SKIP }.
 
@@ -737,7 +737,7 @@ Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membr
 
 Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d'écrire sur l'unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit avoir des autorisations d'écriture. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. De tels problèmes pour le fichier physique de l'unité de sauvegarde peuvent n'apparaître que lorsque la ressource physique est sollicitée au moment de la sauvegarde ou de la restauration.
 
-## <a name="examples"></a> Exemples
+## <a name="examples"></a><a name="examples"></a> Exemples
 
 Cette section contient les exemples suivants :
 
@@ -755,7 +755,7 @@ Cette section contient les exemples suivants :
 > [!NOTE]
 > Les rubriques de procédures de sauvegarde contiennent des exemples supplémentaires. Pour plus d’informations, consultez l’article [Vue d’ensemble de la sauvegarde](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-### <a name="backing_up_db"></a> A. Sauvegarde d'une base de données complète
+### <a name="a-backing-up-a-complete-database"></a><a name="backing_up_db"></a> A. Sauvegarde d'une base de données complète
 
 L’exemple ci-dessous sauvegarde la base de données [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] dans un fichier disque.
 
@@ -766,7 +766,7 @@ BACKUP DATABASE AdventureWorks2012
 GO
 ```
 
-### <a name="backing_up_db_and_log"></a> B. Sauvegarde de la base de données et du journal
+### <a name="b-backing-up-the-database-and-log"></a><a name="backing_up_db_and_log"></a> B. Sauvegarde de la base de données et du journal
 
 L'exemple suivant sauvegarde l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui utilise par défaut le mode de récupération simple. Pour prendre en charge les sauvegardes de fichier journal, la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est modifiée pour utiliser le mode de récupération complète.
 
@@ -804,7 +804,7 @@ GO
 > [!NOTE]
 > Pour une base de données de production, sauvegardez régulièrement le journal. Les sauvegardes du journal doivent être suffisamment fréquentes pour assurer une protection contre la perte des données.
 
-### <a name="full_file_backup"></a> C. Création d'une sauvegarde de fichiers complète des groupes de fichiers secondaires
+### <a name="c-creating-a-full-file-backup-of-the-secondary-filegroups"></a><a name="full_file_backup"></a> C. Création d'une sauvegarde de fichiers complète des groupes de fichiers secondaires
 
 L'exemple suivant crée une sauvegarde complète de tous les fichiers se trouvant dans les deux groupes de fichiers secondaires.
 
@@ -817,7 +817,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="differential_file_backup"></a> D. Création d'une sauvegarde de fichiers différentielle des groupes de fichiers secondaires
+### <a name="d-creating-a-differential-file-backup-of-the-secondary-filegroups"></a><a name="differential_file_backup"></a> D. Création d'une sauvegarde de fichiers différentielle des groupes de fichiers secondaires
 
 L'exemple suivant crée une sauvegarde différentielle de tous les fichiers se trouvant dans les deux groupes de fichiers secondaires.
 
@@ -832,7 +832,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="create_single_family_mirrored_media_set"></a> E. Création et sauvegarde dans un support de sauvegarde miroir d'une seule famille
+### <a name="e-creating-and-backing-up-to-a-single-family-mirrored-media-set"></a><a name="create_single_family_mirrored_media_set"></a> E. Création et sauvegarde dans un support de sauvegarde miroir d'une seule famille
 
 L'exemple ci-dessous illustre la création d'un support de sauvegarde miroir contenant une seule famille de supports et quatre miroirs, ainsi que la sauvegarde de la base de données [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] dans ces derniers.
 
@@ -847,7 +847,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet0';
 ```
 
-### <a name="create_multifamily_mirrored_media_set"></a> F. Création et sauvegarde dans un support de sauvegarde miroir de plusieurs familles
+### <a name="f-creating-and-backing-up-to-a-multifamily-mirrored-media-set"></a><a name="create_multifamily_mirrored_media_set"></a> F. Création et sauvegarde dans un support de sauvegarde miroir de plusieurs familles
 
 L'exemple suivant illustre la création d'un support de sauvegarde miroir dans lequel chaque miroir contient deux familles de supports. La base de données [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] est sauvegardée sur les deux miroirs.
 
@@ -860,7 +860,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet1';
 ```
 
-### <a name="existing_mirrored_media_set"></a> G. Sauvegarde dans un support de sauvegarde miroir existant
+### <a name="g-backing-up-to-an-existing-mirrored-media-set"></a><a name="existing_mirrored_media_set"></a> G. Sauvegarde dans un support de sauvegarde miroir existant
 
 L'exemple suivant illustre l'ajout d'un jeu de sauvegarde au support de sauvegarde créé dans l'exemple précédent.
 
@@ -876,7 +876,7 @@ WITH
 > [!NOTE]
 > NOINIT, par défaut, est indiqué ici pour plus de clarté.
 
-### <a name="creating_compressed_backup_new_media_set"></a> H. Création d'une sauvegarde compressée dans un nouveau support de sauvegarde
+### <a name="h-creating-a-compressed-backup-in-a-new-media-set"></a><a name="creating_compressed_backup_new_media_set"></a> H. Création d'une sauvegarde compressée dans un nouveau support de sauvegarde
 
 L'exemple suivant illustre le formatage du support avec la création d'un nouveau jeu de médias et une sauvegarde complète compressée de la base de données [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].
 
@@ -887,7 +887,7 @@ WITH
     COMPRESSION;
 ```
 
-### <a name="url"></a> I. Sauvegarde du service de stockage d’objets blob Microsoft Azure
+### <a name="i-backing-up-to-the-microsoft-azure-blob-storage-service"></a><a name="url"></a> I. Sauvegarde du service de stockage d’objets blob Microsoft Azure
 
 L’exemple effectue une sauvegarde complète de la base de données `Sales` vers le service Microsoft Azure Storage Blob. Le nom du compte de stockage est `mystorageaccount`. Le conteneur se nomme `myfirstcontainer`. Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture, suppression et liste. Les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) ont été créées à l’aide d’une signature d’accès partagé associée à la stratégie d’accès stockée. Pour plus d’informations sur la sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service de stockage Blob Microsoft Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) et [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -897,7 +897,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-### <a name="backup_progress"></a> J. Suivi de la progression de l’instruction de sauvegarde
+### <a name="j-track-the-progress-of-backup-statement"></a><a name="backup_progress"></a> J. Suivi de la progression de l’instruction de sauvegarde
 
 La requête suivante retourne des informations sur les instructions de sauvegarde en cours d’exécution :
 ```sql
@@ -1095,7 +1095,7 @@ Les autorisations BACKUP DATABASE reviennent par défaut aux membres du rôle se
 
 Des problèmes de propriété et d’autorisations sur l’URL sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d'écrire sur l'unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit avoir des autorisations d'écriture.
 
-## <a name="examples"></a> Exemples
+## <a name="examples"></a><a name="examples"></a> Exemples
 
 L’exemple effectue une sauvegarde COPY_ONLY de `Sales` vers le service de stockage Blob Microsoft Azure. Le nom du compte de stockage est `mystorageaccount`. Le conteneur se nomme `myfirstcontainer`. Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture, suppression et liste. Les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) ont été créées à l’aide d’une signature d’accès partagé associée à la stratégie d’accès stockée. Pour plus d’informations sur la sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service de stockage Blob Microsoft Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) et [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -1254,7 +1254,7 @@ Pour effectuer une sauvegarde, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sau
 
 Applique un verrou ExclusiveUpdate sur l’objet DATABASE.
 
-## <a name="Security"></a> Sécurité
+## <a name="security"></a><a name="Security"></a> Sécurité
 
 Les sauvegardes [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ne sont pas stockées sur l’appliance. Il revient donc à votre équipe informatique de gérer tous les aspects liés à la sécurité de la sauvegarde. Cela comprend, par exemple, la gestion de la sécurité des données de sauvegarde, de la sécurité du serveur utilisé pour stocker les sauvegardes et de la sécurité de l’infrastructure réseau qui connecte le serveur de sauvegarde à l’appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 

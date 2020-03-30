@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68254868"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
 
 Les journaux de traces du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont des fichiers texte ASCII qui contiennent des informations détaillées sur les opérations du service Report Server.  Ce fichier contient des informations comme les opérations effectuées par le service web Report Server, le portail web et le traitement en arrière-plan. Le fichier journal des traces comprend des informations redondantes qui sont consignées dans d'autres fichiers journaux, ainsi que des informations qui ne se trouvent nulle part ailleurs. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l’origine d’un problème consigné dans le journal des événements ou le journal des exécutions. Par exemple, lors de la résolution des problèmes liés aux abonnements.  
 
-## <a name="bkmk_view_log"></a> Où se trouvent les fichiers journaux de Report Server ?
+## <a name="where-are-the-report-server-log-files"></a><a name="bkmk_view_log"></a> Où se trouvent les fichiers journaux de Report Server ?
 
 Les fichiers journaux des traces sont `ReportServerService_<timestamp>.log` et `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log`, et se trouvent dans le dossier suivant :
 
@@ -28,7 +28,7 @@ Les fichiers journaux des traces sont `ReportServerService_<timestamp>.log` et `
 
 Les journaux des traces sont créés quotidiennement, à partir de la première entrée ayant lieu après minuit (heure locale), et chaque fois que le service redémarre. L'horodateur est basé sur l'heure UTC (Coordinated Universal Time). Le fichier est au format EN-US. Par défaut, les journaux des traces sont limités à 32 mégaoctets et par défaut, ils sont supprimés après 14 jours.  
 
-## <a name="bkmk_trace_configuration_settings"></a> Paramètres de configuration des traces
+## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> Paramètres de configuration des traces
 
 Le comportement du journal des traces est géré dans le fichier de configuration **ReportingServicesService.exe.config**. Le fichier de configuration se trouve dans le chemin d'accès de dossier suivant :  
   
@@ -68,7 +68,7 @@ Le comportement du journal des traces est géré dans le fichier de configuratio
 |**Catégorie de composant**|Spécifie les composants pour lesquels les informations du journal des traces sont générées, ainsi que le niveau des traces, dans le format suivant :<br /><br /> \<catégorie de composant>:\<tracelevel><br /><br /> Vous pouvez spécifier l’ensemble ou une partie des composants (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Si vous ne voulez pas générer les informations relatives à un composant spécifique, désactivez les traces de ce composant (par exemple, « SemanticModelGenerator:0 »). Ne désactivez pas le suivi pour le composant **all**.<br /><br /> Vous pouvez définir « SemanticQueryEngine:4 » si vous voulez afficher les instructions Transact-SQL qui sont générées pour chaque requête sémantique. Les instructions Transact-SQL sont enregistrées dans le journal des traces. L'exemple suivant illustre le paramètre de configuration qui ajoute les instructions Transact-SQL au journal :<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Catégories de composants pouvant être définies :<br /><br /> <br /><br /> Le composant**All** est utilisé pour effectuer le suivi de l’activité générale du serveur de rapports pour tous les processus qui ne se retrouvent pas dans les catégories spécifiques.<br /><br /> Le composant**RunningJobs** sert à effectuer le suivi d’une opération de rapport ou d’abonnement en cours.<br /><br /> Le composant**SemanticQueryEngine** sert à effectuer le suivi d’une requête sémantique qui est traitée quand un utilisateur effectue une exploration de données ad hoc dans un rapport basé sur un modèle.<br /><br /> Le composant**SemanticModelGenerator** est utilisé pour effectuer le suivi de la génération de modèle.<br /><br /> Le composant**http** sert à activer le fichier journal HTTP Report Server. Pour plus d'informations, consultez [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
 |Valeur **trace level** pour les catégories de composants|\<catégorie de composant>:\<tracelevel><br /><br /> <br /><br /> Si vous n’ajoutez pas de niveau de suivi au composant, la valeur spécifiée pour **DefaultTraceSwitch** est utilisée. Par exemple, si vous spécifiez « all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator », tous les composants utilisent le niveau des traces par défaut.|Valeurs valides pour le niveau de trace :<br /><br /> <br /><br /> 0= Trace désactivée<br /><br /> 1= Exceptions et redémarrages<br /><br /> 2= Exceptions, redémarrages, avertissements<br /><br /> 3= Exceptions, redémarrages, avertissements, messages d'état (par défaut)<br /><br /> 4= Mode commenté<br /><br /> La valeur par défaut pour Report Server est : « all:3 ».|  
   
-## <a name="bkmk_add_custom"></a> Ajout d'un paramètre de configuration personnalisé destiné à spécifier l'emplacement des fichiers de vidage  
+## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> Ajout d'un paramètre de configuration personnalisé destiné à spécifier l'emplacement des fichiers de vidage  
 Vous pouvez ajouter un paramètre personnalisé visant à définir l'emplacement que l’outil Dr Watson pour Windows utilise pour stocker les fichiers de vidage. Le paramètre personnalisé est **Directory**. L’exemple suivant illustre l’utilisation de ce paramètre de configuration dans la section **RStrace** :  
 
 ```
@@ -77,7 +77,7 @@ Vous pouvez ajouter un paramètre personnalisé visant à définir l'emplacement
   
 Pour plus d'informations, consultez l' [article 913046 de la Base de connaissances](https://support.microsoft.com/?kbid=913046) sur le site Web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-##  <a name="bkmk_log_file_fields"></a> Champs du fichier journal
+##  <a name="log-file-fields"></a><a name="bkmk_log_file_fields"></a> Champs du fichier journal
 
 Un journal des traces contient les champs suivants :  
   

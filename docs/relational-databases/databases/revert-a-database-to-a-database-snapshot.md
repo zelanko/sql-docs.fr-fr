@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909511"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
@@ -34,9 +34,9 @@ ms.locfileid: "72909511"
   
 -   **Pour rétablir une base de données dans l’état d’un instantané de base de données, avec :**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Le rétablissement n'est pas pris en charge dans les conditions suivantes :  
   
 -   Il existe plusieurs instantanés pour la base de données. Le rétablissement doit compter un seul instantané de base de données que vous prévoyez de rétablir.  
@@ -67,7 +67,7 @@ ms.locfileid: "72909511"
   
 -   Le rétablissement supprime tous les catalogues de texte intégral.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Vérifiez que la base de données source et l'instantané de base de données remplissent les conditions préalables suivantes :  
   
 -   Vérifiez que la base de données n'a pas été endommagée.  
@@ -79,12 +79,12 @@ ms.locfileid: "72909511"
   
 -   Supprimez tous les autres instantanés qui existent actuellement sur la base de données. Pour plus d’informations, consultez [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Tout utilisateur qui dispose des autorisations RESTORE DATABASE sur la base de données source peut la rétablir dans l'état qui était le sien au moment où l'instantané a été créé.  
   
-##  <a name="TsqlProcedure"></a> Comment rétablir une base de données dans l'état d'un instantané de base de données (à l'aide de Transact-SQL)  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> Comment rétablir une base de données dans l'état d'un instantané de base de données (à l'aide de Transact-SQL)  
  **Pour rétablir une base de données dans l'état d'un instantané de base de données**  
   
 > [!NOTE]  
@@ -118,14 +118,14 @@ ms.locfileid: "72909511"
   
 6.  En option, sauvegardez la base de données restaurée, notamment si elle utilise le mode de récupération complète (ou utilisant les journaux de transactions). Pour sauvegarder une base de données, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
 
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cette section présente les exemples suivants de rétablissement d'une base de données à un état antérieur par le biais d'un instantané de base de données :  
   
 -   R. [Rétablissement d'un instantané sur la base de données AdventureWorks](#Reverting_AW)  
   
 -   B. [Rétablissement d'un instantané sur la base de données Sales (Ventes)](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> A. Rétablissement d'un instantané sur la base de données AdventureWorks  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> A. Rétablissement d'un instantané sur la base de données AdventureWorks  
  L'exemple suivant part du principe qu'un seul instantané existe actuellement sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Pour l’exemple qui crée l’instantané auquel la base de données est ici rétablie, consultez [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
@@ -136,7 +136,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> B. Rétablissement d'un instantané sur la base de données Sales (Ventes)  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> B. Rétablissement d'un instantané sur la base de données Sales (Ventes)  
  Cet exemple suppose que deux instantanés existent actuellement sur la base de données **Sales** : **sales_snapshot0600** et **sales_snapshot1200**. Cet exemple supprime l'instantané le plus ancien et rétablit la base de données au moyen de l'instantané le plus récent.  
   
  Pour voir le code servant à créer la base de données et les instantanés donnés en exemple ici, consultez :  
@@ -158,7 +158,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

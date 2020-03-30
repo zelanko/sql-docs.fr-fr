@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727138"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutoriel : Déployer un modèle dans Python pour classer les clients par catégorie avec SQL Server Machine Learning Services
@@ -41,7 +41,7 @@ Dans la [deuxième partie](python-clustering-model-prepare-data.md), vous avez p
 
 Dans la [troisième partie](python-clustering-model-build.md), vous avez appris à créer et à effectuer l’apprentissage d’un modèle de clustering dans Python.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 * La troisième partie de ce tutoriel part du principe que vous avez satisfait les prérequis de la [**première partie**](python-clustering-model.md) et effectué les étapes décrites dans la [**deuxième partie**](python-clustering-model-prepare-data.md) et la [**troisième partie**](python-clustering-model-build.md).
 

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287743"
 ---
 # <a name="tables"></a>Tables
@@ -44,7 +44,7 @@ Les tables partitionnées sont des tables dont les données sont divisées horiz
 Les tables temporaires sont stockées dans **tempdb**. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des tables temporaires locales est un signe dièse (#) unique. Ces tables sont visibles uniquement à la connexion courante de l'utilisateur et sont supprimées dès que l'utilisateur se déconnecte de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, le nom des tables temporaires globales commence par deux signes dièse (##) ; ces tables sont visibles à tout utilisateur après avoir été créées et ne sont supprimées qu'une fois que l'ensemble des utilisateurs ayant fait référence à la table se sont déconnectés de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 
-#### <a name="ctp23"></a> Recompilations réduites pour les charges de travail qui utilisent des tables temporaires sur plusieurs étendues
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> Recompilations réduites pour les charges de travail qui utilisent des tables temporaires sur plusieurs étendues
 
 [!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] pour tous les niveaux de compatibilité de base de données réduit les recompilations pour les charges de travail qui utilisent des tables temporaires sur plusieurs étendues. Cette fonctionnalité est également activée dans Azure SQL Database sous le niveau de compatibilité de base de données 150 pour tous les modèles de déploiement.  Avant cette fonctionnalité, quand vous référenciez une table temporaire avec une instruction de langage de manipulation de données (DML) (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), si la table temporaire était créée par un lot d’étendue externe, une recompilation de l’instruction DML se produisait à chacune de ses exécutions. Avec cette amélioration, SQL Server effectue de légères vérifications supplémentaires pour éviter les recompilations inutiles :
 

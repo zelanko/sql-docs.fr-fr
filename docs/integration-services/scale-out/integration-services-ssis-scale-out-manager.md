@@ -10,13 +10,13 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082128"
 ---
-# <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
+# <a name="integration-services-scale-out-manager"></a>Manager scale-out Integration Services
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -31,18 +31,18 @@ Vous pouvez ouvrir Scale Out Manager de deux façons.
 ### <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1. Ouvrir Scale Out Manager à partir de SQL Server Management Studio
 Ouvrez SSMS (SQL Server Management Studio) et connectez-vous à l’instance de SQL Server de Scale Out Master.
 
-Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **SSISDB** et sélectionnez **Gérer Scale Out**.
+Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **SSISDB** et sélectionnez **Gérer Scale-out**.
 
-![Gérer Scale Out](media/manage-scale-out.PNG)
+![Gérer Scale-out](media/manage-scale-out.PNG)
 
 > [!NOTE]
-> Nous vous recommandons d’exécuter SSMS en tant qu’administrateur, car certaines opérations de gestion Scale Out telles que l’ajout d’un Scale Out Worker nécessitent un privilège administratif.
+> Nous vous recommandons d’exécuter SSMS en tant qu’administrateur, car certaines opérations de gestion Scale-out telles que l’ajout d’un Scale Out Worker nécessitent un privilège administratif.
 
 ### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2. Ouvrir Scale Out Manager en exécutant ManagementTool.exe
 
 Recherchez `ManagementTool.exe` sous `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management`. Cliquez avec le bouton droit sur **ManagementTool.exe** et sélectionnez **Exécuter en tant qu’administrateur**. 
 
-Après l’ouverture de Scale Out Manager, vous devez entrer le nom de l’instance de SQL Server de Scale Out Master et vous y connecter pour gérer votre environnement Scale Out.
+Après l’ouverture de Scale Out Manager, vous devez entrer le nom de l’instance de SQL Server de Scale Out Master et vous y connecter pour gérer votre environnement Scale-out.
 
 ![Connexion au portail](media/portal-connect-new.png)
 
@@ -50,7 +50,7 @@ Après l’ouverture de Scale Out Manager, vous devez entrer le nom de l’insta
 Dans Scale Out Manager, vous pouvez effectuer les opérations suivantes :
 
 ### <a name="enable-scale-out"></a>Activer Scale Out
-Après vous être connecté à SQL Server, si Scale Out n’est pas activé, vous pouvez sélectionner **Activer** pour l’activer.
+Après vous être connecté à SQL Server, si Scale-out n’est pas activé, vous pouvez sélectionner **Activer** pour l’activer.
 
 ![Portail - Activer Scale Out](media/portal-enable-scale-out-new.PNG) 
 

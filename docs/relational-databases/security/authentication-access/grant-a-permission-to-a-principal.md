@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e7dc2bff70e98420161d823207222c6c9205940
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68043263"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Accorder une autorisation à un principal
@@ -38,21 +38,21 @@ ms.locfileid: "68043263"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Tenez compte des recommandations suivantes qui peuvent faciliter la gestion des autorisations.  
   
 -   Accorder des autorisations à des rôles plutôt qu'à des connexions ou des utilisateurs. Lorsqu'un individu est remplacé par un autre, supprimez celui qui quitte le rôle et ajoutez le nouvel arrivant au rôle. Les nombreuses autorisations qui peuvent être associées au rôle seront automatiquement disponibles pour ce dernier. Si, dans une entreprise, plusieurs personnes ont besoin des mêmes autorisations, l'ajout de chacune d'entre elles au rôle leur accordera les mêmes autorisations.  
   
 -   Configurez des éléments sécurisables similaires (tables, vues et procédures) qui seront détenus par un schéma, puis octroyez des autorisations au schéma. Par exemple, le schéma de registre du personnel peut détenir plusieurs tables, vues et procédures stockées. En accordant l'accès au schéma, toutes les autorisations nécessaires pour effectuer la fonction de gestion du personnel peuvent être accordées en même temps. Pour en savoir plus sur les éléments sécurisables auxquels accorder des autorisations, consultez [Securables](../../../relational-databases/security/securables.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée. Les membres du rôle serveur fixe **sysadmin** peuvent accorder toutes les autorisations.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Pour accorder une autorisation à un principal  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68043263"
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Pour accorder une autorisation à un principal  
   

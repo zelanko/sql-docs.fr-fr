@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325511"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
@@ -31,7 +31,7 @@ ms.locfileid: "75325511"
 
 Cet article décrit comment créer des index sur une vue. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.
 
-## <a name="BeforeYouBegin"></a> Avant de commencer
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer
 
 Les étapes suivantes de création d'une vue indexée sont essentielles à la réussite de l'implémentation de la vue indexée :
 
@@ -47,7 +47,7 @@ Les étapes suivantes de création d'une vue indexée sont essentielles à la r�
 >
 > <sup>1</sup> Comme des opérations UPDATE, DELETE ou INSERT.
 
-### <a name="Restrictions"></a> Options SET requises pour les vues indexées
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> Options SET requises pour les vues indexées
 
 L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET `CONCAT_NULL_YIELDS_NULL` est définie sur ON, l’expression `'abc' + NULL` retourne la valeur `NULL`. Cependant, si l’option `CONCAT_NULL_YIELDS_NULL` est définie sur OFF, la même expression produit `'abc'`.
 
@@ -131,13 +131,13 @@ Outre les options SET et les conditions requises pour les fonctions déterminist
 > [!IMPORTANT]
 > Les vues indexées ne sont pas prises en charge en plus des requêtes temporelles (qui utilisent la clause `FOR SYSTEM_TIME`).
 
-### <a name="Recommendations"></a> Recommandations
+### <a name="recommendations"></a><a name="Recommendations"></a> Recommandations
 
 Si vous faites référence aux littéraux de chaîne **datetime** et **smalldatetime** au sein de vues indexées, il est recommandé de convertir explicitement le littéral en type date souhaité à l’aide d’un style de format de date déterministe. Pour obtenir la liste des styles de formats de date qui sont déterministes, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Pour plus d’informations sur les expressions déterministes et non déterministes, consultez la section [Considérations](#nondeterministic) de cette page.
 
 Lors de l’exécution d’instructions DML (comme `UPDATE`, `DELETE` ou `INSERT`) sur une table référencée par un grand nombre de vues indexées, ou par moins de vues mais très complexes, ces vues indexées référencées doivent également être mises à jour pendant l’exécution d’instructions DML. Par conséquent, les performances des requêtes DML peuvent se dégrader considérablement ou, dans certains cas, un plan de requête ne peut même pas être produit. Dans de tels scénarios, testez vos requêtes DML avant une utilisation en production, analysez le plan de requête et optimisez/simplifiez l’instruction DML.
 
-### <a name="Considerations"></a> Observations
+### <a name="considerations"></a><a name="Considerations"></a> Observations
 
 La valeur de l’option **large_value_types_out_of_row** des colonnes contenues dans une vue indexée est héritée de la valeur de la colonne correspondante dans la table de base. Cette valeur est définie à l’aide de [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). La valeur par défaut des colonnes constituées à partir d'expressions est 0. Cela signifie que les types de valeurs élevées sont stockés dans la ligne.
 
@@ -151,13 +151,13 @@ Les index sur les tables et les vues peuvent être désactivés. Lorsqu'un index
 
 <a name="nondeterministic"></a> Les expressions qui impliquent une conversion implicite de chaînes de caractères en **datetime** ou **smalldatetime** sont considérées comme non déterministes. Pour plus d’informations, consultez [Conversion non déterministe de chaînes de date littérale en valeurs DATE](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
-### <a name="Security"></a> Sécurité
+### <a name="security"></a><a name="Security"></a> Sécurité
 
-#### <a name="Permissions"></a> Autorisations
+#### <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
 Nécessite l’autorisation **CREATE VIEW** dans la base de données et l’autorisation **ALTER** sur le schéma dans lequel la vue est créée.
 
-## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>Pour créer une vue indexée
 

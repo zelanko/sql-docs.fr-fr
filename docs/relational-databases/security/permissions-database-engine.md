@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68995850"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
@@ -40,7 +40,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Pour des conseils sur la conception d’un système d’autorisations, consultez [Bien démarrer avec les autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="_conventions"></a> Conventions des noms des autorisations  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a> Conventions des noms des autorisations  
  La section ci-après décrit les conventions générales qui sont suivies pour affecter des noms aux autorisations.  
   
 -   CONTROL  
@@ -96,7 +96,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 ## <a name="chart-of-sql-server-permissions"></a>Graphique des autorisations SQL Server  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-##  <a name="_securables"></a> Autorisations applicables à des éléments sécurisables spécifiques  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Autorisations applicables à des éléments sécurisables spécifiques  
  Le tableau ci-dessous répertorie les principales classes d'autorisations et les types d'éléments sécurisables auxquels elles peuvent s'appliquer.  
   
 |Autorisation|S’applique à|  
@@ -118,7 +118,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 > [!CAUTION]  
 >  Les autorisations par défaut accordées aux objets système au moment de l'installation sont évaluées avec soin par rapport aux menaces potentielles et ne doivent pas être modifiées dans le cadre du renforcement de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les modifications apportées aux autorisations sur les objets système peuvent limiter ou rompre le fonctionnement et pourraient potentiellement laisser votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un état non pris en charge.  
   
-##  <a name="_permissions"></a> Autorisations SQL Server  
+##  <a name="sql-server-permissions"></a><a name="_permissions"></a> Autorisations SQL Server  
  Le tableau ci-dessous fournit la liste complète des autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les autorisations[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sont disponibles seulement pour les éléments sécurisables de base pris en charge. Les autorisations de niveau serveur ne peuvent pas être accordées dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]; toutefois, dans certains cas, les autorisations de base de données sont disponibles à la place.  
   
 |Élément sécurisable de base|Autorisations granulaires sur les éléments sécurisables de base|Code du type d'autorisation|Élément sécurisable qui contient un élément sécurisable de base|Autorisation sur l'élément sécurisable conteneur, qui implique une autorisation granulaire sur l'élément sécurisable de base|  
@@ -361,7 +361,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Résumé de l’algorithme de vérification des autorisations  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Résumé de l’algorithme de vérification des autorisations  
  La vérification des autorisations peut être complexe. L'algorithme de vérification des autorisations englobe les membres de groupes qui se chevauchent et le chaînage des propriétés, l'autorisation explicite et implicite, et peut être affecté par les autorisations sur les classes sécurisables qui contiennent l'entité sécurisable. Le processus général de l'algorithme consiste à collecter toutes les autorisations pertinentes. Si aucun blocage DENY n'est rencontré, l'algorithme recherche une instruction GRANT fournissant un accès suffisant. L'algorithme contient trois éléments essentiels : le **contexte de sécurité**, l' **espace d'autorisation**et l' **autorisation requise**.  
   
 > [!NOTE]  
@@ -423,7 +423,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Une instruction DENY sur la table est remplacée par une instruction GRANT sur une colonne. Toutefois, une instruction DENY ultérieure sur la table supprime la colonne GRANT. 
   
-##  <a name="_examples"></a> Exemples  
+##  <a name="examples"></a><a name="_examples"></a> Exemples  
  Les exemples de cette section montrent comment récupérer des informations relatives aux autorisations.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. Retour de la liste complète des autorisations accordables  

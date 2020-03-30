@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146302"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurer un groupe de disponibilité distribué Always On  
@@ -24,7 +24,7 @@ Pour créer un groupe de disponibilité distribué, vous devez créer deux group
 
 Pour obtenir une présentation technique des groupes de disponibilité distribués, consultez [Groupes de disponibilité distribués](distributed-availability-groups.md).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Définir les écouteurs de point de terminaison pour écouter toutes les adresses IP
 
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a>Joindre la base de données sur le réplica secondaire du deuxième groupe de disponibilité
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a>Joindre la base de données sur le réplica secondaire du deuxième groupe de disponibilité
 Quand la base de données qui se trouve sur le réplica secondaire du deuxième groupe de disponibilité est en restauration, vous devez la joindre manuellement au groupe de disponibilité.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> Basculer vers un groupe de disponibilité secondaire  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> Basculer vers un groupe de disponibilité secondaire  
 
 Seul le basculement manuel est pris en charge pour l’instant. Pour basculer manuellement un groupe de disponibilité distribué :
 

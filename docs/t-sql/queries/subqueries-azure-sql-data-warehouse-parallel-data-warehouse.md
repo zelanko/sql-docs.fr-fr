@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244829"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Sous-requêtes (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -32,7 +32,7 @@ ms.locfileid: "75244829"
   
 -   [Exemples : SQL Data Warehouse et Parallel Data Warehouse](#Examples)  
   
-##  <a name="Basics"></a> Principes de base  
+##  <a name="basics"></a><a name="Basics"></a> Principes de base  
  Sous-requête  
  Une sous-requête est une requête qui est imbriquée dans une instruction SELECT, INSERT, UPDATE ou DELETE, ou dans une autre sous-requête. Elle est également désignée sous le nom de requête interne ou sélection interne.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75244829"
  Sous-requête corrélée  
  Sous-requête qui fait référence à une table dans la requête externe.  
   
-##  <a name="Examples"></a> Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Cette section fournit des exemples de sous-requêtes prises en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>R. TOP et ORDER BY dans une sous-requête  

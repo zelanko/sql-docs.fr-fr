@@ -11,10 +11,10 @@ ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e0a2185037f54aa7ed975667c0bdd5fb921c845
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970614"
 ---
 # <a name="sqlserverresultset-class"></a>Classe SQLServerResultSet
@@ -33,7 +33,7 @@ ms.locfileid: "67970614"
 public final class SQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Il existe deux types de jeux de résultats : côté client et côté serveur.  
   
  Les jeux de résultats côté client sont utilisés lorsque la mémoire du processus client dispose d'assez de place pour contenir les résultats. Ces résultats offrent de meilleures performances en termes de rapidité et sont lus dans leur intégralité par [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] dans la base de données. Ces jeux de résultats n'imposent aucune charge supplémentaire pour la base de données puisqu'aucun curseur n'est créé côté serveur. Cependant, ces types de jeux de résultats ne peuvent pas être mis à jour.  
@@ -44,7 +44,7 @@ public final class SQLServerResultSet
   
  Cette classe prend en charge la désencapsulation (unwrapping) dans la classe SQLServerResultSet, l’interface ISQLServerResultSet et l’interface java.sql.ResultSet. Pour plus d’informations, consultez [Wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

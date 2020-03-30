@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981956"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -361,7 +361,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>Changement de contexte  
  Vous pouvez utiliser la clause `AS { LOGIN | USER } = ' name '` pour changer le contexte d'exécution d'une instruction dynamique. Lorsque le changement de contexte est spécifié sous la forme `EXECUTE ('string') AS <context_specification>`, la durée du changement est limitée à l'étendue de la requête en cours d'exécution.  
   
-###  <a name="_user"></a> Spécification d’un nom d’utilisateur ou d’un ID de connexion  
+###  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Spécification d’un nom d’utilisateur ou d’un ID de connexion  
  L'utilisateur ou le nom de connexion spécifié dans `AS { LOGIN | USER } = ' name '` doit exister en tant que principal respectivement dans sys.database_principals ou sys.server_principals, faute de quoi l'instruction échoue. De plus, les autorisations IMPERSONATE doivent être accordées sur le principal. À moins que l'appelant soit le propriétaire de la base de données ou un membre du rôle serveur fixe sysadmin, le principal doit exister même lorsque l'utilisateur accède à la base de données ou à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'une appartenance à un groupe Windows. Par exemple, supposons les conditions suivantes :  
   
 -   Le groupe CompanyDomain\SQLUsers a accès à la base de données Sales.  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>Exemple O : exécution d’une procédure simple  
  Exécution d’une procédure stockée :  
