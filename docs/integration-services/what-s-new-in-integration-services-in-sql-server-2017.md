@@ -11,10 +11,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296468"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Nouveautés d’Integration Services dans SQL Server 2017
@@ -31,7 +31,7 @@ Cette rubrique décrit les fonctionnalités qui ont été ajoutées ou mises à 
 
 Voici les nouvelles fonctionnalités les plus importantes d’Integration Services dans SQL Server 2017.
 
--   **Scale out**. Distribuez plus facilement l’exécution de package SSIS sur plusieurs ordinateurs de travail, et gérez les exécutions et les threads de travail à partir d’un seul ordinateur maître. Pour plus d’informations, consultez [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+-   **Scale-out**. Distribuez plus facilement l’exécution de package SSIS sur plusieurs ordinateurs de travail, et gérez les exécutions et les threads de travail à partir d’un seul ordinateur maître. Pour plus d’informations, consultez [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
 
 -   **Integration Services sur Linux**. Exécutez des packages SSIS sur des ordinateurs Linux. Pour plus d’informations, consultez [Extraire, transformer et charger des données sur Linux avec SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
@@ -62,7 +62,7 @@ Vous pouvez maintenant développer des projets et des packages SSIS qui ciblent 
 -   Scale Out Master prend désormais en charge la haute disponibilité. Vous pouvez activer AlwaysOn pour SSISDB et configurer le clustering de basculement Windows Server pour le serveur qui héberge le service Scale Out Master. En appliquant cette modification à Scale Out Master, vous évitez un point de défaillance unique et bénéficiez d’une haute disponibilité pour l’ensemble du déploiement Scale Out.
 -   La gestion de basculement des journaux d’exécution des Scale Out Workers est améliorée. Les journaux d’exécution sont conservés sur le disque local au cas où le Scale Out Worker s’arrêterait de manière inattendue. Plus tard, quand le worker redémarre, il recharge les journaux persistants et continue à les enregistrer dans SSISDB.
 -   Le paramètre *runincluster* de la procédure stockée **[catalog].[create_execution]** est renommé en *runinscaleout* pour des raisons de cohérence et de lisibilité. Ce changement de nom de paramètre a l’impact suivant :
-    -   Si vous avez des scripts existants pour exécuter des packages dans Scale Out, vous devez remplacer le nom du paramètre *runincluster* par *runinscaleout* pour que les scripts fonctionnent dans la version RC1.
+    -   Si vous avez des scripts existants pour exécuter des packages dans Scale-out, vous devez remplacer le nom du paramètre *runincluster* par *runinscaleout* pour que les scripts fonctionnent dans la version RC1.
     -   SQL Server Management Studio (SSMS) 17.1 et versions antérieures ne peuvent pas déclencher l’exécution du package dans Scale Out dans la version RC1. Le message d’erreur est : « *@runincluster* n’est pas un paramètre valide pour la procédure **create_execution** ». Ce problème est résolu dans la prochaine version de SSMS, la version 17.2. Les versions 17.2 et ultérieures de SSMS prennent en charge le nouveau nom de paramètre et l’exécution de package dans Scale Out. Jusqu’à ce que SSMS version 17.2 soit disponible, en guise de solution de contournement vous pouvez utiliser votre version existante de SSMS pour générer le script d’exécution du package, remplacer le nom du paramètre *runincluster* par *runinscaleout* dans le script, puis exécuter le script.
 -   Le catalogue SSIS a une nouvelle propriété globale afin de spécifier le mode par défaut pour l’exécution de packages SSIS. Cette nouvelle propriété s’applique quand vous appelez la procédure stockée **[catalog].[create_execution]** avec le paramètre *runinscaleout* défini sur null. Ce mode s’applique également aux travaux de l’Agent SQL de SSIS. Vous pouvez définir la nouvelle propriété globale dans la boîte de dialogue Propriétés du nœud SSISDB dans SSMS, ou avec la commande suivante :
     ```sql
@@ -101,9 +101,9 @@ Il n’y a pas de nouvelles fonctionnalités SSIS dans SQL Server 2017 CTP 1.1.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-10"></a>Nouveautés de SSIS dans SQL Server 2017 CTP 1.0
 
-### <a name="scale-out-for-ssis"></a>Scale Out pour SSIS
+### <a name="scale-out-for-ssis"></a>Scale-out pour SSIS
 
-La fonctionnalité Scale Out facilite grandement l’exécution de [!INCLUDE[ssIS_md](../includes/ssis-md.md)] sur plusieurs ordinateurs. 
+La fonctionnalité Scale-out facilite grandement l’exécution de [!INCLUDE[ssIS_md](../includes/ssis-md.md)] sur plusieurs ordinateurs. 
    
 Après l’installation du Scale Out Master et des Scale Out Workers, le package peut être distribué pour s’exécuter automatiquement sur différents Workers. Si l’exécution est arrêtée inopinément, une nouvelle tentative est effectuée automatiquement. De plus, vous pouvez gérer toutes les exécutions et Workers de manière centralisée à l’aide du Master.
    

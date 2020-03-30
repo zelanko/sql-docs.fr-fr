@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243014"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Déterminer pourquoi les changements apportés au réplica principal ne sont pas répercutés sur le réplica secondaire dans un groupe de disponibilité Always On
@@ -50,7 +50,7 @@ ms.locfileid: "75243014"
 Les sections suivantes décrivent les causes courantes de la non-répercussion des changements apportés au réplica principal sur le réplica secondaire pour les requêtes en lecture seule.  
 
 
-##  <a name="BKMK_OLDTRANS"></a> Transactions actives de longue durée  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> Transactions actives de longue durée  
  Une transaction de longue durée sur le réplica principal empêche la lecture des mises à jour sur le réplica secondaire.  
   
 ### <a name="explanation"></a>Explication  
@@ -59,7 +59,7 @@ Les sections suivantes décrivent les causes courantes de la non-répercussion d
 ### <a name="diagnosis-and-resolution"></a>Diagnostic et résolution  
  Sur le réplica principal, utilisez [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) pour afficher les transactions actives les plus anciennes et voir si elles peuvent être restaurées. Une fois les transactions actives les plus anciennes restaurées et synchronisées avec le réplica secondaire, les charges de travail de lecture sur le réplica secondaire peuvent voir les mises à jour dans la base de données de disponibilité jusqu’au début de la transaction active la plus ancienne à ce moment-là.  
   
-##  <a name="BKMK_LATENCY"></a> Une latence réseau élevée ou un débit réseau faible provoque l’accumulation des journaux sur le réplica principal  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> Une latence réseau élevée ou un débit réseau faible provoque l’accumulation des journaux sur le réplica principal  
  Une latence réseau élevée ou un débit faible peut empêcher l’envoi des journaux au réplica secondaire dans les temps.  
   
 ### <a name="explanation"></a>Explication  
@@ -92,7 +92,7 @@ Les sections suivantes décrivent les causes courantes de la non-répercussion d
   
  Pour remédier à ce problème, essayez d’augmenter votre bande passante réseau ou de supprimer/réduire le trafic réseau inutile.  
   
-##  <a name="BKMK_REDOBLOCK"></a> Une autre charge de travail de création de rapports empêche l’exécution du thread de restauration par progression  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Une autre charge de travail de création de rapports empêche l’exécution du thread de restauration par progression  
  Le thread de restauration par progression sur le réplica secondaire est bloqué et ne peut pas apporter de changements au DDL (langage de définition de données) au moyen d’une requête en lecture seule de longue durée. Vous devez débloquer le thread de restauration par progression pour qu’il puisse mettre à disposition de la charge de travail de lecture d’autres mises à jour.  
   
 ### <a name="explanation"></a>Explication  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Vous pouvez soit laisser la charge de travail de création de rapports se terminer, ce qui déclenche le déblocage du thread de restauration par progression, soit débloquer immédiatement le thread de restauration par progression en exécutant la commande [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) sur l’ID de session à l’origine du blocage.  
   
-##  <a name="BKMK_REDOBEHIND"></a> Le thread de restauration par progression prend du retard en raison d’une contention de ressources  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> Le thread de restauration par progression prend du retard en raison d’une contention de ressources  
  Une importante charge de travail de création de rapports sur le réplica secondaire ralentit les performances du réplica secondaire, et le thread de restauration par progression prend du retard.  
   
 ### <a name="explanation"></a>Explication  

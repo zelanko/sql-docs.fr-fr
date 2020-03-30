@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957033"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutoriel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Tutoriel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 La création et l’exécution de requêtes, de procédures stockées, de scripts, etc. sont les principales tâches des professionnels des bases de données. Ce didacticiel présente les principales fonctionnalités de l’éditeur T-SQL pour créer des objets de base de données.
 
@@ -29,7 +29,7 @@ Dans ce didacticiel, vous apprendrez à utiliser [!INCLUDE[name-sos-short](../in
 > * Afficher les détails de l'objet de base de données avec l’option *Aperçu de la définition* et *Atteindre la définition*
 
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azure SQL Database. Pour créer la base de données *TutorialDB*, suivez un des démarrages rapides suivants :
 

@@ -14,10 +14,10 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993504"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procédure : Exécuter des requêtes paramétrables
@@ -44,12 +44,12 @@ Le reste de cette rubrique traite des requêtes paramétrables qui utilisent le 
 > [!NOTE]  
 > Les paramètres sont implicitement liés à l’aide de **sqlsrv_prepare**. Cela signifie que si une requête paramétrable est préparée à l’aide de **sqlsrv_prepare** et que des valeurs incluses dans le tableau de paramètres sont mises à jour, les valeurs mises à jour sont utilisées durant la prochaine exécution de la requête. Consultez le deuxième exemple inclus dans cette rubrique pour plus d’informations.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant met à jour la quantité d’un ID de produit spécifié dans la table *Production.ProductInventory* de la base de données AdventureWorks. La quantité et l’ID de produit sont des paramètres dans la requête UPDATE.  
   
 L’exemple interroge ensuite la base de données pour vérifier que la quantité a été correctement mise à jour. L’ID de produit est un paramètre dans la requête SELECT.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -112,10 +112,10 @@ sqlsrv_close( $conn);
   
 L’exemple précédent utilise la fonction **sqlsrv_query** pour exécuter des requêtes. Cette fonction est parfaite pour exécuter des requêtes à usage unique car elle effectue à la fois la préparation et l’exécution. La combinaison de **sqlsrv_prepare**/**sqlsrv_execute** convient mieux à la réexécution d’une requête avec des valeurs de paramètre différentes. Pour voir un exemple de réexécution d’une requête avec des valeurs de paramètre différentes, consultez l’exemple qui suit.  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant illustre la liaison implicite des variables quand vous utilisez la fonction **sqlsrv_prepare** . L’exemple montre comment insérer plusieurs commandes client dans la table *Sales.SalesOrderDetail* . Le tableau *$params* est lié à l’instruction (*$stmt*) quand **sqlsrv_prepare** est appelé. Avant chaque exécution d’une requête qui insère une nouvelle commande client dans la table, le tableau *$params* est mis à jour avec de nouvelles valeurs correspondant aux détails de cette commande client. L’exécution suivante de la requête utilise les nouvelles valeurs de paramètre.  
+## <a name="example"></a>Exemple  
+L’exemple suivant illustre la liaison implicite des variables quand vous utilisez la fonction **sqlsrv_prepare** . L’exemple montre comment insérer plusieurs commandes client dans la table *Sales.SalesOrderDetail* . Le tableau *$params* est lié à l’instruction ( *$stmt*) quand **sqlsrv_prepare** est appelé. Avant chaque exécution d’une requête qui insère une nouvelle commande client dans la table, le tableau *$params* est mis à jour avec de nouvelles valeurs correspondant aux détails de cette commande client. L’exécution suivante de la requête utilise les nouvelles valeurs de paramètre.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -187,7 +187,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Conversion de types de données](../../connect/php/converting-data-types.md)
 
 [Considérations relatives à la sécurité pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)

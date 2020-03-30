@@ -1,5 +1,5 @@
 ---
-title: Guide du verrouillage des transactions et de la gestion de versions de ligne
+title: Guide du verrouillage des transactions et du contrôle de version de ligne
 ms.custom: seo-dt-2019
 ms.date: 03/10/2020
 ms.prod: sql
@@ -20,20 +20,20 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287173"
 ---
-# <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et de la gestion de versions de ligne
+# <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Dans une base de données, une mauvaise gestion des transactions conduit souvent à des problèmes de contention et de détérioration des performances dans les systèmes comprenant de nombreux utilisateurs. Plus le nombre d'utilisateurs qui ont accès aux données est grand, plus il est important que les applications utilisent les transactions de manière efficace. Ce guide présente les mécanismes de verrouillage et de gestion de versions de ligne utilisés par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour garantir l'intégrité physique de chaque transaction et contient des informations sur la façon dont les applications peuvent contrôler efficacement les transactions.  
+Dans une base de données, une mauvaise gestion des transactions conduit souvent à des problèmes de contention et de détérioration des performances dans les systèmes comprenant de nombreux utilisateurs. Plus le nombre d'utilisateurs qui ont accès aux données est grand, plus il est important que les applications utilisent les transactions de manière efficace. Ce guide présente les mécanismes de verrouillage et de contrôle de version de ligne utilisés par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour garantir l'intégrité physique de chaque transaction et contient des informations sur la façon dont les applications peuvent contrôler efficacement les transactions.  
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] jusqu’à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], sauf indication contraire) et [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. 
   
-##  <a name="Basics"></a> Principes de base sur les transactions  
+##  <a name="transaction-basics"></a><a name="Basics"></a> Principes de base sur les transactions  
  Une transaction est une suite d'opérations effectuées comme une seule unité logique de travail. Une unité logique de travail doit posséder quatre propriétés appelées propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité), pour être considérée comme une transaction :  
   
  **Atomicité**  
@@ -174,7 +174,7 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```   
   
-##  <a name="Lock_Basics"></a> Principes de base sur le verrouillage et la gestion de versions de ligne  
+##  <a name="locking-and-row-versioning-basics"></a><a name="Lock_Basics"></a> Principes de base sur le verrouillage et le contrôle de version de ligne  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les mécanismes suivants pour garantir l'intégrité des transactions et gérer la cohérence des bases de données lorsque plusieurs utilisateurs accèdent simultanément aux données :  
   
 -  **Verrouillage**    
@@ -183,9 +183,9 @@ GO
   
 -  **Gestion de versions de ligne**    
 
-   Lorsqu'un niveau d'isolement basé sur la gestion de versions de ligne est activé, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gère les versions de chaque ligne modifiée. Les applications peuvent, au lieu de protéger toutes les lectures avec des verrous, spécifier qu'une transaction utilise les versions de ligne pour consulter les données telles qu'elles existaient à son démarrage ou à l'exécution de la requête. L'utilisation de la gestion de versions de ligne réduit sensiblement le risque qu'une opération de lecture bloque les autres transactions.  
+   Lorsqu'un niveau d'isolement basé sur le contrôle de version de ligne est activé, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gère les versions de chaque ligne modifiée. Les applications peuvent, au lieu de protéger toutes les lectures avec des verrous, spécifier qu'une transaction utilise les versions de ligne pour consulter les données telles qu'elles existaient à son démarrage ou à l'exécution de la requête. L'utilisation du contrôle de version de ligne réduit sensiblement le risque qu'une opération de lecture bloque les autres transactions.  
   
- Le verrouillage et la gestion de versions de ligne empêchent les utilisateurs de lire les données non validées et plusieurs utilisateurs de modifier simultanément les mêmes données. Sans le verrouillage ou la gestion de versions de ligne, les requêtes exécutées sur ces données pourraient produire des résultats inattendus en retournant des données qui ne sont pas encore validées dans la base de données.  
+ Le verrouillage et le contrôle de version de ligne empêchent les utilisateurs de lire les données non validées et plusieurs utilisateurs de modifier simultanément les mêmes données. Sans le verrouillage ou le contrôle de version de ligne, les requêtes exécutées sur ces données pourraient produire des résultats inattendus en retournant des données qui ne sont pas encore validées dans la base de données.  
   
  Les applications peuvent choisir les niveaux d'isolement de transaction, qui définissent le niveau de protection d'une transaction contre les modifications apportées par les autres transactions. Vous pouvez spécifier des indicateurs de table pour des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] spécifiques en fonction des besoins de l'application.  
   
@@ -240,7 +240,7 @@ GO
   
     -   Manquer une ligne mise à jour ou consulter une ligne mise à jour plusieurs fois  
   
-         Les transactions qui s’exécutent au niveau `READ UNCOMMITTED` ne génèrent pas de verrous partagés pour empêcher d’autres transactions de modifier des données lues par la transaction en cours. Les transactions qui s'exécutent au niveau READ COMMITTED génèrent des verrous partagés, mais les verrous de ligne ou de page sont libérés une fois la ligne lue. Dans les deux cas, lorsque vous analysez un index, si un autre utilisateur modifie la colonne de clé d'index de la ligne pendant votre lecture, la ligne peut apparaître de nouveau si la modification apportée à la clé a déplacé la ligne à une position située en aval de votre analyse. De même, la ligne peut ne pas apparaître si la modification apportée à la clé a déplacé la ligne à une position dans l'index que vous aviez déjà lue. Pour éviter cela, utilisez l’indicateur `SERIALIZABLE` ou `HOLDLOCK`, ou la gestion de versions de ligne. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
+         Les transactions qui s’exécutent au niveau `READ UNCOMMITTED` ne génèrent pas de verrous partagés pour empêcher d’autres transactions de modifier des données lues par la transaction en cours. Les transactions qui s'exécutent au niveau READ COMMITTED génèrent des verrous partagés, mais les verrous de ligne ou de page sont libérés une fois la ligne lue. Dans les deux cas, lorsque vous analysez un index, si un autre utilisateur modifie la colonne de clé d'index de la ligne pendant votre lecture, la ligne peut apparaître de nouveau si la modification apportée à la clé a déplacé la ligne à une position située en aval de votre analyse. De même, la ligne peut ne pas apparaître si la modification apportée à la clé a déplacé la ligne à une position dans l'index que vous aviez déjà lue. Pour éviter cela, utilisez l’indicateur `SERIALIZABLE` ou `HOLDLOCK`, ou le contrôle de version de ligne. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
   
     -   Manquer une ou plusieurs lignes qui n'étaient pas la cible de la mise à jour  
   
@@ -305,7 +305,7 @@ GO
 |**Instantané**|Non|Non|Non|  
 |**Sérialisable**|Non|Non|Non|  
   
- Pour plus d’informations sur les types spécifiques de verrouillage ou de gestion de versions de ligne contrôlés par chaque niveau d’isolation de la transaction, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Pour plus d’informations sur les types spécifiques de verrouillage ou de contrôle de version de ligne contrôlés par chaque niveau d’isolation de la transaction, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  Les niveaux d'isolement des transactions peuvent être définis à l'aide de [!INCLUDE[tsql](../includes/tsql-md.md)] ou d'une API de base de données.  
   
@@ -328,7 +328,7 @@ GO
   
  Pour les transactions d’instantanés, les applications appellent `SQLSetConnectAttr` avec la valeur SQL_COPT_SS_TXN_ISOLATION pour le paramètre Attribute et la valeur SQL_TXN_SS_SNAPSHOT pour le paramètre ValuePtr. Une transaction d'instantané peut être extraite à l'aide de SQL_COPT_SS_TXN_ISOLATION ou de SQL_ATTR_TXN_ISOLATION.  
   
-##  <a name="Lock_Engine"></a> Verrouillage du moteur de base de données  
+##  <a name="locking-in-the-database-engine"></a><a name="Lock_Engine"></a> Verrouillage du moteur de base de données  
  Le verrouillage est un mécanisme utilisé par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour synchroniser l'accès simultané de plusieurs utilisateurs à la même donnée.  
   
  Avant qu'une transaction acquière une dépendance sur l'état actuel d'un élément de données, par exemple par sa lecture ou la modification d'une donnée, elle doit se protéger des effets d'une autre transaction qui modifie la même donnée. Pour ce faire, la transaction demande un verrou sur l'élément de données. Le verrou possède plusieurs modes, par exemple partagé ou exclusif. Le mode de verrouillage définit le niveau de dépendance de la transaction sur les données. Aucune transaction ne peut obtenir un verrou qui entrerait en conflit avec le mode d'un verrou déjà accordé sur ces données à une autre transaction. Si une transaction demande un mode de verrouillage qui est en conflit avec un verrou déjà accordé aux mêmes données, l'instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] suspend la transaction concernée jusqu'à ce que le premier verrou soit libéré.  
@@ -361,7 +361,7 @@ GO
 > [!NOTE]  
 > Les verrous HoBT et TABLE peuvent être affectés par l’option LOCK_ESCALATION de l’instruction [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="lock_modes"></a> Modes de verrouillage  
+### <a name="lock-modes"></a><a name="lock_modes"></a> Modes de verrouillage  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verrouille les ressources en utilisant différents modes de verrouillage qui déterminent le mode d'accès aux ressources par des transactions simultanées.  
   
  Le tableau suivant illustre les modes de verrouillage des ressources utilisés par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
@@ -376,20 +376,20 @@ GO
 |**Mise à jour en bloc (BU)**|Utilisé lors de la copie en bloc de données dans une table avec l’indicateur **TABLOCK** spécifié.|  
 |**Groupe de clés**|Protège la plage de lignes lue par une requête lorsque le niveau d'isolation des transactions SERIALIZABLE est utilisé. Garantit qu'aucune autre transaction ne peut insérer des lignes susceptibles de répondre aux requêtes de la transaction sérialisable si ces dernières étaient réexécutées.|  
   
-#### <a name="shared"></a> Verrous partagés  
+#### <a name="shared-locks"></a><a name="shared"></a> Verrous partagés  
  Les verrous partagés (S) permettent à des transactions simultanées de lire (SELECT) une ressource dans des conditions de contrôle d'accès concurrentiel pessimiste. Aucune autre transaction ne peut modifier les données de la ressource tant que des verrous partagés (S) existent sur la ressource. Les verrous partagés (S) sur une ressource sont enlevés dès que l'opération de lecture est terminée, à moins que le niveau d'isolation de la transaction soit de type lecture renouvelable ou plus élevé, ou qu'un indicateur de verrouillage conserve les verrous partagés (S) pendant toute la durée de la transaction.  
   
-#### <a name="update"></a> Verrous de mise à jour  
+#### <a name="update-locks"></a><a name="update"></a> Verrous de mise à jour  
  Les verrous de mise à jour (U) empêchent une forme fréquente de blocage. Une transaction isolée avec le niveau sérialisable ou de lecture renouvelable lit les données en obtenant un verrou partagé (S) sur la ressource (page ou ligne), puis modifie ces données, ce qui nécessite une conversion du verrou en mode exclusif (X). Si deux transactions acquièrent des verrous partagés sur une ressource et tentent ensuite de mettre à jour des données de manière simultanée, une transaction tente de convertir le verrou en verrou exclusif (X). La conversion du verrou partagé au mode de verrou exclusif reste en attente, car le verrou exclusif de la première transaction n'est pas compatible avec le verrou partagé de l'autre transaction. Une attente de verrouillage se produit alors. La deuxième transaction impliquée essaie d'acquérir un verrou exclusif (X) pour sa mise à jour. Puisque les deux transactions effectuant la conversion en verrous exclusifs (X) attendent que l'autre transaction libère son verrou partagé, un blocage se produit.  
   
  Les verrous de mise à jour (U) permettent de résoudre les problèmes de blocage. Une seule transaction à la fois peut obtenir un verrou de mise à jour (U) pour une ressource. Si une transaction modifie une ressource, le verrou de mise à jour (U) est converti en verrou exclusif (X).  
   
-#### <a name="exclusive"></a> Verrous exclusifs  
+#### <a name="exclusive-locks"></a><a name="exclusive"></a> Verrous exclusifs  
  Les verrous exclusifs (X) empêchent l'accès à une ressource par des transactions simultanées. Un verrou exclusif (X) empêche toute autre transaction de modifier les données ; les opérations de lecture ne peuvent avoir lieu qu'avec l'indicateur NOLOCK ou le niveau d'isolation « lecture non validée ».  
   
  Les instructions qui modifient les données telles que INSERT, UPDATE et DELETE combinent des opérations de modification et de lecture. Elles commencent par les opérations de lecture pour obtenir les données, puis elles effectuent les opérations de modification. Par conséquent, les instructions qui modifient les données demandent généralement à la fois des verrous partagés et des verrous exclusifs. Ainsi, une instruction UPDATE peut modifier les lignes d'une table en fonction d'une jointure avec une autre table. Dans ce cas, l'instruction UPDATE demande des verrous partagés sur les lignes lues dans la table jointe en plus des verrous exclusifs sur les lignes mises à jour.  
   
-#### <a name="intent"></a> Verrous intentionnels  
+#### <a name="intent-locks"></a><a name="intent"></a> Verrous intentionnels  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise des verrous intentionnels pour protéger le placement de verrous partagés (S) ou exclusifs (X) sur une ressource hiérarchiquement inférieure. Les verrous intentionnels sont appelés ainsi parce qu'ils sont obtenus avant un verrou de niveau inférieur et signalent par conséquent l'intention de placer des verrous à un niveau inférieur.  
   
  Les verrous intentionnels ont deux fonctions :  
@@ -410,14 +410,14 @@ GO
 |**Mise à jour intentionnelle partagée (SIU)**|Combinaison de verrous S et IU résultant de l'acquisition séparée de ces verrous et de leur gestion simultanée. Par exemple, une transaction peut exécuter une requête avec l'indicateur PAGLOCK, puis une opération de mise à jour. La requête contenant l'indicateur PAGLOCK obtient le verrou S et l'opération de mise à jour obtient le verrou IU.|  
 |**Mise à jour intentionnelle exclusive (UIX)**|Combinaison de verrous U et IX résultant de l'acquisition séparée de ces verrous et de leur gestion simultanée.|  
   
-#### <a name="schema"></a> Verrous de schéma  
+#### <a name="schema-locks"></a><a name="schema"></a> Verrous de schéma  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les verrous de modification de schémas (Sch-M) quand une opération de langage de définition de données (DDL, Data Definition Language) est effectuée sur une table (ajout d’une colonne ou suppression d’une table, par exemple). Pendant le temps de sa détention, le verrou Sch-M empêche les accès simultanés à la table. Cela signifie que le verrou Sch-M bloque toutes les opérations externes jusqu'à ce que le verrou soit libéré.  
   
  Certaines opérations DML(langage de manipulation de données), comme la troncation de table, utilisent les verrous SCH-M pour empêcher l'accès aux tables affectées par des opérations simultanées.  
   
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les verrous de stabilité de schéma (Sch-S) lors de la compilation et l’exécution des requêtes. Les verrous Sch-S ne bloquent aucun verrou transactionnel, verrous exclusifs (X) y compris. Par conséquent, les autres transactions, y compris celles avec des verrous exclusifs (X) sur une table, continuent à s'exécuter pendant la compilation d'une requête. Toutefois, les opérations DDL simultanées, ainsi que les opérations DML simultanées qui définissent des verrous Sch-M, ne peuvent pas être exécutées sur la table.  
   
-#### <a name="bulk_update"></a> Verrous de mise à jour en bloc (BU)  
+#### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Verrous de mise à jour en bloc (BU)  
  Les verrous BU permettent à plusieurs threads de charger simultanément en masse des données dans la même table tout en empêchant les processus qui n'effectuent pas de chargement de données en masse d'accéder à cette table. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise des verrous BU lorsque les deux conditions suivantes sont vraies.  
   
 -   Vous utilisez l’instruction [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT ou la fonction OPENROWSET(BULK), ou l’une des commandes d’API Bulk Insert, telles que .NET SqlBulkCopy, les API OLEDB Fast Load ou les API ODBC Bulk Copy pour copier en bloc des données dans une table.  
@@ -426,10 +426,10 @@ GO
 > [!TIP]  
 > Contrairement à l’instruction BULK INSERT, qui maintient un verrou de mise à jour en bloc moins restrictif, INSERT INTO...SELECT avec l’indicateur TABLOCK maintient un verrou exclusif (X) sur la table. Cela signifie que vous ne pouvez pas insérer de lignes à l'aide d'opérations d'insertion parallèles.  
   
-#### <a name="key_range"></a> Verrous d’étendues de clés  
+#### <a name="key-range-locks"></a><a name="key_range"></a> Verrous d’étendues de clés  
  Les verrous d'étendues de clés protègent une plage de lignes implicitement incluses dans un jeu d'enregistrements lu par une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] lors de l'utilisation du niveau d'isolement des transactions sérialisable. Le verrouillage d'étendues de clés empêche les lectures fantômes. Les verrous d'étendues de clés couvrent des enregistrements individuels et les étendues entre les enregistrements, empêchant les insertions ou les suppressions fantômes dans un ensemble d'enregistrements auquel accède une transaction.  
   
-### <a name="lock_compatibility"></a> Compatibilité de verrouillage  
+### <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Compatibilité de verrouillage  
  La compatibilité de verrouillage détermine si plusieurs transactions peuvent simultanément acquérir des verrous sur la même ressource. Si une ressource est déjà verrouillée par une autre transaction, une demande de nouveau verrou ne peut être accordée que si le mode du verrou demandé est compatible avec celui du verrou existant. Si le mode du verrou demandé n'est pas compatible avec le verrou existant, la transaction qui demande le nouveau verrou attend que le verrou existant soit libéré ou que l'intervalle de délai de verrouillage ait expiré. Par exemple, aucun mode de verrou n'est compatible avec les verrous exclusifs. Lorsqu'un verrou exclusif (X) est posé, aucune autre transaction ne peut acquérir un verrou de quelque sorte que ce soit (partagé, mise à jour, exclusif) sur cette ressource tant que le verrou exclusif (X) n'a pas été libéré. Inversement, si un verrou partagé (S) a été appliqué à une ressource, les autres transactions peuvent aussi acquérir un verrou partagé ou de mise à jour (U) sur cet élément, même si la première transaction n'est pas terminée. Toutefois, les autres transactions ne peuvent pas acquérir un verrou exclusif tant que le verrou partagé n'a pas été libéré.  
   
 <a name="lock_compat_table"></a> Le tableau suivant décrit la compatibilité des modes de verrouillage les plus courants.  
@@ -458,7 +458,7 @@ GO
   
  Un verrou d'étendues de clés est placé sur un index, spécifiant une valeur de clé de début et de fin. Ce verrou bloque toute tentative d'insertion, de mise à jour ou de suppression de ligne possédant une valeur de clé comprise dans cette étendue, car ces opérations doivent d'abord acquérir un verrou sur l'index. Par exemple, une transaction sérialisable peut émettre une instruction `SELECT` qui lit toutes les lignes dont les valeurs de clés remplissent la condition `BETWEEN 'AAA' AND 'CZZ'`. Un verrou de groupes de clés sur les valeurs de clés comprises entre **'** AAA **'** et **'** CZZ **'** empêche les autres transactions d’insérer des lignes possédant des valeurs de clés comprises dans ce groupe, telles que **'** ADG **'** , **'** BBD **'** ou **'** CAL **'** .  
   
-#### <a name="key_range_modes"></a> Modes de verrouillage d'étendues de clés  
+#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Modes de verrouillage d'étendues de clés  
  Les verrous d'étendues de clés comprennent un composant étendue et un composant ligne, au format étendue-ligne :  
   
 -   L'étendue représente le mode de verrouillage protégeant l'étendue entre deux entrées d'index successives.  
@@ -488,7 +488,7 @@ GO
 |**RangeI-N**|Oui|Oui|Oui|Non|Non|Oui|Non|  
 |**RangeX-X**|Non|Non|Non|Non|Non|Non|Non|  
   
-#### <a name="lock_conversion"></a> Verrous de conversion  
+#### <a name="conversion-locks"></a><a name="lock_conversion"></a> Verrous de conversion  
  Les verrous de conversion sont créés lorsqu'un verrou d'étendue de clés chevauche un autre verrou.  
   
 |Verrou 1|Verrou 2|Verrou de conversion|  
@@ -565,7 +565,7 @@ INSERT mytable VALUES ('Dan');
   
  Le verrou d'étendues de clés du mode RangeI-N est placé sur l'entrée d'index correspondant au nom David pour le test de l'étendue. Si le verrou est accordé, la valeur `Dan` est insérée et un verrou exclusif (X) est placé sur la valeur `Dan`. Le verrou d'étendues de clés du mode RangeI-N est uniquement nécessaire pour le test de l'étendue et n'est pas maintenu pendant la durée de la transaction effectuant l'opération d'insertion. D'autres transactions peuvent insérer ou supprimer des valeurs avant ou après la valeur `Dan` insérée. Toutefois, toute transaction essayant de lire, écrire ou supprimer la valeur `Dan` est verrouillée jusqu'à ce que la transaction d'insertion soit validée ou restaurée.  
   
-### <a name="dynamic_locks"></a> Verrouillage dynamique  
+### <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Verrouillage dynamique  
  L'utilisation de verrous de bas niveau, comme les verrous de ligne, augmente la concurrence car elle diminue la probabilité d'avoir deux transactions qui demandent des verrous sur les mêmes données en même temps. L'utilisation de verrous de bas niveau augmente également le nombre de verrous et les ressources nécessaires à leur gestion. Les verrous de table ou de page de haut niveau réduisent la charge mais au détriment de la concurrence.  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -580,7 +580,7 @@ INSERT mytable VALUES ('Dan');
   
  À compter de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], le comportement d’escalade de verrous a changé avec l’introduction de l’option `LOCK_ESCALATION`. Pour plus d’informations, consultez l’option `LOCK_ESCALATION` de l’instruction [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="deadlocks"></a> Interblocages  
+## <a name="deadlocks"></a><a name="deadlocks"></a> Interblocages  
  Un interblocage se produit lorsque deux tâches ou plus se bloquent mutuellement de façon permanente. Dans ce cas, chaque tâche place un verrou sur une ressource que la ou les autres tâches essaient de verrouiller. Par exemple :  
   
 -   La transaction A obtient un verrou partagé sur la ligne 1.  
@@ -616,7 +616,7 @@ INSERT mytable VALUES ('Dan');
   
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] détecte automatiquement les cycles de blocage dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] choisit l'une des sessions comme victime et la transaction en cours se termine par une erreur, ce qui met fin à la situation de blocage.  
   
-#### <a name="deadlock_resources"></a> Ressources susceptibles de se bloquer  
+#### <a name="resources-that-can-deadlock"></a><a name="deadlock_resources"></a> Ressources susceptibles de se bloquer  
  Chaque session utilisateur peut avoir une ou plusieurs tâches en cours d'exécution, chacune de ces tâches pouvant obtenir ou être en attente d'obtention de diverses ressources. Les types de ressources susceptibles de provoquer un blocage sont les suivants :  
   
 -   **Verrous**. L'attente d'obtention de verrous sur des ressources, telles qu'objets, pages, lignes, métadonnées et applications peut provoquer un blocage. Par exemple, la transaction T1 a un verrou partagé (S) sur la ligne r1 et elle attend d'obtenir un verrou exclusif (X) sur r2. La transaction T2 a un verrou partagé (S) sur r2 et elle attend d'obtenir un verrou exclusif (X) sur la ligne r1. Il en résulte un cycle de verrouillage où T1 et T2 attendent l'une de l'autre la libération des ressources que chacune a verrouillées.  
@@ -646,7 +646,7 @@ INSERT mytable VALUES ('Dan');
   
  ![LogicFlowExamplec](../relational-databases/media/udb9_LogicFlowExamplec.png)  
   
-### <a name="deadlock_detection"></a> Détection de blocage  
+### <a name="deadlock-detection"></a><a name="deadlock_detection"></a> Détection de blocage  
  Toutes les ressources énumérées dans la section précédente sont visées par le dispositif de détection de blocage du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. La détection de blocage est mise en œuvre par un thread de contrôle des verrous qui lance périodiquement une recherche sur toutes les tâches d'une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Le processus de recherche présente les caractéristiques suivantes :  
   
 -   L'intervalle par défaut est de 5 secondes.  
@@ -664,10 +664,10 @@ INSERT mytable VALUES ('Dan');
   
  Lorsque les fonctionnalités CLR sont utilisées, le moniteur de blocage détecte automatiquement le blocage des ressources de synchronisation (moniteurs, verrou de lecture/écriture et jointure de thread) qui font l'objet d'accès à l'intérieur des procédures gérées. Toutefois, le blocage est résolu par la levée d'une exception dans la procédure qui a été sélectionnée comme victime du blocage. Il est important de comprendre que l'exception ne libère pas automatiquement les ressources actuellement détenues par la victime ; les ressources doivent être libérées explicitement. Conformément au comportement des exceptions, l'exception utilisée pour identifier une victime de blocage peut être interceptée et annulée.  
   
-### <a name="deadlock_tools"></a> Outils d'information sur les blocages  
+### <a name="deadlock-information-tools"></a><a name="deadlock_tools"></a> Outils d'information sur les blocages  
  Pour afficher des informations sur l’interblocage, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] fournit des outils de surveillance sous la forme de la session XEvent system\_health, de deux indicateurs de trace ainsi que de l’événement Deadlock Graph dans SQL Profiler.  
 
-#### <a name="deadlock_xevent"></a> Événement étendu de blocage
+#### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Événement étendu de blocage
 À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l’événement étendu `xml_deadlock_report` (xEvent) doit être utilisé à la place de la classe d’événements Deadlock Graph dans SQL Trace ou SQL Profiler.
 
 De plus, à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], dans le cas de blocages, la session system\_health capture tous les événements xEvent `xml_deadlock_report` qui contiennent le graphique de blocage. Étant donné que la session system\_health est activée par défaut, il n’est pas nécessaire qu’une session xEvent distincte soit configurée pour capturer les informations de blocage. 
@@ -769,7 +769,7 @@ END
 
 Pour plus d’informations, consultez [Utiliser la session system_health](../relational-databases/extended-events/use-the-system-health-session.md)
 
-#### <a name="deadlock_traceflags"></a> Indicateur de trace 1204 et indicateur de trace 1222  
+#### <a name="trace-flag-1204-and-trace-flag-1222"></a><a name="deadlock_traceflags"></a> Indicateur de trace 1204 et indicateur de trace 1222  
  En cas de situation de blocage, l'indicateur de trace 1204 et l'indicateur de trace 1222 retournent des informations qui sont recueillies dans le journal des erreurs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'indicateur de trace 1024 signale les informations de blocage mises en forme par chaque nœud impliqué dans le blocage. L'indicateur de trace 1222 met en forme les informations de blocage, en commençant par les processus et en poursuivant avec les ressources. Il est possible d'activer deux indicateurs de trace pour obtenir deux représentations du même événement de blocage.  
 
 > [!IMPORTANT]
@@ -909,7 +909,7 @@ Pour plus d’informations sur l’exécution de l’événement Deadlock Graph 
   
  L'application doit marquer un bref temps d'arrêt avant de soumettre à nouveau la requête. Cela permet à l'autre transaction impliquée dans le blocage d'aboutir et de libérer ses verrous qui faisaient partie du cycle de blocage. Les risques qu'un blocage se reproduise au moment où la requête de nouveau soumise demande ses verrous sont ainsi réduits.  
   
-### <a name="deadlock_minimizing"></a> Réduction des blocages  
+### <a name="minimizing-deadlocks"></a><a name="deadlock_minimizing"></a> Réduction des blocages  
  Même si les interblocages ne peuvent pas être totalement évités, le respect de certaines conventions de codage peut minimiser le risque d'en générer. La réduction des blocages peut augmenter le débit des transactions et réduire la charge du système, car il y a moins de transactions :  
   
 -   restaurées, en annulant ce qui a été accompli par la transaction ;  
@@ -921,7 +921,7 @@ Pour plus d’informations sur l’exécution de l’événement Deadlock Graph 
 -   Évitez les interactions utilisateur dans les transactions.  
 -   Créez des transactions courtes dans le même traitement.  
 -   Utilisez un niveau d'isolement plus faible.  
--   Utilisez un niveau d'isolement basé sur la gestion de versions de ligne.  
+-   Utilisez un niveau d'isolement basé sur le contrôle de version de ligne.  
     -   Affectez à l’option de base de données `READ_COMMITTED_SNAPSHOT` la valeur ON pour activer les transactions read-committed afin d’utiliser la gestion de versions de ligne.  
     -   Utilisez un isolement d'instantané.  
 -   Utilisez des connexions liées.  
@@ -955,7 +955,7 @@ Pour plus d’informations sur l’exécution de l’événement Deadlock Graph 
 #### <a name="use-bound-connections"></a>Utiliser des connexions liées  
  En utilisant des connexions liées, deux connexions ou plus ouvertes par la même application peuvent coopérer entre elles. Tout verrou acquis par la connexion secondaire apparaît comme s'il avait été posé par la connexion primaire et vice-versa. Ils ne se bloquent donc pas réciproquement.  
   
-## <a name="lock_partitioning"></a> Partitionnement de verrous  
+## <a name="lock-partitioning"></a><a name="lock_partitioning"></a> Partitionnement de verrous  
  Pour les gros systèmes informatiques, des verrous sur des objets souvent référencés peuvent affaiblir les performances, car l'acquisition et la libération des verrous provoque une contention sur les ressources des verrous internes. Le partitionnement de verrous améliore les performances du verrouillage en fractionnant une ressource de verrou en plusieurs. Cette fonctionnalité n'est disponible que pour les systèmes dotés d'au moins 16 UC ; elle est activée automatiquement et ne peut pas être désactivée. Seuls les verrous d'objets peuvent être partitionnés. Les verrous d'objets dotés d'un sous-type ne sont pas partitionnés. Pour plus d’informations, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
 ### <a name="understanding-lock-partitioning"></a>Présentation du partitionnement de verrous  
@@ -1066,7 +1066,7 @@ BEGIN TRANSACTION
     WITH (TABLOCKX, HOLDLOCK);  
 ```   
   
-##  <a name="Row_versioning"></a> Niveaux d’isolation basés sur le contrôle de version de ligne dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+##  <a name="row-versioning-based-isolation-levels-in-the-ssdenoversion"></a><a name="Row_versioning"></a> Niveaux d’isolation basés sur le contrôle de version de ligne dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  À partir de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] introduit une implémentation d’un niveau d’isolation de la transaction existant, read committed, qui fournit un instantané au niveau des instructions basé sur le contrôle de version de ligne. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] offre également un niveau d’isolation de la transaction, instantané, qui fournit un instantané au niveau des transactions basé aussi sur le contrôle de version de ligne.  
   
  Le contrôle de version de ligne est une infrastructure générale de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui appelle un mécanisme de copie sur écriture lorsqu'une ligne est modifiée ou supprimée. Il exige que l'ancienne version de la ligne soit disponible pendant l'exécution de la transaction pour les transactions qui nécessitent un état antérieur cohérent d'un point de vue transactionnel. Le contrôle de version de ligne est utilisé pour la prise en charge des fonctionnalités suivantes :  
@@ -1214,11 +1214,11 @@ BEGIN TRANSACTION
   
  Un espace disque suffisant doit être alloué pour satisfaire à cette exigence.  
   
-#### <a name="monitoring-row-versioning-and-the-version-store"></a>Supervision de la gestion de versions de ligne et du magasin de versions  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit des outils pour superviser la gestion de versions de ligne, le magasin de versions et les processus d'isolement d'instantané : les vues DMV (Dynamic Management Views) et les compteurs de performances dans le Moniteur système Windows.  
+#### <a name="monitoring-row-versioning-and-the-version-store"></a>Contrôle du contrôle de version de ligne et du magasin de versions  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit des outils pour le contrôle du contrôle de version de ligne, du magasin de versions et des processus d'isolement d'instantané : les vues DMV (Dynamic Management Views) et les compteurs de performances dans le Moniteur système Windows.  
   
 ##### <a name="dmvs"></a>Vues DMV  
- Les vues DMV suivantes fournissent des informations sur l'état système actuel de tempdb et du magasin de versions, ainsi que sur les transactions utilisant la gestion de versions de ligne.  
+ Les vues DMV suivantes fournissent des informations sur l'état système actuel de tempdb et du magasin de versions, ainsi que sur les transactions utilisant le contrôle de version de ligne.  
   
  sys.dm_db_file_space_usage. Retourne des informations sur l'utilisation de l'espace pour chaque fichier de la base de données. Pour plus d’informations, consultez [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md).  
   
@@ -1594,7 +1594,7 @@ ALTER DATABASE AdventureWorks2016
     > Les opérations BULK INSERT peuvent entraîner des modifications au niveau des métadonnées de la table cible (par exemple, lors de la désactivation des vérifications de contraintes). Dans ce cas, les transactions simultanées d'isolement d'instantané qui accèdent à des tables faisant l'objet d'insertion en bloc échouent.  
   
    
-## <a name="customizing-locking-and-row-versioning"></a>Personnalisation du verrouillage et de la gestion de versions de ligne  
+## <a name="customizing-locking-and-row-versioning"></a>Personnalisation du verrouillage et du contrôle de version de ligne  
   
 ### <a name="customizing-the-lock-time-out"></a>Personnalisation du délai d'attente de verrouillage  
  Quand une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] ne peut pas accorder un verrou à une transaction, car une autre transaction a déjà un verrou en conflit dans la ressource, la première transaction se bloque, dans l’attente de la libération du verrou existant. Par défaut, il n'existe pas de délai d'expiration obligatoire et aucun moyen de tester si une ressource est déjà verrouillée avant de la verrouiller, excepté par une tentative d'accès aux données (avec un risque de blocage infini).  
@@ -1670,7 +1670,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ### <a name="locking-hints"></a>Indicateurs de verrouillage  
- Il est possible de spécifier des indicateurs de verrouillage pour des références de table individuelles dans les instructions SELECT, INSERT, UPDATE et DELETE. Ces indicateurs déterminent le type de verrouillage ou de gestion de versions de ligne qu’utilise l’instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour les données de la table. Les indicateurs de verrouillage au niveau des tables peuvent être utilisés pour un contrôle plus fin des types de verrous acquis sur un objet. Ces options de verrouillage remplacent le niveau d'isolement courant de la transaction pour la session.  
+ Il est possible de spécifier des indicateurs de verrouillage pour des références de table individuelles dans les instructions SELECT, INSERT, UPDATE et DELETE. Ces indicateurs déterminent le type de verrouillage ou de contrôle de version de ligne qu’utilise l’instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour les données de la table. Les indicateurs de verrouillage au niveau des tables peuvent être utilisés pour un contrôle plus fin des types de verrous acquis sur un objet. Ces options de verrouillage remplacent le niveau d'isolement courant de la transaction pour la session.  
   
  Pour plus d’informations sur les indicateurs de verrouillage spécifiques et leurs comportements, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
   
@@ -1710,7 +1710,7 @@ GO
   
  Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], l’option `LOCK_ESCALATION` de l’instruction `ALTER TABLE` peut défavoriser des verrous de table et activer des verrous HoBT sur des tables partitionnées. Cette option n'est pas un indicateur de verrouillage, mais elle peut servir à réduire l'escalade de verrous. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
-###  <a name="Customize"></a> Personnalisation du verrouillage pour un index  
+###  <a name="customizing-locking-for-an-index"></a><a name="Customize"></a> Personnalisation du verrouillage pour un index  
  Dans la plupart des cas, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise une stratégie de verrouillage dynamique qui choisit automatiquement la granularité de verrouillage la plus appropriée pour les requêtes. Nous vous recommandons de ne pas remplacer les niveaux de verrouillage par défaut, pour lesquels le verrouillage de page et de ligne est activé, sauf si les modèles d'accès à la table ou à l'index sont bien assimilés et cohérents et s'il existe une contention de ressources à résoudre. Le remplacement d’un niveau de verrouillage peut affecter considérablement les accès simultanés à une table ou un index. Par exemple, la spécification de verrous de niveau table uniquement sur une table de grande taille à laquelle les utilisateurs accèdent fréquemment peut provoquer des goulets d’étranglement, car les utilisateurs doivent attendre que le verrou de niveau table soit libéré avant de pouvoir accéder à la table.  
   
  Il existe quelques cas où l'interdiction du verrouillage de page ou de ligne peut être avantageuse, à condition que les modèles d'accès soient bien assimilés et cohérents. Par exemple, une application de base de données utilise une table de recherche mise à jour chaque semaine via un processus par lot. Les lecteurs simultanés accèdent à la table avec un verrou partagé (S) et la mise à jour par lot hebdomadaire accède à la table avec un verrou exclusif (X). La désactivation du verrouillage de page et de ligne sur la table réduit la charge de traitement liée au verrouillage tout au long de la semaine en permettant aux lecteurs d'accéder simultanément à la table via des verrous de table partagés. Lorsque le programme de traitement par lot s'exécute, il peut effectuer la mise à jour efficacement, car il obtient un verrou de table exclusif.  
@@ -1727,7 +1727,7 @@ GO
 |Niveau ligne|Verrous au niveau des pages et des tables|  
 |Niveau page et niveau ligne|Verrous au niveau des tables|  
   
-##  <a name="Advanced"></a> Informations sur les transactions avancées  
+##  <a name="advanced-transaction-information"></a><a name="Advanced"></a> Informations sur les transactions avancées  
   
 ### <a name="nesting-transactions"></a>Transactions imbriquées  
  Les transactions explicites peuvent être imbriquées. Cette fonctionnalité est avant tout destinée à la prise en charge des transactions dans les procédures stockées appelées par un processus faisant partie d'une transaction, ou par des processus ne disposant pas de transaction active.  
@@ -1816,7 +1816,7 @@ GO
 ### <a name="coding-efficient-transactions"></a>Écriture de transactions performantes  
  Il est important de réduire la durée des transactions au minimum. Au démarrage d'une transaction, le SGBD, autrement dit le système de gestion de base de données, doit utiliser de nombreuses ressources pour toute la durée de la transaction afin de préserver les propriétés ACID (atomicité, cohérence, isolement et durabilité) de la transaction. En cas de modification des données, les lignes modifiées doivent être protégées par des verrous exclusifs qui empêchent les autres transactions de lire ces lignes, et ces verrous doivent être maintenus jusqu'à ce que la transaction soit validée ou restaurée. En fonction des paramètres de niveau d’isolation de la transaction, les instructions `SELECT` peuvent acquérir des verrous qui doivent être maintenus jusqu’à la restauration ou la validation de la transaction. Dans le cas de systèmes comprenant de nombreux utilisateurs, les transactions doivent être aussi courtes que possible afin de limiter la contention des ressources par les verrous pour des connexions concurrentes. Des transactions longues et peu performantes peuvent ne pas poser de problème pour un nombre réduit d'utilisateurs, mais elles sont inacceptables dans le cas d'un système comprenant plusieurs milliers d'utilisateurs. À partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge les transactions durables retardées. Les transactions durables retardées ne garantissent pas la durabilité. Consultez la rubrique [Durabilité des transactions](../relational-databases/logs/control-transaction-durability.md) pour plus d’informations.  
   
-#### <a name="guidelines"></a> Directives de codage  
+#### <a name="coding-guidelines"></a><a name="guidelines"></a> Directives de codage  
  Vous trouverez ci-dessous des directives vous permettant de coder des transactions performantes :  
   
 -   Évitez l'entrée de données par l'utilisateur au cours d'une transaction.  
@@ -1869,7 +1869,7 @@ GO
 #### <a name="stopping-a-transaction"></a>Arrêt d'une transaction  
  Vous devrez peut-être utiliser l'instruction KILL. Utilisez cette instruction avec précaution, particulièrement lorsque des processus critiques sont en cours d'exécution. Pour plus d’informations, consultez [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
-##  <a name="Additional_Reading"></a> Lecture supplémentaire   
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecture supplémentaire   
 [Charge du contrôle de version de ligne](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
 [Événements étendus](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     

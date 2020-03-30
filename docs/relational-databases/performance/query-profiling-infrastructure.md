@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705904"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
@@ -50,7 +50,7 @@ Les méthodes suivantes de collecte globale d’informations sur les plans d’e
 
 Lors de l’exécution d’une session d’événements étendus qui utilise l’événement *query_post_execution_showplan*, la vue de gestion dynamique [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) est également renseignée, ce qui active les statistiques des requêtes actives pour tous les sessions, à l’aide du [Moniteur d’activité](../../relational-databases/performance-monitor/activity-monitor.md) ou par interrogation directe de la vue de gestion dynamique. Pour plus d’informations, voir [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
-## <a name="lwp"></a> Infrastructure légère de profilage des statistiques sur l’exécution des requêtes
+## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a> Infrastructure légère de profilage des statistiques sur l’exécution des requêtes
 
 À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], une nouvelle *infrastructure légère de profilage des statistiques sur l’exécution des requêtes* (ou **profilage léger**), a été introduite. 
 

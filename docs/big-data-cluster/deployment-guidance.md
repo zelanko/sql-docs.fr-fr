@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286063"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
@@ -35,14 +35,14 @@ Avant de déployer un cluster Big Data SQL Server 2019, commencez par [installe
 - Azure Data Studio
 - [Extension de virtualisation de données](../azure-data-studio/data-virtualization-extension.md) pour Azure Data Studio
 
-## <a id="prereqs"></a> Kubernetes - Prérequis
+## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Kubernetes - Prérequis
 
 Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nécessitent au minimum Kubernetes version 1.13 sur le serveur et le client (kubectl).
 
 > [!NOTE]
 > Notez que la différence entre les versions mineures de Kubernetes sur le client et le serveur ne doit pas dépasser +1 ou -1. Pour plus d’informations, consultez [les notes de publication de Kubernetes et la stratégie en matière de différence de version pour les références SKU](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-### <a id="kubernetes"></a> Configuration du cluster Kubernetes
+### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Configuration du cluster Kubernetes
 
 Si vous avez déjà un cluster Kubernetes qui répond aux prérequis ci-dessus, vous pouvez passer directement à l’[étape de déploiement](#deploy). Cette section suppose que vous disposez de connaissances de base sur les concepts de Kubernetes.  Pour obtenir des informations plus détaillées, consultez la [documentation de Kubernetes](https://kubernetes.io/docs/home).
 
@@ -75,13 +75,13 @@ La plupart des déploiements de cluster Big Data doivent disposer d’un stockag
 
 Si vous déployez dans AKS, aucune configuration de stockage n’est nécessaire. AKS fournit des classes de stockage intégrées au provisionnement dynamique. Vous pouvez personnaliser la classe de stockage (`default` ou `managed-premium`) dans le fichier de configuration de déploiement. Les profils intégrés utilisent une classe de stockage `default`. Si vous déployez sur un cluster Kubernetes que vous avez déployé à l’aide de `kubeadm`, vous devez vous veiller à disposer d’un espace de stockage suffisant pour qu’un cluster de l’échelle souhaitée soit disponible et son utilisation configurée. Si vous souhaitez personnaliser la façon dont votre stockage est utilisé, vous devez le faire avant de continuer. Consultez [Persistance des données avec un cluster Big Data SQL Server sur Kubernetes](concept-data-persistence.md).
 
-## <a id="deploy"></a> Vue d’ensemble du déploiement
+## <a name="deployment-overview"></a><a id="deploy"></a> Vue d’ensemble du déploiement
 
 La plupart des paramètres de cluster Big Data sont définis dans un fichier de configuration de déploiement JSON. Vous pouvez utiliser un profil de déploiement par défaut pour AKS et les clusters Kubernetes créés avec `kubeadm` ou vous pouvez personnaliser un fichier de configuration de déploiement et l’utiliser pendant l’installation. Pour des raisons de sécurité, les paramètres d’authentification sont passés par le biais de variables d’environnement.
 
 Les sections suivantes fournissent plus d’informations sur la façon de configurer vos déploiements de cluster Big Data, ainsi que des exemples de personnalisations courantes. Sachez que vous pouvez toujours modifier le fichier de configuration de déploiement personnalisé à l’aide d’un éditeur comme VS Code.
 
-## <a id="configfile"></a> Configurations par défaut
+## <a name="default-configurations"></a><a id="configfile"></a> Configurations par défaut
 
 Les options de déploiement d’un cluster Big Data sont définies dans les fichiers de configuration JSON. Vous pouvez démarrer votre personnalisation du déploiement de cluster à partir des profils de déploiement intégrés disponibles dans `azdata`. 
 
@@ -125,7 +125,7 @@ Dans ce scénario, vous êtes invité à fournir tous les paramètres qui ne fon
 > [!IMPORTANT]
 > Par défaut, le cluster Big Data est nommé `mssql-cluster`. Il est important de le connaître si vous souhaitez exécuter l’une des commandes `kubectl` spécifiant l’espace de noms Kubernetes avec le paramètre `-n`.
 
-## <a id="customconfig"></a> Configurations personnalisées
+## <a name="custom-configurations"></a><a id="customconfig"></a> Configurations personnalisées
 
 Vous pouvez également personnaliser votre déploiement pour prendre en charge les charges de travail que vous envisagez d’exécuter. Notez que vous ne pouvez pas modifier la mise à l’échelle (nombre de réplicas) ni les paramètres de stockage des services de cluster Big Data après les déploiements. Vous devez donc planifier votre configuration de déploiement avec soin afin d’éviter les problèmes de capacité. Pour personnaliser votre déploiement, procédez comme suit :
 
@@ -165,7 +165,7 @@ Vous pouvez également personnaliser votre déploiement pour prendre en charge l
 
 > Pour plus de détails sur la structure d’un fichier de configuration de déploiement, consultez ces [informations de référence](reference-deployment-config.md). Pour obtenir d’autres exemples de configuration, consultez [Configurer les paramètres de déploiement de clusters Big Data](deployment-custom-configuration.md).
 
-## <a id="env"></a> Variables d’environnement
+## <a name="environment-variables"></a><a id="env"></a> Variables d’environnement
 
 Les variables d’environnement suivantes sont utilisées pour les paramètres de sécurité qui ne sont pas stockés dans un fichier de configuration de déploiement. Notez que les paramètres Docker, à l’exception des informations d’identification, peuvent être définis dans le fichier de configuration.
 
@@ -208,11 +208,11 @@ Notez les consignes suivantes :
 - Veillez à inclure le mot de passe entre guillemets doubles s’il contient des caractères spéciaux. Vous pouvez définir `AZDATA_PASSWORD` avec la valeur de votre choix, mais veillez à ce que le mot de passe soit suffisamment complexe et n’utilisez pas les caractères `!`, `&` et `'`. Notez que les délimiteurs de guillemets doubles fonctionnent uniquement dans les commandes bash.
 - La connexion `AZDATA_USERNAME` est un administrateur système sur l’instance principale SQL Server dont la création a lieu lors de l’installation. Une fois le conteneur SQL Server créé, la variable d’environnement `AZDATA_PASSWORD` que vous avez spécifiée peut être découverte en exécutant `echo $AZDATA_PASSWORD` dans le conteneur. Pour des raisons de sécurité, modifiez le mot de passe en guise de bonne pratique.
 
-## <a id="unattended"></a> Installation sans assistance
+## <a name="unattended-install"></a><a id="unattended"></a> Installation sans assistance
 
 Pour un déploiement sans assistance, vous devez définir toutes les variables d’environnement nécessaires, utiliser un fichier de configuration et appeler la commande `azdata bdc create` avec le paramètre `--accept-eula yes`. Les exemples de la section précédente illustrent la syntaxe d’une installation sans assistance.
 
-## <a id="monitor"></a> Superviser le déploiement
+## <a name="monitor-the-deployment"></a><a id="monitor"></a> Superviser le déploiement
 
 Durant l’amorçage du cluster, la fenêtre de commande du client retourne l’état du déploiement. Vous devez ensuite voir une série de messages indiquant que le processus de déploiement attend le pod du contrôleur :
 
@@ -239,7 +239,7 @@ Cluster deployed successfully.
 > [!TIP]
 > Le nom par défaut du cluster Big Data déployé est `mssql-cluster`, sauf s’il est modifié par une configuration personnalisée.
 
-## <a id="endpoints"></a> Récupérer des points de terminaison
+## <a name="retrieve-endpoints"></a><a id="endpoints"></a> Récupérer des points de terminaison
 
 Une fois le script de déploiement terminé, vous pouvez obtenir les adresses des points de terminaison externes du cluster Big Data en effectuant les étapes suivantes.
 
@@ -293,7 +293,7 @@ Vous pouvez également obtenir tous les points de terminaison de service déploy
 kubectl get svc -n <your-big-data-cluster-name>
 ```
 
-## <a id="status"></a> Vérifier l’état du cluster
+## <a name="verify-the-cluster-status"></a><a id="status"></a> Vérifier l’état du cluster
 
 Après le déploiement, vous pouvez vérifier l’état du cluster à l’aide de la commande [azdata bdc status show](reference-azdata-bdc-status.md).
 
@@ -423,7 +423,7 @@ Sql: ready                                                                      
 
 Outre `azdata`, vous pouvez utiliser Azure Data Studio pour rechercher les points de terminaison et des informations d’état. Pour plus d’informations sur l’affichage de l’état du cluster avec `azdata` et Azure Data Studio, consultez [Guide pratique pour afficher l’état d’un cluster Big Data](view-cluster-status.md).
 
-## <a id="connect"></a> Se connecter au cluster
+## <a name="connect-to-the-cluster"></a><a id="connect"></a> Se connecter au cluster
 
 Pour plus d’informations sur la façon de se connecter au cluster Big Data, consultez [Se connecter à un cluster Big Data SQL Server avec Azure Data Studio](connect-to-big-data-cluster.md).
 

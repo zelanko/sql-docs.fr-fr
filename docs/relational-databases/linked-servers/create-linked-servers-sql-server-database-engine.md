@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761893"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
@@ -29,24 +29,24 @@ ms.locfileid: "76761893"
 
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
   
-##  <a name="Background"></a> Arrière-plan  
+##  <a name="background"></a><a name="Background"></a> Arrière-plan  
  Un serveur lié autorise l'accès à des sources de données OLE DB par l'intermédiaire de requêtes distribuées et hétérogènes. Une fois qu'un serveur lié a été créé, il est possible d'exécuter des requêtes distribuées sur ce serveur, et les requêtes peuvent joindre des tables de plusieurs sources de données. Si le serveur lié est défini comme une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les procédures stockées distantes peuvent être exécutées.  
   
  Les fonctions et les arguments requis du serveur lié peuvent considérablement varier. Cette rubrique fournit des exemples typiques, mais toutes les options ne sont pas décrites. Pour plus d’informations, consultez [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-##  <a name="Security"></a> Sécurité  
+##  <a name="security"></a><a name="Security"></a> Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
  Quand vous utilisez des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous avez besoin de l’autorisation **ALTER ANY LINKED SERVER** sur le serveur ou de l’appartenance au rôle serveur fixe **setupadmin** . Quand vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , vous avez besoin de l’autorisation **CONTROL SERVER** ou de l’appartenance au rôle serveur fixe **sysadmin** .  
   
-##  <a name="Procedures"></a> Comment créer un serveur lié  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Comment créer un serveur lié  
  Vous pouvez utiliser l'une des options suivantes :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Pour créer un serveur lié à une autre instance de Serveur SQL à l'aide de SQL Server Management Studio  
   
@@ -197,7 +197,7 @@ ms.locfileid: "76761893"
      **Prend en charge l'opérateur 'Like'**  
      Indique que le fournisseur prend en charge les requêtes qui utilisent le mot clé LIKE.  
   
-###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Pour créer un serveur lié à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)], utilisez les instructions [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) et [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Pour créer un serveur lié à une autre instance de SQL Server à l'aide de Transact-SQL  
@@ -225,7 +225,7 @@ ms.locfileid: "76761893"
   
     ```  
   
-##  <a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
   
 #### <a name="to-test-the-linked-server"></a>Pour tester le serveur lié  
   

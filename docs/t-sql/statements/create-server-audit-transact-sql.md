@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983001"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -174,7 +174,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     WITH ( QUEUE_DELAY = 1000,  ON_FAILURE = SHUTDOWN);  
 ```  
   
-###  <a name="ExampleWhere"></a> C. Création d'un audit de serveur contenant une clause WHERE  
+###  <a name="c-creating-a-server-audit-containing-a-where-clause"></a><a name="ExampleWhere"></a> C. Création d'un audit de serveur contenant une clause WHERE  
  L'exemple suivant crée une base de données, un schéma et deux tables pour l'exemple. La table `DataSchema.SensitiveData` contient des données confidentielles et tout accès à cette table doit être enregistré dans l’audit. La table `DataSchema.GeneralData` ne contient pas de données confidentielles. La spécification de l'audit de la base de données audite les accès à tous les objets du schéma `DataSchema`. L'audit du serveur est créé avec une clause WHERE qui limite l'audit à la seule table `SensitiveData`. L’audit du serveur présume qu’un dossier d’audit existe dans `C:\SQLAudit`.  
   
 ```sql  

@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140216"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -52,7 +52,7 @@ Les planifications spécifiques à un rapport ou un abonnement sont supprimées 
 
 Une planification spécifique aux rapports arrivée à expiration reste associée au rapport. Vous pouvez déterminer si une planification est arrivée à expiration en vérifiant sa date de fin. Une planification partagée expirée reste dans la liste des planifications partagées. Le champ État indique si la planification est arrivée à expiration. Vous pouvez rétablir la planification en reportant la date de fin ou vous pouvez supprimer la référence à la planification si vous n'en n'avez plus besoin.
 
-## <a name="bkmk_native"></a> Créer, supprimer ou modifier une planification partagée (portail web)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> Créer, supprimer ou modifier une planification partagée (portail web)
  La création et la modification d'une planification consiste à définir des options de fréquence qui déterminent le moment d'exécution de la planification.
 
  Vous pouvez créer ou modifier une planification à n'importe quel moment. Toutefois, si une planification commence à s'exécuter avant que vous n'ayez terminé vos modifications, la version précédente de la planification est utilisée. La planification révisée ne prend pas effet tant que vous ne l'avez pas enregistrée.
@@ -114,7 +114,7 @@ Cliquez sur **Annuler**.
 
  Si vous supprimez une planification partagée utilisée par plusieurs rapports et abonnements, le serveur de rapports créera des planifications individuelles pour chaque rapport et abonnement qui a précédemment utilisé la planification partagée. Chaque nouvelle planification individuelle contiendra la date, l'heure et la périodicité spécifiée dans la planification partagée.
 
-##  <a name="bkmk_sharepoint"></a> Créer et gérer des planifications partagées (mode SharePoint)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Créer et gérer des planifications partagées (mode SharePoint)
  Vous devez être un administrateur de site pour pouvoir créer, modifier ou supprimer les planifications partagées d'un site SharePoint.
 
  Vous pouvez identifier une planification spécifique par son nom descriptif. Si aucun nom n'est spécifié, un nom par défaut est créé à partir des informations qui se rapportent à la planification, par exemple sa périodicité ou ses dates et heures d'exécution.

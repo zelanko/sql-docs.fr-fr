@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558627"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Groupes de disponibilité Always On sur Linux
@@ -45,7 +45,7 @@ Les réplicas secondaires accessibles en lecture sont pris en charge uniquement 
 
 Une des nouveautés de [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] est l’introduction d’un type de cluster pour les groupes de disponibilité. Pour Linux, il existe deux valeurs valides: External et None. Un type de cluster External signifie que Pacemaker sera utilisé sous le groupe de disponibilité. L’utilisation d’External pour le type de cluster nécessite que le mode de basculement soit défini sur External aussi (une autre nouveauté de [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Le basculement automatique est pris en charge, mais contrairement à WSFC, le mode de basculement est défini sur External, pas Automatic lorsque Pacemaker est utilisé. Contrairement à WSFC, la partie Pacemaker du groupe de disponibilité est créée après la configuration du groupe de disponibilité.
 
-Un type de cluster None signifie qu’il n’est pas nécessaire que Pacemaker soit configuré ou utilisé par le groupe. Même sur les serveurs sur lesquels Pacemaker est configuré, si un groupe de disponibilité est configuré avec un type de cluster None, Pacemaker ne voit pas et ne gère pas ce groupe de disponibilité. Le type de cluster None prend en charge uniquement le basculement manuel d’un réplica principal vers un réplica secondaire. Un groupe de disponibilité créé avec None est principalement destiné au scénario de mise à l’échelle en lecture et aux mises à niveau. Bien qu’il puisse fonctionner dans des scénarios tels que la récupération d’urgence ou la disponibilité locale où aucun basculement automatique n’est nécessaire, il n’est pas recommandé. L’écouteur est également plus complexe sans Pacemaker.
+Un type de cluster None signifie qu’il n’est pas nécessaire que Pacemaker soit configuré ou utilisé par le groupe. Même sur les serveurs sur lesquels Pacemaker est configuré, si un groupe de disponibilité est configuré avec un type de cluster None, Pacemaker ne voit pas et ne gère pas ce groupe de disponibilité. Le type de cluster None prend en charge uniquement le basculement manuel d’un réplica principal vers un réplica secondaire. Un groupe de disponibilité créé avec None est principalement destiné au scénario de scale-out en lecture et aux mises à niveau. Bien qu’il puisse fonctionner dans des scénarios tels que la récupération d’urgence ou la disponibilité locale où aucun basculement automatique n’est nécessaire, il n’est pas recommandé. L’écouteur est également plus complexe sans Pacemaker.
 
 Le type de cluster est stocké dans la vue de gestion dynamique (DMV) `sys.availability_groups` de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], dans les colonnes `cluster_type` et `cluster_type_desc`.
 
@@ -114,7 +114,7 @@ Lorsqu’un réplica de configuration est utilisé, il a le comportement suivant
 -   Si les réplicas de configuration échouent, le groupe de disponibilité fonctionne normalement, mais aucun basculement automatique n’est possible.
 -   Si un réplica secondaire synchrone et le réplica de configuration échouent, la base de données primaire ne peut pas accepter de transactions, et il n’y a pas d’options de basculement disponibles pour le réplica principal.
 
-Dans la CU1, il existe un bogue connu dans la journalisation dans le fichier corosync.log généré via `mssql-server-ha`. Si un réplica secondaire n’est pas en mesure de devenir le réplica principal en raison du nombre de réplicas disponibles requis, le message actuel indique « Réception attendue de 1 numéro de séquence mais 2 reçus. Il n’y a pas assez de réplicas en ligne pour promouvoir le réplica local en toute sécurité. » Les nombres doivent être inversés et le message doit plutôt indiquer « Réception attendue de 2 numéros de séquence mais un 1 seul reçu. Il n’y a pas assez de réplicas en ligne pour promouvoir le réplica local en toute sécurité. » 
+Dans la CU1, il existe un bogue connu dans la journalisation dans le fichier corosync.log généré via `mssql-server-ha`. Si un réplica secondaire n’est pas en mesure de devenir le réplica principal en raison du nombre de réplicas disponibles requis, le message actuel indique « Expected to receive 1 sequence numbers but only received 2. Il n’y a pas assez de réplicas en ligne pour promouvoir le réplica local en toute sécurité. » Les nombres doivent être inversés et le message doit plutôt indiquer « Réception attendue de 2 numéros de séquence mais un 1 seul reçu. Il n’y a pas assez de réplicas en ligne pour promouvoir le réplica local en toute sécurité. » 
 
 ## <a name="multiple-availability-groups"></a>Groupes de disponibilité multiples 
 

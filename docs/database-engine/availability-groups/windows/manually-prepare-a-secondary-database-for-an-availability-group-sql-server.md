@@ -19,10 +19,10 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68023710"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Préparer une base de données secondaire pour un groupe de disponibilité Always On
@@ -35,7 +35,7 @@ Cette rubrique explique comment préparer une base de données pour un groupe de
 > [!TIP]  
 >  Si vous avez une configuration de copie des journaux de transaction, vous pouvez peut-être convertir la base de données principale de copie des journaux de transaction ainsi qu’une ou plusieurs de ses bases de données secondaires en réplica principal de groupe de disponibilité et en un ou plusieurs réplicas secondaires. Pour plus d'informations, consultez [Prérequis pour la migration de la copie des journaux de transaction vers les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
 
-##  <a name="Prerequisites"></a> Prérequis et restrictions  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Prérequis et restrictions  
   
 -   Assurez-vous que le système dans lequel vous envisagez de placer la base de données possède un lecteur de disque avec suffisamment d'espace pour les bases de données secondaires.  
   
@@ -49,21 +49,21 @@ Cette rubrique explique comment préparer une base de données pour un groupe de
   
 -   Après la restauration de la base de données, vous devez restaurer (WITH NORECOVERY) chaque sauvegarde de journal créée depuis la dernière sauvegarde de données restaurée.  
   
-##  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Sur les instances autonomes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], nous recommandons, si possible, que le chemin d'accès au fichier (y compris la lettre de lecteur) d'une base de données secondaire particulière soit identique au chemin d'accès de la base de données primaire correspondante. Cela est dû au fait que, si vous déplacez les fichiers de base de données lors de la création d'une base de données secondaire, une opération ultérieure d'ajout de fichier peut échouer sur la base de données secondaire et provoquer l'interruption de la base de données secondaire.  
   
 -   Avant de préparer vos bases de données secondaires, il est fortement recommandé d'interrompre les sauvegardes de fichiers journaux planifiées sur les bases de données dans le groupe de disponibilité jusqu'à ce que l'initialisation des réplicas secondaires soit terminée.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Lorsqu'une base de données est sauvegardée, la valeur OFF est attribuée à la propriété [TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) de la base de données. Par conséquent, la propriété TRUSTWORTHY d'une base de données nouvellement restaurée a toujours la valeur OFF.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** . Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md).  
   
  Lorsque la base de données en cours de restauration n'existe pas dans l'instance de serveur, l'instruction RESTORE nécessite des autorisations CREATE DATABASE. Pour plus d’informations, consultez [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Utiliser SQL Server Management Studio  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utiliser SQL Server Management Studio  
   
 > [!NOTE]  
 >  Si les chemins de fichier de sauvegarde et de restauration sont identiques entre l’instance de serveur qui héberge le réplica principal et chaque instance qui héberge un réplica secondaire, vous devez pouvoir créer des bases de données de réplica secondaire à l’aide de l’[Assistant Nouveau groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), de l’[Assistant Ajouter un réplica au groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md) ou de l’[Assistant Ajouter une base de données au groupe de disponibilité](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md).  
@@ -88,7 +88,7 @@ Cette rubrique explique comment préparer une base de données pour un groupe de
 > [!NOTE]  
 >  Pour plus d’informations sur l’exécution de ces opérations de sauvegarde et de restauration, consultez [Tâches connexes de sauvegarde et de restauration](#RelatedTasks), plus loin dans cette section.  
   
-###  <a name="RelatedTasks"></a> Tâches connexes de sauvegarde et de restauration  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a> Tâches connexes de sauvegarde et de restauration  
  **Pour créer une sauvegarde de base de données**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -109,7 +109,7 @@ Cette rubrique explique comment préparer une base de données pour un groupe de
   
 -   [Restaurer une base de données à un nouvel emplacement &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour préparer une base de données secondaire**  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ Cette rubrique explique comment préparer une base de données pour un groupe de
 > [!NOTE]  
 >  Pour plus d’informations sur l’exécution de ces opérations de sauvegarde et de restauration, consultez [Tâches connexes de sauvegarde et de restauration](#RelatedTasks), plus loin dans cette rubrique.  
   
-###  <a name="ExampleTsql"></a> Exemple Transact-SQL  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a> Exemple Transact-SQL  
  L'exemple suivant prépare une base de données secondaire. L'exemple suivant utilise la base de données d'exemple [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] qui emploie par défaut le mode de récupération simple.  
   
 1.  Pour utiliser la base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , modifiez-la afin qu'elle utilise le mode de récupération complète :  
@@ -227,7 +227,7 @@ Cette rubrique explique comment préparer une base de données pour un groupe de
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour préparer une base de données secondaire**  
   
 1.  Si vous devez créer une sauvegarde récente de la base de données primaire, remplacez le répertoire (**cd**) par l’instance de serveur qui héberge le réplica principal.  
@@ -247,7 +247,7 @@ Cette rubrique explique comment préparer une base de données pour un groupe de
   
 -   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> Exemple de commande et de script de sauvegarde et restauration  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a> Exemple de commande et de script de sauvegarde et restauration  
  Les commandes PowerShell suivantes effectuent une sauvegarde complète de base de données et de son journal des transactions dans un partage réseau et restaurent ces sauvegardes depuis ce partage. Dans cet exemple, on suppose que le chemin d'accès de fichier dans lequel la base de données est restaurée est identique au chemin d'accès de fichier dans lequel la base de données a été sauvegardée.  
   
 ```  
@@ -262,7 +262,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a>Étapes suivantes  
+##  <a name="next-steps"></a><a name="FollowUp"></a>Étapes suivantes  
  Pour terminer la configuration de la base de données secondaire, attachez la base de données nouvellement restaurée au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  

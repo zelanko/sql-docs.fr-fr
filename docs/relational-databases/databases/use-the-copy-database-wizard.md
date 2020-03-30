@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127117"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
@@ -49,7 +49,7 @@ L’Assistant Copie de base de données déplace ou copie des bases de données 
 -   Programmer l’heure à laquelle déplacer ou copier les bases de données.  
   
 
-##  <a name="Restrictions"></a> Limitations et restrictions  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   L'Assistant Copie de base de données n'est pas disponible dans l'édition Express.  
   
@@ -81,7 +81,7 @@ L’Assistant Copie de base de données déplace ou copie des bases de données 
 > **IMPORTANT** La méthode d’ **attachement et de détachement** attribue la propriété de la base de données source et de destination à la connexion exécutant l’ **Assistant Copie de base de données**.  Consultez [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) pour modifier la propriété d’une base de données.
   
   
-##  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
 -   Vérifiez que SQL Server Agent est démarré sur le serveur de destination.  
 
 -   Vérifiez que les répertoires de fichiers journaux et de données sur le serveur source sont accessibles à partir du serveur de destination.
@@ -90,7 +90,7 @@ L’Assistant Copie de base de données déplace ou copie des bases de données 
 
 > **IMPORTANT** Sous la méthode de **détachement et d’attachement** , le processus de copie ou de déplacement échoue si aucun compte proxy Integration Services n’est utilisé.  Sous certaines circonstances, la base de données source n’est pas à nouveau attachée au serveur source et toutes les autorisations de sécurité NTFS sont supprimées des fichiers journaux et de données.  Dans ce cas, accédez à vos fichiers, ré-appliquez les autorisations appropriées, puis attachez à nouveau la base de données à votre instance de SQL Server.
   
-##  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Pour garantir des performances optimales de la base de données mise à niveau, exécutez [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (mise à jour des statistiques) sur la base de données mise à niveau.  
   
@@ -98,10 +98,10 @@ L’Assistant Copie de base de données déplace ou copie des bases de données 
   
 
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez être membre du rôle de serveur fixe **sysadmin** sur le serveur source et sur le serveur de destination.  
   
-##  <a name="Overview"></a> Pages de l’Assistant Copie de base de données 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> Pages de l’Assistant Copie de base de données 
 Lancez l’ **Assistant Copie de base de données** dans SQL Server Management Studio à partir de l’ **Explorateur d’objets** et développez **Bases de données**.  Ensuite, cliquez avec le bouton droit sur une base de données, pointez vers **Tâches**et cliquez sur **Copier la base de données**.  Si la page d’accueil **Bienvenue dans l’Assistant Copie de base de données** s’affiche, cliquez sur **Suivant**.
 
 
@@ -295,7 +295,7 @@ Affiche un résumé des options sélectionnées.  Cliquez sur **Précédent** po
 -    **Message**  
 Affiche les messages retournés par chaque étape.
 
-##  <a name="Examples"></a> Exemples
+##  <a name="examples"></a><a name="Examples"></a> Exemples
 ### <a name="common-steps"></a>**Étapes courantes** 
 Que vous choisissiez **Déplacer** ou **Copier**, **Détacher et attacher** ou **SMO**, les cinq étapes répertoriées ci-dessous sont les mêmes.  Par souci de concision, ces étapes ne sont répertoriées ici qu’une seule fois et tous les exemples commencent à l’ **Étape 6**.
 
@@ -384,12 +384,12 @@ Dans cet exemple, la base de données `Sales` est copiée et créée en tant que
 14. Démarrez manuellement le travail SQL Server Agent nouvellement créé `SalesCopy weekly refresh`.  Passez en revue l’historique des travaux et vérifiez que `SalesCopy` existe maintenant sur l’instance.
 
   
-##  <a name="FollowUp"></a> Suivi : après la mise à niveau d’une base de données  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> Suivi : après la mise à niveau d’une base de données  
  Après avoir utilisé l'Assistant Copie de base de données pour mettre à niveau une base de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau des index de recherche en texte intégral** . Si l’option de mise à niveau a la valeur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne sont pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que quand l’option de mise à niveau est **Importer**, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  
- ## <a name="Post"></a> Considérations liées à l’après-copie/déplacement
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> Considérations liées à l’après-copie/déplacement
  Pensez à effectuer les étapes suivantes après une **copie** ou un **déplacement**:
 -    Modifiez la propriété des bases de données quand vous utilisez la méthode de détachement et d’attachement.
 -    Supprimez les objets serveur sur le serveur source après un **déplacement**.

@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078569"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
@@ -100,17 +100,17 @@ ms.locfileid: "77078569"
   
  Pour plus d’informations sur les cartes, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Pour savoir pas à pas comment ajouter une carte à un rapport, voir [Tutoriel : Rapport cartographique &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
   
-##  <a name="SpatialDataSource"></a> Choisir une source de données spatiales  
+##  <a name="choose-a-source-of-spatial-data"></a><a name="SpatialDataSource"></a> Choisir une source de données spatiales  
  Dans cette page, spécifiez la source de données spatiales et les données spatiales à inclure. Les données spatiales peuvent provenir de la bibliothèque de cartes, d'un fichier de forme ESRI ou d'une requête de dataset spécifiant des données spatiales [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'une base de données [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  
   
  Vous pouvez utiliser la même source ou une source différente de données spatiales pour chaque couche, mais vous devez spécifier la source chaque fois que vous ajoutez une couche. Lorsque les données spatiales proviennent de la bibliothèque de cartes ou d'un fichier de forme ESRI, la source de données spatiales n'est pas un élément distinct du rapport. Elle n'apparaît pas dans le volet des données de rapport.  
   
-###  <a name="SpatialData"></a> Que sont les données spatiales ?  
+###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> Que sont les données spatiales ?  
  Les données spatiales contiennent des coordonnées qui définissent des éléments géographiques ou géométriques. Dans une carte, les données spatiales définissent des *éléments cartographiques*: des polygones qui définissent des zones ou des formes, des lignes qui définissent des itinéraires ou des chemins d'accès et des points qui définissent des marqueurs ou des punaises. Les données spatiales sont stockées au format binaire dans la source de données et spécifiées comme jeux de coordonnées. Par exemple, un point a deux coordonnées X et Y (X Y), une ligne deux jeux de coordonnées ((X1 Y1), (X2 Y2)), un polygone quatre jeux de coordonnées ou plus, le premier et le dernier jeu de coordonnées étant identiques ((X1 Y1), (X1 Y1) (X3 Y3) (X2 Y2)).  
   
  Pour plus d'informations, consultez la documentation pour le type de données spatiales que vous utilisez.  
   
-###  <a name="MapGallery"></a> What is the map gallery?  
+###  <a name="what-is-the-map-gallery"></a><a name="MapGallery"></a> What is the map gallery?  
  La bibliothèque de cartes contient des cartes de rapports stockés dans le dossier Bibliothèque de cartes pour l'environnement de création de rapports. Les cartes de la bibliothèque fournissent un point de départ pratique pour ajouter rapidement une carte à votre rapport. Les cartes prédéfinies de la bibliothèque sont fournies par un fournisseur de cartes.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.locfileid: "77078569"
   
  Pour étendre la bibliothèque de cartes, vous pouvez ajouter ou supprimer des rapports du répertoire de la bibliothèque de cartes et ajouter des dossiers pour organiser les cartes. Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> What is an ESRI shapefile?  
+###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
  Un fichier de forme ESRI est un ensemble de fichiers contenant des données conformes au format de données spatiales de l'ESRI . Le jeu de fichiers inclut en général le fichier *\<nom_fichier>* .shp qui contient les données spatiales, ainsi qu’un fichier de support, *\<nom_fichier>* .dbf.  
   
  Lorsque vous spécifiez un fichier de forme en tant que source de données spatiales et que ce fichier se trouve sur votre ordinateur local, les données spatiales sont incorporées automatiquement dans le rapport. Pour utiliser dynamiquement des données spatiales d'un fichier ESRI, vous devez effectuer les opérations suivantes :  
@@ -127,10 +127,10 @@ ms.locfileid: "77078569"
   
  Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ajoutez le fichier .shp et le fichier .dbf au projet de rapport, puis spécifiez le nom du fichier .shp comme source de données spatiales.  
   
-###  <a name="GetShapefiles"></a> Où puis-je obtenir des fichiers de forme ESRI ?  
+###  <a name="where-can-i-get-esri-shapefiles"></a><a name="GetShapefiles"></a> Où puis-je obtenir des fichiers de forme ESRI ?  
  Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](https://go.microsoft.com/fwlink/?linkid=178814).  
   
-###  <a name="SqlServerSpatial"></a> Qu'est-ce qu'une requête spatiale SQL Server ?  
+###  <a name="what-is-a-sql-server-spatial-query"></a><a name="SqlServerSpatial"></a> Qu'est-ce qu'une requête spatiale SQL Server ?  
  Une requête spatiale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une requête de dataset qui spécifie des données de type SQLGeometry ou SQLGeography d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
@@ -140,7 +140,7 @@ ms.locfileid: "77078569"
   
  Pour plus d’informations, consultez [Types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-##  <a name="MapView"></a> Choisir des options de vue cartographique et de données spatiales  
+##  <a name="choose-spatial-data-and-map-view-options"></a><a name="MapView"></a> Choisir des options de vue cartographique et de données spatiales  
  Dans cette page, vous pouvez définir les options suivantes :  
   
 -   Définissez le centre d'affichage et le niveau de zoom des données spatiales que vous avez sélectionnées dans la page précédente de l'Assistant. La vue que vous définissez s'applique à l'ensemble de la carte.  
@@ -153,12 +153,12 @@ ms.locfileid: "77078569"
   
 -   Spécifiez si vous souhaitez inclure un arrière-plan de mosaïques Bing [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-###  <a name="Viewport"></a> Qu'est-ce que la vue cartographique ou fenêtre d'affichage ?  
+###  <a name="what-is-the-map-view-or-viewport"></a><a name="Viewport"></a> Qu'est-ce que la vue cartographique ou fenêtre d'affichage ?  
  Le point de vue de la carte définit la zone de carte à afficher pour toutes les couches de votre rapport.  
   
  Par défaut, l'échelle de couleurs et l'échelle des distances s'affichent à l'intérieur de la fenêtre d'affichage et la légende de la carte s'affiche à l'extérieur de la fenêtre d'affichage. Vous pouvez modifier ces options pour la fenêtre d'affichage après avoir terminé l'Assistant.  
   
-###  <a name="Resolution"></a> Qu'est-ce que la résolution et l'optimisation de la carte ?  
+###  <a name="what-is-map-resolution-and-optimization"></a><a name="Resolution"></a> Qu'est-ce que la résolution et l'optimisation de la carte ?  
  Lorsque vous modifiez la résolution pour des données spatiales représentant des lignes ou des polygones, vous spécifiez le niveau de détail de la carte. Par exemple, pour les vues aériennes d'une région, avez-vous besoin d'un degré de granularité allant jusqu'à cent mètres de la surface, ou une résolution d'un kilomètre est-elle suffisante ?  
   
  Lorsque les données spatiales sont incorporées dans le rapport, une résolution plus élevée augmente le nombre d'éléments nécessaires pour faire figurer les détails à cette résolution. Lorsque les données spatiales ne sont pas incorporées dans le rapport, une résolution plus élevée augmente la durée requise par le processeur de rapports pour calculer les lignes pour la carte à cette résolution chaque fois que vous affichez le rapport.  
@@ -167,14 +167,14 @@ ms.locfileid: "77078569"
   
  Lorsque vous ajustez le curseur, les données d'aperçu dans le volet Assistant sont mises à jour pour vous donner une indication de l'effet de la modification. Après avoir ajouté la carte au rapport, vous pouvez ajuster cette valeur en modifiant les options de point de vue de la carte.  
   
-###  <a name="Embed"></a> Quel est l'effet de l'incorporation de données spatiales ?  
+###  <a name="what-does-embedding-spatial-data-do"></a><a name="Embed"></a> Quel est l'effet de l'incorporation de données spatiales ?  
  Lorsque vous incorporez des éléments cartographiques ou des mosaïques Bing dans un rapport, les données spatiales sont stockées dans la définition de rapport.  
   
  Un rapport avec une carte peut utiliser des données spatiales ou des mosaïques Bing récupérées dynamiquement soit lors du traitement du rapport, soit au moment de la conception, puis incorporées dans la définition de rapport. Les éléments cartographiques incorporés peuvent augmenter considérablement la taille de la définition de rapport, mais ils réduisent le temps nécessaire pour afficher la carte dans le rapport. Les éléments cartographiques dynamiques réduisent la taille de la définition de rapport, mais ils augmentent le temps nécessaire pour traiter et afficher la carte.  
   
  Une conception de carte efficace requiert l'évaluation des avantages et inconvénients des données de cartes statiques ou dynamiques et la recherche d'un équilibre approprié aux circonstances. En général, un volume plus important de données signifie que la définition de rapport et le rapport compilé requièrent un volume de stockage plus important sur le serveur de rapports et une durée de traitement plus longue. Il est toujours recommandé de rogner les données spatiales, ainsi que de limiter les autres données de rapport, pour inclure uniquement les données nécessaires pour ce rapport.  
   
-###  <a name="Tiles"></a> Qu'est-ce qu'un arrière-plan de mosaïques Bing ?  
+###  <a name="what-is-a-bing-map-tile-background"></a><a name="Tiles"></a> Qu'est-ce qu'un arrière-plan de mosaïques Bing ?  
  Pour ajouter un arrière-plan d'image géographique à votre carte, sélectionnez l'option d'arrière-plan de mosaïques Bing. Le processeur de rapports télécharge des mosaïques à partir des services Web Bing Maps pour la zone de carte et la résolution spécifiées dans cette page de l'Assistant. Vous pouvez spécifier un des types de mosaïques suivants :  
   
 -   **Route.** Affichez un style de carte routière avec arrière-plan blanc.  
@@ -189,12 +189,12 @@ ms.locfileid: "77078569"
   
  Pour plus d’informations sur d’autres manières de personnaliser une couche de mosaïques, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="Visualization"></a> Choisir la visualisation de la carte  
+##  <a name="choose-map-visualization"></a><a name="Visualization"></a> Choisir la visualisation de la carte  
  Dans cette page, choisissez le type de carte ou de couche à ajouter à votre rapport. La première fois vous exécutez l'Assistant, vous ajoutez la carte et la première couche au rapport. Une carte peut contenir plusieurs couches. Chaque couche affiche un type spécifique de données spatiales : polygones, lignes ou points.  
   
  Le type de carte que vous choisissez dépend de l'objectif de la carte ainsi que des données disponibles.  
   
-###  <a name="MapType"></a> Quelle est la différence entre une carte simple, une carte à bulles et une carte analytique ?  
+###  <a name="what-is-the-difference-among-a-basic-map-a-bubble-map-and-an-analytical-map"></a><a name="MapType"></a> Quelle est la différence entre une carte simple, une carte à bulles et une carte analytique ?  
  Une **carte simple** affiche uniquement des emplacements. Vous pouvez faire varier les couleurs des zones de la carte par ton, mais la couleur ne représente pas de valeurs de données analytiques.  
   
  Une **carte à bulles** transmet la valeur relative d'un agrégat unique de données analytiques en tant que taille de bulle, par exemple le chiffre de ventes des magasins. Vous pouvez créer des cartes à bulles pour des polygones ou des points. Pour les polygones, définissez les propriétés du point central du polygone ; pour les points, définissez les propriétés des marqueurs.  
@@ -203,29 +203,29 @@ ms.locfileid: "77078569"
   
  Pour plus d’informations, consultez [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AnalyticalData"></a> Choisir le dataset analytique  
+##  <a name="choose-the-analytical-dataset"></a><a name="AnalyticalData"></a> Choisir le dataset analytique  
  Dans cette page, spécifiez où obtenir les données analytiques qui seront affichées sur cette couche.  
   
  Pour afficher vos données de rapport ou toutes autres données analytiques sur l'arrière-plan de la carte, vous devez spécifier où sont les données et comment elles sont reliées aux données spatiales. Vos données peuvent provenir d'un dataset de rapport existant ou d'un nouveau dataset pour lequel vous générez une requête. Les données analytiques existantes peuvent être incluses dans le fichier de forme ESRI qui contient les données spatiales.  
   
-###  <a name="Diff"></a> Quelle est la différence entre les données spatiales et les données analytiques ?  
+###  <a name="what-is-the-difference-between-spatial-data-and-analytical-data"></a><a name="Diff"></a> Quelle est la différence entre les données spatiales et les données analytiques ?  
  Les données spatiales consistent en des jeux de coordonnées spécifiant des points, des lignes et des polygones. Les éléments cartographiques sont basés sur les données spatiales.  
   
  Les données analytiques sont des données numériques ou catégoriques que vous souhaitez utiliser pour modifier l'apparence de la carte. Elles peuvent provenir d'un dataset du rapport ou être incluses avec les données spatiales d'une carte de la bibliothèque de cartes ou d'un fichier de forme ESRI.  
   
-##  <a name="SpecifyMatchFields"></a> Spécifier les champs de correspondance  
+##  <a name="specify-the-match-fields"></a><a name="SpecifyMatchFields"></a> Spécifier les champs de correspondance  
  Dans cette page, créez une relation entre les données spatiales et les données analytiques.  
   
-###  <a name="MatchFields"></a> Que sont les champs de correspondance ?  
+###  <a name="what-are-match-fields"></a><a name="MatchFields"></a> Que sont les champs de correspondance ?  
  Les champs de correspondance permettent au processeur de rapports de créer une relation entre les données analytiques et les données spatiales. Les champs de correspondance spécifient des valeurs uniques dans les données analytiques. Par exemple, le nom du magasin peut ne pas être unique dans les données et vous pourriez donc spécifier à la fois la ville et le nom du magasin.  
   
-##  <a name="ThemeandVisualization"></a> Choisir un thème de couleurs et une visualisation des données  
+##  <a name="choose-color-theme-and-data-visualization"></a><a name="ThemeandVisualization"></a> Choisir un thème de couleurs et une visualisation des données  
  Dans cette page, spécifiez comment visualiser vos données sur l'arrière-plan de la carte, spécifiez le thème de la carte, les champs à visualiser et les éléments à varier : couleur, taille et/ou type de marqueur.  
   
-###  <a name="Theme"></a> Quelle est la fonction du thème ?  
+###  <a name="what-does-the-theme-do"></a><a name="Theme"></a> Quelle est la fonction du thème ?  
  Le thème que vous choisissez définit des valeurs par défaut pour la couleur, la bordure et la police. Vous pouvez modifier ces options après avoir terminé l'Assistant.  
   
-###  <a name="Legends"></a> À quoi servent les légendes et les échelles dans l'aperçu de la carte ?  
+###  <a name="what-are-the-legends-and-scales-in-map-preview-for"></a><a name="Legends"></a> À quoi servent les légendes et les échelles dans l'aperçu de la carte ?  
  Les légendes aident l'utilisateur à interpréter les données affichées sur une carte. Une carte fournit une plage de couleurs, une échelle des distances et une légende.  
   
 -   **Plage de couleurs.** La plage de couleurs affiche une barre de couleur avec une échelle qui fournit des indications sur les intervalles de données déterminés par le processeur de rapports en fonction des règles que vous spécifiez pour la couche.  
@@ -234,7 +234,7 @@ ms.locfileid: "77078569"
   
 -   **Légende.** La légende fournit des indications permettant d'interpréter les couleurs, les tailles et les types de marqueur sur une carte. Par défaut, toutes les règles pour toutes les couches affichent des intervalles de données dans la première légende. Vous pouvez personnaliser cette légende et ajouter des légendes après avoir ajouté la carte au rapport.  
   
-###  <a name="Rules"></a> Qu'est-ce que des règles ?  
+###  <a name="what-are-rules"></a><a name="Rules"></a> Qu'est-ce que des règles ?  
  Les règles sont des calculs utilisés par le processeur de rapports pour diviser des données analytiques en plages. Vous pouvez spécifier des règles différentes pour chaque couche. Le type de règles vous pouvez spécifier dépend du type de données spatiales sur la couche :  
   
 -   **Polygones.** Vous pouvez spécifier des règles de couleur.  

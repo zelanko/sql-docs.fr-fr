@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245511"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Conseils et astuces pour utiliser SQL Server Management Studio (SSMS)
@@ -37,7 +37,7 @@ Cet article vous propose des conseils et astuces pour utiliser SQL Server Manage
 > * Accéder à votre journal des erreurs SQL Server
 > * Rechercher le nom de votre instance SQL Server
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour tester les étapes fournies dans cet article, vous avez besoin de SQL Server Management Studio, de l’accès à SQL Server et d’une base de données AdventureWorks. 
 
@@ -231,7 +231,7 @@ Le chemin d’accès à votre journal des erreurs SQL Server peut varier en fonc
 
 6. Ouvrez le fichier errorlog.log dans le Bloc-notes. 
 
-## <a name="determine-sql-server-name"></a>Trouver le nom de l’instance SQL Server
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Trouver le nom de l’instance SQL Server
 
 Vous avez plusieurs options pour rechercher le nom de votre serveur SQL avant et après vous y être connecté.  
 

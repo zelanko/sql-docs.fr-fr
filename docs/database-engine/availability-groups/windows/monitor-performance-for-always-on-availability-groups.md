@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014682"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Superviser les performances des groupes de disponibilité Always On
@@ -436,7 +436,7 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
   
  Vous pouvez afficher l’historique des travaux pour examiner les résultats de l’évaluation. Les échecs d’évaluation sont également enregistrés dans le journal des applications Windows (dans l’observateur d’événements) avec l’ID d’événement 34052. Vous pouvez également configurer SQL Server Agent de manière à ce qu’il envoie des alertes en cas d’échec de stratégie. Pour plus d’informations, consultez [Configurer des alertes pour informer les administrateurs de stratégie en cas d’échec de stratégie](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md).  
   
-##  <a name="BKMK_SCENARIOS"></a> Scénarios de résolution des problèmes de performances  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Scénarios de résolution des problèmes de performances  
  Le tableau suivant répertorie les scénarios courants de résolution des problèmes liés aux performances.  
   
 |Scénario|Description|  
@@ -445,7 +445,7 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
 |[Résolution du problème : Dépassement de RPO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rpo.md)|À l’issue d’un basculement manuel forcé, la perte de données est supérieure à votre RPO. Vous pouvez aussi constater que votre calcul de la perte de données potentielle d’un réplica secondaire avec validation asynchrone dépasse votre RPO.|  
 |[Résolution du problème : Les changements sur le réplica principal ne sont pas répercutés sur le réplica secondaire](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L’application cliente mène à bien une mise à jour sur le réplica principal, mais l’exécution d’une requête sur le réplica secondaire montre que le changement n’a pas été répercuté.|  
   
-##  <a name="BKMK_XEVENTS"></a> Événements étendus utiles  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> Événements étendus utiles  
  Les événements étendus suivants sont utiles dans le cadre de la résolution des problèmes liés aux réplicas dans l’état **Synchronisation**.  
   
 |Nom de l'événement|Category|Channel|Réplica de disponibilité|  

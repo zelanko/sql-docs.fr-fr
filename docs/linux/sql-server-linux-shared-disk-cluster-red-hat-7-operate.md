@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558524"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Utiliser une instance de cluster de basculement RHEL pour SQL Server
@@ -39,7 +39,7 @@ Le diagramme suivant illustre les composants d’un cluster Linux avec SQL Serve
 
 Pour plus d’informations sur la configuration du cluster, les options des agents de ressources et la gestion, consultez la [documentation de référence de RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## <a name = "failManual"></a>Cluster de basculement manuel
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a>Cluster de basculement manuel
 
 La commande `resource move` crée une contrainte forçant la ressource à démarrer sur le nœud cible.  Après l’exécution de la commande `move`, l’exécution de la ressource `clear` supprime la contrainte, de sorte qu’il est possible de déplacer à nouveau la ressource ou d’effectuer le basculement automatique de la ressource. 
 

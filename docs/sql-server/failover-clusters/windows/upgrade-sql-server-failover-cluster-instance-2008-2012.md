@@ -12,17 +12,17 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242853"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012
 
 [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] et [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] empêchent les clusters de basculement Windows Server d’effectuer des mises à niveau du système d’exploitation sur place, ce qui limite la version autorisée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour un cluster. Une fois que le cluster est mis à niveau avec au moins [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], il peut rester à jour.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 -   Avant d’effectuer l’une des stratégies de migration, un cluster de basculement Windows Server parallèle avec Windows Server 2016/2012 R2 doit être préparé. Tous les nœuds comprenant des instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent être joints au cluster Windows où les instances de cluster de basculement parallèles sont installées. Aucun ordinateur autonome **ne doit** être joint au cluster de basculement Windows Server avant la migration. Les bases de données utilisateur doivent être synchronisées dans le nouvel environnement avant la migration.
 -   Toutes les instances de destination doivent exécuter la même version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que leur instance parallèle dans l’environnement d’origine, avec les mêmes noms et ID d’instance, et elles doivent être installées avec les mêmes fonctionnalités. Les chemins d’installation et la structure de répertoire doivent être identiques sur les ordinateurs de destination. Cela n’inclut pas les noms de réseaux virtuels des instances de cluster de basculement, qui doivent être différents avant la migration. Toutes les fonctionnalités activées par l’instance d’origine (Always On, FILESTREAM, etc.) doivent être activées sur l’instance de destination.

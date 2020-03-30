@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903862"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
@@ -26,7 +26,7 @@ Un catalogue de texte intégral est un conteneur logique pour un groupe d’inde
 
 Un catalogue de texte intégral est un objet virtuel qui n’appartient à aucun groupe de fichiers.
   
-##  <a name="creating"></a> Créer un catalogue de texte intégral  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> Créer un catalogue de texte intégral  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Créer un catalogue de texte intégral avec Transact-SQL
 Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Par exemple :
@@ -52,7 +52,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> Obtenir les propriétés d’un catalogue de texte intégral  
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> Obtenir les propriétés d’un catalogue de texte intégral  
 Utilisez la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)]**FULLTEXTCATALOGPROPERTY** pour obtenir la valeur de diverses propriétés relatives aux catalogues de texte intégral. Pour plus d’informations, consultez [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 Par exemple, exécutez la requête suivante pour obtenir le nombre d’index dans le catalogue de texte intégral `Catalog1`.
@@ -77,7 +77,7 @@ Le tableau suivant répertorie les propriétés liées aux catalogues de texte i
 |**PopulateStatus**|État de remplissage.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|Nombre de clés uniques dans le catalogue de texte intégral.| 
 
-##  <a name="rebuildone"></a> Reconstruire un catalogue de texte intégral  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> Reconstruire un catalogue de texte intégral  
 
 Exécutez l’instruction Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) ou effectuez les opérations suivantes dans SSMS (SQL Server Management Studio).
@@ -92,7 +92,7 @@ Exécutez l’instruction Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
 5.  Dans la boîte de dialogue **Reconstruire le catalogue de texte intégral** , cliquez sur **Fermer**.  
    
-##  <a name="rebuildall"></a> Reconstruire tous les catalogues de texte intégral pour une base de données  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Reconstruire tous les catalogues de texte intégral pour une base de données  
 
 1.  Dans SSMS, dans l’Explorateur d’objets, développez successivement le serveur, l’option **Bases de données**, puis la base de données contenant les catalogues de texte intégral à reconstruire.  
   
@@ -106,7 +106,7 @@ Exécutez l’instruction Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
   
   
-##  <a name="removing"></a> Supprimer un catalogue de texte intégral d’une base de données  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> Supprimer un catalogue de texte intégral d’une base de données  
 
 Exécutez l’instruction Transact-SQL [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) ou effectuez les opérations suivantes dans SSMS (SQL Server Management Studio).

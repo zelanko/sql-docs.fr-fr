@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cb9f3a891fa81345d7ae9d167419a02356a035af
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093682"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe d’événements **CursorRecompile** décrit les événements de recompilation de curseur qui interviennent dans les curseurs de l’API. Les événements de recompilation de curseur surviennent quand le [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] recompile un curseur Transact-SQL en raison d’une modification de schéma.  
+  La classe d’événements **CursorRecompile** décrit les événements de recompilation de curseur qui interviennent dans les curseurs de l’API. Les événements de recompilation de curseur surviennent quand le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] recompile un curseur Transact-SQL en raison d’une modification de schéma.  
   
  Incluez la classe d’événements **CursorRecompile** dans les traces qui enregistrent les performances des curseurs. Lorsque la classe d’événements **CursorRecompile** est incluse dans une trace, la quantité de surcharge induite dépend de la fréquence d’utilisation des curseurs sur la base de données pendant le suivi. Si les curseurs sont fortement utilisés, la trace peut dégrader notablement les performances.  
   

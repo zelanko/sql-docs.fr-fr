@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256863"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Guide pratique pour effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -162,7 +162,7 @@ Il n’existe aucune mise à niveau sur place pour les clusters Big Data déploy
    > [!IMPORTANT]
    > Pour chaque version release, le chemin de la version `n-1` d’`azdata` change. Même si vous avez déjà installé `azdata`, vous devez le réinstaller à partir du chemin le plus récent avant de créer le cluster.
 
-### <a id="azdataversion"></a> Vérifier la version d’azdata
+### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> Vérifier la version d’azdata
 
 Avant de déployer un nouveau cluster Big Data, vérifiez que vous utilisez la dernière version de `azdata` avec le paramètre `--version` :
 

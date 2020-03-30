@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287383"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Exécuter des packages Integration Services (SSIS)
@@ -111,7 +111,7 @@ ms.locfileid: "79287383"
   
      Utilisez des procédures stockées pour exécuter le package. Cliquez sur **Script** pour générer l’instruction Transact-SQL qui crée et démarre une instance de l’exécution. L'instruction inclut un appel aux procédures stockées catalog.create_execution, catalog.set_execution_parameter_value et catalog.start_execution. Pour plus d’informations sur ces procédures stockées, consultez [catalog.create_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)[catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
 
-## <a name="execute_package_dialog"></a> Boîte de dialogue d’exécution de package
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> Boîte de dialogue d’exécution de package
   Utilisez la boîte de dialogue **Exécuter le package** pour exécuter un package stocké sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut contenir des paramètres qui référencent les valeurs stockées dans les variables d'environnement. Avant d'exécuter un tel package, vous devez spécifier quel environnement sera utilisé pour fournir les valeurs de variable d'environnement. Un projet peut contenir plusieurs environnements, mais un seul environnement peut être utilisé pour la liaison de valeurs de variable d'environnement au moment de l'exécution. Si aucune variable d'environnement n'est utilisée dans le package, un environnement n'est pas obligatoire.  
@@ -130,7 +130,7 @@ ms.locfileid: "79287383"
   
 -   [Création de script avec les options de la boîte de dialogue Exécuter le package](#script)  
   
-###  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Exécuter le package  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> Ouvrir la boîte de dialogue Exécuter le package  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -144,16 +144,16 @@ ms.locfileid: "79287383"
   
 5.  Cliquez avec le bouton droit sur le package, puis cliquez sur **Exécuter**.  
   
-###  <a name="general"></a> Définir les options sur la page Général  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Définir les options sur la page Général  
  Sélectionnez **Environnement** pour spécifier l'environnement qui est appliqué avec le package.  
   
-###  <a name="parameters"></a> Définir les options de l'onglet Paramètres  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> Définir les options de l'onglet Paramètres  
  Utilisez l'onglet **Paramètres** pour modifier les valeurs de paramètre utilisées lors de l'exécution du package.  
   
-###  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
  Utilisez l'onglet Gestionnaires de connexions pour définir les propriétés du ou des gestionnaires de connexions du package.  
   
-###  <a name="advanced"></a> Définir les options de l'onglet Avancé  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> Définir les options de l'onglet Avancé  
  Utilisez l'onglet Avancé pour gérer des propriétés et d'autres paramètres du package.  
   
  **Ajouter**, **Modifier**, **Supprimer**  
@@ -168,7 +168,7 @@ ms.locfileid: "79287383"
  **Runtime 32 bits**  
  Indiquez que le package doit s'exécuter sur un système 32 bits.  
   
-###  <a name="script"></a> Création de script avec les options de la boîte de dialogue Exécuter le package  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> Création de script avec les options de la boîte de dialogue Exécuter le package  
  Lorsque vous vous trouvez dans la boîte de dialogue **Exécuter le package** , vous pouvez également utiliser le bouton **Script** de la barre d'outils pour écrire du code [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le script généré appelle les procédures stockées [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) avec les options que vous avez sélectionnées dans la boîte de dialogue **Exécuter le package**. Le script s'affiche dans une nouvelle fenêtre de script dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
 
 ## <a name="see-also"></a>Voir aussi  

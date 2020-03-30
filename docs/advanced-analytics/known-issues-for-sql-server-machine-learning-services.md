@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200396"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problèmes connus dans SQL Server Machine Learning Services
@@ -125,7 +125,7 @@ Ce problème est résolu dans la version publiée. De même, cette limitation ne
 
 **S’applique à :** SQL Server 2017 avec Python
 
-### <a name="bkmk_sqlbindr"></a> Avertissement d’incompatibilité de version quand vous vous connectez à une ancienne version de SQL Server R Services à partir d’un client en utilisant [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssqlv14_md"></a><a name="bkmk_sqlbindr"></a> Avertissement d’incompatibilité de version quand vous vous connectez à une ancienne version de SQL Server R Services à partir d’un client en utilisant [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 Quand vous exécutez du code R dans un contexte de calcul SQL Server 2016, l’erreur suivante risque de s’afficher :
 
@@ -332,7 +332,7 @@ Si vous avez besoin d’utiliser des modèles plus volumineux, voici les solutio
 
     Une fois que vous avez activé FileTable, pour écrire le modèle, vous obtenez un chemin de SQL via l’API FileTable, puis vous écrivez le modèle à cet emplacement à partir de votre code. Quand vous avez besoin de lire le modèle, vous obtenez le chemin de SQL, puis vous appelez le modèle en utilisant le chemin à partir de votre script. Pour plus d’informations, consultez [Accéder aux FileTables avec des API d’entrée-sortie de fichier](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
-### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7. Éviter l’effacement d’espaces de travail pendant l’exécution de code R dans un contexte de calcul [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-ssnoversion-compute-context"></a>7. Éviter l’effacement d’espaces de travail pendant l’exécution de code R dans un contexte de calcul [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Si vous utilisez une commande R pour effacer votre espace de travail d’objets pendant que vous exécutez du code R dans un contexte de calcul [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ou si vous effacez l’espace de travail dans un script R appelé avec [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), vous pouvez obtenir cette erreur : *workspace object revoScriptConnection not found*
 

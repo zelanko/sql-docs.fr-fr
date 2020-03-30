@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866282"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Où trouver le complément Reporting Services pour les produits SharePoint
@@ -26,7 +26,7 @@ Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssN
 > [!IMPORTANT]  
 >  Pour obtenir la liste des combinaisons du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], du serveur de rapports et de SharePoint prises en charge, consultez [Combinaisons de serveur et complément SharePoint et Reporting Services prises en charge &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Complément Reporting Services pour les produits SharePoint  
+##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Complément Reporting Services pour les produits SharePoint  
  Pour télécharger et installer le complément, consultez le centre de téléchargement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
 -   [Complément Microsoft® SQL Server 2016 Reporting Services pour Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=52682)  
@@ -37,7 +37,7 @@ Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssN
   
 -   À une invite de commandes, utilisez l’option **RS_SHPWFE** pour installer le complément. Pour plus d’informations sur les installations de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l’invite de commandes, consultez [nstaller Reporting Services à l’invite de commandes](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Complément Reporting Services pour les produits SharePoint  
+##  <a name="sssql14-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Complément Reporting Services pour les produits SharePoint  
  Pour télécharger et installer le complément, consultez le centre de téléchargement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
 -   [Complément Microsoft® SQL Server 2014 Reporting Services pour Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=42294)  
@@ -48,7 +48,7 @@ Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssN
   
 -   À une invite de commandes, utilisez l’option **RS_SHPWFE** pour installer le complément. Pour plus d’informations sur les installations de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l’invite de commandes, consultez [nstaller Reporting Services à l’invite de commandes](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Complément Reporting Services pour les produits SharePoint  
+##  <a name="sssql11sp1-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Complément Reporting Services pour les produits SharePoint  
  La version [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] du complément et du serveur de rapports ajoute la prise en charge pour SharePoint Server 2013.  
   
  Pour télécharger et installer le complément, consultez le centre de téléchargement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
@@ -57,7 +57,7 @@ Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssN
   
 -   **SP1 :**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575).  
 
-##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complément Reporting Services pour les produits SharePoint 2010
+##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complément Reporting Services pour les produits SharePoint 2010
 
 Dans SQL Server 2016, le complément peut être installé avec l’Assistant Installation de SQL Server, dans la page Sélection de composant. Si vous souhaitez télécharger et installer le complément séparément, la version la plus à jour de ce fichier est disponible en ligne dans le Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , page [Complément Reporting Services Microsoft® SQL Server 2012 pour les technologies Microsoft® SharePoint® 2010](https://go.microsoft.com/fwlink/?LinkID=207242) .
 

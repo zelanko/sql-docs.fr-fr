@@ -14,10 +14,10 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7e0e50e22fc257b3a8429e556fe7fd2cec2c97d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017504"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Bien démarrer avec les groupes de disponibilité Always On
@@ -26,21 +26,21 @@ ms.locfileid: "68017504"
 Cette rubrique présente les étapes de configuration des instances de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et créer, gérer et surveiller un groupe de disponibilité.  
   
   
-##  <a name="RecommendedReading"></a> Lecture recommandée  
+##  <a name="recommended-reading"></a><a name="RecommendedReading"></a> Lecture recommandée  
  Avant de créer votre premier groupe de disponibilité, nous vous recommandons de lire les rubriques suivantes :  
   
 -   [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 -   [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-##  <a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
+##  <a name="configuring-an-instance-of-sql-server-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
   
 ||Étape|Liens|  
 |------|----------|-----------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|**Activez [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].** La fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] doit être activée sur chaque instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui participe à un groupe de disponibilité.<br /><br /> **Configuration requise :**  L'ordinateur hôte doit se trouver sur un nœud WSFC (clustering de basculement Windows Server).<br /><br /> Pour plus d’informations sur les autres conditions préalables requises, consultez « Conditions préalables requises et restrictions pour une instance de SQL Server » dans [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|[Activer et désactiver les groupes de disponibilité Always On](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|**Créez un point de terminaison pour la mise en miroir de bases de données (le cas échéant).** Veillez à ce que chaque instance de serveur possède un [point de terminaison de mise en miroir de bases de données](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md). L'instance de serveur utilise ce point de terminaison pour recevoir les connexions [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provenant d'autres instances de serveur.|Pour déterminer si un point de terminaison de mise en miroir de bases de données existe : <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **Pour l’authentification Windows**.  Pour créer un point de terminaison pour la mise en miroir de bases de données, à l’aide de :<br /><br /> [Assistant Nouveau groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **Pour l’authentification par certificat**. Pour créer un point de terminaison de mise en miroir de bases de données, utilisez :[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
-##  <a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
+##  <a name="creating-and-configuring-a-new-availability-group"></a><a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
   
 ||Étape|Liens|  
 |------|----------|-----------|  
@@ -52,7 +52,7 @@ Cette rubrique présente les étapes de configuration des instances de [!INCLUDE
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|**Fournissez le nom d’hôte DNS de l’écouteur aux développeurs d’applications.**  Les développeurs ont besoin spécifier ce nom DNS dans les chaînes de connexion pour diriger les demandes de connexion vers l'écouteur du groupe de disponibilité. Pour plus d’informations, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).|« Suivi : Après avoir créé un écouteur de groupe de disponibilité » dans [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|**Configurez l’emplacement d’exécution des travaux de sauvegarde.**  Si vous souhaitez effectuer des sauvegardes sur des bases de données secondaires, vous devez créer un script de travail de sauvegarde qui prend en compte la préférence de sauvegarde automatisée. Créer un script pour chaque base de données dans le groupe de disponibilité sur chaque instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité.|« Suivi : Après la configuration de la sauvegarde sur les réplicas secondaires » dans [Configurer la sauvegarde sur des réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).|  
   
-##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
+##  <a name="managing-availability-groups-replicas-and-databases"></a><a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les propriétés de groupe de disponibilité et de réplica, consultez [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md).  
@@ -72,7 +72,7 @@ Cette rubrique présente les étapes de configuration des instances de [!INCLUDE
 |Résolvez les problèmes d'opérations de fichiers. Cela peut être requis si la base de données principale et une base de données secondaire ont des chemins d'accès de fichier différents.|[Résoudre les problèmes d'opération d'ajout de fichier](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|  
 |Modifiez les propriétés d'un réplica de disponibilité.|[Modifier le mode de disponibilité](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)<br /><br /> [Modifier le mode de basculement](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)<br /><br /> [Configurer la priorité de sauvegarde (et la préférence de sauvegarde automatisée)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)<br /><br /> [Configurer l'accès en lecture seule](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)<br /><br /> [Configurer le routage en lecture seule](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)<br /><br /> [Modifier la période d'expiration de session](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)|  
   
-##  <a name="MonitorAGsEtc"></a> Monitoring Availability Groups  
+##  <a name="monitoring-availability-groups"></a><a name="MonitorAGsEtc"></a> Monitoring Availability Groups  
  Pour surveiller les propriétés et l’état d’un groupe de disponibilité Always On, vous pouvez utiliser les outils suivants.  
   
 |Outil|Brève description|Liens|  
@@ -84,7 +84,7 @@ Cette rubrique présente les étapes de configuration des instances de [!INCLUDE
 |Moniteur système|L’objet de performance **SQLServer:Availability Replica** intègre des compteurs de performances chargés de fournir des informations sur les réplicas de disponibilité.|[SQL Server, réplica de disponibilité](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |Moniteur système|L’objet de performance **SQLServer:Database Replica** contient des compteurs de performances qui signalent des informations concernant les bases de données secondaires sur un réplica secondaire donné.<br /><br /> L'objet **SQLServer:Databases** dans SQL Server contient des compteurs de performances pour surveiller les activités du journal des transactions, entre autres choses. Les compteurs suivants sont particulièrement pertinents pour la supervision de l’activité du journal des transactions sur les bases de données de disponibilité : **Temps d’attente de vidage du journal (ms)** , **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool** et **Journaliser les requêtes/s du pool**.|[SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server, objet Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Vidéo : Présentation d’AlwaysOn :**  [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 1 : Présentation de la solution haute disponibilité de la génération suivante](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

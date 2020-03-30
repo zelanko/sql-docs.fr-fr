@@ -19,10 +19,10 @@ ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033729"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Jeux de supports de sauvegarde en miroir (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "68033729"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="OverviewofMirroredMediaSets"></a> Vue d'ensemble des jeux de supports mis en miroir  
+##  <a name="overview-of-mirrored-media-sets"></a><a name="OverviewofMirroredMediaSets"></a> Vue d'ensemble des jeux de supports mis en miroir  
  La mise en miroir est une des propriétés du jeu de supports. Un *support de sauvegarde miroir* se compose de plusieurs copies (*miroirs*) du support de sauvegarde. Un support de sauvegarde contient une ou plusieurs familles de supports, chacun correspondant à une unité de sauvegarde. Par exemple, si la clause TO de l'instruction BACKUP DATABASE répertorie trois unités, BACKUP répartit les données sur trois familles de support, une par unité. Le nombre de familles de supports et de miroirs est défini lors de la création du jeu de supports (par une instruction BACKUP DATABASE qui spécifie WITH FORMAT).  
   
  Un jeu de supports mis en miroir possède deux à quatre miroirs. Chaque miroir contient toutes les familles de supports dans le jeu de supports. Les miroirs nécessitent le même nombre d'unités, une seule par famille de supports. Chaque miroir nécessite une unité de sauvegarde séparée pour chaque famille de supports. Par exemple, un jeu de supports miroir qui comprend quatre familles de supports avec trois miroirs nécessitent douze unités de sauvegarde. Toutes ces unités doivent être équivalentes. Par exemple, les lecteurs de bande ayant le même numéro de modèle et le même fabricant.  
@@ -62,12 +62,12 @@ ms.locfileid: "68033729"
   
  Les opérations de sauvegarde et de restauration n'ont pas les mêmes exigences en matière de présence de la totalité des miroirs. Pour qu'une opération de sauvegarde écrive (c'est-à-dire crée ou agrandisse) un jeu de supports mis en miroir, tous les miroirs doivent être présents. En revanche, lors de la restauration d'une sauvegarde à partir d'un jeu de supports mis en miroir, vous ne pouvez spécifier qu'un seul miroir pour chaque famille de supports. Vous pouvez restaurer à partir de moins d'unités que de familles, mais chaque famille de supports n'est traitée qu'une seule fois. En cas d'erreurs, cependant, l'utilisation d'autres miroirs permet une résolution rapide de certains problèmes de restauration. Vous pouvez remplacer un volume de supports endommagé par le volume correspondant d'un autre miroir. Ceci est dû au fait que les instructions RESTORE et RESTORE VERIFYONLY prennent en charge le remplacement des supports endommagés par le volume de support de sauvegarde correspondant d'un autre miroir.  
   
-##  <a name="HardwareReqs"></a> Configuration matérielle requise pour les miroirs de sauvegarde  
+##  <a name="hardware-requirements-for-backup-mirrors"></a><a name="HardwareReqs"></a> Configuration matérielle requise pour les miroirs de sauvegarde  
  La mise en miroir s'applique aussi bien aux disques qu'aux bandes (les disques ne prennent pas en charge les bandes consécutives). Toutes les unités de sauvegarde pour une simple opération de sauvegarde ou de restauration doivent être du même type (disque ou bande).  
   
  Ensuite, vous devez utiliser des unités similaires qui ont les mêmes propriétés. Le non-respect de cette règle entraîne l'affichage du message d'erreur 3212. Pour éviter le risque d'une discordance d'unités, utilisez des unités entièrement équivalentes, comme des lecteurs ayant le même numéro de modèle et provenant du même fabricant.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour effectuer une sauvegarde sur une unité de sauvegarde mise en miroir**  
   
 -   [Sauvegarder sur un support de sauvegarde miroir &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  

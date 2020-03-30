@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295131"
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
@@ -118,7 +118,7 @@ ms.locfileid: "71295131"
 |Output|Affiche les messages d’état relatifs aux fonctionnalités de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Immédiat|Utilisée pour déboguer et évaluer des expressions, et imprimer des valeurs variables.|  
 
-## <a name="debug"></a> Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur
   Cette section décrit la procédure de définition des points d'arrêt dans un package, une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences.  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>Pour définir des points d'arrêt dans un package, une tâche ou un conteneur  

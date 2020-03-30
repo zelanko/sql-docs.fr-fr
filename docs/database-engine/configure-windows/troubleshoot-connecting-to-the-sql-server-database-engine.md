@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866375"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
@@ -78,7 +78,7 @@ Pour vérifier que l’instance est en cours d’exécution, dans le Gestionnair
 
 Si l’instance est arrêtée, cliquez avec le bouton de droite sur l’instance, puis cliquez sur **Démarrer**. L’instance de serveur démarre et l’indicateur devient une flèche verte.
 
-## <a name = "startbrowser"></a> Vérifier que le service SQL Server Browser est en cours d’exécution
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> Vérifier que le service SQL Server Browser est en cours d’exécution
 
 Pour vous connecter à une instance nommée, le service SQL Server Browser doit être en cours d’exécution. Dans le Gestionnaire de configuration, recherchez le service **SQL Server Browser** et vérifiez qu’il s’exécute. S’il n'est pas en cours d'exécution, démarrez-le. Le service SQL Server Browser n'est pas requis pour les instances par défaut.
 
@@ -129,7 +129,7 @@ Obtenir l’adresse IP de l’ordinateur hébergeant l’instance de SQL Server.
 
   >SQL Server peut se connecter à l’aide du protocole IP version 4 ou du protocole IP version 6. Votre réseau peut autoriser l’un des deux, ou les deux. La plupart des personnes commencent par la résolution des problèmes de l’adresse **IPv4** . Elle est plus courte et plus simple à taper.
 
-## <a name = "getTCP"></a>Obtenir le port TCP de l’instance SQL Server
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>Obtenir le port TCP de l’instance SQL Server
 
 Dans la plupart des cas, vous vous connectez au moteur de base de données à partir d’un autre ordinateur en utilisant le protocole TCP.
 
@@ -142,7 +142,7 @@ Ce message indique que cette instance de SQL Server écoute sur toutes les adres
   > [!NOTE]
   > `IP address 127.0.0.1` est probablement répertoriée. Elle est appelée l’adresse de l’adaptateur de bouclage. Seuls les processus sur le même ordinateur peuvent l’utiliser pour se connecter. Elle peut être utile pour la résolution des problèmes, mais vous ne pouvez pas l’utiliser pour vous connecter à partir d’un autre ordinateur.
 
-## <a name = "enableprotocols"></a>Activer les protocoles
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>Activer les protocoles
 
 Dans certaines installations de SQL Server, la connexion au moteur de base de données à partir d’un autre ordinateur est désactivée, sauf si un administrateur utilise le Gestionnaire de configuration pour l’activer. Pour activer des connexions à partir d’un autre ordinateur :
 
@@ -150,7 +150,7 @@ Dans certaines installations de SQL Server, la connexion au moteur de base de do
 1. En utilisant le Gestionnaire de configuration, dans le volet gauche, développez **Configuration du réseau SQL Server**, puis sélectionnez l’instance de SQL Server à laquelle vous voulez vous connecter. Le volet droit répertorie les protocoles de connexion disponibles. La mémoire partagée est normalement activée. Comme elle peut uniquement être utilisée à partir du même ordinateur, la plupart des installations laissent la mémoire partagée activée. Pour vous connecter à SQL Server à partir d’un autre ordinateur, vous utilisez normalement TCP/IP. Si TCP/IP n’est pas activé, cliquez avec le bouton droit sur **TCP/IP**, puis cliquez sur **Activer**.
 1. Si vous avez modifié le paramètre activé pour n’importe quel protocole, redémarrez le Moteur de base de données. Dans le volet gauche, sélectionnez **Services SQL Server**. Dans le volet droit, cliquez avec le bouton droit sur l’instance du moteur de base de données, puis cliquez sur **Redémarrer**.
 
-## <a name="testTCPIP"></a>Test de la connectivité TCP/IP
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>Test de la connectivité TCP/IP
 
 La connexion à SQL Server à l’aide de TCP/IP exige que Windows puisse établir la connexion. Utilisez l’outil `ping` pour tester TCP.
 

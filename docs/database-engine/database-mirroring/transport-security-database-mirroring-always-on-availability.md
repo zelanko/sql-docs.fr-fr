@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252748"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Sécurité du transport - Mise en miroir de bases de données - Groupes de disponibilité Always On
@@ -40,7 +40,7 @@ ms.locfileid: "75252748"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Authentication"></a> Authentification  
+##  <a name="authentication"></a><a name="Authentication"></a> Authentification  
  L'authentification est le processus qui permet de vérifier qu'un utilisateur est la personne qu'il prétend être. Les connexions entre les points de terminaison de mise en miroir de bases de données requièrent une authentification. Les demandes de connexion éventuellement formulées par un partenaire ou un témoin doivent être authentifiées.  
   
  Le type d'authentification utilisé pour la mise en miroir de bases de données ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] par une instance de serveur est une propriété du point de terminaison de la mise en miroir. Deux types de sécurité de transport sont disponibles pour les points de terminaison de mise en miroir de bases de données : l’authentification Windows (SSPI, Security Support Provider Interface) et l’authentification basée sur les certificats.  
@@ -64,7 +64,7 @@ ms.locfileid: "75252748"
   
  Une instance de serveur utilise la clé privée de son propre certificat pour établir son identité lors de la configuration d'une connexion. L'instance de serveur qui reçoit la demande de connexion utilise la clé publique du certificat de l'émetteur pour authentifier l'identité de celui-ci. Par exemple, considérons deux instances de serveur, en l'occurrence Serveur_A et Serveur_B. Serveur_A utilise sa clé privée pour chiffrer l'en-tête de connexion avant d'envoyer une demande de connexion à Serveur_B. Serveur_B utilise la clé publique du certificat de Serveur_A pour déchiffrer l'en-tête de connexion. Si l'en-tête déchiffré est correct, Serveur_B sait que l'en-tête a été chiffré par Serveur_A et la connexion est authentifiée. Si l'en-tête déchiffré est incorrect, Serveur_B sait que la demande de connexion n'est pas authentique et refuse la connexion.  
   
-##  <a name="DataEncryption"></a> Chiffrement des données  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a> Chiffrement des données  
  Par défaut, un point de terminaison de mise en miroir de bases de données requiert le chiffrement des données envoyées via les connexions de mise en miroir. Dans ce cas, le point de terminaison ne peut se connecter qu'aux points de terminaison utilisant également le chiffrement. Sauf si vous pouvez garantir que votre réseau est sécurisé, il est recommandé d'imposer le chiffrement des connexions de mise en miroir de bases de données. Toutefois, vous pouvez désactiver le chiffrement ou le rendre disponible sans qu'il soit nécessaire. Si le chiffrement est désactivé, les données ne sont jamais chiffrées et le point de terminaison ne peut pas se connecter à un point de terminaison qui requiert le chiffrement. Si le chiffrement est pris en charge, les données ne sont chiffrées que si le point de terminaison opposé prend en charge ou requiert le chiffrement.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "75252748"
   
  Pour plus d’informations sur la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] permettant de définir le chiffrement, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer la sécurité du transport pour un point de terminaison de mise en miroir de bases de données**  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

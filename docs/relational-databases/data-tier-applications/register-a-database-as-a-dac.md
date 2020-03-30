@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134676"
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
@@ -36,15 +36,15 @@ ms.locfileid: "68134676"
 ## <a name="before-you-begin"></a>Avant de commencer  
  Le processus d'inscription crée une définition de la DAC qui définit les objets de la base de données. La combinaison de la définition de la DAC et de la base de données forme une instance DAC. Si vous inscrivez une base de données comme une DAC sur une instance du moteur de base de données, la DAC inscrite est incorporée dans l’Utilitaire SQL Server la prochaine fois que le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC est ensuite présente dans le nœud **Application de la couche Données déployée** au sein de l’**Explorateur d’utilitaire** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et est signalée dans la page de détails pour **Application de la couche Données déployée**.  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  L'inscription de la DAC ne peut être exécutée que sur une base de données dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure. L'inscription de la DAC ne peut pas être effectuée si une DAC est déjà inscrite pour la base de données. Par exemple, si la base de données a été créée en déployant une DAC, vous ne pouvez pas exécuter l’ **Assistant Inscrire l’application de la couche Données**.  
   
  Vous ne pouvez pas inscrire de DAC si la base de données a des objets qui ne sont pas pris en charge dans une DAC, ou des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L’inscription d’une DAC dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] nécessite au moins les autorisations ALTER ANY LOGIN et VIEW DEFINITION de l’étendue de la base de données, les autorisations SELECT sur **sys.sql_expression_dependencies**, et l’appartenance au rôle serveur fixe **dbcreator** . Les membres du rôle serveur fixe **sysadmin** ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également inscrire une DAC. L'inscription d'une DAC qui ne contient pas de connexions dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles **dbmanager** ou **serveradmin** . L'inscription d'une DAC comportant des connexions dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles **loginmanager** ou **serveradmin** .  
   
-##  <a name="UsingRegisterDACWizard"></a> Utilisation de l'Assistant Inscrire l'application de la couche Données  
+##  <a name="using-the-register-data-tier-application-wizard"></a><a name="UsingRegisterDACWizard"></a> Utilisation de l'Assistant Inscrire l'application de la couche Données  
  **Pour inscrire une DAC à l'aide d'un Assistant**  
   
 1.  Dans l' **Explorateur d'objets**, développez le nœud pour l'instance qui contient la base de données à inscrire en tant que DAC.  
@@ -63,7 +63,7 @@ ms.locfileid: "68134676"
   
     4.  [Page Inscrire la DAC](#Register)  
   
-##  <a name="Introduction"></a> Page Introduction  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de l'inscription d'une application de la couche Données.  
   
  **Ne plus afficher cette page.** - Cochez la case pour ne plus afficher la page à l'avenir.  
@@ -74,7 +74,7 @@ ms.locfileid: "68134676"
   
  [Utilisation de l'Assistant Inscrire l'application de la couche Données](#UsingRegisterDACWizard)  
   
-##  <a name="Set_properties"></a> Page Définir les propriétés  
+##  <a name="set-properties-page"></a><a name="Set_properties"></a> Page Définir les propriétés  
  Utilisez cette page pour spécifier des propriétés au niveau de la DAC telles que le nom de l'application et sa version.  
   
  **Nom de l'application.** - Chaîne qui spécifie le nom utilisé pour identifier la définition de la DAC. Le champ est renseigné avec le nom de la base de données.  
@@ -91,7 +91,7 @@ ms.locfileid: "68134676"
   
  [Utilisation de l'Assistant Inscrire l'application de la couche Données](#UsingRegisterDACWizard)  
   
-##  <a name="Summary"></a> Page Validation et résumé  
+##  <a name="validation-and-summary-page"></a><a name="Summary"></a> Page Validation et résumé  
  Utilisez cette page pour examiner les mesures que l'Assistant prendra lors de l'inscription de la DAC. La page passe par trois états alors qu'elle vérifie qu'une DAC peut être générée à partir des objets de la base de données.  
   
  [Utilisation de l'Assistant Inscrire l'application de la couche Données](#UsingRegisterDACWizard)  
@@ -131,7 +131,7 @@ ms.locfileid: "68134676"
   
  [Utilisation de l'Assistant Inscrire l'application de la couche Données](#UsingRegisterDACWizard)  
   
-##  <a name="Register"></a> Page Inscrire la DAC  
+##  <a name="register-dac-page"></a><a name="Register"></a> Page Inscrire la DAC  
  Cette page signale la réussite ou l'échec de l'inscription.  
   
  **Inscription de la DAC** : signale la réussite ou l’échec de chaque action entreprise pour inscrire la DAC. Examinez les informations pour déterminer la réussite ou l'échec de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Sélectionnez le lien pour consulter le rapport de d'erreur de cette action.  
@@ -142,7 +142,7 @@ ms.locfileid: "68134676"
   
  [Utilisation de l'Assistant Inscrire l'application de la couche Données](#UsingRegisterDACWizard)  
   
-##  <a name="RegisterDACPowerShell"></a> Inscrire une DAC à l'aide de PowerShell  
+##  <a name="register-a-dac-using-powershell"></a><a name="RegisterDACPowerShell"></a> Inscrire une DAC à l'aide de PowerShell  
  **Pour inscrire une base de données comme DAC à l’aide de la méthode Register() dans un script PowerShell**  
   
 1.  Créez un objet serveur SMO et définissez-le sur l'instance qui contient la base de données à inscrire comme une DAC.  

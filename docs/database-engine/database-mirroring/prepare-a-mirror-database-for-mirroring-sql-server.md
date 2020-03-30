@@ -16,10 +16,10 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255979"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Préparer une base de données miroir pour la mise en miroir (SQL Server)
@@ -46,9 +46,9 @@ ms.locfileid: "75255979"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Requirements"></a> Spécifications  
+###  <a name="requirements"></a><a name="Requirements"></a> Spécifications  
   
 -   Les instances du serveur miroir et du serveur principal doivent exécuter la même version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Bien qu'il soit possible que le serveur miroir possède une version ultérieure de SQL Server, cette configuration est recommandée uniquement lors d'une mise à niveau planifiée avec soin. Dans une telle configuration, vous courez le risque d'un basculement automatique, dans lequel le déplacement des données est automatiquement interrompu, car les données n'ont pas accès à une version antérieure de SQL Server. Pour plus d’informations, consultez [Mise à niveau des instances en miroir](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
@@ -64,13 +64,13 @@ ms.locfileid: "75255979"
   
 -   Le système dans lequel vous envisagez de créer la base de données miroir doit posséder un lecteur de disque avec suffisamment d'espace pour contenir la base de données miroir.  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous ne pouvez pas mettre en miroir les bases de données système **master**, **msdb**, **temp**ou **model** .  
   
 -   Vous ne pouvez pas mettre en miroir une base de données qui appartient à un [groupe de disponibilité Always On](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Utilisez une sauvegarde complète très récente ou une sauvegarde différentielle récente de la base de données principale.  
   
@@ -87,22 +87,22 @@ ms.locfileid: "75255979"
   
 -   Dans le cas d'une base de données de production, effectuez toujours les sauvegardes sur une unité distincte.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  TRUSTWORTHY a la valeur OFF lorsqu'une base de données est sauvegardée. Par conséquent, la propriété TRUSTWORTHY d'une nouvelle base de données miroir a toujours la valeur OFF. Si la base de données doit être fiable après un basculement, des opérations de configuration supplémentaires sont requises. Pour plus d’informations, consultez [Configurer une base de données miroir pour utiliser la propriété Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
  Pour plus d’informations sur l’activation du déchiffrement automatique de la clé principale d’une base de données miroir, consultez [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Propriétaire de base de données ou administrateur système.  
   
-##  <a name="PrepareToRestartMirroring"></a> Pour préparer une base de données miroir existante pour redémarrer la mise en miroir  
+##  <a name="to-prepare-an-existing-mirror-database-to-restart-mirroring"></a><a name="PrepareToRestartMirroring"></a> Pour préparer une base de données miroir existante pour redémarrer la mise en miroir  
  Si la mise en miroir a été supprimée et que la base de données miroir est toujours à l'état RECOVERING, vous pouvez redémarrer la mise en miroir.  
   
 1.  Prenez au moins une sauvegarde du journal sur la base de données principale. Pour plus d’informations, consultez [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 2.  Sur la base de données miroir, restaurez à l'aide de RESTORE WITH NORECOVERY toutes les sauvegardes des journaux effectuées sur la base de données principale depuis la suppression de la mise en miroir. Pour plus d’informations, consultez [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-##  <a name="CombinedProcedure"></a> Pour préparer une nouvelle base de données miroir  
+##  <a name="to-prepare-a-new-mirror-database"></a><a name="CombinedProcedure"></a> Pour préparer une nouvelle base de données miroir  
  **Pour préparer une base de données miroir**  
   
 > [!NOTE]  
@@ -131,13 +131,13 @@ ms.locfileid: "75255979"
   
     -   [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [RESTORE Arguments &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  À l'aide de RESTORE WITH NORECOVERY, appliquez les autres sauvegardes de fichiers journaux ou sauvegardes en attente à la base de données miroir.  
   
     -   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Avant de démarrer une session de mise en miroir de bases de données, vous devez créer la base de données miroir. Vous devez procéder à cette opération avant de démarrer la session de mise en miroir.  
   
  L'exemple suivant utilise la base de données d'exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui emploie par défaut le mode de récupération simple.  
@@ -237,7 +237,7 @@ ms.locfileid: "75255979"
   
  Pour voir un exemple de configuration de la mise en miroir d’une base de données illustrant la configuration de la sécurité, la préparation de la base de données miroir, la configuration des serveurs partenaires et l’ajout d’un témoin, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir préparé une base de données miroir  
+##  <a name="follow-up-after-preparing-a-mirror-database"></a><a name="FollowUp"></a> Suivi : Après avoir préparé une base de données miroir  
   
 1.  Si des sauvegardes de fichier journal supplémentaires ont été effectuées depuis votre opération RESTORE LOG la plus récente, vous devez appliquer manuellement chaque sauvegarde de journal supplémentaire, à l'aide de RESTORE WITH NORECOVERY.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "75255979"
   
 4.  Si la base de données doit être fiable après un basculement, des opérations de configuration supplémentaires sont requises après le début de la mise en miroir. Pour plus d’informations, consultez [Configurer une base de données miroir pour utiliser la propriété Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

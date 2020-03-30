@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082608"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Cartes (Générateur de rapports et SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77082608"
 > [!NOTE]  
 >  Vous pouvez enregistrer des cartes hors d’un rapport en tant que parties de rapports. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="Process"></a> Ajout d'une carte à votre rapport  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> Ajout d'une carte à votre rapport  
  Pour ajouter une carte à votre rapport, suivez les étapes générales répertoriées ci-dessous :  
   
 -   Déterminez les données analytiques que vous souhaitez afficher et les types de données spatiales dont vous avez besoin. Par exemple, pour afficher des chiffres des ventes annuels relatifs de magasins sur une carte à bulles, vous avez besoin des noms des magasins et de leurs chiffres des ventes comme données analytiques, et des noms et emplacements des magasins en latitude et longitude comme données spatiales.  
@@ -49,7 +49,7 @@ ms.locfileid: "77082608"
   
  Pour plus d’informations, consultez [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AddingData"></a> Ajout de données à une carte  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> Ajout de données à une carte  
  Une carte utilise deux types de données : des données spatiales et des données analytiques. Les données spatiales définissent l'apparence de la carte, tandis que les données analytiques fournissent les valeurs associées à la carte. Par exemple, les données spatiales définissent les emplacements des villes dans une région, alors que les données analytiques fournissent la population de chaque ville.  
   
  Une carte doit avoir des données spatiales ; les données analytiques sont facultatives. Par exemple, vous pouvez ajouter une carte qui affiche uniquement les emplacements de magasins dans une ville.  
@@ -136,12 +136,12 @@ ms.locfileid: "77082608"
   
  Dans cet exemple, le nom de ville seul n'est pas suffisant pour identifier la population de façon unique. Par exemple, il existe plusieurs villes nommées Albany aux États-Unis. Pour nommer une ville spécifique, vous devez spécifier la région en plus du nom de ville.  
   
-##  <a name="Viewport"></a> Fonctionnement du point de vue de la carte  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Fonctionnement du point de vue de la carte  
  Après avoir spécifié des données cartographiques pour un rapport, vous pouvez limiter la zone d'affichage de la carte en spécifiant une *fenêtre d'affichage*de la carte. Par défaut, la fenêtre de carte représente la même zone que l'ensemble de la carte. Pour rogner la carte, vous pouvez spécifier le centre, le niveau de zoom et les coordonnées minimale et maximale qui définissent la zone à inclure dans votre rapport. Pour améliorer l'affichage de la carte dans le rapport, vous pouvez déplacer les légendes, l'échelle des distances et l'échelle de couleurs à l'extérieur de la fenêtre d'affichage. L'illustration suivante montre une fenêtre d'affichage :  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> Ajout d'une couche de mosaïques Bing  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Ajout d'une couche de mosaïques Bing  
  Vous pouvez ajouter une couche de mosaïques Bing offrant un arrière-plan géographique à la vue cartographique active telle que définie par la fenêtre d'affichage. Pour ajouter une couche de mosaïques, vous devez spécifier le système de coordonnées **Géographique** et le type de projection **Mercator**. Les mosaïques qui correspondent au centre de la fenêtre d'affichage et au niveau de zoom que vous sélectionnez sont récupérées automatiquement des services Web Bing Maps.  
   
  Vous pouvez personnaliser la couche en spécifiant les options suivantes :  
@@ -162,7 +162,7 @@ ms.locfileid: "77082608"
   
  Pour plus d'informations sur les mosaïques, consultez [Système de mosaïques Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315)(éventuellement en anglais). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
-##  <a name="MapLayers"></a> Fonctionnement des couches et des éléments cartographiques  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> Fonctionnement des couches et des éléments cartographiques  
  Une carte peut avoir plusieurs couches. Il existe trois types de couches. Chaque couche affiche un type de données spatiales :  
   
 -   **Couche de polygones.** Affiche des plans de zones ou des marqueurs pour le point central de polygone, calculé automatiquement pour chaque polygone.  
@@ -208,7 +208,7 @@ ms.locfileid: "77082608"
   
  Pour plus d’informations, consultez [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
-##  <a name="Legends"></a> Fonctionnement des légendes de carte, de l'échelle de couleurs et de l'échelle des distances  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> Fonctionnement des légendes de carte, de l'échelle de couleurs et de l'échelle des distances  
  Vous pouvez ajouter diverses légendes à votre rapport pour aider les utilisateurs à interpréter une carte. Les cartes peuvent inclure les éléments suivants :  
   
 -   **Légendes.** Vous pouvez créer plusieurs légendes. Les éléments qui apparaissent dans une légende sont générés automatiquement selon les règles que vous spécifiez pour les éléments cartographiques sur chaque couche. Pour chaque règle, vous spécifiez la légende à utiliser pour afficher ses éléments connexes. De cette manière, vous pouvez attribuer des éléments de plusieurs couches à la même légende ou à des légendes différentes.  
@@ -219,14 +219,14 @@ ms.locfileid: "77082608"
   
  Vous pouvez placer les légendes, l'échelle de couleurs et l'échelle des distances à des emplacements discrets à l'intérieur ou à l'extérieur de la fenêtre d'affichage. Pour plus d’informations, consultez [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Dépannage de problèmes liés aux cartes  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> Dépannage de problèmes liés aux cartes  
  Les rapports cartographiques utilisent des données spatiales et analytiques de diverses sources de données. Chaque couche peut utiliser des sources différentes de données. Les propriétés d'affichage de chaque couche suivent un ordre de priorité spécifique basé sur les propriétés de la couche, des règles et des propriétés des éléments cartographiques.  
   
  Si vous n'obtenez pas le résultat souhaité lorsque vous affichez un rapport cartographique, les causes principales peuvent provenir de divers problèmes. Pour vous aider à isoler et à comprendre chaque problème, il est recommandé de travailler avec une seule couche à la fois. Utilisez le volet Carte pour sélectionner une couche et facilement activer/désactiver sa visibilité.  
   
  Pour plus d'informations sur les problèmes liés aux rapports cartographiques, voir [Résoudre les problèmes des rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous montrent pas à pas comment utiliser des cartes et des couches dans vos rapports.  
   
 -   [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "77082608"
   
 -   [Ajouter des emplacements personnalisés à une carte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="Section"></a> Dans cette section  
  [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
