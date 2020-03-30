@@ -20,10 +20,10 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908929"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurations de fichiers (mode de récupération complète)
@@ -55,7 +55,7 @@ ms.locfileid: "72908929"
     >  Si vous souhaitez que la base de données soit hors connexion pour une restauration de fichiers, mettez-la hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
   
   
-##  <a name="Overview"></a> Restauration de fichiers endommagés à partir de sauvegardes de fichiers  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Restauration de fichiers endommagés à partir de sauvegardes de fichiers  
   
 1.  Avant de restaurer un ou plusieurs fichiers endommagés, essayez de créer une [sauvegarde de la fin du journal](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
@@ -121,7 +121,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Exemple : restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour restaurer des fichiers et des groupes de fichiers**  
   
 -   [Restaurer des fichiers à un nouvel emplacement &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  

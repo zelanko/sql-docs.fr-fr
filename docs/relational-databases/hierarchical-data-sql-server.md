@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288363"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "79288363"
   
  Le type de données [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) permet de créer des tables avec une structure hiérarchique ou de décrire la structure hiérarchique de données stockées à un autre emplacement. Utilisez les [fonctions hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) de [!INCLUDE[tsql](../includes/tsql-md.md)] pour interroger et gérer les données hiérarchiques.  
   
-##  <a name="keyprops"></a> Propriétés principales de hierarchyid  
+##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> Propriétés principales de hierarchyid  
  Une valeur du type de données **hierarchyid** représente une position dans une hiérarchie d'arborescence. Les valeurs de **hierarchyid** ont les propriétés suivantes :  
   
 -   Extrêmement compact  
@@ -61,7 +61,7 @@ ms.locfileid: "79288363"
      En utilisant la méthode [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md) , il est toujours possible de générer un frère à droite d'un nœud donné, à gauche d'un nœud donné, ou entre les deux frères. La propriété de comparaison est maintenue lorsqu'un nombre arbitraire de nœuds est inséré ou supprimé dans la hiérarchie. La plupart des insertions et suppressions préservent la propriété de compacité. Toutefois, les insertions entre deux nœuds produiront des valeurs hierarchyid avec une représentation légèrement moins compacte.  
   
   
-##  <a name="limits"></a> Limites de hierarchyid  
+##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> Limites de hierarchyid  
  Les limites du type de données **hierarchyid** sont les suivantes :  
   
 -   Une colonne de type **hierarchyid** ne représente pas automatiquement une arborescence. Il appartient à l'application de générer et d'assigner des valeurs **hierarchyid** de telle façon que la relation voulue entre les lignes soit reflétée dans les valeurs. Certaines applications peuvent avoir une colonne de type **hierarchyid** qui indique l'emplacement dans une hiérarchie définie dans une autre table.  
@@ -71,7 +71,7 @@ ms.locfileid: "79288363"
 -   Les relations hiérarchiques représentées par les valeurs **hierarchyid** ne sont pas appliquées de la même manière qu'une relation de clé étrangère. Dans une relation hiérarchique, il est possible et parfois nécessaire que A ait un enfant B, puis que A soit supprimé, laissant B avec une relation à un enregistrement inexistant. Si ce comportement n'est pas acceptable, l'application doit rechercher des descendants avant de supprimer des parents.  
   
   
-##  <a name="alternatives"></a> Quand utiliser des alternatives à hierarchyid  
+##  <a name="when-to-use-alternatives-to-hierarchyid"></a><a name="alternatives"></a> Quand utiliser des alternatives à hierarchyid  
  Les deux alternatives à **hierarchyid** pour représenter des données hiérarchiques sont les suivantes :  
   
 -   Parent/enfant  
@@ -148,7 +148,7 @@ GO
 ```  
   
   
-##  <a name="indexing"></a> Stratégies d'indexation des données hiérarchiques  
+##  <a name="indexing-strategies-for-hierarchical-data"></a><a name="indexing"></a> Stratégies d'indexation des données hiérarchiques  
  Il existe deux stratégies d'indexation des données hiérarchiques :  
   
 -   **À profondeur prioritaire**  
@@ -163,7 +163,7 @@ GO
   
      Dans un index à largeur prioritaire, tous les enfants directs d'un nœud sont colocalisés. Les index à largeur prioritaire sont par conséquent efficaces pour répondre aux requêtes sur les enfants immédiats, telle que « Rechercher tous les employés dont ce responsable est le supérieur direct ».  
   
- Le choix entre profondeur prioritaire, largeur prioritaire ou les deux, et la sélection de l'un d'eux comme clé de clustering (si nécessaire) dépend de l'importance relative des types de requêtes ci-dessus et de l'importance relative de SELECT par rapport aux opérations DML. Pour obtenir un exemple détaillé de stratégies d’indexation, consultez [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Le choix entre profondeur prioritaire, largeur prioritaire ou les deux, et la sélection de l'un d'eux comme clé de clustering (si nécessaire) dépend de l'importance relative des types de requêtes ci-dessus et de l'importance relative de SELECT par rapport aux opérations DML. Pour un exemple détaillé de stratégies d'indexation, consultez [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Création des index  
@@ -268,13 +268,13 @@ INSERT SimpleDemo
     VALUES ('/', 'Earth', 'Planet');  
 ```  
   
-##  <a name="tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="tasks"></a> Tâches associées  
   
-###  <a name="migrating"></a> Migration de parent/enfant vers hierarchyid  
- La plupart des arborescences sont représentées à l'aide de parent/enfant. La méthode la plus simple pour effectuer une migration d’une structure parent/enfant vers une table à l’aide de **hierarchyid** consiste à utiliser une colonne ou une table temporaire pour conserver une trace du nombre de nœuds à chaque niveau de la hiérarchie. Pour obtenir un exemple de migration de table parent/enfant, consultez la leçon 1 de [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> Migration de parent/enfant vers hierarchyid  
+ La plupart des arborescences sont représentées à l'aide de parent/enfant. La méthode la plus simple pour effectuer une migration d’une structure parent/enfant vers une table à l’aide de **hierarchyid** consiste à utiliser une colonne ou une table temporaire pour conserver une trace du nombre de nœuds à chaque niveau de la hiérarchie. Pour voir un exemple de migration de table parent/enfant, consultez la leçon 1 de [Didacticiel : utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
-###  <a name="BKMK_ManagingTrees"></a> Gestion d'une arborescence à l'aide de hierarchyid  
+###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> Gestion d'une arborescence à l'aide de hierarchyid  
  Bien qu'une colonne **hierarchyid** ne représente pas nécessairement une arborescence, une application peut facilement faire en sorte que ce soit le cas.  
   
 -   Lorsque vous générez de nouvelles valeurs, effectuez l'une des opérations suivantes :  
@@ -379,7 +379,7 @@ EmployeeId LastChild EmployeeName
 ```  
   
   
-###  <a name="BKMK_EnforcingTrees"></a> Application d'une arborescence  
+###  <a name="enforcing-a-tree"></a><a name="BKMK_EnforcingTrees"></a> Application d'une arborescence  
  Les exemples ci-dessus illustrent la manière dont une application peut garantir la conservation d'une arborescence. Pour appliquer une arborescence à l'aide de contraintes, une colonne calculée qui définit le parent de chaque nœud peut être créée avec une contrainte de clé étrangère vers l'ID de clé primaire.  
   
 ```sql
@@ -397,7 +397,7 @@ GO
  Cette méthode d'application d'une relation est préférable lorsqu'un code non fiable pour maintenir l'arborescence hiérarchique dispose d'un accès DML direct à la table. Toutefois, cette méthode est susceptible de réduire les performances car la contrainte doit être vérifiée à chaque opération DML.  
   
   
-###  <a name="findclr"></a> Recherche d'ancêtres à l'aide du CLR  
+###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> Recherche d'ancêtres à l'aide du CLR  
  La recherche de l'ancêtre commun le plus bas est une opération courante impliquant deux nœuds dans une hiérarchie. Cela peut être écrit dans [!INCLUDE[tsql](../includes/tsql-md.md)] ou CLR, car le type **hierarchyid** est disponible pour les deux. L'utilisation de CLR est recommandée car les performances seront plus rapides.  
   
  Utilisez le code CLR suivant pour répertorier les ancêtres et trouver l'ancêtre commun le plus bas :  
@@ -450,7 +450,7 @@ GO
 ```  
   
   
-###  <a name="ancestors"></a> Répertorier les ancêtres  
+###  <a name="listing-ancestors"></a><a name="ancestors"></a> Répertorier les ancêtres  
  La création d'une liste d'ancêtres d'un nœud est une opération courante, par exemple pour afficher la position au sein d'une organisation. Pour cela, vous pouvez par exemple utiliser une fonction table à l’aide de la classe **HierarchyId_Operations** définie ci-dessus :  
   
  Utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)]:  
@@ -479,7 +479,7 @@ GO
 ```  
   
   
-###  <a name="lowestcommon"></a> Recherche de l'ancêtre commun le plus bas  
+###  <a name="finding-the-lowest-common-ancestor"></a><a name="lowestcommon"></a> Recherche de l'ancêtre commun le plus bas  
  À l’aide de la classe **HierarchyId_Operations** définie ci-dessus, créez la fonction [!INCLUDE[tsql](../includes/tsql-md.md)] suivante pour rechercher l’ancêtre commun le plus bas impliquant deux nœuds dans une hiérarchie :  
   
 ```sql
@@ -511,7 +511,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
  Le nœud résultant est /1/1/  
   
   
-###  <a name="BKMK_MovingSubtrees"></a> Déplacement de sous-arborescences  
+###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Déplacement de sous-arborescences  
  Une autre opération courante concerne le déplacement de sous-arborescences. La procédure suivante prend la sous-arborescence de **\@oldMgr** pour en faire une sous-arborescence de **\@newMgr** (en y incluant **\@oldMgr**).  
   
 ```sql
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de méthodes de type de données hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 85d4d245ae71adbd6b1c534381c7683b676d7fbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288209"
 ---
 # <a name="initialize-a-subscription-manually"></a>Initialiser manuellement un abonnement
@@ -27,13 +27,13 @@ ms.locfileid: "76288209"
   Cette rubrique explique comment initialiser manuellement un abonnement dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'instantané initial est normalement utilisé pour initialiser un abonnement, mais les abonnements aux publications peuvent être initialisés sans utiliser d'instantané, à condition que le schéma et les données initiales soient déjà présents sur l'Abonné.  
   
 
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   S'il existe une activité sur une base de données publiée à l'aide de la réplication transactionnelle entre le moment où les données et le schéma sont copiés vers l'Abonné et le moment auquel l'abonnement est initialisé manuellement, les modifications résultant de cette activité peuvent ne pas être répliquées vers l'Abonné.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Initialisez manuellement un abonnement à une publication en copiant le schéma (et généralement les données) dans la base de données d'abonnement. Le schéma et les données doivent correspondre à la base de données de publication. Précisez ensuite que l'abonnement ne nécessite pas de schéma et de données dans la page **Initialiser les abonnements** de l'Assistant Nouvel abonnement. Pour plus d'informations sur l'accès à cet Assistant, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) et [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
  Lors de la première synchronisation de l'abonnement, les objets et les métadonnées dont la réplication a besoin sont copiés dans la base de données d'abonnement.  
@@ -44,7 +44,7 @@ ms.locfileid: "76288209"
   
 2.  Désactivez la case à cocher **Initialiser** dans la page **Initialiser les abonnements** de l'Assistant Nouvel abonnement. Procédez de même pour chaque abonnement nécessitant uniquement la copie des objets et des métadonnées de réplication.  
 
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les abonnements peuvent être initialisés manuellement à l'aide des procédures stockées de réplication.  
   
 #### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>Pour initialiser manuellement un abonnement par extraction à une publication transactionnelle  

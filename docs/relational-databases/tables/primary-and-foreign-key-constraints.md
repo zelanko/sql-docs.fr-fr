@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999435"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Contraintes de clé primaire et de clé étrangère
@@ -36,7 +36,7 @@ ms.locfileid: "67999435"
   
  [Tâches associées](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> Contraintes de clé primaire  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> Contraintes de clé primaire  
  Une table contient généralement une colonne ou une combinaison de colonnes dont les valeurs identifient de façon unique chaque ligne dans la table. Cette colonne (ou ces colonnes), appelée clé primaire (PK, Primary Key), assure l'intégrité de l'entité de la table. Les contraintes de clé primaire garantissent des données uniques, c'est pourquoi elles sont souvent définies pour une colonne d'identité.  
   
  Lorsque vous spécifiez une contrainte de clé primaire pour une table, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] garantit l'unicité des données en créant automatiquement un index unique pour les colonnes de clé primaire. Cet index permet également l'accès rapide aux données lorsque la clé primaire est utilisée dans des requêtes. Si une contrainte de clé primaire est définie sur plusieurs colonnes, des valeurs peuvent apparaître en double dans une colonne, mais chaque combinaison de valeurs issues de toutes les colonnes de la définition de contrainte de clé primaire doit être unique.  
@@ -57,12 +57,12 @@ ms.locfileid: "67999435"
   
 -   Si une clé primaire est définie sur une colonne avec le type de données CLR défini par l'utilisateur, l'implémentation du type doit prendre en charge le tri binaire.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  On appelle « clé étrangère » une colonne ou une combinaison de colonnes utilisée pour établir et conserver une liaison entre les données de deux tables pour contrôler les données qui peuvent être stockées dans la table de clés étrangères. Dans une référence de clé étrangère, la création d'une liaison entre deux tables s'effectue lors du référencement de la ou des colonnes contenant les valeurs de clé primaire d'une table dans la ou les colonnes de l'autre table. Cette colonne devient alors une clé étrangère dans la seconde table.  
   
  Par exemple, la table **Sales.SalesOrderHeader** possède une liaison de clé étrangère avec la table **Sales.SalesPerson** car il existe une relation logique entre les commandes et les vendeurs. La colonne **SalesPersonID** de la table **SalesOrderHeader** correspond à la colonne clé primaire de la table **SalesPerson** . La colonne **SalesPersonID** de la table **SalesOrderHeader** est donc la clé étrangère de la table **SalesPerson** . Lors de la création de cette relation de clé étrangère, une valeur pour **SalesPersonID** ne peut pas être insérée dans la table **SalesOrderHeader** si elle n'existe pas déjà dans la table **SalesPerson** .  
   
- Une table peut référencer au maximum 253 autres tables et colonnes en tant que clés étrangères (références sortantes). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fait passer de 253 à 10 000 le nombre limite des autres tables et colonnes pouvant référencer des colonnes dans une table unique (références entrantes). (Cela nécessite au minimum le niveau de compatibilité 130). Cette augmentation est soumise aux restrictions suivantes :  
+ Une table peut référencer au maximum 253 autres tables et colonnes en tant que clés étrangères (références sortantes). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fait passer de 253 à 10 000 le nombre limite des autres tables et colonnes pouvant référencer des colonnes dans une table unique (références entrantes). (Cela nécessite au minimum le niveau de compatibilité 130). Cette augmentation est soumise aux restrictions suivantes :  
   
 -   Les références de clés étrangères supérieures à 253 sont uniquement prises en charge pour les opérations DELETE DML. Les opérations UPDATE et MERGE ne sont pas prises en charge.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "67999435"
   
 -   En outre, une table possédant un déclencheur INSTEAD OF ne peut pas détenir de clause REFERENCES spécifiant une action en cascade. Cependant, un déclencheur AFTER d'une table impliquée dans une action en cascade peut exécuter une instruction INSERT, UPDATE ou DELETE sur une autre table ou vue, qui active un déclencheur INSTEAD OF défini sur cet objet.  
   
-##  <a name="Tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Tâches associées  
  Le tableau suivant répertorie les tâches courantes associées aux contraintes de clé primaire et de clé étrangère.  
   
 |Tâche|Rubrique|  

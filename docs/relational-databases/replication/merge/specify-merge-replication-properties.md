@@ -15,10 +15,10 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908158"
 ---
 # <a name="specify-merge-replication-properties"></a>Spécifier les propriétés de la réplication de fusion
@@ -76,7 +76,7 @@ Dans la page **Articles** de l'Assistant Nouvelle publication, sélectionnez une
  La réplication Microsoft SQL Server propose un outil de résolution interactif qui vous permet de résoudre manuellement des conflits au cours d’une synchronisation à la demande dans le Gestionnaire de synchronisation Microsoft Windows. Quand la résolution de conflits est activée, résolvez les conflits de façon interactive au cours de la synchronisation, à l'aide du résolveur interactif. L’outil de résolution interactif est disponible par le biais du Gestionnaire de synchronisation Microsoft Windows. Pour plus d’informations, consultez [Synchroniser un abonnement à l’aide du Gestionnaire de synchronisation Windows &#40;Gestionnaire de synchronisation Windows&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
   
-### <a name="Recommendations"></a> Recommandations  
+### <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Si une synchronisation est effectuée en dehors du Gestionnaire de synchronisation Windows (comme une synchronisation planifiée ou à la demande dans SQL Server Management Studio ou le moniteur de réplication), les conflits sont résolus automatiquement sans intervention de l'utilisateur, en utilisant l'outil de résolution des conflits par défaut spécifié pour l'article. Pour plus d’informations, consultez [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   

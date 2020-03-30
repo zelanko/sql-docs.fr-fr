@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68116793"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
@@ -50,7 +50,7 @@ ms.locfileid: "68116793"
 |------------------------------|-----------------|  
 |**sysadmin**|Les membres du rôle serveur fixe **sysadmin** peuvent effectuer n’importe quelle activité sur le serveur.|  
 |**serveradmin**|Les membres du rôle serveur fixe **serveradmin** peuvent modifier les options de configuration à l’échelle du serveur et arrêter le serveur.|  
-|**securityadmin**|Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau du serveur. Ils peuvent également attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau de la base de données, s’ils ont accès à une base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANT :** La possibilité d'octroyer l'accès au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de configurer des autorisations utilisateur permet à l'administrateur de sécurité d'affecter la plupart des autorisations du serveur. Le rôle **securityadmin** doit être traité comme équivalent au rôle **sysadmin** .|  
+|**securityadmin**|Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau du serveur. Ils peuvent également attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau de la base de données, s’ils ont accès à une base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANT :** La possibilité d’octroyer l’accès au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de configurer des autorisations utilisateur permet à l’administrateur de sécurité d’affecter la plupart des autorisations du serveur. Le rôle **securityadmin** doit être traité comme équivalent au rôle **sysadmin** .|  
 |**processadmin**|Les membres du rôle serveur fixe **processadmin** peuvent mettre fin aux processus en cours d’exécution dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**setupadmin**|Les membres du rôle serveur fixe **setupadmin** peuvent ajouter et supprimer des serveurs liés à l’aide d’instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. (L’appartenance au rôle **sysadmin** est nécessaire pour utiliser [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
 |**bulkadmin**|Les membres du rôle serveur fixe **bulkadmin** peuvent exécuter l’instruction `BULK INSERT`.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68116793"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  L'autorisation **CONTROL SERVER** ressemble, mais n'est pas identique au rôle serveur fixe **sysadmin** . Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple, **CONTROL SERVER** n’implique pas l’appartenance au rôle serveur fixe **sysadmin**.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes **DBCC** et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe **sysadmin** . Pour découvrir la liste des 171 procédures stockées système qui nécessitent l’appartenance à **sysadmin** , consultez le billet de blog suivant d’Andreas Wolter : [Comparaison entre CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et réaffectation de privilèges - avertissements](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
+>  L'autorisation **CONTROL SERVER** ressemble, mais n'est pas identique au rôle serveur fixe **sysadmin** . Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple, **CONTROL SERVER** n’implique pas l’appartenance au rôle serveur fixe **sysadmin** .) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes **DBCC** et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe **sysadmin** . Pour découvrir la liste des 171 procédures stockées système qui nécessitent l’appartenance à **sysadmin** , consultez le billet de blog suivant d’Andreas Wolter : [Comparaison entre CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et réaffectation de privilèges - avertissements](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Autorisations au niveau serveur  
  Seules des autorisations au niveau du serveur peuvent être ajoutées aux rôles serveur définis par l'utilisateur. Pour répertorier les autorisations au niveau du serveur, exécutez l'instruction suivante. Les autorisations au niveau du serveur sont :  

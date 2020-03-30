@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73843631"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73843631"
   
  **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) et [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md). L'utilisation continue de la fonction PERMISSIONS peut entraîner une baisse des performances.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

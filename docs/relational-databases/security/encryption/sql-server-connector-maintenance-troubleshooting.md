@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557929"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
@@ -25,7 +25,7 @@ ms.locfileid: "75557929"
   Des informations supplémentaires sur le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont fournies dans cette rubrique. Pour plus d’informations sur le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault ](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) et [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
   
-##  <a name="AppendixA"></a> A. Instructions de maintenance du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+##  <a name="a-maintenance-instructions-for-ssnoversion-connector"></a><a name="AppendixA"></a> A. Instructions de maintenance du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ### <a name="key-rollover"></a>Substitution de clé  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75557929"
     GO  
     ```  
   
-### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>Mise à niveau du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="upgrade-of-ssnoversion-connector"></a>Mise à niveau du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 Les versions 1.0.0.440 et antérieures ont été remplacées et ne sont plus prises en charge dans les environnements de production. Les versions 1.0.1.0 et les versions antérieures ne sont pas prises en charge dans les environnements de production. Utilisez les instructions suivantes pour effectuer une mise à niveau vers la dernière version disponible sur le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
 
@@ -138,7 +138,7 @@ Si vous utilisez actuellement la version 1.0.0.440 ou une version plus récente,
   
 8.  Après avoir vérifié que la mise à jour fonctionne, vous pouvez supprimer le dossier de l’ancien connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si vous avez choisi de le renommer au lieu de le désinstaller à l’étape 3.  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Modification du principal du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="rolling-the-ssnoversion-service-principal"></a>Modification du principal du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des principaux du service créés dans Azure Active Directory comme informations d’identification pour accéder au coffre de clés.  Le principal du service a un ID client et une clé d’authentification.  Des informations d’identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont configurées avec le **nom du coffre**, l’ **ID client**et la **clé d’authentification**.  La **clé d’authentification** est valide un certain temps (un ou deux ans).   Avant l’expiration de cette période, une nouvelle clé doit être générée pour le principal du service dans Azure AD.  Ensuite, les informations d’identification doivent être modifiées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] gère un cache pour les informations d’identification de la session en cours ; ainsi, si des informations d’identification sont modifiées, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] doit être redémarré.  
   
 ### <a name="key-backup-and-recovery"></a>Sauvegarde et récupération des clés  
@@ -156,7 +156,7 @@ Voici un récapitulatif des étapes :
 Les sauvegardes des clés peuvent être restaurées entre les régions Azure, tant qu’elles restent dans la même région géographique ou le même cloud national : États-Unis, Canada, Japon, Australie, Inde, Asie et Pacifique du sud, Europe, Brésil, Chine, Administration américaine ou Allemagne.  
   
   
-##  <a name="AppendixB"></a> B. Forum Aux Questions (FAQ)  
+##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. Forum Aux Questions (FAQ)  
 ### <a name="on-azure-key-vault"></a>À propos d’Azure Key Vault  
   
 **Comment fonctionnent les opérations de clé avec Azure Key Vault ?**  
@@ -165,7 +165,7 @@ Les sauvegardes des clés peuvent être restaurées entre les régions Azure, ta
  **Qu’est-ce qu’un URI de clé ?**  
  Dans Azure Key Vault, chaque clé a un URI, que vous pouvez utiliser pour référencer la clé dans votre application. Utilisez le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` pour obtenir la version actuelle, et le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` pour obtenir une version spécifique.  
   
-### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>À propos de la configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-ssnoversion"></a>À propos de la configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **Quels sont les points de terminaison auxquels le connecteur SQL Server doit pouvoir accéder ?** Le connecteur communique avec deux points de terminaison, qui doivent figurer dans la liste verte. Le seul port requis pour la communication sortante à ces autres services est le port 443 pour Https :
 -  login.microsoftonline.com/*:443
@@ -203,7 +203,7 @@ Le connecteur utilise les paramètres de configuration de proxy d’Internet Exp
 
 Pour en savoir plus sur Active Directory, lisez [Association des abonnements Azure avec Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
   
-##  <a name="AppendixC"></a> C. Explications des codes d’erreur du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explications des codes d’erreur du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Codes d’erreur du fournisseur :**  
   
 Code d'erreur  |Symbole  |Description    

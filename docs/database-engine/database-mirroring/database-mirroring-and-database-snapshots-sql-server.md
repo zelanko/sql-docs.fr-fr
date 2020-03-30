@@ -16,10 +16,10 @@ ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258813"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Mise en miroir et instantanés de bases de données (SQL Server)
@@ -71,7 +71,7 @@ ms.locfileid: "75258813"
   
      À ce stade, les nouvelles connexions clientes peuvent être orientées, par programme, vers l'instantané le plus récent.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

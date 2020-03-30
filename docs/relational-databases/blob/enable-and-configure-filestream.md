@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908770"
 ---
 # <a name="enable-and-configure-filestream"></a>Activer et configurer FILESTREAM
@@ -23,7 +23,7 @@ ms.locfileid: "72908770"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Pour pouvoir commencer à utiliser FILESTREAM, vous devez l’activer sur l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cette rubrique décrit comment activer FILESTREAM à l'aide du Gestionnaire de configuration SQL Server.  
   
-##  <a name="enabling"></a> Activation de FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Activation de FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Pour activer et modifier des paramètres FILESTREAM  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908770"
   
 13. Redémarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-##  <a name="best"></a> Bonnes pratiques  
+##  <a name="best-practices"></a><a name="best"></a> Bonnes pratiques  
   
-###  <a name="config"></a> Configuration et maintenance physiques  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Configuration et maintenance physiques  
  Lorsque vous configurez des volumes de stockage FILESTREAM, prenez en compte les recommandations suivantes :  
   
 -   Désactivez les noms de fichiers courts sur les systèmes informatiques FILESTREAM. La création de noms de fichiers courts demande beaucoup plus de temps. Pour désactiver les noms de fichiers courts, servez-vous de l’utilitaire Windows **fsutil** .  
@@ -84,7 +84,7 @@ ms.locfileid: "72908770"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> Conception d’une base de données physique  
+###  <a name="physical-database-design"></a><a name="database"></a> Conception d’une base de données physique  
  Lorsque vous concevez une base de données FILESTREAM, prenez en compte les recommandations suivantes:  
   
 -   Les colonnes FILESTREAM doivent être accompagnées d’une colonne **uniqueidentifier**ROWGUID correspondante. Ces types de tables doivent également être accompagnés d'un index unique. En règle générale, cet index n'est pas un index cluster. Si la logique métier des bases de données requiert un index cluster, vous devez vous assurer que les valeurs stockées dans l'index ne sont pas aléatoires. Les valeurs aléatoires entraînent une réorganisation de l'index chaque fois qu'une ligne est ajoutée ou supprimée dans la table.  

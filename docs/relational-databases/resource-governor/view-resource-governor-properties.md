@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903911"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
@@ -25,7 +25,7 @@ ms.locfileid: "72903911"
 
   Vous pouvez créer ou configurer des entités de Resource Governor, telles que des pools de ressources et des groupes de charge de travail, en utilisant la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- ##  <a name="BeforeYouBegin"></a> Rubriques connexes 
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> Rubriques connexes 
  Outre la consultation des propriétés des entités de Resource Governor, vous pouvez effectuer plusieurs tâches de configuration à l'aide de la page **ropriétés de Resource Governor** . Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "72903911"
   
  Vous pouvez déterminer s’il existe une configuration en attente en interrogeant la vue de gestion dynamique [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) pour obtenir l’état en cours d’is_configuration_pending.  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L'affichage des propriétés de Resource Governor nécessite l'autorisation VIEW SERVER STATER. Les tâches de configuration de Resource Governor nécessitent l'autorisation CONTROL SERVER.  
   
-##  <a name="ViewRGProp"></a> Page Propriétés de Resource Governor  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> Page Propriétés de Resource Governor  
  **Pour afficher les propriétés de Resource Governor à l’aide de la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'au **Resource Governor**.  
@@ -62,7 +62,7 @@ ms.locfileid: "72903911"
   
 4.  Cliquez sur **OK**pour enregistrer les éventuelles modifications.  
 
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **Nom de la fonction classifieur**  
  Spécifiez la fonction classifieur en la sélectionnant dans la liste.  
   

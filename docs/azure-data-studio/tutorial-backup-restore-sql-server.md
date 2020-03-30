@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287213"
 ---
 # <a name="backup-and-restore-databases-using-name-sos"></a>Sauvegarder et restaurer des bases de données avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -27,7 +27,7 @@ Dans ce didacticiel, vous apprendrez à utiliser [!INCLUDE[name-sos](../includes
 > * Restaurer une base de données
 > * Afficher l’état de la tâche de restauration
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server. Pour créer la base de données *TutorialDB*, suivez un des démarrages rapides suivants :
 

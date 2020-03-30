@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982589"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982589"
 
   Crée un index spatial sur une table et une colonne spécifiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un index peut être créé avant que la table soit remplie de données. Les index peuvent être créés sur des tables ou des vues d'une autre base de données en spécifiant un nom de base de données qualifié. Les index spatiaux exigent que la table ait une clé primaire cluster. Pour plus d’informations sur les index spatiaux, consultez [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

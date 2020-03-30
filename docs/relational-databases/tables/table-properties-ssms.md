@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905950"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -39,7 +39,7 @@ ms.locfileid: "72905950"
   
 4.  [Page de stockage](#Storage)  
 
-##  <a name="GeneralPage"></a> Page Général  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Page Général  
  **Sauvegarde de la base de données**  
  Nom de la base de données qui contient cette table.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72905950"
  **Table répliquée**  
  Indique lorsqu'une table est répliquée vers une autre base de données à l'aide de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les valeurs possibles sont **True** et **False**.  
   
-##  <a name="ChangeTracking"></a> Page de suivi des modifications  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Page de suivi des modifications  
  **Suivi des modifications**  
  Indique si le suivi des modifications est activé pour la table. La valeur par défaut est **False**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72905950"
   
  Pour plus d’informations sur le suivi des modifications, consultez [À propos du suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a> Page FileTable  
+##  <a name="filetable-page"></a><a name="FileTable"></a> Page FileTable  
  Affiche les propriétés de la table associée aux FileTables. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
  **Classement de la colonne de noms de FileTable**  
@@ -110,7 +110,7 @@ ms.locfileid: "72905950"
  **Espace de noms FileTable activé**  
  Quand la valeur est **True**, cette valeur indique que la table est un FileTable. Si vous remplacez cette valeur par **False**, vous modifiez le FileTable pour en faire une table utilisateur ordinaire. Si vous souhaitez ultérieurement remodifier la table pour en faire un FileTable, la table devra réussir la vérification de cohérence de FileTable pour la conversion puisse aboutir.  
   
-##  <a name="Storage"></a> Page de stockage  
+##  <a name="storage-page"></a><a name="Storage"></a> Page de stockage  
  Affiche les propriétés de stockage de la table sélectionnée.  
   
 ### <a name="compression"></a>Compression  

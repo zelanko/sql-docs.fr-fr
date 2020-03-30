@@ -16,10 +16,10 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321231"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gérer les partitions d'une publication de fusion avec des filtres paramétrables
@@ -40,15 +40,15 @@ ms.locfileid: "75321231"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Si vous créez un script de la topologie de réplication (ce qui est recommandé), les scripts de publication contiennent les appels de procédures stockées pour créer des partitions de données. Le script fournit une référence pour les partitions créées et un moyen permettant de recréer si nécessaire une ou plusieurs partitions. Pour plus d'informations, voir [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 -   Lorsqu'une publication a paramétré des filtres qui génèrent des abonnements avec des partitions ne se chevauchant pas, et si un abonnement particulier est perdu et doit être recréé, vous devez effectuer les opérations suivantes : supprimez la partition à laquelle s'abonner, recréez l'abonnement, puis recréez la partition. Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). La réplication génère des scripts de création pour les partitions d'Abonné existantes lors de la génération d'un script de création de publication. Pour plus d'informations, voir [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Gérez des partitions dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Sur cette page, vous pouvez : créer et supprimer des partitions, autoriser des Abonnés à initier la génération et la remise d'instantanés, générer des instantanés pour une ou plusieurs partitions et nettoyer des instantanés.  
   
 #### <a name="to-create-a-partition"></a>Pour créer une partition  
@@ -89,7 +89,7 @@ ms.locfileid: "75321231"
   
 2.  Cliquez sur **Nettoyer les instantanés existants**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Pour mieux gérer une publication avec des filtres paramétrables, vous pouvez énumérer par programmation les partitions existantes à l'aide de procédures stockées de réplication. Vous pouvez également créer et supprimer des partitions existantes. Vous pouvez obtenir les informations suivantes sur les partitions existantes :  
   
 -   Comment une partition est filtrée (à l’aide de [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) ou de [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)).  
@@ -124,7 +124,7 @@ ms.locfileid: "75321231"
   
      Le travail d'instantané et les fichiers d'instantané de la partition sont également supprimés.  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Pour mieux gérer une publication avec les filtres paramétrables, vous pouvez par programmation créer, énumérer ou supprimer les partitions d'Abonné, en utilisant les objets RMO (Replication Management Objects). Pour plus d'informations sur la création de partitions d'Abonné, consultez [Créer un instantané d’une publication de fusion avec des filtres paramétrés](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Vous pouvez obtenir les informations suivantes sur les partitions existantes :  
   
 -   la valeur et la fonction de filtrage sur lesquelles la partition est basée ;  

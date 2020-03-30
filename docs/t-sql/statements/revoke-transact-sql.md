@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74909026"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "74909026"
 
   Supprime une autorisation accordée ou refusée antérieurement.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -159,7 +159,7 @@ L’utilisation de AS dans cette instruction n’implique pas la possibilité d�
   
  Les bénéficiaires de l'autorisation CONTROL SERVER, par exemple les membres du rôle serveur fixe sysadmin, peuvent révoquer n'importe quelle autorisation sur n'importe quel élément sécurisable du serveur. Les bénéficiaires de l'autorisation CONTROL sur une base de données, par exemple les membres du rôle de base de données fixe db_owner, peuvent révoquer n'importe quelle autorisation sur n'importe quel élément sécurisable de la base de données. Les bénéficiaires de l'autorisation CONTROL sur un schéma peuvent révoquer n'importe quelle autorisation sur n'importe quel objet du schéma.  
   
-##  <a name="securable"></a> Syntaxe spécifique aux éléments sécurisables  
+##  <a name="securable-specific-syntax"></a><a name="securable"></a> Syntaxe spécifique aux éléments sécurisables  
  Le tableau suivant répertorie les éléments sécurisables et les rubriques qui décrivent leur syntaxe.  
   
 |Élément sécurisable|Rubrique|  

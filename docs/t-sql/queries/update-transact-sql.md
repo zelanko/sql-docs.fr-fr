@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78176689"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
@@ -50,7 +50,7 @@ ms.locfileid: "78176689"
 
   Modifie les données existantes d'une table ou d'une vue dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir des exemples, consultez [Exemples](#UpdateExamples).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -329,7 +329,7 @@ GO
 > [!IMPORTANT]
 >  Les types de données **ntext**, **text** et **image** seront supprimés dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez plutôt les types de données [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)et [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
-### <a name="updating-lobs"></a> Mise à jour des données de valeurs élevées  
+### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> Mise à jour des données de valeurs élevées  
  Utilisez la clause **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** pour effectuer une mise à jour partielle ou complète des types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** . 
  
  Par exemple, une mise à jour partielle d’une colonne **varchar(max)** risque de supprimer ou modifier uniquement les 200 premiers octets de la colonne (200 caractères en cas d’utilisation de caractères ASCII), alors qu’une mise à jour complète supprime ou modifie toutes les données de cette colonne. Les mises à jour **.WRITE**, qui insèrent ou ajoutent de nouvelles données, sont journalisées de façon minimale si vous avez spécifié un mode de récupération des bases de données simple ou journalisé en bloc. La journalisation minimale n'est pas utilisée lors de la mise à jour de valeurs existantes. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -470,7 +470,7 @@ ID     Value
   
  Les autorisations UPDATE sont attribuées par défaut aux membres du rôle serveur fixe `sysadmin`, aux membres des rôles de base de données fixes `db_owner` et `db_datawriter` ainsi qu’au propriétaire de la table. Les membres des rôles `sysadmin`, `db_owner`, et `db_securityadmin` ainsi que le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
   
-##  <a name="UpdateExamples"></a> Exemples  
+##  <a name="examples"></a><a name="UpdateExamples"></a> Exemples  
   
 |Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
@@ -486,7 +486,7 @@ ID     Value
 |[Capture des résultats de l’instruction UPDATE](#CaptureResults)|Clause OUTPUT|  
 |[Utilisation de l’instruction UPDATE dans d’autres instructions](#Other)|Procédures stockées • TRY...CATCH|  
   
-###  <a name="BasicSyntax"></a> Syntaxe de base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de l'instruction UPDATE en utilisant la syntaxe minimale requise.  
   
 #### <a name="a-using-a-simple-update-statement"></a>R. Utilisation d'une instruction UPDATE simple  
@@ -510,7 +510,7 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a> Limitation des lignes mises à jour  
+###  <a name="limiting-the-rows-that-are-updated"></a><a name="LimitingValues"></a> Limitation des lignes mises à jour  
  Les exemples de cette section montrent les différentes méthodes que vous pouvez utiliser pour limiter le nombre de lignes affectées par l'instruction UPDATE.  
   
 #### <a name="c-using-the-where-clause"></a>C. Utilisation de la clause WHERE  
@@ -598,7 +598,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a> Définition des valeurs de colonne  
+###  <a name="setting-column-values"></a><a name="ColumnValues"></a> Définition des valeurs de colonne  
  Les exemples de cette section illustrent la mise à jour de colonnes à l'aide de valeurs calculées, de sous-requêtes et des valeurs DEFAULT.  
   
 #### <a name="g-specifying-a-computed-value"></a>G. Spécification d'une valeur calculée  
@@ -664,7 +664,7 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a> Spécification d’objets cibles autres que les tables standard  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Spécification d’objets cibles autres que les tables standard  
  Les exemples présentés dans cette section montrent comment mettre à jour des lignes en spécifiant une variable de table, un alias de table ou une vue.  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>K. Spécification d'une vue comme objet cible  
@@ -721,7 +721,7 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a> Mise à jour de données en fonction des données d’autres tables  
+###  <a name="updating-data-based-on-data-from-other-tables"></a><a name="OtherTables"></a> Mise à jour de données en fonction des données d’autres tables  
  Les exemples fournis dans cette section présentent des méthodes de mise à jour de lignes d'une table en fonction d'informations contenues dans une autre table.  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>N. Utilisation de l'instruction UPDATE avec des informations provenant d'une autre table  
@@ -760,7 +760,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Mise à jour de lignes dans une table distante  
+###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> Mise à jour de lignes dans une table distante  
  Les exemples présentés dans cette section montrent comment mettre à jour des lignes dans une table cible distante en utilisant un [serveur lié](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou une [fonction d’ensemble de lignes](../../t-sql/functions/rowset-functions-transact-sql.md) pour référencer la table distante.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Mise à jour de données dans une table distante en utilisant un serveur lié  
@@ -804,7 +804,7 @@ UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
-###  <a name="LOBValues"></a> Mise à jour de types de données Large Object (LOB)  
+###  <a name="updating-large-object-data-types"></a><a name="LOBValues"></a> Mise à jour de types de données Large Object (LOB)  
  Les exemples de cette section illustrent des méthodes de mise à jour de valeurs dans les colonnes définies avec les types de données LOB.  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. Utilisation de l'instruction UPDATE avec la clause .WRITE pour modifier les données dans une colonne nvarchar(max)  
@@ -907,7 +907,7 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a> Mise à jour de types définis par l’utilisateur  
+###  <a name="updating-user-defined-types"></a><a name="UDTs"></a> Mise à jour de types définis par l’utilisateur  
  Les exemples suivants modifient des valeurs dans les colonnes de type clr défini par l'utilisateur (UDT). Trois méthodes sont illustrées. Pour plus d’informations sur les colonnes définies par l’utilisateur, consultez [Types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 #### <a name="v-using-a-system-data-type"></a>V. Utilisation d'un type de données système  
@@ -937,7 +937,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> Remplacement du comportement par défaut de l’optimiseur de requête à l’aide d’indicateurs  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Remplacement du comportement par défaut de l’optimiseur de requête à l’aide d’indicateurs  
  Les exemples présentés dans cette section montrent comment utiliser des indicateurs de table et de requête pour substituer temporairement le comportement par défaut de l'optimiseur de requête lors du traitement de l'instruction UPDATE.  
   
 > [!CAUTION]  
@@ -975,7 +975,7 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a> Capture des résultats de l’instruction UPDATE  
+###  <a name="capturing-the-results-of-the-update-statement"></a><a name="CaptureResults"></a> Capture des résultats de l’instruction UPDATE  
  Les exemples présentés dans cette section montrent comment utiliser la [clause OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) pour retourner des informations de chaque ligne affectée par une instruction UPDATE, ou des expressions basées sur ces lignes. Ces résultats peuvent être retournés à l'application en cours de traitement afin d'être utilisés notamment avec des messages de confirmation, des opérations d'archivage et d'autres spécifications d'application similaires.  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. Utilisation de l'instruction UPDATE avec la clause OUTPUT  
@@ -1009,7 +1009,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a> Utilisation de l’instruction UPDATE dans d’autres instructions  
+###  <a name="using-update-in-other-statements"></a><a name="Other"></a> Utilisation de l’instruction UPDATE dans d’autres instructions  
  Les exemples de cette section montrent comment utiliser UPDATE dans d'autres instructions.  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. Utilisation de l'instruction UPDATE dans une procédure stockée  

@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68053570"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
@@ -31,7 +31,7 @@ ms.locfileid: "68053570"
 -   Pour rechercher des correspondances avec des mots et des expressions, utilisez **CONTAINS** et **CONTAINSTABLE**.
 -   Pour rechercher des correspondances avec la signification, mais pas avec le libellé exact, utilisez **FREETEXT** et **FREETEXTTABLE**.
 
-## <a name="examples_simple"></a> Exemples des différents prédicats et fonctions
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Exemples des différents prédicats et fonctions
 
 Les exemples suivants utilisent l’exemple de base de données AdventureWorks. Pour la version finale d’AdventureWorks, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). Pour exécuter les exemples de requêtes, vous devez également configurer la recherche en texte intégral. Pour plus d’informations, consultez [Bien démarrer avec la recherche en texte intégral](get-started-with-full-text-search.md). 
 
@@ -172,9 +172,9 @@ Les requêtes qui utilisent une de ces fonctions retournent également une valeu
 
 **Plus d’informations**. Pour plus d’informations sur la syntaxe et les arguments de ces fonctions, consultez [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) et [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).
 
-## <a name="examples_specific"></a> Types spécifiques de recherches
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> Types spécifiques de recherches
 
-###  <a name="Simple_Term"></a> Recherche d’un mot ou d’une expression spécifique (terme simple)  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> Recherche d’un mot ou d’une expression spécifique (terme simple)  
  Vous pouvez utiliser [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) pour rechercher un mot ou une expression spécifique dans une table. Par exemple, si vous voulez effectuer une recherche dans la table **ProductReview** de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] afin de trouver tous les commentaires de produits contenant l’expression « learning curve », vous pouvez utiliser le prédicat CONTAINS comme suit :  
   
 ```sql
@@ -197,7 +197,7 @@ Par exemple, « croissant » constitue un mot et « café au lait » une express
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) et [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) recherchent une correspondance exacte pour l'expression. [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) et [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) décomposent l'expression en mots distincts.
 
-###  <a name="Prefix_Term"></a> Recherche d’un mot avec un préfixe (terme de préfixe)  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a> Recherche d’un mot avec un préfixe (terme de préfixe)  
  Vous pouvez utiliser [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions ayant un préfixe que vous spécifiez. Toutes les entrées de la colonne qui contiennent le texte commençant par le préfixe spécifié sont retournées. Par exemple, rechercher toutes les lignes qui contiennent le préfixe `top`-, comme dans `top``ple`, `top``ping`et `top`. La requête se présente comme dans l’exemple suivant :  
   
 ```sql  
@@ -224,7 +224,7 @@ Un *terme de préfixe* fait référence à une chaîne apposée au devant d’un
 
 Les recherches par préfixe sont prises en charge par [CONTAINS](../../t-sql/queries/contains-transact-sql.md) et par [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
   
-###  <a name="Inflectional_Generation_Term"></a> Recherche de formes fléchies d’un mot spécifique (forme canonique)  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> Recherche de formes fléchies d’un mot spécifique (forme canonique)  
 Vous pouvez utiliser [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) pour rechercher tous les différents temps et conjugaisons d’un verbe, le pluriel et le singulier d’un nom (recherche des formes fléchies) ou les formes synonymes d’un mot spécifique (recherche dans le dictionnaire des synonymes).  
   
 L’exemple suivant recherche toutes les formes de « foot » (« foot », « feet », etc.) dans la colonne `Comments` de la table `ProductReview` de la base de données `AdventureWorks` : 
@@ -267,7 +267,7 @@ Par exemple, vous voulez rechercher les lignes dans lesquelles le mot « ice » 
 
 Pour plus d’informations sur les recherches de proximité, consultez [Recherche de mots dans le voisinage d’autres mots avec NEAR](search-for-words-close-to-another-word-with-near.md).
 
-###  <a name="Weighted_Term"></a> Recherche de mots et d’expressions à l’aide de valeurs pondérées (termes pondérés)  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a> Recherche de mots et d’expressions à l’aide de valeurs pondérées (termes pondérés)  
 Vous pouvez utiliser [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions et spécifier une valeur pondérée. La pondération d'un terme, qui est une mesure numérique comprise entre 0.0 et 1.0, indique l'importance de chaque mot et expression au sein d'un ensemble de mots et d'expressions. L'échelle de pondération oscille entre un minimum de 0.0 et un maximum de 1.0.  
   
 L’exemple suivant montre une requête qui recherche toutes les adresses de client en utilisant des pondérations, où un texte qui commence par la chaîne « Bay » comporte aussi « Street » ou « View ». Les résultats accordent un rang plus élevé aux lignes qui contiennent le plus de mots, parmi ceux spécifiés.  
@@ -297,7 +297,7 @@ Par exemple, dans une requête de recherche de plusieurs termes, vous pouvez aff
 
 Les recherches de termes pondérés sont prises en charge par [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
 
-##  <a name="Using_Boolean_Operators"></a> Utiliser AND, OR et NOT (opérateurs booléens)
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> Utiliser AND, OR et NOT (opérateurs booléens)
  
 Le prédicat CONTAINS et la fonction CONTAINSTABLE utilisent les mêmes conditions de recherche. Ils permettent tous les deux de combiner plusieurs termes à rechercher via les opérateurs booléens (AND, OR et NOT), pour effectuer des opérations logiques. Par exemple, vous pouvez utiliser AND pour rechercher des lignes qui contiennent à la fois « latte » et « New York-style bagel ». Vous pouvez utiliser AND NOT pour rechercher les lignes qui contiennent « bagel » mais qui ne contiennent pas « cream cheese ».  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> Casse, mots vides, langue et dictionnaire des synonymes
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> Casse, mots vides, langue et dictionnaire des synonymes
 
  Quand vous écrivez des requêtes de texte intégral, vous pouvez aussi spécifier les options suivantes :
   
@@ -331,7 +331,7 @@ GO
   
 -   **Dictionnaire des synonymes**. Les requêtes FREETEXT et FREETEXTTABLE utilisent le dictionnaire des synonymes par défaut. CONTAINS et CONTAINSTABLE prennent en charge un argument THESAURUS facultatif. Pour plus d’informations, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
-##  <a name="tokens"></a> Vérifier les résultats de la création de jetons
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a> Vérifier les résultats de la création de jetons
 
 Après avoir appliqué une combinaison d’analyseur lexical, de dictionnaire des synonymes et de liste de mots vides dans une requête, vous pouvez voir comment la recherche en texte intégral analyse les résultats avec la vue de gestion dynamique **sys.dm_fts_parser**. Pour plus d’informations, consultez [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   

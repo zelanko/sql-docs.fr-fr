@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000710"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Index XML sélectifs (SXI)
@@ -33,7 +33,7 @@ ms.locfileid: "68000710"
   
  La fonctionnalité d'index XML sélectif prend également en charge les index XML secondaires sélectifs sur les nœuds qui ont été indexés par un index XML sélectif. Ces index sélectifs secondaires sont efficaces et améliorent encore les performances des requêtes.  
   
-##  <a name="benefits"></a> Avantages des index XML sélectifs  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> Avantages des index XML sélectifs  
  Les index XML sélectif présentent les avantages suivants :  
   
 1.  Les performances des requêtes sont considérablement améliorées sur le type de données XML pour les charges de requête classique.  
@@ -45,7 +45,7 @@ ms.locfileid: "68000710"
 4.  Aucun besoin de mettre à jour des applications pour tirer parti des index XML sélectifs.  
   
   
-##  <a name="compare"></a> Index XML sélectifs et index XML primaires sélectifs  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> Index XML sélectifs et index XML primaires sélectifs  
   
 > [!IMPORTANT]  
 >  Créez un index XML sélectif au lieu d'un index XML ordinaire dans la plupart des cas pour obtenir de meilleures performances et un stockage plus efficace.  
@@ -57,7 +57,7 @@ ms.locfileid: "68000710"
 -   Vous devez prendre en charge des requêtes d'éléments inconnus ou des éléments d'un emplacement inconnu dans la structure du document.  
   
   
-##  <a name="example"></a> Exemple simple d'un index XML sélectif  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> Exemple simple d'un index XML sélectif  
  Examinons le fragment de code XML suivant sous la forme d'un document XML dans une table d'environ 500 000 lignes :  
   
 ```xml  
@@ -101,7 +101,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>Fonctionnalités prises en charge, configuration requise et limitations  
   
-###  <a name="features"></a> Fonctionnalités XML prises en charge  
+###  <a name="supported-xml-features"></a><a name="features"></a> Fonctionnalités XML prises en charge  
  Les index XML sélectifs prennent en charge la syntaxe XQuery prise en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les méthodes exist(), value() et nodes().  
   
 -   Pour les méthodes exist(), value() et nodes(), les index XML sélectifs contiennent suffisamment d'informations pour convertir l'expression entière.  
@@ -113,7 +113,7 @@ FOR
 -   Pour la méthode modify(), les index XML sélectifs ne sont pas utilisés pour mettre à jour les documents XML.  
   
   
-###  <a name="unsupported"></a> Fonctionnalités XML non prises en charge  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> Fonctionnalités XML non prises en charge  
  Les index XML sélectifs ne prennent pas en charge les fonctionnalités suivantes qui sont prises en charge dans l'implémentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du XML :  
   
 -   Indexation des nœuds avec des types complexes XS : types d'unions, types de séquences et types de listes.  
@@ -129,7 +129,7 @@ FOR
 -   Spécification et récupération de l'identificateur d'un nœud en utilisant la fonction id().  
   
   
-###  <a name="prereq"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="prereq"></a> Conditions préalables  
  Les conditions suivantes doivent être réunies avant de pouvoir créer un index XML sélectif sur une colonne XML dans une table utilisateur :  
   
 -   Un index cluster doit exister dans la clé primaire de la table utilisateur.  
@@ -139,7 +139,7 @@ FOR
 -   La clé de clustering de la table utilisateur est limitée à 15 colonnes si elle est utilisée avec des index XML sélectifs.  
   
   
-###  <a name="limits"></a> Limitations  
+###  <a name="limitations"></a><a name="limits"></a> Limitations  
  **Limitations et exigences générales**  
   
 -   Un index XML sélectif ne peut être créé que sur une colonne XML unique.  
@@ -191,7 +191,7 @@ FOR
 -   Les index XML sélectifs et les index XML secondaires sélectifs ne sont pas pris en charge par l'Assistant Paramétrage de base de données.  
   
   
-##  <a name="reltasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tâches associées  
   
 |||  
 |-|-|  

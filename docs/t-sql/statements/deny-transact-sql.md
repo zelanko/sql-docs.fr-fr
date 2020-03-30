@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67984400"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67984400"
   Refuse une autorisation à un principal. Empêche ce principal d'hériter de l'autorisation par ses appartenances à des groupes ou à des rôles. DENY est prioritaire par rapport à toutes les autres autorisations, sauf qu’elle ne s’applique pas aux propriétaires d’objets ou aux membres du rôle serveur fixe sysadmin.
   **Note de sécurité** Les membres du rôle serveur fixe sysadmin et les propriétaires d’objets ne peuvent pas se voir refuser des autorisations.
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

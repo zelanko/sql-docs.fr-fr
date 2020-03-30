@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Publier un package SSIS en tant que vue SQL | Microsoft Docs'
+title: 'Procédure pas à pas : publier un package SSIS en tant que vue SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297739"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216894"
 ---
-# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : Publication d’un package SSIS sous la forme d’une vue SQL
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "71297739"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Étape 1 : Créer et déployer le projet SSIS dans le catalogue SSIS  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Étape 1 : créer et déployer le projet SSIS dans le catalogue SSIS  
  Dans cette étape, vous créez un package SSIS qui extrait les données d’une source de données SSIS prise en charge (dans cet exemple, nous utilisons une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) et qui produit en sortie des données en utilisant un composant Data Streaming Destination. Vous générez et déployez ensuite le projet SSIS dans le catalogue SSIS.  
   
 1.  Lancez **SQL Server Data Tools**. Dans le menu **Démarrer** , pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server**et cliquez sur **SQL Server Data Tools**.  
@@ -85,7 +85,7 @@ ms.locfileid: "71297739"
   
     2.  Suivez les instructions de l’Assistant pour déployer le projet dans le catalogue SSIS sur le serveur de base de données local. L’exemple suivant utilise **Power BI** comme nom de dossier et **SSISPackagePublishing** comme nom de projet dans le catalogue SSIS.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Étape 2 : Utiliser l’Assistant Publication de flux de données SSIS pour publier le package SSIS en tant que vue SQL  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Étape 2 : utiliser l’Assistant Publication de flux de données SSIS pour publier le package SSIS en tant que vue SQL  
  Au cours de cette étape, vous utilisez l’Assistant Publication de flux de données SQL Server Integration Services (SSIS) pour publier le package SSIS en tant que vue dans une base de données SQL Server. Les données de sortie du package peuvent être consommées par l’interrogation de cette vue.  
   
  L’Assistant Publication de flux de données SSIS crée un serveur lié à l’aide du fournisseur OLE DB pour SSIS (SSISOLEDB), puis crée une vue SQL qui se compose d’une requête sur le serveur lié. Cette requête inclut le nom du dossier, le nom du projet et le nom du package dans le catalogue SSIS.  
@@ -159,7 +159,7 @@ ms.locfileid: "71297739"
     > [!NOTE]  
     >  Les types de données suivants ne sont pas pris en charge : text, ntext, image, nvarchar(max), varchar(max) et varbinary(max).  
   
-## <a name="step-3-test-the-sql-view"></a>Étape 3 : Tester la vue SQL  
+## <a name="step-3-test-the-sql-view"></a>Étape 3 : tester la vue SQL  
  Au cours de cette étape, vous allez exécuter la vue SQL créée par l’Assistant Publication de flux de données SSIS.  
   
 1.  Lancez SQL Server Management Studio.  
@@ -170,7 +170,7 @@ ms.locfileid: "71297739"
   
 4.  Vérifiez que vous voyez bien les résultats du package SSIS.  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>Étape 4 : Vérifier l’exécution du Package SSIS  
+## <a name="step-4-verify-the-ssis-package-execution"></a>Étape 4 : vérifier l’exécution du Package SSIS  
  Au cours de cette étape, vous allez vérifier que le package SSIS s’est bien exécuté.  
   
 1.  Dans SQL Server Management Studio, développez **Catalogues Integration Services**, développez **SSISDB**, développez le **dossier** où se trouve votre projet SSIS, développez **Projets**, développez votre nœud de projet, puis développez **Packages**.  
@@ -266,8 +266,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   Crochets gauche et droit ([ et ]) - Ces caractères sont utilisés pour indiquer les espaces de début/de fin. Par exemple, « [ des espaces ] » représente la chaîne « des espaces » avec un espace de début et un espace de fin. Si ces caractères sont eux-mêmes utilisés dans la clause de requête, ils doivent faire l’objet d’une séquence d’échappement. Par exemple, \\[ et \\].  
   
 -   Barre oblique (\\) - Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
-  
- Barre oblique (\\) - Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   

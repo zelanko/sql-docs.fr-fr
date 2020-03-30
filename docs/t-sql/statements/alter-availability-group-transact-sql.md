@@ -23,10 +23,10 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874518"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "70874518"
 
   Modifie un groupe de disponibilité AlwaysOn existant dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La plupart des arguments ALTER AVAILABILITY GROUP ne sont pris en charge que par le réplica principal actuel. Toutefois, les arguments JOIN, FAILOVER et FORCE_FAILOVER_ALLOW_DATA_LOSS, ne sont pris en charge que sur les réplicas secondaires.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -197,7 +197,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|Condition d'échec|  
 |-----------|-----------------------|  
-|1|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fermé.<br /><br /> Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n'est reçu de l'instance de serveur. Pour plus d’informations, consultez [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fermé.<br /><br /> Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n'est reçu de l'instance de serveur. Pour plus d’informations, consultez [Fonctionnement : délai d’expiration de bail Always On SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne se connecte pas au cluster et le seuil du groupe de disponibilité HEALTH_CHECK_TIMEOUT spécifié par l'utilisateur est dépassé.<br /><br /> Le réplica de disponibilité est dans un état d'échec.|  
 |3|Spécifie qu'un basculement automatique doit être initialisé sur les erreurs internes critiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles que les verrouillages spinlock orphelins, les violations graves d'accès en écriture, ou en cas de vidages trop importants.<br /><br /> Il s'agit du comportement par défaut.|  
 |4|Spécifie qu'un basculement automatique doit être initialisé sur les erreurs internes modérées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles qu'une condition persistante de mémoire insuffisante dans le pool de ressources interne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -343,7 +343,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
   
 -   0 indique que ce réplica de disponibilité ne sera jamais choisi pour effectuer des sauvegardes. Cela est utile, par exemple, pour un réplica de disponibilité distant sur lequel vous ne souhaitez jamais basculer de sauvegardes.  
   
- Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Spécifie des paramètres spécifiques au rôle qui entreront en vigueur si ce réplica de disponibilité a actuellement le rôle secondaire (autrement dit, chaque fois qu'il s'agit d'un réplica secondaire). Entre parenthèses, spécifiez le l'une ou l'autre, ou les deux options de rôle secondaire. Si vous spécifiez les deux, utilisez une liste séparée par des virgules.  
@@ -362,7 +362,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  ALL  
  Toutes les connexions sont autorisées aux bases de données dans le réplica secondaire pour un accès en lecture seule.  
   
- Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires accessibles en lecture &#40;groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie l'URL à utiliser pour le routage des demandes de connexion de tentative de lecture à ce réplica de disponibilité. Il s'agit de l'URL sur laquelle le moteur de base de données SQL Server écoute. En général, l'instance par défaut du moteur de base de données SQL Server écoute le port TCP 1433.  
@@ -612,7 +612,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
   
 ## <a name="examples"></a>Exemples  
   
-###  <a name="Join_Secondary_Replica"></a> A. Jointure d'un réplica secondaire à un groupe de disponibilité  
+###  <a name="a-joining-a-secondary-replica-to-an-availability-group"></a><a name="Join_Secondary_Replica"></a> A. Jointure d'un réplica secondaire à un groupe de disponibilité  
  L’exemple suivant joint un réplica secondaire auquel vous êtes connecté au groupe de disponibilité `AccountsAG`.  
   
 ```SQL  
@@ -620,7 +620,7 @@ ALTER AVAILABILITY GROUP AccountsAG JOIN;
 GO  
 ```  
   
-###  <a name="Force_Failover"></a> B. Forcer le basculement d'un groupe de disponibilité  
+###  <a name="b-forcing-failover-of-an-availability-group"></a><a name="Force_Failover"></a> B. Forcer le basculement d'un groupe de disponibilité  
  L'exemple suivant force le basculement du groupe de disponibilité `AccountsAG` sur le réplica secondaire auquel vous êtes connecté.  
   
 ```SQL

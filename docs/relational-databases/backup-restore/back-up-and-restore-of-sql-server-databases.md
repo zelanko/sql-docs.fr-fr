@@ -23,10 +23,10 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77256742"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
@@ -111,7 +111,7 @@ unité de**sauvegarde**
 > Veillez à placer vos sauvegardes de bases de données sur un appareil ou à un emplacement physique distinct des fichiers de base de données. Quand votre lecteur physique qui stocke les bases de données ne fonctionne pas ou plante, la récupération dépend de la possibilité d’accéder à un lecteur distinct ou à un appareil distant qui stocke les sauvegardes afin de procéder à une restauration. Gardez à l’esprit que vous pouvez créer plusieurs partitions ou volumes logiques à partir d’un même lecteur de disque physique. Étudiez attentivement la disposition des partitions de disque et des volumes logiques avant de choisir un emplacement de stockage pour les sauvegardes.
 
 ### <a name="choose-appropriate-recovery-model"></a>Choisir le mode de récupération approprié
- Les opérations de sauvegarde et de restauration interviennent dans le cadre d’un [mode de récupération](../backup-restore/recovery-models-sql-server.md). Un mode de récupération désigne une propriété de base de données qui contrôle le mode de gestion du journal des transactions. Ainsi, le mode de récupération d’une base de données détermine les types de sauvegardes et les scénarios de restauration pris en charge pour la base de données ainsi qu’une estimation de la taille des sauvegardes des journaux des transactions. En règle générale, une base de données utilise le mode de récupération complète ou le mode de récupération simple. Le mode de récupération complète peut être augmenté en basculant vers le mode de récupération utilisant les journaux de transactions avant d’effectuer des opérations en bloc. Pour obtenir une présentation de ces modes de récupération et leur impact sur la gestion du journal des transactions, consultez [Journal des transactions (SQL Server)](../logs/the-transaction-log-sql-server.md)  
+ Les opérations de sauvegarde et de restauration s'exécutent dans le contexte d'un [mode de récupération](../backup-restore/recovery-models-sql-server.md). Un mode de récupération désigne une propriété de base de données qui contrôle le mode de gestion du journal des transactions. Ainsi, le mode de récupération d’une base de données détermine les types de sauvegardes et les scénarios de restauration pris en charge pour la base de données ainsi qu’une estimation de la taille des sauvegardes des journaux des transactions. En règle générale, une base de données utilise le mode de récupération complète ou le mode de récupération simple. Le mode de récupération complète peut être augmenté en basculant vers le mode de récupération utilisant les journaux de transactions avant d’effectuer des opérations en bloc. Pour obtenir une présentation de ces modes de récupération et leur impact sur la gestion du journal des transactions, consultez [Journal des transactions (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   
  Le meilleur choix du mode de récupération de la base de données dépend de vos exigences d'entreprise. Pour éviter la gestion du journal des transactions et simplifier la sauvegarde et la restauration, optez pour le mode de récupération simple. Pour minimiser les risques de perte de travail, mais avec un coût en termes de charges d'administration, choisissez le mode de récupération complète. Pour réduire l’impact sur la taille du journal pendant les opérations journalisées en bloc tout en autorisant la récupération de ces opérations, utilisez le mode de récupération utilisant les journaux de transactions. Pour obtenir des informations sur l’impact des modes de récupération sur la sauvegarde et la restauration, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   

@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287836"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "76287836"
   
 
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -109,7 +109,7 @@ En dehors d'un module, cette instruction n'a pas d'effet.
   
 Vous pouvez créer une pile de contextes d'exécution en appelant l'instruction EXECUTE AS plusieurs fois sur plusieurs principaux. Lorsqu'elle est appelée, l'instruction REVERT bascule le contexte vers la connexion ou l'utilisateur du niveau supérieur dans la pile de contexte. Pour avoir une démonstration de ce comportement, consultez [Exemple A](#_exampleA).  
   
-##  <a name="_user"></a> Spécification d’un nom d’utilisateur ou d’un ID de connexion  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Spécification d’un nom d’utilisateur ou d’un ID de connexion  
  Le nom d’utilisateur ou de connexion spécifié dans EXECUTE AS \<context_specification> doit exister comme principal respectivement dans **sys.database_principals** ou **sys.server_principals**. Sinon, l’instruction EXECUTE AS échoue. De plus, les autorisations IMPERSONATE doivent être accordées sur le principal. Sauf si l’appelant est le propriétaire de la base de données, ou un membre du rôle serveur fixe **sysadmin**, le principal doit exister même quand l’utilisateur a accès à la base de données ou l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fait de son appartenance à un groupe Windows. Par exemple, supposons les conditions suivantes : 
   
 -   Le groupe **CompanyDomain\SQLUsers** a accès à la base de données **Sales**.  
@@ -141,7 +141,7 @@ Si l’utilisateur est orphelin (la connexion associée n’existant plus) et qu
   
 ## <a name="examples"></a>Exemples  
   
-###  <a name="_exampleA"></a> A. Utilisation de EXECUTE AS et REVERT pour changer de contexte  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Utilisation de EXECUTE AS et REVERT pour changer de contexte  
  L'exemple suivant crée une pile d'exécutions de contexte à l'aide de plusieurs principaux. L'instruction `REVERT` est ensuite utilisée pour réinitialiser le contexte d'exécution à l'appelant précédent. L'instruction `REVERT` est exécutée plusieurs fois en remontant la pile jusqu'à ce que le contexte d'exécution soit défini pour l'appelant d'origine.  
   
 ```  

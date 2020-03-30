@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288151"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
@@ -53,9 +53,9 @@ ms.locfileid: "76288151"
   
      [Replication Management Objects](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Les jetons de suivi peuvent également être utiles lors de la suspension d'un système, qui consiste à arrêter toute l'activité pour vérifier que tous les nœuds ont reçu les changements en cours. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
  Pour utiliser les jetons de suivi, vous avez besoin de certaines versions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -80,7 +80,7 @@ ms.locfileid: "76288151"
   
 -   Après un basculement vers un réplica secondaire, le Moniteur de réplication ne peut pas ajuster le nom de l'instance de publication de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et continue à afficher les informations de réplication sous le nom de l'instance principale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]d'origine. Après le basculement, un jeton de suivi ne peut pas être écrit à l'aide du Moniteur de réplication, toutefois un jeton de suivi écrit sur le nouveau serveur de publication à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)]est visible dans le Moniteur de réplication.  
   
-##  <a name="SSMSProcedure"></a> Utilisation du Moniteur de réplication SQL Server  
+##  <a name="using-sql-server-replication-monitor"></a><a name="SSMSProcedure"></a> Utilisation du Moniteur de réplication SQL Server  
  Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Pour insérer un jeton de suivi et afficher des informations sur le jeton  
@@ -106,7 +106,7 @@ ms.locfileid: "76288151"
     > [!NOTE]  
     >  Les informations de jeton de suivi sont conservées pour la même durée que toute autre donnée d'historique, elles-mêmes étant régies par la période de rétention des historiques définie dans la base de données de distribution. Pour plus d’informations sur la modification des propriétés de base de données de distribution, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Pour publier un jeton de suivi sur une publication transactionnelle  
   
@@ -130,12 +130,12 @@ ms.locfileid: "76288151"
   
 2.  Dans la base de données du serveur de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), en spécifiant **\@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour `@tracer_id`.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple publie un enregistrement de jeton de suivi et utilise l'ID retourné du jeton de suivi publié pour consulter les informations de latence.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../relational-databases/replication/codesnippet/tsql/measure-latency-and-vali_1.sql)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Pour publier un jeton de suivi sur une publication transactionnelle  
   

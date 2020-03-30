@@ -22,10 +22,10 @@ ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4b354807fedda0f273d5f3822591f7f84912b028
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127409"
 ---
 # <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68127409"
 
   Renvoie le nombre de lignes affectées par la dernière instruction exécutée. Cette fonction s’apparente à [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md), si ce n’est que le type de retour de ROWCOUNT_BIG est **bigint**.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

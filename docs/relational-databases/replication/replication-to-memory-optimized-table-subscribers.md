@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 2b0f576365ef8e6221196eef4a9fca92f54f6318
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287346"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
@@ -84,7 +84,7 @@ ms.locfileid: "76287346"
   
 -   Toutes les fonctionnalités Transact-SQL ne sont pas prises en charge avec les tables optimisées en mémoire. Pour plus d’informations, consultez [Constructions Transact-SQL non prises en charge par OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="Schema"></a> Modification d'un fichier de schéma  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a> Modification d'un fichier de schéma  
   
 -   Si vous utilisez l'option de table mémoire optimisée `DURABILITY = SCHEMA_AND_DATA` , la table doit avoir un index de clé primaire non cluster.  
   

@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73032998"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
@@ -27,7 +27,7 @@ Cette leçon contient les tâches suivantes :
 - [Connexion à Management Studio](#connect)  
 - [Autorisation de connexions supplémentaires](#additional) 
 
-## <a name="tools">Outils de mise en route</a> 
+## <a name=""></a><a name="tools">Outils de mise en route</a> 
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d’outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l’outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer**. Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu’éléments inhérents aux composants clients lors de l’installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
 
 ### <a name="basic-tools"></a>Outils de base
@@ -46,7 +46,7 @@ Les exemples de bases de données et les exemples ne sont pas fournis avec [!INC
 - Dans les versions actuelles de Windows, dans la page **Démarrer** , tapez **Gestionnaire de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server *version* Gestionnaire de configuration**.   
 - Si vous utilisez une version ancienne de Windows, dans le menu **Démarrer** , pointez successivement sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
 
-## <a name="connect"></a>Connexion à Management Studio  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>Connexion à Management Studio  
 - La connexion au [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir d’outils s’exécutant sur le même ordinateur est un jeu d’enfant si vous connaissez le nom de l’instance et si vous vous connectez en tant que membre du groupe Administrateurs local sur l’ordinateur. Vous devez effectuer les procédures suivantes sur le même ordinateur qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ Au moins un compte d’administrateur a été sélectionné pendant l’installa
 > [!NOTE]
 > Ce didacticiel part du principe que vous ne connaissez pas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et que vous n’avez pas de problème de connexion particulier. Ainsi, il peut convenir au plus grand nombre et garde toute sa simplicité. Pour connaître les étapes de dépannage détaillées, consultez [Résoudre les problèmes de connexion au moteur de base de données SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 
-## <a name="additional"></a>Autorisation de connexions supplémentaires  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>Autorisation de connexions supplémentaires  
 Une fois que vous êtes connecté à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'administrateur, l'une de vos premières tâches consiste à autoriser d'autres utilisateurs à se connecter. Pour cela, vous pouvez créer une connexion et l'autoriser à accéder à une base de données en tant qu'utilisateur. Les connexions peuvent désigner des connexions d'authentification Windows qui exploitent les informations d'identification Windows, ou bien des connexions d'authentification SQL Server qui stockent les données d'authentification dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et qui n'ont aucun lien avec vos informations d'identification Windows. Utilisez l'authentification Windows chaque fois que cela est possible.
 
 > [!TIP]

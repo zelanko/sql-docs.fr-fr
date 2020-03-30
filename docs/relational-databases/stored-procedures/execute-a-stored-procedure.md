@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 55acdb31113dde48aeda980e3823f194f66d15c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934049"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243419"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,9 +49,9 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Le classement de la base de données d'appel est utilisé pour mettre en correspondance les noms des procédures système. Par conséquent, utilisez systématiquement la casse exacte des noms des procédures système dans vos appels de procédure. Par exemple, le code suivant ne fonctionnera pas s'il est exécuté dans le contexte d'une base de données dotée d'un classement qui respecte la casse :  
   
@@ -63,7 +63,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
   
 -   Si une procédure définie par l'utilisateur a le même nom qu'une procédure système, elle peut ne jamais s'exécuter.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Exécution de procédures stockées système  
   
@@ -121,13 +121,13 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
   
     2.  supprimer l'exécution automatique d'une procédure au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour plus d’informations, consultez [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) et [Clause EXECUTE AS &#40;Transact-SQL& #41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour plus d’informations, consultez la section « Autorisations » dans [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Pour exécuter une procédure stockée  
   
@@ -156,7 +156,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
   
 5.  Pour exécuter la procédure stockée, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Pour exécuter une procédure stockée  
   
@@ -185,7 +185,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';  
 ```  
   
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier les paramètres](../../relational-databases/stored-procedures/specify-parameters.md)   

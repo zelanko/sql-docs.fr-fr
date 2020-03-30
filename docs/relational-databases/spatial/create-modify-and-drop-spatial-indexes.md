@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048710"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
@@ -33,9 +33,9 @@ ms.locfileid: "68048710"
 > [!NOTE]  
 >  Pour plus d’informations sur la relation entre les index spatiaux et les partitions et groupes de fichiers, consultez la section « Remarques » dans [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
-##  <a name="creating"></a> Création, modification et suppression d'index spatiaux  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Création, modification et suppression d'index spatiaux  
   
-###  <a name="create"></a> Pour créer un index spatial  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> Pour créer un index spatial  
  **Pour créer un index spatial à l'aide de Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68048710"
 5.  Sélectionnez le nouvel index dans la liste **Index spatial sélectionné** et, dans la grille située à droite, définissez les propriétés de l'index spatial. Pour plus d’informations sur les propriétés, consultez [Boîte de dialogue Index spatiaux &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
   
-###  <a name="alter"></a> Pour modifier un index spatial  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> Pour modifier un index spatial  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68048710"
 -   [Déplacer un index existant dans un autre groupe de fichiers](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> Pour supprimer un index spatial  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> Pour supprimer un index spatial  
  **Pour supprimer un index spatial à l'aide de Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68048710"
 4.  Cliquez sur **Supprimer**.  
   
   
-##  <a name="restrictions"></a> Restrictions sur les index spatiaux  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Restrictions sur les index spatiaux  
  Un index spatial peut être créé uniquement sur une colonne de type **geometry** ou **geography**.  
   
 ### <a name="table-and-view-restrictions"></a>Restrictions sur les tables et les vues  

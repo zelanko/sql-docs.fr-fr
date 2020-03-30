@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325456"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installer SQL Server sur Server Core
@@ -36,7 +36,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
 |Windows PowerShell|Inclus dans l’installation Server Core.|  
 |Java Runtime |Pour utiliser PolyBase, vous devez installer le Java Runtime approprié. Pour plus d’informations, consultez [Installation de PolyBase](../../relational-databases/polybase/polybase-installation.md).|
   
-##  <a name="BK_SupportedFeatures"></a> Fonctionnalités prises en charge  
+##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> Fonctionnalités prises en charge  
  Utilisez le tableau suivant pour rechercher les fonctionnalités prises en charge dans [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] sur une installation Server Core.  
   
 |Fonctionnalité|Prise en charge|Informations supplémentaires|  
@@ -258,10 +258,10 @@ L’option d’installation Server Core offre l’environnement minimal requis p
   
          Si le fichier DefaultSetup.ini n'existe pas, vous pouvez le créer et le copier dans les dossiers \x86 et \x64 au niveau de la racine du média source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Configurer l’accès à distance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core  
+## <a name="configure-remote-access-of-ssnoversion-on-server-core"></a>Configurer l’accès à distance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core  
  Effectuez les actions décrites ci-dessous pour configurer l’accès à distance d’une instance de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] qui s’exécute sur Server Core.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer les connexions distantes sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>Activer les connexions distantes sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécutez les instructions suivantes sur l'instance de Server Core :  
 
@@ -272,7 +272,7 @@ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécut
    GO
    ```  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>Activer et démarrer le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
+### <a name="enable-and-start-the-ssnoversion-browser-service"></a>Activer et démarrer le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  Par défaut, le service Browser est désactivé.  Si elle est désactivée sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur Server Core, exécutez la commande suivante à partir de l'invite de commandes pour l'activer :  
   
  `sc config SQLBROWSER start= auto`  
@@ -284,7 +284,7 @@ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécut
 ### <a name="create-exceptions-in-windows-firewall"></a>Créer des exceptions dans le pare-feu Windows  
  Pour créer des exceptions pour l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le Pare-feu Windows, suivez les étapes spécifiées dans [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer TCP/IP sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>Activer TCP/IP sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Le protocole TCP/IP peut être activé via Windows PowerShell pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core. Procédez comme suit :  
   
 1.  Sur le serveur, lancez le Gestionnaire des tâches.  

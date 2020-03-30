@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287623"
 ---
 # <a name="manage-identity-columns"></a>Gérer des colonnes d'identité
@@ -40,15 +40,15 @@ ms.locfileid: "76287623"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Lors de la publication d'une table dans plusieurs publications, vous devez spécifier les mêmes options de gestion des plages d'identité pour les différentes publications. Pour plus d’informations, consultez « Publication de tables dans plusieurs publications » dans la rubrique [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 -   Pour créer un numéro à incrémentation automatique qui peut être utilisé dans plusieurs tables ou être appelé par des applications sans faire référence à une table, consultez [Numéros de séquence](../../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Spécifiez une option de gestion des colonnes d’identité sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** de l’Assistant Nouvelle publication. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md). Dans l'Assistant Nouvelle publication :  
   
 -   Si vous sélectionnez **Publication de fusion** ou **Publication transactionnelle avec abonnements pouvant être mis à jour** dans la page **Type de publication** , sélectionnez une gestion des plages d'identité automatique ou manuelle (l'option par défaut, automatique, est recommandée). Après la publication de la table, la propriété ne peut plus être modifiée mais d'autres propriétés liées peuvent l'être.  
@@ -92,7 +92,7 @@ ms.locfileid: "76287623"
   
 5.  Dans la boîte de dialogue **Propriétés de la publication -** Publication> **, cliquez sur \<OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez utiliser des procédures stockées de réplication pour spécifier les options de gestion des plages d'identité lors de la création d'un article.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Pour activer la gestion automatique des plages d'identité lors de la définition d'articles pour une publication transactionnelle  

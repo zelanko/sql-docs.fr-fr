@@ -23,10 +23,10 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0b70fdfc02e876310841bde3646aab9620c56951
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082504"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE Statements - REWINDONLY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68082504"
 
   Rembobine et ferme les périphériques à bandes laissés ouverts par l'instruction BACKUP ou RESTORE exécutée avec l'option NOREWIND. Cette commande n'est prise en charge que dans le cas de périphériques à bandes.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

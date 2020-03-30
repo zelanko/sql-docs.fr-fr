@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251578"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considérations relatives à l'installation de SQL Server à l'aide de SysPrep
@@ -33,7 +33,7 @@ ms.locfileid: "75251578"
   
 Pour plus d’informations sur la façon d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de SysPrep, consultez [Installer SQL Server à l’aide de SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md).  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Utilisations courantes pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>Utilisations courantes pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
 Vous pouvez utiliser la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep de chacune des manières suivantes :  
   
 - À l'aide de l'étape Préparer l'image, vous pouvez préparer une ou plusieurs instances non configurées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le même ordinateur. Vous pouvez configurer ces instances préparées à l'aide de l'étape de finalisation d'image sur le même ordinateur.  
@@ -59,7 +59,7 @@ Vous pouvez utiliser la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ss
   
     - Vous ne pouvez pas spécifier d'ID de produit pour une instance préparée d'une édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>Installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge  
+## <a name="supported-ssnoversion-installations"></a>Installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge  
 SysPrep dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge toutes les fonctionnalités, outils y compris, de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Vous pouvez préparer plusieurs instances pour des installations côte à côte de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou versions antérieures. Les fonctionnalités de ces instances doivent prendre en charge SysPrep.  
@@ -74,10 +74,10 @@ Vous pouvez effectuer une mise à niveau d'édition lors de la configuration d'u
   
 Depuis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep prend en charge les installations de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la ligne de commande.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
 La réparation d'une instance préparée n'est pas prise en charge. Si le programme d'installation échoue pendant l'étape Préparer l'image ou Finaliser l'image, vous devez le réexécuter.  
   
-##  <a name="BKMK_PrepareImage"></a> Préparer l'image  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> Préparer l'image  
 L'étape Préparer l'image installe le produit et les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais ne configure pas l'installation.  
   
 Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à installer et l'emplacement d'installation pour les fichiers d'installation du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être spécifiés pendant cette étape. Vous pouvez préparer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soit par le biais de **Préparation de l’image d’une instance autonome pour le déploiement SysPrep** dans la page **Avancé** du **Centre d’installation** , soit à partir de l’invite de commandes.  
@@ -88,7 +88,7 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] �
   
  Une fois l'instance préparée, un raccourci dans le menu **Démarrer** devient disponible pour finaliser la configuration de l'instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BKMK_CompleteImage"></a> Finaliser l'image  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> Finaliser l'image  
 Vous pouvez finaliser les instances préparées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'une des méthodes suivantes :  
   
 - Utilisez le raccourci dans le menu Démarrer.  

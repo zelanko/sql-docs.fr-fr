@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179270"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
@@ -37,7 +37,7 @@ STRING_SPLIT nécessite que le niveau de compatibilité soit au moins 130. Quand
 
 Pour changer le niveau de compatibilité d’une base de données, consultez [Afficher ou changer le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
 
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 
@@ -104,7 +104,7 @@ STRING_SPLIT retourne une chaîne vide si aucun élément ne figure entre les s�
 
 La table de produits a une colonne avec une liste de balises séparées par des virgules, illustrée dans l’exemple suivant :  
   
-|ProductId|Nom|Balises|  
+|ProductId|Name|Balises|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -120,7 +120,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Nom|value|  
+|ProductId|Name|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|Route|  

@@ -13,10 +13,10 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095296"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Capture de données modifiées et autres fonctionnalités de SQL Server
@@ -33,10 +33,10 @@ ms.locfileid: "74095296"
 
 -   [Bases de données autonomes](#Contained)
   
-##  <a name="ChangeTracking"></a> Suivi des modifications  
+##  <a name="change-tracking"></a><a name="ChangeTracking"></a> Suivi des modifications  
  La capture de données modifiées et le [suivi des modifications](../../relational-databases/track-changes/about-change-tracking-sql-server.md) peuvent être activés sur la même base de données. Aucune considération particulière ne s'applique. Pour plus d’informations, consultez [Utiliser le suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
-##  <a name="DatabaseMirroring"></a> Mise en miroir de bases de données  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> Mise en miroir de bases de données  
  Une base de données prenant en charge la capture de données modifiées peut être mise en miroir. Pour faire en sorte que la capture et le nettoyage s'exécutent automatiquement après un basculement, suivez ces étapes :  
   
 1.  Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent s'exécute sur la nouvelle instance de serveur principal.  
@@ -49,7 +49,7 @@ ms.locfileid: "74095296"
   
  Pour plus d’informations sur la mise en miroir des bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
-##  <a name="TransReplication"></a> Transactional Replication  
+##  <a name="transactional-replication"></a><a name="TransReplication"></a> Transactional Replication  
  La capture de données modifiées et la réplication transactionnelle peuvent coexister dans la même base de données, mais le remplissage des tables de modifications est géré différemment lorsque les deux fonctionnalités sont activées. La capture de données modifiées et la réplication transactionnelle utilisent toujours la même procédure, [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md), pour lire les modifications dans le journal des transactions. Quand la capture de données modifiées est la seule fonctionnalité activée, un travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent appelle **sp_replcmds**. Quand les deux fonctionnalités sont activées sur la même base de données, l’Agent de lecture du journal appelle **sp_replcmds**. Cet agent remplit à la fois les tables de modifications et les tables de bases de données de distribution. Pour plus d’informations, consultez [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
  Considérez un scénario dans lequel la capture de données modifiées est activée sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , et deux tables sont activées pour la capture. Pour remplir les tables de modifications, le travail de capture appelle **sp_replcmds**. La base de données est activée pour la réplication transactionnelle, et une publication est créée. Ensuite, l'Agent de lecture du journal est créé pour la base de données et le travail de capture est supprimé. L'Agent de lecture du journal continue à analyser le journal à partir du dernier numéro séquentiel dans le journal qui été validé dans la table de modifications. Cela garantit la cohérence des données dans les tables de modifications. Si la réplication transactionnelle est désactivée dans cette base de données, l'Agent de lecture du journal est supprimé et le travail de capture est recréé.  
@@ -59,7 +59,7 @@ ms.locfileid: "74095296"
   
  L'option **proc exec** de réplication transactionnelle n'est pas disponible lorsque la capture de données modifiées est activée.  
   
-##  <a name="RestoreOrAttach"></a> Restauration ou attachement d'une base de données activée pour la capture de données modifiées  
+##  <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a><a name="RestoreOrAttach"></a> Restauration ou attachement d'une base de données activée pour la capture de données modifiées  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la logique suivante pour déterminer si la capture de données modifiées reste activée après qu'une base de données a été restaurée ou attachée :  
   
 -   Si une base de données est restaurée sur le même serveur avec le même nom de base de données, la capture de données modifiées reste activée.  
@@ -76,7 +76,7 @@ ms.locfileid: "74095296"
   
  Vous pouvez utiliser [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) pour supprimer la capture de données modifiées d’une base de données restaurée ou attachée.  
   
-##  <a name="Contained"></a> Bases de données autonomes  
+##  <a name="contained-databases"></a><a name="Contained"></a> Bases de données autonomes  
  La capture des changements de données n’est pas prise en charge dans les [bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md).
   
 ## <a name="change-data-capture-and-always-on"></a>Capture de données modifiées et Always On  

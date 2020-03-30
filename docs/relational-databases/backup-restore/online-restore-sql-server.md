@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908880"
 ---
 # <a name="online-restore-sql-server"></a>Restauration en ligne (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "72908880"
     > [!NOTE]  
     >  D'une autre manière, vous pouvez mettre manuellement le fichier hors connexion avant la séquence de restauration. Pour plus d'informations, consultez « Mise hors connexion d'une base de données ou d'un fichier », plus loin dans cette rubrique.  
   
-##  <a name="taking_db_or_file_offline"></a> Mise hors connexion d'une base de données ou d'un fichier  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Mise hors connexion d'une base de données ou d'un fichier  
  Si vous ne souhaitez pas utiliser la restauration en ligne, mettez la base de données hors connexion avant de démarrer la séquence de restauration au moyen de l'une des méthodes suivantes :  
   
 -   Quel que soit le mode de récupération, vous pouvez mettre la base de données hors connexion à l'aide de l'instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) suivante :  
@@ -95,7 +95,7 @@ ms.locfileid: "72908880"
   
 -   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Restaurer des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

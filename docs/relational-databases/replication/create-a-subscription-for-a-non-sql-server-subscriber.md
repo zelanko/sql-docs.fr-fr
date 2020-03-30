@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322006"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "75322006"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Pour créer un abonnement destiné à un abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 1.  Installez et configurez le logiciel client et le ou les fournisseurs OLE DB approprié sur le serveur de distribution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) et [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
@@ -143,7 +143,7 @@ ms.locfileid: "75322006"
   
  Lorsque l'Agent d'instantané a terminé, un message s'affiche, par exemple, « [100%] Un instantané de 17 articles a été généré. »  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez créer par programmation des abonnements par émission de données pour des abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant des procédures stockées de réplication.  
   
 > [!IMPORTANT]  

@@ -22,10 +22,10 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024306"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68024306"
 
   Retourne le nom de la colonne indexée. Retourne la valeur NULL pour les index XML.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

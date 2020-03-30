@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064685"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064685"
 
   Définit un niveau de priorité et le jeu de critères pour déterminer les conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] auxquelles le niveau de priorité est attribué. Le niveau de priorité est attribué aux points de terminaison qui utilisent la même combinaison de contrats et de services que ceux spécifiés dans la priorité de conversation. Les priorités varient en valeur de 1 (faible) à 10 (élevée). La valeur par défaut est 5.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,10 +57,10 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>Arguments  
  *ConversationPriorityName*  
- Spécifie le nom de cette priorité de conversation. Le nom doit être unique dans la base de données active et doit se conformer aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md) du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Spécifie le nom de cette priorité de conversation. Le nom doit être unique dans la base de données active et doit se conformer aux règles des [!INCLUDE[ssDE](../../includes/ssde-md.md)]identificateurs[ du ](../../relational-databases/databases/database-identifiers.md).  
   
  SET  
- Spécifie les critères permettant de déterminer si la priorité de conversation s'applique à une conversation. S’il est spécifié, SET doit contenir au moins un critère : CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL. Si SET n'est pas spécifié, les valeurs par défaut sont définies pour les trois critères.  
+ Spécifie les critères permettant de déterminer si la priorité de conversation s'applique à une conversation. S'il est spécifié, SET doit contenir au moins un critère : CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL. Si SET n'est pas spécifié, les valeurs par défaut sont définies pour les trois critères.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Spécifie le nom d'un contrat à utiliser comme critère pour déterminer si la priorité de conversation s'applique à une conversation. *ContractName* est un identificateur [!INCLUDE[ssDE](../../includes/ssde-md.md)], et vous devez spécifier le nom d’un contrat de base de données active.  

@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982920"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982920"
 
   Indique si l'utilisateur actuel est membre du groupe [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ou du rôle de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifié. La fonction IS_MEMBER n’est pas prise en charge pour les groupes Azure Active Directory.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

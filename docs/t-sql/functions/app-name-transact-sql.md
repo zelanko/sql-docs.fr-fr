@@ -22,10 +22,10 @@ ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73843439"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
@@ -36,7 +36,7 @@ Cette fonction retourne le nom de l’application pour la session active, si l�
 > [!IMPORTANT]  
 >  Le client fournit le nom de l’application, et `APP_NAME` ne vérifie la valeur de ce nom en aucune façon. N'utilisez pas `APP_NAME` dans le cadre d'une vérification de sécurité.  
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

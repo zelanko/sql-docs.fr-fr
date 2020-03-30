@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287039"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchroniser un abonnement par extraction
@@ -36,7 +36,7 @@ ms.locfileid: "76287039"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Les abonnements sont synchronisés par l'Agent de distribution (pour la réplication transactionnelle et d'instantané) ou l'Agent de fusion (pour la réplication de fusion). Les agents peuvent s'exécuter en continu, à la demande ou selon une planification. Pour plus d’informations sur la spécification de planifications de synchronisation, consultez [Spécifier des planifications de synchronisation](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Synchronisez un abonnement à la demande à partir du dossier **Publications locales** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "76287039"
   
 5.  Cliquez sur **Fermer**.  
   
-##  <a name="ReplProg"></a> Replication Agents  
+##  <a name="replication-agents"></a><a name="ReplProg"></a> Replication Agents  
  Les abonnements par extraction de données (pull) peuvent être synchronisés par le biais de la programmation et à la demande en appelant le fichier exécutable de l'Agent de réplication approprié à partir de l'invite de commandes. Le fichier exécutable de l'Agent de réplication qui est appelé dépend du type de publication à laquelle l'abonnement par extraction de données (pull) appartient. Pour plus d'informations, voir [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ ms.locfileid: "76287039"
   
     -   **-SubscriberSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> Exemples (Agents de réplication)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Exemples (Agents de réplication)  
  L'exemple suivant démarre l'Agent de distribution pour synchroniser un abonnement par extraction de données (pull). Toutes les connexions sont effectuées au moyen de l'authentification Windows.  
   
 ```  
@@ -181,7 +181,7 @@ SET Publication=AdvWorksSalesOrdersMerge
 -Validate 3  -ParallelUploadDownload 1 ;  
 ```  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez synchroniser des abonnements par extraction de données (pull) au moyen d'objets RMO (Replication Management Objects) et d'un accès par code managé aux fonctionnalités de l'Agent de réplication. Les classes que vous utilisez pour synchroniser un abonnement par extraction de données (pull) sont fonction du type de publication à laquelle l'abonnement appartient.  
   
 > [!NOTE]
@@ -241,7 +241,7 @@ SET Publication=AdvWorksSalesOrdersMerge
         > [!NOTE]  
         >  Si vous avez spécifié la valeur **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (la valeur par défaut) lorsque vous avez créé l'abonnement par envoi de données (pull), vous devez également spécifier <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, d' <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, d' <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, d' <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, d' <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, d' <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>et, facultativement, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, d' <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, d' <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>et <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> parce que les métadonnées liées au travail d'agent pour l'abonnement ne sont pas disponibles dans [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple synchronise un abonnement par envoi de données (pull) vers une publication transactionnelle, où l'agent est démarré en mode asynchrone au moyen du travail d'agent.  
   
 ```csharp  

@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548274"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "75548274"
 
   Supprime une ou plusieurs lignes d’une table ou d’une vue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -226,7 +226,7 @@ DELETE
 |[Suppression de lignes dans une table distante](#RemoteTables)|Serveur lié • fonction d'ensemble de lignes OPENQUERY • fonction d'ensemble de lignes OPENDATASOURCE|  
 |[Capture des résultats de l’instruction DELETE](#CaptureResults)|Clause OUTPUT|  
   
-###  <a name="BasicSyntax"></a> Syntaxe de base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de l'instruction DELETE en utilisant la syntaxe minimale requise.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>R. Utilisation de DELETE sans clause WHERE  
@@ -237,7 +237,7 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a> Limitation des lignes supprimées  
+###  <a name="limiting-the-rows-deleted"></a><a name="LimitRows"></a> Limitation des lignes supprimées  
  Les exemples de cette section montrent comment limiter le nombre de lignes qui seront supprimées.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Utilisation de la clause WHERE pour supprimer un jeu de lignes  
@@ -335,7 +335,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Suppression de lignes dans une table distante  
+###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Suppression de lignes dans une table distante  
  Les exemples présentés dans cette section montrent comment supprimer des lignes dans une table distante en utilisant un [serveur lié](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou une [fonction d’ensemble de lignes](../../t-sql/functions/rowset-functions-transact-sql.md) pour référencer la table distante. Une table distante existe sur un serveur différent ou une instance différente de SQL Server.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
@@ -386,7 +386,7 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a> Capture des résultats de l’instruction DELETE  
+###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Capture des résultats de l’instruction DELETE  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>I. Utilisation de DELETE avec la clause OUTPUT  
  L’exemple suivant montre comment enregistrer les résultats d’une instruction `DELETE` dans une variable de table dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -431,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. Supprimer toutes les lignes d’une table  
  L'exemple suivant supprime toutes les lignes de la table `Table1`car aucune clause WHERE ne limite le nombre de lignes supprimées.  

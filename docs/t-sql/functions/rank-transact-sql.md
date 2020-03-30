@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68661445"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
@@ -38,7 +38,7 @@ Les fonctions ROW_NUMBER et RANK sont similaires. ROW_NUMBER numérote toutes le
 > [!NOTE]
 > RANK est une valeur temporaire calculée quand la requête est exécutée. Pour conserver les nombres dans un tableau, consultez [IDENTITY (propriété)](../../t-sql/statements/create-table-transact-sql-identity-property.md) et [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -129,7 +129,7 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-ranking-rows-within-a-partition"></a>C. Classement des lignes d’une partition  
  L’exemple suivant classe par rang les représentants commerciaux dans chaque secteur de vente en fonction de leurs ventes totales. L'ensemble de lignes est partitionné par `SalesTerritoryGroup` et trié par `SalesAmountQuota`.  

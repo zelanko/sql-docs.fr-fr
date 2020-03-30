@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866108"
 ---
 # <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
@@ -46,9 +46,9 @@ ms.locfileid: "78866108"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Les classements Windows Unicode seulement peuvent être utilisés uniquement avec la clause COLLATE pour appliquer des classements aux types de données **nchar**, **nvarchar**et **ntext** sur les données de niveau de colonne et de niveau d’expression. Ils ne peuvent pas être utilisés avec la clause COLLATE pour modifier le classement d'une instance de serveur ou de base de données.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "78866108"
 
 -   Le classement ne peut pas être modifié avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ne peut être modifié qu’à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 Vous trouverez les noms des classements pris en charge dans [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) et [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). Vous pouvez également utiliser la fonction système [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
@@ -70,14 +70,14 @@ Lorsque vous modifiez le classement d'une base de données, vous changez les él
   
 Vous pouvez modifier le classement de tous les objets créés dans une base de données utilisateur à l'aide de la clause `COLLATE` de l'instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Cette instruction **ne modifie pas** le classement des colonnes dans les tables définies par l'utilisateur existantes. Celles-ci peuvent être modifiées à l'aide de la clause `COLLATE` de l'instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La création d’une base de données requiert l’autorisation `CREATE DATABASE` dans la base de données **MASTER** ou bien l’autorisation `CREATE ANY DATABASE` ou `ALTER ANY DATABASE`.  
   
  La modification du classement d’une base de données existante, requiert l’autorisation `ALTER` sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>Pour définir ou modifier le classement de base de données  
   
@@ -89,7 +89,7 @@ Vous pouvez modifier le classement de tous les objets créés dans une base de d
   
 3.  Une fois que vous avez terminé, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>Pour définir le classement de base de données  
   

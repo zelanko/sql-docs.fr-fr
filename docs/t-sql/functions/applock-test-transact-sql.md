@@ -22,10 +22,10 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f71a288994afb76d1237f303edfc926116f5962e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68040329"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68040329"
 
 Cette fonction retourne des informations indiquant si un verrou peut ou non être octroyé sur une ressource d'application à un propriétaire de verrou donné, sans acquisition du verrou. En tant que fonction de verrouillage d'application, APPLOCK_TEST agit sur la base de données active. La base de données constitue l'étendue des verrous d'application.
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +49,7 @@ Utilisateur, rôle ou rôle d’application qui peuvent se voir octroyer des aut
 Nom de ressource de verrouillage spécifié par l'application cliente. L'application doit garantir un nom de ressource unique. Le nom spécifié est haché en interne en une valeur que le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut stocker en interne.  *resource_name* est de type **nvarchar(255)** , sans valeur par défaut. L’argument *resource_name* est évalué en binaire et respecte la casse, quels que soient les paramètres de classement de la base de données active.
   
 **'** *lock_mode* **'**  
-Mode de verrouillage à obtenir pour une ressource spécifique. L’argument *lock_mode* est de type **nvarchar(32)** et n’a pas de valeur par défaut. *lock_mode* peut avoir une des valeurs suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
+Mode de verrouillage à obtenir pour une ressource spécifique. L’argument *lock_mode* est de type **nvarchar(32)** et n’a pas de valeur par défaut. La valeur de l’argument *lock_mode* peut être l’une des suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
 Propriétaire du verrou, correspondant à la valeur *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)** et sa valeur peut être **Transaction** (valeur par défaut) ou **Session**. Si la valeur par défaut ou **Transaction** est explicitement spécifiée, la fonction APPLOCK_TEST doit être exécutée à partir d’une transaction.

@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908599"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Créer une publication à partir d'une base de données Oracle
@@ -28,7 +28,7 @@ ms.locfileid: "72908599"
   
 -   **Avant de commencer :**  
   
-     [Composants requis](#Prerequisites)  
+     [Prérequis](#Prerequisites)  
   
 -   **Pour créer une publication à partir d'une base de données Oracle à l'aide de :**  
   
@@ -36,13 +36,13 @@ ms.locfileid: "72908599"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   Avant de créer une publication, vous devez installer le logiciel Oracle sur le serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et configurer la base de données Oracle. Pour plus d’informations, consultez [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Créez une publication transactionnelle ou d'instantané à partir d'une base de données Oracle à l'aide de l'Assistant Nouvelle publication.  
   
  La première fois que vous créez une publication à partir d'une base de données Oracle, vous devez identifier le serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ce ne sera plus nécessaire pour les publications suivantes effectuées à partir de la même base de données). Pour identifier le serveur de publication Oracle, ouvrez l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**  ; cette rubrique illustre la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** .  
@@ -106,7 +106,7 @@ ms.locfileid: "72908599"
   
 11. Dans la page **Terminer l'Assistant** , spécifiez un nom pour la publication.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Une fois la base de données Oracle configurée comme serveur de publication, vous pouvez créer une publication transactionnelle ou d’instantané de la même façon que vous le feriez à partir un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], en utilisant des procédures stockées système.  
   
 #### <a name="to-create-an-oracle-publication"></a>Pour créer une publication Oracle  

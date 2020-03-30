@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235391"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433756"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La réplication, la capture de données modifiées (CDC) et le suivi des modifications (CT) sont pris en charge sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aide à fournir des fonctionnalités haute disponibilité et de récupération de base de données supplémentaires.  
   
-##  <a name="Overview"></a>Vue d’ensemble de la réplication avec des groupes de disponibilité  
+##  <a name="overview-of-replication-with-availability-groups"></a><a name="Overview"></a>Vue d’ensemble de la réplication avec des groupes de disponibilité  
   
-###  <a name="PublisherRedirect"></a> Redirection de serveur de publication  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a> Redirection de serveur de publication  
  Lorsqu'une base de données publiée repose sur la technologie [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], le serveur de distribution qui offre un accès d'agent à la base de données de publication est configuré avec des entrées redirected_publishers. Ces entrées redirigent la combinaison serveur de publication/base de données initialement configurée, en se servant d'un nom d'écouteur de groupe de disponibilité pour se connecter au serveur de publication et à la base de données de publication. Les connexions établies via le nom d'écouteur de groupe de disponibilité échouent lors d'un basculement. Lors du redémarrage de l'agent de réplication, à l'issue du basculement, la connexion est automatiquement redirigée vers le nouveau principal.  
   
  Dans un groupe de disponibilité, une base de données secondaire ne peut pas être un serveur de publication. La republication est prise en charge uniquement lorsque la réplication transactionnelle est associée à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "75235391"
 > [!NOTE]  
 >  Après un basculement vers un réplica secondaire, le Moniteur de réplication ne peut pas ajuster le nom de l'instance de publication de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et continue à afficher les informations de réplication sous le nom de l'instance principale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]d'origine. Après le basculement, un jeton de suivi ne peut pas être écrit à l'aide du Moniteur de réplication, toutefois un jeton de suivi écrit sur le nouveau serveur de publication à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)]est visible dans le Moniteur de réplication.  
   
-###  <a name="Changes"></a> Modifications générales apportées aux agents de réplication pour prendre en charge les groupes de disponibilité  
+###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a> Modifications générales apportées aux agents de réplication pour prendre en charge les groupes de disponibilité  
  Trois agents de réplication ont été modifiés pour prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. L'agent de lecture du journal, ainsi que les agents d'instantané et de fusion ont été modifiés pour interroger la base de données de distribution pour le serveur de publication redirigé et pour utiliser le nom d'écouteur de groupe de disponibilité retourné, si un serveur de publication redirigé était déclaré, pour se connecter au serveur de publication de base de données.  
   
  Par défaut, lorsque les agents interrogent le serveur de distribution afin de déterminer si le serveur de publication d'origine a été redirigé, l'adéquation de la cible actuelle ou de la redirection est vérifiée avant de retourner l'hôte redirigé à l'agent. Il s'agit du comportement recommandé. Toutefois, si le démarrage de l’agent se produit très fréquemment, la surcharge liée à la procédure stockée de validation peut être considérée comme trop importante. Un nouveau commutateur de ligne de commande, *BypassPublisherValidation*, a été ajouté à l’Agent Lecture de journal, à l’Agent d’instantané et à l’Agent Fusion. Lorsque le commutateur est utilisé, le serveur de publication redirigé est retourné immédiatement à l'agent et l'exécution de la procédure stockée de validation est ignorée.  
@@ -59,7 +59,7 @@ ms.locfileid: "75235391"
   
      L'indicateur de trace 1448 permet à l'agent de lecture du journal de réplication d'avancer même si les réplicas secondaires asynchrones n'ont pas accusé réception d'une modification. Même si cet indicateur de trace est activé, l’Agent Lecture de journal attend toujours les réplicas secondaires synchrones. L'agent de lecture du journal n'ira pas au delà de l'accusé réception minimum des réplicas secondaires synchrones. Cet indicateur de trace s'applique à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et pas simplement à un groupe de disponibilité, à une base de données de disponibilité ou à une instance de l'agent de lecture de journal. Cet indicateur de trace prend effet immédiatement, sans redémarrage. Il peut être activé d'avance ou lorsque le réplica secondaire asynchrone échoue.  
   
-###  <a name="StoredProcs"></a> Procédures stockées prenant en charge les groupes de disponibilité  
+###  <a name="stored-procedures-supporting-availability-groups"></a><a name="StoredProcs"></a> Procédures stockées prenant en charge les groupes de disponibilité  
   
 -   **sp_redirect_publisher**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75235391"
   
      Cette procédure stockée est toujours exécutée manuellement. L'appelant doit être **sysadmin** sur le serveur de distribution, **dbowner** de la base de données de distribution ou un membre de la **liste d'accès à la publication** d'une publication de la base de données du serveur de publication. En outre, l'identifiant de connexion de l'appelant doit être un identifiant valide pour tous les hôtes de réplica de groupe de disponibilité, et disposer de privilèges de sélection sur la base de données de disponibilité associée à la base de données du serveur de publication.  
   
-###  <a name="CDC"></a> Capture de données modifiées  
+###  <a name="change-data-capture"></a><a name="CDC"></a> Capture de données modifiées  
  Les bases de données activées pour la capture de données modifiées (CDC) peuvent tirer parti de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] afin d’assurer que non seulement la base de données reste disponible en cas de défaillance, mais également que les modifications apportées aux tables de base de données continuent d’être surveillées et déposées dans les tables de modifications de capture de données modifiées. L'ordre dans lequel la capture de données modifiées et [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont configurés n'est pas important. Les bases de données activées pour la capture de données modifiées peuvent être ajoutées à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], et celles qui sont membres d’un groupe de disponibilité Always On peuvent être activées pour la capture de données modifiées. Dans les deux cas, toutefois, la configuration de la capture de données modifiées est toujours effectuée sur le réplica principal actuel ou prévu. CDC utilise l'agent de lecture du journal et est soumis aux mêmes limitations décrites dans la section **Modifications apportées à l'agent de lecture du journal** plus haut dans cette rubrique.  
   
 -   **Récolte des modifications pour la capture de données modifiées sans réplication**  
@@ -123,7 +123,7 @@ ms.locfileid: "75235391"
   
     -   L’autre garantit que les demandes de connexion sont dirigées vers un réplica secondaire en lecture seule.  
   
-     Utilisée pour rechercher un réplica secondaire en lecture seule, une liste de routage en lecture seule doit également être définie pour le groupe de disponibilité. Pour plus d’informations sur l’accès de routage aux serveurs secondaires accessibles en lecture, consultez [Pour configurer des réplicas de disponibilité pour le routage en lecture seule](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConfigureARsForROR).  
+     Utilisée pour rechercher un réplica secondaire en lecture seule, une liste de routage en lecture seule doit également être définie pour le groupe de disponibilité. Pour plus d’informations sur l’accès de routage aux serveurs secondaires accessibles en lecture, consultez [Pour configurer des réplicas de disponibilité pour le routage en lecture seule](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
     > [!NOTE]  
     >  Il existe un certain délai de propagation associé à la création d'un nom d'écouteur de groupe de disponibilité et son utilisation par les applications clientes afin d'accéder à un réplica de base de données du groupe de disponibilité.  
@@ -177,7 +177,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
     - Redémarrer le service SQL Server sur chaque instance de réplica secondaire
     - OU supprimer la base de données de toutes les instances de réplica secondaire du groupe de disponibilité et l’ajouter aux instances de réplica du groupe de disponibilité par amorçage automatique ou manuel
   
-###  <a name="CT"></a> Suivi des modifications  
+###  <a name="change-tracking"></a><a name="CT"></a> Suivi des modifications  
  Une base de données activée pour le suivi des modifications peut faire partie d’un groupe de disponibilité Always On. Aucune configuration supplémentaire n’est nécessaire. Les applications clientes de suivi des modifications qui utilisent les fonctions table (TVF) de capture de données modifiées pour accéder aux données modifiées ont besoin de pouvoir localiser le réplica principal après le basculement. Si l'application cliente se connecte via le nom d'écouteur de groupe de disponibilité, les demandes de connexion seront toujours dirigées correctement vers le réplica principal actuel.  
   
 > [!NOTE]  
@@ -187,7 +187,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
 >   
 >  Pour les bases de données qui sont membres d'un réplica secondaire (pour les bases de données secondaires), le suivi des modifications n'est pas pris en charge. Exécutez les requêtes de suivi des modifications sur les bases de données du réplica principal.  
   
-##  <a name="Prereqs"></a> Conditions préalables requises, restrictions et considérations relatives à l'utilisation de la réplication  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> Conditions préalables requises, restrictions et considérations relatives à l'utilisation de la réplication  
  Cette section décrit les considérations à prendre en compte pour déployer la réplication avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], y compris les conditions préalables requises, les restrictions et les recommandations.  
   
 ### <a name="prerequisites"></a>Conditions préalables requises  
@@ -223,7 +223,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 -   Les métadonnées et les objets qui existent en dehors de la base de données, c'est-à-dire les connexions, les travaux et les serveurs liés, ne sont pas propagés vers les réplicas secondaires. Si vous voulez faire figurer les métadonnées et les objets dans la nouvelle base de données principale après le basculement, vous devez les copier manuellement. Pour plus d’informations, consultez [Gestion des connexions et des travaux pour les bases de données d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Réplication**  
   
 -   [Configurer la réplication pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  

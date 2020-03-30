@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70211441"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70211441"
 
   Récupère un ou plusieurs messages dans une file d'attente. Selon le paramètre de rétention défini pour la file d'attente, supprime le message de la file d'attente ou met à jour l'état du message dans la file d'attente.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

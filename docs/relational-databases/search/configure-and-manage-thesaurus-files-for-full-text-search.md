@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056202"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
@@ -29,7 +29,7 @@ La mise en correspondance avec le dictionnaire des synonymes intervient pour tou
   
 Un dictionnaire des synonymes pour la recherche en texte intégral est un fichier texte XML.
   
-##  <a name="tasks"></a> Contenu d’un dictionnaire des synonymes  
+##  <a name="whats-in-a-thesaurus"></a><a name="tasks"></a> Contenu d’un dictionnaire des synonymes  
  Pour que vos requêtes de recherche en texte intégral puissent rechercher des synonymes dans une langue donnée, vous devez au préalable définir des mappages de dictionnaire des synonymes (c’est-à-dire des synonymes) pour cette langue. Chaque dictionnaire des synonymes doit être configuré manuellement de façon à définir les éléments suivants :  
   
 -   Jeu d'expansion  
@@ -46,10 +46,10 @@ Un dictionnaire des synonymes pour la recherche en texte intégral est un fichie
   
      Pour un dictionnaire des synonymes donné, tous les modèles de recherche respectent ou non les signes diacritiques, par exemple le tilde ( **~** ), l’accent aigu ( **&acute;** ) ou le tréma ( **&uml;** ), (autrement dit ils *respectent les accents* ou *ne respectent pas les accents*). Par exemple, supposez que vous spécifiez le remplacement du modèle « caf&eacute; » par d'autres modèles dans une requête de texte intégral. Si le dictionnaire des synonymes ne tient pas compte des accents, la recherche en texte intégral remplace les modèles « caf&eacute; » et « cafe ». Si le dictionnaire des synonymes respecte les accents, la recherche en texte intégral remplace seulement le modèle « caf&eacute; ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
   
-##  <a name="initial_thesaurus_files"></a> Fichiers par défaut du dictionnaire des synonymes
+##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a> Fichiers par défaut du dictionnaire des synonymes
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un fichier de dictionnaire des synonymes XML par langue prise en charge. Ces fichiers sont essentiellement vides. Ils contiennent uniquement la structure XML de niveau supérieur commune à tous les dictionnaires des synonymes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un exemple commenté de dictionnaire des synonymes.  
   
-##  <a name="location"></a> Emplacement des fichiers de dictionnaire des synonymes  
+##  <a name="location-of-thesaurus-files"></a><a name="location"></a> Emplacement des fichiers de dictionnaire des synonymes  
  L'emplacement par défaut des fichiers de dictionnaires des synonymes est :  
   
      <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
@@ -79,12 +79,12 @@ Vous pouvez modifier l'emplacement et le nom d'un fichier de dictionnaire des sy
   
  Le fichier du dictionnaire des synonymes global correspond à la langue « neutre », avec le LCID 0. Cette valeur ne peut être modifiée que par des administrateurs.  
 
-##  <a name="how_queries_use_tf"></a> Utilisation du dictionnaire des synonymes par des requêtes de texte intégral  
+##  <a name="how-full-text-queries-use-the-thesaurus"></a><a name="how_queries_use_tf"></a> Utilisation du dictionnaire des synonymes par des requêtes de texte intégral  
 Une requête de dictionnaire des synonymes utilise à la fois le dictionnaire des synonymes spécifique à la langue et le dictionnaire des synonymes global.
 1.  En premier lieu, la requête recherche le fichier spécifique à la langue et le charge en vue du traitement (à moins qu'il ne soit déjà chargé). La requête est développée pour inclure les synonymes spécifiques à la langue spécifiés par les règles de jeu d'expansion et de jeu de remplacement définies dans le fichier du dictionnaire des synonymes. 
 2.  Ces étapes sont ensuite répétées pour le dictionnaire des synonymes global. Toutefois, si un terme fait déjà partie d'une correspondance dans le fichier du dictionnaire des synonymes spécifique à la langue, ce terme est inéligible pour la mise en correspondance dans le dictionnaire des synonymes global.  
 
-##  <a name="structure"></a> Structure d’un fichier de dictionnaire des synonymes  
+##  <a name="structure-of-a-thesaurus-file"></a><a name="structure"></a> Structure d’un fichier de dictionnaire des synonymes  
  Chaque fichier de dictionnaire des synonymes définit un conteneur XML dont l’ID est `Microsoft Search Thesaurus` et un commentaire, `<!--` ... `-->`, qui contient un exemple de dictionnaire des synonymes. Le dictionnaire des synonymes est défini dans un élément `<thesaurus>` qui contient des exemples des éléments enfants qui définissent le paramètre de signes diacritiques, les jeux d’expansion et les jeux de remplacement.
 
 Un fichier de dictionnaire des synonymes vide standard contient le texte XML suivant :  
@@ -115,7 +115,7 @@ Un fichier de dictionnaire des synonymes vide standard contient le texte XML sui
 </XML>  
 ```
 
-### <a name="expansion"></a> XML structure of an expansion set  
+### <a name="xml-structure-of-an-expansion-set"></a><a name="expansion"></a> XML structure of an expansion set  
   
  Chaque jeu d’expansion est compris dans un élément `<expansion>`. Dans cet élément, vous spécifiez une ou plusieurs substitutions dans un élément `<sub>`. Dans le jeu d'expansion, vous pouvez spécifier un groupe de substitutions synonymes les unes des autres.  
   
@@ -131,7 +131,7 @@ Voici à quoi ressemble la section du jeu d'expansion pour l'exemple ci-dessus :
 </expansion>  
 ```  
   
-### <a name="replacement"></a> XML structure of a replacement set  
+### <a name="xml-structure-of-a-replacement-set"></a><a name="replacement"></a> XML structure of a replacement set  
   
 Chaque jeu de remplacement est compris dans un élément `<replacement>`. Dans cet élément, vous pouvez spécifier un ou plusieurs modèles dans un élément `<pat>` et zéro, une ou plusieurs substitutions dans des éléments `<sub>`, à raison d’un par synonyme. Vous pouvez spécifier un modèle de texte à remplacer par un jeu de substitution. Les modèles et les substitutions peuvent contenir un mot ou une suite de mots. L'absence de spécification d'une substitution pour un modèle a pour effet de supprimer le modèle de la requête de l'utilisateur.  
   
@@ -178,7 +178,7 @@ Le paramètre de signes diacritiques d’un dictionnaire des synonymes est spéc
 > [!NOTE]  
 >  Ce paramètre ne peut être appliqué qu'une seule fois dans le fichier et s'applique à tous les modèles de recherche au sein du fichier. Vous ne pouvez pas définir ce paramètre pour des modèles individuels.  
 
-##  <a name="editing"></a> Modifier un fichier de dictionnaire des synonymes  
+##  <a name="edit-a-thesaurus-file"></a><a name="editing"></a> Modifier un fichier de dictionnaire des synonymes  
 Vous pouvez configurer le dictionnaire des synonymes d’une langue donnée en modifiant son fichier de dictionnaire des synonymes (fichier XML). Pendant l’installation, des fichiers de dictionnaire des synonymes vides comportant uniquement le conteneur `<xml>` et un exemple commenté d’élément `<thesaurus`> sont installés. Pour que les requêtes de recherche en texte intégral qui recherchent des synonymes fonctionnent correctement, vous devez créer un élément `<thesaurus`> réel qui définisse un jeu de synonymes. Vous pouvez définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement.  
 
 ### <a name="edit-a-thesaurus-file"></a>Modifier un fichier de dictionnaire des synonymes  

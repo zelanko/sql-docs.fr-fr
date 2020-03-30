@@ -22,10 +22,10 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70745400"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70745400"
 
   Crée un nouveau service. Un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un nom pour une tâche ou un ensemble de tâches spécifiques. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise le nom du service pour acheminer les messages, les remettre à la file d'attente appropriée dans une base de données et appliquer le contrat pour une conversation.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

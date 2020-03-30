@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287163"
 ---
 # <a name="snapshot-replication"></a>Réplication d'instantané
@@ -50,7 +50,7 @@ ms.locfileid: "76287163"
   
  [Agent de distribution et Agent de fusion](#DistAgent)  
   
-##  <a name="HowWorks"></a> Fonctionnement de la réplication d'instantané  
+##  <a name="how-snapshot-replication-works"></a><a name="HowWorks"></a> Fonctionnement de la réplication d'instantané  
  Par défaut, les trois types de réplication utilisent un instantané pour initialiser les abonnés. L'Agent d'instantané [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère toujours les fichiers d'instantanés, mais l'Agent qui remet les fichiers diffère selon le type de réplication utilisé. La réplication d'instantané et la réplication transactionnelle utilisent l'Agent de distribution pour remettre les fichiers, alors que la réplication de fusion utilise l'Agent de fusion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'Agent d'instantané s'exécute sur le serveur de distribution. L'Agent de distribution et l'Agent de fusion s'exécutent sur le serveur de distribution pour les abonnements par envoi de données (push), ou sur les abonnés pour les abonnements par extraction de données (pull).  
   
  Les instantanés peuvent être générés et appliqués soit immédiatement après la création de l'abonnement, ou selon une planification définie lors de la création de la publication. L'Agent d'instantané prépare les fichiers d'instantanés contenant les schémas ainsi que les données des tables et des objets de base de données publiés, stocke les fichiers dans le dossier d'instantanés du serveur de publication, et enregistre les informations de suivi dans la base de données de distribution sur le serveur de distribution. Le dossier d'instantanés par défaut est spécifié lorsque vous configurez un serveur de distribution, vous pouvez également spécifier un emplacement de remplacement pour une publication pour remplacer ou suppléer le dossier par défaut.  
@@ -61,7 +61,7 @@ ms.locfileid: "76287163"
   
  ![Composants et flux de données de réplication d’instantané](../../relational-databases/replication/media/snapshot.gif "Composants et flux de données de réplication d’instantané")  
   
-##  <a name="SnapshotAgent"></a> Agent d'instantané  
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> Agent d'instantané  
  Pour la réplication de fusion, un instantané est généré à chaque exécution de l'Agent d'instantané. Pour la réplication transactionnelle, la génération d'instantané dépend du paramétrage de la propriété de publication **immediate_sync**. Si la propriété est définie avec la valeur TRUE (valeur par défaut lors de l'utilisation de l'Assistant Nouvelle publication), un instantané est généré à chaque exécution de l'Agent d'instantané, et peut être appliqué à un abonné à tout moment. Si la propriété est définie avec la valeur FALSE (valeur par défaut lors de l'utilisation de **sp_addpublication**), l'instantané est généré uniquement si un nouvel abonnement a été ajouté depuis la dernière exécution de l'Agent d'instantané ; les abonnés doivent attendre que l'Agent d'instantané se termine avant de pouvoir se synchroniser.  
   
  L'Agent d'instantané exécute les étapes suivantes :  
@@ -86,7 +86,7 @@ ms.locfileid: "76287163"
   
  Vous ne pouvez pas effectuer de modifications de schéma sur les tables publiées pendant la génération d'instantané. Une fois les fichiers d'instantanés générés, vous pouvez les visualiser dans le dossier d'instantanés à l'aide de l'Explorateur Windows.  
   
-##  <a name="DistAgent"></a> Agent de distribution et Agent de fusion  
+##  <a name="distribution-agent-and-merge-agent"></a><a name="DistAgent"></a> Agent de distribution et Agent de fusion  
  Pour les publications d'instantanés, chaque fois que l'Agent de distribution s'exécute pour la publication, il déplace le nouvel instantané sur chaque abonné n'ayant pas encore été synchronisé, ayant été marqué pour une réinitialisation, ou incluant de nouveaux articles.  
   
  Pour la réplication d'instantané ou transactionnelle, l'Agent de distribution effectue les étapes suivantes :  

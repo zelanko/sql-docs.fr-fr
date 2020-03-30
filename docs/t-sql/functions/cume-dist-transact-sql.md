@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68026459"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68026459"
 
 Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette fonction calcule la distribution cumulative d'une valeur dans un groupe de valeurs. Autrement dit, `CUME_DIST` calcule la position relative d'une valeur spécifiée dans un groupe de valeurs. En supposant un ordre croissant, le `CUME_DIST` d’une valeur à la ligne _r_ correspond au nombre de lignes avec des valeurs inférieures ou égales à la valeur de la ligne _r_, divisé par le nombre de lignes évaluées dans la partition ou le jeu de résultats de la requête. `CUME_DIST` est similaire à la fonction `PERCENT_RANK`.
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

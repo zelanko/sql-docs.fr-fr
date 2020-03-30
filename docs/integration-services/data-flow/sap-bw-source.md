@@ -11,10 +11,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f510f17f6a03320e8a20bf8a39e0452bfbeb718
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298069"
 ---
 # <a name="sap-bw-source"></a>Source SAP BW
@@ -40,7 +40,7 @@ ms.locfileid: "71298069"
   
 -   [Configurer la source SAP BW](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Préparation des objets SAP Netweaver BW requis par la source  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-source-requires"></a><a name="bkmk_Prepare_Objects"></a> Préparation des objets SAP Netweaver BW requis par la source  
  La source SAP BW nécessite la présence de certains objets dans le système SAP Netweaver BW pour que la source puisse fonctionner. Si ces objets n'existent pas, vous devez suivre ces étapes pour les créer et les configurer dans le système SAP Netweaver BW.  
   
 > [!NOTE]  
@@ -84,12 +84,12 @@ ms.locfileid: "71298069"
   
      La source SAP BW peut appeler la chaîne de processus pour activer le processus de transfert de données.  
   
-##  <a name="bkmk_Connect_Database"></a> Connexion au système SAP Netweaver BW  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> Connexion au système SAP Netweaver BW  
  Pour la connexion au système SAP Netweaver BW version 7, la source SAP BW utilise le gestionnaire de connexions SAP BW qui fait partie du package [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Le gestionnaire de connexions SAP BW est le seul gestionnaire de connexions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que la source SAP BW peut utiliser.  
   
  Pour plus d'informations sur le gestionnaire de connexions SAP BW, consultez [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Source"></a> Configuration de la source SAP BW  
+##  <a name="configuring-the-sap-bw-source"></a><a name="bkmk_Configure_Source"></a> Configuration de la source SAP BW  
  Vous pouvez configurer la source SAP BW comme suit :  
   
 -   Recherchez et sélectionnez la destination OHS (Open Hub Service) à utiliser pour extraire des données.  
@@ -114,7 +114,7 @@ ms.locfileid: "71298069"
   
 -   Utilisez les options que vous avez sélectionnées pour afficher un aperçu des données à extraire.  
   
- Vous pouvez également activer la journalisation des appels de fonction RFC par la source. (Cette journalisation diffère de la journalisation facultative que vous pouvez activer sur les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].) Vous activez la journalisation des appels de fonction RFC lorsque vous configurez le gestionnaire de connexions SAP BW que la source utilisera. Pour plus d'informations sur la configuration du gestionnaire de connexions SAP BW, consultez [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
+ Vous pouvez également activer la journalisation des appels de fonction RFC par la source. (Cette journalisation diffère de la journalisation facultative que vous pouvez activer sur les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .) Vous activez la journalisation des appels de fonction RFC lorsque vous configurez le gestionnaire de connexions SAP BW que la source utilisera. Pour plus d'informations sur la configuration du gestionnaire de connexions SAP BW, consultez [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
   
  Si vous ne connaissez pas toutes les valeurs requises pour configurer la source, adressez-vous à votre administrateur SAP.  
   

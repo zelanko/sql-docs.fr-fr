@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 00ab2a45675b237e3e15e340cc3789b1b79cdafc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287540"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Définir la méthode de propagation des modifications de données des articles transactionnels
@@ -42,11 +42,11 @@ ms.locfileid: "76287540"
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   La modification des fichiers d'instantanés générés par la réplication nécessite la plus grande prudence. Vous devez tester et prendre en charge la logique personnalisée dans les procédures stockées personnalisées. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] n'assure pas la prise en charge de la logique personnalisée.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Spécifiez la méthode de propagation dans l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** , accessible dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-the-propagation-method"></a>Pour spécifier la méthode de propagation  
@@ -77,7 +77,7 @@ ms.locfileid: "76287540"
   
      Une fois l'instantané généré, accédez au dossier d'instantanés de la publication à laquelle cet article appartient, puis recherchez le fichier **.sch** dont le nom est identique à celui de l'article. Ouvrez ce fichier à l'aide du Bloc-notes ou d'un autre éditeur de texte, recherchez la commande CREATE PROCEDURE pour les procédures stockées INSERT, UPDATE ou DELETE, puis modifiez la définition de la procédure pour fournir une logique personnalisée de propagation des modifications de données. Si l'instantané est régénéré, vous devez recréer la procédure personnalisée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  La réplication transactionnelle vous permet de contrôler comment les modifications sont propagées du serveur de publication aux Abonnés et cette méthode de propagation peut être définie par programme lorsqu'un article est créé et modifié ultérieurement à l'aide de procédures stockées de réplication.  
   
 > [!NOTE]  

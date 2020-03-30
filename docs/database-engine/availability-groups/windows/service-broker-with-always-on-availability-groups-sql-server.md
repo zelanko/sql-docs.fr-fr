@@ -14,10 +14,10 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8845f69e619c8cd2cc7a194b6f03a4dec5f592c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822612"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker avec les groupes de disponibilité Always On (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822612"
   Cette rubrique contient des informations sur la configuration de Service Broker afin d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
   
-##  <a name="ReceiveRemoteMessages"></a> Spécifications pour qu'un service dans un groupe de disponibilité reçoive les messages distants  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a> Spécifications pour qu'un service dans un groupe de disponibilité reçoive les messages distants  
   
 1.  **Assurez-vous que le groupe de disponibilité possède un écouteur.**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74822612"
   
      Pour plus d’informations sur la création des itinéraires, consultez [Exemples de routage Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (dans la version [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] de la documentation en ligne) et [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
   
-##  <a name="SendRemoteMessages"></a> Spécifications pour l'envoi de messages à un service distant dans un groupe de disponibilité  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a> Spécifications pour l'envoi de messages à un service distant dans un groupe de disponibilité  
   
 1.  **Créez un itinéraire vers le service cible.**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "74822612"
   
 2.  **Vérifiez que msdb contient un itinéraire AutoCreatedLocal ou un itinéraire vers le service spécifique.** (Pour plus d’informations, consultez [Spécifications pour qu’un service dans un groupe de disponibilité reçoive les messages distants](#ReceiveRemoteMessages), plus haut dans cette rubrique.)  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   

@@ -17,17 +17,17 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78370542"
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   À l'instar des fonctions dans les langages de programmation, les fonctions définies par l'utilisateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des routines qui acceptent des paramètres, exécutent une action, par exemple un calcul complexe, et retournent le résultat de cette action sous forme de valeur. La valeur retournée peut être une valeur scalaire unique ou un jeu de résultats.  
    
-##  <a name="Benefits"></a> Fonctions définies par l’utilisateur  
+##  <a name="user-defined-functions"></a><a name="Benefits"></a> Fonctions définies par l’utilisateur  
 Pourquoi utiliser des fonctions définies par l’utilisateur (UDF) ? 
   
 -   Elles permettent d'utiliser la programmation modulaire.  
@@ -47,7 +47,7 @@ Pourquoi utiliser des fonctions définies par l’utilisateur (UDF) ?
 > [!IMPORTANT]
 > Les fonctions définies par l’utilisateur (UDF) [!INCLUDE[tsql](../../includes/tsql-md.md)] figurant dans les requêtes ne peuvent être exécutées que sur un seul thread (plan d’exécution en série). Par conséquent, l’utilisation de fonctions UDF empêche le traitement de requêtes en parallèle. Pour plus d’informations sur le traitement de requêtes en parallèle, consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
   
-##  <a name="FunctionTypes"></a> Types de fonctions  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> Types de fonctions  
 **Fonction scalaire**  
  Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Pour une fonction scalaire incluse, la valeur scalaire retournée est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples peut contenir une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n’importe quel type de données, sauf **text**, **ntext**, **image**, **cursor**et **timestamp**. 
  **[Exemples.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
@@ -58,7 +58,7 @@ Pourquoi utiliser des fonctions définies par l’utilisateur (UDF) ?
 **Fonctions système**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit de nombreuses fonctions système que vous pouvez utiliser pour effectuer diverses opérations. Elles ne peuvent pas être modifiées. Pour plus d’informations, consultez [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Fonctions stockées système &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md) et [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-##  <a name="Guidelines"></a> Instructions  
+##  <a name="guidelines"></a><a name="Guidelines"></a> Instructions  
  Les erreurs [!INCLUDE[tsql](../../includes/tsql-md.md)] qui provoquent l’annulation d’une instruction et la poursuite avec l’instruction suivante dans le module (comme les déclencheurs ou les procédures stockées) sont traitées différemment à l’intérieur d’une fonction. Dans les fonctions, ces erreurs provoquent l'arrêt de l'exécution de la fonction, lequel provoque à son tour l'annulation de l'instruction qui a invoqué la fonction.  
   
  Les instructions contenues dans un bloc `BEGIN...END` ne peuvent pas avoir d’effets secondaires. Les effets secondaires d'une fonction sont toutes les modifications définitives de l'état d'une ressource dont la portée s'étend hors de la fonction, comme la modification d'une table de base de données. Les instructions d'une fonction ne peuvent modifier que les objets locaux de cette fonction, tels les variables ou les curseurs locaux. Les modifications apportées aux tables de base de données, les opérations portant sur des curseurs non locaux par rapport à la fonction, l'envoi de courrier électronique, les tentatives de modification de catalogue et la génération d'un jeu de résultats retourné à l'utilisateur sont autant d'actions qui ne peuvent pas être exécutées dans une fonction.  
@@ -71,7 +71,7 @@ Pourquoi utiliser des fonctions définies par l’utilisateur (UDF) ?
 > [!IMPORTANT]   
 > Pour plus d’informations sur les fonctions définies par l’utilisateur et pour prendre connaissance des considérations relatives aux performances, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
   
-##  <a name="ValidStatements"></a> Instructions valides dans une fonction  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a> Instructions valides dans une fonction  
 Les types d'instructions valides dans une fonction sont les suivants :  
   
 -   Les instructions `DECLARE` permettant de définir des variables de données et des curseurs locaux de la fonction.  
@@ -112,7 +112,7 @@ Les types d'instructions valides dans une fonction sont les suivants :
   
  Pour obtenir la liste des fonctions système intégrées déterministes et non déterministes, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-##  <a name="SchemaBound"></a> Fonctions liées à un schéma  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> Fonctions liées à un schéma  
  `CREATE FUNCTION` prend en charge une clause `SCHEMABINDING` qui lie la fonction au schéma de tout objet auquel elle fait référence, comme les tables, les vues ou d’autres fonctions définies par l’utilisateur. Toute tentative de modification (ALTER) ou de suppression (DROP) d'un objet référencé par une fonction liée au schéma est vouée à l'échec.  
   
  Les conditions suivantes doivent être respectées pour que la clause `SCHEMABINDING` puisse être spécifiée dans [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) :  
@@ -125,10 +125,10 @@ Les types d'instructions valides dans une fonction sont les suivants :
   
  Vous pouvez utiliser l’instruction `ALTER FUNCTION` pour supprimer la liaison au schéma. L’instruction `ALTER FUNCTION` doit redéfinir la fonction sans spécifier `WITH SCHEMABINDING`.  
   
-##  <a name="Parameters"></a> Spécification des paramètres  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a> Spécification des paramètres  
  Une fonction définie par l'utilisateur accepte ou n'accepte pas de paramètres d'entrée et retourne une valeur scalaire ou une table. Une fonction peut comprendre jusqu'à 1 024 paramètres d'entrée. Lorsqu'un des paramètres de la fonction possède une valeur par défaut, le mot clé DEFAULT doit être spécifié lors de l'appel de la fonction afin d'obtenir la valeur par défaut. Ce comportement est différent de celui des paramètres avec valeurs par défaut des procédures stockées définies par l'utilisateur pour lesquelles l'omission du paramètre implique également la prise en compte de la valeur par défaut. Les fonctions définies par l'utilisateur ne prennent pas en charge les paramètres de sortie.  
   
-##  <a name="Tasks"></a> Exemples supplémentaires  
+##  <a name="more-examples"></a><a name="Tasks"></a> Exemples supplémentaires  
   
 |||  
 |-|-|  

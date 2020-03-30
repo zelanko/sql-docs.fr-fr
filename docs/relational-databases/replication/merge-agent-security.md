@@ -15,10 +15,10 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 45cc5e8c2ca3e311704ffd4eb6577d2e934d484a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140719"
 ---
 # <a name="merge-agent-security"></a>Sécurité de l'agent de fusion
@@ -27,7 +27,7 @@ ms.locfileid: "68140719"
   
 -   Si la boîte de dialogue est ouverte à partir de l'Assistant Nouvel abonnement, elle vous propose ainsi en plus d'indiquer le contexte dans lequel l'agent de fusion établit les connexions avec l'Abonné (dans le cas d'abonnements envoyés au serveur) ou avec le serveur de publication et le serveur de distribution (dans le cas d'abonnements extraits du serveur). La connexion peut s’établir via un compte Windows ou un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   
--   Si la boîte de dialogue est ouverte à partir de celle intitulée **Propriétés de l'abonnement** , vous devez indiquer le contexte dans lequel l'agent de fusion établit les connexions en cliquant sur le bouton des propriétés ( **...** ) de la ligne **Connexion de l'Abonné** ou **Connexion du serveur de publication** . Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et le guide pratique pour [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+-   Si la boîte de dialogue est ouverte à partir de celle intitulée **Propriétés de l'abonnement** , vous devez indiquer le contexte dans lequel l'agent de fusion établit les connexions en cliquant sur le bouton des propriétés ( **...** ) de la ligne **Connexion de l'Abonné** ou **Connexion du serveur de publication** . Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et la procédure indiquant comment [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Tous les comptes doivent être valides, le mot de passe correct étant spécifié pour chaque compte. Les comptes et les mots de passe ne sont pas validés tant qu'un agent ne s'exécute pas.  
   

@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907344"
 ---
 # <a name="modify-a-partition-function"></a>Modifier une fonction de partition
@@ -38,9 +38,9 @@ ms.locfileid: "72907344"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous ne pouvez utiliser ALTER PARTITION FUNCTION que pour diviser une partition en deux ou pour fusionner deux partitions en une seule. Pour modifier le mode de partitionnement d'une table ou d'un index (par exemple, pour passer de 10 à 5 partitions), vous disposez de plusieurs options :  
   
@@ -59,9 +59,9 @@ ms.locfileid: "72907344"
   
 -   Tous les groupes de fichiers concernés par l’instruction ALTER PARTITION FUNCTION doivent être en ligne.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L'instruction ALTER PARTITION FUNCTION peut être exécutée avec les autorisations suivantes :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -70,7 +70,7 @@ ms.locfileid: "72907344"
   
 -   Autorisation CONTROL SERVER ou ALTER ANY DATABASE sur le serveur de la base de données dans laquelle la fonction de partition a été créée.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour modifier une fonction de partition :**  
   
  Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier une fonction de partition, vous devez d'abord supprimer la fonction puis en créer une nouvelle avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d'informations, consultez la rubrique  
@@ -85,7 +85,7 @@ ms.locfileid: "72907344"
   
 4.  Dans la boîte de dialogue **Supprimer un objet** , assurez-vous que la fonction de partition est sélectionnée, puis cliquez sur **OK**.  
 
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Pour fractionner une partition unique en deux partitions  
   

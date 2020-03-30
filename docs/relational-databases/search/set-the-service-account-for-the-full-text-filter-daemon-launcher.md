@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055950"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Définir le compte du service du Lanceur de démon de filtre de texte intégral
@@ -31,7 +31,7 @@ Le service du Lanceur de démon de filtre de texte intégral SQL est utilisé pa
   
 Le service du Lanceur de démon de filtre de texte intégral SQL est un service dépendant associé à une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le service du Lanceur de démon de filtre de texte intégral SQL propage les informations du compte de service à chaque processus hôte de démon de filtre qu’il lance.  
 
-##  <a name="setting"></a> Définir le compte de service  
+##  <a name="set-the-service-account"></a><a name="setting"></a> Définir le compte de service  
   
 1.  Dans le menu **Démarrer**, pointez sur **Tous les programmes**, développez [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur **Gestionnaire de configuration SQL Server 2016**.  
   
@@ -43,7 +43,7 @@ Le service du Lanceur de démon de filtre de texte intégral SQL est un service 
   
 ![Propriétés des processus du Lanceur de démon de filtre de texte intégral SQL](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> Dépanner le service du Lanceur de démon de filtre de texte intégral SQL s’il ne démarre pas  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> Dépanner le service du Lanceur de démon de filtre de texte intégral SQL s’il ne démarre pas  
  Si le service du Lanceur de démon de filtre de texte intégral SQL ne démarre pas, passez en revue les causes possibles suivantes :  
   
 ### <a name="permissions-issues"></a>Problèmes d’autorisations

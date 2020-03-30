@@ -16,10 +16,10 @@ ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ac82c951c3e65c1d26891f802d19b8522f22a6e9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321212"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Définir le niveau de compatibilité pour les publications de fusion
@@ -34,7 +34,7 @@ ms.locfileid: "75321212"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Définir le niveau de compatibilité sur la page **Types d'abonnés** de l'Assistant Nouvelle publication. Pour plus d'informations sur l'accès à cet Assistant, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md). Après la création d'un instantané de publication, le niveau de compatibilité peut être augmenté, mais il ne peut pas être diminué. Augmentez le niveau de compatibilité dans la page **Général** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Si vous augmentez le niveau de compatibilité de la publication, tous les abonnements existants sur les serveurs exécutant des versions antérieures au niveau de compatibilité ne peuvent plus se synchroniser.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "75321212"
   
 -   Dans la page **Général** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez **Niveau de compatibilité**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Le niveau de compatibilité d'une publication de fusion peut être défini par programme au moment de la création d'une publication ou être modifié par programme ultérieurement. Vous pouvez utiliser des procédures stockées de réplication pour définir ou modifier cette propriété de publication.  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Pour définir le niveau de compatibilité d'une publication de fusion  
@@ -65,7 +65,7 @@ ms.locfileid: "75321212"
   
 2.  Recherchez le niveau de compatibilité de la publication dans la colonne **backward_comp_level** du jeu de résultats.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple crée une publication de fusion et définit son niveau de compatibilité.  
   
 ```sql  

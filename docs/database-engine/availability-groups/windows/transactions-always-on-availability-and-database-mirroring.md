@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251232"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transactions - Groupes de disponibilité Always On et mise en miroir de bases de données
@@ -51,7 +51,7 @@ Dans SQL Server 2016 SP1 et versions antérieures, les transactions entre bases 
   
 En outre, les transactions de bases de données croisées ne sont non plus prises en charge pour la mise en miroir de bases de données.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 et versions antérieures : Prise en charge des transactions distribuées  
+##  <a name="sql-server-2016-sp1-and-before-support-for-distributed-transactions"></a><a name="dtcsupport"></a> SQL Server 2016 SP1 et versions antérieures : Prise en charge des transactions distribuées  
 Les transactions distribuées sont prises en charge avec les groupes de disponibilité quand les bases de données sont hébergées par différentes instances de SQL Server. Cela s’applique aussi aux transactions distribuées entre des instances de SQL Server et un autre serveur compatible DTC.  
  
 MSDTC (Microsoft Distributed Transaction Coordinator ou DTC) est un service Windows qui fournit une infrastructure de transaction pour les systèmes distribués. MSDTC permet aux applications clientes d’intégrer plusieurs sources de données dans une transaction, laquelle est ensuite validée sur tous les serveurs inclus dans la transaction. Par exemple, vous pouvez utiliser MSDTC pour coordonner des transactions qui s’étendent sur plusieurs bases de données sur des serveurs différents.

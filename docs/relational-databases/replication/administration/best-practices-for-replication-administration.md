@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 5d0948f6732b97da93b1136635175b90d5e92059
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286874"
 ---
 # <a name="best-practices-for-replication-administration"></a>Méthodes conseillées pour l'administration de la réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les méthodes conseillées présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les bonnes pratiques présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  Les indications sur les méthodes conseillées sont scindées en deux domaines :  
   

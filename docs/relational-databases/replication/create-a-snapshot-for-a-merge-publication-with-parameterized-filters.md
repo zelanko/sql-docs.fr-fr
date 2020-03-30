@@ -16,10 +16,10 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321823"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Créer un instantané d'une publication de fusion avec des filtres paramétrés
@@ -52,13 +52,13 @@ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications d
  L'Agent d'instantané crée des instantanés de chaque partition. Pour les instantanés prégénérés et ceux demandés par un Abonné, l'Agent s'exécute et se connecte avec les informations d'identification spécifiées au moment de la création du travail de l'Agent d'instantané pour la publication (ce travail est créé par l'Assistant Nouvelle publication ou par **sp_addpublication_snapshot**). Pour modifier les informations d'identification, utilisez **sp_changedynamicsnapshot_job**. Pour plus d’informations, consultez [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
 
   
-##  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Lors de la génération d'un instantané pour une publication de fusion à l'aide de filtres paramétrables, vous devez commencer par générer un instantané standard (schéma) qui contient l'ensemble des données publiées, ainsi que les métadonnées de l'Abonné pour l'abonnement. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Après avoir créé l'instantané de schéma, vous pouvez générer l'instantané qui contient la partition des données publiées spécifique à l'Abonné.  
   
 -   Si le filtrage d'un ou plusieurs articles de la publication donne des partitions qui ne se chevauchent pas et sont uniques pour chaque abonnement, les métadonnées sont nettoyées à chaque exécution de l'Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à initialiser la génération et la remise d'instantané. 
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Générez des instantanés pour des partitions dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication\< -** Publication>. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Vous pouvez permettre à des Abonnés de lancer la génération et la livraison d'instantanés et/ou de générer des instantanés.  
   
  Pour générer des instantanés pour une ou plusieurs partitions, vous devez préalablement :  
@@ -103,7 +103,7 @@ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications d
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les procédures stockées et l'Agent d'instantané permettent d'effectuer les tâches suivantes :  
   
 -   Vous pouvez autoriser les Abonnés à demander la génération et l'application d'un instantané lors de leur première synchronisation.  
@@ -200,7 +200,7 @@ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications d
 > [!NOTE]  
 >  Pour plus d’informations sur la programmation des agents de réplication, consultez [Concepts des exécutables de l’Agent de réplication](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple crée une publication de fusion avec des filtres paramétrables dans laquelle les Abonnés initialisent le processus de génération d'instantané. Les valeurs de **\@job_login** et **\@job_password** sont passées à l’aide de variables de script.  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
@@ -272,7 +272,7 @@ PAUSE
   
 ```  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez utiliser les Replication Management Objects pour générer par programme des instantanés partitionnés des manières suivantes :  
   
 -   Vous pouvez autoriser les Abonnés à demander la génération et l'application d'un instantané lors de leur première synchronisation.  
@@ -401,7 +401,7 @@ PAUSE
   
 8.  Répétez les étapes 4 à 7 pour chaque Abonné.  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple crée une publication de fusion qui permet aux Abonnés de demander la génération d'instantanés.  
   
  [!code-cs[HowTo#rmo_CreateMergePub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  

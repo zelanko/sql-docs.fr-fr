@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251137"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure
@@ -35,7 +35,7 @@ ms.locfileid: "75251137"
   
 -   **Laisser SQL Server gérer les sauvegardes dans Microsoft Azure :** configurez SQL Server pour qu’il gère la stratégie de sauvegarde et planifie les sauvegardes d’une seule ou de plusieurs bases de données, ou définissez les valeurs par défaut au niveau de l’instance. Cette fonctionnalité s’appelle **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Pour plus d’informations, consultez [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Cette fonctionnalité est disponible dans SQL Server 2014 ou version ultérieure.  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Avantages de l’utilisation du service d’objets blob Microsoft Azure pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>Avantages de l’utilisation du service d’objets blob Microsoft Azure pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Stockage hors site flexible, fiable et illimité : le stockage de vos sauvegardes dans le service d’objets blob Microsoft Azure peut représenter une option hors site pratique, flexible et facile d'accès. La création d'un stockage hors site pour vos sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être aussi simple que la modification de vos scripts/tâches existants. En principe, le stockage hors site doit être suffisamment éloigné de l'emplacement de la base de données de production pour empêcher qu'un éventuel sinistre n'affecte tous les emplacements (bases de données hors site et de production). En choisissant de géorépliquer le stockage d'objets blob, vous disposez d'un niveau de protection supplémentaire au cas où un sinistre affecterait l'ensemble de la région. En outre, les sauvegardes restent accessibles à partir de n'importe quel endroit et à tout moment, et vous pouvez y accéder facilement pour les restaurations.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251137"
   
 -   Avantages en termes de coûts : payez uniquement pour le service utilisé. Peut être économique comme option de sauvegarde et d'archivage hors site. Pour plus d’informations et de liens, consultez la section [Considérations sur la facturation Microsoft Azure](#Billing) .  
   
-##  <a name="Billing"></a> Considérations sur la facturation Microsoft Azure :  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Considérations sur la facturation Microsoft Azure :  
  En comprenant les coûts de stockage Microsoft Azure, vous pouvez prévoir le coût de création et de stockage des sauvegardes dans Microsoft Azure.  
   
  La [Calculatrice Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) peut vous aider à évaluer les coûts.  

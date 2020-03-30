@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68139599"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifier des relations de clé étrangère
@@ -43,9 +43,9 @@ ms.locfileid: "68139599"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Le type de données et la taille de la nouvelle colonne clé étrangère doivent correspondre à ceux de la colonne clé primaire à laquelle elle est associée, à ceci près :  
   
 -   Une colonne **char** ou **sysname** peut être en relation avec une colonne **varchar** .  
@@ -54,12 +54,12 @@ ms.locfileid: "68139599"
   
 -   Un type de données alias peut être en relation avec son type de base.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>Pour modifier une clé étrangère  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68139599"
   
 4.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé étrangère**  
   
  Pour modifier une contrainte FOREIGN KEY à l'aide de Transact-SQL, vous devez d'abord supprimer la contrainte FOREIGN KEY existante, puis la recréer avec sa nouvelle définition. Pour plus d'informations, consultez [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) et [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  

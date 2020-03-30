@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 977066e40cc35b5a769192005dadc0e52b37a91a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68075127"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (Supérieur à) (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68075127"
 
   Compare deux expressions (opérateur de comparaison) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Lorsque vous comparez des expressions non nulles, le résultat est TRUE si l'opérande de gauche a une valeur plus élevée que celui de droite. Si tel n'est pas le cas, le résultat est FALSE. Si l’une des opérandes ou les deux ont la valeur NULL, consultez la rubrique [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

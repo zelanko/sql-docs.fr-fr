@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 63fa5ab8c3eea6db950fb2c74a26b7087c5927c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287516"
 ---
 # <a name="view-and-modify-article-properties"></a>Afficher et modifier les propriétés d'un article
@@ -49,17 +49,17 @@ ms.locfileid: "76287516"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Certaines propriétés ne sont pas modifiables après la création d'une publication et d'autres s'il existe des abonnements à la publication. Les propriétés non modifiables sont affichées en lecture seule.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Après qu'une publication a été créée, certaines modifications de propriétés nécessitent un nouvel instantané. Si une publication dispose d'abonnements, ces abonnements pourraient devoir alors être réinitialisés selon les modifications que vous avez apportées. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Affichez et modifiez les propriétés de l’article dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , disponible dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et le Moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 -   La page **Général** contient le nom et la description de la publication, le nom de la base de données, le type de publication et les paramètres d'expiration des abonnements.  
@@ -97,9 +97,9 @@ ms.locfileid: "76287516"
   
 3.  Modifiez les propriétés si nécessaire, puis cliquez sur **OK**.  
   
-4.  Dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de la publication -** Publication> **, cliquez sur \<OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les articles peuvent être modifiés et leurs propriétés retournées, par programme, à l'aide des procédures stockées de réplication. Les procédures stockées utilisées dépendent du type de publication auquel l'article appartient.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Pour afficher les propriétés d'un article appartenant à une publication transactionnelle ou d'instantané  
@@ -128,7 +128,7 @@ ms.locfileid: "76287516"
     > [!NOTE]  
     >  Si la modification nécessite la génération d’un nouvel instantané, vous devez également spécifier la valeur `1` pour `@force_invalidate_snapshot`, et si la modification nécessite la réinitialisation des Abonnés, vous devez également spécifier la valeur `1` pour `@force_reinit_subscription`. Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple de réplication transactionnelle retourne les propriétés de l'article publié.  
   
  [!code-sql[HowTo#sp_helptranarticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_1.sql)]  
@@ -145,7 +145,7 @@ ms.locfileid: "76287516"
   
  [!code-sql[HowTo#sp_changemergearticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_4.sql)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez modifier des articles et accéder à leurs propriétés, par programme, en utilisant les objets RMO (Replication Management Objects). Les classes RMO à utiliser pour afficher ou modifier les propriétés d'un article dépendent du type de publication auquel l'article appartient.  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Pour afficher ou modifier les propriétés d'un article qui appartient à une publication transactionnelle ou d'instantané  
@@ -180,7 +180,7 @@ ms.locfileid: "76287516"
   
 7.  (Facultatif) Si vous avez spécifié la valeur **true** pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour valider les modifications sur le serveur. Si vous avez spécifié la valeur **false** pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valeur par défaut), les modifications sont envoyées immédiatement au serveur.  
   
-###  <a name="PShellExample"></a> Exemple (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemple (RMO)  
  Cet exemple modifie un article de fusion pour spécifier le gestionnaire de logique métier utilisé par l'article.  
   
  [!code-cs[HowTo#rmo_ChangeMergeArticle_BLH](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changemergearticle_blh)]  

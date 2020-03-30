@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288543"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Utiliser l’amorçage automatique pour initialiser un réplica secondaire dans un groupe de disponibilité Always On
@@ -46,7 +46,7 @@ L’amorçage automatique est un processus monothread qui peut gérer jusqu’à
 
 La compression peut être utilisée pour l’amorçage automatique, mais elle est désactivée par défaut. L’activation de la compression réduit la bande passante réseau et accélère éventuellement le processus, mais l’inconvénient est une charge supplémentaire pour le processeur. Pour utiliser la compression pendant l’amorçage automatique, activez l’indicateur de trace 9567. Consultez [Régler la compression pour un groupe de disponibilité](tune-compression-for-availability-group.md).
 
-## <a name = "disklayout"></a> Disposition des disques
+## <a name="disk-layout"></a><a name = "disklayout"></a> Disposition des disques
 
 Dans SQL Server 2016 et antérieur, le dossier où la base de données est créée par l’amorçage automatique doit déjà exister et avoir le même chemin que sur le réplica principal. 
 
@@ -85,7 +85,7 @@ Vous créez un groupe de disponibilité par amorçage automatique avec Transact-
 
 ![Sélectionner la synchronisation de données initiale][1]
 
-L’exemple suivant crée un groupe de disponibilité avec amorçage automatique à l’aide de Transact-SQL. Consultez aussi la rubrique [Créer un groupe de disponibilité (Transact-SQL)](create-an-availability-group-transact-sql.md). L’amorçage est activé sur un réplica secondaire en affectant la valeur `AUTOMATIC` à l’option `SEEDING_MODE`. Le comportement par défaut est `MANUAL`, qui est le comportement des versions antérieures à SQL Server 2016 nécessitant la réalisation d’une sauvegarde de la base de données sur le réplica principal, la copie du fichier de sauvegarde sur le réplica secondaire et la restauration de la sauvegarde `WITH NORECOVERY`.
+L’exemple suivant crée un groupe de disponibilité avec amorçage automatique à l’aide de Transact-SQL. Consultez aussi la rubrique [Créer un groupe de disponibilité (Transact-SQL)](create-an-availability-group-transact-sql.md). L’amorçage est activé sur un réplica secondaire en affectant la valeur `SEEDING_MODE` à l’option `AUTOMATIC`. Le comportement par défaut est `MANUAL`, qui est le comportement des versions antérieures à SQL Server 2016 nécessitant la réalisation d’une sauvegarde de la base de données sur le réplica principal, la copie du fichier de sauvegarde sur le réplica secondaire et la restauration de la sauvegarde `WITH NORECOVERY`.
 
 ```sql
 CREATE AVAILABILITY GROUP [<AGName>]
@@ -109,7 +109,7 @@ Sur une instance qui devient un réplica secondaire, une fois que l’instance e
 
 >Le réplica de disponibilité local pour le groupe de disponibilité « nom_groupe_de_disponibilité » n’a pas reçu l’autorisation de créer des bases de données, mais son paramètre `SEEDING_MODE` est défini sur `AUTOMATIC`. Utilisez `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` pour autoriser la création de bases de données amorcée par le réplica de disponibilité principal.
 
-### <a name = "grantCreate"></a> Octroyer l’autorisation de créer une base de données sur un réplica secondaire au groupe de disponibilité
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> Octroyer l’autorisation de créer une base de données sur un réplica secondaire au groupe de disponibilité
 
 Après la jointure, accordez au groupe de disponibilité l’autorisation de créer des bases de données sur l’instance de réplica secondaire de SQL Server. Pour que l’amorçage automatique fonctionne, le groupe de disponibilité a besoin de l’autorisation de créer une base de données. 
 
@@ -230,7 +230,7 @@ GO
 
 Le tableau suivant répertorie les événements étendus relatifs à l’amorçage automatique.
 
-|Nom|Description|
+|Name|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Message de demande d’amorçage.|
 |hadr_physical_seeding_backup_state_change|Modification d’état côté sauvegarde d’amorçage physique.|

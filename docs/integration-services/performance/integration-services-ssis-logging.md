@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287883"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
@@ -71,7 +71,7 @@ ms.locfileid: "79287883"
   
  Le tableau suivant énumère les ProgID et ClassID des modules fournisseurs d'informations inclus dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ainsi que l'emplacement des journaux dans lesquels les modules fournisseurs d'informations écrivent.  
   
-|Module fournisseur d'informations|ProgID|ClassID|Emplacement|  
+|Module fournisseur d'informations|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |Fichier texte|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|Le gestionnaire de connexions de fichiers utilisé par le module fournisseur d'informations spécifie le chemin d'accès du fichier texte.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|Le gestionnaire de connexions de fichiers utilisé par le module fournisseur d'informations spécifie le chemin d'accès du fichier utilisé par [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -105,7 +105,7 @@ ms.locfileid: "79287883"
 |Opérateur|L'identité de l'utilisateur ayant lancé le package.|  
 |SourceName|Le nom du conteneur ou de la tâche dans laquelle l'événement du journal est survenu.|  
 |SourceID|L'identificateur unique du package ; la boucle Foreach, la boucle For ou le conteneur de séquences ; ou la tâche dans laquelle l'événement du journal est survenu.|  
-|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : L'exécution d'un package unique peut créer des entrées de journal avec des valeurs différentes pour l'élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
+|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : l’exécution d’un package unique peut créer des entrées de journal avec des valeurs différentes pour l’élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
 |MessageText|Un message associé à l'entrée de journal.|  
 |DataBytes|Un tableau d'octets spécifique à l'entrée du journal. La signification de ce champ varie en fonction de l'entrée du journal.|  
   
@@ -137,7 +137,7 @@ ms.locfileid: "79287883"
 |**OnVariableValueChanged**|Écrit une entrée de journal lorsque la valeur d'une variable est modifiée.|  
 |**OnWarning**|Écrit une entrée de journal lorsqu'un avertissement survient.|  
 |**PipelineComponentTime**|Pour chaque composant de flux de données, écrit une entrée de journal pour chaque phase de validation et d'exécution. L'entrée de journal spécifie le temps de traitement de chaque phase.|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|Écrit une entrée de journal qui fournit des informations de diagnostic.<br /><br /> Par exemple, vous pouvez enregistrer un message avant et après chaque appel à un fournisseur de données externes. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Consignez l’événement **DiagnosticEx** lorsque vous souhaitez rechercher les noms des colonnes dans le flux de données qui contiennent des erreurs. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> Remarque : Si vous consignez l’événement **DiagnosticEx** avec le fournisseur de journaux SQL Server, la sortie risque d’être tronquée. Le champ **message** du module fournisseur d’informations SQL Server est de type nvarchar(2048). Pour prévenir le risque de troncation, utilisez un fournisseur de journaux différent lorsque vous consignez l’événement **DiagnosticEx** .|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|Écrit une entrée de journal qui fournit des informations de diagnostic.<br /><br /> Par exemple, vous pouvez enregistrer un message avant et après chaque appel à un fournisseur de données externes. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Consignez l’événement **DiagnosticEx** lorsque vous souhaitez rechercher les noms des colonnes dans le flux de données qui contiennent des erreurs. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> Remarque : si vous consignez l’événement **DiagnosticEx** avec le fournisseur de journaux SQL Server, la sortie risque d’être tronquée. Le champ **message** du module fournisseur d’informations SQL Server est de type nvarchar(2048). Pour prévenir le risque de troncation, utilisez un fournisseur de journaux différent lorsque vous consignez l’événement **DiagnosticEx** .|  
   
  Le package ainsi que de nombreuses tâches contiennent des entrées du journal personnalisées qui peuvent être activées pour la journalisation. Par exemple, la tâche d’envoi de courrier fournit l’entrée de journal personnalisée **SendMailTaskBegin** , qui journalise les informations quand l’exécution de la tâche démarre, mais avant d’envoyer un message électronique. Pour plus d’informations, consultez [Custom Messages for Logging](#custom_messages).  
   
@@ -156,7 +156,7 @@ ms.locfileid: "79287883"
   
 1.  Activez le package et ses tâches pour la journalisation. La journalisation peut s'effectuer au niveau du package, du conteneur et de la tâche. Vous pouvez spécifier différents journaux pour les packages, conteneurs et tâches.  
   
-2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : Fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt).  
+2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt).  
   
 3.  Sélectionnez les événements et les informations de schéma de journal pour chaque événement que vous voulez capturer dans le journal. Pour plus d’informations, consultez [Configurer la journalisation à l’aide d’un fichier de configuration enregistré](#saved_config).  
   
@@ -214,7 +214,7 @@ ms.locfileid: "79287883"
   
 -   La transformation d’agrégation nommée « Sum Quantity and LineItemTotalCost » a passé un total de 220 ms (141 ms dans PrimeOutput et 79 ms dans ProcessInput) à effectuer des calculs et à passer les données à la transformation suivante.  
 
-## <a name="ssdt"></a> Activer la journalisation des packages dans les outils de données SQL Server
+## <a name="enable-package-logging-in-sql-server-data-tools"></a><a name="ssdt"></a> Activer la journalisation des packages dans les outils de données SQL Server
   Cette procédure décrit comment ajouter des journaux à un package, configurer la journalisation au niveau du package et enregistrer la configuration dans un fichier XML. Vous ne pouvez ajouter des journaux qu'au niveau du package, mais le package n'a pas besoin d'effectuer une journalisation pour activer la journalisation dans les conteneurs inclus dans ce package.  
   
 > [!IMPORTANT]  
@@ -262,7 +262,7 @@ ms.locfileid: "79287883"
   
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
-## <a name="configure_logs"></a> Boîte de dialogue Configurer les journaux SSIS
+## <a name="configure-ssis-logs-dialog-box"></a><a name="configure_logs"></a> Boîte de dialogue Configurer les journaux SSIS
   Utilisez la boîte de dialogue **Configurer les journaux SSIS** pour définir les options de journalisation d’un package.  
   
  **Que voulez-vous faire ?**  
@@ -275,12 +275,12 @@ ms.locfileid: "79287883"
   
 4.  [Configurer les options sous l'onglet Détails](#detail)  
   
-###  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Configurer les journaux SSIS  
+###  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a> Ouvrir la boîte de dialogue Configurer les journaux SSIS  
  **Pour ouvrir la boîte de dialogue Configurer les journaux SSIS**  
   
 -   Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , dans le menu **SSIS** , cliquez sur **Enregistrement** .  
   
-###  <a name="container"></a> Configurer les options du volet Conteneurs  
+###  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a> Configurer les options du volet Conteneurs  
  Utilisez le volet **Conteneurs** de la boîte de dialogue **Configurer les journaux SSIS** pour activer l’enregistrement du fichier journal du package et de ses conteneurs.  
   
 #### <a name="options"></a>Options  
@@ -295,7 +295,7 @@ ms.locfileid: "79287883"
   
  Si un conteneur est grisé alors que vous voulez définir ses options d'enregistrement dans le journal, cliquez sur sa case à cocher deux fois. Le premier clic désactive la case à cocher et le deuxième l'active, vous permettant ainsi de choisir le module fournisseur d'informations à utiliser et de sélectionner les informations à enregistrer.  
   
-###  <a name="provider"></a> Configurer les options sous l'onglet Fournisseurs et journaux  
+###  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a> Configurer les options sous l'onglet Fournisseurs et journaux  
  Utilisez l’onglet **Fournisseurs et journaux** de la boîte de dialogue **Configurer les journaux SSIS** pour créer et configurer des journaux permettant de capturer des événements à l’exécution.  
   
 #### <a name="options"></a>Options  
@@ -314,12 +314,12 @@ ms.locfileid: "79287883"
  **Configuration**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur \<**Nouvelle connexion**> pour créer un gestionnaire de connexions. En fonction du type de module fournisseur d'informations, vous pouvez configurer un gestionnaire de connexions OLE DB ou un gestionnaire de connexions de fichiers. Le module fournisseur d’informations du journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ne nécessite aucune connexion.  
   
- Rubriques connexes : [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) , [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
+ Rubriques connexes : [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) , [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **Supprimer**  
  Sélectionnez un module fournisseur d’informations, puis cliquez sur **Supprimer**.  
   
-###  <a name="detail"></a> Configurer les options sous l'onglet Détails  
+###  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a> Configurer les options sous l'onglet Détails  
  Utilisez l’onglet **Détails** de la boîte de dialogue **Configurer les journaux SSIS** pour spécifier les événements à enregistrer dans le journal et les détails des informations à consigner. Les informations sélectionnées s'appliquent à tous les modules fournisseurs d'informations du package. Par exemple, vous ne pouvez pas écrire d’informations dans l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et écrire des informations différentes dans un fichier texte.  
   
 #### <a name="options"></a>Options  
@@ -351,7 +351,7 @@ ms.locfileid: "79287883"
  **Save**  
  Enregistrez les détails de la configuration en tant que modèle dans un fichier XML.  
 
-## <a name="saved_config"></a> Configurer la journalisation à l’aide d’un fichier de configuration enregistré
+## <a name="configure-logging-by-using-a-saved-configuration-file"></a><a name="saved_config"></a> Configurer la journalisation à l’aide d’un fichier de configuration enregistré
   Cette procédure permet de configurer la journalisation de nouveaux conteneurs dans un package en chargeant un fichier de configuration de journalisation déjà enregistré.  
   
  Par défaut, tous les conteneurs d'un package utilisent la même configuration de journalisation que leur conteneur parent. Par exemple, les tâches d'une boucle Foreach utilisent la même configuration de journalisation que la boucle Foreach.  
@@ -382,7 +382,7 @@ ms.locfileid: "79287883"
   
 9. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
-## <a name="server_logging"></a>Activer la journalisation des exécutions de package sur le serveur SSIS
+## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a>Activer la journalisation des exécutions de package sur le serveur SSIS
   Cette rubrique explique comment définir ou modifier le niveau de journalisation d'un package lorsque vous exécutez un package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le niveau de journalisation que vous définissez lorsque vous exécutez le package remplace la journalisation du package configurée lors de la création dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt) .  
   
  Dans **Propriétés du serveur**de SQL Server, sous la propriété **Niveau de journalisation du serveur** , vous pouvez sélectionner un niveau de journalisation par défaut au niveau du serveur. Vous pouvez choisir parmi les niveaux de journalisation intégrés décrits dans cette rubrique, ou choisir un niveau de journalisation personnalisé existant. Le niveau de journalisation sélectionné s'applique par défaut à tous les packages déployés sur le catalogue SSIS. Il s'applique également par défaut à une étape de travail de l'Agent SQL qui exécute un package SSIS.  
@@ -438,7 +438,7 @@ ms.locfileid: "79287883"
   
 -   Seuls les utilisateurs avec un rôle ssis_admin ou sysadmin peuvent créer, mettre à jour ou supprimer des niveaux de journalisation personnalisés.  
 
-## <a name="custom_messages"></a> Custom Messages for Logging
+## <a name="custom-messages-for-logging"></a><a name="custom_messages"></a> Custom Messages for Logging
 SQL Server Integration Services fournit un ensemble complet d’événements personnalisés permettant d’écrire des entrées de journal pour des packages et bon nombre de tâches. Vous pouvez utiliser ces entrées pour enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Vous pouvez ainsi enregistrer l'heure de début et de fin d'une insertion en bloc pour identifier des problèmes de performances lors de l'exécution du package.  
   
  Les entrées de journal personnalisées constituent un ensemble qui se distingue de l'ensemble des événements de journalisation standard, disponibles pour les packages et tous les conteneurs et tâches. Ces entrées sont conçues pour capturer des informations utiles sur une tâche spécifique d'un package. Par exemple, l'une des entrées de journal personnalisées pour la tâche d'exécution de requêtes SQL consigne l'instruction SQL que la tâche exécute dans le journal.  
@@ -491,7 +491,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
 ### <a name="log-entries"></a>Entrées du journal  
   
-####  <a name="Package"></a> Package  
+####  <a name="package"></a><a name="Package"></a> Package  
  Le tableau suivant répertorie les entrées de journal personnalisées pour les packages.  
   
 |Entrée du journal|Description|  
@@ -500,7 +500,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**PackageEnd**|Indique que le package est terminé. Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
 |**Diagnostic**|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.<br /><br /> L’entrée de journal **Diagnostic** inclut également des entrées avant et après les appels effectués auprès des fournisseurs de données externes.|  
   
-####  <a name="BulkInsert"></a> Tâche d'insertion en bloc  
+####  <a name="bulk-insert-task"></a><a name="BulkInsert"></a> Tâche d'insertion en bloc  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche d'insertion en bloc.  
   
 |Entrée du journal|Description|  
@@ -509,7 +509,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**DTSBulkInsertTaskEnd**|Indique que l'insertion en bloc est terminée.|  
 |**DTSBulkInsertTaskInfos**|Fournit des informations détaillées concernant la tâche.|  
   
-####  <a name="DataFlow"></a> Data Flow Task  
+####  <a name="data-flow-task"></a><a name="DataFlow"></a> Data Flow Task  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de flux de données.  
   
 |Entrée du journal|Description|  
@@ -525,17 +525,17 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**PipelineExecutionTrees**|Indique les arborescences d'exécution de la disposition du flux de données. Le planificateur du moteur du flux de données utilise les arborescences pour construire le plan d’exécution du flux de données.|  
 |**PipelineInitialization**|Donne des informations d'initialisation relatives à la tâche. Ces informations incluent les répertoires à utiliser pour le stockage temporaire des données blob, la taille par défaut de la mémoire tampon, ainsi que le nombre de lignes contenues dans une mémoire tampon. Selon la configuration de la tâche de flux de données, plusieurs entrées de journal peuvent être écrites.|  
   
-####  <a name="ExecuteDTS200"></a> Tâche d'exécution DTS 2000  
+####  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> Tâche d'exécution DTS 2000  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche d'exécution DTS 2000.  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Indique que la tâche a commencé l'exécution d'un package DTS 2000.|  
-|**ExecuteDTS80PackageTaskEnd**|Indique que la tâche est terminée.<br /><br /> Remarque : Il est possible que le package DTS 2000 continue à s'exécuter à la fin de la tâche.|  
+|**ExecuteDTS80PackageTaskEnd**|Indique que la tâche est terminée.<br /><br /> Remarque : il est possible que le package DTS 2000 continue à s’exécuter à la fin de la tâche.|  
 |**ExecuteDTS80PackageTaskTaskInfo**|Fournit des informations détaillées concernant la tâche.|  
 |**ExecuteDTS80PackageTaskTaskResult**|Indique le résultat d'exécution du package DTS 2000 que la tâche a exécuté.|  
   
-####  <a name="ExecuteProcess"></a> Tâche d'exécution de processus  
+####  <a name="execute-process-task"></a><a name="ExecuteProcess"></a> Tâche d'exécution de processus  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche d'exécution de processus.  
   
 |Entrée du journal|Description|  
@@ -543,21 +543,21 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**ExecuteProcessExecutingProcess**|Donne des informations sur le processus d'exécution de l'exécutable dont est chargé la tâche.<br /><br /> Deux entrées de journal sont écrites. La première contient des informations sur le nom et l'emplacement de l'exécutable que la tâche exécute, tandis que la seconde enregistre la sortie de l'exécutable.|  
 |**ExecuteProcessVariableRouting**|Fournit des informations sur les variables qui doivent être acheminées vers l'entrée et les sorties de l'exécutable. Les entrées du journal sont écrites pour stdin (l'entrée), stdout (la sortie) et stderr (la sortie des erreurs).|  
   
-####  <a name="ExecuteSQL"></a> Tache d'exécution de requêtes SQL  
+####  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a> Tache d'exécution de requêtes SQL  
  Le tableau suivant décrit les entrées de journal personnalisées pour la tâche d'exécution SQL.  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Fournit des informations sur les phases d'exécution de l'instruction SQL. Des entrées de journal sont écrites lorsque la tâche acquiert la connexion à la base de données, lorsqu'elle commence à préparer l'instruction SQL et à la fin de l'exécution de l'instruction SQL. L'entrée de journal concernant la phase de préparation inclut l'instruction SQL que la tâche utilise.|  
   
-####  <a name="FileSystem"></a> Tâches du système de fichiers  
+####  <a name="file-system-task"></a><a name="FileSystem"></a> Tâches du système de fichiers  
  Le tableau suivant décrit l'entrée de journal personnalisée pour la tâche de système de fichiers.  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Indique l'opération que la tâche effectue. L'entrée de journal est écrite au démarrage de l'opération du système de fichiers et inclut des informations sur la source et la destination.|  
   
-####  <a name="FTP"></a> Tâche FTP  
+####  <a name="ftp-task"></a><a name="FTP"></a> Tâche FTP  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche FTP.  
   
 |Entrée du journal|Description|  
@@ -565,7 +565,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**FTPConnectingToServer**|Indique que la tâche a lancé une connexion au serveur FTP.|  
 |**FTPOperation**|Indique le démarrage et le type d'une opération FTP effectuée par la tâche.|  
   
-####  <a name="MessageQueue"></a> Tâche MSMQ  
+####  <a name="message-queue-task"></a><a name="MessageQueue"></a> Tâche MSMQ  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche MSMQ.  
   
 |Entrée du journal|Description|  
@@ -579,14 +579,14 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**MSMQTaskInfo**|Fournit des informations détaillées concernant la tâche.|  
 |**MSMQTaskTimeOut**|Indique que le délai de la tâche a expiré.|  
   
-####  <a name="Script"></a> Tâche de script  
+####  <a name="script-task"></a><a name="Script"></a> Tâche de script  
  Le tableau suivant décrit l'entrée de journal personnalisée pour la tâche de script.  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Indique les résultats de l'implémentation de la journalisation dans le script. Une entrée de journal est écrite pour chaque appel de la méthode **Log** de l’objet **Dts** . L'entrée est écrite à l'exécution du code. Pour plus d’informations, consultez [Journalisation dans la tâche de script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
-####  <a name="SendMail"></a> Tâche Envoyer un message  
+####  <a name="send-mail-task"></a><a name="SendMail"></a> Tâche Envoyer un message  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche Envoyer un message.  
   
 |Entrée du journal|Description|  
@@ -595,7 +595,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**SendMailTaskEnd**|Indique que la tâche a terminé l'envoi d'un message électronique.|  
 |**SendMailTaskInfo**|Fournit des informations détaillées concernant la tâche.|  
   
-####  <a name="TransferDatabase"></a> Tâche de transfert de bases de données  
+####  <a name="transfer-database-task"></a><a name="TransferDatabase"></a> Tâche de transfert de bases de données  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de bases de données.  
   
 |Entrée du journal|Description|  
@@ -603,7 +603,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**SourceDB**|Spécifie la base de données que la tâche a copiée.|  
 |**SourceSQLServer**|Spécifie l'ordinateur à partir duquel la base de données a été copiée.|  
   
-####  <a name="TransferErrorMessages"></a> Tâche de transfert de messages d'erreur  
+####  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a> Tâche de transfert de messages d'erreur  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de messages d'erreur.  
   
 |Entrée du journal|Description|  
@@ -611,7 +611,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|Indique que la tâche a terminé le transfert des messages d'erreur.|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|Indique que la tâche a commencé le transfert des messages d'erreur.|  
   
-####  <a name="TransferJobs"></a> Tâche de transfert de travaux  
+####  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a> Tâche de transfert de travaux  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de travaux.  
   
 |Entrée du journal|Description|  
@@ -619,7 +619,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**TransferJobsTaskFinishedTransferringObjects**|Indique que la tâche a terminé le transfert des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TransferJobsTaskStartTransferringObjects**|Indique que la tâche a commencé le transfert des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-####  <a name="TransferLogins"></a> Tâche de transfert de connexions  
+####  <a name="transfer-logins-task"></a><a name="TransferLogins"></a> Tâche de transfert de connexions  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de connexions.  
   
 |Entrée du journal|Description|  
@@ -627,7 +627,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**TransferLoginsTaskFinishedTransferringObjects**|Indique que la tâche a terminé le transfert des connexions.|  
 |**TransferLoginsTaskStartTransferringObjects**|Indique que la tâche a commencé le transfert des connexions.|  
   
-####  <a name="TransferMasterStoredProcedures"></a> Tâche de transfert de procédures stockées de master  
+####  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a> Tâche de transfert de procédures stockées de master  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert de procédures stockées de master.  
   
 |Entrée du journal|Description|  
@@ -635,7 +635,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|Indique que la tâche a terminé le transfert des procédures stockées définies par l’utilisateur qui existent dans la base de données **master** .|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|Indique que la tâche a commencé le transfert des procédures stockées définies par l’utilisateur qui existent dans la base de données **master** .|  
   
-####  <a name="TransferSQLServerObjects"></a> Tâche de transfert d'objets SQL Server  
+####  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a> Tâche de transfert d'objets SQL Server  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de transfert d'objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Entrée du journal|Description|  
@@ -643,7 +643,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|Indique que la tâche a terminé le transfert des objets de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|Indique que la tâche a commencé le transfert des objets de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-####  <a name="WebServices"></a> Tâche de services Web  
+####  <a name="web-services-task"></a><a name="WebServices"></a> Tâche de services Web  
  Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de services Web.  
   
 |Entrée du journal|Description|  
@@ -652,7 +652,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**WSTaskEnd**|La tâche a terminé une méthode de service Web.|  
 |**WSTaskInfo**|Donne des informations détaillées relatives à la tâche.|  
   
-####  <a name="WMIDataReader"></a> Tâche Lecteur de données WMI  
+####  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a> Tâche Lecteur de données WMI  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Lecteur de données WMI.  
   
 |Entrée du journal|Description|  
@@ -660,7 +660,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**WMIDataReaderGettingWMIData**|Indique que la tâche a commencé la lecture des données WMI.|  
 |**WMIDataReaderOperation**|Indique la requête WQL que la tâche a exécutée.|  
   
-####  <a name="WMIEventWatcher"></a> Tâche Observateur d'événement WMI  
+####  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a> Tâche Observateur d'événement WMI  
  Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Observateur d'événement WMI.  
   
 |Entrée du journal|Description|  
@@ -669,7 +669,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |**WMIEventWatcherTimedout**|Indique que le délai de la tâche a expiré.|  
 |**WMIEventWatcherWatchingForWMIEvents**|Indique que la tâche a commencé l'exécution de la requête WQL. L'entrée inclut la requête.|  
   
-####  <a name="XML"></a> Tâche XML  
+####  <a name="xml-task"></a><a name="XML"></a> Tâche XML  
  Le tableau suivant décrit l'entrée de journal personnalisée de la tâche XML.  
   
 |Entrée du journal|Description|  

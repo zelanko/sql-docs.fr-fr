@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: d03b0e8d21414101940e4eb653e8f9a7fa3d2d30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287666"
 ---
 # <a name="delete-an-article"></a>Supprimer un article
@@ -39,7 +39,7 @@ ms.locfileid: "76287666"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les articles peuvent être supprimés par programme en utilisant des procédures stockées de réplication. Les procédures stockées utilisées dépendent du type de publication auquel l'article appartient.  
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Pour supprimer un article d'une publication transactionnelle ou d'instantané  
@@ -54,7 +54,7 @@ ms.locfileid: "76287666"
   
 2.  (Facultatif) Pour supprimer entièrement l'objet publié de la base de données, exécutez la commande `DROP <objectname>` au niveau du serveur de publication dans la base de données de publication.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  L'exemple suivant supprime un article d'une publication transactionnelle. Dans la mesure où cette modification invalide l’instantané existant, la valeur **1** est affectée au paramètre **\@force_invalidate_snapshot**.  
   
 ```  
@@ -95,7 +95,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez supprimer des articles par programme à l'aide des objets RMO (Replication Management Objects). Les classes RMO à utiliser pour supprimer un article dépendent du type de publication auquel l'article appartient.  
   
 #### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Pour supprimer un article qui appartient à une publication transactionnelle ou d'instantané.  

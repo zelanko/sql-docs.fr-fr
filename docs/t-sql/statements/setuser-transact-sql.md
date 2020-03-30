@@ -21,10 +21,10 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68076446"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68076446"
 > [!IMPORTANT]  
 >  L'instruction SETUSER est incluse pour des raisons de compatibilité descendante uniquement. Elle ne sera peut-être plus prise en charge dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nous vous recommandons d’utiliser [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) à la place.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

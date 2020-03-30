@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017659"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
@@ -34,7 +34,7 @@ ms.locfileid: "68017659"
   
  [Tâches associées](#Tasks)  
   
-##  <a name="Unique"></a> Contraintes UNIQUE  
+##  <a name="unique-constraints"></a><a name="Unique"></a> Contraintes UNIQUE  
  Les contraintes sont des règles que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] applique automatiquement. par exemple, vous pouvez utiliser des contraintes UNIQUE pour garantir qu'aucune valeur en double n'est entrée dans des colonnes spécifiques ne faisant pas partie d'une clé primaire. Bien qu'une contrainte UNIQUE et une contrainte PRIMARY KEY assurent l'unicité, il est préférable d'avoir recours à une contrainte UNIQUE au lieu d'une contrainte PRIMARY KEY lorsque vous voulez assurer l'unicité d'une colonne (ou d'une combinaison de colonnes) qui n'est pas la clé primaire.  
   
  À la différence des contraintes PRIMARY KEY, les contraintes UNIQUE autorisent la valeur NULL. Cependant, comme pour toute valeur participant à une contrainte UNIQUE, une seule valeur NULL est autorisée par colonne. Une contrainte UNIQUE peut être référencée par une contrainte FOREIGN KEY.  
@@ -43,7 +43,7 @@ ms.locfileid: "68017659"
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée automatiquement un index UNIQUE pour appliquer l’impératif d’unicité de la contrainte UNIQUE. Dès lors, en cas de tentative d’insertion d’une ligne dupliquée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne un message d’erreur indiquant que la contrainte UNIQUE a été violée et n’ajoute pas la ligne à la table. Sauf si un index cluster est explicitement spécifié, un index non-cluster unique est créé par défaut pour assurer l'application de la contrainte UNIQUE.  
   
-##  <a name="Check"></a> Contraintes CHECK  
+##  <a name="check-constraints"></a><a name="Check"></a> Contraintes CHECK  
  Les contraintes CHECK assurent l'intégrité de domaine en limitant les valeurs acceptées par une ou plusieurs colonnes. Vous pouvez créer une contrainte CHECK avec n'importe quelle expression logique (booléenne) qui retourne TRUE ou FALSE sur la base des opérateurs logiques. Par exemple, il est possible de limiter la plage de valeurs d'une colonne **salary** en créant une contrainte CHECK qui autorise uniquement les données comprises entre 15 000 $ et 100 000 $. De cette façon, il est impossible d'entrer des salaires non compris dans cette fourchette de salaires normaux. L'expression logique est la suivante : `salary >= 15000 AND salary <= 100000`.  
   
  Vous pouvez appliquer plusieurs contraintes CHECK à une seule colonne. Vous pouvez aussi appliquer une seule contrainte CHECK à plusieurs colonnes en la créant au niveau de la table. Ainsi, vous pouvez utiliser une contrainte CHECK sur plusieurs colonnes pour confirmer que les lignes comportant la valeur **USA** dans leur colonne **country_region** possèdent également une valeur à deux caractères dans leur colonne **state** . Cela permet de vérifier plusieurs conditions au même emplacement.  
@@ -87,7 +87,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
  L'instruction `DELETE` aboutit, même si la contrainte `CHECK` spécifie que la table `CheckTbl` doit comporter au moins `1` ligne.  
   
-##  <a name="Tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Tâches associées  
   
 > [!NOTE]  
 >  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction Transact-SQL [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou de SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au diagramme à l’aide du Concepteur de tables ou du Concepteur de diagrammes de base de données, celui-ci tente d’abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  

@@ -16,10 +16,10 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321227"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Définir une relation d'enregistrement logique entre des articles de table de fusion
@@ -45,13 +45,13 @@ ms.locfileid: "75321227"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Si vous ajoutez, modifiez ou supprimez un enregistrement logique après que les abonnements à la publication aient été initialisés, vous devez générer un nouvel instantané et réinitialiser tous les abonnements après avoir effectué la modification. Pour plus d’informations sur les exigences relatives aux changements de propriétés, consultez [Changer les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Définissez des enregistrements logiques dans la boîte de dialogue **Ajouter une jointure**, disponible dans l’Assistant Nouvelle publication, ainsi que dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Les enregistrements logiques peuvent être définis dans la boîte de dialogue **Ajouter une jointure** seulement s'ils sont appliqués à un filtre de jointure dans une publication de fusion, et si la publication satisfait aux conditions requises pour l'utilisation de partitions précalculées. Pour définir des enregistrements logiques qui ne sont pas appliqués à des filtres de jointure et pour définir la détection et la résolution des conflits au niveau des enregistrements logiques, vous devez utiliser des procédures stockées.  
@@ -84,7 +84,7 @@ ms.locfileid: "75321227"
   
     -   Dans la page **Filtrer les lignes** de l’Assistant Nouvelle publication ou dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**. Si le filtre de jointure que vous supprimez est lui-même étendu par d'autres jointures, ces jointures seront aussi supprimées.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez spécifier par programme des relations d'enregistrements logiques entre des articles en utilisant des procédures stockées de réplication.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Pour définir une relation d'enregistrement logique sans filtre de jointure associé  
@@ -146,12 +146,12 @@ ms.locfileid: "75321227"
   
 2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Spécifiez **\@publication**, le nom de l’un des articles de la relation pour **\@article** et le nom de la relation de l’étape 1 pour **\@filtername**.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple active les partitions précalculées sur une publication existante et crée un enregistrement logique qui comprend les deux nouveaux articles des tables `SalesOrderHeader` et `SalesOrderDetail` .  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../relational-databases/replication/codesnippet/tsql/define-a-logical-record-_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
   
 > [!NOTE]  
 >  La réplication de fusion vous permet de spécifier que les conflits soient suivis et résolus au niveau des enregistrements logiques, mais ces options ne peuvent pas être définies à l'aide des objets RMO.  
@@ -196,7 +196,7 @@ ms.locfileid: "75321227"
   
 10. Répétez les étapes 8 et 9 pour chaque relation d'enregistrement logique restante dans la publication.  
   
-###  <a name="PShellExample"></a> Exemple (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemple (RMO)  
  Cet exemple crée un enregistrement logique qui comprend les deux nouveaux articles pour les tables `SalesOrderHeader` et `SalesOrderDetail` .  
   
  [!code-cs[HowTo#rmo_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createlogicalrecord)]  

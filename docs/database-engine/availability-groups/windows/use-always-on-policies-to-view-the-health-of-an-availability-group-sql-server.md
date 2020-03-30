@@ -13,10 +13,10 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244742"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité (SQL Server)
@@ -29,10 +29,10 @@ ms.locfileid: "75244742"
   
   
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert les autorisations CONNECT, VIEW SERVER STATE et VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Utilisation du tableau de bord Always On  
+##  <a name="using-the-always-on-dashboard"></a><a name="SSMSProcedure"></a> Utilisation du tableau de bord Always On  
  **Pour ouvrir le tableau de bord Always On**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge l'un des réplicas de disponibilité. Pour afficher des informations sur tous les réplicas de disponibilité d'un groupe de disponibilité, utilisez l'instance de serveur qui héberge le réplica principal.  
@@ -47,7 +47,7 @@ ms.locfileid: "75244742"
   
  Pour plus d’informations sur l’utilisation du tableau de bord Always On, consultez [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité**  
   
 1.  Définissez la valeur par défaut (**cd**) sur une instance de serveur qui héberge l’un des réplicas de disponibilité. Pour afficher des informations sur tous les réplicas de disponibilité d'un groupe de disponibilité, utilisez l'instance de serveur qui héberge le réplica principal.  
@@ -112,7 +112,7 @@ ms.locfileid: "75244742"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
  **Blogs de l’équipe SQL Server AlwaysOn - Supervision de l’intégrité AlwaysOn avec PowerShell :**  
   
 -   [Partie 1 : Vue d'ensemble de l'applet de commande](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  

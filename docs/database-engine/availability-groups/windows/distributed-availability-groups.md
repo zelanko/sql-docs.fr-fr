@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941113"
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
@@ -127,11 +127,11 @@ Après la migration, une fois que le deuxième groupe de disponibilité fait off
 * Renommez l’écouteur sur le groupe de disponibilité secondaire (et éventuellement supprimez ou renommez l’ancien sur le groupe de disponibilité principal d’origine), ou recréez-le avec l’écouteur du groupe de disponibilité principal d’origine, afin que les applications et les utilisateurs puissent accéder à la nouvelle configuration.
 * Si un renommage ou une recréation est impossible, faites pointer les applications et les utilisateurs vers l’écouteur sur le deuxième groupe de disponibilité.
 
-### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>Augmenter la taille des instances des réplicas lisibles avec des groupes de disponibilité distribués
+### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>Effectuer un scale-out des réplicas lisibles avec des groupes de disponibilité distribués
 
 Un même groupe de disponibilité distribué peut avoir jusqu’à 16 réplicas secondaires, en fonction des besoins. Ainsi, il peut avoir 18 copies à des fins de lecture, y compris les deux réplicas principaux des différents groupes de disponibilité. Cette approche signifie que plusieurs sites peuvent avoir accès pratiquement en temps réel à différentes applications pour des opérations de rapport.
 
-Les groupes de disponibilité distribués peuvent vous aider à augmenter la taille des instances d’une batterie de serveurs en lecture seule, plus qu’avec simplement un seul groupe de disponibilité. Un groupe de disponibilité distribué peut augmenter la taille des instances des réplicas lisibles de deux manières :
+Les groupes de disponibilité distribués peuvent vous aider à effectuer un scale-out d’une batterie de serveurs en lecture seule, plus qu’avec simplement un seul groupe de disponibilité. Un groupe de disponibilité distribué peut effectuer un scale-out des réplicas lisibles de deux manières :
 
 * Vous pouvez utiliser le réplica principal du deuxième groupe de disponibilité dans un groupe de disponibilité distribué pour créer un autre groupe de disponibilité distribué, même si la base de données n’est pas dans RECOVERY.
 * Vous pouvez également utiliser le réplica principal du premier groupe de disponibilité pour créer un autre groupe de disponibilité distribué.
@@ -140,7 +140,7 @@ En d’autres termes, un réplica principal peut participer à deux groupes de d
 
 ![Augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-Dans la figure suivante, le groupe de disponibilité AG 1 est le réplica principal pour deux groupes de disponibilité distribués différents : le groupe de disponibilité distribué AG 1 (composé d’AG 1 et d’AG 2) et le groupe de disponibilité distribué AG 2 (composé d’AG 1 et d’AG 3).
+Dans la figure suivante, AG 1 fait office de réplica principal pour deux groupes de disponibilité distribués : le groupe de disponibilité distribué AG 1 (composé d’AG 1 et AG 2) et le groupe de disponibilité distribué AG 2 (composé d’AG 1 et AG 3).
 
 
 ![Autre exemple d’augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)

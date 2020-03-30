@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846509"
 ---
 # <a name="reinitialize-a-subscription"></a>Réinitialiser un abonnement
@@ -30,7 +30,7 @@ ms.locfileid: "70846509"
 
 
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  La réinitialisation d'un abonnement est un processus en deux parties :  
   
 1.  Un abonnement seul ou tous les abonnements à une publication sont *marqués* pour réinitialisation. Marquez des abonnements pour réinitialisation dans la boîte de dialogue **Réinitialiser les abonnements**, qui est disponible à partir du dossier **Publications locales** et du dossier **Abonnements locaux** dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez aussi marquer des abonnements à partir de l'onglet **Tous les abonnements** et du nœud des publications dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md). Quand vous marquez un abonnement pour réinitialisation, vous disposez des options suivantes :  
@@ -98,7 +98,7 @@ ms.locfileid: "70846509"
   
 3.  Dans la boîte de dialogue **Réinitialiser les abonnements** , sélectionnez les options, puis cliquez sur **Marquer pour réinitialisation**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les abonnements peuvent être réinitialisés par programme en utilisant des procédures stockées de réplication. La procédure stockée utilisée dépend du type d'abonnement (par extraction ou par émission de données) et du type de publication à laquelle l'abonnement appartient.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par extraction à une publication transactionnelle  
@@ -157,7 +157,7 @@ ms.locfileid: "70846509"
   
      Pour plus d'informations, voir [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Des abonnements individuels peuvent être marqués pour réinitialisation afin qu'un nouvel instantané soit appliqué lors de la synchronisation suivante. Les abonnements peuvent être réinitialisés par programme à l'aide de Replication Management Objects. Les classes que vous utilisez dépendent du type de publication à laquelle l'abonnement appartient et du type d'abonnement (par extraction ou par émission de données).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par extraction à une publication transactionnelle  
@@ -226,7 +226,7 @@ ms.locfileid: "70846509"
   
 5.  Synchronisez l'abonnement par émission de données. Pour plus d’informations, consultez [Synchroniser un abonnement par émission (push)](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple réinitialise un abonnement par extraction à une publication transactionnelle.  
   
  [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  

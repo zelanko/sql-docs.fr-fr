@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287803"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
@@ -67,7 +67,7 @@ Dans un **scénario de copie des journaux de transactions**, le serveur principa
 
 Dans un **scénario de mise en miroir de base de données**, toutes les mises à jour d’une base de données, à savoir la base de données principale, sont immédiatement reproduites dans une copie distincte complète de la base de données, la base de données miroir. L'instance du serveur principal envoie chaque enregistrement du journal immédiatement à l'instance du serveur miroir, qui applique ces enregistrements à la base de données miroir en la restaurant constamment par progression. Pour plus d’informations, consultez [Mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
-##  <a name="Characteristics"></a>Caractéristiques du journal des transactions
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>Caractéristiques du journal des transactions
 Caractéristiques du journal des transactions [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] : 
 -  Le journal des transactions est mis en œuvre sous la forme d'un fichier ou d'un ensemble de fichiers distinct dans la base de données. Le cache du journal est géré indépendamment du cache des tampons des pages de données, ce qui se traduit par un code simple, rapide et robuste dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Pour plus d’informations, consultez [Architecture physique du journal des transactions](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 
@@ -79,7 +79,7 @@ Caractéristiques du journal des transactions [!INCLUDE[ssDEnoversion](../../inc
 
 Pour plus d’informations sur l’architecture du journal des transactions et les structures internes, consultez [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
-##  <a name="Truncation"></a> Troncation du journal des transactions  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> Troncation du journal des transactions  
 La troncation du journal libère de l'espace dans le fichier journal pour que le journal des transactions puisse le réutiliser. Vous devez régulièrement tronquer le journal des transactions pour l’empêcher de remplir l’espace imparti. Plusieurs facteurs peuvent retarder la troncation du journal. Il est donc important de surveiller sa taille. Certaines opérations peuvent faire l'objet d'une journalisation minimale afin de réduire leur impact sur la taille des journaux de transactions.  
  
 La troncation du journal supprime les [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) inactifs du journal des transactions logique d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce qui libère de l’espace dans le journal logique de façon à ce qu’il soit réutilisé par le journal des transactions physique. Si un journal des transactions n’est jamais tronqué, il finit par occuper tout l’espace disque alloué aux fichiers journaux physiques.  
@@ -95,7 +95,7 @@ Pour éviter de manquer d’espace, à moins que la troncation du journal soit r
 > La troncation du journal ne réduit pas la taille du fichier journal physique. Pour réduire la taille physique d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d'informations sur la réduction de la taille du fichier journal physique, consultez [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Toutefois, gardez à l’esprit les [facteurs pouvant retarder la troncation du journal](#FactorsThatDelayTruncation). Si l’espace de stockage est à nouveau nécessaire après une réduction de journal, le journal des transactions croît de nouveau, introduisant une surcharge au niveau des performances pendant les opérations d’accroissement du journal.
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Lorsque les enregistrements de journal restent actifs longtemps, la troncation du journal des transactions est retardée et le journal des transactions peut se remplir entièrement, comme nous l’avons déjà mentionné dans cette longue rubrique.  
   
 > [!IMPORTANT]
@@ -122,7 +122,7 @@ Pour éviter de manquer d’espace, à moins que la troncation du journal soit r
 |14|OTHER_TRANSIENT|Cette valeur n'est pas utilisée actuellement.|  
 |16|XTP_CHECKPOINT|Un point de contrôle de l’OLTP en mémoire doit être effectué. Pour les tables à mémoire optimisée, un point de contrôle automatique est effectué quand le fichier journal de transactions dépasse 1,5 Go par rapport au dernier point de contrôle (inclut les tables sur disque et les tables à mémoire optimisée)<br /> Pour plus d’informations, consultez [Opération de point de contrôle pour les tables à mémoire optimisée](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) et [Processus de journalisation et de point de contrôle pour les tables à mémoire optimisée] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
-##  <a name="MinimallyLogged"></a> Opérations pouvant faire l’objet d’une journalisation minimale  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Opérations pouvant faire l’objet d’une journalisation minimale  
 La*journalisation minimale* implique de ne journaliser que les informations obligatoires pour pouvoir récupérer la transaction sans prendre en charge la récupération jusqu’à une date et heure. Cette rubrique identifie les opérations qui sont journalisées au minimum en [mode de récupération](../backup-restore/recovery-models-sql-server.md) utilisant les journaux de transactions (ainsi qu’en mode de récupération simple, sauf quand une sauvegarde est en cours).  
   
 > [!NOTE]
@@ -133,7 +133,7 @@ La*journalisation minimale* implique de ne journaliser que les informations obli
   
  Les opérations suivantes, qui sont entièrement journalisées en mode de récupération complète, font l'objet d'une journalisation minimale en modes simple et de récupération utilisant les journaux de transactions :  
   
--   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quand la réplication transactionnelle est activée, les opérations `BULK INSERT` sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  
   
@@ -159,7 +159,7 @@ Quand la réplication transactionnelle est activée, les opérations `SELECT INT
   
     -   Reconstruction d’un nouveau segment de mémoire [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (le cas échéant). La désallocation de pages d’index pendant une opération `DROP INDEX` est **toujours** entièrement journalisée.
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Gestion du journal des transactions**  
   
 -   [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

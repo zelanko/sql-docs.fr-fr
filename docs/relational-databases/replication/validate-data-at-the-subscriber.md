@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710767"
 ---
 # <a name="validate-replicated-data"></a>Valider des données répliquées
@@ -259,7 +259,7 @@ La réplication transactionnelle et de fusion vous permet de vérifier que les d
   
      Pour plus d'informations, consultez [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) ou [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  La réplication permet d'utiliser les objets RMO (Replication Management Objects) pour vérifier par programmation que les données de l'Abonné correspondent à celles du serveur de publication. Les objets que vous utilisez dépendent du type de topologie de réplication. La réplication transactionnelle requiert la validation de tous les abonnements à une publication.  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ La réplication transactionnelle et de fusion vous permet de vérifier que les d
   
 5.  Exécutez l'Agent de fusion de l'abonnement pour démarrer la validation ou attendez que l'agent planifié suivant ne s'exécute. Pour plus d'informations, consultez [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) et [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). Le résultat de l'opération de validation est écrit dans l'historique de l'agent, que vous affichez en utilisant le moniteur de réplication. Pour plus d'informations, voir [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
-###  <a name="RMOExample"></a> Exemple (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> Exemple (RMO)  
  Cet exemple marque tous les abonnements à une publication transactionnelle pour une validation du nombre de lignes.  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

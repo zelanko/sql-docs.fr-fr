@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebccd45c54a3f5abb745f7c3028e0438c9ed5d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68056008"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modifier ou renommer les déclencheurs DML
@@ -41,13 +41,13 @@ ms.locfileid: "68056008"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Lorsque vous renommez un déclencheur, celui-ci doit se trouver dans la base de données actuelle et le nouveau nom doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Nous vous recommandons de ne pas utiliser la procédure stockée [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) pour renommer un déclencheur. La modification d'une partie du nom de l'objet peut provoquer des problèmes dans des scripts et des procédures stockées. Le fait de renommer un déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de définition de l’affichage catalogue [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) . Nous vous recommandons plutôt de supprimer et de recréer le déclencheur.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "68056008"
   
     -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La modification d'un déclencheur DML nécessite une autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est défini.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-modify-a-dml-trigger"></a>Pour modifier un déclencheur DML  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68056008"
   
 2.  [Recréez le déclencheur](../../relational-databases/triggers/create-dml-triggers.md)en spécifiant un nouveau nom.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>Pour modifier un déclencheur à l'aide de ALTER TRIGGER  
   

@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244767"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Alias (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -42,7 +42,7 @@ object_source [ AS ] alias
  *alias*  
  Nom de référence temporaire souhaité pour la table ou la colonne. Vous pouvez utiliser n’importe quel nom d’objet valide. Pour plus d’informations, consultez les règles de nommage des objets dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant montre une requête contenant plusieurs jointures. Il illustre des alias de table et de colonne.  
   
 -   Alias de colonne : dans cet exemple, les colonnes et les expressions référençant des colonnes dans la liste de sélection ont des alias. `SalesTerritoryRegion AS SalesTR` présente un alias de colonne simple. `Sum(SalesAmountQuota) AS TotalSales` montre  

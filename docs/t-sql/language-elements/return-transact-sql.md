@@ -25,10 +25,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072370"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68072370"
 
   Permet de quitter sans condition une requête ou une procédure. RETURN a une action immédiate et complète, et elle est utilisable à tout moment pour quitter une procédure, un traitement ou un bloc d'instructions. Les instructions qui suivent RETURN ne sont pas exécutées.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

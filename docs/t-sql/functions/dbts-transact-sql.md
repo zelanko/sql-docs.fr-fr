@@ -19,10 +19,10 @@ ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68136029"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68136029"
 
 Cette fonction retourne la valeur du type de données actuel **timestamp** pour la base de données active. La base de données actuelle a une valeur timestamp unique garantie.
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

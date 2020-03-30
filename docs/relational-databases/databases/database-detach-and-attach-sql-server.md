@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287873"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Attacher et détacher une base de données (SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "79287873"
 Les données et les journaux de transactions d'une base de données peuvent être détachés, puis rattachés à la même instance ou à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le détachement et l'attachement d'une base de données sont utiles pour transférer la base de données dans une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le même ordinateur ou pour la déplacer.  
   
   
-##  <a name="Security"></a> Sécurité  
+##  <a name="security"></a><a name="Security"></a> Sécurité  
 Les autorisations d'accès au fichier sont définies au cours de plusieurs opérations de base de données, notamment le détachement ou l'attachement d'une base de données.  
   
 > [!IMPORTANT]  
 > Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données.   
 > Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données.  
   
-##  <a name="DetachDb"></a> Détachement d'une base de données  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> Détachement d'une base de données  
 Détacher une base de données consiste à la supprimer de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans toucher à ses fichiers de données et à ses journaux de transactions. Ces fichiers peuvent ensuite servir à rattacher la base de données à n'importe quelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y compris le serveur d'où la base de données a été détachée.  
   
 Une base de données ne peut pas être détachée si l'une des conditions suivantes est vraie :  
@@ -83,7 +83,7 @@ Les erreurs générées à l'occasion du détachement d'une base de données peu
   
 3.  Détachez la base de données de nouveau.  
   
-##  <a name="AttachDb"></a> Attachement d'une base de données  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> Attachement d'une base de données  
 Vous pouvez attacher une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiée ou détachée. Quand vous attachez une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui contient des fichiers catalogue de texte intégral à une instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , les fichiers catalogue sont attachés à partir de leur emplacement précédent avec les autres fichiers de base de données, les mêmes que dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
   
 Lorsque vous attachez une base de données, tous les fichiers de données (fichiers MDF et NDF) doivent être disponibles. Si un fichier de données possède un chemin différent de celui qui existait lorsque la base de données a été créée pour la première fois ou attachée pour la dernière fois, vous devez spécifier le chemin actuel du fichier.  
@@ -101,7 +101,7 @@ La première fois qu’une base de données chiffrée est attachée à une insta
   
 -   Si le fichier de données primaires attaché est en lecture seule, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] suppose que la base de données est en lecture seule. Pour une base de données en lecture seule, les fichiers journaux doivent être disponibles à l'emplacement spécifié dans le fichier primaire de la base de données. La création d'un nouveau fichier journal est impossible car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas mettre à jour son emplacement stocké dans le fichier primaire.  
  
-###  <a name="Metadata"></a> Modifications des métadonnées lors de l'attachement d'une base de données  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> Modifications des métadonnées lors de l'attachement d'une base de données  
 Lorsqu'une base de données en lecture seule est détachée puis rattachée, les informations de sauvegarde sur la base différentielle active sont perdues. La *base différentielle* est la sauvegarde complète la plus récente de toutes les données de la base de données ou d'un sous-ensemble des fichiers ou groupes de fichiers de la base de données. Sans les informations de sauvegarde de la base, la base de données **MASTER** est désynchronisée par rapport à la base de données en lecture seule ; ainsi, les sauvegardes différentielles effectuées ultérieurement peuvent produire des résultats inattendus. C'est la raison pour laquelle, si vous utilisez des sauvegardes différentielles avec une base de données en lecture seule, vous devez établir une nouvelle base différentielle en effectuant une sauvegarde complète après le rattachement de la base de données. Pour plus d’informations sur les sauvegardes différentielles, consultez [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
 À l'attachement, la base de données démarre. En général, l'attachement d'une base de données la place dans le même état où elle se trouvait au moment de son détachement ou de sa copie. Toutefois, les opérations d'attachement et de détachement désactivent le chaînage des propriétés des bases de données croisées de la base de données. Pour plus d’informations sur l’activation du chaînage, consultez [Chaînage des propriétés des bases de données croisées (option de configuration de serveur)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
@@ -112,14 +112,14 @@ Lorsqu'une base de données en lecture seule est détachée puis rattachée, les
 ### <a name="backup-and-restore-and-attach"></a>Sauvegarder, restaurer et attacher  
 Comme toutes les bases de données complètement ou partiellement hors connexion, une base de données contenant des fichiers de restauration ne peut pas être attachée. Pour attacher la base de données, arrêtez la séquence de restauration. Puis, vous pouvez redémarrer la séquence de restauration.  
   
-###  <a name="OtherServerInstance"></a> Attachement d'une base de données à une autre instance de serveur  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> Attachement d'une base de données à une autre instance de serveur  
   
 > [!IMPORTANT]  
 > Une base de données créée dans une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être attachée à des versions antérieures. Ainsi, la base de données ne peut pas être utilisée physiquement avec une version antérieure du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Toutefois, cela concerne l’état des métadonnées et n’affecte pas le [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).   
   
 Lorsque vous attachez une base de données à une autre instance de serveur et si vous souhaitez offrir une expérience cohérente aux utilisateurs et aux applications, il est possible que vous deviez recréer une partie ou l'ensemble des métadonnées de la base de données, telles que les connexions et les travaux, sur cette autre instance de serveur. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
 **Pour détacher une base de données**  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  

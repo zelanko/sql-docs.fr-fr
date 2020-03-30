@@ -11,10 +11,10 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412764"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Lier une base de données avec des tables optimisées en mémoire à un pool de ressources
@@ -50,10 +50,10 @@ ms.locfileid: "74412764"
   
 -   [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
   
-##  <a name="bkmk_CreatePool"></a> Créer la base de données et le pool de ressources  
+##  <a name="create-the-database-and-resource-pool"></a><a name="bkmk_CreatePool"></a> Créer la base de données et le pool de ressources  
  Vous pouvez créer la base de données et le pool de ressources dans n'importe quel ordre. L'important est de créer les deux avant de procéder à leur liaison.  
   
-###  <a name="bkmk_CreateDatabase"></a> Créer la base de données  
+###  <a name="create-the-database"></a><a name="bkmk_CreateDatabase"></a> Créer la base de données  
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée la base de données IMOLTP_DB destinée à contenir une ou plusieurs tables mémoire optimisées. Le chemin \<lecteur_et_chemin> doit exister avant d’exécuter cette commande.  
   
 ```sql  
@@ -64,7 +64,7 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-###  <a name="bkmk_DeterminePercent"></a> Déterminer la valeur minimale pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT  
+###  <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a><a name="bkmk_DeterminePercent"></a> Déterminer la valeur minimale pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT  
  Après avoir déterminé les besoins en mémoire des tables mémoire optimisées, vous devez déterminer le pourcentage de mémoire disponible dont vous avez besoin, et définir les pourcentages de mémoire sur cette valeur ou sur une valeur supérieure.  
   
  **Exemple :**    
@@ -83,7 +83,7 @@ Pour cet exemple, nous allons supposer que vos calculs ont déterminé que les t
   
  Ainsi, vous avez besoin au moins de 62,5 % de la mémoire disponible pour obtenir les 16 Go requis pour vos tables et index mémoire optimisés.  Étant donné que les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être des entiers, nous devons les définir sur au moins 63 %.  
   
-###  <a name="bkmk_CreateResourcePool"></a> Créer un pool de ressources et configurer la mémoire  
+###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> Créer un pool de ressources et configurer la mémoire  
  Lors de la configuration de tables mémoire optimisées, la planification des capacités doit être effectuée sur MIN_MEMORY_PERCENT, et non sur MAX_MEMORY_PERCENT.  Consultez [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) pour des informations sur MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT. Ce paramètre fournit une disponibilité de mémoire plus prédictible pour les tables mémoire optimisées, car MIN_MEMORY_PERCENT sollicite la mémoire d'autres pools de ressources pour s'assurer qu'il est servi. Pour garantir que la mémoire est disponible et éviter les conditions OOM (mémoire insuffisante), les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être identiques. Consultez [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ci-dessous pour obtenir le pourcentage de la mémoire disponible pour les tables optimisées en mémoire en fonction de la quantité de mémoire allouée.  
   
  Pour plus d’informations sur le fonctionnement dans un environnement de machines virtuelles, consultez [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
@@ -102,7 +102,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-##  <a name="bkmk_DefineBinding"></a> Lier la base de données au pool  
+##  <a name="bind-the-database-to-the-pool"></a><a name="bkmk_DefineBinding"></a> Lier la base de données au pool  
  Utilisez la fonction système `sp_xtp_bind_db_resource_pool` pour lier la base de données au pool de ressources. La fonction accepte deux paramètres : le nom de la base de données et le nom du pool de ressources.  
   
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant définit une liaison de la base de données IMOLTP_DB au pool de ressources Pool_IMOLTP. La liaison ne devient effective que lorsque vous mettez la base de données en ligne.  
@@ -114,7 +114,7 @@ GO
   
  La fonction système sp_xtp_bind_db_resource_pool accepte deux paramètres de chaîne : database_name et pool_name.  
   
-##  <a name="bkmk_ConfirmBinding"></a> Confirmer la liaison  
+##  <a name="confirm-the-binding"></a><a name="bkmk_ConfirmBinding"></a> Confirmer la liaison  
  Confirmez la liaison, en prenant soin de noter l'ID du pool de ressources pour IMOLTP_DB. Cette valeur ne doit pas être NULL.  
   
 ```sql  
@@ -123,7 +123,7 @@ FROM sys.databases d
 GO  
 ```  
   
-##  <a name="bkmk_MakeBindingEffective"></a> Rendre la liaison effective  
+##  <a name="make-the-binding-effective"></a><a name="bkmk_MakeBindingEffective"></a> Rendre la liaison effective  
  Vous devez mettre la base de données hors ligne, puis en ligne, après sa liaison au pool de ressources afin que la liaison prenne effet. Si votre base de données était déjà liée à un autre pool de ressources, cela supprime la mémoire allouée du pool précédent afin que les allocations de mémoire pour vos index et votre table mémoire optimisée émanent désormais du nouveau pool de ressources lié à la base de données.  
   
 ```sql  
@@ -141,7 +141,7 @@ GO
   
  Maintenant, la base de données est liée au pool de ressources.  
   
-##  <a name="bkmk_ChangeAllocation"></a> Modifier MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant  
+##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> Modifier MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant  
  Si vous ajoutez de la mémoire supplémentaire au serveur ou si la quantité de mémoire requise pour vos tables mémoire optimisées change, il peut être nécessaire de remplacer la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT. Les étapes suivantes vous montrent comment modifier la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT sur un pool de ressources. Consultez la section ci-dessous, pour des conseils sur les valeurs à utiliser pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT.  Consultez la rubrique [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) pour plus d’informations.  
   
 1.  Utilisez `ALTER RESOURCE POOL` pour modifier à la fois la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT.  
@@ -162,7 +162,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE
 GO  
 ```  
   
-##  <a name="bkmk_PercentAvailable"></a> Pourcentage de mémoire disponible pour les tables et index mémoire optimisés  
+##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> Pourcentage de mémoire disponible pour les tables et index mémoire optimisés  
  Si vous mappez une base de données avec des tables mémoire optimisées et une charge de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au même pool de ressources, Resource Governor définit un seuil interne pour l'utilisation de l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)] afin que les utilisateurs du pool ne rencontrent aucun conflit au niveau de l'utilisation du pool. D'une manière générale, le seuil d'utilisation de l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)] représente environ 80 % du pool. Le tableau suivant montre les seuils réels pour différentes capacités de mémoire.  
   
  Lorsque vous créez un pool de ressources dédié pour la base de données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , vous devez estimer la quantité de mémoire physique dont vous avez besoin pour les tables en mémoire compte tenu de la croissance des versions de ligne et des données. Après avoir estimé la mémoire nécessaire, créez un pool de ressources avec un pourcentage de la mémoire cible allouée à l’instance SQL comme indiqué par la colonne « committed_target_kb » dans la DMV `sys.dm_os_sys_info` (reportez-vous à [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Par exemple, créez un pool de ressources P1 avec 40 % de la mémoire totale disponible sur l'instance. Parmi ces 40 %, le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] obtient un pourcentage plus petit pour enregistrer les données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Cela a pour but de s'assurer que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ne consomme pas toute la mémoire de ce pool.  Cette valeur de pourcentage inférieur dépend de la mémoire allouée cible. Le tableau suivant décrit la mémoire disponible pour la base de données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dans un pool de ressources (nommé ou par défaut) avant qu'une situation d'insuffisance de mémoire soit déclenchée.  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082565"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Spécifier les colonnes calculées dans une table
@@ -40,22 +40,22 @@ Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquem
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Avant de commencer
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer
 
-### <a name="Limitations"></a> Limitations et restrictions
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Limitations et restrictions
 
 - Une colonne calculée ne peut pas être utilisée en tant que définition de contrainte DEFAULT ou FOREIGN KEY ou avec une définition de contrainte NOT NULL. Toutefois, si sa valeur est définie par une expression déterministe et que le type de données du résultat est autorisé dans les colonnes d'index, elle peut être utilisée en tant que colonne clé dans un index ou composante d'une contrainte PRIMARY KEY ou UNIQUE quelconque. Par exemple, si la table possède les colonnes d'entiers a et b, la colonne calculée a + b peut être indexée, contrairement à la colonne calculée a + DATEPART(dd, GETDATE()) dont la valeur est susceptible d'évoluer au fil des appels.
 - Une colonne calculée ne peut pas être la cible d'une instruction INSERT ou UPDATE.
 
-### <a name="Security"></a> Sécurité
+### <a name="security"></a><a name="Security"></a> Sécurité
 
-#### <a name="Permissions"></a> Autorisations
+#### <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
 Requiert une autorisation ALTER sur la table.
 
-## <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
 
-### <a name="NewColumn"></a> Pour ajouter une nouvelle colonne calculée
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> Pour ajouter une nouvelle colonne calculée
 
 1. Dans l' **Explorateur d'objets**, développez la table à laquelle vous voulez ajouter une nouvelle colonne calculée. Cliquez avec le bouton droit sur **Colonnes** et sélectionnez **Nouvelle colonne**.
 2. Entrez le nom de la colonne et acceptez le type de données par défaut (**nchar**(10)). Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le type de données de la colonne calculée en appliquant les règles de priorité des types de données aux expressions spécifiées dans la formule. Par exemple, si la formule fait référence à une colonne de type **money** et à une colonne de type **int**, la colonne calculée est de type **money** , car ce type de données a la priorité la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).
@@ -75,7 +75,7 @@ Requiert une autorisation ALTER sur la table.
 2. Cliquez avec le bouton droit sur la colonne dans laquelle vous voulez spécifier une formule de colonne calculée et cliquez sur **Supprimer**. Cliquez sur **OK**.
 3. Ajoutez une nouvelle colonne et spécifiez la formule de colonne calculée en suivant la procédure précédente pour ajouter une nouvelle colonne calculée.
 
-## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>Pour ajouter une colonne calculée lors de la création d'une table
 

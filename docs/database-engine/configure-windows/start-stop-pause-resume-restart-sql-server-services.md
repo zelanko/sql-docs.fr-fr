@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78946733"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server
@@ -121,7 +121,7 @@ Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur **Microsof
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmande"></a> Pour démarrer, arrêter, suspendre, reprendre ou redémarrer une instance du moteur de base de données SQL Server
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="configmande"></a> Pour démarrer, arrêter, suspendre, reprendre ou redémarrer une instance du moteur de base de données SQL Server
 
 1. Démarrez le Gestionnaire de configuration SQL Server en suivant les instructions ci-dessus.
 
@@ -153,7 +153,7 @@ Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur **Microsof
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-### <a name="ssmsde"></a> Pour démarrer, arrêter, suspendre, reprendre ou redémarrer une instance du moteur de base de données SQL Server
+### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="ssmsde"></a> Pour démarrer, arrêter, suspendre, reprendre ou redémarrer une instance du moteur de base de données SQL Server
 
 1. Dans l’Explorateur d’objets, connectez-vous à l’instance du moteur de base de données, cliquez avec le bouton droit sur l’instance du moteur de base de données à démarrer, puis cliquez sur **Démarrer**, **Arrêter**, **Suspendre**, **Reprendre** ou **Redémarrer**.
 
@@ -171,11 +171,11 @@ Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur **Microsof
 
 3. Quand le système vous demande si vous voulez agir, cliquez sur **Oui**.
 
-## <a name="CommandPrompt"></a> Fenêtre d’invite de commandes avec les commandes net
+## <a name="command-prompt-window-using-net-commands"></a><a name="CommandPrompt"></a> Fenêtre d’invite de commandes avec les commandes net
 
 Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspendus à l’aide des commandes **net** Microsoft Windows.
 
-### <a name="dbDefault"></a> Pour démarrer l’instance par défaut du moteur de base de données
+### <a name="to-start-the-default-instance-of-the-database-engine"></a><a name="dbDefault"></a> Pour démarrer l’instance par défaut du moteur de base de données
 
 - À partir d'une invite de commandes, entrez l'une des commandes suivantes :  
   
@@ -185,7 +185,7 @@ Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspend
 
     **net start MSSQLSERVER**
 
-### <a name="dbNamed"></a> Pour démarrer une instance nommée du moteur de base de données
+### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> Pour démarrer une instance nommée du moteur de base de données
 
 - À partir d'une invite de commandes, entrez l'une des commandes suivantes. Remplacez *\<nom_instance>* par le nom de l’instance à gérer.  
   
@@ -195,7 +195,7 @@ Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspend
   
     **net start MSSQL$** *nom_instance*  
   
-### <a name="dbStartup"></a> Pour démarrer le moteur de base de données avec les options de démarrage  
+### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> Pour démarrer le moteur de base de données avec les options de démarrage  
 
 - Ajoutez les options de démarrage à la fin de l’instruction **"SQL Server (MSSQLSERVER)"** , en les séparant par un espace. Lors d’un démarrage avec l’instruction **net start**, les options de démarrage utilisent une barre oblique (/) au lieu d’un tiret (-).  
   
@@ -208,7 +208,7 @@ Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspend
   > [!NOTE]
   >  Pour plus d’informations sur les options de démarrage, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a> Pour démarrer SQL Server Agent sur l’instance par défaut de SQL Server
+###  <a name="to-start-the-sql-server-agent-on-the-default-instance-of-sql-server"></a><a name="agDefault"></a> Pour démarrer SQL Server Agent sur l’instance par défaut de SQL Server
   
 - À partir d'une invite de commandes, entrez l'une des commandes suivantes :  
   
@@ -218,7 +218,7 @@ Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspend
   
     **net start SQLSERVERAGENT**
   
-###  <a name="agNamed"></a> Pour démarrer SQL Server Agent sur une instance nommée de SQL Server  
+###  <a name="to-start-the-sql-server-agent-on-a-named-instance-of-sql-server"></a><a name="agNamed"></a> Pour démarrer SQL Server Agent sur une instance nommée de SQL Server  
   
 - À partir d'une invite de commandes, entrez l'une des commandes suivantes. Remplacez *nom_instance* par le nom de l’instance à gérer.  
   
@@ -230,7 +230,7 @@ Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspend
   
  Pour plus d’informations sur la façon d’exécuter SQL Server Agent en mode détaillé à des fins de résolution des problèmes, consultez [Application sqlagent90](../../tools/sqlagent90-application.md).  
 
-### <a name="Browser"></a> Pour démarrer SQL Server Browser  
+### <a name="to-start-the-sql-server-browser"></a><a name="Browser"></a> Pour démarrer SQL Server Browser  
 
 - À partir d'une invite de commandes, entrez l'une des commandes suivantes :  
   
@@ -240,7 +240,7 @@ Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspend
   
     **net start SQLBrowser**
   
-### <a name="pauseStop"></a> Pour suspendre ou arrêter des services à partir de la fenêtre d'invite de commandes  
+### <a name="to-pause-or-stop-services-from-the-command-prompt-window"></a><a name="pauseStop"></a> Pour suspendre ou arrêter des services à partir de la fenêtre d'invite de commandes  
 
 - Pour suspendre ou arrêter des services, modifiez les commandes des façons suivantes.  
 
@@ -248,7 +248,7 @@ Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspend
 
 - Pour arrêter un service, remplacez **net start** par **net stop**.  
 
-## <a name="TsqlProcedure"></a> Transact-SQL
+## <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL
 
 Le moteur de base de données peut être arrêté à l’aide de l’instruction **SHUTDOWN**.  
 
@@ -268,7 +268,7 @@ Le moteur de base de données peut être arrêté à l’aide de l’instruction
 
 Pour plus d’informations sur l’instruction **SHUTDOWN**, consultez [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md).  
 
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 ### <a name="to-start-and-stop-database-engine-services"></a>Pour démarrer et arrêter des services Moteur de base de données
 

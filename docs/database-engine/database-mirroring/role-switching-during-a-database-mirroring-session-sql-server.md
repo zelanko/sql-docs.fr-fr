@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252793"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server)
@@ -77,7 +77,7 @@ ms.locfileid: "75252793"
   
  Au cours d'un basculement de rôle, la durée pendant laquelle la mise en miroir de base de données sera hors service dépend du type de basculement de rôle et de sa raison. Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
-##  <a name="ManualFailover"></a> Manual Failover  
+##  <a name="manual-failover"></a><a name="ManualFailover"></a> Manual Failover  
  Le basculement manuel déconnecte les clients de la base de données et inverse les rôles des partenaires. Seul le mode haute sécurité prend en charge le basculement manuel.  
   
  **Dans cette section :**  
@@ -88,7 +88,7 @@ ms.locfileid: "75252793"
   
 -   [Fonctionnement du basculement manuel](#HowManualFoWorks)  
   
-###  <a name="AvailabilityDuringUpgrades"></a> Maintien de la disponibilité lors des mises à niveau  
+###  <a name="maintaining-availability-during-upgrades"></a><a name="AvailabilityDuringUpgrades"></a> Maintien de la disponibilité lors des mises à niveau  
  L'administrateur de base de données peut recourir au basculement manuel pour mettre du matériel ou des logiciels à niveau sans sacrifier la disponibilité. Pour utiliser la mise en miroir de base de données dans le cadre de mises à niveau logicielles, le serveur miroir et/ou le système doivent déjà avoir été mis à niveau.  
   
 > [!NOTE]  
@@ -98,10 +98,10 @@ ms.locfileid: "75252793"
   
  ![Basculement manuel planifié](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Basculement manuel planifié")  
   
-###  <a name="ConditionsForManualFo"></a> Conditions requises pour un basculement manuel  
+###  <a name="conditions-required-for-a-manual-failover"></a><a name="ConditionsForManualFo"></a> Conditions requises pour un basculement manuel  
  Le basculement manuel nécessite que la sécurité de transaction soit définie sur FULL (c'est-à-dire, mode haute sécurité). Lorsque les partenaires sont connectés et que la base de données est déjà synchronisée, un basculement manuel est possible.  
   
-###  <a name="HowManualFoWorks"></a> Fonctionnement du basculement manuel  
+###  <a name="how-manual-failover-works"></a><a name="HowManualFoWorks"></a> Fonctionnement du basculement manuel  
  Le basculement manuel initialise la série d'actions suivante :  
   
 1.  Le serveur principal déconnecte les clients de la base de données principale, envoie la fin du journal au serveur miroir, puis définit l'état de la mise en miroir à SYNCHRONIZING pour se préparer à prendre le rôle miroir.  
@@ -133,7 +133,7 @@ ms.locfileid: "75252793"
   
 -   [Basculer manuellement une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
-##  <a name="AutomaticFailover"></a> Automatic Failover  
+##  <a name="automatic-failover"></a><a name="AutomaticFailover"></a> Automatic Failover  
  Le basculement automatique est pris en charge uniquement dans les sessions de mise en miroir de bases de données s’exécutant avec un témoin et en mode haute sécurité (*mode haute sécurité avec basculement automatique*). En mode haute sécurité avec basculement automatique, une fois la base de données synchronisée, si la base de données principale devient non disponible, le basculement automatique se produit. Lors d'un basculement automatique, le serveur miroir assume le rôle de serveur principal et met en ligne sa copie de la base de données en tant que base de données principale. Exiger la synchronisation de la base de données empêche toute perte de données lors du basculement, car chaque transaction validée sur la base de données principale est également validée sur la base de données miroir.  
   
 > [!IMPORTANT]  
@@ -149,7 +149,7 @@ ms.locfileid: "75252793"
   
 -   [Pour désactiver le basculement automatique (à l'aide de Transact-SQL)](#DisableAutoTsql)  
   
-###  <a name="ConditionsForAutoFo"></a> Conditions requises pour un basculement automatique  
+###  <a name="conditions-required-for-an-automatic-failover"></a><a name="ConditionsForAutoFo"></a> Conditions requises pour un basculement automatique  
  Le basculement automatique nécessite les conditions suivantes :  
   
 -   La session de mise en miroir de bases de données doit s'exécuter en mode haute sécurité et doit posséder un témoin. Pour plus d'informations, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
@@ -165,7 +165,7 @@ ms.locfileid: "75252793"
   
      La manière dont le serveur miroir détecte une défaillance du serveur principal est variable, selon qu'il s'agisse d'une défaillance matérielle ou logicielle. Pour plus d’informations, consultez [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
-###  <a name="HowAutoFoWorks"></a> Fonctionnement du basculement automatique  
+###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> Fonctionnement du basculement automatique  
  Sous les conditions précédentes, le basculement automatique initialise la séquence d'actions suivante :  
   
 1.  Si le serveur principal fonctionne toujours, il change l'état de la base de données principale en DISCONNECTED et déconnecte tous les clients de la base de données principale.  
@@ -192,7 +192,7 @@ ms.locfileid: "75252793"
 > [!NOTE]  
 >  Les transactions qui ont été préparées à l'aide du service MSDTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) mais qui ne sont toujours pas validées au moment du basculement, sont considérées comme abandonnées après le basculement de la base de données.  
   
-###  <a name="DisableAutoSSMS"></a> Pour désactiver le basculement automatique (SQL Server Management Studio)  
+###  <a name="to-disable-automatic-failover-sql-server-management-studio"></a><a name="DisableAutoSSMS"></a> Pour désactiver le basculement automatique (SQL Server Management Studio)  
  Ouvrez la page **Mise en miroir** de la boîte de dialogue Propriétés de la base de données, puis changez de mode de fonctionnement en sélectionnant l’une des options suivantes :  
   
 -   **Haute sécurité sans basculement automatique (synchrone)**  
@@ -203,7 +203,7 @@ ms.locfileid: "75252793"
   
      Dans ce mode, la base de données miroir peut rester quelque peu en arrière de la base de données principale, de sorte que le basculement manuel ne sera plus possible.  
   
-###  <a name="DisableAutoTsql"></a> Pour désactiver le basculement automatique (à l'aide de Transact-SQL)  
+###  <a name="to-disable-automatic-failover-using-transact-sql"></a><a name="DisableAutoTsql"></a> Pour désactiver le basculement automatique (à l'aide de Transact-SQL)  
  À n'importe quel moment d'une session de mise en miroir de bases de données, le propriétaire de la base de données peut désactiver le basculement automatique en désactivant le témoin.  
   
  **Pour désactiver le témoin**  
@@ -213,7 +213,7 @@ ms.locfileid: "75252793"
     > [!NOTE]  
     >  La désactivation du témoin avec maintien de la sécurité complète des transactions place la session en mode haute sécurité sans basculement automatique.  
   
-##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
+##  <a name="forced-service-with-possible-data-loss"></a><a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
  La mise en miroir de bases de données fournit un service forcé (avec possibilité de perte de données) en guise de méthode de récupération d'urgence afin de vous permettre d'utiliser un serveur miroir en tant que serveur de secours actif. Le service forcé est possible uniquement si le serveur principal est déconnecté du serveur miroir lors d'une session de mise en miroir. Le service forcé entraînant un risque de perte de données, il convient de l'utiliser avec prudence et parcimonie.  
   
  La prise en charge du service forcé dépend du mode de fonctionnement et de l'état de la session, comme suit :  
@@ -239,7 +239,7 @@ ms.locfileid: "75252793"
   
 -   [Tâches associées à la gestion d'un basculement forcé](#RelatedTasksForFS)  
   
-###  <a name="TypicalCaseFS"></a> Cas ordinaire de service forcé  
+###  <a name="typical-case-of-forced-service"></a><a name="TypicalCaseFS"></a> Cas ordinaire de service forcé  
  L'illustration suivante présente un cas ordinaire de service forcé (avec possibilité de perte de données).  
   
  ![Service forcé avec possibilité de perte de données](../../database-engine/database-mirroring/media/dbm-forced-service.gif "Service forcé avec possibilité de perte de données")  
@@ -251,7 +251,7 @@ ms.locfileid: "75252793"
 > [!NOTE]  
 >  Bien que le mode hautes performances n'ait pas besoin de témoin, si un témoin est configuré, il est possible de forcer le service seulement si le témoin est connecté au serveur miroir.  
   
-###  <a name="FSrisks"></a> Risques posés par le service forcé  
+###  <a name="risks-of-forcing-service"></a><a name="FSrisks"></a> Risques posés par le service forcé  
  Il est essentiel de comprendre que le service forcé peut entraîner une perte de données. La perte de données est possible car le serveur miroir ne peut pas communiquer avec le serveur principal et, par conséquent, ne peut pas garantir la synchronisation des deux bases de données. Le service forcé démarre un nouveau point de branchement de récupération. Étant donné que la base de données principale et la base de données miroir d'origine sont situées sur différents branchements de récupération, chaque base de données contient maintenant des données qui ne figurent pas dans l'autre base de données : la base de données principale d'origine contient toutes les modifications qui n'avaient pas encore été envoyées de sa file d'attente d'envoi à l'ancienne base de données miroir (le journal non envoyé) ; l'ancienne base de données miroir contient toutes les modifications qui surviennent une fois le service forcé.  
   
  Si le service est forcé suite à une défaillance du serveur principal, le risque de perte de données dépend du fait que les journaux de transactions ont été envoyés ou non au serveur miroir avant la défaillance. En mode haute sécurité, cela est possible uniquement jusqu'à ce que la base de données miroir soit synchronisée. En mode hautes performances, une accumulation du journal non envoyé est toujours une possibilité.  
@@ -264,7 +264,7 @@ ms.locfileid: "75252793"
   
  Pour plus d’informations, consultez [Gestion de la perte de données potentielle](#ManageDataLoss), plus loin dans cette rubrique.  
   
-###  <a name="ManageDataLoss"></a> Gestion de la perte de données potentielle  
+###  <a name="managing-the-potential-data-loss"></a><a name="ManageDataLoss"></a> Gestion de la perte de données potentielle  
  Après le forçage du service, une fois l'ancien serveur principal disponible, en supposant que sa base de données ne soit pas endommagée, vous pouvez tenter de gérer la perte de données potentielle. La méthode disponible pour gérer la perte de données potentielle dépend selon que le serveur principal d'origine s'est reconnecté à son partenaire et a rejoint la session de mise en miroir. En supposant que le serveur principal d'origine puisse accéder à la nouvelle instance principale, la reconnexion se produit automatiquement et de manière transparente.  
   
 #### <a name="the-original-principal-server-has-reconnected"></a>Le serveur principal d'origine s'est reconnecté  
@@ -293,7 +293,7 @@ ms.locfileid: "75252793"
   
      Pour rétablir la mise en miroir avec la base de données mise à jour en tant que base de données principale initiale, utilisez cette sauvegarde (et au moins une sauvegarde du journal ultérieure) pour créer une nouvelle base de données miroir. Chaque sauvegarde de journal effectuée après la suppression de la mise en miroir doit être appliquée. Par conséquent, nous recommandons de différer les sauvegardes de fichier journal supplémentaires de la base de données principale jusqu'à ce que la nouvelle session de mise en miroir démarre.  
   
-###  <a name="RelatedTasksForFS"></a> Tâches associées à la gestion d'un basculement forcé  
+###  <a name="related-tasks-for-managing-a-forced-failover"></a><a name="RelatedTasksForFS"></a> Tâches associées à la gestion d'un basculement forcé  
  **Pour forcer le service**  
   
 -   [Forcer le service dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md).  

@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982407"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -36,7 +36,7 @@ Fournit des statistiques sur le taux d'utilisation de l'espace du journal des tr
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,7 +76,7 @@ Supprime tous les messages d'information dont les niveaux de gravité sont compr
 |**Espace journal utilisé (%)**|Pourcentage du fichier journal en cours d’utilisation pour stocker les informations du journal des transactions.|  
 |**État**|État du fichier journal. Toujours 0.|  
   
-## <a name="Remarks"></a> Notes  
+## <a name="remarks"></a><a name="Remarks"></a> Notes  
 À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], utilisez la vue de gestion dynamique [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) à la place de `DBCC SQLPERF(LOGSPACE)` afin de retourner des informations sur l’utilisation de l’espace pour le journal des transactions par base de données.    
  
 Le journal de transactions enregistre chaque transaction effectuée dans une base de données. Pour plus d’informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) et [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).

@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095877"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "74095877"
 
   Définit la condition qui fera se répéter l'exécution d'une instruction SQL ou d'un bloc d'instructions. L'exécution des instructions se répète aussi longtemps que la condition spécifiée demeure vraie. L'exécution des instructions de la boucle WHILE peut être contrôlée de l'intérieur de la boucle avec les mots clés BREAK et CONTINUE.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -115,7 +115,7 @@ DEALLOCATE Employee_Cursor;
 GO 
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-simple-while-loop"></a>C. Boucle While simple  
  Dans l'exemple suivant, si le prix moyen d'un produit est inférieur à `$300`, la boucle `WHILE` double les prix puis sélectionne le prix maximum. Si le prix maximum est inférieur ou égal à `$500`, la boucle `WHILE` redémarre et double de nouveau les prix. Cette boucle continue à doubler les prix jusqu’à ce que le prix maximal soit supérieur à `$500`, puis le programme sort de la boucle `WHILE`.  

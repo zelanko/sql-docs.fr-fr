@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101904"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -40,7 +40,7 @@ Supprime tous les éléments du cache du plan, supprime un plan spécifique du c
 >[!NOTE]
 >DBCC FREEPROCCACHE n'efface pas les statistiques d'exécution pour les procédures stockées compilées en mode natif. Le cache de procédures ne contient pas d'informations relatives aux procédures stockées compilées en mode natif. Toutes les statistiques d’exécution collectées à partir des exécutions de procédure s’affichent dans les vues de gestion dynamique de statistiques d’exécution : [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) et [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
 Syntaxe de SQL Server :
@@ -121,21 +121,21 @@ S’applique à : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!I
 S’applique à : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Nécessite l'appartenance au rôle serveur fixe DB_OWNER.  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Remarques d’ordre général pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="general-remarks-for-sssdw-and-sspdw"></a>Remarques d’ordre général pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Plusieurs commandes DBCC FREEPROCCACHE peuvent être exécutées simultanément.
 Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], l’effacement du cache du plan peut entraîner une baisse temporaire des performances des requêtes comme les requêtes entrantes compilent un nouveau plan au lieu de réutiliser un plan mis en cache précédemment. 
 
 DBCC FREEPROCCACHE (COMPUTE) contraint uniquement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à recompiler les requêtes quand elles sont exécutées sur les nœuds de calcul. Ni [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ni [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ne doivent recompiler le plan de requête parallèle qui est généré sur le nœud de contrôle.
 Il est possible d’annuler DBCC FREEPROCCACHE lors de l’exécution.
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitations et restrictions pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Limitations et restrictions pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Il n’est pas possible d’exécuter DBCC FREEPROCCACHE dans une transaction.
 DBCC FREEPROCCACHE n’est pas pris en charge dans une instruction EXPLAIN.
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Métadonnées pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="metadata-for-sssdw-and-sspdw"></a>Métadonnées pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Une nouvelle ligne est ajoutée à la vue système sys.pdw_exec_requests lors de l’exécution de DBCC FREEPROCCACHE.
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-ssnoversion"></a>Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>R. Effacement d'un plan de requête du cache du plan  
 L'exemple suivant efface un plan de requête du cache du plan en spécifiant le descripteur du plan de requête. Pour vérifier que l'exemple de requête se trouve dans le cache du plan, la requête est d'abord exécutée. Les vues de gestion dynamique `sys.dm_exec_cached_plans` et `sys.dm_exec_sql_text` sont interrogées pour retourner le handle de plan de la requête. 
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. Exemples de syntaxe de base DBCC FREEPROCCACHE  
 L’exemple suivant supprime tous les caches des plans de requête existants des nœuds de calcul. Même si le contexte est défini sur UserDbSales, les caches des plans de requête des nœuds de calcul pour toutes les bases de données seront supprimés. La clause WITH NO_INFOMSGS empêche l’affichage des messages d’information dans les résultats.  

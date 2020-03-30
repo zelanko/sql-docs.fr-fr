@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072251"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concaténation de chaîne) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072251"
 
   Opérateur dans une expression de chaîne qui concatène des chaînes binaires ou des chaînes de deux caractères ou plus, des colonnes ou une combinaison de chaînes et de noms de colonnes, pour former une seule expression (un opérateur chaîne).  L’exemple `SELECT 'book'+'case';` retourne `bookcase`.
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -153,7 +153,7 @@ GO
   
  (1 row(s) affected)
  ```  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-multiple-string-concatenation"></a>E. Utilisation de la concaténation de plusieurs chaînes  
  L’exemple suivant concatène plusieurs chaînes pour constituer une seule longue chaîne permettant d’afficher le nom de famille et la première initiale des vice-présidents issus d’un exemple de base de données. Le nom de famille est suivi d'une virgule ; l'initiale est suivie d'un point.  

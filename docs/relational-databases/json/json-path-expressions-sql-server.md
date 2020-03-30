@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095733"
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressions de chemin JSON (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74095733"
   
 2.  Le [chemin](#PATH) lui-même.  
 
-##  <a name="PATHMODE"></a> Path mode  
+##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  Au début de l’expression de chemin, vous pouvez éventuellement déclarer le mode PATH en spécifiant le mot clé **lax** ou **strict**. La valeur par défaut est **lax**.  
   
 -   En mode **lax**, la fonction retourne des valeurs vides si l’expression de chemin contient une erreur. Par exemple, si vous demandez la valeur **$.name** et si le texte JSON ne contient pas de clé **name**, la fonction retourne une valeur null mais ne génère pas d’erreur.  
@@ -58,7 +58,7 @@ SET @json=N'{ ... }'
 SELECT * FROM OPENJSON(@json, N'lax $.info')
 ```  
   
-##  <a name="PATH"></a> Path  
+##  <a name="path"></a><a name="PATH"></a> Path  
  Après la déclaration de mode de chemin facultatif, spécifiez le chemin lui-même.  
   
 -   Le signe dollar (`$`) représente l’élément de contexte.  

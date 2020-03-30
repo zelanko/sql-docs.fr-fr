@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132277"
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
@@ -36,7 +36,7 @@ ms.locfileid: "68132277"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classe les correspondances par rang et ne retourne au maximum que le nombre de lignes spécifié. Ce choix peut considérablement améliorer les performances. Par exemple, une requête qui doit normalement retourner 100 000 lignes d'une table en comprenant 1 million est traitée plus rapidement si seules les 100 premières lignes sont demandées.  
   
-##  <a name="examples"></a> Exemples d'utilisation de RANK pour limiter les résultats de la recherche  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> Exemples d'utilisation de RANK pour limiter les résultats de la recherche  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : recherche des trois premières correspondances uniquement  
  L'exemple suivant utilise CONTAINSTABLE pour retourner uniquement les trois premières correspondances.  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> Classement des résultats d'une requête de recherche  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> Classement des résultats d'une requête de recherche  
  Une recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut générer un score facultatif (ou valeur de classement) qui indique la pertinence des données retournées par une requête de texte intégral. Cette valeur de classement est calculée sur chaque ligne et peut être utilisée comme critère de tri pour trier le jeu de résultats d'une requête donnée par pertinence. Les valeurs de classement indiquent uniquement un ordre relatif de pertinence pour les lignes contenues dans le jeu de résultats. Les valeurs réelles sont sans importance et sont généralement différentes d'une exécution de requête à une autre. La valeur de classement n'a pas de signification entre les requêtes.  
   
 ### <a name="statistics-for-ranking"></a>Statistiques de classement  

@@ -11,10 +11,10 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287703"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
@@ -77,7 +77,7 @@ ms.locfileid: "79287703"
   
 -   [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)  
   
-###  <a name="BKMK_Change_Tables_CT"></a> Tables de modifications (_CT)  
+###  <a name="change-tables-_ct"></a><a name="BKMK_Change_Tables_CT"></a> Tables de modifications (_CT)  
  Les tables de modifications sont créées à partir des tables miroir. Elles contiennent les données modifiées qui sont capturées dans la base de données Oracle. Les tables sont nommées en fonction de la convention suivante :  
   
  **[cdc]. [\<instance_de_capture >_CT]**  
@@ -86,14 +86,14 @@ ms.locfileid: "79287703"
   
  Les tables de capture sont écrites par l'instance Oracle CDC. Elles sont lues à l'aide de fonctions table spéciales générées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance de capture est créée. Par exemple : `fn_cdc_get_all_changes_HR_EMPLOYEES`. Pour plus d’informations sur ces fonctions CDC, consultez [Fonctions de capture de données modifiées (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
-###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  La table **[cdc].[lsn_time_mapping]** est générée par le composant SQL Server CDC. Son utilisation dans le cas de capture de données modifiées Oracle est différente de son utilisation normale.  
   
  Pour la capture de données modifiées Oracle, les valeurs LSN stockées dans cette table reposent sur la valeur SCN (System Change Number) Oracle associée à la modification. Les 6 premiers octets de la valeur LSN constituent le numéro SCN Oracle d'origine.  
   
  En outre, lors de l'utilisation d'Oracle CDC, les colonnes de temps (`tran_begin_time` et `tran_end_time`) stockent l'heure UTC de la modification plutôt que l'heure locale, comme avec SQL Server CDC standard. Cela garantit que les modifications de l'heure d'été n'affectent pas les données stockées dans lsn_time_mapping.  
   
-###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="cdcxdbcdc_config"></a><a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  Cette table contient les données de configuration de l'instance Oracle CDC. Elle est mise à jour à l'aide de la console du concepteur CDC. Cette table a une seule ligne.  
   
  Le tableau suivant décrit les colonnes de la table **cdc.xdbcdc_config** .  
@@ -102,16 +102,16 @@ ms.locfileid: "79287703"
 |----------|-----------------|  
 |version|Effectue le suivi de la version de la configuration de l'instance CDC. Elle est mise à jour chaque fois que la table est mise à jour et chaque fois qu'une nouvelle instance de capture est ajoutée ou qu'une instance de capture existante est supprimée.|  
 |connect_string|Chaîne de connexion Oracle. Voici un exemple de base :<br /><br /> `<server>:<port>/<instance>` (par exemple, `erp.contoso.com:1521/orcl`).<br /><br /> La chaîne de connexion peut également spécifier un descripteur de connexion Oracle Net, par exemple, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Si vous utilisez un serveur d'annuaire ou des noms TNS, la chaîne de connexion peut être le nom de la connexion.<br /><br /> Pour plus d’informations sur les chaînes de connexion Oracle, consultez [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) pour obtenir des informations détaillées sur les chaînes de connexion de base de données Oracle pour le client Oracle Instant qui est utilisée par le service de capture des changements de données Oracle.|  
-|use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut)<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
+|use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut) ;<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
 |username|Nom de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
-|mot de passe|Mot de passe de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
+|password|Mot de passe de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Durée, en secondes, pendant laquelle une transaction Oracle non enregistrée est gardée en mémoire avant d’être écrite dans la table **cdc.xdbcdc_staged_transactions** . La valeur par défaut est 120 secondes.|  
 |memory_limit|Quantité de mémoire limite, en Mo, qui permet de mettre en cache des données en mémoire. Un paramètre inférieur provoque l’écriture de davantage de transactions dans la table **cdc.xdbcdc_staged_transactions** . La valeur par défaut est 50 Mo.|  
 |options|Liste des options au format name[=value][; ] - elle sert à spécifier des options secondaires (par exemple, traçage, paramétrage). Consultez le tableau ci-dessous pour obtenir une description des options disponibles.|  
   
  Le tableau suivant décrit les options disponibles.  
   
-|Nom|Default|Min|Max|statique|Description|  
+|Name|Default|Min|Max|statique|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |trace|False|-|-|False|Les valeurs disponibles sont :<br /><br /> True<br /><br /> False<br /><br /> sur<br /><br /> arrêt|  
 |cdc_update_state_interval|10|1|120|False|Taille (en kilo-octets) des segments de mémoire alloués pour une transaction (une transaction peut allouer plusieurs segments). Consultez la colonne memory_limit dans la table [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
@@ -136,7 +136,7 @@ ms.locfileid: "79287703"
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Propriété booléenne. **True** indique l’arrêt quand une modification avec rupture du schéma est détectée.<br /><br /> **False** indique la suppression de la table miroir et de l’instance de capture.|  
 |source_oracle_home||-|-|False|Peut être défini sur un chemin racine Oracle spécifique ou un nom de dossier racine Oracle que l'instance de capture de données modifiées utilisera pour se connecter à Oracle.|  
   
-###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="cdcxdbcdc_state"></a><a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  Cette table contient des informations sur l'état persistant de l'instance Oracle CDC. L'état de capture est utilisé dans des scénarios de récupération et de basculement et à des fins de contrôle d'intégrité.  
   
  Le tableau suivant décrit les colonnes de la table **cdc.xdbcdc_state** .  
@@ -161,7 +161,7 @@ ms.locfileid: "79287703"
 |read_changes|Nombre d'enregistrements de modification lus dans le journal des transactions Oracle source.|  
 |staged_transactions|Nombre de transactions actives intermédiaires dans la table **cdc.xdbcdc_staged_transactions** .|  
   
-###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="cdcxdbcdc_trace"></a><a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  Cette table contient des informations sur le fonctionnement de l'instance de capture de données modifiées. Les informations stockées dans cette table incluent les enregistrements d'erreur, les modifications notables d'état et les enregistrements de trace. Les informations d’erreur sont également écrites dans le journal des événements Windows pour garantir que les informations sont disponibles si la table **cdc.xcbcdc_trace** n’est pas disponible.  
   
  Le tableau suivant décrit les colonnes de la table cdc.xdbcdc_trace :  
@@ -176,7 +176,7 @@ ms.locfileid: "79287703"
 |status_message|Message d'état utilisé par la table d'état.|  
 |data|Informations supplémentaires pour les cas où l'erreur ou l'enregistrement de trace contient une charge utile (par exemple, un enregistrement de journal endommagé).|  
   
-###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="cdcxdbcdc_staged_transactions"></a><a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  Cette table stocke les enregistrements de modification des transactions de grande taille ou longues jusqu'à ce que l'événement de validation ou de restauration de transaction soit capturé. Le service de capture de données modifiées Oracle classe les enregistrements de journal capturés par heure de validation de transaction, puis par ordre chronologique pour chaque transaction. Les enregistrements de journaux pour la même transaction sont stockés en mémoire jusqu'à ce que la transaction se termine, puis sont écrits dans la table de modifications cible ou ignorés (en cas de restauration). Comme il existe une quantité limitée de mémoire disponible, les grandes transactions sont écrites dans la table **cdc.xdbcdc_staged_transactions** jusqu’à ce que la transaction soit terminée. Les transactions sont également écrites dans la table de mise en lots lorsqu'elles s'exécutent longtemps. Par conséquent, lorsque l'instance Oracle CDC est redémarrée, les anciennes modifications n'ont pas besoin d'être relues dans les journaux des transactions Oracle.  
   
  Le tableau suivant décrit les colonnes de la table **cdc.xdbcdc_staged_transactions** .  

@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121777"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68121777"
   
  Pour affecter des valeurs aux variables, il est recommandé d’utiliser [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) à la place de SELECT @*local_variable*.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

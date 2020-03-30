@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072285"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68072285"
 
 Affecte la valeur indiquée à la variable locale spécifiée, précédemment créée en utilisant l’instruction DECLARE @*local_variable*.  
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 Syntaxe pour SQL Server et Azure SQL Database :
@@ -122,7 +122,7 @@ CURSOR
 Spécifie que l'instruction SET contient une déclaration de curseur.  
   
 SCROLL  
-Indique que le curseur prend en charge toutes les options d’extraction : FIRST, LAST, NEXT, PRIOR, RELATIVE et ABSOLUTE. Vous ne pouvez pas spécifier SCROLL lorsque vous avez également spécifié FAST_FORWARD.  
+Indique que le curseur prend en charge toutes les options d'extraction : FIRST, LAST, NEXT, PRIOR, RELATIVE et ABSOLUTE. Vous ne pouvez pas spécifier SCROLL lorsque vous avez également spécifié FAST_FORWARD.  
   
 FORWARD_ONLY  
 Spécifie que le curseur gère uniquement l'option FETCH NEXT. Le curseur est récupéré dans une seule direction, de la première à la dernière ligne. Lorsque vous spécifiez FORWARD_ONLY sans le mot clé STATIC, KEYSET ou DYNAMIC, le curseur est implémenté sous la forme DYNAMIC. Si vous ne spécifiez ni FORWARD_ONLY ni SCROLL, FORWARD_ONLY est choisi par défaut, sauf si vous spécifiez les mots clés STATIC, KEYSET ou DYNAMIC. Pour les curseurs STATIC, KEYSET et DYNAMIC, SCROLL est la valeur par défaut.  
@@ -306,7 +306,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. Impression de la valeur d'une variable initialisée avec SET  
 L’exemple suivant crée la variable `@myvar`, place une valeur de chaîne dans la variable et imprime la valeur de la variable `@myvar`.  

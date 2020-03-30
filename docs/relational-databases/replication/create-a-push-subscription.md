@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70059293"
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission de données
@@ -31,7 +31,7 @@ ms.locfileid: "70059293"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
 Créez un abonnement par émission de données sur le serveur de publication ou l’abonné à l’aide de l’Assistant Nouvel abonnement. Exécutez les étapes de l'Assistant pour :  
   
 - Spécifier le serveur de publication et la publication.  
@@ -82,7 +82,7 @@ Créez un abonnement par émission de données sur le serveur de publication ou 
   
 7. Exécutez les étapes de l'Assistant Nouvel abonnement.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
 Vous pouvez créer par programmation des abonnements par émission de données à l’aide de procédures stockées de réplication. Les procédures stockées utilisées dépendent du type de publication auquel l'abonnement appartient.  
   
 > [!IMPORTANT]
@@ -150,7 +150,7 @@ Vous pouvez créer par programmation des abonnements par émission de données �
 > [!IMPORTANT]
 > Lors de la création d’un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, notamment *job_login* et *job_password*, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d’exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  L'exemple suivant crée un abonnement par envoi de données vers une publication transactionnelle. Les valeurs de connexion et de mot de passe sont fournies lors de l’exécution à l’aide des variables de script **sqlcmd**.  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
@@ -159,7 +159,7 @@ Vous pouvez créer par programmation des abonnements par émission de données �
   
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d’objets RMO (Replication Management Object)  
+##  <a name="using-replication-management-objects"></a><a name="RMOProcedure"></a> Utilisation d’objets RMO (Replication Management Object)  
  Vous pouvez créer par programme des abonnements par émission de données (push) à l'aide d'objets RMO (Replication Management Objects). Les classes RMO que vous utilisez pour créer un abonnement par émission de données dépendent du type de publication sur laquelle l’abonnement est créé.  
   
 > [!IMPORTANT]
@@ -245,7 +245,7 @@ Vous pouvez créer par programmation des abonnements par émission de données �
 > [!IMPORTANT]  
 > Lors de la création d’un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, notamment <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple crée un nouvel abonnement par envoi de données vers une publication transactionnelle. Les informations d’identification du compte Windows que vous utilisez pour exécuter le travail de l’Agent de distribution sont transmises lors de l’exécution.  
   
  [!code-cs[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  

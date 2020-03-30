@@ -20,10 +20,10 @@ ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892e4c09154e93ded7718819c86dfe91c18c85ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68026250"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68026250"
 
 Pour un paramètre donné, `CURSOR_STATUS` indique si une déclaration de curseur a retourné ou non un curseur et un jeu de résultats.
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

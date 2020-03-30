@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257660"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
@@ -27,7 +27,7 @@ Cette rubrique décrit comment créer, remplir et gérer des index de recherche 
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Prérequis - Créer un catalogue de texte intégral
 Avant de pouvoir créer un index de recherche en texte intégral, vous devez disposer d’un catalogue de texte intégral. Le catalogue est un conteneur virtuel pour un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Créer et gérer des catalogues de texte intégral](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
   
-##  <a name="tasks"></a> Créer, modifier ou supprimer un index de recherche en texte intégral  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a> Créer, modifier ou supprimer un index de recherche en texte intégral  
 ### <a name="create-a-full-text-index"></a>Créer un index de recherche en texte intégral  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -48,7 +48,7 @@ Le processus de création et de gestion d’un index de recherche en texte inté
 
 Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).
 
-##  <a name="view"></a> Afficher les propriétés d’un index de recherche en texte intégral
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> Afficher les propriétés d’un index de recherche en texte intégral
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Afficher les propriétés d’un index de recherche en texte intégral avec Transact-SQL
 
 |Vue catalogue ou vue de gestion dynamique|Description|  
@@ -80,7 +80,7 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral**.  
   
-##  <a name="props"></a> Afficher les propriétés des colonnes et tables indexées  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> Afficher les propriétés des colonnes et tables indexées  
  Vous pouvez faire appel à plusieurs fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], comme OBJECTPROPERTYEX, pour vous procurer la valeur de diverses propriétés d'indexation de texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  
   
  Le tableau ci-après recense les propriétés en texte intégral liées aux colonnes et tables indexées, ainsi que les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui leur sont associées.  
@@ -102,7 +102,7 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
 |**TableFulltextPopulateStatus**|État de remplissage de la table de texte intégral.|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|Indique si une table possède un index de recherche en texte intégral actif.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> Obtenir des informations sur la colonne de clés de texte intégral  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a> Obtenir des informations sur la colonne de clés de texte intégral  
  En général, le résultat des fonctions d'ensemble de lignes CONTAINSTABLE ou FREETEXTTABLE doit être joint avec la table de base. Dans ce cas-là, vous devez connaître le nom de la colonne clé unique. Vous pouvez déterminer si un index unique donné est utilisé comme clé de texte intégral et obtenir l'identificateur de la colonne clés de texte intégral.  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Déterminer si un index unique donné est utilisé comme colonne de clés de texte intégral  
@@ -183,7 +183,7 @@ Pour créer un index de recherche en texte intégral sur une colonne **varbinary
   
  Pour plus d’informations sur l’indexation et l’interrogation sur une colonne **xml**, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
-##  <a name="disable"></a> Désactiver ou réactiver l’indexation de texte intégral pour une table   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> Désactiver ou réactiver l’indexation de texte intégral pour une table   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par défaut, toutes les bases de données créées par les utilisateurs sont activées pour la recherche en texte intégral. De plus, une table individuelle est automatiquement activée pour l'indexation de texte intégral dès qu'un index de recherche en texte intégral est créé sur cette table et qu'une colonne est ajoutée à l'index. Une table est automatiquement désactivée pour l'indexation de recherche en texte intégral lorsque la dernière colonne est supprimée de son index de texte intégral.  
   
  Dans une table à index de recherche en texte intégral, vous pouvez désactiver ou réactiver manuellement une table pour l'indexation de recherche en texte intégral en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -194,7 +194,7 @@ Pour créer un index de recherche en texte intégral sur une colonne **varbinary
   
 3.  Sélectionnez **Index de recherche en texte intégral**, puis cliquez sur **Disable Full-Text index** (Désactiver l’index de recherche en texte intégral) ou **Enable Full-Text index**(Activer l’index de recherche en texte intégral).  
   
-##  <a name="remove"></a> Supprimer un index de recherche en texte intégral d’une table  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> Supprimer un index de recherche en texte intégral d’une table  
   
 1.  Dans l'Explorateur d'objets, cliquez avec le bouton droit sur la table dotée de l'index de recherche en texte intégral à supprimer.  
   

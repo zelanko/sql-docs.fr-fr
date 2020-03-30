@@ -15,16 +15,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d8dd1cd471328859dd8bfa595fc341bda5f51f04
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095305"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Résoudre l’indexation de texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
-##  <a name="failure"></a> Dépanner les échecs de l'indexation de texte intégral  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Dépanner les échecs de l'indexation de texte intégral  
  Lors du remplissage ou de la gestion d'un index de recherche en texte intégral, il est possible que l'indexeur de texte intégral, pour les raisons détaillées ci-dessous, ne parvienne pas à indexer une ou plusieurs lignes. Ces erreurs au niveau des lignes n'empêchent pas l'achèvement du remplissage. L'indexeur ignore ces lignes, et leur contenu ne peut donc pas être interrogé.  
   
  Les défaillances d'indexation peuvent se produire dans les cas suivants :  
@@ -54,7 +54,7 @@ ms.locfileid: "68095305"
 >  Le fait d'ignorer la vérification de signature réduit la sécurité de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il est recommandé de signer tous les composants que vous implémentez ou de vérifier que tous les composants que vous achetez sont signés. Pour plus d’informations sur la signature des composants, consultez [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
   
-##  <a name="state"></a> Index de recherche en texte intégral dans un état non cohérent une fois le journal des transactions restauré  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Index de recherche en texte intégral dans un état non cohérent une fois le journal des transactions restauré  
  Lors de la restauration du journal des transactions d'une base de données, il arrive qu'un message d'avertissement s'affiche en indiquant que l'index de recherche en texte intégral n'est pas dans un état cohérent. Cela se produit lorsque l'index de recherche en texte intégral d'une table est modifié après la sauvegarde de la base de données. Pour rendre un état cohérent à l'index de recherche en texte intégral, vous devez exécuter un remplissage complet (analyse) sur la table. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).  
   
   

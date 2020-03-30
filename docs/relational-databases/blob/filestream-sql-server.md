@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287283"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -75,7 +75,7 @@ Seul le compte sous lequel le compte de service [!INCLUDE[ssNoVersion](../../inc
 > [!NOTE]
 > Les connexions SQL ne fonctionnent pas avec les conteneurs FILESTREAM. Seule l’authentification NTFS ou ReFS fonctionne avec les conteneurs FILESTREAM.
 
-## <a name="dual"></a> Accès aux données BLOB avec Transact-SQL et accès en continu au système de fichiers
+## <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> Accès aux données BLOB avec Transact-SQL et accès en continu au système de fichiers
 
 Après avoir stocké des données dans une colonne FILESTREAM, vous pouvez accéder aux fichiers en utilisant des transactions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en utilisant des API Win32.  
   

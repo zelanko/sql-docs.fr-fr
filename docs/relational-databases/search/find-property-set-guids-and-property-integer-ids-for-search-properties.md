@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056520"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche
@@ -37,7 +37,7 @@ ms.locfileid: "74056520"
   
  Cette rubrique décrit les méthodes couramment utilisées pour rechercher des informations sur les propriétés disponibles, notamment sur les propriétés définies par Microsoft. Pour plus d'informations sur les propriétés définies par un tiers, reportez-vous à la documentation de ce tiers ou contactez le fournisseur.  
   
-##  <a name="wellknown"></a> Recherche d'informations sur les propriétés Microsoft largement répandues et connues  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> Recherche d'informations sur les propriétés Microsoft largement répandues et connues  
  Microsoft définit des centaines de propriétés de document utiles dans de nombreux contextes, mais seul un modeste sous-ensemble des propriétés disponibles est utilisé par chaque format de fichier. Parmi les propriétés Windows fréquemment utilisées se trouve un petit jeu de propriétés génériques. Quelques exemples de propriétés génériques connues sont présentés dans le tableau suivant. Le tableau indique le nom connu, le nom canonique Windows (issu de la description de la propriété publiée par Microsoft), le GUID du jeu de propriétés, l'identificateur entier de propriété et une brève description.  
   
 |Nom connu|Nom canonique Windows|GUID du jeu de propriétés|ID entier|Description|  
@@ -57,7 +57,7 @@ ms.locfileid: "74056520"
   
 -   Propriétés personnalisées, spécifiques à l'application définies par le fournisseur de logiciels.  
   
-##  <a name="filtdump"></a> Recherche d'informations sur les propriétés disponibles à l'aide de FILTDUMP.EXE  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a> Recherche d'informations sur les propriétés disponibles à l'aide de FILTDUMP.EXE  
  Pour savoir quelles propriétés sont détectées et extraites, le cas échéant, par un IFilter installé, vous pouvez installer et exécuter l’utilitaire **filtdump.exe** , qui fait partie du Kit de développement logiciel (SDK) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  Exécutez **filtdump.exe** à partir de l’invite de commandes et fournissez un argument unique. Cet argument est le nom d'un fichier individuel dont le type de fichier correspond à un IFilter installé. L'utilitaire affiche une liste de toutes les propriétés identifiées par l'IFilter dans le document, avec leurs GUID de jeu de propriétés, leurs ID d'entier et des informations supplémentaires.  
@@ -68,7 +68,7 @@ ms.locfileid: "74056520"
   
 -   Pour la version 32 bits, recherchez dans `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`.  
   
-##  <a name="propdesc"></a> Recherche de valeurs pour une propriété de recherche à partir d'une description de la propriété Windows  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a> Recherche de valeurs pour une propriété de recherche à partir d'une description de la propriété Windows  
  Pour une propriété de recherche Windows connue, vous pouvez obtenir ces informations à partir des attributs **formatID** et **propID** de la description de la propriété (**propertyDescription**).  
   
  L'exemple suivant montre la partie pertinente d'une description de propriété Microsoft typique, dans ce cas, la propriété `System.Author` . L'attribut `formatID` spécifie le GUID du jeu de propriétés, `F29F85E0-4FF9-1068-AB91-08002B27B3D9`et l'attribut `propID` spécifie l'ID entier de propriété `4.` . Remarquez que l'attribut `name` spécifie le nom canonique Windows de la propriété `System.Author`. (Cet exemple omet les parties de la description de la propriété qui ne sont pas appropriées.)  
@@ -87,7 +87,7 @@ propID = 4
   
  Pour obtenir une liste complète des propriétés Windows, consultez [Propriétés Windows](https://go.microsoft.com/fwlink/?LinkId=215013)et aussi la documentation Windows Search.  
   
-##  <a name="examples"></a> Ajout d'une propriété à une liste de propriétés de recherche  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> Ajout d'une propriété à une liste de propriétés de recherche  
  L'exemple suivant indique comment ajouter une propriété à une liste de propriétés de recherche. L’exemple utilise une instruction [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) pour ajouter la propriété `System.Author` à une liste de propriétés de recherche nommée `PropertyList1`, et fournit un nom convivial à la propriété, `Author`.  
   
 ```  

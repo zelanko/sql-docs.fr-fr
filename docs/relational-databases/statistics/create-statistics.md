@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68103422"
 ---
 # <a name="create-statistics"></a>Créer des statistiques
@@ -43,9 +43,9 @@ ms.locfileid: "68103422"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Avant de créer des statistiques avec l'instruction CREATE STATISTICS, vérifiez que l'option AUTO_CREATE_STATISTICS est définie au niveau de la base de données. Cela garantit que l'optimiseur de requête continue de créer régulièrement des statistiques de colonnes uniques pour les colonnes de prédicat de requête.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68103422"
   
 -   Vous ne pouvez pas supprimer, renommer ni modifier la définition d'une colonne de table définie dans un prédicat de statistiques filtrées.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite que l’utilisateur soit le propriétaire de la table ou de la vue indexée ou qu’il soit membre d’un des rôles suivants : rôle serveur fixe **sysadmin** , rôle de base de données fixe **db_owner** ou rôle de base de données fixe **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>Pour créer des statistiques  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68103422"
   
 7.  Dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Pour créer des statistiques  
   

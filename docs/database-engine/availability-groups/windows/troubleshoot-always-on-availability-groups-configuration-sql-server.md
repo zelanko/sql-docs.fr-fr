@@ -15,10 +15,10 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286993"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Résoudre des problèmes de configuration des groupes de disponibilité Always On (SQL Server)
@@ -44,10 +44,10 @@ ms.locfileid: "79286993"
 |[Tâches associées](#RelatedTasks)|Contient une liste de rubriques orientées tâche dans la documentation en ligne de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui sont particulièrement appropriée au dépannage d'une configuration de groupe de disponibilité.|  
 |[Contenu connexe](#RelatedContent)|Contient une liste de ressources pertinentes externes à la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="IsHadrEnabled"></a> Les groupes de disponibilité Always On ne sont pas activés  
+##  <a name="always-on-availability-groups-is-not-enabled"></a><a name="IsHadrEnabled"></a> Les groupes de disponibilité Always On ne sont pas activés  
  La fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] doit être activée sur chacune des instances de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Accounts"></a> Comptes (Accounts)  
+##  <a name="accounts"></a><a name="Accounts"></a> Comptes (Accounts)  
  Les comptes sous lesquels [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est en cours d'exécution doivent être configurés correctement.  
   
 1.  Les comptes possèdent-ils les autorisations appropriées ?  
@@ -58,7 +58,7 @@ ms.locfileid: "79286993"
   
 2.  Si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute en tant que compte intégré, tel que Système local, Service local ou Service réseau, ou comme compte qui n'appartient pas au domaine, vous devez utiliser des certificats pour l'authentification de point de terminaison. Si vos comptes de service utilisent des comptes de domaine au sein du même domaine, vous pouvez choisir d'accorder l'accès CONNECT pour chaque compte de service sur tous les emplacements de réplica ou vous pouvez utiliser des certificats. Pour plus d’informations, consultez [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  Les points de terminaison doivent être correctement configurés.  
   
 1.  Vérifiez que chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devant héberger un réplica de disponibilité (chaque *emplacement de réplica*) dispose d’un point de terminaison de mise en miroir de bases de données. Pour déterminer si un point de terminaison de mise en miroir de bases de données existe sur une instance de serveur donnée, utilisez l’affichage catalogue [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md). Pour plus d’informations, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) ou [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -111,16 +111,16 @@ ms.locfileid: "79286993"
   
     ```  
   
-##  <a name="SystemName"></a> System Name  
+##  <a name="system-name"></a><a name="SystemName"></a> System Name  
  Comme nom système d'une instance de serveur dans une URL de point de terminaison, vous pouvez utiliser tout nom qui identifie sans ambiguïté le système. L'adresse de serveur peut être un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP (de préférence statique). L'utilisation du nom de domaine complet garantit un fonctionnement correct. Pour plus d’informations, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  Chaque instance de serveur qui héberge un réplica de disponibilité doit être autorisée à accéder au port de chacune de l'autre instance de serveur par le biais du protocole TCP. Ceci est d'autant plus important que les instances de serveur peuvent se trouver dans différents domaines, entre lesquels aucune relation d'approbation n'a été établie (domaines non approuvés).  
   
-##  <a name="Msg1418"></a> Accès au point de terminaison (erreur SQL Server 1418)  
+##  <a name="endpoint-access-sql-server-error-1418"></a><a name="Msg1418"></a> Accès au point de terminaison (erreur SQL Server 1418)  
  Ce message [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indique que l'adresse réseau du serveur spécifiée dans l'URL de point de terminaison ne peut pas être atteinte ou n'existe pas, et il suggère de vérifier le nom de l'adresse réseau puis de réexécuter la commande.  
   
-##  <a name="JoinDbFails"></a> Échec de jointure de base de données (erreur SQL Server 35250)  
+##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> Échec de jointure de base de données (erreur SQL Server 35250)  
  Cette section décrit les causes possibles et la résolution d'un problème de jointure de bases de données secondaires au groupe de disponibilité du fait que la connexion au réplica principal n'est pas active.  
   
  **Résolution :**  
@@ -129,19 +129,19 @@ ms.locfileid: "79286993"
   
 2.  Vérifiez si le compte de service réseau dispose de l'autorisation de connexion au point de terminaison.  
   
-##  <a name="ROR"></a> Le routage en lecture seule ne fonctionne pas correctement  
+##  <a name="read-only-routing-is-not-working-correctly"></a><a name="ROR"></a> Le routage en lecture seule ne fonctionne pas correctement  
  Vérifiez les paramètres suivants des valeurs de configuration et corrigez-les si nécessaire.  
   
 ||Sur...|Action|Commentaires|Lien|  
 |------|---------|------------|--------------|----------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Réplica principal actuel|Assurez-vous que l'écouteur du groupe de disponibilité est en ligne.|**Pour vérifier si l'écouteur en ligne :**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **Pour redémarrer un écouteur hors connexion :**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Réplica principal actuel|Vérifiez que l'option READ_ONLY_ROUTING_LIST contient uniquement les instances de serveur qui hébergent un réplica secondaire accessible en lecture.|**Pour identifier des réplicas secondaires accessibles en lecture :** sys.availability_replicas (colonne**secondary_role_allow_connections_desc** )<br /><br /> **Pour consulter une liste de routage en lecture seule :** sys.availability_read_only_routing_lists<br /><br /> **Pour modifier une liste de routage en lecture seule :** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Réplica principal actuel|Vérifiez que l'option READ_ONLY_ROUTING_LIST contient uniquement les instances de serveur qui hébergent un réplica secondaire accessible en lecture.|**Pour identifier des réplicas secondaires accessibles en lecture :** sys.availability_replicas (colonne**secondary_role_allow_connections_desc** )<br /><br /> **Pour consulter une liste de routage en lecture seule :** sys.availability_read_only_routing_lists<br /><br /> **Pour modifier une liste de routage en lecture seule :** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Assurez-vous que le Pare-feu Windows ne bloque pas le port READ_ONLY_ROUTING_URL.|-|[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Dans le gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vérifiez que :<br /><br /> La connectivité à distance SQL Server est activée.<br /><br /> TCP/IP est activé<br /><br /> Les adresses IP sont configurées correctement.|-|[Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurer un serveur pour écouter un port TCP spécifique &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Vérifiez que READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) contient le nom de domaine complet (FQDN) et le numéro de port corrects.|-|[Calcul de l’URL de routage en lecture seule pour Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Système client|Vérifiez que le pilote client prend en charge le routage en lecture seule.|-|[Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
@@ -157,13 +157,13 @@ ms.locfileid: "79286993"
   
 -   [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Applets de commande de cluster de basculement Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

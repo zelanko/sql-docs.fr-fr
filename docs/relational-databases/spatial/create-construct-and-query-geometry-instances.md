@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f3b5cc1721483534307acf797a58e4dc70b5c81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048732"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Créer, construire et interroger des instances geometry
@@ -36,9 +36,9 @@ ms.locfileid: "68048732"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de la norme GML 3.1, qui est définie dans le schéma suivant : [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959).  
   
-##  <a name="creating"></a> Création ou construction d'une nouvelle instance geometry  
+##  <a name="creating-or-constructing-a-new-geometry-instance"></a><a name="creating"></a> Création ou construction d'une nouvelle instance geometry  
   
-###  <a name="existing"></a> Création d'une instance geometry à partir d'une instance existante  
+###  <a name="creating-a-new-geometry-instance-from-an-existing-instance"></a><a name="existing"></a> Création d'une instance geometry à partir d'une instance existante  
  Le type de données **geometry** fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour créer des instances **geometry** basées sur des instances existantes.  
   
  **Pour créer une mémoire tampon autour d'une géométrie**  
@@ -68,7 +68,7 @@ ms.locfileid: "68048732"
  [STPointOnSurface &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)  
   
   
-###  <a name="wkt"></a> Construction d'une instance geometry à partir d'une entrée WKT (Well-Known Text)  
+###  <a name="constructing-a-geometry-instance-from-well-known-text-input"></a><a name="wkt"></a> Construction d'une instance geometry à partir d'une entrée WKT (Well-Known Text)  
  Le type de données **geometry** fournit plusieurs méthodes intégrées qui génèrent une géométrie à partir de la représentation WKT OGC (Open Geospatial Consortium). La norme WKT est une chaîne de texte qui autorise l'échange de données géométriques sous forme textuelle.  
   
  **Pour construire tout type d'instance geometry à partir d'une entrée WKT**  
@@ -98,7 +98,7 @@ ms.locfileid: "68048732"
  [STGeomCollFromText &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stgeomcollfromtext-geometry-data-type.md)  
   
   
-###  <a name="wkb"></a> Construction d'une instance geometry à partir d'une entrée WKB (Well-Known Binary)  
+###  <a name="constructing-a-geometry-instance-from-well-known-binary-input"></a><a name="wkb"></a> Construction d'une instance geometry à partir d'une entrée WKB (Well-Known Binary)  
  WKB est un format binaire spécifié par l’OGC (Open Geospatial Consortium) qui autorise l’échange de données **geometry** entre une application cliente et une base de données SQL. Les fonctions suivantes acceptent l'entrée WKB pour construire des géométries :  
   
  **Pour construire tout type d'instance geometry à partir d'une entrée WKB**  
@@ -126,14 +126,14 @@ ms.locfileid: "68048732"
  [STGeomCollFromWKB &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
   
-###  <a name="gml"></a> Construction d'une instance geometry à partir d'une entrée texte GML  
+###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Construction d'une instance geometry à partir d'une entrée texte GML  
  Le type de données **geometry** fournit une méthode qui génère une instance **geometry** à partir de GML, représentation XML d’objets géométriques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
   
  **Pour construire tout type d'instance geometry à partir d'une entrée GML**  
  [GeomFromGml &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
   
-##  <a name="returning"></a> Renvoi de données WKT et WKB à partir d'une instance geometry  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geometry-instance"></a><a name="returning"></a> Renvoi de données WKT et WKB à partir d'une instance geometry  
  Vous pouvez utiliser les méthodes suivantes pour retourner le format WKT ou WKB d'une instance **geometry** :  
   
  **Pour retourner la représentation WKT d'une instance geometry**  
@@ -151,10 +151,10 @@ ms.locfileid: "68048732"
  [AsGml &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
   
-##  <a name="querying"></a> Interrogation des propriétés et comportements des instances geometry  
+##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Interrogation des propriétés et comportements des instances geometry  
  Toutes les instances **geometry** ont plusieurs propriétés qui peuvent être extraites par le biais des méthodes fournies par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les rubriques suivantes définissent les propriétés et comportements de types geometry et les méthodes permettant de les interroger.  
   
-###  <a name="valid"></a> Informations sur la validité, le type d'instance et GeometryCollection  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Informations sur la validité, le type d'instance et GeometryCollection  
  Une fois qu’une instance **geometry** est construite, vous pouvez utiliser les méthodes suivantes pour déterminer si elle est formée correctement, retourner le type d’instance ou, s’il s’agit d’une instance de collection, retourner une instance **geometry** spécifique.  
   
  **Pour retourner le type d'instance d'une géométrie**  
@@ -176,7 +176,7 @@ ms.locfileid: "68048732"
  [STGeometryN &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stgeometryn-geometry-data-type.md)STGeometryN (type de données geometry)  
   
   
-###  <a name="number"></a> Nombre de points  
+###  <a name="number-of-points"></a><a name="number"></a> Nombre de points  
  Toutes les instances **geometry** non vides sont constituées de *points*. Ces points représentent les coordonnées X et Y de latitude et de longitude du plan sur lequel les géométries sont dessinées. **geometry** fournit de nombreuses méthodes intégrées pour interroger les points d’une instance.  
   
  **Pour retourner le nombre de points qui composent une instance**  
@@ -204,7 +204,7 @@ ms.locfileid: "68048732"
  [STCentroid](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)  
   
   
-###  <a name="dimension"></a> Dimension  
+###  <a name="dimension"></a><a name="dimension"></a> Dimension  
  Une instance **geometry** non vide peut avoir 0, 1 ou 2 dimensions. Les instances **geometry**à zéro dimension, telles que **Point** et **MultiPoint**, n’ont aucune longueur ou surface. Les objets unidimensionnels, tels que **LineString, CircularString, CompoundCurve**et **MultiLineString**ont une longueur. Les instances à deux dimensions, telles que **Polygon**, **CurvePolygon**et **MultiPolygon**, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une instance **GeometryCollection** indique une surface en fonction des types de son contenu.  
   
  **Pour retourner la dimension d'une instance**  
@@ -217,14 +217,14 @@ ms.locfileid: "68048732"
  [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
   
-###  <a name="empty"></a> Vide  
+###  <a name="empty"></a><a name="empty"></a> Vide  
  Une instance _geometry_**vide** n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon**, **CurvePolygon**et **MultiPolygon** vides est 0.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
   
   
-###  <a name="simple"></a> Simple  
+###  <a name="simple"></a><a name="simple"></a> Simple  
  Pour qu’une **géometrie** de l’instance soit *simple*, elle doit remplir ces deux conditions :  
   
 -   Chaque graphique de l'instance ne doit pas se croiser lui-même, sauf à ses points de terminaison.  
@@ -238,7 +238,7 @@ ms.locfileid: "68048732"
  [STIsSimple](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md).  
   
   
-###  <a name="boundary"></a> Limite, intérieur et extérieur  
+###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Limite, intérieur et extérieur  
  L’ *intérieur* d’une instance **geometry** est l’espace occupé par l’instance et l’ *extérieur* est l’espace qu’elle n’occupe pas.  
   
  Une limite (*Boudary* à est définie par l’OGC comme suit :  
@@ -264,13 +264,13 @@ SELECT @g.STBoundary().ToString();
  **Pour retourner la limite d'une instance**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
-###  <a name="envelope"></a> Enveloppe  
+###  <a name="envelope"></a><a name="envelope"></a> Enveloppe  
  L’ *enveloppe* d’une instance **geometry** , aussi appelée *cadre englobant*, est le rectangle aligné sur l’axe formé par les coordonnées minimales et maximales (X, Y) de l’instance.  
   
  **Pour retourner l'enveloppe d'une instance**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
-###  <a name="closure"></a> Fermeture  
+###  <a name="closure"></a><a name="closure"></a> Fermeture  
  Une instance _geometry_**fermée** est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
@@ -291,7 +291,7 @@ SELECT @g.STBoundary().ToString();
  [STInteriorRingN](../../t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)  
   
   
-###  <a name="srid"></a> ID de référence spatial (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> ID de référence spatial (SRID)  
  L’ID de référence spatial (SRID) est un identificateur spécifiant dans quel système de coordonnées l’instance **geometry** est représentée. Deux instances avec différents SRID ne peuvent pas être comparées.  
   
  **Pour définir ou retourner le SRID d'une instance**  
@@ -300,7 +300,7 @@ SELECT @g.STBoundary().ToString();
 > [!NOTE]
 > Cette propriété peut être modifiée.  
   
-##  <a name="rel"></a> Détermination de relations entre des instances geometry  
+##  <a name="determining-relationships-between-geometry-instances"></a><a name="rel"></a> Détermination de relations entre des instances geometry  
  Le type de données **geometry** fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour déterminer les relations entre deux instances **geometry** .  
   
  **Pour déterminer si deux instances comprennent le même ensemble de points**  
@@ -336,10 +336,10 @@ SELECT @g.STBoundary().ToString();
  **Pour déterminer la distance la plus courte entre des points dans deux géométries**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-##  <a name="defaultsrid"></a> Les instances geometry ont un SRID par défaut de zéro  
+##  <a name="geometry-instances-default-to-zero-srid"></a><a name="defaultsrid"></a> Les instances geometry ont un SRID par défaut de zéro  
  Le SRID par défaut pour les instances **geometry** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est 0. Avec les données spatiales **geometry** , le SRID spécifique de l'instance spatiale n'est pas requis pour effectuer des calculs ; par conséquent, les instances peuvent résider dans un espace planaire indéfini. Pour indiquer un espace planaire indéfini dans les calculs des méthodes du type de données **geometry** , le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilise SRID 0.  
   
-##  <a name="examples"></a> Exemples  
+##  <a name="examples"></a><a name="examples"></a> Exemples  
 Les deux exemples suivants montrent comment ajouter et interroger des données géométriques.  
   
 ### <a name="example-a"></a>Exemple A.

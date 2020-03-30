@@ -27,10 +27,10 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74901874"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "74901874"
 > [!NOTE]  
 >  L’intégration du CLR .NET Framework à SQL Server est décrite dans cette rubrique. L’intégration du CLR ne s’applique pas à Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

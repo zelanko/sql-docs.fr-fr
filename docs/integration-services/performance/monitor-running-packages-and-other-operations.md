@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287843"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Surveiller les packages en cours d’exécution et autres opérations
@@ -55,12 +55,12 @@ ms.locfileid: "79287843"
   
  Neuf types d'état différents sont utilisés pour indiquer l'état d'une opération. Pour obtenir une liste complète des types de statuts, consultez la vue [catalog.operations &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
 
-## <a name="active_ops"></a> Boîte de dialogue Opérations actives
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a> Boîte de dialogue Opérations actives
   Utilisez la boîte de dialogue **Opérations actives** pour afficher l'état des opérations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en cours d'exécution sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , par exemple les opérations de déploiement, de validation et d'exécution de package. Ces données sont stockées dans le catalogue SSISDB.  
   
  Pour plus d’informations sur les vues [!INCLUDE[tsql](../../includes/tsql-md.md)] associées, consultez [catalog.operations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) et [catalog.executions &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
   
-###  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Opérations actives  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> Ouvrir la boîte de dialogue Opérations actives  
   
 1.  Ouvrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79287843"
  Accès par programmation via l'API managé  
  Consultez l’espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices> et ses classes.  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   Dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
   
  En haut de chaque page de rapport, l'icône de retour permet de revenir à la page précédente, l'icône de rafraîchissement actualise les informations affichées dans la page et l'icône d'impression vous permet d'imprimer la page en cours.  

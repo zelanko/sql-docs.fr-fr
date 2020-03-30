@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287124"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
@@ -39,7 +39,7 @@ ms.locfileid: "76287124"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Spécifiez des planifications de synchronisation dans la page **Planification de synchronisation** dans l'Assistant Nouvel abonnement. Pour plus d'informations sur l'accès à cet Assistant, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) et [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
  Modifiez les planifications de synchronisation dans la boîte de dialogue **Propriétés de la planification du travail** , accessible à partir du dossier **Travaux** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de la fenêtre des détails de l'agent dans le Moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -140,7 +140,7 @@ ms.locfileid: "76287124"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez définir des planifications de synchronisation par programme en utilisant des procédures stockées de réplication. Les procédures stockées que vous utilisez dépendent du type de réplication et du type d'abonnement (par extraction ou par émission de données).  
   
  Une planification est définie par les paramètres de planification suivants dont le comportement est hérité de [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) :  
@@ -189,7 +189,7 @@ ms.locfileid: "76287124"
   
 2.  Sur l'Abonné, exécutez [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Spécifiez **\@subscriber**, **\@subscriber_db**, **\@publication** et les informations d’identification Windows sous lesquelles l’Agent de fusion s’exécute sur l’Abonné pour **\@job_name** et **\@password**. Spécifiez les paramètres de synchronisation (détaillés plus haut) qui définissent la planification du travail de l'Agent de fusion qui synchronise l'abonnement.  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  La réplication utilise l'Agent SQL Server pour planifier des travaux pour les activités qui se produisent périodiquement, telles que la génération d'instantanés et la synchronisation d'abonnements. Vous pouvez utiliser les Replication Management Objects par programme pour spécifier des planifications pour les travaux des agents de réplication.  
   
 > [!NOTE]  
@@ -319,7 +319,7 @@ ms.locfileid: "76287124"
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> pour créer l'abonnement.  
   
-###  <a name="PShellExample"></a> Exemple (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemple (RMO)  
  Cet exemple crée un abonnement par émission de données à une publication de fusion et spécifie la planification sur laquelle l'abonnement est synchronisé.  
   
  [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  

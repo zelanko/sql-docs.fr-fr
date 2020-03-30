@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286663"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
@@ -48,7 +48,7 @@ ms.locfileid: "79286663"
 
 Les constructions de requête suivantes sont prises en charge :  
 
-Expression CASE : CASE peut être utilisé dans n'importe quelle instruction ou clause qui autorise une expression valide.
+Expression CASE : CASE peut être utilisé dans n’importe quelle instruction ou clause qui autorise une expression valide.
    - **S’applique à :** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     Depuis [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], les instructions CASE sont désormais prises en charge pour les modules T-SQL compilés en mode natif.
 
@@ -199,27 +199,27 @@ Les instructions DML suivantes sont prises en charge.
 
 -   Toutes les [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 
--   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et YEAR.  
+-   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et YEAR.  
 
--   Fonctions de chaînes : LEN, LTRIM, RTRIM et SUBSTRING.  
+-   Fonctions de chaîne : LEN, LTRIM, RTRIM et SUBSTRING.  
     - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], les fonctions intégrées suivantes sont également prises en charge : TRIM, TRANSLATE et CONCAT_WS.  
+      À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], les fonctions intégrées suivantes sont également prises en charge : TRIM, TRANSLATE et CONCAT_WS.  
 
--   Fonctions d’identité : SCOPE_IDENTITY  
+-   Fonction d’identité : SCOPE_IDENTITY  
 
--   Fonctions NULL : ISNULL  
+-   Fonctions NULL : ISNULL  
 
--   Fonctions Uniqueidentifier : NEWID et NEWSEQUENTIALID  
+-   Fonctions Uniqueidentifier : NEWID et NEWSEQUENTIALID  
 
 -   Fonctions JSON  
     - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], les fonctions JSON sont prises en charge dans les modules compilés en mode natif.
 
--   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
+-   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
 
 -   Fonctions système : @@rowcount. Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
 
--   Fonctions de sécurité : IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal']), IS_SRVROLEMEMBER ('role' [, 'login']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login']), SUSER_SID(['login'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
+-   Fonctions de sécurité : IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal’]), IS_SRVROLEMEMBER ('role' [, 'login’]), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login’]), SUSER_SID(['login’] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
 
 -   Les exécutions de modules natifs peuvent être imbriquées.
 
@@ -244,13 +244,13 @@ Les instructions DML suivantes sont prises en charge.
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> Limitations sur le tri  
  Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
 
- Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, le message d’erreur suivant s’affiche : **Message 41398, Niveau 16, État 1, Procédure *\<nom_procédure>* , Ligne *\<numéro_ligne>* L’opérateur TOP peut retourner au plus 8 192 lignes ; *\<nombre>* demandées.**  
+ Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, le message d’erreur suivant s’affiche : **Message 41398, Niveau 16, État 1, Procédure *\<nom_procédure>* , Ligne *\<numéro_ligne>* L’opérateur TOP peut retourner au maximum 8 192 lignes ; *\<nombre* demandé.**  
 
  Si vous n'avez pas de clause TOP, triez les lignes avec ORDER BY.  
 
  Si vous n'utilisez pas de clause ORDER BY, utilisez une valeur entière avec l'opérateur TOP.  
 
- Exemple avec TOP N = 8192 : Compiles  
+ Exemple avec TOP N = 8192 : Compiles  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -263,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Exemple avec TOP N > 8192 : Fails to compile.  
+ Exemple avec TOP N > 8192 : Fails to compile.  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -278,7 +278,7 @@ GO
 
  La limitation de 8192 lignes s'applique uniquement à `TOP N` où `N` est une constante, comme dans les exemples précédents.  Si `N` doit être supérieur à 8192, vous pouvez affecter la valeur à une variable et utiliser cette variable avec `TOP`.  
 
- Exemple utilisant une variable : Compiles  
+ Exemple à l'aide d'une variable : Compiles  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -292,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **Limitations sur les lignes retournées :** il existe deux cas de figure qui peuvent potentiellement réduire le nombre de lignes retournées par l’opérateur TOP :  
+ **Limitations sur les lignes retournées :** il existe deux cas de figure qui peuvent potentiellement réduire le nombre de lignes retournées par l'opérateur TOP :  
 
 -   L'utilisation de JOINs dans la requête.  L'impact de JOINs sur une limitation dépend du plan de requête.  
 

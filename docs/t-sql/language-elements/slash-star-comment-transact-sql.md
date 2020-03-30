@@ -22,10 +22,10 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121679"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Barre oblique étoile (bloc de commentaire) (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68121679"
 
   Indique un texte défini par l'utilisateur. Le texte placé entre /* et \*/ n’est pas évalué par le serveur.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

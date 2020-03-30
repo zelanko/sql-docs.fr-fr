@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: 3533d69ebaac7cf535de0e835bdbfdef9c5fbb4b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70152052"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70152052"
 
   Retourne le résultat d'une expression, traduit en type de données demandé, ou NULL si la conversion échoue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez TRY_PARSE uniquement pour effectuer une conversion d'une chaîne en un type date/heure ou numérique.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

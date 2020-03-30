@@ -18,10 +18,10 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322156"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implémenter un outil personnalisé de résolution des conflits pour un article de fusion
@@ -36,7 +36,7 @@ ms.locfileid: "75322156"
   
      [Un programme de résolution s’appuyant sur l’architecture COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez écrire votre propre outil personnalisé de résolution des conflits sous forme de procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] au niveau de chaque serveur de publication. Pendant la synchronisation, cette procédure stockée est appelée quand des conflits sont rencontrés dans un article auprès duquel l’outil de résolution a été inscrit. Les informations sur la ligne en conflit sont transmises par l’Agent de fusion aux paramètres requis de la procédure. Les outils personnalisés de résolution des conflits s'appuyant sur des procédures stockées sont toujours créés au niveau du serveur de publication.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "75322156"
   
 2.  Exécutez [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en spécifiant **\@publication**, **\@article**, en affectant la valeur **resolver_info** à **\@property** et en spécifiant le nom de la procédure stockée qui implémente la logique de l’outil de résolution des conflits pour **\@value**.  
   
-##  <a name="COM"></a> Utilisation d’un outil de résolution personnalisé basé sur COM  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> Utilisation d’un outil de résolution personnalisé basé sur COM  
  L’espace de noms <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implémente une interface qui vous permet d’écrire une logique métier complexe afin de gérer les événements et de résoudre les conflits qui se produisent au cours du processus de synchronisation de la réplication de fusion. Pour plus d’informations, consultez [Implémenter un gestionnaire de logique métier pour un article de fusion](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Vous pouvez également écrire votre propre logique métier personnalisée en code natif pour résoudre ces conflits. Cette logique est construite sous la forme d’un composant COM et compilée dans des bibliothèques de liens dynamiques (DLL) à l’aide de produits tels que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Ce genre d’outil personnalisé de résolution des conflits basé sur COM doit implémenter l’interface **ICustomResolver**, qui est conçue spécifiquement pour la résolution des conflits.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Pour créer et enregistrer un outil de résolution des conflits personnalisé  basé sur COM  

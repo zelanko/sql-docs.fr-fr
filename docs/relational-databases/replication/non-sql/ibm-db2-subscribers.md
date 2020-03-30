@@ -17,10 +17,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68133266"
 ---
 # <a name="ibm-db2-subscribers"></a>Abonnés IBM DB2
@@ -163,7 +163,7 @@ ms.locfileid: "68133266"
   
      En l'absence d'un mappage approprié pour une colonne d'objet volumineux, envisagez d'utiliser le filtrage de colonnes sur l'article afin que la colonne ne soit pas répliquée. Pour plus d’informations, consultez [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md).  
   
--   Quand vous répliquez les types **nchar** et **nvarchar** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers les types CHAR et VARCHAR de DB2, la réplication utilise le même spécificateur de longueur pour le type DB2 que pour le type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, il se peut que la longueur du type de données soit trop petite pour la table DB2 générée.  
+-   Quand vous répliquez les types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nchar**et**nvarchar**de** vers les types CHAR et VARCHAR de DB2, la réplication utilise le même spécificateur de longueur pour le type DB2 que pour le type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, il se peut que la longueur du type de données soit trop petite pour la table DB2 générée.  
   
      Dans certains environnements DB2, un élément de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** n’est pas limité à des caractères codés sur un octet ; la longueur d’un élément CHAR ou VARCHAR doit en tenir compte. Vous devez également prendre en compte les caractères *en code* et *hors code* , s'ils sont nécessaires. Si vous répliquez des tables avec des colonnes **nchar** et **nvarchar** , il se peut que vous deviez spécifier une longueur maximale plus élevée pour le type de données dans un script de création personnalisé. Pour plus d'informations sur la spécification d'un script de création personnalisé, reportez-vous à l'étape 5 de la section « Configuration d'un Abonné IBM DB2 » dans cette rubrique.  
   

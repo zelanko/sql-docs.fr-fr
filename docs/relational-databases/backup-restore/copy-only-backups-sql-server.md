@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941042"
 ---
 # <a name="copy-only-backups"></a>Sauvegardes de type copie seule
@@ -37,7 +37,7 @@ Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](.
   
 - Sauvegardes de fichier journal de copie uniquement (en mode de récupération complète et en mode de récupération utilisant les journaux de transactions uniquement)  
 
-     Une sauvegarde du journal de type copie seule préserve le point d'archive du journal existant et, donc, n'a pas d'incidence sur l'ordre des sauvegardes régulières des journaux. Les sauvegardes de journaux de type copie seule sont généralement superflues. En revanche, vous pouvez créer une nouvelle sauvegarde de routine des journaux (à l'aide de WITH NORECOVERY) et utiliser cette sauvegarde conjointement avec toute sauvegarde des journaux précédente nécessaire à la séquence de restauration. Toutefois, une sauvegarde de fichier journal de copie uniquement peut parfois être utile pour effectuer une restauration en ligne. Pour obtenir un exemple, consultez [Exemple : Restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md).  
+     Une sauvegarde du journal de type copie seule préserve le point d'archive du journal existant et, donc, n'a pas d'incidence sur l'ordre des sauvegardes régulières des journaux. Les sauvegardes de journaux de type copie seule sont généralement superflues. En revanche, vous pouvez créer une nouvelle sauvegarde de routine des journaux (à l'aide de WITH NORECOVERY) et utiliser cette sauvegarde conjointement avec toute sauvegarde des journaux précédente nécessaire à la séquence de restauration. Toutefois, une sauvegarde de fichier journal de copie uniquement peut parfois être utile pour effectuer une restauration en ligne. Pour obtenir un exemple, consultez [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;Mode de récupération complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md).  
 
      Le journal des transactions n'est jamais tronqué après une sauvegarde de type copie seule.  
   
@@ -50,7 +50,7 @@ Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](.
  Vous pouvez créer une sauvegarde de copie uniquement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
 
 ### <a name="examples"></a>Exemples  
-###  <a name="SSMSProcedure"></a> A. Utilisation de SQL Server Management Studio  
+###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> A. Utilisation de SQL Server Management Studio  
 Dans cet exemple, une sauvegarde de copie seule de la base de données `Sales` sauvegardée sur le disque à l’emplacement de sauvegarde par défaut.
 
 1. Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
@@ -61,7 +61,7 @@ Dans cet exemple, une sauvegarde de copie seule de la base de données `Sales` s
 
 1. Cliquez sur **OK**.
 
-###  <a name="TsqlProcedure"></a>B. Utilisation de Transact-SQL  
+###  <a name="b-using-transact-sql"></a><a name="TsqlProcedure"></a>B. Utilisation de Transact-SQL  
 Cet exemple crée une sauvegarde de copie seule pour la base de données `Sales` utilisant le paramètre COPY_ONLY.  Une sauvegarde de copie seule du journal des transactions est également prise.
 
 ```sql
@@ -78,13 +78,13 @@ WITH COPY_ONLY;
 > COPY_ONLY n'a aucun effet lorsqu'il est spécifié avec l'option DIFFERENTIAL.  
 
   
-###  <a name="PowerShellProcedure"></a>C. Utilisation de PowerShell  
+###  <a name="c-using-powershell"></a><a name="PowerShellProcedure"></a>C. Utilisation de PowerShell  
 Cet exemple crée une sauvegarde de copie seule pour la base de données `Sales` utilisant le paramètre -CopyOnly.  
 ```powershell
 Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile 'E:\BAK\Sales_Copy.bak' -CopyOnly
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour créer une sauvegarde complète ou de fichier journal**  
   
 - [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

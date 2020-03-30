@@ -20,10 +20,10 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68105025"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68105025"
 
 Cette fonction retourne la somme de contrôle des valeurs dans un groupe. `CHECKSUM_AGG` ignore les valeurs NULL. La [clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md) peut suivre `CHECKSUM_AGG`.
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

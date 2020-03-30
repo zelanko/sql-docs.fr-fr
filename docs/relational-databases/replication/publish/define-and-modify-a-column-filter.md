@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: efda97d51b3cbbe5137c89405c3534f48027a633
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286366"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Définir et modifier un filtre de colonne
@@ -39,13 +39,13 @@ ms.locfileid: "76286366"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Certaines colonnes ne peuvent pas être filtrées. Pour plus d’informations, consultez [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md). Si vous modifiez un filtre de colonne après que des abonnements ont été initialisés, vous devez générer un nouvel instantané et réinitialiser tous les abonnements après avoir effectué la modification. Pour plus d’informations sur les exigences relatives aux changements de propriétés, consultez [Changer les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Définissez des filtres de colonnes sur la page **Articles** de l'Assistant Nouvelle Publication. Pour plus d’informations sur l’utilisation de l’Assistant Nouvelle publication, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
  Définissez et modifiez des filtres de colonnes dans la page**Articles** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur les propriétés des publications et des articles, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "76286366"
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Lors de la création d'articles de table, vous pouvez définir les colonnes à inclure dans l'article et modifier ces colonnes une fois l'article défini. Vous pouvez créer et modifier par programme des colonnes filtrées en utilisant des procédures stockées de réplication.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "76286366"
   
 3.  Réinitialiser les abonnements. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Dans cet exemple de réplication transactionnelle, la colonne `DaysToManufacture` est supprimée d'un article reposant sur la table `Product` .  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-colu_1.sql)]  

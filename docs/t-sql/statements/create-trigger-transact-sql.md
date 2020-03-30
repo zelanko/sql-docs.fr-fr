@@ -29,10 +29,10 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287683"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
@@ -51,7 +51,7 @@ Les déclencheurs LOGON sont activés en réponse à l’événement LOGON qui e
 > [!NOTE]  
 >  L’intégration du CLR .NET Framework à SQL Server est décrite dans cet article. L’intégration du CLR ne s’applique pas à Azure SQL Database.  
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="sql-server-syntax"></a>Syntaxe SQL Server  
   
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>Arguments
 OR ALTER  
-**S’applique à** : Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
+**S’applique à** : Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
   
 Modifie, de manière conditionnelle, le déclencheur uniquement s’il existe déjà. 
   
@@ -352,7 +352,7 @@ Les déclencheurs DDL ne sont pas activés en réponse à des événements qui c
 À la différence des déclencheurs DML, le champ d'action des déclencheurs DDL ne correspond pas aux schémas. Vous ne pouvez donc pas utiliser de fonctions telles qu’OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY et OBJECTPROPERTYEX pour effectuer des requêtes de métadonnées à propos de déclencheurs DDL. Utilisez plutôt les affichages catalogue. Pour plus d’informations, consultez [Obtenir des informations sur les déclencheurs DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 > [!NOTE]  
->  Les déclencheurs DDL avec étendue au niveau serveur figurent dans le dossier **Déclencheurs** de l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ce dossier se trouve dans le dossier **Objets serveur** . Les déclencheurs DDL délimités à la base de données figurent dans le dossier **Déclencheurs de base de données**. Ce dossier se trouve dans le dossier **Programmabilité** de la base de données correspondante.  
+>  Les déclencheurs DDL avec étendue au niveau serveur figurent dans le dossier [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Déclencheurs**de l’Explorateur d’objets**. Ce dossier se trouve dans le dossier **Objets serveur** . Les déclencheurs DDL délimités à la base de données figurent dans le dossier **Déclencheurs de base de données**. Ce dossier se trouve dans le dossier **Programmabilité** de la base de données correspondante.  
   
 ## <a name="logon-triggers"></a>Déclencheurs de connexion  
 Les déclencheurs de connexion exécutent des procédures stockées en réponse à un événement LOGON. Cet événement survient lorsqu'une session utilisateur est établie avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les déclencheurs de connexion sont activés au terme de la phase d'authentification de connexion, mais avant l'établissement de la session utilisateur. Tous les messages provenant du corps du déclencheur et habituellement destinés à l'utilisateur, (les messages et les messages d'erreur de l'instruction PRINT, par exemple), sont donc dirigés vers le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Déclencheurs de connexion](../../relational-databases/triggers/logon-triggers.md).  
