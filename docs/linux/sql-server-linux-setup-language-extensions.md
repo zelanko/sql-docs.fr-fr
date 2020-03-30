@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76971224"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installer les extensions de langage SQL Server sur Linux
@@ -70,7 +70,7 @@ Pour chaque ensemble d’instructions d’installation propres au système d’e
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 + La version de Linux doit être [prise en charge par SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), mais elle n’inclut pas le moteur Docker. Les versions prises en charge sont les suivantes :
 

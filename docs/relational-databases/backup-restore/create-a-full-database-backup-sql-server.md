@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710319"
 ---
 # <a name="create-a-full-database-backup"></a>Créer une sauvegarde complète de base de données
@@ -30,32 +30,32 @@ Cette rubrique explique comment créer une sauvegarde de base de données compl�
 
 Pour obtenir des informations sur la sauvegarde SQL Server dans le service Stockage Blob Azure, consultez [Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) et [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="Restrictions"></a> Limitations et restrictions
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions
 
 - L’instruction `BACKUP` n’est pas autorisée dans une transaction explicite ou implicite.
 - Les sauvegardes créées avec une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Pour obtenir une vue d’ensemble et approfondir vos connaissances des concepts de sauvegarde et des tâches, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) avant de continuer.
 
-## <a name="Recommendations"></a> Recommandations
+## <a name="recommendations"></a><a name="Recommendations"></a> Recommandations
 
 - À mesure que la taille d’une base de données augmente, les sauvegardes complètes de base de données nécessitent davantage de temps et d’espace de stockage. Pour les bases de données volumineuses, songez à compléter les sauvegardes complètes avec une série de [sauvegardes différentielles de base de données](../../relational-databases/backup-restore/differential-backups-sql-server.md).
 - Vous pouvez estimer la taille d’une sauvegarde complète de base de données en utilisant la procédure stockée système [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .
 - Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous effectuez régulièrement une sauvegarde, ces messages de réussite s’accumuleront rapidement et vos journaux d’erreurs deviendront énormes. Cela peut rendre la recherche d’autres messages difficile. Dans ces cas-là, vous pouvez supprimer ces entrées de journaux de sauvegarde en utilisant l’indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-## <a name="Security"></a> Sécurité
+## <a name="security"></a><a name="Security"></a> Sécurité
 
 **TRUSTWORTHY** a la valeur OFF pour une sauvegarde de base de données. Pour obtenir des informations sur la façon d’affecter la valeur ON à **TRUSTWORTHY**, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les options **PASSWORD** et **MEDIAPASSWORD** sont suspendues pour la création de sauvegardes. Vous pouvez toujours restaurer les sauvegardes créées avec des mots de passe.
 
-## <a name="Permissions"></a> Autorisations
+## <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
 Les autorisations `BACKUP DATABASE` et `BACKUP LOG` reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator**.
 
  Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit pouvoir lire et écrire sur l’appareil, ce qui signifie que le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute doit avoir des autorisations d’écriture sur l’unité de sauvegarde. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. Par conséquent, il est possible qu’aucun problème ne se produise sur le fichier physique de l’unité de sauvegarde tant que la ressource physique n’est pas sollicitée lors d’une tentative de sauvegarde ou de restauration.
 
-## <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
 
 > [!NOTE]
 > Si vous spécifiez une tâche de sauvegarde à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination de script.
@@ -240,7 +240,7 @@ Si vous n’avez pas de conteneur d’objets blob Azure dans un compte de stocka
 
 1. Une fois la sauvegarde terminée, cliquez sur **OK** pour fermer la boîte de dialogue SQL Server Management Studio.
 
-## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL
 
 Créez une sauvegarde de base de données complète en exécutant l’instruction `BACKUP DATABASE` et en spécifiant les éléments suivants :
 
@@ -278,7 +278,7 @@ Une autre méthode pour formater le support de sauvegarde consiste à utiliser l
  > [!IMPORTANT]
  > Soyez extrêmement vigilant lorsque vous utilisez la clause **FORMAT** de l’instruction `BACKUP`, car elle entraîne la destruction de toutes les sauvegardes préalablement stockées sur le support de sauvegarde.
 
-### <a name="TsqlExample"></a> Exemples
+### <a name="examples"></a><a name="TsqlExample"></a> Exemples
 
 Pour les exemples suivants, créez une base de données de test avec le code Transact-SQL suivant :
 
@@ -361,7 +361,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> Utilisation de PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell
 
 Utilisez l’applet de commande **Backup-SqlDatabase** . Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de la base de données, spécifiez le paramètre **-BackupAction** avec sa valeur par défaut, **Database**. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.
 
@@ -402,7 +402,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-## <a name="RelatedTasks"></a> Related tasks
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks
 
 - [Sauvegarder une base de données (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)

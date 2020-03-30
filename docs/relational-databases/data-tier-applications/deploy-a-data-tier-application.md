@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190117"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
@@ -114,7 +114,7 @@ Plus d’informations sur certaines pages de l’Assistant sont fournies ci-dess
   
  **Nom et chemin d’accès du fichier journal** : spécifie le chemin complet et le nom du fichier journal. La zone est renseignée avec le chemin d'accès et le nom de fichier par défaut. Modifiez la chaîne dans la zone pour modifier la valeur par défaut ou utilisez le bouton **Parcourir** pour accéder au dossier où le fichier journal sera placé.  
   
-###  <a name="Summary"></a> Page Résumé  
+###  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez cette page pour vérifier les mesures que l'Assistant prendra lors du déploiement de la DAC.  
   
  **Les paramètres suivants seront utilisés pour déployer votre DAC.** - Vérifiez les informations affichées pour vous assurer que les actions prises seront correctes. La fenêtre affiche le package DAC que vous avez sélectionné et le nom que vous avez sélectionné pour l'instance DAC déployée. La fenêtre affiche également les paramètres qui seront utilisés lors de la création de la base de données associée à la DAC.  

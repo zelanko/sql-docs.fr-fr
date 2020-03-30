@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981815"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Pour plus d’informations sur les listes de propriétés de recherche, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="change-tracking-no-population"></a> Interactions entre le suivi des modifications et le paramètre NO POPULATION  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> Interactions entre le suivi des modifications et le paramètre NO POPULATION  
  Le remplissage de l'index de recherche en texte intégral dépend de l'activation du suivi des modifications et varie selon que WITH NO POPULATION est spécifié ou non dans l'instruction ALTER FULLTEXT INDEX. Le tableau suivant résume le résultat de leur interaction.  
   
 |Suivi des modifications|WITH NO POPULATION|Résultats|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Pour plus d’informations sur l’alimentation d’index les index de recherche en texte intégral, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="change-search-property-rebuild-index"></a> La modification de la liste des propriétés de recherche provoque la reconstruction de l’index  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> La modification de la liste des propriétés de recherche provoque la reconstruction de l’index  
  La première fois qu'un index de recherche en texte intégral est associé à une liste de propriétés de recherche, l'index doit faire l'objet d'un nouveau remplissage afin d'indexer des termes de recherche spécifiques aux propriétés. Les données d'index existantes ne sont pas tronquées.  
   
  Toutefois, si vous associez l'index de recherche en texte intégral à une liste de propriétés différente, l'index est reconstruit. La reconstruction tronque immédiatement l'index de recherche en texte intégral, en supprimant toutes les données existantes, et l'index doit être de nouveau rempli. Pendant le remplissage, les requêtes de texte intégral sur la table de base recherchent uniquement les lignes de table qui ont déjà été indexées par le remplissage. Les données d'index remplies incluront des métadonnées des propriétés inscrites de la liste de propriétés de recherche récemment ajoutée.  

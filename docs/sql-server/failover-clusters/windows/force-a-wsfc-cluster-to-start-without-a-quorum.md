@@ -14,10 +14,10 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258144"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forcer un cluster WSFC à démarrer sans quorum
@@ -30,15 +30,15 @@ ms.locfileid: "75258144"
   
 -   **Suivi :**  [« Suivi : Après avoir forcé le cluster à démarrer sans quorum](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
  Sauf instructions spécifiques, les procédures de cette rubrique doivent fonctionner si vous les exécutez à partir de n'importe quel nœud du cluster WSFC.  Toutefois, vous pouvez obtenir de meilleurs résultats, et éviter des problèmes de connexion, en exécutant ces étapes à partir du nœud que vous envisagez de forcer à démarrer sans quorum.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  L'utilisateur doit être un compte de domaine qui est membre du groupe Administrateurs local sur chaque nœud du cluster WSFC.  
   
-##  <a name="FailoverClusterManagerProcedure"></a> Utilisation du Gestionnaire du cluster de basculement  
+##  <a name="using-failover-cluster-manager"></a><a name="FailoverClusterManagerProcedure"></a> Utilisation du Gestionnaire du cluster de basculement  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Pour forcer un cluster à démarrer sans quorum  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75258144"
   
 4.  Dans le volet Résumé, vérifiez que la valeur actuelle de **Configuration de quorum** est :  **Avertissement : le cluster s’exécute dans l’état ForceQuorum**.  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Pour forcer un cluster à démarrer sans quorum  
   
@@ -83,7 +83,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Utilisation de Net.exe  
+##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a> Utilisation de Net.exe  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Pour forcer un cluster à démarrer sans quorum  
   
@@ -103,7 +103,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir forcé le cluster à démarrer sans quorum  
+##  <a name="follow-up-after-forcing-cluster-to-start-without-a-quorum"></a><a name="FollowUp"></a> Suivi : Après avoir forcé le cluster à démarrer sans quorum  
   
 -   Vous devez réévaluer et reconfigurer les valeurs NodeWeight pour construire correctement un nouveau quorum avant de mettre en ligne d'autres nœuds. Sinon, le cluster peut de nouveau se trouver hors connexion.  
   
@@ -121,7 +121,7 @@ net.exe start clussvc /forcequorum
   
      [Basculer vers un serveur secondaire d’envoi de journaux &#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

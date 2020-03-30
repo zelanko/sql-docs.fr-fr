@@ -11,10 +11,10 @@ ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970379"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement, classe
@@ -33,12 +33,12 @@ ms.locfileid: "67970379"
 public class SQLServerStatement  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La classe SQLServerStatement fournit également un certain nombre de méthodes d’implémentation de classe de base pour l’instruction préparée JDBC et les instructions pouvant être appelées. Le rôle de base de la classe SQLServerStatement est d’exécuter des instructions SQL, puis de retourner des nombres de mises à jour et des jeux de résultats à l’application utilisateur.  
   
  Cette classe prend en charge la désencapsulation (unwrapping) dans la classe SQLServerStatement, l’interface ISQLServerStatement et l’interface java.sql.Statement. Pour plus d’informations, consultez [Wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

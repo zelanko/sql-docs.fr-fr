@@ -10,10 +10,10 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258102"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "75258102"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> Recherche et affichage de rapports dans le Générateur de rapports  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> Recherche et affichage de rapports dans le Générateur de rapports  
  Pour rechercher un rapport que vous souhaitez utiliser ou pour sélectionner une source de données partagée, une image ou un sous-état à utiliser dans un rapport, parcourez votre ordinateur, les dossiers sur un serveur de rapports ou un site SharePoint intégré avec Reporting Services.  
   
  Pour rechercher des rapports sur un serveur de rapports, vous devez spécifier une URL pour le serveur de rapports et disposer des autorisations appropriées sur les dossiers afin de lire et d'enregistrer des éléments de rapports. Pour obtenir les autorisations et URL appropriées, contactez l'administrateur système du serveur de rapports.  
@@ -49,7 +49,7 @@ ms.locfileid: "75258102"
 -   **Affichage de rapports** Vous affichez un aperçu d'un rapport dans le Générateur de rapports lors de la création ou mise à jour des rapports. Lorsque le Générateur de rapports est connecté à un serveur de rapports, le serveur de rapports charge et traite le rapport ; sinon, les rapports sont traités localement. La visionneuse de rapports du Générateur de rapports affiche le rapport rendu.  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> Affichage et gestion de rapports sur un serveur de rapports  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> Affichage et gestion de rapports sur un serveur de rapports  
  Le portail web permet d'afficher et de gérer des rapports sur le serveur de rapports. Parcourez les dossiers sur le serveur pour trouver des rapports, exécuter des rapports, pour les consulter dans un navigateur et effectuer des tâches de gestion.  
   
  Le portail web peut vous aider pour les tâches de gestion suivantes :  
@@ -90,7 +90,7 @@ Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, 
 |Combinaison de touches CTRL+F5|Produit le même résultat qu'un clic sur le bouton **Actualiser** dans la barre d'outils Rapports.|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> Affichage et gestion d'éléments de serveur de rapports à partir d'un site SharePoint  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> Affichage et gestion d'éléments de serveur de rapports à partir d'un site SharePoint  
  Lorsque l'administrateur système configure un serveur de rapports pour qu'il s'exécute en mode intégré SharePoint, vous pouvez afficher et gérer des rapports et d'autres éléments de serveur de rapports à partir d'un site SharePoint.  
   
  Le site SharePoint inclut des pages vous permettant de définir les propriétés des sources de données, l'historique de rapport, les options de traitement de rapport, les planifications, les abonnements et les paramètres de rapport, ainsi que de créer des planifications partagées. Vous pouvez gérer les éléments de serveur de rapports sur un site SharePoint de la même manière que vous les créez et gérez à partir d'autres outils dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -119,11 +119,11 @@ Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, 
  ![Commandes de menu pour les éléments de serveur de rapports](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Commandes de menu pour les éléments de serveur de rapports")  
   
   
-##  <a name="DeskTop"></a> Affichage des rapports dans une application bureautique  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> Affichage des rapports dans une application bureautique  
  Vous pouvez ne pas recourir au navigateur et utiliser une application bureautique (telle que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) comme visionneuse de rapports. Pour ce faire, vous devez définir un abonnement qui spécifie un format d'application bureautique et un partage de fichiers comme destination. Le serveur de rapports génère votre rapport sous la forme d'un fichier d'application, y ajoute une extension de nom de fichier et l'enregistre en tant que fichier sur votre disque dur. Vous pouvez ensuite utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel (ou une autre application) à la place d’un navigateur pour visualiser votre rapport.  
   
   
-##  <a name="AboutUserSessions"></a> À propos des sessions utilisateur  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> À propos des sessions utilisateur  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des sessions de navigateur pour assurer une certaine uniformité pendant l'affichage des rapports. Les sessions sont basées sur des connexions navigateur et non sur des utilisateurs authentifiés. Une session est créée chaque fois qu'un utilisateur ouvre un rapport dans une nouvelle fenêtre de navigateur. Une fois qu'une session est établie dans un navigateur, vous pouvez continuer à utiliser la version du rapport qui a été ouvert au début de la session, même si le rapport est modifié sur le serveur de rapports. Par exemple, si vous ouvrez un rapport à 23h00 et que l'auteur du rapport republie le même rapport à 23h01, votre session contiendra, pendant la durée de la session, la version que vous avez ouverte.  
   
  Si vous actualisez un rapport au cours de la même session en cliquant sur le bouton **Actualiser** du navigateur, la version de session d'origine du rapport s'affiche. Si vous actualisez un rapport à la demande en cliquant sur le bouton **Actualiser** dans la barre d’outils de rapport, le rapport est réexécuté et les nouvelles données, si elles existent, sont affichées.  
@@ -131,7 +131,7 @@ Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, 
  Les informations de session sont stockées dans la base de données temporaire du serveur de rapports. Le serveur de rapports n'utilise pas la gestion de sessions [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Si vous redémarrez le serveur ou que vous effectuez une opération de récupération de la base de données, l'état de la session n'est pas restauré. Pour plus d’informations sur la gestion de sessions, consultez [Identification de l’état d’exécution](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
  
-##  <a name="InThisSection"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Dans cette section  
  Les articles suivants fournissent des informations supplémentaires sur l'affichage et la gestion des rapports.  
   
  [Rechercher, afficher et gérer des rapports](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

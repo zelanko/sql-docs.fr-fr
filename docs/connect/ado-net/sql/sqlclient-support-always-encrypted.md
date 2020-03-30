@@ -10,10 +10,10 @@ author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
 ms.openlocfilehash: dc70690bfe3d3d95171c885707b5a195c31b2fc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75233919"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Utilisation d’Always Encrypted avec le Fournisseur de données Microsoft .NET pour SQL Server
@@ -24,7 +24,7 @@ Cet article fournit des informations sur le développement d’applications .NET
 
 Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. À cette fin, un pilote activé avec Always Encrypted, tel que le **Fournisseur de données Microsoft .NET pour SQL Server** chiffre et déchiffre de manière transparente les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Développer des applications à l’aide d’Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md) et [Développer des applications à l’aide d’Always Encrypted avec enclaves sécurisées](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Configurez Always Encrypted dans votre base de données. Pour cela, vous devez mettre en service des clés Always Encrypted et configurer le chiffrement pour les colonnes de base de données sélectionnées. Si vous n’avez pas déjà une base de données configurée avec Always Encrypted, suivez les instructions de [Bien démarrer avec Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
 - Vérifiez que la plateforme .NET requise est installée sur votre ordinateur de développement. Avec [Microsoft. Data. SqlClient](../microsoft-ado-net-sql-server.md), la fonctionnalité Always Encrypted est prise en charge pour .NET Framework et .NET Core. Vous devez également vérifier [.NET Framework version 4.6](https://docs.microsoft.com/dotnet/framework/) ou ultérieure ou [.NET Core 2.1](https://docs.microsoft.com/dotnet/core/) ou ultérieure est configurée comme version cible de la plateforme .NET dans votre environnement de développement. Si vous utilisez Visual Studio, veuillez vous reporter à la [Vue d’ensemble ciblant l’infrastructure](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview).
@@ -539,7 +539,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 **Assembly :** Microsoft.Data.SqlClient.dll
 
-|Name|Description|
+|Nom|Description|
 |:---|:---|
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider)|Un fournisseur de magasin de clés pour le magasin de certificats Windows.|
 |[Classe SqlColumnEncryptionCngProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider)|Un fournisseur de magasin de clés pour l’API de chiffrement Microsoft : de la prochaine génération (CNG).|

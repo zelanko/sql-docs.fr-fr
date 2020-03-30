@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc2d749f3963f0828a70bc1506581f5bd2a35a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75246230"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char et varchar (Transact-SQL)
@@ -74,7 +74,7 @@ Si SET ANSI_PADDING a la valeur OFF lors de l’exécution de CREATE TABLE ou d�
 > Chaque colonne varchar(max) ou nvarchar(max) non Null demande 24 octets d’allocation fixe supplémentaire calculée par rapport à la limite de 8 060 octets par ligne pendant une opération de tri. Cela peut produire une limite implicite du nombre de colonnes varchar(max) ou nvarchar(max) non Null pouvant être créées dans une table.
 Aucune erreur spéciale n'est fournie quand la table est créée (mis à part l’avertissement habituel indiquant que la taille maximale de ligne dépasse la taille maximale autorisée de 8 060 octets) ou quand les données sont insérées. Cette grande taille de ligne peut provoquer des erreurs (comme l’erreur 512) au cours des opérations normales, telles que la mise à jour de la clé d’index cluster ou le tri de l’ensemble des colonnes, ce qui ne se produit que pendant l’exécution d’une opération.
 
-## <a name="_character"></a> Conversion de données caractères
+## <a name="converting-character-data"></a><a name="_character"></a> Conversion de données caractères
 
 Lorsque des expressions de caractères sont converties en type caractère de taille différente, les valeurs trop longues pour le nouveau type de données sont tronquées. Le type **uniqueidentifier** est considéré comme un type caractères pour la conversion d’une expression de type caractères. Il est donc soumis aux règles de troncation pour la conversion en un type caractères. Consultez la section Exemples qui suit.
 

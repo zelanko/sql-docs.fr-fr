@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822678"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio)
@@ -41,7 +41,7 @@ ms.locfileid: "74822678"
 -   Durée de restauration du journal  
   
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Vous devez être connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instance de serveur) qui héberge soit le réplica principal, soit un réplica secondaire d'un groupe de disponibilité.  
   
  
@@ -85,7 +85,7 @@ ms.locfileid: "74822678"
 > [!TIP]  
 >  Cliquez sur les en-têtes de colonne pour trier les informations de groupe de disponibilité selon le nom du groupe de disponibilité, l'instance principale, le mode de basculement ou le problème.  
   
-##  <a name="AvGroupDetails"></a> Détails du groupe de disponibilité  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> Détails du groupe de disponibilité  
  Les informations détaillées suivantes sont affichées pour le groupe de disponibilité que vous sélectionnez dans l'écran récapitulatif :  
   
  **État du groupe de disponibilité**  
@@ -104,7 +104,7 @@ ms.locfileid: "74822678"
  **État du cluster**  
  Nom et état du cluster dans lequel l'instance du serveur connecté et du groupe de disponibilité est un nœud membre.  
   
-##  <a name="AvReplicaDetails"></a> Détails du réplica de disponibilité  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Détails du réplica de disponibilité  
 
 Quand vous êtes connecté au réplica principal, **Détails du réplica de disponibilité** affiche des informations issues de tous les réplicas du groupe de disponibilité. Quand vous êtes connecté à un réplica secondaire, seules apparaissent les informations issues du réplica connecté.  
 

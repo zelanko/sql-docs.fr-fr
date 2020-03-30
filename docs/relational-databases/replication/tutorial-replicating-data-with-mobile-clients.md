@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321850"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutoriel : configurer la réplication entre un serveur et des clients mobiles (fusion)
@@ -36,7 +36,7 @@ Dans ce didacticiel, vous apprendrez à :
 > * Ajouter un abonné mobile à la publication de fusion.
 > * Synchroniser l’abonnement avec la publication de fusion.
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Ce tutoriel est destiné aux utilisateurs qui sont familiers des opérations essentielles de base de données, mais pas de la réplication. Avant de commencer ce tutoriel, vous devez effectuer le [Tutoriel : Préparer SQL Server pour la réplication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management Studio (SSMS) et une base de données AdventureWorks : 

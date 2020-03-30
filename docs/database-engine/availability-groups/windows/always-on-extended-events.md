@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991564"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurer les événements étendus pour les groupes de disponibilité Always On
@@ -25,7 +25,7 @@ ms.locfileid: "67991564"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
    
-##  <a name="BKMK_alwayson_health"></a> Session Alwayson_health  
+##  <a name="alwayson_health-session"></a><a name="BKMK_alwayson_health"></a> Session Alwayson_health  
  La session d’événements étendus alwayson_health est créée automatiquement quand vous créez le groupe de disponibilité. Elle capture un sous-ensemble des événements liés à un groupe de disponibilité. Cette session préconfigurée constitue un outil à la fois utile et pratique pour démarrer rapidement la résolution des problèmes d’un groupe de disponibilité. L’Assistant Création d’un groupe de disponibilité démarre automatiquement la session sur chaque réplica de disponibilité participant configuré dans l’Assistant.  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 Pour plus d’informations sur certains des événements couverts par alwayson_health, consultez les [informations de référence sur les événements étendus](always-on-extended-events.md#BKMK_Reference).  
 
 
-##  <a name="BKMK_Debugging"></a>Événements étendus pour le débogage  
+##  <a name="extended-events-for-debugging"></a><a name="BKMK_Debugging"></a>Événements étendus pour le débogage  
  Outre les événements étendus couverts par la session alwayson_health, SQL Server définit un ensemble complet d’événements de débogage pour les groupes de disponibilité. Pour exploiter ces événements étendus supplémentaires dans une session, effectuez les procédures suivantes :  
   
 1.  Dans **l’Explorateur d’objets**, développez **Gestion**, **Événements étendus**, puis **Sessions**.  
@@ -57,7 +57,7 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
   
 7.  Quand vous avez terminé avec la session, cliquez sur **OK** pour la fermer. Vérifiez que la session est démarrée pour qu’elle puisse capturer les événements sélectionnés.  
   
-##  <a name="BKMK_Reference"></a> Informations de référence sur les événements étendus des groupes de disponibilité Always On  
+##  <a name="always-on-availability-groups-extended-events-reference"></a><a name="BKMK_Reference"></a> Informations de référence sur les événements étendus des groupes de disponibilité Always On  
  Cette section décrit certains des événements étendus utilisés pour monitorer les groupes de disponibilité.  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
@@ -76,20 +76,20 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
   
  [error_reported (1480) : Le rôle de réplica de base de données a changé](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
+###  <a name="availability_replica_state_change"></a><a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Se produit en cas de changement de l’état d’un réplica de disponibilité. La création d’un groupe de disponibilité ou la participation à un réplica de disponibilité peut déclencher cet événement. Il est utile pour diagnostiquer les échecs de basculement automatique. Il peut également être utilisé pour suivre les étapes de basculement.  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|Name|availability_replica_state_change|  
+|Nom|availability_replica_state_change|  
 |Category|always on|  
 |Channel|En fonctionnement|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Name|Type_name|Description|  
+|Nom|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -107,20 +107,20 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
+###  <a name="availability_group_lease_expired"></a><a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
  Se produit après l’expiration du bail en cas de problème de connectivité entre le cluster et le groupe de disponibilité. Cet événement indique que la connectivité entre le groupe de disponibilité et le cluster WSFC sous-jacent est rompue. Si le problème de connectivité se produit sur le réplica principal, l’événement peut entraîner un basculement automatique ou provoquer la mise hors connexion du groupe de disponibilité.  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|Name|availability_group_lease_expired|  
+|Nom|availability_group_lease_expired|  
 |Category|always on|  
 |Channel|En fonctionnement|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Name|Type_name|Description|  
+|Nom|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -135,12 +135,12 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
+###  <a name="availability_replica_automatic_failover_validation"></a><a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
  Se produit quand le basculement automatique valide l’état de préparation d’un réplica de disponibilité comme réplica principal, et indique si le réplica de disponibilité cible est prêt à devenir le nouveau réplica principal. Par exemple, la validation du basculement retourne false quand les bases de données ne sont pas toutes synchronisées ou jointes. Cet événement est conçu pour fournir un point de défaillance pendant les basculements. Ces informations sont intéressantes pour l’administrateur de base de données, en particulier au niveau des basculements automatiques, ceux-ci constituant une opération sans assistance. L’administrateur de base de données peut passer en revue l’événement pour déterminer la raison de l’échec d’un basculement automatique.  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |Category|always on|  
@@ -148,7 +148,7 @@ GO
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Name|Type_name|Description|  
+|Nom|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -174,12 +174,12 @@ GO
   
 ```  
   
-###  <a name="BKMK_error_reported"></a> error_reported (plusieurs numéros d’erreur) : pour les problèmes de connexion ou de transport  
+###  <a name="error_reported-multiple-error-numbers-for-transport-or-connection-issues"></a><a name="BKMK_error_reported"></a> error_reported (plusieurs numéros d’erreur) : pour les problèmes de connexion ou de transport  
  Chaque événement filtré indique qu’un problème de connectivité s’est produit dans le transport ou le point de terminaison de mise en miroir de bases de données dont dépend ce groupe de disponibilité.  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|Name|error_reported<br /><br /> numéros à filtrer : 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
+|Nom|error_reported<br /><br /> numéros à filtrer : 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |Category|erreurs|  
 |Channel|Admin|  
   
@@ -235,14 +235,14 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
+###  <a name="data_movement_suspend_resume"></a><a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
  Se produit quand le déplacement de base de données d’un réplica de base de données est suspendu ou repris.  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|Name|data_movement_suspend_resume|  
+|Nom|data_movement_suspend_resume|  
 |Category|Toujours active|  
 |Channel|En fonctionnement|  
   
@@ -250,7 +250,7 @@ GO
   
 ||||  
 |-|-|-|  
-|Name|Type_name|Description|  
+|Nom|Type_name|Description|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité (le cas échéant).|  
 |availability_replica_id|guid|ID du réplica de disponibilité.|  
@@ -278,20 +278,20 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
+###  <a name="alwayson_ddl_executed"></a><a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
  Se produit quand une instruction DDL (Data Definition Language) de groupe de disponibilité est en cours d’exécution, notamment CREATE, ALTER ou DROP. L’objectif principal de l’événement est d’indiquer un problème avec une action de l’utilisateur sur un réplica de disponibilité ou d’indiquer le point de départ d’une action opérationnelle, celle-ci étant suivie d’un problème de runtime (basculement manuel, basculement forcé, déplacement de données suspendu, déplacement de données repris, etc.).  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|Name|alwayson_ddl_execution|  
+|Nom|alwayson_ddl_execution|  
 |Category|always on|  
 |Channel|Analytiques|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Name|Type_name|Description|  
+|Nom|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -311,20 +311,20 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
+###  <a name="availability_replica_manager_state"></a><a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
  Se produit en cas de changement de l’état du gestionnaire de réplicas de disponibilité. Cet événement indique la pulsation du gestionnaire de réplicas de disponibilité. Quand le gestionnaire de réplicas de disponibilité n’est pas dans un état sain, tous les réplicas de disponibilité dans l’instance SQL Server sont hors service.  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|Name|availability_replica_manager_state_change|  
+|Nom|availability_replica_manager_state_change|  
 |Category|always on|  
 |Channel|En fonctionnement|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Name|Type_name|Description|  
+|Nom|Type_name|Description|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|État actuel du gestionnaire de réplicas de disponibilité.<br /><br /> En ligne<br /><br /> Hors connexion<br /><br /> WaitingForClusterCommunication|  
   
@@ -342,14 +342,14 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported (1480) : Le rôle de réplica de base de données a changé  
+###  <a name="error_reported-1480-database-replica-role-change"></a><a name="BKMK_error_reported_1480"></a> error_reported (1480) : Le rôle de réplica de base de données a changé  
  Cet événement error_reported filtré se produit de façon asynchrone après un changement de rôle de réplica de disponibilité. Il indique la base de données de disponibilité qui ne parvient pas à changer son rôle attendu durant le processus de basculement.  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|Name|error_reported<br /><br /> Numéro d’erreur 1480 : La base de données REPLICATION_TYPE_MSG « DATABASE_NAME » change les rôles de « OLD_ROLE » en « NEW_ROLE » en raison de REASON_MSG|  
+|Nom|error_reported<br /><br /> Numéro d’erreur 1480 : La base de données REPLICATION_TYPE_MSG « DATABASE_NAME » change les rôles de « OLD_ROLE » en « NEW_ROLE » en raison de REASON_MSG|  
 |Category|erreurs|  
 |Channel|Admin|  
   

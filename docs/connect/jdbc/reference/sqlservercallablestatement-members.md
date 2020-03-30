@@ -12,10 +12,10 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971869"
 ---
 # <a name="sqlservercallablestatement-members"></a>Membres de SQLServerCallableStatement
@@ -37,7 +37,7 @@ ms.locfileid: "67971869"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Ajoute un ensemble de paramètres au lot de commandes de cet objet CallableStatement.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Annule l’instruction SQL actuellement exécutée par cet objet CallableStatement.|  

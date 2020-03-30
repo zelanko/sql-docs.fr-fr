@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095706"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
@@ -54,16 +54,16 @@ ms.locfileid: "74095706"
   
 -   **Pour configurer Database Mail, utilisez :**  [Assistant Configuration de Database Mail](#DBWizard), [Utilisation de modèles](#Template)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Utilisez **l’option** pour activer la messagerie de base de données sur ce serveur. Pour plus d’informations, consultez la rubrique de référence [Messagerie de base de données XPs (option de configuration de serveur)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  L'activation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker dans une base de données requiert un verrou de base de données. Si Service Broker a été désactivé dans **msdb**, pour activer la messagerie de base de données, arrêtez d'abord l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin que Service Broker puisse obtenir le verrou nécessaire.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour configurer la messagerie de base de données vous devez être membre du rôle serveur fixe **sysadmin** . Pour envoyer un message de messagerie de base de données, vous devez être membre du rôle de base de données **DatabaseMailUserRole** de la base de données **msdb** .  
   
-##  <a name="DBWizard"></a> Utilisation de l'Assistant Configuration de la messagerie de base de données  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="DBWizard"></a> Utilisation de l'Assistant Configuration de la messagerie de base de données  
  **Pour configurer la messagerie de base de données à l'aide d'un Assistant**  
   
 1.  Dans l'Explorateur d'objets, développez le nœud de l'instance dont vous souhaitez configurer la messagerie de base de données.  
@@ -100,7 +100,7 @@ ms.locfileid: "74095706"
   
     -   [Page Envoyer un message électronique de test](#TestEmail)  
   
-###  <a name="Welcome"></a> Page d'accueil  
+###  <a name="welcome-page"></a><a name="Welcome"></a> Page d'accueil  
  Cette page décrit les étapes de configuration de la messagerie de base de données.  
   
  **Ne plus afficher cette page** : activez cette option pour ignorer cette page d’accueil.  
@@ -111,7 +111,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="ConfigTask"></a> Sélectionner une tâche de configuration  
+###  <a name="select-configuration-task"></a><a name="ConfigTask"></a> Sélectionner une tâche de configuration  
  Chaque fois que vous utilisez l'Assistant, utilisez la page **Sélectionner une tâche de configuration** pour indiquer quelle tâche vous allez réaliser. Si vous changez d'avis avant d'avoir terminé l'Assistant, utilisez le bouton **Précédent** pour retourner à cette page et sélectionner une autre tâche.  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="NewAccount"></a> Page Nouveau compte  
+###  <a name="new-account-page"></a><a name="NewAccount"></a> Page Nouveau compte  
  Utilisez cette page pour créer un nouveau compte de messagerie de base de données. Ce type de compte contient les informations d’envoi de messages électroniques à un serveur SMTP.  
   
  Un compte de messagerie de base de données contient les informations utilisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l’envoi du courrier électronique à un serveur SMTP. Chacun contient des informations propres à un serveur de messagerie particulier.  
@@ -182,7 +182,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="ExistingAccount"></a> Page Gérer le compte existant  
+###  <a name="manage-existing-account-page"></a><a name="ExistingAccount"></a> Page Gérer le compte existant  
  Utilisez cette page pour gérer un compte de messagerie de base de données existant.  
   
  **Nom du compte**  
@@ -232,7 +232,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="NewProfile"></a> Page Nouveau profil  
+###  <a name="new-profile-page"></a><a name="NewProfile"></a> Page Nouveau profil  
  Utilisez cette page pour créer un profil de messagerie de base de données. Un profil de messagerie de base de données est une collection de comptes de messagerie de base de données. Les profils améliorent la fiabilité lorsqu'un serveur de messagerie électronique est inaccessible, grâce à la fourniture d'autres comptes de messagerie de base de données. Au moins un compte de messagerie de base de données est nécessaire. Pour plus d'informations sur la définition des priorités des comptes de messagerie de base de données dans le profil, consultez [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
  Utilisez les boutons **Monter** et **Descendre** pour modifier l'ordre d'utilisation des comptes de messagerie de base de données. Cet ordre est déterminé par une valeur nommée numéro de séquence. **Monter** diminue le numéro de séquence et **Descendre** l'augmente. Le numéro de séquence détermine l'ordre d'utilisation des comptes de messagerie de base de données dans le profil. Pour un nouveau message électronique, la messagerie de base de données démarre avec le compte dont le numéro de séquence est le plus petit. Si ce compte échoue, la messagerie de base de données utilise le compte qui possède le numéro de séquence plus élevé suivant, et ainsi de suite jusqu'à ce qu'elle envoie le message correctement ou que le compte qui possède le numéro de séquence le plus élevé échoue. Si le compte possédant le numéro de séquence le plus élevé échoue, la messagerie de base de données tente d'envoyer le message pendant la durée configurée dans le paramètre **AccountRetryDelay** de la messagerie de base de données. Elle tente ensuite de nouveau le processus d'envoi du message en commençant par le numéro de séquence le plus petit. Utilisez le paramètre **AccountRetryAttempts** de la messagerie de base de données pour configurer le nombre de fois que le processus de messagerie externe tente d’envoyer le message à l’aide de chacun des comptes du profil spécifié. Vous pouvez configurer les paramètres **AccountRetryDelay** et **AccountRetryAttempts** dans la page **Configurer les paramètres du système** de l'Assistant Configuration de la messagerie de base de données.  
@@ -260,7 +260,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="ExistingProfile"></a> Page Gérer le profil existant  
+###  <a name="manage-existing-profile-page"></a><a name="ExistingProfile"></a> Page Gérer le profil existant  
  Utilisez cette page pour gérer un profil existant de la messagerie de base de données. Un profil de messagerie de base de données est une collection de comptes de messagerie de base de données. Les profils améliorent la fiabilité lorsqu'un serveur de messagerie électronique est inaccessible, grâce à la fourniture d'autres comptes de messagerie de base de données. Au moins un compte de messagerie de base de données est nécessaire. Pour plus d'informations sur la définition des priorités des comptes de messagerie de base de données dans le profil, consultez [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
  Utilisez les boutons **Monter** et **Descendre** pour modifier l'ordre d'utilisation des comptes de messagerie de base de données. Cet ordre est déterminé par une valeur nommée numéro de séquence. **Monter** diminue le numéro de séquence et **Descendre** l'augmente. Le numéro de séquence détermine l'ordre d'utilisation des comptes de messagerie de base de données dans le profil. Pour un nouveau message électronique, la messagerie de base de données démarre avec le compte dont le numéro de séquence est le plus petit. Si ce compte échoue, la messagerie de base de données utilise le compte qui possède le numéro de séquence plus élevé suivant, et ainsi de suite jusqu'à ce qu'elle envoie le message correctement ou que le compte qui possède le numéro de séquence le plus élevé échoue. Si le compte possédant le numéro de séquence le plus élevé échoue, la messagerie de base de données tente d'envoyer le message pendant la durée configurée dans le paramètre **AccountRetryDelay** de la messagerie de base de données. Elle tente ensuite de nouveau le processus d'envoi du message en commençant par le numéro de séquence le plus petit. Utilisez le paramètre **AccountRetryAttempts** de la messagerie de base de données pour configurer le nombre de fois que le processus de messagerie externe tente d’envoyer le message à l’aide de chacun des comptes du profil spécifié. Vous pouvez configurer les paramètres **AccountRetryDelay** et **AccountRetryAttempts** dans la page **Configurer les paramètres du système** de l'Assistant Configuration de la messagerie de base de données.  
@@ -300,7 +300,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="AddAccount"></a> Add Account to Profile Page  
+###  <a name="add-account-to-profile-page"></a><a name="AddAccount"></a> Add Account to Profile Page  
  Utilisez cette page pour choisir le compte à ajouter au profil. Choisissez un compte existant dans la zone **Nom du compte** ou cliquez sur **Nouveau compte**.  
   
  **Nom du compte**  
@@ -317,7 +317,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="AccountsProfiles"></a> Page Gérer les comptes et profils  
+###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> Page Gérer les comptes et profils  
  Utilisez cette page pour choisir une tâche de gestion d'un profil ou d'un compte.  
   
  **Créer un nouveau compte**  
@@ -334,7 +334,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="ProfileSecurityPublic"></a> Gérer la sécurité des profils, onglet Public  
+###  <a name="manage-profile-security-public-tab"></a><a name="ProfileSecurityPublic"></a> Gérer la sécurité des profils, onglet Public  
  Utilisez cette page pour configurer un profil public.  
   
  Les profils sont soit publics soit privés. Un profil privé n'est accessible qu'à des utilisateurs ou des rôles spécifiques. Un profil public permet à tout utilisateur ou rôle ayant accès à la base de données hôte de messagerie (**msdb**) d’envoyer des messages en utilisant ce profil.  
@@ -355,7 +355,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="ProfileSecurityPrivate"></a> Gérer la sécurité des profils, onglet Privé  
+###  <a name="manage-profile-security-private-tab"></a><a name="ProfileSecurityPrivate"></a> Gérer la sécurité des profils, onglet Privé  
  Utilisez cette page pour configurer un profil privé.  
   
  Les profils sont soit publics soit privés. Un profil privé n'est accessible qu'à des utilisateurs ou des rôles spécifiques. Un profil public permet à tout utilisateur ou rôle ayant accès à la base de données hôte de messagerie (**msdb**) d’envoyer des messages en utilisant ce profil.  
@@ -379,7 +379,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="SystemParameters"></a> Configurer les paramètres du système  
+###  <a name="configure-system-parameters"></a><a name="SystemParameters"></a> Configurer les paramètres du système  
  Utilisez cette page pour spécifier les paramètres système de la messagerie de base de données. Affichez les paramètres du système et la valeur actuelle de chaque paramètre. Sélectionnez un paramètre pour afficher une brève description dans le volet d'informations.  
   
  **Tentatives de reprises de comptes**  
@@ -413,12 +413,12 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="CompleteWizard"></a> Page Fin de l'Assistant  
+###  <a name="complete-the-wizard-page"></a><a name="CompleteWizard"></a> Page Fin de l'Assistant  
  Cette page vous permet de passer en revue les actions que doit effectuer l' **Assistant Configuration de la messagerie de base de données** . Aucune modification n'est apportée, tant que vous ne terminez pas l'Assistant.  
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="TestEmail"></a> Send Test E-Mail Page  
+###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
  Utilisez la page **Envoyer un message électronique de test à partir de** _<nom_instance>_ pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
   
  **Profil de messagerie de base de données**  
@@ -443,7 +443,7 @@ ms.locfileid: "74095706"
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-##  <a name="Template"></a> Utilisation de modèles  
+##  <a name="using-templates"></a><a name="Template"></a> Utilisation de modèles  
  **Pour créer un script de configuration de la messagerie de base de données**  
   
 1.  Dans le menu **Affichage** , sélectionnez **Explorateur de modèles**.  

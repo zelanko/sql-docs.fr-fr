@@ -11,10 +11,10 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76920343"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL
@@ -29,7 +29,7 @@ ms.locfileid: "76920343"
   
 -   [Tutoriel : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups-mb1"></a> Gestion des sauvegardes  
+## <a name="managing-backups"></a><a name="managing-backups-mb1"></a> Gestion des sauvegardes  
  La liste suivante comprend des recommandations générales sur la gestion des sauvegardes :  
   
 -   Nous vous recommandons d'utiliser un nom de fichier unique pour chaque sauvegarde afin d'éviter tout remplacement accidentel des objets blob.  

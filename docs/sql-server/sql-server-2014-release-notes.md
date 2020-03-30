@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155687"
 ---
 # <a name="sql-server-2014-release-notes"></a>Notes de publication de SQL Server 2014
@@ -115,7 +115,7 @@ La version incorrecte de StreamInsight.msi et StreamInsightClient.msi se trouve 
   
 **Solution de contournement :** Téléchargez et installez la version correcte à partir de la [page de téléchargement de SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
-### <a name="ProdDoc"></a>Version finale de la documentation du produit
+### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>Version finale de la documentation du produit
   
 Le contenu du Générateur de rapports et de PowerPivot n’est pas disponible dans toutes les langues. 
 
@@ -148,7 +148,7 @@ Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], ce contenu était disponibl
   
 **Solution de contournement :** Aucun.  
   
-### <a name="DBEngine"></a>Moteur de base de données (version finale)
+### <a name="database-engine-rtm"></a><a name="DBEngine"></a>Moteur de base de données (version finale)
   
 #### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>Changements apportés à l’édition Standard dans SQL Server 2014 RTM  
 L'édition SQL Server 2014 Standard comprend les modifications suivantes :  
@@ -288,7 +288,7 @@ Si vous avez déjà le problème avec des valeurs d’instance_id non correspond
   
     `update` sysdac_history_internal `set` instance_id = '\<valeur de l’étape 3\>' `where` \<expression correspondant aux lignes que vous voulez mettre à jour\>  
   
-### <a name="SSRS"></a>Reporting Services (RTM)
+### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>Le serveur de rapports SQL Server 2012 Reporting Services en mode natif ne peut pas fonctionner côte à côte avec les composants SQL Server 2014 Reporting Services SharePoint  
 **Problème :** Le service Windows en mode natif [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] « SQL Server Reporting Services » (ReportingServicesService.exe) ne démarre pas quand des composants [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint sont installés sur le même serveur.  
@@ -334,7 +334,7 @@ Pour plus d'informations, consultez [Conseils, astuces et dépannage pour SQL Se
   
 Pour plus d'informations, consultez [Conseils, astuces et dépannage pour SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM sur des machines virtuelles Azure  
+### <a name="sql-server-2014-rtm-on-azure-virtual-machines"></a><a name="AzureVM"></a>SQL Server 2014 RTM sur des machines virtuelles Azure  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>L’Assistant Ajouter un réplica Azure retourne une erreur lors de la configuration d’un écouteur de groupe de disponibilité dans Azure  
 **Problème :** Si un groupe de disponibilité a un écouteur, l’Assistant Ajouter un réplica Azure retourne une erreur quand vous tentez de configurer l’écouteur dans Azure.  
@@ -349,7 +349,7 @@ Ce problème est dû au fait que les écouteurs de groupe de disponibilité exig
   
 2.  Une fois l’Assistant terminé, vous devez achever la configuration de l’écouteur dans Azure comme expliqué dans la rubrique [Configuration de l’écouteur pour les groupes de disponibilité AlwaysOn dans Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
   
-### <a name="SSAS"></a>Analysis Services (RTM)
+### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>MSOLAP.5 doit être téléchargé, installé et inscrit pour une nouvelle batterie de serveurs SharePoint 2010 configurée avec SQL Server 2014  
 **Problème :**  
@@ -394,7 +394,7 @@ Ce problème est dû au fait que les écouteurs de groupe de disponibilité exig
   
 -    Si la longueur sérialisée de la planification d’actualisation est inférieure à la planification d’origine, quand vous mettez à jour une planification d’actualisation des données d’un classeur, la taille du tampon n’est pas correctement mise à jour et les nouvelles informations de planification sont fusionnées avec les anciennes informations de planification, ce qui endommage la planification.  
   
-### <a name="DQS"></a>Data Quality Services (RTM)
+### <a name="data-quality-services-rtm"></a><a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Pas de prise en charge des inter-versions pour Data Quality Services dans Master Data Services  
 **Problème :** Les scénarios suivants ne sont pas pris en charge :  
@@ -405,7 +405,7 @@ Ce problème est dû au fait que les écouteurs de groupe de disponibilité exig
   
 **Solution de contournement :** Utilisez la même version de Master Data Services que la base de données du moteur de base de données et Data Quality Services.  
   
-### <a name="UA"></a>Problèmes relatifs au Conseiller de mise à niveau (version finale)
+### <a name="upgrade-advisor-issues-rtm"></a><a name="UA"></a>Problèmes relatifs au Conseiller de mise à niveau (version finale)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Le Conseiller de mise à niveau SQL Server 2014 signale des problèmes de mise à niveau non pertinents pour SQL Server Reporting Services  
 **Problème :** le Conseiller de mise à niveau de SQL Server (SSUA) fourni avec le média SQL Server 2014 signale incorrectement plusieurs erreurs lors de l’analyse du serveur SQL Server Reporting Services.  

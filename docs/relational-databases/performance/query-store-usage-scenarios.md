@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288453"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
@@ -110,7 +110,7 @@ Le plan après la création d’index absents (plan_id = 15, en dessous) a maint
   
 En fonction de l’analyse, vous conservez généralement les index, car les performances de la requête ont été améliorées.  
   
-## <a name="CEUpgrade"></a> Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a> Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 Avant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les utilisateurs étaient exposés au risque d’une régression des performances lors de la mise à niveau vers la dernière version de la plateforme. Cela était dû au fait que la dernière version de l’optimiseur de requête devenait immédiatement actif une fois les nouveaux éléments installés.  
   
 À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], tous les changements de l’optimiseur de requête sont liés au [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, de sorte que les plans ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace le `COMPATIBILITY_LEVEL` par le plus récent. Cette fonctionnalité, en association avec le magasin de requêtes, vous offre un niveau de contrôle élevé sur les performances des requêtes dans le processus de mise à niveau. Le flux de travail de mise à niveau recommandé est illustré dans l’image suivante :  

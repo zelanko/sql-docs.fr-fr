@@ -15,10 +15,10 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 11ca900d4a6f0f820379b0446bcca85e97462177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67945683"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Afficher ou configurer des options de connexion au serveur distant (SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "67945683"
   
 -   **Suivi :**  [Après avoir configuré des options de connexion au serveur distant](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L’exécution de **sp_serveroption** nécessite l’autorisation ALTER ANY LINKED SERVER sur le serveur.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>Pour afficher ou configurer des options de connexion au serveur distant  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67945683"
   
 4.  Répétez les étapes 1 à 3 sur l'autre serveur de la paire de serveurs distants.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-remote-server-connection-options"></a>Pour afficher les options de connexion au serveur distant  
   
@@ -87,7 +87,7 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré des options de connexion au serveur distant  
+##  <a name="follow-up-after-you-configure-remote-server-connection-options"></a><a name="FollowUp"></a> Suivi : Après avoir configuré des options de connexion au serveur distant  
  Le serveur distant doit être arrêté et redémarré pour que le paramètre puisse prendre effet.  
   
 ## <a name="see-also"></a>Voir aussi  

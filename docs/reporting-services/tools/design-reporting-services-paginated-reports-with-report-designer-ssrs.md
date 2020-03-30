@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286163"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Concevoir des rapports paginés Reporting Services à l’aide du Concepteur de rapports (SSRS)
@@ -37,7 +37,7 @@ Les projets de rapports fonctionnent comme des conteneurs de définitions de rap
  Utilisez les informations de cette rubrique pour concevoir des rapports paginés et des éléments associés pour un projet de rapport dans une solution de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Pour plus d’informations sur les solutions et les projets multiples dans les outils de données SQL Server, consultez [Reporting Services dans les outils de données SQL Server](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Sources de données partagées  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a> Sources de données partagées  
  Utilisez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour définir et déployer des sources de données partagées pour une solution de création de rapports. Les sources de données partagées peuvent être déployées indépendamment des autres éléments dans un projet à l'aide de les propriétés de **OverwriteDataSources** et de **TargetDataSourceFolder** . Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  Dans le Concepteur de rapports, vous travaillez dans le volet des données de rapport et dans l'explorateur de solutions pour définir les sources de données utilisées dans un rapport. Pour plus d'informations, consultez [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Vous ne pouvez pas utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour ouvrir les sources de données publiées sur un serveur de rapports ou un site SharePoint, mais non inclus dans la solution de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Pour cette fonctionnalité, utilisez [Environnement de création du Générateur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md).  
@@ -46,14 +46,14 @@ Les projets de rapports fonctionnent comme des conteneurs de définitions de rap
   
  Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_SharedDatasets"></a> Datasets partagés  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> Datasets partagés  
  Utilisez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour définir et déployer des datasets partagées pour une solution de création de rapports. Les datasets partagés peuvent être déployés indépendamment des autres éléments dans un projet à l'aide de les propriétés de **OverwriteDatasets** et de **TargetDatasetFolder** . Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  Dans le Concepteur de rapports, vous travaillez dans le volet des données de rapport et dans l'explorateur de solutions pour définir les datasets partagés utilisés dans un rapport. Pour plus d'informations, consultez [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Vous ne pouvez pas utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour ouvrir des datasets publiés directement à partir d'un serveur de rapports ou d'un site SharePoint. Pour cette fonctionnalité, utilisez [Environnement de création du Générateur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md) en mode dataset partagé.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est un outil client. Vous pouvez utiliser les concepteurs de requêtes pour créer et tester vos résultats de requête localement dans l'aperçu. Après le déploiement, vous pouvez gérer les datasets partagés indépendamment des sources de données partagées et des rapports dont ils dépendent. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Outils de conception de requête &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) et [Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md).  
   
-##  <a name="bkmk_Reports"></a> Rapports paginés  
+##  <a name="paginated-reports"></a><a name="bkmk_Reports"></a> Rapports paginés  
 Les rapports paginés sont des fichiers qui sont stockés dans un projet de rapport. Les rapports peuvent être utilisés comme rapports autonomes, sous-rapports ou cibles pour les actions d'extraction des rapports principaux. Les rapports peuvent être déployés indépendamment des autres éléments dans un projet à l'aide de **TargetReportFolder** et d'autres propriétés. Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
@@ -84,18 +84,18 @@ Les rapports paginés sont des fichiers qui sont stockés dans un projet de rapp
   
      Pour plus d’informations, consultez [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).  
   
-##  <a name="bkmk_ReportParts"></a> Parties de rapports  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> Parties de rapports  
  Dans le Concepteur de rapports, une fois que vous avez créé des tables, graphiques et autres éléments de rapport paginé dans un projet, vous pouvez les publier comme des *parties de rapport* sur un serveur de rapports ou sur le site SharePoint intégré avec un serveur de rapports afin que vous et d’autres personnes puissiez les réutiliser dans d’autres rapports. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
  Les parties de rapports peuvent être déployées indépendamment des autres éléments dans un projet à l'aide de **TargetReportPartFolder** et d'autres propriétés. Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
-##  <a name="bkmk_Resources"></a> Ressources  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Ressources  
  Vous pouvez ajouter à votre projet des fichiers liés à votre rapport mais pas traités par le serveur de rapports. Par exemple, vous pouvez ajouter des images pour des illustrations ou des fichiers de formes ESRI pour des données spatiales. Pour plus d’informations, consultez [Ressources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
-##  <a name="bkmk_ReportLayout"></a> Mise en page de rapport paginé  
+##  <a name="paginated-report-layout"></a><a name="bkmk_ReportLayout"></a> Mise en page de rapport paginé  
  Pour créer une mise en page de rapport, faites glisser des éléments de rapport et des régions de données de la boîte à outils vers l'aire de conception, puis réorganisez-les pour créer la mise en page du rapport. Faites glisser les champs du dataset vers les éléments de l'aire de conception pour ajouter des données au rapport. Pour organiser des données en groupes dans une région de données de tableau matriciel, faites glisser les champs du dataset vers le volet de regroupement. Étant donné que les outils de création de rapport sont essentiellement le moyen de créer des définitions de rapport, l'approche de création de rapports est assez similaire entre le Générateur et le Concepteur de rapports.  
    
-##  <a name="bkmk_Preview"></a> Aperçu d’un rapport paginé  
+##  <a name="preview-a-paginated-report"></a><a name="bkmk_Preview"></a> Aperçu d’un rapport paginé  
  Pour vérifier les données du rapport et la conception de la mise en page, utilisez **Aperçu** . Quand vous affichez l'aperçu d'un rapport, le processeur de rapports valide la syntaxe de schéma et d'expression de définition de rapport et répertorie les problèmes dans la fenêtre [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ Les rapports paginés sont des fichiers qui sont stockés dans un projet de rapp
   
     -   la mise en page de rapport nécessitant une modification pour une meilleure lecture dans un format imprimé.  
    
-##  <a name="bkmk_SaveandDeploy"></a> Enregistrer et déployer des rapports paginés  
+##  <a name="save-and-deploy-paginated-reports"></a><a name="bkmk_SaveandDeploy"></a> Enregistrer et déployer des rapports paginés  
  Dans le Concepteur de rapports, vous pouvez enregistrer des rapports et d'autres fichiers projet localement, ou les déployer vers un serveur de rapports ou un site SharePoint. Les sources de données partagées, les datasets partagés, les rapports, les ressources de rapport et les parties de rapports peuvent être déployés indépendamment ou définis selon les propriétés de déploiement du projet que vous configurez. Pour plus d'informations, consultez [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  Dans le Concepteur de rapports, il est important de comprendre que vous concevez un rapport à l'aide du schéma de définition de rapport pris en charge par la version actuelle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsque vous définissez les propriétés de déploiement du projet pour un serveur de rapports ou un site SharePoint spécifique et enregistrez ensuite le rapport, le générateur de rapports enregistre la définition de rapport dans le répertoire de build se trouvant dans le schéma correspondant à la version sur le serveur de rapports cible. Pour créer des rapports qui peuvent être publiés sur un serveur de rapports de bas niveau, le Concepteur de rapports supprime les éléments de rapport qui n'existent pas dans le schéma cible. Cela se produit automatiquement et sans invite. Dans ce cas, la définition de rapport d'origine est conservée dans le dossier du projet. La définition de rapport modifiée qui est déployée est dans le dossier de génération.  
@@ -159,7 +159,7 @@ Les rapports paginés sont des fichiers qui sont stockés dans un projet de rapp
 ### <a name="export-a-paginated-report-to-a-different-file-format"></a>Exporter un rapport paginé vers un autre format de fichier  
  Les rapports peuvent être exportés dans divers formats ; ceux-ci affectent le fonctionnement des fonctionnalités interactives et la mise en page des rapports. Pour plus d’informations sur les considérations relatives à la conception pour plusieurs formats de sortie, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> Validation de rapport et niveaux d’erreurs  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> Validation de rapport et niveaux d’erreurs  
  Les rapports sont validés avant l'aperçu et lors du déploiement. Plusieurs problèmes de génération peuvent se produire lorsque les rapports sont créés. Les rapports peuvent contenir des chaînes, telles que des expressions ou requêtes, qui sont incompatibles avec la version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] spécifiée par la configuration de projet, par exemple.  
   
  Utilisez la propriété ErrorLevel pour gérer les avertissements de génération et erreurs. La propriété ErrorLevel peut contenir une valeur comprise entre 0 et 4. La valeur détermine les problèmes de génération qui sont signalés comme erreurs et ceux qui sont signalés comme avertissements. La valeur par défaut est 2. Les avertissements et les erreurs sont écrits dans la fenêtre [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][Sortie](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  

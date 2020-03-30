@@ -28,10 +28,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77544939"
 ---
 # <a name="sqlcmd-utility"></a>Utilitaire sqlcmd
@@ -867,7 +867,7 @@ Lorsque vous appuyez sur ENTRÉE, le message d'information suivant s'affiche : 
   
  Bien que la colonne `BusinessEntityID` ne soit large que de quatre caractères, elle a été étendue pour contenir les noms de colonne plus longs. Par défaut, la sortie se termine à 80 caractères. Vous pouvez modifier ceci en utilisant l’option **-w** ou en définissant la variable de script SQLCMDCOLWIDTH.  
   
-###  <a name="OutputXML"></a> Format de sortie XML  
+###  <a name="xml-output-format"></a><a name="OutputXML"></a> Format de sortie XML  
  La sortie XML qui est le résultat d'une clause FOR XML est générée, sans mise en forme, dans un flux continu.  
   
  Lorsque vous attendez une sortie XML, utilisez la commande suivante : `:XML ON`.  
@@ -884,7 +884,7 @@ Lorsque vous appuyez sur ENTRÉE, le message d'information suivant s'affiche : 
 > [!NOTE]  
 >  La commande `:XML` ne prend pas en charge l’instruction SET STATISTICS XML.  
   
-###  <a name="OutputJSON"></a> Format de sortie JSON  
+###  <a name="json-output-format"></a><a name="OutputJSON"></a> Format de sortie JSON  
  Lorsque vous attendez une sortie JSON, utilisez la commande suivante : `:XML ON`. Dans le cas contraire, la sortie inclut le nom de colonne et le texte JSON. Cette option n’est pas valide pour JSON.  
   
  Pour désactiver le mode XML, utilisez la commande suivante : `:XML OFF`.  

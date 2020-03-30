@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298303"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
@@ -272,7 +272,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
 -   [Obtenir les valeurs de codes de retour](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a> Utiliser des marqueurs et des noms de paramètres  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a> Utiliser des marqueurs et des noms de paramètres  
  Selon le type de connexion que la tâche d'exécution SQL utilise, la syntaxe de la commande SQL utilise différents marqueurs de paramètres. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] impose que la commande SQL utilise un marqueur de paramètre au format **\@varParameter**, tandis que le type de connexion OLE DB exige le marqueur de paramètre point d’interrogation (?).  
   
  Les noms que vous pouvez utiliser comme noms de paramètres dans les mappages entre variables et paramètres varient également selon le type de gestionnaire de connexions. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utilise un nom défini par l'utilisateur avec le préfixe \@, tandis que le type de gestionnaire de connexions OLE DB impose l'utilisation de la valeur numérique d'un ordinal de base 0 comme nom de paramètre.  
@@ -307,7 +307,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
  Lorsque vous utilisez un gestionnaire de connexions OLE DB, vous ne pouvez pas utiliser de sous-requêtes paramétrables, car la tâche d'exécution SQL ne peut pas dériver d'informations de paramètre par le biais du fournisseur OLE DB. Toutefois, vous pouvez utiliser une expression pour concaténer les valeurs des paramètres dans la chaîne de requête et définir la propriété SqlStatementSource de la tâche.  
   
-###  <a name="Date_and_time_data_types"></a> Utiliser des paramètres avec les types de données de date et d’heure  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a> Utiliser des paramètres avec les types de données de date et d’heure  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Utiliser des paramètres de date et d’heure avec les gestionnaires de connexions ADO.NET et ADO  
  Au moment de la lecture des données des types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **time** et **datetimeoffset**, une tâche d’exécution SQL qui utilise un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou ADO a les spécifications supplémentaires suivantes :  
@@ -356,7 +356,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
  Si les données ne sont pas stockées dans le paramètre d'entrée ou de sortie approprié, le package échoue.  
   
-###  <a name="WHERE_clauses"></a> Utiliser des paramètres dans les clauses WHERE  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a> Utiliser des paramètres dans les clauses WHERE  
  Les commandes SELECT, INSERT, UPDATE et DELETE incluent fréquemment des clauses WHERE pour spécifier des filtres qui définissent les conditions auxquelles chaque ligne des tables sources doit satisfaire pour se qualifier pour une commande SQL. Les paramètres fournissent les valeurs de filtre dans les clauses WHERE.  
   
  Vous pouvez utiliser des marqueurs de paramètres pour fournir dynamiquement des valeurs de paramètres. Les règles pour lesquelles des marqueurs de paramètres et des noms de paramètres peuvent être utilisés dans l'instruction SQL varient selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise.  
@@ -377,7 +377,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
 -   Le type de connexion [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utilise les noms de paramètres \@parmMinProductID et \@parmMaxProductID.  
   
-###  <a name="Stored_procedures"></a> Utiliser des paramètres avec les procédures stockées  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a> Utiliser des paramètres avec les procédures stockées  
  Les commandes SQL qui exécutent des procédures stockées peuvent également utiliser le mappage de paramètres. Les règles d'utilisation des marqueurs de paramètres et des noms de paramètres varient selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise, tout comme les règles des requêtes paramétrables.  
   
  Le tableau suivant présente des exemples de la commande EXEC par type de gestionnaire de connexions. Les exemples exécutent la procédure stockée **uspGetBillOfMaterials** dans [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. La procédure stockée utilise les paramètres **d’entrée** `@StartProductID` et `@CheckDate`.  
@@ -464,7 +464,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
   
 14. Cliquez sur **OK**.  
 
-##  <a name="Return_codes"></a> Obtenir les valeurs de codes de retour  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> Obtenir les valeurs de codes de retour  
  Une procédure stockée peut retourner une valeur entière appelée « code de retour » pour indiquer l'état d'exécution d'une procédure. Pour implémenter des codes de retour dans la tâche d’exécution SQL, vous utilisez des paramètres du type **ReturnValue** .  
   
  Le tableau suivant présente par type de connexion des exemples de commandes EXEC qui implémentent des codes de retour. Tous les exemples utilisent un paramètre **d’entrée** . Les règles d’utilisation des marqueurs de paramètres et des noms de paramètres sont les mêmes pour tous les types de paramètre : **Input**, **Output** et **ReturnValue**.  
@@ -493,7 +493,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
   
 -   [Remplir une variable à l’aide d’un jeu de résultats](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a> Spécifier un type d’ensemble de résultats  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a> Spécifier un type d’ensemble de résultats  
  La tâche d'exécution SQL prend en charge les types de jeux de résultats suivants :  
   
 -   L'ensemble de résultats **Aucun** est utilisé lorsque la requête ne retourne aucun résultat. Par exemple, cet ensemble de résultats est utilisé pour les requêtes qui ajoutent, modifient et suppriment des enregistrements dans une table.  
@@ -506,7 +506,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
   
  Si la tâche d'exécution SQL utilise l'ensemble de résultats **Ensemble de résultats complet** et que la requête retourne plusieurs ensemble de lignes, la tâche ne retourne que le premier. Si cet ensemble de lignes génère une erreur, la tâche la signale. En revanche, si d'autres ensembles de lignes génèrent des erreurs, la tâche ne les signale pas.  
   
-###  <a name="Populate_variable_with_result_set"></a> Remplir une variable à l’aide d’un jeu de résultats  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a> Remplir une variable à l’aide d’un jeu de résultats  
  Vous pouvez lier le jeu de résultats retourné par une requête à une variable définie par l'utilisateur si le type du jeu de résultats est une ligne unique, un ensemble de lignes ou des données XML.  
   
  Si le type de l'ensemble de résultats est **Ligne unique**, vous pouvez lier une colonne du résultat obtenu à une variable en utilisant le nom de colonne comme nom d'ensemble de résultats. Vous pouvez également utiliser comme nom la position ordinale de la colonne dans la liste des colonnes. Par exemple, le nom de l'ensemble de résultats de la requête `SELECT Color FROM Production.Product WHERE ProductID = ?` pourrait être **Color** ou **0**. Si la requête retourne plusieurs colonnes et que vous souhaitez accéder aux valeurs de toutes les colonnes, vous devez lier chaque colonne à une variable différente. Si vous mappez des colonnes à des variables en utilisant des numéros comme noms de jeux de résultats, ces numéros reflètent l'ordre d'apparition des colonnes dans la liste des colonnes de la requête. Par exemple, dans la requête `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, vous utilisez 0 pour la colonne **Color** et 1 pour la colonne **ListPrice** . La possibilité d'utiliser un nom de colonne comme nom d'ensemble de résultats dépend du fournisseur que la tâche a été configurée pour utiliser. Tous les fournisseurs ne rendent pas les noms de colonnes disponibles.  
