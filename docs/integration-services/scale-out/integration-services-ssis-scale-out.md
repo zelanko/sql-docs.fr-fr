@@ -12,10 +12,10 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b4a5b5f27f959f3a04bb3cf5468d198d3ef5267
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295653"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Scale-out Integration Services (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "71295653"
 SSIS (SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) Scale Out constitue un moyen très performant d’exécuter des packages SSIS en distribuant les exécutions sur plusieurs ordinateurs. Après avoir configuré Scale-out, vous pouvez effectuer plusieurs exécutions de packages en parallèle, en mode scale-out, à partir de SSMS (SQL Server Management Studio).
 
 ## <a name="components"></a>Components
-[!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out se compose d’un [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Master et d’un ou de plusieurs [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Workers.
+[!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale-out se compose d’un [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Master et d’un ou de plusieurs [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Workers.
 
 -   Le Scale Out Master est responsable de la gestion de Scale Out et reçoit les demandes d’exécution de package des utilisateurs. Pour plus d’informations, consultez [Scale Out Master](integration-services-ssis-scale-out-master.md).
 
@@ -42,7 +42,7 @@ Vous pouvez définir Scale-out dans les configurations suivantes :
 ## <a name="what-you-can-do"></a>Ce que vous pouvez faire
 Après avoir configuré Scale-out, vous pouvez effectuer les opérations suivantes :
 
--   Exécuter plusieurs packages déployés sur le catalogue SSISDB en parallèle. Pour plus d’informations, consultez [Exécuter des packages dans Scale Out](run-packages-in-integration-services-ssis-scale-out.md).
+-   Exécuter plusieurs packages déployés sur le catalogue SSISDB en parallèle. Pour plus d’informations, consultez [Exécuter des packages dans Scale-out](run-packages-in-integration-services-ssis-scale-out.md).
 
 -   Gérer la topologie Scale-out dans l’application Scale Out Manager. Pour plus d’informations, consultez [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md).
 

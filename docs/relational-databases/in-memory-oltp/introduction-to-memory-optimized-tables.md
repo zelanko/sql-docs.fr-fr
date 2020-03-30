@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050197"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduction aux tables optimisées en mémoire
@@ -69,20 +69,20 @@ Les tables optimisées en mémoire sont plus efficacement accessibles à partir 
 
 Les facteurs suivants affectent les gains de performance pouvant être obtenus avec l'OLTP en mémoire :  
   
-*Communication :* Une application comportant de nombreux appels à des procédures stockées courtes aura un moindre gain de performances par rapport à une application comportant moins d'appels et plus de fonctionnalités implémentées dans chaque procédure stockée.  
+*Communication :* Une application comportant de nombreux appels à des procédures stockées courtes a un moindre gain de performances par rapport à une application comportant moins d’appels et plus de fonctionnalités implémentées dans chaque procédure stockée.  
   
-*Exécution de [!INCLUDE[tsql](../../includes/tsql-md.md)] :* L'OLTP en mémoire offre des performances optimales si vous utilisez des procédures stockées compilées en mode natif plutôt que des procédures stockées interprétées ou l'exécution de requêtes. Il peut être avantageux d’accéder aux tables optimisées en mémoire à partir de ces procédures stockées.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] Exécution :* L’OLTP en mémoire offre des performances optimales si vous utilisez des procédures stockées compilées en mode natif plutôt que des procédures stockées interprétées ou l’exécution de requêtes. Il peut être avantageux d’accéder aux tables optimisées en mémoire à partir de ces procédures stockées.  
   
-*Comparaison entre l’analyse de plage et la recherche de points :* Les index non cluster mémoire optimisés prennent en charge les analyses de plage et les analyses triées. Pour les recherches de points, les index de hachage optimisés en mémoire offrent de meilleures performances que les index non cluster optimisés en mémoire. Les index non cluster optimisés en mémoire offrent de meilleures performances que les index sur disque.
+*Comparaison entre l’analyse de plage et la recherche de points :* Les index non cluster optimisés en mémoire prennent en charge les analyses de plage et les analyses triées. Pour les recherches de points, les index de hachage optimisés en mémoire offrent de meilleures performances que les index non cluster optimisés en mémoire. Les index non cluster optimisés en mémoire offrent de meilleures performances que les index sur disque.
 
 - À partir de SQL Server 2016, le plan de requête pour une table optimisée en mémoire peut analyser la table en parallèle. Les requêtes analytiques sont donc plus performantes.
   - Les index de hachage peuvent également être analysés en parallèle à partir de SQL Server 2016.
   - Les index non cluster peuvent également être analysés en parallèle à partir de SQL Server 2016.
   - Les index columnstore peuvent être analysés en parallèle depuis leur création dans SQL Server 2014.
   
-*Opérations d’index :* les opérations d’index ne sont pas journalisées et existent uniquement en mémoire.  
+*Opérations d’index :* Les opérations d’index ne sont pas stockées et existent uniquement en mémoire.  
   
-*Accès simultané :* Pour les applications dont les performances sont affectées par l'accès simultané au niveau du moteur, tel que la contention de verrous internes ou le blocage, les performances s'améliorent de façon significative lorsque l'application passe à l'OLTP en mémoire.  
+*Accès simultané :* Pour les applications dont les performances sont affectées par l’accès simultané au niveau du moteur, tel que la contention de verrous internes ou le blocage, les performances s’améliorent de façon significative quand l’application passe à l’OLTP en mémoire.  
   
 Le tableau suivant répertorie les problèmes de performance et d'extensibilité couramment rencontrés dans les bases de données relationnelles et indique comment l'OLTP peut améliorer les performances.  
   
@@ -91,7 +91,7 @@ Le tableau suivant répertorie les problèmes de performance et d'extensibilité
 |Performances<br /><br /> Utilisation importante des ressources (UC, E/S, réseau ou mémoire).|UC<br /> Les procédures stockées compilées en mode natif peuvent réduire de façon significative l'utilisation de l'UC, car elles nécessitent moins d'instructions pour exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que les procédures stockées interprétées.<br /><br /> L'OLTP en mémoire peut vous aider à réduire l'investissement en matériel dans des charges de travail avec montée en puissance parallèle, car un serveur peut assurer à lui seul le débit de cinq à dix serveurs.<br /><br /> E/S<br /> Si vous observez un goulot d'étranglement des E/S à partir du traitement des données ou des pages d'index, l'OLTP en mémoire peut l'atténuer. En outre, les points de contrôle des objets OLTP en mémoire sont continus et n'entraînent pas une hausse soudaine des opérations d'E/S. Toutefois, si la plage de travail des tables critiques pour les performances ne tient pas en mémoire, l'OLTP en mémoire n'améliore pas les performances, car il nécessite que les données résident en mémoire. Si vous observez un goulot d'étranglement des E/S lors de la journalisation, l'OLTP en mémoire l'atténue, car il nécessite moins d'opérations de journalisation. Si une ou plusieurs tables optimisées en mémoire sont configurées en tant que tables non durables, supprimez la journalisation des données.<br /><br /> Mémoire<br /> L'OLTP en mémoire ne procure aucun gain de performance. Il peut en effet solliciter davantage la mémoire, car les objets doivent résider en mémoire.<br /><br /> Réseau<br /> L'OLTP en mémoire ne procure aucun gain de performance. Les données doivent être communiquées de la couche Données à la couche Application.|  
 |Extensibilité<br /><br /> La plupart des problèmes de mise à l'échelle dans les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont dus à des problèmes d'accès concurrentiel tels que la contention dans les verrous, les verrous internes et les verrouillages tournants.|Contention de verrous internes<br /> Un scénario typique est la contention dans la dernière page d'un index lors de l'insertion simultanée de lignes dans l'ordre des clés. Étant donné que l'OLTP en mémoire ne prend pas de verrou interne lors de l'accès aux données, il n'y a plus de problèmes d'extensibilité liés à la contention de verrous internes.<br /><br /> Contention de verrouillage tournant<br /> Étant donné que l'OLTP en mémoire ne prend pas de verrou interne lors de l'accès aux données, il n'y a plus de problèmes d'extensibilité liés à la contention de verrouillage tournant.<br /><br /> Contention liée au verrouillage<br /> Si votre application de base de données rencontre des problèmes de blocage entre les opérations de lecture et d'écriture, l'OLTP en mémoire les supprime, car il utilise une nouvelle forme de contrôle d'accès concurrentiel optimiste pour implémenter tous les niveaux d'isolation des transactions. L'OLTP en mémoire n'utilise pas TempDB pour stocker les versions de ligne.<br /><br /> Si le problème de mise à l'échelle est provoqué par un conflit entre deux opérations d'écriture, telles que deux transactions simultanées tentant de mettre à jour la même ligne, l'OLTP en mémoire laisse une transaction aboutir et fait échouer l'autre. La transaction en échec doit être retentée par un nouvel envoi explicite ou implicite. Dans les deux cas, vous devez apporter des modifications à l'application.<br /><br /> Si votre application crée des conflits fréquents entre deux opérations d'écriture, la valeur du verrouillage optimiste est diminuée. L'application ne convient pas pour l'OLTP en mémoire. La plupart des applications OLTP ne connaissent pas de conflits d’écriture à moins que le conflit ne soit induit par une escalade de verrous.|  
   
-##  <a name="rls"></a> Sécurité de niveau ligne dans les tables optimisées en mémoire  
+##  <a name="row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> Sécurité de niveau ligne dans les tables optimisées en mémoire  
 
 [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md) La sécurité au niveau des lignes est prise en charge pour les tables optimisées en mémoire. La procédure d’application de stratégies de sécurité de niveau ligne à des tables optimisées en mémoire est globalement identique à celle qui concerne les tables sur disque, à une exception près : les Fonctions table incluses qui sont utilisées comme prédicats de sécurité doivent être compilées en mode natif (créées avec l’option WITH NATIVE_COMPILATION). Pour plus d’informations, consultez la section [Compatibilité entre fonctionnalités](../../relational-databases/security/row-level-security.md#Limitations) dans la rubrique [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md) .  
   

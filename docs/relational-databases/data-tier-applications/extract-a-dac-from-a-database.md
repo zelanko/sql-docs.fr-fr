@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134791"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraire une DAC d'une base de données
@@ -34,13 +34,13 @@ ms.locfileid: "68134791"
 ## <a name="before-you-begin"></a>Avant de commencer  
  Vous pouvez extraire une DAC des bases de données qui résident sur les instances de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) ou version ultérieure. Si le processus d'extraction est exécuté sur une base de données déployée à partir d'une DAC, seules les définitions des objets de la base de données sont extraites. Le processus ne référence pas la DAC enregistrée dans **msdb** (**master** , dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Le processus d'extraction n'inscrit pas la définition de la DAC dans l'instance actuelle du moteur de base de données. Pour plus d'informations sur l'inscription d'une DAC, consultez [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
   
-##  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Une DAC peut uniquement être extraite d'une base de données dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure. Vous ne pouvez pas extraire une DAC si la base de données possède des objets qui ne sont pas pris en charge dans une DAC, ou des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L’extraction d’un DAC requiert au moins des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'extraction d'un DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données de laquelle est extrait le DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également extraire une DAC.  
   
-##  <a name="UsingDACExtractWizard"></a> Utilisation de l'Assistant Extraire l'application de la couche Données  
+##  <a name="using-the-extract-data-tier-application-wizard"></a><a name="UsingDACExtractWizard"></a> Utilisation de l'Assistant Extraire l'application de la couche Données  
  **Pour extraire une DAC à l'aide d'un Assistant**  
   
 1.  Dans l' **Explorateur d'objets**, développez le nœud de l'instance contenant la base de données à partir de laquelle la DAC doit être extraite.  
@@ -61,7 +61,7 @@ ms.locfileid: "68134791"
   
     5.  [Page Générer le package](#BuildPackage)  
   
-###  <a name="Introduction"></a> Page Introduction à l’Assistant  
+###  <a name="wizard-introduction-page"></a><a name="Introduction"></a> Page Introduction à l’Assistant  
  Cette page décrit les étapes à suivre pour extraire une application de la couche Données.  
   
  **Ne plus afficher cette page.** - Cochez la case pour ne plus afficher la page à l'avenir.  
@@ -72,7 +72,7 @@ ms.locfileid: "68134791"
   
  [&#91;Assistant d’extraction&#93;](#UsingDACExtractWizard)  
   
-###  <a name="SelectData"></a> Select data page  
+###  <a name="select-data-page"></a><a name="SelectData"></a> Select data page  
 Sélectionnez les données de référence que vous voulez inclure dans votre fichier de package d’application de la couche Données (DAC). L'inclusion de données dans votre package DAC est facultative. Le package DAC inclura déjà le schéma de tous les objets de base de données pris en charge, ainsi que les objets d'instance relatifs à votre base de données.  
   
  Vous pouvez inclure jusqu'à 10 Mo de données de référence dans votre fichier de package DAC. Toutefois, pour que les tables soient inclues dans la DAC, elles ne doivent pas contenir de types de données d’objet BLOB tels que **image** ou **varchar(max)** . Pour extraire des quantités de données plus importantes pour le transfert vers une autre base de données, utilisez SQL Server Integration Services, l'utilitaire de copie en bloc ou l'un des nombreuses autres techniques de migration des données.  
@@ -81,7 +81,7 @@ Sélectionnez les données de référence que vous voulez inclure dans votre fic
   
  [&#91;Assistant d’extraction&#93;](#UsingDACExtractWizard)  
   
-###  <a name="SetProperties"></a> Set properties page  
+###  <a name="set-properties-page"></a><a name="SetProperties"></a> Set properties page  
  Utilisez cette page de l'Assistant pour décrire l'application de la couche Données (DAC). Ces propriétés sont utilisées pour identifier la DAC et aider à la distinguer des autres.  
   
  **Nom** - Ce nom identifie la DAC. Il peut être différent du nom du fichier de package de DAC et doit décrire votre application. Par exemple, si la base de données est utilisée pour une application financière, vous pouvez nommer la DAC Finance.  
@@ -94,7 +94,7 @@ Sélectionnez les données de référence que vous voulez inclure dans votre fic
   
  **Remplacer le fichier existant** - Cochez la case pour remplacer le fichier du package DAC s’il en existe déjà un du même nom.  
   
-###  <a name="ValidateSummary"></a> Validation and summary page  
+###  <a name="validation-and-summary-page"></a><a name="ValidateSummary"></a> Validation and summary page  
  Dans cette page, l'Assistant vérifie que tous les objets de base de données sont pris en charge par une application de la couche Données (DAC). Il vérifie également les dépendances entre les objets de base de données afin de déterminer l'ensemble d'objets qui peuvent être inclus avec succès dans la DAC. Après cela, il affiche le rapport de validation et résume les options que vous avez sélectionnées dans cet Assistant. Pour modifier une option, cliquez sur **Précédent**. Pour commencer à extraire une DAC, cliquez sur **Suivant**.  
   
 > **Remarque**Si un ou plusieurs objets ne sont pas pris en charge par une DAC, le bouton **Suivant** est désactivé et le processus d’extraction ne peut pas continuer. Dans ces cas-là, il est recommandé de supprimer les objets non pris en charge, puis de réexécuter cet Assistant.  
@@ -113,7 +113,7 @@ Sélectionnez les données de référence que vous voulez inclure dans votre fic
   
  **Enregistrer le rapport** - Vous permet d’enregistrer un fichier HTML qui répertorie tous les objets sous le nœud **Objets de DAC** dans le résumé. Ce rapport peut être utile lorsque certains de vos objets de base de données ne sont pas pris en charge dans une DAC. Utilisez le rapport pour changer ou supprimer des objets qui ne sont pas pris en charge, avant d'essayer d'extraire de nouveau la DAC.  
   
- ###  <a name="BuildPackage"></a> Build package page  
+ ###  <a name="build-package-page"></a><a name="BuildPackage"></a> Build package page  
  Utilisez cette page pour surveiller la progression de l'Assistant à mesure qu'il extrait l'application de la couche Données (DAC).  
   
  **Action** - Pendant l’action **Créer et enregistrer le fichier de package de DAC** , l’Assistant extrait une DAC de votre base de données SQL Server. Ensuite, un package de DAC est créé en mémoire et enregistré à l'emplacement que vous avez spécifié. Cliquez sur les liens dans la colonne **Résultat** pour consulter le résultat de l'étape correspondante.  
@@ -122,7 +122,7 @@ Sélectionnez les données de référence que vous voulez inclure dans votre fic
   
  **Terminer** - Ferme l’Assistant une fois le traitement terminé ou si une erreur se produit.  
    
-##  <a name="ExtractDACPowerShell"></a> Extraire une DAC à l’aide de PowerShell  
+##  <a name="extract-a-dac-using-powershell"></a><a name="ExtractDACPowerShell"></a> Extraire une DAC à l’aide de PowerShell  
  **Pour extraire une DAC d’une base de données à l’aide de la méthode Extract() dans un script PowerShell**  
   
 1.  Créez un objet serveur SMO et affectez-lui l'instance qui contient la base de données à partir de laquelle la DAC doit être extraite.  

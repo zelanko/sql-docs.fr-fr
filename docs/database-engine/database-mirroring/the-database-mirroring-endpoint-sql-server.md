@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68047992"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Point de terminaison de mise en miroir de bases de données (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "68047992"
 >  La fonctionnalité de mise en miroir de bases de données sera supprimée dans une prochaine version de Microsoft SQL Server. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement la mise en miroir de bases de données afin qu'elles utilisent [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.  
   
   
-##  <a name="ServerNetworkAddress"></a> Adresse réseau du serveur  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> Adresse réseau du serveur  
  L’adresse réseau d’une instance de serveur (son *adresse réseau de serveur* ou *URL de point de terminaison*) contient le numéro de port de son point de terminaison, ainsi que le nom du système et le nom de domaine de l’ordinateur hôte. Le numéro de port identifie de manière unique une instance de serveur spécifique.  
   
  L'illustration suivante montre comment deux instances de serveur sur un même serveur sont identifiées de manière univoque. Les adresses réseau du serveur des deux instances de serveur contiennent le même nom de système ( `MYSYSTEM`) et le même nom de domaine ( `Adventure-Works.MyDomain.com`). Afin de permettre au système de diriger les connexions vers une instance de serveur, l'adresse réseau de serveur comprend le numéro de port associé au point de terminaison de mise en miroir d'une instance de serveur spécifique.  
@@ -57,7 +57,7 @@ ms.locfileid: "68047992"
 >  Ne reconfigurez pas un point de terminaison de mise en miroir de base de données en cours d'utilisation. Les instances de serveurs utilisent les points de terminaison des autres instances pour connaître l'état des autres systèmes. Si le point de terminaison est reconfiguré, il est possible qu'il redémarre, ce qui peut être perçu comme une erreur par les autres instances de serveurs. Cela est particulièrement important pour le mode de basculement automatique, où la reconfiguration du point de terminaison sur un partenaire peut déclencher un basculement.  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> Détermination du type d'authentification pour un point de terminaison de mise en miroir de bases de données  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> Détermination du type d'authentification pour un point de terminaison de mise en miroir de bases de données  
  Il est important de comprendre que les comptes de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de vos instances de serveur déterminent quel type d'authentification vous pouvez utiliser pour vos points de terminaison de mise en miroir de bases de données, comme suit :  
   
 -   Si chaque instance de serveur s'exécute sous un compte de service de domaine, vous pouvez utiliser l'authentification Windows pour vos points de terminaison de mise en miroir de bases de données. Si toutes les instances de serveur s’exécutent sous le même compte d’utilisateur de domaine, les noms de connexion d’utilisateur corrects existent automatiquement dans les deux bases de données **master** . Cela simplifie la configuration de sécurité des bases de données de disponibilité et est recommandé.  
@@ -74,7 +74,7 @@ ms.locfileid: "68047992"
      Il n'existe aucune méthode automatisée permettant de configurer la sécurité de la mise en miroir de bases de données à l'aide de certificats. Vous devez utiliser l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT ou l’applet de commande **New-SqlHadrEndpoint** PowerShell. Pour plus d’informations, consultez [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md). Pour plus d’informations sur l’activation de l’authentification du certificat sur une instance de serveur, consultez [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un point de terminaison de mise en miroir de bases de données**  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l'authentification Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
