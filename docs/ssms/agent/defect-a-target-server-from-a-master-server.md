@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e61c18fc2312fc3b04569f6a6d536ce077c4c35e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252129"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Annuler l'inscription d'un serveur cible dans un serveur maître
@@ -33,14 +33,14 @@ ms.locfileid: "75252129"
 
 Cette rubrique décrit comment désinscrire un serveur cible d'un serveur maître dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'objets SMO (SQL Server Management Objects). Exécutez cette procédure à partir du serveur cible.  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Autorisations  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorisations  
 Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe **sysadmin** .  
   
-## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Pour annuler l'inscription d'un serveur cible dans un serveur maître  
   
@@ -50,7 +50,7 @@ Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rô
   
 3.  Cliquez sur **Oui** pour confirmer que vous voulez désinscrire ce serveur cible d'un serveur maître.  
   
-## <a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Pour annuler l'inscription d'un serveur cible dans un serveur maître  
   
@@ -66,7 +66,7 @@ sp_msx_defect ;
   
 Pour plus d’informations, consultez [sp_msx_defect (Transact-SQL)](https://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883).  
   
-## <a name="PowerShellProcedure"></a>Utilisation d'objets SMO (SQL Server Management Objects)  
+## <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Utilisation d'objets SMO (SQL Server Management Objects)  
 Utilisez la méthode **MsxDefect**.  
   
 ## <a name="see-also"></a>Voir aussi  

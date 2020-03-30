@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 207f7c3cd226ba5fe2bd8d5b708e820d63dd0b2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245839"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
@@ -33,12 +33,12 @@ Cette rubrique indique comment créer une étape de travail de [!INCLUDE[msCoNam
   
 Ces scripts d'étape de travail peuvent appeler des procédures stockées et des procédures stockées étendues. Une même étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] peut contenir plusieurs traitements et commandes GO incorporées. Pour plus d'informations sur la création d'un travail, consultez [Création de travaux](../../ssms/agent/create-jobs.md).  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
 Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-transact-sql-job-step"></a>Pour créer une étape de travail Transact-SQL  
   
@@ -62,7 +62,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 10. Si vous êtes membre du rôle de serveur fixe **sysadmin** et voulez exécuter cette étape de travail avec une connexion SQL différente, sélectionnez la connexion SQL dans la liste **Exécuter en tant qu'utilisateur** .  
   
-## <a name="TSQL"></a>Utilisation de Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-transact-sql-job-step"></a>Pour créer une étape de travail Transact-SQL  
   
@@ -88,7 +88,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 Pour plus d’informations, consultez [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
-## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 **Pour créer une étape de travail Transact-SQL**  
   
 Utilisez la classe **JobStep** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell.  
