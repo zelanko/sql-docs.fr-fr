@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909691"
 ---
 # <a name="indexes-on-computed-columns"></a>Index sur les colonnes calculées
@@ -115,7 +115,7 @@ La propriété **IsPrecise** de la fonction COLUMNPROPERTY indique si un paramè
 > [!NOTE]
 > L'affectation de la valeur ON à ANSI_WARNINGS affecte de manière implicite la valeur ON à ARITHABORT, lorsque le niveau de compatibilité de la base de données est d'au moins 90.  
   
-## <a name="BKMK_persisted"></a> Création d’index sur des colonnes calculées persistantes  
+## <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Création d’index sur des colonnes calculées persistantes  
 
 Parfois, vous pouvez créer une colonne calculée qui est définie par une expression déterministe, mais non précise. Vous pouvez le faire quand la colonne est marquée comme PERSISTED dans l’instruction CREATE TABLE ou ALTER TABLE.
 
